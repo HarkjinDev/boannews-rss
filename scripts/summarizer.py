@@ -23,7 +23,7 @@ def _count_sentences(text: str) -> int:
     return len([p for p in parts if len(p.strip()) > 10])
 
 
-MAX_LINE_CHARS = 15  # 번호 뒤 내용 최대 글자 수
+MAX_LINE_CHARS = 50  # 번호 뒤 내용 최대 글자 수
 
 def _trim(text: str) -> str:
     """공백 정리 후 MAX_LINE_CHARS 이내로 자르기"""
