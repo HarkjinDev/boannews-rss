@@ -164,6 +164,17 @@ def parse_published(entry) -> str:
     except Exception:
         return datetime.now(KST).isoformat()
 
+
+def format_korean_dt(iso_str: str) -> str:
+    """ISO 날짜 문자열 → 한국어 형식 (예: 2026년 5월 27일 오전 2시 16분)"""
+    try:
+        dt = datetime.fromisoformat(iso_str).astimezone(KST)
+        am_pm = '오전' if dt.hour < 12 else '오후'
+        h12   = dt.hour % 12 or 12
+        return f"{dt.year}년 {dt.month}월 {dt.day}일 {am_pm} {h12}시 {dt.minute}분"
+    except Exception:
+        return iso_str
+
 # ================================================================
 # 피드 Fetch
 # ================================================================
@@ -204,12 +215,15 @@ def enrich(item: dict) -> dict:
     title_ko, lang   = translate_to_korean(item['title'])
     summary_ko, _    = translate_to_korean(item['summary'])
 
-    item['title_ko']       = title_ko
-    item['summary_ko']     = summary_ko
-    item['lang']           = lang
-    item['summary_3lines'] = summarize_3lines(
-        item['summary'], lang=lang, translator_fn=translate_to_korean
-    )
+    item['title_ko']   = title_ko
+    item['summary_ko'] = summary_ko
+    item['lang']       = lang
+
+    # _skip_summarize 플래그가 있으면 summary_3lines를 이미 직접 설정한 것
+    if not item.pop('_skip_summarize', False):
+        item['summary_3lines'] = summarize_3lines(
+            item['summary'], lang=lang, translator_fn=translate_to_korean
+        )
     time.sleep(0.5)  # 번역 API 속도 제한 방지
     return item
 
@@ -305,6 +319,7 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
             cve_id    = extract_cve_id(combined)
             cvss, sev = extract_cvss(combined)
 
+            published_iso = parse_published(entry)
             item = {
                 'title':          title,
                 'summary':        summary,
@@ -316,9 +331,37 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
                 'severity':       sev,
                 'link':           link,
                 'source':         cfg['source'],
-                'published':      parse_published(entry),
+                'published':      published_iso,
                 'lang':           'unknown',
             }
+
+            # ── cvefeed 전용: CVE ID / 게시일 / 설명 구조화 3줄 요약 (각 15자 이내) ──
+            if cfg['source'] == 'cvefeed':
+                def _t15(s):
+                    s = re.sub(r'\s+', ' ', str(s)).strip()
+                    return s[:15] if len(s) > 15 else s
+
+                # 1. CVE ID (예: CVE-2026-6565)
+                line1 = _t15(cve_id or 'CVE 정보 없음')
+
+                # 2. 게시일 — 짧은 형식 (예: 26.05.27 오전2:16)
+                try:
+                    from datetime import datetime as _dt
+                    _d  = _dt.fromisoformat(published_iso).astimezone(KST)
+                    _ap = '오전' if _d.hour < 12 else '오후'
+                    _h  = _d.hour % 12 or 12
+                    date_short = f"{str(_d.year)[2:]}.{_d.month:02d}.{_d.day:02d} {_ap}{_h}:{_d.minute:02d}"
+                except Exception:
+                    date_short = published_iso[:10]
+                line2 = _t15(date_short)
+
+                # 3. 설명 앞부분 15자
+                desc_clean = re.sub(r'\s+', ' ', summary).strip()
+                line3 = _t15(desc_clean)
+
+                item['summary_3lines'] = f"1. {line1}\n2. {line2}\n3. {line3}"
+                item['_skip_summarize'] = True
+
             item = enrich(item)
             results.append(item)
             visited_links.add(link)
