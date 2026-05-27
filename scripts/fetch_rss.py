@@ -34,7 +34,7 @@ KST              = pytz.timezone('Asia/Seoul')
 RETENTION_DAYS   = 3     # feeds.json 보존 기간 (일)
 MAX_PER_CATEGORY = 500   # 카테고리별 최대 보관 건수 (안전망)
 WINDOW_HOURS_NEWS = 24   # 보안뉴스 · 평판 수집 시간 범위 (시간)
-WINDOW_HOURS_VULN = 48   # 취약점 수집 시간 범위 (시간, 늦게 공개되는 CVE 대응)
+WINDOW_HOURS_VULN = 168  # 취약점 수집 시간 범위 (7일, KISA 등 업데이트 주기 느린 피드 대응)
 SIMILARITY_THRESH = 0.90 # 유사 제목 판단 임계값
 
 NAVER_CLIENT_ID     = os.environ.get('NAVER_CLIENT_ID', '')
@@ -113,8 +113,11 @@ VULNERABILITY_FEEDS = [
 # ================================================================
 
 def clean_html(text: str) -> str:
-    if not text:
+    if not text or not isinstance(text, str):
         return ''
+    # 태그가 없는 일반 텍스트는 BeautifulSoup 불필요 (경고 방지)
+    if '<' not in text and '>' not in text:
+        return text.strip()
     return BeautifulSoup(text, 'html.parser').get_text().strip()
 
 
