@@ -1,0 +1,48 @@
+name: Fetch Security RSS
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'   # 5분마다 실행
+  workflow_dispatch:         # 수동 트리거 (Actions 탭에서 Run workflow 버튼)
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10      # 10분 초과 시 강제 종료 (무한 루프 방지)
+
+    permissions:
+      contents: write        # feeds.json 커밋/푸시 권한
+
+    steps:
+      # ── 1. 레포 체크아웃 ───────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python 환경 설정 ────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements.txt
+
+      # ── 3. 패키지 설치 ─────────────────────────────────────
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      # ── 4. RSS 수집 실행 ───────────────────────────────────
+      - name: Run fetch_rss.py
+        env:
+          NAVER_CLIENT_ID:     ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python scripts/fetch_rss.py
+
+      # ── 5. feeds.json 변경 시에만 커밋 & 푸시 ─────────────
+      - name: Commit and push feeds.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add feeds.json
+          git diff --staged --quiet \
+            && echo "변경 없음 — 커밋 스킵" \
+            || (git commit -m "chore: update feeds.json [skip ci]" && git push)
