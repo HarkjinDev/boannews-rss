@@ -19,6 +19,7 @@ import feedparser
 import requests
 import urllib3
 from bs4 import BeautifulSoup
+import html as html_lib
 from dateutil.parser import parse as parse_date
 
 from translator import translate_to_korean
@@ -116,8 +117,11 @@ def clean_html(text: str) -> str:
         return ''
     # 태그가 없는 일반 텍스트는 BeautifulSoup 불필요 (경고 방지)
     if '<' not in text and '>' not in text:
-        return text.strip()
-    return BeautifulSoup(text, 'html.parser').get_text().strip()
+        return html_lib.unescape(text.strip())
+    result = BeautifulSoup(text, 'html.parser').get_text().strip()
+    # feedparser가 미처 디코딩 못한 HTML 엔티티 2차 처리
+    # ex) &quot; → "  &amp; → &  &#39; → '
+    return html_lib.unescape(result)
 
 
 def is_similar_title(t1: str, t2: str) -> bool:
