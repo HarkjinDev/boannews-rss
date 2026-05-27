@@ -80,16 +80,27 @@ SECURITY_KEYWORDS = [
 ]
 
 VULNERABILITY_FEEDS = [
+    # ── 국내 ──────────────────────────────────────────────────
+    # KISA 보호나라 보안공지 (보안 업데이트 권고 등)
     {'url': 'https://www.boho.or.kr/rss/rss.do?menuNo=205020',
      'source': 'krcert_notice', 'naver': False},
+    # KISA 보호나라 보고서/가이드 (취약점 분석 등)
     {'url': 'https://www.boho.or.kr/rss/rss.do?menuNo=205021',
-     'source': 'krcert_vuln', 'naver': False},
-    {'url': 'https://msrc.microsoft.com/update-guide/rss',
+     'source': 'krcert_guide', 'naver': False},
+    # ── 해외 ──────────────────────────────────────────────────
+    # Microsoft MSRC (보안 업데이트 가이드) — 공식 확인 URL
+    {'url': 'https://api.msrc.microsoft.com/update-guide/rss',
      'source': 'msrc', 'naver': False},
+    # Exploit-DB (공개 PoC 코드)
     {'url': 'https://www.exploit-db.com/rss.xml',
      'source': 'exploitdb', 'naver': False},
-    {'url': 'https://www.cisa.gov/cybersecurity-advisories/all-advisories.xml',
+    # CISA — 2025.05.12 공식 RSS 폐지, all.xml로 대체 시도
+    {'url': 'https://www.cisa.gov/cybersecurity-advisories/all.xml',
      'source': 'cisa', 'naver': False},
+    # SANS Internet Storm Center (CVE 실시간 분석)
+    {'url': 'https://isc.sans.edu/rssfeed.xml',
+     'source': 'sans_isc', 'naver': False},
+    # CVE Feed (커뮤니티 CVE 통합 피드)
     {'url': 'https://cvefeed.io/rssfeed/latest.xml',
      'source': 'cvefeed', 'naver': False},
 ]
@@ -330,19 +341,28 @@ def collect_reputation(visited_links: set, visited_titles: list) -> list:
     cutoff  = datetime.now(KST) - timedelta(hours=WINDOW_HOURS_NEWS)
     results = []
 
+    # 평판 보안 필터 키워드 (기관 키워드와 AND 조합)
+    SEC_FILTER = ['해킹', '사고', '유출', '개인정보', '침해', '취약점', '랜섬웨어', '악성코드', '공격']
+
     for kw in keywords:
-        encoded = urllib.parse.quote(kw)
+        encoded_kw  = urllib.parse.quote(kw)
+        # 구글뉴스: "기관명 (해킹 OR 사고 OR 유출 OR 개인정보 OR 침해)"
+        sec_or      = ' OR '.join(SEC_FILTER[:6])
+        google_q    = urllib.parse.quote(f'{kw} ({sec_or})')
+        # 네이버: "기관명 침해사고" (OR 연산자 미지원 → 대표 키워드 조합)
+        naver_q     = urllib.parse.quote(f'{kw} 침해사고')
+
         sources = [
             {
-                'url': f'https://news.google.com/rss/search?q={encoded}&hl=ko&gl=KR&ceid=KR:ko',
+                'url': f'https://news.google.com/rss/search?q={google_q}&hl=ko&gl=KR&ceid=KR:ko',
                 'source': 'google_rep', 'naver': False
             },
             {
-                'url': f'https://openapi.naver.com/v1/search/news.xml?query={encoded}&display=10',
+                'url': f'https://openapi.naver.com/v1/search/news.xml?query={naver_q}&display=10',
                 'source': 'naver_rep', 'naver': True
             },
         ]
-        print(f'  키워드: "{kw}"')
+        print(f'  키워드: "{kw}" + 보안 필터')
 
         for cfg in sources:
             feed = fetch_naver(cfg['url']) if cfg['naver'] else fetch_rss(cfg['url'])
@@ -365,6 +385,11 @@ def collect_reputation(visited_links: set, visited_titles: list) -> list:
                     pass
 
                 if is_duplicate(link, title, visited_links, visited_titles):
+                    continue
+
+                # 제목+요약에 보안 키워드 최소 1개 포함 여부 2차 필터
+                combined_check = (title + ' ' + summary).lower()
+                if not any(sk in combined_check for sk in SEC_FILTER):
                     continue
 
                 item = {
