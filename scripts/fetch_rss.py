@@ -80,13 +80,16 @@ SECURITY_KEYWORDS = [
 ]
 
 VULNERABILITY_FEEDS = [
-    # ── 국내 ──────────────────────────────────────────────────
-    # KISA 보호나라 보안공지 (보안 업데이트 권고 등)
-    {'url': 'https://www.boho.or.kr/rss/rss.do?menuNo=205020',
+    # ── 국내 (KISA 보호나라 공식 RSS: /kr/rss.do?bbsId=) ─────
+    # 보안공지 — 보안 업데이트 권고, 취약점 패치 안내
+    {'url': 'https://www.boho.or.kr/kr/rss.do?bbsId=B0000133',
      'source': 'krcert_notice', 'naver': False},
-    # KISA 보호나라 보고서/가이드 (취약점 분석 등)
-    {'url': 'https://www.boho.or.kr/rss/rss.do?menuNo=205021',
-     'source': 'krcert_guide', 'naver': False},
+    # 취약점 정보 — CVE 분석, 취약점 상세 정보
+    {'url': 'https://www.boho.or.kr/kr/rss.do?bbsId=B0000302',
+     'source': 'krcert_vuln', 'naver': False},
+    # 경보단계 — 사이버 위협 경보 (관심/주의/경계/심각)
+    {'url': 'https://www.boho.or.kr/kr/rss.do?bbsId=B0000342',
+     'source': 'krcert_alert', 'naver': False},
     # ── 해외 ──────────────────────────────────────────────────
     # Microsoft MSRC (보안 업데이트 가이드) — 공식 확인 URL
     {'url': 'https://api.msrc.microsoft.com/update-guide/rss',
