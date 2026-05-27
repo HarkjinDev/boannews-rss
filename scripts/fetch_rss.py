@@ -31,11 +31,10 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # ================================================================
 
 KST              = pytz.timezone('Asia/Seoul')
-RETENTION_DAYS   = 3     # feeds.json 보존 기간 (일)
-MAX_PER_CATEGORY = 500   # 카테고리별 최대 보관 건수 (안전망)
-WINDOW_HOURS_NEWS = 24   # 보안뉴스 · 평판 수집 시간 범위 (시간)
-WINDOW_HOURS_VULN = 168  # 취약점 수집 시간 범위 (7일, KISA 등 업데이트 주기 느린 피드 대응)
-SIMILARITY_THRESH = 0.90 # 유사 제목 판단 임계값
+RETENTION_DAYS   = 3                        # feeds.json 보존 기간 (일)
+MAX_PER_CATEGORY = 500                      # 카테고리별 최대 보관 건수 (안전망)
+WINDOW_HOURS     = RETENTION_DAYS * 24      # 수집 시간 범위 = 보존 기간과 동일 (72시간)
+SIMILARITY_THRESH = 0.90                    # 유사 제목 판단 임계값
 
 NAVER_CLIENT_ID     = os.environ.get('NAVER_CLIENT_ID', '')
 NAVER_CLIENT_SECRET = os.environ.get('NAVER_CLIENT_SECRET', '')
@@ -227,7 +226,7 @@ def enrich(item: dict) -> dict:
         item['summary_3lines'] = summarize_3lines(
             item['summary'], lang=lang, translator_fn=translate_to_korean
         )
-    time.sleep(0.5)  # 번역 API 속도 제한 방지
+    time.sleep(0.2)  # 번역 API 속도 제한 방지
     return item
 
 # ================================================================
@@ -236,7 +235,7 @@ def enrich(item: dict) -> dict:
 
 def collect_security_news(visited_links: set, visited_titles: list) -> list:
     print('\n── [보안뉴스] 수집 ──')
-    cutoff  = datetime.now(KST) - timedelta(hours=WINDOW_HOURS_NEWS)
+    cutoff  = datetime.now(KST) - timedelta(hours=WINDOW_HOURS)
     results = []
 
     for cfg in SECURITY_NEWS_FEEDS:
@@ -291,7 +290,7 @@ def collect_security_news(visited_links: set, visited_titles: list) -> list:
 
 def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
     print('\n── [취약점] 수집 ──')
-    cutoff  = datetime.now(KST) - timedelta(hours=WINDOW_HOURS_VULN)
+    cutoff  = datetime.now(KST) - timedelta(hours=WINDOW_HOURS)
     results = []
 
     for cfg in VULNERABILITY_FEEDS:
@@ -404,7 +403,7 @@ def collect_reputation(visited_links: set, visited_titles: list) -> list:
         print(f'  [오류] {KEYWORDS_PATH} 로드 실패: {e}')
         return []
 
-    cutoff  = datetime.now(KST) - timedelta(hours=WINDOW_HOURS_NEWS)
+    cutoff  = datetime.now(KST) - timedelta(hours=WINDOW_HOURS)
     results = []
 
     # 평판 보안 필터 키워드 (기관 키워드와 AND 조합)
