@@ -23,7 +23,7 @@ def _count_sentences(text: str) -> int:
     return len([p for p in parts if len(p.strip()) > 10])
 
 
-MAX_LINE_CHARS = 50  # 번호 뒤 내용 최대 글자 수
+MAX_LINE_CHARS = 15  # 번호 뒤 내용 최대 글자 수
 
 def _trim(text: str) -> str:
     """공백 정리 후 MAX_LINE_CHARS 이내로 자르기"""
@@ -85,9 +85,9 @@ def summarize_3lines(text: str, lang: str = 'en', translator_fn=None) -> str:
     cleaned = re.sub(r'\s{2,}', ' ', cleaned).strip()
 
     # ── sumy LsaSummarizer로 3문장 추출 ──────────────────────
+    # konlpy(Java 필요)는 GitHub Actions 환경에서 불가 → 항상 'english' tokenizer 사용
     try:
-        tokenizer_lang = 'korean' if lang == 'ko' else 'english'
-        parser = PlaintextParser.from_string(cleaned, Tokenizer(tokenizer_lang))
+        parser = PlaintextParser.from_string(cleaned, Tokenizer('english'))
         summarizer = LsaSummarizer()
         sentences = [str(s) for s in summarizer(parser.document, 3)]
 
