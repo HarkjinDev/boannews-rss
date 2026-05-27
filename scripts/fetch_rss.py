@@ -339,7 +339,7 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
             if cfg['source'] == 'cvefeed':
                 def _t15(s):
                     s = re.sub(r'\s+', ' ', str(s)).strip()
-                    return s[:15] if len(s) > 15 else s
+                    return s[:50] if len(s) > 50 else s
 
                 # 1. CVE ID (예: CVE-2026-6565)
                 # summary에서 'CVE ID :CVE-xxx' 패턴으로 정확히 추출
