@@ -467,10 +467,15 @@ def main():
     new_vuln = collect_vulnerability(visited_links, visited_titles)
     new_rep  = collect_reputation(visited_links, visited_titles)
 
-    # 신규 항목을 앞에 병합 (최신순 유지)
-    existing['security_news'] = new_sec  + existing.get('security_news', [])
-    existing['vulnerability']  = new_vuln + existing.get('vulnerability',  [])
-    existing['reputation']     = new_rep  + existing.get('reputation',     [])
+    # 신규 항목 병합 후 published 기준 내림차순 정렬
+    def merge_sorted(new_items, old_items):
+        merged = new_items + old_items
+        merged.sort(key=lambda x: x.get('published', ''), reverse=True)
+        return merged
+
+    existing['security_news'] = merge_sorted(new_sec,  existing.get('security_news', []))
+    existing['vulnerability']  = merge_sorted(new_vuln, existing.get('vulnerability',  []))
+    existing['reputation']     = merge_sorted(new_rep,  existing.get('reputation',     []))
 
     save_feeds(existing)
 
