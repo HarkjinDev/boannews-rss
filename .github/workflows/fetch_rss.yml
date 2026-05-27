@@ -8,7 +8,7 @@ on:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 10      # 10분 초과 시 강제 종료 (무한 루프 방지)
+    timeout-minutes: 30      # 30분 초과 시 강제 종료 (초기 대량 수집 대응)
 
     permissions:
       contents: write        # feeds.json 커밋/푸시 권한
