@@ -342,7 +342,12 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
                     return s[:15] if len(s) > 15 else s
 
                 # 1. CVE ID (예: CVE-2026-6565)
-                line1 = _t15(cve_id or 'CVE 정보 없음')
+                # summary에서 'CVE ID :CVE-xxx' 패턴으로 정확히 추출
+                cve_from_summary = ''
+                m_cve = re.search(r'CVE ID\s*:\s*(CVE-[\d-]+)', summary, re.I)
+                if m_cve:
+                    cve_from_summary = m_cve.group(1).strip()
+                line1 = _t15(cve_from_summary or cve_id or 'CVE 정보 없음')
 
                 # 2. 게시일 — 짧은 형식 (예: 26.05.27 오전2:16)
                 try:
@@ -355,9 +360,21 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
                     date_short = published_iso[:10]
                 line2 = _t15(date_short)
 
-                # 3. 설명 앞부분 15자
-                desc_clean = re.sub(r'\s+', ' ', summary).strip()
-                line3 = _t15(desc_clean)
+                # 3. Description 부분만 추출 (cvefeed 구조: "Description :설명내용")
+                desc_text = ''
+                m_desc = re.search(r'Description\s*:\s*(.+)', summary, re.I | re.DOTALL)
+                if m_desc:
+                    desc_text = re.sub(r'\s+', ' ', m_desc.group(1)).strip()
+                else:
+                    # Description 태그 없으면 CVE ID/Published 줄 제외 후 나머지 사용
+                    lines_filtered = [
+                        l.strip() for l in summary.splitlines()
+                        if l.strip()
+                        and not re.match(r'CVE\s*ID\s*:', l, re.I)
+                        and not re.match(r'Published\s*:', l, re.I)
+                    ]
+                    desc_text = re.sub(r'\s+', ' ', ' '.join(lines_filtered)).strip()
+                line3 = _t15(desc_text or '설명 없음')
 
                 item['summary_3lines'] = f"1. {line1}\n2. {line2}\n3. {line3}"
                 item['_skip_summarize'] = True
