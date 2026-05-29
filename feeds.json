@@ -1,6 +1,28 @@
 {
-  "fetched_at": "2026-05-29T14:35:24.376301+09:00",
+  "fetched_at": "2026-05-29T15:03:00.851095+09:00",
   "security_news": [
+    {
+      "title": "빗썸, 콜드월렛·양자내성암호까지···고객 자산 보호 체계 대폭 강화",
+      "summary": "여기에 'MPC(Multi-Party Computation) 기반 분산 서명' 기술을 적용해 특정 관리자의 권한 남용이나 단일 서버 해킹을 통한 유출 가능성을 원천 차단하고 있다. 모든 자산 이동은 '직무 분리 원칙(SoD)'에 따라 이동 요청·검토...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 여기에 'MPC(Multi-Party Computation) 기반 분산 서명' 기술을 적용\n2. 모든 자산 이동은 '직무 분리 원칙(SoD)'에 따라 이동 요청·검토...",
+      "link": "http://www.finomy.com/news/articleView.html?idxno=255028",
+      "source": "naver",
+      "published": "2026-05-29T14:40:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "금융 탈취 악성코드 ‘그란도레이도’ 확산... 윈도우·안드로이드 공습",
+      "summary": "글로벌 보안기업 이셋(ESET) 연구진에 따르면, 이번 해킹 공격은 단일 플랫폼을 노리던 과거 수법에서 벗어나 MS 윈도우 PC와 구글 안드로이드 모바일 사용자를 동시에 타깃으로 삼고 있다. 이 악성코드를 이용한...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 글로벌 보안기업 이셋(ESET) 연구진에 따르면, 이번 해킹 공격은 단일 플랫폼을 노리던 \n2. 이 악성코드를 이용한...",
+      "link": "http://www.boannews.com/media/view.asp?idx=143874&kind=1",
+      "source": "naver",
+      "published": "2026-05-29T14:34:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[미토스②] AI 해킹 현실화…취약점 폭증에 무너지는 방어선",
       "summary": "[미토스①] 27년 된 결함 찾은 '미토스'…막 오른 AI 보안 패권 경쟁 [미토스②] AI 해킹 현실화…취약점... 하지만 지금 같은 속도로 AI가 발전한다면 해킹의 진입장벽이 낮아지며 사이버 공격이 급증하기까지 그리 오랜...",
@@ -399,6 +421,20 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-2128 - Breeze Cache <= 2.5.2 - Unauthenticated Exposure of Sensitive Information to an Unauthorized Actor via Crafted Login Cookie",
+      "summary": "CVE ID :CVE-2026-2128\n  \nPublished : May 29, 2026, 5:16 a.m. | 35 minutes ago\n  \nDescription :The Breeze plugin for WordPress is vulnerable to Exposure of Sensitive Information to an Unauthorized Actor in all versions up to, and including, 2.5.2 This is due to improper verification of the `wordpress_logged_in_` cookie in the `inc/cache/execute-cache.php` file when the \"Cache Logged-in Users\" setting is enabled. The plugin parses the username directly from the cookie value (e.g., `username|hash`) using `substr()` to retrieve the corresponding cache file but fails to verify the session's cryptographic signature or validity with WordPress core. This makes it possible for unauthenticated attackers to supply a crafted cookie (e.g., `wordpress_logged_in_fake=admin|fake`) to trick the plugin into serving the cached HTML content generated for an administrator, leading to the disclosure of sensitive information such as private posts (including their full content), the Admin Bar, WordPress nonces, and other data visible only to logged-in administrators or other users.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-2128 - Breeze 캐시 <= 2.5.2 - 제작된 로그인 쿠키를 통해 인증되지 않은 행위자에게 중요한 정보가 인증되지 않고 노출됨",
+      "summary_ko": "CVE ID:CVE-2026-2128\n  \n게시일 : 2026년 5월 29일 오전 5시 16분 | 35분 전\n  \n설명:WordPress용 Breeze 플러그인은 2.5.2를 포함한 모든 버전에서 무단 행위자에 대한 민감한 정보 노출에 취약합니다. 이는 \"로그인한 사용자 캐시\" 설정이 활성화된 경우 `inc/cache/execute-cache.php` 파일에 있는 `wordpress_logged_in_` 쿠키의 부적절한 확인으로 인해 발생합니다. 플러그인은 해당 캐시 파일을 검색하기 위해 `substr()`을 ​​사용하여 쿠키 값(예: `username|hash`)에서 사용자 이름을 직접 구문 분석하지만 WordPress 코어에서 세션의 암호화 서명이나 유효성을 확인하지 못합니다. 이를 통해 인증되지 않은 공격자가 조작된 쿠키(예: `wordpress_logged_in_fake=admin|fake`)를 제공하여 플러그인을 속여 관리자를 위해 생성된 캐시된 HTML 콘텐츠를 제공하도록 할 수 있으며, 이로 인해 비공개 게시물(전체 콘텐츠 포함), 관리 표시줄, WordPress nonce 및 로그인한 관리자나 다른 사용자에게만 표시되는 기타 데이터와 같은 민감한 정보가 공개될 수 있습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-2128\n2. 26.05.29 오후2:16\n3. The Breeze plugin for WordPress is vulnerable to E",
+      "cve_id": "CVE-2026-2128",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-2128",
+      "source": "cvefeed",
+      "published": "2026-05-29T14:16:19+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-8995 - Poll Maker by AYS <= 6.3.7 - Authenticated (Subscriber+) Sensitive Information Exposure in 'ays_poll_get_user_information' AJAX Action",
       "summary": "CVE ID :CVE-2026-8995\n  \nPublished : May 29, 2026, 2:27 a.m. | 1 hour, 22 minutes ago\n  \nDescription :The Poll Maker – Versus Polls, Anonymous Polls, Image Polls plugin for WordPress is vulnerable to Sensitive Information Exposure in versions up to and including 6.3.7. This is due to insufficient access controls on the 'ays_poll_get_user_information' AJAX action, which serializes and returns the complete WP_User object — including the user_pass (bcrypt password hash), user_email, user_login, user_registered, roles, and all capabilities — without any nonce verification or capability check beyond is_user_logged_in(). This makes it possible for authenticated attackers, with subscriber-level access and above, to retrieve sensitive account data including their own password hash, which WordPress does not expose through any of its standard interfaces and which can be leveraged for offline password-cracking attacks.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
