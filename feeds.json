@@ -1,6 +1,28 @@
 {
-  "fetched_at": "2026-05-30T19:51:25.013151+09:00",
+  "fetched_at": "2026-05-30T21:04:21.176906+09:00",
   "security_news": [
+    {
+      "title": "빗썸, 고객 자산 보호 캠페인…양자내성암호 도입 추진",
+      "summary": "빗썸은 현재 법정 기준을 상회하는 비율로 자산을 오프라인 기반 '콜드월렛'에 분리 보관하고 있으며, 다자간 연산(MPC) 기반 분산 서명 기술을 적용해 단일 서버 해킹에 의한 유출 가능성을 차단하고 있다. 자산 이동...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 빗썸은 현재 법정 기준을 상회하는 비율로 자산을 오프라인 기반 '콜드월렛'에 분리 보관하고",
+      "link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2186254",
+      "source": "naver",
+      "published": "2026-05-30T20:08:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[IT 소식 톺아보기- 5월 4주차] 네덜란드, 1700만 봇넷 차단...CNN, 퍼플렉...",
+      "summary": "이번 조치는 국가 사이버보안센터(NCSC)와 경찰이 공동으로 진행한 수사 결과로, 압수된 서버들은 컴퓨터·태블릿·스마트폰 등을 원격 제어해 디도스(DDoS) 공격, 악성 트래픽 프록시, 암호화폐 채굴 등 다양한 사이버...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 이번 조치는 국가 사이버보안센터(NCSC)와 경찰이 공동으로 진행한 수사 결과로, 압수된 ",
+      "link": "https://www.m-economynews.com/news/article.html?no=67575",
+      "source": "naver",
+      "published": "2026-05-30T19:54:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "PAN-OS GlobalProtect Authentication Bypass (CVE-2026-0257) Under Active Exploitation",
       "summary": "Palo Alto Networks has warned that a recently disclosed medium-severity security flaw impacting PAN-OS and Prisma Access has come under active exploitation in the wild.\n\nThe vulnerability, tracked as CVE-2026-0257 (CVSS score: 7.8), refers to a case of authentication bypass that could be exploited by bad actors to set up VPN connections.\n\n\"Authentication bypass vulnerabilities in the",
@@ -740,6 +762,20 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-10116 - Open5GS ue-authentications Endpoint ogs-timer.c ogs_sbi_xact_add denial of service",
+      "summary": "CVE ID :CVE-2026-10116\n  \nPublished : May 30, 2026, 11 a.m. | 52 minutes ago\n  \nDescription :A security flaw has been discovered in Open5GS up to 2.7.7. This vulnerability affects the function ogs_sbi_xact_add in the library /lib/core/ogs-timer.c of the component ue-authentications Endpoint. Performing a manipulation results in denial of service. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks. Applying a patch is the recommended action to fix this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10116 - Open5GS ue-authentications 엔드포인트 ogs-timer.c ogs_sbi_xact_add 서비스 거부",
+      "summary_ko": "CVE ID:CVE-2026-10116\n  \n게시일 : 2026년 5월 30일 오전 11시 | 52분 전\n  \n설명 : Open5GS 2.7.7까지에서 보안 결함이 발견되었습니다. 이 취약점은 ue-authentications Endpoint 구성 요소의 /lib/core/ogs-timer.c 라이브러리에 있는 ogs_sbi_xact_add 함수에 영향을 미칩니다. 조작을 수행하면 서비스가 거부됩니다. 공격은 원격으로 시작될 수 있습니다. 이 익스플로잇은 대중에게 공개되었으며 공격에 사용될 수 있습니다. 이 문제를 해결하려면 패치를 적용하는 것이 좋습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10116\n2. 26.05.30 오후8:00\n3. A security flaw has been discovered in Open5GS up ",
+      "cve_id": "CVE-2026-10116",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10116",
+      "source": "cvefeed",
+      "published": "2026-05-30T20:00:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-9757 - GEO my WP <= 4.5.5 - Unauthenticated SQL Injection via 'swlatlng' / 'nelatlng' Parameters",
       "summary": "CVE ID :CVE-2026-9757\n  \nPublished : May 30, 2026, 10:16 a.m. | 18 minutes ago\n  \nDescription :The GEO my WP plugin for WordPress is vulnerable to SQL Injection via the 'swlatlng' and 'nelatlng' parameters in all versions up to, and including, 4.5.5 The parameters are read from $_SERVER['QUERY_STRING'] via parse_str() (bypassing WordPress's wp_magic_quotes protection, which only covers $_POST/$_GET/$_COOKIE/$_REQUEST), then each is split on ',' via explode() and the resulting fragments are interpolated directly into a SQL BETWEEN clause in gmw_get_locations_within_boundaries_sql() without is_numeric() validation, (float) casting, esc_sql(), or $wpdb->prepare(). This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Exploitation requires the site to host the Posts Locator search-results shortcode (`[gmw form=\"results\" form_id=N]`) on a public page and to have at least one published post with an associated gmw_location row.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6549,20 +6585,6 @@
       "source": "krcert_notice",
       "published": "2026-05-28T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-      "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\nCVE-2026-8398 Daemon Tools Lite Embedded Malicious Code Vulnerability\nCVE-2026-45321 TanStack Unspecified Vulnerability\nCVE-2026-48027 Nx Console Embedded Malicious Code Vulnerability\n\nThese types of vulnerabilities are frequent attack vectors for malicious cyber actors and pose significant risks to the federal enterprise.\nBinding Operational Directive (BOD) 22-01: Reducing the Significant Risk of Known Exploited Vulnerabilities established the KEV Catalog as a living list of known Common Vulnerabilities and Exposures (CVEs) that carry significant risk to the federal enterprise. BOD 22-01 requires Federal Civilian Executive Branch (FCEB) agencies to remediate identified vulnerabilities by the due date to protect FCEB networks against active threats. See the BOD 22-01 Fact Sheet for more information.\nAlthough BOD 22-01 only applies to FCEB agencies, CISA strongly urges all organizations to reduce their exposure to cyberattacks by prioritizing timely remediation of KEV Catalog vulnerabilities as part of their vulnerability management practice. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria.",
-      "title_ko": "CISA, 알려진 악용 취약점 세 가지를 카탈로그에 추가",
-      "summary_ko": "CISA는 현재 악용되고 있는 증거를 바탕으로 알려진 악용 취약점(KEV) 카탈로그에 세 가지 새로운 취약점을 추가했습니다.\n\nCVE-2026-8398 Daemon Tools Lite 내장 악성 코드 취약점\nCVE-2026-45321 TanStack 지정되지 않은 취약점\nCVE-2026-48027 Nx 콘솔 내장 악성 코드 취약점\n\n이러한 유형의 취약점은 악의적인 사이버 행위자에 대한 빈번한 공격 벡터이며 연방 기업에 심각한 위험을 초래합니다.\n구속력 있는 운영 지침(BOD) 22-01: 알려진 악용된 취약점의 심각한 위험 감소를 통해 KEV 카탈로그는 연방 기업에 심각한 위험을 초래하는 알려진 CVE(공통 취약점 및 노출)의 살아있는 목록으로 확립되었습니다. BOD 22-01은 FCEB(연방민간행정부) 기관이 ​​식별된 취약점을 기한까지 수정하여 활성 위협으로부터 FCEB 네트워크를 보호하도록 요구합니다. 자세한 내용은 이사회 22-01 사실 자료를 참조하세요.\nBOD 22-01은 FCEB 기관에만 적용되지만 CISA는 취약점 관리 관행의 일환으로 KEV 카탈로그 취약점을 적시에 해결하는 데 우선순위를 두어 모든 조직이 사이버 공격에 대한 노출을 줄일 것을 강력히 촉구합니다. CISA는 지정된 기준을 충족하는 취약점을 카탈로그에 계속 추가할 예정입니다.",
-      "summary_3lines": "1. CVE-2026-8398 Daemon Tools Lite 내장 악성 코드 취약점 CVE-2\n2. 구속력 있는 운영 지침(BOD) 22-01: 알려진 악용된 취약점의 심각한 위험 감소를 통\n3. BOD 22-01은 FCEB(연방민간행정부) 기관이 ​​식별된 취약점을 기한까지 수정하여 ",
-      "cve_id": "CVE-2026-8398",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.cisa.gov/news-events/alerts/2026/05/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-      "source": "cisa",
-      "published": "2026-05-27T21:00:00+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
