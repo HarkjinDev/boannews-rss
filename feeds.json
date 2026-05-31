@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-01T04:13:04.930516+09:00",
+  "fetched_at": "2026-06-01T05:37:31.573258+09:00",
   "security_news": [
     {
       "title": "[비전 동서남북] 사이버 영토가 국력이다, '사이버보안 3대 강국'을 향한...",
@@ -861,6 +861,20 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-8796 - Sereal::Decoder versions before 5.005 for Perl allow heap out-of-bounds read via crafted input",
+      "summary": "CVE ID :CVE-2026-8796\n  \nPublished : May 31, 2026, 7:43 p.m. | 35 minutes ago\n  \nDescription :Sereal::Decoder versions before 5.005 for Perl allow heap out-of-bounds read via crafted input.\n\nIn Perl/Decoder/srl_decoder.c, srl_read_object() and srl_read_hash() process a COPY tag, a back-reference whose target byte the decoder re-decodes as a fresh tag. When that target byte matches the SHORT_BINARY pattern (an inline string whose length is encoded in the low bits of the tag), the resulting read is not bounded to precede the COPY tag's own offset and can run past the end of the input buffer. An attacker controlled COPY offset can land inside a previously decoded value rather than on a tag boundary, planting a byte that the decoder reads as a SHORT_BINARY tag and consuming up to 31 following bytes from the heap as a class name (OBJECT path) or hash key (HASH path).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-8796 - Perl용 5.005 이전의 Sereal::Decoder 버전에서는 조작된 입력을 통해 범위를 벗어난 힙 읽기를 허용합니다.",
+      "summary_ko": "CVE ID:CVE-2026-8796\n  \n게시일 : 2026년 5월 31일 오후 7시 43분 | 35분 전\n  \n설명 :Sereal::Perl용 5.005 이전 디코더 버전에서는 조작된 입력을 통해 범위를 벗어난 힙 읽기를 허용합니다.\n\nPerl/Decoder/srl_decoder.c에서 srl_read_object() 및 srl_read_hash()는 디코더가 대상 바이트를 새로운 태그로 다시 디코딩하는 역참조인 COPY 태그를 처리합니다. 해당 대상 바이트가 SHORT_BINARY 패턴(길이가 태그의 하위 비트로 인코딩된 인라인 문자열)과 일치하는 경우 결과 읽기는 COPY 태그의 자체 오프셋 앞에 제한되지 않으며 입력 버퍼의 끝을 지나 실행될 수 있습니다. 공격자가 제어하는 ​​COPY 오프셋은 태그 경계가 아닌 이전에 디코딩된 값 내부에 위치하여 디코더가 SHORT_BINARY 태그로 읽는 바이트를 심고 힙에서 클래스 이름(OBJECT 경로) 또는 해시 키(HASH 경로)로 최대 31개의 후속 바이트를 소비할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-8796\n2. 26.06.01 오전4:43\n3. Sereal::Decoder versions before 5.005 for Perl all",
+      "cve_id": "CVE-2026-8796",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8796",
+      "source": "cvefeed",
+      "published": "2026-06-01T04:43:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-10194 - OFFIS DCMTK dcmqrscp dcmqrdbi.cc deleteOldestImages heap-based overflow",
       "summary": "CVE ID :CVE-2026-10194\n  \nPublished : May 31, 2026, 5:16 p.m. | 37 minutes ago\n  \nDescription :A weakness has been identified in OFFIS DCMTK 3.7.0. This affects the function DcmQueryRetrieveIndexDatabaseHandle::deleteOldestImages of the file dcmqrdb/libsrc/dcmqrdbi.cc of the component dcmqrscp. Executing a manipulation can lead to heap-based buffer overflow. The attack may be launched remotely. This patch is called 0f78a4ef6f645ea5530166e445e5436a5de58e75. A patch should be applied to remediate this issue.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6487,20 +6501,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-9981",
       "source": "cvefeed",
       "published": "2026-05-29T08:16:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Analysis of a Year of Files Uploaded to DShield Sensors, (Wed, May 27th)",
-      "summary": "Using the data collected over the past year and using Kibana these two ES|QL query to summarize the data, this shows the list of the most uploaded threat to two DShield sensors (local and cloud) over the past year. I have sorted the activity by months that shows the evolution of files uploaded to the sensors each month. The activity peaked during the winter months (Dec 2025 - Feb 2026) and started decreasing in March 2026 for each sensor.\r",
-      "title_ko": "DShield 센서에 업로드된 한 해 동안의 파일 분석, (5월 27일 수요일)",
-      "summary_ko": "지난 1년 동안 수집된 데이터와 Kibana의 두 ES|QL 쿼리를 사용하여 데이터를 요약하면 지난 한 해 동안 두 개의 DShield 센서(로컬 및 클라우드)에 가장 많이 업로드된 위협 목록이 표시됩니다. 매달 센서에 업로드되는 파일의 변화를 보여주는 활동을 월별로 정렬했습니다. 각 센서의 활동은 겨울철(2025년 12월~2026년 2월)에 최고조에 달했고 2026년 3월부터 감소하기 시작했습니다.",
-      "summary_3lines": "1. 지난 1년 동안 수집된 데이터와 Kibana의 두 ES|QL 쿼리를 사용하여 데이터를 요약\n2. 매달 센서에 업로드되는 파일의 변화를 보여주는 활동을 월별로 정렬했습니다.\n3. 각 센서의 활동은 겨울철(2025년 12월~2026년 2월)에 최고조에 달했고 2026년 ",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33026",
-      "source": "sans_isc",
-      "published": "2026-05-29T04:41:55+09:00",
       "lang": "en"
     }
   ],
