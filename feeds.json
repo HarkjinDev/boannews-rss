@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-31T23:45:30.928936+09:00",
+  "fetched_at": "2026-06-01T01:05:00.217607+09:00",
   "security_news": [
     {
       "title": "[비전 동서남북] 사이버 영토가 국력이다, '사이버보안 3대 강국'을 향한...",
@@ -880,20 +880,23 @@
       "source": "thehackernews",
       "published": "2026-05-29T02:24:44+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Threat Actors Exploit Critical FortiClient EMS Flaw to Deploy Credential Stealer",
-      "summary": "Threat actors are continuing to exploit a critical, now-patched security flaw impacting FortiClient Endpoint Management Server (EMS) deployments to deliver credential-stealing malware.\n\n\"The campaign abused trusted endpoint management infrastructure to deliver malware across managed endpoints,\" Arctic Wolf said. \"Threat actors disguised the credential stealer payload as a Fortinet endpoint",
-      "title_ko": "위협 행위자들, 심각한 FortiClient EMS 결함을 악용하여 자격 증명 도용 장치 배포",
-      "summary_ko": "위협 행위자들은 자격 증명 도용 악성 코드를 유포하기 위해 FortiClient EMS(Endpoint Management Server) 배포에 영향을 미치는 심각한 현재 패치된 보안 결함을 계속 악용하고 있습니다.\n\nArctic Wolf는 \"이 캠페인은 신뢰할 수 있는 엔드포인트 관리 인프라를 남용하여 관리되는 엔드포인트 전체에 악성 코드를 전달했습니다.\"라고 말했습니다. \"공격자들은 자격 증명 도용 페이로드를 Fortinet 엔드포인트로 위장했습니다.",
-      "summary_3lines": "1. 위협 행위자들은 자격 증명 도용 악성 코드를 유포하기 위해 FortiClient EMS(E\n2. Arctic Wolf는 \"이 캠페인은 신뢰할 수 있는 엔드포인트 관리 인프라를 남용하여 관\n3. \"공격자들은 자격 증명 도용 페이로드를 Fortinet 엔드포인트로 위장했습니다.",
-      "link": "https://thehackernews.com/2026/05/threat-actors-exploit-critical.html",
-      "source": "thehackernews",
-      "published": "2026-05-29T00:26:04+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-10188 - Tenda W12 httpd cgistaKickOff stack-based overflow",
+      "summary": "CVE ID :CVE-2026-10188\n  \nPublished : May 31, 2026, 2:30 p.m. | 36 minutes ago\n  \nDescription :A flaw has been found in Tenda W12 3.0.0.7(4763). This affects the function cgistaKickOff of the file /bin/httpd. Executing a manipulation of the argument staMac can lead to stack-based buffer overflow. The attack may be performed from remote. The exploit has been published and may be used.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10188 - Tenda W12 httpd cgistaKickOff 스택 기반 오버플로",
+      "summary_ko": "CVE ID:CVE-2026-10188\n  \n게시일 : 2026년 5월 31일 오후 2시 30분 | 36분 전\n  \n설명 :Tenda W12 3.0.0.7(4763)에서 결함이 발견되었습니다. 이는 /bin/httpd 파일의 cgistaKickOff 기능에 영향을 미칩니다. staMac 인수를 조작하면 스택 기반 버퍼 오버플로가 발생할 수 있습니다. 공격은 원격에서 수행될 수 있습니다. 익스플로잇이 공개되어 사용될 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10188\n2. 26.05.31 오후11:30\n3. A flaw has been found in Tenda W12 3.0.0.7(4763). ",
+      "cve_id": "CVE-2026-10188",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10188",
+      "source": "cvefeed",
+      "published": "2026-05-31T23:30:12+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-10186 - code-projects Online Hospital Management System patient.php sql injection",
       "summary": "CVE ID :CVE-2026-10186\n  \nPublished : May 31, 2026, 2:16 p.m. | 18 minutes ago\n  \nDescription :A security vulnerability has been detected in code-projects Online Hospital Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /patient.php. Such manipulation of the argument editid leads to sql injection. The attack can be executed remotely. The exploit has been disclosed publicly and may be used.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -934,6 +937,20 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10182",
       "source": "cvefeed",
       "published": "2026-05-31T23:16:50+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-10187 - Totolink N300RH Web Management wireless.so setWiFiBasicConfig stack-based overflow",
+      "summary": "CVE ID :CVE-2026-10187\n  \nPublished : May 31, 2026, 2:15 p.m. | 51 minutes ago\n  \nDescription :A vulnerability was detected in Totolink N300RH 6.1c.1353_B20190305. Affected by this issue is the function setWiFiBasicConfig of the file wireless.so of the component Web Management Interface. Performing a manipulation of the argument KeyStr results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10187 - Totolink N300RH 웹 관리 wireless.so setWiFiBasicConfig 스택 기반 오버플로",
+      "summary_ko": "CVE ID:CVE-2026-10187\n  \n게시일 : 2026년 5월 31일 오후 2시 15분 | 51분 전\n  \n설명 : Totolink N300RH 6.1c.1353_B20190305에서 취약점이 발견되었습니다. 이 문제의 영향을 받는 것은 웹 관리 인터페이스 구성 요소의 wireless.so 파일에 있는 setWiFiBasicConfig 기능입니다. KeyStr 인수를 조작하면 스택 기반 버퍼 오버플로가 발생합니다. 공격은 원격으로 수행될 수 있습니다. 이 익스플로잇은 이제 공개되었으며 사용할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10187\n2. 26.05.31 오후11:15\n3. A vulnerability was detected in Totolink N300RH 6.",
+      "cve_id": "CVE-2026-10187",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10187",
+      "source": "cvefeed",
+      "published": "2026-05-31T23:15:14+09:00",
       "lang": "en"
     },
     {
@@ -6409,34 +6426,6 @@
       "source": "sans_isc",
       "published": "2026-05-29T04:41:55+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Portainer 제품 보안 업데이트 권고",
-      "summary": "",
-      "title_ko": "Portainer 제품 보안 업데이트 권고",
-      "summary_ko": null,
-      "summary_3lines": "",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72073",
-      "source": "krcert_notice",
-      "published": "2026-05-29T00:00:00+09:00",
-      "lang": "de"
-    },
-    {
-      "title": "Linux Kernel 보안 업데이트 권고",
-      "summary": "",
-      "title_ko": "Linux Kernel 보안 업데이트 권고",
-      "summary_ko": null,
-      "summary_3lines": "",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72072",
-      "source": "krcert_notice",
-      "published": "2026-05-29T00:00:00+09:00",
-      "lang": "et"
     }
   ],
   "reputation": [
