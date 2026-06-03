@@ -1,9 +1,7 @@
 name: Fetch Security RSS
 
 on:
-  schedule:
-    # - cron: '*/30 * * * *'   # 30분마다 실행
-  workflow_dispatch:         # 수동 트리거 (Actions 탭에서 Run workflow 버튼)
+  workflow_dispatch:         # 수동 트리거 (Actions 탭에서 Run workflow 버튼), cron-job.org에서 자동 트리거
 
 jobs:
   fetch:
