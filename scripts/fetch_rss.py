@@ -249,7 +249,7 @@ def enrich(item: dict) -> dict:
             translator_fn=translate_to_korean,
             gemini_api_key=GEMINI_API_KEY,
         )
-    time.sleep(4)    # Gemini 15 RPM 제한 대응 (60초/15 = 4초 간격)
+    time.sleep(7)    # Gemini 10 RPM 제한 대응 (60초/10 = 6초 + 여유 1초)
     return item
 
 # ================================================================
