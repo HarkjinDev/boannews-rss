@@ -64,7 +64,7 @@ def _summarize_with_gemini(text: str, api_key: str) -> str:
         import google.generativeai as genai
 
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-2.5-flash-lite-preview-06-17')
+        model = genai.GenerativeModel('gemini-2.5-flash-lite')
 
         prompt = f"""다음 보안 뉴스를 한국어로 핵심만 3줄로 요약해줘.
 
