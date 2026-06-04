@@ -1,7 +1,7 @@
 name: Fetch Security RSS
 
 on:
-  workflow_dispatch:         # 수동 트리거 (Actions 탭에서 Run workflow 버튼), cron-job.org에서 자동 트리거
+  workflow_dispatch:         # cron-job.org가 외부에서 트리거
 
 jobs:
   fetch:
@@ -33,6 +33,12 @@ jobs:
         env:
           NAVER_CLIENT_ID:     ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          KAKAO_URL:           ${{ secrets.KAKAO_URL }}
+          KAKAO_SENDER_KEY:    ${{ secrets.KAKAO_SENDER_KEY }}
+          KAKAO_BEARER:        ${{ secrets.KAKAO_BEARER }}
+          KAKAO_TEMPLATE:      ${{ secrets.KAKAO_TEMPLATE }}
+          KAKAO_RECEIVERS:     ${{ secrets.KAKAO_RECEIVERS }}
+          GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/fetch_rss.py
 
       # ── 5. feeds.json 변경 시에만 커밋 & 푸시 ─────────────
