@@ -39,6 +39,7 @@ SIMILARITY_THRESH = 0.90                    # 유사 제목 판단 임계값
 
 NAVER_CLIENT_ID     = os.environ.get('NAVER_CLIENT_ID', '')
 NAVER_CLIENT_SECRET = os.environ.get('NAVER_CLIENT_SECRET', '')
+GEMINI_API_KEY      = os.environ.get('GEMINI_API_KEY', '')
 
 # 카카오 알림톡 설정 (GitHub Secrets)
 KAKAO_URL         = os.environ.get('KAKAO_URL', '')
@@ -243,9 +244,12 @@ def enrich(item: dict) -> dict:
     # _skip_summarize 플래그가 있으면 summary_3lines를 이미 직접 설정한 것
     if not item.pop('_skip_summarize', False):
         item['summary_3lines'] = summarize_3lines(
-            item['summary'], lang=lang, translator_fn=translate_to_korean
+            item['summary'],
+            lang=lang,
+            translator_fn=translate_to_korean,
+            gemini_api_key=GEMINI_API_KEY,
         )
-    time.sleep(0.2)  # 번역 API 속도 제한 방지
+    time.sleep(4)    # Gemini 15 RPM 제한 대응 (60초/15 = 4초 간격)
     return item
 
 # ================================================================
