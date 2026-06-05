@@ -8,7 +8,11 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
 
-MAX_LINE_CHARS = 50  # 각 줄 최대 글자 수
+MAX_LINE_CHARS = 50   # 각 줄 최대 글자 수
+GEMINI_FAIL_LIMIT = 5 # 연속 실패 N회 이상이면 해당 실행 전체를 sumy로 전환
+
+_gemini_fail_count = 0  # 429 연속 실패 횟수 (실행 세션 내 유지)
+_gemini_disabled   = False  # True이면 Gemini 호출 없이 sumy로 바로 전환
 
 
 # ================================================================
@@ -58,9 +62,15 @@ def _count_sentences(text: str) -> int:
 def _summarize_with_gemini(text: str, api_key: str) -> str:
     """
     Gemini 2.5 Flash-Lite로 3줄 요약 생성
-    - 429 발생 시 retry_delay만큼 대기 후 1회 재시도
+    - 429 연속 실패가 GEMINI_FAIL_LIMIT 이상이면 즉시 '' 반환 (sumy 전환)
     Returns: "1. ...\n2. ...\n3. ..." 형식 or '' (실패 시)
     """
+    global _gemini_fail_count, _gemini_disabled
+
+    # 이미 비활성화된 경우 즉시 반환
+    if _gemini_disabled:
+        return ''
+
     import google.generativeai as genai
 
     genai.configure(api_key=api_key)
@@ -99,15 +109,27 @@ def _summarize_with_gemini(text: str, api_key: str) -> str:
 
         except Exception as e:
             err_str = str(e)
-            # 429 Rate Limit: retry_delay 파싱 후 대기
-            if '429' in err_str and not retry:
-                wait = 60  # 기본 대기
-                m = re.search(r'retry_delay.*?seconds:\s*(\d+)', err_str, re.DOTALL)
-                if m:
-                    wait = int(m.group(1)) + 5  # 여유분 5초 추가
-                print(f"  [Gemini 429] {wait}초 대기 후 재시도...")
-                time.sleep(wait)
-                return _call_api(retry=True)
+            # 429 Rate Limit 처리
+            if '429' in err_str:
+                _gemini_fail_count += 1
+                print(f"  [Gemini 429] 누적 실패 {_gemini_fail_count}/{GEMINI_FAIL_LIMIT}회")
+
+                # 연속 실패가 한도 초과 → 이후 모든 항목 sumy로 전환
+                if _gemini_fail_count >= GEMINI_FAIL_LIMIT:
+                    _gemini_disabled = True
+                    print(f"  [Gemini 비활성화] 429 {GEMINI_FAIL_LIMIT}회 초과 — 이후 전체 sumy 사용")
+                    return ''
+
+                # 한도 미만이면 1회 재시도
+                if not retry:
+                    wait = 60
+                    m = re.search(r'retry_delay.*?seconds:\s*(\d+)', err_str, re.DOTALL)
+                    if m:
+                        wait = int(m.group(1)) + 5
+                    print(f"  [Gemini 429] {wait}초 대기 후 재시도...")
+                    time.sleep(wait)
+                    return _call_api(retry=True)
+
             print(f"  [Gemini 오류] {err_str[:120]}")
             return ''
 
