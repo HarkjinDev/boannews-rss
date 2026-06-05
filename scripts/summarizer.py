@@ -65,16 +65,13 @@ def _summarize_with_gemini(text: str, api_key: str) -> str:
     - 429 연속 실패가 GEMINI_FAIL_LIMIT 이상이면 즉시 '' 반환 (sumy 전환)
     Returns: "1. ...\n2. ...\n3. ..." 형식 or '' (실패 시)
     """
-    global _gemini_fail_count, _gemini_disabled
-
     # 이미 비활성화된 경우 즉시 반환
     if _gemini_disabled:
         return ''
 
-    import google.generativeai as genai
+    from google import genai as google_genai
 
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-2.5-flash-lite')
+    client = google_genai.Client(api_key=api_key)
 
     prompt = f"""다음 보안 뉴스를 한국어로 핵심만 3줄로 요약해줘.
 
@@ -91,9 +88,14 @@ def _summarize_with_gemini(text: str, api_key: str) -> str:
 {text[:3000]}"""
 
     def _call_api(retry: bool = False) -> str:
+        # 내부 함수에서 전역변수 수정 시 반드시 global 선언 필요
+        global _gemini_fail_count, _gemini_disabled
         try:
-            response = model.generate_content(prompt)
-            result   = response.text.strip()
+            response = client.models.generate_content(
+                model='gemini-2.5-flash-lite',
+                contents=prompt,
+            )
+            result = response.text.strip()
 
             lines   = [l.strip() for l in result.splitlines() if l.strip()]
             numbered = [l for l in lines if re.match(r'^[1-3]\.', l)]
