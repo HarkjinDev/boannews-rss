@@ -360,38 +360,32 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
                 'lang':           'unknown',
             }
 
-            # ── cvefeed 전용: CVE ID / 게시일 / 설명 구조화 3줄 요약 (각 15자 이내) ──
-            if cfg['source'] == 'cvefeed':
-                def _t15(s):
-                    s = re.sub(r'\s+', ' ', str(s)).strip()
-                    return s[:50] if len(s) > 50 else s
+            # ── 모든 취약점: Gemini 사용 안 함, 구조화 포맷으로 직접 생성 ──
+            def _t50v(s):
+                s = re.sub(r'\s+', ' ', str(s)).strip()
+                return s[:50] if len(s) > 50 else s
 
-                # 1. CVE ID (예: CVE-2026-6565)
-                # summary에서 'CVE ID :CVE-xxx' 패턴으로 정확히 추출
+            if cfg['source'] == 'cvefeed':
+                # cvefeed: CVE ID / 게시일 / Description 추출
                 cve_from_summary = ''
                 m_cve = re.search(r'CVE ID\s*:\s*(CVE-[\d-]+)', summary, re.I)
                 if m_cve:
                     cve_from_summary = m_cve.group(1).strip()
-                line1 = _t15(cve_from_summary or cve_id or 'CVE 정보 없음')
+                line1 = _t50v(cve_from_summary or cve_id or 'CVE 정보 없음')
 
-                # 2. 게시일 — 짧은 형식 (예: 26.05.27 오전2:16)
                 try:
                     from datetime import datetime as _dt
                     _d  = _dt.fromisoformat(published_iso).astimezone(KST)
                     _ap = '오전' if _d.hour < 12 else '오후'
                     _h  = _d.hour % 12 or 12
-                    date_short = f"{str(_d.year)[2:]}.{_d.month:02d}.{_d.day:02d} {_ap}{_h}:{_d.minute:02d}"
+                    line2 = _t50v(f"{str(_d.year)[2:]}.{_d.month:02d}.{_d.day:02d} {_ap}{_h}:{_d.minute:02d}")
                 except Exception:
-                    date_short = published_iso[:10]
-                line2 = _t15(date_short)
+                    line2 = _t50v(published_iso[:10])
 
-                # 3. Description 부분만 추출 (cvefeed 구조: "Description :설명내용")
-                desc_text = ''
                 m_desc = re.search(r'Description\s*:\s*(.+)', summary, re.I | re.DOTALL)
                 if m_desc:
                     desc_text = re.sub(r'\s+', ' ', m_desc.group(1)).strip()
                 else:
-                    # Description 태그 없으면 CVE ID/Published 줄 제외 후 나머지 사용
                     lines_filtered = [
                         l.strip() for l in summary.splitlines()
                         if l.strip()
@@ -399,10 +393,24 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
                         and not re.match(r'Published\s*:', l, re.I)
                     ]
                     desc_text = re.sub(r'\s+', ' ', ' '.join(lines_filtered)).strip()
-                line3 = _t15(desc_text or '설명 없음')
+                line3 = _t50v(desc_text or '설명 없음')
 
-                item['summary_3lines'] = f"1. {line1}\n2. {line2}\n3. {line3}"
-                item['_skip_summarize'] = True
+            else:
+                # krcert / msrc / exploitdb / cisa / sans_isc:
+                # 1. CVE ID 또는 제목
+                # 2. 심각도 + CVSS (없으면 출처)
+                # 3. 요약 앞부분
+                line1 = _t50v(cve_id or title)
+                if sev and cvss:
+                    line2 = _t50v(f"{sev} / CVSS {cvss}")
+                elif sev:
+                    line2 = _t50v(sev)
+                else:
+                    line2 = _t50v(cfg['source'].upper())
+                line3 = _t50v(re.sub(r'\s+', ' ', summary).strip() or '설명 없음')
+
+            item['summary_3lines'] = f"1. {line1}\n2. {line2}\n3. {line3}"
+            item['_skip_summarize'] = True  # 취약점 전체 Gemini 사용 안 함
 
             item = enrich(item)
             results.append(item)
