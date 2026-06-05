@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-06T02:05:04.696267+09:00",
+  "fetched_at": "2026-06-06T02:33:38.623121+09:00",
   "security_news": [
     {
       "title": "OWASP Incubator Project Helps Developers Find and Fix Vulnerable Dependencies in Seconds",
@@ -3849,6 +3849,20 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-11334",
       "source": "cvefeed",
       "published": "2026-06-05T23:00:12+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-32177 .NET Elevation of Privilege Vulnerability",
+      "summary": "This CVE was updated to fix the download link for .NET Framework 3.8 & 4.81 for Windows 2025",
+      "title_ko": "CVE-2026-32177 .NET 권한 상승 취약점",
+      "summary_ko": "이 CVE는 Windows 2025용 .NET Framework 3.8 및 4.81의 다운로드 링크를 수정하기 위해 업데이트되었습니다.",
+      "summary_3lines": "1. CVE-2026-32177\n2. MSRC\n3. This CVE was updated to fix the download link for ",
+      "cve_id": "CVE-2026-32177",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32177",
+      "source": "msrc",
+      "published": "2026-06-05T23:00:00+09:00",
       "lang": "en"
     },
     {
@@ -10639,20 +10653,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-49120",
       "source": "cvefeed",
       "published": "2026-06-03T05:16:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48682 - FastNetMon Out-of-Bounds Read in IPv4 Packet Parser",
-      "summary": "CVE ID :CVE-2026-48682\n  \nPublished : June 2, 2026, 8:16 p.m. | 19 minutes ago\n  \nDescription :FastNetMon Community Edition through 1.2.9 contains an out-of-bounds read in the IPv4 packet parser. In src/simple_packet_parser_ng.cpp, after validating that the packet contains at least sizeof(ipv4_header_t) bytes (20 bytes), the code advances the local_pointer by '4 * ipv4_header->get_ihl()' (line 164) without validating that (a) IHL >= 5 (the minimum valid value per RFC 791), or (b) 4 * IHL bytes are actually available in the packet. The IHL field is 4 bits, allowing values 0-15, so the advance can be 0-60 bytes. An IHL value of 15 with only 20 bytes validated causes a 40-byte over-read. An IHL of 0-4 causes the pointer to not advance past the IP header, resulting in the TCP/UDP header being parsed from IP header data (type confusion). This vulnerability is reachable via any packet capture interface.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48682 - IPv4 패킷 구문 분석기에서 FastNetMon 범위를 벗어난 읽기",
-      "summary_ko": "CVE ID:CVE-2026-48682\n  \n게시일 : 2026년 6월 2일 오후 8시 16분 | 19분 전\n  \n설명 : FastNetMon Community Edition 1.2.9부터 IPv4 패킷 파서의 범위를 벗어난 읽기가 포함되어 있습니다. src/simple_packet_parser_ng.cpp에서 패킷에 최소 sizeof(ipv4_header_t) 바이트(20바이트)가 포함되어 있는지 확인한 후 코드는 (a) IHL >= 5(RFC 791에 따른 최소 유효 값) 또는 (b) 4 *를 확인하지 않고 '4 * ipv4_header->get_ihl()'(라인 164)만큼 local_pointer를 전진시킵니다. IHL 바이트는 실제로 패킷에서 사용 가능합니다. IHL 필드는 4비트이고 0~15의 값을 허용하므로 0~60바이트가 가능합니다. 20바이트만 검증된 IHL 값 15는 40바이트 초과 읽기를 유발합니다. IHL이 0-4이면 포인터가 IP 헤더를 지나서 앞으로 나가지 않게 되어 TCP/UDP 헤더가 IP 헤더 데이터에서 구문 분석됩니다(유형 혼동). 이 취약점은 모든 패킷 캡처 인터페이스를 통해 도달할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48682\n2. 26.06.03 오전5:16\n3. FastNetMon Community Edition through 1.2.9 contain",
-      "cve_id": "CVE-2026-48682",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48682",
-      "source": "cvefeed",
-      "published": "2026-06-03T05:16:38+09:00",
       "lang": "en"
     }
   ],
