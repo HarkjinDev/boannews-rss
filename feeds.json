@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-07T00:32:13.181544+09:00",
+  "fetched_at": "2026-06-07T01:01:17.774806+09:00",
   "security_news": [
     {
       "title": "[베인앤드컴퍼니의 新경영 <12>] '미토스 쇼크'의 진짜 교훈… 사이버 보...",
@@ -3376,17 +3376,6 @@
       "link": "https://www.thepublic.kr/news/articleView.html?idxno=306445",
       "source": "naver",
       "published": "2026-06-04T01:42:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "최주희 티빙 대표, 개인정보 유출 신고 이틀 만에 공식 사과",
-      "summary": "이어 \"영향을 받은 이용자들에게 개별 안내를 진행하고 있으며 피해 구제와 이용자 보호를 위해 끝까지 책임을 다하겠다\"며 \"보안 체계를 원점에서 전면 재점검해 같은 일이 재발하지 않도록 하겠다\"고 강조했다. 티빙의...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 이어 \"영향을 받은 이용자들에게 개별 안내를 진행하고 있으며 피해 구제와 이용자 보호를 위",
-      "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=842269",
-      "source": "naver",
-      "published": "2026-06-04T00:36:00+09:00",
       "lang": "ko"
     }
   ],
@@ -8919,104 +8908,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-20233",
       "source": "cvefeed",
       "published": "2026-06-04T01:06:06+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46272 - coresight: tmc-etr: Fix race condition between sysfs and perf mode",
-      "summary": "CVE ID :CVE-2026-46272\n  \nPublished : June 3, 2026, 3:50 p.m. | 2 hours, 5 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ncoresight: tmc-etr: Fix race condition between sysfs and perf mode\n\nWhen trying to run perf and sysfs mode simultaneously, the WARN_ON()\nin tmc_etr_enable_hw() is triggered sometimes:\n\n WARNING: CPU: 42 PID: 3911571 at drivers/hwtracing/coresight/coresight-tmc-etr.c:1060 tmc_etr_enable_hw+0xc0/0xd8 [coresight_tmc]\n [..snip..]\n Call trace:\n  tmc_etr_enable_hw+0xc0/0xd8 [coresight_tmc] (P)\n  tmc_enable_etr_sink+0x11c/0x250 [coresight_tmc] (L)\n  tmc_enable_etr_sink+0x11c/0x250 [coresight_tmc]\n  coresight_enable_path+0x1c8/0x218 [coresight]\n  coresight_enable_sysfs+0xa4/0x228 [coresight]\n  enable_source_store+0x58/0xa8 [coresight]\n  dev_attr_store+0x20/0x40\n  sysfs_kf_write+0x4c/0x68\n  kernfs_fop_write_iter+0x120/0x1b8\n  vfs_write+0x2c8/0x388\n  ksys_write+0x74/0x108\n  __arm64_sys_write+0x24/0x38\n  el0_svc_common.constprop.0+0x64/0x148\n  do_el0_svc+0x24/0x38\n  el0_svc+0x3c/0x130\n  el0t_64_sync_handler+0xc8/0xd0\n  el0t_64_sync+0x1ac/0x1b0\n ---[ end trace 0000000000000000 ]---\n\nSince the enablement of sysfs mode is separeted into two critical regions,\none for sysfs buffer allocation and another for hardware enablement, it's\npossible to race with the perf mode. Fix this by double check whether\nthe perf mode's been used before enabling the hardware in sysfs mode.\n\n mode:\n   [sysfs mode]                   [perf mode]\n   tmc_etr_get_sysfs_buffer()\n     spin_lock(&drvdata->spinlock)\n     [sysfs buffer allocation]\n     spin_unlock(&drvdata->spinlock)\n                                  spin_lock(&drvdata->spinlock)\n                                  tmc_etr_enable_hw()\n                                    drvdata->etr_buf = etr_perf->etr_buf\n                                  spin_unlock(&drvdata->spinlock)\n   spin_lock(&drvdata->spinlock)\n   tmc_etr_enable_hw()\n     WARN_ON(drvdata->etr_buf) // WARN sicne etr_buf initialized at\n                                  the perf side\n   spin_unlock(&drvdata->spinlock)\n\nWith this fix, we retain the check for CS_MODE_PERF in get_etr_sysfs_buf.\nThis ensures we verify whether the perf mode's already running before we\nactually allocate the buffer. Then we can save the time of\nallocating/freeing the sysfs buffer if race with the perf mode.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46272 - coresight: tmc-etr: sysfs와 perf 모드 간의 경쟁 조건 수정",
-      "summary_ko": "CVE ID:CVE-2026-46272\n  \n게시일 : 2026년 6월 3일 오후 3시 50분 | 2시간, 5분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\ncoresight: tmc-etr: sysfs와 perf 모드 간의 경쟁 조건 수정\n\nperf 및 sysfs 모드를 동시에 실행하려고 하면 WARN_ON()\ntmc_etr_enable_hw()가 때때로 트리거됩니다.\n\n 경고: CPU: 42 PID: drivers/hwtracing/coresight/coresight-tmc-etr.c:1060 tmc_etr_enable_hw+0xc0/0xd8 [coresight_tmc]에서 3911571\n [..스니핑..]\n 통화 추적:\n  tmc_etr_enable_hw+0xc0/0xd8 [coresight_tmc] (P)\n  tmc_enable_etr_sink+0x11c/0x250 [coresight_tmc] (L)\n  tmc_enable_etr_sink+0x11c/0x250 [coresight_tmc]\n  coresight_enable_path+0x1c8/0x218 [코어사이트]\n  coresight_enable_sysfs+0xa4/0x228 [코어사이트]\n  활성화_소스_스토어+0x58/0xa8 [코어사이트]\n  dev_attr_store+0x20/0x40\n  sysfs_kf_write+0x4c/0x68\n  kernfs_fop_write_iter+0x120/0x1b8\n  vfs_write+0x2c8/0x388\n  ksys_write+0x74/0x108\n  __arm64_sys_write+0x24/0x38\n  el0_svc_common.constprop.0+0x64/0x148\n  do_el0_svc+0x24/0x38\n  el0_svc+0x3c/0x130\n  el0t_64_sync_handler+0xc8/0xd0\n  el0t_64_sync+0x1ac/0x1b0\n ---[ 추적 종료 0000000000000000 ]---\n\nsysfs 모드 활성화는 두 개의 중요한 영역으로 분리되므로\n하나는 sysfs 버퍼 할당용이고 다른 하나는 하드웨어 활성화용입니다.\n성능 모드로 경주가 가능합니다. 이 문제를 다시 확인하여 수정하세요.\nsysfs 모드에서 하드웨어를 활성화하기 전에 성능 모드가 사용되었습니다.\n\n 모드:\n   [sysfs 모드] [성능 모드]\n   tmc_etr_get_sysfs_buffer()\n     spin_lock(&drvdata->스핀락)\n     [sysfs 버퍼 할당]\n     spin_unlock(&drvdata->스핀락)\n                                  spin_lock(&drvdata->스핀락)\n                                  tmc_etr_enable_hw()\n                                    drvdata->etr_buf = etr_perf->etr_buf\n                                  spin_unlock(&drvdata->스핀락)\n   spin_lock(&drvdata->스핀락)\n   tmc_etr_enable_hw()\n     WARN_ON(drvdata->etr_buf) // 경고 sicne etr_buf가 초기화됨\n                                  성능 측면\n   spin_unlock(&drvdata->스핀락)\n\n이번 수정을 통해 get_etr_sysfs_buf에서 CS_MODE_PERF 확인을 유지합니다.\n이를 통해 성능 모드가 이미 실행 중인지 확인하기 전에 확인할 수 있습니다.\n실제로 버퍼를 할당합니다. 그러면 우리는 시간을 절약할 수 있다\n성능 모드와 경쟁하는 경우 sysfs 버퍼를 할당/해제합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46272\n2. 26.06.04 오전12:50\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-46272",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46272",
-      "source": "cvefeed",
-      "published": "2026-06-04T00:50:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46271 - wifi: ath12k: do WoW offloads only on primary link",
-      "summary": "CVE ID :CVE-2026-46271\n  \nPublished : June 3, 2026, 3:50 p.m. | 2 hours, 5 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: ath12k: do WoW offloads only on primary link\n\nIn case of multi-link connection, WCN7850 firmware crashes due to WoW\noffloads enabled on both primary and secondary links.\n\nChange to do it only on primary link to fix it.\n\nTested-on: WCN7850 hw2.0 PCI WLAN.HMT.1.1.c5-00284-QCAHMTSWPL_V1.0_V2.0_SILICONZ-1\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46271 - wifi: ath12k: 기본 링크에서만 WoW 오프로드를 수행합니다.",
-      "summary_ko": "CVE ID:CVE-2026-46271\n  \n게시일 : 2026년 6월 3일 오후 3시 50분 | 2시간, 5분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nwifi: ath12k: 기본 링크에서만 WoW 오프로드를 수행합니다.\n\n멀티링크 연결의 경우 WoW로 인해 WCN7850 펌웨어가 충돌합니다.\n기본 및 보조 링크 모두에서 오프로드가 활성화됩니다.\n\n이를 수정하려면 기본 링크에서만 수행하도록 변경하세요.\n\n테스트 완료: WCN7850 hw2.0 PCI WLAN.HMT.1.1.c5-00284-QCAHMTSWPL_V1.0_V2.0_SILICONZ-1\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46271\n2. 26.06.04 오전12:50\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-46271",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46271",
-      "source": "cvefeed",
-      "published": "2026-06-04T00:50:13+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46270 - power: supply: rt9455: Fix use-after-free in power_supply_changed()",
-      "summary": "CVE ID :CVE-2026-46270\n  \nPublished : June 3, 2026, 3:50 p.m. | 2 hours, 5 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\npower: supply: rt9455: Fix use-after-free in power_supply_changed()\n\nUsing the `devm_` variant for requesting IRQ _before_ the `devm_`\nvariant for allocating/registering the `power_supply` handle, means that\nthe `power_supply` handle will be deallocated/unregistered _before_ the\ninterrupt handler (since `devm_` naturally deallocates in reverse\nallocation order). This means that during removal, there is a race\ncondition where an interrupt can fire just _after_ the `power_supply`\nhandle has been freed, *but* just _before_ the corresponding\nunregistration of the IRQ handler has run.\n\nThis will lead to the IRQ handler calling `power_supply_changed()` with\na freed `power_supply` handle. Which usually crashes the system or\notherwise silently corrupts the memory...\n\nNote that there is a similar situation which can also happen during\n`probe()`; the possibility of an interrupt firing _before_ registering\nthe `power_supply` handle. This would then lead to the nasty situation\nof using the `power_supply` handle *uninitialized* in\n`power_supply_changed()`.\n\nFix this racy use-after-free by making sure the IRQ is requested _after_\nthe registration of the `power_supply` handle.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46270 - power: Supply: rt9455: power_supply_changed()에서 use-after-free 수정",
-      "summary_ko": "CVE ID:CVE-2026-46270\n  \n게시일 : 2026년 6월 3일 오후 3시 50분 | 2시간, 5분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\npower: 공급: rt9455: power_supply_changed()에서 use-after-free 수정\n\n`devm_` _전에_ IRQ를 요청하기 위해 `devm_` 변형 사용\n`power_supply` 핸들을 할당/등록하기 위한 변형은 다음을 의미합니다.\n'power_supply' 핸들은 _전에_ 할당 해제/등록 해제됩니다.\n인터럽트 핸들러(`devm_`은 자연스럽게 역으로 할당 해제되므로\n할당 순서). 이는 제거 중에 경쟁이 있음을 의미합니다.\n`power_supply` _후_ 바로_ 인터럽트가 발생할 수 있는 조건\n핸들이 해제되었지만 *해당하는 핸들 _전에_ 바로\nIRQ 처리기 등록 취소가 실행되었습니다.\n\n그러면 IRQ 처리기가 `power_supply_changed()`를 호출하게 됩니다.\n해제된 `power_supply` 핸들. 일반적으로 시스템이 충돌하거나\n그렇지 않으면 자동으로 메모리가 손상됩니다.\n\n비슷한 상황이 발생할 수도 있습니다.\n`프로브()`; 등록하기 _전에_ 인터럽트가 발생할 가능성\n`power_supply` 핸들. 그러면 곤란한 상황이 발생하게 됩니다\n*초기화되지 않은** `power_supply` 핸들을 사용하는 것\n`전력_공급_변경()`.\n\nIRQ가 _after_ 요청되었는지 확인하여 이 난해한 use-after-free를 수정하세요.\n`power_supply` 핸들 등록.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46270\n2. 26.06.04 오전12:50\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-46270",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46270",
-      "source": "cvefeed",
-      "published": "2026-06-04T00:50:12+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46269 - pinctrl: canaan: k230: Fix NULL pointer dereference when parsing devicetree",
-      "summary": "CVE ID :CVE-2026-46269\n  \nPublished : June 3, 2026, 3:50 p.m. | 2 hours, 5 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\npinctrl: canaan: k230: Fix NULL pointer dereference when parsing devicetree\n\nWhen probing the k230 pinctrl driver, the kernel triggers a NULL pointer\ndereference. The crash trace showed:\n[    0.732084] Unable to handle kernel NULL pointer dereference at virtual address 0000000000000068\n[    0.740737] ...\n[    0.776296] epc : k230_pinctrl_probe+0x1be/0x4fc\n\nIn k230_pinctrl_parse_functions(), we attempt to retrieve the device\npointer via info->pctl_dev->dev, but info->pctl_dev is only initialized\nafter k230_pinctrl_parse_dt() completes.\n\nAt the time of DT parsing, info->pctl_dev is still NULL, leading to\nthe invalid dereference of info->pctl_dev->dev.\n\nUse the already available device pointer from platform_device\ninstead of accessing through uninitialized pctl_dev.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46269 - pinctrl: canaan: k230: 장치 트리를 구문 분석할 때 NULL 포인터 역참조 수정",
-      "summary_ko": "CVE ID:CVE-2026-46269\n  \n게시일 : 2026년 6월 3일 오후 3시 50분 | 2시간, 5분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\npinctrl: canaan: k230: 장치 트리를 구문 분석할 때 NULL 포인터 역참조 수정\n\nk230 pinctrl 드라이버를 검색할 때 커널이 NULL 포인터를 트리거합니다.\n역참조. 크래시 추적 결과는 다음과 같습니다.\n[0.732084] 가상 주소 0000000000000068에서 커널 NULL 포인터 역참조를 처리할 수 없습니다.\n[0.740737] ...\n[ 0.776296] epc : k230_pinctrl_probe+0x1be/0x4fc\n\nk230_pinctrl_parse_functions()에서 장치 검색을 시도합니다.\ninfo->pctl_dev->dev를 통한 포인터이지만 info->pctl_dev는 초기화만 됩니다.\nk230_pinctrl_parse_dt()가 완료된 후.\n\nDT 구문 분석 시 info->pctl_dev는 여전히 NULL이므로 다음과 같습니다.\ninfo->pctl_dev->dev의 잘못된 역참조입니다.\n\nplatform_device에서 이미 사용 가능한 장치 포인터를 사용하십시오.\n초기화되지 않은 pctl_dev를 통해 액세스하는 대신.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46269\n2. 26.06.04 오전12:50\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-46269",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46269",
-      "source": "cvefeed",
-      "published": "2026-06-04T00:50:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46268 - PCI/P2PDMA: Fix p2pmem_alloc_mmap() warning condition",
-      "summary": "CVE ID :CVE-2026-46268\n  \nPublished : June 3, 2026, 3:50 p.m. | 2 hours, 5 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nPCI/P2PDMA: Fix p2pmem_alloc_mmap() warning condition\n\nCommit b7e282378773 has already changed the initial page refcount of\np2pdma page from one to zero, however, in p2pmem_alloc_mmap() it uses\n\"VM_WARN_ON_ONCE_PAGE(!page_ref_count(page))\" to assert the initial page\nrefcount should not be zero and the following will be reported when\nCONFIG_DEBUG_VM is enabled:\n\n  page: refcount:0 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x380400000\n  flags: 0x20000000002000(reserved|node=0|zone=4)\n  raw: 0020000000002000 ff1100015e3ab440 0000000000000000 0000000000000000\n  raw: 0000000000000000 0000000000000000 00000000ffffffff 0000000000000000\n  page dumped because: VM_WARN_ON_ONCE_PAGE(!page_ref_count(page))\n  ------------[ cut here ]------------\n  WARNING: CPU: 5 PID: 449 at drivers/pci/p2pdma.c:240 p2pmem_alloc_mmap+0x83a/0xa60\n\nFix by using \"page_ref_count(page)\" as the assertion condition.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46268 - PCI/P2PDMA: p2pmem_alloc_mmap() 경고 조건 수정",
-      "summary_ko": "CVE ID:CVE-2026-46268\n  \n게시일 : 2026년 6월 3일 오후 3시 50분 | 2시간, 5분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nPCI/P2PDMA: p2pmem_alloc_mmap() 경고 조건 수정\n\n커밋 b7e282378773은 이미 다음의 초기 페이지 참조 횟수를 변경했습니다.\np2pdma 페이지는 1에서 0으로, 그러나 p2pmem_alloc_mmap()에서는 다음을 사용합니다.\n초기 페이지를 주장하기 위한 \"VM_WARN_ON_ONCE_PAGE(!page_ref_count(page))\"\nrefcount는 0이 아니어야 하며 다음과 같은 경우 보고됩니다.\nCONFIG_DEBUG_VM이 활성화되었습니다:\n\n  페이지: refcount:0 mapcount:0 매핑:0000000000000000 인덱스:0x0 pfn:0x380400000\n  플래그: 0x20000000002000(예약됨|노드=0|영역=4)\n  원시: 0020000000002000 ff1100015e3ab440 0000000000000000 0000000000000000\n  원시: 0000000000000000 0000000000000000 00000000ffffffff 0000000000000000\n  페이지가 덤프된 이유: VM_WARN_ON_ONCE_PAGE(!page_ref_count(page))\n  ------------[ 여기서 잘라내기 ]------------\n  경고: CPU: 5 PID: drivers/pci/p2pdma.c:240 p2pmem_alloc_mmap+0x83a/0xa60에서 449\n\n어설션 조건으로 \"page_ref_count(page)\"를 사용하여 수정하세요.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46268\n2. 26.06.04 오전12:50\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-46268",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46268",
-      "source": "cvefeed",
-      "published": "2026-06-04T00:50:10+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46267 - nfc: hci: shdlc: Stop timers and work before freeing context",
-      "summary": "CVE ID :CVE-2026-46267\n  \nPublished : June 3, 2026, 3:50 p.m. | 2 hours, 5 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnfc: hci: shdlc: Stop timers and work before freeing context\n\nllc_shdlc_deinit() purges SHDLC skb queues and frees the llc_shdlc\nstructure while its timers and state machine work may still be active.\n\nTimer callbacks can schedule sm_work, and sm_work accesses SHDLC state\nand the skb queues. If teardown happens in parallel with a queued/running\nwork item, it can lead to UAF and other shutdown races.\n\nStop all SHDLC timers and cancel sm_work synchronously before purging the\nqueues and freeing the context.\n\nFound by Linux Verification Center (linuxtesting.org) with SVACE.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46267 - nfc: hci: shdlc: 컨텍스트를 해제하기 전에 타이머를 중지하고 작업",
-      "summary_ko": "CVE ID:CVE-2026-46267\n  \n게시일 : 2026년 6월 3일 오후 3시 50분 | 2시간, 5분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nnfc: hci: shdlc: 컨텍스트를 해제하기 전에 타이머를 중지하고 작업\n\nllc_shdlc_deinit()는 SHDLC skb 대기열을 제거하고 llc_shdlc를 해제합니다.\n타이머와 상태 머신 작업이 여전히 활성화되어 있는 동안 구조를 유지합니다.\n\n타이머 콜백은 sm_work를 예약할 수 있으며 sm_work는 SHDLC 상태에 액세스합니다.\n그리고 skb 대기열. 대기/실행 중인 작업과 동시에 해제가 발생하는 경우\n작업 항목으로 인해 UAF 및 기타 종료 경쟁이 발생할 수 있습니다.\n\n모든 SHDLC 타이머를 중지하고 sm_work를 동기식으로 취소한 후\n대기열을 만들고 컨텍스트를 해제합니다.\n\nSVACE를 사용하여 Linux 검증 센터(linuxtesting.org)에서 찾았습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46267\n2. 26.06.04 오전12:50\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-46267",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46267",
-      "source": "cvefeed",
-      "published": "2026-06-04T00:50:09+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46266 - inet: RAW sockets using IPPROTO_RAW MUST drop incoming ICMP",
-      "summary": "CVE ID :CVE-2026-46266\n  \nPublished : June 3, 2026, 3:50 p.m. | 2 hours, 5 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ninet: RAW sockets using IPPROTO_RAW MUST drop incoming ICMP\n\nYizhou Zhao reported that simply having one RAW socket on protocol\nIPPROTO_RAW (255) was dangerous.\n\n  socket(AF_INET, SOCK_RAW, 255);\n\nA malicious incoming ICMP packet can set the protocol field to 255\nand match this socket, leading to FNHE cache changes.\n\ninner = IP(src=\"192.168.2.1\", dst=\"8.8.8.8\", proto=255)/Raw(\"TEST\")\npkt = IP(src=\"192.168.1.1\", dst=\"192.168.2.1\")/ICMP(type=3, code=4, nexthopmtu=576)/inner\n\n\"man 7 raw\" states:\n\n  A protocol of IPPROTO_RAW implies enabled IP_HDRINCL and is able\n  to send any IP protocol that is specified in the passed header.\n  Receiving of all IP protocols via IPPROTO_RAW is not possible\n  using raw sockets.\n\nMake sure we drop these malicious packets.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46266 - inet: IPPROTO_RAW를 사용하는 RAW 소켓은 수신 ICMP를 삭제해야 합니다.",
-      "summary_ko": "CVE ID:CVE-2026-46266\n  \n게시일 : 2026년 6월 3일 오후 3시 50분 | 2시간, 5분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\ninet: IPPROTO_RAW를 사용하는 RAW 소켓은 들어오는 ICMP를 삭제해야 합니다.\n\nYizhou Zhao는 단순히 프로토콜에 RAW 소켓이 하나만 있다고 보고했습니다.\nIPPROTO_RAW(255)는 위험했습니다.\n\n  소켓(AF_INET, SOCK_RAW, 255);\n\n악의적으로 들어오는 ICMP 패킷은 프로토콜 필드를 255로 설정할 수 있습니다.\n이 소켓을 일치시키면 FNHE 캐시가 변경됩니다.\n\n내부 = IP(src=\"192.168.2.1\", dst=\"8.8.8.8\", proto=255)/Raw(\"테스트\")\npkt = IP(src=\"192.168.1.1\", dst=\"192.168.2.1\")/ICMP(유형=3, 코드=4, nexthopmtu=576)/inner\n\n\"man 7 raw\"는 다음과 같이 말합니다.\n\n  IPPROTO_RAW 프로토콜은 활성화된 IP_HDRINCL을 의미하며 다음을 수행할 수 있습니다.\n  전달된 헤더에 지정된 IP 프로토콜을 보냅니다.\n  IPPROTO_RAW를 통한 모든 IP 프로토콜 수신은 불가능합니다.\n  원시 소켓을 사용합니다.\n\n이러한 악성 패킷을 삭제했는지 확인하세요.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46266\n2. 26.06.04 오전12:50\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-46266",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46266",
-      "source": "cvefeed",
-      "published": "2026-06-04T00:50:07+09:00",
       "lang": "en"
     }
   ],
