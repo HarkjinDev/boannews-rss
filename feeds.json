@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-07T22:33:28.229708+09:00",
+  "fetched_at": "2026-06-07T23:03:42.142162+09:00",
   "security_news": [
     {
       "title": "[아침을 열며]또, 털렸다",
@@ -2090,20 +2090,23 @@
       "source": "thehackernews",
       "published": "2026-06-05T01:55:51+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Hackers Are After the Gaps in Your Vulnerability Program: Here's Their Playbook",
-      "summary": "Threat actors are actively teaching newcomers how to find, exploit, and profit from vulnerable systems. Flare explores what a popular underground hacking tutorial reveals about modern attacker workflows. [...]",
-      "title_ko": "해커는 취약성 프로그램의 공백을 노립니다. 해커의 플레이북은 다음과 같습니다.",
-      "summary_ko": "위협 행위자는 신규 사용자에게 취약한 시스템을 찾아 악용하고 이익을 얻는 방법을 적극적으로 가르치고 있습니다. Flare는 인기 있는 지하 해킹 튜토리얼에서 최신 공격자 작업 흐름에 대해 밝혀낸 내용을 살펴봅니다. [...]",
-      "summary_3lines": "1. 위협 행위자는 신규 사용자에게 취약한 시스템을 찾아 악용하고 이익을 얻는 방법을 적극적으로\n2. Flare는 인기 있는 지하 해킹 튜토리얼에서 최신 공격자 작업 흐름에 대해 밝혀낸 내용을",
-      "link": "https://www.bleepingcomputer.com/news/security/hackers-are-after-the-gaps-in-your-vulnerability-program-heres-their-playbook/",
-      "source": "bleepingcomputer",
-      "published": "2026-06-04T23:01:11+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-49494 - Comodo Internet Security Inspect.sys IPv6 Integer Underflow Remote Denial of Service",
+      "summary": "CVE ID :CVE-2026-49494\n  \nPublished : June 7, 2026, 1:16 p.m. | 41 minutes ago\n  \nDescription :Comodo Internet Security's firewall driver Inspect.sys contains an integer underflow in its IPv6 packet parser. The parser decrements an unsigned 64-bit payload-length value (taken from the IPv6 fixed header's payload length field) by the size of each IPv6 extension header without validating it, so a packet whose declared payload length is smaller than the sum of its extension-header lengths underflows the value to a near-maximal 64-bit integer. Because IPv6 parsing occurs before firewall rule enforcement, a remote, unauthenticated attacker can send a single crafted IPv6 packet - even to a host with all ports blocked - to trigger an out-of-bounds read (and, on a separate code path, an oversized memcpy) in the Windows kernel at DISPATCH_LEVEL, crashing the system (BSOD).\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-49494 - Comodo Internet Security Inspect.sys IPv6 정수 언더플로우 원격 서비스 거부",
+      "summary_ko": "CVE ID:CVE-2026-49494\n  \n게시일 : 2026년 6월 7일 오후 1시 16분 | 41분 전\n  \n설명:Comodo Internet Security의 방화벽 드라이버 Inspect.sys에는 IPv6 패킷 파서에 정수 언더플로가 포함되어 있습니다. 파서는 서명되지 않은 64비트 페이로드 길이 값(IPv6 고정 헤더의 페이로드 길이 필드에서 가져옴)을 검증하지 않고 각 IPv6 확장 헤더의 크기만큼 줄입니다. 따라서 선언된 페이로드 길이가 확장 헤더 길이의 합보다 작은 패킷은 값을 거의 최대 64비트 정수로 언더플로우합니다. IPv6 구문 분석은 방화벽 규칙 시행 이전에 발생하므로 인증되지 않은 원격 공격자는 모든 포트가 차단된 호스트에도 단일 제작된 IPv6 패킷을 보내 DISPATCH_LEVEL의 Windows 커널에서 범위를 벗어난 읽기(및 별도의 코드 경로에서 대형 memcpy)를 트리거하여 시스템을 충돌시킬 수 있습니다(BSOD).\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-49494\n2. 26.06.07 오후10:16\n3. Comodo Internet Security's firewall driver Inspect",
+      "cve_id": "CVE-2026-49494",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49494",
+      "source": "cvefeed",
+      "published": "2026-06-07T22:16:20+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-11458 - erzhongxmu JeeWMS Boot Actuator Endpoint actuator information disclosure",
       "summary": "CVE ID :CVE-2026-11458\n  \nPublished : June 7, 2026, 9:16 a.m. | 41 minutes ago\n  \nDescription :A weakness has been identified in erzhongxmu JeeWMS up to 141740afb2ba14d441c82a833d0a418d07ca2d69. This issue affects some unknown processing of the file /base-boot/actuator of the component Boot Actuator Endpoint. Executing a manipulation can lead to information disclosure. The attack can be executed remotely. The exploit has been made available to the public and could be used for attacks. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. The vendor was contacted early about this disclosure but did not respond in any way.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -5827,90 +5830,6 @@
       "source": "krcert_notice",
       "published": "2026-06-05T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-48567 Azure HorizonDB  Elevation of Privilege Vulnerability",
-      "summary": "Authentication bypass by spoofing in Azure HorizonDB allows an unauthorized attacker to elevate privileges over a network.",
-      "title_ko": "CVE-2026-48567 Azure HorizonDB 권한 상승 취약성",
-      "summary_ko": "Azure HorizonDB에서 스푸핑을 통한 인증 우회를 통해 무단 공격자가 네트워크를 통해 권한을 상승시킬 수 있습니다.",
-      "summary_3lines": "1. Azure HorizonDB에서 스푸핑을 통한 인증 우회를 통해 무단 공격자가 네트워크를 ",
-      "cve_id": "CVE-2026-48567",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48567",
-      "source": "msrc",
-      "published": "2026-06-04T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-42824 M365 Copilot Information Disclosure Vulnerability",
-      "summary": "Improper neutralization of special elements used in a command ('command injection') in M365 Copilot allows an unauthorized attacker to disclose information over a network.",
-      "title_ko": "CVE-2026-42824 M365 코파일럿 정보 공개 취약점",
-      "summary_ko": "M365 Copilot의 명령('명령 주입')에 사용된 특수 요소를 부적절하게 무력화하면 무단 공격자가 네트워크를 통해 정보를 공개할 수 있습니다.",
-      "summary_3lines": "1. M365 Copilot의 명령('명령 주입')에 사용된 특수 요소를 부적절하게 무력화하면 ",
-      "cve_id": "CVE-2026-42824",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42824",
-      "source": "msrc",
-      "published": "2026-06-04T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45497 Microsoft M365 Copilot Remote Code Execution Vulnerability",
-      "summary": "Improper neutralization of special elements used in a command ('command injection') in Microsoft Copilot allows an authorized attacker to execute code over a network.",
-      "title_ko": "CVE-2026-45497 Microsoft M365 Copilot 원격 코드 실행 취약점",
-      "summary_ko": "Microsoft Copilot의 명령('명령 주입')에 사용된 특수 요소를 부적절하게 무력화하면 인증된 공격자가 네트워크를 통해 코드를 실행할 수 있습니다.",
-      "summary_3lines": "1. Microsoft Copilot의 명령('명령 주입')에 사용된 특수 요소를 부적절하게 무",
-      "cve_id": "CVE-2026-45497",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45497",
-      "source": "msrc",
-      "published": "2026-06-04T23:00:00+09:00",
-      "lang": "ro"
-    },
-    {
-      "title": "CVE-2026-47644 Copilot Chat (Microsoft Edge) Information Disclosure Vulnerability",
-      "summary": "Improper neutralization of special elements in output used by a downstream component ('injection') in Copilot Chat (Microsoft Edge) allows an unauthorized attacker to disclose information over a network.",
-      "title_ko": "CVE-2026-47644 Copilot Chat(Microsoft Edge) 정보 공개 취약성",
-      "summary_ko": "Copilot Chat(Microsoft Edge)의 다운스트림 구성 요소('주입')에서 사용되는 출력의 특수 요소를 부적절하게 무력화하면 무단 공격자가 네트워크를 통해 정보를 공개할 수 있습니다.",
-      "summary_3lines": "1. Copilot Chat(Microsoft Edge)의 다운스트림 구성 요소('주입')에서 ",
-      "cve_id": "CVE-2026-47644",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47644",
-      "source": "msrc",
-      "published": "2026-06-04T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47655 Microsoft Graph Information Disclosure Vulnerability",
-      "summary": "Exposure of sensitive information to an unauthorized actor in Microsoft Graph allows an authorized attacker to disclose information over a network.",
-      "title_ko": "CVE-2026-47655 Microsoft 그래프 정보 공개 취약성",
-      "summary_ko": "Microsoft Graph에서 승인되지 않은 행위자에게 중요한 정보가 노출되면 승인된 공격자가 네트워크를 통해 정보를 공개할 수 있습니다.",
-      "summary_3lines": "1. Microsoft Graph에서 승인되지 않은 행위자에게 중요한 정보가 노출되면 승인된 공",
-      "cve_id": "CVE-2026-47655",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47655",
-      "source": "msrc",
-      "published": "2026-06-04T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48579 Microsoft Exchange Online Information Disclosure Vulnerability",
-      "summary": "Improper authorization in Microsoft Exchange Online allows an unauthorized attacker to disclose information over a network.",
-      "title_ko": "CVE-2026-48579 Microsoft Exchange 온라인 정보 공개 취약점",
-      "summary_ko": "Microsoft Exchange Online의 부적절한 인증으로 인해 무단 공격자가 네트워크를 통해 정보를 공개할 수 있습니다.",
-      "summary_3lines": "1. Microsoft Exchange Online의 부적절한 인증으로 인해 무단 공격자가 네트",
-      "cve_id": "CVE-2026-48579",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48579",
-      "source": "msrc",
-      "published": "2026-06-04T23:00:00+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
