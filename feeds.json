@@ -1,6 +1,17 @@
 {
-  "fetched_at": "2026-06-09T05:31:24.226613+09:00",
+  "fetched_at": "2026-06-09T06:03:23.295323+09:00",
   "security_news": [
+    {
+      "title": "Check Point VPN Flaw Exploited Since Early May",
+      "summary": "A newly discovered, critical zero-day vulnerability is under attack; a Qilin ransomware affiliate has been blamed for at least one incident.",
+      "title_ko": "Check Point VPN 결함, 5월 초부터 악용돼",
+      "summary_ko": "새로 발견된 치명적인 제로데이 취약점이 공격을 받고 있습니다. Qilin 랜섬웨어 제휴사가 적어도 한 건의 사건에 대해 비난을 받았습니다.",
+      "summary_3lines": "1. 새로 발견된 치명적인 제로데이 취약점이 공격을 받고 있습니다. Qilin 랜섬웨어 제휴사가",
+      "link": "https://www.darkreading.com/vulnerabilities-threats/check-point-vpn-flaw-exploited-early-may",
+      "source": "darkreading",
+      "published": "2026-06-09T05:28:35+09:00",
+      "lang": "en"
+    },
     {
       "title": "[SPACE B.] 김한용 엑스게이트 채널사업본부장 인터뷰",
       "summary": "정작 해킹을 당하고도 그 사실조차 모르는 경우가 허다합니다. 지금 당장은 돈이 되지 않는 암호화 데이터라... 월패드 해킹으로 인한 사생활 유출 사고가 사회적 문제로 대두되면서, 만 3년 전 관련 법제화가 이루어졌다....",
@@ -22,6 +33,17 @@
       "source": "naver",
       "published": "2026-06-09T05:20:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "One-Character Linux Kernel Flaw Enables Local Root Access, Exploits Now Public",
+      "summary": "Security researchers have published a detailed, working exploit for a Linux kernel use-after-free that lets an unprivileged local user escalate to root and break out of a container.\n\nThe flaw, CVE-2026-23111, sits in the kernel's nf_tables packet-filtering code and was patched upstream on February 5, 2026. Exodus Intelligence released its full technical walkthrough on June 8, and it is not even",
+      "title_ko": "단일 문자 Linux 커널 결함으로 로컬 루트 액세스 가능, 악용이 이제 공개됨",
+      "summary_ko": "보안 연구원들이 권한이 없는 로컬 사용자가 루트로 에스컬레이션하고 컨테이너에서 벗어날 수 있도록 하는 Linux 커널 use-after-free에 대한 상세하고 작동하는 익스플로잇을 발표했습니다.\n\nCVE-2026-23111이라는 결함은 커널의 nf_tables 패킷 필터링 코드에 있으며 2026년 2월 5일에 업스트림 패치가 적용되었습니다. Exodus Intelligence는 6월 8일에 전체 기술 연습을 발표했지만 아직 완료되지 않았습니다.",
+      "summary_3lines": "1. 리눅스 커널 취약점, 루트 권한 탈취 가능\n2. 컨테이너 탈출 및 시스템 장악 위험\n3. 보안 연구원, 취약점 상세 공개 및 패치 완료",
+      "link": "https://thehackernews.com/2026/06/one-character-linux-kernel-flaw-enables.html",
+      "source": "thehackernews",
+      "published": "2026-06-09T05:17:39+09:00",
+      "lang": "en"
     },
     {
       "title": "제재 뚫은 북한 경제… 시장이 주시할 대북 리스크 '3가지 신호'",
@@ -2782,17 +2804,6 @@
       "link": "https://n.news.naver.com/mnews/article/119/0003098313?sid=100",
       "source": "naver",
       "published": "2026-06-06T07:01:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "개인정보 유출에 몸살 앓는 기업들…티빙도 예외 아니었다",
-      "summary": "◆ 티빙 해킹 사고에 이용자 정보 유출 온라인동영상서비스(OTT) 티빙에서 개인정보 유출 사고가 발생했다. 티빙은 6월2일 이용자 개인정보를 저장하는 데이터베이스(DB)에 비인가 접근이 발생해 개인정보가 유출된...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 티빙, DB 비인가 접근으로 개인정보 유출\n2. 이용자 계정 정보 등이 유출된 것으로 파악\n3. 티빙, 사고 인지 후 관계기관에 신고",
-      "link": "https://n.news.naver.com/mnews/article/138/0002230049?sid=105",
-      "source": "naver",
-      "published": "2026-06-06T06:01:00+09:00",
       "lang": "ko"
     }
   ],
@@ -6533,34 +6544,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-11431",
       "source": "cvefeed",
       "published": "2026-06-06T06:08:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-11429 - Path Traversal in Altium Git Service Allows Remote Code Execution",
-      "summary": "CVE ID :CVE-2026-11429\n  \nPublished : June 5, 2026, 9:01 p.m. | 55 minutes ago\n  \nDescription :A path traversal vulnerability exists in the Git Service component shared by Altium Enterprise Server and Altium 365. The service accepts a sequence of post-clone file-manipulation operations that use user-supplied paths without validation, allowing an authenticated user with basic git access to move arbitrary files outside the intended repository area.\n\n\n\n\nThis file-move primitive can be used to place attacker-controlled script content into directories where it is later executed by the service, resulting in remote code execution under the Git Service account. On multi-tenant Altium 365 deployments, this could have allowed access to data belonging to other tenants on the same infrastructure node. Altium Enterprise Server is fixed in 8.1.1; the issue has been remediated in Altium 365 at the service level.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-11429 - Altium Git 서비스의 경로 탐색으로 인해 원격 코드 실행이 허용됨",
-      "summary_ko": "CVE ID:CVE-2026-11429\n  \n게시일 : 2026년 6월 5일 오후 9시 01분 | 55분 전\n  \n설명: Altium Enterprise Server 및 Altium 365가 공유하는 Git 서비스 구성 요소에 경로 탐색 취약점이 존재합니다. 이 서비스는 검증 없이 사용자 제공 경로를 사용하는 일련의 복제 후 파일 조작 작업을 허용하므로 기본 Git 액세스 권한이 있는 인증된 사용자가 의도한 저장소 영역 외부로 임의 파일을 이동할 수 있습니다.\n\n\n\n\n이 파일 이동 기본 요소는 공격자가 제어하는 ​​스크립트 콘텐츠를 나중에 서비스에 의해 실행되는 디렉터리에 배치하여 Git 서비스 계정에서 원격 코드가 실행되도록 하는 데 사용할 수 있습니다. 다중 테넌트 Altium 365 배포에서는 동일한 인프라 노드의 다른 테넌트에 속한 데이터에 대한 액세스가 허용되었을 수 있습니다. Altium Enterprise Server는 8.1.1에서 수정되었습니다. 이 문제는 서비스 수준의 Altium 365에서 해결되었습니다.\n  \n심각도: 9.4 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-11429\n2. 26.06.06 오전6:01\n3. A path traversal vulnerability exists in the Git S",
-      "cve_id": "CVE-2026-11429",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11429",
-      "source": "cvefeed",
-      "published": "2026-06-06T06:01:37+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-11424 - Server-Side Request Forgery in Altium Platform Design GraphQL Service Allows Information Disclosure",
-      "summary": "CVE ID :CVE-2026-11424\n  \nPublished : June 5, 2026, 8:51 p.m. | 1 hour, 5 minutes ago\n  \nDescription :A server-side request forgery (SSRF) vulnerability exists in a GraphQL service component shared by Altium Enterprise Server and Altium 365. An authenticated user can submit a request whose input is treated as a URL by the server and used to issue an outbound HTTP GET request without URL validation or destination filtering. The response body is then returned to the user.\n\n\n\n\nThis allows an authenticated attacker to reach internal services and metadata endpoints that would not otherwise be accessible from the public network, and to retrieve their contents. The impact is information disclosure and internal infrastructure reconnaissance; the request primitive is limited to HTTP GET with no custom headers. Altium Enterprise Server is fixed in 8.1.1; the issue has been remediated in Altium 365 at the service level.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-11424 - Altium 플랫폼 디자인 GraphQL 서비스의 서버측 요청 위조로 인해 정보 공개가 허용됨",
-      "summary_ko": "CVE ID:CVE-2026-11424\n  \n게시일 : 2026년 6월 5일 오후 8시 51분 | 1시간, 5분 전\n  \n설명: Altium Enterprise Server 및 Altium 365가 공유하는 GraphQL 서비스 구성 요소에 서버 측 요청 위조(SSRF) 취약점이 존재합니다. 인증된 사용자는 입력이 서버에 의해 URL로 처리되고 URL 유효성 검사 또는 대상 필터링 없이 아웃바운드 HTTP GET 요청을 실행하는 데 사용되는 요청을 제출할 수 있습니다. 그러면 응답 본문이 사용자에게 반환됩니다.\n\n\n\n\n이를 통해 인증된 공격자는 공용 네트워크에서 액세스할 수 없는 내부 서비스 및 메타데이터 엔드포인트에 도달하고 해당 콘텐츠를 검색할 수 있습니다. 그 영향은 정보 공개 및 내부 인프라 정찰입니다. 요청 프리미티브는 사용자 정의 헤더가 없는 HTTP GET으로 제한됩니다. Altium Enterprise Server는 8.1.1에서 수정되었습니다. 이 문제는 서비스 수준의 Altium 365에서 해결되었습니다.\n  \n심각도: 8.3 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-11424\n2. 26.06.06 오전5:51\n3. A server-side request forgery (SSRF) vulnerability",
-      "cve_id": "CVE-2026-11424",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11424",
-      "source": "cvefeed",
-      "published": "2026-06-06T05:51:28+09:00",
       "lang": "en"
     }
   ],
