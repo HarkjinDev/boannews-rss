@@ -1,6 +1,17 @@
 {
-  "fetched_at": "2026-06-08T23:04:13.247603+09:00",
+  "fetched_at": "2026-06-08T23:33:33.297628+09:00",
   "security_news": [
+    {
+      "title": "[이슈] \"AI를 통제 대상 아닌 필수 도구로\"...금융권 AX 본격화",
+      "summary": "이혁준 팀장도 \"개별 요소들의 취약점 간 상호작용으로 해킹을 허용하는 공급망 리스크와, 권한을 가진 내부자에 의해 보안 체계가 무력화되는 내부자 위협에 철저히 대비해야 한다\"고 제언했다.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 이혁준 팀장도 \"개별 요소들의 취약점 간 상호작용으로 해킹을 허용하는 공급망 리스크와, 권",
+      "link": "http://www.paxetv.com/news/articleView.html?idxno=274145",
+      "source": "naver",
+      "published": "2026-06-08T23:26:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "CU 편의점 택배 개인정보 '탈탈'...도마 위 오른 '보안'",
       "summary": "공공뉴스=김수연 기자 CU 편의점 택배 서비스를 운영하는 BGF네트웍스가 해킹으로 인해 고객 개인정보가... 이번 사고는 고도화된 해킹 기법 앞에서 기존의 방어 체계가 한계에 봉착했음을 보여준다. 단순한 사후 수습을...",
@@ -22,6 +33,17 @@
       "source": "naver",
       "published": "2026-06-08T22:34:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "⚡ Weekly Recap: Instagram Account Hacks, Android Zero-Day, GitHub Worm and More",
+      "summary": "Monday again. The weekend was meant to be quiet. It wasn't. Last week had poisoned packages, a broken AI helper, and a worm tearing through repos. The ugly part: basic tricks still worked.\n\nA chatbot got fooled. A bot token got leaked inside the malware. The same old mistakes showed up again. And while everyone chased the loud stuff, quieter attackers sat in inboxes for months, reading mail and",
+      "title_ko": "⚡ 주간 요약: Instagram 계정 해킹, Android Zero-Day, GitHub Worm 등",
+      "summary_ko": "다시 월요일. 주말은 조용할 예정이었습니다. 그렇지 않았습니다. 지난 주에는 중독된 패키지, 손상된 AI 도우미, 저장소를 찢는 웜이 있었습니다. 추악한 부분은 기본 트릭이 여전히 작동한다는 것입니다.\n\n챗봇이 속았습니다. 악성코드 내부에서 봇 토큰이 유출되었습니다. 똑같은 실수가 다시 나타났습니다. 모두가 시끄러운 내용을 쫓는 동안 좀 더 조용한 공격자들은 몇 달 동안 받은 편지함에 앉아 메일을 읽고",
+      "summary_3lines": "1. 악성코드 유포, AI 오작동 등 보안 사고 발생\n2. 단순한 실수로 인한 취약점 노출 빈번\n3. 소리 없는 공격, 장기간 잠복 후 정보 탈취",
+      "link": "https://thehackernews.com/2026/06/weekly-recap-instagram-account-hacks.html",
+      "source": "thehackernews",
+      "published": "2026-06-08T22:18:57+09:00",
+      "lang": "en"
     },
     {
       "title": "Check Point links VPN zero-day attacks to Qilin ransomware gang",
@@ -2727,17 +2749,6 @@
       "link": "https://www.tokenpost.kr/news/economy/366514",
       "source": "naver",
       "published": "2026-06-06T01:14:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[단독] 티빙 이어 'CU'까지…BGF네트웍스 해킹으로 개인정보 유출",
-      "summary": "해킹 공격으로 고객 개인정보가 유출된 사실이 확인됐다. 외부 침입에 따른 보안 공백이 드러나면서 이용자 정보 보호 체계 전반에 대한 불안이 확산되고 있다. 5일 정보보안 업계에 따르면 BGF네트웍스는 최근 해킹...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. BGF네트웍스, 해킹으로 고객 개인정보 유출 확인\n2. 보안 공백으로 이용자 정보 보호 불안 확산\n3. 재발 방지 위한 보안 체계 강화 시급",
-      "link": "https://www.ngetnews.com/news/articleView.html?idxno=550650",
-      "source": "naver",
-      "published": "2026-06-05T23:06:00+09:00",
       "lang": "ko"
     }
   ],
@@ -6142,62 +6153,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-9270",
       "source": "cvefeed",
       "published": "2026-06-05T23:49:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-10879 - DBI versions before 1.648 for Perl have a heap overflow when preparsing SQL statements with more than 9 binders",
-      "summary": "CVE ID :CVE-2026-10879\n  \nPublished : June 5, 2026, 2:30 p.m. | 14 minutes ago\n  \nDescription :DBI versions before 1.648 for Perl have a heap overflow when preparsing SQL statements with more than 9 binders.\n\nThe preparse method expands SQL placeholder characters to numbered binders of the form :pN, but only allocates three characters per binder in the buffer.  Placeholders 10-99 require four characters, 100-999 require five characters, et cetera.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10879 - Perl용 1.648 이전 DBI 버전에는 9개 이상의 바인더가 포함된 SQL 문을 준비할 때 힙 오버플로가 발생합니다.",
-      "summary_ko": "CVE ID:CVE-2026-10879\n  \n게시일 : 2026년 6월 5일 오후 2시 30분 | 14분 전\n  \n설명: Perl용 1.648 이전의 DBI 버전에서는 바인더가 9개 이상인 SQL 문을 준비할 때 힙 오버플로가 발생합니다.\n\npreparse 메소드는 SQL 자리 표시자 문자를 :pN 형식의 번호가 매겨진 바인더로 확장하지만 버퍼의 바인더당 3개의 문자만 할당합니다.  자리 표시자 10-99에는 4자가 필요하고, 100-999에는 5자가 필요합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10879\n2. 26.06.05 오후11:30\n3. DBI versions before 1.648 for Perl have a heap ove",
-      "cve_id": "CVE-2026-10879",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10879",
-      "source": "cvefeed",
-      "published": "2026-06-05T23:30:58+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-11335 - tittuvarghese CollegeManagementSystem login-form.php session_start session fixiation",
-      "summary": "CVE ID :CVE-2026-11335\n  \nPublished : June 5, 2026, 2:30 p.m. | 15 minutes ago\n  \nDescription :A flaw has been found in tittuvarghese CollegeManagementSystem 3e476335cfbfb9a049e09f474c7ec885f69a9df3/a38852979f7e27ae67b610dce5979500ef8ebe01. This impacts the function session_start of the file /login-form.php. Executing a manipulation of the argument UserAuthData can lead to session fixiation. The attack can be launched remotely. The exploit has been published and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-11335 - tittuvarghese CollegeManagementSystem login-form.php session_start 세션 고정",
-      "summary_ko": "CVE ID:CVE-2026-11335\n  \n게시일 : 2026년 6월 5일 오후 2시 30분 | 15분 전\n  \n설명:tituvarghese CollegeManagementSystem 3e476335cfbfb9a049e09f474c7ec885f69a9df3/a38852979f7e27ae67b610dce5979500ef8ebe01에서 결함이 발견되었습니다. 이는 /login-form.php 파일의 session_start 함수에 영향을 미칩니다. UserAuthData 인수를 조작하면 세션이 고정될 수 있습니다. 공격은 원격으로 시작될 수 있습니다. 익스플로잇이 공개되어 사용될 수 있습니다. 이 제품은 버전 관리를 사용하지 않습니다. 이것이 영향을 받는 릴리스와 영향을 받지 않는 릴리스에 대한 정보를 사용할 수 없는 이유입니다. 해당 프로젝트는 이슈 리포트를 통해 조기에 문제를 통보 받았으나 아직까지 답변을 하지 않았습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-11335\n2. 26.06.05 오후11:30\n3. A flaw has been found in tittuvarghese CollegeMana",
-      "cve_id": "CVE-2026-11335",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11335",
-      "source": "cvefeed",
-      "published": "2026-06-05T23:30:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-38500 - Cisco IOS XE Software Privilege Escalation Vulnerability",
-      "summary": "CVE ID :CVE-2026-38500\n  \nPublished : June 5, 2026, 2:16 p.m. | 29 minutes ago\n  \nDescription :Rejected reason: DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: This candidate was withdrawn by its CNA. Further investigation showed that it was not a security issue. Notes: none.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-38500 - Cisco IOS XE 소프트웨어 권한 상승 취약점",
-      "summary_ko": "CVE ID:CVE-2026-38500\n  \n게시일 : 2026년 6월 5일 오후 2시 16분 | 29분 전\n  \n설명:거부 이유: 이 후보자 번호를 사용하지 마십시오. ConsultID: 없음. 이유: 이 후보는 CNA에 의해 철회되었습니다. 추가 조사 결과 보안 문제가 아닌 것으로 나타났습니다. 참고 사항: 없음.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-38500\n2. 26.06.05 오후11:16\n3. Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.",
-      "cve_id": "CVE-2026-38500",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-38500",
-      "source": "cvefeed",
-      "published": "2026-06-05T23:16:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-6209 - Improper Access Control in in HAVELSAN's Geographic Tracking System",
-      "summary": "CVE ID :CVE-2026-6209\n  \nPublished : June 5, 2026, 2:08 p.m. | 37 minutes ago\n  \nDescription :Improper Access Control, Missing Authorization vulnerability in HAVELSAN Inc. Geographic Tracking System allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Geographic Tracking System: before v0.0.2.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-6209 - HAVELSAN 지리 추적 시스템의 부적절한 액세스 제어",
-      "summary_ko": "CVE ID:CVE-2026-6209\n  \n게시일 : 2026년 6월 5일 오후 2시 8분 | 37분 전\n  \n설명:HAVELSAN Inc. 지리적 추적 시스템의 부적절한 액세스 제어, 승인 누락 취약점으로 인해 ACL에 의해 적절하게 제한되지 않은 기능에 액세스할 수 있습니다.\n\n이 문제는 v0.0.2 이전의 지리적 추적 시스템에 영향을 미칩니다.\n  \n심각도: 9.1 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-6209\n2. 26.06.05 오후11:08\n3. Improper Access Control, Missing Authorization vul",
-      "cve_id": "CVE-2026-6209",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6209",
-      "source": "cvefeed",
-      "published": "2026-06-05T23:08:27+09:00",
       "lang": "en"
     }
   ],
