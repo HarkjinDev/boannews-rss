@@ -1,6 +1,28 @@
 {
-  "fetched_at": "2026-06-09T00:01:28.057805+09:00",
+  "fetched_at": "2026-06-09T00:34:00.473555+09:00",
   "security_news": [
+    {
+      "title": "랜섬웨어도 PQC 이용···유출한 데이터 지속적으로 악용",
+      "summary": "한편 지난 5월 젠틀맨 공격 인프라가 해킹돼 이들의 내부 정보가 다크웹 포럼에 유출되기도 했다. BYOVD 공격이 확산되자 마이크로소프트와 보안 기업들이 취약한 드라이버 블랙리스트를 만들어 배포했는데...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 한편 지난 5월 젠틀맨 공격 인프라가 해킹돼 이들의 내부 정보가 다크웹 포럼에 유출되기도 \n2. BYOVD 공격이 확산되자 마이크로소프트와 보안 기업들이 취약한 드라이버 블랙리스트를 만들",
+      "link": "https://www.datanet.co.kr/news/articleView.html?idxno=212189",
+      "source": "naver",
+      "published": "2026-06-09T00:30:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"북한, 세계가 놀랄 정도의 '경제 성장'…우크라 전쟁 특수\"",
+      "summary": "북한의 사이버 해커 조직원들 중 상당수가 체포될 위험이 적은 중국에 거주하면서 암호화폐 거래소 해킹만... 판매와 해킹으로 벌어들인 자금의 일부가 주민들에게도 흘러 들어가고 있다\"고 말했다. WSJ는 북한을 여행한...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한의 사이버 해커 조직원들 중 상당수가 체포될 위험이 적은 중국에 거주하면서 암호화폐 거\n2. 판매와 해킹으로 벌어들인 자금의 일부가 주민들에게도 흘러 들어가고 있다\"고 말했다.\n3. WSJ는 북한을 여행한...",
+      "link": "https://n.news.naver.com/mnews/article/421/0008992458?sid=101",
+      "source": "naver",
+      "published": "2026-06-09T00:26:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[이슈] \"AI를 통제 대상 아닌 필수 도구로\"...금융권 AX 본격화",
       "summary": "이혁준 팀장도 \"개별 요소들의 취약점 간 상호작용으로 해킹을 허용하는 공급망 리스크와, 권한을 가진 내부자에 의해 보안 체계가 무력화되는 내부자 위협에 철저히 대비해야 한다\"고 제언했다.",
@@ -11,6 +33,17 @@
       "source": "naver",
       "published": "2026-06-08T23:26:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Critical Check Point VPN Flaw Exploited to Bypass Passwords in IKEv1 Setups",
+      "summary": "Check Point has warned of active exploitation of a critical vulnerability impacting Remote Access VPN and Mobile Access deployments that are configured to use the deprecated IKEv1 key exchange protocol.\n\nThe vulnerability, tracked as CVE-2026-50751 (CVSS score: 9.3), is a case of a logic flow weakness in certificate validation that allows an unauthenticated remote attacker to bypass user",
+      "title_ko": "IKEv1 설정에서 비밀번호를 우회하기 위해 악용된 중요한 체크포인트 VPN 결함",
+      "summary_ko": "Check Point는 더 이상 사용되지 않는 IKEv1 키 교환 프로토콜을 사용하도록 구성된 원격 액세스 VPN 및 모바일 액세스 배포에 영향을 미치는 심각한 취약점이 적극적으로 악용되고 있음을 경고했습니다.\n\nCVE-2026-50751(CVSS 점수: 9.3)로 추적되는 이 취약점은 인증되지 않은 원격 공격자가 사용자를 우회할 수 있도록 허용하는 인증서 유효성 검사의 논리 흐름 약점의 사례입니다.",
+      "summary_3lines": "1. Check Point는 더 이상 사용되지 않는 IKEv1 키 교환 프로토콜을 사용하도록 구\n2. CVE-2026-50751(CVSS 점수: 9.3)로 추적되는 이 취약점은 인증되지 않은 ",
+      "link": "https://thehackernews.com/2026/06/critical-check-point-vpn-flaw-exploited.html",
+      "source": "thehackernews",
+      "published": "2026-06-08T23:17:39+09:00",
+      "lang": "en"
     },
     {
       "title": "CU 편의점 택배 개인정보 '탈탈'...도마 위 오른 '보안'",
@@ -6042,76 +6075,6 @@
       "source": "cvefeed",
       "published": "2026-06-06T01:45:09+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48102 - GHSL-2026-118: 7-Zip UDF Field OOB Read",
-      "summary": "CVE ID :CVE-2026-48102\n  \nPublished : June 5, 2026, 3:19 p.m. | 34 minutes ago\n  \nDescription :7-Zip is a file archiver with a high compression ratio. Versions 9.11 through 26.00 contain a heap out-of-bounds read of up to 3 bytes in the UDF disc image handler's File Identifier Descriptor parser. In CFileId::Parse (CPP/7zip/Archive/Udf/UdfIn.cpp), after validating size < 38 + idLen + impLen and advancing processed to 38 + impLen + idLen, the alignment-padding loop reads p[processed] while incrementing up to 3 times to reach a 4-byte boundary, and the processed <= size bounds check only runs after the loop. When (38 + impLen + idLen) % 4 != 0 and 38 + impLen + idLen == size, the loop reads 1 to 3 bytes past the end of the exact-size heap buffer allocated via buf.Alloc((size_t)item.Size). The UDF handler is registered for .iso and .udf files and auto-detected by signature, and the OOB read triggers during Open() when listing or extracting a crafted UDF image. Impact is limited to information disclosure (a 1-bit oracle per OOB byte via open/fail behavior) and denial of service (crash under hardened allocators); there is no write primitive. Version 26.01 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48102 - GHSL-2026-118: 7-Zip UDF 필드 OOB 읽기",
-      "summary_ko": "CVE ID:CVE-2026-48102\n  \n게시일 : 2026년 6월 5일 오후 3시 19분 | 34분 전\n  \n설명 :7-Zip은 압축률이 높은 파일 아카이버입니다. 버전 9.11부터 26.00까지는 UDF 디스크 이미지 처리기의 파일 식별자 설명자 구문 분석기에 최대 3바이트의 범위를 벗어난 힙 읽기가 포함되어 있습니다. CFileId::Parse(CPP/7zip/Archive/Udf/UdfIn.cpp)에서 크기 < 38 + idLen + impLen을 검증하고 38 + impLen + idLen으로 처리된 후 정렬 패딩 루프는 4바이트 경계에 도달하기 위해 최대 3배 증가하면서 p[processed]를 읽고 처리된 <= 크기 경계 검사는 루프 후에만 실행됩니다. (38 + impLen + idLen) % 4 != 0 및 38 + impLen + idLen == size인 경우 루프는 buf.Alloc((size_t)item.Size)를 통해 할당된 정확한 크기의 힙 버퍼 끝에서 1~3바이트를 읽습니다. UDF 처리기는 .iso 및 .udf 파일에 등록되고 서명으로 자동 감지되며, 제작된 UDF 이미지를 나열하거나 추출할 때 Open() 중에 OOB 읽기가 트리거됩니다. 영향은 정보 공개(개방/실패 동작을 통한 OOB 바이트당 1비트 Oracle) 및 서비스 거부(강화된 할당자에서 충돌)로 제한됩니다. 쓰기 프리미티브가 없습니다. 버전 26.01에서는 문제가 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48102\n2. 26.06.06 오전12:19\n3. 7-Zip is a file archiver with a high compression r",
-      "cve_id": "CVE-2026-48102",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48102",
-      "source": "cvefeed",
-      "published": "2026-06-06T00:19:04+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48101 - GHSL-2026-117: 7-Zip UEFI Capsule uninitialized heap memory disclosure",
-      "summary": "CVE ID :CVE-2026-48101\n  \nPublished : June 5, 2026, 3:17 p.m. | 36 minutes ago\n  \nDescription :7-Zip is a file archiver with a high compression ratio. Versions 9.21 through 26.00 contain an An uninitialized memory disclosure vulnerability in the UEFI capsule (.scap) parser in 7-Zip. The OpenCapsule function allocates a heap buffer of attacker-declared CapsuleImageSize (up to 1 GiB) without zero-initialization, then reads the file contents into it with ReadStream_FALSE whose return value is silently discarded. If the file is truncated, the unread tail of the buffer retains uninitialized heap memory, which is then exposed as extracted file content via GetStream. Version 26.0.1 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48101 - GHSL-2026-117: 7-Zip UEFI 캡슐 초기화되지 않은 힙 메모리 공개",
-      "summary_ko": "CVE ID:CVE-2026-48101\n  \n게시일 : 2026년 6월 5일 오후 3시 17분 | 36분 전\n  \n설명 :7-Zip은 압축률이 높은 파일 아카이버입니다. 버전 9.21~26.00에는 7-Zip의 UEFI 캡슐(.scap) 파서에 초기화되지 않은 메모리 공개 취약점이 포함되어 있습니다. OpenCapsule 함수는 초기화 없이 공격자가 선언한 CapsuleImageSize(최대 1GiB)의 힙 버퍼를 할당한 다음 반환 값이 자동으로 삭제되는 ReadStream_FALSE를 사용하여 파일 내용을 읽습니다. 파일이 잘리는 경우 버퍼의 읽지 않은 테일은 초기화되지 않은 힙 메모리를 유지하며, 이는 GetStream을 통해 추출된 파일 콘텐츠로 노출됩니다. 버전 26.0.1에서는 문제가 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48101\n2. 26.06.06 오전12:17\n3. 7-Zip is a file archiver with a high compression r",
-      "cve_id": "CVE-2026-48101",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48101",
-      "source": "cvefeed",
-      "published": "2026-06-06T00:17:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-38579 - Damasac thaipalliative_lte Reflected Cross-Site Scripting",
-      "summary": "CVE ID :CVE-2026-38579\n  \nPublished : June 5, 2026, 3:16 p.m. | 37 minutes ago\n  \nDescription :Multiple reflected Cross-Site Scripting (XSS) vulnerabilities in damasac thaipalliative_lte through version 3.0 allow remote attackers to inject arbitrary web script or HTML via the idFormMain parameter (line 24), the id parameter (lines 25, 75), and the ptid_key parameter (lines 26, 42) in /substudy/ezform.php. User input is echoed into HTML attributes and JavaScript contexts without encoding.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-38579 - Damasac thaipalliative_lte 반영된 크로스 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-38579\n  \n게시일 : 2026년 6월 5일 오후 3시 16분 | 37분 전\n  \n설명: damasac thaipalliative_lte에서 버전 3.0까지의 여러 반영된 XSS(교차 사이트 스크립팅) 취약점으로 인해 원격 공격자가 /substudy/ezform.php의 idFormMain 매개변수(24행), id 매개변수(25, 75행) 및 ptid_key 매개변수(26, 42행)를 통해 임의의 웹 스크립트나 HTML을 삽입할 수 있습니다. 사용자 입력은 인코딩 없이 HTML 속성 및 JavaScript 컨텍스트에 반영됩니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-38579\n2. 26.06.06 오전12:16\n3. Multiple reflected Cross-Site Scripting (XSS) vuln",
-      "cve_id": "CVE-2026-38579",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-38579",
-      "source": "cvefeed",
-      "published": "2026-06-06T00:16:52+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-37737 - Sanic-CORS Regex Bypass Vulnerability",
-      "summary": "CVE ID :CVE-2026-37737\n  \nPublished : June 5, 2026, 3:16 p.m. | 37 minutes ago\n  \nDescription :sanic-cors version 2.2.0 and prior contains an improper regular expression in the try_match() function in sanic_cors/core.py that uses re.match without end-anchoring. This allows an attacker to bypass CORS origin allowlists by registering a domain that begins with a trusted origin string, to gain unauthorized access to cross-origin requests for authenticated resources.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-37737 - Sanic-CORS Regex 우회 취약점",
-      "summary_ko": "CVE ID:CVE-2026-37737\n  \n게시일 : 2026년 6월 5일 오후 3시 16분 | 37분 전\n  \n설명 :sanic-cors 버전 2.2.0 및 이전 버전에는 end-anchoring 없이 re.match를 사용하는 sanic_cors/core.py의 try_match() 함수에 부적절한 정규식이 포함되어 있습니다. 이를 통해 공격자는 신뢰할 수 있는 원본 문자열로 시작하는 도메인을 등록하여 CORS 원본 허용 목록을 우회하고 인증된 리소스에 대한 원본 간 요청에 대한 무단 액세스 권한을 얻을 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-37737\n2. 26.06.06 오전12:16\n3. sanic-cors version 2.2.0 and prior contains an imp",
-      "cve_id": "CVE-2026-37737",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-37737",
-      "source": "cvefeed",
-      "published": "2026-06-06T00:16:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2020-25900 - HelloTalk GPS Data Leak",
-      "summary": "CVE ID :CVE-2020-25900\n  \nPublished : June 5, 2026, 3:16 p.m. | 37 minutes ago\n  \nDescription :HelloTalk through 3.4.1 stores full-precision GPS coordinates even when the user had intended to share only a country or city. Furthermore, these coordinates are placed into a database on the client of other users. (The client side was changed in 2019 to encrypt that database.)\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2020-25900 - HelloTalk GPS 데이터 유출",
-      "summary_ko": "CVE ID :CVE-2020-25900\n  \n게시일 : 2026년 6월 5일 오후 3시 16분 | 37분 전\n  \n설명 : 3.4.1을 통한 HelloTalk는 사용자가 국가나 도시만 공유하려는 경우에도 완전 정밀도 GPS 좌표를 저장합니다. 또한 이러한 좌표는 다른 사용자의 클라이언트에 있는 데이터베이스에 저장됩니다. (클라이언트 측은 2019년에 해당 데이터베이스를 암호화하도록 변경되었습니다.)\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2020-25900\n2. 26.06.06 오전12:16\n3. HelloTalk through 3.4.1 stores full-precision GPS ",
-      "cve_id": "CVE-2020-25900",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2020-25900",
-      "source": "cvefeed",
-      "published": "2026-06-06T00:16:39+09:00",
-      "lang": "fi"
     }
   ],
   "reputation": []
