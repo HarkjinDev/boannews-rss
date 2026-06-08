@@ -1,6 +1,17 @@
 {
-  "fetched_at": "2026-06-09T08:03:34.903126+09:00",
+  "fetched_at": "2026-06-09T08:31:16.091718+09:00",
   "security_news": [
+    {
+      "title": "투표소 생중계에 유권자 개인정보 노출···지방선거가 남긴 '법적 구멍...",
+      "summary": "해킹이나 외부 침입이 아닌 투표용지 부족, 선거인명부 대조전표 배부, 투표소 봉쇄, 현장 생중계가 겹치면서... 서버 침입이나 시스템 해킹이 아니라, 투표용지 부족으로 임시 생성된 종이 자료가 현장에 남았고 이를...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 투표용지 부족, 명부 대조전표 배부 등 외부 요인이 문제\n2. 서버 침입이나 시스템 해킹 등은 아니었음\n3. 임시 종이 자료가 현장에 남아 발견됨",
+      "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2436603",
+      "source": "naver",
+      "published": "2026-06-09T08:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[위클리AI] xAI·앤트로픽·오픈AI, 기업 인프라 더 파고든다…사업 영역...",
       "summary": "앤트로픽, 프로젝트 글래스윙 150개 기관으로 확대 글로벌 AI 기업 앤트로픽(Anthropic)이 AI 사이버보안... 등급 보안 취약점을 발견했습니다. 이번 확장으로 약 150개 신규 기관이 합류합니다. 각 기관은 앤트로픽의...",
@@ -2772,20 +2783,23 @@
       "source": "naver",
       "published": "2026-06-06T09:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "한국 경제, 고용·성장·가계대출 지표로 내주 체력 시험대",
-      "summary": "이억원 금융위원장은 10일 서울 중구 은행연합회에서 5대 금융지주 회장들과 함께 고성능 인공지능 디지털 리스크 대응 간담회를 열고, 인공지능 전환 확산에 따른 해킹과 보이스피싱 대응책을 논의할 예정이다. 12일에는...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 이억원 금융위원장은 10일 서울 중구 은행연합회에서 5대 금융지주 회장들과 함께 고성능 인",
-      "link": "https://www.tokenpost.kr/news/economy/366549",
-      "source": "naver",
-      "published": "2026-06-06T08:14:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-9669 - bz2.BZ2Decompressor reuse after error can cause a stack buffer overflow",
+      "summary": "CVE ID :CVE-2026-9669\n  \nPublished : June 8, 2026, 10:01 p.m. | 1 hour, 9 minutes ago\n  \nDescription :bz2.BZ2Decompressor objects could be reused after a decompression error. If an application caught the resulting OSError and retried with the same decompressor, crafted input could cause the decompressor to resume from an invalid internal state and perform out-of-bounds writes to a stack buffer. This could crash the process when processing untrusted data.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-9669 - 오류 후 bz2.BZ2Decompressor 재사용으로 인해 스택 버퍼 오버플로가 발생할 수 있음",
+      "summary_ko": "CVE ID:CVE-2026-9669\n  \n게시일 : 2026년 6월 8일 오후 10시 01분 | 1시간, 9분 전\n  \n설명 :bz2.BZ2Decompressor 개체는 압축 풀기 오류 후에 재사용될 수 있습니다. 애플리케이션이 결과 OSError를 포착하고 동일한 압축 해제기로 재시도하는 경우 조작된 입력으로 인해 압축 해제기가 잘못된 내부 상태에서 재개되고 스택 버퍼에 대한 범위를 벗어난 쓰기가 수행될 수 있습니다. 신뢰할 수 없는 데이터를 처리할 때 프로세스가 중단될 수 있습니다.\n  \n심각도: 8.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-9669\n2. 26.06.09 오전7:01\n3. bz2.BZ2Decompressor objects could be reused after ",
+      "cve_id": "CVE-2026-9669",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9669",
+      "source": "cvefeed",
+      "published": "2026-06-09T07:01:15+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-44541 - Fides: DOM-based XSS vulnerability in fides.js via fides_description override",
       "summary": "CVE ID :CVE-2026-44541\n  \nPublished : June 8, 2026, 9:16 p.m. | 41 minutes ago\n  \nDescription :Fides is an open-source privacy engineering platform. From version 2.33.0 to before version 2.84.5, there is a DOM-based XSS vulnerability in fides.js via the fides_description override. This issue has been patched in version 2.84.5.\n  \nSeverity: 7.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6438,34 +6452,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2025-12656",
       "source": "cvefeed",
       "published": "2026-06-06T09:16:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-7654 - Admin Columns <= 7.0.18 - Authenticated (Contributor+) PHP Object Injection to Remote Code Execution via Custom Field Meta Value",
-      "summary": "CVE ID :CVE-2026-7654\n  \nPublished : June 5, 2026, 11:16 p.m. | 37 minutes ago\n  \nDescription :The Admin Columns plugin for WordPress is vulnerable to PHP Object Injection leading to Remote Code Execution in versions up to and including 7.0.18. This is due to the use of `unserialize()` without an `allowed_classes` restriction in the `IdsToCollection::get_ids_from_string()` function, which processes attacker-controlled post meta values without proper validation. This makes it possible for authenticated attackers with Contributor-level access and above to inject a serialized PHP object into a post's custom meta field and trigger arbitrary code execution by exploiting a bundled POP gadget chain, resulting in remote code execution as the web server user.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-7654 - 관리 열 <= 7.0.18 - 사용자 정의 필드 메타 값을 통해 원격 코드 실행에 인증된(Contributor+) PHP 개체 주입",
-      "summary_ko": "CVE ID:CVE-2026-7654\n  \n게시일 : 2026년 6월 5일 오후 11시 16분 | 37분 전\n  \n설명:WordPress용 Admin Columns 플러그인은 7.0.18 이하 버전에서 원격 코드 실행으로 이어지는 PHP 개체 주입에 취약합니다. 이는 적절한 유효성 검사 없이 공격자가 제어하는 ​​게시물 메타 값을 처리하는 `IdsToCollection::get_ids_from_string()` 함수에서 `allowed_classes` 제한 없이 `unserialize()`를 사용하기 때문입니다. 이를 통해 기여자 수준 이상의 액세스 권한이 있는 인증된 공격자가 직렬화된 PHP 개체를 게시물의 사용자 정의 메타 필드에 삽입하고 번들 POP 가젯 체인을 활용하여 임의 코드 실행을 트리거하여 웹 서버 사용자로서 원격 코드를 실행할 수 있습니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-7654\n2. 26.06.06 오전8:16\n3. The Admin Columns plugin for WordPress is vulnerab",
-      "cve_id": "CVE-2026-7654",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-7654",
-      "source": "cvefeed",
-      "published": "2026-06-06T08:16:44+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-7523 - Alba Board <= 2.1.3 - Missing Authorization to Authenticated (Subscriber+) Sensitive Information Disclosure via 'card_id' Parameter",
-      "summary": "CVE ID :CVE-2026-7523\n  \nPublished : June 5, 2026, 11:16 p.m. | 37 minutes ago\n  \nDescription :The Alba Board plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.1.3. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to access arbitrary private alba_card post data, including title, description, assignee, due date, tags, and comments, that is intended to be restricted to Administrators and Editors. The handler is registered via the wp_ajax_nopriv_ hook and its nonce is exposed to all site visitors through wp_localize_script on pages containing the [alba_board] shortcode, making this exploitable by unauthenticated users who can access any such page.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-7523 - Alba Board <= 2.1.3 - 'card_id' 매개변수를 통한 인증된(구독자+) 민감한 정보 공개에 대한 권한 누락",
-      "summary_ko": "CVE ID:CVE-2026-7523\n  \n게시일 : 2026년 6월 5일 오후 11시 16분 | 37분 전\n  \n설명 : WordPress용 Alba Board 플러그인은 2.1.3까지의 모든 버전에서 인증 우회에 취약합니다. 이는 사용자가 작업을 수행할 권한이 있는지 플러그인이 제대로 확인하지 못하기 때문입니다. 이를 통해 구독자 수준 이상의 액세스 권한을 가진 인증된 공격자가 제목, 설명, 담당자, 마감일, 태그 및 댓글을 포함하여 관리자 및 편집자로 제한되는 임의의 비공개 alba_card 게시물 데이터에 액세스할 수 있습니다. 핸들러는 wp_ajax_nopriv_ 후크를 통해 등록되며 nonce는 [alba_board] 단축 코드가 포함된 페이지에서 wp_localize_script를 통해 모든 사이트 방문자에게 노출되므로 해당 페이지에 액세스할 수 있는 인증되지 않은 사용자가 이를 악용할 수 있습니다.\n  \n심각도: 4.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-7523\n2. 26.06.06 오전8:16\n3. The Alba Board plugin for WordPress is vulnerable ",
-      "cve_id": "CVE-2026-7523",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-7523",
-      "source": "cvefeed",
-      "published": "2026-06-06T08:16:44+09:00",
       "lang": "en"
     }
   ],
