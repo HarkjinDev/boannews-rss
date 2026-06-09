@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-09T19:07:17.437190+09:00",
+  "fetched_at": "2026-06-09T19:31:08.098390+09:00",
   "security_news": [
     {
       "title": "ICTK, 70억 규모 보안 SoC 과제 주관 기관 선정",
@@ -2408,17 +2408,6 @@
       "link": "https://www.econovill.com/news/articleView.html?idxno=741728",
       "source": "naver",
       "published": "2026-06-06T19:56:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "CU편의점 택배, 해킹으로 고객 개인정보 대규모 유출",
-      "summary": "운영사 BGF네트웍스...해킹으로 이름·주소·휴대전화 등 핵심 정보 노출 회사 “보안 재점검·관계기관 신고 완료...비밀번호 변경 등 2차 피해 주의” CU편의점 택배(CU POST)를 운영하는 BGF네트웍스에서 대규모 개인정보...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CU POST, BGF네트웍스 해킹으로 고객 정보 유출\n2. 이름, 주소, 휴대전화 등 핵심 정보 노출 확인\n3. 보안 점검 완료, 비밀번호 변경 등 2차 피해 주의",
-      "link": "https://www.m-economynews.com/news/article.html?no=67734",
-      "source": "naver",
-      "published": "2026-06-06T19:24:00+09:00",
       "lang": "ko"
     }
   ],
@@ -7490,34 +7479,6 @@
       "source": "cvefeed",
       "published": "2026-06-06T20:16:48+09:00",
       "lang": "nl"
-    },
-    {
-      "title": "CVE-2026-11406 - GL.iNet MT3000 OpenVPN Client Import Workflow ovpnclient.sh command injection",
-      "summary": "CVE ID :CVE-2026-11406\n  \nPublished : June 6, 2026, 10:16 a.m. | 20 minutes ago\n  \nDescription :A vulnerability was determined in GL.iNet MT3000 up to 4.4.5. This vulnerability affects unknown code of the file ovpnclient.sh of the component OpenVPN Client Import Workflow. This manipulation causes command injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. Upgrading to version 4.9.0_beta3-1012-0513-1778656146 is able to resolve this issue. You should upgrade the affected component. The vendor confirms: \"This issue has been addressed by implementing malicious checks on OpenVPN configuration files to prevent command injection attacks carried through malicious configuration files.\"\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-11406 - GL.iNet MT3000 OpenVPN 클라이언트 가져오기 워크플로 ovpnclient.sh 명령 삽입",
-      "summary_ko": "CVE ID:CVE-2026-11406\n  \n게시일 : 2026년 6월 6일 오전 10시 16분 | 20분 전\n  \n설명 :GL.iNet MT3000 4.4.5까지에서 취약점이 확인되었습니다. 이 취약점은 OpenVPN 클라이언트 가져오기 워크플로 구성 요소의 ovpnclient.sh 파일에 있는 알 수 없는 코드에 영향을 미칩니다. 이 조작으로 인해 명령 주입이 발생합니다. 공격의 원격 이용이 가능합니다. 해당 익스플로잇은 공개적으로 공개되었으며 활용될 수 있습니다. 버전 4.9.0_beta3-1012-0513-1778656146으로 업그레이드하면 이 문제를 해결할 수 있습니다. 영향을 받는 구성 요소를 업그레이드해야 합니다. 공급업체는 \"이 문제는 악성 구성 파일을 통해 수행되는 명령 주입 공격을 방지하기 위해 OpenVPN 구성 파일에 대한 악성 검사를 구현하여 해결되었습니다.\"라고 확인했습니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-11406\n2. 26.06.06 오후7:16\n3. A vulnerability was determined in GL.iNet MT3000 u",
-      "cve_id": "CVE-2026-11406",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11406",
-      "source": "cvefeed",
-      "published": "2026-06-06T19:16:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-10725 - Protocol::HTTP2 versions through 1.12 for Perl is vulnerable to a HTTP/2 Bomb",
-      "summary": "CVE ID :CVE-2026-10725\n  \nPublished : June 6, 2026, 10:16 a.m. | 20 minutes ago\n  \nDescription :Protocol::HTTP2 versions through 1.12 for Perl is vulnerable to a HTTP/2 Bomb.\n\nProtocol::HTTP2's inbound HPACK path has no header-list size limit, so a small HTTP/2 request can expand into large server memory (the \"HTTP/2 bomb\").\n\nThe headers_decode method materialises a full key+value copy per indexed reference with no running size check, and the stream_header_block_add method appends (since version 1.12) every CONTINUATION frame to the per-stream buffer unbounded.\n\nMAX_HEADER_LIST_SIZE (default 65536) is advertised in SETTINGS but never consulted on decode.  It is absent from the decoder and from the :limits export tag.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10725 - Perl용 프로토콜::HTTP2 버전 1.12부터 HTTP/2 폭탄에 취약함",
-      "summary_ko": "CVE ID:CVE-2026-10725\n  \n게시일 : 2026년 6월 6일 오전 10시 16분 | 20분 전\n  \n설명 :Protocol::Perl용 HTTP2 버전 1.12부터 HTTP/2 Bomb에 취약합니다.\n\nProtocol::HTTP2의 인바운드 HPACK 경로에는 헤더 목록 크기 제한이 없으므로 작은 HTTP/2 요청이 대규모 서버 메모리(\"HTTP/2 폭탄\")로 확장될 수 있습니다.\n\nheaders_decode 메서드는 실행 크기 확인 없이 인덱스 참조별로 전체 키+값 복사본을 구체화하며, stream_header_block_add 메서드는 (버전 1.12부터) 모든 CONTINUATION 프레임을 제한되지 않은 스트림별 버퍼에 추가합니다.\n\nMAX_HEADER_LIST_SIZE(기본값 65536)는 SETTINGS에 공지되지만 디코드에 대해서는 참조되지 않습니다.  디코더와 :limits 내보내기 태그에는 없습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10725\n2. 26.06.06 오후7:16\n3. Protocol::HTTP2 versions through 1.12 for Perl is ",
-      "cve_id": "CVE-2026-10725",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10725",
-      "source": "cvefeed",
-      "published": "2026-06-06T19:16:25+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
