@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-09T22:36:13.819406+09:00",
+  "fetched_at": "2026-06-09T23:01:35.865700+09:00",
   "security_news": [
     {
       "title": "월드코인(WLD) 대항마라더니...휴머니티(H), 3000만 달러 해킹",
@@ -2431,20 +2431,23 @@
       "source": "bleepingcomputer",
       "published": "2026-06-06T23:09:26+09:00",
       "lang": "en"
-    },
-    {
-      "title": "하이퍼리퀴드 거래량 기록·켈프 DAO 브리지 해킹 등 주간 프로젝트 동...",
-      "summary": "또 폴리마켓은 칼시의 산업 스파이 의혹을 제기했으며, 켈프 DAO 브리지 자금은 해킹으로 유출됐다고 밝혔다. 이번 주간 동향은 파생상품 거래 증가와 함께 보안 사고·프로젝트 운영 리스크가 동시에 부각된 사례다.",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 또 폴리마켓은 칼시의 산업 스파이 의혹을 제기했으며, 켈프 DAO 브리지 자금은 해킹으로 \n2. 이번 주간 동향은 파생상품 거래 증가와 함께 보안 사고·프로젝트 운영 리스크가 동시에 부각",
-      "link": "https://www.tokenpost.kr/news/breaking/366673",
-      "source": "naver",
-      "published": "2026-06-06T22:46:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-11792 - 389-ds-base: 389-ds-base: heap buffer overflow in audit log password masking (create_masked_entry_string)",
+      "summary": "CVE ID :CVE-2026-11792\n  \nPublished : June 9, 2026, 1:11 p.m. | 47 minutes ago\n  \nDescription :A heap buffer overflow flaw was found in 389 Directory Server. When audit logging is enabled, the create_masked_entry_string() function in auditlog.c copies a fixed-length password mask into a precisely-sized heap buffer without checking available space. If a short cleartext password is logged (requiring non-default CLEAR password storage or a compromised replication peer), the copy overflows the buffer, corrupting heap memory and audit log output.\n  \nSeverity: 3.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-11792 - 389-ds-base: 389-ds-base: 감사 로그 비밀번호 마스킹의 힙 버퍼 오버플로(create_masked_entry_string)",
+      "summary_ko": "CVE ID:CVE-2026-11792\n  \n게시일 : 2026년 6월 9일 오후 1시 11분 | 47분 전\n  \n설명:389 Directory Server에서 힙 버퍼 오버플로 결함이 발견되었습니다. 감사 로깅이 활성화되면 auditlog.c의 create_masked_entry_string() 함수는 사용 가능한 공간을 확인하지 않고 고정 길이 암호 마스크를 정확한 크기의 힙 버퍼에 복사합니다. 짧은 일반 텍스트 비밀번호가 기록되면(기본값이 아닌 CLEAR 비밀번호 저장소 또는 손상된 복제 피어 필요) 복사본이 버퍼를 오버플로하여 힙 메모리 및 감사 로그 출력을 손상시킵니다.\n  \n심각도: 3.3 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-11792\n2. 26.06.09 오후10:11\n3. A heap buffer overflow flaw was found in 389 Direc",
+      "cve_id": "CVE-2026-11792",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11792",
+      "source": "cvefeed",
+      "published": "2026-06-09T22:11:40+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-46324 - netfilter: nf_tables: use list_del_rcu for netlink hooks",
       "summary": "CVE ID :CVE-2026-46324\n  \nPublished : June 9, 2026, 12:11 p.m. | 1 hour, 3 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: use list_del_rcu for netlink hooks\n\nnft_netdev_unregister_hooks and __nft_unregister_flowtable_net_hooks need\nto use list_del_rcu(), this list can be walked by concurrent dumpers.\n\nAdd a new helper and use it consistently.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
