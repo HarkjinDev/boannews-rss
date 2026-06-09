@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-10T04:32:19.947513+09:00",
+  "fetched_at": "2026-06-10T05:02:22.945796+09:00",
   "security_news": [
     {
       "title": "피지컬AI 핵심기술 '월드모델' 국산화 추진",
@@ -2719,6 +2719,34 @@
       "link": "https://isc.sans.edu/diary/rss/33064",
       "source": "sans_isc",
       "published": "2026-06-10T02:34:29+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-0466 - AMD uProf Kernel-Shared Memory Write Vulnerability",
+      "summary": "CVE ID :CVE-2026-0466\n  \nPublished : June 9, 2026, 5:33 p.m. | 55 minutes ago\n  \nDescription :Improper access control in AMD uProf may allow a local attacker with user privileges to write to the kernel-shared memory section, potentially resulting in crash or denial of service.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-0466 - AMD uProf 커널 공유 메모리 쓰기 취약점",
+      "summary_ko": "CVE ID:CVE-2026-0466\n  \n게시일 : 2026년 6월 9일 오후 5시 33분 | 55분 전\n  \n설명: AMD uProf의 부적절한 액세스 제어로 인해 사용자 권한이 있는 로컬 공격자가 커널 공유 메모리 섹션에 쓸 수 있게 되어 잠재적으로 충돌이나 서비스 거부가 발생할 수 있습니다.\n  \n심각도: 6.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-0466\n2. 26.06.10 오전2:33\n3. Improper access control in AMD uProf may allow a l",
+      "cve_id": "CVE-2026-0466",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-0466",
+      "source": "cvefeed",
+      "published": "2026-06-10T02:33:58+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2025-54509 - AMD Secure Processor Improper Access Control",
+      "summary": "CVE ID :CVE-2025-54509\n  \nPublished : June 9, 2026, 5:22 p.m. | 1 hour, 6 minutes ago\n  \nDescription :Improper access control for register interface in the input-output memory management unit (IOMMU) could allow a privileged attacker to cause non-coherent accesses by the AMD secure processor (ASP) potentially resulting in loss of integrity.\n  \nSeverity: 4.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2025-54509 - AMD 보안 프로세서 부적절한 액세스 제어",
+      "summary_ko": "CVE ID:CVE-2025-54509\n  \n게시일 : 2026년 6월 9일 오후 5시 22분 | 1시간, 6분 전\n  \n설명: IOMMU(입출력 메모리 관리 장치)의 레지스터 인터페이스에 대한 부적절한 액세스 제어로 인해 권한 있는 공격자가 AMD 보안 프로세서(ASP)에 의한 일관성 없는 액세스를 유발하여 잠재적으로 무결성 손실을 초래할 수 있습니다.\n  \n심각도: 4.0 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2025-54509\n2. 26.06.10 오전2:22\n3. Improper access control for register interface in ",
+      "cve_id": "CVE-2025-54509",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2025-54509",
+      "source": "cvefeed",
+      "published": "2026-06-10T02:22:26+09:00",
       "lang": "en"
     },
     {
@@ -9481,34 +9509,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-11508",
       "source": "cvefeed",
       "published": "2026-06-08T20:00:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-11569 - Quay: quay: stored xss via filedrop svg upload",
-      "summary": "CVE ID :CVE-2026-11569\n  \nPublished : June 8, 2026, 10:54 a.m. | 1 hour, 3 minutes ago\n  \nDescription :A flaw was found in Quay. The filedrop endpoint accepts any mime type without validation, allowing an authenticated user with repository write access to upload a malicious SVG file containing JavaScript. The file is stored and served inline through the CDN, enabling stored cross-site scripting when a victim visits the archive URL.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-11569 - Quay: quay: filedrop svg 업로드를 통해 xss 저장",
-      "summary_ko": "CVE ID:CVE-2026-11569\n  \n게시일 : 2026년 6월 8일 오전 10시 54분 | 1시간, 3분 전\n  \n설명 :Quay에서 결함이 발견되었습니다. filedrop 엔드포인트는 검증 없이 모든 MIME 유형을 허용하므로 저장소 쓰기 권한이 있는 인증된 사용자가 JavaScript가 포함된 악성 SVG 파일을 업로드할 수 있습니다. 파일은 CDN을 통해 인라인으로 저장 및 제공되므로 피해자가 아카이브 URL을 방문할 때 저장된 교차 사이트 스크립팅이 가능합니다.\n  \n심각도: 5.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-11569\n2. 26.06.08 오후7:54\n3. A flaw was found in Quay. The filedrop endpoint ac",
-      "cve_id": "CVE-2026-11569",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11569",
-      "source": "cvefeed",
-      "published": "2026-06-08T19:54:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47430 - Cordova Plugin InAppBrowser: iOS: Arbitrary Cordova callback IDs can be dispatched without validation from InAppBrowser WebViews",
-      "summary": "CVE ID :CVE-2026-47430\n  \nPublished : June 8, 2026, 10:22 a.m. | 1 hour, 35 minutes ago\n  \nDescription :## Summary\n\nThe iOS implementation of `cordova-plugin-inappbrowser` passes the `id` field from a `WKScriptMessage` body to `commandDelegate sendPluginResult:callbackId:` with no format validation (`CDVWKInAppBrowser.m:560–574`). Any web content loaded inside the InAppBrowser can fire any pending Cordova callback in the host app by posting a message whose `id` field is a guessable or enumerated callback identifier. An attack abusing this weakness must be tailored to the specific plugins and callback IDs the host app uses. Though an attacker with knowledge of common Cordova plugin configurations could craft reusable payloads targeting widely-adopted plugins.\n\n\n## Impact\n\nAn unauthenticated remote attacker who controls content displayed in the InAppBrowser — via a URL the app opens (OAuth redirect, marketing link, deep-link target) or a network interception — can call `window.webkit.messageHandlers.cordova_iab.postMessage({id: '', d: '...'})` to fire callbacks belonging to any other installed Cordova plugin (Camera, Contacts, File, Geolocation). Cordova callback IDs follow the predictable format ``, making enumeration feasible. Successful exploitation allows the attacker to spoof plugin results across trust boundaries — for example, injecting a forged camera approval, a fabricated contacts list, or a crafted file-read response.\n\nThis issue affects Cordova Plugin InAppBrowser: from 3.1.0 through 6.0.0.\n\nUsers are recommended to upgrade to version 6.0.1, which fixes the issue.\n  \nSeverity: 9.5 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47430 - Cordova 플러그인 InAppBrowser: iOS: InAppBrowser WebViews에서 확인 없이 임의의 Cordova 콜백 ID를 디스패치할 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-47430\n  \n게시일 : 2026년 6월 8일 오전 10시 22분 | 1시간 35분 전\n  \n설명 :## 요약\n\n`cordova-plugin-inappbrowser`의 iOS 구현은 `WKScriptMessage` 본문의 `id` 필드를 형식 유효성 검사 없이 `commandDelegate sendPluginResult:callbackId:`로 전달합니다(`CDVWKInAppBrowser.m:560–574`). InAppBrowser 내부에 로드된 모든 웹 콘텐츠는 'id' 필드가 추측 가능하거나 열거된 콜백 식별자인 메시지를 게시하여 호스트 앱에서 보류 중인 Cordova 콜백을 실행할 수 있습니다. 이 약점을 악용하는 공격은 호스트 앱이 사용하는 특정 플러그인 및 콜백 ID에 맞게 조정되어야 합니다. 일반적인 Cordova 플러그인 구성에 대한 지식을 갖춘 공격자는 널리 채택되는 플러그인을 대상으로 재사용 가능한 페이로드를 제작할 수 있습니다.\n\n\n## 영향\n\nInAppBrowser에 표시되는 콘텐츠를 제어하는 인증되지 않은 원격 공격자는 앱이 여는 URL(OAuth 리디렉션, 마케팅 링크, 딥 링크 대상) 또는 네트워크 가로채기를 통해 `window.webkit.messageHandlers.cordova_iab.postMessage({id: '', d: '...'})`를 호출하여 설치된 다른 Cordova 플러그인(카메라, 연락처, 파일, 지리적 위치)에 속하는 콜백을 실행할 수 있습니다. Cordova 콜백 ID는 예측 가능한 형식을 따르므로 열거가 가능합니다. 악용에 성공하면 공격자는 신뢰 경계를 넘어 플러그인 결과를 스푸핑할 수 있습니다. 예를 들어 위조된 카메라 승인, 조작된 연락처 목록 또는 조작된 파일 읽기 응답을 삽입할 수 있습니다.\n\n이 문제는 Cordova 플러그인 InAppBrowser(3.1.0부터 6.0.0까지)에 영향을 미칩니다.\n\n사용자는 문제를 해결하는 버전 6.0.1로 업그레이드하는 것이 좋습니다.\n  \n심각도: 9.5 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47430\n2. 26.06.08 오후7:22\n3. ## Summary The iOS implementation of `cordova-plug",
-      "cve_id": "CVE-2026-47430",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47430",
-      "source": "cvefeed",
-      "published": "2026-06-08T19:22:25+09:00",
       "lang": "en"
     }
   ],
