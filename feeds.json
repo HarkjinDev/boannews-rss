@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-10T19:03:48.333171+09:00",
+  "fetched_at": "2026-06-10T19:32:38.642609+09:00",
   "security_news": [
     {
       "title": "이억원 \"AI 공격은 AI로 방어\"…금융권 AI 보안 빗장 푼다",
@@ -3776,6 +3776,62 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-3018 - Newsletters <= 4.13 - Unauthenticated SQL Injection via wpmlsubscriber_id Parameter",
+      "summary": "CVE ID :CVE-2026-3018\n  \nPublished : June 10, 2026, 10:16 a.m. | 14 minutes ago\n  \nDescription :The Newsletters plugin for WordPress is vulnerable to time-based SQL Injection via the ‘wpmlsubscriber_id’ parameter in all versions up to, and including, 4.13 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-3018 - 뉴스레터 <= 4.13 - wpmlsubscriber_id 매개변수를 통한 인증되지 않은 SQL 주입",
+      "summary_ko": "CVE ID:CVE-2026-3018\n  \n게시일 : 2026년 6월 10일 오전 10시 16분 | 14분 전\n  \n설명: WordPress용 뉴스레터 플러그인은 사용자 제공 매개변수에 대한 이스케이프가 충분하지 않고 기존 SQL 쿼리에 대한 충분한 준비가 부족하여 4.13을 포함한 모든 버전에서 'wpmlsubscriber_id' 매개변수를 통한 시간 기반 SQL 주입에 취약합니다.  이를 통해 인증되지 않은 공격자가 데이터베이스에서 중요한 정보를 추출하는 데 사용할 수 있는 기존 쿼리에 추가 SQL 쿼리를 추가할 수 있습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-3018\n2. 26.06.10 오후7:16\n3. The Newsletters plugin for WordPress is vulnerable",
+      "cve_id": "CVE-2026-3018",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-3018",
+      "source": "cvefeed",
+      "published": "2026-06-10T19:16:31+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-11853 - Debusine Arbitrary File Overwrite via Path Traversal",
+      "summary": "CVE ID :CVE-2026-11853\n  \nPublished : June 10, 2026, 10:16 a.m. | 14 minutes ago\n  \nDescription :Debusine is an integrated solution to build, distribute and maintain a Debian-based distribution. Debian source packages (.dsc) and upload artifacts (.changes) are manifest files that name the files that make up the artifact. The parser used to read these files in Debusine accepted arbitrary fully user-controlled paths. The mergeuploads task could be abused to create arbitrary symbolic links on a worker, overwriting any file that the worker user has access to.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-11853 - 경로 탐색을 통한 Debusine 임의 파일 덮어쓰기",
+      "summary_ko": "CVE ID:CVE-2026-11853\n  \n게시일 : 2026년 6월 10일 오전 10시 16분 | 14분 전\n  \n설명:Debusine은 데비안 기반 배포판을 구축, 배포 및 유지 관리하는 통합 솔루션입니다. Debian 소스 패키지(.dsc) 및 업로드 아티팩트(.changes)는 아티팩트를 구성하는 파일의 이름을 지정하는 매니페스트 파일입니다. Debusine에서 이러한 파일을 읽는 데 사용된 파서는 완전히 사용자가 제어하는 ​​임의의 경로를 허용했습니다. mergeuploads 작업은 작업자에 임의의 기호 링크를 생성하여 작업자 사용자가 액세스할 수 있는 모든 파일을 덮어쓰는 데 악용될 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-11853\n2. 26.06.10 오후7:16\n3. Debusine is an integrated solution to build, distr",
+      "cve_id": "CVE-2026-11853",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11853",
+      "source": "cvefeed",
+      "published": "2026-06-10T19:16:31+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-11852 - Debusine Artifact Relationship Management Insecure Access Control",
+      "summary": "CVE ID :CVE-2026-11852\n  \nPublished : June 10, 2026, 10:16 a.m. | 14 minutes ago\n  \nDescription :Debusine is an integrated solution to build, distribute and maintain a Debian-based distribution. Files managed by debusine are organized into artifacts. The endpoints that create and delete relationships between artifacts enforced no permissions checks beyond being able to see the artifacts in question.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-11852 - Debusine 아티팩트 관계 관리 안전하지 않은 액세스 제어",
+      "summary_ko": "CVE ID:CVE-2026-11852\n  \n게시일 : 2026년 6월 10일 오전 10시 16분 | 14분 전\n  \n설명:Debusine은 데비안 기반 배포판을 구축, 배포 및 유지 관리하는 통합 솔루션입니다. Debusine에서 관리하는 파일은 아티팩트로 구성됩니다. 아티팩트 간의 관계를 생성하고 삭제하는 엔드포인트는 문제의 아티팩트를 볼 수 있는 것 외에는 권한 검사가 적용되지 않습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-11852\n2. 26.06.10 오후7:16\n3. Debusine is an integrated solution to build, distr",
+      "cve_id": "CVE-2026-11852",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11852",
+      "source": "cvefeed",
+      "published": "2026-06-10T19:16:31+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2025-6254 - Doctreat Core <= 1.6.8 - Unauthenticated Privilege Escalation",
+      "summary": "CVE ID :CVE-2025-6254\n  \nPublished : June 10, 2026, 10:16 a.m. | 14 minutes ago\n  \nDescription :The Doctreat Core plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.6.8. This is due to the doctreat_process_registration() function not properly restricting the roles that a user can register with. This makes it possible for unauthenticated attackers to register as an administrator user.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2025-6254 - Doctreat Core <= 1.6.8 - 인증되지 않은 권한 상승",
+      "summary_ko": "CVE ID:CVE-2025-6254\n  \n게시일 : 2026년 6월 10일 오전 10시 16분 | 14분 전\n  \n설명 : WordPress용 Doctreat Core 플러그인은 1.6.8까지의 모든 버전에서 권한 상승에 취약합니다. 이는 doctreat_process_registration() 함수가 사용자가 등록할 수 있는 역할을 적절하게 제한하지 않기 때문입니다. 이를 통해 인증되지 않은 공격자가 관리자 사용자로 등록할 수 있습니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2025-6254\n2. 26.06.10 오후7:16\n3. The Doctreat Core plugin for WordPress is vulnerab",
+      "cve_id": "CVE-2025-6254",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2025-6254",
+      "source": "cvefeed",
+      "published": "2026-06-10T19:16:29+09:00",
+      "lang": "en"
+    },
     {
       "title": "How has use of framing protection security headers changed in the past 3 years?, (Wed, Jun 10th)",
       "summary": "Back in 2023, I wrote a diary[1] discussing how commonly X-Frame-Options and CSP headers containing the frame-ancestors directive were used on 1 million most popular domains on the internet (based on the Tranco list[2]), and how they were set. Given that three years have passed since then, I thought it might be interesting to repeat the analysis and see what â€“ if anything â€“ has changed in the meantime.\r",
@@ -10716,62 +10772,6 @@
       "cvss": "",
       "severity": "",
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-8883",
-      "source": "cvefeed",
-      "published": "2026-06-09T14:16:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-8882 - WP ApplicantStack Jobs Display <= 1.1.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode Attributes",
-      "summary": "CVE ID :CVE-2026-8882\n  \nPublished : June 9, 2026, 5:16 a.m. | 42 minutes ago\n  \nDescription :The WP ApplicantStack Jobs Display plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Shortcode Attributes in all versions up to, and including, 1.1.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-8882 - WP ApplicantStack 작업 표시 <= 1.1.1 - 단축 코드 속성을 통해 인증된(Contributor+) 저장된 교차 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-8882\n  \n게시일 : 2026년 6월 9일 오전 5시 16분 | 42분 전\n  \n설명:WordPress용 WP ApplicantStack 작업 표시 플러그인은 입력 삭제 및 출력 이스케이프 부족으로 인해 1.1.1까지의 모든 버전에서 단축 코드 속성을 통한 저장된 교차 사이트 스크립팅에 취약합니다. 이를 통해 기여자 수준 이상의 액세스 권한을 가진 인증된 공격자가 사용자가 삽입된 페이지에 액세스할 때마다 실행되는 임의의 웹 스크립트를 페이지에 삽입할 수 있습니다.\n  \n심각도: 6.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-8882\n2. 26.06.09 오후2:16\n3. The WP ApplicantStack Jobs Display plugin for Word",
-      "cve_id": "CVE-2026-8882",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8882",
-      "source": "cvefeed",
-      "published": "2026-06-09T14:16:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-8880 - RomanCart Ecommerce <= 2.0.8 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode Attributes",
-      "summary": "CVE ID :CVE-2026-8880\n  \nPublished : June 9, 2026, 5:16 a.m. | 42 minutes ago\n  \nDescription :The RomanCart Ecommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'blclass' attribute (and other attributes) of the romancart_button shortcode in versions up to, and including, 2.0.8. This is due to insufficient input sanitization and output escaping on user supplied attributes within the romancart_button_shortcode() function. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-8880 - RomanCart 전자상거래 <= 2.0.8 - 단축 코드 속성을 통해 인증된(기여자+) 저장된 교차 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-8880\n  \n게시일 : 2026년 6월 9일 오전 5시 16분 | 42분 전\n  \n설명 : WordPress용 RomanCart 전자상거래 플러그인은 2.0.8 이하 버전에서 romancart_button 단축 코드의 'blclass' 속성(및 기타 속성)을 통한 Stored Cross-Site Scripting에 취약합니다. 이는 romancart_button_shortcode() 함수 내에서 사용자가 제공한 속성에 대한 입력 삭제 및 출력 이스케이프가 충분하지 않기 때문입니다. 이를 통해 기여자 수준 이상의 액세스 권한을 가진 인증된 공격자가 사용자가 삽입된 페이지에 액세스할 때마다 실행되는 임의의 웹 스크립트를 페이지에 삽입할 수 있습니다.\n  \n심각도: 6.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-8880\n2. 26.06.09 오후2:16\n3. The RomanCart Ecommerce plugin for WordPress is vu",
-      "cve_id": "CVE-2026-8880",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8880",
-      "source": "cvefeed",
-      "published": "2026-06-09T14:16:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-8841 - Extra Settings for RocketChat <= 0.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode Attributes",
-      "summary": "CVE ID :CVE-2026-8841\n  \nPublished : June 9, 2026, 5:16 a.m. | 42 minutes ago\n  \nDescription :The Extra Settings for RocketChat plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'rocketchat' shortcode's 'title' attribute in versions up to, and including, 0.1. This is due to insufficient input sanitization and output escaping in the rxstg_shortcode() function, which concatenates the user-supplied 'title' attribute directly into HTML output. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-8841 - RocketChat <= 0.1에 대한 추가 설정 - 단축 코드 속성을 통해 인증된(Contributor+) 저장된 교차 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-8841\n  \n게시일 : 2026년 6월 9일 오전 5시 16분 | 42분 전\n  \n설명 : WordPress용 RocketChat 플러그인의 추가 설정은 0.1 이하 버전에서 'rocketchat' 단축 코드의 '제목' 속성을 통한 저장된 교차 사이트 스크립팅에 취약합니다. 이는 사용자가 제공한 '제목' 속성을 HTML 출력에 직접 연결하는 rxstg_shortcode() 함수의 입력 삭제 및 출력 이스케이프가 충분하지 않기 때문입니다. 이를 통해 기여자 수준 이상의 액세스 권한을 가진 인증된 공격자가 사용자가 삽입된 페이지에 액세스할 때마다 실행되는 임의의 웹 스크립트를 페이지에 삽입할 수 있습니다.\n  \n심각도: 6.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-8841\n2. 26.06.09 오후2:16\n3. The Extra Settings for RocketChat plugin for WordP",
-      "cve_id": "CVE-2026-8841",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8841",
-      "source": "cvefeed",
-      "published": "2026-06-09T14:16:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-8499 - Helpfulcrowd Product Reviews <= 1.2.9 - Inccorect Authorization via Type Juggling in 'token' Parameter to Arbitrary Settings Update",
-      "summary": "CVE ID :CVE-2026-8499\n  \nPublished : June 9, 2026, 5:16 a.m. | 42 minutes ago\n  \nDescription :The Helpfulcrowd Product Reviews plugin for WordPress is vulnerable to Authorization Bypass via PHP Type Juggling in versions up to, and including, 1.2.9. This is due to the `helpfulcrowd_validate_token()` function using a loose comparison operator (`!=`) instead of a strict comparison (`!==`) when validating the `token` parameter, while the corresponding REST route `/wp-json/helpfulcrowd/v1/update-settings` is registered with a `permission_callback` of `__return_true`, making it reachable by unauthenticated users; submitting a JSON boolean `true` as the `token` value causes PHP's loose comparison to evaluate as equal to the non-empty base64-encoded secret string, bypassing the check entirely. This makes it possible for unauthenticated attackers to invoke `helpfulcrowd_settings_endpoint()` and write arbitrary attacker-controlled key-value pairs directly into the `helpfulcrowd_options` WordPress database option via `update_option()` without any sanitization or allowlist filtering, enabling full unauthenticated modification of the plugin's stored configuration.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-8499 - Helpfulcrowd 제품 리뷰 <= 1.2.9 - 임의 설정 업데이트에 대한 'token' 매개변수의 유형 저글링을 통한 잘못된 인증",
-      "summary_ko": "CVE ID:CVE-2026-8499\n  \n게시일 : 2026년 6월 9일 오전 5시 16분 | 42분 전\n  \n설명 : WordPress용 Helpfulcrowd 제품 리뷰 플러그인은 1.2.9 이하 버전에서 PHP Type Juggling을 통한 Authorization Bypass에 취약합니다. 이는 `token` 매개변수의 유효성을 검사할 때 엄격한 비교(`!==`) 대신 느슨한 비교 연산자(`!=`)를 사용하는 `helpfulcrowd_validate_token()` 함수에 기인합니다. 반면 해당 REST 경로 `/wp-json/helpfulcrowd/v1/update-settings`는 `__return_true`의 `permission_callback`으로 등록되어 인증되지 않은 사용자가 접근할 수 있게 됩니다. JSON 부울 'true'를 'token' 값으로 제출하면 PHP의 느슨한 비교가 비어 있지 않은 base64로 인코딩된 비밀 문자열과 동일한 것으로 평가되어 검사를 완전히 우회합니다. 이를 통해 인증되지 않은 공격자가 `helpfulcrowd_settings_endpoint()`를 호출하고 `update_option()`을 통해 임의의 공격자가 제어하는 ​​키-값 쌍을 `helpfulcrowd_options` WordPress 데이터베이스 옵션에 직접 작성할 수 있으며, 삭제 또는 허용 목록 필터링 없이 플러그인의 저장된 구성을 인증되지 않은 상태로 완전히 수정할 수 있습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-8499\n2. 26.06.09 오후2:16\n3. The Helpfulcrowd Product Reviews plugin for WordPr",
-      "cve_id": "CVE-2026-8499",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8499",
       "source": "cvefeed",
       "published": "2026-06-09T14:16:39+09:00",
       "lang": "en"
