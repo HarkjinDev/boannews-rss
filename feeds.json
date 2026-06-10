@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-11T01:37:09.179012+09:00",
+  "fetched_at": "2026-06-11T02:06:20.198731+09:00",
   "security_news": [
     {
       "title": "Ivanti, Fortinet, and SAP Release Patches for Multiple Critical Vulnerabilities",
@@ -4576,6 +4576,20 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-20846 GDI+ Denial of Service Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": "CVE-2026-20846 GDI+ 서비스 거부 취약점",
+      "summary_ko": "승인을 업데이트했습니다. 이는 정보 제공용 변경일 뿐입니다.",
+      "summary_3lines": "1. CVE-2026-20846\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-20846",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20846",
+      "source": "msrc",
+      "published": "2026-06-10T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-24067 - Slate Digital Connect macOS XPC PID validation privilege escalation",
       "summary": "CVE ID :CVE-2026-24067\n  \nPublished : June 10, 2026, 12:16 p.m. | 17 minutes ago\n  \nDescription :Slate Digital Connect 1.37.0 for macOS installs a privileged helper tool, com.slatedigital.connect.privileged.helper.tool, which exposes the XPC service com.slatedigital.connect.privileged.helper.tool2. The helper validates connecting XPC clients by obtaining the client's process identifier and using it to retrieve code-signing information for the process. This PID-based client validation is subject to a time-of-check time-of-use race condition because process identifiers can be reused. A local attacker can exploit PID reuse so that validation is performed against a trusted process instead of the original connecting process. This allows unauthorized access to privileged helper functionality and may lead to local privilege escalation.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "title_ko": "CVE-2026-24067 - Slate Digital Connect macOS XPC PID 검증 권한 에스컬레이션",
@@ -4657,6 +4671,20 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2025-6254",
       "source": "cvefeed",
       "published": "2026-06-10T19:16:29+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-49975 Apache HTTP Server: mod_http2 denial of service",
+      "summary": "Information published.",
+      "title_ko": "CVE-2026-49975 Apache HTTP 서버: mod_http2 서비스 거부",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-49975\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-49975",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49975",
+      "source": "msrc",
+      "published": "2026-06-10T17:42:51+09:00",
       "lang": "en"
     },
     {
@@ -10845,34 +10873,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42499",
       "source": "msrc",
       "published": "2026-06-09T17:42:47+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-39836 Panic in Dial and LookupPort when handling NUL byte on Windows in net",
-      "summary": "Information published.",
-      "title_ko": "CVE-2026-39836 Net에서 Windows의 NUL 바이트를 처리할 때 Dial 및 LookupPort에서 패닉이 발생함",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-39836\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-39836",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39836",
-      "source": "msrc",
-      "published": "2026-06-09T17:42:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-39820 Quadratic string concatentation in consumeComment in net/mail",
-      "summary": "Information published.",
-      "title_ko": "CVE-2026-39820 net/mail의 ConsumerComment에서 2차 문자열 연결",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-39820\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-39820",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39820",
-      "source": "msrc",
-      "published": "2026-06-09T17:42:19+09:00",
       "lang": "en"
     }
   ],
