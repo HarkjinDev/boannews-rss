@@ -1,6 +1,17 @@
 {
-  "fetched_at": "2026-06-11T04:12:19.062704+09:00",
+  "fetched_at": "2026-06-11T04:41:12.758555+09:00",
   "security_news": [
+    {
+      "title": "20만건 유출… 초등교사 대부분 털렸다",
+      "summary": "초등학교 교사의 90% 이상이 이용하는 에듀테크 기업 '아이스크림미디어'에서 유출된 개인정보 규모가 20만건에 달하는 것으로 확인됐다. 아이스크림미디어의 핵심서비스를 이용하는 교사가 약 20만명으로 추산되는 점을...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 아이스크림미디어 개인정보 20만건 유출 확인\n2. 초등교사 90% 이상 이용 기업 대상\n3. 교사 개인정보 대규모 유출 우려",
+      "link": "https://n.news.naver.com/mnews/article/008/0005370193?sid=102",
+      "source": "naver",
+      "published": "2026-06-11T04:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Ivanti, Fortinet, and SAP Release Patches for Multiple Critical Vulnerabilities",
       "summary": "Fortinet, Ivanti, and SAP have released security updates to address multiple critical security vulnerabilities that could result in arbitrary code execution and information disclosure.\n\nThe security flaw patched by Fortinet relates to a command injection vulnerability in FortiSandbox, FortiSandbox Cloud, and FortiSandbox PaaS WEB UI. It's tracked as CVE-2026-25089 (CVSS score: 9.1).\n\n\"An",
@@ -3875,6 +3886,34 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-11626 - Local Privilege Escalation in Symantec Endpoint Protection macOS CleanWipe Removal Tool",
+      "summary": "CVE ID :CVE-2026-11626\n  \nPublished : June 10, 2026, 6:47 p.m. | 32 minutes ago\n  \nDescription :CleanWipe Removal Tool (macOS), prior to 16.0.0.65, may be susceptible to an Local Privilege Escalation vulnerability, which is a type of issue whereby an attacker with limited privilege access on an affected system can escalate their privileges to gain administrative control.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-11626 - Symantec Endpoint Protection macOS CleanWipe 제거 도구의 로컬 권한 상승",
+      "summary_ko": "CVE ID:CVE-2026-11626\n  \n게시일 : 2026년 6월 10일 오후 6시 47분 | 32분 전\n  \n설명: 16.0.0.65 이전의 CleanWipe 제거 도구(macOS)는 로컬 권한 에스컬레이션 취약점에 취약할 수 있습니다. 이는 영향을 받는 시스템에 대해 제한된 권한 액세스를 가진 공격자가 자신의 권한을 에스컬레이션하여 관리 제어권을 얻을 수 있는 문제 유형입니다.\n  \n심각도: 5.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-11626\n2. 26.06.11 오전3:47\n3. CleanWipe Removal Tool (macOS), prior to 16.0.0.65",
+      "cve_id": "CVE-2026-11626",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11626",
+      "source": "cvefeed",
+      "published": "2026-06-11T03:47:21+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-50639 - Metrics::Any::Adapter::SignalFx versions before 0.04 for Perl does not protect against metric injections",
+      "summary": "CVE ID :CVE-2026-50639\n  \nPublished : June 10, 2026, 6:32 p.m. | 47 minutes ago\n  \nDescription :Metrics::Any::Adapter::SignalFx versions before 0.04 for Perl does not protect against metric injections.\n\nThe statsd protocol (and extensions such as dogstatsd) allow mutiple metrics,separated by newlines, to be sent per packet.\n\nMetrics::Any::Adapter::SignalFx which extends Metrics::Any::Adapter::Statsd, which has a similar vulnerability.\n\nIn addition, the _labels function does not check tags labels newlines or statsd control characters. The labels can be used for metric injections.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-50639 - Perl에 대한 0.04 이전의 Metrics::Any::Adapter::SignalFx 버전은 메트릭 삽입을 방지하지 못합니다.",
+      "summary_ko": "CVE ID:CVE-2026-50639\n  \n게시일 : 2026년 6월 10일 오후 6시 32분 | 47분 전\n  \n설명 :Metrics::Any::Adapter::SignalFx Perl용 0.04 이전 버전은 메트릭 주입을 방지하지 않습니다.\n\nstatsd 프로토콜(및 dogstatsd와 같은 확장)을 사용하면 개행 문자로 구분된 여러 측정항목을 패킷별로 전송할 수 있습니다.\n\nMetrics::Any::Adapter::SignalFx는 유사한 취약점을 가지고 있는 Metrics::Any::Adapter::Statsd를 확장합니다.\n\n또한 _labels 함수는 태그 레이블 개행 또는 statsd 제어 문자를 확인하지 않습니다. 레이블은 미터법 주입에 사용될 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-50639\n2. 26.06.11 오전3:32\n3. Metrics::Any::Adapter::SignalFx versions before 0.",
+      "cve_id": "CVE-2026-50639",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-50639",
+      "source": "cvefeed",
+      "published": "2026-06-11T03:32:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-9151 - Command Injection Vulnerability in OpenVPN on Multiple TP-Link Archer Routers",
       "summary": "CVE ID :CVE-2026-9151\n  \nPublished : June 10, 2026, 6:17 p.m. | 17 minutes ago\n  \nDescription :An OS\ncommand injection vulnerability exists in the VPN module of TP-Link Archer AX12\nv1, AX17 v1. AX18 v1, and AX1300 v1.6 routers. This vulnerability allows an\nadjacent, authenticated attacker to execute arbitrary commands on the device by\nimporting a specially crafted VPN client configuration file. The issue stems\nfrom improper filtering of special characters. \n\n\n\n\n\nSuccessful\nexploitation of this vulnerability may enable an attacker to gain full control\nof the affected device, potentially compromising configuration integrity,\nnetwork security, and service availability.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -10845,34 +10884,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-8365",
       "source": "cvefeed",
       "published": "2026-06-09T18:16:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-7542 - Slider Revolution <= 7.0.10 - Authenticated (Subscriber+) Sensitive Information Disclosure",
-      "summary": "CVE ID :CVE-2026-7542\n  \nPublished : June 9, 2026, 9:16 a.m. | 42 minutes ago\n  \nDescription :The Slider Revolution plugin for WordPress is vulnerable to Sensitive Information Disclosure in versions up to and including 7.0.10. This is due to three compounding design flaws: (1) the plugin leaks a valid backend AJAX nonce (revslider_actions) to all authenticated users including Subscribers via the admin_footer hook; (2) the wordpress.create.image_from_url action is explicitly allowlisted in the $user_allowed array, bypassing the administrator-only access control; (3) the create_wordpress_image_from_url() function accepts an attacker-controlled url parameter that is passed to import_media(), where path_or_url_exists() explicitly accepts local filesystem paths (file_exists() && is_readable()) with no restriction to remote HTTP/HTTPS URLs, and @copy() physically copies those files into the publicly accessible /wp-content/uploads/revslider/ai/ directory. The MIME type check trusts the attacker-supplied content_type parameter to derive the destination extension without verifying actual file content, and the source extension blacklist does not block many sensitive types (.sql, .log, .json, .bak, .xml, .csv, .conf, .yml, .yaml, .pem, .key, .crt, .txt, .db, etc.). This makes it possible for authenticated attackers with Subscriber-level access and above to read the contents of server files with non-blacklisted extensions by having them copied to a publicly accessible URL.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-7542 - 슬라이더 혁명 <= 7.0.10 - 인증된(구독자+) 민감한 정보 공개",
-      "summary_ko": "CVE ID:CVE-2026-7542\n  \n게시일 : 2026년 6월 9일 오전 9시 16분 | 42분 전\n  \n설명 : WordPress용 Slider Revolution 플러그인은 7.0.10 이하 버전에서 민감한 정보 공개에 취약합니다. 이는 세 가지 복합적인 설계 결함으로 인해 발생합니다. (1) 플러그인은 admin_footer 후크를 통해 구독자를 포함하여 인증된 모든 사용자에게 유효한 백엔드 AJAX nonce(revslider_actions)를 유출합니다. (2) wordpress.create.image_from_url 작업은 관리자 전용 액세스 제어를 우회하여 $user_allowed 배열에 명시적으로 허용 목록에 추가됩니다. (3) create_wordpress_image_from_url() 함수는 import_media()에 전달되는 공격자 제어 URL 매개변수를 허용합니다. 여기서 path_or_url_exists()는 원격 HTTP/HTTPS URL에 대한 제한 없이 로컬 파일 시스템 경로(file_exists() && is_reader())를 명시적으로 허용하고 @copy()는 해당 파일을 공개적으로 액세스 가능한 /wp-content/uploads/revslider/ai/ 디렉터리에 물리적으로 복사합니다. MIME 유형 검사는 공격자가 제공한 content_type 매개변수를 신뢰하여 실제 파일 콘텐츠를 확인하지 않고 대상 확장자를 파생시키며, 소스 확장자 블랙리스트는 많은 민감한 유형(.sql, .log, .json, .bak, .xml, .csv, .conf, .yml, .yaml, .pem, .key, .crt, .txt, .db 등)을 차단하지 않습니다. 이를 통해 구독자 수준 이상의 액세스 권한을 가진 인증된 공격자가 블랙리스트에 없는 확장명이 포함된 서버 파일의 내용을 공개적으로 액세스할 수 있는 URL에 복사하여 읽을 수 있습니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-7542\n2. 26.06.09 오후6:16\n3. The Slider Revolution plugin for WordPress is vuln",
-      "cve_id": "CVE-2026-7542",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-7542",
-      "source": "cvefeed",
-      "published": "2026-06-09T18:16:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-6899 - Improper Check for Certificate Revocation in S2OPC",
-      "summary": "CVE ID :CVE-2026-6899\n  \nPublished : June 9, 2026, 9:16 a.m. | 42 minutes ago\n  \nDescription :Check for certificate revocation only considers the first matching CRL and ignores other valid CRLs of the same CA in the CycloneCrypto cryptographic wrapper of S2OPC library. It might allow connection between an OPC UA client and server using a revoked certificate.\n  \nSeverity: 5.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-6899 - S2OPC에서 인증서 해지에 대한 부적절한 검사",
-      "summary_ko": "CVE ID:CVE-2026-6899\n  \n게시일 : 2026년 6월 9일 오전 9시 16분 | 42분 전\n  \n설명: 인증서 해지 확인은 일치하는 첫 번째 CRL만 고려하고 S2OPC 라이브러리의 CycloneCrypto 암호화 래퍼에 있는 동일한 CA의 다른 유효한 CRL을 무시합니다. 해지된 인증서를 사용하여 OPC UA 클라이언트와 서버 간의 연결을 허용할 수 있습니다.\n  \n심각도: 5.6 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-6899\n2. 26.06.09 오후6:16\n3. Check for certificate revocation only considers th",
-      "cve_id": "CVE-2026-6899",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6899",
-      "source": "cvefeed",
-      "published": "2026-06-09T18:16:30+09:00",
       "lang": "en"
     }
   ],
