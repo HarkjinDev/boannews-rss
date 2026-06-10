@@ -1,6 +1,17 @@
 {
-  "fetched_at": "2026-06-10T21:32:17.964455+09:00",
+  "fetched_at": "2026-06-10T22:03:39.987302+09:00",
   "security_news": [
+    {
+      "title": "\"AI 공격은 AI로 방어\" 금융권, 디지털 위협 대응체계 고도화 나선다",
+      "summary": "금융위원회와 5대 금융지주가 인공지능(AI) 대전환 시대를 맞아 해킹과 보이스피싱 등 신종 디지털 위협에... 시대 해킹·보이스피싱 대응 간담회'를 개최했다. 이번 간담회는 AI 기술 발전에 따라 등장한 새로운 보안...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 시대 디지털 금융 범죄 대응\n2. 금융위·5대 금융지주 신종 위협 논의\n3. 해킹·보이스피싱 근절 방안 모색",
+      "link": "https://www.newscammp.co.kr/news/articleView.html?idxno=6369",
+      "source": "naver",
+      "published": "2026-06-10T21:54:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "금융위, AI 대전환기 해킹·보이스피싱 등 당면위협에 적극 대응",
       "summary": "(KB·신한·하나·우리·농협)들과 'AX시대 해킹·보이스피싱 대응 간담회'를 개최했다. 이번 간담회는 AI 대전환... 아울러, 이억원 금융위원장은 AX 시대 해킹·보이스피싱 등 새로운 디지털 위협에 대응하기 위해 다음 세...",
@@ -3809,6 +3820,34 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-24067 - Slate Digital Connect macOS XPC PID validation privilege escalation",
+      "summary": "CVE ID :CVE-2026-24067\n  \nPublished : June 10, 2026, 12:16 p.m. | 17 minutes ago\n  \nDescription :Slate Digital Connect 1.37.0 for macOS installs a privileged helper tool, com.slatedigital.connect.privileged.helper.tool, which exposes the XPC service com.slatedigital.connect.privileged.helper.tool2. The helper validates connecting XPC clients by obtaining the client's process identifier and using it to retrieve code-signing information for the process. This PID-based client validation is subject to a time-of-check time-of-use race condition because process identifiers can be reused. A local attacker can exploit PID reuse so that validation is performed against a trusted process instead of the original connecting process. This allows unauthorized access to privileged helper functionality and may lead to local privilege escalation.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-24067 - Slate Digital Connect macOS XPC PID 검증 권한 에스컬레이션",
+      "summary_ko": "CVE ID:CVE-2026-24067\n  \n게시일 : 2026년 6월 10일 오후 12시 16분 | 17분 전\n  \n설명: macOS용 Slate Digital Connect 1.37.0은 XPC 서비스 com.slatedigital.connect.privileged.helper.tool2를 노출하는 권한 있는 도우미 도구인 com.slatedigital.connect.privileged.helper.tool을 설치합니다. 도우미는 클라이언트의 프로세스 식별자를 획득하고 이를 사용하여 프로세스에 대한 코드 서명 정보를 검색함으로써 XPC 클라이언트 연결의 유효성을 검사합니다. 이 PID 기반 클라이언트 검증에는 프로세스 식별자가 재사용될 수 있으므로 확인 시간 경쟁 조건이 적용됩니다. 로컬 공격자는 PID 재사용을 악용하여 원래 연결 프로세스 대신 신뢰할 수 있는 프로세스에 대해 유효성 검사를 수행할 수 있습니다. 이는 권한 있는 도우미 기능에 대한 무단 액세스를 허용하고 로컬 권한 상승으로 이어질 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-24067\n2. 26.06.10 오후9:16\n3. Slate Digital Connect 1.37.0 for macOS installs a ",
+      "cve_id": "CVE-2026-24067",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-24067",
+      "source": "cvefeed",
+      "published": "2026-06-10T21:16:25+09:00",
+      "lang": "it"
+    },
+    {
+      "title": "CVE-2026-11859 - HTML injection in the Canarytoken links email",
+      "summary": "CVE ID :CVE-2026-11859\n  \nPublished : June 10, 2026, 12:16 p.m. | 17 minutes ago\n  \nDescription :An HTML injection vulnerability in the \"fetch links\" email sent by Thinkst Applied Research Canarytokens, enabling Interface Manipulation, Cross-Site Scripting (XSS) in emails clients that render HTML emails.\n\n\nThis issue affects Canarytokens: from Docker tag sha-c0f3cf142 before sha-08c3f93d, from Git commit c0f3cf142 before 08c3f93d.\n  \nSeverity: 2.0 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-11859 - Canarytoken 링크 이메일에 HTML 삽입",
+      "summary_ko": "CVE ID:CVE-2026-11859\n  \n게시일 : 2026년 6월 10일 오후 12시 16분 | 17분 전\n  \n설명:Thinkst Applied Research Canarytokens가 보낸 \"링크 가져오기\" 이메일의 HTML 주입 취약점으로, HTML 이메일을 렌더링하는 이메일 클라이언트에서 인터페이스 조작, XSS(교차 사이트 스크립팅)를 활성화합니다.\n\n\n이 문제는 sha-08c3f93d 이전의 Docker 태그 sha-c0f3cf142, 08c3f93d 이전의 Git 커밋 c0f3cf142에서 Canarytoken에 영향을 미칩니다.\n  \n심각도: 2.0 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-11859\n2. 26.06.10 오후9:16\n3. An HTML injection vulnerability in the \"fetch link",
+      "cve_id": "CVE-2026-11859",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11859",
+      "source": "cvefeed",
+      "published": "2026-06-10T21:16:25+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-3018 - Newsletters <= 4.13 - Unauthenticated SQL Injection via wpmlsubscriber_id Parameter",
       "summary": "CVE ID :CVE-2026-3018\n  \nPublished : June 10, 2026, 10:16 a.m. | 14 minutes ago\n  \nDescription :The Newsletters plugin for WordPress is vulnerable to time-based SQL Injection via the ‘wpmlsubscriber_id’ parameter in all versions up to, and including, 4.13 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -10779,34 +10818,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-8902",
       "source": "cvefeed",
       "published": "2026-06-09T14:16:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-8895 - kk blog card <= 1.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode Attributes",
-      "summary": "CVE ID :CVE-2026-8895\n  \nPublished : June 9, 2026, 5:16 a.m. | 42 minutes ago\n  \nDescription :The kk blog card plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'blog-card' shortcode in all versions up to, and including, 1.3. This is due to insufficient input sanitization and output escaping on the shortcode's 'href' and 'type' attributes, which are concatenated directly into HTML attribute contexts in the shortcode callback registered in kk-blog-card-shortcode.php. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-8895 - kk 블로그 카드 <= 1.3 - 단축 코드 속성을 통해 인증된(기여자+) 저장된 교차 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-8895\n  \n게시일 : 2026년 6월 9일 오전 5시 16분 | 42분 전\n  \n설명 : WordPress용 kk 블로그 카드 플러그인은 1.3까지의 모든 버전에서 플러그인의 'blog-card' 단축 코드를 통한 Stored Cross-Site Scripting에 취약합니다. 이는 kk-blog-card-shortcode.php에 등록된 단축 코드 콜백의 HTML 속성 컨텍스트에 직접 연결되는 단축 코드의 'href' 및 'type' 속성에 대한 입력 삭제 및 출력 이스케이프가 충분하지 않기 때문입니다. 이를 통해 기여자 수준 이상의 액세스 권한을 가진 인증된 공격자가 사용자가 삽입된 페이지에 액세스할 때마다 실행되는 임의의 웹 스크립트를 페이지에 삽입할 수 있습니다.\n  \n심각도: 6.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-8895\n2. 26.06.09 오후2:16\n3. The kk blog card plugin for WordPress is vulnerabl",
-      "cve_id": "CVE-2026-8895",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8895",
-      "source": "cvefeed",
-      "published": "2026-06-09T14:16:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-8883 - Global Body Mass Index Calculator <= 1.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode Attributes",
-      "summary": "CVE ID :CVE-2026-8883\n  \nPublished : June 9, 2026, 5:16 a.m. | 42 minutes ago\n  \nDescription :The Global Body Mass Index Calculator plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'gbmicalc' shortcode in versions up to, and including, 1.2. This is due to insufficient input sanitization and output escaping on user-supplied shortcode attributes in the GBMI_Calc_Widget::widget() function. Shortcode attributes are extracted directly into local variables via @extract($args) and then echoed unescaped into an HTML style attribute (height/width) and HTML body context (title), allowing attribute-breakout payloads. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-8883 - 글로벌 체질량 지수 계산기 <= 1.2 - 단축 코드 속성을 통해 인증된(기여자+) 저장된 교차 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-8883\n  \n게시일 : 2026년 6월 9일 오전 5시 16분 | 42분 전\n  \n설명:WordPress용 글로벌 체질량 지수 계산기 플러그인은 1.2 이하 버전에서 'gbmicalc' 단축 코드를 통한 Stored Cross-Site Scripting에 취약합니다. 이는 GBMI_Calc_Widget::widget() 함수의 사용자 제공 단축 코드 속성에 대한 입력 삭제 및 출력 이스케이프가 충분하지 않기 때문입니다. 단축 코드 속성은 @extract($args)를 통해 로컬 변수로 직접 추출된 다음 HTML 스타일 속성(높이/너비) 및 HTML 본문 컨텍스트(제목)로 이스케이프되지 않은 상태로 에코되어 속성 구분 페이로드를 허용합니다. 이를 통해 기여자 수준 이상의 액세스 권한을 가진 인증된 공격자가 사용자가 삽입된 페이지에 액세스할 때마다 실행되는 임의의 웹 스크립트를 페이지에 삽입할 수 있습니다.\n  \n심각도: 6.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-8883\n2. 26.06.09 오후2:16\n3. The Global Body Mass Index Calculator plugin for W",
-      "cve_id": "CVE-2026-8883",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8883",
-      "source": "cvefeed",
-      "published": "2026-06-09T14:16:39+09:00",
       "lang": "en"
     }
   ],
