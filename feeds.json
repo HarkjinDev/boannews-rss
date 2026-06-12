@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-13T07:06:20.529498+09:00",
+  "fetched_at": "2026-06-13T07:35:54.238033+09:00",
   "security_news": [
     {
       "title": "노보, 임상시험 환자 정보 유출…\"이상 징후 경계해야\"",
@@ -5503,6 +5503,76 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54393 - MISP Overmind theme stored XSS via unvalidated homepage setting",
+      "summary": "CVE ID :CVE-2026-54393\n  \nPublished : June 12, 2026, 9:16 p.m. | 15 minutes ago\n  \nDescription :A stored cross-site scripting vulnerability exists in MISP when the Overmind theme is used. The setHomePage endpoint previously saved the user-controlled path value through setSettingInternal(), bypassing the normal setSetting() validation logic, including validate_homepage, which requires homepage paths to start with /. As a result, an authenticated user could store an arbitrary homepage value, including an XSS payload.\n\nThe stored value was later rendered in app/View/News/index.ctp as the href attribute of the “Continue to homepage” link without HTML escaping. This could allow execution of attacker-controlled JavaScript in the browser context of the affected MISP instance when the crafted homepage link is rendered and interacted with.\n\nThe issue is fixed by always persisting the homepage setting through setSetting(), ensuring validation and access checks are applied, and by HTML-escaping the homepage value before rendering it in the news view.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54393 - MISP Overmind 테마가 확인되지 않은 홈페이지 설정을 통해 XSS를 저장했습니다.",
+      "summary_ko": "CVE ID:CVE-2026-54393\n  \n게시일 : 2026년 6월 12일 오후 9시 16분 | 15분 전\n  \n설명: Overmind 테마를 사용할 때 MISP에 저장된 교차 사이트 스크립팅 취약점이 존재합니다. 이전에 setHomePage 엔드포인트는 /로 시작하는 홈페이지 경로가 필요한 verify_homepage를 포함하여 일반 setSetting() 유효성 검사 로직을 우회하여 setSettingInternal()을 통해 사용자 제어 경로 값을 저장했습니다. 결과적으로 인증된 사용자는 XSS 페이로드를 포함하여 임의의 홈페이지 값을 저장할 수 있습니다.\n\n저장된 값은 나중에 HTML 이스케이프 없이 \"홈페이지로 계속\" 링크의 href 속성으로 app/View/News/index.ctp에서 렌더링되었습니다. 이로 인해 제작된 홈페이지 링크가 렌더링되고 상호 작용할 때 영향을 받는 MISP 인스턴스의 브라우저 컨텍스트에서 공격자가 제어하는 ​​JavaScript가 실행될 수 있습니다.\n\n문제는 항상 setSetting()을 통해 홈페이지 설정을 유지하고 유효성 검사 및 액세스 확인이 적용되도록 하고 뉴스 보기에서 렌더링하기 전에 홈페이지 값을 HTML 이스케이프 처리하여 해결됩니다.\n  \n심각도: 5.1 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54393\n2. 26.06.13 오전6:16\n3. A stored cross-site scripting vulnerability exists",
+      "cve_id": "CVE-2026-54393",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54393",
+      "source": "cvefeed",
+      "published": "2026-06-13T06:16:25+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-54362 - MISP template builder exposes non-visible custom galaxies across organisations",
+      "summary": "CVE ID :CVE-2026-54362\n  \nPublished : June 12, 2026, 9:16 p.m. | 15 minutes ago\n  \nDescription :An incorrect visibility condition in the MISP event template builder allowed authenticated non-site-admin users to view galaxies that should not have been visible to their organisation. The custom access-control condition intended to restrict galaxies to those owned by the user’s organisation or distributed beyond it used a PHP comparison expression instead of a query condition. As a result, enabled galaxies, including organisation-only custom galaxies belonging to other organisations, could be exposed in the template builder galaxy list. This could disclose metadata about private galaxy definitions to unauthorised users.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54362 - MISP 템플릿 빌더는 조직 전반에 걸쳐 보이지 않는 맞춤형 갤럭시를 노출합니다.",
+      "summary_ko": "CVE ID:CVE-2026-54362\n  \n게시일 : 2026년 6월 12일 오후 9시 16분 | 15분 전\n  \n설명: MISP 이벤트 템플릿 빌더의 잘못된 가시성 조건으로 인해 사이트 관리자가 아닌 인증된 사용자가 해당 조직에 표시되어서는 안 되는 은하계를 볼 수 있었습니다. 은하계를 사용자 조직이 소유하거나 그 이상으로 분산된 은하계로 제한하기 위한 사용자 정의 액세스 제어 조건은 쿼리 조건 대신 PHP 비교 표현식을 사용했습니다. 결과적으로 다른 조직에 속한 조직 전용 사용자 정의 은하를 포함하여 활성화된 은하가 템플릿 작성기 은하 목록에 노출될 수 있습니다. 이로 인해 비공개 은하 정의에 대한 메타데이터가 승인되지 않은 사용자에게 공개될 수 있습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54362\n2. 26.06.13 오전6:16\n3. An incorrect visibility condition in the MISP even",
+      "cve_id": "CVE-2026-54362",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54362",
+      "source": "cvefeed",
+      "published": "2026-06-13T06:16:24+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-54057 - Kitty vulnerable to command injection via unsanitized OSC 21 query reply",
+      "summary": "CVE ID :CVE-2026-54057\n  \nPublished : June 12, 2026, 9:16 p.m. | 15 minutes ago\n  \nDescription :Kitty is a cross-platform GPU based terminal. In versions prior to 0.47.3, kitty's OSC 21 (color-control) query reply reflects attacker-controlled bytes, including newlines, into the shell's input without sanitization. Version 0.47.3 fixes the issue.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54057 - 정리되지 않은 OSC 21 쿼리 응답을 통한 명령 주입에 취약한 키티",
+      "summary_ko": "CVE ID:CVE-2026-54057\n  \n게시일 : 2026년 6월 12일 오후 9시 16분 | 15분 전\n  \n설명:Kitty는 크로스 플랫폼 GPU 기반 터미널입니다. 0.47.3 이전 버전에서 kitty의 OSC 21(색상 제어) 쿼리 응답은 새 줄을 포함하여 공격자가 제어하는 ​​바이트를 삭제 없이 셸의 입력에 반영합니다. 버전 0.47.3에서는 문제가 해결되었습니다.\n  \n심각도: 7.3 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54057\n2. 26.06.13 오전6:16\n3. Kitty is a cross-platform GPU based terminal. In v",
+      "cve_id": "CVE-2026-54057",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54057",
+      "source": "cvefeed",
+      "published": "2026-06-13T06:16:24+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-54056 - Kitty has an arbitrary file overwrite via symlink following in `kitten dnd` remote drop staging",
+      "summary": "CVE ID :CVE-2026-54056\n  \nPublished : June 12, 2026, 9:16 p.m. | 15 minutes ago\n  \nDescription :Kitty is a cross-platform GPU based terminal. In versions 0.47.0 and 0.47.1, `kitten dnd` can allow a malicious remote drag-and-drop source to overwrite or truncate arbitrary files writable by the local kitty user. Remote `text/uri-list` drops are staged in a temporary directory, but on case-sensitive filesystems duplicate remote basenames are not de-duplicated. An attacker can first create a staged symlink and then send a same-name regular-file entry. The regular-file write uses `utils.CreateAt()` / `openat(O_RDWR|O_CREAT|O_TRUNC)` without `O_NOFOLLOW`, so it follows the attacker-created symlink and writes outside the staging directory before final overwrite confirmation runs. This appears related in class to the file-transfer symlink advisory, but it is a different bug: it affects `kitten dnd` remote drag-and-drop staging, uses different vulnerable code (`kittens/dnd/drop.go` and `tools/utils/file_at_fd.go`), and reproduces on commit `4aa4a5c0567a92553a8c20a88a4352da637fca5d`, after the file-transfer `O_NOFOLLOW` fix. Version 0.47.2 patches the issue.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54056 - 키티는 `kitten dnd` 원격 드롭 스테이징에서 다음 심볼릭 링크를 통해 임의 파일 덮어쓰기를 수행합니다.",
+      "summary_ko": "CVE ID:CVE-2026-54056\n  \n게시일 : 2026년 6월 12일 오후 9시 16분 | 15분 전\n  \n설명:Kitty는 크로스 플랫폼 GPU 기반 터미널입니다. 버전 0.47.0 및 0.47.1에서는 `kitten dnd`를 사용하면 악의적인 원격 드래그 앤 드롭 소스가 로컬 키티 사용자가 쓸 수 있는 임의의 파일을 덮어쓰거나 자를 수 있습니다. 원격 `text/uri-list` 삭제는 임시 디렉토리에 준비되지만 대소문자를 구분하는 파일 시스템에서는 중복된 원격 기본 이름이 중복 제거되지 않습니다. 공격자는 먼저 단계적 심볼릭 링크를 만든 다음 동일한 이름의 일반 파일 항목을 보낼 수 있습니다. 일반 파일 쓰기는 `O_NOFOLLOW` 없이 `utils.CreateAt()` / `openat(O_RDWR|O_CREAT|O_TRUNC)`를 사용하므로 공격자가 만든 심볼릭 링크를 따르고 최종 덮어쓰기 확인이 실행되기 전에 준비 디렉터리 외부에 씁니다. 이는 파일 전송 심볼릭 링크 권고와 관련된 클래스로 보이지만 다른 버그입니다. `kitten dnd` 원격 드래그 앤 드롭 스테이징에 영향을 미치고, 다른 취약한 코드(`kittens/dnd/drop.go` 및 `tools/utils/file_at_fd.go`)를 사용하며, 커밋 시 재현됩니다. `4aa4a5c0567a92553a8c20a88a4352da637fca5d`, 파일 전송 `O_NOFOLLOW` 수정 후. 버전 0.47.2에서는 문제가 패치되었습니다.\n  \n심각도: 7.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54056\n2. 26.06.13 오전6:16\n3. Kitty is a cross-platform GPU based terminal. In v",
+      "cve_id": "CVE-2026-54056",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54056",
+      "source": "cvefeed",
+      "published": "2026-06-13T06:16:24+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-44786 - Discourse: Public chat MessageBus broadcasts are not restricted to chat-eligible users",
+      "summary": "CVE ID :CVE-2026-44786\n  \nPublished : June 12, 2026, 9:16 p.m. | 15 minutes ago\n  \nDescription :Discourse is an open-source discussion platform. From versions 2026.1.0-latest to before 2026.1.4, 2026.3.0-latest to before 2026.3.1, and 2026.4.0-latest to before 2026.4.1, chat events for public category channels are published to MessageBus without permission scoping, so any MessageBus subscriber without chat enabled could receive chat message payloads in real time. This issue has been patched in versions 2026.1.4, 2026.3.1, 2026.4.1, and 2026.5.0-latest.1.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-44786 - 담론: 공개 채팅 MessageBus 브로드캐스트는 채팅 자격이 있는 사용자에게만 제한되지 않습니다.",
+      "summary_ko": "CVE ID:CVE-2026-44786\n  \n게시일 : 2026년 6월 12일 오후 9시 16분 | 15분 전\n  \n설명:Discourse는 오픈 소스 토론 플랫폼입니다. 버전 2026.1.0 최신부터 2026.1.4 이전까지, 2026.3.0 최신부터 2026.3.1 이전까지, 2026.4.0 최신부터 2026.4.1 이전까지 공개 카테고리 채널의 채팅 이벤트는 권한 범위 지정 없이 MessageBus에 게시되므로 채팅이 활성화되지 않은 모든 MessageBus 구독자는 채팅 메시지 페이로드를 실시간으로 받을 수 있습니다. 이 문제는 버전 2026.1.4, 2026.3.1, 2026.4.1 및 2026.5.0-latest.1에서 패치되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-44786\n2. 26.06.13 오전6:16\n3. Discourse is an open-source discussion platform. F",
+      "cve_id": "CVE-2026-44786",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-44786",
+      "source": "cvefeed",
+      "published": "2026-06-13T06:16:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54397 - MISP event editing allows unauthorized assignment to undisclosed sharing groups",
       "summary": "CVE ID :CVE-2026-54397\n  \nPublished : June 12, 2026, 8:55 p.m. | 24 minutes ago\n  \nDescription :A vulnerability in MISP’s non-REST event editing path allowed an authenticated user with event edit permissions to manipulate the submitted form data and set an event’s sharing_group_id to a sharing group they were not authorized to use. When distribution was set to sharing group distribution, the non-REST save path accepted the submitted sharing_group_id without performing the same sharing group authorization check enforced by the REST edit path.\n\nAn attacker could exploit this by tampering with the event edit request and assigning an event to an undisclosed or unauthorized sharing group. This could result in unauthorized use of restricted sharing groups, disclosure of the sharing group name in event listings, and unintended modification of the event’s distribution metadata.\n\nThe issue is fixed by validating that the selected sharing group can be used by the current user when the sharing group is changed, and by clearing sharing_group_id when the event distribution is not set to sharing group distribution.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -12432,76 +12502,6 @@
       "source": "msrc",
       "published": "2026-06-10T17:04:46+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46314 drm/v3d: Reject empty multisync extension to prevent infinite loop",
-      "summary": "Information published.",
-      "title_ko": "CVE-2026-46314 drm/v3d: 무한 루프를 방지하기 위해 빈 다중 동기화 확장을 거부합니다.",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-46314\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-46314",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46314",
-      "source": "msrc",
-      "published": "2026-06-10T17:04:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46302 selinux: allow multiple opens of /sys/fs/selinux/policy",
-      "summary": "Information published.",
-      "title_ko": "CVE-2026-46302 selinux: /sys/fs/selinux/policy의 다중 열기 허용",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-46302\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-46302",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46302",
-      "source": "msrc",
-      "published": "2026-06-10T17:04:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46291 crypto: caam - guard HMAC key hex dumps in hash_digest_key",
-      "summary": "Information published.",
-      "title_ko": "CVE-2026-46291 crypto: caam - hash_digest_key의 HMAC 키 16진수 덤프를 보호합니다.",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-46291\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-46291",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46291",
-      "source": "msrc",
-      "published": "2026-06-10T17:04:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46301 spi: topcliff-pch: fix use-after-free on unbind",
-      "summary": "Information published.",
-      "title_ko": "CVE-2026-46301 spi: topcliff-pch: 바인딩 해제 시 use-after-free 수정",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-46301\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-46301",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46301",
-      "source": "msrc",
-      "published": "2026-06-10T17:04:24+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46312 media: videobuf2: Set vma_flags in vb2_dma_sg_mmap",
-      "summary": "Information published.",
-      "title_ko": "CVE-2026-46312 미디어: videobuf2: vb2_dma_sg_mmap에 vma_flags 설정",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-46312\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-46312",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46312",
-      "source": "msrc",
-      "published": "2026-06-10T17:04:19+09:00",
-      "lang": "sv"
     }
   ],
   "reputation": []
