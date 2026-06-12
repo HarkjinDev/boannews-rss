@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-13T01:06:22.775239+09:00",
+  "fetched_at": "2026-06-13T01:35:25.717125+09:00",
   "security_news": [
     {
       "title": "빗썸, 교묘해지는 사칭 피싱 예방 캠페인",
@@ -8248,6 +8248,34 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-11822 SQLite before 3.53.2 Memory Corruption in FTS5 Extension",
+      "summary": "Information published.",
+      "title_ko": "CVE-2026-11822 FTS5 확장의 3.53.2 이전 SQLite 메모리 손상",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-11822\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-11822",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11822",
+      "source": "msrc",
+      "published": "2026-06-11T17:01:31+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-11824 SQLite before 3.53.2 Heap Buffer Overflow via FTS5 fts5ChunkIterate",
+      "summary": "Information published.",
+      "title_ko": "CVE-2026-11824 3.53.2 이전의 SQLite FTS5 fts5ChunkIterate를 통한 힙 버퍼 오버플로",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-11824\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-11824",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11824",
+      "source": "msrc",
+      "published": "2026-06-11T17:01:25+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-53901 - Cerebrate before v1.37 allows mass assignment of record identifiers during object creation",
       "summary": "CVE ID :CVE-2026-53901\n  \nPublished : June 11, 2026, 7:31 a.m. | 1 hour, 47 minutes ago\n  \nDescription :Cerebrate before version 1.37 contains a mass-assignment vulnerability in the generic CRUD add path. The add() handler attempted to remove an attacker-supplied id from $params before normalizing the request through __massageInput(). Because the normalized $input could still contain an id field, a user able to reach an affected add endpoint could supply an identifier that should have been server-controlled.\n\n\nSuccessful exploitation could allow creation of objects with attacker-chosen identifiers, potentially causing unauthorized data manipulation, object spoofing, inconsistent references, or disruption through identifier collisions, depending on the affected model and endpoint permissions. The issue was fixed in v1.37 by removing id from the normalized input before entity patching.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "title_ko": "CVE-2026-53901 - v1.37 이전의 Cerebrate에서는 개체 생성 중에 레코드 식별자의 대량 할당이 허용됩니다.",
@@ -12473,34 +12501,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48292",
       "source": "cvefeed",
       "published": "2026-06-10T06:17:25+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47960 - ColdFusion | Improper Restriction of XML External Entity Reference ('XXE') (CWE-611)",
-      "summary": "CVE ID :CVE-2026-47960\n  \nPublished : June 9, 2026, 9:17 p.m. | 1 hour, 13 minutes ago\n  \nDescription :ColdFusion versions 2023.19, 2025.8 and earlier are affected by an Improper Restriction of XML External Entity Reference ('XXE') vulnerability that could lead to arbitrary file system read. An attacker could exploit this vulnerability to access sensitive files and directories outside the intended access scope. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47960 - ColdFusion | XML 외부 엔터티 참조('XXE')의 부적절한 제한(CWE-611)",
-      "summary_ko": "CVE ID:CVE-2026-47960\n  \n게시일 : 2026년 6월 9일 오후 9시 17분 | 1시간, 13분 전\n  \n설명: ColdFusion 버전 2023.19, 2025.8 및 이전 버전은 임의 파일 시스템 읽기로 이어질 수 있는 XML 외부 엔터티 참조('XXE')의 부적절한 제한 취약점의 영향을 받습니다. 공격자는 이 취약점을 악용하여 의도된 액세스 범위 밖의 중요한 파일 및 디렉터리에 액세스할 수 있습니다. 이 문제를 악용하려면 피해자가 악성 파일을 열어야 한다는 점에서 사용자 상호 작용이 필요합니다. 범위가 변경되었습니다.\n  \n심각도: 7.4 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47960\n2. 26.06.10 오전6:17\n3. ColdFusion versions 2023.19, 2025.8 and earlier ar",
-      "cve_id": "CVE-2026-47960",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47960",
-      "source": "cvefeed",
-      "published": "2026-06-10T06:17:24+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-6445 - FlashArray Purity Information Disclosure",
-      "summary": "CVE ID :CVE-2026-6445\n  \nPublished : June 9, 2026, 8:17 p.m. | 13 minutes ago\n  \nDescription :A flaw exists in FlashArray Purity where insufficient filtering of certain data paths could expose sensitive information to an authenticated user with low privileges.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-6445 - FlashArray 순수성 정보 공개",
-      "summary_ko": "CVE ID:CVE-2026-6445\n  \n게시일 : 2026년 6월 9일 오후 8시 17분 | 13분 전\n  \n설명:FlashArray Purity에는 특정 데이터 경로를 충분히 필터링하지 않으면 낮은 권한을 가진 인증된 사용자에게 민감한 정보가 노출될 수 있는 결함이 있습니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-6445\n2. 26.06.10 오전5:17\n3. A flaw exists in FlashArray Purity where insuffici",
-      "cve_id": "CVE-2026-6445",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6445",
-      "source": "cvefeed",
-      "published": "2026-06-10T05:17:02+09:00",
       "lang": "en"
     }
   ],
