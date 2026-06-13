@@ -1,6 +1,17 @@
 {
-  "fetched_at": "2026-06-13T22:02:06.147252+09:00",
+  "fetched_at": "2026-06-13T22:32:11.458481+09:00",
   "security_news": [
+    {
+      "title": "[ET시선] 공공시스템 대전환, 도전 기반이 성패 가른다",
+      "summary": "당장 클라우드 전환 등 전례 없는 변화 이후 발생할지 모르는 해킹, 데이터 유출, 시스템 장애 같은 치명적인 사고의 책임 화살이 온전히 자신에게 돌아오지 않을까 깊이 우려한다. 그리고 이 같은 불안감은 필연적으로...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 클라우드 전환 후 발생할 사고 책임 우려\n2. 해킹, 데이터 유출, 시스템 장애 위험\n3. 이로 인한 불안감 증대",
+      "link": "https://n.news.naver.com/mnews/article/030/0003437271?sid=105",
+      "source": "naver",
+      "published": "2026-06-13T22:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "韓서 클로드 못 쓰나? 美, 클로드 최고 모델 수출 금지",
       "summary": "핵심 보안 파트너들에게 제한적으로 제공되던 모델이다. 앤트로픽은 사회관계망서비스 엑스(X·옛 트위터)... 사이버보안 기업 루타 시큐리티의 케이티 무수리스 CEO 역시 “해당 취약점 정보는 공격자보다 방어자에게 더...",
@@ -4447,6 +4458,20 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-5513 - Online Scheduling and Appointment Booking System – Bookly <= 27.2 - Unauthenticated Stored Cross-Site Scripting via 'bookly-customer-full-name' Cookie",
+      "summary": "CVE ID :CVE-2026-5513\n  \nPublished : June 13, 2026, 12:16 p.m. | 1 hour, 6 minutes ago\n  \nDescription :The Online Scheduling and Appointment Booking System – Bookly plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'bookly-customer-full-name' cookie in versions up to, and including, 27.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires 'Remember personal information in cookies' setting to be enabled (disabled by default).\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-5513 - 온라인 일정 및 약속 예약 시스템 - Bookly <= 27.2 - 'bookly-customer-full-name' 쿠키를 통한 인증되지 않은 저장된 교차 사이트 스크립팅",
+      "summary_ko": "CVE ID:CVE-2026-5513\n  \n게시일 : 2026년 6월 13일 오후 12시 16분 | 1시간, 6분 전\n  \n설명: 온라인 일정 및 약속 예약 시스템 – WordPress용 Bookly 플러그인은 입력 삭제 및 출력 이스케이프 부족으로 인해 27.2 이하 버전에서 'bookly-customer-full-name' 쿠키를 통한 저장된 교차 사이트 스크립팅에 취약합니다. 이로 인해 인증되지 않은 공격자가 사용자가 삽입된 페이지에 액세스할 때마다 실행되는 임의의 웹 스크립트를 페이지에 삽입할 수 있습니다. 악용하려면 '쿠키에 개인 정보 기억' 설정이 활성화되어 있어야 합니다(기본적으로 비활성화되어 있음).\n  \n심각도: 7.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-5513\n2. 26.06.13 오후9:16\n3. The Online Scheduling and Appointment Booking Syst",
+      "cve_id": "CVE-2026-5513",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-5513",
+      "source": "cvefeed",
+      "published": "2026-06-13T21:16:15+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-40034 gitoxide - Command Injection via Partial .gitmodules Override in gix-submodule",
       "summary": "Information published.",
@@ -11429,20 +11454,6 @@
       "cvss": "",
       "severity": "",
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-45560",
-      "source": "cvefeed",
-      "published": "2026-06-11T00:16:36+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45559 - Roxy-WI: LDAP injection in /user/ldap/ (admin-only)",
-      "summary": "CVE ID :CVE-2026-45559\n  \nPublished : June 10, 2026, 3:16 p.m. | 35 minutes ago\n  \nDescription :Roxy-WI is a web interface for managing Haproxy, Nginx, Apache and Keepalived servers. In versions 8.2.6.4 and prior, get_ldap_email (app/modules/roxywi/user.py:120-157) builds the LDAP search filter via f-string concatenation. The username URL path parameter is taken verbatim — no checkAjaxInput, no LDAP escape — and inserted, a username like *)(mail=*)(cn=* injects additional clauses, allowing the admin to enumerate or harvest attributes outside the intended record. At time of publication, there are no publicly available patches.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-45559 - Roxy-WI: /user/ldap/에 LDAP 삽입(관리자 전용)",
-      "summary_ko": "CVE ID:CVE-2026-45559\n  \n게시일 : 2026년 6월 10일 오후 3시 16분 | 35분 전\n  \n설명 :Roxy-WI는 Haproxy, Nginx, Apache 및 Keepalived 서버를 관리하기 위한 웹 인터페이스입니다. 버전 8.2.6.4 이하에서는 get_ldap_email(app/modules/roxywi/user.py:120-157)이 f-문자열 연결을 통해 LDAP 검색 필터를 구축합니다. 사용자 이름 URL 경로 매개변수는 checkAjaxInput 없음, LDAP 이스케이프 없음 — 그대로 사용되어 삽입되며 *)(mail=*)(cn=*과 같은 사용자 이름은 추가 절을 삽입하여 관리자가 의도한 레코드 외부의 속성을 열거하거나 수집할 수 있도록 합니다. 게시 시점에는 공개적으로 사용 가능한 패치가 없습니다.\n  \n심각도: 4.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-45559\n2. 26.06.11 오전12:16\n3. Roxy-WI is a web interface for managing Haproxy, N",
-      "cve_id": "CVE-2026-45559",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45559",
       "source": "cvefeed",
       "published": "2026-06-11T00:16:36+09:00",
       "lang": "en"
