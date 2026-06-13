@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-14T04:31:07.650426+09:00",
+  "fetched_at": "2026-06-14T05:01:24.936887+09:00",
   "security_news": [
     {
       "title": "[속보] ‘수시간 동안 먹통’ 제주도 공공배달앱 복구",
@@ -4425,6 +4425,20 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-12183 - Nefteprodukttekhnika BUK TS-G Improper Authentication",
+      "summary": "CVE ID :CVE-2026-12183\n  \nPublished : June 13, 2026, 6:16 p.m. | 1 hour, 6 minutes ago\n  \nDescription :Nefteprodukttekhnika BUK TS-G Gas Station Automation System 2.9.1 through 2.10.2 on Linux contains an Improper Authentication vulnerability (CWE-287) in the system configuration module. The /php/ajax-login.php endpoint returns userid=1 (administrator) in response to any HTTP POST request that supplies arbitrary credentials (e.g., action=dologin&login=&pwd=), and subsequent privileged endpoints under /php/ajax-main.php and /modules/* do not validate a server-side session. A remote unauthenticated attacker can invoke any administrative action exposed by the configuration module, including reading and modifying user rules, fuel tank gauges, fuel dispensers, relays, cash registers, bank terminals, fuel cards, price and customer displays, cash collection, and pricing rules.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-12183 - Nefteproduktekhnika BUK TS-G 부적절한 인증",
+      "summary_ko": "CVE ID:CVE-2026-12183\n  \n게시일 : 2026년 6월 13일 오후 6시 16분 | 1시간, 6분 전\n  \n설명:Nefteprodukttekhnika BUK TS-G Linux용 주유소 자동화 시스템 2.9.1~2.10.2에는 시스템 구성 모듈에 부적절한 인증 취약점(CWE-287)이 포함되어 있습니다. /php/ajax-login.php 엔드포인트는 임의의 자격 증명(예: action=dologin&login=&pwd=)을 제공하는 HTTP POST 요청에 대한 응답으로 userid=1(관리자)을 반환하고 /php/ajax-main.php 및 /modules/* 아래의 후속 권한 있는 엔드포인트는 서버측 세션을 검증하지 않습니다. 인증되지 않은 원격 공격자는 사용자 규칙, 연료 탱크 게이지, 연료 디스펜서, 릴레이, 현금 등록기, 은행 터미널, 연료 카드, 가격 및 고객 표시, 현금 수집 및 가격 책정 규칙 읽기 및 수정을 포함하여 구성 모듈에 의해 노출된 모든 관리 작업을 호출할 수 있습니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-12183\n2. 26.06.14 오전3:16\n3. Nefteprodukttekhnika BUK TS-G Gas Station Automati",
+      "cve_id": "CVE-2026-12183",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12183",
+      "source": "cvefeed",
+      "published": "2026-06-14T03:16:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-6428 - Koha SQL Injection",
       "summary": "CVE ID :CVE-2026-6428\n  \nPublished : June 13, 2026, 5:16 p.m. | 22 minutes ago\n  \nDescription :SQL Injection in reports/catalogue_out.pl in Koha Community Koha through 22.11.37, 23.x, 24.x before 24.11.16, 25.05.x before 25.05.11, 25.11.x before 25.11.05, 26.05.x before 26.05.01, and 26.11.x before 26.11.00 allows an authenticated staff user with the Reports module flag to read arbitrary data from the Koha application database via the Filter URL parameter when the Criteria parameter matches /branchcode/.\n\n\n\nThe vulnerable sink in sub calculate concatenates the unmodified Filter request parameter directly into a LIKE clause of the auxiliary $strsth2 statement and executes it via DBI without bound parameters:\n\n\n\nmy $f = @$filters[0];\n$f =~ s/\\*/%/g;\n$strsth2 .= \" AND $column LIKE '$f' \";\n\n\n\nThis enables error-based SQL injection (e.g., via EXTRACTVALUE) and full read access to sensitive tables including borrowers (password hashes, 2FA secrets, PII), borrower_password_recovery, api_keys, and sessions.\n\n\n\nProof of concept (error-based, single request):\n\n\n\nGET /cgi-bin/koha/reports/catalogue_out.pl?do_it=1&output=screen&Limit=10&Criteria=branchcode&Filter=x'+AND+EXTRACTVALUE(1,CONCAT(0x7e,VERSION(),0x7c,USER(),0x7c,DATABASE(),0x7e))--+-\nCookie: CGISESSID=\n\n\n\nThe response body contains the DBI exception leaking the MariaDB version, database user, client IP, and database name, after which arbitrary data can be paged out using LIMIT n,1 / SUBSTRING(...).\n\n\n\nThe vulnerable sink was introduced in commit 6bb77ae3e4 (2008-07-09); CVE-2015-4633 patched the same class in sibling files but did not generalise the fix to reports/catalogue_out.pl. Fixed in Koha 22.11.38, 24.11.16, 25.05.11, 25.11.05, 26.05.01, and 26.11.00 by replacing the raw concatenation with a parameterised placeholder.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
