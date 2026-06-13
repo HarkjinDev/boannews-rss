@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-14T02:31:09.045795+09:00",
+  "fetched_at": "2026-06-14T03:01:18.802441+09:00",
   "security_news": [
     {
       "title": "[속보] ‘수시간 동안 먹통’ 제주도 공공배달앱 복구",
@@ -4436,6 +4436,20 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-6428 - Koha SQL Injection",
+      "summary": "CVE ID :CVE-2026-6428\n  \nPublished : June 13, 2026, 5:16 p.m. | 22 minutes ago\n  \nDescription :SQL Injection in reports/catalogue_out.pl in Koha Community Koha through 22.11.37, 23.x, 24.x before 24.11.16, 25.05.x before 25.05.11, 25.11.x before 25.11.05, 26.05.x before 26.05.01, and 26.11.x before 26.11.00 allows an authenticated staff user with the Reports module flag to read arbitrary data from the Koha application database via the Filter URL parameter when the Criteria parameter matches /branchcode/.\n\n\n\nThe vulnerable sink in sub calculate concatenates the unmodified Filter request parameter directly into a LIKE clause of the auxiliary $strsth2 statement and executes it via DBI without bound parameters:\n\n\n\nmy $f = @$filters[0];\n$f =~ s/\\*/%/g;\n$strsth2 .= \" AND $column LIKE '$f' \";\n\n\n\nThis enables error-based SQL injection (e.g., via EXTRACTVALUE) and full read access to sensitive tables including borrowers (password hashes, 2FA secrets, PII), borrower_password_recovery, api_keys, and sessions.\n\n\n\nProof of concept (error-based, single request):\n\n\n\nGET /cgi-bin/koha/reports/catalogue_out.pl?do_it=1&output=screen&Limit=10&Criteria=branchcode&Filter=x'+AND+EXTRACTVALUE(1,CONCAT(0x7e,VERSION(),0x7c,USER(),0x7c,DATABASE(),0x7e))--+-\nCookie: CGISESSID=\n\n\n\nThe response body contains the DBI exception leaking the MariaDB version, database user, client IP, and database name, after which arbitrary data can be paged out using LIMIT n,1 / SUBSTRING(...).\n\n\n\nThe vulnerable sink was introduced in commit 6bb77ae3e4 (2008-07-09); CVE-2015-4633 patched the same class in sibling files but did not generalise the fix to reports/catalogue_out.pl. Fixed in Koha 22.11.38, 24.11.16, 25.05.11, 25.11.05, 26.05.01, and 26.11.00 by replacing the raw concatenation with a parameterised placeholder.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-6428 - Koha SQL 주입",
+      "summary_ko": "CVE ID:CVE-2026-6428\n  \n게시일 : 2026년 6월 13일 오후 5시 16분 | 22분 전\n  \n설명 : Koha 커뮤니티 Koha의 보고서/catalogue_out.pl에 SQL 삽입 Koha ~ 22.11.37, 23.x, 24.11.16 이전 24.x, 25.05.11 이전 25.05.x, 25.11.05 이전 25.11.x, 26.05.01 이전 26.05.x 및 26.11.00 이전의 26.11.x에서는 보고서 모듈 플래그가 있는 인증된 직원 사용자가 Criteria 매개변수가 /branchcode/와 일치할 때 필터 URL 매개변수를 통해 Koha 애플리케이션 데이터베이스에서 임의의 데이터를 읽을 수 있습니다.\n\n\n\n하위 계산의 취약한 싱크는 수정되지 않은 필터 요청 매개변수를 보조 $strsth2 문의 LIKE 절에 직접 연결하고 바인딩된 매개변수 없이 DBI를 통해 실행합니다.\n\n\n\n내 $f = @$filters[0];\n$f =~ s/\\*/%/g;\n$strsth2 .= \" AND $column LIKE '$f' \";\n\n\n\n이를 통해 오류 기반 SQL 주입(예: EXTRACTVALUE를 통해)과 차용자(암호 해시, 2FA 비밀, PII), 차용자_password_recovery, api_keys 및 세션을 포함한 민감한 테이블에 대한 전체 읽기 액세스가 가능해집니다.\n\n\n\n개념 증명(오류 기반, 단일 요청):\n\n\n\nGET /cgi-bin/koha/reports/catalogue_out.pl?do_it=1&output=screen&Limit=10&Criteria=branchcode&Filter=x'+AND+EXTRACTVALUE(1,CONCAT(0x7e,VERSION(),0x7c,USER(),0x7c,DATABASE(),0x7e))--+-\n쿠키: CGISESSID=\n\n\n\n응답 본문에는 MariaDB 버전, 데이터베이스 사용자, 클라이언트 IP 및 데이터베이스 이름을 유출하는 DBI 예외가 포함되어 있으며, 이후 LIMIT n,1 / SUBSTRING(...)을 사용하여 임의의 데이터를 페이지 아웃할 수 있습니다.\n\n\n\n취약한 싱크는 커밋 6bb77ae3e4(2008-07-09)에 도입되었습니다. CVE-2015-4633은 형제 파일에서 동일한 클래스를 패치했지만 보고서/catalogue_out.pl에 대한 수정 사항을 일반화하지 않았습니다. 원시 연결을 매개변수화된 자리 표시자로 대체하여 Koha 22.11.38, 24.11.16, 25.05.11, 25.11.05, 26.05.01 및 26.11.00에서 수정되었습니다.\n  \n심각도: 7.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-6428\n2. 26.06.14 오전2:16\n3. SQL Injection in reports/catalogue_out.pl in Koha ",
+      "cve_id": "CVE-2026-6428",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6428",
+      "source": "cvefeed",
+      "published": "2026-06-14T02:16:17+09:00",
+      "lang": "hr"
+    },
     {
       "title": "CVE-2026-5513 - Online Scheduling and Appointment Booking System – Bookly <= 27.2 - Unauthenticated Stored Cross-Site Scripting via 'bookly-customer-full-name' Cookie",
       "summary": "CVE ID :CVE-2026-5513\n  \nPublished : June 13, 2026, 12:16 p.m. | 1 hour, 6 minutes ago\n  \nDescription :The Online Scheduling and Appointment Booking System – Bookly plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'bookly-customer-full-name' cookie in versions up to, and including, 27.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires 'Remember personal information in cookies' setting to be enabled (disabled by default).\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
