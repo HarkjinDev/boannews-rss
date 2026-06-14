@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-14T23:03:41.393982+09:00",
+  "fetched_at": "2026-06-14T23:34:35.679403+09:00",
   "security_news": [
     {
       "title": "민형배 당선인 SNS 해킹…‘암호화폐 카지노’ 유도 게시물",
@@ -5801,104 +5801,6 @@
       "source": "krcert_notice",
       "published": "2026-06-12T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-8406 - openSIS Classic 9.3 - Insecure Direct Object Reference in Sent Mail",
-      "summary": "CVE ID :CVE-2026-8406\n  \nPublished : June 11, 2026, 2:16 p.m. | 1 hour, 2 minutes ago\n  \nDescription :openSIS Classic 9.3 contains an insecure direct object reference vulnerability in the messaging module. Any authenticated user with access to the messaging module can request sent-message details from modules/messaging/SentMail.php by supplying an arbitrary mail_id value.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-8406 - openSIS Classic 9.3 - 보낸 메일의 안전하지 않은 직접 개체 참조",
-      "summary_ko": "CVE ID:CVE-2026-8406\n  \n게시일 : 2026년 6월 11일 오후 2시 16분 | 1시간, 2분 전\n  \n설명 :openSIS Classic 9.3에는 메시징 모듈에 안전하지 않은 직접 개체 참조 취약점이 포함되어 있습니다. 메시징 모듈에 액세스할 수 있는 인증된 사용자는 임의의 mail_id 값을 제공하여 module/messaging/SentMail.php에서 보낸 메시지 세부 정보를 요청할 수 있습니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-8406\n2. 26.06.11 오후11:16\n3. openSIS Classic 9.3 contains an insecure direct ob",
-      "cve_id": "CVE-2026-8406",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8406",
-      "source": "cvefeed",
-      "published": "2026-06-11T23:16:32+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-6338 - HTTP request smuggling in Kong Enteprise Gateway",
-      "summary": "CVE ID :CVE-2026-6338\n  \nPublished : June 11, 2026, 2:16 p.m. | 1 hour, 2 minutes ago\n  \nDescription :A HTTP request smuggling and desynchronization vulnerability affects Kong Gateway Enterprise 3.4, 3.10, 3.11, 3.12, 3.13, and 3.14 series. The vulnerability is caused by a parsing flaw in Kong’s HTTP request processing pipeline when handling untrusted HTTP/1.1 traffic.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-6338 - Kong Enterprise Gateway의 HTTP 요청 밀수",
-      "summary_ko": "CVE ID:CVE-2026-6338\n  \n게시일 : 2026년 6월 11일 오후 2시 16분 | 1시간, 2분 전\n  \n설명: HTTP 요청 밀수 및 비동기화 취약점은 Kong Gateway Enterprise 3.4, 3.10, 3.11, 3.12, 3.13 및 3.14 시리즈에 영향을 미칩니다. 이 취약점은 신뢰할 수 없는 HTTP/1.1 트래픽을 처리할 때 Kong의 HTTP 요청 처리 파이프라인에 있는 구문 분석 결함으로 인해 발생합니다.\n  \n심각도: 4.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-6338\n2. 26.06.11 오후11:16\n3. A HTTP request smuggling and desynchronization vul",
-      "cve_id": "CVE-2026-6338",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6338",
-      "source": "cvefeed",
-      "published": "2026-06-11T23:16:32+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53723 - guzzlehttp/guzzle-services' XML Request Serialization Vulnerable to XML Injection via CDATA Terminator",
-      "summary": "CVE ID :CVE-2026-53723\n  \nPublished : June 11, 2026, 2:16 p.m. | 1 hour, 2 minutes ago\n  \nDescription :Guzzle Services provides an implementation of the Guzzle Command library that uses Guzzle service descriptions to describe web services, serialize requests, and parse responses into easy to use model structures. Versions prior ro 1.5.4 do not safely serialize scalar XML element values containing the CDATA terminator `]]>`. The XML request serializer writes values containing `<`, `>`, or `&` with `XMLWriter::writeCData($value)`. If attacker-controlled input contains `]]>`, the CDATA section closes early and the remainder is interpreted as XML markup. This is an outgoing request-body integrity issue, not a response parsing issue. The attacker does not need to control the service description or schema. Users are affected when all of the following are true: the application uses `guzzlehttp/guzzle-services` to serialize outgoing requests; a request parameter or `additionalParameters` schema uses `location: xml`; the value is serialized as XML element text, not an XML attribute; the value can contain attacker-controlled, user-controlled, tenant-controlled, or otherwise untrusted input; the value is not constrained by a safe `enum`, `pattern`, or custom filter that excludes `]]>`; and the downstream service parses the generated XML structurally and may act on unexpected, duplicated, or injected elements. Applications that serialize untrusted input into `location: xml` request parameters can emit XML containing attacker-controlled elements outside the intended text node. Depending on the receiving service, this can alter operation semantics, smuggle privileged fields, bypass modeled parameter boundaries, or create conflicting duplicated elements. Fixed service descriptions are sufficient if they contain an XML element parameter populated from attacker-controlled input. Users are not directly affected if they only use Guzzle Services to deserialize HTTP response bodies. Response XML parsing uses the response XML location visitor and does not invoke the vulnerable request XML serializer. Response bodies matter only in a second-order flow, such as parsing attacker-controlled response XML, storing or forwarding a parsed string value, and later using it as a `location: xml` request parameter. The issue is patched in `1.5.3` and later by safely splitting embedded CDATA terminators before serialization. The fix preserves the original scalar value as XML text and prevents injected nodes. As a workaround, constrain attacker-controlled XML element values with a strict `enum`, `pattern`, or custom filter that excludes `]]>`, or avoid serializing untrusted data into `location: xml` element text until patched. Where appropriate for the service schema, XML attributes are not affected because they are written with XMLWriter attribute APIs rather than CDATA sections. To determine whether action is needed, search service descriptions for request parameters using `location: xml`, including operation `parameters` and `additionalParameters`. Response-only `models` are not directly affected unless parsed values are reused for request serialization. For object and array parameters, review nested scalar properties because leaf element values can still be affected.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53723 - guzzlehttp/guzzle-services의 XML 요청 직렬화는 CDATA 터미네이터를 통한 XML 주입에 취약합니다.",
-      "summary_ko": "CVE ID:CVE-2026-53723\n  \n게시일 : 2026년 6월 11일 오후 2시 16분 | 1시간, 2분 전\n  \n설명 :Guzzle 서비스는 Guzzle 서비스 설명을 사용하여 웹 서비스를 설명하고, 요청을 직렬화하고, 응답을 사용하기 쉬운 모델 구조로 구문 분석하는 Guzzle 명령 라이브러리의 구현을 제공합니다. ro 1.5.4 이전 버전에서는 CDATA 종결자 `]]>`가 포함된 스칼라 XML 요소 값을 안전하게 직렬화하지 않습니다. XML 요청 직렬 변환기는 `XMLWriter::writeCData($value)`를 사용하여 `<`, `>` 또는 `&`가 포함된 값을 씁니다. 공격자가 제어하는 ​​입력에 `]]>`가 포함되어 있으면 CDATA 섹션이 일찍 닫히고 나머지 부분은 XML 마크업으로 해석됩니다. 이는 응답 구문 분석 문제가 아니라 나가는 요청 본문 무결성 문제입니다. 공격자는 서비스 설명이나 스키마를 제어할 필요가 없습니다. 다음 사항이 모두 참인 경우 사용자에게 영향을 미칩니다. 애플리케이션이 'guzzlehttp/guzzle-services'를 사용하여 나가는 요청을 직렬화합니다. 요청 매개변수 또는 `additionalParameters` 스키마는 `location: xml`을 사용합니다. 값은 XML 속성이 아닌 XML 요소 텍스트로 직렬화됩니다. 값에는 공격자 제어, 사용자 제어, 테넌트 제어 또는 기타 신뢰할 수 없는 입력이 포함될 수 있습니다. 값은 안전한 `enum`, `pattern` 또는 `]]>`를 제외하는 사용자 정의 필터에 의해 제한되지 않습니다. 다운스트림 서비스는 생성된 XML을 구조적으로 구문 분석하고 예상치 못한 요소, 중복된 요소 또는 삽입된 요소에 대해 조치를 취할 수 있습니다. 신뢰할 수 없는 입력을 `location: xml` 요청 매개변수로 직렬화하는 애플리케이션은 의도된 텍스트 노드 외부에 공격자가 제어하는 ​​요소가 포함된 XML을 내보낼 수 있습니다. 수신 서비스에 따라 이는 작업 의미를 변경하거나, 권한 있는 필드를 밀수하거나, 모델링된 매개변수 경계를 우회하거나, 충돌하는 중복 요소를 생성할 수 있습니다. 공격자가 제어하는 ​​입력으로 채워진 XML 요소 매개변수가 포함된 경우 고정 서비스 설명으로 충분합니다. Guzzle 서비스만 사용하여 HTTP 응답 본문을 역직렬화하는 경우 사용자는 직접적인 영향을 받지 않습니다. 응답 XML 구문 분석은 응답 XML 위치 방문자를 사용하며 취약한 요청 XML 직렬 변환기를 호출하지 않습니다. 응답 본문은 공격자가 제어하는 ​​응답 XML을 구문 분석하고, 구문 분석된 문자열 값을 저장 또는 전달하고, 나중에 이를 'location: xml' 요청 매개변수로 사용하는 등의 2차 흐름에서만 중요합니다. 이 문제는 '1.5.3' 이상에서 직렬화 전에 내장된 CDATA 종결자를 안전하게 분할하여 패치되었습니다. 수정 사항은 원래 스칼라 값을 XML 텍스트로 유지하고 노드가 삽입되는 것을 방지합니다. 해결 방법으로, 엄격한 `enum`, `pattern` 또는 `]]>`를 제외하는 사용자 정의 필터를 사용하여 공격자가 제어하는 ​​XML 요소 값을 제한하거나 패치가 적용될 때까지 신뢰할 수 없는 데이터를 `location: xml` 요소 텍스트로 직렬화하지 마십시오. 서비스 스키마에 적합한 경우 XML 속성은 CDATA 섹션이 아닌 XMLWriter 속성 API로 작성되므로 영향을 받지 않습니다. 조치가 필요한지 여부를 결정하려면 `parameters` 및 `additionalParameters` 작업을 포함하여 `location: xml`을 사용하여 요청 매개변수에 대한 서비스 설명을 검색하세요. 요청 직렬화에 구문 분석된 값을 재사용하지 않는 한 응답 전용 `모델`은 직접적인 영향을 받지 않습니다. 객체 및 배열 매개변수의 경우 리프 요소 값이 여전히 영향을 받을 수 있으므로 중첩된 스칼라 속성을 검토하세요.\n  \n심각도: 5.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53723\n2. 26.06.11 오후11:16\n3. Guzzle Services provides an implementation of the ",
-      "cve_id": "CVE-2026-53723",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53723",
-      "source": "cvefeed",
-      "published": "2026-06-11T23:16:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53661 - boruta-server sent sensitive session cookies without the Secure attribute",
-      "summary": "CVE ID :CVE-2026-53661\n  \nPublished : June 11, 2026, 2:16 p.m. | 1 hour, 2 minutes ago\n  \nDescription :Boruta is a standalone authorization server that aims to implement OAuth 2.0 and Openid Connect up to decentralized identity specifications. Prior to version 0.9.1, boruta session cookies and the identity “remember me” cookie were set without the Secure attribute. In deployments where users could reach the same Boruta origin over plaintext HTTP, browsers could send these cookies over an unencrypted connection. An attacker able to observe or intercept that network traffic could recover a valid session or remember-me cookie and reuse it to impersonate the affected user. Affected components include boruta_web, boruta_identity, and boruta_admin. The affected cookies include the shared session cookie, defaulting to _boruta_web_key, and the identity remember-me cookie, defaulting to `_boruta_identity_web_user_remember_me`. The issue is fixed in commit 18691c655164635066aa113003a3cd87f6ed11cd, released as part of version 0.9.1. The patch sets `secure: true` and `same_site: \"Lax\"` on configured session cookies for boruta_web, boruta_identity, and boruta_admin, and sets `secure: true` on the identity remember-me cookie. Until upgrading to a release containing the fix: terminate or reject plaintext HTTP before requests reach Boruta; enforce HTTPS-only access at the reverse proxy or load balancer; enable HSTS for Boruta domains; if cookie exposure is suspected, rotate SECRET_KEY_BASE and BORUTA_SESSION_COOKIE_SIGNING_SALT, then require users to authenticate again. Upgrade to a version containing commit 18691c655164635066aa113003a3cd87f6ed11cd, or apply the patch manually. After deploying the fix, verify that Boruta session and remember-me cookies include the Secure attribute in browser developer tools or with an HTTP response inspection tool.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53661 - boruta-server가 보안 속성 없이 민감한 세션 쿠키를 보냈습니다.",
-      "summary_ko": "CVE ID:CVE-2026-53661\n  \n게시일 : 2026년 6월 11일 오후 2시 16분 | 1시간, 2분 전\n  \n설명 :Boruta는 OAuth 2.0 및 Openid Connect를 분산 ID 사양까지 구현하는 것을 목표로 하는 독립형 인증 서버입니다. 버전 0.9.1 이전에는 boruta 세션 쿠키와 ID \"remember me\" 쿠키가 Secure 속성 없이 설정되었습니다. 사용자가 일반 텍스트 HTTP를 통해 동일한 Boruta 원본에 도달할 수 있는 배포에서는 브라우저가 암호화되지 않은 연결을 통해 이러한 쿠키를 보낼 수 있습니다. 해당 네트워크 트래픽을 관찰하거나 가로챌 수 있는 공격자는 유효한 세션이나 기억 쿠키를 복구하고 이를 재사용하여 영향을 받는 사용자를 가장할 수 있습니다. 영향을 받는 구성 요소에는 boruta_web, boruta_identity 및 boruta_admin이 포함됩니다. 영향을 받는 쿠키에는 기본값이 _boruta_web_key인 공유 세션 쿠키와 '_boruta_identity_web_user_remember_me'가 기본값인 ID Remember-me 쿠키가 포함됩니다. 이 문제는 버전 0.9.1의 일부로 릴리스된 커밋 18691c655164635066aa113003a3cd87f6ed11cd에서 수정되었습니다. 패치는 boruta_web, boruta_identity 및 boruta_admin에 대해 구성된 세션 쿠키에 `secure: true` 및 `same_site: \"Lax\"`를 설정하고 ID Remember-me 쿠키에 `secure: true`를 설정합니다. 수정 사항이 포함된 릴리스로 업그레이드할 때까지: 요청이 Boruta에 도달하기 전에 일반 텍스트 HTTP를 종료하거나 거부합니다. 역방향 프록시 또는 로드 밸런서에서 HTTPS 전용 액세스를 시행합니다. Boruta 도메인에 대해 HSTS를 활성화합니다. 쿠키 노출이 의심되는 경우 SECRET_KEY_BASE 및 BORUTA_SESSION_COOKIE_SIGNING_SALT를 교체한 다음 사용자에게 다시 인증하도록 요구합니다. 커밋 18691c655164635066aa113003a3cd87f6ed11cd가 포함된 버전으로 업그레이드하거나 패치를 수동으로 적용하세요. 수정 사항을 배포한 후 Boruta 세션 및 Remember-Me 쿠키에 브라우저 개발자 도구 또는 HTTP 응답 검사 도구에 Secure 속성이 포함되어 있는지 확인하십시오.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53661\n2. 26.06.11 오후11:16\n3. Boruta is a standalone authorization server that a",
-      "cve_id": "CVE-2026-53661",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53661",
-      "source": "cvefeed",
-      "published": "2026-06-11T23:16:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-38581 - Damasac thaipalliative_lte SQL Injection",
-      "summary": "CVE ID :CVE-2026-38581\n  \nPublished : June 11, 2026, 2:16 p.m. | 1 hour, 2 minutes ago\n  \nDescription :SQL Injection vulnerability in damasac thaipalliative_lte through version 3.0 allows remote attackers to execute arbitrary SQL commands via the idFormMain parameter to /substudy/ezform.php (line 14) and the id parameter (line 49). The parameters are concatenated directly into SQL queries without sanitization or parameterized statements.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-38581 - Damasac thaipalliative_lte SQL 주입",
-      "summary_ko": "CVE ID:CVE-2026-38581\n  \n게시일 : 2026년 6월 11일 오후 2시 16분 | 1시간, 2분 전\n  \n설명: damasac thaipalliative_lte 버전 3.0의 SQL 주입 취약점으로 인해 원격 공격자가 idFormMain 매개변수를 통해 /substudy/ezform.php(라인 14) 및 id 매개변수(라인 49)에 대한 임의의 SQL 명령을 실행할 수 있습니다. 매개변수는 정리 또는 매개변수화된 문 없이 SQL 쿼리에 직접 연결됩니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-38581\n2. 26.06.11 오후11:16\n3. SQL Injection vulnerability in damasac thaipalliat",
-      "cve_id": "CVE-2026-38581",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-38581",
-      "source": "cvefeed",
-      "published": "2026-06-11T23:16:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-11816 - Path Traversal in keras-team/keras",
-      "summary": "CVE ID :CVE-2026-11816\n  \nPublished : June 11, 2026, 2:16 p.m. | 1 hour, 2 minutes ago\n  \nDescription :Keras versions prior to 3.14.0 are vulnerable to a path traversal issue in the archive extraction utilities located in `keras/src/utils/file_utils.py`. The functions `filter_safe_tarinfos()` and `filter_safe_zipinfos()` validate archive member paths against the process current working directory (CWD) instead of the actual extraction destination. When the process runs with CWD set to `/`, which is common in Docker containers, CI/CD runners, and Jupyter environments, the validation boundary becomes the filesystem root, allowing traversal paths to bypass the security check. Additionally, the zip filter contains a bug that causes an `AttributeError` when a blocked entry is encountered, leading to incomplete extraction. Furthermore, Python 3.11 installations lack the `filter=\"data\"` safety net, leaving them entirely reliant on the flawed CWD-based filter. Exploitation of this vulnerability can result in arbitrary file writes outside the intended extraction directory, enabling attackers to overwrite configuration files, inject malicious code, or corrupt machine learning datasets and pipelines.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-11816 - 경로 탐색 inkeras-team/keras",
-      "summary_ko": "CVE ID:CVE-2026-11816\n  \n게시일 : 2026년 6월 11일 오후 2시 16분 | 1시간, 2분 전\n  \n설명: 3.14.0 이전의 Keras 버전은 `keras/src/utils/file_utils.py`에 있는 아카이브 추출 유틸리티의 경로 탐색 문제에 취약합니다. `filter_safe_tarinfos()` 및 `filter_safe_zipinfos()` 함수는 실제 추출 대상 대신 프로세스 현재 작업 디렉터리(CWD)에 대해 아카이브 구성원 경로의 유효성을 검사합니다. Docker 컨테이너, CI/CD 실행기 및 Jupyter 환경에서 일반적으로 사용되는 '/'로 설정된 CWD를 사용하여 프로세스가 실행되면 유효성 검사 경계가 파일 시스템 루트가 되어 통과 경로가 보안 검사를 우회할 수 있습니다. 또한 zip 필터에는 차단된 항목이 발견될 때 'AttributeError'를 발생시켜 추출이 불완전하게 되는 버그가 포함되어 있습니다. 게다가 Python 3.11 설치에는 `filter=\"data\"` 안전망이 부족하여 결함이 있는 CWD 기반 필터에 전적으로 의존하게 됩니다. 이 취약점을 악용하면 의도한 추출 디렉터리 외부에 임의 파일 쓰기가 발생하여 공격자가 구성 파일을 덮어쓰거나 악성 코드를 삽입하거나 기계 학습 데이터 세트 및 파이프라인을 손상시킬 수 있습니다.\n  \n심각도: 8.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-11816\n2. 26.06.11 오후11:16\n3. Keras versions prior to 3.14.0 are vulnerable to a",
-      "cve_id": "CVE-2026-11816",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11816",
-      "source": "cvefeed",
-      "published": "2026-06-11T23:16:26+09:00",
-      "lang": "id"
-    },
-    {
-      "title": "CVE-2026-10847 - Local Privilege Escalation vulnerability in Check Point Identity Agent Full for Windows OS",
-      "summary": "CVE ID :CVE-2026-10847\n  \nPublished : June 11, 2026, 2:16 p.m. | 1 hour, 2 minutes ago\n  \nDescription :A local privilege escalation vulnerability exists in Check Point Identity Agent Full for Windows OS. An authenticated local user may be able to execute arbitrary code with SYSTEM privileges due to improper handling of executable resolution during the log collection process. Successful exploitation could allow an attacker to gain elevated privileges on the affected Windows endpoint.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10847 - Windows OS용 Check Point Identity Agent Full의 로컬 권한 상승 취약점",
-      "summary_ko": "CVE ID:CVE-2026-10847\n  \n게시일 : 2026년 6월 11일 오후 2시 16분 | 1시간, 2분 전\n  \n설명: Windows OS용 Check Point Identity Agent Full에 로컬 권한 상승 취약점이 존재합니다. 인증된 로컬 사용자는 로그 수집 프로세스 중 실행 파일 확인을 잘못 처리하여 SYSTEM 권한으로 임의 코드를 실행할 수 있습니다. 악용에 성공하면 공격자가 영향을 받는 Windows 엔드포인트에서 상승된 권한을 얻을 수 있습니다.\n  \n심각도: 7.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10847\n2. 26.06.11 오후11:16\n3. A local privilege escalation vulnerability exists ",
-      "cve_id": "CVE-2026-10847",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10847",
-      "source": "cvefeed",
-      "published": "2026-06-11T23:16:26+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
