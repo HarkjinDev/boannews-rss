@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-16T01:31:10.988262+09:00",
+  "fetched_at": "2026-06-16T02:01:22.588398+09:00",
   "security_news": [
     {
       "title": "[단독] 인간 해킹만으로… 과기부 산하 42곳 보안 허점 500개 발견",
@@ -6251,34 +6251,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48558",
       "source": "cvefeed",
       "published": "2026-06-13T02:07:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47224 - NanaZip: Heap buffer-overflow read in NanaZip LVM metadata CRC check",
-      "summary": "CVE ID :CVE-2026-47224\n  \nPublished : June 12, 2026, 4:57 p.m. | 23 minutes ago\n  \nDescription :NanaZip is the 7-Zip derivative intended for the modern Windows experience. From version 3.0.1000.0 to before version 6.0.1698.0, a heap buffer-overflow read exists in the LVM2 physical-volume metadata parser in NanaZip (via the upstream 7-Zip LvmHandler). The vulnerability is triggered when opening a crafted LVM disk image. This issue has been patched in stable version 6.0.1698.0 and preview version 6.5.1742.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47224 - NanaZip: NanaZip LVM 메타데이터 CRC 검사에서 힙 버퍼 오버플로 읽기",
-      "summary_ko": "CVE ID:CVE-2026-47224\n  \n게시일 : 2026년 6월 12일 오후 4시 57분 | 23분 전\n  \n설명 :NanaZip은 최신 Windows 환경을 위해 고안된 7-Zip 파생 버전입니다. 버전 3.0.1000.0부터 버전 6.0.1698.0 이전까지 힙 버퍼 오버플로 읽기는 NanaZip의 LVM2 물리 볼륨 메타데이터 파서(업스트림 7-Zip LvmHandler를 통해)에 존재합니다. 취약점은 조작된 LVM 디스크 이미지를 열 때 발생합니다. 이 문제는 안정 버전 6.0.1698.0 및 미리 보기 버전 6.5.1742.0에서 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47224\n2. 26.06.13 오전1:57\n3. NanaZip is the 7-Zip derivative intended for the m",
-      "cve_id": "CVE-2026-47224",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47224",
-      "source": "cvefeed",
-      "published": "2026-06-13T01:57:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47222 - NanaZip: Heap out-of-bounds read in NanaZip AVB property descriptor parser via unsigned integer underflow",
-      "summary": "CVE ID :CVE-2026-47222\n  \nPublished : June 12, 2026, 4:56 p.m. | 23 minutes ago\n  \nDescription :NanaZip is the 7-Zip derivative intended for the modern Windows experience. From version 3.0.1000.0 to before version 6.0.1698.0, a heap out-of-bounds read exists in the Android Verified Boot (AVB) vbmeta image parser in NanaZip (via the upstream 7-Zip AvbHandler). An unsigned integer underflow in a bounds check allows an attacker-controlled value_num_bytes field to pass validation, causing AddNameToString to read up to ~4 GiB past the end of a 64 KiB heap buffer. This causes a deterministic crash (denial of service) when opening a crafted .avb or .img file. This issue has been patched in stable version 6.0.1698.0 and preview version 6.5.1742.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47222 - NanaZip: 부호 없는 정수 언더플로를 통해 NanaZip AVB 속성 설명자 파서에서 범위를 벗어난 힙을 읽습니다.",
-      "summary_ko": "CVE ID:CVE-2026-47222\n  \n게시일 : 2026년 6월 12일 오후 4시 56분 | 23분 전\n  \n설명 :NanaZip은 최신 Windows 환경을 위해 고안된 7-Zip 파생 버전입니다. 버전 3.0.1000.0부터 버전 6.0.1698.0 이전까지 NanaZip의 Android 검증 부팅(AVB) vbmeta 이미지 파서(업스트림 7-Zip AvbHandler를 통해)에 범위를 벗어난 힙 읽기가 존재합니다. 경계 검사의 부호 없는 정수 언더플로를 통해 공격자가 제어하는 ​​value_num_bytes 필드가 유효성 검사를 통과할 수 있으므로 AddNameToString이 64KiB 힙 버퍼 끝을 지나 최대 4GiB까지 읽을 수 있습니다. 이로 인해 조작된 .avb 또는 .img 파일을 열 때 결정론적 충돌(서비스 거부)이 발생합니다. 이 문제는 안정 버전 6.0.1698.0 및 미리 보기 버전 6.5.1742.0에서 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47222\n2. 26.06.13 오전1:56\n3. NanaZip is the 7-Zip derivative intended for the m",
-      "cve_id": "CVE-2026-47222",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47222",
-      "source": "cvefeed",
-      "published": "2026-06-13T01:56:47+09:00",
       "lang": "en"
     }
   ],
