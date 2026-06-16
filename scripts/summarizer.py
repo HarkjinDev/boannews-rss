@@ -74,6 +74,10 @@ def _build_prompt(text: str) -> str:
 
 def _parse_response(text: str) -> str:
     """모델 응답에서 번호 형식 추출 + 각 줄 trim"""
+    # thinking 태그 제거 (qwen3 등 reasoning 모델 대응)
+    text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+    text = re.sub(r'<[^>]+>', '', text).strip()
+
     lines    = [l.strip() for l in text.splitlines() if l.strip()]
     numbered = [l for l in lines if re.match(r'^[1-3]\.', l)]
     if len(numbered) < 2:
@@ -154,7 +158,7 @@ def _summarize_with_groq(text: str, api_key: str) -> str:
         resp   = client.chat.completions.create(
             model='qwen/qwen3-32b',  # 한국어 강화 모델 (Alibaba 다국어)
             messages=[{'role': 'user', 'content': prompt}],
-            max_tokens=200,
+            max_tokens=500,  # 한국어 3줄 출력에 충분한 여유
             temperature=0.3,
         )
         result = _parse_response(resp.choices[0].message.content.strip())

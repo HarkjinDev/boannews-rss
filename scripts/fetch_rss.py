@@ -35,7 +35,9 @@ KST              = pytz.timezone('Asia/Seoul')
 RETENTION_DAYS   = 3                        # feeds.json 보존 기간 (일)
 MAX_PER_CATEGORY = 500                      # 카테고리별 최대 보관 건수 (안전망)
 WINDOW_HOURS     = RETENTION_DAYS * 24      # 수집 시간 범위 = 보존 기간과 동일 (72시간)
-SIMILARITY_THRESH = 0.90                    # 유사 제목 판단 임계값
+SIMILARITY_THRESH      = 0.90  # 문자 유사도 기준 (엄격)
+SIMILARITY_THRESH_SOFT = 0.45  # 문자 유사도 기준 (완화) — 단어 겹침과 조합
+WORD_JACCARD_THRESH    = 0.20  # 단어 Jaccard 유사도 기준
 
 NAVER_CLIENT_ID     = os.environ.get('NAVER_CLIENT_ID', '')
 NAVER_CLIENT_SECRET = os.environ.get('NAVER_CLIENT_SECRET', '')
@@ -133,15 +135,68 @@ def clean_html(text: str) -> str:
     return html_lib.unescape(result)
 
 
-def is_similar_title(t1: str, t2: str) -> bool:
-    return SequenceMatcher(None, t1, t2).ratio() >= SIMILARITY_THRESH
+def _word_jaccard(t1: str, t2: str) -> float:
+    """단어 단위 Jaccard 유사도 (같은 토픽의 다르게 표현된 제목 감지)"""
+    def _clean(t):
+        # 알파벳/숫자/한글 외 문자를 공백으로 치환 후 분리
+        import re
+        return set(re.sub('[^가-힣a-zA-Z0-9]', ' ', t).split())
+    w1, w2 = _clean(t1), _clean(t2)
+    if not w1 or not w2:
+        return 0.0
+    return len(w1 & w2) / len(w1 | w2)
 
+
+def is_similar_title(t1: str, t2: str) -> bool:
+    """
+    두 가지 기준 중 하나라도 충족하면 유사 제목으로 판단
+    ① 문자 유사도 ≥ 0.90  (엄격: 거의 동일한 제목)
+    ② 문자 유사도 ≥ 0.55  AND  단어 Jaccard ≥ 0.20
+       (완화: 같은 사건을 다르게 표현한 제목)
+    """
+    char_ratio = SequenceMatcher(None, t1, t2).ratio()
+    if char_ratio >= SIMILARITY_THRESH:
+        return True
+    if char_ratio >= SIMILARITY_THRESH_SOFT:
+        if _word_jaccard(t1, t2) >= WORD_JACCARD_THRESH:
+            return True
+    return False
+
+
+TITLE_SOFT_THRESH   = 0.45  # 키워드 체크 발동 제목 유사도 하한
+KEYWORD_JACCARD_THRESH = 0.50  # 한국어 키워드 Jaccard 유사도 임계값
+
+def _korean_keywords(text: str) -> set:
+    """한국어 2자 이상 단어 추출 (키워드 지문)"""
+    return set(re.findall(r'[가-힣]{2,}', text))
+
+def _jaccard(set1: set, set2: set) -> float:
+    if not set1 or not set2:
+        return 0.0
+    return len(set1 & set2) / len(set1 | set2)
 
 def is_duplicate(link: str, title: str,
-                 visited_links: set, visited_titles: list) -> bool:
+                 visited_links: set, visited_titles: list,
+                 summary: str = '', visited_summaries: list = None) -> bool:
+    # 1단계: 링크 일치
     if link in visited_links:
         return True
-    return any(is_similar_title(title, vt) for vt in visited_titles)
+    # 2단계: 제목 유사도 0.90 이상 (기존)
+    for vt in visited_titles:
+        if is_similar_title(title, vt):
+            return True
+    # 3단계: 제목 유사도 0.45 이상 + 한국어 키워드 Jaccard 0.50 이상
+    # → 같은 사건을 다른 기자가 쓴 기사 필터링
+    if summary and visited_summaries:
+        kw_new = _korean_keywords(title + ' ' + summary)
+        for i, vt in enumerate(visited_titles):
+            title_ratio = SequenceMatcher(None, title, vt).ratio()
+            if title_ratio >= TITLE_SOFT_THRESH:
+                vs = visited_summaries[i] if i < len(visited_summaries) else ''
+                kw_old = _korean_keywords(vt + ' ' + vs)
+                if _jaccard(kw_new, kw_old) >= KEYWORD_JACCARD_THRESH:
+                    return True
+    return False
 
 
 def extract_cve_id(text: str) -> str:
@@ -278,7 +333,9 @@ def enrich(item: dict) -> dict:
 # 카테고리별 수집
 # ================================================================
 
-def collect_security_news(visited_links: set, visited_titles: list) -> list:
+def collect_security_news(visited_links: set, visited_titles: list, visited_summaries: list = None) -> list:
+    if visited_summaries is None:
+        visited_summaries = []
     print('\n── [보안뉴스] 수집 ──')
     cutoff  = datetime.now(KST) - timedelta(hours=WINDOW_HOURS)
     results = []
@@ -310,7 +367,8 @@ def collect_security_news(visited_links: set, visited_titles: list) -> list:
             if sum(1 for kw in SECURITY_KEYWORDS if kw in combined) < 2:
                 continue
 
-            if is_duplicate(link, title, visited_links, visited_titles):
+            if is_duplicate(link, title, visited_links, visited_titles,
+                           summary=summary, visited_summaries=visited_summaries):
                 continue
 
             # Atom 피드(BleepingComputer 등)는 content 필드에 본문 제공
@@ -335,13 +393,16 @@ def collect_security_news(visited_links: set, visited_titles: list) -> list:
             results.append(item)
             visited_links.add(link)
             visited_titles.append(title)
+            visited_summaries.append(summary)
             print(f'    ✓ {title[:55]}')
 
     print(f'  → {len(results)}건 신규 수집')
     return results
 
 
-def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
+def collect_vulnerability(visited_links: set, visited_titles: list, visited_summaries: list = None) -> list:
+    if visited_summaries is None:
+        visited_summaries = []
     print('\n── [취약점] 수집 ──')
     cutoff  = datetime.now(KST) - timedelta(hours=WINDOW_HOURS)
     results = []
@@ -367,7 +428,8 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
             except Exception:
                 pass
 
-            if is_duplicate(link, title, visited_links, visited_titles):
+            if is_duplicate(link, title, visited_links, visited_titles,
+                           summary=summary, visited_summaries=visited_summaries):
                 continue
 
             combined  = title + ' ' + summary
@@ -447,6 +509,7 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
             results.append(item)
             visited_links.add(link)
             visited_titles.append(title)
+            visited_summaries.append(summary)
             tag = f'[{cve_id}]' if cve_id else '[CVE-미상]'
             print(f'    ✓ {tag} {title[:50]}')
 
@@ -454,7 +517,9 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
     return results
 
 
-def collect_reputation(visited_links: set, visited_titles: list) -> list:
+def collect_reputation(visited_links: set, visited_titles: list, visited_summaries: list = None) -> list:
+    if visited_summaries is None:
+        visited_summaries = []
     print('\n── [평판] 수집 ──')
 
     try:
@@ -512,7 +577,8 @@ def collect_reputation(visited_links: set, visited_titles: list) -> list:
                 except Exception:
                     pass
 
-                if is_duplicate(link, title, visited_links, visited_titles):
+                if is_duplicate(link, title, visited_links, visited_titles,
+                               summary=summary, visited_summaries=visited_summaries):
                     continue
 
                 # 제목+요약에 보안 키워드 최소 1개 포함 여부 2차 필터
@@ -543,6 +609,7 @@ def collect_reputation(visited_links: set, visited_titles: list) -> list:
                 results.append(item)
                 visited_links.add(link)
                 visited_titles.append(title)
+                visited_summaries.append(summary)
                 print(f'    ✓ [{kw}] {title[:50]}')
 
     print(f'  → {len(results)}건 신규 수집')
@@ -667,17 +734,19 @@ def main():
 
     # 기존 데이터 로드 + 방문 목록 초기화
     existing       = load_feeds()
-    visited_links  = set()
-    visited_titles = []
+    visited_links     = set()
+    visited_titles    = []
+    visited_summaries = []
     for cat in ['security_news', 'vulnerability', 'reputation']:
         for item in existing.get(cat, []):
             visited_links.add(item.get('link', ''))
             visited_titles.append(item.get('title', ''))
+            visited_summaries.append(item.get('summary', ''))
 
     # 카테고리별 수집
-    new_sec  = collect_security_news(visited_links, visited_titles)
-    new_vuln = collect_vulnerability(visited_links, visited_titles)
-    new_rep  = collect_reputation(visited_links, visited_titles)
+    new_sec  = collect_security_news(visited_links, visited_titles, visited_summaries)
+    new_vuln = collect_vulnerability(visited_links, visited_titles, visited_summaries)
+    new_rep  = collect_reputation(visited_links, visited_titles, visited_summaries)
 
     # 신규 항목 병합 후 published 기준 내림차순 정렬
     def merge_sorted(new_items, old_items):
