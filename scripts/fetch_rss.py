@@ -181,12 +181,11 @@ def is_duplicate(link: str, title: str,
     # 1단계: 링크 일치
     if link in visited_links:
         return True
-    # 2단계: 제목 유사도 0.90 이상 (기존)
+    # 2단계: 제목 유사도 체크 (is_similar_title 내부에서 복합 기준 적용)
     for vt in visited_titles:
         if is_similar_title(title, vt):
             return True
     # 3단계: 제목 유사도 0.45 이상 + 한국어 키워드 Jaccard 0.50 이상
-    # → 같은 사건을 다른 기자가 쓴 기사 필터링
     if summary and visited_summaries:
         kw_new = _korean_keywords(title + ' ' + summary)
         for i, vt in enumerate(visited_titles):
@@ -196,6 +195,14 @@ def is_duplicate(link: str, title: str,
                 kw_old = _korean_keywords(vt + ' ' + vs)
                 if _jaccard(kw_new, kw_old) >= KEYWORD_JACCARD_THRESH:
                     return True
+        # 4단계: 제목이 달라도 내용이 비슷하면 중복
+        # 제목+요약 조합 Jaccard 비교 — 같은 사건을 다른 각도로 쓴 기사 감지
+        combined_new = title + ' ' + summary
+        for i, vs in enumerate(visited_summaries):
+            vt = visited_titles[i] if i < len(visited_titles) else ''
+            combined_old = vt + ' ' + vs
+            if combined_old and _word_jaccard(combined_new, combined_old) >= 0.22:
+                return True
     return False
 
 
@@ -299,25 +306,24 @@ def enrich(item: dict) -> dict:
 
     # _skip_summarize 플래그가 있으면 summary_3lines를 이미 직접 설정한 것
     if not item.pop('_skip_summarize', False):
-        # title + description + summary 합쳐서 풍부한 맥락 제공
+        # title + description + summary + content 합쳐서 맥락 제공
+        # 레이블(제목:, 내용:) 없이 연결 — 레이블이 있으면 모델이 에코할 수 있음
         title_text   = item.get('title', '')
         desc_text    = item.get('description', '')
         summary_text = item.get('summary', '')
+        content_text = item.get('content', '')
 
         parts = []
         if title_text:
-            parts.append(f"제목: {title_text}")
-        # description이 summary와 다를 때만 추가 (중복 방지)
+            parts.append(title_text)
         if desc_text and desc_text != summary_text:
-            parts.append(f"설명: {desc_text}")
+            parts.append(desc_text)
         if summary_text:
-            parts.append(f"내용: {summary_text}")
-        # content 필드 있으면 추가 (평판 등 일부 피드에서 제공)
-        content_text = item.get('content', '')
+            parts.append(summary_text)
         if content_text and content_text not in (summary_text, desc_text):
-            parts.append(f"본문: {content_text[:1000]}")
+            parts.append(content_text[:1000])
 
-        full_text = '\n'.join(parts)
+        full_text = '\n\n'.join(p for p in parts if p)
 
         item['summary_3lines'] = summarize_3lines(
             full_text,
