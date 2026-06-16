@@ -1,5 +1,5 @@
 # summarizer.py — 3줄 요약 모듈
-# 우선순위: Gemini 2.5 Flash-Lite → sumy → 앞 3문장 fallback
+# 우선순위: Gemini 2.5 Flash-Lite → Groq (llama-3.3-70b) → sumy → 앞 3문장
 
 import re
 import time
@@ -8,11 +8,15 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
 
-MAX_LINE_CHARS = 50   # 각 줄 최대 글자 수
-GEMINI_FAIL_LIMIT = 5 # 연속 실패 N회 이상이면 해당 실행 전체를 sumy로 전환
+MAX_LINE_CHARS   = 50  # 각 줄 최대 글자 수
+GEMINI_FAIL_LIMIT = 2  # Gemini 연속 실패 N회 → Groq 전환
+GROQ_FAIL_LIMIT   = 2  # Groq   연속 실패 N회 → sumy 전환
 
-_gemini_fail_count = 0  # 429 연속 실패 횟수 (실행 세션 내 유지)
-_gemini_disabled   = False  # True이면 Gemini 호출 없이 sumy로 바로 전환
+# 실행 세션 내 상태
+_gemini_fail_count = 0
+_gemini_disabled   = False
+_groq_fail_count   = 0
+_groq_disabled     = False
 
 
 # ================================================================
@@ -32,16 +36,11 @@ def setup_nltk():
 # ================================================================
 
 def _trim(text: str) -> str:
-    """공백 정리 + MAX_LINE_CHARS 이내로 자르기"""
     t = re.sub(r'\s+', ' ', str(text)).strip()
     return t[:MAX_LINE_CHARS] if len(t) > MAX_LINE_CHARS else t
 
 
 def _format_numbered(sentences: list) -> str:
-    """
-    문장 리스트 → 번호 형식 (1.\n2.\n3.)
-    각 항목 MAX_LINE_CHARS 이내, 빈 줄 제거
-    """
     result = []
     for i, s in enumerate(sentences[:3], start=1):
         line = _trim(s)
@@ -55,25 +54,8 @@ def _count_sentences(text: str) -> int:
     return len([p for p in parts if len(p.strip()) > 10])
 
 
-# ================================================================
-# Gemini 요약
-# ================================================================
-
-def _summarize_with_gemini(text: str, api_key: str) -> str:
-    """
-    Gemini 2.5 Flash-Lite로 3줄 요약 생성
-    - 429 연속 실패가 GEMINI_FAIL_LIMIT 이상이면 즉시 '' 반환 (sumy 전환)
-    Returns: "1. ...\n2. ...\n3. ..." 형식 or '' (실패 시)
-    """
-    # 이미 비활성화된 경우 즉시 반환
-    if _gemini_disabled:
-        return ''
-
-    from google import genai as google_genai
-
-    client = google_genai.Client(api_key=api_key)
-
-    prompt = f"""다음 보안 뉴스를 한국어로 핵심만 3줄로 요약해줘.
+def _build_prompt(text: str) -> str:
+    return f"""다음 보안 뉴스를 한국어로 핵심만 3줄로 요약해줘.
 
 규칙:
 - 반드시 아래 형식으로만 답변 (다른 말 없이)
@@ -87,70 +69,121 @@ def _summarize_with_gemini(text: str, api_key: str) -> str:
 뉴스 내용:
 {text[:3000]}"""
 
-    def _call_api(retry: bool = False) -> str:
-        # 내부 함수에서 전역변수 수정 시 반드시 global 선언 필요
-        global _gemini_fail_count, _gemini_disabled
-        try:
-            response = client.models.generate_content(
-                model='gemini-2.5-flash-lite',
-                contents=prompt,
-            )
-            result = response.text.strip()
 
-            lines   = [l.strip() for l in result.splitlines() if l.strip()]
-            numbered = [l for l in lines if re.match(r'^[1-3]\.', l)]
-
-            if len(numbered) >= 2:
-                trimmed = []
-                for l in numbered[:3]:
-                    prefix = l[:3]
-                    body   = l[3:]
-                    trimmed.append(f"{prefix}{_trim(body)}")
-                return '\n'.join(trimmed)
-            return ''
-
-        except Exception as e:
-            err_str = str(e)
-            # 429 Rate Limit 처리
-            if '429' in err_str:
-                _gemini_fail_count += 1
-                print(f"  [Gemini 429] 누적 실패 {_gemini_fail_count}/{GEMINI_FAIL_LIMIT}회")
-
-                # 연속 실패가 한도 초과 → 이후 모든 항목 sumy로 전환
-                if _gemini_fail_count >= GEMINI_FAIL_LIMIT:
-                    _gemini_disabled = True
-                    print(f"  [Gemini 비활성화] 429 {GEMINI_FAIL_LIMIT}회 초과 — 이후 전체 sumy 사용")
-                    return ''
-
-                # 한도 미만이면 1회 재시도
-                if not retry:
-                    wait = 60
-                    m = re.search(r'retry_delay.*?seconds:\s*(\d+)', err_str, re.DOTALL)
-                    if m:
-                        wait = int(m.group(1)) + 5
-                    print(f"  [Gemini 429] {wait}초 대기 후 재시도...")
-                    time.sleep(wait)
-                    return _call_api(retry=True)
-
-            print(f"  [Gemini 오류] {err_str[:120]}")
-            return ''
-
-    return _call_api()
+def _parse_response(text: str) -> str:
+    """모델 응답에서 번호 형식 추출 + 각 줄 trim"""
+    lines    = [l.strip() for l in text.splitlines() if l.strip()]
+    numbered = [l for l in lines if re.match(r'^[1-3]\.', l)]
+    if len(numbered) < 2:
+        return ''
+    trimmed = []
+    for l in numbered[:3]:
+        prefix = l[:3]
+        body   = l[3:]
+        trimmed.append(f"{prefix}{_trim(body)}")
+    return '\n'.join(trimmed)
 
 
 # ================================================================
-# sumy fallback 요약
+# Gemini 요약
+# ================================================================
+
+def _summarize_with_gemini(text: str, api_key: str) -> str:
+    global _gemini_fail_count, _gemini_disabled
+
+    if _gemini_disabled:
+        return ''
+
+    from google import genai as google_genai
+    client = google_genai.Client(api_key=api_key)
+    prompt = _build_prompt(text)
+
+    def _call(retry: bool = False) -> str:
+        global _gemini_fail_count, _gemini_disabled
+        try:
+            resp   = client.models.generate_content(
+                model='gemini-2.5-flash-lite', contents=prompt)
+            result = _parse_response(resp.text.strip())
+            if result:
+                _gemini_fail_count = 0  # 성공 시 카운터 리셋
+            return result
+        except Exception as e:
+            err = str(e)
+            if '429' in err or 'RESOURCE_EXHAUSTED' in err:
+                _gemini_fail_count += 1
+                print(f"  [Gemini 429] 누적 {_gemini_fail_count}/{GEMINI_FAIL_LIMIT}회")
+                if _gemini_fail_count >= GEMINI_FAIL_LIMIT:
+                    _gemini_disabled = True
+                    print(f"  [Gemini 비활성화] → Groq 전환")
+                    return ''
+                if not retry:
+                    # retry_delay 파싱 후 대기
+                    m    = re.search(r'retry_delay.*?seconds:\s*(\d+)',
+                                     err, re.DOTALL)
+                    wait = int(m.group(1)) + 5 if m else 60
+                    print(f"  [Gemini 429] {wait}초 대기 후 재시도...")
+                    time.sleep(wait)
+                    return _call(retry=True)
+            else:
+                print(f"  [Gemini 오류] {err[:100]}")
+            return ''
+
+    return _call()
+
+
+# ================================================================
+# Groq 요약
+# ================================================================
+
+def _summarize_with_groq(text: str, api_key: str) -> str:
+    global _groq_fail_count, _groq_disabled
+
+    if _groq_disabled:
+        return ''
+
+    try:
+        from openai import OpenAI
+        client = OpenAI(
+            api_key=api_key,
+            base_url='https://api.groq.com/openai/v1',
+        )
+        prompt = _build_prompt(text)
+
+        resp   = client.chat.completions.create(
+            model='llama-3.3-70b-versatile',
+            messages=[{'role': 'user', 'content': prompt}],
+            max_tokens=200,
+            temperature=0.3,
+        )
+        result = _parse_response(resp.choices[0].message.content.strip())
+        if result:
+            _groq_fail_count = 0  # 성공 시 카운터 리셋
+        return result
+
+    except Exception as e:
+        err = str(e)
+        _groq_fail_count += 1
+        print(f"  [Groq 오류] 누적 {_groq_fail_count}/{GROQ_FAIL_LIMIT}회 — {err[:100]}")
+        if _groq_fail_count >= GROQ_FAIL_LIMIT:
+            _groq_disabled = True
+            print(f"  [Groq 비활성화] → sumy 전환")
+        return ''
+
+
+# ================================================================
+# sumy fallback
 # ================================================================
 
 def _summarize_with_sumy(text: str, translator_fn=None, lang: str = 'en') -> str:
-    """sumy LsaSummarizer fallback"""
     cleaned = text.strip()
 
     # 짧은 헤더 줄 제거 (CISA 등 구조화 콘텐츠 대응)
-    lines = [l.strip() for l in cleaned.splitlines() if len(l.strip().split()) >= 5]
-    cleaned = re.sub(r'\s{2,}', ' ', ' '.join(lines) if lines else cleaned).strip()
+    lines   = [l.strip() for l in cleaned.splitlines()
+               if len(l.strip().split()) >= 5]
+    cleaned = re.sub(r'\s{2,}', ' ',
+                     ' '.join(lines) if lines else cleaned).strip()
 
-    # 3문장 이하면 sumy 생략
+    # 3문장 이하 → sumy 생략
     if _count_sentences(cleaned) <= 3:
         parts = re.split(r'(?<=[.!?。])\s+', cleaned)
         parts = [p.strip() for p in parts if len(p.strip()) > 10] or [cleaned]
@@ -163,7 +196,7 @@ def _summarize_with_sumy(text: str, translator_fn=None, lang: str = 'en') -> str
         return _format_numbered(parts)
 
     try:
-        parser    = PlaintextParser.from_string(cleaned, Tokenizer('english'))
+        parser     = PlaintextParser.from_string(cleaned, Tokenizer('english'))
         summarizer = LsaSummarizer()
         sentences  = [str(s) for s in summarizer(parser.document, 3)]
         if not any(sentences):
@@ -184,7 +217,7 @@ def _summarize_with_sumy(text: str, translator_fn=None, lang: str = 'en') -> str
 
 
 # ================================================================
-# 메인 함수 (외부에서 호출)
+# 메인 함수
 # ================================================================
 
 def summarize_3lines(
@@ -192,29 +225,28 @@ def summarize_3lines(
     lang: str = 'en',
     translator_fn=None,
     gemini_api_key: str = '',
+    groq_api_key:   str = '',
 ) -> str:
     """
-    3줄 요약 생성 (우선순위: Gemini → sumy → 앞 3문장)
+    3줄 요약 (우선순위: Gemini → Groq → sumy)
 
-    Args:
-        text            : 요약할 원문
-        lang            : 원문 언어 ('ko' / 'en' 등)
-        translator_fn   : translate_to_korean 함수 (sumy fallback용)
-        gemini_api_key  : Gemini API 키 (있으면 Gemini 우선 사용)
-
-    Returns:
-        "1. ...\n2. ...\n3. ..." 형식 문자열
+    Gemini 2회 연속 실패 → 세션 내 Groq 전환
+    Groq   2회 연속 실패 → 세션 내 sumy  전환
     """
     if not text or not text.strip():
         return ''
 
-    # ── 1순위: Gemini ─────────────────────────────────────────
-    if gemini_api_key:
+    # ── 1순위: Gemini ──────────────────────────────────────────
+    if gemini_api_key and not _gemini_disabled:
         result = _summarize_with_gemini(text, gemini_api_key)
         if result:
             return result
-        print("  [Gemini 실패] sumy로 대체")
-        time.sleep(1)  # 실패 후 잠시 대기
 
-    # ── 2순위: sumy ───────────────────────────────────────────
+    # ── 2순위: Groq ────────────────────────────────────────────
+    if groq_api_key and not _groq_disabled:
+        result = _summarize_with_groq(text, groq_api_key)
+        if result:
+            return result
+
+    # ── 3순위: sumy ────────────────────────────────────────────
     return _summarize_with_sumy(text, translator_fn=translator_fn, lang=lang)

@@ -40,6 +40,7 @@ SIMILARITY_THRESH = 0.90                    # 유사 제목 판단 임계값
 NAVER_CLIENT_ID     = os.environ.get('NAVER_CLIENT_ID', '')
 NAVER_CLIENT_SECRET = os.environ.get('NAVER_CLIENT_SECRET', '')
 GEMINI_API_KEY      = os.environ.get('GEMINI_API_KEY', '')
+GROQ_API_KEY        = os.environ.get('GROQ_API_KEY', '')
 
 # 카카오 알림톡 설정 (GitHub Secrets)
 KAKAO_URL         = os.environ.get('KAKAO_URL', '')
@@ -248,6 +249,7 @@ def enrich(item: dict) -> dict:
             lang=lang,
             translator_fn=translate_to_korean,
             gemini_api_key=GEMINI_API_KEY,
+            groq_api_key=GROQ_API_KEY,
         )
     time.sleep(7)    # Gemini 10 RPM 제한 대응 (60초/10 = 6초 + 여유 1초)
     return item
