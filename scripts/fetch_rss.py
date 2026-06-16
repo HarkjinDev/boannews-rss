@@ -244,8 +244,28 @@ def enrich(item: dict) -> dict:
 
     # _skip_summarize 플래그가 있으면 summary_3lines를 이미 직접 설정한 것
     if not item.pop('_skip_summarize', False):
+        # title + description + summary 합쳐서 풍부한 맥락 제공
+        title_text   = item.get('title', '')
+        desc_text    = item.get('description', '')
+        summary_text = item.get('summary', '')
+
+        parts = []
+        if title_text:
+            parts.append(f"제목: {title_text}")
+        # description이 summary와 다를 때만 추가 (중복 방지)
+        if desc_text and desc_text != summary_text:
+            parts.append(f"설명: {desc_text}")
+        if summary_text:
+            parts.append(f"내용: {summary_text}")
+        # content 필드 있으면 추가 (평판 등 일부 피드에서 제공)
+        content_text = item.get('content', '')
+        if content_text and content_text not in (summary_text, desc_text):
+            parts.append(f"본문: {content_text[:1000]}")
+
+        full_text = '\n'.join(parts)
+
         item['summary_3lines'] = summarize_3lines(
-            item['summary'],
+            full_text,
             lang=lang,
             translator_fn=translate_to_korean,
             gemini_api_key=GEMINI_API_KEY,
@@ -268,9 +288,10 @@ def collect_security_news(visited_links: set, visited_titles: list) -> list:
         feed = fetch_naver(cfg['url']) if cfg['naver'] else fetch_rss(cfg['url'])
 
         for entry in feed.entries:
-            title   = clean_html(entry.get('title', ''))
-            summary = clean_html(entry.get('summary', ''))
-            link    = entry.get('link', '')
+            title       = clean_html(entry.get('title', ''))
+            summary     = clean_html(entry.get('summary', ''))
+            description = clean_html(entry.get('description', ''))
+            link        = entry.get('link', '')
             if not title or not link:
                 continue
 
@@ -292,9 +313,16 @@ def collect_security_news(visited_links: set, visited_titles: list) -> list:
             if is_duplicate(link, title, visited_links, visited_titles):
                 continue
 
+            # Atom 피드(BleepingComputer 등)는 content 필드에 본문 제공
+            content_list = entry.get('content', [])
+            content_full = clean_html(
+                content_list[0].get('value', '') if content_list else ''
+            )
+
             item = {
                 'title':          title,
                 'summary':        summary,
+                'content':        content_full,   # 본문 (있을 때만)
                 'title_ko':       None,
                 'summary_ko':     None,
                 'summary_3lines': '',
@@ -350,6 +378,7 @@ def collect_vulnerability(visited_links: set, visited_titles: list) -> list:
             item = {
                 'title':          title,
                 'summary':        summary,
+                'description':    description,
                 'title_ko':       None,
                 'summary_ko':     None,
                 'summary_3lines': '',
@@ -466,9 +495,10 @@ def collect_reputation(visited_links: set, visited_titles: list) -> list:
             feed = fetch_naver(cfg['url']) if cfg['naver'] else fetch_rss(cfg['url'])
 
             for entry in feed.entries:
-                title   = clean_html(entry.get('title', ''))
-                summary = clean_html(entry.get('summary', ''))
-                link    = entry.get('link', '')
+                title       = clean_html(entry.get('title', ''))
+                summary     = clean_html(entry.get('summary', ''))
+                description = clean_html(entry.get('description', ''))
+                link        = entry.get('link', '')
                 if not title or not link:
                     continue
 
@@ -490,9 +520,16 @@ def collect_reputation(visited_links: set, visited_titles: list) -> list:
                 if not any(sk in combined_check for sk in SEC_FILTER):
                     continue
 
+                content_list = entry.get('content', [])
+                content_full = clean_html(
+                    content_list[0].get('value', '') if content_list else ''
+                )
+
                 item = {
                     'title':           title,
                     'summary':         summary,
+                    'description':     description,
+                    'content':         content_full,
                     'title_ko':        None,
                     'summary_ko':      None,
                     'summary_3lines':  '',
