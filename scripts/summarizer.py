@@ -61,10 +61,13 @@ def _build_prompt(text: str) -> str:
 - 반드시 아래 형식으로만 답변 (다른 말 없이)
 - 각 줄은 {MAX_LINE_CHARS}자 이내
 - 번호로 시작
+- 기사에 등장하는 고유명사(기관명·기업명·인물명·악성코드명), 수치(용량·건수·금액), CVE 번호를 반드시 포함할 것
+- "우려", "중요", "경각심", "필요" 같은 일반적 표현 사용 금지
+- 이 기사에만 해당하는 구체적 사실을 담을 것
 
-1. (첫 번째 핵심)
-2. (두 번째 핵심)
-3. (세 번째 핵심)
+1. (주요 사건/공격 대상 + 구체적 수치나 고유명사)
+2. (공격 방식/유출 내용 + 구체적 사실)
+3. (영향 범위/조치 사항 + 구체적 사실)
 
 뉴스 내용:
 {text[:3000]}"""
@@ -150,7 +153,7 @@ def _summarize_with_groq(text: str, api_key: str) -> str:
         prompt = _build_prompt(text)
 
         resp   = client.chat.completions.create(
-            model='llama-3.3-70b-versatile',
+            model='qwen/qwen3-32b',  # 한국어 강화 모델 (Alibaba 다국어)
             messages=[{'role': 'user', 'content': prompt}],
             max_tokens=200,
             temperature=0.3,
