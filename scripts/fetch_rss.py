@@ -418,9 +418,10 @@ def collect_vulnerability(visited_links: set, visited_titles: list, visited_summ
         feed = fetch_rss(cfg['url'])
 
         for entry in feed.entries:
-            title   = clean_html(entry.get('title', ''))
-            summary = clean_html(entry.get('summary', entry.get('description', '')))
-            link    = entry.get('link', '')
+            title       = clean_html(entry.get('title', ''))
+            summary     = clean_html(entry.get('summary', entry.get('description', '')))
+            description = clean_html(entry.get('description', ''))
+            link        = entry.get('link', '')
             if not title or not link:
                 continue
 
