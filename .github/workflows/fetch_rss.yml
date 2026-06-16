@@ -39,6 +39,7 @@ jobs:
           KAKAO_TEMPLATE:      ${{ secrets.KAKAO_TEMPLATE }}
           KAKAO_RECEIVERS:     ${{ secrets.KAKAO_RECEIVERS }}
           GEMINI_API_KEY:      ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY:        ${{ secrets.GROQ_API_KEY }}
         run: python scripts/fetch_rss.py
 
       # ── 5. feeds.json 변경 시에만 커밋 & 푸시 ─────────────
