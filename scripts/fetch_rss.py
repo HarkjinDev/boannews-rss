@@ -358,7 +358,8 @@ def enrich(item: dict) -> dict:
     item['lang']       = lang
 
     # _skip_summarize 플래그가 있으면 summary_3lines를 이미 직접 설정한 것
-    if not item.pop('_skip_summarize', False):
+    skipped_summarize = item.pop('_skip_summarize', False)
+    if not skipped_summarize:
         # title + description + summary + content 합쳐서 맥락 제공
         # 레이블(제목:, 내용:) 없이 연결 — 레이블이 있으면 모델이 에코할 수 있음
         title_text   = item.get('title', '')
@@ -385,7 +386,11 @@ def enrich(item: dict) -> dict:
             gemini_api_key=GEMINI_API_KEY,
             groq_api_key=GROQ_API_KEY,
         )
-    time.sleep(7)    # Gemini 10 RPM 제한 대응 (60초/10 = 6초 + 여유 1초)
+    # AI 요약 사용 시에만 sleep (KISA 등 _skip_summarize 항목은 불필요)
+    # _skip_summarize는 이미 pop 됐으므로, summarize_3lines 호출 여부로 판단
+    # → 위에서 summarize_3lines를 호출한 경우에만 sleep
+    if not skipped_summarize:
+        time.sleep(7)    # Gemini 10 RPM 제한 대응
     return item
 
 # ================================================================
@@ -551,12 +556,12 @@ def collect_vulnerability(visited_links: set, visited_titles: list, visited_summ
             elif cfg['source'] in ('krcert_notice', 'krcert_vuln',
                                       'krcert_alert', 'krcert_guide'):
                 # KISA 보호나라: 기사 페이지에서 □ 개요 직접 크롤링
-                # RSS에 summary 없음 → link 페이지에서 개요 추출
+                # RSS summary 없음 → link 페이지에서 개요 추출
                 overview = fetch_kisa_overview(link)
                 if overview:
-                    # 이미 1./2./3. 번호 형식으로 반환됨
+                    # ── 개요 추출 성공: 직접 저장 후 continue ──────
+                    item['summary']        = overview  # 중복감지용
                     item['summary_3lines'] = overview
-                    item['summary'] = overview  # summary도 개요로 대체
                     item['_skip_summarize'] = True
                     item = enrich(item)
                     item['summary_3lines'] = overview  # enrich 후 복원
@@ -565,12 +570,12 @@ def collect_vulnerability(visited_links: set, visited_titles: list, visited_summ
                     visited_titles.append(title)
                     visited_summaries.append(overview)
                     print(f'    ✓ {title[:55]}')
-                    continue
+                    continue  # ← 공통 블록 스킵
                 else:
-                    # 크롤링 실패 시 기본 구조화 포맷
+                    # ── 크롤링 실패: 공통 블록으로 fall-through ────
                     line1 = _t50v(title)
                     line2 = _t50v(cfg['source'].upper())
-                    line3 = _t50v('개요를 불러올 수 없습니다.')
+                    line3 = _t50v('개요 로드 실패')
 
             else:
                 # msrc / exploitdb / cisa / sans_isc:
