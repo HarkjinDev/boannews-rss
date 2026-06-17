@@ -211,6 +211,59 @@ def extract_cve_id(text: str) -> str:
     return m.group(0).upper() if m else ''
 
 
+def fetch_kisa_overview(url: str) -> str:
+    """KISA 보안공지 글 페이지에서 □ 개요 섹션 추출
+    - RSS에 summary가 없어 직접 크롤링 필요
+    - o 항목을 1./2./3. 번호 형식으로 변환
+    """
+    try:
+        resp = requests.get(
+            url.strip(), timeout=10, verify=False,
+            headers={'User-Agent': 'Mozilla/5.0'}
+        )
+        if resp.status_code != 200:
+            return ''
+
+        soup = BeautifulSoup(resp.text, 'html.parser')
+
+        # 본문 영역: class에 s-prose 포함하는 div
+        content_div = soup.find('div', class_='s-prose')
+        if not content_div:
+            return ''
+
+        text = content_div.get_text(separator=' ', strip=True)
+
+        # □ 개요 ~ 다음 □ 섹션 사이 내용 추출
+        m = re.search(r'□\s*개요(.+?)(?=□\s*\S|$)', text, re.DOTALL)
+        if not m:
+            m = re.search(r'개요(.+?)(?=□|\Z)', text, re.DOTALL)
+        if not m:
+            return ''
+
+        overview_raw = m.group(1)
+
+        # "o " 로 시작하는 항목 추출
+        items = re.findall(r'o\s+(.+?)(?=o\s+|$)', overview_raw, re.DOTALL)
+        if not items:
+            # o 항목 없으면 전체 텍스트 정리
+            cleaned = re.sub(r'\[\d+\]', '', overview_raw)
+            cleaned = re.sub(r'\s+', ' ', cleaned).strip()
+            return cleaned[:200]
+
+        # 참조번호 제거 + 공백 정리 + 50자 제한
+        lines = []
+        for i, item in enumerate(items[:3], 1):
+            line = re.sub(r'\[\d+\]', '', item)
+            line = re.sub(r'\s+', ' ', line).strip()
+            if line:
+                lines.append(f"{i}. {line[:50]}")
+
+        return '\n'.join(lines)
+
+    except Exception as e:
+        return ''
+
+
 def extract_cvss(text: str) -> tuple:
     """
     Returns: (score_str, severity_str)
@@ -495,8 +548,32 @@ def collect_vulnerability(visited_links: set, visited_titles: list, visited_summ
                     desc_text = re.sub(r'\s+', ' ', ' '.join(lines_filtered)).strip()
                 line3 = _t50v(desc_text or '설명 없음')
 
+            elif cfg['source'] in ('krcert_notice', 'krcert_vuln',
+                                      'krcert_alert', 'krcert_guide'):
+                # KISA 보호나라: 기사 페이지에서 □ 개요 직접 크롤링
+                # RSS에 summary 없음 → link 페이지에서 개요 추출
+                overview = fetch_kisa_overview(link)
+                if overview:
+                    # 이미 1./2./3. 번호 형식으로 반환됨
+                    item['summary_3lines'] = overview
+                    item['summary'] = overview  # summary도 개요로 대체
+                    item['_skip_summarize'] = True
+                    item = enrich(item)
+                    item['summary_3lines'] = overview  # enrich 후 복원
+                    results.append(item)
+                    visited_links.add(link)
+                    visited_titles.append(title)
+                    visited_summaries.append(overview)
+                    print(f'    ✓ {title[:55]}')
+                    continue
+                else:
+                    # 크롤링 실패 시 기본 구조화 포맷
+                    line1 = _t50v(title)
+                    line2 = _t50v(cfg['source'].upper())
+                    line3 = _t50v('개요를 불러올 수 없습니다.')
+
             else:
-                # krcert / msrc / exploitdb / cisa / sans_isc:
+                # msrc / exploitdb / cisa / sans_isc:
                 # 1. CVE ID 또는 제목
                 # 2. 심각도 + CVSS (없으면 출처)
                 # 3. 요약 앞부분
