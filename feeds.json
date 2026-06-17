@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-18T02:31:35.866337+09:00",
+  "fetched_at": "2026-06-18T03:01:37.472889+09:00",
   "security_news": [
     {
       "title": "北, 월드컵 '도둑 중계' 시작했다!…공식 판권 없이 조선중앙TV서 경기 ...",
@@ -3729,6 +3729,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34182",
       "source": "msrc",
       "published": "2026-06-16T18:14:59+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-54411 Linux-PAM through 1.7.2 contains an observable timing discrepancy (CWE-208) in the pam_userdb module's plaintext-password comparison path in modules/pam_userdb/pam_userdb.c that allows a local or network-adjacent attacker able to repeatedly drive authentication through a calling service to recover the plaintext password of a target account by measuring response-timing differences. The comparison uses strncmp() (or strncasecmp() when PAM_ICASE_ARG is set) preceded by a length-equality check, so the time to reject a candidate depends on the index of the first differing byte and on whether the candidate's length matches the stored password, leaking the password length and individual prefix bytes. The vulnerable path is reached when the administrator configures pam_userdb with crypt=none, with an unrecognized crypt method, or without a crypt= argument, causing the module to store and compare credentials in plaintext.",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-54411 Linux-PAM 1.7.2까지는 pam_userdb 모듈의 module/pam_userdb/pam_userdb.c에 있는 일반 텍스트-비밀번호 비교 경로에 관찰 가능한 타이밍 불일치(CWE-208)가 포함되어 있습니다. 이를 통해 로컬 또는 네트워크 인접 공격자가 호출 서비스를 통해 인증을 반복적으로 구동하여 응답 타이밍 차이를 측정하여 대상 계정의 일반 텍스트 비밀번호를 복구할 수 있습니다. 비교에서는 길이 동일 검사 다음에 strncmp()(또는 PAM_ICASE_ARG가 설정된 경우 strncasecmp())를 사용하므로 후보를 거부하는 시간은 첫 번째 다른 바이트의 인덱스와 후보의 길이가 저장된 비밀번호와 일치하는지 여부에 따라 달라지며 비밀번호 길이와 개별 접두사 바이트가 유출됩니다. 관리자가 pam_userdb를 crypt=none, 인식할 수 없는 암호화 방법 또는 crypt= 인수 없이 구성하면 취약한 경로에 도달하여 모듈이 자격 증명을 일반 텍스트로 저장하고 비교하게 됩니다.",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-54411\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-54411",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54411",
+      "source": "msrc",
+      "published": "2026-06-16T17:01:29+09:00",
       "lang": "en"
     },
     {
