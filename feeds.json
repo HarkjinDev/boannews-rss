@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-17T20:31:41.290349+09:00",
+  "fetched_at": "2026-06-17T21:01:19.405361+09:00",
   "security_news": [
     {
       "title": "\"국가 R&D 타주겠다\" 수상한 메일…중기부, '모두의 창업' 정보 유출 진...",
@@ -6735,34 +6735,6 @@
       "source": "krcert_notice",
       "published": "2026-06-15T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-11527 - Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle",
-      "summary": "CVE ID :CVE-2026-11527\n  \nPublished : June 14, 2026, 11:40 a.m. | 24 minutes ago\n  \nDescription :Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle.\n\nConfig::IniFiles::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. The helper is the open path behind the documented -file argument: new(-file => $thing) reaches it through ReadConfig. An in-memory scalar reference (-file => \\$text) does not open a path and is unaffected.\n\nAny caller that forwards untrusted input to the -file argument can run an arbitrary command or truncate a file under the process UID.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-11527 - Perl용 3.001000 이전의 Config::IniFiles 버전에서는 _make_filehandle에 있는 -file 인수의 2-arg open()을 통해 OS 명령 주입 및 파일 덮어쓰기를 허용합니다.",
-      "summary_ko": "CVE ID:CVE-2026-11527\n  \n게시일 : 2026년 6월 14일 오전 11시 40분 | 24분 전\n  \n설명 :Config::Perl용 3.001000 이전 IniFiles 버전에서는 _make_filehandle에 있는 -file 인수의 2-arg open()을 통해 OS 명령 주입 및 파일 덮어쓰기를 허용합니다.\n\nConfig::IniFiles::_make_filehandle은 Perl의 2-인수 open()을 사용하여 파일 이름 인수를 엽니다. 따라서 파이프(\"| cmd\", \"cmd |\")로 시작하거나 끝나거나 리디렉션(\"> path\", \">> path\")으로 시작하는 파일 이름은 파일로 열리지 않고 명령이나 리디렉션으로 실행됩니다. 도우미는 문서화된 -file 인수 뒤에 있는 열린 경로입니다. new(-file => $thing)는 ReadConfig를 통해 도달합니다. 메모리 내 스칼라 참조(-file => \\$text)는 경로를 열지 않으며 영향을 받지 않습니다.\n\n-file 인수에 신뢰할 수 없는 입력을 전달하는 호출자는 임의의 명령을 실행하거나 프로세스 UID 아래의 파일을 자를 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-11527\n2. 26.06.14 오후8:40\n3. Config::IniFiles versions before 3.001000 for Perl",
-      "cve_id": "CVE-2026-11527",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11527",
-      "source": "cvefeed",
-      "published": "2026-06-14T20:40:45+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-11526 - GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle",
-      "summary": "CVE ID :CVE-2026-11526\n  \nPublished : June 14, 2026, 11:39 a.m. | 25 minutes ago\n  \nDescription :GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle.\n\nGD::Image::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. _make_filehandle is the single open path behind every filename-accepting constructor (new, newFromPng, newFromJpeg, and the rest); the in-memory *Data variants do not open a path and are unaffected.\n\nAny caller that forwards untrusted input to one of these constructors as a pathname can run an arbitrary command or truncate a file under the process UID.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-11526 - Perl용 2.86 이전 GD 버전에서는 _make_filehandle에서 파일 이름 인수의 2개 인수 open()을 통해 OS 명령 주입 및 파일 덮어쓰기를 허용합니다.",
-      "summary_ko": "CVE ID:CVE-2026-11526\n  \n게시일 : 2026년 6월 14일 오전 11시 39분 | 25분 전\n  \n설명 : Perl용 2.86 이전 GD 버전에서는 _make_filehandle에 있는 파일 이름 인수의 2개 인수 open()을 통해 OS 명령 주입 및 파일 덮어쓰기를 허용합니다.\n\nGD::Image::_make_filehandle은 Perl의 2-인수 open()을 사용하여 파일 이름 인수를 엽니다. 따라서 파이프(\"| cmd\", \"cmd |\")로 시작하거나 끝나거나 리디렉션(\"> path\", \">> path\")으로 시작하는 파일 이름은 파일로 열리지 않고 명령이나 리디렉션으로 실행됩니다. _make_filehandle은 모든 파일 이름을 허용하는 생성자(new, newFromPng, newFromJpeg 및 나머지) 뒤에 있는 단일 열린 경로입니다. 메모리 내 *Data 변형은 경로를 열지 않으며 영향을 받지 않습니다.\n\n신뢰할 수 없는 입력을 이러한 생성자 중 하나에 경로 이름으로 전달하는 호출자는 임의의 명령을 실행하거나 프로세스 UID 아래의 파일을 자를 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-11526\n2. 26.06.14 오후8:39\n3. GD versions before 2.86 for Perl allow OS command ",
-      "cve_id": "CVE-2026-11526",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11526",
-      "source": "cvefeed",
-      "published": "2026-06-14T20:39:21+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
