@@ -348,6 +348,29 @@ def fetch_rss(url: str) -> feedparser.FeedParserDict:
 # 번역 + 요약 (enrich)
 # ================================================================
 
+def preprocess_for_summary(title: str, text: str) -> str:
+    """
+    AI 요약 품질 향상을 위한 전처리
+    1. 기자 바이라인 제거: [보안뉴스 X기자], [데일리시큐 X기자] 등
+    2. 제목이 본문 앞에 반복될 경우 제거
+    """
+    if not text:
+        return text
+    # 바이라인 패턴 제거: [XX기자], [XX리포터], [XX특파원]
+    text = re.sub(r'\[[^\]]{2,20}(기자|리포터|특파원)\]', '', text)
+    # 언론사 단독 태그 제거: [보안뉴스], [데일리시큐] 등
+    text = re.sub(
+        r'\[(보안뉴스|데일리시큐|zdnet|ZDNet|etnews|전자신문|연합뉴스|뉴스1|뉴시스)\]',
+        '', text, flags=re.I
+    )
+    # 제목이 본문 앞에 반복되면 제거 (title 앞 10자 기준)
+    if title and len(title) > 5:
+        prefix = title[:10]
+        if text.strip().startswith(prefix):
+            text = text.strip()[len(title):].strip()
+    return re.sub(r'\s+', ' ', text).strip()
+
+
 def enrich(item: dict) -> dict:
     """번역 · 3줄 요약을 item에 추가"""
     title_ko, lang   = translate_to_korean(item['title'])
@@ -367,15 +390,20 @@ def enrich(item: dict) -> dict:
         summary_text = item.get('summary', '')
         content_text = item.get('content', '')
 
+        # 바이라인/제목반복 전처리 적용
+        summary_clean = preprocess_for_summary(title_text, summary_text)
+        desc_clean    = preprocess_for_summary(title_text, desc_text)
+        content_clean = preprocess_for_summary(title_text, content_text[:1000]) if content_text else ''
+
         parts = []
         if title_text:
             parts.append(title_text)
-        if desc_text and desc_text != summary_text:
-            parts.append(desc_text)
-        if summary_text:
-            parts.append(summary_text)
-        if content_text and content_text not in (summary_text, desc_text):
-            parts.append(content_text[:1000])
+        if desc_clean and desc_clean != summary_clean:
+            parts.append(desc_clean)
+        if summary_clean:
+            parts.append(summary_clean)
+        if content_clean and content_clean not in (summary_clean, desc_clean):
+            parts.append(content_clean)
 
         full_text = '\n\n'.join(p for p in parts if p)
 
@@ -493,8 +521,16 @@ def collect_vulnerability(visited_links: set, visited_titles: list, visited_summ
             except Exception:
                 pass
 
-            if is_duplicate(link, title, visited_links, visited_titles,
-                           summary=summary, visited_summaries=visited_summaries):
+            # krcert 항목은 링크로만 중복 판단
+            # (제목이 'XX 제품 보안 업데이트 권고' 패턴이라 title 유사도 오탐 방지)
+            is_krcert = cfg['source'] in (
+                'krcert_notice', 'krcert_vuln', 'krcert_alert', 'krcert_guide'
+            )
+            if is_krcert:
+                if link in visited_links:
+                    continue
+            elif is_duplicate(link, title, visited_links, visited_titles,
+                              summary=summary, visited_summaries=visited_summaries):
                 continue
 
             combined  = title + ' ' + summary
