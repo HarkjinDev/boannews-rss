@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-19T01:31:34.786468+09:00",
+  "fetched_at": "2026-06-19T02:01:18.024690+09:00",
   "security_news": [
     {
       "title": "[미국 특징주] 액센추어 18% 급락, 이란 전쟁 여파로 실적 전망 하향",
@@ -2916,6 +2916,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-7383 Possible Heap Buffer Overflow in ASN.1 Multibyte String Conversion",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-7383 ASN.1 멀티바이트 문자열 변환에서 힙 버퍼 오버플로 가능성",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-7383\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-7383",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7383",
+      "source": "msrc",
+      "published": "2026-06-18T17:42:51+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-25681 Invoking  incorrect handling of character references in DOCTYPE nodes in golang.org/x/net/html",
       "summary": "Information published.",
       "description": "Information published.",
@@ -4516,20 +4531,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-49106",
       "source": "cvefeed",
       "published": "2026-06-16T05:19:19+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47777 - Mastodon has a consent-check bypass in its remote Collections",
-      "summary": "CVE ID :CVE-2026-47777\n  \nPublished : June 15, 2026, 4:54 p.m. | 1 hour, 16 minutes ago\n  \nDescription :Mastodon is a free, open-source social network server based on ActivityPub. In versions there is a missing condition in the check if remote accounts consented to be featured in a remote Collection could lead to attackers bypassing the check and faking consent. An attacker could forge the FeatureAuthorization object that is used to verify consent to be featured in a Collection and thus make it appear as if an account is allowed to be in a Collection when it actually is not. While the FeatureAuthorization must reside on the same domain as the object it is for, a check is missing to make sure said object is actually the same as in the Collection item. This allows an attacker to forge the authorization. Mastodon servers are affected only if running the main branch or nightly builds who have opted into testing the experimental \"Collections\" feature by setting the environment variable EXPERIMENTAL_FEATURES to a value including collections. This has been patched in version 4.6.0-beta.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47777 - Mastodon에는 원격 컬렉션에 동의 확인 우회 기능이 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-47777\n  \n게시일 : 2026년 6월 15일 오후 4시 54분 | 1시간, 16분 전\n  \n설명 :Mastodon은 ActivityPub을 기반으로 하는 무료 오픈 소스 소셜 네트워크 서버입니다. 버전에는 원격 계정이 원격 컬렉션에 포함되도록 동의한 경우 확인에 조건이 누락되어 공격자가 확인을 우회하고 동의를 위조할 수 있습니다. 공격자는 컬렉션에 포함되는 것에 대한 동의를 확인하는 데 사용되는 FeatureAuthorization 개체를 위조하여 계정이 컬렉션에 포함되도록 허용된 것처럼 보이게 만들 수 있습니다. FeatureAuthorization은 개체와 동일한 도메인에 있어야 하지만 해당 개체가 실제로 컬렉션 항목과 동일한지 확인하는 검사가 누락되었습니다. 이를 통해 공격자는 권한 부여를 위조할 수 있습니다. Mastodon 서버는 환경 변수 EXPERIMENTAL_FEATURES를 컬렉션을 포함한 값으로 설정하여 실험적인 \"컬렉션\" 기능을 테스트하기로 선택한 메인 브랜치 또는 야간 빌드를 실행하는 경우에만 영향을 받습니다. 이는 버전 4.6.0-beta.1에서 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47777\n2. 26.06.16 오전1:54\n3. Mastodon is a free, open-source social network ser",
-      "cve_id": "CVE-2026-47777",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47777",
-      "source": "cvefeed",
-      "published": "2026-06-16T01:54:44+09:00",
       "lang": "en"
     }
   ],
