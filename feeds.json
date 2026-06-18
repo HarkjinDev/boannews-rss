@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-19T06:32:38.288666+09:00",
+  "fetched_at": "2026-06-19T07:03:54.005858+09:00",
   "security_news": [
     {
       "title": "삼일PwC “AI發 내부통제 리스크 점증, 데이터 기반 의사결정 요구” [시...",
@@ -2735,20 +2735,24 @@
       "source": "naver",
       "published": "2026-06-16T07:12:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[THE Biz&CEO] 취임 100일 앞둔 정상호 롯데카드 대표…실적·신뢰 동반 ...",
-      "summary": "롯데카드는 지난해 8월 외부 해킹 공격으로 297만명의 고객 정보가 유출되는 사고를 겪었고 정 대표는... 금융감독원 제재심의위원회는 지난 4월 해킹 사고와 관련해 영업정지 4개월15일을 포함한 중징계안을 의결했고...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 롯데카드, 297만 고객 정보 유출 사고 발생\n2. 금감원, 롯데카드에 영업정지 4개월15일 중징계\n3. 해킹 사고 관련 금융감독원 제재 확정",
-      "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=722587",
-      "source": "naver",
-      "published": "2026-06-16T07:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-45696 - OpenEXR HTJ2K decoder heap buffer over-read in ht_undo_impl() (DoS)",
+      "summary": "CVE ID :CVE-2026-45696\n  \nPublished : June 18, 2026, 8:31 p.m. | 51 minutes ago\n  \nDescription :OpenEXR is the reference implementation and specification for the EXR image format, widely used in the motion picture industry. In versions 3.4.0 through 3.4.11, the HTJ2K (High-Throughput JPEG 2000) decoder, ht_undo_impl() in OpenEXRCore is vulnerable to a heap-buffer-overflow READ. The  ht_undo_imp function copies decoded pixels out of a per-line OpenJPH buffer using the EXR channel's declared width as the iteration count. The codestream embedded in the EXR chunk can declare different (smaller) tile/line dimensions than the EXR header advertises, but ht_undo_impl() does not validate this — it pulls width 32-bit samples from cur_line->i32[] without checking the OpenJPH line buffer's actual length. A crafted EXR file produces a 4-byte heap-buffer-overflow READ immediately after a buffer allocated by ojph::local::codestream::finalize_alloc(). The bug is reachable through the standard scanline-decode entry point used by every consumer of exr_decoding_run/Imf::checkOpenEXRFile, including thumbnailers, asset pipelines, and the exrcheck utility — i.e. any application that opens untrusted EXR files. The result is a deterministic crash (DoS) and potential adjacent-heap leak. This issue has been fixed in version 3.4.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-45696\n  \nPublished : June 18, 2026, 8:31 p.m. | 51 minutes ago\n  \nDescription :OpenEXR is the reference implementation and specification for the EXR image format, widely used in the motion picture industry. In versions 3.4.0 through 3.4.11, the HTJ2K (High-Throughput JPEG 2000) decoder, ht_undo_impl() in OpenEXRCore is vulnerable to a heap-buffer-overflow READ. The  ht_undo_imp function copies decoded pixels out of a per-line OpenJPH buffer using the EXR channel's declared width as the iteration count. The codestream embedded in the EXR chunk can declare different (smaller) tile/line dimensions than the EXR header advertises, but ht_undo_impl() does not validate this — it pulls width 32-bit samples from cur_line->i32[] without checking the OpenJPH line buffer's actual length. A crafted EXR file produces a 4-byte heap-buffer-overflow READ immediately after a buffer allocated by ojph::local::codestream::finalize_alloc(). The bug is reachable through the standard scanline-decode entry point used by every consumer of exr_decoding_run/Imf::checkOpenEXRFile, including thumbnailers, asset pipelines, and the exrcheck utility — i.e. any application that opens untrusted EXR files. The result is a deterministic crash (DoS) and potential adjacent-heap leak. This issue has been fixed in version 3.4.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-45696 - ht_undo_impl()에서 OpenEXR HTJ2K 디코더 힙 버퍼 초과 읽기(DoS)",
+      "summary_ko": "CVE ID:CVE-2026-45696\n  \n게시일 : 2026년 6월 18일 오후 8시 31분 | 51분 전\n  \n설명 :OpenEXR은 영화 산업에서 널리 사용되는 EXR 이미지 형식에 대한 참조 구현 및 사양입니다. 버전 3.4.0~3.4.11에서 OpenEXRCore의 HTJ2K(High-Throughput JPEG 2000) 디코더인 ht_undo_impl()은 힙 버퍼 오버플로 READ에 취약합니다. ht_undo_imp 함수는 EXR 채널의 선언된 너비를 반복 횟수로 사용하여 라인별 OpenJPH 버퍼에서 디코딩된 픽셀을 복사합니다. EXR 청크에 포함된 코드스트림은 EXR 헤더가 광고하는 것과 다른(더 작은) 타일/라인 크기를 선언할 수 있지만 ht_undo_impl()은 이를 검증하지 않습니다. OpenJPH 라인 버퍼의 실제 길이를 확인하지 않고 cur_line->i32[]에서 너비 32비트 샘플을 가져옵니다. 조작된 EXR 파일은 ojph::local::codestream::finalize_alloc()에 의해 할당된 버퍼 직후에 4바이트 힙 버퍼 오버플로 READ를 생성합니다. 이 버그는 썸네일러, 자산 파이프라인 및 exrcheck 유틸리티(예: 신뢰할 수 없는 EXR 파일을 여는 모든 애플리케이션)를 포함하여 exr_decoding_run/Imf::checkOpenEXRFile의 모든 소비자가 사용하는 표준 스캔라인 디코드 진입점을 통해 도달할 수 있습니다. 그 결과 결정론적 충돌(DoS)이 발생하고 인접 힙 누출이 발생할 가능성이 있습니다. 이 문제는 버전 3.4.12에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-45696\n2. 26.06.19 오전5:31\n3. OpenEXR is the reference implementation and specif",
+      "cve_id": "CVE-2026-45696",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45696",
+      "source": "cvefeed",
+      "published": "2026-06-19T05:31:56+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-48984 - pam_usb: xfree() does not call explicit_bzero — sensitive cryptographic material may linger in freed heap",
       "summary": "CVE ID :CVE-2026-48984\n  \nPublished : June 18, 2026, 5:06 p.m. | 2 hours ago\n  \nDescription :pam_usb provides hardware authentication for Linux using ordinary removable media. In versions 0.9.1 and below, the xfree() memory release helper in calls free() without first zeroing the buffer contents, releasing heap-allocated buffers containing sensitive data — including one-time pad bytes read from disk — without clearing, leaving the sensitive content in freed heap memory until it happens to be overwritten by a subsequent allocation. On a system where a use-after-free condition exists, or where a heap inspection primitive becomes available, this could allow recovery of pad values or other authentication material from freed memory regions. This is a defence-in-depth requirement consistent with prior hardening work in this codebase (GHSA-vx6f-rrqr-j87c applied explicit_bzero to some pad paths; this issue generalises the pattern to the central deallocation helper).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4067,76 +4071,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-12087",
       "source": "cvefeed",
       "published": "2026-06-16T07:16:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12205 - Crypt::DSA versions before 1.21 for Perl reused the nonce across signatures, leading to private-key recovery",
-      "summary": "CVE ID :CVE-2026-12205\n  \nPublished : June 15, 2026, 9:57 p.m. | 1 hour, 24 minutes ago\n  \nDescription :Crypt::DSA versions before 1.21 for Perl reused the nonce across signatures, leading to private-key recovery.\n\nCrypt::DSA::sign caches the per-signature nonce material in the Key object without ever clearing it.\n\nThe first sign() on a Key object picks a nonce, and every later sign() on that same object reuses it, producing an identical \"r\".\n\nKeys used to sign more than once with an affected version should be considered compromised.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-12205 - Perl용 1.21 이전의 Crypt::DSA 버전은 서명 전체에서 nonce를 재사용하여 개인 키 복구로 이어졌습니다.",
-      "summary_ko": "CVE ID:CVE-2026-12205\n  \n게시일 : 2026년 6월 15일 오후 9시 57분 | 1시간, 24분 전\n  \n설명 :Crypt::DSA Perl용 1.21 이전 버전은 서명 전체에서 nonce를 재사용하여 개인 키 복구로 이어졌습니다.\n\nCrypt::DSA::sign은 키 개체의 서명별 nonce 자료를 삭제하지 않고 캐시합니다.\n\nKey 객체의 첫 번째 sign()은 nonce를 선택하고 이후 동일한 객체의 모든 sign()은 이를 재사용하여 동일한 \"r\"을 생성합니다.\n\n영향을 받는 버전으로 두 번 이상 서명하는 데 사용된 키는 손상된 것으로 간주되어야 합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12205\n2. 26.06.16 오전6:57\n3. Crypt::DSA versions before 1.21 for Perl reused th",
-      "cve_id": "CVE-2026-12205",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12205",
-      "source": "cvefeed",
-      "published": "2026-06-16T06:57:18+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48853 - Remote code execution and denial of service via unsafe Erlang term deserialization in elixir-grpc/grpc",
-      "summary": "CVE ID :CVE-2026-48853\n  \nPublished : June 15, 2026, 9:56 p.m. | 1 hour, 25 minutes ago\n  \nDescription :Deserialization of Untrusted Data and Allocation of Resources Without Limits or Throttling vulnerabilities in elixir-grpc grpc allow unauthenticated attackers to crash the BEAM node via atom table exhaustion and, when a decoded term flows into a call site that invokes it, achieve remote code execution on the server.\n\n'Elixir.GRPC.Codec.Erlpack':decode/2 (lib/grpc/codec/erlpack.ex) calls :erlang.binary_to_term/1 on the raw gRPC message body without the :safe option, no size bound, and no type guard. Any unauthenticated peer that sends a request with Content-Type: application/grpc+erlpack can send a crafted payload that mints arbitrary new atoms (which are never garbage-collected, exhausting the bounded atom table and crashing the VM) or that encodes a fun term which, if applied anywhere downstream, executes attacker-controlled code inside the server process.\n\nThis issue affects grpc from 0.4.0 before 1.0.0.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48853 - elixir-grpc/grpc의 안전하지 않은 Erlang 용어 역직렬화를 통한 원격 코드 실행 및 서비스 거부",
-      "summary_ko": "CVE ID:CVE-2026-48853\n  \n게시일 : 2026년 6월 15일 오후 9시 56분 | 1시간 25분 전\n  \n설명 : elixir-grpc grpc의 제한 없는 리소스 할당 또는 제한 없는 리소스 할당의 역직렬화로 인해 인증되지 않은 공격자가 아톰 테이블 고갈을 통해 BEAM 노드를 충돌시키고, 디코딩된 용어가 이를 호출하는 호출 사이트로 유입되면 서버에서 원격 코드가 실행됩니다.\n\n'Elixir.GRPC.Codec.Erlpack':decode/2 (lib/grpc/codec/erlpack.ex)는 :safe 옵션, 크기 제한 및 유형 가드 없이 원시 gRPC 메시지 본문에서 :erlang.binary_to_term/1을 호출합니다. Content-Type: application/grpc+erlpack을 사용하여 요청을 보내는 인증되지 않은 피어는 임의의 새 원자(가비지 수집되지 않고 제한된 원자 테이블을 소진하고 VM을 충돌시킴)를 생성하거나 다운스트림 어디에나 적용될 경우 서버 프로세스 내에서 공격자가 제어하는 ​​코드를 실행하는 재미있는 용어를 인코딩하는 조작된 페이로드를 보낼 수 있습니다.\n\n이 문제는 1.0.0 이전의 0.4.0부터 grpc에 영향을 미칩니다.\n  \n심각도: 9.2 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48853\n2. 26.06.16 오전6:56\n3. Deserialization of Untrusted Data and Allocation o",
-      "cve_id": "CVE-2026-48853",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48853",
-      "source": "cvefeed",
-      "published": "2026-06-16T06:56:15+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53430 - grpc gzip decompression bomb in GRPC.Compressor.Gzip.decompress/1",
-      "summary": "CVE ID :CVE-2026-53430\n  \nPublished : June 15, 2026, 9:55 p.m. | 1 hour, 26 minutes ago\n  \nDescription :Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in elixir-grpc grpc (GRPC.Compressor.Gzip, GRPC.Message modules) allows a denial of service via a gzip decompression bomb.\n\nThis vulnerability is associated with program files lib/grpc/compressor/gzip.ex, lib/grpc/message.ex and program routines 'Elixir.GRPC.Compressor.Gzip':decompress/1, 'Elixir.GRPC.Message':from_data/2.\n\n'Elixir.GRPC.Compressor.Gzip':decompress/1 calls :zlib.gunzip/1 directly on attacker-controlled bytes with no decompressed-size limit, ratio check, or incremental decoding. Because this module is the registered gzip GRPC.Compressor implementation, it is invoked automatically whenever an incoming gRPC frame carries the grpc-encoding: gzip header. :zlib.gunzip/1 allocates the entire decompressed result as a single binary, so a small highly compressible payload (for example a few kilobytes of zeros, which gzip compresses at roughly 1000:1) expands to multiple gigabytes inside a single call. The max_receive_message_length limit is enforced only against the already-decompressed message, so it provides no protection. An unauthenticated remote peer can send a single crafted frame to exhaust the BEAM node's heap and trigger an out-of-memory kill.\n\nThis issue affects grpc: from 0.4.0 before 1.0.0.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53430 - GRPC.Compressor.Gzip.decompress/1의 grpc gzip 압축 해제 폭탄",
-      "summary_ko": "CVE ID:CVE-2026-53430\n  \n게시일 : 2026년 6월 15일 오후 9시 55분 | 1시간 26분 전\n  \n설명 : elixir-grpc grpc(GRPC.Compressor.Gzip, GRPC.Message 모듈)의 고도로 압축된 데이터(데이터 증폭)를 부적절하게 처리하면 gzip 압축 해제 폭탄을 통한 서비스 거부가 허용됩니다.\n\n이 취약점은 프로그램 파일 lib/grpc/compressor/gzip.ex, lib/grpc/message.ex 및 프로그램 루틴 'Elixir.GRPC.Compressor.Gzip':decompress/1, 'Elixir.GRPC.Message':from_data/2와 연관되어 있습니다.\n\n'Elixir.GRPC.Compressor.Gzip':decompress/1은 압축 해제 크기 제한, 비율 확인 또는 증분 디코딩 없이 공격자가 제어하는 ​​바이트에서 직접 :zlib.gunzip/1을 호출합니다. 이 모듈은 등록된 gzip GRPC.Compressor 구현이므로 수신 gRPC 프레임이 grpc-encoding: gzip 헤더를 전달할 때마다 자동으로 호출됩니다. :zlib.gunzip/1은 압축 해제된 전체 결과를 단일 바이너리로 할당하므로 압축률이 높은 작은 페이로드(예: 몇 킬로바이트의 0, gzip은 대략 1000:1로 압축)가 단일 호출 내에서 여러 기가바이트로 확장됩니다. max_receive_message_length 제한은 이미 압축이 풀린 메시지에 대해서만 적용되므로 보호 기능을 제공하지 않습니다. 인증되지 않은 원격 피어는 단일 제작 프레임을 보내 BEAM 노드의 힙을 소진하고 메모리 부족 종료를 트리거할 수 있습니다.\n\n이 문제는 grpc: 0.4.0부터 1.0.0까지 영향을 미칩니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53430\n2. 26.06.16 오전6:55\n3. Improper Handling of Highly Compressed Data (Data ",
-      "cve_id": "CVE-2026-53430",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53430",
-      "source": "cvefeed",
-      "published": "2026-06-16T06:55:33+09:00",
-      "lang": "it"
-    },
-    {
-      "title": "CVE-2026-48599 - Authorization bypass via path binding override in elixir-grpc/grpc HTTP transcoding",
-      "summary": "CVE ID :CVE-2026-48599\n  \nPublished : June 15, 2026, 9:55 p.m. | 1 hour, 26 minutes ago\n  \nDescription :Authorization Bypass Through User-Controlled Key vulnerability in elixir-grpc grpc allows authenticated attackers to access or modify resources belonging to other users by smuggling a conflicting value for any path-bound field via the query string or request body.\n\nIn 'Elixir.GRPC.Server.Transcode':map_request/5 (lib/grpc/server/transcode.ex), all three clauses use Map.merge/2 with path bindings as the first argument, giving them the lowest merge precedence. A request such as GET /users/me/profile?user_id=victim (or a POST with {\"user_id\": \"victim\"} when body: \"*\") yields a decoded protobuf struct where the path-bound field carries the attacker-supplied value rather than the router-extracted value. Any handler that uses the path-bound field for authorization, multi-tenancy scoping, or ownership checks is silently bypassed.\n\nThis issue affects grpc from 0.8.0 before 1.0.0.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48599 - elixir-grpc/grpc HTTP 트랜스코딩에서 경로 바인딩 재정의를 통한 인증 우회",
-      "summary_ko": "CVE ID:CVE-2026-48599\n  \n게시일 : 2026년 6월 15일 오후 9시 55분 | 1시간 26분 전\n  \n설명 : elixir-grpc grpc의 사용자 제어 키를 통한 인증 우회 취약성으로 인해 인증된 공격자가 쿼리 문자열이나 요청 본문을 통해 경로 바인딩 필드에 대해 충돌하는 값을 밀수입하여 다른 사용자에게 속한 리소스에 액세스하거나 수정할 수 있습니다.\n\n'Elixir.GRPC.Server.Transcode':map_request/5 (lib/grpc/server/transcode.ex)에서 세 절 모두 첫 번째 인수로 경로 바인딩이 있는 Map.merge/2를 사용하여 병합 우선순위가 가장 낮습니다. GET /users/me/profile?user_id=victim(또는 body: \"*\"인 경우 {\"user_id\": \"victim\"}이 포함된 POST)과 같은 요청은 경로 바인딩 필드가 라우터 추출 값이 아닌 공격자가 제공한 값을 전달하는 디코딩된 protobuf 구조체를 생성합니다. 권한 부여, 다중 테넌시 범위 지정 또는 소유권 확인을 위해 경로 바인딩 필드를 사용하는 모든 핸들러는 자동으로 우회됩니다.\n\n이 문제는 1.0.0 이전의 0.8.0부터 grpc에 영향을 미칩니다.\n  \n심각도: 7.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48599\n2. 26.06.16 오전6:55\n3. Authorization Bypass Through User-Controlled Key v",
-      "cve_id": "CVE-2026-48599",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48599",
-      "source": "cvefeed",
-      "published": "2026-06-16T06:55:28+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48854 - Unbounded request body accumulation causes memory exhaustion in elixir-grpc/grpc",
-      "summary": "CVE ID :CVE-2026-48854\n  \nPublished : June 15, 2026, 9:55 p.m. | 1 hour, 26 minutes ago\n  \nDescription :Allocation of Resources Without Limits or Throttling vulnerability in elixir-grpc grpc allows unauthenticated attackers to exhaust the BEAM's memory and crash the server by streaming a large or slow-trickle unary request body.\n\n'Elixir.GRPC.Server.Adapters.Cowboy.Handler':read_full_body/3 (lib/grpc/server/adapters/cowboy/handler.ex) accumulates every received chunk into a single growing binary with no size cap. Additionally, when the client omits the grpc-timeout header, the per-chunk read timeout resolves to :infinity, allowing a slow-trickle client to keep the connection alive indefinitely while memory grows. A single connection is sufficient to exhaust server memory and crash the node.\n\nThis issue affects grpc from 0.3.1 before 1.0.0.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48854 - 제한되지 않은 요청 본문 누적으로 인해 elixir-grpc/grpc에서 메모리가 고갈됩니다.",
-      "summary_ko": "CVE ID:CVE-2026-48854\n  \n게시일 : 2026년 6월 15일 오후 9시 55분 | 1시간 26분 전\n  \n설명 : elixir-grpc grpc의 제한 없는 리소스 할당 또는 조절 취약점으로 인해 인증되지 않은 공격자가 크거나 느린 속도의 단항 요청 본문을 스트리밍하여 BEAM의 메모리를 소진하고 서버를 충돌시킬 수 있습니다.\n\n'Elixir.GRPC.Server.Adapters.Cowboy.Handler':read_full_body/3 (lib/grpc/server/adapters/cowboy/handler.ex)는 수신된 모든 청크를 크기 제한 없이 단일 성장 바이너리로 축적합니다. 또한 클라이언트가 grpc-timeout 헤더를 생략하면 청크당 읽기 시간 초과가 :infinity로 확인되어 느린 속도의 클라이언트가 메모리가 증가하는 동안 연결을 무기한으로 유지할 수 있습니다. 서버 메모리를 소모하고 노드를 충돌시키는 데에는 단일 연결이면 충분합니다.\n\n이 문제는 1.0.0 이전의 0.3.1부터 grpc에 영향을 미칩니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48854\n2. 26.06.16 오전6:55\n3. Allocation of Resources Without Limits or Throttli",
-      "cve_id": "CVE-2026-48854",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48854",
-      "source": "cvefeed",
-      "published": "2026-06-16T06:55:23+09:00",
       "lang": "en"
     }
   ],
