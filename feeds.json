@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-06-20T05:02:38.201005+09:00",
+  "fetched_at": "2026-06-20T05:32:59.695052+09:00",
   "security_news": [
+    {
+      "title": "Hackers exploit info disclosure bug in Gravity SMTP WordPress plugin",
+      "summary": "Threat actors are exploiting an unauthenticated information disclosure vulnerability in the WordPress plugin Gravity SMTP, active on 100,000 sites. [...]",
+      "content": "",
+      "title_ko": "해커들은 Gravity SMTP WordPress 플러그인의 정보 공개 버그를 악용합니다.",
+      "summary_ko": "위협 행위자는 100,000개 사이트에서 활성화된 WordPress 플러그인 Gravity SMTP의 인증되지 않은 정보 공개 취약점을 악용하고 있습니다. [...]",
+      "summary_3lines": "1. 워드프레스 플러그인 'Gravity SMTP' 정보 노출 취약점 악용\n2. 비인증 상태에서 서버 정보 유출 가능\n3. 10만 개 사이트 영향… 패치 권고",
+      "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-info-disclosure-bug-in-gravity-smtp-wordpress-plugin/",
+      "source": "bleepingcomputer",
+      "published": "2026-06-20T05:25:02+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[법조광장] 로펌의 내부통제가 곧 법률 자문의 신뢰도다",
+      "summary": "인적 리스크에 대한 통제가 곧 내부통제의 완성 대부분의 보안 사고는 외부 해킹 기술보다 사람의 실수에서 비롯된다. 피싱 이메일, 계정 탈취, 내부자의 정보 유출 등 많은 사고가 임직원의 부주의나 보안 인식 부족과...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 로펌 보안 사고, 90%는 사람 실수로 발생\n2. 피싱, 계정 탈취, 내부 정보 유출 등 발생\n3. 철저한 내부통제가 법률 자문 신뢰도 좌우",
+      "link": "https://www.lawtimes.co.kr/news/articleView.html?idxno=221621",
+      "source": "naver",
+      "published": "2026-06-20T05:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "금융권 AI 공격·방어 '한 끗' 무심코 '업무정보' 입력했다간…",
       "summary": "앞서 금융위는 지난달 미국 앤트로픽 AI 모델 미토스가 사이버보안 분야에서 탁월한 성능을 보였다면서도 해킹 공격을 기획·실행할 수 있는 능력까지 갖춘 점에 주목했다. 금융위는 고성능 AI가 해킹에 악용될 경우...",
@@ -2164,6 +2188,51 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-12446 Insufficient data validation in Passwords",
+      "summary": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.",
+      "description": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.",
+      "title_ko": "CVE-2026-12446 비밀번호의 데이터 유효성 검사가 충분하지 않습니다.",
+      "summary_ko": "이 CVE는 Chrome에서 할당되었습니다.  Microsoft Edge(Chromium 기반)는 이 취약점을 해결하는 Chromium을 수집합니다. 자세한 내용은 [Google Chrome 릴리스](https://chromereleases.googleblog.com/2025)를 참조하세요.",
+      "summary_3lines": "1. CVE-2026-12446\n2. MSRC\n3. This CVE was assigned by Chrome. Microsoft Edge (C",
+      "cve_id": "CVE-2026-12446",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12446",
+      "source": "msrc",
+      "published": "2026-06-20T05:52:27+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-49338 - Subsonic API: any authenticated user can delete or read any other user's playlist (IDOR)",
+      "summary": "CVE ID :CVE-2026-49338\n  \nPublished : June 19, 2026, 7:08 p.m. | 26 minutes ago\n  \nDescription :gonic is a music streaming server / free-software subsonic server API implementation. Prior to version 0.21.0, the Subsonic API endpoints `/rest/deletePlaylist.view` and `/rest/getPlaylist.view` perform no per-resource authorization. Once authenticated as any user (admin or not), an attacker can delete any playlist owned by any other user (including admin) by passing its `id` and read the full contents (name, comment, song list) of any other user's **private** (non-public) playlist by passing its `id`. The Subsonic playlist `id` is `base64url(\"/.m3u\")`. Because filenames are user-supplied or time-derived and the `userID` is a small integer, IDs are guessable and frequently exposed (e.g. a previously-public playlist that was later made private still has the same ID). This breaks the multi-user trust boundary of gonic: a low-privileged user can wipe an administrator's curated playlists, and a user can exfiltrate any private playlist they obtain an ID for. The issue was fixed in commit `6dd71e6a3c966867ef8c900d359a7df75789f410`, which is part of version 0.21.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-49338\n  \nPublished : June 19, 2026, 7:08 p.m. | 26 minutes ago\n  \nDescription :gonic is a music streaming server / free-software subsonic server API implementation. Prior to version 0.21.0, the Subsonic API endpoints `/rest/deletePlaylist.view` and `/rest/getPlaylist.view` perform no per-resource authorization. Once authenticated as any user (admin or not), an attacker can delete any playlist owned by any other user (including admin) by passing its `id` and read the full contents (name, comment, song list) of any other user's **private** (non-public) playlist by passing its `id`. The Subsonic playlist `id` is `base64url(\"/.m3u\")`. Because filenames are user-supplied or time-derived and the `userID` is a small integer, IDs are guessable and frequently exposed (e.g. a previously-public playlist that was later made private still has the same ID). This breaks the multi-user trust boundary of gonic: a low-privileged user can wipe an administrator's curated playlists, and a user can exfiltrate any private playlist they obtain an ID for. The issue was fixed in commit `6dd71e6a3c966867ef8c900d359a7df75789f410`, which is part of version 0.21.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-49338 - Subsonic API: 인증된 모든 사용자는 다른 사용자의 재생 목록(IDOR)을 삭제하거나 읽을 수 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-49338\n  \n게시일 : 2026년 6월 19일 오후 7시 08분 | 26분 전\n  \n설명 :gonic은 음악 스트리밍 서버/무료 소프트웨어 아음속 서버 API 구현입니다. 버전 0.21.0 이전에는 Subsonic API 엔드포인트 `/rest/deletePlaylist.view` 및 `/rest/getPlaylist.view`가 리소스별 인증을 수행하지 않습니다. 사용자(관리자 여부)로 인증되면 공격자는 `id`를 전달하여 다른 사용자(관리자 포함)가 소유한 재생 목록을 삭제할 수 있으며 `id`를 전달하여 다른 사용자의 **비공개**(비공개) 재생 목록의 전체 내용(이름, 댓글, 노래 목록)을 읽을 수 있습니다. Subsonic 재생 목록 `id`는 `base64url(\"/.m3u\")`입니다. 파일 이름은 사용자가 제공하거나 시간에 따라 파생되고 `userID`는 작은 정수이므로 ID는 추측 가능하고 자주 노출됩니다(예: 이전에 공개된 재생 목록이 나중에 비공개로 변경된 경우 여전히 동일한 ID를 갖습니다). 이는 Gonic의 다중 사용자 신뢰 경계를 깨뜨립니다. 권한이 낮은 사용자는 관리자가 선별한 재생 목록을 지울 수 있고 사용자는 ID를 얻은 모든 비공개 재생 목록을 유출할 수 있습니다. 이 문제는 버전 0.21.0의 일부인 '6dd71e6a3c966867ef8c900d359a7df75789f410' 커밋에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-49338\n2. 26.06.20 오전4:08\n3. gonic is a music streaming server / free-software ",
+      "cve_id": "CVE-2026-49338",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49338",
+      "source": "cvefeed",
+      "published": "2026-06-20T04:08:34+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-12726 - Awx: automation-controller: awx: github webhook second-order ssrf via unvalidated statuses_url exfiltrates pat credential",
+      "summary": "CVE ID :CVE-2026-12726\n  \nPublished : June 19, 2026, 6:49 p.m. | 45 minutes ago\n  \nDescription :A flaw was found in the AWX GitHub webhook integration. When processing GitHub pull_request webhooks, the controller stores the pull_request.statuses_url value from the webhook payload without validating that it points to a trusted GitHub API endpoint. If a job template is configured with a GitHub Personal Access Token as its webhook credential, the controller later POSTs that token to the stored callback URL when posting job status updates. An attacker who can submit a correctly signed forged webhook using the job template's webhook_key can redirect the callback to an attacker-controlled URL and exfiltrate the configured GitHub PAT.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-12726\n  \nPublished : June 19, 2026, 6:49 p.m. | 45 minutes ago\n  \nDescription :A flaw was found in the AWX GitHub webhook integration. When processing GitHub pull_request webhooks, the controller stores the pull_request.statuses_url value from the webhook payload without validating that it points to a trusted GitHub API endpoint. If a job template is configured with a GitHub Personal Access Token as its webhook credential, the controller later POSTs that token to the stored callback URL when posting job status updates. An attacker who can submit a correctly signed forged webhook using the job template's webhook_key can redirect the callback to an attacker-controlled URL and exfiltrate the configured GitHub PAT.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-12726 - Awx: Automation-controller: awx: 검증되지 않은 statuses_url을 통해 github webhook 2차 ssrf가 pat 자격 증명을 유출함",
+      "summary_ko": "CVE ID:CVE-2026-12726\n  \n게시일 : 2026년 6월 19일 오후 6시 49분 | 45분 전\n  \n설명:AWX GitHub 웹훅 통합에서 결함이 발견되었습니다. GitHub pull_request 웹훅을 처리할 때 컨트롤러는 신뢰할 수 있는 GitHub API 엔드포인트를 가리키는지 확인하지 않고 웹훅 페이로드의 pull_request.statuses_url 값을 저장합니다. 웹후크 자격 증명으로 GitHub 개인 액세스 토큰을 사용하여 작업 템플릿을 구성한 경우 컨트롤러는 나중에 작업 상태 업데이트를 게시할 때 저장된 콜백 URL에 해당 토큰을 게시합니다. 작업 템플릿의 webhook_key를 사용하여 올바르게 서명된 위조 웹훅을 제출할 수 있는 공격자는 콜백을 공격자가 제어하는 ​​URL로 리디렉션하고 구성된 GitHub PAT를 추출할 수 있습니다.\n  \n심각도: 6.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-12726\n2. 26.06.20 오전3:49\n3. A flaw was found in the AWX GitHub webhook integra",
+      "cve_id": "CVE-2026-12726",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12726",
+      "source": "cvefeed",
+      "published": "2026-06-20T03:49:55+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-49336 - @microsoft/kiota-http-fetchlibrary: Bearer token and Cookie leak across origin on redirect due to case-mismatched scrub in fetchRequestAdapter",
       "summary": "CVE ID :CVE-2026-49336\n  \nPublished : June 19, 2026, 6:19 p.m. | 47 minutes ago\n  \nDescription :@microsoft/kiota-http-fetchlibrary provides TypeScript libraries for Kiota-generated API clients. In versions 1.0.0-preview.97 through 1.0.0-preview.101, `@microsoft/kiota-http-fetchlibrary`'s `RedirectHandler` is documented as stripping `Authorization` and `Cookie` from cross-origin redirect targets, but the default `scrubSensitiveHeaders` callback in `RedirectHandlerOptions` uses case-sensitive property deletion (`delete headers.Authorization`, `delete headers.Cookie`) on a headers object that `FetchRequestAdapter.getRequestFromRequestInformation` has already lower-cased. The delete therefore targets keys that do not exist, the scrub is a no-op, and any Bearer token or Cookie attached by a kiota-generated SDK is forwarded to an attacker-controlled host across a 30x redirect. This is reachable in the default middleware chain (`MiddlewareFactory.getDefaultMiddlewares`) with no custom configuration, and applies to every kiota-generated TypeScript SDK that uses `BaseBearerTokenAuthenticationProvider` or any other authentication provider that sets the `Authorization` request header. Version 1.0.0-preview.102 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-49336\n  \nPublished : June 19, 2026, 6:19 p.m. | 47 minutes ago\n  \nDescription :@microsoft/kiota-http-fetchlibrary provides TypeScript libraries for Kiota-generated API clients. In versions 1.0.0-preview.97 through 1.0.0-preview.101, `@microsoft/kiota-http-fetchlibrary`'s `RedirectHandler` is documented as stripping `Authorization` and `Cookie` from cross-origin redirect targets, but the default `scrubSensitiveHeaders` callback in `RedirectHandlerOptions` uses case-sensitive property deletion (`delete headers.Authorization`, `delete headers.Cookie`) on a headers object that `FetchRequestAdapter.getRequestFromRequestInformation` has already lower-cased. The delete therefore targets keys that do not exist, the scrub is a no-op, and any Bearer token or Cookie attached by a kiota-generated SDK is forwarded to an attacker-controlled host across a 30x redirect. This is reachable in the default middleware chain (`MiddlewareFactory.getDefaultMiddlewares`) with no custom configuration, and applies to every kiota-generated TypeScript SDK that uses `BaseBearerTokenAuthenticationProvider` or any other authentication provider that sets the `Authorization` request header. Version 1.0.0-preview.102 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2236,6 +2305,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-52909",
       "source": "cvefeed",
       "published": "2026-06-19T23:43:33+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-45456 Microsoft Outlook and Word Remote Code Execution Vulnerability",
+      "summary": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action. See the [Release Notes](https://go.microsoft.com/fwlink/p/?linkid=831049) for more information and download links.",
+      "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action. See the [Release Notes](https://go.microsoft.com/fwlink/p/?linkid=831049) for more information and download links.",
+      "title_ko": "CVE-2026-45456 Microsoft Outlook 및 Word 원격 코드 실행 취약점",
+      "summary_ko": "Microsoft는 Mac용 Microsoft Office에 대한 보안 업데이트가 출시되었음을 발표했습니다. 영향을 받는 Mac 소프트웨어를 실행하는 고객은 이 취약점으로부터 제품을 보호하기 위해 업데이트를 설치해야 합니다. 다른 Microsoft Office 소프트웨어를 실행하는 고객은 어떤 조치도 취할 필요가 없습니다. 자세한 내용과 다운로드 링크는 [릴리스 노트](https://go.microsoft.com/fwlink/p/?linkid=831049)를 참조하세요.",
+      "summary_3lines": "1. CVE-2026-45456\n2. MSRC\n3. Microsoft is announcing the availability of the se",
+      "cve_id": "CVE-2026-45456",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45456",
+      "source": "msrc",
+      "published": "2026-06-19T23:00:00+09:00",
       "lang": "en"
     },
     {
