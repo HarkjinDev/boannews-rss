@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-19T19:01:23.844142+09:00",
+  "fetched_at": "2026-06-19T19:31:13.966266+09:00",
   "security_news": [
     {
       "title": "해킹 당한 데이원컴퍼니, 계좌번호·주민번호 등도 털렸다",
@@ -2232,45 +2232,24 @@
       "source": "dailysecu",
       "published": "2026-06-16T19:39:46+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Attackers Exploit Three Fortinet FortiSandbox Flaws, One Patched Last Week",
-      "summary": "Bad actors are exploiting multiple security vulnerabilities in Fortinet FortiSandbox, according to threat intelligence firm Defused Cyber.\n\nIn a post shared on X, the company said it has observed exploitation of CVE-2026-39813, CVE-2026-39808, and CVE-2026-25089 over the past 24 hours.\n\nCVE-2026-39813 (CVSS score: 9.1) refers to a path traversal vulnerability in FortiSandbox JRPC API that could",
-      "content": "",
-      "title_ko": "공격자들은 Fortinet FortiSandbox의 세 가지 결함을 악용하고 그중 한 가지는 지난 주에 패치되었습니다",
-      "summary_ko": "위협 정보 회사인 Defused Cyber에 따르면 악의적인 행위자들이 Fortinet FortiSandbox의 여러 보안 취약점을 악용하고 있다고 합니다.\n\nX에 공유된 게시물에서 회사는 지난 24시간 동안 CVE-2026-39813, CVE-2026-39808 및 CVE-2026-25089의 악용을 관찰했다고 밝혔습니다.\n\nCVE-2026-39813(CVSS 점수: 9.1)은 FortiSandbox JRPC API의 경로 탐색 취약점을 나타냅니다.",
-      "summary_3lines": "1. 포티넷 FortiSandbox 3개 취약점(CVE-2026-39813 등) 악용\n2. JRPC API 경로 탐색 취약점, 제로데이 공격 가능성\n3. 1개 취약점은 지난주 패치, 나머지 2개는 조사 중",
-      "link": "https://thehackernews.com/2026/06/attackers-exploit-three-fortinet.html",
-      "source": "thehackernews",
-      "published": "2026-06-16T19:30:41+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "앤스로픽 미토스 수출통제 배경에 ‘韓통신사 中연계 의혹’",
-      "summary": "사이버 보안 방어에 활용될 수 있지만, 동시에 취약점 탐색 능력이 악의적 해킹에 악용될 수 있다는 우려도 제기돼 왔다. 앤스로픽은 공식 출시 전 ‘프로젝트 글라스윙’을 통해 일부 정부기관과 기업에 미토스 사전...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 앤스로픽 미토스, 한국 통신사 중국 연계 의혹으로 수출 통제\n2. 취약점 탐색 능력 악용 우려, 악성 해킹에 악용 가능성\n3. 공식 출시 전 '글라스윙' 통해 일부 기관·기업에 사전 제공",
-      "link": "https://n.news.naver.com/mnews/article/018/0006307689?sid=105",
-      "source": "naver",
-      "published": "2026-06-16T19:28:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Ransomware gang abuses Microsoft Teams relays to hide malicious traffic",
-      "summary": "DragonForce ransomware used a custom malware named 'Backdoor.Turn' to hide command-and-control traffic inside Microsoft Teams relay infrastructure. [...]",
-      "content": "",
-      "title_ko": "랜섬웨어 집단, Microsoft Teams 릴레이를 악용하여 악성 트래픽 숨기기",
-      "summary_ko": "DragonForce 랜섬웨어는 'Backdoor.Turn'이라는 사용자 지정 악성 코드를 사용하여 Microsoft Teams 릴레이 인프라 내부에 명령 및 제어 트래픽을 숨겼습니다. [...]",
-      "summary_3lines": "1. DragonForce 랜섬웨어, 마이크로소프트 팀스 리레이 악용\n2. 'Backdoor.Turn' 악성코드로 C2 트래픽 숨겨\n3. 팀스 인프라를 악용한 공격 확산 우려",
-      "link": "https://www.bleepingcomputer.com/news/security/ransomware-gang-abuses-microsoft-teams-relays-to-hide-malicious-traffic/",
-      "source": "bleepingcomputer",
-      "published": "2026-06-16T19:18:48+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-41156 - GPU DDK - kernel<->fw CCB contains SYNC_PRIMITIVE_BLOCK firmware address without holding reference",
+      "summary": "CVE ID :CVE-2026-41156\n  \nPublished : June 19, 2026, 9:28 a.m. | 50 minutes ago\n  \nDescription :Software installed and run as a non-privileged user may conduct improper GPU system calls to cause mismanagement of resources creating a write use after free scenario.\n\n\n\nA shared resource (memory page) managed by a CPU thread of control (driver) and accessed by a GPU thread of control (Firmware) can cause a write UAF when the CPU thread frees the resource before the GPU FW has finished accessing it.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-41156\n  \nPublished : June 19, 2026, 9:28 a.m. | 50 minutes ago\n  \nDescription :Software installed and run as a non-privileged user may conduct improper GPU system calls to cause mismanagement of resources creating a write use after free scenario.\n\n\n\nA shared resource (memory page) managed by a CPU thread of control (driver) and accessed by a GPU thread of control (Firmware) can cause a write UAF when the CPU thread frees the resource before the GPU FW has finished accessing it.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-41156 - GPU DDK - 커널<->fw CCB에 참조가 없는 SYNC_PRIMITIVE_BLOCK 펌웨어 주소가 포함되어 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-41156\n  \n게시일 : 2026년 6월 19일 오전 9시 28분 | 50분 전\n  \n설명:권한이 없는 사용자로 설치 및 실행되는 소프트웨어는 부적절한 GPU 시스템 호출을 수행하여 무료 시나리오 이후 쓰기 사용을 생성하는 리소스 관리를 잘못할 수 있습니다.\n\n\n\nCPU 제어 스레드(드라이버)에 의해 관리되고 GPU 제어 스레드(펌웨어)에 의해 액세스되는 공유 리소스(메모리 페이지)는 GPU FW가 액세스를 완료하기 전에 CPU 스레드가 리소스를 해제할 때 쓰기 UAF를 유발할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-41156\n2. 26.06.19 오후6:28\n3. Software installed and run as a non-privileged use",
+      "cve_id": "CVE-2026-41156",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-41156",
+      "source": "cvefeed",
+      "published": "2026-06-19T18:28:53+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-8376 Perl versions through 5.43.10 have a heap buffer overflow when compiling regular expressions with a repeated fixed string on 32-bit builds",
       "summary": "Information published.",
@@ -2284,6 +2263,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8376",
       "source": "msrc",
       "published": "2026-06-19T17:40:20+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-56138 - Authenticated Path Traversal in AIL framework /objects/item/diff Allows Reading Gzip-Compressed Files",
+      "summary": "CVE ID :CVE-2026-56138\n  \nPublished : June 19, 2026, 8:03 a.m. | 2 hours, 15 minutes ago\n  \nDescription :AIL framework contains a path traversal vulnerability in the /objects/item/diff endpoint. The endpoint accepts item identifiers through the s1 and s2 query parameters and, prior to the fix, attempted to retrieve and compare item contents without first verifying that both referenced items existed as valid AIL objects.\n\nAn authenticated AIL user could craft malicious item identifiers containing path traversal sequences to cause the application to read gzip-compressed files accessible to the AIL process. This could result in unauthorized disclosure of local file contents, limited to files readable by the application and compatible with the expected gzip-compressed item format.\n\nThe issue was fixed by validating that both requested items exist before their contents are accessed.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56138\n  \nPublished : June 19, 2026, 8:03 a.m. | 2 hours, 15 minutes ago\n  \nDescription :AIL framework contains a path traversal vulnerability in the /objects/item/diff endpoint. The endpoint accepts item identifiers through the s1 and s2 query parameters and, prior to the fix, attempted to retrieve and compare item contents without first verifying that both referenced items existed as valid AIL objects.\n\nAn authenticated AIL user could craft malicious item identifiers containing path traversal sequences to cause the application to read gzip-compressed files accessible to the AIL process. This could result in unauthorized disclosure of local file contents, limited to files readable by the application and compatible with the expected gzip-compressed item format.\n\nThe issue was fixed by validating that both requested items exist before their contents are accessed.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56138 - AIL 프레임워크 /objects/item/diff의 인증된 경로 탐색을 통해 Gzip 압축 파일 읽기 허용",
+      "summary_ko": "CVE ID:CVE-2026-56138\n  \n게시일 : 2026년 6월 19일 오전 8시 03분 | 2시간, 15분 전\n  \n설명 :AIL 프레임워크에는 /objects/item/diff 엔드포인트에 경로 탐색 취약점이 포함되어 있습니다. 엔드포인트는 s1 및 s2 쿼리 매개변수를 통해 항목 식별자를 받아들이고, 수정 이전에는 참조된 두 항목이 유효한 AIL 개체로 존재하는지 먼저 확인하지 않고 항목 콘텐츠를 검색하고 비교하려고 시도했습니다.\n\n인증된 AIL 사용자는 경로 탐색 시퀀스가 ​​포함된 악성 항목 식별자를 만들어 애플리케이션이 AIL 프로세스에 액세스할 수 있는 gzip 압축 파일을 읽도록 할 수 있습니다. 이로 인해 로컬 파일 콘텐츠가 무단으로 공개될 수 있으며, 이는 애플리케이션에서 읽을 수 있고 예상되는 gzip 압축 항목 형식과 호환되는 파일로 제한됩니다.\n\n해당 콘텐츠에 액세스하기 전에 요청한 두 항목이 모두 존재하는지 확인하여 문제가 해결되었습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56138\n2. 26.06.19 오후5:03\n3. AIL framework contains a path traversal vulnerabil",
+      "cve_id": "CVE-2026-56138",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56138",
+      "source": "cvefeed",
+      "published": "2026-06-19T17:03:58+09:00",
       "lang": "en"
     },
     {
