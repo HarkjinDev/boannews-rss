@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-20T07:31:29.591104+09:00",
+  "fetched_at": "2026-06-20T08:03:42.657239+09:00",
   "security_news": [
     {
       "title": "Hackers exploit info disclosure bug in Gravity SMTP WordPress plugin",
@@ -2100,30 +2100,6 @@
       "source": "naver",
       "published": "2026-06-17T08:16:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'1300만명 유출' 티빙, 집단소송 확산...CI 논란에 보상 검토",
-      "summary": "이주희 더불어민주당 원내대변인은 최근 브리핑에서 \"보안을 비용으로만 치부하는 기업의 안일함과 솜방망이 처벌이 문제\"라며 \"현행 개인정보보호법이 정한 가장 엄정한 수준의 과징금과 제재가 필요하다\"고 강조했다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 티빙 1300만명 개인정보 유출로 집단소송 확산\n2. 이름·전화번호 등 CI 유출, 악성코드로 접근\n3. 더불어민주당 이주희 \"과징금 강화 필요\" 주장",
-      "link": "https://n.news.naver.com/mnews/article/076/0004416301?sid=101",
-      "source": "naver",
-      "published": "2026-06-17T07:55:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "영국, 16세 미만 SNS 전면 금지 추진…틱톡·유튜브 등 막는다",
-      "summary": "언더그라운드 해킹 커뮤니티와 개인정보 보호 커뮤니티에서는 이번 정책이 장기적으로 더 강한 신원 인증 체계를 촉진할 수 있다는 분석도 나온다. 반면 VPN, 타인 명의 계정, 가짜 신분 인증 시장이 성장할 수 있다는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 영국, 16세 미만 SNS 전면 금지 추진\n2. 틱톡·유튜브 등 아동 대상 유해 콘텐츠 차단 목표\n3. VPN·타인 명의 계정 시장 성장 가능성 분석",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207195",
-      "source": "naver",
-      "published": "2026-06-17T07:36:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2290,6 +2266,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-52909",
       "source": "cvefeed",
       "published": "2026-06-19T23:43:33+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Chromium: CVE-2026-12454 Race in Safe Browsing",
+      "summary": "Corrected CVE title. This is an informational change only.",
+      "description": "Corrected CVE title. This is an informational change only.",
+      "title_ko": "크롬: CVE-2026-12454 세이프 브라우징 경쟁",
+      "summary_ko": "CVE 제목을 수정했습니다. 이는 정보 제공용 변경일 뿐입니다.",
+      "summary_3lines": "1. CVE-2026-12454\n2. MSRC\n3. Corrected CVE title. This is an informational chan",
+      "cve_id": "CVE-2026-12454",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12454",
+      "source": "msrc",
+      "published": "2026-06-19T23:00:00+09:00",
       "lang": "en"
     },
     {
@@ -3040,21 +3031,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48797",
       "source": "cvefeed",
       "published": "2026-06-17T08:35:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48782 - pydantic-ai: SSRF blocklist bypass via IPv4-compatible, SIIT/IVI, and local NAT64 IPv6 addresses (incomplete fix of CVE-2026-46678)",
-      "summary": "CVE ID :CVE-2026-48782\n  \nPublished : June 16, 2026, 10:49 p.m. | 40 minutes ago\n  \nDescription :Pydantic AI is a Python agent framework for building applications and workflows with Generative AI. In versions 1.56.0 through 1.101.0, 2.0.0b1, and 2.0.0b2, the cloud-metadata blocklist could be bypassed by encoding the metadata IP in an IPv6 transition form that the previous fix, CVE-2026-46678, did not decode, exposing cloud IAM short-term credentials. The previous remediation decoded only IPv4-mapped IPv6, 6to4, and the NAT64 well-known prefix, so the metadata guarantee did not hold for the remaining transition forms: IPv4-compatible IPv6 (::a.b.c.d), the NAT64 RFC 8215 local-use prefix (64:ff9b:1::/48), operator-chosen NAT64 prefixes, and ISATAP. The IPv6 wrapper is then delivered to the underlying IPv4 metadata endpoint. This occurs when an application using Pydantic AI opts a URL into force_download='allow-local' (which disables the default block on private/internal IPs) and runs on a network that actually routes the affected IPv6 transition forms: NAT64-configured networks (IPv6-only or dual-stack-with-NAT64 deployments, including some Kubernetes setups) for the NAT64 variants, or networks with an ISATAP tunnel for ISATAP. A standard dual-stack cloud VM or container does not route these forms and is not affected in practice. The IPv4-compatible and Teredo variants are deprecated and addressed as defense-in-depth. This is an incomplete fix of GHSA-cqp8-fcvh-x7r3 / CVE-2026-46678 (itself a follow-up to CVE-2026-25580). This issue has been fixed in version 2.0.0b3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48782\n  \nPublished : June 16, 2026, 10:49 p.m. | 40 minutes ago\n  \nDescription :Pydantic AI is a Python agent framework for building applications and workflows with Generative AI. In versions 1.56.0 through 1.101.0, 2.0.0b1, and 2.0.0b2, the cloud-metadata blocklist could be bypassed by encoding the metadata IP in an IPv6 transition form that the previous fix, CVE-2026-46678, did not decode, exposing cloud IAM short-term credentials. The previous remediation decoded only IPv4-mapped IPv6, 6to4, and the NAT64 well-known prefix, so the metadata guarantee did not hold for the remaining transition forms: IPv4-compatible IPv6 (::a.b.c.d), the NAT64 RFC 8215 local-use prefix (64:ff9b:1::/48), operator-chosen NAT64 prefixes, and ISATAP. The IPv6 wrapper is then delivered to the underlying IPv4 metadata endpoint. This occurs when an application using Pydantic AI opts a URL into force_download='allow-local' (which disables the default block on private/internal IPs) and runs on a network that actually routes the affected IPv6 transition forms: NAT64-configured networks (IPv6-only or dual-stack-with-NAT64 deployments, including some Kubernetes setups) for the NAT64 variants, or networks with an ISATAP tunnel for ISATAP. A standard dual-stack cloud VM or container does not route these forms and is not affected in practice. The IPv4-compatible and Teredo variants are deprecated and addressed as defense-in-depth. This is an incomplete fix of GHSA-cqp8-fcvh-x7r3 / CVE-2026-46678 (itself a follow-up to CVE-2026-25580). This issue has been fixed in version 2.0.0b3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48782 - pydantic-ai: IPv4 호환, SIIT/IVI 및 로컬 NAT64 IPv6 주소를 통한 SSRF 차단 목록 우회(CVE-2026-46678의 불완전한 수정)",
-      "summary_ko": "CVE ID:CVE-2026-48782\n  \n게시일 : 2026년 6월 16일 오후 10시 49분 | 40분 전\n  \n설명 :Pydantic AI는 Generative AI를 사용하여 애플리케이션과 워크플로를 구축하기 위한 Python 에이전트 프레임워크입니다. 버전 1.56.0~1.101.0, 2.0.0b1, 2.0.0b2에서는 이전 수정 사항인 CVE-2026-46678에서 디코딩하지 않은 IPv6 전환 형식으로 메타데이터 IP를 인코딩하여 클라우드 IAM 단기 자격 증명을 노출함으로써 클라우드 메타데이터 차단 목록을 우회할 수 있었습니다. 이전 수정에서는 IPv4 매핑된 IPv6, 6to4 및 NAT64 잘 알려진 접두사만 디코딩했으므로 IPv4 호환 IPv6(::a.b.c.d), NAT64 RFC 8215 로컬 사용 접두사(64:ff9b:1::/48), 운영자가 선택한 NAT64 접두사 및 ISATAP와 같은 나머지 전환 형식에 대해서는 메타데이터 보장이 유지되지 않았습니다. 그러면 IPv6 래퍼가 기본 IPv4 메타데이터 끝점으로 전달됩니다. 이는 Pydantic AI를 사용하는 애플리케이션이 URL을 force_download='allow-local'(개인/내부 IP의 기본 블록을 비활성화함)로 선택하고 실제로 영향을 받는 IPv6 전환 형식을 라우팅하는 네트워크에서 실행될 때 발생합니다. NAT64 변형을 위한 NAT64 구성 네트워크(일부 Kubernetes 설정을 포함하는 IPv6 전용 또는 NAT64가 포함된 듀얼 스택 배포) 또는 ISATAP용 ISATAP 터널이 있는 네트워크. 표준 이중 스택 클라우드 VM 또는 컨테이너는 이러한 양식을 라우팅하지 않으며 실제로 영향을 받지 않습니다. IPv4 호환 및 Teredo 변형은 더 이상 사용되지 않으며 심층 방어로 처리됩니다. 이는 GHSA-cqp8-fcvh-x7r3 / CVE-2026-46678(CVE-2026-25580의 후속 조치)의 불완전한 수정 사항입니다. 이 문제는 버전 2.0.0b3에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48782\n2. 26.06.17 오전7:49\n3. Pydantic AI is a Python agent framework for buildi",
-      "cve_id": "CVE-2026-48782",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48782",
-      "source": "cvefeed",
-      "published": "2026-06-17T07:49:26+09:00",
       "lang": "en"
     }
   ],
