@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-20T09:32:39.585182+09:00",
+  "fetched_at": "2026-06-20T10:01:29.811255+09:00",
   "security_news": [
+    {
+      "title": "마크애니, 'AI DLP'로 프롬프트 유출 문제 해결",
+      "summary": "위협은 외부 해킹에만 머물지 않는다. 임직원이 챗GPT, 제미나이(Gemini) 같은 생성형 AI의 입력창에 소스코드나 개인정보를 직접 타이핑해 넣는 '프롬프트 유출'도 빈번히 일어나고 있다. 한번 입력한 정보가 AI 학습...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 마크애니, AI DLP로 프롬프트 유출 방지\n2. 챗GPT·제미나이 입력 시 소스코드·개인정보 유출\n3. AI 학습 데이터 반영 전 정보 보호",
+      "link": "https://n.news.naver.com/mnews/article/092/0002427394?sid=105",
+      "source": "naver",
+      "published": "2026-06-20T09:51:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "크롬 확장 프로그램의 배신... 수백만대의 브라우저 해킹 가능",
       "summary": "AI 기반 에이전트 사이드 패널 확장 프로그램 ‘SiderAI’와 ‘MaxAI’에 심각한 보안 취약점악성 웹사이트로 조작된 메시지를 콘텐츠 스크립트로 전송하면 그대로 전달... 악용가능[보안뉴스 원병철 기자] 널리 사용되는 크롬 확장 프로그램인 ‘SiderAI’와 ‘MaxAI’에서 심각한 보안 취약점이 발견되어 수백만 명의 사용자가 위험에 처했다. 이 취약",
@@ -2076,18 +2088,6 @@
       "source": "naver",
       "published": "2026-06-17T10:04:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "국회·국방부 등 국가보안시설도 사이버보험 가입한다",
-      "summary": "10대 손보사, 사이버보험 공동인수 해킹·랜섬웨어 등 사이버 위협 사각지대에 놓여 있던 정부 부처와... 그러나 이번 개정으로 사이버 보험이 포함되면서 해킹, 랜섬웨어, 개인 정보 유출 등 사이버 사고로 인한 피해와...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국회·국방부 등 10대 손보사, 사이버보험 공동인수\n2. 해킹·랜섬웨어·개인정보 유출 피해 보장\n3. 국가보안시설 보호 강화, 사각지대 해소",
-      "link": "https://n.news.naver.com/mnews/article/366/0001172339?sid=101",
-      "source": "naver",
-      "published": "2026-06-17T10:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2164,6 +2164,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48772",
       "source": "cvefeed",
       "published": "2026-06-20T04:28:46+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-49345 - Mercator CVE Configuration Vulnerable to Server-Side Request Forgery (SSRF)",
+      "summary": "CVE ID :CVE-2026-49345\n  \nPublished : June 19, 2026, 7:23 p.m. | 4 hours, 12 minutes ago\n  \nDescription :Mercator is an open source web application that enables mapping of the information system. Prior to version 2025.05.19, a Server-Side Request Forgery (SSRF) vulnerability exists in Mercator's CVE configuration panel (`/admin/config/parameters`). The `testProvider()` method in `ConfigurationController` passes user-supplied input directly to `curl_init()` without validating the scheme, hostname, or destination IP address. An authenticated user with the `configure` permission can force the Mercator server to issue arbitrary outbound network requests. The suffix `/api/dbInfo` appended to the URL can be bypassed by injecting a `#` fragment character (e.g. `http://TARGET/PATH#`), allowing full control over the target URL. No scheme whitelist, host whitelist, or private/loopback IP block is applied. The `telnet://` scheme can be used for internal port scanning; the `gopher://` scheme enables interaction with unauthenticated internal services (Redis, Memcached), potentially leading to Remote Code Execution under specific deployment conditions. Version 2025.05.19 patches the issue.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-49345\n  \nPublished : June 19, 2026, 7:23 p.m. | 4 hours, 12 minutes ago\n  \nDescription :Mercator is an open source web application that enables mapping of the information system. Prior to version 2025.05.19, a Server-Side Request Forgery (SSRF) vulnerability exists in Mercator's CVE configuration panel (`/admin/config/parameters`). The `testProvider()` method in `ConfigurationController` passes user-supplied input directly to `curl_init()` without validating the scheme, hostname, or destination IP address. An authenticated user with the `configure` permission can force the Mercator server to issue arbitrary outbound network requests. The suffix `/api/dbInfo` appended to the URL can be bypassed by injecting a `#` fragment character (e.g. `http://TARGET/PATH#`), allowing full control over the target URL. No scheme whitelist, host whitelist, or private/loopback IP block is applied. The `telnet://` scheme can be used for internal port scanning; the `gopher://` scheme enables interaction with unauthenticated internal services (Redis, Memcached), potentially leading to Remote Code Execution under specific deployment conditions. Version 2025.05.19 patches the issue.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-49345 - SSRF(서버 측 요청 위조)에 취약한 Mercator CVE 구성",
+      "summary_ko": "CVE ID:CVE-2026-49345\n  \n게시일 : 2026년 6월 19일 오후 7시 23분 | 4시간, 12분 전\n  \n설명 :Mercator는 정보 시스템 매핑을 가능하게 하는 오픈 소스 웹 애플리케이션입니다. 버전 2025.05.19 이전에는 Mercator의 CVE 구성 패널(`/admin/config/parameters`)에 서버 측 요청 위조(SSRF) 취약점이 존재합니다. `ConfigurationController`의 `testProvider()` 메서드는 구성표, 호스트 이름 또는 대상 IP 주소를 확인하지 않고 사용자 제공 입력을 `curl_init()`에 직접 전달합니다. '구성' 권한이 있는 인증된 사용자는 Mercator 서버가 임의의 아웃바운드 네트워크 요청을 발행하도록 강제할 수 있습니다. URL에 추가된 접미사 `/api/dbInfo`는 `#` 조각 문자(예: `http://TARGET/PATH#`)를 삽입하여 우회할 수 있으므로 대상 URL을 완전히 제어할 수 있습니다. 구성표 화이트리스트, 호스트 화이트리스트 또는 개인/루프백 IP 블록이 적용되지 않습니다. 'telnet://' 방식은 내부 포트 스캐닝에 사용될 수 있습니다. `gopher://` 체계를 사용하면 인증되지 않은 내부 서비스(Redis, Memcached)와의 상호 작용이 가능해 잠재적으로 특정 배포 조건에서 원격 코드 실행이 발생할 수 있습니다. 버전 2025.05.19에서는 문제가 패치되었습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-49345\n2. 26.06.20 오전4:23\n3. Mercator is an open source web application that en",
+      "cve_id": "CVE-2026-49345",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49345",
+      "source": "cvefeed",
+      "published": "2026-06-20T04:23:22+09:00",
       "lang": "en"
     },
     {
