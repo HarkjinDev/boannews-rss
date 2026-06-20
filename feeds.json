@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-21T01:33:50.864663+09:00",
+  "fetched_at": "2026-06-21T02:02:53.860218+09:00",
   "security_news": [
     {
       "title": "[IT 소식 톺아보기- 6월 3주차] AI 기반 고도화된 사기 증가...日, 기업·...",
@@ -1728,18 +1728,6 @@
       "source": "thehackernews",
       "published": "2026-06-18T02:36:28+09:00",
       "lang": "en"
-    },
-    {
-      "title": "北, 월드컵 '도둑 중계' 시작했다!…공식 판권 없이 조선중앙TV서 경기 ...",
-      "summary": "해외 축구 소식을 전하는 알레르타문디알은 17일(한국시간) \"북한이 공식 신호를 해킹해 2026 FIFA 월드컵을 국영TV로 재전송하고 있으며, 심지어 코카콜라와 맥도날드의 광고를 무검열로 그대로 보여주고 있다\"고 전했다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한, 2026 FIFA 월드컵 도둑 중계 시작\n2. 공식 판권 없이 조선중앙TV서 경기 재전송\n3. 코카콜라, 맥도날드 광고 무검열로 송출",
-      "link": "https://m.sports.naver.com/worldcup2026/article/311/0002023617",
-      "source": "naver",
-      "published": "2026-06-18T02:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2656,21 +2644,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-50202",
       "source": "cvefeed",
       "published": "2026-06-18T06:53:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47774 - Envoy vulnerable to HTTP/2 memory exhaustion via cookie header size bypass and HPACK amplification",
-      "summary": "CVE ID :CVE-2026-47774\n  \nPublished : June 17, 2026, 4:58 p.m. | 2 hours, 24 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to versions 1.35.11, 1.36.7, 1.37.3, and 1.38.1, a vulnerability in Envoy's HTTP/2 downstream request processing allows an unauthenticated remote client to trigger excessive memory consumption, potentially resulting in OOM termination of the Envoy process and denial of service. The issue arises from the combination of two behaviors. First, cookie header bytes are not fully accounted for during request header size validation in Envoy. Second, HPACK header block limits in oghttp2/quiche are enforced on encoded bytes without a corresponding limit on total decoded header size. Together, these behaviors allow a malicious client to cause large decoded header allocations while bypassing the intended request header size protections. Versions 1.35.11, 1.36.7, 1.37.3, and 1.38.1 contain a fix. No complete workaround is known short of applying a fix. Possible temporary mitigations include disabling downstream HTTP/2 where operationally feasible; enforcing stricter request header and cookie limits before traffic reaches Envoy; and monitoring Envoy memory usage for abnormal growth under HTTP/2 traffic.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47774\n  \nPublished : June 17, 2026, 4:58 p.m. | 2 hours, 24 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to versions 1.35.11, 1.36.7, 1.37.3, and 1.38.1, a vulnerability in Envoy's HTTP/2 downstream request processing allows an unauthenticated remote client to trigger excessive memory consumption, potentially resulting in OOM termination of the Envoy process and denial of service. The issue arises from the combination of two behaviors. First, cookie header bytes are not fully accounted for during request header size validation in Envoy. Second, HPACK header block limits in oghttp2/quiche are enforced on encoded bytes without a corresponding limit on total decoded header size. Together, these behaviors allow a malicious client to cause large decoded header allocations while bypassing the intended request header size protections. Versions 1.35.11, 1.36.7, 1.37.3, and 1.38.1 contain a fix. No complete workaround is known short of applying a fix. Possible temporary mitigations include disabling downstream HTTP/2 where operationally feasible; enforcing stricter request header and cookie limits before traffic reaches Envoy; and monitoring Envoy memory usage for abnormal growth under HTTP/2 traffic.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47774 - 쿠키 헤더 크기 우회 및 HPACK 증폭을 통한 HTTP/2 메모리 고갈에 취약한 Envoy",
-      "summary_ko": "CVE ID:CVE-2026-47774\n  \n게시일 : 2026년 6월 17일 오후 4시 58분 | 2시간, 24분 전\n  \n설명:Envoy는 클라우드 네이티브 애플리케이션용으로 설계된 오픈 소스 에지 및 서비스 프록시입니다. 버전 1.35.11, 1.36.7, 1.37.3 및 1.38.1 이전에는 Envoy의 HTTP/2 다운스트림 요청 처리의 취약점으로 인해 인증되지 않은 원격 클라이언트가 과도한 메모리 소비를 유발하여 잠재적으로 Envoy 프로세스의 OOM 종료 및 서비스 거부가 발생할 수 있습니다. 문제는 두 가지 행동의 조합으로 인해 발생합니다. 첫째, Envoy에서 요청 헤더 크기를 검증하는 동안 쿠키 헤더 바이트가 완전히 고려되지 않습니다. 둘째, oghttp2/quiche의 HPACK 헤더 블록 제한은 디코딩된 총 헤더 크기에 대한 해당 제한 없이 인코딩된 바이트에 적용됩니다. 이러한 동작을 통해 악의적인 클라이언트는 의도된 요청 헤더 크기 보호를 우회하면서 대량의 디코딩된 헤더 할당을 유발할 수 있습니다. 버전 1.35.11, 1.36.7, 1.37.3 및 1.38.1에는 수정 사항이 포함되어 있습니다. 수정 사항을 적용하지 않는 한 완전한 해결 방법은 알려져 있지 않습니다. 가능한 임시 완화에는 운영상 가능한 경우 다운스트림 HTTP/2를 비활성화하는 것이 포함됩니다. 트래픽이 Envoy에 도달하기 전에 더 엄격한 요청 헤더 및 쿠키 제한을 적용합니다. HTTP/2 트래픽에서 비정상적인 증가에 대해 Envoy 메모리 사용량을 모니터링합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47774\n2. 26.06.18 오전1:58\n3. Envoy is an open source edge and service proxy des",
-      "cve_id": "CVE-2026-47774",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47774",
-      "source": "cvefeed",
-      "published": "2026-06-18T01:58:36+09:00",
       "lang": "en"
     }
   ],
