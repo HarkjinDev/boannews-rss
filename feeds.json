@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-22T02:03:36.420601+09:00",
+  "fetched_at": "2026-06-22T02:32:26.316285+09:00",
   "security_news": [
     {
       "title": "북한 해킹조직 ‘사파이어 슬리트’, npm 대규모 공급망 공격 배후로 지...",
@@ -1332,18 +1332,6 @@
       "source": "naver",
       "published": "2026-06-19T04:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "F5 Patches Two Critical NGINX Open Source Flaws Enabling Remote Code Execution",
-      "summary": "F5 has released security updates to address two critical security flaws in NGINX Open Source that could be exploited to achieve code execution on affected systems.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-42530 (CVSS v4 score: 9.2) - A use-after-free vulnerability in the ngx_http_v3_module that could be triggered by a remote unauthenticated attacker when NGINX Open Source is",
-      "content": "",
-      "title_ko": "F5, 원격 코드 실행을 가능하게 하는 두 가지 중요한 NGINX 오픈 소스 결함 패치",
-      "summary_ko": "F5는 영향을 받는 시스템에서 코드 실행을 달성하는 데 악용될 수 있는 NGINX 오픈 소스의 두 가지 중요한 보안 결함을 해결하기 위해 보안 업데이트를 출시했습니다.\n\n취약점은 다음과 같습니다 -\n\n\n  CVE-2026-42530(CVSS v4 점수: 9.2) - NGINX 오픈 소스가 다음과 같은 경우 인증되지 않은 원격 공격자에 의해 트리거될 수 있는 ngx_http_v3_module의 use-after-free 취약점입니다.",
-      "summary_3lines": "1. F5, NGINX Open Source RCE 취약점 2개 해결\n2. CVSS 9.2점의 use-after-free 취약점, 원격 코드 실행 가능\n3. NGINX Open Source 사용자, 즉시 보안 업데이트 필요",
-      "link": "https://thehackernews.com/2026/06/f5-patches-two-critical-nginx-open.html",
-      "source": "thehackernews",
-      "published": "2026-06-19T02:32:14+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -2035,21 +2023,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-45696",
       "source": "cvefeed",
       "published": "2026-06-19T05:31:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48984 - pam_usb: xfree() does not call explicit_bzero — sensitive cryptographic material may linger in freed heap",
-      "summary": "CVE ID :CVE-2026-48984\n  \nPublished : June 18, 2026, 5:06 p.m. | 2 hours ago\n  \nDescription :pam_usb provides hardware authentication for Linux using ordinary removable media. In versions 0.9.1 and below, the xfree() memory release helper in calls free() without first zeroing the buffer contents, releasing heap-allocated buffers containing sensitive data — including one-time pad bytes read from disk — without clearing, leaving the sensitive content in freed heap memory until it happens to be overwritten by a subsequent allocation. On a system where a use-after-free condition exists, or where a heap inspection primitive becomes available, this could allow recovery of pad values or other authentication material from freed memory regions. This is a defence-in-depth requirement consistent with prior hardening work in this codebase (GHSA-vx6f-rrqr-j87c applied explicit_bzero to some pad paths; this issue generalises the pattern to the central deallocation helper).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48984\n  \nPublished : June 18, 2026, 5:06 p.m. | 2 hours ago\n  \nDescription :pam_usb provides hardware authentication for Linux using ordinary removable media. In versions 0.9.1 and below, the xfree() memory release helper in calls free() without first zeroing the buffer contents, releasing heap-allocated buffers containing sensitive data — including one-time pad bytes read from disk — without clearing, leaving the sensitive content in freed heap memory until it happens to be overwritten by a subsequent allocation. On a system where a use-after-free condition exists, or where a heap inspection primitive becomes available, this could allow recovery of pad values or other authentication material from freed memory regions. This is a defence-in-depth requirement consistent with prior hardening work in this codebase (GHSA-vx6f-rrqr-j87c applied explicit_bzero to some pad paths; this issue generalises the pattern to the central deallocation helper).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48984 - pam_usb: xfree()는explicit_bzero를 호출하지 않습니다. 민감한 암호화 자료가 해제된 힙에 남아 있을 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-48984\n  \n게시일 : 2026년 6월 18일 오후 5시 06분 | 2시간 전\n  \n설명 :pam_usb는 일반 이동식 미디어를 사용하여 Linux용 하드웨어 인증을 제공합니다. 버전 0.9.1 이하에서 xfree() 메모리 해제 도우미는 먼저 버퍼 내용을 0으로 설정하지 않고 free()를 호출하여 중요한 데이터(디스크에서 읽은 일회성 패드 바이트 포함)가 포함된 힙 할당 버퍼를 지우지 않고 해제하고 후속 할당으로 덮어쓰일 때까지 해제된 힙 메모리에 민감한 내용을 남겨 둡니다. use-after-free 조건이 존재하거나 힙 검사 프리미티브가 사용 가능한 시스템에서 이를 통해 해제된 메모리 영역에서 패드 값이나 기타 인증 자료를 복구할 수 있습니다. 이는 이 코드베이스의 이전 강화 작업과 일치하는 심층 방어 요구 사항입니다(GHSA-vx6f-rrqr-j87c는 일부 패드 경로에explicit_bzero를 적용했습니다. 이 문제는 중앙 할당 해제 도우미에 대한 패턴을 일반화합니다).\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48984\n2. 26.06.19 오전2:06\n3. pam_usb provides hardware authentication for Linux",
-      "cve_id": "CVE-2026-48984",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48984",
-      "source": "cvefeed",
-      "published": "2026-06-19T02:06:00+09:00",
       "lang": "en"
     }
   ],
