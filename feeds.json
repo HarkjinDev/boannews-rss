@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-22T06:02:34.842489+09:00",
+  "fetched_at": "2026-06-22T06:31:17.006346+09:00",
   "security_news": [
     {
       "title": "삼성전자·AT&T·토요타 이름 올랐다… 포티넷 방화벽 7만여 대 계정 정...",
@@ -1272,18 +1272,6 @@
       "source": "naver",
       "published": "2026-06-19T06:54:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "삼일PwC “AI發 내부통제 리스크 점증, 데이터 기반 의사결정 요구” [시...",
-      "summary": "반복적인 업무 위주의 기업 내부통제는 AI 적용이 용이한 분야지만 AI 리스크와 해킹이 새로운 위협으로... 최근 해킹 사고가 잇따라 발생하면서 사이버보안도 기업의 존폐 여부를 결정짓는 이슈로 관심을 받고 있다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 시대, 삼일PwC는 내부통제 리스크 증가에 주목.\n2. AI 해킹 사고 잇따르며 사이버보안 중요성 증대.\n3. 데이터 기반 의사결정으로 AI 리스크 대응 필요.",
-      "link": "https://n.news.naver.com/mnews/article/011/0004632746?sid=101",
-      "source": "naver",
-      "published": "2026-06-19T06:23:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1930,21 +1918,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-12044",
       "source": "cvefeed",
       "published": "2026-06-19T08:37:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54017 - Open WebUI: Path traversal / SSRF in terminal server proxy via encoded path traversal",
-      "summary": "CVE ID :CVE-2026-54017\n  \nPublished : June 18, 2026, 9:09 p.m. | 1 hour, 19 minutes ago\n  \nDescription :Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, the terminal-server reverse proxy in `backend/open_webui/routers/terminals.py` does not fully confine the user-controlled `path` segment before forwarding it to an admin-configured terminal server. An authenticated user who has been granted access to a terminal server can craft `path` values containing encoded `../` traversal sequences that escape the intended path (or policy) scope on that server, reaching unintended endpoints and files on the terminal-server host. Where the terminal server fans requests out to internal services, this also gives SSRF-style reach into those services. This is a separate code path from the `/api/v1/retrieval/process/web` SSRF (GHSA-c6xv-rcvw-v685), with its own input. Two distinct vectors are consolidated here: first, raw path forwarding / single-encoded traversal (original report); and second, a bypass of the subsequently-added `_sanitize_proxy_path` mitigation using double-encoded dots (`%252e%252e`). The attacker-controlled input is the request `path`, supplied by the non-admin user, not anything an administrator configures, so this is not an admin-trust / Rule-9 situation. Version 0.9.6 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54017\n  \nPublished : June 18, 2026, 9:09 p.m. | 1 hour, 19 minutes ago\n  \nDescription :Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.6, the terminal-server reverse proxy in `backend/open_webui/routers/terminals.py` does not fully confine the user-controlled `path` segment before forwarding it to an admin-configured terminal server. An authenticated user who has been granted access to a terminal server can craft `path` values containing encoded `../` traversal sequences that escape the intended path (or policy) scope on that server, reaching unintended endpoints and files on the terminal-server host. Where the terminal server fans requests out to internal services, this also gives SSRF-style reach into those services. This is a separate code path from the `/api/v1/retrieval/process/web` SSRF (GHSA-c6xv-rcvw-v685), with its own input. Two distinct vectors are consolidated here: first, raw path forwarding / single-encoded traversal (original report); and second, a bypass of the subsequently-added `_sanitize_proxy_path` mitigation using double-encoded dots (`%252e%252e`). The attacker-controlled input is the request `path`, supplied by the non-admin user, not anything an administrator configures, so this is not an admin-trust / Rule-9 situation. Version 0.9.6 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54017 - Open WebUI: 인코딩된 경로 탐색을 통한 터미널 서버 프록시의 경로 탐색/SSRF",
-      "summary_ko": "CVE ID:CVE-2026-54017\n  \n게시일 : 2026년 6월 18일 오후 9시 9분 | 1시간, 19분 전\n  \n설명 :Open WebUI는 완전히 오프라인으로 작동하도록 설계된 자체 호스팅 인공 지능 플랫폼입니다. 0.9.6 이전에는 `backend/open_webui/routers/terminals.py`의 터미널 서버 역방향 프록시가 관리자가 구성한 터미널 서버로 전달하기 전에 사용자 제어 `경로` 세그먼트를 완전히 제한하지 않았습니다. 터미널 서버에 대한 액세스 권한이 부여된 인증된 사용자는 해당 서버에서 의도한 경로(또는 정책) 범위를 벗어나 터미널 서버 호스트의 의도하지 않은 끝점과 파일에 도달하는 인코딩된 '../' 순회 시퀀스가 ​​포함된 '경로' 값을 만들 수 있습니다. 터미널 서버 팬이 내부 서비스를 요청하는 경우 SSRF 스타일로 해당 서비스에 접근할 수도 있습니다. 이는 자체 입력이 있는 `/api/v1/retrieval/process/web` SSRF(GHSA-c6xv-rcvw-v685)와 별도의 코드 경로입니다. 여기에는 두 가지 고유한 벡터가 통합되어 있습니다. 첫째, 원시 경로 전달/단일 인코딩된 순회(원본 보고서); 둘째, 이중 인코딩된 점(`%252e%252e`)을 사용하여 이후에 추가된 `_sanitize_proxy_path` 완화를 우회합니다. 공격자가 제어하는 ​​입력은 관리자가 구성한 것이 아니라 관리자가 아닌 사용자가 제공한 '경로' 요청이므로 이는 관리자 신뢰/규칙-9 상황이 아닙니다. 버전 0.9.6에서는 문제가 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54017\n2. 26.06.19 오전6:09\n3. Open WebUI is a self-hosted artificial intelligenc",
-      "cve_id": "CVE-2026-54017",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54017",
-      "source": "cvefeed",
-      "published": "2026-06-19T06:09:07+09:00",
       "lang": "en"
     }
   ],
