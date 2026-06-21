@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-22T01:32:32.893399+09:00",
+  "fetched_at": "2026-06-22T02:03:36.420601+09:00",
   "security_news": [
     {
       "title": "북한 해킹조직 ‘사파이어 슬리트’, npm 대규모 공급망 공격 배후로 지...",
@@ -1347,6 +1347,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-56393 - Craft CMS - Multiple Stored Cross-Site Scripting in Settings Names and Field Options",
+      "summary": "CVE ID :CVE-2026-56393\n  \nPublished : June 21, 2026, 1:27 p.m. | 2 hours, 9 minutes ago\n  \nDescription :Craft CMS 4.x (>= 4.0.0-RC1, < 4.17.0-beta.1) and 5.x (>= 5.0.0-RC1, < 5.9.0-beta.1) contain multiple stored cross-site scripting vulnerabilities where settings names and field option labels are rendered without sanitization (e.g., via the checkbox.twig template, which used {{ label|raw }}). An authenticated administrator (with allowAdminChanges enabled) can inject malicious payloads into section names, volume names, user group names, global set names, generated field names, checkbox/radio option labels, and custom source labels, causing arbitrary JavaScript to execute in other users' control-panel sessions. Fixed in 4.17.0-beta.1 and 5.9.0-beta.1.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56393\n  \nPublished : June 21, 2026, 1:27 p.m. | 2 hours, 9 minutes ago\n  \nDescription :Craft CMS 4.x (>= 4.0.0-RC1, < 4.17.0-beta.1) and 5.x (>= 5.0.0-RC1, < 5.9.0-beta.1) contain multiple stored cross-site scripting vulnerabilities where settings names and field option labels are rendered without sanitization (e.g., via the checkbox.twig template, which used {{ label|raw }}). An authenticated administrator (with allowAdminChanges enabled) can inject malicious payloads into section names, volume names, user group names, global set names, generated field names, checkbox/radio option labels, and custom source labels, causing arbitrary JavaScript to execute in other users' control-panel sessions. Fixed in 4.17.0-beta.1 and 5.9.0-beta.1.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56393 - Craft CMS - 설정 이름 및 필드 옵션에 여러 개의 저장된 교차 사이트 스크립팅",
+      "summary_ko": "CVE ID:CVE-2026-56393\n  \n게시일 : 2026년 6월 21일 오후 1시 27분 | 2시간, 9분 전\n  \n설명:Craft CMS 4.x(>= 4.0.0-RC1, < 4.17.0-beta.1) 및 5.x(>= 5.0.0-RC1, < 5.9.0-beta.1)에는 설정 이름과 필드 옵션 레이블이 삭제 없이(예: {{ label|raw를 사용하는 checkbox.twig 템플릿을 통해) 렌더링되는 여러 개의 저장된 교차 사이트 스크립팅 취약점이 포함되어 있습니다. }}). 인증된 관리자(allowAdminChanges가 활성화된)는 섹션 이름, 볼륨 이름, 사용자 그룹 이름, 전역 세트 이름, 생성된 필드 이름, 확인란/라디오 옵션 레이블 및 사용자 정의 소스 레이블에 악성 페이로드를 삽입하여 다른 사용자의 제어판 세션에서 임의의 JavaScript가 실행되도록 할 수 있습니다. 4.17.0-beta.1 및 5.9.0-beta.1에서 수정되었습니다.\n  \n심각도: 4.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56393\n2. 26.06.21 오후10:27\n3. Craft CMS 4.x (>= 4.0.0-RC1, < 4.17.0-beta.1) and ",
+      "cve_id": "CVE-2026-56393",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56393",
+      "source": "cvefeed",
+      "published": "2026-06-21T22:27:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-12776 - Montodel House-Rental-Management index.php houses sql injection",
       "summary": "CVE ID :CVE-2026-12776\n  \nPublished : June 21, 2026, 4:45 a.m. | 1 hour, 55 minutes ago\n  \nDescription :A flaw has been found in Montodel House-Rental-Management up to 90010017b81265eb1ef3810268909f7719a33863. This affects an unknown part of the file /index.php?page=houses. This manipulation of the argument ID causes sql injection. The attack is possible to be carried out remotely. The exploit has been published and may be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The vendor was contacted early about this disclosure but did not respond in any way.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
