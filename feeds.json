@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-21T19:02:43.455300+09:00",
+  "fetched_at": "2026-06-21T19:32:28.484150+09:00",
   "security_news": [
     {
       "title": "유출된 비밀번호가 부른 사고…포티넷 VPN·방화벽 8만 6천여 대 침해",
@@ -2185,21 +2185,6 @@
       "link": "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure",
       "source": "cisa",
       "published": "2026-06-18T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54419 - PIAF-HMS multiple unauthenticated SQL injection vulnerabilities via mysql_query",
-      "summary": "CVE ID :CVE-2026-54419\n  \nPublished : June 18, 2026, 10:21 a.m. | 3 hours, 1 minute ago\n  \nDescription :claudiopizzillo PIAF-HMS (PBX-In-A-Flash Hotel Management System; no released versions, latest commit 389d2633441b65ced1c104212cd62be2bfca21e5) contains multiple unauthenticated SQL injection vulnerabilities. The application has no authentication mechanism and passes user-supplied HTTP parameters directly into deprecated mysql_query() calls via string concatenation, without sanitization, escaping, or parameterization. Affected sinks include rooms.php (DELETE FROM Rooms WHERE ID = $_GET['ID'], unquoted numeric context), checkuser.php (WHERE Ext = '$_GET[\"Ext\"]'), ec.php (date/extension parameters in a WHERE), checkin.php and wakeup.php ($_POST values into INSERT statements), bills.php ($_POST fields built into a WHERE clause), and rates.php and checkout.php. A remote, unauthenticated attacker can inject arbitrary SQL to read, modify, or delete arbitrary records in the backing database (e.g. rooms.php?ID=1 OR 1=1 deletes all room records). Note: queries run via the legacy mysql_* extension, which does not permit stacked statements.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54419\n  \nPublished : June 18, 2026, 10:21 a.m. | 3 hours, 1 minute ago\n  \nDescription :claudiopizzillo PIAF-HMS (PBX-In-A-Flash Hotel Management System; no released versions, latest commit 389d2633441b65ced1c104212cd62be2bfca21e5) contains multiple unauthenticated SQL injection vulnerabilities. The application has no authentication mechanism and passes user-supplied HTTP parameters directly into deprecated mysql_query() calls via string concatenation, without sanitization, escaping, or parameterization. Affected sinks include rooms.php (DELETE FROM Rooms WHERE ID = $_GET['ID'], unquoted numeric context), checkuser.php (WHERE Ext = '$_GET[\"Ext\"]'), ec.php (date/extension parameters in a WHERE), checkin.php and wakeup.php ($_POST values into INSERT statements), bills.php ($_POST fields built into a WHERE clause), and rates.php and checkout.php. A remote, unauthenticated attacker can inject arbitrary SQL to read, modify, or delete arbitrary records in the backing database (e.g. rooms.php?ID=1 OR 1=1 deletes all room records). Note: queries run via the legacy mysql_* extension, which does not permit stacked statements.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54419 - mysql_query를 통한 PIAF-HMS 다중 인증되지 않은 SQL 주입 취약점",
-      "summary_ko": "CVE ID:CVE-2026-54419\n  \n게시일 : 2026년 6월 18일 오전 10시 21분 | 3시간, 1분 전\n  \n설명 :claudiopizzillo PIAF-HMS(PBX-In-A-Flash 호텔 관리 시스템, 릴리스된 버전 없음, 최신 커밋 389d2633441b65ced1c104212cd62be2bfca21e5)에는 여러 개의 인증되지 않은 SQL 주입 취약점이 포함되어 있습니다. 애플리케이션에는 인증 메커니즘이 없으며 삭제, 이스케이프 또는 매개변수화 없이 문자열 연결을 통해 사용자가 제공한 HTTP 매개변수를 더 이상 사용되지 않는 mysql_query() 호출에 직접 전달합니다. 영향을 받는 싱크에는 Rooms.php(DELETE FROM Rooms WHERE ID = $_GET['ID'], 인용되지 않은 숫자 컨텍스트), checkuser.php(WHERE Ext = '$_GET[\"Ext\"]'), ec.php(WHERE의 날짜/확장 매개변수), checkin.php 및 wakeup.php(INSERT 문에 $_POST 값), bills.php(WHERE Ext = '$_GET[\"Ext\"]')가 포함됩니다. 조항), rates.php 및 checkout.php. 인증되지 않은 원격 공격자는 임의 SQL을 삽입하여 지원 데이터베이스의 임의 레코드를 읽거나 수정하거나 삭제할 수 있습니다(예: Rooms.php?ID=1 OR 1=1은 모든 회의실 레코드를 삭제합니다). 참고: 쿼리는 스택형 문을 허용하지 않는 레거시 mysql_* 확장을 통해 실행됩니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54419\n2. 26.06.18 오후7:21\n3. claudiopizzillo PIAF-HMS (PBX-In-A-Flash Hotel Man",
-      "cve_id": "CVE-2026-54419",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54419",
-      "source": "cvefeed",
-      "published": "2026-06-18T19:21:47+09:00",
       "lang": "en"
     }
   ],
