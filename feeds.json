@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-23T03:31:12.459134+09:00",
+  "fetched_at": "2026-06-23T04:01:42.660841+09:00",
   "security_news": [
+    {
+      "title": "'AI 능동 소비자'로 진화하는 은퇴 세대…글로벌 생성형 기술 지형 바꾼...",
+      "summary": "특히 시니어를 표적으로 삼는 생성형 AI 기반 딥페이크 피싱과 보안 취약성을 악용한 금융 사기 리스크는 산업 안착의 최대 걸림돌이다. 의료 AI 부문의 개인정보 보호 규제 역시 기술 확산의 속도를 늦추는 요인으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 시니어 대상 딥페이크 피싱, 금융 사기 리스크 증가\n2. 의료 AI 개인정보 보호 규제, 기술 확산 속도 늦춰\n3. AI 능동 소비자 진화, 보안 취약점 악용 우려",
+      "link": "https://www.g-enews.com/view.php?ud=202606221813476834fbbec65dfb_1",
+      "source": "naver",
+      "published": "2026-06-23T03:56:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "애플·테슬라 영업비밀 다크웹 유출…인도 제조사 타타 해킹",
       "summary": "랜섬웨어 그룹, 관련 데이터 20만 건 이상 공개…\"몸값 요구 권영전 특파원 = 애플과 테슬라의 핵심 영업 비밀이 인도 제조업체 해킹으로 다크웹에 무더기로 유출된 것으로 나타났다. 랜섬웨어(금품 요구 악성 프로그램)...",
@@ -2293,21 +2305,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-49338",
       "source": "cvefeed",
       "published": "2026-06-20T04:08:34+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12726 - Awx: automation-controller: awx: github webhook second-order ssrf via unvalidated statuses_url exfiltrates pat credential",
-      "summary": "CVE ID :CVE-2026-12726\n  \nPublished : June 19, 2026, 6:49 p.m. | 45 minutes ago\n  \nDescription :A flaw was found in the AWX GitHub webhook integration. When processing GitHub pull_request webhooks, the controller stores the pull_request.statuses_url value from the webhook payload without validating that it points to a trusted GitHub API endpoint. If a job template is configured with a GitHub Personal Access Token as its webhook credential, the controller later POSTs that token to the stored callback URL when posting job status updates. An attacker who can submit a correctly signed forged webhook using the job template's webhook_key can redirect the callback to an attacker-controlled URL and exfiltrate the configured GitHub PAT.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12726\n  \nPublished : June 19, 2026, 6:49 p.m. | 45 minutes ago\n  \nDescription :A flaw was found in the AWX GitHub webhook integration. When processing GitHub pull_request webhooks, the controller stores the pull_request.statuses_url value from the webhook payload without validating that it points to a trusted GitHub API endpoint. If a job template is configured with a GitHub Personal Access Token as its webhook credential, the controller later POSTs that token to the stored callback URL when posting job status updates. An attacker who can submit a correctly signed forged webhook using the job template's webhook_key can redirect the callback to an attacker-controlled URL and exfiltrate the configured GitHub PAT.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-12726 - Awx: Automation-controller: awx: 검증되지 않은 statuses_url을 통해 github webhook 2차 ssrf가 pat 자격 증명을 유출함",
-      "summary_ko": "CVE ID:CVE-2026-12726\n  \n게시일 : 2026년 6월 19일 오후 6시 49분 | 45분 전\n  \n설명:AWX GitHub 웹훅 통합에서 결함이 발견되었습니다. GitHub pull_request 웹훅을 처리할 때 컨트롤러는 신뢰할 수 있는 GitHub API 엔드포인트를 가리키는지 확인하지 않고 웹훅 페이로드의 pull_request.statuses_url 값을 저장합니다. 웹후크 자격 증명으로 GitHub 개인 액세스 토큰을 사용하여 작업 템플릿을 구성한 경우 컨트롤러는 나중에 작업 상태 업데이트를 게시할 때 저장된 콜백 URL에 해당 토큰을 게시합니다. 작업 템플릿의 webhook_key를 사용하여 올바르게 서명된 위조 웹훅을 제출할 수 있는 공격자는 콜백을 공격자가 제어하는 ​​URL로 리디렉션하고 구성된 GitHub PAT를 추출할 수 있습니다.\n  \n심각도: 6.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12726\n2. 26.06.20 오전3:49\n3. A flaw was found in the AWX GitHub webhook integra",
-      "cve_id": "CVE-2026-12726",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12726",
-      "source": "cvefeed",
-      "published": "2026-06-20T03:49:55+09:00",
       "lang": "en"
     }
   ],
