@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-23T01:31:13.092717+09:00",
+  "fetched_at": "2026-06-23T02:01:22.750049+09:00",
   "security_news": [
     {
       "title": "[사설] 맥없이 뚫린 정부 플랫폼, 국가 보안망은 안전한가",
@@ -2296,21 +2296,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-49293",
       "source": "cvefeed",
       "published": "2026-06-20T03:14:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-49260 - PhpWeasyPrint: shell command injection via configurable WeasyPrint binary path due to inverted is_executable() guard (mirror of KnpLabs/snappy GHSA-vpr4-p6fq-85jc)",
-      "summary": "CVE ID :CVE-2026-49260\n  \nPublished : June 19, 2026, 4:59 p.m. | 24 minutes ago\n  \nDescription :PhpWeasyPrint is a PHP library allowing PDF generation from a URL or an HTML page. Prior to version 2.5.1, `pontedilana/php-weasyprint` builds the shell command for WeasyPrint by passing the binary path through `escapeshellarg()` first and then checking the *quoted* result with `is_executable()`. On POSIX `escapeshellarg('/usr/local/bin/weasyprint')` returns `'/usr/local/bin/weasyprint'` with the single-quote characters as part of the string, so `is_executable()` looks for a file whose actual name includes those quotes. That file never exists, the \"safe\" branch is dead code, and the raw `$binary` string (set via the constructor or `setBinary()`) flows directly into `Symfony\\Component\\Process\\Process::fromShellCommandline()`. Any deployment whose binary path is sourced from configuration, an environment variable, or a per-tenant setting reaches a shell-command-injection sink. The library is documented as a one-to-one substitute for KnpLabs/snappy and inherited the exact pre-fix codepath KnpLabs patched in GHSA-vpr4-p6fq-85jc. PhpWeasyPrint version 2.5.1 contains a patch for the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-49260\n  \nPublished : June 19, 2026, 4:59 p.m. | 24 minutes ago\n  \nDescription :PhpWeasyPrint is a PHP library allowing PDF generation from a URL or an HTML page. Prior to version 2.5.1, `pontedilana/php-weasyprint` builds the shell command for WeasyPrint by passing the binary path through `escapeshellarg()` first and then checking the *quoted* result with `is_executable()`. On POSIX `escapeshellarg('/usr/local/bin/weasyprint')` returns `'/usr/local/bin/weasyprint'` with the single-quote characters as part of the string, so `is_executable()` looks for a file whose actual name includes those quotes. That file never exists, the \"safe\" branch is dead code, and the raw `$binary` string (set via the constructor or `setBinary()`) flows directly into `Symfony\\Component\\Process\\Process::fromShellCommandline()`. Any deployment whose binary path is sourced from configuration, an environment variable, or a per-tenant setting reaches a shell-command-injection sink. The library is documented as a one-to-one substitute for KnpLabs/snappy and inherited the exact pre-fix codepath KnpLabs patched in GHSA-vpr4-p6fq-85jc. PhpWeasyPrint version 2.5.1 contains a patch for the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-49260 - PhpWeasyPrint: 반전된 is_executable() 가드(KnpLabs/snappy GHSA-vpr4-p6fq-85jc의 미러)로 인해 구성 가능한 WeasyPrint 바이너리 경로를 통한 셸 명령 주입",
-      "summary_ko": "CVE ID:CVE-2026-49260\n  \n게시일 : 2026년 6월 19일 오후 4시 59분 | 24분 전\n  \n설명 :PhpWeasyPrint는 URL 또는 HTML 페이지에서 PDF 생성을 허용하는 PHP 라이브러리입니다. 버전 2.5.1 이전에는 'pontedilana/php-weasyprint'가 먼저 'escapeshellarg()'를 통해 바이너리 경로를 전달한 다음 'is_executable()'을 사용하여 *quoted* 결과를 확인하여 WeasyPrint용 셸 명령을 빌드합니다. POSIX에서 `escapeshellarg('/usr/local/bin/weasyprint')`는 작은 따옴표 문자를 문자열의 일부로 사용하여 `'/usr/local/bin/weasyprint'`를 반환하므로 `is_executable()`은 실제 이름에 해당 따옴표가 포함된 파일을 찾습니다. 해당 파일은 존재하지 않으며 \"안전한\" 분기는 데드 코드이며 원시 `$binary` 문자열(생성자 또는 `setBinary()`을 통해 설정)은 `Symfony\\Component\\Process\\Process::fromShellCommandline()`으로 직접 흐릅니다. 구성, 환경 변수 또는 테넌트별 설정에서 바이너리 경로가 제공되는 모든 배포는 셸 명령 주입 싱크에 도달합니다. 라이브러리는 KnpLabs/snappy에 대한 일대일 대체물로 문서화되었으며 GHSA-vpr4-p6fq-85jc에 패치된 정확한 접두사 코드 경로 KnpLabs를 상속했습니다. PhpWeasyPrint 버전 2.5.1에는 이 문제에 대한 패치가 포함되어 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-49260\n2. 26.06.20 오전1:59\n3. PhpWeasyPrint is a PHP library allowing PDF genera",
-      "cve_id": "CVE-2026-49260",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49260",
-      "source": "cvefeed",
-      "published": "2026-06-20T01:59:01+09:00",
       "lang": "en"
     }
   ],
