@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-06-22T22:31:38.387927+09:00",
+  "fetched_at": "2026-06-22T23:02:53.375584+09:00",
   "security_news": [
+    {
+      "title": "한국 노린 공유기 봇넷 '아리스팅어' 확산…해킹 공격 중계지로 악용",
+      "summary": "악성코드 통신에 '2024'라는 문자열이 포함돼 있지만, 실제 공격이 2024년부터 시작됐다는 증거는 발견되지 않았다. 현재 확인된 사실만으로 특정 국가나 해킹 조직과 연결하기는 어렵다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 한국 공유기 공격 봇넷 '아리스팅어' 확산\n2. 악성코드 통신 문자열 '2024' 포함\n3. 2024년 공격 증거 없어 출처 특정 어려움",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207266",
+      "source": "naver",
+      "published": "2026-06-22T22:46:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "텍사스주 면허 시스템 해킹…308만명 개인정보 노출",
+      "summary": "미국 텍사스주의 사냥·낚시 면허 시스템에서 대규모 개인정보 유출 사고가 발생했다. 피해자는 308만7천721명으로 확인됐다. 텍사스 공원야생동물국(Texas Parks and Wildlife Department·TPWD)은 2026년 6월 18일 외부 면허...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 텍사스 공원야생동물국, 308만7천721명 개인정보 유출. (36)\n2. 사냥·낚시 면허 시스템 해킹으로 개인정보 노출. (27)\n3. 2026년 6월 18일 외부 해킹으로 시스템 침해 확인. (25)",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207265",
+      "source": "naver",
+      "published": "2026-06-22T22:36:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "‘모두의창업’ 정보 유출 원인은 “AI 도구로 백엔드 API에 비정상 접근...",
       "summary": "관계기관은 현재까지 파악한 접근을 해킹 행위로 보고 있다. 다만 구체적인 공격 방식은 공개되지 않았다. 공격자가 어떤 인증 정보나 API 요청값을 조작했는지, 시스템이 권한 없는 요청을 정상 요청으로 판단한 이유는...",
@@ -1828,6 +1852,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-56422 - MISP Core: Mass Assignment and Object Re-ownership via Unvalidated Request Fields",
+      "summary": "CVE ID :CVE-2026-56422\n  \nPublished : June 22, 2026, 11:43 a.m. | 1 hour, 54 minutes ago\n  \nDescription :Multiple MISP core controllers and model capture paths accepted client-controlled request fields such as primary keys (id) and ownership/scope foreign keys (event_id, org_id, user_id, sharing_group_id, galaxy_cluster_uuid, organisation_uuid, and related nested object identifiers) without consistently stripping, pinning, or revalidating them against the server-authorized object.\n\nIn affected paths, an authenticated user with access to one authorized object could submit crafted REST or form payloads that caused MISP to save data against a different object than the one checked by the authorization logic. Depending on the endpoint, this could allow object overwrite, object re-parenting, ownership transfer, unauthorized sharing-group scoping, event/object injection, proposal retargeting, or stored attacker-controlled content appearing in another user’s context.\n\nThe fixes harden affected create/edit/import flows by stripping client-supplied primary keys on create-only saves, re-pinning route- or database-authorized identifiers before save operations, validating effective sharing-group scope, and adding field whitelists where ownership fields must never be editable. The initial broad fix also added a central CRUDComponent::edit() primary-key re-pin so payload-supplied IDs cannot redirect saves away from the already-authorized row. GitHub’s patch for 7acf8220c describes this central issue as CRUDComponent::edit() copying supplied fields, including a payload primary key, onto the loaded record, allowing CakePHP save() to update an arbitrary row unless the loaded ID is re-pinned.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56422\n  \nPublished : June 22, 2026, 11:43 a.m. | 1 hour, 54 minutes ago\n  \nDescription :Multiple MISP core controllers and model capture paths accepted client-controlled request fields such as primary keys (id) and ownership/scope foreign keys (event_id, org_id, user_id, sharing_group_id, galaxy_cluster_uuid, organisation_uuid, and related nested object identifiers) without consistently stripping, pinning, or revalidating them against the server-authorized object.\n\nIn affected paths, an authenticated user with access to one authorized object could submit crafted REST or form payloads that caused MISP to save data against a different object than the one checked by the authorization logic. Depending on the endpoint, this could allow object overwrite, object re-parenting, ownership transfer, unauthorized sharing-group scoping, event/object injection, proposal retargeting, or stored attacker-controlled content appearing in another user’s context.\n\nThe fixes harden affected create/edit/import flows by stripping client-supplied primary keys on create-only saves, re-pinning route- or database-authorized identifiers before save operations, validating effective sharing-group scope, and adding field whitelists where ownership fields must never be editable. The initial broad fix also added a central CRUDComponent::edit() primary-key re-pin so payload-supplied IDs cannot redirect saves away from the already-authorized row. GitHub’s patch for 7acf8220c describes this central issue as CRUDComponent::edit() copying supplied fields, including a payload primary key, onto the loaded record, allowing CakePHP save() to update an arbitrary row unless the loaded ID is re-pinned.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56422 - MISP 핵심: 검증되지 않은 요청 필드를 통한 대량 할당 및 개체 재소유권",
+      "summary_ko": "CVE ID:CVE-2026-56422\n  \n게시일 : 2026년 6월 22일 오전 11시 43분 | 1시간 54분 전\n  \n설명: 여러 MISP 코어 컨트롤러 및 모델 캡처 경로는 기본 키(id) 및 소유권/범위 외래 키(event_id, org_id, user_id, Sharing_group_id, galaxy_cluster_uuid, organization_uuid 및 관련 중첩 개체 식별자)와 같은 클라이언트 제어 요청 필드를 서버 승인 개체에 대해 일관되게 제거, 고정 또는 재검증하지 않고 허용했습니다.\n\n영향을 받은 경로에서 하나의 승인된 개체에 대한 액세스 권한이 있는 인증된 사용자는 조작된 REST를 제출하거나 MISP가 승인 논리에서 확인한 것과 다른 개체에 대해 데이터를 저장하도록 하는 페이로드를 형성할 수 있습니다. 엔드포인트에 따라 개체 덮어쓰기, 개체 부모 재지정, 소유권 이전, 무단 공유 그룹 범위 지정, 이벤트/개체 삽입, 제안 대상 변경 또는 다른 사용자의 컨텍스트에 나타나는 저장된 공격자 제어 콘텐츠가 허용될 수 있습니다.\n\n수정 사항은 생성 전용 저장에서 클라이언트 제공 기본 키를 제거하고, 저장 작업 전에 경로 또는 데이터베이스 승인 식별자를 다시 고정하고, 효과적인 공유 그룹 범위를 검증하고, 소유권 필드를 절대 편집할 수 없는 필드 화이트리스트를 추가하여 영향을 받는 생성/편집/가져오기 흐름을 강화합니다. 또한 초기 광범위한 수정에는 중앙 CRUDComponent::edit() 기본 키 재핀이 추가되어 페이로드 제공 ID가 이미 승인된 행에서 저장을 리디렉션할 수 없습니다. 7acf8220c용 GitHub 패치에서는 이 핵심 문제를 CRUDComponent::edit()가 페이로드 기본 키를 포함한 제공된 필드를 로드된 레코드에 복사하여 로드된 ID가 다시 고정되지 않는 한 CakePHP save()가 임의의 행을 업데이트할 수 있도록 허용한다고 설명합니다.\n  \n심각도: 9.4 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56422\n2. 26.06.22 오후8:43\n3. Multiple MISP core controllers and model capture p",
+      "cve_id": "CVE-2026-56422",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56422",
+      "source": "cvefeed",
+      "published": "2026-06-22T20:43:02+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-44914 - Apache NiFi: Missing Authorization of Restricted Permissions when Replacing Flow Contents",
       "summary": "CVE ID :CVE-2026-44914\n  \nPublished : June 22, 2026, 7:38 a.m. | 1 hour, 59 minutes ago\n  \nDescription :Apache NiFi 1.12.0 through 2.9.0 are missing authorization when replacing Process Groups that include extension components with specific Required Permissions based on the Restricted annotation. The Restricted annotation indicates additional privileges required, but framework authorization did not check restricted status when handling requests to replace Process Groups. The missing authorization permits a user with general write access to add components with Restricted status. Apache NiFi installations that do not implement specific authorization for Restricted components are not subject to this vulnerability because the framework enforces write permissions as the security boundary. Upgrading to Apache NiFi 2.9.0 is the recommended mitigation, which removes the implementation of Restricted status authorization from the framework.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-44914\n  \nPublished : June 22, 2026, 7:38 a.m. | 1 hour, 59 minutes ago\n  \nDescription :Apache NiFi 1.12.0 through 2.9.0 are missing authorization when replacing Process Groups that include extension components with specific Required Permissions based on the Restricted annotation. The Restricted annotation indicates additional privileges required, but framework authorization did not check restricted status when handling requests to replace Process Groups. The missing authorization permits a user with general write access to add components with Restricted status. Apache NiFi installations that do not implement specific authorization for Restricted components are not subject to this vulnerability because the framework enforces write permissions as the security boundary. Upgrading to Apache NiFi 2.9.0 is the recommended mitigation, which removes the implementation of Restricted status authorization from the framework.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2230,51 +2269,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-52909",
       "source": "cvefeed",
       "published": "2026-06-19T23:43:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Chromium: CVE-2026-12454 Race in Safe Browsing",
-      "summary": "Corrected CVE title. This is an informational change only.",
-      "description": "Corrected CVE title. This is an informational change only.",
-      "title_ko": "크롬: CVE-2026-12454 세이프 브라우징 경쟁",
-      "summary_ko": "CVE 제목을 수정했습니다. 이는 정보 제공용 변경일 뿐입니다.",
-      "summary_3lines": "1. CVE-2026-12454\n2. MSRC\n3. Corrected CVE title. This is an informational chan",
-      "cve_id": "CVE-2026-12454",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12454",
-      "source": "msrc",
-      "published": "2026-06-19T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45456 Microsoft Outlook and Word Remote Code Execution Vulnerability",
-      "summary": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action. See the [Release Notes](https://go.microsoft.com/fwlink/p/?linkid=831049) for more information and download links.",
-      "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action. See the [Release Notes](https://go.microsoft.com/fwlink/p/?linkid=831049) for more information and download links.",
-      "title_ko": "CVE-2026-45456 Microsoft Outlook 및 Word 원격 코드 실행 취약점",
-      "summary_ko": "Microsoft는 Mac용 Microsoft Office에 대한 보안 업데이트가 출시되었음을 발표했습니다. 영향을 받는 Mac 소프트웨어를 실행하는 고객은 이 취약점으로부터 제품을 보호하기 위해 업데이트를 설치해야 합니다. 다른 Microsoft Office 소프트웨어를 실행하는 고객은 어떤 조치도 취할 필요가 없습니다. 자세한 내용과 다운로드 링크는 [릴리스 노트](https://go.microsoft.com/fwlink/p/?linkid=831049)를 참조하세요.",
-      "summary_3lines": "1. CVE-2026-45456\n2. MSRC\n3. Microsoft is announcing the availability of the se",
-      "cve_id": "CVE-2026-45456",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45456",
-      "source": "msrc",
-      "published": "2026-06-19T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2025-6965 Integer Truncation on SQLite",
-      "summary": "Added Visual Studio software to the Security Updates table.  Customers that are running supported version of Visual Studio are encouraged to update to the indicated version to be protected from this vulnerability.",
-      "description": "Added Visual Studio software to the Security Updates table.  Customers that are running supported version of Visual Studio are encouraged to update to the indicated version to be protected from this vulnerability.",
-      "title_ko": "CVE-2025-6965 SQLite의 정수 잘림",
-      "summary_ko": "보안 업데이트 표에 Visual Studio 소프트웨어가 추가되었습니다.  지원되는 Visual Studio 버전을 실행하는 고객은 이 취약성으로부터 보호되도록 표시된 버전으로 업데이트하는 것이 좋습니다.",
-      "summary_3lines": "1. CVE-2025-6965\n2. MSRC\n3. Added Visual Studio software to the Security Updat",
-      "cve_id": "CVE-2025-6965",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-6965",
-      "source": "msrc",
-      "published": "2026-06-19T23:00:00+09:00",
       "lang": "en"
     }
   ],
