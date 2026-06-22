@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-23T06:33:18.456452+09:00",
+  "fetched_at": "2026-06-23T07:02:25.761872+09:00",
   "security_news": [
+    {
+      "title": "'디지털 헬스케어법' 첫발 뗐지만…'데이터 활용' 확대 찬반 팽팽",
+      "summary": "시민사회단체가 제기한 개인정보 유출 우려에 대해서는 \"해킹 문제는 보건의료정보뿐 아니라 금융정보와... 이어 \"현재 운영 중인 건강정보 고속도로는 지금까지 단 한 차례의 해킹 사고도 발생하지 않았고 보안 수준 역시...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 디지털 헬스케어법, 데이터 활용 확대에 찬반 팽팽\n2. 시민단체, 개인정보 유출 우려 제기\n3. 건강정보 고속도로, 해킹 사고 0건 보안 수준 안전",
+      "link": "http://www.docdocdoc.co.kr/news/articleView.html?idxno=3040271",
+      "source": "naver",
+      "published": "2026-06-23T06:40:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[이슈인터뷰]\"보안 투자가 금융 디지털 경쟁력 좌우…포스트 망분리 시...",
       "summary": "아울러 금융보안원은 전 금융권을 대상으로 AI 기반 취약점 점검과 모의해킹 지원에 나설 예정이다. 최근... 모의해킹을 실시해 실질적인 보안 수준 향상을 돕겠다\"고 말했다. 그는 국내 금융권의 보안 역량이 과거보다...",
@@ -2368,21 +2380,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-5791",
       "source": "msrc",
       "published": "2026-06-20T17:40:10+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-56082 - Supabase - Unauthenticated Cross-Tenant Billing Log Tampering via public.record_build_time RPC",
-      "summary": "CVE ID :CVE-2026-56082\n  \nPublished : June 19, 2026, 9:39 p.m. | 2 hours, 42 minutes ago\n  \nDescription :Capgo (Cap-go/capgo) before 12.128.2 contains an improper access control vulnerability in the SECURITY DEFINER PostgREST RPC function public.record_build_time, which is granted to the anon role and callable with only the public Supabase publishable (sb_publishable_*) anon key. An unauthenticated attacker can insert rows into public.build_logs for arbitrary organizations and, because the function uses ON CONFLICT (build_id, org_id) DO UPDATE, can overwrite existing usage/billing records by reusing the same build_id for a target org. This enables cross-tenant tampering of billing build logs and financial-impact denial of service by inflating billable build time.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-56082\n  \nPublished : June 19, 2026, 9:39 p.m. | 2 hours, 42 minutes ago\n  \nDescription :Capgo (Cap-go/capgo) before 12.128.2 contains an improper access control vulnerability in the SECURITY DEFINER PostgREST RPC function public.record_build_time, which is granted to the anon role and callable with only the public Supabase publishable (sb_publishable_*) anon key. An unauthenticated attacker can insert rows into public.build_logs for arbitrary organizations and, because the function uses ON CONFLICT (build_id, org_id) DO UPDATE, can overwrite existing usage/billing records by reusing the same build_id for a target org. This enables cross-tenant tampering of billing build logs and financial-impact denial of service by inflating billable build time.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-56082 - Supabase - public.record_build_time RPC를 통한 인증되지 않은 테넌트 간 청구 로그 변조",
-      "summary_ko": "CVE ID:CVE-2026-56082\n  \n게시일 : 2026년 6월 19일 오후 9시 39분 | 2시간 42분 전\n  \n설명: 12.128.2 이전의 Capgo(Cap-go/capgo)에는 SECURITY DEFINER PostgREST RPC 함수 public.record_build_time에 부적절한 액세스 제어 취약점이 포함되어 있습니다. 이 함수는 anon 역할에 부여되고 공용 Supabase 게시 가능(sb_publishable_*) anon 키로만 호출할 수 있습니다. 인증되지 않은 공격자는 임의 조직의 public.build_logs에 행을 삽입할 수 있으며, 함수는 ON CONFLICT(build_id, org_id) DO UPDATE를 사용하므로 대상 조직에 대해 동일한 build_id를 재사용하여 기존 사용/청구 기록을 덮어쓸 수 있습니다. 이를 통해 청구 가능한 빌드 시간을 부풀려 청구 빌드 로그를 테넌트 간 변조하고 재정적 영향을 미치는 서비스 거부를 수행할 수 있습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-56082\n2. 26.06.20 오전6:39\n3. Capgo (Cap-go/capgo) before 12.128.2 contains an i",
-      "cve_id": "CVE-2026-56082",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56082",
-      "source": "cvefeed",
-      "published": "2026-06-20T06:39:21+09:00",
       "lang": "en"
     }
   ],
