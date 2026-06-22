@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-22T23:02:53.375584+09:00",
+  "fetched_at": "2026-06-22T23:32:27.664964+09:00",
   "security_news": [
+    {
+      "title": "인터폴 “아태지역 랜섬웨어 공격 13만5000건”…딥페이크 사기도 산업화",
+      "summary": "인터폴(INTERPOL)이 아시아와 남태평양 지역에서 피싱과 랜섬웨어, 인공지능(AI)을 이용한 사기가 빠르게 증가하고 있다고 경고했다. 디지털 금융과 클라우드 서비스 이용은 늘었지만 국가별 보안 수준과 수사 역량의 차이가 커지면서 범죄조직이 공격 범위를 넓히고 있다는 분석이다.인터폴은 6월 17일 ‘2025·2026 아시아·남태평양 사이버위협 평가 보고서’를 공개했다. 보고서는 2024년 1월부터 2025년 3월까지 발생한 위협을 분석했으며, 역내 18개 회원국이 제출한 자료와 수사 사례, 민간 보안기업의 위협 정보를 반영했다.조",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 인터폴, 아태지역 랜섬웨어 공격 13만5000건 보고\n2. 피싱·랜섬웨어·AI 사기 증가, 딥",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207267",
+      "source": "dailysecu",
+      "published": "2026-06-22T23:06:01+09:00",
+      "lang": "ko"
+    },
     {
       "title": "한국 노린 공유기 봇넷 '아리스팅어' 확산…해킹 공격 중계지로 악용",
       "summary": "악성코드 통신에 '2024'라는 문자열이 포함돼 있지만, 실제 공격이 2024년부터 시작됐다는 증거는 발견되지 않았다. 현재 확인된 사실만으로 특정 국가나 해킹 조직과 연결하기는 어렵다.",
@@ -1836,21 +1848,24 @@
       "source": "naver",
       "published": "2026-06-20T05:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "금융권 AI 공격·방어 '한 끗' 무심코 '업무정보' 입력했다간…",
-      "summary": "앞서 금융위는 지난달 미국 앤트로픽 AI 모델 미토스가 사이버보안 분야에서 탁월한 성능을 보였다면서도 해킹 공격을 기획·실행할 수 있는 능력까지 갖춘 점에 주목했다. 금융위는 고성능 AI가 해킹에 악용될 경우...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융위, 앤트로픽 AI 모델 미토스 해킹 악용 우려\n2. 업무 정보 입력 시 AI 통한 해킹 위험성 제기\n3. 고성능 AI, 금융권 사이버 보안 위협 가능성",
-      "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7170524",
-      "source": "naver",
-      "published": "2026-06-19T23:32:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Webshells Remain Popular, (Mon, Jun 22nd)",
+      "summary": "Webshells have been popular for a long time. We already covered this topic across multiple diaries[1][2]. I spent some time to track them[3] and slighly paid less attention to them but today I found another one. It seems to be a new player (pushed on Github two months ago). \r",
+      "description": "Webshells have been popular for a long time. We already covered this topic across multiple diaries[1][2]. I spent some time to track them[3] and slighly paid less attention to them but today I found another one. It seems to be a new player (pushed on Github two months ago). \r",
+      "title_ko": "Webshells의 인기 유지, (6월 22일 월요일)",
+      "summary_ko": "Webshell은 오랫동안 인기를 끌었습니다. 우리는 이미 여러 일기에서 이 주제를 다루었습니다[1][2]. 나는 그들을 추적하는 데 약간의 시간을 보냈고[3] 그들에게 약간의 관심을 기울였지만 오늘 또 다른 것을 발견했습니다. 새로운 플레이어인 것 같습니다(두 달 전에 Github에 푸시됨).",
+      "summary_3lines": "1. Webshells Remain Popular, (Mon, Jun 22nd)\n2. SANS_ISC\n3. Webshells have been popular for a long time. We al",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33096",
+      "source": "sans_isc",
+      "published": "2026-06-22T23:10:27+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-56422 - MISP Core: Mass Assignment and Object Re-ownership via Unvalidated Request Fields",
       "summary": "CVE ID :CVE-2026-56422\n  \nPublished : June 22, 2026, 11:43 a.m. | 1 hour, 54 minutes ago\n  \nDescription :Multiple MISP core controllers and model capture paths accepted client-controlled request fields such as primary keys (id) and ownership/scope foreign keys (event_id, org_id, user_id, sharing_group_id, galaxy_cluster_uuid, organisation_uuid, and related nested object identifiers) without consistently stripping, pinning, or revalidating them against the server-authorized object.\n\nIn affected paths, an authenticated user with access to one authorized object could submit crafted REST or form payloads that caused MISP to save data against a different object than the one checked by the authorization logic. Depending on the endpoint, this could allow object overwrite, object re-parenting, ownership transfer, unauthorized sharing-group scoping, event/object injection, proposal retargeting, or stored attacker-controlled content appearing in another user’s context.\n\nThe fixes harden affected create/edit/import flows by stripping client-supplied primary keys on create-only saves, re-pinning route- or database-authorized identifiers before save operations, validating effective sharing-group scope, and adding field whitelists where ownership fields must never be editable. The initial broad fix also added a central CRUDComponent::edit() primary-key re-pin so payload-supplied IDs cannot redirect saves away from the already-authorized row. GitHub’s patch for 7acf8220c describes this central issue as CRUDComponent::edit() copying supplied fields, including a payload primary key, onto the loaded record, allowing CakePHP save() to update an arbitrary row unless the loaded ID is re-pinned.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
