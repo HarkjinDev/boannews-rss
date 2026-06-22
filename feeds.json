@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-23T02:01:22.750049+09:00",
+  "fetched_at": "2026-06-23T02:31:19.566529+09:00",
   "security_news": [
     {
       "title": "[사설] 맥없이 뚫린 정부 플랫폼, 국가 보안망은 안전한가",
@@ -1863,6 +1863,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54268 - Angular: Denial of Service (DoS) via OOM in Date Formatting (formatDate)",
+      "summary": "CVE ID :CVE-2026-54268\n  \nPublished : June 22, 2026, 3:31 p.m. | 1 hour, 36 minutes ago\n  \nDescription :Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages. Prior to 22.0.1, 21.2.17, and 20.3.25, a Denial of Service (DoS) vulnerability exists in the @angular/common package of the Angular framework. The formatDate function, which is also utilized by the standard Angular DatePipe, does not properly limit or validate the length of the format parameter. When parsing a maliciously crafted, excessively long date format string (e.g., a repeating pattern or very large string), the internal parser splits the string iteratively using a regular expression loop. This results in uncontrolled resource consumption (high CPU utilization and excessive memory allocations), leading to a Denial of Service (DoS). This vulnerability is fixed in 22.0.1, 21.2.17, and 20.3.25.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54268\n  \nPublished : June 22, 2026, 3:31 p.m. | 1 hour, 36 minutes ago\n  \nDescription :Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages. Prior to 22.0.1, 21.2.17, and 20.3.25, a Denial of Service (DoS) vulnerability exists in the @angular/common package of the Angular framework. The formatDate function, which is also utilized by the standard Angular DatePipe, does not properly limit or validate the length of the format parameter. When parsing a maliciously crafted, excessively long date format string (e.g., a repeating pattern or very large string), the internal parser splits the string iteratively using a regular expression loop. This results in uncontrolled resource consumption (high CPU utilization and excessive memory allocations), leading to a Denial of Service (DoS). This vulnerability is fixed in 22.0.1, 21.2.17, and 20.3.25.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54268 - Angular: 날짜 형식(formatDate)에서 OOM을 통한 서비스 거부(DoS)",
+      "summary_ko": "CVE ID:CVE-2026-54268\n  \n게시일 : 2026년 6월 22일 오후 3시 31분 | 1시간 36분 전\n  \n설명 :Angular는 TypeScript/JavaScript 및 기타 언어를 사용하여 모바일 및 데스크톱 웹 애플리케이션을 구축하기 위한 개발 플랫폼입니다. 22.0.1, 21.2.17 및 20.3.25 이전에는 Angular 프레임워크의 @angular/common 패키지에 서비스 거부(DoS) 취약점이 존재합니다. 표준 Angular DatePipe에서도 활용되는 formatDate 함수는 형식 매개변수의 길이를 적절하게 제한하거나 유효성을 검사하지 않습니다. 악의적으로 제작되고 지나치게 긴 날짜 형식 문자열(예: 반복 패턴 또는 매우 큰 문자열)을 구문 분석할 때 내부 구문 분석기는 정규식 루프를 사용하여 문자열을 반복적으로 분할합니다. 이로 인해 제어되지 않은 리소스 소비(높은 CPU 사용률 및 과도한 메모리 할당)가 발생하여 DoS(서비스 거부)가 발생합니다. 이 취약점은 22.0.1, 21.2.17 및 20.3.25에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54268\n2. 26.06.23 오전12:31\n3. Angular is a development platform for building mob",
+      "cve_id": "CVE-2026-54268",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54268",
+      "source": "cvefeed",
+      "published": "2026-06-23T00:31:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "Webshells Remain Popular, (Mon, Jun 22nd)",
       "summary": "Webshells have been popular for a long time. We already covered this topic across multiple diaries[1][2]. I spent some time to track them[3] and slighly paid less attention to them but today I found another one. It seems to be a new player (pushed on Github two months ago). \r",
