@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-06-23T04:01:42.660841+09:00",
+  "fetched_at": "2026-06-23T04:31:53.834296+09:00",
   "security_news": [
+    {
+      "title": "고개 숙인 한성숙… \"정보유출 책임 통감, 깊이 송구\"",
+      "summary": "중기부와 창업진흥원에서는 이번 사고가 모두의 창업 프로젝트에 참여한 AI 솔루션 공급업체가 정보접근 권한이 없음에도 API(애플리케이션 프로그래밍 인터페이스)를 호출하면서 발생한 해킹사고라고 본다. 이어 한 달...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 창업진흥원 '모두의 창업' 프로젝트서 정보유출 사고 발생\n2. AI 솔루션 공급업체, 접근 권한 없이 API 호출로 해킹\n3. 중기부, 보안 강화 및 재발 방지 대책 마련 중",
+      "link": "https://n.news.naver.com/mnews/article/008/0005375508?sid=101",
+      "source": "naver",
+      "published": "2026-06-23T04:10:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "아이폰 도면·직원 여권까지…\"애플·테슬라 영업기밀 20만건 유출\"",
+      "summary": "인도 내 아이폰 생산량의 약 3분의 1을 담당한다. 나머지는 폭스콘이 맡고 있다. 이번 해킹 사건으로 중국 의존도를 낮추고 인도로 제조시설을 이전·재편하려는 애플의 고민이 커질 것이라고 로이터 통신은 분석했다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 애플·테슬라 영업기밀 20만건 유출\n2. 아이폰 도면, 직원 여권 정보 등 포함\n3. 애플, 인도 생산기지 이전 계획에 난항",
+      "link": "https://n.news.naver.com/mnews/article/008/0005375507?sid=104",
+      "source": "naver",
+      "published": "2026-06-23T04:07:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "파이브 아이즈 \"AI로 무장한 사이버 공격, 수개월 내 닥친다\"",
+      "summary": "구글에 따르면 중국과 북한 해킹 그룹도 비슷한 시도를 하고 있다. 현재 서방의 최첨단 AI 모델인 클로드 미소스 역량은 잘 알려져 있지만 중국과 러시아가 구축한 모델들은 베일에 가려져 있다. 파이브 아이즈 사이버...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 파이브 아이즈, AI 무장한 사이버 공격 수개월 내 예상\n2. 중국·북한 해킹 그룹도 AI 모델 활용 시도\n3. 서방 AI 모델 클로드 미소스 역량은 알려져 있으나, 중·러 모델은 미공개",
+      "link": "https://n.news.naver.com/mnews/article/014/0005538278?sid=101",
+      "source": "naver",
+      "published": "2026-06-23T04:03:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "'AI 능동 소비자'로 진화하는 은퇴 세대…글로벌 생성형 기술 지형 바꾼...",
       "summary": "특히 시니어를 표적으로 삼는 생성형 AI 기반 딥페이크 피싱과 보안 취약성을 악용한 금융 사기 리스크는 산업 안착의 최대 걸림돌이다. 의료 AI 부문의 개인정보 보호 규제 역시 기술 확산의 속도를 늦추는 요인으로...",
@@ -1888,6 +1924,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-54293 - NLTK: URL-Encoded Path Traversal in nltk.data.load() Allows Arbitrary Local File Read",
+      "summary": "CVE ID :CVE-2026-54293\n  \nPublished : June 22, 2026, 5:25 p.m. | 1 hour, 59 minutes ago\n  \nDescription :NLTK (Natural Language Toolkit) is a suite of open source Python modules, data sets, and tutorials supporting research and development in Natural Language Processing. Prior to 3.10.0-rc1, nltk.data.load() in NLTK is vulnerable to path traversal via URL-encoded path separators and traversal segments when using the nltk: URL scheme. The unsafe-path regex check is performed before url2pathname() decodes the %xx sequences (a classic decode-after-check / TOCTOU-style flaw), allowing an attacker to bypass the protection documented in NLTK's SECURITY.md and read arbitrary files from the filesystem. While literal traversal strings such as ../../../etc/passwd are correctly blocked, encoded variants such as %2fetc%2fpasswd, %2e%2e%2f..., and ..%2f..%2f slip past the regex and are subsequently decoded into a real filesystem path. This vulnerability is fixed in 3.10.0-rc1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54293\n  \nPublished : June 22, 2026, 5:25 p.m. | 1 hour, 59 minutes ago\n  \nDescription :NLTK (Natural Language Toolkit) is a suite of open source Python modules, data sets, and tutorials supporting research and development in Natural Language Processing. Prior to 3.10.0-rc1, nltk.data.load() in NLTK is vulnerable to path traversal via URL-encoded path separators and traversal segments when using the nltk: URL scheme. The unsafe-path regex check is performed before url2pathname() decodes the %xx sequences (a classic decode-after-check / TOCTOU-style flaw), allowing an attacker to bypass the protection documented in NLTK's SECURITY.md and read arbitrary files from the filesystem. While literal traversal strings such as ../../../etc/passwd are correctly blocked, encoded variants such as %2fetc%2fpasswd, %2e%2e%2f..., and ..%2f..%2f slip past the regex and are subsequently decoded into a real filesystem path. This vulnerability is fixed in 3.10.0-rc1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54293 - NLTK: nltk.data.load()의 URL 인코딩 경로 탐색으로 인해 임의 로컬 파일 읽기가 허용됩니다.",
+      "summary_ko": "CVE ID:CVE-2026-54293\n  \n게시일 : 2026년 6월 22일 오후 5시 25분 | 1시간 59분 전\n  \n설명 :NLTK(Natural Language Toolkit)는 자연어 처리에 대한 연구 및 개발을 지원하는 오픈 소스 Python 모듈, 데이터 세트 및 튜토리얼 제품군입니다. 3.10.0-rc1 이전에는 NLTK의 nltk.data.load()가 nltk: URL 체계를 사용할 때 URL 인코딩된 경로 구분 기호 및 순회 세그먼트를 통한 경로 순회에 취약했습니다. 안전하지 않은 경로 정규식 검사는 url2pathname()이 %xx 시퀀스(전형적인 검사 후 디코딩/TOCTOU 스타일 결함)를 디코딩하기 전에 수행되어 공격자가 NLTK의 SECURITY.md에 문서화된 보호를 우회하고 파일 시스템에서 임의의 파일을 읽을 수 있도록 합니다. ../../../etc/passwd와 같은 리터럴 순회 문자열은 올바르게 차단되지만 %2fetc%2fpasswd, %2e%2e%2f... 및 ..%2f..%2f와 같은 인코딩된 변형은 정규식을 빠져나가 실제 파일 시스템 경로로 디코딩됩니다. 이 취약점은 3.10.0-rc1에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54293\n2. 26.06.23 오전2:25\n3. NLTK (Natural Language Toolkit) is a suite of open",
+      "cve_id": "CVE-2026-54293",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54293",
+      "source": "cvefeed",
+      "published": "2026-06-23T02:25:05+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-54289 - Hono: Lambda@Edge adapter keeps only the last value of a repeated request header, dropping the rest",
       "summary": "CVE ID :CVE-2026-54289\n  \nPublished : June 22, 2026, 5:16 p.m. | 20 minutes ago\n  \nDescription :Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.25, on AWS Lambda@Edge, CloudFront delivers a request header that appears more than once as several separate entries. The adapter writes each value with Headers.set instead of Headers.append, so every value overwrites the previous one and only the last reaches the application. Repeated request headers such as X-Forwarded-For, Forwarded, and Via are silently truncated to a single value. Request middleware sees only the last value of a repeated header instead of the full chain. For applications that base access control on the X-Forwarded-For chain, this can weaken or alter that decision; for auditing, hop history is lost. This vulnerability is fixed in 4.12.25.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-54289\n  \nPublished : June 22, 2026, 5:16 p.m. | 20 minutes ago\n  \nDescription :Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.25, on AWS Lambda@Edge, CloudFront delivers a request header that appears more than once as several separate entries. The adapter writes each value with Headers.set instead of Headers.append, so every value overwrites the previous one and only the last reaches the application. Repeated request headers such as X-Forwarded-For, Forwarded, and Via are silently truncated to a single value. Request middleware sees only the last value of a repeated header instead of the full chain. For applications that base access control on the X-Forwarded-For chain, this can weaken or alter that decision; for auditing, hop history is lost. This vulnerability is fixed in 4.12.25.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2260,51 +2311,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48774",
       "source": "cvefeed",
       "published": "2026-06-20T04:34:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48772 - ProxySQL: PROXY-Protocol-v1 UNKNOWN parses spoofed source IP, bypassing mysql_query_rules.client_addr ACL",
-      "summary": "CVE ID :CVE-2026-48772\n  \nPublished : June 19, 2026, 7:28 p.m. | 53 minutes ago\n  \nDescription :ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. In versions 2.0.0 through 3.0.8, the ProxySQL MySQL frontend accepts the `PROXY UNKNOWN    \\r\\n` PP1 frame as a well-formed PROXY protocol header. The HAProxy PROXY protocol v1 specification says that when the protocol token is `UNKNOWN`, the receiver MUST ignore any address fields that follow it, because the proxy has declared it cannot determine the client identity. ProxySQL parses those address fields anyway via `sscanf` and writes the spoofed source address into the session's `addr.addr` field. From there it flows directly into the query-rule matcher, where the `client_addr` predicate decides routing and ACL. When `mysql-proxy_protocol_networks = '*'` (the default), any TCP peer can send a PP1 frame and choose any source IP claim. With that, any `mysql_query_rules` row pinned to a `client_addr` value is forgeable: the attacker writes the address they want to match into the PP1 line, and ProxySQL routes their query as if it came from that address. In practice this is a routing and ACL bypass. Real deployments use `client_addr` for read-write splitting (internal apps go to the primary, public traffic to read replicas), per-app schema pinning, and query-filter rules (DDL allowed only from admin CIDR, public queries blocked from dangerous patterns). An attacker that can reach the frontend port can forge their way into any of those routes. Version 3.0.9 patches this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48772\n  \nPublished : June 19, 2026, 7:28 p.m. | 53 minutes ago\n  \nDescription :ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. In versions 2.0.0 through 3.0.8, the ProxySQL MySQL frontend accepts the `PROXY UNKNOWN    \\r\\n` PP1 frame as a well-formed PROXY protocol header. The HAProxy PROXY protocol v1 specification says that when the protocol token is `UNKNOWN`, the receiver MUST ignore any address fields that follow it, because the proxy has declared it cannot determine the client identity. ProxySQL parses those address fields anyway via `sscanf` and writes the spoofed source address into the session's `addr.addr` field. From there it flows directly into the query-rule matcher, where the `client_addr` predicate decides routing and ACL. When `mysql-proxy_protocol_networks = '*'` (the default), any TCP peer can send a PP1 frame and choose any source IP claim. With that, any `mysql_query_rules` row pinned to a `client_addr` value is forgeable: the attacker writes the address they want to match into the PP1 line, and ProxySQL routes their query as if it came from that address. In practice this is a routing and ACL bypass. Real deployments use `client_addr` for read-write splitting (internal apps go to the primary, public traffic to read replicas), per-app schema pinning, and query-filter rules (DDL allowed only from admin CIDR, public queries blocked from dangerous patterns). An attacker that can reach the frontend port can forge their way into any of those routes. Version 3.0.9 patches this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48772 - ProxySQL: PROXY-Protocol-v1 UNKNOWN은 mysql_query_rules.client_addr ACL을 우회하여 스푸핑된 소스 IP를 구문 분석합니다.",
-      "summary_ko": "CVE ID:CVE-2026-48772\n  \n게시일 : 2026년 6월 19일 오후 7시 28분 | 53분 전\n  \n설명 :ProxySQL은 PostgreSQL뿐만 아니라 MySQL과 그 포크를 위한 프록시입니다. 버전 2.0.0~3.0.8에서 ProxySQL MySQL 프런트엔드는 `PROXY UNKNOWN \\r\\n` PP1 프레임을 올바른 형식의 PROXY 프로토콜 헤더로 허용합니다. HAProxy PROXY 프로토콜 v1 사양에 따르면 프로토콜 토큰이 'UNKNOWN'인 경우 프록시가 클라이언트 ID를 확인할 수 없다고 선언했기 때문에 수신자는 이를 따르는 모든 주소 필드를 무시해야 합니다. ProxySQL은 `sscanf`를 통해 해당 주소 필드를 구문 분석하고 스푸핑된 소스 주소를 세션의 `addr.addr` 필드에 기록합니다. 거기에서 `client_addr` 조건자가 라우팅과 ACL을 결정하는 쿼리 규칙 일치자로 직접 흐릅니다. `mysql-proxy_protocol_networks = '*'`(기본값)인 경우 모든 TCP 피어는 PP1 프레임을 보내고 소스 IP 클레임을 선택할 수 있습니다. 이를 통해 `client_addr` 값에 고정된 `mysql_query_rules` 행은 위조 가능합니다. 공격자는 일치시키려는 주소를 PP1 라인에 쓰고 ProxySQL은 쿼리가 해당 주소에서 나온 것처럼 라우팅합니다. 실제로 이는 라우팅 및 ACL 우회입니다. 실제 배포에서는 읽기-쓰기 분할(내부 앱은 기본으로 이동, 공용 트래픽은 읽기 복제본으로 이동), 앱별 스키마 고정 및 쿼리 필터 규칙(DDL은 관리자 CIDR에서만 허용되고 공개 쿼리는 위험한 패턴에서 차단됨)에 'client_addr'을 사용합니다. 프런트엔드 포트에 도달할 수 있는 공격자는 이러한 경로 중 하나로 침입할 수 있습니다. 버전 3.0.9에서는 이 문제를 패치합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48772\n2. 26.06.20 오전4:28\n3. ProxySQL is a proxy for MySQL and its forks, as we",
-      "cve_id": "CVE-2026-48772",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48772",
-      "source": "cvefeed",
-      "published": "2026-06-20T04:28:46+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-49345 - Mercator CVE Configuration Vulnerable to Server-Side Request Forgery (SSRF)",
-      "summary": "CVE ID :CVE-2026-49345\n  \nPublished : June 19, 2026, 7:23 p.m. | 4 hours, 12 minutes ago\n  \nDescription :Mercator is an open source web application that enables mapping of the information system. Prior to version 2025.05.19, a Server-Side Request Forgery (SSRF) vulnerability exists in Mercator's CVE configuration panel (`/admin/config/parameters`). The `testProvider()` method in `ConfigurationController` passes user-supplied input directly to `curl_init()` without validating the scheme, hostname, or destination IP address. An authenticated user with the `configure` permission can force the Mercator server to issue arbitrary outbound network requests. The suffix `/api/dbInfo` appended to the URL can be bypassed by injecting a `#` fragment character (e.g. `http://TARGET/PATH#`), allowing full control over the target URL. No scheme whitelist, host whitelist, or private/loopback IP block is applied. The `telnet://` scheme can be used for internal port scanning; the `gopher://` scheme enables interaction with unauthenticated internal services (Redis, Memcached), potentially leading to Remote Code Execution under specific deployment conditions. Version 2025.05.19 patches the issue.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-49345\n  \nPublished : June 19, 2026, 7:23 p.m. | 4 hours, 12 minutes ago\n  \nDescription :Mercator is an open source web application that enables mapping of the information system. Prior to version 2025.05.19, a Server-Side Request Forgery (SSRF) vulnerability exists in Mercator's CVE configuration panel (`/admin/config/parameters`). The `testProvider()` method in `ConfigurationController` passes user-supplied input directly to `curl_init()` without validating the scheme, hostname, or destination IP address. An authenticated user with the `configure` permission can force the Mercator server to issue arbitrary outbound network requests. The suffix `/api/dbInfo` appended to the URL can be bypassed by injecting a `#` fragment character (e.g. `http://TARGET/PATH#`), allowing full control over the target URL. No scheme whitelist, host whitelist, or private/loopback IP block is applied. The `telnet://` scheme can be used for internal port scanning; the `gopher://` scheme enables interaction with unauthenticated internal services (Redis, Memcached), potentially leading to Remote Code Execution under specific deployment conditions. Version 2025.05.19 patches the issue.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-49345 - SSRF(서버 측 요청 위조)에 취약한 Mercator CVE 구성",
-      "summary_ko": "CVE ID:CVE-2026-49345\n  \n게시일 : 2026년 6월 19일 오후 7시 23분 | 4시간, 12분 전\n  \n설명 :Mercator는 정보 시스템 매핑을 가능하게 하는 오픈 소스 웹 애플리케이션입니다. 버전 2025.05.19 이전에는 Mercator의 CVE 구성 패널(`/admin/config/parameters`)에 서버 측 요청 위조(SSRF) 취약점이 존재합니다. `ConfigurationController`의 `testProvider()` 메서드는 구성표, 호스트 이름 또는 대상 IP 주소를 확인하지 않고 사용자 제공 입력을 `curl_init()`에 직접 전달합니다. '구성' 권한이 있는 인증된 사용자는 Mercator 서버가 임의의 아웃바운드 네트워크 요청을 발행하도록 강제할 수 있습니다. URL에 추가된 접미사 `/api/dbInfo`는 `#` 조각 문자(예: `http://TARGET/PATH#`)를 삽입하여 우회할 수 있으므로 대상 URL을 완전히 제어할 수 있습니다. 구성표 화이트리스트, 호스트 화이트리스트 또는 개인/루프백 IP 블록이 적용되지 않습니다. 'telnet://' 방식은 내부 포트 스캐닝에 사용될 수 있습니다. `gopher://` 체계를 사용하면 인증되지 않은 내부 서비스(Redis, Memcached)와의 상호 작용이 가능해 잠재적으로 특정 배포 조건에서 원격 코드 실행이 발생할 수 있습니다. 버전 2025.05.19에서는 문제가 패치되었습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-49345\n2. 26.06.20 오전4:23\n3. Mercator is an open source web application that en",
-      "cve_id": "CVE-2026-49345",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49345",
-      "source": "cvefeed",
-      "published": "2026-06-20T04:23:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-49338 - Subsonic API: any authenticated user can delete or read any other user's playlist (IDOR)",
-      "summary": "CVE ID :CVE-2026-49338\n  \nPublished : June 19, 2026, 7:08 p.m. | 26 minutes ago\n  \nDescription :gonic is a music streaming server / free-software subsonic server API implementation. Prior to version 0.21.0, the Subsonic API endpoints `/rest/deletePlaylist.view` and `/rest/getPlaylist.view` perform no per-resource authorization. Once authenticated as any user (admin or not), an attacker can delete any playlist owned by any other user (including admin) by passing its `id` and read the full contents (name, comment, song list) of any other user's **private** (non-public) playlist by passing its `id`. The Subsonic playlist `id` is `base64url(\"/.m3u\")`. Because filenames are user-supplied or time-derived and the `userID` is a small integer, IDs are guessable and frequently exposed (e.g. a previously-public playlist that was later made private still has the same ID). This breaks the multi-user trust boundary of gonic: a low-privileged user can wipe an administrator's curated playlists, and a user can exfiltrate any private playlist they obtain an ID for. The issue was fixed in commit `6dd71e6a3c966867ef8c900d359a7df75789f410`, which is part of version 0.21.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-49338\n  \nPublished : June 19, 2026, 7:08 p.m. | 26 minutes ago\n  \nDescription :gonic is a music streaming server / free-software subsonic server API implementation. Prior to version 0.21.0, the Subsonic API endpoints `/rest/deletePlaylist.view` and `/rest/getPlaylist.view` perform no per-resource authorization. Once authenticated as any user (admin or not), an attacker can delete any playlist owned by any other user (including admin) by passing its `id` and read the full contents (name, comment, song list) of any other user's **private** (non-public) playlist by passing its `id`. The Subsonic playlist `id` is `base64url(\"/.m3u\")`. Because filenames are user-supplied or time-derived and the `userID` is a small integer, IDs are guessable and frequently exposed (e.g. a previously-public playlist that was later made private still has the same ID). This breaks the multi-user trust boundary of gonic: a low-privileged user can wipe an administrator's curated playlists, and a user can exfiltrate any private playlist they obtain an ID for. The issue was fixed in commit `6dd71e6a3c966867ef8c900d359a7df75789f410`, which is part of version 0.21.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-49338 - Subsonic API: 인증된 모든 사용자는 다른 사용자의 재생 목록(IDOR)을 삭제하거나 읽을 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-49338\n  \n게시일 : 2026년 6월 19일 오후 7시 08분 | 26분 전\n  \n설명 :gonic은 음악 스트리밍 서버/무료 소프트웨어 아음속 서버 API 구현입니다. 버전 0.21.0 이전에는 Subsonic API 엔드포인트 `/rest/deletePlaylist.view` 및 `/rest/getPlaylist.view`가 리소스별 인증을 수행하지 않습니다. 사용자(관리자 여부)로 인증되면 공격자는 `id`를 전달하여 다른 사용자(관리자 포함)가 소유한 재생 목록을 삭제할 수 있으며 `id`를 전달하여 다른 사용자의 **비공개**(비공개) 재생 목록의 전체 내용(이름, 댓글, 노래 목록)을 읽을 수 있습니다. Subsonic 재생 목록 `id`는 `base64url(\"/.m3u\")`입니다. 파일 이름은 사용자가 제공하거나 시간에 따라 파생되고 `userID`는 작은 정수이므로 ID는 추측 가능하고 자주 노출됩니다(예: 이전에 공개된 재생 목록이 나중에 비공개로 변경된 경우 여전히 동일한 ID를 갖습니다). 이는 Gonic의 다중 사용자 신뢰 경계를 깨뜨립니다. 권한이 낮은 사용자는 관리자가 선별한 재생 목록을 지울 수 있고 사용자는 ID를 얻은 모든 비공개 재생 목록을 유출할 수 있습니다. 이 문제는 버전 0.21.0의 일부인 '6dd71e6a3c966867ef8c900d359a7df75789f410' 커밋에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-49338\n2. 26.06.20 오전4:08\n3. gonic is a music streaming server / free-software ",
-      "cve_id": "CVE-2026-49338",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49338",
-      "source": "cvefeed",
-      "published": "2026-06-20T04:08:34+09:00",
       "lang": "en"
     }
   ],
