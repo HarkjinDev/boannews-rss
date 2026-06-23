@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-24T04:01:34.670353+09:00",
+  "fetched_at": "2026-06-24T04:31:31.146013+09:00",
   "security_news": [
     {
       "title": "사이버 보안 기업, 북한 ‘가상화폐 탈취·공급망 공격’ 경고…’국제...",
@@ -2991,6 +2991,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-55249 - @rtk-ai/rtk-rewrite: OpenClaw Rewrite Plugin Command Injection via execSync Template String",
+      "summary": "CVE ID :CVE-2026-55249\n  \nPublished : June 23, 2026, 6:33 p.m. | 50 minutes ago\n  \nDescription :@rtk-ai/rtk-rewrite transparently rewrites shell commands executed via OpenClaw's exec tool to their RTK equivalents. In 1.0.0, the @rtk-ai/rtk-rewrite OpenClaw plugin passes attacker-controlled input directly into a shell-backed execSync() template string without shell-safe escaping. JSON.stringify() wraps the value in double quotes and escapes inner double-quotes and backslashes, but leaves $() and backtick shell metacharacters untouched. Because execSync delegates execution to /bin/sh -c, the shell expands $(...) substitutions even inside double-quoted strings, causing the injected subcommand to execute before rtk is invoked. An attacker who can influence the exec tool's command parameter (e.g., via an LLM agent prompt or gateway/tool-call input) achieves arbitrary OS command execution with the privileges of the plugin/gateway process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55249\n  \nPublished : June 23, 2026, 6:33 p.m. | 50 minutes ago\n  \nDescription :@rtk-ai/rtk-rewrite transparently rewrites shell commands executed via OpenClaw's exec tool to their RTK equivalents. In 1.0.0, the @rtk-ai/rtk-rewrite OpenClaw plugin passes attacker-controlled input directly into a shell-backed execSync() template string without shell-safe escaping. JSON.stringify() wraps the value in double quotes and escapes inner double-quotes and backslashes, but leaves $() and backtick shell metacharacters untouched. Because execSync delegates execution to /bin/sh -c, the shell expands $(...) substitutions even inside double-quoted strings, causing the injected subcommand to execute before rtk is invoked. An attacker who can influence the exec tool's command parameter (e.g., via an LLM agent prompt or gateway/tool-call input) achieves arbitrary OS command execution with the privileges of the plugin/gateway process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-55249\n  \n게시일 : 2026년 6월 23일 오후 6시 33분 | 50분 전\n  \nDescription :@rtk-ai/rtk-rewrite transparently rewrites shell commands executed via OpenClaw's exec tool to their RTK equivalents. In 1.0.0, the @rtk-ai/rtk-rewrite OpenClaw plugin passes attacker-controlled input directly into a shell-backed execSync() template string without shell-safe escaping. JSON.stringify() wraps the value in double quotes and escapes inner double-quotes and backslashes, but leaves $() and backtick shell metacharacters untouched. Because execSync delegates execution to /bin/sh -c, the shell expands $(...) substitutions even inside double-quoted strings, causing the injected subcommand to execute before rtk is invoked. An attacker who can influence the exec tool's command parameter (e.g., via an LLM agent prompt or gateway/tool-call input) achieves arbitrary OS command execution with the privileges of the plugin/gateway process.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-55249\n2. 26.06.24 오전3:33\n3. @rtk-ai/rtk-rewrite transparently rewrites shell c",
+      "cve_id": "CVE-2026-55249",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55249",
+      "source": "cvefeed",
+      "published": "2026-06-24T03:33:46+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-44726 - Deno: TLS retry copies stale upgrade hook, risking plaintext traffic",
       "summary": "CVE ID :CVE-2026-44726\n  \nPublished : June 23, 2026, 5:24 p.m. | 14 minutes ago\n  \nDescription :Deno is a JavaScript, TypeScript, and WebAssembly runtime. From 2.0.0 until 2.7.8, a flaw in Deno's Node.js tls compatibility layer could cause a TLS client to transmit application data in plaintext after a connection retry. When `autoSelectFamily was enabled and the first address-family attempt failed, the socket reinitialization path reused a stale TLS upgrade hook that was bound to the original, failed handle. As a result, the replacement TCP connection was never upgraded to TLS, and any data the application wrote before the secureConnect event travelled over the network unencrypted. A network attacker positioned to cause the initial connection attempt to fail (for example, by dropping IPv6 traffic on a dual-stack host) could deterministically trigger the fallback path and observe or tamper with traffic that the application believed was TLS-protected. This vulnerability is fixed in 2.7.8.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
