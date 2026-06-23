@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-06-23T21:31:10.314443+09:00",
+  "fetched_at": "2026-06-23T22:01:48.288110+09:00",
   "security_news": [
+    {
+      "title": "[윤정호의 앵커칼럼] 납득이 안 가잖아, 납득이",
+      "summary": "모두의 창업 플랫폼 개인 정보 유출로 인해 주무부처 장관으로서 무거운 책임을 통감하며…\" 황당한 건, 한 달 전 한 피해자가 해킹 위험성을 알아차리고 개선 의견까지 냈는데, 못 막았습니다. 또 이번 사고는 정체 모를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 모두의 창업 플랫폼 개인정보 유출 사고 발생\n2. 한 달 전 위험성 알렸으나 개선 못 해\n3. 장관, 무거운 책임 통감하며 황당함 표해",
+      "link": "https://n.news.naver.com/mnews/article/448/0000621785?sid=004",
+      "source": "naver",
+      "published": "2026-06-23T21:53:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "토르체인, 1070만달러 해킹 한 달 만에 거래 재개",
+      "summary": "토르체인은 5월 15일 해킹 이후 거래를 멈춘 뒤 한 달 넘게 보안 점검과 업그레이드를 진행했다. 이후 취약점 보완과 금고 이전 작업을 마치고 네트워크를 복구했다. 토르체인은 키베리파이 프로토콜로 대부분 금고의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 토르체인, 1070만달러 해킹 한 달 만에 거래 재개 토르체인은 5월 15일 해킹 이후 거\n2. 이후 취약점 보완과 금고 이전 작업을 마치고 네트워크를 복구했다.\n3. 토르체인은 키베리파이 프로토콜로 대부분 금고의...",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=677687",
+      "source": "naver",
+      "published": "2026-06-23T21:44:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[지금 AI] 말만 하면 코드 생성 ‘바이브코딩’",
       "summary": "AI가 생성한 코드에서 보안 취약점이 발견되거나 개인정보가 노출될 수 있다는 연구 결과도 나오고 있습니다. 겉으로는 멀쩡하게 보이지만 예상치 못한 문제가 숨어 있을 수도 있는 것이죠. 그만큼 사람의 확인이 중요한...",
@@ -2943,6 +2967,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54892 - Plug: quadratic-time decoding of nested query/body parameters enables denial of service",
+      "summary": "CVE ID :CVE-2026-54892\n  \nPublished : June 23, 2026, 12:31 p.m. | 15 minutes ago\n  \nDescription :Inefficient algorithmic complexity in Plug's nested-parameter decoder allows an unauthenticated remote attacker to cause denial of service. Plug.Conn.Query.decode/4 (and Plug.Conn.Query.decode_each/2) parse query strings and application/x-www-form-urlencoded request bodies. When a key contains many bracketed segments such as a[a][a][a]=1, the decoder walks the brackets and, for each of the N levels, performs a map operation keyed on an ever-growing binary prefix of the key, hashing the full byte range at each step. The total decode cost is therefore quadratic in the number of nesting levels.\n\nWith the default Plug.Parsers.URLENCODED body limit of 1,000,000 bytes, a single request can carry roughly 333,000 nesting levels and saturate a BEAM scheduler for minutes. A small number of concurrent requests can saturate all schedulers and render a Plug-based server unresponsive. No authentication or knowledge of application routes is required.\n\nThis vulnerability is associated with program files lib/plug/conn/query.ex and program routines Plug.Conn.Query.decode/4, Plug.Conn.Query.decode_each/2, Plug.Conn.Query.split_keys/6, Plug.Conn.Query.insert_keys/3, and Plug.Conn.Query.finalize_pointer/2.\n\nThis issue affects plug from 1.15.0 before 1.15.5, 1.16.4, 1.17.2, 1.18.3, and 1.19.3.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54892\n  \nPublished : June 23, 2026, 12:31 p.m. | 15 minutes ago\n  \nDescription :Inefficient algorithmic complexity in Plug's nested-parameter decoder allows an unauthenticated remote attacker to cause denial of service. Plug.Conn.Query.decode/4 (and Plug.Conn.Query.decode_each/2) parse query strings and application/x-www-form-urlencoded request bodies. When a key contains many bracketed segments such as a[a][a][a]=1, the decoder walks the brackets and, for each of the N levels, performs a map operation keyed on an ever-growing binary prefix of the key, hashing the full byte range at each step. The total decode cost is therefore quadratic in the number of nesting levels.\n\nWith the default Plug.Parsers.URLENCODED body limit of 1,000,000 bytes, a single request can carry roughly 333,000 nesting levels and saturate a BEAM scheduler for minutes. A small number of concurrent requests can saturate all schedulers and render a Plug-based server unresponsive. No authentication or knowledge of application routes is required.\n\nThis vulnerability is associated with program files lib/plug/conn/query.ex and program routines Plug.Conn.Query.decode/4, Plug.Conn.Query.decode_each/2, Plug.Conn.Query.split_keys/6, Plug.Conn.Query.insert_keys/3, and Plug.Conn.Query.finalize_pointer/2.\n\nThis issue affects plug from 1.15.0 before 1.15.5, 1.16.4, 1.17.2, 1.18.3, and 1.19.3.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54892 - 플러그: 중첩된 쿼리/본문 매개변수의 2차 시간 디코딩을 통해 서비스 거부 가능",
+      "summary_ko": "CVE ID:CVE-2026-54892\n  \n게시일 : 2026년 6월 23일 오후 12시 31분 | 15분 전\n  \n설명: 플러그의 중첩 매개변수 디코더의 비효율적인 알고리즘 복잡성으로 인해 인증되지 않은 원격 공격자가 서비스 거부를 일으킬 수 있습니다. Plug.Conn.Query.decode/4(및 Plug.Conn.Query.decode_each/2)는 쿼리 문자열과 application/x-www-form-urlencoded 요청 본문을 구문 분석합니다. 키에 a[a][a][a]=1과 같이 괄호로 묶인 세그먼트가 많이 포함되어 있는 경우 디코더는 괄호를 탐색하고 각 N 레벨에 대해 키의 계속 증가하는 이진 접두사에 대해 매핑 작업을 수행하여 각 단계에서 전체 바이트 범위를 해싱합니다. 따라서 총 디코드 비용은 중첩 수준 수에 따라 2차입니다.\n\n기본 Plug.Parsers.URLENCODED 본문 제한이 1,000,000바이트인 경우 단일 요청은 대략 333,000개의 중첩 수준을 전달할 수 있으며 몇 분 동안 BEAM 스케줄러를 포화시킬 수 있습니다. 적은 수의 동시 요청으로 인해 모든 스케줄러가 포화되어 플러그 기반 서버가 응답하지 않을 수 있습니다. 신청 경로에 대한 인증이나 지식이 필요하지 않습니다.\n\n이 취약점은 프로그램 파일 lib/plug/conn/query.ex 및 프로그램 루틴 Plug.Conn.Query.decode/4, Plug.Conn.Query.decode_each/2, Plug.Conn.Query.split_keys/6, Plug.Conn.Query.insert_keys/3 및 Plug.Conn.Query.finalize_pointer/2와 연관되어 있습니다.\n\n이 문제는 1.15.0, 1.15.5, 1.16.4, 1.17.2, 1.18.3 및 1.19.3 이전의 플러그에 영향을 미칩니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54892\n2. 26.06.23 오후9:31\n3. Inefficient algorithmic complexity in Plug's neste",
+      "cve_id": "CVE-2026-54892",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54892",
+      "source": "cvefeed",
+      "published": "2026-06-23T21:31:12+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-10857 - Reflected XSS in Akinsoft's e-Commerce",
+      "summary": "CVE ID :CVE-2026-10857\n  \nPublished : June 23, 2026, 12:15 p.m. | 31 minutes ago\n  \nDescription :Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in AKIN Software Computer Import Export Industry and Trade Ltd. E-Commerce allows Reflected XSS.\n\nThis issue affects e-Commerce: before 1.25.01.06.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10857\n  \nPublished : June 23, 2026, 12:15 p.m. | 31 minutes ago\n  \nDescription :Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in AKIN Software Computer Import Export Industry and Trade Ltd. E-Commerce allows Reflected XSS.\n\nThis issue affects e-Commerce: before 1.25.01.06.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10857 - Akinsoft의 전자상거래에 반영된 XSS",
+      "summary_ko": "CVE ID:CVE-2026-10857\n  \n게시일 : 2026년 6월 23일 오후 12시 15분 | 31분 전\n  \n설명: AKIN 소프트웨어 컴퓨터 가져오기 내보내기 산업 및 무역 회사 전자 상거래의 웹 페이지 생성('교차 사이트 스크립팅') 중 입력의 부적절한 무효화 취약점은 반사 XSS를 허용합니다.\n\n이 문제는 전자상거래에 영향을 미칩니다: 1.25.01.06 이전.\n  \n심각도: 6.1 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10857\n2. 26.06.23 오후9:15\n3. Improper neutralization of input during web page g",
+      "cve_id": "CVE-2026-10857",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10857",
+      "source": "cvefeed",
+      "published": "2026-06-23T21:15:49+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-56301 - Nuxt - Arbitrary File Read via World-Connectable vite-node IPC Socket on Linux",
+      "summary": "CVE ID :CVE-2026-56301\n  \nPublished : June 23, 2026, 12:13 p.m. | 34 minutes ago\n  \nDescription :Nuxt 4.0.0 before 4.4.7 and 3.18.0 before 3.21.7, when running the development server (nuxt dev) on Linux, binds the vite-node IPC server to an abstract-namespace Unix socket without permission restrictions, allowing local users to enumerate and connect. Unprivileged co-resident users can exploit the unprotected module request handler to read arbitrary files such as .env and SSH keys through the SSR plugin pipeline. Production builds are unaffected, as the IPC server runs only in development.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56301\n  \nPublished : June 23, 2026, 12:13 p.m. | 34 minutes ago\n  \nDescription :Nuxt 4.0.0 before 4.4.7 and 3.18.0 before 3.21.7, when running the development server (nuxt dev) on Linux, binds the vite-node IPC server to an abstract-namespace Unix socket without permission restrictions, allowing local users to enumerate and connect. Unprivileged co-resident users can exploit the unprotected module request handler to read arbitrary files such as .env and SSH keys through the SSR plugin pipeline. Production builds are unaffected, as the IPC server runs only in development.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56301 - Nuxt - Linux에서 World-Connectable vite-node IPC 소켓을 통해 임의 파일 읽기",
+      "summary_ko": "CVE ID:CVE-2026-56301\n  \n게시일 : 2026년 6월 23일 오후 12시 13분 | 34분 전\n  \n설명 : 4.4.7 이전의 Nuxt 4.0.0 및 3.21.7 이전의 3.18.0은 Linux에서 개발 서버(nuxt dev)를 실행할 때 권한 제한 없이 vite-node IPC 서버를 추상 네임스페이스 Unix 소켓에 바인딩하여 로컬 사용자가 열거하고 연결할 수 있도록 합니다. 권한이 없는 공동 상주 사용자는 보호되지 않는 모듈 요청 처리기를 활용하여 SSR 플러그인 파이프라인을 통해 .env 및 SSH 키와 같은 임의 파일을 읽을 수 있습니다. IPC 서버는 개발 단계에서만 실행되므로 프로덕션 빌드는 영향을 받지 않습니다.\n  \n심각도: 6.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56301\n2. 26.06.23 오후9:13\n3. Nuxt 4.0.0 before 4.4.7 and 3.18.0 before 3.21.7, ",
+      "cve_id": "CVE-2026-56301",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56301",
+      "source": "cvefeed",
+      "published": "2026-06-23T21:13:02+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-55654 - Openssh: heap out-of-bounds read in red hat enterprise linux versions of openssh gssapi indicator cleanup due to missing null sentinel termination",
       "summary": "CVE ID :CVE-2026-55654\n  \nPublished : June 23, 2026, 3:37 a.m. | 2 hours ago\n  \nDescription :A flaw was found in OpenSSH. This vulnerability, a heap out-of-bounds read, occurs during the cleanup of GSSAPI (Generic Security Service Application Programming Interface) indicators when a trailing NULL termination is missing in the auth-indicators array. A remote attacker, under specific configurations involving GSSAPI authentication and a Kerberos environment, could exploit this to cause the SSH authentication path to crash or abort. This leads to a denial of service (DoS), impacting the availability of the SSH service.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
