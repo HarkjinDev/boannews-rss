@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-24T06:32:42.336535+09:00",
+  "fetched_at": "2026-06-24T07:01:36.455118+09:00",
   "security_news": [
+    {
+      "title": "Cisco Unified CM flaw CVE-2026-20230 now exploited in attacks",
+      "summary": "A high-severity SSRF vulnerability, tracked as CVE-2026-20230, in Cisco Unified Communications Manager Server is now being exploited in attacks. [...]",
+      "content": "",
+      "title_ko": "Cisco Unified CM 결함 CVE-2026-20230, 이제 공격에 악용됨",
+      "summary_ko": "Cisco Unified Communications Manager Server의 심각도가 높은 SSRF 취약점(CVE-2026-20230으로 추적됨)이 현재 공격에 악용되고 있습니다. [...]",
+      "summary_3lines": "1. 시스코 Unified CM 서버, CVE-2026-20230 취약점 악용 공격 중\n2. SSRF 취약점, 공격자들이 원격 코드 실행 시도에 활용\n3. 시스코, 취약점 패치 권고하며 즉각적인 업데이트 중요",
+      "link": "https://www.bleepingcomputer.com/news/security/cisco-unified-cm-sme-flaw-cve-2026-20230-now-exploited-in-attacks/",
+      "source": "bleepingcomputer",
+      "published": "2026-06-24T06:48:32+09:00",
+      "lang": "en"
+    },
     {
       "title": "중기부, 개인정보 유출에 \"노출됐다\" 브리핑…책임 축소 지적",
       "summary": "권헌영 고려대 정보보호대학원 교수는 \"노출된 정보가 (불법으로) 제삼자나 비인가자에게 넘어간 점을 확인해야 유출 개념이 된다\"며 \"해당 기관이 해킹 여부는 입증이 안 됐다고 주장하고 있는 셈\"이라고 분석했다. 그는...",
@@ -3012,21 +3024,24 @@
       "source": "naver",
       "published": "2026-06-21T07:54:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "이메일만 샌 게 아닌데...'모두의 창업' 유출 사고에 공공 책임 기준 시...",
-      "summary": "보안업계에서는 민간과 공공의 제재 수단이 다를 수밖에 없다는 점을 인정하면서도 사고 유형과 대응... 중기부, '모두의 창업' 개인정보 유출 사과 21일 보안업계에 따르면 중소벤처기업부가 추진하는 '모두의 창업' 1차...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중기부 '모두의 창업' 개인정보 유출 사고 발생\n2. 이메일 외 추가 정보 유출 가능성 제기\n3. 공공 책임 기준 마련 논의 시작",
-      "link": "https://www.techm.kr/news/articleView.html?idxno=152770",
-      "source": "naver",
-      "published": "2026-06-21T07:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54512 - jackson-databind: PolymorphicTypeValidator bypass via generic type parameters allows arbitrary class instantiation",
+      "summary": "CVE ID :CVE-2026-54512\n  \nPublished : June 23, 2026, 8:56 p.m. | 27 minutes ago\n  \nDescription :jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.10.0 until 2.18.8, 2.21.4, and 3.1.4, jackson-databind's PolymorphicTypeValidator (PTV) is the primary safety mechanism guarding polymorphic deserialization. When polymorphic typing is enabled and a type identifier contains generic parameters (i.e. the type ID string contains <), DatabindContext._resolveAndValidateGeneric() validates only the raw container class name (the substring before <) against the configured PTV. If the container type is approved, the method parses the full canonical type string via TypeFactory.constructFromCanonical() and returns the fully parameterized type without ever validating the nested type arguments against the PTV. The nested type arguments are then resolved, instantiated, and populated as beans during deserialization. An attacker who controls the type ID can therefore place a denied class as a generic type parameter of an allowed container — for example java.util.ArrayList when only java.util.ArrayList is allow-listed. The container passes the PTV check; com.evil.Gadget is loaded via Class.forName(name, true, loader), instantiated, and its properties are set from attacker-controlled JSON. This completely bypasses an explicitly configured PTV allow-list. This vulnerability is fixed in 2.18.8, 2.21.4, and 3.1.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54512\n  \nPublished : June 23, 2026, 8:56 p.m. | 27 minutes ago\n  \nDescription :jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.10.0 until 2.18.8, 2.21.4, and 3.1.4, jackson-databind's PolymorphicTypeValidator (PTV) is the primary safety mechanism guarding polymorphic deserialization. When polymorphic typing is enabled and a type identifier contains generic parameters (i.e. the type ID string contains <), DatabindContext._resolveAndValidateGeneric() validates only the raw container class name (the substring before <) against the configured PTV. If the container type is approved, the method parses the full canonical type string via TypeFactory.constructFromCanonical() and returns the fully parameterized type without ever validating the nested type arguments against the PTV. The nested type arguments are then resolved, instantiated, and populated as beans during deserialization. An attacker who controls the type ID can therefore place a denied class as a generic type parameter of an allowed container — for example java.util.ArrayList when only java.util.ArrayList is allow-listed. The container passes the PTV check; com.evil.Gadget is loaded via Class.forName(name, true, loader), instantiated, and its properties are set from attacker-controlled JSON. This completely bypasses an explicitly configured PTV allow-list. This vulnerability is fixed in 2.18.8, 2.21.4, and 3.1.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54512 - jackson-databind: 일반 유형 매개변수를 통한 PolymorphicTypeValidator 우회로 임의 클래스 인스턴스화 허용",
+      "summary_ko": "CVE ID:CVE-2026-54512\n  \n게시일 : 2026년 6월 23일 오후 8시 56분 | 27분 전\n  \n설명 :jackson-databind에는 Jackson 데이터 프로세서용 범용 데이터 바인딩 기능과 트리 모델이 포함되어 있습니다. 2.10.0부터 2.18.8, 2.21.4 및 3.1.4까지 jackson-databind의 PTV(PolymorphicTypeValidator)는 다형성 역직렬화를 보호하는 기본 안전 메커니즘입니다. 다형성 유형 지정이 활성화되고 유형 식별자에 일반 매개 변수가 포함된 경우(예: 유형 ID 문자열에 <가 포함됨) DatabindContext._resolveAndValidateGeneric()는 구성된 PTV에 대해 원시 컨테이너 클래스 이름(< 앞의 하위 문자열)만 유효성을 검사합니다. 컨테이너 유형이 승인되면 메서드는 TypeFactory.constructFromCanonical()을 통해 전체 표준 유형 문자열을 구문 분석하고 PTV에 대해 중첩 유형 인수의 유효성을 검사하지 않고 완전히 매개 변수화된 유형을 반환합니다. 그런 다음 중첩된 유형 인수는 역직렬화 중에 Bean으로 확인되고 인스턴스화되고 채워집니다. 따라서 유형 ID를 제어하는 ​​공격자는 거부된 클래스를 허용된 컨테이너의 일반 유형 매개변수로 배치할 수 있습니다. 예를 들어 java.util.ArrayList만 허용 목록에 있는 경우 java.util.ArrayList입니다. 컨테이너가 PTV 검사를 통과했습니다. com.evil.Gadget은 Class.forName(name, true, loader)을 통해 로드되고 인스턴스화되며 해당 속성은 공격자가 제어하는 ​​JSON에서 설정됩니다. 이는 명시적으로 구성된 PTV 허용 목록을 완전히 우회합니다. 이 취약점은 2.18.8, 2.21.4 및 3.1.4에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54512\n2. 26.06.24 오전5:56\n3. jackson-databind contains the general-purpose data",
+      "cve_id": "CVE-2026-54512",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54512",
+      "source": "cvefeed",
+      "published": "2026-06-24T05:56:36+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-11820 - Community.general: community.general nexmo — api credentials exposed in get url query string[security] community.general nexmo — api credentials exposed in get url query string",
       "summary": "CVE ID :CVE-2026-11820\n  \nPublished : June 23, 2026, 7:53 p.m. | 1 hour ago\n  \nDescription :Module: plugins/modules/nexmo.py\n\nCVSS 3.1: 6.5 MEDIUM — AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N \n\nIssue: api_key and api_secret are declared no_log=True at the input level, but both credentials are immediately URL-encoded into a GET request as query parameters, bypassing all no_log protection. \n\nVulnerable Code (lines 82-93):\n\nmsg = {\n\"api_key\": module.params.get(\"api_key\"),\n\"api_secret\": module.params.get(\"api_secret\"),\n\"from\": module.params.get(\"src\"),\n\"text\": module.params.get(\"msg\"),\n}\nurl = f\"{NEXMO_API}?{urlencode(msg)}\"\nresponse, info = fetch_url(module, url, headers=headers)\n\nObserved Output:\n\nhttps://rest.nexmo.com/sms/json?api_key=a1b2c3d4&api_secret=MyS3cr3tK3y!!&from=AnsibleBot&to=15551234567&text=Hello\n\nExposure Vectors: \n\nAnsible verbose output (-vvv) logs the full request URL \n\nVonage/Nexmo server access logs record credentials in query string \n\nHTTP proxies, SIEM, and network inspection tools capture the full URL \n\nAWX/Automation Controller network debug logs\n\nFix: Switch to POST with credentials in the request body:\n\ndata = urlencode({\"api_key\": api_key, \"api_secret\": api_secret,\n\"from\": src, \"to\": number, \"text\": msg})\nfetch_url(module, NEXMO_API, data=data, method=\"POST\",\nheaders={\"Content-Type\": \"application/x-www-form-urlencoded\"})\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
