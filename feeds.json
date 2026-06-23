@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-24T02:01:37.774961+09:00",
+  "fetched_at": "2026-06-24T02:31:20.651012+09:00",
   "security_news": [
     {
       "title": "전문가 150명으로 구성된 프라이버시·정보보호 그룹… 산업별 맞춤형 ...",
@@ -2979,6 +2979,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-33760 - Langflow: IDOR/BOLA in Monitor API — Missing Ownership Enforcement on 7 Endpoints",
+      "summary": "CVE ID :CVE-2026-33760\n  \nPublished : June 23, 2026, 4:30 p.m. | 54 minutes ago\n  \nDescription :Langflow is a tool for building and deploying AI-powered agents and workflows. Prior to 1.9.0, Langflow's /api/v1/monitor router exposes 7 endpoints that perform read, write, and delete operations on user-owned resources — messages, sessions, build artifacts, and LLM transaction logs — without verifying that the authenticated requester owns the targeted resource. Any authenticated user can read, modify, rename, or permanently delete another user's data by supplying the target's resource ID or flow_id. This is a classic IDOR/BOLA vulnerability. Notably, the same source file (monitor.py) contains one correctly-implemented endpoint that uses an ownership check, demonstrating the correct pattern was known but inconsistently applied. This vulnerability is fixed in 1.9.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-33760\n  \nPublished : June 23, 2026, 4:30 p.m. | 54 minutes ago\n  \nDescription :Langflow is a tool for building and deploying AI-powered agents and workflows. Prior to 1.9.0, Langflow's /api/v1/monitor router exposes 7 endpoints that perform read, write, and delete operations on user-owned resources — messages, sessions, build artifacts, and LLM transaction logs — without verifying that the authenticated requester owns the targeted resource. Any authenticated user can read, modify, rename, or permanently delete another user's data by supplying the target's resource ID or flow_id. This is a classic IDOR/BOLA vulnerability. Notably, the same source file (monitor.py) contains one correctly-implemented endpoint that uses an ownership check, demonstrating the correct pattern was known but inconsistently applied. This vulnerability is fixed in 1.9.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-33760 - Langflow: Monitor API의 IDOR/BOLA — 7개 엔드포인트에 대한 소유권 적용 누락",
+      "summary_ko": "CVE ID:CVE-2026-33760\n  \n게시일 : 2026년 6월 23일 오후 4시 30분 | 54분 전\n  \n설명 :Langflow는 AI 기반 에이전트 및 워크플로를 구축하고 배포하기 위한 도구입니다. 1.9.0 이전에 Langflow의 /api/v1/monitor 라우터는 인증된 요청자가 대상 리소스를 소유하는지 확인하지 않고 사용자 소유 리소스(메시지, 세션, 빌드 아티팩트 및 LLM 트랜잭션 로그)에 대해 읽기, 쓰기 및 삭제 작업을 수행하는 7개의 엔드포인트를 노출했습니다. 인증된 사용자는 대상의 리소스 ID 또는 flow_id를 제공하여 다른 사용자의 데이터를 읽고, 수정하고, 이름을 바꾸거나 영구적으로 삭제할 수 있습니다. 이는 전형적인 IDOR/BOLA 취약점입니다. 특히, 동일한 소스 파일(monitor.py)에는 소유권 확인을 사용하는 올바르게 구현된 엔드포인트가 하나 포함되어 있으며, 이는 올바른 패턴이 알려졌지만 일관되지 않게 적용되었음을 보여줍니다. 이 취약점은 1.9.0에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-33760\n2. 26.06.24 오전1:30\n3. Langflow is a tool for building and deploying AI-p",
+      "cve_id": "CVE-2026-33760",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-33760",
+      "source": "cvefeed",
+      "published": "2026-06-24T01:30:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-27604 - FOSSBilling: Improper API Role Validation (system) Enables Unauthenticated Access to Privileged Admin Functions",
       "summary": "CVE ID :CVE-2026-27604\n  \nPublished : June 23, 2026, 2:25 p.m. | 1 hour, 12 minutes ago\n  \nDescription :FOSSBilling is a free, open-source billing and client management system. Starting in version 0.5.4 and prior to version 0.8.0, an authorization bypass in the API role handling allows unauthenticated access to privileged `/api/system/*` endpoints. Because `system` resolves to the cron admin identity, attackers can invoke admin API methods without valid credentials, session, or CSRF token. Version 0.8.0 patches the issue. Some workarounds are available. Block external access to `/api/system/*` at reverse proxy/WAF, restrict API access by trusted source IPs only (`api.allowed_ips`), rotate all admin/client API tokens immediately, invalidate active sessions and reset high-privilege credentials, and/or review API request logs for suspicious `/api/system/` access and treat as potential incident.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
