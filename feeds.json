@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-23T22:31:27.629184+09:00",
+  "fetched_at": "2026-06-23T23:01:58.987411+09:00",
   "security_news": [
     {
       "title": "[윤정호의 앵커칼럼] 납득이 안 가잖아, 납득이",
@@ -2967,6 +2967,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-33840 Win32k Elevation of Privilege Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": "CVE-2026-33840 Win32k 권한 상승 취약점",
+      "summary_ko": "승인을 업데이트했습니다. 이는 정보 제공용 변경일 뿐입니다.",
+      "summary_3lines": "1. CVE-2026-33840\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-33840",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33840",
+      "source": "msrc",
+      "published": "2026-06-23T23:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54892 - Plug: quadratic-time decoding of nested query/body parameters enables denial of service",
       "summary": "CVE ID :CVE-2026-54892\n  \nPublished : June 23, 2026, 12:31 p.m. | 15 minutes ago\n  \nDescription :Inefficient algorithmic complexity in Plug's nested-parameter decoder allows an unauthenticated remote attacker to cause denial of service. Plug.Conn.Query.decode/4 (and Plug.Conn.Query.decode_each/2) parse query strings and application/x-www-form-urlencoded request bodies. When a key contains many bracketed segments such as a[a][a][a]=1, the decoder walks the brackets and, for each of the N levels, performs a map operation keyed on an ever-growing binary prefix of the key, hashing the full byte range at each step. The total decode cost is therefore quadratic in the number of nesting levels.\n\nWith the default Plug.Parsers.URLENCODED body limit of 1,000,000 bytes, a single request can carry roughly 333,000 nesting levels and saturate a BEAM scheduler for minutes. A small number of concurrent requests can saturate all schedulers and render a Plug-based server unresponsive. No authentication or knowledge of application routes is required.\n\nThis vulnerability is associated with program files lib/plug/conn/query.ex and program routines Plug.Conn.Query.decode/4, Plug.Conn.Query.decode_each/2, Plug.Conn.Query.split_keys/6, Plug.Conn.Query.insert_keys/3, and Plug.Conn.Query.finalize_pointer/2.\n\nThis issue affects plug from 1.15.0 before 1.15.5, 1.16.4, 1.17.2, 1.18.3, and 1.19.3.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
