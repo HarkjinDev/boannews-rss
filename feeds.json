@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-25T03:01:44.147152+09:00",
+  "fetched_at": "2026-06-25T03:32:38.168645+09:00",
   "security_news": [
+    {
+      "title": "CISA Warns Critical Lantronix EDS5000 Flaw Is Being Actively Exploited",
+      "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday warned of active exploitation of a critical security flaw impacting Lantronix EDS5000 Series devices, urging Federal Civilian Executive Branch (FCEB) agencies to apply the fixes by June 26, 2026.\n\nThe vulnerability in question is CVE-2025-67038 (CVSS score: 9.8), a code injection flaw that could result in the execution",
+      "content": "",
+      "title_ko": "CISA, Lantronix EDS5000의 심각한 결함이 적극적으로 악용되고 있다고 경고",
+      "summary_ko": "미국 사이버보안 및 인프라 보안국(CISA)은 화요일 Lantronix EDS5000 시리즈 장치에 영향을 미치는 심각한 보안 결함이 적극적으로 악용되고 있다고 경고하면서 연방 민간 행정부(FCEB) 기관에 2026년 6월 26일까지 수정 사항을 적용할 것을 촉구했습니다.\n\n문제의 취약점은 CVE-2025-67038(CVSS 점수: 9.8)로, 실행으로 이어질 수 있는 코드 주입 결함입니다.",
+      "summary_3lines": "1. CISA, Lantronix EDS5000 시리즈 취약점(CVE-2025-67038) 긴급\n2. 코드 주입 공격으로 시스템 실행 위험, CVSS 9.8\n3. 2026년 6월26일까지 연방 기관 긴급 패치 요구",
+      "link": "https://thehackernews.com/2026/06/cisa-warns-critical-lantronix-eds5000.html",
+      "source": "thehackernews",
+      "published": "2026-06-25T02:19:18+09:00",
+      "lang": "en"
+    },
     {
       "title": "Amadey and StealC Malware Network Disrupted, 27M Stolen Credentials Recovered",
       "summary": "A coordinated law enforcement operation, in partnership with private sector companies, including Bitdefender, Bitsight, ESET, and Microsoft, has resulted in the takedown of criminal infrastructure powering Amadey and StealC.\n\n\"The main common goal was to disrupt the 'assembly lines' cybercriminals use to launch ransomware, financial fraud, and attacks on critical infrastructure,\" Europol said in",
@@ -3448,6 +3460,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-53108",
       "source": "cvefeed",
       "published": "2026-06-25T01:30:42+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-53106 - bpf: Do not allow deleting local storage in NMI",
+      "summary": "CVE ID :CVE-2026-53106\n  \nPublished : June 24, 2026, 4:30 p.m. | 54 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Do not allow deleting local storage in NMI\n\nCurrently, local storage may deadlock when deferring freeing selem or\nlocal storage through kfree_rcu(), call_rcu() or call_rcu_tasks_trace()\nin NMI or reentrant. Since deleting selem in NMI is an unlikely use\ncase, partially mitigate it by returning error when calling from\nbpf_xxx_storage_delete() helpers in NMI. Note that, it is still possible\nto deadlock through reentrant. A full mitigation requires returning\nerror when irqs_disabled() is true, which, however is too heavy-handed\nfor bpf_xxx_storage_delete().\n\nThe long-term solution requires _nolock versions of call_rcu. Another\npossible solution is to defer the free through irq_work [0], but it\nwould grow the size of selem, which is non-ideal.\n\nThe check is only needed in bpf_selem_unlink(), which is used by helpers\nand syscalls. bpf_selem_unlink_nofail() is fine as it is called during\nmap and owner tear down that never run in NMI or reentrant.\n\n[0] https://lore.kernel.org/bpf/20260205190233.912-1-alexei.starovoitov@gmail.com/\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53106\n  \nPublished : June 24, 2026, 4:30 p.m. | 54 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Do not allow deleting local storage in NMI\n\nCurrently, local storage may deadlock when deferring freeing selem or\nlocal storage through kfree_rcu(), call_rcu() or call_rcu_tasks_trace()\nin NMI or reentrant. Since deleting selem in NMI is an unlikely use\ncase, partially mitigate it by returning error when calling from\nbpf_xxx_storage_delete() helpers in NMI. Note that, it is still possible\nto deadlock through reentrant. A full mitigation requires returning\nerror when irqs_disabled() is true, which, however is too heavy-handed\nfor bpf_xxx_storage_delete().\n\nThe long-term solution requires _nolock versions of call_rcu. Another\npossible solution is to defer the free through irq_work [0], but it\nwould grow the size of selem, which is non-ideal.\n\nThe check is only needed in bpf_selem_unlink(), which is used by helpers\nand syscalls. bpf_selem_unlink_nofail() is fine as it is called during\nmap and owner tear down that never run in NMI or reentrant.\n\n[0] https://lore.kernel.org/bpf/20260205190233.912-1-alexei.starovoitov@gmail.com/\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53106 - bpf: NMI에서 로컬 스토리지 삭제를 허용하지 않음",
+      "summary_ko": "CVE ID:CVE-2026-53106\n  \n게시일 : 2026년 6월 24일 오후 4시 30분 | 54분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nbpf: NMI에서 로컬 스토리지 삭제를 허용하지 않습니다.\n\n현재 셀렘 해제를 연기할 때 로컬 저장소가 교착 상태에 빠질 수 있습니다.\nkfree_rcu(), call_rcu() 또는 call_rcu_tasks_trace()를 통한 로컬 저장\nNMI 또는 재진입자. NMI에서 셀렘을 삭제하는 것은 거의 사용되지 않기 때문에\n이 경우 호출할 때 오류를 반환하여 부분적으로 완화합니다.\nNMI의 bpf_xxx_storage_delete() 도우미. 아직은 가능하니 참고하세요\n재진입을 통해 교착 상태에 빠집니다. 완전한 완화를 위해서는 복귀가 필요합니다.\nirqs_disabled()가 true인 경우 오류가 발생하지만 이는 너무 가혹합니다.\nbpf_xxx_storage_delete()의 경우.\n\n장기적인 솔루션에는 call_rcu의 _nolock 버전이 필요합니다. 또 다른\n가능한 해결책은 irq_work [0]을 통해 해제를 연기하는 것입니다.\n셀렘의 크기가 커지는 것은 이상적이지 않습니다.\n\n검사는 헬퍼가 사용하는 bpf_selem_unlink()에서만 필요합니다.\n그리고 시스템콜. bpf_selem_unlink_nofail()은 호출되는 동안 괜찮습니다.\nNMI 또는 재진입에서 실행되지 않는 지도 및 소유자가 분해됩니다.\n\n[0] https://lore.kernel.org/bpf/20260205190233.912-1-alexei.starovoitov@gmail.com/\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-53106\n2. 26.06.25 오전1:30\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-53106",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53106",
+      "source": "cvefeed",
+      "published": "2026-06-25T01:30:41+09:00",
       "lang": "en"
     },
     {
