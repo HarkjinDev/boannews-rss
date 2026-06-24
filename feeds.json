@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-24T15:02:50.106946+09:00",
+  "fetched_at": "2026-06-24T15:32:31.232389+09:00",
   "security_news": [
+    {
+      "title": "'전화번호·아이디 친구 추가 허용'… 신종 피싱 범죄 표적됐다",
+      "summary": "사회공학범죄대응협회 관계자는 \"피싱 조직이 사용하는 해킹 방식이 플랫폼의 특성에 맞게 계속 변화하고... 이어 \"이미 해킹 피해를 입었다면 추가적인 데이터 유출과 유포를 막기 위해 신속히 스마트폰을 점검하고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 신종 피싱 범죄, 전화번호·ID 친구추가 방식 1200명 이상 피해\n2. 사회공학범죄대응협회, 플랫폼 특성 악용한 해킹 방식 지적\n3. 피해자, 스마트폰 점검 권고… 추가 데이터 유출 방지",
+      "link": "https://edu.donga.com/news/articleView.html?idxno=109260",
+      "source": "naver",
+      "published": "2026-06-24T15:26:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Hackers Exploiting Cisco Unified CM Vulnerability",
       "summary": "Cisco noted that a PoC had been available for CVE-2026-20230 when it announced patches in early June.\nThe post Hackers Exploiting Cisco Unified CM Vulnerability appeared first on SecurityWeek.",
@@ -3204,33 +3216,24 @@
       "source": "naver",
       "published": "2026-06-21T15:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "대구·경북, 정보보호 클러스터 구축사업 선정…AI로봇 보안산업 육성 ...",
-      "summary": "최근 생성형 AI 서비스 해킹과 랜섬웨어, 공급망 공격이 늘어나면서 산업용 로봇과 AI 시스템의 보안 중요성도 커지고 있다. 특히 제조현장에서 활용되는 AI 로봇은 보안 사고 발생 시 정보 유출을 넘어 생산 차질이나...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 대구·경북, AI 로봇 보안 클러스터 구축사업 선정\n2. 생성형 AI 해킹·랜섬웨어로 제조 현장 보안 위협 증",
-      "link": "https://n.news.naver.com/mnews/article/018/0006311471?sid=100",
-      "source": "naver",
-      "published": "2026-06-21T15:13:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "‘유출 1위’ 정보통신업, 보안 투자는 글로벌 절반…“위협 느는데 제...",
-      "summary": "실제 지난해 통신 3사가 모두 해킹 사고를 겪고, 예스24가 랜섬웨어로 서비스 마비를 겪는 등 정보통신업에서 무더기 유출 사고가 발생했다. 업체 별로 보면 라인게임즈의 정보보호 투자 비중은 1.0%에 불과했다. 같은...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. ‘유출 1위’ 정보통신업, 보안 투자는 글로벌 절반…“위협 느는데 제...\n2. 실제 지난해 통신 3사가 모두 해킹 사고를 겪고, 예스24가 랜섬웨어로 서비스 마비를 겪는\n3. 업체 별로 보면 라인게임즈의 정보보호 투자 비중은 1.0%에 불과했다.",
-      "link": "https://n.news.naver.com/mnews/article/029/0003032795?sid=105",
-      "source": "naver",
-      "published": "2026-06-21T15:03:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Linux Process Name Masquerading, (Wed, Jun 24th)",
+      "summary": "In a previous diary, I talked about stack strings&#;x26;#;x5b;1&#;x26;#;x5d; with a practical example of them. Since my SEC670 class, I&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;m even more interested&#;x26;#;xc2;&#;x26;#;xa0;in malware obfuscation techniques. I had&#;x26;#;xc2;&#;x26;#;xa0;a look at process names. When you list running processes on a computer, can you trust what you see&#;x26;#;x3f; If you&#;x26;#;39;re facing a rootkit, malicious processes can be simply hidden (the API calls or commands to list processed have been tampered). But a malicious process&#;x26;#;xc2;&#;x26;#;xa0;can also mimic a non-suspicious name by masquerading their name. This technique (T1036 in the MITRE ATT&#;x26;CK framework&#;x26;#;x5b;2&#;x26;#;x5d;) has been used by attackers in many campaigns. A good example of the Velvet Ant Chinese group&#;x26;#;x5b;3&#;x26;#;x5d;. The goal is to hide the &#;x26;#;xe2;&#;x26;#;x80;œmalware&#;x26;#;xe2;&#;x26;#;x80; process name by replacing it with something&#;x26;#;xc2;&#;x26;#;xa0;that won&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;t attract the Security Analyst&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;s eyes or defeat security controls.\r",
+      "description": "In a previous diary, I talked about stack strings&#;x26;#;x5b;1&#;x26;#;x5d; with a practical example of them. Since my SEC670 class, I&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;m even more interested&#;x26;#;xc2;&#;x26;#;xa0;in malware obfuscation techniques. I had&#;x26;#;xc2;&#;x26;#;xa0;a look at process names. When you list running processes on a computer, can you trust what you see&#;x26;#;x3f; If you&#;x26;#;39;re facing a rootkit, malicious processes can be simply hidden (the API calls or commands to list processed have been tampered). But a malicious process&#;x26;#;xc2;&#;x26;#;xa0;can also mimic a non-suspicious name by masquerading their name. This technique (T1036 in the MITRE ATT&#;x26;CK framework&#;x26;#;x5b;2&#;x26;#;x5d;) has been used by attackers in many campaigns. A good example of the Velvet Ant Chinese group&#;x26;#;x5b;3&#;x26;#;x5d;. The goal is to hide the &#;x26;#;xe2;&#;x26;#;x80;œmalware&#;x26;#;xe2;&#;x26;#;x80; process name by replacing it with something&#;x26;#;xc2;&#;x26;#;xa0;that won&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;t attract the Security Analyst&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;s eyes or defeat security controls.\r",
+      "title_ko": "Linux 프로세스 이름 위장, (6월 24일 수요일)",
+      "summary_ko": "이전 일기에서 스택 문자열&#;x26;#;x5b;1&#x26;#;x5d;에 대해 이야기한 적이 있습니다. 그 실제적인 예를 들어보겠습니다. SEC670 수업 이후로 저는 맬웨어 난독화 기술에 훨씬 더 관심을 갖게 되었습니다. 프로세스 이름을 살펴봤습니다. 컴퓨터에서 실행 중인 프로세스를 나열할 때 보이는 내용을 신뢰할 수 있습니까? 루트킷에 직면한 경우 악성 프로세스를 간단히 숨길 수 있습니다(처리된 목록을 표시하는 API 호출이나 명령이 변조되었습니다). 그러나 악의적인 프로세스는 자신의 이름을 가장하여 의심스럽지 않은 이름을 흉내낼 수도 있습니다. 이 기술(MITRE ATT'CK 프레임워크의 T1036')은 많은 캠페인에서 공격자들에 의해 사용되었습니다. Velvet Ant 중국 그룹&#;x26;#;x5b;3&#x26;#;x5d;의 좋은 예입니다. 목표는 '악성코드' 프로세스 이름을 'xc2;''로 대체하여 숨기는 것입니다. 보안 분석가의 시선을 끌거나 보안 통제를 무력화할 수 없습니다.",
+      "summary_3lines": "1. Linux Process Name Masquerading, (Wed, Jun 24th)\n2. SANS_ISC\n3. In a previous diary, I talked about stack strings&",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33102",
+      "source": "sans_isc",
+      "published": "2026-06-24T15:29:03+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-12851 - GeoVision GV-I/O Box 4E libNetSetObj.so OS command injection vulnerability",
       "summary": "CVE ID :CVE-2026-12851\n  \nPublished : June 24, 2026, 3:40 a.m. | 1 hour, 28 minutes ago\n  \nDescription :Multiple OS command injection vulnerabilities exist in the libNetSetObj.so functionality of GeoVision GV-I/O Box 4E 2.09. A specially crafted network packet can lead to command execution. An attacker can send a network request to trigger this vulnerability.\n\n\n`libNetSetObj.so` is an internal library used by various binaries on the device to configure the network stack (start and stop various services, configure IP, Netmask, gateway, dns, etc.)\n\n\n#### CNetSetObj::m_F_n_Set_DNS_Addr command injection\n\nThe following function can take up to two addresses, performs no sanitization and then calls `system`. This is a classic command injection vulnerability. The function is reachable from both the network-exposed `DVRSearch` service and the `Network.cgi` endpoint. \n\n\n\n    int __fastcall CNetSetObj::m_F_n_Set_DNS_Addr(CNetSetObj *this, char *dns1, char *dns2)\n\n    {\n\n      int result; // r0\n\n      char v5[80]; // [sp+0h] [bp-50h] BYREF\n\n\n\n      if ( !dns1 )\n\n        result = 0;\n\n      if ( dns1 )\n\n      {\n\n        sprintf(v5, \"/bin/echo nameserver %s > /etc/resolv.conf\", dns1);  // attacker controlled dns1 field\n\n        system(v5);\n\n        if ( dns2 )\n\n        {\n\n          sprintf(v5, \"/bin/echo nameserver %s >> /etc/resolv.conf\", dns2);\n\n          system(v5);\n\n        }\n\n        return 1;\n\n      }\n\n      return result;\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
