@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-24T19:31:38.015111+09:00",
+  "fetched_at": "2026-06-24T20:04:14.440921+09:00",
   "security_news": [
+    {
+      "title": "Stealthy Mistic backdoor linked to ransomware access broker KongTuke",
+      "summary": "A new backdoor dubbed Mistic has been observed in financially motivated attacks targeting organizations in the insurance, education, IT, and professional services sectors. [...]",
+      "content": "",
+      "title_ko": "랜섬웨어 액세스 브로커 KongTuke에 연결된 은밀한 Mistic 백도어",
+      "summary_ko": "보험, 교육, IT 및 전문 서비스 부문의 조직을 표적으로 삼은 금전적 동기를 지닌 공격에서 Mistic이라는 새로운 백도어가 발견되었습니다. [...]",
+      "summary_3lines": "1. Mistic 백도어, 보험·교육·IT 기관 공격 (KongTuke 연계)\n2. 금전 목적 악성코드 배포로 시스템 침투 시도\n3. 보험·교육·IT 분야 4개 산업 타깃으로 확산 우려",
+      "link": "https://www.bleepingcomputer.com/news/security/stealthy-mistic-backdoor-linked-to-ransomware-access-broker-kongtuke/",
+      "source": "bleepingcomputer",
+      "published": "2026-06-24T19:41:51+09:00",
+      "lang": "en"
+    },
     {
       "title": "'모두의 창업' 유출 논란 중기부…산하기관 보안인력은 6년째 제자리[on...",
       "summary": "중소벤처기업부와 11개 산하기관에 대한 해킹 시도가 지난 5년 사이 4배 가까이 늘었지만 정보보안... 연간 해킹 시도 건수는 2020년 1192건에서 2025년 4185건으로 약 3.5배 늘었다. 올해도 1월 1일부터 6월 17일까지 집계된...",
@@ -3252,30 +3264,6 @@
       "source": "naver",
       "published": "2026-06-21T20:50:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "양자컴 해킹 꼼짝 마… KT, 차세대 통신망 'E2E 퀀텀 시큐리티' 공개",
-      "summary": "이날 발표를 맡은 정제민 KT 상무는 AI 기술이 해킹 취약점 탐지와 공격 자동화에 악용되면서 자율적으로 진화하는 사이버 공격이 늘고 있다고 진단했다. 특히 소인수분해 등 복잡한 수학 연산에 기반을 둔 기존 공개키...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KT, 양자컴 해킹 대응 'E2E 퀀텀 시큐리티' 공개\n2. AI 악용해 자율 진화 공격 증가…소인수분해 기반 암호 취약\n3. 기존 공개키 방식 대체, 양자 보안 통신망 확대 계획",
-      "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=263331",
-      "source": "naver",
-      "published": "2026-06-21T20:02:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "‘모두의 창업’ 개인정보 유출 사고…\"내부 업체 해킹 추정\"",
-      "summary": "업체의 해킹으로 일어난 것으로 나타났다. 앞서 중소벤처기업부는 지난 15일 모두의 창업 프로젝트... 오는 22일 이번 해킹 사고와 관련해 중기부가 ‘모두의 창업 진행 현황 및 향후 운영 방향’을 주제로 공식 브리핑을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. '모두의 창업' 개인정보 유출, 내부 업체 해킹 추정\n2. 중기부, 15일 '모두의 창업' 프로젝트서 사고 발생\n3. 22일 공식 브리핑서 사고 진행 현황 발표 예정",
-      "link": "https://www.kgnews.co.kr/news/article.html?no=900855",
-      "source": "naver",
-      "published": "2026-06-21T19:44:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3337,6 +3325,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-52936",
       "source": "cvefeed",
       "published": "2026-06-24T16:14:26+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-52934 - batman-adv: tvlv: reject oversized TVLV packets",
+      "summary": "CVE ID :CVE-2026-52934\n  \nPublished : June 24, 2026, 7:14 a.m. | 3 hours, 42 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nbatman-adv: tvlv: reject oversized TVLV packets\n\nbatadv_tvlv_container_ogm_append() builds a TVLV packet section from\nthe tvlv.container_list. The total size of this section is computed by\nbatadv_tvlv_container_list_size(), which sums the sizes of all registered\ncontainers.\n\nThe return type and accumulator in batadv_tvlv_container_list_size() were\nu16. If the accumulated size exceeds U16_MAX, the value wraps around,\ncausing the subsequent allocation in batadv_tvlv_container_ogm_append()\nto be undersized. The memcpy-style copy that follows would then write\nbeyond the end of the allocated buffer, corrupting kernel memory.\n\nFix this by widening the return type of batadv_tvlv_container_list_size()\nto size_t. In batadv_tvlv_container_ogm_append(), check the computed length\nagainst U16_MAX before proceeding, and bail out as if the allocation had\nfailed when the limit is exceeded.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-52934\n  \nPublished : June 24, 2026, 7:14 a.m. | 3 hours, 42 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nbatman-adv: tvlv: reject oversized TVLV packets\n\nbatadv_tvlv_container_ogm_append() builds a TVLV packet section from\nthe tvlv.container_list. The total size of this section is computed by\nbatadv_tvlv_container_list_size(), which sums the sizes of all registered\ncontainers.\n\nThe return type and accumulator in batadv_tvlv_container_list_size() were\nu16. If the accumulated size exceeds U16_MAX, the value wraps around,\ncausing the subsequent allocation in batadv_tvlv_container_ogm_append()\nto be undersized. The memcpy-style copy that follows would then write\nbeyond the end of the allocated buffer, corrupting kernel memory.\n\nFix this by widening the return type of batadv_tvlv_container_list_size()\nto size_t. In batadv_tvlv_container_ogm_append(), check the computed length\nagainst U16_MAX before proceeding, and bail out as if the allocation had\nfailed when the limit is exceeded.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-52934 - batman-adv: tvlv: 대형 TVLV 패킷 거부",
+      "summary_ko": "CVE ID:CVE-2026-52934\n  \n게시일 : 2026년 6월 24일 오전 7시 14분 | 3시간 42분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nbatman-adv: tvlv: 너무 큰 TVLV 패킷 거부\n\nbatadv_tvlv_container_ogm_append()는 다음에서 TVLV 패킷 섹션을 구축합니다.\ntvlv.container_list. 이 섹션의 전체 크기는 다음과 같이 계산됩니다.\nbatadv_tvlv_container_list_size(), 등록된 모든 컨테이너의 크기를 합산합니다.\n컨테이너.\n\nbatadv_tvlv_container_list_size()의 반환 유형과 누산기는 다음과 같습니다.\nu16. 누적된 크기가 U16_MAX를 초과하면 값이 순환되며,\nbatadv_tvlv_container_ogm_append()에서 후속 할당을 유발합니다.\n크기가 작다. 다음 memcpy 스타일 사본은 다음과 같습니다.\n할당된 버퍼의 끝을 초과하면 커널 메모리가 손상됩니다.\n\nbatadv_tvlv_container_list_size()의 반환 유형을 확장하여 이 문제를 해결하세요.\nsize_t로. batadv_tvlv_container_ogm_append()에서 계산된 길이를 확인합니다.\n진행하기 전에 U16_MAX에 대해 할당이 완료된 것처럼 구제합니다.\n한도를 초과하여 실패했습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-52934\n2. 26.06.24 오후4:14\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-52934",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-52934",
+      "source": "cvefeed",
+      "published": "2026-06-24T16:14:25+09:00",
       "lang": "en"
     },
     {
