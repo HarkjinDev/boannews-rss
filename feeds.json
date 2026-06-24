@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-06-24T21:32:23.331713+09:00",
+  "fetched_at": "2026-06-24T22:02:59.139464+09:00",
   "security_news": [
+    {
+      "title": "AI 쓰려고 얼굴 인증까지…\"민감정보 수집, 규제 공백 우려\"",
+      "summary": "한 보안 업계 관계자는 중국 AI 서비스인 딥시크 사례를 언급하며 \"이용자가 인지하지 못하는 사이 수집되는... 보안 전문가들은 생성형 AI에서 개인정보 유출이 발생하는 핵심 지점으로 데이터 수집·학습·추론 과정을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 딥시크 AI, 얼굴 등 민감정보 수집 논란\n2. 이용자 인지 없이 개인정보 수집 및 학습\n3. 생성형 AI 규제 공백 우려 제기",
+      "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=309482",
+      "source": "naver",
+      "published": "2026-06-24T21:36:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "프로젝트 글래스윙",
+      "summary": "미국 AI 기업 앤트로픽이 주도하는 글로벌 사이버보안 협력 프로그램이다. 검증된 기업과 기관에 최신 고성능 AI 모델 '미토스'를 제공해 보안 취약점을 선제적으로 찾아내고 방어 체계를 구축하는 방식으로 운영된다....",
+      "content": "",
+      "title_ko": "프로젝트 글래스윙",
+      "summary_ko": null,
+      "summary_3lines": "1. 미국 AI 기업 앤트로픽 주도 프로젝트 글래스윙\n2. 고성능 AI 모델 '미토스'로 보안 취약점 선제 탐지\n3. 검증된 기업·기관 대상 방어 체계 구축 프로그램 운영",
+      "link": "https://www.danbinews.com/news/articleView.html?idxno=33265",
+      "source": "naver",
+      "published": "2026-06-24T21:32:00+09:00",
+      "lang": "unknown"
+    },
     {
       "title": "해킹·숏 베팅 겹쳤다…카르다노(ADA) 투자심리 급랭",
       "summary": "특히 카르다노 생태계 프로젝트인 세컨드파이(SecondFi)의 지갑 생성 소프트웨어가 해킹 공격을 받으면서 약 1,600만 ADA가 유출된 사건이 발생해 시장에 부정적인 영향을 미쳤다. 세컨드파이는 사고 원인 분석...",
@@ -3279,6 +3303,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-56269 - Flowise - Weak Default Token Hash Secret in JWT Token Encryption",
+      "summary": "CVE ID :CVE-2026-56269\n  \nPublished : June 24, 2026, 11:53 a.m. | 1 hour, 1 minute ago\n  \nDescription :Flowise before 3.1.0 (npm package flowise, versions 3.0.13 and earlier) uses a weak hardcoded default value 'Secre$t' for the TOKEN_HASH_SECRET environment variable in packages/server/src/enterprise/utils/tempTokenUtils.ts when the variable is not configured. This secret derives the AES-256-CBC key used to encrypt user IDs and workspace IDs in the 'meta' field of JWT tokens. An attacker who knows the default secret can decrypt this metadata to extract internal user and workspace identifiers, and re-encrypt manipulated values such as altered user or workspace IDs. Because the JWT signature is validated separately, decrypting or tampering with this metadata does not by itself grant access, but the disclosure of internal identifiers and possible metadata manipulation could aid privilege escalation or unauthorized data access.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56269\n  \nPublished : June 24, 2026, 11:53 a.m. | 1 hour, 1 minute ago\n  \nDescription :Flowise before 3.1.0 (npm package flowise, versions 3.0.13 and earlier) uses a weak hardcoded default value 'Secre$t' for the TOKEN_HASH_SECRET environment variable in packages/server/src/enterprise/utils/tempTokenUtils.ts when the variable is not configured. This secret derives the AES-256-CBC key used to encrypt user IDs and workspace IDs in the 'meta' field of JWT tokens. An attacker who knows the default secret can decrypt this metadata to extract internal user and workspace identifiers, and re-encrypt manipulated values such as altered user or workspace IDs. Because the JWT signature is validated separately, decrypting or tampering with this metadata does not by itself grant access, but the disclosure of internal identifiers and possible metadata manipulation could aid privilege escalation or unauthorized data access.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56269 - Flowise - JWT 토큰 암호화의 취약한 기본 토큰 해시 비밀",
+      "summary_ko": "CVE ID:CVE-2026-56269\n  \n게시일 : 2026년 6월 24일 오전 11시 53분 | 1시간, 1분 전\n  \n설명: 3.1.0 이전의 Flowise(npm 패키지 flowise, 버전 3.0.13 및 이전)는 변수가 구성되지 않은 경우 packages/server/src/enterprise/utils/tempTokenUtils.ts의 TOKEN_HASH_SECRET 환경 변수에 대해 약한 하드코딩된 기본값 'Secre$t'를 사용합니다. 이 비밀은 JWT 토큰의 '메타' 필드에서 사용자 ID와 작업공간 ID를 암호화하는 데 사용되는 AES-256-CBC 키를 파생합니다. 기본 비밀을 알고 있는 공격자는 이 메타데이터를 해독하여 내부 사용자 및 작업 영역 식별자를 추출하고 변경된 사용자 또는 작업 영역 ID와 같이 조작된 값을 다시 암호화할 수 있습니다. JWT 서명은 별도로 검증되므로 이 메타데이터를 복호화하거나 변조한다고 해서 그 자체로 액세스 권한이 부여되는 것은 아니지만, 내부 식별자가 공개되고 메타데이터 조작이 가능해지면 권한 상승이나 무단 데이터 액세스에 도움이 될 수 있습니다.\n  \n심각도: 4.6 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56269\n2. 26.06.24 오후8:53\n3. Flowise before 3.1.0 (npm package flowise, version",
+      "cve_id": "CVE-2026-56269",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56269",
+      "source": "cvefeed",
+      "published": "2026-06-24T20:53:14+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-56244 - Capgo - Webhook Signing Secret Disclosure via Non-Admin API Key",
+      "summary": "CVE ID :CVE-2026-56244\n  \nPublished : June 24, 2026, 11:53 a.m. | 1 hour, 1 minute ago\n  \nDescription :Capgo before 12.128.2 allows non-admin API keys to read webhook signing secrets via Supabase REST due to insufficient row-level security policies on the webhooks table. Attackers can retrieve the webhook secret and forge valid X-Capgo-Signature headers to send authenticated webhook events to configured receivers, breaking webhook authenticity and integrity.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56244\n  \nPublished : June 24, 2026, 11:53 a.m. | 1 hour, 1 minute ago\n  \nDescription :Capgo before 12.128.2 allows non-admin API keys to read webhook signing secrets via Supabase REST due to insufficient row-level security policies on the webhooks table. Attackers can retrieve the webhook secret and forge valid X-Capgo-Signature headers to send authenticated webhook events to configured receivers, breaking webhook authenticity and integrity.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56244 - Capgo - 비관리 API 키를 통한 웹훅 서명 비밀 공개",
+      "summary_ko": "CVE ID:CVE-2026-56244\n  \n게시일 : 2026년 6월 24일 오전 11시 53분 | 1시간, 1분 전\n  \n설명: 12.128.2 이전의 Capgo에서는 웹훅 테이블의 행 수준 보안 정책이 충분하지 않기 때문에 관리자가 아닌 API 키가 Supabase REST를 통해 웹훅 서명 비밀을 읽을 수 있습니다. 공격자는 웹훅 비밀을 검색하고 유효한 X-Capgo-Signature 헤더를 위조하여 인증된 웹훅 이벤트를 구성된 수신기에 보내 웹훅 신뢰성과 무결성을 깨뜨릴 수 있습니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56244\n2. 26.06.24 오후8:53\n3. Capgo before 12.128.2 allows non-admin API keys to",
+      "cve_id": "CVE-2026-56244",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56244",
+      "source": "cvefeed",
+      "published": "2026-06-24T20:53:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-46285 mtd: docg3: fix use-after-free in docg3_release()",
       "summary": "Information published.",
