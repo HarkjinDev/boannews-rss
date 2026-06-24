@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-06-24T22:02:59.139464+09:00",
+  "fetched_at": "2026-06-24T22:32:47.325596+09:00",
   "security_news": [
+    {
+      "title": "[시사천국] 내 CI값이 600원? 티빙 초대형 개인정보 유출 사태",
+      "summary": "더 문제는 해킹 수법이 사실 굉장히 간단한 방법이었었어요. ▷어떻게 털린 거예요? ▶이거는 서비스... 근데 이 수법이 아주 엄청난 해킹 수법이 아니에요. 그래서 제가 좀 심각하게 보는 거는 이 문제점에 대해서 사고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 티빙, CI값 600원에 개인정보 대량 유출\n2. 간단한 해킹 수법으로 서비스 취약점 공격\n3. 회사, 사고 심각성 인정해 조치 중",
+      "link": "https://news.cpbc.co.kr/article/1173904?division=NAVER",
+      "source": "naver",
+      "published": "2026-06-24T22:14:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "'개인정보 유출' 에듀테크 엄정 조사…부처 합동 점검",
+      "summary": "교육부와 합동으로 사전 실태점검을 추진하고 있다고 덧붙였습니다. 개보위는 개인정보 유출 사고에 대해서는 신속히 조사해 엄정하게 제재하는 한편 사전점검을 통해 에듀테크 업계 전반의 보안 체계를 강화할 방침입니다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 에듀테크 개인정보 유출 100만 건…교육부 합동 조사\n2. 사전 점검 통해 보안 체계 강화 방침\n3. 개보위, 제재 및 사전 점검 추진",
+      "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4091173",
+      "source": "naver",
+      "published": "2026-06-24T22:14:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "AI 쓰려고 얼굴 인증까지…\"민감정보 수집, 규제 공백 우려\"",
       "summary": "한 보안 업계 관계자는 중국 AI 서비스인 딥시크 사례를 언급하며 \"이용자가 인지하지 못하는 사이 수집되는... 보안 전문가들은 생성형 AI에서 개인정보 유출이 발생하는 핵심 지점으로 데이터 수집·학습·추론 과정을...",
@@ -4036,21 +4060,6 @@
       "link": "https://isc.sans.edu/diary/rss/33092",
       "source": "sans_isc",
       "published": "2026-06-22T11:00:02+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-56393 - Craft CMS - Multiple Stored Cross-Site Scripting in Settings Names and Field Options",
-      "summary": "CVE ID :CVE-2026-56393\n  \nPublished : June 21, 2026, 1:27 p.m. | 2 hours, 9 minutes ago\n  \nDescription :Craft CMS 4.x (>= 4.0.0-RC1, < 4.17.0-beta.1) and 5.x (>= 5.0.0-RC1, < 5.9.0-beta.1) contain multiple stored cross-site scripting vulnerabilities where settings names and field option labels are rendered without sanitization (e.g., via the checkbox.twig template, which used {{ label|raw }}). An authenticated administrator (with allowAdminChanges enabled) can inject malicious payloads into section names, volume names, user group names, global set names, generated field names, checkbox/radio option labels, and custom source labels, causing arbitrary JavaScript to execute in other users' control-panel sessions. Fixed in 4.17.0-beta.1 and 5.9.0-beta.1.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-56393\n  \nPublished : June 21, 2026, 1:27 p.m. | 2 hours, 9 minutes ago\n  \nDescription :Craft CMS 4.x (>= 4.0.0-RC1, < 4.17.0-beta.1) and 5.x (>= 5.0.0-RC1, < 5.9.0-beta.1) contain multiple stored cross-site scripting vulnerabilities where settings names and field option labels are rendered without sanitization (e.g., via the checkbox.twig template, which used {{ label|raw }}). An authenticated administrator (with allowAdminChanges enabled) can inject malicious payloads into section names, volume names, user group names, global set names, generated field names, checkbox/radio option labels, and custom source labels, causing arbitrary JavaScript to execute in other users' control-panel sessions. Fixed in 4.17.0-beta.1 and 5.9.0-beta.1.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-56393 - Craft CMS - 설정 이름 및 필드 옵션에 여러 개의 저장된 교차 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-56393\n  \n게시일 : 2026년 6월 21일 오후 1시 27분 | 2시간, 9분 전\n  \n설명:Craft CMS 4.x(>= 4.0.0-RC1, < 4.17.0-beta.1) 및 5.x(>= 5.0.0-RC1, < 5.9.0-beta.1)에는 설정 이름과 필드 옵션 레이블이 삭제 없이(예: {{ label|raw를 사용하는 checkbox.twig 템플릿을 통해) 렌더링되는 여러 개의 저장된 교차 사이트 스크립팅 취약점이 포함되어 있습니다. }}). 인증된 관리자(allowAdminChanges가 활성화된)는 섹션 이름, 볼륨 이름, 사용자 그룹 이름, 전역 세트 이름, 생성된 필드 이름, 확인란/라디오 옵션 레이블 및 사용자 정의 소스 레이블에 악성 페이로드를 삽입하여 다른 사용자의 제어판 세션에서 임의의 JavaScript가 실행되도록 할 수 있습니다. 4.17.0-beta.1 및 5.9.0-beta.1에서 수정되었습니다.\n  \n심각도: 4.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-56393\n2. 26.06.21 오후10:27\n3. Craft CMS 4.x (>= 4.0.0-RC1, < 4.17.0-beta.1) and ",
-      "cve_id": "CVE-2026-56393",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56393",
-      "source": "cvefeed",
-      "published": "2026-06-21T22:27:01+09:00",
       "lang": "en"
     }
   ],
