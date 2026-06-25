@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-25T21:32:16.961059+09:00",
+  "fetched_at": "2026-06-25T22:02:36.805498+09:00",
   "security_news": [
+    {
+      "title": "정부 청년 창업플랫폼 개인정보·아이디어 보안 절차 누락",
+      "summary": "청년들의 창업 아이디어를 포함한 개인정보가 유출된 중소벤처기업부 '모두의 창업' 플랫폼이 정보 보안을... 구 의원은 \"사전에 해당 여부를 확인하고 이행했어야 할 필수 보안절차를 누락한 채 방치했고 이번 유출 사고와...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 중소벤처기업부 '모두의 창업' 플랫폼, 개인정보·아이디어 유출\n2. 보안 절차 누락으로 청년 창업 정보 노출\n3. 필수 점검 미이행으로 사고 발생",
+      "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=552184",
+      "source": "naver",
+      "published": "2026-06-25T21:34:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Lantronix Serial-to-IP Converter Flaw Exploited in Attacks After OT Threat Warning",
       "summary": "The exploited flaw, CVE-2025-67038, is one of the vulnerabilities disclosed in April as part of the BRIDGE:BREAK research project.\nThe post Lantronix Serial-to-IP Converter Flaw Exploited in Attacks After OT Threat Warning appeared first on SecurityWeek.",
@@ -4081,51 +4093,6 @@
       "link": "https://isc.sans.edu/diary/rss/33096",
       "source": "sans_isc",
       "published": "2026-06-22T23:10:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-56450 - AIL Framework - Missing Rate Limiting Enables Brute-Force Attacks Against Two-Factor Authentication Codes",
-      "summary": "CVE ID :CVE-2026-56450\n  \nPublished : June 22, 2026, 1:02 p.m. | 1 hour, 44 minutes ago\n  \nDescription :AIL did not restrict repeated failed attempts to verify a two-factor authentication (OTP) code. An attacker who had reached the 2FA verification step, such as after successfully completing the password-authentication stage, could submit an unlimited number of OTP guesses. This could enable brute-force guessing of a valid code and bypass the intended second authentication factor, resulting in unauthorized account access.\n\n\nThe patch introduces per-user failed-OTP tracking, blocks verification after 30 failed attempts for one hour, clears the counter after a successful OTP verification, and provides administrator recovery actions to purge affected lockouts.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-56450\n  \nPublished : June 22, 2026, 1:02 p.m. | 1 hour, 44 minutes ago\n  \nDescription :AIL did not restrict repeated failed attempts to verify a two-factor authentication (OTP) code. An attacker who had reached the 2FA verification step, such as after successfully completing the password-authentication stage, could submit an unlimited number of OTP guesses. This could enable brute-force guessing of a valid code and bypass the intended second authentication factor, resulting in unauthorized account access.\n\n\nThe patch introduces per-user failed-OTP tracking, blocks verification after 30 failed attempts for one hour, clears the counter after a successful OTP verification, and provides administrator recovery actions to purge affected lockouts.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-56450 - AIL 프레임워크 - 누락된 속도 제한으로 인해 2단계 인증 코드에 대한 무차별 대입 공격이 가능해졌습니다.",
-      "summary_ko": "CVE ID :CVE-2026-56450\n  \n게시일 : 2026년 6월 22일 오후 1시 2분 | 1시간 44분 전\n  \n설명: AIL은 2단계 인증(OTP) 코드를 확인하기 위한 반복적인 실패 시도를 제한하지 않았습니다. 비밀번호 인증 단계를 성공적으로 완료하는 등 2FA 인증 단계에 도달한 공격자는 OTP 추측을 무제한으로 제출할 수 있습니다. 이로 인해 유효한 코드에 대한 무차별 추측이 가능해지고 의도된 두 번째 인증 요소를 우회하여 무단 계정 액세스가 발생할 수 있습니다.\n\n\n이 패치는 사용자별 OTP 실패 추적 기능을 도입하고, 1시간 동안 30회 시도 실패 후 확인을 차단하고, OTP 확인 성공 후 카운터를 지우고, 영향을 받은 잠금을 제거하기 위한 관리자 복구 조치를 제공합니다.\n  \n심각도: 5.1 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-56450\n2. 26.06.22 오후10:02\n3. AIL did not restrict repeated failed attempts to v",
-      "cve_id": "CVE-2026-56450",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56450",
-      "source": "cvefeed",
-      "published": "2026-06-22T22:02:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-7165 - Multiple vulnerabilities in the Assassin game by Gaudire",
-      "summary": "CVE ID :CVE-2026-7165\n  \nPublished : June 22, 2026, 12:46 p.m. | 2 hours, 1 minute ago\n  \nDescription :The vulnerability is present in the ‘/addJugador’ endpoint:\n  *  The 'keyJugador' and 'keyJugadorObjectiu'  parameters allow the modification of other users’ information without requiring prior authorization validation. This could enable an authenticated attacker to alter any user’s ID and change their information.\n\n  *  The ‘punts’ and ‘numObjectiusEliminats’ fields allow arbitrary data to be added because user input is not properly validated. This makes it possible to obtain authentic prizes, awarded by city councils, by falsifying game scores. \n\n  *  In the ‘tokens’ field, administrative privileges can be self-assigned without server validation or prior authentication. This vulnerability could allow an authenticated attacker to grant themselves administrator permissions and thus escalate privileges.\n\n  *  Numeric fields allow the entry of extremely long values, which can cause the system to crash. Successful exploitation of this vulnerability could allow an authenticated attacker to launch a denial-of-service (DoS) attack, preventing created games from being playable.\n\n  *  The ‘urlImatge’ parameter allows server-side requests to arbitrary URLs, enabling the retrieval of users’ internal IP addresses, access to internal services, reading of local files, and unauthorized interaction with third-party APIs. An authenticated attacker could gain access to sensitive data.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-7165\n  \nPublished : June 22, 2026, 12:46 p.m. | 2 hours, 1 minute ago\n  \nDescription :The vulnerability is present in the ‘/addJugador’ endpoint:\n  *  The 'keyJugador' and 'keyJugadorObjectiu'  parameters allow the modification of other users’ information without requiring prior authorization validation. This could enable an authenticated attacker to alter any user’s ID and change their information.\n\n  *  The ‘punts’ and ‘numObjectiusEliminats’ fields allow arbitrary data to be added because user input is not properly validated. This makes it possible to obtain authentic prizes, awarded by city councils, by falsifying game scores. \n\n  *  In the ‘tokens’ field, administrative privileges can be self-assigned without server validation or prior authentication. This vulnerability could allow an authenticated attacker to grant themselves administrator permissions and thus escalate privileges.\n\n  *  Numeric fields allow the entry of extremely long values, which can cause the system to crash. Successful exploitation of this vulnerability could allow an authenticated attacker to launch a denial-of-service (DoS) attack, preventing created games from being playable.\n\n  *  The ‘urlImatge’ parameter allows server-side requests to arbitrary URLs, enabling the retrieval of users’ internal IP addresses, access to internal services, reading of local files, and unauthorized interaction with third-party APIs. An authenticated attacker could gain access to sensitive data.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-7165 - Gaudire의 Assassin 게임의 여러 취약점",
-      "summary_ko": "CVE ID:CVE-2026-7165\n  \n게시일 : 2026년 6월 22일 오후 12시 46분 | 2시간, 1분 전\n  \n설명: 취약점은 '/addJugador' 엔드포인트에 존재합니다.\n  * 'keyJugador' 및 'keyJugadorObjectiu' 매개변수를 사용하면 사전 승인 검증 없이 다른 사용자의 정보를 수정할 수 있습니다. 이를 통해 인증된 공격자가 사용자의 ID를 변경하고 정보를 변경할 수 있습니다.\n\n  * 'punts' 및 'numObjectiusEliminats' 필드에서는 사용자 입력이 제대로 검증되지 않아 임의의 데이터를 추가할 수 있습니다. 이를 통해 게임 점수를 위조하여 시의회에서 수여하는 실제 상품을 획득하는 것이 가능해졌습니다. \n\n  * '토큰' 필드에서는 서버 검증이나 사전 인증 없이 관리 권한을 자체 할당할 수 있습니다. 이 취약점으로 인해 인증된 공격자가 자신에게 관리자 권한을 부여하여 권한을 상승시킬 수 있습니다.\n\n  * 숫자 필드에는 시스템 충돌을 일으킬 수 있는 매우 긴 값을 입력할 수 있습니다. 이 취약점을 성공적으로 악용하면 인증된 공격자가 서비스 거부(DoS) 공격을 실행하여 생성된 게임을 플레이할 수 없도록 할 수 있습니다.\n\n  * 'urlImatge' 매개변수는 임의 URL에 대한 서버 측 요청을 허용하여 사용자의 내부 IP 주소 검색, 내부 서비스에 대한 액세스, 로컬 파일 읽기 및 타사 API와의 무단 상호 작용을 가능하게 합니다. 인증된 공격자는 민감한 데이터에 접근할 수 있습니다.\n  \n심각도: 9.4 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-7165\n2. 26.06.22 오후9:46\n3. The vulnerability is present in the ‘/addJugador’ ",
-      "cve_id": "CVE-2026-7165",
-      "cvss": "9.4",
-      "severity": "Critical",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-7165",
-      "source": "cvefeed",
-      "published": "2026-06-22T21:46:17+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54099 - Windows-machine-config-operator: windows-machine-config-operator: wicd csr extra-organization allows privilege escalation to system:masters",
-      "summary": "CVE ID :CVE-2026-54099\n  \nPublished : June 22, 2026, 12:46 p.m. | 2 hours, 1 minute ago\n  \nDescription :A flaw was found in the Windows Machine Config Operator (WMCO) for Red Hat OpenShift Container Platform. The WICD CSR auto-approver validates that a Certificate Signing Request contains the organization system:wicd-nodes but does not reject additional organization values such as system:masters. A compromised Windows worker node that holds WICD credentials can submit a CSR that is auto-approved and signed by the cluster, yielding a client certificate that grants cluster-administrator privileges and enabling full cluster takeover.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54099\n  \nPublished : June 22, 2026, 12:46 p.m. | 2 hours, 1 minute ago\n  \nDescription :A flaw was found in the Windows Machine Config Operator (WMCO) for Red Hat OpenShift Container Platform. The WICD CSR auto-approver validates that a Certificate Signing Request contains the organization system:wicd-nodes but does not reject additional organization values such as system:masters. A compromised Windows worker node that holds WICD credentials can submit a CSR that is auto-approved and signed by the cluster, yielding a client certificate that grants cluster-administrator privileges and enabling full cluster takeover.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54099 - Windows-machine-config-operator: windows-machine-config-operator: wicd csr extra-organization은 system:masters로 권한 상승을 허용합니다.",
-      "summary_ko": "CVE ID:CVE-2026-54099\n  \n게시일 : 2026년 6월 22일 오후 12시 46분 | 2시간, 1분 전\n  \n설명 : Red Hat OpenShift Container Platform용 Windows Machine Config Operator(WMCO)에서 결함이 발견되었습니다. WICD CSR 자동 승인자는 인증서 서명 요청에 조직 system:wicd-nodes가 포함되어 있는지 확인하지만 system:masters와 같은 추가 조직 값은 거부하지 않습니다. WICD 자격 증명을 보유하고 있는 손상된 Windows 작업자 노드는 클러스터에서 자동 승인되고 서명된 CSR을 제출하여 클러스터 관리자 권한을 부여하고 전체 클러스터 인계를 활성화하는 클라이언트 인증서를 생성할 수 있습니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54099\n2. 26.06.22 오후9:46\n3. A flaw was found in the Windows Machine Config Ope",
-      "cve_id": "CVE-2026-54099",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54099",
-      "source": "cvefeed",
-      "published": "2026-06-22T21:46:04+09:00",
       "lang": "en"
     }
   ],
