@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-25T20:32:30.517062+09:00",
+  "fetched_at": "2026-06-25T21:01:35.021023+09:00",
   "security_news": [
     {
       "title": "Lantronix Serial-to-IP Converter Flaw Exploited in Attacks After OT Threat Warning",
@@ -3132,18 +3132,6 @@
       "source": "naver",
       "published": "2026-06-22T21:14:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "믿고 맡긴 AI업체가 해킹…참가자 5000명 아이디어 유출",
-      "summary": "'탱크데이' 논란으로 온 나라를 들썩였던 스타벅스가 사상 처음으로 전 매장의 문을 닫고 역사 인식을 다잡았습니다. 누구든 역사를 악용하는 일은 없었으면 합니다. 천정부지 모르게 치솟던 이재명 대통령 지지율이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 믿고 맡긴 AI업체가 해킹…참가자 5000명 아이디어 유출 '탱크데이' 논란으로 온 나라를\n2. 누구든 역사를 악용하는 일은 없었으면 합니다.\n3. 천정부지 모르게 치솟던 이재명 대통령 지지율이...",
-      "link": "https://n.news.naver.com/mnews/article/448/0000621510?sid=101",
-      "source": "naver",
-      "published": "2026-06-22T21:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4150,21 +4138,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-54099",
       "source": "cvefeed",
       "published": "2026-06-22T21:46:04+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-56422 - MISP Core: Mass Assignment and Object Re-ownership via Unvalidated Request Fields",
-      "summary": "CVE ID :CVE-2026-56422\n  \nPublished : June 22, 2026, 11:43 a.m. | 1 hour, 54 minutes ago\n  \nDescription :Multiple MISP core controllers and model capture paths accepted client-controlled request fields such as primary keys (id) and ownership/scope foreign keys (event_id, org_id, user_id, sharing_group_id, galaxy_cluster_uuid, organisation_uuid, and related nested object identifiers) without consistently stripping, pinning, or revalidating them against the server-authorized object.\n\nIn affected paths, an authenticated user with access to one authorized object could submit crafted REST or form payloads that caused MISP to save data against a different object than the one checked by the authorization logic. Depending on the endpoint, this could allow object overwrite, object re-parenting, ownership transfer, unauthorized sharing-group scoping, event/object injection, proposal retargeting, or stored attacker-controlled content appearing in another user’s context.\n\nThe fixes harden affected create/edit/import flows by stripping client-supplied primary keys on create-only saves, re-pinning route- or database-authorized identifiers before save operations, validating effective sharing-group scope, and adding field whitelists where ownership fields must never be editable. The initial broad fix also added a central CRUDComponent::edit() primary-key re-pin so payload-supplied IDs cannot redirect saves away from the already-authorized row. GitHub’s patch for 7acf8220c describes this central issue as CRUDComponent::edit() copying supplied fields, including a payload primary key, onto the loaded record, allowing CakePHP save() to update an arbitrary row unless the loaded ID is re-pinned.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-56422\n  \nPublished : June 22, 2026, 11:43 a.m. | 1 hour, 54 minutes ago\n  \nDescription :Multiple MISP core controllers and model capture paths accepted client-controlled request fields such as primary keys (id) and ownership/scope foreign keys (event_id, org_id, user_id, sharing_group_id, galaxy_cluster_uuid, organisation_uuid, and related nested object identifiers) without consistently stripping, pinning, or revalidating them against the server-authorized object.\n\nIn affected paths, an authenticated user with access to one authorized object could submit crafted REST or form payloads that caused MISP to save data against a different object than the one checked by the authorization logic. Depending on the endpoint, this could allow object overwrite, object re-parenting, ownership transfer, unauthorized sharing-group scoping, event/object injection, proposal retargeting, or stored attacker-controlled content appearing in another user’s context.\n\nThe fixes harden affected create/edit/import flows by stripping client-supplied primary keys on create-only saves, re-pinning route- or database-authorized identifiers before save operations, validating effective sharing-group scope, and adding field whitelists where ownership fields must never be editable. The initial broad fix also added a central CRUDComponent::edit() primary-key re-pin so payload-supplied IDs cannot redirect saves away from the already-authorized row. GitHub’s patch for 7acf8220c describes this central issue as CRUDComponent::edit() copying supplied fields, including a payload primary key, onto the loaded record, allowing CakePHP save() to update an arbitrary row unless the loaded ID is re-pinned.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-56422 - MISP 핵심: 검증되지 않은 요청 필드를 통한 대량 할당 및 개체 재소유권",
-      "summary_ko": "CVE ID:CVE-2026-56422\n  \n게시일 : 2026년 6월 22일 오전 11시 43분 | 1시간 54분 전\n  \n설명: 여러 MISP 코어 컨트롤러 및 모델 캡처 경로는 기본 키(id) 및 소유권/범위 외래 키(event_id, org_id, user_id, Sharing_group_id, galaxy_cluster_uuid, organization_uuid 및 관련 중첩 개체 식별자)와 같은 클라이언트 제어 요청 필드를 서버 승인 개체에 대해 일관되게 제거, 고정 또는 재검증하지 않고 허용했습니다.\n\n영향을 받은 경로에서 하나의 승인된 개체에 대한 액세스 권한이 있는 인증된 사용자는 조작된 REST를 제출하거나 MISP가 승인 논리에서 확인한 것과 다른 개체에 대해 데이터를 저장하도록 하는 페이로드를 형성할 수 있습니다. 엔드포인트에 따라 개체 덮어쓰기, 개체 부모 재지정, 소유권 이전, 무단 공유 그룹 범위 지정, 이벤트/개체 삽입, 제안 대상 변경 또는 다른 사용자의 컨텍스트에 나타나는 저장된 공격자 제어 콘텐츠가 허용될 수 있습니다.\n\n수정 사항은 생성 전용 저장에서 클라이언트 제공 기본 키를 제거하고, 저장 작업 전에 경로 또는 데이터베이스 승인 식별자를 다시 고정하고, 효과적인 공유 그룹 범위를 검증하고, 소유권 필드를 절대 편집할 수 없는 필드 화이트리스트를 추가하여 영향을 받는 생성/편집/가져오기 흐름을 강화합니다. 또한 초기 광범위한 수정에는 중앙 CRUDComponent::edit() 기본 키 재핀이 추가되어 페이로드 제공 ID가 이미 승인된 행에서 저장을 리디렉션할 수 없습니다. 7acf8220c용 GitHub 패치에서는 이 핵심 문제를 CRUDComponent::edit()가 페이로드 기본 키를 포함한 제공된 필드를 로드된 레코드에 복사하여 로드된 ID가 다시 고정되지 않는 한 CakePHP save()가 임의의 행을 업데이트할 수 있도록 허용한다고 설명합니다.\n  \n심각도: 9.4 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-56422\n2. 26.06.22 오후8:43\n3. Multiple MISP core controllers and model capture p",
-      "cve_id": "CVE-2026-56422",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56422",
-      "source": "cvefeed",
-      "published": "2026-06-22T20:43:02+09:00",
       "lang": "en"
     }
   ],
