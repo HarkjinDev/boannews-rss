@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-26T00:33:14.509103+09:00",
+  "fetched_at": "2026-06-26T01:03:04.758682+09:00",
   "security_news": [
     {
       "title": "정부 청년 창업플랫폼 개인정보·아이디어 보안 절차 누락",
@@ -3076,6 +3076,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-49319 - Alps Electric Co., Ltd. R53R0 Remote Keyless Entry System (RKES) Replay Attack",
+      "summary": "CVE ID :CVE-2026-49319\n  \nPublished : June 25, 2026, 2:11 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Remote Keyless Entry System (RKES), using the 433 MHz key fob bearing FCC ID CWTR53R0 manufactured by ALPS ALPINE CO., LTD., is vulnerable to a roll-back attack against its rolling-code authentication. \n\n\n\nAn attacker within RF range who records two consecutive lock or unlock transmissions from a legitimate key fob can later replay the same pair of transmissions repeatedly. During testing, replaying the first captured transmission caused the RKES to enter a state in which replaying the second captured transmission resulted in a successful lock or unlock operation of the vehicle. Tested and confirmed on a 2024 Suzuki Swift (SWIFT ISG GLS AC 1.2 5P 4x2 TM).\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-49319\n  \nPublished : June 25, 2026, 2:11 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Remote Keyless Entry System (RKES), using the 433 MHz key fob bearing FCC ID CWTR53R0 manufactured by ALPS ALPINE CO., LTD., is vulnerable to a roll-back attack against its rolling-code authentication. \n\n\n\nAn attacker within RF range who records two consecutive lock or unlock transmissions from a legitimate key fob can later replay the same pair of transmissions repeatedly. During testing, replaying the first captured transmission caused the RKES to enter a state in which replaying the second captured transmission resulted in a successful lock or unlock operation of the vehicle. Tested and confirmed on a 2024 Suzuki Swift (SWIFT ISG GLS AC 1.2 5P 4x2 TM).\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-49319 - Alps Electric Co., Ltd. R53R0 RKES(Remote Keyless Entry System) 재생 공격",
+      "summary_ko": "CVE ID:CVE-2026-49319\n  \n게시일 : 2026년 6월 25일 오후 2시 11분 | 1시간 27분 전\n  \n설명:ALPS ALPINE CO., LTD.에서 제조한 FCC ID CWTR53R0이 포함된 433MHz 전자열쇠를 사용하는 원격 키리스 출입 시스템(RKES)은 롤링 코드 인증에 대한 롤백 공격에 취약합니다. \n\n\n\n합법적인 열쇠 고리에서 두 번의 연속 잠금 또는 잠금 해제 전송을 기록하는 RF 범위 내의 공격자는 나중에 동일한 전송 쌍을 반복적으로 재생할 수 있습니다. 테스트 중에 캡처된 첫 번째 전송을 재생하면 RKES가 두 번째 캡처된 전송을 재생하여 차량을 성공적으로 잠그거나 잠금 해제하는 상태로 전환되었습니다. 2024 Suzuki Swift(SWIFT ISG GLS AC 1.2 5P 4x2 TM)에서 테스트 및 확인되었습니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-49319\n2. 26.06.25 오후11:11\n3. Remote Keyless Entry System (RKES), using the 433 ",
+      "cve_id": "CVE-2026-49319",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49319",
+      "source": "cvefeed",
+      "published": "2026-06-25T23:11:18+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-53263 - 6lowpan: fix off-by-one in multicast context address compression",
       "summary": "CVE ID :CVE-2026-53263\n  \nPublished : June 25, 2026, 8:39 a.m. | 59 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\n6lowpan: fix off-by-one in multicast context address compression\n\nThe second memcpy in lowpan_iphc_mcast_ctx_addr_compress() uses\n&data[1] as destination and &ipaddr->s6_addr[11] as source, but\nboth should be offset by one: &data[2] and &ipaddr->s6_addr[12]\nrespectively.\n\nThis off-by-one has two consequences:\n1. data[1] is overwritten with s6_addr[11], corrupting the RIID\n   field in the compressed multicast address\n2. data[5] is never written, so uninitialized kernel stack memory\n   is transmitted over the network via lowpan_push_hc_data(),\n   leaking kernel stack contents\n\nThe correct inline data layout must match what the decompression\nfunction lowpan_uncompress_multicast_ctx_daddr() expects:\n  data[0..1] = s6_addr[1..2]  (flags/scope + RIID)\n  data[2..5] = s6_addr[12..15] (group ID)\n\nAlso zero-initialize the data array as a defensive measure against\nsimilar bugs in the future.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-53263\n  \nPublished : June 25, 2026, 8:39 a.m. | 59 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\n6lowpan: fix off-by-one in multicast context address compression\n\nThe second memcpy in lowpan_iphc_mcast_ctx_addr_compress() uses\n&data[1] as destination and &ipaddr->s6_addr[11] as source, but\nboth should be offset by one: &data[2] and &ipaddr->s6_addr[12]\nrespectively.\n\nThis off-by-one has two consequences:\n1. data[1] is overwritten with s6_addr[11], corrupting the RIID\n   field in the compressed multicast address\n2. data[5] is never written, so uninitialized kernel stack memory\n   is transmitted over the network via lowpan_push_hc_data(),\n   leaking kernel stack contents\n\nThe correct inline data layout must match what the decompression\nfunction lowpan_uncompress_multicast_ctx_daddr() expects:\n  data[0..1] = s6_addr[1..2]  (flags/scope + RIID)\n  data[2..5] = s6_addr[12..15] (group ID)\n\nAlso zero-initialize the data array as a defensive measure against\nsimilar bugs in the future.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3148,6 +3163,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-53258",
       "source": "cvefeed",
       "published": "2026-06-25T17:39:47+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-4367 Libxpm: libxpm: denial of service via out-of-bounds read in xpm file parsing",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-4367 Libxpm: libxpm: xpm 파일 구문 분석에서 범위를 벗어난 읽기를 통한 서비스 거부",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-4367\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-4367",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-4367",
+      "source": "msrc",
+      "published": "2026-06-25T17:03:53+09:00",
       "lang": "en"
     },
     {
