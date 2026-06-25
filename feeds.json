@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-26T03:31:46.686992+09:00",
+  "fetched_at": "2026-06-26T04:02:52.112726+09:00",
   "security_news": [
     {
       "title": "정부 청년 창업플랫폼 개인정보·아이디어 보안 절차 누락",
@@ -3048,21 +3048,39 @@
       "source": "naver",
       "published": "2026-06-23T04:03:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'AI 능동 소비자'로 진화하는 은퇴 세대…글로벌 생성형 기술 지형 바꾼...",
-      "summary": "특히 시니어를 표적으로 삼는 생성형 AI 기반 딥페이크 피싱과 보안 취약성을 악용한 금융 사기 리스크는 산업 안착의 최대 걸림돌이다. 의료 AI 부문의 개인정보 보호 규제 역시 기술 확산의 속도를 늦추는 요인으로...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 시니어 대상 딥페이크 피싱, 금융 사기 리스크 증가\n2. 의료 AI 개인정보 보호 규제, 기술 확산 속도 늦춰\n3. AI 능동 소비자 진화, 보안 취약점 악용 우려",
-      "link": "https://www.g-enews.com/view.php?ud=202606221813476834fbbec65dfb_1",
-      "source": "naver",
-      "published": "2026-06-23T03:56:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-11999 - X.509 trust-chain bypass via path-depth exhaustion in wolfSSL_X509_verify_cert()",
+      "summary": "CVE ID :CVE-2026-11999\n  \nPublished : June 25, 2026, 4:56 p.m. | 42 minutes ago\n  \nDescription :X.509 trust-chain bypass (path-depth exhaustion) in the OpenSSL compatibility certificate verifier (wolfSSL_X509_verify_cert()). This affects only builds with --enable-opensslextra whose application calls X509_verify_cert() with caller-supplied untrusted intermediates; for those users it is critical, otherwise the library is unaffected. Native wolfSSL TLS/DTLS usage is not impacted. X509_verify_cert() returned success based only on the last verified link rather than on reaching a trust anchor: when the supplied chain is deeper than the verifier's maximum path depth (default 100), path building runs out of depth while still walking untrusted intermediates and the chain is accepted even though it never reaches a configured trust anchor, allowing acceptance of an attacker-controlled certificate. The default TLS handshake (WOLFSSL_VERIFY_PEER) is not affected; only applications doing manual or deferred verification through this API are.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-11999\n  \nPublished : June 25, 2026, 4:56 p.m. | 42 minutes ago\n  \nDescription :X.509 trust-chain bypass (path-depth exhaustion) in the OpenSSL compatibility certificate verifier (wolfSSL_X509_verify_cert()). This affects only builds with --enable-opensslextra whose application calls X509_verify_cert() with caller-supplied untrusted intermediates; for those users it is critical, otherwise the library is unaffected. Native wolfSSL TLS/DTLS usage is not impacted. X509_verify_cert() returned success based only on the last verified link rather than on reaching a trust anchor: when the supplied chain is deeper than the verifier's maximum path depth (default 100), path building runs out of depth while still walking untrusted intermediates and the chain is accepted even though it never reaches a configured trust anchor, allowing acceptance of an attacker-controlled certificate. The default TLS handshake (WOLFSSL_VERIFY_PEER) is not affected; only applications doing manual or deferred verification through this API are.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-11999 - WolfSSL_X509_verify_cert()의 경로 깊이 고갈을 통한 X.509 신뢰 체인 우회",
+      "summary_ko": "CVE ID:CVE-2026-11999\n  \n게시일 : 2026년 6월 25일 오후 4시 56분 | 42분 전\n  \n설명: OpenSSL 호환성 인증서 검증기(wolfSSL_X509_verify_cert())에서 X.509 신뢰 체인 우회(경로 깊이 고갈). 이는 애플리케이션이 호출자 제공 신뢰할 수 없는 중간 항목을 사용하여 X509_verify_cert()를 호출하는 --enable-opensslextra를 사용하는 빌드에만 영향을 미칩니다. 해당 사용자에게는 이것이 중요합니다. 그렇지 않으면 라이브러리가 영향을 받지 않습니다. 기본 WolfSSL TLS/DTLS 사용은 영향을 받지 않습니다. X509_verify_cert()는 트러스트 앵커에 도달하지 않고 마지막으로 확인된 링크만을 기반으로 성공을 반환했습니다. 제공된 체인이 검증자의 최대 경로 깊이(기본값 100)보다 깊을 경우 경로 구축은 신뢰할 수 없는 중간 경로를 계속 이동하는 동안 깊이가 부족해지며 체인은 구성된 트러스트 앵커에 도달하지 않더라도 허용되므로 공격자가 제어하는 ​​인증서를 수락할 수 있습니다. 기본 TLS 핸드셰이크(WOLFSSL_VERIFY_PEER)는 영향을 받지 않습니다. 이 API를 통해 수동 또는 지연 확인을 수행하는 애플리케이션만 해당됩니다.\n  \n심각도: 8.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-11999\n2. 26.06.26 오전1:56\n3. X.509 trust-chain bypass (path-depth exhaustion) i",
+      "cve_id": "CVE-2026-11999",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11999",
+      "source": "cvefeed",
+      "published": "2026-06-26T01:56:14+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-6291 - Bleichenbacher padding oracle in PKCS#7 KTRI RSA PKCS#1 v1.5 decryption",
+      "summary": "CVE ID :CVE-2026-6291\n  \nPublished : June 25, 2026, 4:41 p.m. | 57 minutes ago\n  \nDescription :Bleichenbacher padding oracle in PKCS#7 KTRI decryption. When decrypting PKCS#7 EnvelopedData using RSA PKCS#1 v1.5 key transport, wolfSSL returned distinguishable error codes depending on whether RSA padding validation failed versus whether the decrypted content was malformed. An attacker able to submit crafted EnvelopedData messages and observe error responses could use this as a padding oracle to incrementally recover the encrypted Content Encryption Key (CEK). The fix generates a deterministic pseudo-random fake CEK on padding failure (via HMAC-SHA256) and proceeds with decryption identically, using constant-time operations throughout, so that all failure paths produce the same error regardless of padding validity.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-6291\n  \nPublished : June 25, 2026, 4:41 p.m. | 57 minutes ago\n  \nDescription :Bleichenbacher padding oracle in PKCS#7 KTRI decryption. When decrypting PKCS#7 EnvelopedData using RSA PKCS#1 v1.5 key transport, wolfSSL returned distinguishable error codes depending on whether RSA padding validation failed versus whether the decrypted content was malformed. An attacker able to submit crafted EnvelopedData messages and observe error responses could use this as a padding oracle to incrementally recover the encrypted Content Encryption Key (CEK). The fix generates a deterministic pseudo-random fake CEK on padding failure (via HMAC-SHA256) and proceeds with decryption identically, using constant-time operations throughout, so that all failure paths produce the same error regardless of padding validity.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-6291 - PKCS#7 KTRI RSA PKCS#1 v1.5 암호 해독의 Bleichenbacher 패딩 오라클",
+      "summary_ko": "CVE ID:CVE-2026-6291\n  \n게시일 : 2026년 6월 25일 오후 4시 41분 | 57분 전\n  \n설명 :PKCS#7 KTRI 암호 해독의 Bleichenbacher 패딩 오라클입니다. RSA PKCS#1 v1.5 키 전송을 사용하여 PKCS#7 EnvelopedData를 해독할 때, WolfSSL은 RSA 패딩 검증이 실패했는지 여부와 해독된 콘텐츠의 형식이 잘못되었는지 여부에 따라 구별 가능한 오류 코드를 반환했습니다. 조작된 EnvelopedData 메시지를 제출하고 오류 응답을 관찰할 수 있는 공격자는 이를 패딩 ​​오라클로 사용하여 암호화된 CEK(콘텐츠 암호화 키)를 점진적으로 복구할 수 있습니다. 수정 사항은 패딩 실패 시(HMAC-SHA256을 통해) 결정론적 의사 난수 가짜 CEK를 생성하고 전체적으로 상수 시간 작업을 사용하여 동일하게 암호 해독을 진행하므로 모든 실패 경로에서 패딩 유효성에 관계없이 동일한 오류가 생성됩니다.\n  \n심각도: 6.0 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-6291\n2. 26.06.26 오전1:41\n3. Bleichenbacher padding oracle in PKCS#7 KTRI decry",
+      "cve_id": "CVE-2026-6291",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6291",
+      "source": "cvefeed",
+      "published": "2026-06-26T01:41:42+09:00",
+      "lang": "de"
+    },
     {
       "title": "CVE-2026-9099 - Keycloak: group-admin escalation to realm-admin",
       "summary": "CVE ID :CVE-2026-9099\n  \nPublished : June 25, 2026, 4:16 p.m. | 43 minutes ago\n  \nDescription :A flaw was found in Keycloak. A missing authorization check in the GroupResource.addChild() endpoint within the Admin REST API allows an authenticated user with limited administrative privileges to reparent any existing group. When Fine-Grained Admin Permissions v2 (FGAPv2) is enabled, an attacker with management rights over a single low-privilege group can reparent a highly privileged group (such as one possessing the realm-admin role) under their managed group.\n\nBecause group permissions follow a hierarchical structure, this action unauthorizedly grants the attacker management and password-reset capabilities over the members of the targeted privileged group. An attacker can exploit this to reset an administrator's password, compromise the account, and achieve a full realm takeover, leading to a complete compromise of confidentiality, integrity, and availability.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
