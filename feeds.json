@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-26T08:01:48.471201+09:00",
+  "fetched_at": "2026-06-26T08:31:29.442673+09:00",
   "security_news": [
+    {
+      "title": "\"주민번호 털린 것보다 더 끔찍\"…티빙 해킹 '최악'인 이유",
+      "summary": "온라인동영상서비스(OTT) 티빙에서 1900만 명 규모의 대규모 개인정보 유출 사고가 발생했다. 특히 이번에 유출된 정보에는 아이디와 비밀번호뿐만 아니라 인터넷 공간에서 ‘온라인 주민등록번호’ 역할을 하는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 티빙 OTT 1900만 명 개인정보 대량 유출\n2. 아이디·비밀번호·온라인 주민등록번호 포함\n3. 온라인 주민번호 유출로 보안 위험 최고 수준",
+      "link": "https://n.news.naver.com/mnews/article/015/0005303051?sid=105",
+      "source": "naver",
+      "published": "2026-06-26T08:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "접속하자마자 41억 원 증발… 폴리마켓 피싱 기습에 전 세계 개미들 전...",
       "summary": "25일(현지 시각) 가상자산 업계에 따르면, 유명 온체인 애널리스트 스펙터는 최근 최소 11개의 폴리마켓 사용자 계정이 악성 해킹 세력에 의해 유출돼 총 294만 달러 상당의 자산이 탈취됐다는 조사 결과를 보고했다. 수사...",
@@ -2868,45 +2880,24 @@
       "source": "dailysecu",
       "published": "2026-06-23T08:42:18+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[아이온의 AI:온] \"상상만 하면 돼\"…생각이 곧 명령인 시대",
-      "summary": "다만 인간의 뇌 신호를 수집하고 분석하는 만큼 개인정보 보호와 해킹, 오작동에 대한 우려도 함께 제기됩니다. 키보드에서 터치로, 터치에서 음성으로, 그리고 이제는 생각으로. AI 시대, 인간과 기계를 연결하는 방식이 또...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Aion의 AI:On, 뇌파 수집·분석 기술 도입\n2. 개인정보 유출 및 해킹 우려 제기\n3. 인간-기계 연결 방식 확장에 따른 보안 리스크 증가",
-      "link": "https://n.news.naver.com/mnews/article/448/0000621574?sid=101",
-      "source": "naver",
-      "published": "2026-06-23T08:29:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "오픈AI, 사이버 방어 '데이브레이크' 확대…취약점 탐지부터 패치까지 ...",
-      "summary": "모질라(Mozilla)는 국제 해킹대회 폰투온 베를린(Pwn2Own Berlin)을 이틀 앞두고 해당 취약점을 수정했다. 한국 등 정부기관과 핵심 인프라 보호 협력 오픈AI는 사이버 공격 능력이 강화된 AI 모델의 등장에 대비해 미국...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 오픈AI, AI 기반 사이버 방어 '데이브레이크' 확대\n2. 모질라, 폰투온 베를린 앞두고 취약점 수정 완료\n3. 한국 정부기관 등 핵심 인프라 보호 협력 강화",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207269",
-      "source": "naver",
-      "published": "2026-06-23T08:28:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "'휴대폰 안면인증 개통' 7월 시행 촉각…실효성 논란 속 혼란 불가피",
-      "summary": "지난해 발생한 통신사 해킹 사고 등으로 개인정보 보안에 대한 불신이 높아진 상황에서 민감한 생체 정보를 제공해야 한다는 점에 우려를 표하고 있다. 더 큰 문제는 안면인증에 실패했을 때 이를 보완할 대체 인증 체계의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 휴대폰 안면인증 개통 7월 시행 예정\n2. 개인정보 불신 속 생체 정보 제공 우려\n3. 대체 인증 체계 미흡 시 혼란 불가피",
-      "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=360859",
-      "source": "naver",
-      "published": "2026-06-23T08:20:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-40080 - Cacti: Open Redirect via HTTP_REFERER substring check in auth_login_redirect",
+      "summary": "CVE ID :CVE-2026-40080\n  \nPublished : June 25, 2026, 10:29 p.m. | 55 minutes ago\n  \nDescription :Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior are vulnerable to Open Redirect through a substring check rather than a host check at str_contains($referer, CACTI_PATH_URL). When the user's login_opts == '1' (redirect to referer after login), the function used $_SERVER['HTTP_REFERER'] directly.  An attacker could craft a referer such as https://evil.com/cacti/. Where CACTI_PATH_URL is /cacti/, the substring matches and the user is redirected to evil.com after login. The pre-existing validate_redirect_url() helper at lib/html_utility.php performed proper validation but was not invoked from auth_login_redirect(). This issue has been fixed in version 1.2.31.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-40080\n  \nPublished : June 25, 2026, 10:29 p.m. | 55 minutes ago\n  \nDescription :Cacti is an open source performance and fault management framework. Versions 1.2.30 and prior are vulnerable to Open Redirect through a substring check rather than a host check at str_contains($referer, CACTI_PATH_URL). When the user's login_opts == '1' (redirect to referer after login), the function used $_SERVER['HTTP_REFERER'] directly.  An attacker could craft a referer such as https://evil.com/cacti/. Where CACTI_PATH_URL is /cacti/, the substring matches and the user is redirected to evil.com after login. The pre-existing validate_redirect_url() helper at lib/html_utility.php performed proper validation but was not invoked from auth_login_redirect(). This issue has been fixed in version 1.2.31.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-40080 - Cacti: auth_login_redirect의 HTTP_REFERER 하위 문자열 검사를 통한 오픈 리디렉션",
+      "summary_ko": "CVE ID:CVE-2026-40080\n  \n게시일 : 2026년 6월 25일 오후 10시 29분 | 55분 전\n  \n설명:Cacti는 오픈 소스 성능 및 오류 관리 프레임워크입니다. 버전 1.2.30 및 이전 버전은 str_contains($referer, CACTI_PATH_URL)에서 호스트 확인이 아닌 하위 문자열 확인을 통한 Open Redirect에 취약합니다. 사용자의 login_opts == '1'(로그인 후 리퍼러로 리디렉션)인 경우 함수는 $_SERVER['HTTP_REFERER']를 직접 사용했습니다.  공격자는 https://evil.com/cacti/와 같은 리퍼러를 만들 수 있습니다. CACTI_PATH_URL이 /cacti/인 경우 하위 문자열이 일치하고 사용자는 로그인 후 evil.com으로 리디렉션됩니다. lib/html_utility.php에 있는 기존의 verify_redirect_url() 도우미가 적절한 유효성 검사를 수행했지만 auth_login_redirect()에서 호출되지 않았습니다. 이 문제는 버전 1.2.31에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-40080\n2. 26.06.26 오전7:29\n3. Cacti is an open source performance and fault mana",
+      "cve_id": "CVE-2026-40080",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-40080",
+      "source": "cvefeed",
+      "published": "2026-06-26T07:29:51+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-10512 - X25519 x86_64 assembly final reduction leaves non-canonical field element",
       "summary": "CVE ID :CVE-2026-10512\n  \nPublished : June 25, 2026, 7:58 p.m. | 1 hour, 11 minutes ago\n  \nDescription :The X25519 x86_64 assembly implementation fails to clear the most significant bit during the final modular reduction, so the computed result may not be fully reduced modulo the field prime 2^255 - 19. This can leave the field element in a non-canonical form, producing an incorrect result from the scalar multiplication and potentially a wrong shared secret. The final carry-propagation chains in the x64 and AVX2 reduction routines could overflow into the top bit, and the high limb was not masked afterward, so the 255-bit field element was left non-canonical.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
