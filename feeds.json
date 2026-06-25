@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-26T06:32:39.737596+09:00",
+  "fetched_at": "2026-06-26T07:03:34.803606+09:00",
   "security_news": [
+    {
+      "title": "위태로운 K게임 보안 성적표, 정보보호 투자는 '제각각'",
+      "summary": "보안 위협 및 개인정보 유출 사고가 지속되는 가운데 국내 주요 게임사들의 보안 리스크 관리가 핵심 경영 과제로 떠올랐다. 지난해 넥슨 '블루아카이브' 콘텐츠전송네트워크(CDN)에 대한 해킹 공격 및 위메이드...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 위태로운 K게임 보안 성적표, 정보보호 투자는 '제각각' 보안 위협 및 개인정보 유출 사고\n2. 지난해 넥슨 '블루아카이브' 콘텐츠전송네트워크(CDN)에 대한 해킹 공격 및 위메이드...",
+      "link": "https://n.news.naver.com/mnews/article/417/0001149082?sid=105",
+      "source": "naver",
+      "published": "2026-06-26T06:30:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "다윗과 골리앗…전관 앞세운 SKT·쿠팡 vs '일당백' 개보위",
       "summary": "개인정보위는 올해 6월 쿠팡이 기본적인 보안관리 체계를 제대로 갖추지 않아 약 3755만명의 개인정보가 유출됐다고 결론 내렸다. 개인정보보호법 시행 이후 최대 규모인 6246억원의 과징금을 부과했다. 쿠팡은 법무법인...",
@@ -2892,18 +2904,6 @@
       "source": "naver",
       "published": "2026-06-23T07:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'디지털 헬스케어법' 첫발 뗐지만…'데이터 활용' 확대 찬반 팽팽",
-      "summary": "시민사회단체가 제기한 개인정보 유출 우려에 대해서는 \"해킹 문제는 보건의료정보뿐 아니라 금융정보와... 이어 \"현재 운영 중인 건강정보 고속도로는 지금까지 단 한 차례의 해킹 사고도 발생하지 않았고 보안 수준 역시...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 디지털 헬스케어법, 데이터 활용 확대에 찬반 팽팽\n2. 시민단체, 개인정보 유출 우려 제기\n3. 건강정보 고속도로, 해킹 사고 0건 보안 수준 안전",
-      "link": "http://www.docdocdoc.co.kr/news/articleView.html?idxno=3040271",
-      "source": "naver",
-      "published": "2026-06-23T06:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3850,21 +3850,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-54236",
       "source": "cvefeed",
       "published": "2026-06-23T07:09:15+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53923 - vLLM GGUF Kernels: int64_t to int truncation of tensor dimensions causes GPU buffer overflow",
-      "summary": "CVE ID :CVE-2026-53923\n  \nPublished : June 22, 2026, 9:55 p.m. | 5 hours, 12 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models (LLMs). From 0.5.5 until 0.23.1rc0, integer truncation of tensor dimensions in vLLM's GGUF dequantize kernels (csrc/quantization/gguf/gguf_kernel.cu) causes partial tensor processing. The output tensor is allocated at full size via torch::empty (uninitialized memory), but the dequantize CUDA kernel processes only a truncated number of elements. The unfilled portion of the output tensor retains whatever was previously in GPU memory. In multi-tenant inference deployments, this residual GPU memory may contain tensor data from other users' inference requests, constituting information disclosure. This vulnerability is fixed in 0.23.1rc0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53923\n  \nPublished : June 22, 2026, 9:55 p.m. | 5 hours, 12 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models (LLMs). From 0.5.5 until 0.23.1rc0, integer truncation of tensor dimensions in vLLM's GGUF dequantize kernels (csrc/quantization/gguf/gguf_kernel.cu) causes partial tensor processing. The output tensor is allocated at full size via torch::empty (uninitialized memory), but the dequantize CUDA kernel processes only a truncated number of elements. The unfilled portion of the output tensor retains whatever was previously in GPU memory. In multi-tenant inference deployments, this residual GPU memory may contain tensor data from other users' inference requests, constituting information disclosure. This vulnerability is fixed in 0.23.1rc0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53923 - vLLM GGUF 커널: int64_t에서 int로의 텐서 크기 잘림으로 인해 GPU 버퍼 오버플로 발생",
-      "summary_ko": "CVE ID:CVE-2026-53923\n  \n게시일 : 2026년 6월 22일 오후 9시 55분 | 5시간, 12분 전\n  \n설명 :vLLM은 LLM(대형 언어 모델)을 위한 추론 및 제공 엔진입니다. 0.5.5부터 0.23.1rc0까지 vLLM의 GGUF 역양자화 커널(csrc/퀀트화/gguf/gguf_kernel.cu)에서 텐서 차원의 정수 잘림으로 인해 부분 텐서 처리가 발생합니다. 출력 텐서는 torch::empty(초기화되지 않은 메모리)를 통해 전체 크기로 할당되지만, 역양자화 CUDA 커널은 잘린 수의 요소만 처리합니다. 출력 텐서의 채워지지 않은 부분은 이전에 GPU 메모리에 있던 내용을 유지합니다. 다중 테넌트 추론 배포에서 이 잔여 GPU 메모리에는 정보 공개를 구성하는 다른 사용자의 추론 요청에서 얻은 텐서 데이터가 포함될 수 있습니다. 이 취약점은 0.23.1rc0에서 수정되었습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53923\n2. 26.06.23 오전6:55\n3. vLLM is an inference and serving engine for large ",
-      "cve_id": "CVE-2026-53923",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53923",
-      "source": "cvefeed",
-      "published": "2026-06-23T06:55:42+09:00",
       "lang": "en"
     }
   ],
