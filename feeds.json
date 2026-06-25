@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-26T02:02:58.547559+09:00",
+  "fetched_at": "2026-06-26T02:33:09.685641+09:00",
   "security_news": [
     {
       "title": "정부 청년 창업플랫폼 개인정보·아이디어 보안 절차 누락",
@@ -3076,6 +3076,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-9099 - Keycloak: group-admin escalation to realm-admin",
+      "summary": "CVE ID :CVE-2026-9099\n  \nPublished : June 25, 2026, 4:16 p.m. | 43 minutes ago\n  \nDescription :A flaw was found in Keycloak. A missing authorization check in the GroupResource.addChild() endpoint within the Admin REST API allows an authenticated user with limited administrative privileges to reparent any existing group. When Fine-Grained Admin Permissions v2 (FGAPv2) is enabled, an attacker with management rights over a single low-privilege group can reparent a highly privileged group (such as one possessing the realm-admin role) under their managed group.\n\nBecause group permissions follow a hierarchical structure, this action unauthorizedly grants the attacker management and password-reset capabilities over the members of the targeted privileged group. An attacker can exploit this to reset an administrator's password, compromise the account, and achieve a full realm takeover, leading to a complete compromise of confidentiality, integrity, and availability.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-9099\n  \nPublished : June 25, 2026, 4:16 p.m. | 43 minutes ago\n  \nDescription :A flaw was found in Keycloak. A missing authorization check in the GroupResource.addChild() endpoint within the Admin REST API allows an authenticated user with limited administrative privileges to reparent any existing group. When Fine-Grained Admin Permissions v2 (FGAPv2) is enabled, an attacker with management rights over a single low-privilege group can reparent a highly privileged group (such as one possessing the realm-admin role) under their managed group.\n\nBecause group permissions follow a hierarchical structure, this action unauthorizedly grants the attacker management and password-reset capabilities over the members of the targeted privileged group. An attacker can exploit this to reset an administrator's password, compromise the account, and achieve a full realm takeover, leading to a complete compromise of confidentiality, integrity, and availability.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-9099 - Keycloak: 그룹 관리자가 영역 관리자로 에스컬레이션됩니다.",
+      "summary_ko": "CVE ID:CVE-2026-9099\n  \n게시일 : 2026년 6월 25일 오후 4시 16분 | 43분 전\n  \n설명 : Keycloak에서 결함이 발견되었습니다. Admin REST API 내의 GroupResource.addChild() 엔드포인트에 누락된 권한 부여 확인을 통해 제한된 관리 권한을 가진 인증된 사용자가 기존 그룹의 상위를 다시 지정할 수 있습니다. FGAPv2(Fine-Grained Admin Permissions v2)가 활성화되면 단일 낮은 권한 그룹에 대한 관리 권한을 가진 공격자는 관리되는 그룹에서 높은 권한을 가진 그룹(예: 영역 관리자 역할을 소유한 그룹)의 상위를 다시 지정할 수 있습니다.\n\n그룹 권한은 계층 구조를 따르기 때문에 이 작업은 대상 권한 그룹의 구성원에 대해 공격자 관리 및 암호 재설정 기능을 무단으로 부여합니다. 공격자는 이를 악용하여 관리자의 비밀번호를 재설정하고, 계정을 손상시키고, 전체 영역을 장악하여 기밀성, 무결성 및 가용성을 완전히 손상시킬 수 있습니다.\n  \n심각도: 7.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-9099\n2. 26.06.26 오전1:16\n3. A flaw was found in Keycloak. A missing authorizat",
+      "cve_id": "CVE-2026-9099",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9099",
+      "source": "cvefeed",
+      "published": "2026-06-26T01:16:43+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-49319 - Alps Electric Co., Ltd. R53R0 Remote Keyless Entry System (RKES) Replay Attack",
       "summary": "CVE ID :CVE-2026-49319\n  \nPublished : June 25, 2026, 2:11 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Remote Keyless Entry System (RKES), using the 433 MHz key fob bearing FCC ID CWTR53R0 manufactured by ALPS ALPINE CO., LTD., is vulnerable to a roll-back attack against its rolling-code authentication. \n\n\n\nAn attacker within RF range who records two consecutive lock or unlock transmissions from a legitimate key fob can later replay the same pair of transmissions repeatedly. During testing, replaying the first captured transmission caused the RKES to enter a state in which replaying the second captured transmission resulted in a successful lock or unlock operation of the vehicle. Tested and confirmed on a 2024 Suzuki Swift (SWIFT ISG GLS AC 1.2 5P 4x2 TM).\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-49319\n  \nPublished : June 25, 2026, 2:11 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Remote Keyless Entry System (RKES), using the 433 MHz key fob bearing FCC ID CWTR53R0 manufactured by ALPS ALPINE CO., LTD., is vulnerable to a roll-back attack against its rolling-code authentication. \n\n\n\nAn attacker within RF range who records two consecutive lock or unlock transmissions from a legitimate key fob can later replay the same pair of transmissions repeatedly. During testing, replaying the first captured transmission caused the RKES to enter a state in which replaying the second captured transmission resulted in a successful lock or unlock operation of the vehicle. Tested and confirmed on a 2024 Suzuki Swift (SWIFT ISG GLS AC 1.2 5P 4x2 TM).\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3973,36 +3988,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48512",
       "source": "cvefeed",
       "published": "2026-06-23T06:14:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54293 - NLTK: URL-Encoded Path Traversal in nltk.data.load() Allows Arbitrary Local File Read",
-      "summary": "CVE ID :CVE-2026-54293\n  \nPublished : June 22, 2026, 5:25 p.m. | 1 hour, 59 minutes ago\n  \nDescription :NLTK (Natural Language Toolkit) is a suite of open source Python modules, data sets, and tutorials supporting research and development in Natural Language Processing. Prior to 3.10.0-rc1, nltk.data.load() in NLTK is vulnerable to path traversal via URL-encoded path separators and traversal segments when using the nltk: URL scheme. The unsafe-path regex check is performed before url2pathname() decodes the %xx sequences (a classic decode-after-check / TOCTOU-style flaw), allowing an attacker to bypass the protection documented in NLTK's SECURITY.md and read arbitrary files from the filesystem. While literal traversal strings such as ../../../etc/passwd are correctly blocked, encoded variants such as %2fetc%2fpasswd, %2e%2e%2f..., and ..%2f..%2f slip past the regex and are subsequently decoded into a real filesystem path. This vulnerability is fixed in 3.10.0-rc1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54293\n  \nPublished : June 22, 2026, 5:25 p.m. | 1 hour, 59 minutes ago\n  \nDescription :NLTK (Natural Language Toolkit) is a suite of open source Python modules, data sets, and tutorials supporting research and development in Natural Language Processing. Prior to 3.10.0-rc1, nltk.data.load() in NLTK is vulnerable to path traversal via URL-encoded path separators and traversal segments when using the nltk: URL scheme. The unsafe-path regex check is performed before url2pathname() decodes the %xx sequences (a classic decode-after-check / TOCTOU-style flaw), allowing an attacker to bypass the protection documented in NLTK's SECURITY.md and read arbitrary files from the filesystem. While literal traversal strings such as ../../../etc/passwd are correctly blocked, encoded variants such as %2fetc%2fpasswd, %2e%2e%2f..., and ..%2f..%2f slip past the regex and are subsequently decoded into a real filesystem path. This vulnerability is fixed in 3.10.0-rc1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54293 - NLTK: nltk.data.load()의 URL 인코딩 경로 탐색으로 인해 임의 로컬 파일 읽기가 허용됩니다.",
-      "summary_ko": "CVE ID:CVE-2026-54293\n  \n게시일 : 2026년 6월 22일 오후 5시 25분 | 1시간 59분 전\n  \n설명 :NLTK(Natural Language Toolkit)는 자연어 처리에 대한 연구 및 개발을 지원하는 오픈 소스 Python 모듈, 데이터 세트 및 튜토리얼 제품군입니다. 3.10.0-rc1 이전에는 NLTK의 nltk.data.load()가 nltk: URL 체계를 사용할 때 URL 인코딩된 경로 구분 기호 및 순회 세그먼트를 통한 경로 순회에 취약했습니다. 안전하지 않은 경로 정규식 검사는 url2pathname()이 %xx 시퀀스(전형적인 검사 후 디코딩/TOCTOU 스타일 결함)를 디코딩하기 전에 수행되어 공격자가 NLTK의 SECURITY.md에 문서화된 보호를 우회하고 파일 시스템에서 임의의 파일을 읽을 수 있도록 합니다. ../../../etc/passwd와 같은 리터럴 순회 문자열은 올바르게 차단되지만 %2fetc%2fpasswd, %2e%2e%2f... 및 ..%2f..%2f와 같은 인코딩된 변형은 정규식을 빠져나가 실제 파일 시스템 경로로 디코딩됩니다. 이 취약점은 3.10.0-rc1에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54293\n2. 26.06.23 오전2:25\n3. NLTK (Natural Language Toolkit) is a suite of open",
-      "cve_id": "CVE-2026-54293",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54293",
-      "source": "cvefeed",
-      "published": "2026-06-23T02:25:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54289 - Hono: Lambda@Edge adapter keeps only the last value of a repeated request header, dropping the rest",
-      "summary": "CVE ID :CVE-2026-54289\n  \nPublished : June 22, 2026, 5:16 p.m. | 20 minutes ago\n  \nDescription :Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.25, on AWS Lambda@Edge, CloudFront delivers a request header that appears more than once as several separate entries. The adapter writes each value with Headers.set instead of Headers.append, so every value overwrites the previous one and only the last reaches the application. Repeated request headers such as X-Forwarded-For, Forwarded, and Via are silently truncated to a single value. Request middleware sees only the last value of a repeated header instead of the full chain. For applications that base access control on the X-Forwarded-For chain, this can weaken or alter that decision; for auditing, hop history is lost. This vulnerability is fixed in 4.12.25.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54289\n  \nPublished : June 22, 2026, 5:16 p.m. | 20 minutes ago\n  \nDescription :Hono is a Web application framework that provides support for any JavaScript runtime. Prior to 4.12.25, on AWS Lambda@Edge, CloudFront delivers a request header that appears more than once as several separate entries. The adapter writes each value with Headers.set instead of Headers.append, so every value overwrites the previous one and only the last reaches the application. Repeated request headers such as X-Forwarded-For, Forwarded, and Via are silently truncated to a single value. Request middleware sees only the last value of a repeated header instead of the full chain. For applications that base access control on the X-Forwarded-For chain, this can weaken or alter that decision; for auditing, hop history is lost. This vulnerability is fixed in 4.12.25.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54289 - Hono: Lambda@Edge 어댑터는 반복되는 요청 헤더의 마지막 값만 유지하고 나머지는 삭제합니다.",
-      "summary_ko": "CVE ID:CVE-2026-54289\n  \n게시일 : 2026년 6월 22일 오후 5시 16분 | 20분 전\n  \n설명 :Hono는 모든 JavaScript 런타임을 지원하는 웹 애플리케이션 프레임워크입니다. 4.12.25 이전에는 AWS Lambda@Edge에서 CloudFront가 여러 개의 개별 항목으로 두 번 이상 나타나는 요청 헤더를 전달했습니다. 어댑터는 Headers.append 대신 Headers.set을 사용하여 각 값을 작성하므로 모든 값이 이전 값을 덮어쓰고 마지막 값만 애플리케이션에 도달합니다. X-Forwarded-For, Forwarded 및 Via와 같은 반복되는 요청 헤더는 자동으로 단일 값으로 잘립니다. 요청 미들웨어는 전체 체인 대신 반복되는 헤더의 마지막 값만 봅니다. X-Forwarded-For 체인에 대한 액세스 제어를 기반으로 하는 애플리케이션의 경우 이로 인해 해당 결정이 약화되거나 변경될 수 있습니다. 감사를 위해 홉 기록이 손실됩니다. 이 취약점은 4.12.25에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54289\n2. 26.06.23 오전2:16\n3. Hono is a Web application framework that provides ",
-      "cve_id": "CVE-2026-54289",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54289",
-      "source": "cvefeed",
-      "published": "2026-06-23T02:16:58+09:00",
       "lang": "en"
     }
   ],
