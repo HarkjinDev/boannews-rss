@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-26T07:03:34.803606+09:00",
+  "fetched_at": "2026-06-26T07:32:50.261704+09:00",
   "security_news": [
+    {
+      "title": "[세계의 창] 美 앤트로픽 최첨단 모델 금지 조치가 세계에 의미하는 것",
+      "summary": "사이버보안 스타트업을 상상해 보라. 수천㎞ 떨어진 곳에서 내려진 지정학적 결정 때문에 이러한 역량에... 당국자들은 최첨단 AI 시스템이 소프트웨어 취약점 식별과 고급 사이버보안 연구 수행을 도울 수 있으며 적절한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [세계의 창] 美 앤트로픽 최첨단 모델 금지 조치가 세계에 의미하는 것 사이버보안 스타트업\n2. 수천㎞ 떨어진 곳에서 내려진 지정학적 결정 때문에 이러한 역량에...\n3. 당국자들은 최첨단 AI 시스템이 소프트웨어 취약점 식별과 고급 사이버보안 연구 수행을 도울",
+      "link": "https://www.newscj.com/news/articleView.html?idxno=3411289",
+      "source": "naver",
+      "published": "2026-06-26T07:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "위태로운 K게임 보안 성적표, 정보보호 투자는 '제각각'",
       "summary": "보안 위협 및 개인정보 유출 사고가 지속되는 가운데 국내 주요 게임사들의 보안 리스크 관리가 핵심 경영 과제로 떠올랐다. 지난해 넥슨 '블루아카이브' 콘텐츠전송네트워크(CDN)에 대한 해킹 공격 및 위메이드...",
@@ -2880,33 +2892,24 @@
       "source": "bleepingcomputer",
       "published": "2026-06-23T07:42:21+09:00",
       "lang": "en"
-    },
-    {
-      "title": "정부·여당, 의료AI 활성화 속 디지털헬스케어법 추진…“해킹·재식별...",
-      "summary": "해킹 우려에 “어디가 안전한가”…현장서 “위험한 인식” 질타 최 과장은 시민사회가 제기한 정보 유출과 해킹 우려에 대해 “해킹에 대해서 어디가 안전한가라고 역으로 말씀드릴 수 있을 것 같다”며 “물론 해킹을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 의료 AI 활성화 속 디지털헬스케어법 추진\n2. 정보 유출·해킹 우려에도 법안 추진 강행\n3. 시민사회, \"위험한 인식\" 질타하며 우려 제기",
-      "link": "https://www.medigatenews.com/news/3054822163",
-      "source": "naver",
-      "published": "2026-06-23T07:18:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "롯데카드 해킹 9개월 만에 결론 '눈앞'… 금융권 책임 기준 세워질까",
-      "summary": "대규모 고객 정보 유출 이후 금융권에서는 외부 사이버 공격으로 발생한 사고에서 금융회사의 책임 범위를 어디까지 볼 것인지를 두고 논의가 이어져 왔다. 이번 금융위원회의 결정은 제재 수위와 함께 금융권 보안 사고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 롯데카드 해킹, 9개월 만에 결론 임박\n2. 대규모 고객 정보 유출, 금융권 책임 기준 논의\n3. 금융위, 제재 수위 결정으로 보안 사고 영향 범위 제시",
-      "link": "http://www.economytalk.kr/news/articleView.html?idxno=422123",
-      "source": "naver",
-      "published": "2026-06-23T07:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-10512 - X25519 x86_64 assembly final reduction leaves non-canonical field element",
+      "summary": "CVE ID :CVE-2026-10512\n  \nPublished : June 25, 2026, 7:58 p.m. | 1 hour, 11 minutes ago\n  \nDescription :The X25519 x86_64 assembly implementation fails to clear the most significant bit during the final modular reduction, so the computed result may not be fully reduced modulo the field prime 2^255 - 19. This can leave the field element in a non-canonical form, producing an incorrect result from the scalar multiplication and potentially a wrong shared secret. The final carry-propagation chains in the x64 and AVX2 reduction routines could overflow into the top bit, and the high limb was not masked afterward, so the 255-bit field element was left non-canonical.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10512\n  \nPublished : June 25, 2026, 7:58 p.m. | 1 hour, 11 minutes ago\n  \nDescription :The X25519 x86_64 assembly implementation fails to clear the most significant bit during the final modular reduction, so the computed result may not be fully reduced modulo the field prime 2^255 - 19. This can leave the field element in a non-canonical form, producing an incorrect result from the scalar multiplication and potentially a wrong shared secret. The final carry-propagation chains in the x64 and AVX2 reduction routines could overflow into the top bit, and the high limb was not masked afterward, so the 255-bit field element was left non-canonical.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10512 - X25519 x86_64 어셈블리 최종 축소로 비정규 필드 요소가 남음",
+      "summary_ko": "CVE ID:CVE-2026-10512\n  \n게시일 : 2026년 6월 25일 오후 7시 58분 | 1시간 11분 전\n  \n설명: X25519 x86_64 어셈블리 구현은 최종 모듈식 축소 중에 가장 중요한 비트를 지우지 못하므로 계산된 결과가 필드 소수 2^255 - 19의 모듈로 완전히 축소되지 않을 수 있습니다. 이로 인해 필드 요소가 비정규 형식으로 남게 되어 스칼라 곱셈에서 잘못된 결과가 생성되고 잠재적으로 잘못된 공유 비밀이 생성될 수 있습니다. x64 및 AVX2 감소 루틴의 최종 캐리 전파 체인은 최상위 비트로 오버플로될 수 있으며 높은 부분은 나중에 마스크되지 않았으므로 255비트 필드 요소는 비표준으로 남겨졌습니다.\n  \n심각도: 2.3 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10512\n2. 26.06.26 오전4:58\n3. The X25519 x86_64 assembly implementation fails to",
+      "cve_id": "CVE-2026-10512",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10512",
+      "source": "cvefeed",
+      "published": "2026-06-26T04:58:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-4930 - DPA Countermeasures weakening on Series 3 devices",
       "summary": "CVE ID :CVE-2026-4930\n  \nPublished : June 25, 2026, 6:39 p.m. | 21 minutes ago\n  \nDescription :SYMCRYPTO is the SiXG301's host side hardware engine accessed by PSA crypto library that accelerates symmetric cryptographic operations (AES encryption/decryption and hashing).\n\n\nDPA Countermeasures on SYMCRYPTO can be weakened (reduced entropy) by forcing certain seed values if an attacker gains code execution capability on the impacted device.\n\n  *  Therefore, the keys loaded on SYMCRYPTO may be more vulnerable to extraction through DPA attacks than intended\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3835,21 +3838,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10658",
       "source": "cvefeed",
       "published": "2026-06-23T08:58:47+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54236 - vLLM: incomplete CVE-2026-22778 fix leaks PIL repr addresses via Anthropic router",
-      "summary": "CVE ID :CVE-2026-54236\n  \nPublished : June 22, 2026, 10:09 p.m. | 1 hour, 15 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, the fix for CVE-2026-22778, which introduced a sanitize_message helper that strips object-repr memory addresses from error messages before they reach the client, is incomplete: several response paths echo str(exc) directly to clients without calling sanitize_message. The unsanitized sites include the Anthropic API router in vllm/entrypoints/anthropic/api_router.py (the POST /v1/messages and POST /v1/messages/count_tokens handlers), the Server-Sent Events streaming converter in vllm/entrypoints/anthropic/serving.py, and the realtime speech-to-text WebSocket in vllm/entrypoints/speech_to_text/realtime/connection.py. These paths catch the exception inside the route coroutine and construct the JSONResponse themselves, bypassing the sanitizing global FastAPI exception handler, and WebSocket frames do not traverse that handler chain at all. Using the same primitive as the parent issue, an unauthenticated attacker can send malformed image bytes through the Anthropic Messages API image content parts so that PIL.Image.open raises an UnidentifiedImageError whose message contains the BytesIO object repr, leaking the heap memory address verbatim in the error.message field of the response body. This vulnerability is fixed in 0.23.1rc0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54236\n  \nPublished : June 22, 2026, 10:09 p.m. | 1 hour, 15 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.23.1rc0, the fix for CVE-2026-22778, which introduced a sanitize_message helper that strips object-repr memory addresses from error messages before they reach the client, is incomplete: several response paths echo str(exc) directly to clients without calling sanitize_message. The unsanitized sites include the Anthropic API router in vllm/entrypoints/anthropic/api_router.py (the POST /v1/messages and POST /v1/messages/count_tokens handlers), the Server-Sent Events streaming converter in vllm/entrypoints/anthropic/serving.py, and the realtime speech-to-text WebSocket in vllm/entrypoints/speech_to_text/realtime/connection.py. These paths catch the exception inside the route coroutine and construct the JSONResponse themselves, bypassing the sanitizing global FastAPI exception handler, and WebSocket frames do not traverse that handler chain at all. Using the same primitive as the parent issue, an unauthenticated attacker can send malformed image bytes through the Anthropic Messages API image content parts so that PIL.Image.open raises an UnidentifiedImageError whose message contains the BytesIO object repr, leaking the heap memory address verbatim in the error.message field of the response body. This vulnerability is fixed in 0.23.1rc0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54236 - vLLM: 불완전한 CVE-2026-22778 수정으로 인해 Anthropic 라우터를 통해 PIL 담당자 주소가 유출됩니다.",
-      "summary_ko": "CVE ID:CVE-2026-54236\n  \n게시일 : 2026년 6월 22일 오후 10시 9분 | 1시간, 15분 전\n  \n설명 :vLLM은 LLM(대형 언어 모델)을 위한 추론 및 제공 엔진입니다. 0.23.1rc0 이전에는 오류 메시지가 클라이언트에 도달하기 전에 object-repr 메모리 주소를 제거하는 sanitize_message 도우미를 도입한 CVE-2026-22778에 대한 수정 사항이 불완전합니다. 여러 응답 경로는 sanitize_message를 호출하지 않고 클라이언트에 직접 str(exc)을 표시합니다. 정리되지 않은 사이트에는 vllm/entrypoints/anthropic/api_router.py의 Anthropic API 라우터(POST /v1/messages 및 POST /v1/messages/count_tokens 핸들러), vllm/entrypoints/anthropic/serving.py의 서버 전송 이벤트 스트리밍 변환기, 실시간 음성-텍스트 WebSocket이 포함됩니다. vllm/entrypoints/speech_to_text/realtime/connection.py. 이러한 경로는 경로 코루틴 내부에서 예외를 포착하고 JSONResponse 자체를 생성하여 삭제된 글로벌 FastAPI 예외 핸들러를 우회하며 WebSocket 프레임은 해당 핸들러 체인을 전혀 통과하지 않습니다. 인증되지 않은 공격자는 상위 문제와 동일한 프리미티브를 사용하여 Anthropic Messages API 이미지 콘텐츠 부분을 통해 잘못된 형식의 이미지 바이트를 보낼 수 있으므로 PIL.Image.open은 메시지에 BytesIO 개체 표현이 포함된 UnidentifiedImageError를 발생시켜 응답 본문의 error.message 필드에서 힙 메모리 주소를 그대로 유출합니다. 이 취약점은 0.23.1rc0에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54236\n2. 26.06.23 오전7:09\n3. vLLM is an inference and serving engine for large ",
-      "cve_id": "CVE-2026-54236",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54236",
-      "source": "cvefeed",
-      "published": "2026-06-23T07:09:15+09:00",
       "lang": "en"
     }
   ],
