@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-25T09:34:21.465993+09:00",
+  "fetched_at": "2026-06-25T10:01:13.930081+09:00",
   "security_news": [
     {
       "title": "중국 360, 美 앤트로픽 대항 AI 보안 도구 발표",
@@ -3468,45 +3468,24 @@
       "source": "naver",
       "published": "2026-06-22T10:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[사랑의 AI 인문학] AI 주권보다 AI 협상력이다",
-      "summary": "고성능 AI 모델은 해킹, 사이버공격, 보안기술 유출, 군사적 활용과 연결될 수 있다. 기술을 가진 국가는 접근권을 통제할 수 있고, 기술을 쓰는 국가는 어느 날 갑자기 문이 닫히는 상황을 맞을 수 있다. 실제로...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 고성능 AI는 해킹, 사이버 공격, 군사 활용에 악용될 수 있다.\n2. AI 기술 소유국은 접근권을 통제하여, 비소유국은 갑작스러운 서비스 중단을 겪을 수 있다.\n3. AI 주권보다 AI 협상력 확보가 중요하며, 기술 격차 심화 우려가 있다.",
-      "link": "https://www.ilovepc.co.kr/news/articleView.html?idxno=59780",
-      "source": "naver",
-      "published": "2026-06-22T10:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "한성숙, 중기부 '모두의 창업' 정보유출 논란에 \"책임 통감… 긴급 보안...",
-      "summary": "창업' 프로젝트 합격자 5천명의 개인정보가 유출됐다는 소식을 전했다. 조사 결과 외부 공격이 아닌 해당 프로젝트의 참가자를 지원하는 업체로 참여한 기업이 해킹당한 것으로 나타났다. 안재민 로이슈 기자",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중기부 '모두의 창업' 프로젝트, 합격자 5천명 정보 유출\n2. 참가자 지원 업체 해킹, 개인정보 외부 유출\n3. 한성숙, 책임 통감하며 긴급 보안 점검 지시",
-      "link": "http://www.lawissue.co.kr/view.php?ud=202606220952449477b3279dfb36_12",
-      "source": "naver",
-      "published": "2026-06-22T09:56:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "진화하는 자동차 사이버 위협, 사이버보안 통합 관리 플랫폼으로 해결",
-      "summary": "실제로 2015년 해외에서는 주행 중인 차량을 원격으로 해킹해 제동과 조향을 제어하는 시연이 이뤄졌고, 이로 인해 약 140만 대가 리콜되는 사건이 발생했다. 이는 사이버보안이 곧 안전의 문제임을 보여준 상징적...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 2015년 해외 자동차 원격 해킹으로 140만 대 리콜 발생\n2. 제동·조향 시스템 원격 조작 시연으로 사이버보안 중요성 부각\n3. 자동차 안전 문제로 부상, 통합 관리 플랫폼 필요성 강조",
-      "link": "http://www.engjournal.co.kr/news/articleView.html?idxno=3838",
-      "source": "naver",
-      "published": "2026-06-22T09:42:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "What do Ports Hear When Nobody's Listening? An Assessment of Automated Cybercrime [Guest Diary], (Wed, Jun 24th)",
+      "summary": "[This is a Guest Diary by Nicole Phillips, an ISC intern as part of the SANS.edu BACS program]\r",
+      "description": "[This is a Guest Diary by Nicole Phillips, an ISC intern as part of the SANS.edu BACS program]\r",
+      "title_ko": "아무도 듣지 않을 때 포트는 무엇을 듣나요? 자동화된 사이버 범죄 평가 [게스트 다이어리], (6.24(수))",
+      "summary_ko": "[SANS.edu BACS 프로그램의 일환으로 ISC 인턴인 Nicole Phillips의 게스트 일기입니다.]",
+      "summary_3lines": "1. What do Ports Hear When Nobody's Listening? An Ass\n2. SANS_ISC\n3. [This is a Guest Diary by Nicole Phillips, an ISC ",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33104",
+      "source": "sans_isc",
+      "published": "2026-06-25T09:39:08+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-10642 - Unbounded TX busy-loop DoS in Zephyr PL011 UART driver under CTS hardware flow control",
       "summary": "CVE ID :CVE-2026-10642\n  \nPublished : June 24, 2026, 9:32 p.m. | 2 hours, 6 minutes ago\n  \nDescription :The Zephyr PL011 UART driver (drivers/serial/uart_pl011.c) contains an unbounded software loop in pl011_irq_tx_enable() that repeatedly invokes the interrupt-driven application callback while the TX interrupt mask bit (PL011_IMSC_TXIM) is set, to work around the controller's level-transition TX-interrupt behavior. When CTS hardware flow control is enabled (devicetree hw-flow-control or runtime UART_CFG_FLOW_CTRL_RTS_CTS) and the wired serial peer de-asserts CTS, the controller stops draining the TX FIFO; pl011_fifo_fill() then returns 0 on every call while the application still has pending data and therefore never disables the TX interrupt. The loop condition never clears, so the thread that called uart_irq_tx_enable() (e.g. h4_send() in the Bluetooth HCI H4 driver) spins indefinitely, hanging the executing context and stalling the transport — a denial of service (CWE-835). An attacker controlling the device attached to the UART's CTS line can trigger the hang by withholding CTS during transmission. Impact is availability only; there is no memory-safety, confidentiality, or integrity consequence. The vulnerable loop was introduced in commit b783bc8448ef (Feb 2025) and shipped in releases v4.1.0 through v4.4.0. The fix breaks out of the loop when CTS is blocking and arms the CTS modem-status interrupt to resume transmission when CTS re-asserts.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
