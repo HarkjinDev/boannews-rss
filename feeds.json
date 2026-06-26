@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-27T03:31:19.366463+09:00",
+  "fetched_at": "2026-06-27T04:01:14.213001+09:00",
   "security_news": [
     {
       "title": "트럼프 저격수 볼턴, 기밀유출 유죄 인정",
@@ -3394,21 +3394,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-11820",
       "source": "cvefeed",
       "published": "2026-06-24T04:53:19+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55249 - @rtk-ai/rtk-rewrite: OpenClaw Rewrite Plugin Command Injection via execSync Template String",
-      "summary": "CVE ID :CVE-2026-55249\n  \nPublished : June 23, 2026, 6:33 p.m. | 50 minutes ago\n  \nDescription :@rtk-ai/rtk-rewrite transparently rewrites shell commands executed via OpenClaw's exec tool to their RTK equivalents. In 1.0.0, the @rtk-ai/rtk-rewrite OpenClaw plugin passes attacker-controlled input directly into a shell-backed execSync() template string without shell-safe escaping. JSON.stringify() wraps the value in double quotes and escapes inner double-quotes and backslashes, but leaves $() and backtick shell metacharacters untouched. Because execSync delegates execution to /bin/sh -c, the shell expands $(...) substitutions even inside double-quoted strings, causing the injected subcommand to execute before rtk is invoked. An attacker who can influence the exec tool's command parameter (e.g., via an LLM agent prompt or gateway/tool-call input) achieves arbitrary OS command execution with the privileges of the plugin/gateway process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55249\n  \nPublished : June 23, 2026, 6:33 p.m. | 50 minutes ago\n  \nDescription :@rtk-ai/rtk-rewrite transparently rewrites shell commands executed via OpenClaw's exec tool to their RTK equivalents. In 1.0.0, the @rtk-ai/rtk-rewrite OpenClaw plugin passes attacker-controlled input directly into a shell-backed execSync() template string without shell-safe escaping. JSON.stringify() wraps the value in double quotes and escapes inner double-quotes and backslashes, but leaves $() and backtick shell metacharacters untouched. Because execSync delegates execution to /bin/sh -c, the shell expands $(...) substitutions even inside double-quoted strings, causing the injected subcommand to execute before rtk is invoked. An attacker who can influence the exec tool's command parameter (e.g., via an LLM agent prompt or gateway/tool-call input) achieves arbitrary OS command execution with the privileges of the plugin/gateway process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-55249\n  \n게시일 : 2026년 6월 23일 오후 6시 33분 | 50분 전\n  \nDescription :@rtk-ai/rtk-rewrite transparently rewrites shell commands executed via OpenClaw's exec tool to their RTK equivalents. In 1.0.0, the @rtk-ai/rtk-rewrite OpenClaw plugin passes attacker-controlled input directly into a shell-backed execSync() template string without shell-safe escaping. JSON.stringify() wraps the value in double quotes and escapes inner double-quotes and backslashes, but leaves $() and backtick shell metacharacters untouched. Because execSync delegates execution to /bin/sh -c, the shell expands $(...) substitutions even inside double-quoted strings, causing the injected subcommand to execute before rtk is invoked. An attacker who can influence the exec tool's command parameter (e.g., via an LLM agent prompt or gateway/tool-call input) achieves arbitrary OS command execution with the privileges of the plugin/gateway process.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-55249\n2. 26.06.24 오전3:33\n3. @rtk-ai/rtk-rewrite transparently rewrites shell c",
-      "cve_id": "CVE-2026-55249",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55249",
-      "source": "cvefeed",
-      "published": "2026-06-24T03:33:46+09:00",
       "lang": "en"
     }
   ],
