@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-27T04:01:14.213001+09:00",
+  "fetched_at": "2026-06-27T04:31:17.230724+09:00",
   "security_news": [
     {
       "title": "트럼프 저격수 볼턴, 기밀유출 유죄 인정",
@@ -2451,6 +2451,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-48090 - Envoy HTTP: OAuth2 filter late async token completion after stream teardown (UAF / crash risk)",
+      "summary": "CVE ID :CVE-2026-48090\n  \nPublished : June 26, 2026, 6:03 p.m. | 1 hour, 6 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. From 1.37.0 until 1.37.5 and 1.38.3, the HTTP OAuth2 filter (envoy.filters.http.oauth2) can leave an in-flight async token exchange attached to a downstream stream that has already been torn down. A late AsyncClient completion can still invoke OAuth2Filter methods that use StreamDecoderFilterCallbacks after that object’s lifetime has ended, causing undefined behavior, worker crashes (availability loss), and use-after-free / invalid-vptr failures under AddressSanitizer. This is a memory-safety / lifetime issue in the data plane, not a trivial config bug. Remote code execution is not claimed here; the primary demonstrated impact is DoS via crash and UB; any further impact would be deployment- and allocator-dependent.  This vulnerability is fixed in 1.37.5 and 1.38.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-48090\n  \nPublished : June 26, 2026, 6:03 p.m. | 1 hour, 6 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. From 1.37.0 until 1.37.5 and 1.38.3, the HTTP OAuth2 filter (envoy.filters.http.oauth2) can leave an in-flight async token exchange attached to a downstream stream that has already been torn down. A late AsyncClient completion can still invoke OAuth2Filter methods that use StreamDecoderFilterCallbacks after that object’s lifetime has ended, causing undefined behavior, worker crashes (availability loss), and use-after-free / invalid-vptr failures under AddressSanitizer. This is a memory-safety / lifetime issue in the data plane, not a trivial config bug. Remote code execution is not claimed here; the primary demonstrated impact is DoS via crash and UB; any further impact would be deployment- and allocator-dependent.  This vulnerability is fixed in 1.37.5 and 1.38.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-48090 - Envoy HTTP: 스트림 분해 후 OAuth2 필터 지연 비동기 토큰 완료(UAF/충돌 위험)",
+      "summary_ko": "CVE ID:CVE-2026-48090\n  \n게시일 : 2026년 6월 26일 오후 6시 03분 | 1시간, 6분 전\n  \n설명:Envoy는 클라우드 네이티브 애플리케이션용으로 설계된 오픈 소스 에지 및 서비스 프록시입니다. 1.37.0부터 1.37.5 및 1.38.3까지 HTTP OAuth2 필터(envoy.filters.http.oauth2)는 이미 제거된 다운스트림 스트림에 연결된 진행 중인 비동기 토큰 교환을 남겨 둘 수 있습니다. 늦은 AsyncClient 완료는 해당 개체의 수명이 종료된 후에도 StreamDecoderFilterCallbacks를 사용하는 OAuth2Filter 메서드를 계속 호출하여 정의되지 않은 동작, 작업자 충돌(가용성 손실) 및 AddressSanitizer에서 use-after-free/invalid-vptr 오류를 일으킬 수 있습니다. 이는 사소한 구성 버그가 아닌 데이터 플레인의 메모리 안전성/수명 문제입니다. 원격 코드 실행은 여기에서 주장되지 않습니다. 입증된 주요 영향은 충돌 및 UB를 통한 DoS입니다. 추가 영향은 배포 및 할당자에 따라 다릅니다.  이 취약점은 1.37.5 및 1.38.3에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-48090\n2. 26.06.27 오전3:03\n3. Envoy is an open source edge and service proxy des",
+      "cve_id": "CVE-2026-48090",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48090",
+      "source": "cvefeed",
+      "published": "2026-06-27T03:03:05+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-55441 - mise: Arbitrary command execution via task-include files in an untrusted, config-less repository",
       "summary": "CVE ID :CVE-2026-55441\n  \nPublished : June 26, 2026, 4:48 p.m. | 51 minutes ago\n  \nDescription :mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.6.4, mise's trust feature gates config files (mise.toml, .tool-versions) through trust_check, but task-include files are loaded on a path that never reaches it. When a directory has a task-include dir (mise-tasks/, .mise/tasks/, …) but no config file, mise falls back to the default includes and renders each task's tera fields — and that tera environment has exec() registered. A {{ exec(command='…') }} in any rendered field runs arbitrary commands the moment the tasks are merely listed. There's no config file to gate on, so no trust prompt ever appears. Read-only commands trigger it: mise tasks, mise task ls, mise run, mise tasks --usage (the query shell completion runs on Tab). The victim only has to cd into a cloned repo and list or tab-complete a task. This vulnerability is fixed in 2026.6.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
