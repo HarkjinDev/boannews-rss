@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-27T05:31:12.359421+09:00",
+  "fetched_at": "2026-06-27T06:01:13.049389+09:00",
   "security_news": [
     {
       "title": "트럼프 저격수 볼턴, 기밀유출 유죄 인정",
@@ -2376,18 +2376,6 @@
       "source": "naver",
       "published": "2026-06-24T06:11:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[단독] 청렴서약서 썼는데…참가팀 부사장 출신이 심사위원 [의혹의 군...",
-      "summary": "국가 수사 기관의 사이버 보안 자문위원들은 P사가 지난 2024년 북한이 배후로 있는 해커 그룹인 'APT37'의 피싱 공격(스피어 피싱)으로 대북 정보 수집 작전과 임무를 수행하는 중고도 정찰용 무인기(MUAV) 핵심 기술들이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 2024년 P사, 북한 APT37 피싱 공격으로 MUAV 핵심 기술 유출\n2. 대북 정보 수집 작전 관련 무인기 기술 스피어피싱 공격으로 유출\n3. 국가 수사 기관 자문위원 포함, 작전 수행 기술 노출로 보안 위협 확대",
-      "link": "https://n.news.naver.com/mnews/article/215/0001256376?sid=101",
-      "source": "naver",
-      "published": "2026-06-24T06:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3349,36 +3337,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-47693",
       "source": "cvefeed",
       "published": "2026-06-24T07:07:25+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54512 - jackson-databind: PolymorphicTypeValidator bypass via generic type parameters allows arbitrary class instantiation",
-      "summary": "CVE ID :CVE-2026-54512\n  \nPublished : June 23, 2026, 8:56 p.m. | 27 minutes ago\n  \nDescription :jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.10.0 until 2.18.8, 2.21.4, and 3.1.4, jackson-databind's PolymorphicTypeValidator (PTV) is the primary safety mechanism guarding polymorphic deserialization. When polymorphic typing is enabled and a type identifier contains generic parameters (i.e. the type ID string contains <), DatabindContext._resolveAndValidateGeneric() validates only the raw container class name (the substring before <) against the configured PTV. If the container type is approved, the method parses the full canonical type string via TypeFactory.constructFromCanonical() and returns the fully parameterized type without ever validating the nested type arguments against the PTV. The nested type arguments are then resolved, instantiated, and populated as beans during deserialization. An attacker who controls the type ID can therefore place a denied class as a generic type parameter of an allowed container — for example java.util.ArrayList when only java.util.ArrayList is allow-listed. The container passes the PTV check; com.evil.Gadget is loaded via Class.forName(name, true, loader), instantiated, and its properties are set from attacker-controlled JSON. This completely bypasses an explicitly configured PTV allow-list. This vulnerability is fixed in 2.18.8, 2.21.4, and 3.1.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54512\n  \nPublished : June 23, 2026, 8:56 p.m. | 27 minutes ago\n  \nDescription :jackson-databind contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor. From 2.10.0 until 2.18.8, 2.21.4, and 3.1.4, jackson-databind's PolymorphicTypeValidator (PTV) is the primary safety mechanism guarding polymorphic deserialization. When polymorphic typing is enabled and a type identifier contains generic parameters (i.e. the type ID string contains <), DatabindContext._resolveAndValidateGeneric() validates only the raw container class name (the substring before <) against the configured PTV. If the container type is approved, the method parses the full canonical type string via TypeFactory.constructFromCanonical() and returns the fully parameterized type without ever validating the nested type arguments against the PTV. The nested type arguments are then resolved, instantiated, and populated as beans during deserialization. An attacker who controls the type ID can therefore place a denied class as a generic type parameter of an allowed container — for example java.util.ArrayList when only java.util.ArrayList is allow-listed. The container passes the PTV check; com.evil.Gadget is loaded via Class.forName(name, true, loader), instantiated, and its properties are set from attacker-controlled JSON. This completely bypasses an explicitly configured PTV allow-list. This vulnerability is fixed in 2.18.8, 2.21.4, and 3.1.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54512 - jackson-databind: 일반 유형 매개변수를 통한 PolymorphicTypeValidator 우회로 임의 클래스 인스턴스화 허용",
-      "summary_ko": "CVE ID:CVE-2026-54512\n  \n게시일 : 2026년 6월 23일 오후 8시 56분 | 27분 전\n  \n설명 :jackson-databind에는 Jackson 데이터 프로세서용 범용 데이터 바인딩 기능과 트리 모델이 포함되어 있습니다. 2.10.0부터 2.18.8, 2.21.4 및 3.1.4까지 jackson-databind의 PTV(PolymorphicTypeValidator)는 다형성 역직렬화를 보호하는 기본 안전 메커니즘입니다. 다형성 유형 지정이 활성화되고 유형 식별자에 일반 매개 변수가 포함된 경우(예: 유형 ID 문자열에 <가 포함됨) DatabindContext._resolveAndValidateGeneric()는 구성된 PTV에 대해 원시 컨테이너 클래스 이름(< 앞의 하위 문자열)만 유효성을 검사합니다. 컨테이너 유형이 승인되면 메서드는 TypeFactory.constructFromCanonical()을 통해 전체 표준 유형 문자열을 구문 분석하고 PTV에 대해 중첩 유형 인수의 유효성을 검사하지 않고 완전히 매개 변수화된 유형을 반환합니다. 그런 다음 중첩된 유형 인수는 역직렬화 중에 Bean으로 확인되고 인스턴스화되고 채워집니다. 따라서 유형 ID를 제어하는 ​​공격자는 거부된 클래스를 허용된 컨테이너의 일반 유형 매개변수로 배치할 수 있습니다. 예를 들어 java.util.ArrayList만 허용 목록에 있는 경우 java.util.ArrayList입니다. 컨테이너가 PTV 검사를 통과했습니다. com.evil.Gadget은 Class.forName(name, true, loader)을 통해 로드되고 인스턴스화되며 해당 속성은 공격자가 제어하는 ​​JSON에서 설정됩니다. 이는 명시적으로 구성된 PTV 허용 목록을 완전히 우회합니다. 이 취약점은 2.18.8, 2.21.4 및 3.1.4에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54512\n2. 26.06.24 오전5:56\n3. jackson-databind contains the general-purpose data",
-      "cve_id": "CVE-2026-54512",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54512",
-      "source": "cvefeed",
-      "published": "2026-06-24T05:56:36+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46552 - NocoDB: Shared-base link access can invite arbitrary users as persistent base members",
-      "summary": "CVE ID :CVE-2026-46552\n  \nPublished : June 23, 2026, 8:38 p.m. | 2 hours, 59 minutes ago\n  \nDescription :NocoDB is software for building databases as spreadsheets. Prior to 2026.04.1, shared-base sessions were granted the same base-member capabilities as authenticated viewers. Using only the shared-base UUID (xc-shared-base-id), an attacker could enumerate base members and invite an arbitrary email into the base as a real member. The invited user could then redeem the invite via the normal signup flow and retain authenticated access even after the owner revoked the shared link. Shared-base sessions were mapped to ProjectRoles.VIEWER in packages/nocodb/src/strategies/base-view.strategy/base-view.strategy.ts, and packages/nocodb/src/utils/acl.ts granted baseUserList and userInvite to that role. The shared frontend (packages/nc-gui/composables/useApi/interceptors.ts) deliberately removed auth headers in favour of the shared-base header, but the ACL middleware did not distinguish shared sessions from genuine viewers. This vulnerability is fixed in 2026.04.1.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-46552\n  \nPublished : June 23, 2026, 8:38 p.m. | 2 hours, 59 minutes ago\n  \nDescription :NocoDB is software for building databases as spreadsheets. Prior to 2026.04.1, shared-base sessions were granted the same base-member capabilities as authenticated viewers. Using only the shared-base UUID (xc-shared-base-id), an attacker could enumerate base members and invite an arbitrary email into the base as a real member. The invited user could then redeem the invite via the normal signup flow and retain authenticated access even after the owner revoked the shared link. Shared-base sessions were mapped to ProjectRoles.VIEWER in packages/nocodb/src/strategies/base-view.strategy/base-view.strategy.ts, and packages/nocodb/src/utils/acl.ts granted baseUserList and userInvite to that role. The shared frontend (packages/nc-gui/composables/useApi/interceptors.ts) deliberately removed auth headers in favour of the shared-base header, but the ACL middleware did not distinguish shared sessions from genuine viewers. This vulnerability is fixed in 2026.04.1.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46552 - NocoDB: 공유 기반 링크 액세스는 임의의 사용자를 영구 기본 구성원으로 초대할 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-46552\n  \n게시일 : 2026년 6월 23일 오후 8시 38분 | 2시간 59분 전\n  \n설명:NocoDB는 데이터베이스를 스프레드시트로 구축하기 위한 소프트웨어입니다. 2026.04.1 이전에는 공유 기반 세션에 인증된 뷰어와 동일한 기본 구성원 기능이 부여되었습니다. 공격자는 공유 기반 UUID(xc-shared-base-id)만 사용하여 기본 구성원을 열거하고 임의의 이메일을 기본 구성원으로 기본 구성원으로 초대할 수 있습니다. 그러면 초대된 사용자는 일반적인 가입 절차를 통해 초대를 사용할 수 있으며 소유자가 공유 링크를 취소한 후에도 인증된 액세스 권한을 유지할 수 있습니다. 공유 기반 세션은 packages/nocodb/src/strategies/base-view.strategy/base-view.strategy.ts의 ProjectRoles.VIEWER에 매핑되었으며 packages/nocodb/src/utils/acl.ts에는 해당 역할에 baseUserList 및 userInvite가 부여되었습니다. 공유 프런트엔드(packages/nc-gui/composables/useApi/interceptors.ts)는 공유 기반 헤더를 위해 의도적으로 인증 헤더를 제거했지만 ACL 미들웨어는 공유 세션과 실제 뷰어를 구별하지 못했습니다. 이 취약점은 2026.04.1에서 수정되었습니다.\n  \n심각도: 5.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46552\n2. 26.06.24 오전5:38\n3. NocoDB is software for building databases as sprea",
-      "cve_id": "CVE-2026-46552",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46552",
-      "source": "cvefeed",
-      "published": "2026-06-24T05:38:29+09:00",
       "lang": "en"
     }
   ],
