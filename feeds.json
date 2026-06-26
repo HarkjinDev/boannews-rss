@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-27T05:01:13.606096+09:00",
+  "fetched_at": "2026-06-27T05:31:12.359421+09:00",
   "security_news": [
     {
       "title": "트럼프 저격수 볼턴, 기밀유출 유죄 인정",
@@ -2388,18 +2388,6 @@
       "source": "naver",
       "published": "2026-06-24T06:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "강서시장 도매법인 해킹에 마비",
-      "summary": "사회적으로 디지털 보안에 대한 관심이 높아지는 가운데 공영 농산물도매시장도 예외가 아닌 것으로 드러난... 서울시공사는 12일 ‘랜섬웨어 감염 확산에 따른 보안점검 권고’라는 제목의 긴급 공문을 가락·강서 시장...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. \"강서시장 도매법인 해킹에 마비, 서울시공사 긴급 공문 발송\" – 34 characters\n2. \"랜섬웨어 감염 확산으로 보안점검 권고 공문 발송\" – 28 characters",
-      "link": "https://n.news.naver.com/mnews/article/662/0000098108?sid=101",
-      "source": "naver",
-      "published": "2026-06-24T05:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2419,6 +2407,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-52783 - OpenProject: Information Disclosure (cleartext storage of data) on localhost through memcached via Others \"storage..httpx_access_token\" leads to Sensitive Data Exposure",
+      "summary": "CVE ID :CVE-2026-52783\n  \nPublished : June 26, 2026, 6:57 p.m. | 41 minutes ago\n  \nDescription :OpenProject is open-source, web-based project management software. Prior to 17.3.3 and 17.4.1, OpenProject's Storages module writes the OneDrive/SharePoint userless OAuth access_token plaintext to Rails.cache under the deterministic key storage..httpx_access_token, repopulated continuously by an hourly cron and every userless-OAuth call site (see Write cadence). None of the three allowed cache backends (file_store, memcache, redis) encrypts at rest. An attacker with read access to the cache backend recovers the Azure-AD application-tier bearer with an anonymous get over the memcached binary protocol (or the equivalent against Redis). This vulnerability is fixed in 17.3.3 and 17.4.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-52783\n  \nPublished : June 26, 2026, 6:57 p.m. | 41 minutes ago\n  \nDescription :OpenProject is open-source, web-based project management software. Prior to 17.3.3 and 17.4.1, OpenProject's Storages module writes the OneDrive/SharePoint userless OAuth access_token plaintext to Rails.cache under the deterministic key storage..httpx_access_token, repopulated continuously by an hourly cron and every userless-OAuth call site (see Write cadence). None of the three allowed cache backends (file_store, memcache, redis) encrypts at rest. An attacker with read access to the cache backend recovers the Azure-AD application-tier bearer with an anonymous get over the memcached binary protocol (or the equivalent against Redis). This vulnerability is fixed in 17.3.3 and 17.4.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-52783 - OpenProject: 기타 \"storage..httpx_access_token\"을 통한 memcached를 통한 localhost의 정보 공개(데이터의 일반 텍스트 저장)로 인해 민감한 데이터 노출이 발생함",
+      "summary_ko": "CVE ID:CVE-2026-52783\n  \n게시일 : 2026년 6월 26일 오후 6시 57분 | 41분 전\n  \n설명 :OpenProject는 오픈 소스, 웹 기반 프로젝트 관리 소프트웨어입니다. 17.3.3 및 17.4.1 이전에는 OpenProject의 저장소 모듈이 결정적 키 저장소..httpx_access_token 아래의 Rails.cache에 OneDrive/SharePoint 사용자 없는 OAuth access_token 일반 텍스트를 기록하며, 시간별 cron 및 모든 사용자 없는 OAuth 호출 사이트에 의해 지속적으로 다시 채워집니다(쓰기 흐름 참조). 허용되는 세 가지 캐시 백엔드(file_store, memcache, redis) 중 어느 것도 유휴 상태에서 암호화되지 않습니다. 캐시 백엔드에 대한 읽기 액세스 권한이 있는 공격자는 memcached 바이너리 프로토콜(또는 Redis와 동등한 프로토콜)을 통해 익명 가져오기를 사용하여 Azure-AD 애플리케이션 계층 전달자를 복구합니다. 이 취약점은 17.3.3 및 17.4.1에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-52783\n2. 26.06.27 오전3:57\n3. OpenProject is open-source, web-based project mana",
+      "cve_id": "CVE-2026-52783",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-52783",
+      "source": "cvefeed",
+      "published": "2026-06-27T03:57:58+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-48090 - Envoy HTTP: OAuth2 filter late async token completion after stream teardown (UAF / crash risk)",
       "summary": "CVE ID :CVE-2026-48090\n  \nPublished : June 26, 2026, 6:03 p.m. | 1 hour, 6 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. From 1.37.0 until 1.37.5 and 1.38.3, the HTTP OAuth2 filter (envoy.filters.http.oauth2) can leave an in-flight async token exchange attached to a downstream stream that has already been torn down. A late AsyncClient completion can still invoke OAuth2Filter methods that use StreamDecoderFilterCallbacks after that object’s lifetime has ended, causing undefined behavior, worker crashes (availability loss), and use-after-free / invalid-vptr failures under AddressSanitizer. This is a memory-safety / lifetime issue in the data plane, not a trivial config bug. Remote code execution is not claimed here; the primary demonstrated impact is DoS via crash and UB; any further impact would be deployment- and allocator-dependent.  This vulnerability is fixed in 1.37.5 and 1.38.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-48090\n  \nPublished : June 26, 2026, 6:03 p.m. | 1 hour, 6 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. From 1.37.0 until 1.37.5 and 1.38.3, the HTTP OAuth2 filter (envoy.filters.http.oauth2) can leave an in-flight async token exchange attached to a downstream stream that has already been torn down. A late AsyncClient completion can still invoke OAuth2Filter methods that use StreamDecoderFilterCallbacks after that object’s lifetime has ended, causing undefined behavior, worker crashes (availability loss), and use-after-free / invalid-vptr failures under AddressSanitizer. This is a memory-safety / lifetime issue in the data plane, not a trivial config bug. Remote code execution is not claimed here; the primary demonstrated impact is DoS via crash and UB; any further impact would be deployment- and allocator-dependent.  This vulnerability is fixed in 1.37.5 and 1.38.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2431,6 +2434,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48090",
       "source": "cvefeed",
       "published": "2026-06-27T03:03:05+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-47778 - Envoy: Embedded NUL in TLS DNS SAN Truncation in the Default TLS Certificate Validator. (Auth Bypass)",
+      "summary": "CVE ID :CVE-2026-47778\n  \nPublished : June 26, 2026, 5:27 p.m. | 2 hours, 11 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, a structural flaw was identified in DefaultCertValidator::verifySubjectAltName where the extracted DNS SAN string is cast to a C-style string using .c_str() before being passed to the Utility::dnsNameMatch() algorithm. If the attacker serves a certificate with a dNSName SAN containing an embedded NUL byte, the helper Utility::generalNameAsString captures the complete string including the NUL. However, when .c_str() evaluates it, implicit conversion to absl::string_view inside dnsNameMatch relies on strlen(), prematurely truncating the evaluation context. Envoy evaluates trucated string against the exact required config_san match and returns true, thereby successfully validating the string with the Nul byte for an upstream routing. This vulnerability is fixed in 1.35.11, 1.36.7, 1.37.3, and 1.38.1.\n  \nSeverity: 4.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-47778\n  \nPublished : June 26, 2026, 5:27 p.m. | 2 hours, 11 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, a structural flaw was identified in DefaultCertValidator::verifySubjectAltName where the extracted DNS SAN string is cast to a C-style string using .c_str() before being passed to the Utility::dnsNameMatch() algorithm. If the attacker serves a certificate with a dNSName SAN containing an embedded NUL byte, the helper Utility::generalNameAsString captures the complete string including the NUL. However, when .c_str() evaluates it, implicit conversion to absl::string_view inside dnsNameMatch relies on strlen(), prematurely truncating the evaluation context. Envoy evaluates trucated string against the exact required config_san match and returns true, thereby successfully validating the string with the Nul byte for an upstream routing. This vulnerability is fixed in 1.35.11, 1.36.7, 1.37.3, and 1.38.1.\n  \nSeverity: 4.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-47778 - Envoy: 기본 TLS 인증서 유효성 검사기의 TLS DNS SAN 잘림에 NUL이 포함되어 있습니다. (인증 우회)",
+      "summary_ko": "CVE ID:CVE-2026-47778\n  \n게시일 : 2026년 6월 26일 오후 5시 27분 | 2시간 11분 전\n  \n설명:Envoy는 클라우드 네이티브 애플리케이션용으로 설계된 오픈 소스 에지 및 서비스 프록시입니다. 1.35.11, 1.36.7, 1.37.3 및 1.38.1 이전에는 추출된 DNS SAN 문자열이 Utility::dnsNameMatch() 알고리즘에 전달되기 전에 .c_str()을 사용하여 C 스타일 문자열로 캐스팅되는 DefaultCertValidator::verifySubjectAltName에서 구조적 결함이 식별되었습니다. 공격자가 내장된 NUL 바이트가 포함된 dNSName SAN이 있는 인증서를 제공하는 경우 도우미 Utility::generalNameAsString은 NUL을 포함한 전체 문자열을 캡처합니다. 그러나 .c_str()이 이를 평가할 때 dnsNameMatch 내에서 absl::string_view로의 암시적 변환은 strlen()에 의존하여 평가 컨텍스트를 조기에 자릅니다. Envoy는 정확히 필요한 config_san 일치 항목에 대해 잘린 문자열을 평가하고 true를 반환하여 업스트림 라우팅을 위해 Nul 바이트로 문자열을 성공적으로 검증합니다. 이 취약점은 1.35.11, 1.36.7, 1.37.3 및 1.38.1에서 수정되었습니다.\n  \n심각도: 4.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-47778\n2. 26.06.27 오전2:27\n3. Envoy is an open source edge and service proxy des",
+      "cve_id": "CVE-2026-47778",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47778",
+      "source": "cvefeed",
+      "published": "2026-06-27T02:27:57+09:00",
       "lang": "en"
     },
     {
