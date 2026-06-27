@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-27T12:33:24.070765+09:00",
+  "fetched_at": "2026-06-27T13:02:27.757077+09:00",
   "security_news": [
     {
       "title": "미국, 월드컵 불법 스트리밍 도메인 400개 압수",
@@ -3043,21 +3043,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-9178",
       "source": "cvefeed",
       "published": "2026-06-24T14:33:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12851 - GeoVision GV-I/O Box 4E libNetSetObj.so OS command injection vulnerability",
-      "summary": "CVE ID :CVE-2026-12851\n  \nPublished : June 24, 2026, 3:40 a.m. | 1 hour, 28 minutes ago\n  \nDescription :Multiple OS command injection vulnerabilities exist in the libNetSetObj.so functionality of GeoVision GV-I/O Box 4E 2.09. A specially crafted network packet can lead to command execution. An attacker can send a network request to trigger this vulnerability.\n\n\n`libNetSetObj.so` is an internal library used by various binaries on the device to configure the network stack (start and stop various services, configure IP, Netmask, gateway, dns, etc.)\n\n\n#### CNetSetObj::m_F_n_Set_DNS_Addr command injection\n\nThe following function can take up to two addresses, performs no sanitization and then calls `system`. This is a classic command injection vulnerability. The function is reachable from both the network-exposed `DVRSearch` service and the `Network.cgi` endpoint. \n\n\n\n    int __fastcall CNetSetObj::m_F_n_Set_DNS_Addr(CNetSetObj *this, char *dns1, char *dns2)\n\n    {\n\n      int result; // r0\n\n      char v5[80]; // [sp+0h] [bp-50h] BYREF\n\n\n\n      if ( !dns1 )\n\n        result = 0;\n\n      if ( dns1 )\n\n      {\n\n        sprintf(v5, \"/bin/echo nameserver %s > /etc/resolv.conf\", dns1);  // attacker controlled dns1 field\n\n        system(v5);\n\n        if ( dns2 )\n\n        {\n\n          sprintf(v5, \"/bin/echo nameserver %s >> /etc/resolv.conf\", dns2);\n\n          system(v5);\n\n        }\n\n        return 1;\n\n      }\n\n      return result;\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12851\n  \nPublished : June 24, 2026, 3:40 a.m. | 1 hour, 28 minutes ago\n  \nDescription :Multiple OS command injection vulnerabilities exist in the libNetSetObj.so functionality of GeoVision GV-I/O Box 4E 2.09. A specially crafted network packet can lead to command execution. An attacker can send a network request to trigger this vulnerability.\n\n\n`libNetSetObj.so` is an internal library used by various binaries on the device to configure the network stack (start and stop various services, configure IP, Netmask, gateway, dns, etc.)\n\n\n#### CNetSetObj::m_F_n_Set_DNS_Addr command injection\n\nThe following function can take up to two addresses, performs no sanitization and then calls `system`. This is a classic command injection vulnerability. The function is reachable from both the network-exposed `DVRSearch` service and the `Network.cgi` endpoint. \n\n\n\n    int __fastcall CNetSetObj::m_F_n_Set_DNS_Addr(CNetSetObj *this, char *dns1, char *dns2)\n\n    {\n\n      int result; // r0\n\n      char v5[80]; // [sp+0h] [bp-50h] BYREF\n\n\n\n      if ( !dns1 )\n\n        result = 0;\n\n      if ( dns1 )\n\n      {\n\n        sprintf(v5, \"/bin/echo nameserver %s > /etc/resolv.conf\", dns1);  // attacker controlled dns1 field\n\n        system(v5);\n\n        if ( dns2 )\n\n        {\n\n          sprintf(v5, \"/bin/echo nameserver %s >> /etc/resolv.conf\", dns2);\n\n          system(v5);\n\n        }\n\n        return 1;\n\n      }\n\n      return result;\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-12851 - GeoVision GV-I/O Box 4E libNetSetObj.so OS 명령 주입 취약점",
-      "summary_ko": "CVE ID:CVE-2026-12851\n  \n게시일 : 2026년 6월 24일 오전 3시 40분 | 1시간 28분 전\n  \n설명: GeoVision GV-I/O Box 4E 2.09의 libNetSetObj.so 기능에 여러 OS 명령 주입 취약점이 존재합니다. 특별히 제작된 네트워크 패킷으로 인해 명령이 실행될 수 있습니다. 공격자는 이 취약점을 트리거하기 위해 네트워크 요청을 보낼 수 있습니다.\n\n\n`libNetSetObj.so`는 네트워크 스택을 구성하기 위해 장치의 다양한 바이너리에서 사용되는 내부 라이브러리입니다(다양한 서비스 시작 및 중지, IP, 넷마스크, 게이트웨이, DNS 등 구성).\n\n\n#### CNetSetObj::m_F_n_Set_DNS_Addr 명령 삽입\n\n다음 함수는 최대 2개의 주소를 사용할 수 있으며, 삭제를 수행하지 않고 'system'을 호출합니다. 이는 전형적인 명령 주입 취약점입니다. 이 기능은 네트워크에 노출된 `DVRSearch` 서비스와 `Network.cgi` 엔드포인트 모두에서 접근할 수 있습니다. \n\n\n\n    int __fastcall CNetSetObj::m_F_n_Set_DNS_Addr(CNetSetObj *this, char *dns1, char *dns2)\n\n    {\n\n      정수 결과; //r0\n\n      문자 v5[80]; // [sp+0h] [bp-50h] BYREF\n\n\n\n      만약 (!dns1)\n\n        결과 = 0;\n\n      만약 (dns1)\n\n      {\n\n        sprintf(v5, \"/bin/echo 네임서버 %s > /etc/resolv.conf\", dns1);  // 공격자가 dns1 필드를 제어함\n\n        시스템(v5);\n\n        만약 (dns2)\n\n        {\n\n          sprintf(v5, \"/bin/echo 네임서버 %s >> /etc/resolv.conf\", dns2);\n\n          시스템(v5);\n\n        }\n\n        1을 반환합니다.\n\n      }\n\n      결과 반환;\n  \n심각도: 9.1 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12851\n2. 26.06.24 오후12:40\n3. Multiple OS command injection vulnerabilities exis",
-      "cve_id": "CVE-2026-12851",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12851",
-      "source": "cvefeed",
-      "published": "2026-06-24T12:40:26+09:00",
       "lang": "en"
     }
   ],
