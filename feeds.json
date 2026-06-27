@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-27T14:33:32.041362+09:00",
+  "fetched_at": "2026-06-27T15:03:37.345314+09:00",
   "security_news": [
     {
       "title": "딜로이트, IBM·레드햇 오픈소스 보안 이니셔티브 라이트웰 합류",
@@ -2052,30 +2052,6 @@
       "source": "naver",
       "published": "2026-06-24T15:26:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Hackers Exploiting Cisco Unified CM Vulnerability",
-      "summary": "Cisco noted that a PoC had been available for CVE-2026-20230 when it announced patches in early June.\nThe post Hackers Exploiting Cisco Unified CM Vulnerability appeared first on SecurityWeek.",
-      "content": "",
-      "title_ko": "Cisco Unified CM 취약점을 악용하는 해커들",
-      "summary_ko": "Cisco는 6월 초에 패치를 발표했을 때 CVE-2026-20230에 대한 PoC를 사용할 수 있었다고 밝혔습니다.\nCisco Unified CM 취약점을 악용하는 해커 게시물이 SecurityWeek에 처음으로 게재되었습니다.",
-      "summary_3lines": "1. 시스코 유니파이드 CM, CVE-2026-20230 취약점 공격\n2. 6월 초 패치 발표 시 PoC 공개로 악용 증가\n3. 시큐리티위크 통해 공격 사실 보도",
-      "link": "https://www.securityweek.com/hackers-exploiting-cisco-unified-cm-vulnerability/",
-      "source": "securityweek",
-      "published": "2026-06-24T14:44:15+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "고려대 정보보호대학원 '제2회 글로벌 사이버보안 학술대회' 개최.. 제주...",
-      "summary": "올해로 2회째를 맞은 이번 행사는 인공지능(AI) 기술의 급속한 발전에 따른 사이버보안 위협과 개인정보 침해 문제에 대응하기 위해 마련됐다. 이번 학술대회는 ▲AI 시대의 사이버 위협과 대응 전략 ▲안전하고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 고려대 정보보호대학원 '제2회 글로벌 사이버보안 학술대회' 개최..\n2. 올해로 2회째를 맞은 이번 행사는 인공지능(AI) 기술의 급속한 발전에 따른 사이버보안 위\n3. 이번 학술대회는 ▲AI 시대의 사이버 위협과 대응 전략 ▲안전하고...",
-      "link": "https://www.veritas-a.com/news/articleView.html?idxno=616386",
-      "source": "naver",
-      "published": "2026-06-24T14:36:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2992,21 +2968,6 @@
       "link": "https://isc.sans.edu/diary/rss/33102",
       "source": "sans_isc",
       "published": "2026-06-24T15:29:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-9178 - WP Forms Connector <= 1.8 - Missing Authorization to Unauthenticated Information Exposure via 'user/list' REST Endpoint",
-      "summary": "CVE ID :CVE-2026-9178\n  \nPublished : June 24, 2026, 5:33 a.m. | 1 hour, 20 minutes ago\n  \nDescription :The WP Forms Connector plugin for WordPress is vulnerable to Information Exposure in all versions up to, and including, 1.8. The plugin registers the REST route wp/v3/user/list/ (callback userDetail()) with permission_callback set to '__return_true', and the function's home-grown authentication only verifies that the supplied 'Username' HTTP header maps to an administrator account and that a 'Password' HTTP header is non-empty. It never validates the password with wp_check_password() (unlike the sibling delete_wc_user() function which does). This makes it possible for unauthenticated attackers to retrieve sensitive information for any registered user ID — including the WordPress password hash (user_pass) and email address — by sending a request with a valid administrator login name (commonly the default 'admin') and any arbitrary password value.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-9178\n  \nPublished : June 24, 2026, 5:33 a.m. | 1 hour, 20 minutes ago\n  \nDescription :The WP Forms Connector plugin for WordPress is vulnerable to Information Exposure in all versions up to, and including, 1.8. The plugin registers the REST route wp/v3/user/list/ (callback userDetail()) with permission_callback set to '__return_true', and the function's home-grown authentication only verifies that the supplied 'Username' HTTP header maps to an administrator account and that a 'Password' HTTP header is non-empty. It never validates the password with wp_check_password() (unlike the sibling delete_wc_user() function which does). This makes it possible for unauthenticated attackers to retrieve sensitive information for any registered user ID — including the WordPress password hash (user_pass) and email address — by sending a request with a valid administrator login name (commonly the default 'admin') and any arbitrary password value.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-9178 - WP Forms Connector <= 1.8 - '사용자/목록' REST 엔드포인트를 통한 인증되지 않은 정보 노출에 대한 권한 누락",
-      "summary_ko": "CVE ID:CVE-2026-9178\n  \n게시일 : 2026년 6월 24일 오전 5시 33분 | 1시간, 20분 전\n  \n설명 : WordPress용 WP Forms Connector 플러그인은 1.8까지의 모든 버전에서 정보 노출에 취약합니다. 플러그인은 퍼미션_콜백이 '__return_true'로 설정된 REST 경로 wp/v3/user/list/(콜백 userDetail())를 등록하고, 함수의 자체 인증은 제공된 '사용자 이름' HTTP 헤더가 관리자 계정에 매핑되고 '비밀번호' HTTP 헤더가 비어 있지 않은지 확인합니다. wp_check_password()를 사용하여 비밀번호의 유효성을 검사하지 않습니다(형제 delete_wc_user() 함수와 달리). 이를 통해 인증되지 않은 공격자가 유효한 관리자 로그인 이름(일반적으로 기본 'admin')과 임의의 비밀번호 값을 사용하여 요청을 보내 WordPress 비밀번호 해시(user_pass) 및 이메일 주소를 포함하여 등록된 사용자 ID에 대한 민감한 정보를 검색할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-9178\n2. 26.06.24 오후2:33\n3. The WP Forms Connector plugin for WordPress is vul",
-      "cve_id": "CVE-2026-9178",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9178",
-      "source": "cvefeed",
-      "published": "2026-06-24T14:33:33+09:00",
       "lang": "en"
     }
   ],
