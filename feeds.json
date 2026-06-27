@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-28T03:01:07.656133+09:00",
+  "fetched_at": "2026-06-28T03:31:05.445820+09:00",
   "security_news": [
     {
       "title": "[IT 소식 톺아보기- 6월 4주차] 일본, 모든 기업에 ‘실소유주 정보 제출...",
@@ -2353,21 +2353,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-11998",
       "source": "cvefeed",
       "published": "2026-06-25T05:29:37+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-49246 - Jellyfin: Potential MKV attachment filename path traversal to RCE",
-      "summary": "CVE ID :CVE-2026-49246\n  \nPublished : June 24, 2026, 6:21 p.m. | 35 minutes ago\n  \nDescription :Jellyfin is an open source self hosted media server. Prior to 10.11.10, a specifically crafted MKV file containing forged filename tags can be leveraged to exploit missing path sanitization during playback. Jellyfin treats the MKV file name tag on MKV attachments as trusted and passes it unsanitized into Path.Combine(attachmentFolder, fileName) inside PathManager.GetAttachmentPath. Because .NET's Path.Combine neither normalises .. nor rejects a rooted second argument, a crafted MKV can redirect Jellyfin's MKV attachment extraction to any absolute path on disk. This triggers on any playback action of the affected video on a client which will attempt to burn in the subtitles by default.g This vulnerability is fixed in 10.11.10.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-49246\n  \nPublished : June 24, 2026, 6:21 p.m. | 35 minutes ago\n  \nDescription :Jellyfin is an open source self hosted media server. Prior to 10.11.10, a specifically crafted MKV file containing forged filename tags can be leveraged to exploit missing path sanitization during playback. Jellyfin treats the MKV file name tag on MKV attachments as trusted and passes it unsanitized into Path.Combine(attachmentFolder, fileName) inside PathManager.GetAttachmentPath. Because .NET's Path.Combine neither normalises .. nor rejects a rooted second argument, a crafted MKV can redirect Jellyfin's MKV attachment extraction to any absolute path on disk. This triggers on any playback action of the affected video on a client which will attempt to burn in the subtitles by default.g This vulnerability is fixed in 10.11.10.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-49246 - Jellyfin: RCE로의 잠재적인 MKV 첨부 파일 이름 경로 탐색",
-      "summary_ko": "CVE ID:CVE-2026-49246\n  \n게시일 : 2026년 6월 24일 오후 6시 21분 | 35분 전\n  \n설명 :Jellyfin은 오픈 소스 자체 호스팅 미디어 서버입니다. 10.11.10 이전에는 위조된 파일 이름 태그가 포함되어 특별히 제작된 MKV 파일을 활용하여 재생 중에 누락된 경로 삭제를 악용할 수 있었습니다. Jellyfin은 MKV 첨부 파일의 MKV 파일 이름 태그를 신뢰할 수 있는 것으로 취급하고 이를 PathManager.GetAttachmentPath 내의 Path.Combine(attachmentFolder, fileName)에 정제되지 않은 상태로 전달합니다. .NET의 Path.Combine은 .. 루트 기반 두 번째 인수를 정규화하거나 거부하지 않기 때문에 조작된 MKV는 Jellyfin의 MKV 첨부 파일 추출을 디스크의 절대 경로로 리디렉션할 수 있습니다. 이는 기본적으로 자막 굽기를 시도하는 클라이언트에서 영향을 받는 비디오의 모든 재생 작업에서 트리거됩니다.g 이 취약점은 10.11.10에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-49246\n2. 26.06.25 오전3:21\n3. Jellyfin is an open source self hosted media serve",
-      "cve_id": "CVE-2026-49246",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49246",
-      "source": "cvefeed",
-      "published": "2026-06-25T03:21:25+09:00",
       "lang": "en"
     }
   ],
