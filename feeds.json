@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-29T04:32:46.003499+09:00",
+  "fetched_at": "2026-06-29T05:01:48.153285+09:00",
   "security_news": [
     {
       "title": "[민선 8기 '마지막' 광주광역시정 백서] 미래차 도시 대전환",
@@ -1022,6 +1022,18 @@
       "lang": "ko"
     },
     {
+      "title": "북한 연계 맥OS 악성코드 ‘가스라이트’ 발견…가짜 오류로 AI 분석 방해",
+      "summary": "인공지능을 이용한 악성코드 분석을 방해하기 위해 가짜 오류 메시지를 심은 새로운 맥OS 악성코드가 발견됐다. 악성코드 내부에 정상적인 시스템 경고처럼 보이는 문구를 대량으로 넣어, AI 분석 도구가 분석 과정에 문제가 발생했다고 잘못 판단하도록 유도하는 방식이다.센티넬원 위협연구조직 센티넬랩스는 6월 23일 새로운 맥OS 악성코드 ‘맥OS.가스라이트’에 대한 분석 결과를 공개했다.연구진은 이 악성코드가 북한 연계 공격조직의 맥OS 공격 활동과 관련됐을 가능성이 높다고 평가했다. 가스라이트는 러스트(Rust) 언어로 개발됐으며, 감염",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 연계 악성코드 '가스라이트' 발견\n2. AI 분석 방해용 가짜 오류 메시지 심어\n3. 맥OS 감염, 러스트 언어로 개발",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207321",
+      "source": "dailysecu",
+      "published": "2026-06-26T09:27:57+09:00",
+      "lang": "ko"
+    },
+    {
       "title": "日 자위대 기밀망에 중국산 감염 USB…1년 가까이 몰랐다",
       "summary": "문제의 악성코드는 미국 보안업체 보고서에서 중국 관련 해킹조직이 과거 사용한 것으로 지적된 종류다. 감염된 PC를 사이버 공격의 발판으로 삼거나, 정보를 외부로 빼내는 데 악용될 수 있다고 닛케이는 전했다....",
       "content": "",
@@ -1151,18 +1163,6 @@
       "link": "https://it.chosun.com/news/articleView.html?idxno=2023092164557",
       "source": "naver",
       "published": "2026-06-26T06:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "“AI가 개인정보 유출… 또다른 통로될 수도”",
-      "summary": "개인정보 유출 사고가 잇따르며 데이터 보안 우려가 커지는 가운데 의료 인공지능(AI) 모델 자체가 새로운 개인정보 침해 통로가 될 수 있다는 연구 결과가 나왔다. 공격자는 AI 모델을 분석해 특정 환자의 데이터가 AI...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 의료 AI 모델, 개인정보 유출 새 통로로 지목\n2. AI 분석으로 특정 환자 데이터 유출 가능성 확인 (서울대 연구)\n3. 기존 보안 대책 무력화 우려… 모델 보호 기술 개발 촉구",
-      "link": "https://n.news.naver.com/mnews/article/020/0003729634?sid=105",
-      "source": "naver",
-      "published": "2026-06-26T04:35:00+09:00",
       "lang": "ko"
     }
   ],
@@ -3595,21 +3595,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-40080",
       "source": "cvefeed",
       "published": "2026-06-26T07:29:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-10512 - X25519 x86_64 assembly final reduction leaves non-canonical field element",
-      "summary": "CVE ID :CVE-2026-10512\n  \nPublished : June 25, 2026, 7:58 p.m. | 1 hour, 11 minutes ago\n  \nDescription :The X25519 x86_64 assembly implementation fails to clear the most significant bit during the final modular reduction, so the computed result may not be fully reduced modulo the field prime 2^255 - 19. This can leave the field element in a non-canonical form, producing an incorrect result from the scalar multiplication and potentially a wrong shared secret. The final carry-propagation chains in the x64 and AVX2 reduction routines could overflow into the top bit, and the high limb was not masked afterward, so the 255-bit field element was left non-canonical.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-10512\n  \nPublished : June 25, 2026, 7:58 p.m. | 1 hour, 11 minutes ago\n  \nDescription :The X25519 x86_64 assembly implementation fails to clear the most significant bit during the final modular reduction, so the computed result may not be fully reduced modulo the field prime 2^255 - 19. This can leave the field element in a non-canonical form, producing an incorrect result from the scalar multiplication and potentially a wrong shared secret. The final carry-propagation chains in the x64 and AVX2 reduction routines could overflow into the top bit, and the high limb was not masked afterward, so the 255-bit field element was left non-canonical.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10512 - X25519 x86_64 어셈블리 최종 축소로 비정규 필드 요소가 남음",
-      "summary_ko": "CVE ID:CVE-2026-10512\n  \n게시일 : 2026년 6월 25일 오후 7시 58분 | 1시간 11분 전\n  \n설명: X25519 x86_64 어셈블리 구현은 최종 모듈식 축소 중에 가장 중요한 비트를 지우지 못하므로 계산된 결과가 필드 소수 2^255 - 19의 모듈로 완전히 축소되지 않을 수 있습니다. 이로 인해 필드 요소가 비정규 형식으로 남게 되어 스칼라 곱셈에서 잘못된 결과가 생성되고 잠재적으로 잘못된 공유 비밀이 생성될 수 있습니다. x64 및 AVX2 감소 루틴의 최종 캐리 전파 체인은 최상위 비트로 오버플로될 수 있으며 높은 부분은 나중에 마스크되지 않았으므로 255비트 필드 요소는 비표준으로 남겨졌습니다.\n  \n심각도: 2.3 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10512\n2. 26.06.26 오전4:58\n3. The X25519 x86_64 assembly implementation fails to",
-      "cve_id": "CVE-2026-10512",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10512",
-      "source": "cvefeed",
-      "published": "2026-06-26T04:58:16+09:00",
       "lang": "en"
     }
   ],
