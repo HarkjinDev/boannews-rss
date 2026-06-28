@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-28T14:02:46.225085+09:00",
+  "fetched_at": "2026-06-28T14:32:34.437822+09:00",
   "security_news": [
     {
       "title": "\"中企 기술유출 막는다\"…정부, 기술보호 지원 총집결",
@@ -1320,45 +1320,54 @@
       "source": "naver",
       "published": "2026-06-25T14:46:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "쿠팡 5000원 쿠폰도 보험으로?…개보위, 기업 '자발적 보상' 보험 가능성...",
-      "summary": "예컨대 지난해 SKT가 해킹사고 이후 피해 고객에게 선제적으로 제공한 고객감사 패키지(통신요금 할인, 데이터 추가 제공)와 쿠팡이 정보유출 통지를 받은 3370만명에게 지급했던 5000원 쿠폰 등이 대표적인 자발적 보상...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 쿠팡 5000원 쿠폰, SKT 고객 감사 패키지 등 자발적 보상\n2. 기업, 정보 유출 시 고객에게 자발적 보상 보험 가능성 검토\n3. 개인정보보호위원회, 보험 상품화 검토 및 기업 책임 강화",
-      "link": "https://n.news.naver.com/mnews/article/030/0003441319?sid=101",
-      "source": "naver",
-      "published": "2026-06-25T14:09:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "해킹 과징금, 국고 대신 피해자에…'기금화' 입법 논의 주목",
-      "summary": "해킹·정보유출 사고로 거둬들인 과징금을 피해자 구제에 돌려쓰는 입법 논의가 본격화됐다. 그동안 전액 국고로 귀속되던 제재금을 피해 상담·소송지원 재원으로 환류시키는 것이 골자다. 대규모 정보유출 사고가...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 해킹 과징금 국고 대신 피해자 지원…입법 논의\n2. 제재금 전액 상담·소송 지원 재원으로 환류\n3. 대규모 정보유출 사고 대응 강화 방안",
-      "link": "https://n.news.naver.com/mnews/article/030/0003441315?sid=105",
-      "source": "naver",
-      "published": "2026-06-25T14:07:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "신종회 아주대 교수, “AI 해커되는 시대, AI로 위협 막는다”",
-      "summary": "먼저 AI로 방어하는 시대가 오고 있습니다.” 신종회 아주대 사이버보안학과 초빙교수는 25일 서울 중구 프레스센터에서 열린 동북아ICT포럼 조찬간담회에서 “생성형 AI가 해킹의 진입장벽을 낮추는 상황에서 AI 기반...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 신종회 아주대 교수, 동북아ICT포럼서 AI 방어 강조\n2. 생성형 AI로 해킹 진입장벽 낮아져\n3. AI 기반 방어 필요성 제기",
-      "link": "https://n.news.naver.com/mnews/article/030/0003441309?sid=105",
-      "source": "naver",
-      "published": "2026-06-25T14:04:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-10593 - Remotely triggerable NULL-pointer dereference in Bluetooth LE Audio BAP unicast client QoS-state handling",
+      "summary": "CVE ID :CVE-2026-10593\n  \nPublished : June 28, 2026, 4:28 a.m. | 57 minutes ago\n  \nDescription :The Zephyr Bluetooth LE Audio Basic Audio Profile (BAP) unicast client mishandles peer-supplied ASE state notifications. In unicast_client_ep_qos_state() (subsys/bluetooth/audio/bap_unicast_client.c), the handler writes attacker-controlled QoS fields (interval, framing, phy, sdu, rtn, latency, pd) through the stream-qos pointer with only a stream != NULL guard. stream-qos is NULL for any stream that has been codec-configured via bt_bap_stream_config() but not yet added to a unicast group (it is set only by unicast_group_add_stream()). A malicious or buggy remote ASCS server, to which the local device is connected as a BAP unicast client, can send a GATT notification announcing the ASE has entered the QoS Configured state while the local endpoint is still in the Codec Configured state — a transition the dispatcher explicitly permits — during that window, causing a write through a NULL pointer and a crash (denial of service). The data written is itself remote-controlled. The defect shipped in v4.3.0 and v4.4.0 (and earlier). The fix re-points all BAP QoS storage to the always-valid embedded ep-qos struct, eliminating the NULL dereference.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10593\n  \nPublished : June 28, 2026, 4:28 a.m. | 57 minutes ago\n  \nDescription :The Zephyr Bluetooth LE Audio Basic Audio Profile (BAP) unicast client mishandles peer-supplied ASE state notifications. In unicast_client_ep_qos_state() (subsys/bluetooth/audio/bap_unicast_client.c), the handler writes attacker-controlled QoS fields (interval, framing, phy, sdu, rtn, latency, pd) through the stream-qos pointer with only a stream != NULL guard. stream-qos is NULL for any stream that has been codec-configured via bt_bap_stream_config() but not yet added to a unicast group (it is set only by unicast_group_add_stream()). A malicious or buggy remote ASCS server, to which the local device is connected as a BAP unicast client, can send a GATT notification announcing the ASE has entered the QoS Configured state while the local endpoint is still in the Codec Configured state — a transition the dispatcher explicitly permits — during that window, causing a write through a NULL pointer and a crash (denial of service). The data written is itself remote-controlled. The defect shipped in v4.3.0 and v4.4.0 (and earlier). The fix re-points all BAP QoS storage to the always-valid embedded ep-qos struct, eliminating the NULL dereference.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10593 - Bluetooth LE 오디오 BAP 유니캐스트 클라이언트 QoS 상태 처리에서 원격으로 트리거 가능한 NULL 포인터 역참조",
+      "summary_ko": "CVE ID:CVE-2026-10593\n  \n게시일 : 2026년 6월 28일 오전 4시 28분 | 57분 전\n  \n설명: Zephyr Bluetooth LE 오디오 BAP(기본 오디오 프로필) 유니캐스트 클라이언트가 피어 제공 ASE 상태 알림을 잘못 처리합니다. unicast_client_ep_qos_state()(subsys/bluetooth/audio/bap_unicast_client.c)에서 핸들러는 스트림 != NULL 가드만 사용하여 stream-qos 포인터를 통해 공격자가 제어하는 ​​QoS 필드(간격, 프레이밍, phy, sdu, rtn, 대기 시간, pd)를 작성합니다. stream-qos는 bt_bap_stream_config()를 통해 코덱이 구성되었지만 아직 유니캐스트 그룹에 추가되지 않은 모든 스트림에 대해 NULL입니다(unicast_group_add_stream()에 의해서만 설정됨). 로컬 장치가 BAP 유니캐스트 클라이언트로 연결된 악성 또는 버그가 있는 원격 ASCS 서버는 해당 기간 동안 로컬 엔드포인트가 여전히 코덱 구성 상태에 있는 동안 ASE가 QoS 구성 상태에 진입했음을 알리는 GATT 알림을 보낼 수 있습니다(디스패처가 명시적으로 허용하는 전환). 이로 인해 NULL 포인터를 통한 쓰기 및 충돌(서비스 거부)이 발생합니다. 기록된 데이터 자체는 원격으로 제어됩니다. v4.3.0 및 v4.4.0(및 이전 버전)에서 결함이 발생했습니다. 이 수정 사항은 모든 BAP QoS 저장소를 항상 유효한 내장형 ep-qos 구조체로 다시 지정하여 NULL 역참조를 제거합니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10593\n2. 26.06.28 오후1:28\n3. The Zephyr Bluetooth LE Audio Basic Audio Profile ",
+      "cve_id": "CVE-2026-10593",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10593",
+      "source": "cvefeed",
+      "published": "2026-06-28T13:28:22+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-10646 - Use-after-return in `zsock_getaddrinfo()` when a timed-out DNS query is retried without cancellation",
+      "summary": "CVE ID :CVE-2026-10646\n  \nPublished : June 28, 2026, 4:04 a.m. | 1 hour, 21 minutes ago\n  \nDescription :Zephyr's BSD-sockets getaddrinfo() implementation (subsys/net/lib/sockets/getaddrinfo.c) passes a pointer to a stack-allocated state object (struct getaddrinfo_state ai_state) as the user_data of an asynchronous DNS resolver query. The socket layer waits on a semaphore with a timeout deliberately set slightly longer than the resolver's own per-query timeout. When that semaphore wait nonetheless times out (-EAGAIN) - which can occur when the resolver's timeout work is delayed by workqueue contention, or in the documented multi-retry configuration where CONFIG_NET_SOCKETS_DNS_TIMEOUT exceeds CONFIG_NET_SOCKETS_DNS_BACKOFF_INTERVAL - the pre-fix code retries the query (goto again) without cancelling the previous one and without resetting the semaphore. The previous query slot remains active in the resolver with its callback and the stack pointer as user_data, and ai_state-dns_id is overwritten so the stale query can no longer be cancelled. A subsequent DNS response delivered over UDP and matched by its 16-bit transaction id (in dispatcher_cb()/dns_read()), or the resolver's own delayed query-timeout work, then invokes dns_resolve_cb() against the now out-of-scope stack frame, writing through the stale pointer (state-status, state-idx, state-ai_arr[], and k_sem_give()). Because the triggering response is network-delivered and its 16-bit id is spoofable/replayable by an on- or off-path attacker, this is a network-influenceable use-after-return that can corrupt reused stack memory, leading to crashes/denial of service or memory corruption. The fix cancels the timed-out query by name and type before retrying and resets the local semaphore, eliminating the stale callback path. Affected: Zephyr v4.0.0 through v4.4.0.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10646\n  \nPublished : June 28, 2026, 4:04 a.m. | 1 hour, 21 minutes ago\n  \nDescription :Zephyr's BSD-sockets getaddrinfo() implementation (subsys/net/lib/sockets/getaddrinfo.c) passes a pointer to a stack-allocated state object (struct getaddrinfo_state ai_state) as the user_data of an asynchronous DNS resolver query. The socket layer waits on a semaphore with a timeout deliberately set slightly longer than the resolver's own per-query timeout. When that semaphore wait nonetheless times out (-EAGAIN) - which can occur when the resolver's timeout work is delayed by workqueue contention, or in the documented multi-retry configuration where CONFIG_NET_SOCKETS_DNS_TIMEOUT exceeds CONFIG_NET_SOCKETS_DNS_BACKOFF_INTERVAL - the pre-fix code retries the query (goto again) without cancelling the previous one and without resetting the semaphore. The previous query slot remains active in the resolver with its callback and the stack pointer as user_data, and ai_state-dns_id is overwritten so the stale query can no longer be cancelled. A subsequent DNS response delivered over UDP and matched by its 16-bit transaction id (in dispatcher_cb()/dns_read()), or the resolver's own delayed query-timeout work, then invokes dns_resolve_cb() against the now out-of-scope stack frame, writing through the stale pointer (state-status, state-idx, state-ai_arr[], and k_sem_give()). Because the triggering response is network-delivered and its 16-bit id is spoofable/replayable by an on- or off-path attacker, this is a network-influenceable use-after-return that can corrupt reused stack memory, leading to crashes/denial of service or memory corruption. The fix cancels the timed-out query by name and type before retrying and resets the local semaphore, eliminating the stale callback path. Affected: Zephyr v4.0.0 through v4.4.0.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10646 - 시간 초과된 DNS 쿼리가 취소 없이 재시도될 때 `zsock_getaddrinfo()`에서 반환 후 사용",
+      "summary_ko": "CVE ID:CVE-2026-10646\n  \n게시일 : 2026년 6월 28일 오전 4시 4분 | 1시간 21분 전\n  \n설명: Zephyr의 BSD 소켓 getaddrinfo() 구현(subsys/net/lib/sockets/getaddrinfo.c)은 스택 할당 상태 개체(struct getaddrinfo_state ai_state)에 대한 포인터를 비동기 DNS 확인자 쿼리의 user_data로 전달합니다. 소켓 계층은 확인자의 자체 쿼리당 시간 제한보다 의도적으로 약간 더 길게 설정된 시간 제한을 사용하여 세마포어를 기다립니다. 그럼에도 불구하고 해당 세마포어 대기 시간이 초과되는 경우(-EAGAIN) - 작업 대기열 경합으로 인해 해석기의 시간 초과 작업이 지연되거나 CONFIG_NET_SOCKETS_DNS_TIMEOUT이 CONFIG_NET_SOCKETS_DNS_BACKOFF_INTERVAL을 초과하는 문서화된 다중 재시도 구성에서 발생할 수 있습니다. 접두사 코드는 이전 쿼리를 취소하거나 재설정하지 않고 쿼리를 재시도합니다(다시 이동). 세마포어. 이전 쿼리 슬롯은 해당 콜백 및 스택 포인터를 user_data로 사용하여 해석기에서 활성 상태로 유지되며, 오래된 쿼리를 더 이상 취소할 수 없도록 ai_state-dns_id를 덮어씁니다. UDP를 통해 전달되고 해당 16비트 트랜잭션 ID(dispatcher_cb()/dns_read()) 또는 확인자 자체의 지연된 쿼리 시간 제한 작업과 일치하는 후속 DNS 응답은 현재 범위를 벗어난 스택 프레임에 대해 dns_resolve_cb()를 호출하여 오래된 포인터(state-status, state-idx, state-ai_arr[] 및 k_sem_give())를 통해 씁니다. 트리거링 응답은 네트워크에서 전달되고 해당 16비트 ID는 경로 또는 경로 외부 공격자가 스푸핑/재생할 수 있기 때문에 이는 재사용된 스택 메모리를 손상시켜 충돌/서비스 거부 또는 메모리 손상을 초래할 수 있는 네트워크에 영향을 미치는 반환 후 사용입니다. 수정 사항은 재시도하기 전에 이름 및 유형별로 시간 초과된 쿼리를 취소하고 로컬 세마포를 재설정하여 오래된 콜백 경로를 제거합니다. 영향을 받음: Zephyr v4.0.0~v4.4.0.\n  \n심각도: 7.4 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10646\n2. 26.06.28 오후1:04\n3. Zephyr's BSD-sockets getaddrinfo() implementation ",
+      "cve_id": "CVE-2026-10646",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10646",
+      "source": "cvefeed",
+      "published": "2026-06-28T13:04:11+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-10644 - Out-of-bounds write in Microchip SERCOM-G1 (PIC32CM-JH) async UART RX with 1-byte buffer",
+      "summary": "CVE ID :CVE-2026-10644\n  \nPublished : June 28, 2026, 4:02 a.m. | 1 hour, 23 minutes ago\n  \nDescription :The Microchip SERCOM-G1 UART driver (drivers/serial/uart_mchp_sercom_g1.c), used by the PIC32CM-JH SoC family, contains an out-of-bounds write in its asynchronous (DMA) receive path. When uart_rx_enable() is invoked with a one-byte receive buffer (len == 1) and CONFIG_UART_MCHP_ASYNC is enabled, the RX-complete ISR starts a single-beat DMA transfer while a received byte is already pending in the SERCOM DATA register. On this SoC the peripheral-triggered DMA start sequencing then writes one byte past the end of the caller-supplied buffer (CWE-787). The overflowed byte's value is the UART RX data supplied by the connected serial peer (adjacent attacker), while its size and location are fixed at one byte immediately after the buffer. Exploitation requires the async UART config (not enabled by default on the in-tree PIC32CM-JH boards) and a consumer that enables RX with a one-byte buffer; impact is limited single-byte memory corruption adjacent to the RX buffer (possible crash / denial of service). The defect shipped in v4.4.0. The fix reads the first byte with the CPU and, for one-byte buffers, performs no DMA at all; for larger buffers it sizes the DMA for the remaining len-1 bytes.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10644\n  \nPublished : June 28, 2026, 4:02 a.m. | 1 hour, 23 minutes ago\n  \nDescription :The Microchip SERCOM-G1 UART driver (drivers/serial/uart_mchp_sercom_g1.c), used by the PIC32CM-JH SoC family, contains an out-of-bounds write in its asynchronous (DMA) receive path. When uart_rx_enable() is invoked with a one-byte receive buffer (len == 1) and CONFIG_UART_MCHP_ASYNC is enabled, the RX-complete ISR starts a single-beat DMA transfer while a received byte is already pending in the SERCOM DATA register. On this SoC the peripheral-triggered DMA start sequencing then writes one byte past the end of the caller-supplied buffer (CWE-787). The overflowed byte's value is the UART RX data supplied by the connected serial peer (adjacent attacker), while its size and location are fixed at one byte immediately after the buffer. Exploitation requires the async UART config (not enabled by default on the in-tree PIC32CM-JH boards) and a consumer that enables RX with a one-byte buffer; impact is limited single-byte memory corruption adjacent to the RX buffer (possible crash / denial of service). The defect shipped in v4.4.0. The fix reads the first byte with the CPU and, for one-byte buffers, performs no DMA at all; for larger buffers it sizes the DMA for the remaining len-1 bytes.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10644 - 1바이트 버퍼를 사용하는 Microchip SERCOM-G1(PIC32CM-JH) 비동기 UART RX의 범위를 벗어난 쓰기",
+      "summary_ko": "CVE ID:CVE-2026-10644\n  \n게시일 : 2026년 6월 28일 오전 4시 02분 | 1시간 23분 전\n  \n설명: PIC32CM-JH SoC 제품군에서 사용되는 Microchip SERCOM-G1 UART 드라이버(drivers/serial/uart_mchp_sercom_g1.c)에는 비동기(DMA) 수신 경로에 범위를 벗어난 쓰기가 포함되어 있습니다. uart_rx_enable()이 1바이트 수신 버퍼(len == 1)로 호출되고 CONFIG_UART_MCHP_ASYNC가 활성화되면 수신된 바이트가 이미 SERCOM DATA 레지스터에 보류 중인 동안 RX 완료 ISR은 단일 비트 DMA 전송을 시작합니다. 이 SoC에서는 주변 장치에 의해 트리거되는 DMA 시작 시퀀싱이 호출자 제공 버퍼(CWE-787)의 끝을 지나 1바이트를 씁니다. 오버플로된 바이트의 값은 연결된 직렬 피어(인접한 공격자)가 제공하는 UART RX 데이터이며, 크기와 위치는 버퍼 바로 뒤의 1바이트로 고정됩니다. 악용하려면 비동기 UART 구성(트리 내 PIC32CM-JH 보드에서는 기본적으로 활성화되지 않음)과 1바이트 버퍼로 RX를 활성화하는 소비자가 필요합니다. 영향은 RX 버퍼에 인접한 단일 바이트 메모리 손상으로 제한됩니다(충돌 가능성/서비스 거부). v4.4.0에서 결함이 발생했습니다. 수정 사항은 CPU로 첫 번째 바이트를 읽고 1바이트 버퍼의 경우 DMA를 전혀 수행하지 않습니다. 더 큰 버퍼의 경우 나머지 len-1 바이트에 대해 DMA 크기를 조정합니다.\n  \n심각도: 4.2 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10644\n2. 26.06.28 오후1:02\n3. The Microchip SERCOM-G1 UART driver (drivers/seria",
+      "cve_id": "CVE-2026-10644",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10644",
+      "source": "cvefeed",
+      "published": "2026-06-28T13:02:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-58058 - Nmap - Integer Underflow in IPv6 Extension Header Parsing",
       "summary": "CVE ID :CVE-2026-58058\n  \nPublished : June 28, 2026, 1:32 a.m. | 42 minutes ago\n  \nDescription :Nmap through 7.99 does not keep the IPv6 extension-header walk within the captured packet in ipv6_get_data_primitive (libnetutil/netutil.cc), so the pointer advances past the buffer and the remaining-length computation underflows to a large value. A scanned target or on-path attacker returning a crafted IPv6 response with a truncated extension header can trigger out-of-bounds reads and a crash during raw IPv6 scans.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
