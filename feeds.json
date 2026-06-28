@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-29T01:02:44.022724+09:00",
+  "fetched_at": "2026-06-29T01:32:04.452720+09:00",
   "security_news": [
     {
       "title": "[민선 8기 '마지막' 광주광역시정 백서] 미래차 도시 대전환",
@@ -3668,21 +3668,6 @@
       "source": "cvefeed",
       "published": "2026-06-26T01:41:42+09:00",
       "lang": "de"
-    },
-    {
-      "title": "CVE-2026-9099 - Keycloak: group-admin escalation to realm-admin",
-      "summary": "CVE ID :CVE-2026-9099\n  \nPublished : June 25, 2026, 4:16 p.m. | 43 minutes ago\n  \nDescription :A flaw was found in Keycloak. A missing authorization check in the GroupResource.addChild() endpoint within the Admin REST API allows an authenticated user with limited administrative privileges to reparent any existing group. When Fine-Grained Admin Permissions v2 (FGAPv2) is enabled, an attacker with management rights over a single low-privilege group can reparent a highly privileged group (such as one possessing the realm-admin role) under their managed group.\n\nBecause group permissions follow a hierarchical structure, this action unauthorizedly grants the attacker management and password-reset capabilities over the members of the targeted privileged group. An attacker can exploit this to reset an administrator's password, compromise the account, and achieve a full realm takeover, leading to a complete compromise of confidentiality, integrity, and availability.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-9099\n  \nPublished : June 25, 2026, 4:16 p.m. | 43 minutes ago\n  \nDescription :A flaw was found in Keycloak. A missing authorization check in the GroupResource.addChild() endpoint within the Admin REST API allows an authenticated user with limited administrative privileges to reparent any existing group. When Fine-Grained Admin Permissions v2 (FGAPv2) is enabled, an attacker with management rights over a single low-privilege group can reparent a highly privileged group (such as one possessing the realm-admin role) under their managed group.\n\nBecause group permissions follow a hierarchical structure, this action unauthorizedly grants the attacker management and password-reset capabilities over the members of the targeted privileged group. An attacker can exploit this to reset an administrator's password, compromise the account, and achieve a full realm takeover, leading to a complete compromise of confidentiality, integrity, and availability.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-9099 - Keycloak: 그룹 관리자가 영역 관리자로 에스컬레이션됩니다.",
-      "summary_ko": "CVE ID:CVE-2026-9099\n  \n게시일 : 2026년 6월 25일 오후 4시 16분 | 43분 전\n  \n설명 : Keycloak에서 결함이 발견되었습니다. Admin REST API 내의 GroupResource.addChild() 엔드포인트에 누락된 권한 부여 확인을 통해 제한된 관리 권한을 가진 인증된 사용자가 기존 그룹의 상위를 다시 지정할 수 있습니다. FGAPv2(Fine-Grained Admin Permissions v2)가 활성화되면 단일 낮은 권한 그룹에 대한 관리 권한을 가진 공격자는 관리되는 그룹에서 높은 권한을 가진 그룹(예: 영역 관리자 역할을 소유한 그룹)의 상위를 다시 지정할 수 있습니다.\n\n그룹 권한은 계층 구조를 따르기 때문에 이 작업은 대상 권한 그룹의 구성원에 대해 공격자 관리 및 암호 재설정 기능을 무단으로 부여합니다. 공격자는 이를 악용하여 관리자의 비밀번호를 재설정하고, 계정을 손상시키고, 전체 영역을 장악하여 기밀성, 무결성 및 가용성을 완전히 손상시킬 수 있습니다.\n  \n심각도: 7.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-9099\n2. 26.06.26 오전1:16\n3. A flaw was found in Keycloak. A missing authorizat",
-      "cve_id": "CVE-2026-9099",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9099",
-      "source": "cvefeed",
-      "published": "2026-06-26T01:16:43+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
