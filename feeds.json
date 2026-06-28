@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-06-29T08:01:51.246881+09:00",
+  "fetched_at": "2026-06-29T08:32:57.534768+09:00",
   "security_news": [
+    {
+      "title": "고려대 KU-ICCSP 2026 폐막…AI 시대 개인정보보호와 블록체인 신뢰체계...",
+      "summary": "고려대학교 정보보호대학원이 지난 25일부터 26일까지 이틀간 개최한 '제2회 고려대학교 국제 사이버보안... 참석자들은 개인정보보호와 보안을 법·제도와 기술 구조에 처음부터 반영하는 '구조 기반' 모델로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 고려대 KU-ICCSP 2026 개최…AI 시대 개인정보보호 논의\n2. 블록체인 신뢰체계·구조 기반 보안 모델 제시\n3. 법·제도·기술 통합 방식으로 개인정보 보호 강화 방안 마련",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207343",
+      "source": "naver",
+      "published": "2026-06-29T08:24:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "지니언스, 상반기 버그바운티 포상금 1046% 증가",
+      "summary": "VDP는 외부 보안 전문가들이 시스템의 보안 약점을 안전하고 합법적으로 신고할 수 있도록 마련된 공식 소통 창구로, 기업이나 기관이 화이트해커의 취약점 탐색을 위해 허용하는 해킹 범위, 신고 절차, 공개 시기 등을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 지니언스, 상반기 버그바운티 포상금 1046% 증가\n2. VDP 통해 화이트해커 취약점 신고 1046% 확대\n3. 허용 범위·공개 시기 등 공식 절차 마련",
+      "link": "https://www.datanet.co.kr/news/articleView.html?idxno=212682",
+      "source": "naver",
+      "published": "2026-06-29T08:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[사전예방! 정보유출] 한국전력, AI 관제로 '사이버 공격징후' 잡는다",
       "summary": "본지 취재 결과 한전은 개인정보 보호와 정보보안 수준 강화를 위해 AI·디지털 기술을 업무에 도입하고 있다. 한전은 AI 기반 보안 관제 기술을 활용해 비정상 접근과 사이버 공격 시도를 더 신속하게 탐지·대응하고 있다....",
@@ -3578,21 +3602,6 @@
       "source": "msrc",
       "published": "2026-06-26T17:39:42+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-13318 - Virt-api-rhel9: kubevirt: kubevirt: ssrf in virt-api port-forward via unvalidated guest-agent-reported ip",
-      "summary": "CVE ID :CVE-2026-13318\n  \nPublished : June 25, 2026, 11:23 p.m. | 1 hour, 52 minutes ago\n  \nDescription :A server-side request forgery (SSRF) flaw was found in KubeVirt's virt-api port-forward handler. When processing a port-forward request to a VirtualMachineInstance (VMI), virt-api reads the target IP from vmi.Status.Interfaces[0].IP and passes it directly to net.Dial() without validation. For VMIs using non-masquerade network bindings (bridge or secondary-only), this IP is reported by the QEMU guest agent running inside the VM and is fully controllable by the VM owner. An attacker with kubevirt.io:edit permissions can create a VM with a modified guest agent that reports an arbitrary IP address, then request port-forward to establish a bidirectional TCP tunnel from virt-api's cluster-internal network position to any routable destination, bypassing NetworkPolicy isolation.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-13318\n  \nPublished : June 25, 2026, 11:23 p.m. | 1 hour, 52 minutes ago\n  \nDescription :A server-side request forgery (SSRF) flaw was found in KubeVirt's virt-api port-forward handler. When processing a port-forward request to a VirtualMachineInstance (VMI), virt-api reads the target IP from vmi.Status.Interfaces[0].IP and passes it directly to net.Dial() without validation. For VMIs using non-masquerade network bindings (bridge or secondary-only), this IP is reported by the QEMU guest agent running inside the VM and is fully controllable by the VM owner. An attacker with kubevirt.io:edit permissions can create a VM with a modified guest agent that reports an arbitrary IP address, then request port-forward to establish a bidirectional TCP tunnel from virt-api's cluster-internal network position to any routable destination, bypassing NetworkPolicy isolation.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-13318 - Virt-api-rhel9: kubevirt: kubevirt: 검증되지 않은 게스트 에이전트 보고 IP를 통해 virt-api 포트 전달의 ssrf",
-      "summary_ko": "CVE ID:CVE-2026-13318\n  \n게시일 : 2026년 6월 25일 오후 11시 23분 | 1시간 52분 전\n  \n설명: KubeVirt의 virt-api 포트 전달 핸들러에서 서버측 요청 위조(SSRF) 결함이 발견되었습니다. VirtualMachineInstance(VMI)에 대한 포트 전달 요청을 처리할 때 virt-api는 vmi.Status.Interfaces[0].IP에서 대상 IP를 읽고 유효성 검사 없이 net.Dial()에 직접 전달합니다. 비매스커레이드 네트워크 바인딩(브리지 또는 보조 전용)을 사용하는 VMI의 경우 이 IP는 VM 내부에서 실행되는 QEMU 게스트 에이전트에 의해 보고되며 VM 소유자가 완전히 제어할 수 있습니다. kubevirt.io:edit 권한이 있는 공격자는 임의의 IP 주소를 보고하는 수정된 게스트 에이전트로 VM을 생성한 다음 virt-api의 클러스터 내부 네트워크 위치에서 라우팅 가능한 대상으로 양방향 TCP 터널을 설정하도록 포트 전달을 요청할 수 있으며 NetworkPolicy 격리를 우회합니다.\n  \n심각도: 6.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-13318\n2. 26.06.26 오전8:23\n3. A server-side request forgery (SSRF) flaw was foun",
-      "cve_id": "CVE-2026-13318",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13318",
-      "source": "cvefeed",
-      "published": "2026-06-26T08:23:38+09:00",
-      "lang": "no"
     }
   ],
   "reputation": []
