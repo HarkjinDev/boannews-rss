@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-29T00:33:11.751633+09:00",
+  "fetched_at": "2026-06-29T01:02:44.022724+09:00",
   "security_news": [
     {
       "title": "[민선 8기 '마지막' 광주광역시정 백서] 미래차 도시 대전환",
@@ -3682,21 +3682,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-9099",
       "source": "cvefeed",
       "published": "2026-06-26T01:16:43+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54025 - LibreChat: Stored XSS via unescaped image alt text in markdown artifact preview",
-      "summary": "CVE ID :CVE-2026-54025\n  \nPublished : June 25, 2026, 3:53 p.m. | 1 hour, 7 minutes ago\n  \nDescription :LibreChat is an enhanced ChatGPT clone that supports multiple AI providers. Prior to 0.8.4-rc1, there is a vulnerability in LibreChat's markdown artifact preview pipeline. The marked library v15.0.12 does not HTML-escape double-quote characters in image alt text when a custom renderer falls through to the default renderer. LibreChat's generateMarkdownHtml function (in client/src/utils/markdown.ts) installs a custom image renderer that returns false for URLs passing the isSafeUrl allowlist check, which causes marked to fall back to its built-in renderer. That built-in renderer inserts the raw alt text into the alt=\"...\" attribute without escaping double-quote characters. An attacker can craft an alt text such as \" onload=\"payload to break out of the attribute and inject an arbitrary event handler. The resulting HTML is then assigned to document.getElementById('content').innerHTML inside the Sandpack preview iframe, causing the payload to execute in the victim's browser. This vulnerability is fixed in 0.8.4-rc1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54025\n  \nPublished : June 25, 2026, 3:53 p.m. | 1 hour, 7 minutes ago\n  \nDescription :LibreChat is an enhanced ChatGPT clone that supports multiple AI providers. Prior to 0.8.4-rc1, there is a vulnerability in LibreChat's markdown artifact preview pipeline. The marked library v15.0.12 does not HTML-escape double-quote characters in image alt text when a custom renderer falls through to the default renderer. LibreChat's generateMarkdownHtml function (in client/src/utils/markdown.ts) installs a custom image renderer that returns false for URLs passing the isSafeUrl allowlist check, which causes marked to fall back to its built-in renderer. That built-in renderer inserts the raw alt text into the alt=\"...\" attribute without escaping double-quote characters. An attacker can craft an alt text such as \" onload=\"payload to break out of the attribute and inject an arbitrary event handler. The resulting HTML is then assigned to document.getElementById('content').innerHTML inside the Sandpack preview iframe, causing the payload to execute in the victim's browser. This vulnerability is fixed in 0.8.4-rc1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54025 - LibreChat: 마크다운 아티팩트 미리보기에서 이스케이프 처리되지 않은 이미지 대체 텍스트를 통해 저장된 XSS",
-      "summary_ko": "CVE ID:CVE-2026-54025\n  \n게시일 : 2026년 6월 25일 오후 3시 53분 | 1시간, 7분 전\n  \n설명 :LibreChat은 여러 AI 제공자를 지원하는 향상된 ChatGPT 클론입니다. 0.8.4-rc1 이전에는 LibreChat의 마크다운 아티팩트 미리 보기 파이프라인에 취약점이 있습니다. 표시된 라이브러리 v15.0.12는 사용자 정의 렌더러가 기본 렌더러로 넘어갈 때 이미지 대체 텍스트의 큰따옴표 문자를 HTML 이스케이프 처리하지 않습니다. LibreChat의 generateMarkdownHtml 함수(client/src/utils/markdown.ts)는 isSafeUrl 허용 목록 검사를 통과한 URL에 대해 false를 반환하는 사용자 지정 이미지 렌더러를 설치합니다. 이로 인해 표시가 내장 렌더러로 대체됩니다. 해당 내장 렌더러는 큰따옴표 문자를 이스케이프 처리하지 않고 alt=\"...\" 속성에 원시 대체 텍스트를 삽입합니다. 공격자는 \" onload=\"payload와 같은 대체 텍스트를 만들어 속성을 벗어나 임의의 이벤트 핸들러를 삽입할 수 있습니다. 그런 다음 결과 HTML이 Sandpack 미리 보기 iframe 내의 document.getElementById('content').innerHTML에 할당되어 페이로드가 피해자의 브라우저에서 실행됩니다. 이 취약점은 0.8.4-rc1에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54025\n2. 26.06.26 오전12:53\n3. LibreChat is an enhanced ChatGPT clone that suppor",
-      "cve_id": "CVE-2026-54025",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54025",
-      "source": "cvefeed",
-      "published": "2026-06-26T00:53:17+09:00",
       "lang": "en"
     }
   ],
