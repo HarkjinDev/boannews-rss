@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-30T02:02:53.742801+09:00",
+  "fetched_at": "2026-06-30T02:32:51.076969+09:00",
   "security_news": [
     {
       "title": "자위대, '중국 해킹 의심' USB 1년 가까이 방치",
@@ -3979,21 +3979,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48090",
       "source": "cvefeed",
       "published": "2026-06-27T03:03:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47778 - Envoy: Embedded NUL in TLS DNS SAN Truncation in the Default TLS Certificate Validator. (Auth Bypass)",
-      "summary": "CVE ID :CVE-2026-47778\n  \nPublished : June 26, 2026, 5:27 p.m. | 2 hours, 11 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, a structural flaw was identified in DefaultCertValidator::verifySubjectAltName where the extracted DNS SAN string is cast to a C-style string using .c_str() before being passed to the Utility::dnsNameMatch() algorithm. If the attacker serves a certificate with a dNSName SAN containing an embedded NUL byte, the helper Utility::generalNameAsString captures the complete string including the NUL. However, when .c_str() evaluates it, implicit conversion to absl::string_view inside dnsNameMatch relies on strlen(), prematurely truncating the evaluation context. Envoy evaluates trucated string against the exact required config_san match and returns true, thereby successfully validating the string with the Nul byte for an upstream routing. This vulnerability is fixed in 1.35.11, 1.36.7, 1.37.3, and 1.38.1.\n  \nSeverity: 4.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47778\n  \nPublished : June 26, 2026, 5:27 p.m. | 2 hours, 11 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, a structural flaw was identified in DefaultCertValidator::verifySubjectAltName where the extracted DNS SAN string is cast to a C-style string using .c_str() before being passed to the Utility::dnsNameMatch() algorithm. If the attacker serves a certificate with a dNSName SAN containing an embedded NUL byte, the helper Utility::generalNameAsString captures the complete string including the NUL. However, when .c_str() evaluates it, implicit conversion to absl::string_view inside dnsNameMatch relies on strlen(), prematurely truncating the evaluation context. Envoy evaluates trucated string against the exact required config_san match and returns true, thereby successfully validating the string with the Nul byte for an upstream routing. This vulnerability is fixed in 1.35.11, 1.36.7, 1.37.3, and 1.38.1.\n  \nSeverity: 4.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47778 - Envoy: 기본 TLS 인증서 유효성 검사기의 TLS DNS SAN 잘림에 NUL이 포함되어 있습니다. (인증 우회)",
-      "summary_ko": "CVE ID:CVE-2026-47778\n  \n게시일 : 2026년 6월 26일 오후 5시 27분 | 2시간 11분 전\n  \n설명:Envoy는 클라우드 네이티브 애플리케이션용으로 설계된 오픈 소스 에지 및 서비스 프록시입니다. 1.35.11, 1.36.7, 1.37.3 및 1.38.1 이전에는 추출된 DNS SAN 문자열이 Utility::dnsNameMatch() 알고리즘에 전달되기 전에 .c_str()을 사용하여 C 스타일 문자열로 캐스팅되는 DefaultCertValidator::verifySubjectAltName에서 구조적 결함이 식별되었습니다. 공격자가 내장된 NUL 바이트가 포함된 dNSName SAN이 있는 인증서를 제공하는 경우 도우미 Utility::generalNameAsString은 NUL을 포함한 전체 문자열을 캡처합니다. 그러나 .c_str()이 이를 평가할 때 dnsNameMatch 내에서 absl::string_view로의 암시적 변환은 strlen()에 의존하여 평가 컨텍스트를 조기에 자릅니다. Envoy는 정확히 필요한 config_san 일치 항목에 대해 잘린 문자열을 평가하고 true를 반환하여 업스트림 라우팅을 위해 Nul 바이트로 문자열을 성공적으로 검증합니다. 이 취약점은 1.35.11, 1.36.7, 1.37.3 및 1.38.1에서 수정되었습니다.\n  \n심각도: 4.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47778\n2. 26.06.27 오전2:27\n3. Envoy is an open source edge and service proxy des",
-      "cve_id": "CVE-2026-47778",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47778",
-      "source": "cvefeed",
-      "published": "2026-06-27T02:27:57+09:00",
       "lang": "en"
     }
   ],
