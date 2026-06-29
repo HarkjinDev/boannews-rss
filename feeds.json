@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-30T01:33:58.629681+09:00",
+  "fetched_at": "2026-06-30T02:02:53.742801+09:00",
   "security_news": [
     {
       "title": "자위대, '중국 해킹 의심' USB 1년 가까이 방치",
@@ -3994,21 +3994,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-47778",
       "source": "cvefeed",
       "published": "2026-06-27T02:27:57+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55441 - mise: Arbitrary command execution via task-include files in an untrusted, config-less repository",
-      "summary": "CVE ID :CVE-2026-55441\n  \nPublished : June 26, 2026, 4:48 p.m. | 51 minutes ago\n  \nDescription :mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.6.4, mise's trust feature gates config files (mise.toml, .tool-versions) through trust_check, but task-include files are loaded on a path that never reaches it. When a directory has a task-include dir (mise-tasks/, .mise/tasks/, …) but no config file, mise falls back to the default includes and renders each task's tera fields — and that tera environment has exec() registered. A {{ exec(command='…') }} in any rendered field runs arbitrary commands the moment the tasks are merely listed. There's no config file to gate on, so no trust prompt ever appears. Read-only commands trigger it: mise tasks, mise task ls, mise run, mise tasks --usage (the query shell completion runs on Tab). The victim only has to cd into a cloned repo and list or tab-complete a task. This vulnerability is fixed in 2026.6.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55441\n  \nPublished : June 26, 2026, 4:48 p.m. | 51 minutes ago\n  \nDescription :mise manages dev tools like node, python, cmake, and terraform. Prior to 2026.6.4, mise's trust feature gates config files (mise.toml, .tool-versions) through trust_check, but task-include files are loaded on a path that never reaches it. When a directory has a task-include dir (mise-tasks/, .mise/tasks/, …) but no config file, mise falls back to the default includes and renders each task's tera fields — and that tera environment has exec() registered. A {{ exec(command='…') }} in any rendered field runs arbitrary commands the moment the tasks are merely listed. There's no config file to gate on, so no trust prompt ever appears. Read-only commands trigger it: mise tasks, mise task ls, mise run, mise tasks --usage (the query shell completion runs on Tab). The victim only has to cd into a cloned repo and list or tab-complete a task. This vulnerability is fixed in 2026.6.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-55441 - mise: 신뢰할 수 없고 구성이 없는 저장소의 작업 포함 파일을 통한 임의 명령 실행",
-      "summary_ko": "CVE ID:CVE-2026-55441\n  \n게시일 : 2026년 6월 26일 오후 4시 48분 | 51분 전\n  \n설명 :mise는 node, python, cmake, terraform과 같은 개발 도구를 관리합니다. 2026.6.4 이전에는 mise의 신뢰 기능이 trust_check를 통해 구성 파일(mise.toml, .tool-versions)을 제어하지만 작업 포함 파일은 절대 도달하지 않는 경로에 로드됩니다. 디렉터리에 작업 포함 디렉터리(mise-tasks/, .mise/tasks/, …)가 있지만 구성 파일이 없는 경우 mise는 기본 포함으로 돌아가 각 작업의 tera 필드를 렌더링하고 해당 tera 환경에는 exec()가 등록되어 있습니다. 렌더링된 필드의 {{ exec(command='…') }}는 작업이 나열되는 순간 임의의 명령을 실행합니다. 게이트에 적용할 구성 파일이 없으므로 신뢰 프롬프트가 표시되지 않습니다. 읽기 전용 명령은 이를 트리거합니다: mise task, mise task ls, mise run, mise task --usage(쿼리 셸 완성은 Tab에서 실행됨). 피해자는 복제된 저장소에 CD를 넣고 작업을 나열하거나 탭하여 완료하기만 하면 됩니다. 이 취약점은 2026.6.4에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-55441\n2. 26.06.27 오전1:48\n3. mise manages dev tools like node, python, cmake, a",
-      "cve_id": "CVE-2026-55441",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55441",
-      "source": "cvefeed",
-      "published": "2026-06-27T01:48:23+09:00",
       "lang": "en"
     }
   ],
