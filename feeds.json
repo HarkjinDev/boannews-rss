@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-29T22:01:38.479035+09:00",
+  "fetched_at": "2026-06-29T22:32:47.943028+09:00",
   "security_news": [
     {
       "title": "보험 소비자, 가입부터 상품 별 비교까지 생성형 AI 적극 활용…\"보험사...",
@@ -1442,6 +1442,18 @@
       "lang": "en"
     },
     {
+      "title": "New Linux pedit COW Exploit Enables Root Access by Poisoning Cached Binaries",
+      "summary": "A flaw in the Linux kernel's traffic-control subsystem can let a local unprivileged user gain root on affected systems.\n\nCVE-2026-46331, nicknamed \"pedit COW,\" is an out-of-bounds write in the packet-editing action (act_pedit) that corrupts shared page-cache memory. A public, working exploit appeared within a day of the CVE assignment on June 16. Red Hat rates the flaw as",
+      "content": "",
+      "title_ko": "새로운 Linux pedit COW 익스플로잇으로 캐시된 바이너리를 감염시켜 루트 액세스 가능",
+      "summary_ko": "Linux 커널의 트래픽 제어 하위 시스템에 있는 결함으로 인해 권한이 없는 로컬 사용자가 영향을 받는 시스템에서 루트를 얻을 수 있습니다.\n\n\"pedit COW\"라는 별명을 가진 CVE-2026-46331은 공유 페이지 캐시 메모리를 손상시키는 패킷 편집 작업(act_pedit)의 범위를 벗어난 쓰기입니다. 6월 16일 CVE 할당 후 하루 만에 공개적으로 작동하는 익스플로잇이 나타났습니다. Red Hat은 이 결함을 다음과 같이 평가했습니다.",
+      "summary_3lines": "1. 리눅스 커널 티파티 서브시스템 취약점(CVE-2026-46331)\n2. act_pedit 패킷 편집 액션을 통한 메모리 오염으로 root 권한 획득\n3. 6월16일 CVE 공개 후 1일 내 공개 악성코드 출현, Red Hat 취약점 등급 부여",
+      "link": "https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html",
+      "source": "thehackernews",
+      "published": "2026-06-26T22:57:55+09:00",
+      "lang": "en"
+    },
+    {
       "title": "리눅스 커널 또 뚫렸다…'DirtyClone' 권한 상승 취약점 공개, 루트 권한...",
       "summary": "보안기업 JFrog(제이프로그)는 6월 25일 'DirtyClone'으로 불리는 권한 상승 취약점(CVE-2026-43503)의 실제... 메모리만 수정되기 때문에 파일 무결성 검사나 일반 보안 점검으로는 탐지하기 어렵다. 시스템을 재부팅하면...",
       "content": "",
@@ -1468,6 +1480,21 @@
       "link": "https://isc.sans.edu/diary/rss/33110",
       "source": "sans_isc",
       "published": "2026-06-29T21:00:54+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-13601 - Yelp: yelp-xsl: overly permissive content security policy in yelp allows host file disclosure from flatpak applications",
+      "summary": "CVE ID :CVE-2026-13601\n  \nPublished : June 29, 2026, 9:20 a.m. | 4 hours, 5 minutes ago\n  \nDescription :A flaw was found in Yelp due to an overly permissive Content Security Policy (CSP) implementation provided by yelp-xsl. A malicious Flatpak application can open crafted help content through the OpenURI portal. By embedding an untrusted CSS stylesheet within a structured SVG document, attacker-controlled content can bypass Flatpak's intended sandbox isolation, allowing Yelp to evaluate local XML inclusions and disclose arbitrary user-readable host files through remote CSS resource requests. This may result in the unauthorized disclosure of sensitive information.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-13601\n  \nPublished : June 29, 2026, 9:20 a.m. | 4 hours, 5 minutes ago\n  \nDescription :A flaw was found in Yelp due to an overly permissive Content Security Policy (CSP) implementation provided by yelp-xsl. A malicious Flatpak application can open crafted help content through the OpenURI portal. By embedding an untrusted CSS stylesheet within a structured SVG document, attacker-controlled content can bypass Flatpak's intended sandbox isolation, allowing Yelp to evaluate local XML inclusions and disclose arbitrary user-readable host files through remote CSS resource requests. This may result in the unauthorized disclosure of sensitive information.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-13601 - Yelp: yelp-xsl: yelp의 지나치게 관대한 콘텐츠 보안 정책으로 인해 flatpak 애플리케이션에서 호스트 파일 공개가 허용됩니다.",
+      "summary_ko": "CVE ID:CVE-2026-13601\n  \n게시일 : 2026년 6월 29일 오전 9시 20분 | 4시간, 5분 전\n  \n설명 :yelp-xsl에서 제공하는 CSP(콘텐츠 보안 정책) 구현이 과도하게 허용되어 Yelp에서 결함이 발견되었습니다. 악성 Flatpak 애플리케이션은 OpenURI 포털을 통해 조작된 도움말 콘텐츠를 열 수 있습니다. 구조화된 SVG 문서 내에 신뢰할 수 없는 CSS 스타일시트를 삽입함으로써 공격자가 제어하는 ​​콘텐츠는 Flatpak의 의도된 샌드박스 격리를 우회할 수 있으며 Yelp는 로컬 XML 포함을 평가하고 원격 CSS 리소스 요청을 통해 임의의 사용자가 읽을 수 있는 호스트 파일을 공개할 수 있습니다. 이로 인해 민감한 정보가 무단으로 공개될 수 있습니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-13601\n2. 26.06.29 오후6:20\n3. A flaw was found in Yelp due to an overly permissi",
+      "cve_id": "CVE-2026-13601",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13601",
+      "source": "cvefeed",
+      "published": "2026-06-29T18:20:40+09:00",
       "lang": "en"
     },
     {
