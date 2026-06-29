@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-06-30T08:03:22.172975+09:00",
+  "fetched_at": "2026-06-30T08:33:19.843314+09:00",
   "security_news": [
+    {
+      "title": "애플, AI 해킹 우려로 iOS 26.5.2 보안 패치 조기 배포",
+      "summary": "이번 릴리스는 새로운 기능 없이 25개 이상의 보안 취약점 수정에만 집중된 업데이트다. 주목할 점은 배포 시점이다. 애플은 원래 이 보안 패치들을 iOS 26.6에 포함해 배포할 계획이었지만 일정을 앞당겼다. 로이터...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 애플, AI 해킹 우려로 iOS 26.5.2 패치 조기 배포\n2. 25개 이상 보안 취약점 수정, AI 공격 노출 방지\n3. iOS 26.6 예정이었으나 일정 앞당겨 배포",
+      "link": "https://www.wikitree.co.kr/articles/1143824",
+      "source": "naver",
+      "published": "2026-06-30T08:10:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "완전자율주행차 상용화 1년 앞···보험 체계 재편 '발등의 불'",
+      "summary": "대응·사이버보안 증명 등 구체적 법적 의무를 명시하고 있다. 오는 12월 EU 및 독일의 새 제조물책임법이... 소프트웨어 결함이나 사이버 해킹 같은 신규 리스크도 심도를 높이는 요인이다. 천 연구위원은 \"데이터를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. EU·독일, 12월 자율주행차 제조물책임법 시행\n2. 소프트웨어 결함·사이버 해킹 등 새로운 리스크 대응 의무\n3. 천 연구위원, 데이터 기반 보험 체계 재편 촉구",
+      "link": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=696946",
+      "source": "naver",
+      "published": "2026-06-30T08:08:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "인도서 유출된 애플 데이터에 출시 앞둔 아이폰18 정보도 포함",
       "summary": "인도에서 해킹돼 유출된 애플 데이터에 올 하반기 출시를 앞둔 아이폰18 관련 정보도 포함된 것으로... 한편, 애플은 최근 인공지능(AI) 기술 발전으로 해킹 도구 개발 속도가 빨라짐에 따라 소프트웨어 보안 업데이트를...",
@@ -1154,6 +1178,18 @@
       "lang": "ko"
     },
     {
+      "title": "오픈AI, GPT-5.6 공개…사이버보안 AI 경쟁 새 국면",
+      "summary": "오픈AI가 차세대 생성형 인공지능(AI) 모델인 GPT-5.6 시리즈를 공개했다. 이번 모델은 단순한 대화형 AI를 넘어 소프트웨어 취약점을 찾고 보안 패치를 개발하는 능력을 크게 높인 것이 특징이다. 미국 정부와 협력해 승인된 일부 기업을 대상으로 제한적인 프리뷰를 시작했으며, 향후 순차적으로 공개 범위를 확대할 계획이다.이번 공개는 AI를 활용한 사이버보안 경쟁이 새로운 단계에 접어들었다는 평가를 받고 있다. 최근 미국 정부가 고성능 AI 모델을 국가 안보 차원에서 관리하는 정책을 추진하는 가운데, 오픈AI와 앤트로픽(Anthr",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI, GPT-5.6 공개…보안 기능 강화\n2. 미국 정부 협력…제한적 프리뷰 시작\n3. AI 보안 경쟁 격화…국가 안보 정책 반영",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207342",
+      "source": "dailysecu",
+      "published": "2026-06-28T20:25:26+09:00",
+      "lang": "ko"
+    },
+    {
       "title": "AI 시대 지능화된 사이버 위협 선제 대응… '대구·경북 사이버보안 심...",
       "summary": "이와함께 특별행사로 동시 개최된 '대구·경북 사이버공격 방어대회 2026'에서는 일반부, 청소년부, 공공부 참가자들이 2인 1팀으로 치열한 해킹 방어경쟁을 펼치며 실전 역량을 겨뤘다. 오준혁 대구시 기획조정실장은...",
       "content": "",
@@ -1599,6 +1635,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-8023 - Path traversal in Zephyr HTTP server static-filesystem resource handler allows unauthenticated remote arbitrary file read",
+      "summary": "CVE ID :CVE-2026-8023\n  \nPublished : June 29, 2026, 10:15 p.m. | 56 minutes ago\n  \nDescription :Zephyr's HTTP server (subsys/net/lib/http) provides a static-filesystem resource type (HTTP_RESOURCE_TYPE_STATIC_FS, available when CONFIG_FILE_SYSTEM is enabled) that serves files from a configured root directory. Before this fix, both the HTTP/1 and HTTP/2 front-ends placed the raw, attacker-controlled request path into client-url_buffer (assembled in on_url() for HTTP/1 and copied verbatim from the :path pseudo-header for HTTP/2) without resolving ./.. segments. The static-FS handler then built the on-disk filename by directly concatenating the configured root with that raw URL (snprintk(fname, ..., \"%s%s\", static_fs_detail-fs_path, client-url_buffer) at http_server_http1.c:603 and http_server_http2.c:490) and opened it with fs_open(fname, FS_O_READ). Because the handler is reached via wildcard/leading-dir (fnmatch FNM_LEADING_DIR) or fallback resource matching, a request such as GET /..../\nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-8023\n  \nPublished : June 29, 2026, 10:15 p.m. | 56 minutes ago\n  \nDescription :Zephyr's HTTP server (subsys/net/lib/http) provides a static-filesystem resource type (HTTP_RESOURCE_TYPE_STATIC_FS, available when CONFIG_FILE_SYSTEM is enabled) that serves files from a configured root directory. Before this fix, both the HTTP/1 and HTTP/2 front-ends placed the raw, attacker-controlled request path into client-url_buffer (assembled in on_url() for HTTP/1 and copied verbatim from the :path pseudo-header for HTTP/2) without resolving ./.. segments. The static-FS handler then built the on-disk filename by directly concatenating the configured root with that raw URL (snprintk(fname, ..., \"%s%s\", static_fs_detail-fs_path, client-url_buffer) at http_server_http1.c:603 and http_server_http2.c:490) and opened it with fs_open(fname, FS_O_READ). Because the handler is reached via wildcard/leading-dir (fnmatch FNM_LEADING_DIR) or fallback resource matching, a request such as GET /..../\nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-8023 - Zephyr HTTP 서버 정적 파일 시스템 리소스 핸들러의 경로 탐색으로 인해 인증되지 않은 원격 임의 파일 읽기가 허용됩니다.",
+      "summary_ko": "CVE ID:CVE-2026-8023\n  \n게시일 : 2026년 6월 29일 오후 10시 15분 | 56분 전\n  \n설명: Zephyr의 HTTP 서버(subsys/net/lib/http)는 구성된 루트 디렉터리의 파일을 제공하는 정적 파일 시스템 리소스 유형(HTTP_RESOURCE_TYPE_STATIC_FS, CONFIG_FILE_SYSTEM이 활성화된 경우 사용 가능)을 제공합니다. 이 수정 이전에는 HTTP/1 및 HTTP/2 프런트 엔드 모두 공격자가 제어하는 ​​원시 요청 경로를 ./.. 세그먼트를 해결하지 않고 client-url_buffer(HTTP/1의 경우 on_url()에서 어셈블되고 HTTP/2의 경우 :path 의사 헤더에서 그대로 복사됨)에 배치했습니다. 그런 다음 정적 FS 처리기는 구성된 루트를 해당 원시 URL(snprintk(fname, ..., \"%s%s\", static_fs_detail-fs_path, client-url_buffer), http_server_http1.c:603 및 http_server_http2.c:490)과 직접 연결하여 디스크에 있는 파일 이름을 구축하고 fs_open(fname, FS_O_READ)을 사용하여 열었습니다. 핸들러는 와일드카드/leading-dir(fnmatch FNM_LEADING_DIR) 또는 대체 리소스 일치를 통해 도달하므로 GET /..../와 같은 요청은\n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-8023\n2. 26.06.30 오전7:15\n3. Zephyr's HTTP server (subsys/net/lib/http) provide",
+      "cve_id": "CVE-2026-8023",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8023",
+      "source": "cvefeed",
+      "published": "2026-06-30T07:15:22+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-7656 - Broken IPv6 Neighbor Discovery input validation allows spoofed RA/NS/NA acceptance in Zephyr net stack",
+      "summary": "CVE ID :CVE-2026-7656\n  \nPublished : June 29, 2026, 10:09 p.m. | 1 hour, 2 minutes ago\n  \nDescription :The IPv6 Neighbor Discovery handlers in subsys/net/ip/ipv6_nbr.c (handle_ra_input, handle_ns_input, handle_na_input) used an incorrect boolean expression that combined the RFC 4861 validity checks with the ICMPv6 code check using the wrong operator precedence: the form was '((length/hop/source/target checks) && (icmp_hdr-code != 0))'. Because every legitimate ND message carries ICMPv6 code 0, an attacker setting code == 0 (the normal value) caused the entire predicate to evaluate false, so the packet was never dropped and all of the other checks were silently skipped. The bypassed checks include the mandatory Hop Limit == 255 verification (which proves an ND packet originated on-link and was not forwarded) and, for Router Advertisements, the requirement that the source be a link-local address, as well as multicast-target sanity checks. As a result, an adjacent on-link attacker — and, because the Hop-Limit-255 guard is bypassed, potentially a remote/off-link attacker whose packets would otherwise be rejected — can have forged Router Advertisement, Neighbor Solicitation, and Neighbor Advertisement messages accepted. A forged RA lets the attacker reconfigure the victim's default router, on-link prefixes (SLAAC), MTU, reachable/retransmit timers, and (with CONFIG_NET_IPV6_RA_RDNSS) DNS servers, while forged NS/NA enable neighbor-cache poisoning, enabling man-in-the-middle, traffic redirection, and denial of service. The flaw is an input-validation/authentication weakness rather than a memory-safety issue: the underlying packet-parsing primitives (net_pkt_get_data, net_pkt_read, net_pkt_skip) are independently bounds-safe and the validated 'length' is the true buffer length, so skipping the length check causes no out-of-bounds access. The defect has existed since the logic was introduced in 2018 and shipped in all releases through v4.4.0; it is fixed by splitting the condition so any failing check drops the packet.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-7656\n  \nPublished : June 29, 2026, 10:09 p.m. | 1 hour, 2 minutes ago\n  \nDescription :The IPv6 Neighbor Discovery handlers in subsys/net/ip/ipv6_nbr.c (handle_ra_input, handle_ns_input, handle_na_input) used an incorrect boolean expression that combined the RFC 4861 validity checks with the ICMPv6 code check using the wrong operator precedence: the form was '((length/hop/source/target checks) && (icmp_hdr-code != 0))'. Because every legitimate ND message carries ICMPv6 code 0, an attacker setting code == 0 (the normal value) caused the entire predicate to evaluate false, so the packet was never dropped and all of the other checks were silently skipped. The bypassed checks include the mandatory Hop Limit == 255 verification (which proves an ND packet originated on-link and was not forwarded) and, for Router Advertisements, the requirement that the source be a link-local address, as well as multicast-target sanity checks. As a result, an adjacent on-link attacker — and, because the Hop-Limit-255 guard is bypassed, potentially a remote/off-link attacker whose packets would otherwise be rejected — can have forged Router Advertisement, Neighbor Solicitation, and Neighbor Advertisement messages accepted. A forged RA lets the attacker reconfigure the victim's default router, on-link prefixes (SLAAC), MTU, reachable/retransmit timers, and (with CONFIG_NET_IPV6_RA_RDNSS) DNS servers, while forged NS/NA enable neighbor-cache poisoning, enabling man-in-the-middle, traffic redirection, and denial of service. The flaw is an input-validation/authentication weakness rather than a memory-safety issue: the underlying packet-parsing primitives (net_pkt_get_data, net_pkt_read, net_pkt_skip) are independently bounds-safe and the validated 'length' is the true buffer length, so skipping the length check causes no out-of-bounds access. The defect has existed since the logic was introduced in 2018 and shipped in all releases through v4.4.0; it is fixed by splitting the condition so any failing check drops the packet.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-7656 - 손상된 IPv6 Neighbor Discovery 입력 유효성 검사로 인해 Zephyr 넷 스택에서 스푸핑된 RA/NS/NA 승인이 허용됩니다.",
+      "summary_ko": "CVE ID:CVE-2026-7656\n  \n게시일 : 2026년 6월 29일 오후 10시 9분 | 1시간, 2분 전\n  \n설명: subsys/net/ip/ipv6_nbr.c(handle_ra_input, handler_ns_input, handler_na_input)의 IPv6 Neighbor Discovery 핸들러가 잘못된 연산자 우선 순위를 사용하여 RFC 4861 유효성 검사와 ICMPv6 코드 검사를 결합한 잘못된 부울 표현식을 사용했습니다. 형식은 '((length/hop/source/target checks) && (icmp_hdr-code != 0))'. 모든 합법적인 ND 메시지는 ICMPv6 코드 0을 전달하므로 공격자가 설정 코드 == 0(일반 값)으로 인해 전체 조건자가 false로 평가되므로 패킷이 삭제되지 않고 다른 모든 검사가 자동으로 건너뛰게 됩니다. 우회된 검사에는 필수 홉 제한 == 255 확인(ND 패킷이 링크에서 시작되었으며 전달되지 않았음을 증명)과 라우터 광고의 경우 소스가 링크 로컬 주소여야 한다는 요구 사항과 멀티캐스트 대상 온전성 검사가 포함됩니다. 결과적으로 인접한 온링크 공격자(그리고 Hop-Limit-255 가드가 우회되므로 잠재적으로 패킷이 거부될 원격/오프링크 공격자)는 위조된 라우터 광고, 이웃 요청 및 이웃 광고 메시지를 수락할 수 있습니다. 위조된 RA를 사용하면 공격자는 피해자의 기본 라우터, 온링크 접두사(SLAAC), MTU, 도달 가능/재전송 타이머 및 (CONFIG_NET_IPV6_RA_RDNSS 포함) DNS 서버를 재구성할 수 있으며, 위조된 NS/NA는 이웃 캐시 중독을 활성화하여 중간자, 트래픽 리디렉션 및 서비스 거부를 활성화합니다. 결함은 메모리 안전성 문제가 아니라 입력 검증/인증 약점입니다. 기본 패킷 구문 분석 기본 요소(net_pkt_get_data, net_pkt_read, net_pkt_skip)는 독립적으로 경계에 안전하고 검증된 '길이'가 실제 버퍼 길이이므로 길이 확인을 건너뛰어도 경계를 벗어난 액세스가 발생하지 않습니다. 이 결함은 2018년에 로직이 도입되어 v4.4.0까지 모든 릴리스에 출시된 이후 존재했습니다. 조건을 분할하여 검사에 실패하면 패킷이 삭제되도록 수정됩니다.\n  \n심각도: 8.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-7656\n2. 26.06.30 오전7:09\n3. The IPv6 Neighbor Discovery handlers in subsys/net",
+      "cve_id": "CVE-2026-7656",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-7656",
+      "source": "cvefeed",
+      "published": "2026-06-30T07:09:10+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-10647 - Deadlock denial of service in USB CDC-NCM device class on TX enqueue failure",
+      "summary": "CVE ID :CVE-2026-10647\n  \nPublished : June 29, 2026, 9:39 p.m. | 1 hour, 32 minutes ago\n  \nDescription :The USB CDC-NCM device class (subsys/usb/device_next/class/usbd_cdc_ncm.c) ignores the return value of usbd_ep_enqueue() in its ethernet transmit callback cdc_ncm_send(). When the enqueue fails, the function still calls k_sem_take(&data-sync_sem, K_FOREVER), blocking on a completion semaphore that is only ever signaled from the bulk-IN transfer-completion callback. Because nothing was enqueued, that callback never fires and the calling thread — a shared network traffic-class TX thread — deadlocks permanently while holding the interface TX lock, halting transmission until reboot (and leaking the transmit buffer).\n\nThe enqueue fails under conditions controlled by the attached USB host: usbd_ep_enqueue() returns -EPERM whenever the bus is suspended (a standard, persistent host operation), and the underlying udc_ep_enqueue() returns -EPERM/-ENODEV on disconnect, bus reset, or endpoint disable. The cdc_ncm_send() guard only checks the DATA_IFACE_ENABLED and IFACE_UP flags, not the suspended state, so a packet transmitted while the host holds the bus suspended reaches the failing enqueue and deadlocks the TX path.\n\nThe realistic trigger is a bus suspend that occurs while the exported network interface is active and has traffic to send — host sleep, USB selective/auto-suspend, or hub power management — after which any device-originated packet deadlocks the path, recoverable only by reboot. The impact is a persistent loss of the virtual network connection between the host's NCM interface and the Zephyr device; because the deadlocked thread is a shared traffic-class TX thread, egress on other network interfaces can stall as well. There is no memory corruption or information disclosure.\n\nThe defect was introduced with the CDC-NCM driver and shipped in releases through v4.4.0; it is fixed by checking the usbd_ep_enqueue() return value and freeing the buffer before the blocking wait.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10647\n  \nPublished : June 29, 2026, 9:39 p.m. | 1 hour, 32 minutes ago\n  \nDescription :The USB CDC-NCM device class (subsys/usb/device_next/class/usbd_cdc_ncm.c) ignores the return value of usbd_ep_enqueue() in its ethernet transmit callback cdc_ncm_send(). When the enqueue fails, the function still calls k_sem_take(&data-sync_sem, K_FOREVER), blocking on a completion semaphore that is only ever signaled from the bulk-IN transfer-completion callback. Because nothing was enqueued, that callback never fires and the calling thread — a shared network traffic-class TX thread — deadlocks permanently while holding the interface TX lock, halting transmission until reboot (and leaking the transmit buffer).\n\nThe enqueue fails under conditions controlled by the attached USB host: usbd_ep_enqueue() returns -EPERM whenever the bus is suspended (a standard, persistent host operation), and the underlying udc_ep_enqueue() returns -EPERM/-ENODEV on disconnect, bus reset, or endpoint disable. The cdc_ncm_send() guard only checks the DATA_IFACE_ENABLED and IFACE_UP flags, not the suspended state, so a packet transmitted while the host holds the bus suspended reaches the failing enqueue and deadlocks the TX path.\n\nThe realistic trigger is a bus suspend that occurs while the exported network interface is active and has traffic to send — host sleep, USB selective/auto-suspend, or hub power management — after which any device-originated packet deadlocks the path, recoverable only by reboot. The impact is a persistent loss of the virtual network connection between the host's NCM interface and the Zephyr device; because the deadlocked thread is a shared traffic-class TX thread, egress on other network interfaces can stall as well. There is no memory corruption or information disclosure.\n\nThe defect was introduced with the CDC-NCM driver and shipped in releases through v4.4.0; it is fixed by checking the usbd_ep_enqueue() return value and freeing the buffer before the blocking wait.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10647 - TX 대기열 실패 시 USB CDC-NCM 장치 클래스의 교착 상태 서비스 거부",
+      "summary_ko": "CVE ID:CVE-2026-10647\n  \n게시일 : 2026년 6월 29일 오후 9시 39분 | 1시간 32분 전\n  \n설명: USB CDC-NCM 장치 클래스(subsys/usb/device_next/class/usbd_cdc_ncm.c)는 이더넷 전송 콜백 cdc_ncm_send()에서 usbd_ep_enqueue()의 반환 값을 무시합니다. 대기열에 넣기가 실패하면 함수는 여전히 k_sem_take(&data-sync_sem, K_FOREVER)를 호출하여 대량 IN 전송 완료 콜백에서만 신호를 받는 완료 세마포를 차단합니다. 대기열에 추가된 항목이 없기 때문에 해당 콜백은 실행되지 않으며 호출 스레드(공유 네트워크 트래픽 클래스 TX 스레드)는 인터페이스 TX 잠금을 유지하는 동안 영구적으로 교착 상태가 되어 재부팅할 때까지 전송이 중단됩니다(전송 버퍼 누수).\n\n연결된 USB 호스트에 의해 제어되는 조건에서 대기열에 넣기가 실패합니다. 버스가 일시 중단될 때마다 usbd_ep_enqueue()는 -EPERM을 반환하고(표준, 영구 호스트 작업) 기본 udc_ep_enqueue()는 연결 해제, 버스 재설정 또는 끝점 비활성화 시 -EPERM/-ENODEV를 반환합니다. cdc_ncm_send() 가드는 정지 상태가 아닌 DATA_IFACE_ENABLED 및 IFACE_UP 플래그만 확인하므로 호스트가 버스를 정지 상태로 유지하는 동안 전송된 패킷은 실패한 엔큐에 도달하고 TX 경로를 교착 상태로 만듭니다.\n\n현실적인 트리거는 내보낸 네트워크 인터페이스가 활성화되어 있고 전송할 트래픽(호스트 절전, USB 선택/자동 일시 중지 또는 허브 전원 관리)이 있는 동안 발생하는 버스 일시 중지입니다. 그 후 장치에서 시작된 패킷이 경로를 교착 상태로 만들고 재부팅을 통해서만 복구할 수 있습니다. 그 영향은 호스트의 NCM 인터페이스와 Zephyr 장치 간의 가상 네트워크 연결이 지속적으로 끊어지는 것입니다. 교착 상태 스레드는 공유 트래픽 클래스 TX 스레드이므로 다른 네트워크 인터페이스의 송신도 중단될 수 있습니다. 메모리 손상이나 정보 공개가 없습니다.\n\n이 결함은 CDC-NCM 드라이버에서 발생했으며 v4.4.0을 통한 릴리스에서 제공되었습니다. usbd_ep_enqueue() 반환 값을 확인하고 차단 대기 전에 버퍼를 해제하면 문제가 해결됩니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10647\n2. 26.06.30 오전6:39\n3. The USB CDC-NCM device class (subsys/usb/device_ne",
+      "cve_id": "CVE-2026-10647",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10647",
+      "source": "cvefeed",
+      "published": "2026-06-30T06:39:08+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-13758 - CryptX versions before 0.088_001 for Perl compare AEAD authentication tags in non-constant time in the streaming decrypt_done path",
       "summary": "CVE ID :CVE-2026-13758\n  \nPublished : June 29, 2026, 8:42 p.m. | 44 minutes ago\n  \nDescription :CryptX versions before 0.088_001 for Perl compare AEAD authentication tags in non-constant time in the streaming decrypt_done path.\n\nThe decrypt_done($tag) form compares it against the computed tag with memNE (memcmp() != 0), which short-circuits on the first differing byte, so its run time depends on the number of matching leading bytes. This affects all five AEAD modes: GCM, CCM, ChaCha20Poly1305, EAX and OCB. The one-shot *_decrypt_verify helpers are unaffected; they verify the tag inside libtomcrypt with a constant-time comparison.\n\nThe timing difference is a tag-verification oracle. An attacker who can submit many candidate tags for the same nonce, ciphertext and associated data while measuring the timing precisely enough may recover the expected tag byte by byte and forge a message that verifies.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
