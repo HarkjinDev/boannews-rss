@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-06-30T06:03:15.328519+09:00",
+  "fetched_at": "2026-06-30T06:33:23.135394+09:00",
   "security_news": [
+    {
+      "title": "해커 AI가 취약점 쏟아내자…보안업계 '무조건 패치' 한계 왔다",
+      "summary": "서버 해킹이 44.2%로 가장 많았고 분산서비스거부(DDoS) 공격(24.7%), 악성코드 감염(14.9%)이 뒤를 이었다. 그동안 기업과 기관은 공통취약점등급시스템(CVSS) 점수를 기준으로 높은 점수의 취약점부터 순차적으로 조치해...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 서버 해킹 44.2%로 1위, DDoS 24.7%·악성코드 14.9%\n2. AI 해커로 취약점 대량 생성, CVSS 점수 기준 패치 전략 한계 드러나\n3. 보안업계, 무조건적 패치 대신 동적 대응 전략 필요 주장",
+      "link": "https://n.news.naver.com/mnews/article/421/0009030517?sid=105",
+      "source": "naver",
+      "published": "2026-06-30T06:20:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "DL이앤씨, IT투자액 578억 '톱'…대우건설 증가율 26.7% 가장 높아",
+      "summary": "ISO/IEC 27001과 사우디 아람코 정보보호 인증인 CCC를 유지했으며 모의해킹과 개인정보 내부관리계획 점검도... 외부 웹사이트 모의해킹과 해킹메일 모의훈련, 개인정보 유출 대응훈련도 진행했다. IPARK현대산업개발은...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. DL이앤씨, IT투자액 578억 '톱'…대우건설 증가율 26.7% 가장 높아 ISO/IEC\n2. 외부 웹사이트 모의해킹과 해킹메일 모의훈련, 개인정보 유출 대응훈련도 진행했다.\n3. IPARK현대산업개발은...",
+      "link": "http://www.consumernews.co.kr/news/articleView.html?idxno=758368",
+      "source": "naver",
+      "published": "2026-06-30T06:10:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[인터뷰] “알고리즘 하나 바꿔도 4개 규제기관이 본다”… 율촌 “AI 리...",
+      "summary": "율촌 통합TMT센터는 방송·통신 규제, 인허가와 사업 진입, 개인정보·데이터, AI·신기술, 사이버보안, 플랫폼... ㅡ사이버 침해사고가 나면 24시간 안에 무엇을 정해야 하나. (김) “먼저 원인을 파악하고 유출 경로가 있으면...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 율촌 통합TMT센터, AI·사이버보안 규제 4개 기관 협의\n2. 침해사고 시 24시간 내 원인·유출 경로 분석 의무\n3. 방통위·개인정보위 등 4개 규제기관 공동 검토 절차 강화",
+      "link": "https://n.news.naver.com/mnews/article/366/0001175342?sid=102",
+      "source": "naver",
+      "published": "2026-06-30T06:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "토큰 단가 파괴의 청구서, 그리고 봉쇄의 역설 [이승현의 AI 네이티브]",
       "summary": "봉쇄의 역설과 게이팅 체제 2026년 6월 28일 중국 지푸 AI(Zhipu)는 가중치 개방형 모델 GLM-5.2가 자동 보안 취약점 탐지 벤치마크에서 앤트로픽의 최상위 사이버보안 모델 미토스(Mythos)급 점수를 달성했다고 발표했다....",
@@ -1491,6 +1527,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-13758 - CryptX versions before 0.088_001 for Perl compare AEAD authentication tags in non-constant time in the streaming decrypt_done path",
+      "summary": "CVE ID :CVE-2026-13758\n  \nPublished : June 29, 2026, 8:42 p.m. | 44 minutes ago\n  \nDescription :CryptX versions before 0.088_001 for Perl compare AEAD authentication tags in non-constant time in the streaming decrypt_done path.\n\nThe decrypt_done($tag) form compares it against the computed tag with memNE (memcmp() != 0), which short-circuits on the first differing byte, so its run time depends on the number of matching leading bytes. This affects all five AEAD modes: GCM, CCM, ChaCha20Poly1305, EAX and OCB. The one-shot *_decrypt_verify helpers are unaffected; they verify the tag inside libtomcrypt with a constant-time comparison.\n\nThe timing difference is a tag-verification oracle. An attacker who can submit many candidate tags for the same nonce, ciphertext and associated data while measuring the timing precisely enough may recover the expected tag byte by byte and forge a message that verifies.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-13758\n  \nPublished : June 29, 2026, 8:42 p.m. | 44 minutes ago\n  \nDescription :CryptX versions before 0.088_001 for Perl compare AEAD authentication tags in non-constant time in the streaming decrypt_done path.\n\nThe decrypt_done($tag) form compares it against the computed tag with memNE (memcmp() != 0), which short-circuits on the first differing byte, so its run time depends on the number of matching leading bytes. This affects all five AEAD modes: GCM, CCM, ChaCha20Poly1305, EAX and OCB. The one-shot *_decrypt_verify helpers are unaffected; they verify the tag inside libtomcrypt with a constant-time comparison.\n\nThe timing difference is a tag-verification oracle. An attacker who can submit many candidate tags for the same nonce, ciphertext and associated data while measuring the timing precisely enough may recover the expected tag byte by byte and forge a message that verifies.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-13758 - Perl용 0.088_001 이전의 CryptX 버전은 스트리밍 decrypt_done 경로에서 일정하지 않은 시간에 AEAD 인증 태그를 비교합니다.",
+      "summary_ko": "CVE ID:CVE-2026-13758\n  \n게시일 : 2026년 6월 29일 오후 8시 42분 | 44분 전\n  \n설명: Perl용 0.088_001 이전의 CryptX 버전은 스트리밍 decrypt_done 경로에서 일정하지 않은 시간에 AEAD 인증 태그를 비교합니다.\n\ndecrypt_done($tag) 형식은 이를 memNE(memcmp() != 0)를 사용하여 계산된 태그와 비교합니다. 이는 첫 번째 다른 바이트에서 단락되므로 실행 시간은 일치하는 선행 바이트 수에 따라 달라집니다. 이는 GCM, CCM, ChaCha20Poly1305, EAX 및 OCB의 5가지 AEAD 모드 모두에 영향을 미칩니다. 원샷 *_decrypt_verify 도우미는 영향을 받지 않습니다. 그들은 일정한 시간 비교를 통해 libtomcrypt 내부의 태그를 확인합니다.\n\n타이밍 차이는 태그 검증 오라클입니다. 타이밍을 충분히 정확하게 측정하면서 동일한 nonce, 암호문 및 관련 데이터에 대해 많은 후보 태그를 제출할 수 있는 공격자는 예상되는 태그를 바이트 단위로 복구하고 확인하는 메시지를 위조할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-13758\n2. 26.06.30 오전5:42\n3. CryptX versions before 0.088_001 for Perl compare ",
+      "cve_id": "CVE-2026-13758",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13758",
+      "source": "cvefeed",
+      "published": "2026-06-30T05:42:14+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-41896 - Coolify: Unauthenticated Deployment Trigger via Webhook HMAC Bypass with Null Secret",
+      "summary": "CVE ID :CVE-2026-41896\n  \nPublished : June 29, 2026, 8:16 p.m. | 1 hour, 10 minutes ago\n  \nDescription :Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, the HMAC key is the application's manual_webhook_secret_github field, which is used by Coolify's webhook endpoints to validate incoming requests, is nullable with no default — meaning newly created applications have a null webhook secret. PHP's hash_hmac() function silently coerces a null key to an empty string ''. So when the secret is null, the server computes hash_hmac('sha256', $payload, '') — a deterministic value that any attacker can calculate independently. By sending X-Hub-Signature-256: sha256=, an unauthenticated attacker can forge a valid signature and trigger deployments. This vulnerability is fixed in 4.0.0-beta.474.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-41896\n  \nPublished : June 29, 2026, 8:16 p.m. | 1 hour, 10 minutes ago\n  \nDescription :Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, the HMAC key is the application's manual_webhook_secret_github field, which is used by Coolify's webhook endpoints to validate incoming requests, is nullable with no default — meaning newly created applications have a null webhook secret. PHP's hash_hmac() function silently coerces a null key to an empty string ''. So when the secret is null, the server computes hash_hmac('sha256', $payload, '') — a deterministic value that any attacker can calculate independently. By sending X-Hub-Signature-256: sha256=, an unauthenticated attacker can forge a valid signature and trigger deployments. This vulnerability is fixed in 4.0.0-beta.474.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-41896 - Coolify: Null Secret이 포함된 Webhook HMAC 우회를 통한 인증되지 않은 배포 트리거",
+      "summary_ko": "CVE ID:CVE-2026-41896\n  \n게시일 : 2026년 6월 29일 오후 8시 16분 | 1시간, 10분 전\n  \n설명 :Coolify는 서버, 애플리케이션 및 데이터베이스를 관리하기 위한 자체 호스팅 가능한 오픈 소스 도구입니다. 4.0.0-beta.474 이전에는 Coolify의 웹훅 엔드포인트에서 수신 요청을 검증하는 데 사용되는 애플리케이션의 manual_webhook_secret_github 필드가 HMAC 키이며 기본값 없이 null이 허용됩니다. 즉, 새로 생성된 애플리케이션에는 null 웹훅 비밀이 있다는 뜻입니다. PHP의 hash_hmac() 함수는 null 키를 빈 문자열 ''로 자동으로 강제 변환합니다. 따라서 비밀이 null이면 서버는 모든 공격자가 독립적으로 계산할 수 있는 결정적 값인 hash_hmac('sha256', $payload, '')를 계산합니다. X-Hub-Signature-256: sha256=을 전송하면 인증되지 않은 공격자가 유효한 서명을 위조하고 배포를 트리거할 수 있습니다. 이 취약점은 4.0.0-beta.474에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-41896\n2. 26.06.30 오전5:16\n3. Coolify is an open-source and self-hostable tool f",
+      "cve_id": "CVE-2026-41896",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-41896",
+      "source": "cvefeed",
+      "published": "2026-06-30T05:16:50+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-13763 - HTTP/2 Stream Parser Confusion Body-Inspection Bypass in AWS Application Load Balancer with AWS WAF",
+      "summary": "CVE ID :CVE-2026-13763\n  \nPublished : June 29, 2026, 8:03 p.m. | 1 hour, 23 minutes ago\n  \nDescription :Inconsistent interpretation of HTTP/2 requests in AWS Application Load Balancer with AWS WAF enabled might allow remote actors to bypass AWS WAF managed rule body inspection via crafted HTTP/2 requests that fragment the request body across frames so that only a partial body is inspected. This issue only impacts HTTP/2 ALB target groups.\n\n\n\nTo remediate this issue, customers should enable the \"Inspect after sufficient data\" target group configuration associated to an ALB load balancer. Refer to: ( https://docs.aws.amazon.com/elasticloadbalancing/latest/application/edit-target-group-attributes.html#waf-http2-inspection )\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-13763\n  \nPublished : June 29, 2026, 8:03 p.m. | 1 hour, 23 minutes ago\n  \nDescription :Inconsistent interpretation of HTTP/2 requests in AWS Application Load Balancer with AWS WAF enabled might allow remote actors to bypass AWS WAF managed rule body inspection via crafted HTTP/2 requests that fragment the request body across frames so that only a partial body is inspected. This issue only impacts HTTP/2 ALB target groups.\n\n\n\nTo remediate this issue, customers should enable the \"Inspect after sufficient data\" target group configuration associated to an ALB load balancer. Refer to: ( https://docs.aws.amazon.com/elasticloadbalancing/latest/application/edit-target-group-attributes.html#waf-http2-inspection )\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-13763 - AWS WAF를 사용하는 AWS Application Load Balancer에서 HTTP/2 스트림 파서 혼동 본문 검사 우회",
+      "summary_ko": "CVE ID:CVE-2026-13763\n  \n게시일 : 2026년 6월 29일 오후 8시 03분 | 1시간 23분 전\n  \n설명: AWS WAF가 활성화된 AWS Application Load Balancer의 HTTP/2 요청에 대한 일관되지 않은 해석으로 인해 원격 행위자가 프레임 전체에 요청 본문을 조각화하여 부분 본문만 검사하도록 조작된 HTTP/2 요청을 통해 AWS WAF 관리 규칙 본문 검사를 우회할 수 있습니다. 이 문제는 HTTP/2 ALB 대상 그룹에만 영향을 미칩니다.\n\n\n\n이 문제를 해결하려면 고객은 ALB 로드 밸런서와 연결된 \"충분한 데이터 후 검사\" 대상 그룹 구성을 활성화해야 합니다. 참조: ( https://docs.aws.amazon.com/elasticloadbalancing/latest/application/edit-target-group-attributes.html#waf-http2-inspection )\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-13763\n2. 26.06.30 오전5:03\n3. Inconsistent interpretation of HTTP/2 requests in ",
+      "cve_id": "CVE-2026-13763",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13763",
+      "source": "cvefeed",
+      "published": "2026-06-30T05:03:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53428 - Unbounded memory allocation in highlight_lines range expansion in mdex",
       "summary": "CVE ID :CVE-2026-53428\n  \nPublished : June 29, 2026, 6:52 p.m. | 34 minutes ago\n  \nDescription :Memory Allocation with Excessive Size Value vulnerability in leandrocp mdex allows an unauthenticated attacker to cause a denial of service through unbounded memory allocation.\n\ncomrak_nif::lumis_adapter::LumisAdapter::parse_highlight_lines in native/comrak_nif/src/lumis_adapter.rs eagerly expands a user-controlled inclusive line range from a fenced code block's highlight_lines decorator into a Vec, pushing one element per integer in the range with no upper bound on the range size. An attacker who can supply Markdown that an application renders with MDEx.to_html/2 (for example a comment, chat message, or wiki page) can embed a code block whose info string is rust highlight_lines=\"1-100000000\", forcing the native adapter to allocate roughly 8 bytes per line in the range.\n\nA payload that differs by only a few bytes can therefore allocate hundreds of megabytes, and a sufficiently large range (for example 1-2000000000) exhausts host memory and aborts the BEAM, denying service to every user of the rendering process. The per-line write loop additionally tests membership with a linear scan over the same vector, degrading rendering to a quadratic cost even for ranges that do not immediately exhaust memory.\n\nThe vulnerable native code originally shipped inside mdex (in native/comrak_nif/src/lumis_adapter.rs) and was later extracted into the separate mdex_native package (native/mdex_native_nif/src/lumis_adapter.rs), where it remains unpatched.\n\nThis issue affects mdex from 0.11.0 before 0.12.3, and mdex_native from 0.1.0 before 0.2.3.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
