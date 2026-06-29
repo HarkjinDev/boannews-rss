@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-06-30T00:03:15.348908+09:00",
+  "fetched_at": "2026-06-30T00:32:59.973154+09:00",
   "security_news": [
+    {
+      "title": "자위대, '중국 해킹 의심' USB 1년 가까이 방치",
+      "summary": "일본 자위대가 바이러스에 감염된 USB를 1년 가까이 쓴 사실이 뒤늦게 파악됐습니다. 중국계 해커가 심은 것으로 의심되면서 기밀정보 유출 우려가 나왔지만, 일본 정부는 자위대 시스템에 대한 영향은 없다고 선을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 일본 자위대, 중국 해커 의심 USB 1년 사용\n2. 바이러스 감염 USB로 기밀정보 유출 우려\n3. 일본 정부, 시스템 영향 없어 USB 사용 중단",
+      "link": "https://n.news.naver.com/mnews/article/052/0002372518?sid=104",
+      "source": "naver",
+      "published": "2026-06-30T00:12:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "⚡ Weekly Recap: Linux Kernel Flaws, AI Malware Tricks, Turla Backdoor, Infostealers and More",
       "summary": "This week was a reminder that attackers do not always need big tricks. One small mistake, one old access path, one missed patch, and suddenly the door is open.\n\nThe noise is not all noise, either. Forums are talking, researchers are finding easy cracks, and defenders have more cleanup waiting.\n\nHere’s the full Monday recap.\n\n⚡ Threat of the Week\n\nNew DirtyClone Linux Kernel Flaw Lets Local",
@@ -1443,6 +1455,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-46406 - Claude Code: Insecure Temporary File in /copy Command Enables Response Disclosure and Symlink-Based File Write",
+      "summary": "CVE ID :CVE-2026-46406\n  \nPublished : June 29, 2026, 2:03 p.m. | 1 hour, 23 minutes ago\n  \nDescription :Claude Code is an agentic coding tool.  From 2.1.59 until 2.1.128, the Claude Code /copy command wrote responses to a hardcoded, predictable path (/tmp/claude/response.md) without UID isolation, randomness, or symlink protection. The file was created world-readable (0644) in a world-traversable directory (0755), allowing any local user to read a privileged user's Claude response, which could contain secrets or credentials. Additionally, because the path was static and predictable, a local attacker could pre-create the directory and plant a symlink at the expected file path, causing the privileged process to follow the symlink and overwrite an attacker-chosen file with the response text. Exploiting this required a local unprivileged user on the same system and a privileged user to run the /copy command. This vulnerability is fixed in 2.1.128.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-46406\n  \nPublished : June 29, 2026, 2:03 p.m. | 1 hour, 23 minutes ago\n  \nDescription :Claude Code is an agentic coding tool.  From 2.1.59 until 2.1.128, the Claude Code /copy command wrote responses to a hardcoded, predictable path (/tmp/claude/response.md) without UID isolation, randomness, or symlink protection. The file was created world-readable (0644) in a world-traversable directory (0755), allowing any local user to read a privileged user's Claude response, which could contain secrets or credentials. Additionally, because the path was static and predictable, a local attacker could pre-create the directory and plant a symlink at the expected file path, causing the privileged process to follow the symlink and overwrite an attacker-chosen file with the response text. Exploiting this required a local unprivileged user on the same system and a privileged user to run the /copy command. This vulnerability is fixed in 2.1.128.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-46406 - Claude 코드: /copy 명령의 안전하지 않은 임시 파일로 인해 응답 공개 및 Symlink 기반 파일 쓰기가 가능해졌습니다.",
+      "summary_ko": "CVE ID:CVE-2026-46406\n  \n게시일 : 2026년 6월 29일 오후 2시 3분 | 1시간 23분 전\n  \n설명:Claude Code는 에이전트 코딩 도구입니다.  2.1.59부터 2.1.128까지 Claude Code /copy 명령은 UID 격리, 임의성 또는 심볼릭 링크 보호 없이 하드코딩된 예측 가능한 경로(/tmp/claude/response.md)에 응답을 기록했습니다. 이 파일은 전 세계적으로 이동할 수 있는 디렉터리(0755)에 전 세계에서 읽을 수 있도록(0644) 생성되었으므로 모든 로컬 사용자가 비밀이나 자격 증명이 포함될 수 있는 권한 있는 사용자의 Claude 응답을 읽을 수 있습니다. 또한 경로가 정적이고 예측 가능했기 때문에 로컬 공격자가 디렉터리를 미리 생성하고 예상 파일 경로에 심볼릭 링크를 심어 권한 있는 프로세스가 심볼릭 링크를 따르고 공격자가 선택한 파일을 응답 텍스트로 덮어쓰게 할 수 있었습니다. 이를 악용하려면 동일한 시스템의 권한 없는 로컬 사용자와 /copy 명령을 실행하는 권한 있는 사용자가 필요했습니다. 이 취약점은 2.1.128에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-46406\n2. 26.06.29 오후11:03\n3. Claude Code is an agentic coding tool. From 2.1.59",
+      "cve_id": "CVE-2026-46406",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46406",
+      "source": "cvefeed",
+      "published": "2026-06-29T23:03:14+09:00",
+      "lang": "en"
+    },
     {
       "title": "Adding some Automation to the favicon.ico method of Host Recon, (Mon, Jun 29th)",
       "summary": "I&#;x26;#;39;m in the throes of target host recon for another pentest, and thought I&#;x26;#;39;d share some workflow / automation stuff.\r",
