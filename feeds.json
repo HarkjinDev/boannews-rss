@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-06-30T15:32:19.294801+09:00",
+  "fetched_at": "2026-06-30T16:02:24.927252+09:00",
   "security_news": [
+    {
+      "title": "[Global Security TOP 100] 우종현 듀얼오스 대표 “지치지 않는 AI 공격, ‘구조적 보안’으로 가둔다”",
+      "summary": "스마트폰 앱 연동한 양방향 상호 인증 체계 성공적 구축 및 M2M 영역 확대24시간 상시 타격하는 AI 위협 맞서 공격 표면 원천 격리하는 프레임 정조준[보안뉴스 조재호 기자] AI 에이전트의 확산은 사후 대응에 치중해 온 기존 사이버보안 체계의 뼈아픈 한계를 여실히 드러내고 있다. 단발성 해킹을 넘어 24시간 멈추지 않는 인공지능(AI)의 자동화 공격이",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 듀얼오스 우종현 대표, AI 자동화 공격 대응 '구조적 보안' 강조\n2. 24시간 지속 AI 에이전트 공격, 사후 대응 체계 한계 드러내\n3. 스마트폰 앱 연동 양방향 인증 체계 구축, M2M 영역 확대",
+      "link": "http://www.boannews.com/media/view.asp?idx=144405&kind=&sub_kind=",
+      "source": "boannews",
+      "published": "2026-06-30T15:57:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "‘역대급 실적’ 넥슨·크래프톤·넷마블, 보안투자는 매출 1% 미만 ‘인...",
+      "summary": "최근 인공지능(AI)을 활용한 해킹과 개인정보 유출 사고가 잇따르는 가운데 수천만명의 이용자 정보를... 최근 전 세계적으로 생성형 AI를 악용한 해킹 수법이 고도화되고, 국내에서도 기업을 노린 랜섬웨어 공격과...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 넥슨·크래프톤·넷마블, 보안투자 매출 1% 미만\n2. 생성형 AI 악용해킹·랜섬웨어 공격 증가\n3. 수천만명 개인정보 유출, 보안 강화 대응 중",
+      "link": "https://n.news.naver.com/mnews/article/366/0001175574?sid=105",
+      "source": "naver",
+      "published": "2026-06-30T15:39:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "한컴위드, PQC 웹 구간 암호화 솔루션 ‘엑스에프웹’ 출시",
+      "summary": "최근 연계정보(CI) 값 유출 사고와 관련해 파라미터 위·변조를 통한 해킹 가능성에 대한 점검 필요성도 커지고 있다. 파라미터 위·변조 공격은 국내 웹 시스템 해킹 사고의 주요 원인 중 하나로 지목된다. 한컴...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 파라미터 위·변조 해킹 점검 필요성 증대\n2. CI 값 유출 등 웹 시스템 해킹 사고 원인\n3. 한컴위드, '엑스에프웹' 솔루션 출시",
+      "link": "https://n.news.naver.com/mnews/article/018/0006319066?sid=105",
+      "source": "naver",
+      "published": "2026-06-30T15:37:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "9월부터 개인정보 보호 대폭 강화...기업 대표 책임 확대·유출 가능성도...",
       "summary": "이는 반복되는 대규모 유출 사고 속에서 실무자 중심의 책임 구조만으로는 충분한 보안 투자를 끌어내기 어렵다는 문제의식이 반영된 조치다. 개인정보위는 “개인정보 보호를 단순한 규제 준수나 비용 문제가 아니라...",
@@ -4645,36 +4681,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-45258",
       "source": "cvefeed",
       "published": "2026-06-27T17:50:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12432 - Stripe Payment Forms by WP Full Pay <= 8.4.3 - Missing Authorization to Unauthenticated Payment Record Manipulation via 'paymentIntentId' Parameter",
-      "summary": "CVE ID :CVE-2026-12432\n  \nPublished : June 27, 2026, 6:50 a.m. | 49 minutes ago\n  \nDescription :The WP Full Stripe Free plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 8.4.3 via the wpfs_update_failed_payment_status AJAX action. The handler is registered through both wp_ajax_ and wp_ajax_nopriv_ hooks and the underlying update_failed_payment_status() function performs no capability check, no nonce verification, and no logged-in check before calling $this->db->updatePaymentByEventId() with attacker-controlled POST parameters. This makes it possible for unauthenticated attackers who can obtain a valid Stripe Payment Intent ID for the target site (Payment Intent IDs are exposed to the customer browser during normal Stripe.js checkout flows) to manipulate payment records in the site's database, marking previously successful payments as failed and overwriting failure codes and messages with attacker-supplied values.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12432\n  \nPublished : June 27, 2026, 6:50 a.m. | 49 minutes ago\n  \nDescription :The WP Full Stripe Free plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 8.4.3 via the wpfs_update_failed_payment_status AJAX action. The handler is registered through both wp_ajax_ and wp_ajax_nopriv_ hooks and the underlying update_failed_payment_status() function performs no capability check, no nonce verification, and no logged-in check before calling $this->db->updatePaymentByEventId() with attacker-controlled POST parameters. This makes it possible for unauthenticated attackers who can obtain a valid Stripe Payment Intent ID for the target site (Payment Intent IDs are exposed to the customer browser during normal Stripe.js checkout flows) to manipulate payment records in the site's database, marking previously successful payments as failed and overwriting failure codes and messages with attacker-supplied values.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-12432 - WP Full Pay를 통한 스트라이프 결제 양식 <= 8.4.3 - 'payIntentId' 매개변수를 통한 인증되지 않은 결제 기록 조작에 대한 승인 누락",
-      "summary_ko": "CVE ID:CVE-2026-12432\n  \n게시일 : 2026년 6월 27일 오전 6시 50분 | 49분 전\n  \n설명:WordPress용 WP Full Stripe Free 플러그인은 wpfs_update_failed_지불_status AJAX 작업을 통해 8.4.3 이하 버전에서 권한 누락에 취약합니다. 핸들러는 wp_ajax_ 및 wp_ajax_nopriv_ 후크를 통해 등록되며 기본 update_failed_지불_status() 함수는 공격자가 제어하는 ​​POST 매개변수로 $this->db->updatePaymentByEventId()를 호출하기 전에 기능 확인, 임시 확인 및 로그인 확인을 수행하지 않습니다. 이를 통해 대상 사이트에 대한 유효한 Stripe 결제 의도 ID(결제 의도 ID는 일반 Stripe.js 결제 흐름 중에 고객 브라우저에 노출됨)를 얻을 수 있는 인증되지 않은 공격자가 사이트 데이터베이스의 결제 기록을 조작하여 이전에 성공한 결제를 실패로 표시하고 공격자가 제공한 값으로 실패 코드와 메시지를 덮어쓸 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12432\n2. 26.06.27 오후3:50\n3. The WP Full Stripe Free plugin for WordPress is vu",
-      "cve_id": "CVE-2026-12432",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12432",
-      "source": "cvefeed",
-      "published": "2026-06-27T15:50:59+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-11597 - Surbma | Infusionsoft Shortcode <= 2.0.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode Attributes",
-      "summary": "CVE ID :CVE-2026-11597\n  \nPublished : June 27, 2026, 6:50 a.m. | 49 minutes ago\n  \nDescription :The Surbma | Infusionsoft Shortcode plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'infusionsoft-form' shortcode in versions up to, and including, 2.0.1. This is due to insufficient input sanitization and output escaping on user-supplied 'account' and 'id' shortcode attributes in the surbma_infusionsoft_shortcode_shortcode() function, which are concatenated directly into a",
-      "description": "CVE ID :CVE-2026-11597\n  \nPublished : June 27, 2026, 6:50 a.m. | 49 minutes ago\n  \nDescription :The Surbma | Infusionsoft Shortcode plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'infusionsoft-form' shortcode in versions up to, and including, 2.0.1. This is due to insufficient input sanitization and output escaping on user-supplied 'account' and 'id' shortcode attributes in the surbma_infusionsoft_shortcode_shortcode() function, which are concatenated directly into a",
-      "title_ko": "CVE-2026-11597 - 수르브마 | Infusionsoft Shortcode <= 2.0.1 - 단축 코드 속성을 통해 인증된(Contributor+) 저장된 교차 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-11597\n  \n게시일 : 2026년 6월 27일 오전 6시 50분 | 49분 전\n  \n설명 :Surbma | WordPress용 Infusionsoft Shortcode 플러그인은 2.0.1 이하 버전에서 'infusionsoft-form' 단축 코드를 통한 Stored Cross-Site Scripting에 취약합니다. 이는 surbma_infusionsoft_shortcode_shortcode() 함수의 사용자 제공 'account' 및 'id' 단축 코드 속성에서 입력 삭제 및 출력 이스케이프가 충분하지 않기 때문입니다.",
-      "summary_3lines": "1. CVE-2026-11597\n2. 26.06.27 오후3:50\n3. The Surbma | Infusionsoft Shortcode plugin for Wor",
-      "cve_id": "CVE-2026-11597",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11597",
-      "source": "cvefeed",
-      "published": "2026-06-27T15:50:58+09:00",
       "lang": "en"
     }
   ],
