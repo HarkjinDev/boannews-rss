@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-30T23:02:18.155421+09:00",
+  "fetched_at": "2026-06-30T23:31:54.762674+09:00",
   "security_news": [
     {
       "title": "BlueHammer Vulnerability Exploited in Ransomware Attacks",
@@ -2283,6 +2283,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-42910 Windows Hotpatch Monitoring Service Elevation of Privilege Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": "CVE-2026-42910 Windows 핫패치 모니터링 서비스 권한 상승 취약점",
+      "summary_ko": "승인을 업데이트했습니다. 이는 정보 제공용 변경일 뿐입니다.",
+      "summary_3lines": "1. CVE-2026-42910\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-42910",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42910",
+      "source": "msrc",
+      "published": "2026-06-30T23:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-58374 - hostapd: Out-of-bounds Write in AP-mode Wi-Fi 7 MLO Association Request Processing",
       "summary": "CVE ID :CVE-2026-58374\n  \nPublished : June 30, 2026, 12:35 p.m. | 50 minutes ago\n  \nDescription :In hostapd before 2.12, a missing bounds check in AP-mode Wi-Fi 7 (IEEE 802.11be) Multi-Link Operation (MLO) association request processing allows an unauthenticated attacker within wireless range to send a crafted management frame containing a malformed Multi-Link Element or Per-STA Profile subelement. In hostapd_process_ml_assoc_req() in src/ap/ieee802_11_eht.c, the received link_id field can be parsed as value 15, but the corresponding links[] storage only has valid entries for lower link IDs (0 through 14). This causes an out-of-bounds write / small memory corruption during association processing before the 4-way handshake. The attack does not require network credentials, prior authentication, or user interaction. The confirmed practical impact is denial of service through hostapd process termination. This affects hostapd v2.11 and newer development snapshots before v2.12 when built with CONFIG_IEEE80211BE enabled. The issue is fixed in hostapd v2.12 and the upstream 2026-1 fixes.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
