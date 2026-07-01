@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-01T13:03:03.387483+09:00",
+  "fetched_at": "2026-07-01T13:32:53.655688+09:00",
   "security_news": [
+    {
+      "title": "앤트로픽 소넷 5 꺼냈다, 오퍼스급 두뇌를 반값에",
+      "summary": "다만 사이버보안 관련 작업 수행 능력은 오퍼스 계열보다 뚜렷하게 낮게 나타나 소프트웨어 취약점 공격 개발 같은 위험도가 높은 영역에서는 여전히 제한적인 성능을 보였다. 가격 정책도 파격적이다. 소넷 5는 오는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 앤트로픽, '소넷 5' 출시, 오퍼스급 성능 반값으로\n2. 사이버보안 능력은 오퍼스보다 낮음, 취약점 공격 개발 제한적\n3. 파격적 가격 정책, '소넷 5' 곧 출시 예정",
+      "link": "https://www.econovill.com/news/articleView.html?idxno=744018",
+      "source": "naver",
+      "published": "2026-07-01T13:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "커피쿠폰 받고 건넨 개인정보, 보험대리점엔 최대 13만원에 팔린다",
       "summary": "GA로 넘어간 개인정보가 전산시스템 해킹으로 유출되면 보이스피싱 같은 2차 피해로 번질 위험도 있다. 실제 지난해 GA 전산망을 노린 해킹으로 유퍼스트보험마케팅 등에서 고객·임직원 1100여 명의 정보가 유출됐고 이...",
@@ -2532,21 +2544,24 @@
       "source": "naver",
       "published": "2026-06-28T14:44:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"中企 기술유출 막는다\"…정부, 기술보호 지원 총집결",
-      "summary": "기술보호 제도 안내는 물론 AI 시대 사이버보안 교육과 무료 전문가 상담까지 제공해 현장의 대응력을... 이와 함께 국내 보안기업 이스트시큐리티가 'AI 시대 사이버보안 관리 강화 방안'을 주제로 강연을 진행한다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 정부, 中企 기술유출 방지 위해 AI 보안 교육·상담 지원\n2. 이스트시큐리티, AI 시대 사이버보안 관리 강연 진행\n3. 국내 중소기업 대상 대응력 강화",
-      "link": "https://www.m-i.kr/news/articleView.html?idxno=1385916",
-      "source": "naver",
-      "published": "2026-06-28T13:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-14191 - WinRAR / UnRAR RAR5 recovery-volume (.rev) out-of-bounds heap write in RecVolumes5::ReadHeader",
+      "summary": "CVE ID :CVE-2026-14191\n  \nPublished : July 1, 2026, 2:41 a.m. | 1 hour ago\n  \nDescription :An out-of-bounds heap write exists in the RAR5 recovery-volume (.rev) parser in WinRAR and UnRAR (RecVolumes5::ReadHeader in recvol5.cpp). The RecItems vector is sized only when the first .rev file in a set is processed; subsequent .rev files supply an independent RecNum value that is validated against that file's own TotalCount field but never against the actual size of RecItems. A crafted set of two or more .rev files can therefore write an attacker-controlled 32-bit value (the header's RevCRC field) to RecItems[RecNum] at an attacker-controlled offset up to 65534 * sizeof(RecVolItem) bytes past the allocation, corrupting adjacent heap objects. Triggering requires the victim to run a recovery/test operation on an attacker-supplied .rev set (for example 'unrar t x.part1.rev', WinRAR 'Repair archive', or auto-recovery when extracting a volume set with a missing .rar part). This is the RAR5-path sibling of CVE-2023-40477 (which was fixed in the RAR3 path only in WinRAR 6.23). Fixed in WinRAR / RAR 7.23.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-14191\n  \nPublished : July 1, 2026, 2:41 a.m. | 1 hour ago\n  \nDescription :An out-of-bounds heap write exists in the RAR5 recovery-volume (.rev) parser in WinRAR and UnRAR (RecVolumes5::ReadHeader in recvol5.cpp). The RecItems vector is sized only when the first .rev file in a set is processed; subsequent .rev files supply an independent RecNum value that is validated against that file's own TotalCount field but never against the actual size of RecItems. A crafted set of two or more .rev files can therefore write an attacker-controlled 32-bit value (the header's RevCRC field) to RecItems[RecNum] at an attacker-controlled offset up to 65534 * sizeof(RecVolItem) bytes past the allocation, corrupting adjacent heap objects. Triggering requires the victim to run a recovery/test operation on an attacker-supplied .rev set (for example 'unrar t x.part1.rev', WinRAR 'Repair archive', or auto-recovery when extracting a volume set with a missing .rar part). This is the RAR5-path sibling of CVE-2023-40477 (which was fixed in the RAR3 path only in WinRAR 6.23). Fixed in WinRAR / RAR 7.23.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-14191 - RecVolumes5::ReadHeader에서 WinRAR/UnRAR RAR5 복구 볼륨(.rev) 범위를 벗어난 힙 쓰기",
+      "summary_ko": "CVE ID:CVE-2026-14191\n  \n게시일 : 2026년 7월 1일 오전 2시 41분 | 1시간 전\n  \n설명: WinRAR 및 UnRAR(recvol5.cpp의 RecVolumes5::ReadHeader)의 RAR5 복구 볼륨(.rev) 파서에 범위를 벗어난 힙 쓰기가 존재합니다. RecItems 벡터는 세트의 첫 번째 .rev 파일이 처리될 때만 크기가 조정됩니다. 후속 .rev 파일은 해당 파일의 자체 TotalCount 필드에 대해 검증되지만 RecItems의 실제 크기에 대해서는 검증되지 않는 독립적인 RecNum 값을 제공합니다. 따라서 두 개 이상의 .rev 파일로 구성된 조작된 세트는 공격자가 제어하는 ​​32비트 값(헤더의 RevCRC 필드)을 공격자가 제어하는 ​​오프셋에서 할당을 지나 최대 65534 * sizeof(RecVolItem) 바이트만큼 RecItems[RecNum]에 기록하여 인접한 힙 개체를 손상시킬 수 있습니다. 트리거하려면 피해자가 공격자가 제공한 .rev 세트에 대해 복구/테스트 작업을 실행해야 합니다(예: 'unrar t x.part1.rev', WinRAR 'Repair archive' 또는 누락된 .rar 부분이 있는 볼륨 세트를 추출할 때 자동 복구). 이는 CVE-2023-40477(WinRAR 6.23에서만 RAR3 경로에서 수정됨)의 RAR5 경로 형제입니다. WinRAR/RAR 7.23에서 수정되었습니다.\n  \n심각도: 7.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-14191\n2. 26.07.01 오전11:41\n3. An out-of-bounds heap write exists in the RAR5 rec",
+      "cve_id": "CVE-2026-14191",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-14191",
+      "source": "cvefeed",
+      "published": "2026-07-01T11:41:39+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54592 - Oj: Stack Buffer Overflow in Oj::Doc#each_child via Deeply Nested Input",
       "summary": "CVE ID :CVE-2026-54592\n  \nPublished : June 30, 2026, 11:16 p.m. | 2 hours, 10 minutes ago\n  \nDescription :Oj (Optimized JSON) is a JSON parser and Object marshaller packaged as a Ruby gem. In versions prior to 3.17.3, Oj::Doc#each_child, when invoked recursively over a deeply nested JSON document, overflows a fixed-size stack buffer and aborts the process, leading to DoS.  In a two-step chain in ext/oj/fast.c, doc_each_child increments doc->where past the where_path[MAX_STACK = 100] array with no bounds check and never restores it (the doc->where-- is missing), so calling each_child recursively from inside the yield block drives doc->where beyond the array. On the next entry  the function copies the path into the 800-byte stack-local buffer save_path[MAX_STACK]  using wlen = doc->where - doc->where_path, so when the previous recursive call left doc->where past where_path[100] the wlen exceeds MAX_STACK and  the memcpy overflows save_path on the C stack; because the Oj::Doc parser imposes no JSON nesting-depth limit (relying on a C-stack pressure check), deeply nested attacker input reaches this path. This issue has been fixed in version 3.17.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -5320,36 +5335,6 @@
       "link": "https://isc.sans.edu/diary/rss/33106",
       "source": "sans_isc",
       "published": "2026-06-28T16:56:44+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-10593 - Remotely triggerable NULL-pointer dereference in Bluetooth LE Audio BAP unicast client QoS-state handling",
-      "summary": "CVE ID :CVE-2026-10593\n  \nPublished : June 28, 2026, 4:28 a.m. | 57 minutes ago\n  \nDescription :The Zephyr Bluetooth LE Audio Basic Audio Profile (BAP) unicast client mishandles peer-supplied ASE state notifications. In unicast_client_ep_qos_state() (subsys/bluetooth/audio/bap_unicast_client.c), the handler writes attacker-controlled QoS fields (interval, framing, phy, sdu, rtn, latency, pd) through the stream-qos pointer with only a stream != NULL guard. stream-qos is NULL for any stream that has been codec-configured via bt_bap_stream_config() but not yet added to a unicast group (it is set only by unicast_group_add_stream()). A malicious or buggy remote ASCS server, to which the local device is connected as a BAP unicast client, can send a GATT notification announcing the ASE has entered the QoS Configured state while the local endpoint is still in the Codec Configured state — a transition the dispatcher explicitly permits — during that window, causing a write through a NULL pointer and a crash (denial of service). The data written is itself remote-controlled. The defect shipped in v4.3.0 and v4.4.0 (and earlier). The fix re-points all BAP QoS storage to the always-valid embedded ep-qos struct, eliminating the NULL dereference.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-10593\n  \nPublished : June 28, 2026, 4:28 a.m. | 57 minutes ago\n  \nDescription :The Zephyr Bluetooth LE Audio Basic Audio Profile (BAP) unicast client mishandles peer-supplied ASE state notifications. In unicast_client_ep_qos_state() (subsys/bluetooth/audio/bap_unicast_client.c), the handler writes attacker-controlled QoS fields (interval, framing, phy, sdu, rtn, latency, pd) through the stream-qos pointer with only a stream != NULL guard. stream-qos is NULL for any stream that has been codec-configured via bt_bap_stream_config() but not yet added to a unicast group (it is set only by unicast_group_add_stream()). A malicious or buggy remote ASCS server, to which the local device is connected as a BAP unicast client, can send a GATT notification announcing the ASE has entered the QoS Configured state while the local endpoint is still in the Codec Configured state — a transition the dispatcher explicitly permits — during that window, causing a write through a NULL pointer and a crash (denial of service). The data written is itself remote-controlled. The defect shipped in v4.3.0 and v4.4.0 (and earlier). The fix re-points all BAP QoS storage to the always-valid embedded ep-qos struct, eliminating the NULL dereference.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10593 - Bluetooth LE 오디오 BAP 유니캐스트 클라이언트 QoS 상태 처리에서 원격으로 트리거 가능한 NULL 포인터 역참조",
-      "summary_ko": "CVE ID:CVE-2026-10593\n  \n게시일 : 2026년 6월 28일 오전 4시 28분 | 57분 전\n  \n설명: Zephyr Bluetooth LE 오디오 BAP(기본 오디오 프로필) 유니캐스트 클라이언트가 피어 제공 ASE 상태 알림을 잘못 처리합니다. unicast_client_ep_qos_state()(subsys/bluetooth/audio/bap_unicast_client.c)에서 핸들러는 스트림 != NULL 가드만 사용하여 stream-qos 포인터를 통해 공격자가 제어하는 ​​QoS 필드(간격, 프레이밍, phy, sdu, rtn, 대기 시간, pd)를 작성합니다. stream-qos는 bt_bap_stream_config()를 통해 코덱이 구성되었지만 아직 유니캐스트 그룹에 추가되지 않은 모든 스트림에 대해 NULL입니다(unicast_group_add_stream()에 의해서만 설정됨). 로컬 장치가 BAP 유니캐스트 클라이언트로 연결된 악성 또는 버그가 있는 원격 ASCS 서버는 해당 기간 동안 로컬 엔드포인트가 여전히 코덱 구성 상태에 있는 동안 ASE가 QoS 구성 상태에 진입했음을 알리는 GATT 알림을 보낼 수 있습니다(디스패처가 명시적으로 허용하는 전환). 이로 인해 NULL 포인터를 통한 쓰기 및 충돌(서비스 거부)이 발생합니다. 기록된 데이터 자체는 원격으로 제어됩니다. v4.3.0 및 v4.4.0(및 이전 버전)에서 결함이 발생했습니다. 이 수정 사항은 모든 BAP QoS 저장소를 항상 유효한 내장형 ep-qos 구조체로 다시 지정하여 NULL 역참조를 제거합니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10593\n2. 26.06.28 오후1:28\n3. The Zephyr Bluetooth LE Audio Basic Audio Profile ",
-      "cve_id": "CVE-2026-10593",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10593",
-      "source": "cvefeed",
-      "published": "2026-06-28T13:28:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-10646 - Use-after-return in `zsock_getaddrinfo()` when a timed-out DNS query is retried without cancellation",
-      "summary": "CVE ID :CVE-2026-10646\n  \nPublished : June 28, 2026, 4:04 a.m. | 1 hour, 21 minutes ago\n  \nDescription :Zephyr's BSD-sockets getaddrinfo() implementation (subsys/net/lib/sockets/getaddrinfo.c) passes a pointer to a stack-allocated state object (struct getaddrinfo_state ai_state) as the user_data of an asynchronous DNS resolver query. The socket layer waits on a semaphore with a timeout deliberately set slightly longer than the resolver's own per-query timeout. When that semaphore wait nonetheless times out (-EAGAIN) - which can occur when the resolver's timeout work is delayed by workqueue contention, or in the documented multi-retry configuration where CONFIG_NET_SOCKETS_DNS_TIMEOUT exceeds CONFIG_NET_SOCKETS_DNS_BACKOFF_INTERVAL - the pre-fix code retries the query (goto again) without cancelling the previous one and without resetting the semaphore. The previous query slot remains active in the resolver with its callback and the stack pointer as user_data, and ai_state-dns_id is overwritten so the stale query can no longer be cancelled. A subsequent DNS response delivered over UDP and matched by its 16-bit transaction id (in dispatcher_cb()/dns_read()), or the resolver's own delayed query-timeout work, then invokes dns_resolve_cb() against the now out-of-scope stack frame, writing through the stale pointer (state-status, state-idx, state-ai_arr[], and k_sem_give()). Because the triggering response is network-delivered and its 16-bit id is spoofable/replayable by an on- or off-path attacker, this is a network-influenceable use-after-return that can corrupt reused stack memory, leading to crashes/denial of service or memory corruption. The fix cancels the timed-out query by name and type before retrying and resets the local semaphore, eliminating the stale callback path. Affected: Zephyr v4.0.0 through v4.4.0.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-10646\n  \nPublished : June 28, 2026, 4:04 a.m. | 1 hour, 21 minutes ago\n  \nDescription :Zephyr's BSD-sockets getaddrinfo() implementation (subsys/net/lib/sockets/getaddrinfo.c) passes a pointer to a stack-allocated state object (struct getaddrinfo_state ai_state) as the user_data of an asynchronous DNS resolver query. The socket layer waits on a semaphore with a timeout deliberately set slightly longer than the resolver's own per-query timeout. When that semaphore wait nonetheless times out (-EAGAIN) - which can occur when the resolver's timeout work is delayed by workqueue contention, or in the documented multi-retry configuration where CONFIG_NET_SOCKETS_DNS_TIMEOUT exceeds CONFIG_NET_SOCKETS_DNS_BACKOFF_INTERVAL - the pre-fix code retries the query (goto again) without cancelling the previous one and without resetting the semaphore. The previous query slot remains active in the resolver with its callback and the stack pointer as user_data, and ai_state-dns_id is overwritten so the stale query can no longer be cancelled. A subsequent DNS response delivered over UDP and matched by its 16-bit transaction id (in dispatcher_cb()/dns_read()), or the resolver's own delayed query-timeout work, then invokes dns_resolve_cb() against the now out-of-scope stack frame, writing through the stale pointer (state-status, state-idx, state-ai_arr[], and k_sem_give()). Because the triggering response is network-delivered and its 16-bit id is spoofable/replayable by an on- or off-path attacker, this is a network-influenceable use-after-return that can corrupt reused stack memory, leading to crashes/denial of service or memory corruption. The fix cancels the timed-out query by name and type before retrying and resets the local semaphore, eliminating the stale callback path. Affected: Zephyr v4.0.0 through v4.4.0.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10646 - 시간 초과된 DNS 쿼리가 취소 없이 재시도될 때 `zsock_getaddrinfo()`에서 반환 후 사용",
-      "summary_ko": "CVE ID:CVE-2026-10646\n  \n게시일 : 2026년 6월 28일 오전 4시 4분 | 1시간 21분 전\n  \n설명: Zephyr의 BSD 소켓 getaddrinfo() 구현(subsys/net/lib/sockets/getaddrinfo.c)은 스택 할당 상태 개체(struct getaddrinfo_state ai_state)에 대한 포인터를 비동기 DNS 확인자 쿼리의 user_data로 전달합니다. 소켓 계층은 확인자의 자체 쿼리당 시간 제한보다 의도적으로 약간 더 길게 설정된 시간 제한을 사용하여 세마포어를 기다립니다. 그럼에도 불구하고 해당 세마포어 대기 시간이 초과되는 경우(-EAGAIN) - 작업 대기열 경합으로 인해 해석기의 시간 초과 작업이 지연되거나 CONFIG_NET_SOCKETS_DNS_TIMEOUT이 CONFIG_NET_SOCKETS_DNS_BACKOFF_INTERVAL을 초과하는 문서화된 다중 재시도 구성에서 발생할 수 있습니다. 접두사 코드는 이전 쿼리를 취소하거나 재설정하지 않고 쿼리를 재시도합니다(다시 이동). 세마포어. 이전 쿼리 슬롯은 해당 콜백 및 스택 포인터를 user_data로 사용하여 해석기에서 활성 상태로 유지되며, 오래된 쿼리를 더 이상 취소할 수 없도록 ai_state-dns_id를 덮어씁니다. UDP를 통해 전달되고 해당 16비트 트랜잭션 ID(dispatcher_cb()/dns_read()) 또는 확인자 자체의 지연된 쿼리 시간 제한 작업과 일치하는 후속 DNS 응답은 현재 범위를 벗어난 스택 프레임에 대해 dns_resolve_cb()를 호출하여 오래된 포인터(state-status, state-idx, state-ai_arr[] 및 k_sem_give())를 통해 씁니다. 트리거링 응답은 네트워크에서 전달되고 해당 16비트 ID는 경로 또는 경로 외부 공격자가 스푸핑/재생할 수 있기 때문에 이는 재사용된 스택 메모리를 손상시켜 충돌/서비스 거부 또는 메모리 손상을 초래할 수 있는 네트워크에 영향을 미치는 반환 후 사용입니다. 수정 사항은 재시도하기 전에 이름 및 유형별로 시간 초과된 쿼리를 취소하고 로컬 세마포를 재설정하여 오래된 콜백 경로를 제거합니다. 영향을 받음: Zephyr v4.0.0~v4.4.0.\n  \n심각도: 7.4 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10646\n2. 26.06.28 오후1:04\n3. Zephyr's BSD-sockets getaddrinfo() implementation ",
-      "cve_id": "CVE-2026-10646",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10646",
-      "source": "cvefeed",
-      "published": "2026-06-28T13:04:11+09:00",
       "lang": "en"
     }
   ],
