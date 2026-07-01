@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-02T00:01:49.261610+09:00",
+  "fetched_at": "2026-07-02T00:31:16.940294+09:00",
   "security_news": [
     {
       "title": "넷스카우트, 750번째 특허로 연결된 세상의 수호자 입지 강화",
@@ -2856,33 +2856,54 @@
       "source": "naver",
       "published": "2026-06-29T06:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[민선 8기 '마지막' 광주광역시정 백서] 미래차 도시 대전환",
-      "summary": "레벨4 수준의 자율주행은 차량 결함뿐 아니라 AI 소프트웨어, 센서, 관제, 사이버보안 등 다양한 요인이 사고... 개인정보는 보안 처리돼 광주시와도 공유될 예정\"이라고 말했다. 이어 \"울퉁불퉁한 노면 상태와 점멸 등...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 광주광역시, 미래차 도시 대전환... 레벨4 자율주행 시범 운영\n2. 자율주행 사고 요인... 차량 결함·AI·센서·관제·",
-      "link": "http://www.gjdream.com/news/articleView.html?idxno=670512",
-      "source": "naver",
-      "published": "2026-06-29T00:14:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[기자의 눈] 개인정보는 자산인데 보안은 비용인가",
-      "summary": "개인정보를 대량 보유한 기업들이 해킹 공격의 표적이 되면서 유출 규모 역시 갈수록 커지는 모습이다.... 최근 개인정보 유출 사고가 발생한 티빙 해킹 사건의 최종 피해자는 1953만명으로 파악됐다. 쿠팡(3755만명)과...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 티빙, 쿠팡 등 1953만~3755만 명 개인정보 유출 사고 발생\n2. 해킹 공격으로 대량의 개인정보 유출, 자산 가치 훼손 우려\n3. 개인정보 유출 규모 증가, 보안 강화 및 책임 소재 명확화 필요",
-      "link": "https://www.insnews.co.kr/news/articleView.html?idxno=91490",
-      "source": "naver",
-      "published": "2026-06-29T00:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-6686 - FatFs Use of Uninitialized Clusters After Seek Past EOF",
+      "summary": "CVE ID :CVE-2026-6686\n  \nPublished : July 1, 2026, 1:55 p.m. | 1 hour, 32 minutes ago\n  \nDescription :FatFs R0.16 and earlier contains an uninitialized cluster exposure when f_lseek() extends files beyond EOF without zero-filling newly allocated clusters. This maps to CWE-908 (Use of Uninitialized Resource). Estimated CVSS v3.1 vector: CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N (4.6, Medium). The estimated CISA SSVC vectors are Exploitation: PoC, Technical Impact: Partial.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-6686\n  \nPublished : July 1, 2026, 1:55 p.m. | 1 hour, 32 minutes ago\n  \nDescription :FatFs R0.16 and earlier contains an uninitialized cluster exposure when f_lseek() extends files beyond EOF without zero-filling newly allocated clusters. This maps to CWE-908 (Use of Uninitialized Resource). Estimated CVSS v3.1 vector: CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N (4.6, Medium). The estimated CISA SSVC vectors are Exploitation: PoC, Technical Impact: Partial.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-6686 - 이전 EOF를 검색한 후 FatF가 초기화되지 않은 클러스터를 사용함",
+      "summary_ko": "CVE ID:CVE-2026-6686\n  \n게시일 : 2026년 7월 1일 오후 1시 55분 | 1시간 32분 전\n  \n설명 :FatFs R0.16 및 이전 버전에는 f_lseek()가 새로 할당된 클러스터를 0으로 채우지 않고 EOF 이상으로 파일을 확장할 때 초기화되지 않은 클러스터 노출이 포함되어 있습니다. 이는 CWE-908(초기화되지 않은 리소스 사용)에 매핑됩니다. 예상 CVSS v3.1 벡터: CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N(4.6, 중간). 추정된 CISA SSVC 벡터는 공격: PoC, 기술적 영향: 부분입니다.\n  \n심각도: 4.6 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-6686\n2. 26.07.01 오후10:55\n3. FatFs R0.16 and earlier contains an uninitialized ",
+      "cve_id": "CVE-2026-6686",
+      "cvss": "3.1",
+      "severity": "Low",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6686",
+      "source": "cvefeed",
+      "published": "2026-07-01T22:55:09+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-13602 - Session takeover vulnerability",
+      "summary": "CVE ID :CVE-2026-13602\n  \nPublished : July 1, 2026, 1:45 p.m. | 1 hour, 41 minutes ago\n  \nDescription :We found a chain of combining multiple weaknesses in the product that could allow an attacker to become any user in the backend and access any data:\n\n\n\n\n\n\n\n  *  \n\n\nThe payment integration plugins Stripe (included in the core system), pretix-mollie, pretix-oppwa, pretix-bitpay, pretix-payone, pretix-secuconnect, pretix-sofort, and pretix-saferpay\n contain a code path that is intended for the transport of session \nparameters from a tab with isolated cookies (e.g. in the pretix widget) \nto a new tab. For this purpose, a set of session parameters is \ncryptographically signed and then passed to the new tab as a URL \nparameter. The plugins perform no further validation of the session \nparameters, other than the cryptographic signature being valid. This is \nfixed with the releases issued today by strictly validating that no \nsession parameters outside of the scope of the respective plugin may be \nset.\n\n\n\n\n  *  \n\n\nAn unrelated feature in the core system is used to generate redirect links that obfuscate any Referer\n headers for outgoing links to prevent leakage of secrets in URLs. This \nredirect page also requires cryptographically signed parameters. \nUnfortunately, it uses the same key and salt for the signature as the \npreviously mentioned feature in the payment integration plugins. A \nmotivated attacker with access to at least one event in the backend can \ntrick the system into cryptographically signing arbitrary content using \nspecially crafted links. In combination with the previous issue, the \nattacker could use this to set and modify arbitrary parameters on their \nuser session by injecting the signed parameters into the feature of the \npayment providers. This is fixed with the releases issued today by using\n different salts for the signature for each plugin and feature.\n\n\n\n\n  *  \n\n\nA third, unrelated feature in the core system is used for admin users\n to act on behalf of another user, mostly for debugging purposes. With \nbeing able to insert arbitrary parameters into a session, an attacker \ncan abuse this feature to change their session from their actual user to\n any user in the system by guessing a valid user ID. This is fixed with\n the release today by requiring unguessable information to be contained \nin the session of the user to switch to.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-13602\n  \nPublished : July 1, 2026, 1:45 p.m. | 1 hour, 41 minutes ago\n  \nDescription :We found a chain of combining multiple weaknesses in the product that could allow an attacker to become any user in the backend and access any data:\n\n\n\n\n\n\n\n  *  \n\n\nThe payment integration plugins Stripe (included in the core system), pretix-mollie, pretix-oppwa, pretix-bitpay, pretix-payone, pretix-secuconnect, pretix-sofort, and pretix-saferpay\n contain a code path that is intended for the transport of session \nparameters from a tab with isolated cookies (e.g. in the pretix widget) \nto a new tab. For this purpose, a set of session parameters is \ncryptographically signed and then passed to the new tab as a URL \nparameter. The plugins perform no further validation of the session \nparameters, other than the cryptographic signature being valid. This is \nfixed with the releases issued today by strictly validating that no \nsession parameters outside of the scope of the respective plugin may be \nset.\n\n\n\n\n  *  \n\n\nAn unrelated feature in the core system is used to generate redirect links that obfuscate any Referer\n headers for outgoing links to prevent leakage of secrets in URLs. This \nredirect page also requires cryptographically signed parameters. \nUnfortunately, it uses the same key and salt for the signature as the \npreviously mentioned feature in the payment integration plugins. A \nmotivated attacker with access to at least one event in the backend can \ntrick the system into cryptographically signing arbitrary content using \nspecially crafted links. In combination with the previous issue, the \nattacker could use this to set and modify arbitrary parameters on their \nuser session by injecting the signed parameters into the feature of the \npayment providers. This is fixed with the releases issued today by using\n different salts for the signature for each plugin and feature.\n\n\n\n\n  *  \n\n\nA third, unrelated feature in the core system is used for admin users\n to act on behalf of another user, mostly for debugging purposes. With \nbeing able to insert arbitrary parameters into a session, an attacker \ncan abuse this feature to change their session from their actual user to\n any user in the system by guessing a valid user ID. This is fixed with\n the release today by requiring unguessable information to be contained \nin the session of the user to switch to.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-13602 - 세션 탈취 취약점",
+      "summary_ko": "CVE ID:CVE-2026-13602\n  \n게시일 : 2026년 7월 1일 오후 1시 45분 | 1시간 41분 전\n  \n설명:공격자가 백엔드의 모든 사용자가 되어 모든 데이터에 액세스할 수 있도록 허용할 수 있는 여러 가지 약점을 제품에서 결합한 체인을 발견했습니다.\n\n\n\n\n\n\n\n  *  \n\n\n결제 통합 플러그인 Stripe(핵심 시스템에 포함됨), pretix-mollie, pretix-oppwa, pretix-bitpay, pretix-payone, pretix-secuconnect, pretix-sofort 및 pretix-saferpay\n 세션 전송을 위한 코드 경로를 포함합니다. \n격리된 쿠키가 있는 탭의 매개변수(예: pretix 위젯) \n새 탭으로. 이를 위해 세션 매개변수 세트는 다음과 같습니다. \n암호화되어 서명된 후 새 탭에 URL로 전달됩니다. \n매개변수. 플러그인은 세션에 대한 추가 검증을 수행하지 않습니다. \n암호화 서명을 제외한 매개변수가 유효합니다. 이것은 \n오늘 발표된 릴리스로 수정되었습니다. \n해당 플러그인의 범위를 벗어나는 세션 매개변수는 \n설정합니다.\n\n\n\n\n  *  \n\n\n핵심 시스템의 관련 없는 기능이 모든 리퍼러를 난독화하는 리디렉션 링크를 생성하는 데 사용됩니다.\n URL의 비밀 유출을 방지하기 위한 나가는 링크의 헤더입니다. 이 \n리디렉션 페이지에는 암호화로 서명된 매개변수도 필요합니다. \n불행하게도 서명에 동일한 키와 솔트를 사용합니다. \n이전에 결제 통합 플러그인에서 언급한 기능입니다. 에이 \n백엔드에서 하나 이상의 이벤트에 액세스할 수 있는 동기가 있는 공격자는 \n다음을 사용하여 시스템을 속여 임의의 콘텐츠에 암호화 방식으로 서명하도록 합니다. \n특별히 제작된 링크. 지난 호와 함께, \n공격자는 이를 사용하여 자신의 시스템에서 임의의 매개변수를 설정하고 수정할 수 있습니다. \n서명된 매개변수를 기능에 삽입하여 사용자 세션 \n결제 제공업체. 이 문제는 오늘 발표된 릴리스에서 수정되었습니다.\n 각 플러그인 및 기능에 대한 서명에 대한 다른 솔트.\n\n\n\n\n  *  \n\n\n핵심 시스템의 관련 없는 세 번째 기능은 관리자에게 사용됩니다.\n 주로 디버깅 목적으로 다른 사용자를 대신하여 작업합니다. 와 \n세션에 임의의 매개변수를 삽입할 수 있으므로 공격자는 \n이 기능을 남용하여 실제 사용자에서 세션을 다음 사용자로 변경할 수 있습니다.\n 유효한 사용자 ID를 추측하여 시스템의 모든 사용자. 이 문제는 다음과 같이 해결되었습니다.\n 추측할 수 없는 정보를 포함하도록 요구하여 오늘 출시 \n전환할 사용자의 세션에서.\n  \n심각도: 7.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-13602\n2. 26.07.01 오후10:45\n3. We found a chain of combining multiple weaknesses ",
+      "cve_id": "CVE-2026-13602",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13602",
+      "source": "cvefeed",
+      "published": "2026-07-01T22:45:30+09:00",
+      "lang": "fi"
+    },
+    {
+      "title": "CVE-2026-53355 - net: rds: clear i_sends on setup unwind",
+      "summary": "CVE ID :CVE-2026-53355\n  \nPublished : July 1, 2026, 1:32 p.m. | 1 hour, 54 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet: rds: clear i_sends on setup unwind\n\nThe RDS IB connection teardown path is written so it can run during\npartial startup and on repeated shutdown attempts. It uses NULL\npointers to distinguish resources that are still owned from resources\nthat have already been released.\n\nWhen rds_ib_setup_qp() fails after allocating i_sends but before\nallocating i_recvs, the sends_out path frees i_sends without clearing\nthe pointer. A later shutdown pass can still treat that stale pointer\nas a live send ring allocation.\n\nClear i_sends after vfree() in the error unwind path so the existing\nshutdown logic continues to use the correct ownership state.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53355\n  \nPublished : July 1, 2026, 1:32 p.m. | 1 hour, 54 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet: rds: clear i_sends on setup unwind\n\nThe RDS IB connection teardown path is written so it can run during\npartial startup and on repeated shutdown attempts. It uses NULL\npointers to distinguish resources that are still owned from resources\nthat have already been released.\n\nWhen rds_ib_setup_qp() fails after allocating i_sends but before\nallocating i_recvs, the sends_out path frees i_sends without clearing\nthe pointer. A later shutdown pass can still treat that stale pointer\nas a live send ring allocation.\n\nClear i_sends after vfree() in the error unwind path so the existing\nshutdown logic continues to use the correct ownership state.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53355 - net: rds: 설정 해제 시 i_send 삭제",
+      "summary_ko": "CVE ID:CVE-2026-53355\n  \n게시일 : 2026년 7월 1일 오후 1시 32분 | 1시간 54분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nnet: rds: 설정 해제 시 i_send 삭제\n\nRDS IB 연결 해제 경로는 실행 중에도 실행될 수 있도록 작성됩니다.\n부분 시작 및 반복적인 종료 시도 시. NULL을 사용합니다.\n여전히 소유하고 있는 리소스를 리소스와 구별하기 위한 포인터\n이미 출시된 것들입니다.\n\ni_sends를 할당한 후 rds_ib_setup_qp()가 실패하는 경우\ni_recvs를 할당하면 send_out 경로는 지우지 않고 i_sends를 해제합니다.\n포인터. 이후의 종료 단계에서는 여전히 오래된 포인터를 처리할 수 있습니다.\n라이브 전송 링 할당으로.\n\n오류 해제 경로에서 vfree() 이후의 i_sends를 지워 기존\n종료 논리는 올바른 소유권 상태를 계속 사용합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-53355\n2. 26.07.01 오후10:32\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-53355",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53355",
+      "source": "cvefeed",
+      "published": "2026-07-01T22:32:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53905 - Unauthorized Access to Administrator ACL View in MCO",
       "summary": "CVE ID :CVE-2026-53905\n  \nPublished : July 1, 2026, 11:58 a.m. | 1 hour, 28 minutes ago\n  \nDescription :MCO does not properly enforce authorization checks in the /customer/servlet/mco/webapi/admin-view-hierarchy/get-acl-tree-structure endpoint. An authenticated, low-privileged user can retrieve administrator access control structures without proper authorization checks.\nThis may expose sensitive permission mappings and internal configuration details.\n\nBecause vendor contact attempts were unsuccessful, the vulnerability has only been confirmed in version 25.3.3.1 but may also affect other versions.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
