@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-02T08:02:36.001373+09:00",
+  "fetched_at": "2026-07-02T08:32:32.745575+09:00",
   "security_news": [
+    {
+      "title": "\"사이버 위협 선제 대응\"…통신3사, 정보보호 투자·전담인력 확충 '속도...",
+      "summary": "사이버 위협 방어…3사, 보안 방어벽 구축 사활 SKT, 지난해 정보보호 투자 규모 1천111억원 KT·LGU+, 임직원 대상 사내 정보보호 교육 강화 【 청년일보 】 최근 사이버 위협 고도화로 인한 개인정보 유출 리스크...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. SKT, KT·LGU+ 2022년 정보보호 투자 1천111억원\n2. 고도화된 사이버 공격으로 개인정보 유출 리스크 증가\n3. 3사, 전담인력 확충 및 임직원 보안 교육 강화 추진",
+      "link": "https://www.youthdaily.co.kr/news/article.html?no=222046",
+      "source": "naver",
+      "published": "2026-07-02T08:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[역사속 오늘·7.2] 독립협회 결성(1896)·한국, 유엔무역개발회의(UNCTAD...",
+      "summary": "러시아 해킹조직으로 추정되는 '레빌'(ReVil), 사상최대의 랜섬웨어 공격, 레빌은 미국 IT보안관리서비스업체 '카세야'에 다크웹 등을 통해 몸값으로 5천만~7천만$ 요구2022 ‘현대연극의 전설’로 불린 프랑스(영국...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [역사속 오늘·7.2] 독립협회 결성(1896)·한국, 유엔무역개발회의(UNCTAD...\n2. 러시아 해킹조직으로 추정되는 '레빌'(ReVil), 사상최대의 랜섬웨어 공격, 레빌은 미국",
+      "link": "http://kor.theasian.asia/archives/408637",
+      "source": "naver",
+      "published": "2026-07-02T08:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "‘보이스피싱·금융사기’ 막을 수 있을까…DID가 바꾸는 신원 인증의 ...",
       "summary": "특히 온라인에서 개인정보는 개인이 관리할 수도 없고 해킹 등을 통해 상상 이상으로 노출되기도 한다.... 중앙 서버가 해킹되거나 정보가 유출되면 수많은 사용자의 개인정보가 한 번에 위험에 노출될 수 있기...",
@@ -2928,21 +2952,24 @@
       "source": "naver",
       "published": "2026-06-29T08:34:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "고려대 KU-ICCSP 2026 폐막…AI 시대 개인정보보호와 블록체인 신뢰체계...",
-      "summary": "고려대학교 정보보호대학원이 지난 25일부터 26일까지 이틀간 개최한 '제2회 고려대학교 국제 사이버보안... 참석자들은 개인정보보호와 보안을 법·제도와 기술 구조에 처음부터 반영하는 '구조 기반' 모델로...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 고려대 KU-ICCSP 2026 개최…AI 시대 개인정보보호 논의\n2. 블록체인 신뢰체계·구조 기반 보안 모델 제시\n3. 법·제도·기술 통합 방식으로 개인정보 보호 강화 방안 마련",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207343",
-      "source": "naver",
-      "published": "2026-06-29T08:24:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-14440 - Cloudflare Universal SSL automatically managed CAA RRset supersedes customer-configured CAA records",
+      "summary": "CVE ID :CVE-2026-14440\n  \nPublished : July 1, 2026, 10:35 p.m. | 52 minutes ago\n  \nDescription :Description:\n\n\n\n\nTo issue and renew TLS certificates on behalf of customers, Cloudflare's Universal SSL feature automatically manages the CAA RRset for the customer's zone. This auto-managed RRset is permissive by design (e.g. 'issue \"letsencrypt.org\"' without parameters). On Universal SSL zones, Cloudflare's authoritative DNS serves this auto-managed RRset at query time, superseding any customer-configured CAA records on the zone. When a customer publishes a stricter CAA record using the RFC 8657 accounturi or validationmethods parameters, the Certificate Authority does not observe those parameters when evaluating the served RRset under RFC 8659. As a result, the RFC 8657 account-binding and validation-method-binding protections are not enforced end-to-end on Universal SSL zones. Successful exploitation could result in issuance of a browser-trusted TLS certificate to an attacker, enabling MITM against the affected domain.\n\n\n\n\nExploitation is non-trivial in practice: an attacker would need to hold an ACME account at one of the Certificate Authorities in the served CAA RRset and to simultaneously satisfy domain control validation across the multiple geographically distinct Network Perspectives the CA relies on for Multi-Perspective Issuance Corroboration. Cloudflare prefixes are anycast-announced from hundreds of locations globally, raising the bar against single-vantage-point BGP hijacks. Any resulting misissuance of a browser-trusted certificate is subject to Certificate Transparency logging required by major browsers, and would be visible to CT monitoring.\n\n\n\n\n\n\n\n\nMitigation: \n\n\n\nCustomers requiring strict RFC 8657 enforcement need to disable Universal SSL on the affected zone.\n\n\n\nUniversal SSL's automatic CAA management and customer-set RFC 8657 accounturi and validationmethods enforcement are mutually exclusive by the nature of the issue, so there is no in-product workaround that preserves both. \n\n\n\nCertificate Transparency monitoring is recommended for all customers as a general detection control.\n\n\n\n\n\n\n\n\nCredits:\n\n\n\nDavid Osipov (ORCID: https://orcid.org/0009-0005-2713-9242), independent researcher\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-14440\n  \nPublished : July 1, 2026, 10:35 p.m. | 52 minutes ago\n  \nDescription :Description:\n\n\n\n\nTo issue and renew TLS certificates on behalf of customers, Cloudflare's Universal SSL feature automatically manages the CAA RRset for the customer's zone. This auto-managed RRset is permissive by design (e.g. 'issue \"letsencrypt.org\"' without parameters). On Universal SSL zones, Cloudflare's authoritative DNS serves this auto-managed RRset at query time, superseding any customer-configured CAA records on the zone. When a customer publishes a stricter CAA record using the RFC 8657 accounturi or validationmethods parameters, the Certificate Authority does not observe those parameters when evaluating the served RRset under RFC 8659. As a result, the RFC 8657 account-binding and validation-method-binding protections are not enforced end-to-end on Universal SSL zones. Successful exploitation could result in issuance of a browser-trusted TLS certificate to an attacker, enabling MITM against the affected domain.\n\n\n\n\nExploitation is non-trivial in practice: an attacker would need to hold an ACME account at one of the Certificate Authorities in the served CAA RRset and to simultaneously satisfy domain control validation across the multiple geographically distinct Network Perspectives the CA relies on for Multi-Perspective Issuance Corroboration. Cloudflare prefixes are anycast-announced from hundreds of locations globally, raising the bar against single-vantage-point BGP hijacks. Any resulting misissuance of a browser-trusted certificate is subject to Certificate Transparency logging required by major browsers, and would be visible to CT monitoring.\n\n\n\n\n\n\n\n\nMitigation: \n\n\n\nCustomers requiring strict RFC 8657 enforcement need to disable Universal SSL on the affected zone.\n\n\n\nUniversal SSL's automatic CAA management and customer-set RFC 8657 accounturi and validationmethods enforcement are mutually exclusive by the nature of the issue, so there is no in-product workaround that preserves both. \n\n\n\nCertificate Transparency monitoring is recommended for all customers as a general detection control.\n\n\n\n\n\n\n\n\nCredits:\n\n\n\nDavid Osipov (ORCID: https://orcid.org/0009-0005-2713-9242), independent researcher\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-14440 - Cloudflare Universal SSL이 자동으로 관리되는 CAA RRset가 고객이 구성한 CAA 레코드를 대체합니다.",
+      "summary_ko": "CVE ID:CVE-2026-14440\n  \n게시일 : 2026년 7월 1일 오후 10시 35분 | 52분 전\n  \n설명 :설명:\n\n\n\n\n고객을 대신하여 TLS 인증서를 발급하고 갱신하기 위해 Cloudflare의 Universal SSL 기능은 고객 영역에 대한 CAA RRset를 자동으로 관리합니다. 이 자동 관리형 RRset는 설계상 허용됩니다(예: 매개변수 없이 'letsencrypt.org' 발행'). Universal SSL 영역에서 Cloudflare의 권한 있는 DNS는 쿼리 시 이 자동 관리형 RRset를 제공하여 해당 영역에서 고객이 구성한 CAA 레코드를 대체합니다. 고객이 RFC 8657 accounturi 또는 유효성 검사 방법 매개 변수를 사용하여 더 엄격한 CAA 레코드를 게시하면 인증 기관은 RFC 8659에 따라 제공된 RRset를 평가할 때 해당 매개 변수를 관찰하지 않습니다. 결과적으로 RFC 8657 계정 바인딩 및 유효성 검사 방법 바인딩 보호는 Universal SSL 영역에서 종단 간 적용되지 않습니다. 악용에 성공하면 공격자에게 브라우저에서 신뢰하는 TLS 인증서가 발급되어 영향을 받는 도메인에 대해 MITM이 활성화될 수 있습니다.\n\n\n\n\n실제로 악용은 간단하지 않습니다. 공격자는 제공된 CAA RRset의 인증 기관 중 하나에 ACME 계정을 보유해야 하며 동시에 CA가 다중 관점 발급 확인을 위해 의존하는 여러 지리적으로 구별되는 네트워크 관점에 걸쳐 도메인 제어 유효성 검사를 충족해야 합니다. Cloudflare 접두사는 전 세계적으로 수백 개의 위치에서 애니캐스트로 발표되어 단일 유리한 지점 BGP 하이재킹에 대한 기준을 높입니다. 결과적으로 브라우저에서 신뢰할 수 있는 인증서가 잘못 발급되면 주요 브라우저에서 요구하는 인증서 투명성 로깅이 적용되며 CT 모니터링에 표시됩니다.\n\n\n\n\n\n\n\n\n완화: \n\n\n\n엄격한 RFC 8657 적용이 필요한 고객은 영향을 받는 영역에서 Universal SSL을 비활성화해야 합니다.\n\n\n\nUniversal SSL의 자동 CAA 관리와 고객이 설정한 RFC 8657 계정 및 검증 방법 시행은 문제의 성격상 상호 배타적이므로 두 가지를 모두 유지하는 제품 내 해결 방법은 없습니다. \n\n\n\n인증서 투명성 모니터링은 일반적인 탐지 제어로 모든 고객에게 권장됩니다.\n\n\n\n\n\n\n\n\n크레딧:\n\n\n\nDavid Osipov(ORCID: https://orcid.org/0009-0005-2713-9242), 독립 연구원\n  \n심각도: 7.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-14440\n2. 26.07.02 오전7:35\n3. Description: To issue and renew TLS certificates o",
+      "cve_id": "CVE-2026-14440",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-14440",
+      "source": "cvefeed",
+      "published": "2026-07-02T07:35:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-14340 - An incorrect authorization vulnerability in GitHub Enterprise Server allows issue creation in unrelated public repositories",
       "summary": "CVE ID :CVE-2026-14340\n  \nPublished : July 1, 2026, 9:03 p.m. | 24 minutes ago\n  \nDescription :An incorrect authorization vulnerability was identified in GitHub Enterprise Server that allowed a user-to-server token scoped to a GitHub App installation to perform certain write operations on public repositories outside the token's intended scope. This was possible because the authorization check only verified that the installation had read permissions on the target repository rather than verifying that the token's installation was explicitly granted access to that repository. An attacker who obtained a victim's user-to-server token could create issues, issue comments, commit comments, and private vulnerability reports on any public repository, appearing as the victim user with no indication of the app involvement. This vulnerability was fixed by adding a repository scope check for user-to-server tokens issued by global apps. This vulnerability affected all versions of GitHub Enterprise Server prior to 3.22 and was fixed in versions 3.21.2, 3.20.4, 3.19.8, 3.18.11, 3.17.17, 3.16.20. This vulnerability was reported via the GitHub Bug Bounty program.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
