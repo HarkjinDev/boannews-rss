@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-03T05:02:37.552438+09:00",
+  "fetched_at": "2026-07-03T05:32:21.301184+09:00",
   "security_news": [
+    {
+      "title": "SKT·쿠팡 등 '1년'간 약 '1억'건 개인정보 털려…왜 반복되나",
+      "summary": "지난해 'SKT 유심 해킹 사고'에 이어 쿠팡, 티빙과 중소벤처기업부의 '모두의 창업'까지. 대기업과 공공기관을... 전문가들은 갈수록 고도화되는 해킹 기술과 정보보호를 '투자'가 아닌 '비용'으로만 바라보는 기업의 인식...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. SKT·쿠팡 등 1년간 1억건 개인정보 유출\n2. 유심 해킹·고도화된 해킹 기술로 공격 반복\n3. 대기업·공공기관 대상, 정보보호 투자 부족 지적",
+      "link": "https://n.news.naver.com/mnews/article/079/0004164441?sid=102",
+      "source": "naver",
+      "published": "2026-07-03T05:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"당신만을 사랑해 줄게\"…독거노인·독신자 홀린 2억짜리 '아내 로봇'",
       "summary": "일각에서 제기되는 AI 개인정보 데이터 유출 우려에 대해 유비테크는 \"모든 데이터는 암호화 처리되며, 사용자 정보는 AI 모델 훈련에 사용되지 않는다\"며 보안 정책을 강조했다. U1 시리즈의 1차 인도물량은 오는...",
@@ -2856,18 +2868,6 @@
       "source": "naver",
       "published": "2026-06-30T06:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "NAIC says public data stolen in ShinyHunters' PeopleSoft breach",
-      "summary": "The National Association of Insurance Commissioners (NAIC) says the ShinyHunters extortion group stole only publicly available data, outdated logs, and configuration files after breaching its systems by exploiting a zero-day vulnerability in an Oracle PeopleSoft server. [...]",
-      "content": "",
-      "title_ko": "NAIC는 ShinyHunters의 PeopleSoft 침해로 공개 데이터가 도난당했다고 밝혔습니다.",
-      "summary_ko": "NAIC(National Association of Insurance Commissioners)는 ShinyHunters 강탈 그룹이 Oracle PeopleSoft 서버의 제로데이 취약점을 악용하여 시스템을 침해한 후 공개적으로 사용 가능한 데이터, 오래된 로그 및 구성 파일만 훔쳤다고 밝혔습니다. [...]",
-      "summary_3lines": "1. NAIC, ShinyHunters 해킹으로 시스템 침해\n2. Oracle PeopleSoft 0day 취약점 악용해 공개 데이터 유출\n3. 과거 로그·설정 파일만 피해, 민감정보 무단 노출 없음",
-      "link": "https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/",
-      "source": "bleepingcomputer",
-      "published": "2026-06-30T05:30:28+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -4024,36 +4024,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-53404",
       "source": "cvefeed",
       "published": "2026-06-30T05:39:45+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-41896 - Coolify: Unauthenticated Deployment Trigger via Webhook HMAC Bypass with Null Secret",
-      "summary": "CVE ID :CVE-2026-41896\n  \nPublished : June 29, 2026, 8:16 p.m. | 1 hour, 10 minutes ago\n  \nDescription :Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, the HMAC key is the application's manual_webhook_secret_github field, which is used by Coolify's webhook endpoints to validate incoming requests, is nullable with no default — meaning newly created applications have a null webhook secret. PHP's hash_hmac() function silently coerces a null key to an empty string ''. So when the secret is null, the server computes hash_hmac('sha256', $payload, '') — a deterministic value that any attacker can calculate independently. By sending X-Hub-Signature-256: sha256=, an unauthenticated attacker can forge a valid signature and trigger deployments. This vulnerability is fixed in 4.0.0-beta.474.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-41896\n  \nPublished : June 29, 2026, 8:16 p.m. | 1 hour, 10 minutes ago\n  \nDescription :Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, the HMAC key is the application's manual_webhook_secret_github field, which is used by Coolify's webhook endpoints to validate incoming requests, is nullable with no default — meaning newly created applications have a null webhook secret. PHP's hash_hmac() function silently coerces a null key to an empty string ''. So when the secret is null, the server computes hash_hmac('sha256', $payload, '') — a deterministic value that any attacker can calculate independently. By sending X-Hub-Signature-256: sha256=, an unauthenticated attacker can forge a valid signature and trigger deployments. This vulnerability is fixed in 4.0.0-beta.474.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-41896 - Coolify: Null Secret이 포함된 Webhook HMAC 우회를 통한 인증되지 않은 배포 트리거",
-      "summary_ko": "CVE ID:CVE-2026-41896\n  \n게시일 : 2026년 6월 29일 오후 8시 16분 | 1시간, 10분 전\n  \n설명 :Coolify는 서버, 애플리케이션 및 데이터베이스를 관리하기 위한 자체 호스팅 가능한 오픈 소스 도구입니다. 4.0.0-beta.474 이전에는 Coolify의 웹훅 엔드포인트에서 수신 요청을 검증하는 데 사용되는 애플리케이션의 manual_webhook_secret_github 필드가 HMAC 키이며 기본값 없이 null이 허용됩니다. 즉, 새로 생성된 애플리케이션에는 null 웹훅 비밀이 있다는 뜻입니다. PHP의 hash_hmac() 함수는 null 키를 빈 문자열 ''로 자동으로 강제 변환합니다. 따라서 비밀이 null이면 서버는 모든 공격자가 독립적으로 계산할 수 있는 결정적 값인 hash_hmac('sha256', $payload, '')를 계산합니다. X-Hub-Signature-256: sha256=을 전송하면 인증되지 않은 공격자가 유효한 서명을 위조하고 배포를 트리거할 수 있습니다. 이 취약점은 4.0.0-beta.474에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-41896\n2. 26.06.30 오전5:16\n3. Coolify is an open-source and self-hostable tool f",
-      "cve_id": "CVE-2026-41896",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-41896",
-      "source": "cvefeed",
-      "published": "2026-06-30T05:16:50+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-13763 - HTTP/2 Stream Parser Confusion Body-Inspection Bypass in AWS Application Load Balancer with AWS WAF",
-      "summary": "CVE ID :CVE-2026-13763\n  \nPublished : June 29, 2026, 8:03 p.m. | 1 hour, 23 minutes ago\n  \nDescription :Inconsistent interpretation of HTTP/2 requests in AWS Application Load Balancer with AWS WAF enabled might allow remote actors to bypass AWS WAF managed rule body inspection via crafted HTTP/2 requests that fragment the request body across frames so that only a partial body is inspected. This issue only impacts HTTP/2 ALB target groups.\n\n\n\nTo remediate this issue, customers should enable the \"Inspect after sufficient data\" target group configuration associated to an ALB load balancer. Refer to: ( https://docs.aws.amazon.com/elasticloadbalancing/latest/application/edit-target-group-attributes.html#waf-http2-inspection )\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-13763\n  \nPublished : June 29, 2026, 8:03 p.m. | 1 hour, 23 minutes ago\n  \nDescription :Inconsistent interpretation of HTTP/2 requests in AWS Application Load Balancer with AWS WAF enabled might allow remote actors to bypass AWS WAF managed rule body inspection via crafted HTTP/2 requests that fragment the request body across frames so that only a partial body is inspected. This issue only impacts HTTP/2 ALB target groups.\n\n\n\nTo remediate this issue, customers should enable the \"Inspect after sufficient data\" target group configuration associated to an ALB load balancer. Refer to: ( https://docs.aws.amazon.com/elasticloadbalancing/latest/application/edit-target-group-attributes.html#waf-http2-inspection )\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-13763 - AWS WAF를 사용하는 AWS Application Load Balancer에서 HTTP/2 스트림 파서 혼동 본문 검사 우회",
-      "summary_ko": "CVE ID:CVE-2026-13763\n  \n게시일 : 2026년 6월 29일 오후 8시 03분 | 1시간 23분 전\n  \n설명: AWS WAF가 활성화된 AWS Application Load Balancer의 HTTP/2 요청에 대한 일관되지 않은 해석으로 인해 원격 행위자가 프레임 전체에 요청 본문을 조각화하여 부분 본문만 검사하도록 조작된 HTTP/2 요청을 통해 AWS WAF 관리 규칙 본문 검사를 우회할 수 있습니다. 이 문제는 HTTP/2 ALB 대상 그룹에만 영향을 미칩니다.\n\n\n\n이 문제를 해결하려면 고객은 ALB 로드 밸런서와 연결된 \"충분한 데이터 후 검사\" 대상 그룹 구성을 활성화해야 합니다. 참조: ( https://docs.aws.amazon.com/elasticloadbalancing/latest/application/edit-target-group-attributes.html#waf-http2-inspection )\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-13763\n2. 26.06.30 오전5:03\n3. Inconsistent interpretation of HTTP/2 requests in ",
-      "cve_id": "CVE-2026-13763",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13763",
-      "source": "cvefeed",
-      "published": "2026-06-30T05:03:57+09:00",
       "lang": "en"
     }
   ],
