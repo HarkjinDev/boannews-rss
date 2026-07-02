@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-03T06:32:29.561796+09:00",
+  "fetched_at": "2026-07-03T07:01:31.129547+09:00",
   "security_news": [
+    {
+      "title": "북한 가상화폐 도둑질 올 상반기만 1조원 육박",
+      "summary": "TRM랩스는 6억4300만 달러라는 수치가 \"해킹과 악용\"만을 포함하며, 피싱 캠페인과 허위 신분으로 외국 기업에서 돈을 벌기 위한 정보기술 노동자 파견 등 북한의 다른 불법 가상화폐 활동은 반영하지 않는다고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한, 올 상반기 1조원 가상화폐 도둑질\n2. 해킹·악용 6억4300만 달러, 피싱 제외\n3. TRM 랩스 보고서, 실제 피해 더 클 듯",
+      "link": "https://n.news.naver.com/mnews/article/003/0014044229?sid=104",
+      "source": "naver",
+      "published": "2026-07-03T06:43:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "해킹 피해가 경영 리스크로…'안전판' 떠오른 사이버보험",
       "summary": "해킹이나 전산장애가 발생하면 데이터 복구와 법률 대응, 제3자 배상책임 등 비용 부담이 한꺼번에 커질 수... 사이버보험은 해킹이나 전산장애에 따른 기업의 직접 손실과 복구 비용뿐 아니라 개인정보 유출 등으로...",
@@ -2808,21 +2820,39 @@
       "source": "naver",
       "published": "2026-06-30T07:06:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[진단] 제로트러스트, 나아갈 길을 묻다",
-      "summary": "디지털 환경 변화와 대형 해킹 사고가 맞물리며 정보통신망법부터 전자금융감독규정, 개인정보보호법에 이르기까지 관련 법이 만들어지거나 강화됐다. ISMS와 ISMS-P 같은 인증에서도 보안 요건을 정의해 지키도록...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 정보통신망법·개인정보보호법 등 보안 법 강화로 제로트러스트 도입 가속화\n2. ISMS·ISMS-P 인증 통해 기업 보안 요건 강제 적용 확대\n3. 대규모 기업, 연간 100억 이상 보안 투자 의무화",
-      "link": "http://www.itdaily.kr/news/articleView.html?idxno=240092",
-      "source": "naver",
-      "published": "2026-06-30T06:56:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-12413 - IKEv2 Denial of Service via malformed fragmentation",
+      "summary": "CVE ID :CVE-2026-12413\n  \nPublished : July 2, 2026, 9:19 p.m. | 27 minutes ago\n  \nDescription :An invalidly formatted IKEv2 fragment causes the Libreswan pluto daemon to crash and restart. Continued exploitation would cause a denial of service. The function reassemble_v2_incoming_fragments() would ignore unknown outer payloads but still store these in a fixed size array msg_digest.digest[PAYLIMIT]. An off-by-one error in the assertion PASSERT(logger, md->digest_roof < elemsof(md->digest)) causes the daemon to abort. No remote code execution is possible. Any configuration that allows IKEv2 connections that do not set fragmentation=no are vulnerable. IKEv1 is not affected.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-12413\n  \nPublished : July 2, 2026, 9:19 p.m. | 27 minutes ago\n  \nDescription :An invalidly formatted IKEv2 fragment causes the Libreswan pluto daemon to crash and restart. Continued exploitation would cause a denial of service. The function reassemble_v2_incoming_fragments() would ignore unknown outer payloads but still store these in a fixed size array msg_digest.digest[PAYLIMIT]. An off-by-one error in the assertion PASSERT(logger, md->digest_roof < elemsof(md->digest)) causes the daemon to abort. No remote code execution is possible. Any configuration that allows IKEv2 connections that do not set fragmentation=no are vulnerable. IKEv1 is not affected.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-12413 - 잘못된 조각화를 통한 IKEv2 서비스 거부",
+      "summary_ko": "CVE ID:CVE-2026-12413\n  \n게시일 : 2026년 7월 2일 오후 9시 19분 | 27분 전\n  \n설명 :잘못된 형식의 IKEv2 조각으로 인해 Libreswan pluto 데몬이 충돌하고 다시 시작됩니다. 계속 악용하면 서비스 거부가 발생할 수 있습니다. reassemble_v2_incoming_fragments() 함수는 알 수 없는 외부 페이로드를 무시하지만 이를 고정 크기 배열 msg_digest.digest[PAYLIMIT]에 저장합니다. PASSERT(logger, md->digest_roof < elemsof(md->digest)) 어설션의 off-by-one 오류로 인해 데몬이 중단됩니다. 원격 코드 실행은 불가능합니다. 조각화=아니요로 설정되지 않은 IKEv2 연결을 허용하는 모든 구성은 취약합니다. IKEv1은 영향을 받지 않습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-12413\n2. 26.07.03 오전6:19\n3. An invalidly formatted IKEv2 fragment causes the L",
+      "cve_id": "CVE-2026-12413",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12413",
+      "source": "cvefeed",
+      "published": "2026-07-03T06:19:22+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-59102 - Forgejo < 15.0.3 - Stored XSS via Actions Run Full Name Rendering",
+      "summary": "CVE ID :CVE-2026-59102\n  \nPublished : July 2, 2026, 7:44 p.m. | 2 hours, 3 minutes ago\n  \nDescription :Forgejo before 15.0.3 contains a stored cross-site scripting vulnerability that allows authenticated attackers to execute arbitrary JavaScript in other users' browsers by setting a full name containing an HTML payload and triggering an Actions run. When the DEFAULT_SHOW_FULL_NAME option is enabled, the run description is assembled server-side with the user's display name interpolated into an HTML string via a translation function that does not escape its arguments, and the frontend renders the result using a Vue v-html binding, causing script execution for any user who views the affected Actions run page.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59102\n  \nPublished : July 2, 2026, 7:44 p.m. | 2 hours, 3 minutes ago\n  \nDescription :Forgejo before 15.0.3 contains a stored cross-site scripting vulnerability that allows authenticated attackers to execute arbitrary JavaScript in other users' browsers by setting a full name containing an HTML payload and triggering an Actions run. When the DEFAULT_SHOW_FULL_NAME option is enabled, the run description is assembled server-side with the user's display name interpolated into an HTML string via a translation function that does not escape its arguments, and the frontend renders the result using a Vue v-html binding, causing script execution for any user who views the affected Actions run page.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-59102 - Forgejo < 15.0.3 - 전체 이름 렌더링 실행 작업을 통해 저장된 XSS",
+      "summary_ko": "CVE ID:CVE-2026-59102\n  \n게시일 : 2026년 7월 2일 오후 7시 44분 | 2시간, 3분 전\n  \n설명 : 15.0.3 이전의 Forgejo에는 인증된 공격자가 HTML 페이로드가 포함된 전체 이름을 설정하고 작업 실행을 트리거하여 다른 사용자의 브라우저에서 임의의 JavaScript를 실행할 수 있도록 허용하는 저장된 교차 사이트 스크립팅 취약점이 포함되어 있습니다. DEFAULT_SHOW_FULL_NAME 옵션이 활성화되면 실행 설명은 인수를 이스케이프 처리하지 않는 번역 기능을 통해 HTML 문자열에 삽입된 사용자의 표시 이름으로 서버측에서 조립되며 프런트엔드는 Vue v-html 바인딩을 사용하여 결과를 렌더링하므로 영향을 받는 작업 실행 페이지를 보는 모든 사용자에 대해 스크립트가 실행됩니다.\n  \n심각도: 5.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-59102\n2. 26.07.03 오전4:44\n3. Forgejo before 15.0.3 contains a stored cross-site",
+      "cve_id": "CVE-2026-59102",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59102",
+      "source": "cvefeed",
+      "published": "2026-07-03T04:44:07+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54886 - SSH SFTP server denial of service via extended channel data infinite loop",
       "summary": "CVE ID :CVE-2026-54886\n  \nPublished : July 2, 2026, 4:06 p.m. | 1 hour, 21 minutes ago\n  \nDescription :Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in Erlang OTP ssh (ssh_sftpd module) allows an authenticated SFTP user to render an SFTP channel permanently unresponsive.\n\nThe handle_data/4 function in ssh_sftpd contains a catch-all clause that accepts channel data of any type. When channel data with a non-zero type code (SSH_MSG_CHANNEL_EXTENDED_DATA) arrives with an empty pending buffer and a payload at or below the SFTP packet size limit, the clause tail-calls itself with identical arguments, creating an infinite loop.\n\nThe SFTP protocol operates exclusively on normal channel data (type 0). Extended data (non-zero type) is meaningless for SFTP and is never sent by conforming clients. However, the SSH protocol permits any channel participant to send extended data on an open channel, so an authenticated SFTP client can trigger the loop by sending SSH_MSG_CHANNEL_EXTENDED_DATA with any data_type_code and any non-empty payload at or below the size limit.\n\nThe targeted ssh_sftpd process enters an infinite tail-recursive loop. It never processes another message, its message queue grows without bound, and it can only be stopped by killing the process. BEAM's reduction-based scheduler preemption continues to function, so other processes on the node are not starved, but each stuck channel process consumes its full CPU time share continuously and accumulates unbounded message queue memory. Opening many channels amplifies the CPU and memory impact.\n\nErlang/OTP SSH configurations using the default max_channels setting (infinity) allow an authenticated user to open unlimited channels per connection, amplifying the attack without requiring multiple TCP connections or authentications.\n\nNo file contents, credentials, or write access are obtainable through this issue. The impact is limited to denial of service on targeted SFTP channels, with secondary CPU degradation and memory growth.\n\nThis vulnerability is associated with program file lib/ssh/src/ssh_sftpd.erl and program routine ssh_sftpd:handle_data/4.\n\nThis issue affects OTP from OTP 17.0 until OTP 29.0.3, 28.5.0.3, and 27.3.4.14 corresponding to ssh from 3.0.1 until 6.0.2, 5.5.2.2, and 5.2.11.9.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3931,21 +3961,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-7656",
       "source": "cvefeed",
       "published": "2026-06-30T07:09:10+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-10647 - Deadlock denial of service in USB CDC-NCM device class on TX enqueue failure",
-      "summary": "CVE ID :CVE-2026-10647\n  \nPublished : June 29, 2026, 9:39 p.m. | 1 hour, 32 minutes ago\n  \nDescription :The USB CDC-NCM device class (subsys/usb/device_next/class/usbd_cdc_ncm.c) ignores the return value of usbd_ep_enqueue() in its ethernet transmit callback cdc_ncm_send(). When the enqueue fails, the function still calls k_sem_take(&data-sync_sem, K_FOREVER), blocking on a completion semaphore that is only ever signaled from the bulk-IN transfer-completion callback. Because nothing was enqueued, that callback never fires and the calling thread — a shared network traffic-class TX thread — deadlocks permanently while holding the interface TX lock, halting transmission until reboot (and leaking the transmit buffer).\n\nThe enqueue fails under conditions controlled by the attached USB host: usbd_ep_enqueue() returns -EPERM whenever the bus is suspended (a standard, persistent host operation), and the underlying udc_ep_enqueue() returns -EPERM/-ENODEV on disconnect, bus reset, or endpoint disable. The cdc_ncm_send() guard only checks the DATA_IFACE_ENABLED and IFACE_UP flags, not the suspended state, so a packet transmitted while the host holds the bus suspended reaches the failing enqueue and deadlocks the TX path.\n\nThe realistic trigger is a bus suspend that occurs while the exported network interface is active and has traffic to send — host sleep, USB selective/auto-suspend, or hub power management — after which any device-originated packet deadlocks the path, recoverable only by reboot. The impact is a persistent loss of the virtual network connection between the host's NCM interface and the Zephyr device; because the deadlocked thread is a shared traffic-class TX thread, egress on other network interfaces can stall as well. There is no memory corruption or information disclosure.\n\nThe defect was introduced with the CDC-NCM driver and shipped in releases through v4.4.0; it is fixed by checking the usbd_ep_enqueue() return value and freeing the buffer before the blocking wait.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-10647\n  \nPublished : June 29, 2026, 9:39 p.m. | 1 hour, 32 minutes ago\n  \nDescription :The USB CDC-NCM device class (subsys/usb/device_next/class/usbd_cdc_ncm.c) ignores the return value of usbd_ep_enqueue() in its ethernet transmit callback cdc_ncm_send(). When the enqueue fails, the function still calls k_sem_take(&data-sync_sem, K_FOREVER), blocking on a completion semaphore that is only ever signaled from the bulk-IN transfer-completion callback. Because nothing was enqueued, that callback never fires and the calling thread — a shared network traffic-class TX thread — deadlocks permanently while holding the interface TX lock, halting transmission until reboot (and leaking the transmit buffer).\n\nThe enqueue fails under conditions controlled by the attached USB host: usbd_ep_enqueue() returns -EPERM whenever the bus is suspended (a standard, persistent host operation), and the underlying udc_ep_enqueue() returns -EPERM/-ENODEV on disconnect, bus reset, or endpoint disable. The cdc_ncm_send() guard only checks the DATA_IFACE_ENABLED and IFACE_UP flags, not the suspended state, so a packet transmitted while the host holds the bus suspended reaches the failing enqueue and deadlocks the TX path.\n\nThe realistic trigger is a bus suspend that occurs while the exported network interface is active and has traffic to send — host sleep, USB selective/auto-suspend, or hub power management — after which any device-originated packet deadlocks the path, recoverable only by reboot. The impact is a persistent loss of the virtual network connection between the host's NCM interface and the Zephyr device; because the deadlocked thread is a shared traffic-class TX thread, egress on other network interfaces can stall as well. There is no memory corruption or information disclosure.\n\nThe defect was introduced with the CDC-NCM driver and shipped in releases through v4.4.0; it is fixed by checking the usbd_ep_enqueue() return value and freeing the buffer before the blocking wait.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10647 - TX 대기열 실패 시 USB CDC-NCM 장치 클래스의 교착 상태 서비스 거부",
-      "summary_ko": "CVE ID:CVE-2026-10647\n  \n게시일 : 2026년 6월 29일 오후 9시 39분 | 1시간 32분 전\n  \n설명: USB CDC-NCM 장치 클래스(subsys/usb/device_next/class/usbd_cdc_ncm.c)는 이더넷 전송 콜백 cdc_ncm_send()에서 usbd_ep_enqueue()의 반환 값을 무시합니다. 대기열에 넣기가 실패하면 함수는 여전히 k_sem_take(&data-sync_sem, K_FOREVER)를 호출하여 대량 IN 전송 완료 콜백에서만 신호를 받는 완료 세마포를 차단합니다. 대기열에 추가된 항목이 없기 때문에 해당 콜백은 실행되지 않으며 호출 스레드(공유 네트워크 트래픽 클래스 TX 스레드)는 인터페이스 TX 잠금을 유지하는 동안 영구적으로 교착 상태가 되어 재부팅할 때까지 전송이 중단됩니다(전송 버퍼 누수).\n\n연결된 USB 호스트에 의해 제어되는 조건에서 대기열에 넣기가 실패합니다. 버스가 일시 중단될 때마다 usbd_ep_enqueue()는 -EPERM을 반환하고(표준, 영구 호스트 작업) 기본 udc_ep_enqueue()는 연결 해제, 버스 재설정 또는 끝점 비활성화 시 -EPERM/-ENODEV를 반환합니다. cdc_ncm_send() 가드는 정지 상태가 아닌 DATA_IFACE_ENABLED 및 IFACE_UP 플래그만 확인하므로 호스트가 버스를 정지 상태로 유지하는 동안 전송된 패킷은 실패한 엔큐에 도달하고 TX 경로를 교착 상태로 만듭니다.\n\n현실적인 트리거는 내보낸 네트워크 인터페이스가 활성화되어 있고 전송할 트래픽(호스트 절전, USB 선택/자동 일시 중지 또는 허브 전원 관리)이 있는 동안 발생하는 버스 일시 중지입니다. 그 후 장치에서 시작된 패킷이 경로를 교착 상태로 만들고 재부팅을 통해서만 복구할 수 있습니다. 그 영향은 호스트의 NCM 인터페이스와 Zephyr 장치 간의 가상 네트워크 연결이 지속적으로 끊어지는 것입니다. 교착 상태 스레드는 공유 트래픽 클래스 TX 스레드이므로 다른 네트워크 인터페이스의 송신도 중단될 수 있습니다. 메모리 손상이나 정보 공개가 없습니다.\n\n이 결함은 CDC-NCM 드라이버에서 발생했으며 v4.4.0을 통한 릴리스에서 제공되었습니다. usbd_ep_enqueue() 반환 값을 확인하고 차단 대기 전에 버퍼를 해제하면 문제가 해결됩니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10647\n2. 26.06.30 오전6:39\n3. The USB CDC-NCM device class (subsys/usb/device_ne",
-      "cve_id": "CVE-2026-10647",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10647",
-      "source": "cvefeed",
-      "published": "2026-06-30T06:39:08+09:00",
       "lang": "en"
     }
   ],
