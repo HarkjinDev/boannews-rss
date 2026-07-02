@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-02T22:31:13.388316+09:00",
+  "fetched_at": "2026-07-02T23:01:18.677087+09:00",
   "security_news": [
     {
       "title": "HBM 패키지 설계도 AI가 직접 한다…KAIST 테라랩, 오픈클로 활용 사례 ...",
@@ -2832,33 +2832,24 @@
       "source": "naver",
       "published": "2026-06-29T23:06:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Critical SimpleHelp flaw exploited to deploy new stealer malware",
-      "summary": "Hackers are exploiting a recently disclosed critical vulnerability (CVE-2026-48558) in SimpleHelp to deploy Djinn Stealer, a previously undocumented cross-platform information stealer targeting Windows, macOS, and Linux. [...]",
-      "content": "",
-      "title_ko": "새로운 스틸러 악성코드 배포에 악용된 심각한 SimpleHelp 결함",
-      "summary_ko": "해커들은 Windows, macOS 및 Linux를 대상으로 이전에 문서화되지 않은 크로스 플랫폼 정보 스틸러인 Djinn Stealer를 배포하기 위해 최근 SimpleHelp에서 공개된 심각한 취약점(CVE-2026-48558)을 악용하고 있습니다. [...]",
-      "summary_3lines": "1. SimpleHelp 취약점 CVE-2026-48558 악용해 Djinn Stealer 배포\n2. 다중 플랫폼 정보 유출 악성코드로 Windows/macOS/Linux 타깃\n3. 최근 공개된 심각 취약점으로 크로스플랫폼 공격 확산 우려",
-      "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/",
-      "source": "bleepingcomputer",
-      "published": "2026-06-29T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Hackers now exploit critical Oracle E-Business flaw in attacks",
-      "summary": "Attackers have begun exploiting a critical vulnerability (CVE-2026-46817) in the Oracle E-Business Suite (EBS) financial application, according to threat intelligence company Defused. [...]",
-      "content": "",
-      "title_ko": "해커들은 이제 공격에 중요한 Oracle E-Business 결함을 악용합니다.",
-      "summary_ko": "위협 정보 회사 Defused에 따르면 공격자들이 Oracle EBS(E-Business Suite) 금융 애플리케이션의 심각한 취약점(CVE-2026-46817)을 악용하기 시작했습니다. [...]",
-      "summary_3lines": "1. 해커, 오라클 EBS에 CVE-2026-46817 취약점 공격 시작 (디퓨즈 보고)\n2. 심각한 취약점 악용해 시스템 접근 및 데이터 유출 시도\n3. 오라클 패치 권고, 미적용 시 공격 위험 증가",
-      "link": "https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/",
-      "source": "bleepingcomputer",
-      "published": "2026-06-29T22:46:17+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-58652 - luci-app-travelmate - Arbitrary Command Execution via UCI Script Parameter",
+      "summary": "CVE ID :CVE-2026-58652\n  \nPublished : July 2, 2026, 12:28 p.m. | 44 minutes ago\n  \nDescription :luci-app-travelmate (and the travelmate package) contain a privilege-escalation flaw: a LuCI/rpcd session holding the luci-app-travelmate write ACL is granted config-wide UCI write access to the travelmate configuration. While the LuCI UI restricts the auto-login script picker to /etc/travelmate/*.login, this is only a frontend restriction. The backend travelmate service (running as root) reads the raw UCI 'script' and 'script_args' values and executes the configured path when the captive-portal auto-login branch (f_check() in travelmate-functions.sh) is reached. An attacker with delegated write permissions can set script to /bin/sh and script_args to attacker-controlled arguments, resulting in arbitrary command execution as root. Confirmed in luci-app-travelmate/travelmate 2.4.5-r3; the sink is still present in travelmate 2.4.6-1 and no patched version is known.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-58652\n  \nPublished : July 2, 2026, 12:28 p.m. | 44 minutes ago\n  \nDescription :luci-app-travelmate (and the travelmate package) contain a privilege-escalation flaw: a LuCI/rpcd session holding the luci-app-travelmate write ACL is granted config-wide UCI write access to the travelmate configuration. While the LuCI UI restricts the auto-login script picker to /etc/travelmate/*.login, this is only a frontend restriction. The backend travelmate service (running as root) reads the raw UCI 'script' and 'script_args' values and executes the configured path when the captive-portal auto-login branch (f_check() in travelmate-functions.sh) is reached. An attacker with delegated write permissions can set script to /bin/sh and script_args to attacker-controlled arguments, resulting in arbitrary command execution as root. Confirmed in luci-app-travelmate/travelmate 2.4.5-r3; the sink is still present in travelmate 2.4.6-1 and no patched version is known.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-58652 - luci-app-travelmate - UCI 스크립트 매개변수를 통한 임의 명령 실행",
+      "summary_ko": "CVE ID:CVE-2026-58652\n  \n게시일 : 2026년 7월 2일 오후 12시 28분 | 44분 전\n  \n설명 :luci-app-travelmate (및 travelmate 패키지)에는 권한 상승 결함이 있습니다. luci-app-travelmate 쓰기 ACL을 보유하는 LuCI/rpcd 세션에는 travelmate 구성에 대한 구성 전체 UCI 쓰기 액세스 권한이 부여됩니다. LuCI UI는 자동 로그인 스크립트 선택기를 /etc/travelmate/*.login으로 제한하지만 이는 프런트엔드 제한일 뿐입니다. 백엔드 travelmate 서비스(루트로 실행)는 원시 UCI 'script' 및 'script_args' 값을 읽고 captive-portal 자동 로그인 분기(travelmate-functions.sh의 f_check())에 도달하면 구성된 경로를 실행합니다. 위임된 쓰기 권한을 가진 공격자는 스크립트를 /bin/sh로 설정하고 script_args를 공격자가 제어하는 ​​인수로 설정하여 루트로 임의 명령을 실행할 수 있습니다. luci-app-travelmate/travelmate 2.4.5-r3에서 확인되었습니다. 싱크는 travelmate 2.4.6-1에 여전히 존재하며 패치 버전은 알려져 있지 않습니다.\n  \n심각도: 7.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-58652\n2. 26.07.02 오후9:28\n3. luci-app-travelmate (and the travelmate package) c",
+      "cve_id": "CVE-2026-58652",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58652",
+      "source": "cvefeed",
+      "published": "2026-07-02T21:28:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-14336 - Eclipse PIA OIDC Issuer Allowlist Bypass",
       "summary": "CVE ID :CVE-2026-14336\n  \nPublished : July 2, 2026, 8:29 a.m. | 2 hours, 58 minutes ago\n  \nDescription :PIA's OIDC issuer allowlist for Jenkins tokens uses a bare string-prefix check (issuer.startswith(' https://ci.eclipse.org ') in is_issuer_known, pia/models.py:139) instead of validating the issuer as a properly host-bounded URL. An attacker can craft an issuer such as  https://ci.eclipse.org@evil.host  (userinfo trick) or  https://ci.eclipse.org.evil.host  (suffix trick) that satisfies the prefix check while pointing the OIDC discovery and JWKS fetches at a server the attacker controls. An unauthenticated caller of POST /v1/upload/sbom can use this to force PIA to make outbound HTTP(S) requests to an arbitrary attacker-chosen host, and to have oidc.verify_token accept a JWT signed with the attacker's own key.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
