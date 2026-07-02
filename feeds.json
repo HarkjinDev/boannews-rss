@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-03T03:31:23.477395+09:00",
+  "fetched_at": "2026-07-03T04:01:15.103858+09:00",
   "security_news": [
     {
       "title": "[김소영의 이코노믹스] 보안의 최고 방패 ‘망분리’, 혁신의 장벽으로...",
@@ -2832,18 +2832,6 @@
       "source": "darkreading",
       "published": "2026-06-30T04:12:08+09:00",
       "lang": "en"
-    },
-    {
-      "title": "중국 해킹조직 무스탕판다, 인도 정부 침투…클라우드 서비스 악용한 새 악성코드 발견",
-      "summary": "중국 연계 사이버 해킹 조직 ’무스탕판다(Mustang Panda)’가 인도 정부 기관과 수력발전 분야를 겨냥한 새로운 사이버 첩보 작전을 수행한 사실이 확인됐다.공격자는 정상적인 클라우드 저장 서비스를 지휘통제 채널로 악용해 악성 통신을 일반 업무 트래픽처럼 위장했으며, 신규 악성코드 3종도 함께 사용한 것으로 드러났다.아크로니스 위협연구팀은 최근 발표한 분석 보고서를 통해 무스탕판다가 인도 정부 기관 내부 시스템을 실제로 침해했으며, 고위 행정 담당자가 사용하는 컴퓨터도 감염된 사례를 확인했다고 밝혔다. 연구팀은 사고 확인 이후",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중국 해킹조직 '무스탕판다', 인도 정부 및 수력발전 기관 노렸다.\n2. 정상 클라우드 서비스 악용, 신규 악성코드 3종으로 첩보 작전 수행.\n3. 인도 정부 내부 시스템 침해, 고위 행정 담당자 컴퓨터도 감염.",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207362",
-      "source": "dailysecu",
-      "published": "2026-06-30T03:48:51+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4030,21 +4018,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-13763",
       "source": "cvefeed",
       "published": "2026-06-30T05:03:57+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53428 - Unbounded memory allocation in highlight_lines range expansion in mdex",
-      "summary": "CVE ID :CVE-2026-53428\n  \nPublished : June 29, 2026, 6:52 p.m. | 34 minutes ago\n  \nDescription :Memory Allocation with Excessive Size Value vulnerability in leandrocp mdex allows an unauthenticated attacker to cause a denial of service through unbounded memory allocation.\n\ncomrak_nif::lumis_adapter::LumisAdapter::parse_highlight_lines in native/comrak_nif/src/lumis_adapter.rs eagerly expands a user-controlled inclusive line range from a fenced code block's highlight_lines decorator into a Vec, pushing one element per integer in the range with no upper bound on the range size. An attacker who can supply Markdown that an application renders with MDEx.to_html/2 (for example a comment, chat message, or wiki page) can embed a code block whose info string is rust highlight_lines=\"1-100000000\", forcing the native adapter to allocate roughly 8 bytes per line in the range.\n\nA payload that differs by only a few bytes can therefore allocate hundreds of megabytes, and a sufficiently large range (for example 1-2000000000) exhausts host memory and aborts the BEAM, denying service to every user of the rendering process. The per-line write loop additionally tests membership with a linear scan over the same vector, degrading rendering to a quadratic cost even for ranges that do not immediately exhaust memory.\n\nThe vulnerable native code originally shipped inside mdex (in native/comrak_nif/src/lumis_adapter.rs) and was later extracted into the separate mdex_native package (native/mdex_native_nif/src/lumis_adapter.rs), where it remains unpatched.\n\nThis issue affects mdex from 0.11.0 before 0.12.3, and mdex_native from 0.1.0 before 0.2.3.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53428\n  \nPublished : June 29, 2026, 6:52 p.m. | 34 minutes ago\n  \nDescription :Memory Allocation with Excessive Size Value vulnerability in leandrocp mdex allows an unauthenticated attacker to cause a denial of service through unbounded memory allocation.\n\ncomrak_nif::lumis_adapter::LumisAdapter::parse_highlight_lines in native/comrak_nif/src/lumis_adapter.rs eagerly expands a user-controlled inclusive line range from a fenced code block's highlight_lines decorator into a Vec, pushing one element per integer in the range with no upper bound on the range size. An attacker who can supply Markdown that an application renders with MDEx.to_html/2 (for example a comment, chat message, or wiki page) can embed a code block whose info string is rust highlight_lines=\"1-100000000\", forcing the native adapter to allocate roughly 8 bytes per line in the range.\n\nA payload that differs by only a few bytes can therefore allocate hundreds of megabytes, and a sufficiently large range (for example 1-2000000000) exhausts host memory and aborts the BEAM, denying service to every user of the rendering process. The per-line write loop additionally tests membership with a linear scan over the same vector, degrading rendering to a quadratic cost even for ranges that do not immediately exhaust memory.\n\nThe vulnerable native code originally shipped inside mdex (in native/comrak_nif/src/lumis_adapter.rs) and was later extracted into the separate mdex_native package (native/mdex_native_nif/src/lumis_adapter.rs), where it remains unpatched.\n\nThis issue affects mdex from 0.11.0 before 0.12.3, and mdex_native from 0.1.0 before 0.2.3.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53428 - mdex의 하이라이트_라인 범위 확장 시 무제한 메모리 할당",
-      "summary_ko": "CVE ID:CVE-2026-53428\n  \n게시일 : 2026년 6월 29일 오후 6시 52분 | 34분 전\n  \n설명:leandrocp mdex의 과도한 크기 값을 사용한 메모리 할당 취약점으로 인해 인증되지 않은 공격자가 무제한 메모리 할당을 통해 서비스 거부를 일으킬 수 있습니다.\n\n네이티브/comrak_nif/src/lumis_adapter.rs의 comrak_nif::lumis_adapter::LumisAdapter::parse_highlight_lines는 사용자 제어 포함 라인 범위를 울타리 코드 블록의 하이라이트_라인 데코레이터에서 Vec로 적극적으로 확장하여 범위 크기에 대한 상한 없이 범위의 정수당 하나의 요소를 푸시합니다. 애플리케이션이 MDEx.to_html/2로 렌더링하는 마크다운(예: 댓글, 채팅 메시지 또는 위키 페이지)을 제공할 수 있는 공격자는 정보 문자열이 Rust 하이라이트_lines=\"1-100000000\"인 코드 블록을 삽입하여 기본 어댑터가 범위에서 한 줄당 대략 8바이트를 할당하도록 할 수 있습니다.\n\n따라서 몇 바이트만 다른 페이로드는 수백 메가바이트를 할당할 수 있으며 충분히 큰 범위(예: 1-2000000000)는 호스트 메모리를 소모하고 BEAM을 중단하여 렌더링 프로세스의 모든 사용자에 대한 서비스를 거부합니다. 행당 쓰기 루프는 동일한 벡터에 대한 선형 스캔을 통해 멤버십을 추가로 테스트하여 메모리를 즉시 소모하지 않는 범위에 대해서도 렌더링을 2차 비용으로 저하시킵니다.\n\n취약한 네이티브 코드는 원래 mdex(native/comrak_nif/src/lumis_adapter.rs) 내부에 제공되었으며 나중에 별도의 mdex_native 패키지(native/mdex_native_nif/src/lumis_adapter.rs)로 추출되어 패치되지 않은 상태로 유지됩니다.\n\n이 문제는 0.11.0 이전 0.12.3의 mdex와 0.1.0 이전 0.2.3의 mdex_native에 영향을 미칩니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53428\n2. 26.06.30 오전3:52\n3. Memory Allocation with Excessive Size Value vulner",
-      "cve_id": "CVE-2026-53428",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53428",
-      "source": "cvefeed",
-      "published": "2026-06-30T03:52:36+09:00",
       "lang": "en"
     }
   ],
