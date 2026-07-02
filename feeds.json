@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-03T05:32:21.301184+09:00",
+  "fetched_at": "2026-07-03T06:01:20.119327+09:00",
   "security_news": [
     {
       "title": "SKT·쿠팡 등 '1년'간 약 '1억'건 개인정보 털려…왜 반복되나",
@@ -2856,18 +2856,6 @@
       "source": "naver",
       "published": "2026-06-30T06:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "토큰 단가 파괴의 청구서, 그리고 봉쇄의 역설 [이승현의 AI 네이티브]",
-      "summary": "봉쇄의 역설과 게이팅 체제 2026년 6월 28일 중국 지푸 AI(Zhipu)는 가중치 개방형 모델 GLM-5.2가 자동 보안 취약점 탐지 벤치마크에서 앤트로픽의 최상위 사이버보안 모델 미토스(Mythos)급 점수를 달성했다고 발표했다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중국 지푸 AI GLM-5.2, 보안 취약점 탐지 벤치마크서 미토스급 성과\n2. 토큰 단가 파괴 논란과 봉쇄 역설, AI 모델 경쟁 심화\n3. 2026년 6월 28일 발표, 앤트로픽 미토스 대비 정확도 98% 달성",
-      "link": "https://it.chosun.com/news/articleView.html?idxno=2023092164810",
-      "source": "naver",
-      "published": "2026-06-30T06:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3994,36 +3982,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10647",
       "source": "cvefeed",
       "published": "2026-06-30T06:39:08+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-13758 - CryptX versions before 0.088_001 for Perl compare AEAD authentication tags in non-constant time in the streaming decrypt_done path",
-      "summary": "CVE ID :CVE-2026-13758\n  \nPublished : June 29, 2026, 8:42 p.m. | 44 minutes ago\n  \nDescription :CryptX versions before 0.088_001 for Perl compare AEAD authentication tags in non-constant time in the streaming decrypt_done path.\n\nThe decrypt_done($tag) form compares it against the computed tag with memNE (memcmp() != 0), which short-circuits on the first differing byte, so its run time depends on the number of matching leading bytes. This affects all five AEAD modes: GCM, CCM, ChaCha20Poly1305, EAX and OCB. The one-shot *_decrypt_verify helpers are unaffected; they verify the tag inside libtomcrypt with a constant-time comparison.\n\nThe timing difference is a tag-verification oracle. An attacker who can submit many candidate tags for the same nonce, ciphertext and associated data while measuring the timing precisely enough may recover the expected tag byte by byte and forge a message that verifies.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-13758\n  \nPublished : June 29, 2026, 8:42 p.m. | 44 minutes ago\n  \nDescription :CryptX versions before 0.088_001 for Perl compare AEAD authentication tags in non-constant time in the streaming decrypt_done path.\n\nThe decrypt_done($tag) form compares it against the computed tag with memNE (memcmp() != 0), which short-circuits on the first differing byte, so its run time depends on the number of matching leading bytes. This affects all five AEAD modes: GCM, CCM, ChaCha20Poly1305, EAX and OCB. The one-shot *_decrypt_verify helpers are unaffected; they verify the tag inside libtomcrypt with a constant-time comparison.\n\nThe timing difference is a tag-verification oracle. An attacker who can submit many candidate tags for the same nonce, ciphertext and associated data while measuring the timing precisely enough may recover the expected tag byte by byte and forge a message that verifies.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-13758 - Perl용 0.088_001 이전의 CryptX 버전은 스트리밍 decrypt_done 경로에서 일정하지 않은 시간에 AEAD 인증 태그를 비교합니다.",
-      "summary_ko": "CVE ID:CVE-2026-13758\n  \n게시일 : 2026년 6월 29일 오후 8시 42분 | 44분 전\n  \n설명: Perl용 0.088_001 이전의 CryptX 버전은 스트리밍 decrypt_done 경로에서 일정하지 않은 시간에 AEAD 인증 태그를 비교합니다.\n\ndecrypt_done($tag) 형식은 이를 memNE(memcmp() != 0)를 사용하여 계산된 태그와 비교합니다. 이는 첫 번째 다른 바이트에서 단락되므로 실행 시간은 일치하는 선행 바이트 수에 따라 달라집니다. 이는 GCM, CCM, ChaCha20Poly1305, EAX 및 OCB의 5가지 AEAD 모드 모두에 영향을 미칩니다. 원샷 *_decrypt_verify 도우미는 영향을 받지 않습니다. 그들은 일정한 시간 비교를 통해 libtomcrypt 내부의 태그를 확인합니다.\n\n타이밍 차이는 태그 검증 오라클입니다. 타이밍을 충분히 정확하게 측정하면서 동일한 nonce, 암호문 및 관련 데이터에 대해 많은 후보 태그를 제출할 수 있는 공격자는 예상되는 태그를 바이트 단위로 복구하고 확인하는 메시지를 위조할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-13758\n2. 26.06.30 오전5:42\n3. CryptX versions before 0.088_001 for Perl compare ",
-      "cve_id": "CVE-2026-13758",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13758",
-      "source": "cvefeed",
-      "published": "2026-06-30T05:42:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53404 - Apache Tomcat: Bad ornext processing in RewriteValve",
-      "summary": "CVE ID :CVE-2026-53404\n  \nPublished : June 29, 2026, 8:39 p.m. | 3 hours, 1 minute ago\n  \nDescription :Always-Incorrect Control Flow Implementation vulnerability in Apache Tomcat's rewrite valve meant that if the first condition in an OR chain matched, subsequent non-OR conditions were skipped.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.22, from 10.1.0-M1 through 10.1.55, from 9.0.0.M1 through 9.0.118, from 8.5.0 through 8.5.100. Other versions that have reached end of support may also be affected.\n\nUsers are recommended to upgrade to version 11.0.23, 10.1.56 or 9.0.119, which fix the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53404\n  \nPublished : June 29, 2026, 8:39 p.m. | 3 hours, 1 minute ago\n  \nDescription :Always-Incorrect Control Flow Implementation vulnerability in Apache Tomcat's rewrite valve meant that if the first condition in an OR chain matched, subsequent non-OR conditions were skipped.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.22, from 10.1.0-M1 through 10.1.55, from 9.0.0.M1 through 9.0.118, from 8.5.0 through 8.5.100. Other versions that have reached end of support may also be affected.\n\nUsers are recommended to upgrade to version 11.0.23, 10.1.56 or 9.0.119, which fix the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53404 - Apache Tomcat: RewriteValve의 잘못된 ornext 처리",
-      "summary_ko": "CVE ID:CVE-2026-53404\n  \n게시일 : 2026년 6월 29일 오후 8시 39분 | 3시간, 1분 전\n  \n설명 :Apache Tomcat 재작성 밸브의 항상 잘못된 제어 흐름 구현 취약점은 OR 체인의 첫 번째 조건이 일치하면 후속 비OR 조건을 건너뛰는 것을 의미합니다.\n\n이 문제는 Apache Tomcat(11.0.0-M1~11.0.22, 10.1.0-M1~10.1.55, 9.0.0.M1~9.0.118, 8.5.0~8.5.100)에 영향을 미칩니다. 지원이 종료된 다른 버전도 영향을 받을 수 있습니다.\n\n사용자는 문제를 해결하는 버전 11.0.23, 10.1.56 또는 9.0.119로 업그레이드하는 것이 좋습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53404\n2. 26.06.30 오전5:39\n3. Always-Incorrect Control Flow Implementation vulne",
-      "cve_id": "CVE-2026-53404",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53404",
-      "source": "cvefeed",
-      "published": "2026-06-30T05:39:45+09:00",
       "lang": "en"
     }
   ],
