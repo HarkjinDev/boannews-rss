@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-03T02:01:19.354389+09:00",
+  "fetched_at": "2026-07-03T02:31:17.750005+09:00",
   "security_news": [
     {
       "title": "[김소영의 이코노믹스] 보안의 최고 방패 ‘망분리’, 혁신의 장벽으로...",
@@ -4042,21 +4042,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-11720",
       "source": "cvefeed",
       "published": "2026-06-30T02:51:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-57959 - Hi.Events 1.9.0 - Promo Code Max-Usage Bypass via Asynchronous Job Race Condition",
-      "summary": "CVE ID :CVE-2026-57959\n  \nPublished : June 29, 2026, 5:24 p.m. | 1 hour ago\n  \nDescription :Hi.Events through 1.9.0 contains a promo code validation vulnerability where reservation validates usage count before asynchronous UpdateEventStatisticsJob increments it, allowing attackers to redeem limited promo codes unlimited times. Attackers can sequentially reserve multiple orders with the same restricted promo code, each reading order_usage_count=0 and passing validation, then complete them all at discounted prices without concurrent requests.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-57959\n  \nPublished : June 29, 2026, 5:24 p.m. | 1 hour ago\n  \nDescription :Hi.Events through 1.9.0 contains a promo code validation vulnerability where reservation validates usage count before asynchronous UpdateEventStatisticsJob increments it, allowing attackers to redeem limited promo codes unlimited times. Attackers can sequentially reserve multiple orders with the same restricted promo code, each reading order_usage_count=0 and passing validation, then complete them all at discounted prices without concurrent requests.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-57959 - Hi.Events 1.9.0 - 비동기 작업 경쟁 조건을 통한 프로모션 코드 최대 사용량 우회",
-      "summary_ko": "CVE ID:CVE-2026-57959\n  \n게시일 : 2026년 6월 29일 오후 5시 24분 | 1시간 전\n  \n설명: 1.9.0까지의 Hi.Events에는 비동기 UpdateEventStatisticsJob이 사용량을 늘리기 전에 예약에서 사용 횟수를 확인하는 프로모션 코드 유효성 검사 취약점이 포함되어 있어 공격자가 제한된 프로모션 코드를 무제한으로 사용할 수 있습니다. 공격자는 동일한 제한된 프로모션 코드를 사용하여 여러 주문을 순차적으로 예약할 수 있습니다. 각 주문은 order_usage_count=0을 읽고 검증을 통과한 다음 동시 요청 없이 할인된 가격으로 모두 완료할 수 있습니다.\n  \n심각도: 8.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-57959\n2. 26.06.30 오전2:24\n3. Hi.Events through 1.9.0 contains a promo code vali",
-      "cve_id": "CVE-2026-57959",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57959",
-      "source": "cvefeed",
-      "published": "2026-06-30T02:24:03+09:00",
       "lang": "en"
     }
   ],
