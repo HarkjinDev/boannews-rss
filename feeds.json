@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-02T20:04:05.698484+09:00",
+  "fetched_at": "2026-07-02T20:31:11.052083+09:00",
   "security_news": [
     {
       "title": "국제 보안 컨퍼런스 'POC 2026', 11월 12~13일 서울 개최",
@@ -2895,6 +2895,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-14336 - Eclipse PIA OIDC Issuer Allowlist Bypass",
+      "summary": "CVE ID :CVE-2026-14336\n  \nPublished : July 2, 2026, 8:29 a.m. | 2 hours, 58 minutes ago\n  \nDescription :PIA's OIDC issuer allowlist for Jenkins tokens uses a bare string-prefix check (issuer.startswith(' https://ci.eclipse.org ') in is_issuer_known, pia/models.py:139) instead of validating the issuer as a properly host-bounded URL. An attacker can craft an issuer such as  https://ci.eclipse.org@evil.host  (userinfo trick) or  https://ci.eclipse.org.evil.host  (suffix trick) that satisfies the prefix check while pointing the OIDC discovery and JWKS fetches at a server the attacker controls. An unauthenticated caller of POST /v1/upload/sbom can use this to force PIA to make outbound HTTP(S) requests to an arbitrary attacker-chosen host, and to have oidc.verify_token accept a JWT signed with the attacker's own key.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-14336\n  \nPublished : July 2, 2026, 8:29 a.m. | 2 hours, 58 minutes ago\n  \nDescription :PIA's OIDC issuer allowlist for Jenkins tokens uses a bare string-prefix check (issuer.startswith(' https://ci.eclipse.org ') in is_issuer_known, pia/models.py:139) instead of validating the issuer as a properly host-bounded URL. An attacker can craft an issuer such as  https://ci.eclipse.org@evil.host  (userinfo trick) or  https://ci.eclipse.org.evil.host  (suffix trick) that satisfies the prefix check while pointing the OIDC discovery and JWKS fetches at a server the attacker controls. An unauthenticated caller of POST /v1/upload/sbom can use this to force PIA to make outbound HTTP(S) requests to an arbitrary attacker-chosen host, and to have oidc.verify_token accept a JWT signed with the attacker's own key.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-14336 - Eclipse PIA OIDC 발급자 허용 목록 우회",
+      "summary_ko": "CVE ID:CVE-2026-14336\n  \n게시일 : 2026년 7월 2일 오전 8시 29분 | 2시간 58분 전\n  \n설명: Jenkins 토큰에 대한 PIA의 OIDC 발급자 허용 목록은 발급자를 올바르게 호스트 바인딩된 URL로 확인하는 대신 문자열 접두사 검사(is_issuer_known, pia/models.py:139의 issuer.startswith(' https://ci.eclipse.org '))를 사용합니다. 공격자는 OIDC 검색을 가리키고 JWKS가 공격자가 제어하는 ​​서버에서 가져오는 동안 접두사 검사를 충족하는 https://ci.eclipse.org@evil.host(userinfo 트릭) 또는 https://ci.eclipse.org.evil.host(접미사 트릭)와 같은 발급자를 만들 수 있습니다. POST /v1/upload/sbom의 인증되지 않은 호출자는 이를 사용하여 PIA가 임의의 공격자가 선택한 호스트에 아웃바운드 HTTP(S) 요청을 하도록 하고 oidc.verify_token이 공격자 자신의 키로 서명된 JWT를 수락하도록 할 수 있습니다.\n  \n심각도: 8.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-14336\n2. 26.07.02 오후5:29\n3. PIA's OIDC issuer allowlist for Jenkins tokens use",
+      "cve_id": "CVE-2026-14336",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-14336",
+      "source": "cvefeed",
+      "published": "2026-07-02T17:29:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-57278 - GeoVision GeoWebPlayer Websocket Server connectInfo handler stack-based buffer overflow vulnerability",
       "summary": "CVE ID :CVE-2026-57278\n  \nPublished : July 2, 2026, 2:26 a.m. | 1 hour, 16 minutes ago\n  \nDescription :GeoWebPlayer (also called \"Web Plugin\" in the GV-VMS documentation and \"WS Player\" for VMS-Cloud) is an addon that can be installed with various GeoVision software (GV-VMS, GV-Cloud, ...). It creates a websocket server that expands the capabilities of the various web-interfaces provided by the GeoVision software and may be necessary for them to function properly.\n\nThe Websocket server can accept various commands coming from localhost. One of them, `connectionInfo` is meant to provide the necessary details to connect to a camera. The handler associated with this command that we call`handle_connection_info` contains multiple instances of string copy that can overflow. The function `handle_connect_info` copies attacker-controlled JSON strings into fixed-size buffers using manual byte-by-byte loops that do not enforce length limits.\n\n\n\n\n#### Buffer Overflow in ip field\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
