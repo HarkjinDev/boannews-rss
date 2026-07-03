@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-03T21:31:34.312459+09:00",
+  "fetched_at": "2026-07-03T22:01:21.638000+09:00",
   "security_news": [
     {
       "title": "美블록체인 업체 “北, 상반기 가상 화폐 약 1조원 훔쳐”… 전세계 절...",
@@ -3841,21 +3841,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42910",
       "source": "msrc",
       "published": "2026-06-30T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58374 - hostapd: Out-of-bounds Write in AP-mode Wi-Fi 7 MLO Association Request Processing",
-      "summary": "CVE ID :CVE-2026-58374\n  \nPublished : June 30, 2026, 12:35 p.m. | 50 minutes ago\n  \nDescription :In hostapd before 2.12, a missing bounds check in AP-mode Wi-Fi 7 (IEEE 802.11be) Multi-Link Operation (MLO) association request processing allows an unauthenticated attacker within wireless range to send a crafted management frame containing a malformed Multi-Link Element or Per-STA Profile subelement. In hostapd_process_ml_assoc_req() in src/ap/ieee802_11_eht.c, the received link_id field can be parsed as value 15, but the corresponding links[] storage only has valid entries for lower link IDs (0 through 14). This causes an out-of-bounds write / small memory corruption during association processing before the 4-way handshake. The attack does not require network credentials, prior authentication, or user interaction. The confirmed practical impact is denial of service through hostapd process termination. This affects hostapd v2.11 and newer development snapshots before v2.12 when built with CONFIG_IEEE80211BE enabled. The issue is fixed in hostapd v2.12 and the upstream 2026-1 fixes.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-58374\n  \nPublished : June 30, 2026, 12:35 p.m. | 50 minutes ago\n  \nDescription :In hostapd before 2.12, a missing bounds check in AP-mode Wi-Fi 7 (IEEE 802.11be) Multi-Link Operation (MLO) association request processing allows an unauthenticated attacker within wireless range to send a crafted management frame containing a malformed Multi-Link Element or Per-STA Profile subelement. In hostapd_process_ml_assoc_req() in src/ap/ieee802_11_eht.c, the received link_id field can be parsed as value 15, but the corresponding links[] storage only has valid entries for lower link IDs (0 through 14). This causes an out-of-bounds write / small memory corruption during association processing before the 4-way handshake. The attack does not require network credentials, prior authentication, or user interaction. The confirmed practical impact is denial of service through hostapd process termination. This affects hostapd v2.11 and newer development snapshots before v2.12 when built with CONFIG_IEEE80211BE enabled. The issue is fixed in hostapd v2.12 and the upstream 2026-1 fixes.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-58374 - Hostapd: AP 모드 Wi-Fi 7 MLO 연결 요청 처리에서 범위를 벗어난 쓰기",
-      "summary_ko": "CVE ID:CVE-2026-58374\n  \nPublished : June 30, 2026, 12:35 p.m. | 50분 전\n  \n설명: 2.12 이전의 Hostapd에서는 AP 모드 Wi-Fi 7(IEEE 802.11be) MLO(Multi-Link Operation) 연결 요청 처리에서 누락된 경계 검사를 통해 무선 범위 내의 인증되지 않은 공격자가 잘못된 다중 링크 요소 또는 STA별 프로필 하위 요소가 포함된 제작된 관리 프레임을 보낼 수 있습니다. src/ap/ieee802_11_eht.c의hostapd_process_ml_assoc_req()에서 수신된 link_id 필드는 값 15로 구문 분석될 수 있지만 해당 link[] 저장소에는 하위 링크 ID(0~14)에 대한 유효한 항목만 있습니다. This causes an out-of-bounds write / small memory corruption during association processing before the 4-way handshake. The attack does not require network credentials, prior authentication, or user interaction. The confirmed practical impact is denial of service through hostapd process termination. This affects hostapd v2.11 and newer development snapshots before v2.12 when built with CONFIG_IEEE80211BE enabled. The issue is fixed in hostapd v2.12 and the upstream 2026-1 fixes.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-58374\n2. 26.06.30 오후9:35\n3. In hostapd before 2.12, a missing bounds check in ",
-      "cve_id": "CVE-2026-58374",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58374",
-      "source": "cvefeed",
-      "published": "2026-06-30T21:35:54+09:00",
       "lang": "en"
     }
   ],
