@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-03T22:31:19.951463+09:00",
+  "fetched_at": "2026-07-03T23:01:33.033646+09:00",
   "security_news": [
     {
       "title": "美블록체인 업체 “北, 상반기 가상 화폐 약 1조원 훔쳐”… 전세계 절...",
@@ -2448,21 +2448,24 @@
       "source": "naver",
       "published": "2026-06-30T23:43:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "BlueHammer Vulnerability Exploited in Ransomware Attacks",
-      "summary": "The Microsoft Defender vulnerability CVE-2026-33825 was exploited in the wild as a zero-day before patches were released.\nThe post BlueHammer Vulnerability Exploited in Ransomware Attacks appeared first on SecurityWeek.",
-      "content": "",
-      "title_ko": "랜섬웨어 공격에 악용되는 BlueHammer 취약점",
-      "summary_ko": "Microsoft Defender 취약점 CVE-2026-33825는 패치가 출시되기 전에 제로데이로 악용되었습니다.\n랜섬웨어 공격에 악용된 BlueHammer 취약점이라는 게시물이 SecurityWeek에 처음으로 등장했습니다.",
-      "summary_3lines": "1. 마이크로소프트 디펜더 취약점 CVE-2026-33825 0일 공격\n2. 랜섬웨어 공격에 BlueHammer 취약점 활용\n3. 패치 전 악용, 보안위크 최초 보도",
-      "link": "https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/",
-      "source": "securityweek",
-      "published": "2026-06-30T22:56:07+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-56015 - Net::IP::LPM versions through 1.10 for Perl allow a heap out-of-bounds read via an unbounded prefix length",
+      "summary": "CVE ID :CVE-2026-56015\n  \nPublished : July 3, 2026, 12:56 p.m. | 57 minutes ago\n  \nDescription :Net::IP::LPM versions through 1.10 for Perl allow a heap out-of-bounds read via an unbounded prefix length.\n\nadd() passes the prefix string to the trie builder addPrefixToTrie() without checking it against the address width.\n\naddPrefixToTrie() then walks the prefix buffer by prefix_length bits, reading prefix[byte] for byte up to prefix_len/8, where prefix is the 4-byte (IPv4) or 16-byte (IPv6) packed address. A prefix length greater than 32 for IPv4 or 128 for IPv6, for example add(\"1.2.3.4/255\", $v) or add(\"2001:db8::/255\", $v), reads past the end of the packed address.\n\nThe out-of-bounds read happens during trie construction and is bounded: the prefix length is stored as an unsigned char, so the bit walk reads at most 32 bytes from the start of the packed address, a short distance past the end of the 4-byte or 16-byte buffer. It is detectable under AddressSanitizer, valgrind, or a hardened allocator, where it can abort the process. Lookups and dump() format only the valid address width, so the out-of-bounds bytes are not exposed through the module's API.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56015\n  \nPublished : July 3, 2026, 12:56 p.m. | 57 minutes ago\n  \nDescription :Net::IP::LPM versions through 1.10 for Perl allow a heap out-of-bounds read via an unbounded prefix length.\n\nadd() passes the prefix string to the trie builder addPrefixToTrie() without checking it against the address width.\n\naddPrefixToTrie() then walks the prefix buffer by prefix_length bits, reading prefix[byte] for byte up to prefix_len/8, where prefix is the 4-byte (IPv4) or 16-byte (IPv6) packed address. A prefix length greater than 32 for IPv4 or 128 for IPv6, for example add(\"1.2.3.4/255\", $v) or add(\"2001:db8::/255\", $v), reads past the end of the packed address.\n\nThe out-of-bounds read happens during trie construction and is bounded: the prefix length is stored as an unsigned char, so the bit walk reads at most 32 bytes from the start of the packed address, a short distance past the end of the 4-byte or 16-byte buffer. It is detectable under AddressSanitizer, valgrind, or a hardened allocator, where it can abort the process. Lookups and dump() format only the valid address width, so the out-of-bounds bytes are not exposed through the module's API.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56015 - Perl용 Net::IP::LPM 버전 1.10부터 무제한 접두사 길이를 통해 범위를 벗어난 힙 읽기를 허용합니다.",
+      "summary_ko": "CVE ID:CVE-2026-56015\n  \n게시일 : 2026년 7월 3일 오후 12시 56분 | 57분 전\n  \n설명 :Net::IP::LPM 버전 1.10부터 Perl은 무제한 접두사 길이를 통해 범위를 벗어난 힙 읽기를 허용합니다.\n\nadd()는 주소 너비에 대해 확인하지 않고 접두사 문자열을 트라이 빌더 addPrefixToTrie()에 전달합니다.\n\n그런 다음 addPrefixToTrie()는 prefix_length 비트만큼 접두사 버퍼를 탐색하여 최대 prefix_len/8 바이트까지 prefix[byte]를 읽습니다. 여기서 prefix는 4바이트(IPv4) 또는 16바이트(IPv6) 압축 주소입니다. IPv4의 경우 32, IPv6의 경우 128보다 긴 접두사 길이(예: add(\"1.2.3.4/255\", $v) 또는 add(\"2001:db8::/255\", $v))는 압축된 주소의 끝을 지나 읽습니다.\n\n범위를 벗어난 읽기는 트라이 구성 중에 발생하며 제한됩니다. 접두사 길이는 부호 없는 문자로 저장되므로 비트 워크는 4바이트 또는 16바이트 버퍼의 끝을 지나 짧은 거리인 압축된 주소의 시작 부분에서 최대 32바이트를 읽습니다. 이는 AddressSanitizer, valgrind 또는 강화된 할당자에서 감지될 수 있으며 프로세스를 중단할 수 있습니다. 조회 및 dump()는 유효한 주소 너비만 형식화하므로 범위를 벗어난 바이트는 모듈의 API를 통해 노출되지 않습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56015\n2. 26.07.03 오후9:56\n3. Net::IP::LPM versions through 1.10 for Perl allow ",
+      "cve_id": "CVE-2026-56015",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56015",
+      "source": "cvefeed",
+      "published": "2026-07-03T21:56:04+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-10055 - Eclipse Theia Request Service Server-Side Request Forgery",
       "summary": "CVE ID :CVE-2026-10055\n  \nPublished : July 3, 2026, 10:30 a.m. | 57 minutes ago\n  \nDescription :In Eclipse Theia since version 1.26.0, the backend /services/request-service RPC accepts an attacker-controlled URL from any client connected to the standard /services messaging endpoint, performs the HTTP request server-side, and returns the full response body to the caller.\n\n\n\n\nBecause the destination URL is neither validated nor allowlisted, a remote attacker with access to the Theia service connection can issue server-side HTTP requests to localhost or other backend-reachable hosts and read their responses, exposing internal administrative endpoints, cloud instance metadata services, and other resources that are intentionally outside the browser network boundary.\n\n\n\n\nThe vulnerability affects deployments where the Theia service connection is reachable by untrusted users (for example, multi-tenant or publicly-reachable Theia deployments).\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3826,21 +3829,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-4360",
       "source": "cvefeed",
       "published": "2026-06-30T23:45:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-42910 Windows Hotpatch Monitoring Service Elevation of Privilege Vulnerability",
-      "summary": "Updated an acknowledgement. This is an informational change only.",
-      "description": "Updated an acknowledgement. This is an informational change only.",
-      "title_ko": "CVE-2026-42910 Windows 핫패치 모니터링 서비스 권한 상승 취약점",
-      "summary_ko": "승인을 업데이트했습니다. 이는 정보 제공용 변경일 뿐입니다.",
-      "summary_3lines": "1. CVE-2026-42910\n2. MSRC\n3. Updated an acknowledgement. This is an information",
-      "cve_id": "CVE-2026-42910",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42910",
-      "source": "msrc",
-      "published": "2026-06-30T23:00:00+09:00",
       "lang": "en"
     }
   ],
