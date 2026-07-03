@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-04T00:31:27.081054+09:00",
+  "fetched_at": "2026-07-04T01:01:20.690655+09:00",
   "security_news": [
     {
       "title": "[사설]해킹-피싱 명의 도용 대출, 금융사 책임도 함께 물어야",
@@ -2424,18 +2424,6 @@
       "source": "thehackernews",
       "published": "2026-07-01T02:45:25+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Langflow RCE Exploited to Deploy Monero Miner on Exposed AI App Endpoints",
-      "summary": "Threat actors are continuing to exploit a critical Langflow vulnerability as part of fresh attacks designed to deliver a Monero cryptocurrency miner.\n\nThe activity has been found to weaponize CVE-2026-33017 (CVSS score: 9.3), an unauthenticated remote code execution (RCE) vulnerability in Langflow, indicating threat actors are scanning and targeting exposed artificial intelligence (AI)",
-      "content": "",
-      "title_ko": "노출된 AI 앱 엔드포인트에 Monero 채굴기를 배포하기 위해 Langflow RCE가 악용되었습니다.",
-      "summary_ko": "위협 행위자들은 Monero 암호화폐 채굴기를 제공하기 위해 고안된 새로운 공격의 일환으로 중요한 Langflow 취약점을 계속해서 악용하고 있습니다.\n\n이 활동은 Langflow의 인증되지 않은 원격 코드 실행(RCE) 취약점인 CVE-2026-33017(CVSS 점수: 9.3)을 무기화하는 것으로 밝혀졌습니다. 이는 위협 행위자가 노출된 인공 지능(AI)을 스캔하고 표적으로 삼고 있음을 나타냅니다.",
-      "summary_3lines": "1. Langflow RCE 취약점(CVE-2026-33017) 악용해 Monero 마이너 배포\n2. CVSS 9.3 점수의 비인증 원격 코드 실행 공격 방식\n3. 노출된 AI 애플리케이션 엔드포인트 대상, 패치 권고",
-      "link": "https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html",
-      "source": "thehackernews",
-      "published": "2026-07-01T00:47:20+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -3772,51 +3760,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10653",
       "source": "cvefeed",
       "published": "2026-07-01T01:20:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58371 - SeaweedFS < 4.30 - Cross-Origin Information Disclosure via Unvalidated JSONP callback Parameter",
-      "summary": "CVE ID :CVE-2026-58371\n  \nPublished : June 30, 2026, 3:57 p.m. | 1 hour, 29 minutes ago\n  \nDescription :SeaweedFS before 4.30 reflects the callback query parameter verbatim into responses served with Content-Type application/javascript in the shared writeJson helper (weed/server/common.go), with no callback-name validation, no X-Content-Type-Options: nosniff header, and no CORS allow-list. Every JSON endpoint that uses writeJson - including the unauthenticated master endpoints /dir/status, /dir/lookup and /cluster/status, the volume server /status, and the filer directory listing, all reachable in the default configuration (no -whiteList, no security.toml, bound to 0.0.0.0) - can therefore be loaded cross-origin via a script tag with a chosen callback, letting a third-party web page read cluster topology, volume server URLs and gRPC ports, file identifiers, and directory listings. Because the callback string is reflected at the start of the body and no nosniff header is sent, MIME-sniffing clients may also interpret the reflected content as HTML.\n  \nSeverity: 3.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-58371\n  \nPublished : June 30, 2026, 3:57 p.m. | 1 hour, 29 minutes ago\n  \nDescription :SeaweedFS before 4.30 reflects the callback query parameter verbatim into responses served with Content-Type application/javascript in the shared writeJson helper (weed/server/common.go), with no callback-name validation, no X-Content-Type-Options: nosniff header, and no CORS allow-list. Every JSON endpoint that uses writeJson - including the unauthenticated master endpoints /dir/status, /dir/lookup and /cluster/status, the volume server /status, and the filer directory listing, all reachable in the default configuration (no -whiteList, no security.toml, bound to 0.0.0.0) - can therefore be loaded cross-origin via a script tag with a chosen callback, letting a third-party web page read cluster topology, volume server URLs and gRPC ports, file identifiers, and directory listings. Because the callback string is reflected at the start of the body and no nosniff header is sent, MIME-sniffing clients may also interpret the reflected content as HTML.\n  \nSeverity: 3.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-58371 - SeaweedFS < 4.30 - 검증되지 않은 JSONP 콜백 매개변수를 통한 교차 출처 정보 공개",
-      "summary_ko": "CVE ID:CVE-2026-58371\n  \n게시일 : 2026년 6월 30일 오후 3시 57분 | 1시간 29분 전\n  \n설명: 4.30 이전의 SeaweedFS는 공유 writeJson 도우미(weed/server/common.go)의 Content-Type application/javascript와 함께 제공되는 응답에 콜백 쿼리 매개 변수를 그대로 반영합니다. 콜백 이름 유효성 검사도 X-Content-Type-Options: nosniff 헤더 및 CORS 허용 목록도 없습니다. 인증되지 않은 마스터 엔드포인트 /dir/status, /dir/lookup 및 /cluster/status, 볼륨 서버 /status 및 파일러 디렉터리 목록을 포함하여 writeJson을 사용하는 모든 JSON 엔드포인트는 모두 기본 구성(-whiteList 없음, security.toml 없음, 0.0.0.0에 바인딩됨)에서 도달 가능함) 따라서 선택한 콜백이 있는 스크립트 태그를 통해 교차 출처로 로드할 수 있으므로 타사 웹 페이지에서 클러스터 토폴로지, 볼륨 서버를 읽을 수 있습니다. URL 및 gRPC 포트, 파일 식별자, 디렉터리 목록. 콜백 문자열은 본문 시작 부분에 반영되고 nosniff 헤더는 전송되지 않기 때문에 MIME 스니핑 클라이언트는 반영된 콘텐츠를 HTML로 해석할 수도 있습니다.\n  \n심각도: 3.1 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-58371\n2. 26.07.01 오전12:57\n3. SeaweedFS before 4.30 reflects the callback query ",
-      "cve_id": "CVE-2026-58371",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58371",
-      "source": "cvefeed",
-      "published": "2026-07-01T00:57:36+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58369 - Woodpecker < 3.15.0 - Unauthenticated NULL Pointer Dereference in /api/orgs/lookup Enables Log-Flooding Denial of Service",
-      "summary": "CVE ID :CVE-2026-58369\n  \nPublished : June 30, 2026, 3:56 p.m. | 1 hour, 30 minutes ago\n  \nDescription :Woodpecker before 3.15.0 registers the /api/orgs/lookup/*org_full_name endpoint without authentication middleware, and the LookupOrg handler unconditionally dereferences the session user (user.ForgeID, via ForgeFromUser) when selecting the forge to query. For an unauthenticated request session.User returns nil, so any unauthenticated HTTP request triggers a NULL pointer dereference in the handler. The panic is recovered by gin recovery middleware and the server continues serving (returning HTTP 500), but each request writes a multi-line panic stack trace to the error log. A low-bandwidth unauthenticated attacker can repeatedly probe the endpoint to flood the logs (about 37 lines per request), inflating disk usage and downstream log-ingestion cost and burying legitimate log events.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-58369\n  \nPublished : June 30, 2026, 3:56 p.m. | 1 hour, 30 minutes ago\n  \nDescription :Woodpecker before 3.15.0 registers the /api/orgs/lookup/*org_full_name endpoint without authentication middleware, and the LookupOrg handler unconditionally dereferences the session user (user.ForgeID, via ForgeFromUser) when selecting the forge to query. For an unauthenticated request session.User returns nil, so any unauthenticated HTTP request triggers a NULL pointer dereference in the handler. The panic is recovered by gin recovery middleware and the server continues serving (returning HTTP 500), but each request writes a multi-line panic stack trace to the error log. A low-bandwidth unauthenticated attacker can repeatedly probe the endpoint to flood the logs (about 37 lines per request), inflating disk usage and downstream log-ingestion cost and burying legitimate log events.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-58369 - Woodpecker < 3.15.0 - /api/orgs/lookup의 인증되지 않은 NULL 포인터 역참조로 인해 로그 플러딩 서비스 거부가 가능해짐",
-      "summary_ko": "CVE ID:CVE-2026-58369\n  \n게시일 : 2026년 6월 30일 오후 3시 56분 | 1시간 30분 전\n  \n설명 : 3.15.0 이전의 Woodpecker는 인증 미들웨어 없이 /api/orgs/lookup/*org_full_name 엔드포인트를 등록하고, LookupOrg 핸들러는 쿼리할 Forge를 선택할 때 세션 사용자(ForgeFromUser를 통해 user.ForgeID)를 무조건 역참조합니다. 인증되지 않은 요청 세션의 경우 사용자는 nil을 반환하므로 인증되지 않은 HTTP 요청은 핸들러에서 NULL 포인터 역참조를 트리거합니다. 패닉은 gin 복구 미들웨어에 의해 복구되고 서버는 계속 서비스를 제공하지만(HTTP 500 반환) 각 요청은 오류 로그에 여러 줄의 패닉 스택 추적을 기록합니다. 낮은 대역폭의 인증되지 않은 공격자는 엔드포인트를 반복적으로 조사하여 로그(요청당 약 37줄)를 플러딩하여 디스크 사용량과 다운스트림 로그 수집 비용을 부풀리고 합법적인 로그 이벤트를 매장할 수 있습니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-58369\n2. 26.07.01 오전12:56\n3. Woodpecker before 3.15.0 registers the /api/orgs/l",
-      "cve_id": "CVE-2026-58369",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58369",
-      "source": "cvefeed",
-      "published": "2026-07-01T00:56:45+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58169 - Vibe-Trading < 0.1.10 - Loopback Trust and Missing Host Validation Enable DNS-Rebinding Authentication Bypass and Remote Code Execution",
-      "summary": "CVE ID :CVE-2026-58169\n  \nPublished : June 30, 2026, 3:52 p.m. | 1 hour, 34 minutes ago\n  \nDescription :Vibe-Trading before 0.1.10's local API server trusts the TCP peer address to bypass the API_AUTH_KEY bearer-token check for loopback clients and performs no Host header validation, while binding to 0.0.0.0 with credentialed CORS by default. A DNS-rebinding web page can therefore issue authenticated requests to the local API as a trusted loopback client. Because loopback requests also auto-enable shell tools, an attacker can reach POST /swarm/runs with a built-in preset that permits the bash tool and achieve remote code execution as the API process user; the same bypass allows starting the live runner and overwriting LLM and data-source settings to redirect provider traffic and exfiltrate credentials.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-58169\n  \nPublished : June 30, 2026, 3:52 p.m. | 1 hour, 34 minutes ago\n  \nDescription :Vibe-Trading before 0.1.10's local API server trusts the TCP peer address to bypass the API_AUTH_KEY bearer-token check for loopback clients and performs no Host header validation, while binding to 0.0.0.0 with credentialed CORS by default. A DNS-rebinding web page can therefore issue authenticated requests to the local API as a trusted loopback client. Because loopback requests also auto-enable shell tools, an attacker can reach POST /swarm/runs with a built-in preset that permits the bash tool and achieve remote code execution as the API process user; the same bypass allows starting the live runner and overwriting LLM and data-source settings to redirect provider traffic and exfiltrate credentials.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-58169 - Vibe-Trading < 0.1.10 - 루프백 신뢰 및 누락된 호스트 검증으로 DNS 리바인딩 인증 우회 및 원격 코드 실행 가능",
-      "summary_ko": "CVE ID:CVE-2026-58169\n  \n게시일 : 2026년 6월 30일 오후 3시 52분 | 1시간 34분 전\n  \n설명: 0.1.10 이전의 로컬 API 서버는 TCP 피어 주소를 신뢰하여 루프백 클라이언트에 대한 API_AUTH_KEY 전달자 토큰 확인을 우회하고 호스트 헤더 유효성 검사를 수행하지 않으며 기본적으로 자격 증명 CORS를 사용하여 0.0.0.0에 바인딩합니다. 따라서 DNS 리바인딩 웹 페이지는 신뢰할 수 있는 루프백 클라이언트로서 로컬 API에 인증된 요청을 발행할 수 있습니다. 루프백 요청은 셸 도구도 자동 활성화하므로 공격자는 bash 도구를 허용하는 내장 사전 설정을 사용하여 POST /swarm/runs에 도달하고 API 프로세스 사용자로서 원격 코드 실행을 달성할 수 있습니다. 동일한 우회를 통해 라이브 실행기를 시작하고 LLM 및 데이터 소스 설정을 덮어써 공급자 트래픽을 리디렉션하고 자격 증명을 추출할 수 있습니다.\n  \n심각도: 7.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-58169\n2. 26.07.01 오전12:52\n3. Vibe-Trading before 0.1.10's local API server trus",
-      "cve_id": "CVE-2026-58169",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58169",
-      "source": "cvefeed",
-      "published": "2026-07-01T00:52:52+09:00",
       "lang": "en"
     }
   ],
