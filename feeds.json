@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-04T05:31:25.104923+09:00",
+  "fetched_at": "2026-07-04T06:01:35.144277+09:00",
   "security_news": [
     {
       "title": "New Avalon Malware Framework Packs CrownX Ransomware Capabilities",
@@ -2412,33 +2412,24 @@
       "source": "naver",
       "published": "2026-07-01T07:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[종이 처방전의 종말①] 병원·약국 의료데이터 직접 연계 추진",
-      "summary": "제3자가 데이터를 중간에서 확보하거나 외부 해킹이 발생하더라도 암호화된 정보만 확인될 뿐 환자의 진료 내용이나 처방 정보는 사실상 식별이 어려운 구조라는 설명이다. 의료정보는 개인정보 가운데서도 가장 민감한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 병원·약국 의료데이터 직접 연계 추진\n2. 암호화로 제3자 식별 어려워\n3. 민감정보 보호… 개인정보법 준수",
-      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1714269",
-      "source": "naver",
-      "published": "2026-07-01T06:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "금융위 수사의뢰 미신고 가상자산사업자 25곳 중 23곳 수사중지",
-      "summary": "이 같은 미신고 사업자는 자금세탁방지 체계나 이용자 자산 보호장치를 제대로 마련하지 않아, 이용자가 개인정보 유출이나 해킹 등에 노출될 위험성이 있다. 이 때문에 FIU는 2022년 8월부터 지난달 10일까지 민원 등을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융위 수사의뢰 미신고 가상자산사업자 25곳 중 23곳 수사중지\n2. 자금세탁방지 체계 미비로 개인정보 유출·해킹 위험\n3. FIU 2022년 8월~지난달 민원 처리",
-      "link": "https://n.news.naver.com/mnews/article/001/0016168716?sid=102",
-      "source": "naver",
-      "published": "2026-07-01T05:57:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Chromium: CVE-2026-13933 Insufficient policy enforcement in Passwords",
+      "summary": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
+      "description": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
+      "title_ko": "Chromium: CVE-2026-13933 비밀번호에 대한 정책 시행이 불충분함",
+      "summary_ko": "이 CVE는 Chrome에서 할당되었습니다.  Microsoft Edge(Chromium 기반)는 이 취약점을 해결하는 Chromium을 수집합니다. 자세한 내용은 [Google Chrome 릴리스](https://chromereleases.googleblog.com/2026)를 참조하세요.",
+      "summary_3lines": "1. CVE-2026-13933\n2. MSRC\n3. This CVE was assigned by Chrome. Microsoft Edge (C",
+      "cve_id": "CVE-2026-13933",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13933",
+      "source": "msrc",
+      "published": "2026-07-03T23:00:42+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-56015 - Net::IP::LPM versions through 1.10 for Perl allow a heap out-of-bounds read via an unbounded prefix length",
       "summary": "CVE ID :CVE-2026-56015\n  \nPublished : July 3, 2026, 12:56 p.m. | 57 minutes ago\n  \nDescription :Net::IP::LPM versions through 1.10 for Perl allow a heap out-of-bounds read via an unbounded prefix length.\n\nadd() passes the prefix string to the trie builder addPrefixToTrie() without checking it against the address width.\n\naddPrefixToTrie() then walks the prefix buffer by prefix_length bits, reading prefix[byte] for byte up to prefix_len/8, where prefix is the 4-byte (IPv4) or 16-byte (IPv6) packed address. A prefix length greater than 32 for IPv4 or 128 for IPv6, for example add(\"1.2.3.4/255\", $v) or add(\"2001:db8::/255\", $v), reads past the end of the packed address.\n\nThe out-of-bounds read happens during trie construction and is bounded: the prefix length is stored as an unsigned char, so the bit walk reads at most 32 bytes from the start of the packed address, a short distance past the end of the 4-byte or 16-byte buffer. It is detectable under AddressSanitizer, valgrind, or a hardened allocator, where it can abort the process. Lookups and dump() format only the valid address width, so the out-of-bounds bytes are not exposed through the module's API.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
