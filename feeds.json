@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-04T08:01:20.090973+09:00",
+  "fetched_at": "2026-07-04T08:31:26.677260+09:00",
   "security_news": [
     {
       "title": "조 단위 매출에도 보안 투자는 1%미만… 게임업계 안전불감증 여전",
@@ -2400,30 +2400,6 @@
       "source": "naver",
       "published": "2026-07-01T08:46:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "애플, 아이폰18 프로 실물 유출에 강경 대응…SNS 게시물 대거 삭제",
-      "summary": "외신에 따르면 애플은 인도 타타그룹 산하 아이폰 조립공장에서 해킹으로 유출된 것으로 알려진 실물... 보도에 따르면 타타그룹의 한 아이폰 조립공장이 해킹을 당해 630GB가 넘는 데이터가 탈취됐고, 이 안에 애플 내부...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 애플, 타타그룹 아이폰 공장 해킹 유출에 대응\n2. 630GB 이상 아이폰 내부 정보 유출 사실 확인\n3. SNS 게시물 삭제 및 강경 대응 조치",
-      "link": "https://www.autodaily.co.kr/news/articleView.html?idxno=545348",
-      "source": "naver",
-      "published": "2026-07-01T08:28:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "부산시, 국정원과 정보보호의 달 사이버보안 홍보 캠페인 전개",
-      "summary": "각종 온라인 서비스 해킹과 개인정보 유출이 잇따르는 가운데 부산시가 국가정보원 지부와 손잡고 시민 대상 사이버보안 홍보에 나선다. 시는 7월 정보보호의 달을 맞아 국가정보원 지부와 함께 시민을 대상으로...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 부산시, 국정원과 7월 정보보호의 달 캠페인\n2. 온라인 서비스 해킹·개인정보 유출 증가\n3. 시민 대상 사이버보안 홍보 강화",
-      "link": "https://www.newspim.com/news/view/20260701000092",
-      "source": "naver",
-      "published": "2026-07-01T08:12:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3715,21 +3691,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-14191",
       "source": "cvefeed",
       "published": "2026-07-01T11:41:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54592 - Oj: Stack Buffer Overflow in Oj::Doc#each_child via Deeply Nested Input",
-      "summary": "CVE ID :CVE-2026-54592\n  \nPublished : June 30, 2026, 11:16 p.m. | 2 hours, 10 minutes ago\n  \nDescription :Oj (Optimized JSON) is a JSON parser and Object marshaller packaged as a Ruby gem. In versions prior to 3.17.3, Oj::Doc#each_child, when invoked recursively over a deeply nested JSON document, overflows a fixed-size stack buffer and aborts the process, leading to DoS.  In a two-step chain in ext/oj/fast.c, doc_each_child increments doc->where past the where_path[MAX_STACK = 100] array with no bounds check and never restores it (the doc->where-- is missing), so calling each_child recursively from inside the yield block drives doc->where beyond the array. On the next entry  the function copies the path into the 800-byte stack-local buffer save_path[MAX_STACK]  using wlen = doc->where - doc->where_path, so when the previous recursive call left doc->where past where_path[100] the wlen exceeds MAX_STACK and  the memcpy overflows save_path on the C stack; because the Oj::Doc parser imposes no JSON nesting-depth limit (relying on a C-stack pressure check), deeply nested attacker input reaches this path. This issue has been fixed in version 3.17.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54592\n  \nPublished : June 30, 2026, 11:16 p.m. | 2 hours, 10 minutes ago\n  \nDescription :Oj (Optimized JSON) is a JSON parser and Object marshaller packaged as a Ruby gem. In versions prior to 3.17.3, Oj::Doc#each_child, when invoked recursively over a deeply nested JSON document, overflows a fixed-size stack buffer and aborts the process, leading to DoS.  In a two-step chain in ext/oj/fast.c, doc_each_child increments doc->where past the where_path[MAX_STACK = 100] array with no bounds check and never restores it (the doc->where-- is missing), so calling each_child recursively from inside the yield block drives doc->where beyond the array. On the next entry  the function copies the path into the 800-byte stack-local buffer save_path[MAX_STACK]  using wlen = doc->where - doc->where_path, so when the previous recursive call left doc->where past where_path[100] the wlen exceeds MAX_STACK and  the memcpy overflows save_path on the C stack; because the Oj::Doc parser imposes no JSON nesting-depth limit (relying on a C-stack pressure check), deeply nested attacker input reaches this path. This issue has been fixed in version 3.17.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54592 - Oj: 깊게 중첩된 입력을 통한 Oj::Doc#each_child의 스택 버퍼 오버플로",
-      "summary_ko": "CVE ID:CVE-2026-54592\n  \n게시일 : 2026년 6월 30일 오후 11시 16분 | 2시간, 10분 전\n  \n설명 :Oj(Optimized JSON)는 Ruby gem으로 패키지된 JSON 파서이자 객체 마샬러입니다. 3.17.3 이전 버전에서 Oj::Doc#each_child는 깊게 중첩된 JSON 문서에 대해 반복적으로 호출되면 고정 크기 스택 버퍼를 오버플로하고 프로세스를 중단하여 DoS로 이어집니다.  ext/oj/fast.c의 2단계 체인에서 doc_each_child는 경계 확인 없이 where_path[MAX_STACK = 100] 배열을 지나서 doc->where를 증가시키고 절대 복원하지 않으므로(doc->where--가 누락됨), Yield 블록 내부에서 재귀적으로 각_child를 호출하면 배열 너머의 doc->where가 구동됩니다. 다음 항목에서 함수는 wlen = doc->where - doc->where_path를 사용하여 800바이트 스택 로컬 버퍼 save_path[MAX_STACK]에 경로를 복사합니다. 따라서 이전 재귀 호출이 doc->where에서 where_path[100]를 지나면 wlen이 MAX_STACK을 초과하고 memcpy가 C 스택의 save_path를 오버플로합니다. Oj::Doc 파서는 JSON 중첩 깊이 제한을 적용하지 않기 때문에(C 스택 압력 검사에 의존) 깊이 중첩된 공격자 입력이 이 경로에 도달합니다. 이 문제는 버전 3.17.3에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54592\n2. 26.07.01 오전8:16\n3. Oj (Optimized JSON) is a JSON parser and Object ma",
-      "cve_id": "CVE-2026-54592",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54592",
-      "source": "cvefeed",
-      "published": "2026-07-01T08:16:24+09:00",
       "lang": "en"
     }
   ],
