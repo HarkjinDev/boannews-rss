@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-03T13:32:51.125818+09:00",
+  "fetched_at": "2026-07-03T14:01:21.766641+09:00",
   "security_news": [
     {
       "title": "코인 도둑질로 1조를…해킹 자금 66% 싹쓸이한 나라",
@@ -2640,21 +2640,24 @@
       "source": "thehackernews",
       "published": "2026-06-30T14:04:06+09:00",
       "lang": "en"
-    },
-    {
-      "title": "[더벨][유통가 정보보호 점검] 자회사 정보유출 사고 BGF리테일, 투자 확...",
-      "summary": "인프라 자산 취약점 진단과 수탁사 개인정보 보안점검, 정보보호 내부 감사, 정보보안 점검의 날 운영, 임직원 및 외부자 정보보호 교육, 사이버 위기 대응 및 재해복구 모의훈련 등이 포함됐다. 정보보호...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [더벨][유통가 정보보호 점검] 자회사 정보유출 사고 BGF리테일, 투자 확...\n2. 인프라 자산 취약점 진단과 수탁사 개인정보 보안점검, 정보보호 내부 감사, 정보보안 점검의",
-      "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202606260907568000107125",
-      "source": "naver",
-      "published": "2026-06-30T13:42:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-12729 - weDocs: AI Powered Knowledge Base, Docs, Documentation, Wiki & AI Chatbot <= 2.3.0 - Missing Authorization to Authenticated (Subscriber+) Data Migration via wedocs_migrate_betterdocs_to_wedocs AJAX Action",
+      "summary": "CVE ID :CVE-2026-12729\n  \nPublished : July 3, 2026, 1:28 a.m. | 2 hours, 32 minutes ago\n  \nDescription :The weDocs: AI Powered Knowledge Base, Docs, Documentation, Wiki & AI Chatbot plugin for WordPress is vulnerable to Missing Authorization in versions up to and including 2.3.0. This is due to a missing capability check on the do_migration() function registered as the wedocs_migrate_betterdocs_to_wedocs AJAX action, which performs no nonce verification via check_ajax_referer() and no capability check via current_user_can() before executing sensitive operations. This makes it possible for authenticated attackers, with Subscriber-level access and above, to trigger a full BetterDocs-to-weDocs data migration, creating and modifying 'docs' custom post type entries with attacker-controlled titles, updating site options, and deactivating the BetterDocs and BetterDocs Pro plugins via deactivate_plugins().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-12729\n  \nPublished : July 3, 2026, 1:28 a.m. | 2 hours, 32 minutes ago\n  \nDescription :The weDocs: AI Powered Knowledge Base, Docs, Documentation, Wiki & AI Chatbot plugin for WordPress is vulnerable to Missing Authorization in versions up to and including 2.3.0. This is due to a missing capability check on the do_migration() function registered as the wedocs_migrate_betterdocs_to_wedocs AJAX action, which performs no nonce verification via check_ajax_referer() and no capability check via current_user_can() before executing sensitive operations. This makes it possible for authenticated attackers, with Subscriber-level access and above, to trigger a full BetterDocs-to-weDocs data migration, creating and modifying 'docs' custom post type entries with attacker-controlled titles, updating site options, and deactivating the BetterDocs and BetterDocs Pro plugins via deactivate_plugins().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-12729 - weDocs: AI 기반 기술 자료, 문서, 설명서, Wiki 및 AI Chatbot <= 2.3.0 - wedocs_ migration_betterdocs_to_wedocs AJAX 작업을 통해 인증된(구독자+) 데이터 마이그레이션에 대한 권한이 누락되었습니다.",
+      "summary_ko": "CVE ID:CVE-2026-12729\n  \n게시일 : 2026년 7월 3일 오전 1시 28분 | 2시간 32분 전\n  \n설명:Wordocs: WordPress용 AI 기반 기술 자료, 문서, 문서, Wiki 및 AI Chatbot 플러그인은 2.3.0 이하 버전에서 권한 누락에 취약합니다. 이는 중요한 작업을 실행하기 전에 check_ajax_referer()를 통해 nonce 확인을 수행하지 않고 current_user_can()을 통해 기능 확인을 수행하지 않는 wedocs_ migration_betterdocs_to_wedocs AJAX 작업으로 등록된 do_migration() 함수에 대한 기능 확인이 누락되었기 때문입니다. 이를 통해 구독자 수준 이상의 액세스 권한이 있는 인증된 공격자가 전체 BetterDocs에서 weDocs로의 데이터 마이그레이션을 트리거하고, 공격자가 제어하는 ​​제목으로 '문서' 사용자 정의 게시물 유형 항목을 생성 및 수정하고, 사이트 옵션을 업데이트하고, deactivate_plugins()를 통해 BetterDocs 및 BetterDocs Pro 플러그인을 비활성화할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-12729\n2. 26.07.03 오전10:28\n3. The weDocs: AI Powered Knowledge Base, Docs, Docum",
+      "cve_id": "CVE-2026-12729",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12729",
+      "source": "cvefeed",
+      "published": "2026-07-03T10:28:19+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-12413 - IKEv2 Denial of Service via malformed fragmentation",
       "summary": "CVE ID :CVE-2026-12413\n  \nPublished : July 2, 2026, 9:19 p.m. | 27 minutes ago\n  \nDescription :An invalidly formatted IKEv2 fragment causes the Libreswan pluto daemon to crash and restart. Continued exploitation would cause a denial of service. The function reassemble_v2_incoming_fragments() would ignore unknown outer payloads but still store these in a fixed size array msg_digest.digest[PAYLIMIT]. An off-by-one error in the assertion PASSERT(logger, md->digest_roof < elemsof(md->digest)) causes the daemon to abort. No remote code execution is possible. Any configuration that allows IKEv2 connections that do not set fragmentation=no are vulnerable. IKEv1 is not affected.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
