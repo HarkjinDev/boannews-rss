@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-03T09:02:56.233983+09:00",
+  "fetched_at": "2026-07-03T09:31:20.764468+09:00",
   "security_news": [
     {
       "title": "올해 상반기 가상자산 해킹 피해 3분의 2는 北소행···1조원 넘게 빼돌...",
@@ -2784,30 +2784,6 @@
       "source": "naver",
       "published": "2026-06-30T09:32:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[디지털포스트 모닝픽] '제2 스타링크' 나오나… 로켓랩, 12조에 이리듐...",
-      "summary": "■ 애플 협력사 해킹으로 아이폰18 프로의 부품·공급망 정보가 유출됐습니다. 29일(현지시간) 로이터에 따르면 랜섬웨어 조직이 타타 일렉트로닉스에서 탈취한 자료에는 아이폰18 프로 부품 공급업체 목록과 낙하 시험...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 애플 협력사 타타 일렉트로닉스, 아이폰 18 프로 부품 정보 유출\n2. 랜섬웨어 조직, 낙하 시험 정보 등 자료 탈취\n3. 부품 공급망 정보 유출로 아이폰 18 프로 제조 차질 우려",
-      "link": "https://www.ilovepc.co.kr/news/articleView.html?idxno=59868",
-      "source": "naver",
-      "published": "2026-06-30T09:24:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "\"차기작 내부 설계까지 털렸다\"…타타 해킹 사태로 '아이폰 18 프로' 회...",
-      "summary": "사이버 해킹 사태로 인해 약 630GB 규모의 기밀 데이터가 다크웹에 유출되는 초대형 보안 사고가 발생했다.... 이번 인도 팹의 해킹 악재는 애플의 생산 기지 다변화 노선에 적잖은 상업적 부담으로 작용할 전망이다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 타타 인도 팹 해킹으로 애플 '아이폰 18 프로' 630GB 기밀 유출\n2. 다크웹에 내부 설계·생산 데이터 암호화 없이 공개\n3. 애플 생산 다변화 전략에 2025년 출시 계획 지연 우려",
-      "link": "https://n.news.naver.com/mnews/article/138/0002232523?sid=105",
-      "source": "naver",
-      "published": "2026-06-30T09:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3919,21 +3895,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-12349",
       "source": "cvefeed",
       "published": "2026-06-30T13:30:18+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12243 - Path Traversal via Percent-Encoding in nltk.data.find() and nltk.data.load()",
-      "summary": "CVE ID :CVE-2026-12243\n  \nPublished : June 30, 2026, 12:14 a.m. | 1 hour, 12 minutes ago\n  \nDescription :NLTK version 3.9.4 is vulnerable to a path traversal attack due to an incomplete fix for GitHub Issue #3504. The `_UNSAFE_NO_PROTOCOL_RE` regex in `nltk/data.py` checks for literal `../` sequences but fails to account for percent-encoded traversal sequences such as `..%2f`. The `url2pathname()` function decodes these sequences after the validation step, allowing an attacker to bypass the protection. This vulnerability enables an attacker to read arbitrary files accessible to the Python process by controlling the resource name parameter passed to `nltk.data.load()` or `nltk.data.find()`. The issue affects applications that rely on NLTK for resource loading, including NLP web applications, Jupyter notebooks, and CLI tools. The default `pathsec.ENFORCE=False` setting exacerbates the impact by not blocking the file read at the `open()` stage.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12243\n  \nPublished : June 30, 2026, 12:14 a.m. | 1 hour, 12 minutes ago\n  \nDescription :NLTK version 3.9.4 is vulnerable to a path traversal attack due to an incomplete fix for GitHub Issue #3504. The `_UNSAFE_NO_PROTOCOL_RE` regex in `nltk/data.py` checks for literal `../` sequences but fails to account for percent-encoded traversal sequences such as `..%2f`. The `url2pathname()` function decodes these sequences after the validation step, allowing an attacker to bypass the protection. This vulnerability enables an attacker to read arbitrary files accessible to the Python process by controlling the resource name parameter passed to `nltk.data.load()` or `nltk.data.find()`. The issue affects applications that rely on NLTK for resource loading, including NLP web applications, Jupyter notebooks, and CLI tools. The default `pathsec.ENFORCE=False` setting exacerbates the impact by not blocking the file read at the `open()` stage.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-12243 - nltk.data.find() 및 nltk.data.load()에서 백분율 인코딩을 통한 경로 탐색",
-      "summary_ko": "CVE ID:CVE-2026-12243\n  \n게시일 : 2026년 6월 30일 오전 12시 14분 | 1시간, 12분 전\n  \n설명:NLTK 버전 3.9.4는 GitHub 문제 #3504에 대한 불완전한 수정으로 인해 경로 탐색 공격에 취약합니다. `nltk/data.py`의 `_UNSAFE_NO_PROTOCOL_RE` 정규식은 리터럴 `../` 시퀀스를 확인하지만 `..%2f`와 같은 백분율로 인코딩된 순회 시퀀스를 설명하지 못합니다. `url2pathname()` 함수는 유효성 검사 단계 후에 이러한 시퀀스를 디코딩하여 공격자가 보호를 우회할 수 있도록 합니다. 이 취약점을 통해 공격자는 'nltk.data.load()' 또는 'nltk.data.find()'에 전달된 리소스 이름 매개변수를 제어하여 Python 프로세스에 액세스 가능한 임의 파일을 읽을 수 있습니다. 이 문제는 NLP 웹 애플리케이션, Jupyter 노트북 및 CLI 도구를 포함하여 리소스 로딩을 위해 NLTK를 사용하는 애플리케이션에 영향을 미칩니다. 기본 `pathsec.ENFORCE=False` 설정은 `open()` 단계에서 읽은 파일을 차단하지 않음으로써 영향을 더욱 악화시킵니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12243\n2. 26.06.30 오전9:14\n3. NLTK version 3.9.4 is vulnerable to a path travers",
-      "cve_id": "CVE-2026-12243",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12243",
-      "source": "cvefeed",
-      "published": "2026-06-30T09:14:35+09:00",
       "lang": "en"
     }
   ],
