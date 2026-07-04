@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-04T22:05:00.828984+09:00",
+  "fetched_at": "2026-07-04T22:32:44.079390+09:00",
   "security_news": [
     {
       "title": "“결국 여기에 그분이 떴다, 뚫을 수 있겠어?”…인간 해커 vs AI 해커, ...",
@@ -2705,21 +2705,6 @@
       "source": "cvefeed",
       "published": "2026-07-01T22:45:30+09:00",
       "lang": "fi"
-    },
-    {
-      "title": "CVE-2026-53355 - net: rds: clear i_sends on setup unwind",
-      "summary": "CVE ID :CVE-2026-53355\n  \nPublished : July 1, 2026, 1:32 p.m. | 1 hour, 54 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet: rds: clear i_sends on setup unwind\n\nThe RDS IB connection teardown path is written so it can run during\npartial startup and on repeated shutdown attempts. It uses NULL\npointers to distinguish resources that are still owned from resources\nthat have already been released.\n\nWhen rds_ib_setup_qp() fails after allocating i_sends but before\nallocating i_recvs, the sends_out path frees i_sends without clearing\nthe pointer. A later shutdown pass can still treat that stale pointer\nas a live send ring allocation.\n\nClear i_sends after vfree() in the error unwind path so the existing\nshutdown logic continues to use the correct ownership state.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53355\n  \nPublished : July 1, 2026, 1:32 p.m. | 1 hour, 54 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet: rds: clear i_sends on setup unwind\n\nThe RDS IB connection teardown path is written so it can run during\npartial startup and on repeated shutdown attempts. It uses NULL\npointers to distinguish resources that are still owned from resources\nthat have already been released.\n\nWhen rds_ib_setup_qp() fails after allocating i_sends but before\nallocating i_recvs, the sends_out path frees i_sends without clearing\nthe pointer. A later shutdown pass can still treat that stale pointer\nas a live send ring allocation.\n\nClear i_sends after vfree() in the error unwind path so the existing\nshutdown logic continues to use the correct ownership state.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53355 - net: rds: 설정 해제 시 i_send 삭제",
-      "summary_ko": "CVE ID:CVE-2026-53355\n  \n게시일 : 2026년 7월 1일 오후 1시 32분 | 1시간 54분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nnet: rds: 설정 해제 시 i_send 삭제\n\nRDS IB 연결 해제 경로는 실행 중에도 실행될 수 있도록 작성됩니다.\n부분 시작 및 반복적인 종료 시도 시. NULL을 사용합니다.\n여전히 소유하고 있는 리소스를 리소스와 구별하기 위한 포인터\n이미 출시된 것들입니다.\n\ni_sends를 할당한 후 rds_ib_setup_qp()가 실패하는 경우\ni_recvs를 할당하면 send_out 경로는 지우지 않고 i_sends를 해제합니다.\n포인터. 이후의 종료 단계에서는 여전히 오래된 포인터를 처리할 수 있습니다.\n라이브 전송 링 할당으로.\n\n오류 해제 경로에서 vfree() 이후의 i_sends를 지워 기존\n종료 논리는 올바른 소유권 상태를 계속 사용합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53355\n2. 26.07.01 오후10:32\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-53355",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53355",
-      "source": "cvefeed",
-      "published": "2026-07-01T22:32:30+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
