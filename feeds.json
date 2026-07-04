@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-05T05:01:24.813305+09:00",
+  "fetched_at": "2026-07-05T05:31:21.893508+09:00",
   "security_news": [
     {
       "title": "“결국 여기에 그분이 떴다, 뚫을 수 있겠어?”…인간 해커 vs AI 해커, ...",
@@ -1704,18 +1704,6 @@
       "source": "naver",
       "published": "2026-07-02T05:54:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "ChocoPoc malware delivered via trojanized exploits on GitHub",
-      "summary": "Multiple weaponized proof-of-concept (PoC) exploits on GitHub delivered a Python-based remote access trojan (RAT) called ChocoPoC that can execute commands and steal sensitive data. [...]",
-      "content": "",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "GitHub의 여러 무기화된 개념 증명(PoC) 익스플로잇은 명령을 실행하고 민감한 데이터를 훔칠 수 있는 ChocoPoC라는 Python 기반 원격 액세스 트로이 목마(RAT)를 전달했습니다. [...]",
-      "summary_3lines": "1. 깃허브에 ChocoPoC 멀웨어 탑재된 PoC 익스플로잇 발견\n2. 파이썬 기반 RAT, 명령 실행 및 데이터 탈취 가능\n3. 민감 정보 유출 및 추가 공격 위험",
-      "link": "https://www.bleepingcomputer.com/news/security/chocopoc-malware-delivered-via-trojanized-exploits-on-github/",
-      "source": "bleepingcomputer",
-      "published": "2026-07-02T05:08:13+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -2527,21 +2515,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-58263",
       "source": "cvefeed",
       "published": "2026-07-02T05:35:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54786 - Wasmtime: Leak in WASIp1 `fd_renumber` implementation",
-      "summary": "CVE ID :CVE-2026-54786\n  \nPublished : July 1, 2026, 8:12 p.m. | 1 hour, 14 minutes ago\n  \nDescription :Wasmtime is a runtime for WebAssembly. All versions prior to 24.0.10; versions 25.0.0 through those before  36.0.11; versions 37.0.0 through those before 44.0.3; and versions 45.0.0 and 45.0.1 contain a native implementation of WASIp1 which suffers from a leak in the fd_renumber function where the file descriptor being renumbered to is not properly closed. Wasmtime's implementation erroneously only updated the table of descriptors for WASIp1 and didn't update the underlying table of descriptors used by the host. This behavior means that while fd_renumber works correctly from a guest's perspective it ends up leaking resources in the host that aren't cleaned up until the corresponding Store is destroyed. In a loop, guests can use fd_renumber to cause hosts to exhaust both resources and file descriptors. This bug only affects the native implementation of WASIp1, meaning that only runtimes which load core wasm modules and expose fd_renumber are affected. Runtimes are additionally only affected if they expose the ability to acquire a file descriptor, such as opening a file. For runtimes that deny access to files they are unaffected. This issue has been fixed in versions 24.0.10, 36.0.11, 44.0.3, and 45.0.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54786\n  \nPublished : July 1, 2026, 8:12 p.m. | 1 hour, 14 minutes ago\n  \nDescription :Wasmtime is a runtime for WebAssembly. All versions prior to 24.0.10; versions 25.0.0 through those before  36.0.11; versions 37.0.0 through those before 44.0.3; and versions 45.0.0 and 45.0.1 contain a native implementation of WASIp1 which suffers from a leak in the fd_renumber function where the file descriptor being renumbered to is not properly closed. Wasmtime's implementation erroneously only updated the table of descriptors for WASIp1 and didn't update the underlying table of descriptors used by the host. This behavior means that while fd_renumber works correctly from a guest's perspective it ends up leaking resources in the host that aren't cleaned up until the corresponding Store is destroyed. In a loop, guests can use fd_renumber to cause hosts to exhaust both resources and file descriptors. This bug only affects the native implementation of WASIp1, meaning that only runtimes which load core wasm modules and expose fd_renumber are affected. Runtimes are additionally only affected if they expose the ability to acquire a file descriptor, such as opening a file. For runtimes that deny access to files they are unaffected. This issue has been fixed in versions 24.0.10, 36.0.11, 44.0.3, and 45.0.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54786 - Wasmtime: WASIp1 `fd_renumber` 구현의 누출",
-      "summary_ko": "CVE ID:CVE-2026-54786\n  \n게시일 : 2026년 7월 1일 오후 8시 12분 | 1시간, 14분 전\n  \n설명 :Wasmtime은 WebAssembly용 런타임입니다. 24.0.10 이전의 모든 버전; 버전 25.0.0부터 36.0.11 이전 버전까지; 버전 37.0.0부터 44.0.3 이전 버전까지; 버전 45.0.0 및 45.0.1에는 번호가 다시 매겨지는 파일 설명자가 제대로 닫히지 않는 fd_renumber 함수에서 누출이 발생하는 WASIp1의 기본 구현이 포함되어 있습니다. Wasmtime의 구현은 WASIp1에 대한 설명자 테이블만 잘못 업데이트하고 호스트에서 사용하는 기본 설명자 테이블은 업데이트하지 않았습니다. 이 동작은 fd_renumber가 게스트의 관점에서 올바르게 작동하지만 호스트에서 해당 저장소가 삭제될 때까지 정리되지 않는 리소스가 누출된다는 것을 의미합니다. 루프에서 게스트는 fd_renumber를 사용하여 호스트가 리소스와 파일 설명자를 모두 소모하도록 할 수 있습니다. 이 버그는 WASIp1의 기본 구현에만 영향을 미칩니다. 즉, 핵심 wasm 모듈을 로드하고 fd_renumber를 노출하는 런타임만 영향을 받습니다. 런타임은 파일 열기와 같이 파일 설명자를 획득하는 기능을 노출하는 경우에만 추가로 영향을 받습니다. 파일에 대한 액세스를 거부하는 런타임의 경우 영향을 받지 않습니다. 이 문제는 버전 24.0.10, 36.0.11, 44.0.3 및 45.0.2에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54786\n2. 26.07.02 오전5:12\n3. Wasmtime is a runtime for WebAssembly. All version",
-      "cve_id": "CVE-2026-54786",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54786",
-      "source": "cvefeed",
-      "published": "2026-07-02T05:12:35+09:00",
       "lang": "en"
     }
   ],
