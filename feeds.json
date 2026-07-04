@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-05T05:31:21.893508+09:00",
+  "fetched_at": "2026-07-05T06:01:28.428768+09:00",
   "security_news": [
     {
       "title": "“결국 여기에 그분이 떴다, 뚫을 수 있겠어?”…인간 해커 vs AI 해커, ...",
@@ -1656,54 +1656,6 @@
       "source": "naver",
       "published": "2026-07-02T06:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "아마추어도 AI로 해킹하는 시대…\"생존 해법은 복원력\"",
-      "summary": "취약점 발견 및 검증 비용은 수십 달러 수준으로 하락해 아마추어도 치명적 해킹 기술을 사용할 수 있다. AI 에이전트의 경우 목표 설정 시 다단계 공격 시나리오를 스스로 판단하고 엮어 킬체인(Kill Chain)을 수행할...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 아마추어, AI로 해킹 시도 급증… 수십 달러로 치명적 공격\n2. AI 에",
-      "link": "https://n.news.naver.com/mnews/article/138/0002232840?sid=105",
-      "source": "naver",
-      "published": "2026-07-02T06:01:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "엄벌하면 사고 안 칠까? 쿠팡 최대 과징금 갑론을박",
-      "summary": "특히 이번 사고는 약 3700만 개에 달하는 회원의 성명, 주소, 연락처 등이 대량으로 유출돼 기업이 책임을 피하긴 어려운 상황이었으나, 해킹에 의한 민감정보 유출이나 조직적인 2차 피해가 없었음에도 역대 최대 규모의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 쿠팡, 3700만 회원 정보 유출로 최대 과징금 논란\n2. 성명·주소·연락처 등",
-      "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=53045",
-      "source": "naver",
-      "published": "2026-07-02T06:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "美하원 법사위 \"韓, 미국 기업 지속 차별…쿠팡 표적\"(종합)",
-      "summary": "아울러 보고서는 로저스 대표 진술과 확보한 문건을 바탕으로 쿠팡 데이터 유출 사건 이후 중국 상하이에서 해킹 피의자의 전자기기를 회수한 과정을 한국의 '국가정보원이 지시한 회수 작전'이라고 규정했다. 그러면서...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 美하원 법사위, 韓 국가정보원 쿠팡 표적 지시 의혹 제기\n2. 쿠팡 데이터 유출 후 上海 해킹 피의자 전자기기 회수 작전\n3. 로저스 대표 진술·문건 확보로 韓 작전 규정",
-      "link": "https://n.news.naver.com/mnews/article/421/0009036071?sid=104",
-      "source": "naver",
-      "published": "2026-07-02T06:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "미 하원 \"한국, 쿠팡 등 미국 기업 차별\" 보고서…한미 통상 쟁점 부상",
-      "summary": "보고서는 쿠팡 개인정보 유출 사건을 전직 직원의 단독 범행으로 규정했지만, 한국 정부는 기업의 보안 관리 부실도 중대한 원인으로 판단했다. 앞서 개인정보보호위원회는 쿠팡의 인증체계와 접근통제, 보안관리...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 미 하원 \"한국, 쿠팡 등 미국 기업 차별\" 보고서…한미 통상 쟁점 부상 보고서는 쿠팡 개\n2. 앞서 개인정보보호위원회는 쿠팡의 인증체계와 접근통제, 보안관리...",
-      "link": "http://www.4th.kr/news/articleView.html?idxno=2114078",
-      "source": "naver",
-      "published": "2026-07-02T05:54:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2485,36 +2437,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-14340",
       "source": "cvefeed",
       "published": "2026-07-02T06:03:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55660 - TinaCMS: Cross-origin postMessage handlers and rich-text URL-sanitization bypass enable stored XSS and session takeover",
-      "summary": "CVE ID :CVE-2026-55660\n  \nPublished : July 1, 2026, 9 p.m. | 27 minutes ago\n  \nDescription :Tina is a headless content management system. In versions prior to @tinacms/app 2.5.6 and tinacms 3.9.3, cross-origin postMessage handlers and a rich-text URL-sanitization bypass enable stored XSS and session takeover. The library registers window message listeners — the useTina overlay handler, the OAuth authentication popup handler, and the admin↔preview iframe GraphQL reducer — that act on event.data without verifying event.origin or event.source and post messages using non-specific target origins, while insufficient URL sanitization in rich-text content allows malicious URLs to persist and execute. A page the victim visits (or a window in an opener/iframe relationship with a Tina admin) can forge messages to drive the editor, inject preview content, or observe/forge the OAuth popup channel to take over an authenticated editing session. This issue has been fixed in versions @tinacms/app 2.5.6 and tinacms 3.9.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55660\n  \nPublished : July 1, 2026, 9 p.m. | 27 minutes ago\n  \nDescription :Tina is a headless content management system. In versions prior to @tinacms/app 2.5.6 and tinacms 3.9.3, cross-origin postMessage handlers and a rich-text URL-sanitization bypass enable stored XSS and session takeover. The library registers window message listeners — the useTina overlay handler, the OAuth authentication popup handler, and the admin↔preview iframe GraphQL reducer — that act on event.data without verifying event.origin or event.source and post messages using non-specific target origins, while insufficient URL sanitization in rich-text content allows malicious URLs to persist and execute. A page the victim visits (or a window in an opener/iframe relationship with a Tina admin) can forge messages to drive the editor, inject preview content, or observe/forge the OAuth popup channel to take over an authenticated editing session. This issue has been fixed in versions @tinacms/app 2.5.6 and tinacms 3.9.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-55660 - TinaCMS: 교차 출처 postMessage 핸들러 및 서식 있는 텍스트 URL 삭제 우회로 저장된 XSS 및 세션 인계가 가능합니다.",
-      "summary_ko": "CVE ID:CVE-2026-55660\n  \n게시일 : 2026년 7월 1일 오후 9시 | 27분 전\n  \n설명 :Tina는 헤드리스 콘텐츠 관리 시스템입니다. @tinacms/app 2.5.6 및 tinacms 3.9.3 이전 버전에서는 교차 출처 postMessage 핸들러와 서식 있는 텍스트 URL 삭제 우회를 통해 저장된 XSS 및 세션 인계가 가능합니다. 라이브러리는 event.origin 또는 event.source를 확인하지 않고 event.data에 대해 작동하고 비특정 대상 출처를 사용하여 메시지를 게시하는 반면 서식 있는 텍스트 콘텐츠의 URL 삭제가 충분하지 않으면 악성 URL이 지속되고 실행될 수 있는 창 메시지 리스너(useTina 오버레이 처리기, OAuth 인증 팝업 처리기 및 admin-preview iframe GraphQL 감소기)를 등록합니다. 피해자가 방문하는 페이지(또는 Tina 관리자와 오프너/iframe 관계에 있는 창)는 메시지를 위조하여 편집기를 구동하거나 미리 보기 콘텐츠를 삽입하거나 OAuth 팝업 채널을 관찰/위조하여 인증된 편집 세션을 인계받을 수 있습니다. 이 문제는 @tinacms/app 2.5.6 및 tinacms 3.9.3 버전에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-55660\n2. 26.07.02 오전6:00\n3. Tina is a headless content management system. In v",
-      "cve_id": "CVE-2026-55660",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55660",
-      "source": "cvefeed",
-      "published": "2026-07-02T06:00:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58263 - Jodit Editor: Mutation XSS in jodit clean-html via a MathML/style rawtext carrier",
-      "summary": "CVE ID :CVE-2026-58263\n  \nPublished : July 1, 2026, 8:35 p.m. | 51 minutes ago\n  \nDescription :Jodit Editor is a WYSIWYG editor with written in pure TypeScript file and image editing capabilities. In versions prior to 4.12.28, the built-in clean-html sanitizer can be bypassed by a MathML/",
-      "description": "CVE ID :CVE-2026-58263\n  \nPublished : July 1, 2026, 8:35 p.m. | 51 minutes ago\n  \nDescription :Jodit Editor is a WYSIWYG editor with written in pure TypeScript file and image editing capabilities. In versions prior to 4.12.28, the built-in clean-html sanitizer can be bypassed by a MathML/",
-      "title_ko": "CVE-2026-58263 - Jodit 편집기: MathML/스타일 원시 텍스트 캐리어를 통한 jodit clean-html의 돌연변이 XSS",
-      "summary_ko": "CVE ID:CVE-2026-58263\n  \n게시일 : 2026년 7월 1일 오후 8시 35분 | 51분 전\n  \n설명 : Jodit Editor는 순수 TypeScript 파일로 작성되었으며 이미지 편집 기능을 갖춘 WYSIWYG 편집기입니다. 4.12.28 이전 버전에서는 내장된 clean-html 새니타이저를 MathML/",
-      "summary_3lines": "1. CVE-2026-58263\n2. 26.07.02 오전5:35\n3. Jodit Editor is a WYSIWYG editor with written in p",
-      "cve_id": "CVE-2026-58263",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58263",
-      "source": "cvefeed",
-      "published": "2026-07-02T05:35:35+09:00",
       "lang": "en"
     }
   ],
