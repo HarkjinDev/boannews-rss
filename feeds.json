@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-04T17:32:07.449536+09:00",
+  "fetched_at": "2026-07-04T18:02:07.480429+09:00",
   "security_news": [
     {
       "title": "[2026 클라우드 보안 리포트] 앞서가는 클라우드 전환, 뒤처진 보안 생태...",
@@ -1764,54 +1764,6 @@
       "source": "thehackernews",
       "published": "2026-07-01T21:59:19+09:00",
       "lang": "en"
-    },
-    {
-      "title": "AX 열풍에 보안 점검 수요 급증…AI 에이전트가 모의해킹 수행",
-      "summary": "RED팀은 화이트해커로 구성된 전문가 조직으로, 모의해킹으로 시스템 취약점을 찾아서 제거하는... 모의해킹 수요도 늘어났으며, AI 모델 성능이 고도화되면서 해킹 공격에 대한 두려움도 커진 상황으로 2024년...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 2024년 AI 모델 성능 고도화로 보안 점검 수요 급증\n2. RED팀, AI 에이전트 활용해 시스템 취약점 모의해킹\n3. 해킹 공격 위험 증가로 기업 보안 대응 강화 필요",
-      "link": "https://kidd.co.kr/news/246562",
-      "source": "naver",
-      "published": "2026-07-01T18:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "全카드사 통틀어 처음…롯데카드, 해킹사고 후 '절치부심'",
-      "summary": "대규모 해킹사태를 겪은 롯데카드가 업계 최초로 정보보호 자율공시에 참여했다. 공시 의무 대상이... 롯데카드는 지난해 9월 해킹 사고로 고객 297만명의 정보가 유출된 바 있다. 이에 롯데카드는 향후 5년간 정보보호...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 롯데카드, 297만명 정보 유출 후 자율공시 참여\n2. 작년 9월 해킹으로 고객 정보 유출 피해 발생\n3. 향후 5년간 정보보호 강화 및 투자 계획",
-      "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260701010000469",
-      "source": "naver",
-      "published": "2026-07-01T17:58:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "자유소프트, 개인정보 자동 비식별화 지원하는 '자유PDF' 출시",
-      "summary": "오피스 프로그램 개발사 자유소프트는 개인정보 보호 기능과 디지털 접근성을 강화한 PDF 편집 프로그램 '자유PDF'를 시장에 선보였다.자유PDF에 탑재된 개인정보 비식별 기능은 주민등록번호, 전화번호, 계좌번호, 이메일, 주소 등 문서에 포함된 다양한 개인정보를 자동으로 탐지한다. 사용자는 소프트웨어가 찾아낸 결과 중 필요한 정보만 골라 비식별 처리를 할 수 있다. 비식별 처리가 완료된 개인정보는 원본 데이터까지 삭제되어 외부 유출 위험을 방지한다. 시각장애인 등 정보 취약계층을 위한 문서 접근성 기능도 개선됐다. 자유소프트는 광학",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 자유소프트, 개인정보 자동 비식별화 '자유PDF' 출시\n2. 주민번호·전화번호 등 5종 개인정보 자동 탐지·삭제\n3. 정보취약계층 위한 문서 접근성 기능 개선",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207412",
-      "source": "dailysecu",
-      "published": "2026-07-01T17:42:01+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[기고] 에이전트AI 시대, 관제탑이 핵심이다",
-      "summary": "에이전트가 시스템 권한을 쥐는 순간 잘못된 지시 하나가 정보 유출이나 해킹의 통로가 된다. 설계 단계부터 검증과 통제 장치를 내포하고, 공격을 받더라도 스스로 위험을 격리·복구하는 자율 방어체계가 플랫폼에...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 에이전트, 시스템 권한 악용 시 정보 유출·해킹 위험\n2. 잘못된 지시로 인한 사고 예방 위해 검증·통제 장치 필수\n3. 자율 방어체계로 위험 격리·복구 및 플랫폼 보안 강화",
-      "link": "https://n.news.naver.com/mnews/article/009/0005701415?sid=110",
-      "source": "naver",
-      "published": "2026-07-01T17:33:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1906,6 +1858,51 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-57918 libnfs through 6.0.2 before 935b8db has an xid integer underflow in READ_IOVEC in rpc_read_from_socket in lib/socket.c during a connection to a crafted NFS server, when the expected pdu size exceeds the absolute pdu size from the xid/record-marker.",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-57918 935b8db 이전의 libnfs~6.0.2에는 조작된 NFS 서버에 연결하는 동안 예상 pdu 크기가 xid/record-marker의 절대 pdu 크기를 초과하는 경우 lib/socket.c의 rpc_read_from_socket에 있는 READ_IOVEC에 xid 정수 언더플로우가 있습니다.",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-57918\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-57918",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57918",
+      "source": "msrc",
+      "published": "2026-07-03T17:10:48+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-57231 Podman: Malformed Image can trick podman run into leaking host environment variables into the container",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-57231 Podman: 잘못된 이미지는 Podman이 호스트 환경 변수를 컨테이너로 유출하도록 속일 수 있습니다.",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-57231\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-57231",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57231",
+      "source": "msrc",
+      "published": "2026-07-03T17:10:42+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-13322 Kubevirt: virt-handler-rhel9: kubevirt: unbounded virtio-serial readline in virt-handler causes oom denial of service",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-13322 Kubevirt: virt-handler-rhel9: kubevirt: virt-handler의 무제한 virtio-serial readline으로 인해 oom 서비스 거부가 발생함",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-13322\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-13322",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13322",
+      "source": "msrc",
+      "published": "2026-07-03T17:10:37+09:00",
+      "lang": "da"
+    },
+    {
       "title": "CVE-2026-48779 ws: Memory exhaustion DoS from tiny fragments and data chunks",
       "summary": "Information published.",
       "description": "Information published.",
@@ -1918,6 +1915,36 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48779",
       "source": "msrc",
       "published": "2026-07-03T17:10:13+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-58055 nghttp2 nghttpx - HTTP Request/Response Smuggling via Upgrade Request with Content-Length",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-58055 nghttp2 nghttpx - Content-Length의 업그레이드 요청을 통한 HTTP 요청/응답 밀수",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-58055\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-58055",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58055",
+      "source": "msrc",
+      "published": "2026-07-03T17:09:43+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-53303 f2fs: protect extension_list reading with sb_lock in f2fs_sbi_show()",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-53303 f2fs: f2fs_sbi_show()에서 sb_lock을 사용하여 Extension_list 읽기를 보호합니다.",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-53303\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-53303",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-53303",
+      "source": "msrc",
+      "published": "2026-07-03T17:09:08+09:00",
       "lang": "en"
     },
     {
@@ -1993,6 +2020,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-53016",
       "source": "msrc",
       "published": "2026-07-03T17:05:17+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-57585 MessagePack: Out-of-bounds read/crash on Unpacker reuse after caught error",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-57585 MessagePack: 오류 발견 후 Unpacker 재사용 시 범위를 벗어난 읽기/충돌",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-57585\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-57585",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57585",
+      "source": "msrc",
+      "published": "2026-07-03T17:04:20+09:00",
       "lang": "en"
     },
     {
@@ -2086,6 +2128,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-14258 Dhcpcd: dhcpcd infinite loop and out-of-bounds read via zero-length ipv6 nd option in router advertisement handling",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-14258 Dhcpcd: dhcpcd 무한 루프 및 라우터 광고 처리에서 길이가 0인 ipv6 nd 옵션을 통해 범위를 벗어난 읽기",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-14258\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-14258",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14258",
+      "source": "msrc",
+      "published": "2026-07-03T17:03:50+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2025-15661 libssh2 - Heap Buffer Over-read via sftp_symlink() in sftp.c",
       "summary": "Information published.",
       "description": "Information published.",
@@ -2116,6 +2173,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-53043 ocfs2/dlm: validate qr_numregions in dlm_match_regions()",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-53043 ocfs2/dlm: dlm_match_regions()에서 qr_numregions 유효성을 검사합니다.",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-53043\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-53043",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-53043",
+      "source": "msrc",
+      "published": "2026-07-03T17:03:26+09:00",
+      "lang": "sv"
+    },
+    {
       "title": "CVE-2026-52913 batman-adv: v: stop OGMv2 on disabled interface",
       "summary": "Information published.",
       "description": "Information published.",
@@ -2144,6 +2216,21 @@
       "source": "msrc",
       "published": "2026-07-03T17:02:51+09:00",
       "lang": "en"
+    },
+    {
+      "title": "CVE-2026-52935 xfrm: espintcp: do not reuse an in-progress partial send",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-52935 xfrm: espintcp: 진행 중인 부분 전송을 재사용하지 마세요.",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-52935\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-52935",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-52935",
+      "source": "msrc",
+      "published": "2026-07-03T17:02:31+09:00",
+      "lang": "pt"
     },
     {
       "title": "CVE-2026-53130 fs/omfs: reject s_sys_blocksize smaller than OMFS_DIR_START",
@@ -2653,21 +2740,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-13323",
       "source": "cvefeed",
       "published": "2026-07-01T20:28:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-57062 CMS (Cryptographic Message Syntax) parsing in gpgsm in GnuPG through 2.5.20 mishandles the CMS format for AES-GCM because aes-ICVlen is supposed to be 12 bytes but 4 bytes is accepted. NOTE: this is related to CVE-2026-34182.",
-      "summary": "Information published.",
-      "description": "Information published.",
-      "title_ko": "CVE-2026-57062 aes-ICVlen이 12바이트로 예상되지만 4바이트가 허용되기 때문에 GnuPG~2.5.20의 gpgsm에서 구문 분석하는 CMS(암호화 메시지 구문)가 AES-GCM에 대한 CMS 형식을 잘못 처리합니다. 참고: 이는 CVE-2026-34182와 관련이 있습니다.",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-57062\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-57062",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57062",
-      "source": "msrc",
-      "published": "2026-07-01T17:40:05+09:00",
       "lang": "en"
     }
   ],
