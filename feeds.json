@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-04T11:31:29.035012+09:00",
+  "fetched_at": "2026-07-04T12:01:23.750014+09:00",
   "security_news": [
     {
       "title": "우리은행, 또 '외주 탓'…고객정보 1만7천건 유출에 커지는 책임론",
@@ -2208,42 +2208,6 @@
       "source": "naver",
       "published": "2026-07-01T12:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "민간 '보험점검센터'는 공공기관 아닙니다",
-      "summary": "개인정보가 전달되는 과정에서 해킹이나 개인정보 유출에 따른 보이스 피싱 등 2차 피해 위험도 있다. 금감원은 \"인터넷 선물 이벤트에 참여하면서 개인정보 수집·제공 동의한다면 정보 사용 목적과 어디에 이용...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 민간 '보험점검센터' 공공기관 아님\n2. 개인정보 유출로 보이스피싱 위험 증가\n3. 금감원, 인터넷 이벤트 개인정보 수집 경고",
-      "link": "https://n.news.naver.com/mnews/article/031/0001038897?sid=101",
-      "source": "naver",
-      "published": "2026-07-01T12:01:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "안랩클라우드메이트 '시큐어브리지', 우수 정보보호기술 선정",
-      "summary": "안랩클라우드메이트의 생성형 인공지능(AI) 보안 솔루션 '시큐어브리지'가 정부의 '2026년 우수 정보보호기술'로 지정됐다. 기업의 생성형 AI 활용이 늘면서 데이터 유출과 개인정보 노출을 막는 AI 보안 기술의 중요성이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 안랩클라우드메이트 '시큐어브리지', 2026년 우수 정보보호기술 지정\n2. 생성형 AI 활용 증가에 따른 데이터 유출·개인정보 노출 방지\n3. AI 보안 기술 중요성 증대, 기업 솔루션 도입 필요",
-      "link": "https://n.news.naver.com/mnews/article/014/0005542182?sid=105",
-      "source": "naver",
-      "published": "2026-07-01T11:49:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[카드뉴스] “7만 4천대 방화벽 마스터키가 뚫렸다”… CISA가 경고한 ‘포티블리드’ 대량 유출 충격",
-      "summary": "전 세계 약 7만 4천 대의 네트워크 방화벽 마스터키 역할을 하는 관리자 계정이 대량 유출되는 ‘포티블리드(FortiBleed)’ 사태가 발생하여 미 CISA가 긴급 경보를 발령했다. 이번 해킹은 고난도 시스템 침투 대신 정당한 관리자 권한(자격 증명)을 도용하여 내부망에 침입하는 ‘신뢰 기반 공격’ 형태로 진행되어 기존의 경계선 방화벽 체계를 완전히 무력",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CISA 경고한 '포티블리드'로 7만4천대 방화벽 관리자 계정 유출\n2. '신뢰 기반 공격' 방식으로 정당한 자격 증명 도용해 내부망 침입\n3. 기존 방화벽 체계 무력화, 미국 CISA 긴급 경보 발령",
-      "link": "http://www.boannews.com/media/view.asp?idx=144434&kind=&sub_kind=",
-      "source": "boannews",
-      "published": "2026-07-01T11:47:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3550,21 +3514,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-7840",
       "source": "cvefeed",
       "published": "2026-07-01T12:33:28+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-14191 - WinRAR / UnRAR RAR5 recovery-volume (.rev) out-of-bounds heap write in RecVolumes5::ReadHeader",
-      "summary": "CVE ID :CVE-2026-14191\n  \nPublished : July 1, 2026, 2:41 a.m. | 1 hour ago\n  \nDescription :An out-of-bounds heap write exists in the RAR5 recovery-volume (.rev) parser in WinRAR and UnRAR (RecVolumes5::ReadHeader in recvol5.cpp). The RecItems vector is sized only when the first .rev file in a set is processed; subsequent .rev files supply an independent RecNum value that is validated against that file's own TotalCount field but never against the actual size of RecItems. A crafted set of two or more .rev files can therefore write an attacker-controlled 32-bit value (the header's RevCRC field) to RecItems[RecNum] at an attacker-controlled offset up to 65534 * sizeof(RecVolItem) bytes past the allocation, corrupting adjacent heap objects. Triggering requires the victim to run a recovery/test operation on an attacker-supplied .rev set (for example 'unrar t x.part1.rev', WinRAR 'Repair archive', or auto-recovery when extracting a volume set with a missing .rar part). This is the RAR5-path sibling of CVE-2023-40477 (which was fixed in the RAR3 path only in WinRAR 6.23). Fixed in WinRAR / RAR 7.23.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-14191\n  \nPublished : July 1, 2026, 2:41 a.m. | 1 hour ago\n  \nDescription :An out-of-bounds heap write exists in the RAR5 recovery-volume (.rev) parser in WinRAR and UnRAR (RecVolumes5::ReadHeader in recvol5.cpp). The RecItems vector is sized only when the first .rev file in a set is processed; subsequent .rev files supply an independent RecNum value that is validated against that file's own TotalCount field but never against the actual size of RecItems. A crafted set of two or more .rev files can therefore write an attacker-controlled 32-bit value (the header's RevCRC field) to RecItems[RecNum] at an attacker-controlled offset up to 65534 * sizeof(RecVolItem) bytes past the allocation, corrupting adjacent heap objects. Triggering requires the victim to run a recovery/test operation on an attacker-supplied .rev set (for example 'unrar t x.part1.rev', WinRAR 'Repair archive', or auto-recovery when extracting a volume set with a missing .rar part). This is the RAR5-path sibling of CVE-2023-40477 (which was fixed in the RAR3 path only in WinRAR 6.23). Fixed in WinRAR / RAR 7.23.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-14191 - RecVolumes5::ReadHeader에서 WinRAR/UnRAR RAR5 복구 볼륨(.rev) 범위를 벗어난 힙 쓰기",
-      "summary_ko": "CVE ID:CVE-2026-14191\n  \n게시일 : 2026년 7월 1일 오전 2시 41분 | 1시간 전\n  \n설명: WinRAR 및 UnRAR(recvol5.cpp의 RecVolumes5::ReadHeader)의 RAR5 복구 볼륨(.rev) 파서에 범위를 벗어난 힙 쓰기가 존재합니다. RecItems 벡터는 세트의 첫 번째 .rev 파일이 처리될 때만 크기가 조정됩니다. 후속 .rev 파일은 해당 파일의 자체 TotalCount 필드에 대해 검증되지만 RecItems의 실제 크기에 대해서는 검증되지 않는 독립적인 RecNum 값을 제공합니다. 따라서 두 개 이상의 .rev 파일로 구성된 조작된 세트는 공격자가 제어하는 ​​32비트 값(헤더의 RevCRC 필드)을 공격자가 제어하는 ​​오프셋에서 할당을 지나 최대 65534 * sizeof(RecVolItem) 바이트만큼 RecItems[RecNum]에 기록하여 인접한 힙 개체를 손상시킬 수 있습니다. 트리거하려면 피해자가 공격자가 제공한 .rev 세트에 대해 복구/테스트 작업을 실행해야 합니다(예: 'unrar t x.part1.rev', WinRAR 'Repair archive' 또는 누락된 .rar 부분이 있는 볼륨 세트를 추출할 때 자동 복구). 이는 CVE-2023-40477(WinRAR 6.23에서만 RAR3 경로에서 수정됨)의 RAR5 경로 형제입니다. WinRAR/RAR 7.23에서 수정되었습니다.\n  \n심각도: 7.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-14191\n2. 26.07.01 오전11:41\n3. An out-of-bounds heap write exists in the RAR5 rec",
-      "cve_id": "CVE-2026-14191",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-14191",
-      "source": "cvefeed",
-      "published": "2026-07-01T11:41:39+09:00",
       "lang": "en"
     }
   ],
