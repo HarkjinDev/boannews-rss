@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-04T12:31:26.884423+09:00",
+  "fetched_at": "2026-07-04T13:01:27.952113+09:00",
   "security_news": [
     {
       "title": "우리은행, 또 '외주 탓'…고객정보 1만7천건 유출에 커지는 책임론",
@@ -2136,42 +2136,6 @@
       "source": "naver",
       "published": "2026-07-01T13:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Citrix Patches Six NetScaler Flaws Allowing File Read and Denial-of-Service",
-      "summary": "Citrix on Tuesday released security updates to address multiple flaws in NetScaler ADC (formerly Citrix ADC) and NetScaler Gateway (formerly Citrix Gateway) that could be exploited by an attacker to facilitate arbitrary file reads or trigger a denial-of-service (DoS) condition.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-8451 (CVSS score: 8.8) - An insufficient input validation",
-      "content": "",
-      "title_ko": "Citrix, 파일 읽기 및 서비스 거부를 허용하는 NetScaler 결함 6개 패치",
-      "summary_ko": "Citrix는 공격자가 임의 파일 읽기를 용이하게 하거나 DoS(서비스 거부) 조건을 트리거하기 위해 악용할 수 있는 NetScaler ADC(이전 Citrix ADC) 및 NetScaler Gateway(이전 Citrix Gateway)의 여러 결함을 해결하기 위한 보안 업데이트를 화요일에 발표했습니다.\n\n취약점은 다음과 같습니다 -\n\n\n  CVE-2026-8451(CVSS 점수: 8.8) - 입력 유효성 검사가 충분하지 않습니다.",
-      "summary_3lines": "1. 시트릭스, 넷스케일러 ADC/Gateway 6개 취약점 패치\n2. CVE-2026-8451(점수 8.8) 통해 임의 파일 읽기 및 DoS 공격 가능\n3. CVSS 8.8 취약점 포함 시스템 업데이트 권고",
-      "link": "https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html",
-      "source": "thehackernews",
-      "published": "2026-07-01T12:54:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "커피쿠폰 받고 건넨 개인정보, 보험대리점엔 최대 13만원에 팔린다",
-      "summary": "GA로 넘어간 개인정보가 전산시스템 해킹으로 유출되면 보이스피싱 같은 2차 피해로 번질 위험도 있다. 실제 지난해 GA 전산망을 노린 해킹으로 유퍼스트보험마케팅 등에서 고객·임직원 1100여 명의 정보가 유출됐고 이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 보험대리점서 고객정보 최대 13만원에 거래\n2. GA 전산망 해킹으로 고객·임직원 1100명 정보 유출",
-      "link": "https://www.raonnews.com/news/article.html?no=59224",
-      "source": "naver",
-      "published": "2026-07-01T12:54:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "원 구성 후폭풍 속 과방위 지각변동...이해민→정무위, 최민희→문체위",
-      "summary": "국회의사당 /사진=임경호 기자 22대 전반기 국회 과학기술정보방송통신위원회에서 AI・보안・방송 등 주요... 이해민 의원은 ▲개인정보 보호와 대규모 정보유출 대응 ▲클라우드 등 플랫폼에 대한 보안 인증 개편...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 과방위 이해민→정무위, 최민희→문체위 인사\n2. 개인정보 보호·대규모 정보유출 대응 방안 논의\n3. 클라우드 플랫폼 보안 인증 개편 추진",
-      "link": "https://www.techm.kr/news/articleView.html?idxno=153033",
-      "source": "naver",
-      "published": "2026-07-01T12:32:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3463,21 +3427,6 @@
       "link": "https://isc.sans.edu/diary/rss/33118",
       "source": "sans_isc",
       "published": "2026-07-01T14:10:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-7840 - UltraVNC repeater HTTP server global buffer overflow via long URI (pre-auth RCE)",
-      "summary": "CVE ID :CVE-2026-7840\n  \nPublished : July 1, 2026, 3:33 a.m. | 1 hour, 53 minutes ago\n  \nDescription :UltraVNC repeater through 1.8.2.2 contains a global buffer overflow in its embedded HTTP administration server. The functions wi_senderr() and wi_replyhdr() in repeater/webgui/webutils.c write the caller-supplied HTTP request URI into a fixed 1000-byte global buffer (hdrbuf) via unchecked sprintf calls. The HTTP receive buffer accepts URIs up to approximately 150 KB (WI_RXBUFSIZE = 153600), so an unauthenticated attacker who can reach the repeater HTTP port (default TCP 80) can overflow hdrbuf by at least 500 bytes with a single HTTP request containing a URI of 1500 bytes or longer, corrupting adjacent .bss-segment globals. The overflow occurs before any authentication check, making it reachable without credentials. A remote, unauthenticated attacker can achieve arbitrary code execution on the host running the repeater.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-7840\n  \nPublished : July 1, 2026, 3:33 a.m. | 1 hour, 53 minutes ago\n  \nDescription :UltraVNC repeater through 1.8.2.2 contains a global buffer overflow in its embedded HTTP administration server. The functions wi_senderr() and wi_replyhdr() in repeater/webgui/webutils.c write the caller-supplied HTTP request URI into a fixed 1000-byte global buffer (hdrbuf) via unchecked sprintf calls. The HTTP receive buffer accepts URIs up to approximately 150 KB (WI_RXBUFSIZE = 153600), so an unauthenticated attacker who can reach the repeater HTTP port (default TCP 80) can overflow hdrbuf by at least 500 bytes with a single HTTP request containing a URI of 1500 bytes or longer, corrupting adjacent .bss-segment globals. The overflow occurs before any authentication check, making it reachable without credentials. A remote, unauthenticated attacker can achieve arbitrary code execution on the host running the repeater.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-7840 - 긴 URI를 통한 UltraVNC 리피터 HTTP 서버 전역 버퍼 오버플로(사전 인증 RCE)",
-      "summary_ko": "CVE ID:CVE-2026-7840\n  \n게시일 : 2026년 7월 1일 오전 3시 33분 | 1시간 53분 전\n  \n설명 : 1.8.2.2까지의 UltraVNC 리피터에는 내장된 HTTP 관리 서버에 전역 버퍼 오버플로가 포함되어 있습니다. Repeater/webgui/webutils.c의 wi_senderr() 및 wi_replyhdr() 함수는 확인되지 않은 sprintf 호출을 통해 호출자가 제공한 HTTP 요청 URI를 고정 1000바이트 전역 버퍼(hdrbuf)에 기록합니다. HTTP 수신 버퍼는 최대 약 150KB(WI_RXBUFSIZE = 153600)의 URI를 허용하므로 리피터 HTTP 포트(기본 TCP 80)에 도달할 수 있는 인증되지 않은 공격자는 1500바이트 이상의 URI가 포함된 단일 HTTP 요청으로 hdrbuf를 최소 500바이트 오버플로하여 인접한 .bss-segment 전역을 손상시킬 수 있습니다. 인증 확인 전에 오버플로가 발생하므로 자격 증명 없이도 연결할 수 있습니다. 인증되지 않은 원격 공격자가 리피터를 실행하는 호스트에서 임의 코드를 실행할 수 있습니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-7840\n2. 26.07.01 오후12:33\n3. UltraVNC repeater through 1.8.2.2 contains a globa",
-      "cve_id": "CVE-2026-7840",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-7840",
-      "source": "cvefeed",
-      "published": "2026-07-01T12:33:28+09:00",
       "lang": "en"
     }
   ],
