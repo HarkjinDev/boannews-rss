@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-05T04:01:29.492432+09:00",
+  "fetched_at": "2026-07-05T04:31:36.364143+09:00",
   "security_news": [
     {
       "title": "“결국 여기에 그분이 떴다, 뚫을 수 있겠어?”…인간 해커 vs AI 해커, ...",
@@ -2554,36 +2554,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-54786",
       "source": "cvefeed",
       "published": "2026-07-02T05:12:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58593 - NodeBB - ActivityPub Author Spoofing via Unvalidated attributedTo Mapped to Local User",
-      "summary": "CVE ID :CVE-2026-58593\n  \nPublished : July 1, 2026, 7:27 p.m. | 2 hours ago\n  \nDescription :NodeBB does not bind the claimed author of an inbound ActivityPub object to the authenticated remote actor. The inbound middleware verifies the HTTP-signature actor and checks the origin of object.id, but never validates that attributedTo corresponds to the sender. In the object mock, attributedTo is used directly as a uid, and actors.assert silently ignores numeric identifiers (filtering them out without re-deriving the uid), so a federated remote actor can set attributedTo to a bare numeric value such as 1 and have the resulting post or private message created with that local uid as author, including the administrator account. This lets a remote attacker forge posts and direct messages attributed to arbitrary local users. Requires the ActivityPub/federation feature to be enabled.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-58593\n  \nPublished : July 1, 2026, 7:27 p.m. | 2 hours ago\n  \nDescription :NodeBB does not bind the claimed author of an inbound ActivityPub object to the authenticated remote actor. The inbound middleware verifies the HTTP-signature actor and checks the origin of object.id, but never validates that attributedTo corresponds to the sender. In the object mock, attributedTo is used directly as a uid, and actors.assert silently ignores numeric identifiers (filtering them out without re-deriving the uid), so a federated remote actor can set attributedTo to a bare numeric value such as 1 and have the resulting post or private message created with that local uid as author, including the administrator account. This lets a remote attacker forge posts and direct messages attributed to arbitrary local users. Requires the ActivityPub/federation feature to be enabled.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-58593 - NodeBB - 로컬 사용자에 매핑된 검증되지 않은attributedTo를 통한 ActivityPub 작성자 스푸핑",
-      "summary_ko": "CVE ID:CVE-2026-58593\n  \n게시일 : 2026년 7월 1일 오후 7시 27분 | 2시간 전\n  \n설명:NodeBB는 인바운드 ActivityPub 개체의 주장된 작성자를 인증된 원격 행위자에 바인딩하지 않습니다. 인바운드 미들웨어는 HTTP 서명 행위자를 확인하고 object.id의 출처를 확인하지만 attributeTo가 보낸 사람에 해당하는지 확인하지 않습니다. 모의 객체에서 AttributedTo는 uid로 직접 사용되며 actor.assert는 숫자 식별자를 자동으로 무시하므로(uid를 다시 파생시키지 않고 필터링) 연합 원격 액터는 AttributedTo를 1과 같은 순수 숫자 값으로 설정하고 관리자 계정을 포함하여 해당 로컬 uid를 작성자로 사용하여 결과 게시물이나 비공개 메시지를 생성할 수 있습니다. 이를 통해 원격 공격자는 임의의 로컬 사용자가 보낸 게시물과 직접 메시지를 위조할 수 있습니다. ActivityPub/페더레이션 기능을 활성화해야 합니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-58593\n2. 26.07.02 오전4:27\n3. NodeBB does not bind the claimed author of an inbo",
-      "cve_id": "CVE-2026-58593",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58593",
-      "source": "cvefeed",
-      "published": "2026-07-02T04:27:23+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58592 - Ladybird - Web-Reachable Code Execution via Dangling FunctionType Reference in WebAssembly ESM Integration",
-      "summary": "CVE ID :CVE-2026-58592\n  \nPublished : July 1, 2026, 7:27 p.m. | 2 hours ago\n  \nDescription :Ladybird contains a dangling-reference memory-safety flaw in its WebAssembly ESM-integration module loader. When a JavaScript function is imported into a WebAssembly module via the ESM path, WebAssemblyModule.cpp passes a stack-local Wasm::FunctionType by reference to create_host_function, whose host callback captures and later reads that reference; once the ESM link-loop iteration ends the FunctionType is destroyed, leaving the callback with a dangling reference (the normal instantiate path uses a long-lived reference and is not affected). Stale result-type data lets the host callback return an empty result vector for a statically non-empty result, so the destination register retains an attacker-influenced value that is then consumed by the WASM-GC array.set handler, which bit-casts the reference low bits to an ArrayInstance pointer after only a null check, yielding an arbitrary write. A web page can chain this into code execution in the WebContent process. Verified reachable from HTML content without any instrumentation or source modification.\n  \nSeverity: 8.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-58592\n  \nPublished : July 1, 2026, 7:27 p.m. | 2 hours ago\n  \nDescription :Ladybird contains a dangling-reference memory-safety flaw in its WebAssembly ESM-integration module loader. When a JavaScript function is imported into a WebAssembly module via the ESM path, WebAssemblyModule.cpp passes a stack-local Wasm::FunctionType by reference to create_host_function, whose host callback captures and later reads that reference; once the ESM link-loop iteration ends the FunctionType is destroyed, leaving the callback with a dangling reference (the normal instantiate path uses a long-lived reference and is not affected). Stale result-type data lets the host callback return an empty result vector for a statically non-empty result, so the destination register retains an attacker-influenced value that is then consumed by the WASM-GC array.set handler, which bit-casts the reference low bits to an ArrayInstance pointer after only a null check, yielding an arbitrary write. A web page can chain this into code execution in the WebContent process. Verified reachable from HTML content without any instrumentation or source modification.\n  \nSeverity: 8.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-58592 - Ladybird - WebAssembly ESM 통합의 Dangling FunctionType 참조를 통해 웹에 접근 가능한 코드 실행",
-      "summary_ko": "CVE ID:CVE-2026-58592\n  \n게시일 : 2026년 7월 1일 오후 7시 27분 | 2시간 전\n  \n설명:Ladybird에는 WebAssembly ESM 통합 모듈 로더에 매달려 있는 참조 메모리 안전 결함이 있습니다. ESM 경로를 통해 JavaScript 함수를 WebAssembly 모듈로 가져오면 WebAssemblyModule.cpp는 create_host_function을 참조하여 스택 로컬 Wasm::FunctionType을 전달합니다. 호스트 콜백은 해당 참조를 캡처하고 나중에 읽습니다. ESM 링크 루프 반복이 끝나면 FunctionType이 파괴되고 콜백에 매달린 참조가 남습니다(일반 인스턴스화 경로는 수명이 긴 참조를 사용하며 영향을 받지 않습니다). 오래된 결과 유형 데이터를 사용하면 호스트 콜백이 정적으로 비어 있지 않은 결과에 대해 빈 결과 벡터를 반환할 수 있으므로 대상 레지스터는 공격자의 영향을 받은 값을 유지한 다음 WASM-GC array.set 핸들러에서 소비합니다. 이 핸들러는 null 검사 후에 참조 하위 비트를 ArrayInstance 포인터로 비트 캐스팅하여 임의 쓰기를 생성합니다. 웹페이지는 이를 WebContent 프로세스의 코드 실행에 연결할 수 있습니다. 계측이나 소스 수정 없이 HTML 콘텐츠에서 접근 가능한지 확인되었습니다.\n  \n심각도: 8.9 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-58592\n2. 26.07.02 오전4:27\n3. Ladybird contains a dangling-reference memory-safe",
-      "cve_id": "CVE-2026-58592",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58592",
-      "source": "cvefeed",
-      "published": "2026-07-02T04:27:22+09:00",
       "lang": "en"
     }
   ],
