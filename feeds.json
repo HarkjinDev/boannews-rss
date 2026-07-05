@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-06T00:32:52.144162+09:00",
+  "fetched_at": "2026-07-06T01:02:55.092917+09:00",
   "security_news": [
+    {
+      "title": "[DBR]KT, 보안 체계 재설계… 사후 대응→사전 예방으로",
+      "summary": "레드팀은 취약점 점검에 그치지 않고, 실제 해킹 조직의 공격 시나리오를 그대로 적용해 침투 가능 경로와 방어 체계의 실효성을 검증한다. 또한 국내 통신사 중 유일하게 북대서양조약기구(NATO) 사이버방어협력센터...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [DBR]KT, 보안 체계 재설계… 사후 대응→사전 예방으로 레드팀은 취약점 점검에 그치지\n2. 또한 국내 통신사 중 유일하게 북대서양조약기구(NATO) 사이버방어협력센터...",
+      "link": "https://n.news.naver.com/mnews/article/020/0003731647?sid=101",
+      "source": "naver",
+      "published": "2026-07-06T00:32:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[사설] 北해커 AI까지 공격, 기업·금융 방어책 속히 마련해야",
       "summary": "가짜 코드 뭉치(패키지)를 이용해 기업이나 금융사를 통째로 해킹하려는 악의적인 시도다. 문제는 이번 공격의 다단계 침투 구조와 위장 수법 등이 북한 해킹 조직으로 지목된 ‘라자루스’의 활동 양상과 일치한다는...",
@@ -2035,21 +2047,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-54886",
       "source": "cvefeed",
       "published": "2026-07-03T01:06:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-50281 - Craft CMS: Mass assignment via id in newAttributes during bulk duplicate overwrites existing elements",
-      "summary": "CVE ID :CVE-2026-50281\n  \nPublished : July 2, 2026, 4:02 p.m. | 1 hour, 25 minutes ago\n  \nDescription :Craft CMS is a content management system (CMS). Versions 5.7.0 and above, prior to 5.9.21 contain a mass-assignment flaw in the bulk-duplicate element action. An attacker who is only able to duplicate their own entires can submit an arbitrary id through the newAttributes request parameter. The duplication routine overrides its own id = null reset with that value and writes the attacker's attributes into the victim's existing entry row. ElementsController::beforeAction() pulls the request body into $this->_attributes and rejects requests that ship an id or canonicalId key at the top level, actionBulkDuplicate(), reads a separate newAttributes array and passes it straight through to the service layer. Elements::duplicateElement() clones the source element, sets id to null, and then hands the attacker's array to Craft::configure(), which  overwrites the reset id with any numeric value inside $newAttributes. PHP Yii's saveElement() then performs an UPDATE against the row with that primary key instead of an INSERT. The attackers's title, slug, authorId, postDate, and UID land on the victim's entry. safeAttributes() on Entry includes id because the base element model exposes it, so the Collection::only() filter does not strip it. This issue has been fixed in version 5.9.21.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-50281\n  \nPublished : July 2, 2026, 4:02 p.m. | 1 hour, 25 minutes ago\n  \nDescription :Craft CMS is a content management system (CMS). Versions 5.7.0 and above, prior to 5.9.21 contain a mass-assignment flaw in the bulk-duplicate element action. An attacker who is only able to duplicate their own entires can submit an arbitrary id through the newAttributes request parameter. The duplication routine overrides its own id = null reset with that value and writes the attacker's attributes into the victim's existing entry row. ElementsController::beforeAction() pulls the request body into $this->_attributes and rejects requests that ship an id or canonicalId key at the top level, actionBulkDuplicate(), reads a separate newAttributes array and passes it straight through to the service layer. Elements::duplicateElement() clones the source element, sets id to null, and then hands the attacker's array to Craft::configure(), which  overwrites the reset id with any numeric value inside $newAttributes. PHP Yii's saveElement() then performs an UPDATE against the row with that primary key instead of an INSERT. The attackers's title, slug, authorId, postDate, and UID land on the victim's entry. safeAttributes() on Entry includes id because the base element model exposes it, so the Collection::only() filter does not strip it. This issue has been fixed in version 5.9.21.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-50281 - Craft CMS: 대량 복제 중 newAttributes의 ID를 통한 대량 할당이 기존 요소를 덮어씁니다.",
-      "summary_ko": "CVE ID:CVE-2026-50281\n  \n게시일 : 2026년 7월 2일 오후 4시 02분 | 1시간 25분 전\n  \n설명:Craft CMS는 콘텐츠 관리 시스템(CMS)입니다. 5.9.21 이전 버전 5.7.0 이상에는 대량 중복 요소 작업에 대량 할당 결함이 있습니다. 자신의 전체만 복제할 수 있는 공격자는 newAttributes 요청 매개변수를 통해 임의의 ID를 제출할 수 있습니다. 복제 루틴은 해당 값으로 재설정된 자체 id = null을 무시하고 공격자의 속성을 피해자의 기존 항목 행에 씁니다. ElementsController::beforeAction()은 요청 본문을 $this->_attributes로 가져오고 최상위 수준에서 id 또는 canonicalId 키를 제공하는 요청인 actionBulkDuplicate()를 거부하고 별도의 newAttributes 배열을 읽고 이를 서비스 계층으로 직접 전달합니다. Elements::duplicateElement()는 소스 요소를 복제하고 id를 null로 설정한 다음 공격자의 배열을 Craft::configure()에 전달합니다. 그러면 $newAttributes 내의 숫자 값으로 재설정 ID를 덮어씁니다. 그런 다음 PHP Yii의 saveElement()는 INSERT 대신 해당 기본 키가 있는 행에 대해 UPDATE를 수행합니다. 공격자의 제목, 슬러그, 작성자 ID, postDate 및 UID가 피해자의 항목에 표시됩니다. 항목의 safeAttributes()에는 기본 요소 모델이 ID를 노출하므로 id가 포함되어 있으므로 Collection::only() 필터는 이를 제거하지 않습니다. 이 문제는 버전 5.9.21에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-50281\n2. 26.07.03 오전1:02\n3. Craft CMS is a content management system (CMS). Ve",
-      "cve_id": "CVE-2026-50281",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-50281",
-      "source": "cvefeed",
-      "published": "2026-07-03T01:02:14+09:00",
       "lang": "en"
     }
   ],
