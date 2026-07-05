@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-06T04:02:48.892427+09:00",
+  "fetched_at": "2026-07-06T04:32:55.554015+09:00",
   "security_news": [
+    {
+      "title": "쿠팡·티빙서 줄줄이 유출…“털린 내 정보” 1분이면 확인합니다",
+      "summary": "이는 과학기술정보통신부와 한국인터넷진흥원이 운영하는 사이버 민원과 개인정보침해, 스팸 신고 통합 상담센터 신고 번호다. 유출 내용 확인은 개인정보 보호의 시작이다. 다음 편에선 남이 내 이름으로 휴대전화를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 쿠팡, 티빙 등에서 고객 정보 대량 유출 발생\n2. 유출된 개인정보는 1분 내 확인 가능\n3. 과기정통부·KISA, 개인정보 보호 방안 논의",
+      "link": "https://n.news.naver.com/mnews/article/662/0000098965?sid=105",
+      "source": "naver",
+      "published": "2026-07-06T04:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[역사속 오늘·7.6] 미·중 무역전쟁 시작(2018)·문재인 대통령 '베를린...",
       "summary": "스파이웨어업체 ‘해킹팀’ 해킹당해 유출된 고객명단에 5163부대(국정원의 대외용 이름) 들어있어 국정원의 원격 도감청장비 구입 사실 밝혀짐, 국경 없는 기자회는 ‘해킹팀’을 2013년에 ‘인터넷의 적’으로...",
@@ -1332,21 +1344,24 @@
       "source": "naver",
       "published": "2026-07-03T04:34:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "FortiBleed Actors Collaborating With Inc, Lynx Ransomware Gangs",
-      "summary": "After gaining a foothold in thousands of Fortinet firewalls, the attackers are starting to monetize that access, and are also piling on a Nextcloud zero-day bug.",
-      "content": "",
-      "title_ko": "FortiBleed Actors, Inc, Lynx 랜섬웨어 갱단과 협력",
-      "summary_ko": "공격자들은 수천 개의 Fortinet 방화벽에 기반을 마련한 후 해당 액세스로 수익을 창출하기 시작했으며 Nextcloud 제로데이 버그도 쌓이고 있습니다.",
-      "summary_3lines": "1. 포티블리드 해커단, 포티넷 방화벽 1000대 이상 침해\n2. 넥스클라우드 제로데이 취약점(CVE-2023-XXXX) 악용\n3. 린كس 악성코드 단체와 협력해 랜섬",
-      "link": "https://www.darkreading.com/threat-intelligence/fortibleed-actors-inc-lynx-ransomware-gangs",
-      "source": "darkreading",
-      "published": "2026-07-03T04:11:33+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-59510 - Authenticated Path Traversal in AIL Framework PDF Object Handling Enables Potential Arbitrary File Read",
+      "summary": "CVE ID :CVE-2026-59510\n  \nPublished : July 5, 2026, 5:52 p.m. | 12 minutes ago\n  \nDescription :AIL Framework contains a path traversal vulnerability in its PDF object handling. Prior to commit 14c618fce4d1df02358717c48ea903706abecdf2, the PDF.get_filepath() function constructed a file path by joining the configured PDF storage directory with a path derived from a PDF object identifier, without verifying that the resolved path remained within the intended PDF_FOLDER directory.\n\nAn authenticated attacker able to invoke PDF object operations with a crafted identifier could use relative traversal sequences or absolute path components to cause AIL Framework to open files located outside the PDF storage directory. This could allow disclosure of files readable by the AIL process, including application configuration, credentials, or other sensitive local data. This vulnerability is potential due to additional errors before being able to be executed.\n\nThe fix canonicalises the resulting path with os.path.realpath() and rejects paths whose common directory is outside the configured PDF directory.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59510\n  \nPublished : July 5, 2026, 5:52 p.m. | 12 minutes ago\n  \nDescription :AIL Framework contains a path traversal vulnerability in its PDF object handling. Prior to commit 14c618fce4d1df02358717c48ea903706abecdf2, the PDF.get_filepath() function constructed a file path by joining the configured PDF storage directory with a path derived from a PDF object identifier, without verifying that the resolved path remained within the intended PDF_FOLDER directory.\n\nAn authenticated attacker able to invoke PDF object operations with a crafted identifier could use relative traversal sequences or absolute path components to cause AIL Framework to open files located outside the PDF storage directory. This could allow disclosure of files readable by the AIL process, including application configuration, credentials, or other sensitive local data. This vulnerability is potential due to additional errors before being able to be executed.\n\nThe fix canonicalises the resulting path with os.path.realpath() and rejects paths whose common directory is outside the configured PDF directory.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-59510 - AIL 프레임워크 PDF 객체 처리의 인증된 경로 탐색으로 인해 잠재적인 임의 파일 읽기가 가능해졌습니다.",
+      "summary_ko": "CVE ID:CVE-2026-59510\n  \n게시일 : 2026년 7월 5일 오후 5시 52분 | 12분 전\n  \n설명:AIL 프레임워크에는 PDF 개체 처리에 경로 탐색 취약점이 포함되어 있습니다. 14c618fce4d1df02358717c48ea903706abecdf2를 커밋하기 전에 PDF.get_filepath() 함수는 확인된 경로가 의도한 PDF_FOLDER 디렉터리 내에 남아 있는지 확인하지 않고 구성된 PDF 저장소 디렉터리를 PDF 개체 식별자에서 파생된 경로와 결합하여 파일 경로를 구성했습니다.\n\n조작된 식별자를 사용하여 PDF 개체 작업을 호출할 수 있는 인증된 공격자는 상대 순회 시퀀스 또는 절대 경로 구성 요소를 사용하여 AIL 프레임워크가 PDF 저장소 디렉터리 외부에 있는 파일을 열도록 할 수 있습니다. 이로 인해 애플리케이션 구성, 자격 증명 또는 기타 민감한 로컬 데이터를 포함하여 AIL 프로세스에서 읽을 수 있는 파일이 공개될 수 있습니다. 본 취약점은 실행되기 전 추가적인 오류로 인해 발생할 가능성이 있습니다.\n\n수정 사항은 os.path.realpath()를 사용하여 결과 경로를 정규화하고 공통 디렉터리가 구성된 PDF 디렉터리 외부에 있는 경로를 거부합니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-59510\n2. 26.07.06 오전2:52\n3. AIL Framework contains a path traversal vulnerabil",
+      "cve_id": "CVE-2026-59510",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59510",
+      "source": "cvefeed",
+      "published": "2026-07-06T02:52:29+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-59509 - Unauthenticated arbitrary MongoDB collection read in cve-search",
       "summary": "CVE ID :CVE-2026-59509\n  \nPublished : July 5, 2026, 12:02 p.m. | 1 hour, 42 minutes ago\n  \nDescription :An unauthenticated improper input validation vulnerability in the POST /fetch_cve_data endpoint in cve-search. A remote attacker can manipulate request parameters controlling the MongoDB collection, projected fields, and regular-expression filters to read arbitrary application MongoDB collections. This can expose administrative usernames and password hashes from the mgmt_users collection, enabling offline password cracking and potential administrative account compromise.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
