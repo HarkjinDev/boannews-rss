@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-05T17:02:14.700478+09:00",
+  "fetched_at": "2026-07-05T17:31:36.299107+09:00",
   "security_news": [
     {
       "title": "[통일논단] 북한의 해킹 국제범죄 좌시해선 안 된다",
@@ -1404,42 +1404,6 @@
       "source": "naver",
       "published": "2026-07-02T17:50:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "네오위즈, 보안 사고 '제로'… '고령화·성별격차' 숙제 [ESG 성적표]",
-      "summary": "지난해 개인정보 유출 등 정보보안 위반 사고는 한 건도 발생하지 않았다. 2024년에는 정보보호·개인정보보호 관리체계(ISMS-P) 인증도 획득했다. 임직원과 협력사를 포함한 중대재해 발생 건수도 3년 연속 '0건'을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 네오위즈, 2023년 개인정보 유출 사고 '0건'… 2024년 ISMS-P 인증 획득\n2. 정보보호 관리체계 구축… 3년 연속 중대재해 '0건'\n3. 고령화·성별격차 등 사회문제 해결 숙제",
-      "link": "https://www.newscj.com/news/articleView.html?idxno=3414046",
-      "source": "naver",
-      "published": "2026-07-02T17:30:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "넷마블, 정보보호에 283억 투입…개인정보 유출 후 보안 강화",
-      "summary": "넷마블은 지난해 11월 외부 해킹으로 PC 게임 사이트 이용자 611만 명의 개인정보가 유출됐다고 공지했다. 유출 정보에는 이름과 생년월일, 암호화된 비밀번호 등이 포함됐다. 주민등록번호 등 고유식별정보나...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 넷마블, 283억 투자…611만 유저 개인정보 유출 후 보안 강화\n2. 외부 해킹으로 이름·생년월일·암호화 비밀번호 유출\n3. 주민등록번호 등 고유식별정보는 제외…정보보호 대책 마련",
-      "link": "https://n.news.naver.com/mnews/article/008/0005380840?sid=105",
-      "source": "naver",
-      "published": "2026-07-02T17:23:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "장기연체채권 소각 외통수 걸린 롯데카드... 정성호 대표, '경영 정상화...",
-      "summary": "지난해 발생해 금융 신뢰도에 치명상을 입혔던 개인신용정보 유출 및 해킹 사태에 대한 금융당국의 최종 제재 심의가 임박했기 때문이다. 최근 금융감독원은 롯데카드에 대해 영업정지 4.5개월과 과징금 50억원을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 롯데카드, 영업정지 4.5개월·과징금 50억원 처분\n2. 개인신용정보 220만건 해킹·유출 사고 발생\n3. 금융감독원 제재 심의·금융 신뢰도 하락 우려",
-      "link": "https://www.meconomynews.com/news/articleView.html?idxno=132399",
-      "source": "naver",
-      "published": "2026-07-02T17:18:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2176,21 +2140,6 @@
       "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-183-02",
       "source": "cisa",
       "published": "2026-07-02T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-14336 - Eclipse PIA OIDC Issuer Allowlist Bypass",
-      "summary": "CVE ID :CVE-2026-14336\n  \nPublished : July 2, 2026, 8:29 a.m. | 2 hours, 58 minutes ago\n  \nDescription :PIA's OIDC issuer allowlist for Jenkins tokens uses a bare string-prefix check (issuer.startswith(' https://ci.eclipse.org ') in is_issuer_known, pia/models.py:139) instead of validating the issuer as a properly host-bounded URL. An attacker can craft an issuer such as  https://ci.eclipse.org@evil.host  (userinfo trick) or  https://ci.eclipse.org.evil.host  (suffix trick) that satisfies the prefix check while pointing the OIDC discovery and JWKS fetches at a server the attacker controls. An unauthenticated caller of POST /v1/upload/sbom can use this to force PIA to make outbound HTTP(S) requests to an arbitrary attacker-chosen host, and to have oidc.verify_token accept a JWT signed with the attacker's own key.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-14336\n  \nPublished : July 2, 2026, 8:29 a.m. | 2 hours, 58 minutes ago\n  \nDescription :PIA's OIDC issuer allowlist for Jenkins tokens uses a bare string-prefix check (issuer.startswith(' https://ci.eclipse.org ') in is_issuer_known, pia/models.py:139) instead of validating the issuer as a properly host-bounded URL. An attacker can craft an issuer such as  https://ci.eclipse.org@evil.host  (userinfo trick) or  https://ci.eclipse.org.evil.host  (suffix trick) that satisfies the prefix check while pointing the OIDC discovery and JWKS fetches at a server the attacker controls. An unauthenticated caller of POST /v1/upload/sbom can use this to force PIA to make outbound HTTP(S) requests to an arbitrary attacker-chosen host, and to have oidc.verify_token accept a JWT signed with the attacker's own key.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-14336 - Eclipse PIA OIDC 발급자 허용 목록 우회",
-      "summary_ko": "CVE ID:CVE-2026-14336\n  \n게시일 : 2026년 7월 2일 오전 8시 29분 | 2시간 58분 전\n  \n설명: Jenkins 토큰에 대한 PIA의 OIDC 발급자 허용 목록은 발급자를 올바르게 호스트 바인딩된 URL로 확인하는 대신 문자열 접두사 검사(is_issuer_known, pia/models.py:139의 issuer.startswith(' https://ci.eclipse.org '))를 사용합니다. 공격자는 OIDC 검색을 가리키고 JWKS가 공격자가 제어하는 ​​서버에서 가져오는 동안 접두사 검사를 충족하는 https://ci.eclipse.org@evil.host(userinfo 트릭) 또는 https://ci.eclipse.org.evil.host(접미사 트릭)와 같은 발급자를 만들 수 있습니다. POST /v1/upload/sbom의 인증되지 않은 호출자는 이를 사용하여 PIA가 임의의 공격자가 선택한 호스트에 아웃바운드 HTTP(S) 요청을 하도록 하고 oidc.verify_token이 공격자 자신의 키로 서명된 JWT를 수락하도록 할 수 있습니다.\n  \n심각도: 8.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-14336\n2. 26.07.02 오후5:29\n3. PIA's OIDC issuer allowlist for Jenkins tokens use",
-      "cve_id": "CVE-2026-14336",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-14336",
-      "source": "cvefeed",
-      "published": "2026-07-02T17:29:16+09:00",
       "lang": "en"
     }
   ],
