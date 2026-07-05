@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-05T21:02:57.126889+09:00",
+  "fetched_at": "2026-07-05T21:34:05.855514+09:00",
   "security_news": [
+    {
+      "title": "100명으로 시작한 블랙햇, 세계 사이버보안 기술 흐름을 바꾸다",
+      "summary": "세계 사이버보안 업계가 매년 블랙햇에 주목하는 이유는 이 행사가 단순한 보안제품 전시회가 아니기 때문이다. 블랙햇은 새로운 취약점과 공격기법이 처음...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 100명으로 시작한 블랙햇, 세계 사이버보안 기술 흐름을 바꾸다 세계 사이버보안 업계가 매\n2. 블랙햇은 새로운 취약점과 공격기법이 처음...",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207451",
+      "source": "naver",
+      "published": "2026-07-05T21:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "북한 해커, 악성 오픈소스 패키지 108개 유포…개발자 PC 노렸다",
       "summary": "북한 연계 해킹조직이 오픈소스 패키지와 웹브라우저 확장 프로그램을 이용해 개발자들의 PC를 공격한 정황이 확인됐다. 소프트웨어 공급망 보안기업 소켓에 따르면 북한의 '컨테이저스 인터뷰(Contagious Interview)...",
@@ -2062,21 +2074,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50521",
       "source": "msrc",
       "published": "2026-07-02T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58652 - luci-app-travelmate - Arbitrary Command Execution via UCI Script Parameter",
-      "summary": "CVE ID :CVE-2026-58652\n  \nPublished : July 2, 2026, 12:28 p.m. | 44 minutes ago\n  \nDescription :luci-app-travelmate (and the travelmate package) contain a privilege-escalation flaw: a LuCI/rpcd session holding the luci-app-travelmate write ACL is granted config-wide UCI write access to the travelmate configuration. While the LuCI UI restricts the auto-login script picker to /etc/travelmate/*.login, this is only a frontend restriction. The backend travelmate service (running as root) reads the raw UCI 'script' and 'script_args' values and executes the configured path when the captive-portal auto-login branch (f_check() in travelmate-functions.sh) is reached. An attacker with delegated write permissions can set script to /bin/sh and script_args to attacker-controlled arguments, resulting in arbitrary command execution as root. Confirmed in luci-app-travelmate/travelmate 2.4.5-r3; the sink is still present in travelmate 2.4.6-1 and no patched version is known.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-58652\n  \nPublished : July 2, 2026, 12:28 p.m. | 44 minutes ago\n  \nDescription :luci-app-travelmate (and the travelmate package) contain a privilege-escalation flaw: a LuCI/rpcd session holding the luci-app-travelmate write ACL is granted config-wide UCI write access to the travelmate configuration. While the LuCI UI restricts the auto-login script picker to /etc/travelmate/*.login, this is only a frontend restriction. The backend travelmate service (running as root) reads the raw UCI 'script' and 'script_args' values and executes the configured path when the captive-portal auto-login branch (f_check() in travelmate-functions.sh) is reached. An attacker with delegated write permissions can set script to /bin/sh and script_args to attacker-controlled arguments, resulting in arbitrary command execution as root. Confirmed in luci-app-travelmate/travelmate 2.4.5-r3; the sink is still present in travelmate 2.4.6-1 and no patched version is known.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-58652 - luci-app-travelmate - UCI 스크립트 매개변수를 통한 임의 명령 실행",
-      "summary_ko": "CVE ID:CVE-2026-58652\n  \n게시일 : 2026년 7월 2일 오후 12시 28분 | 44분 전\n  \n설명 :luci-app-travelmate (및 travelmate 패키지)에는 권한 상승 결함이 있습니다. luci-app-travelmate 쓰기 ACL을 보유하는 LuCI/rpcd 세션에는 travelmate 구성에 대한 구성 전체 UCI 쓰기 액세스 권한이 부여됩니다. LuCI UI는 자동 로그인 스크립트 선택기를 /etc/travelmate/*.login으로 제한하지만 이는 프런트엔드 제한일 뿐입니다. 백엔드 travelmate 서비스(루트로 실행)는 원시 UCI 'script' 및 'script_args' 값을 읽고 captive-portal 자동 로그인 분기(travelmate-functions.sh의 f_check())에 도달하면 구성된 경로를 실행합니다. 위임된 쓰기 권한을 가진 공격자는 스크립트를 /bin/sh로 설정하고 script_args를 공격자가 제어하는 ​​인수로 설정하여 루트로 임의 명령을 실행할 수 있습니다. luci-app-travelmate/travelmate 2.4.5-r3에서 확인되었습니다. 싱크는 travelmate 2.4.6-1에 여전히 존재하며 패치 버전은 알려져 있지 않습니다.\n  \n심각도: 7.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-58652\n2. 26.07.02 오후9:28\n3. luci-app-travelmate (and the travelmate package) c",
-      "cve_id": "CVE-2026-58652",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58652",
-      "source": "cvefeed",
-      "published": "2026-07-02T21:28:34+09:00",
       "lang": "en"
     }
   ],
