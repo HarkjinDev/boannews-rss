@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-05T22:32:57.326811+09:00",
+  "fetched_at": "2026-07-05T23:02:56.283311+09:00",
   "security_news": [
     {
       "title": "100명으로 시작한 블랙햇, 세계 사이버보안 기술 흐름을 바꾸다",
@@ -1360,6 +1360,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-59509 - Unauthenticated arbitrary MongoDB collection read in cve-search",
+      "summary": "CVE ID :CVE-2026-59509\n  \nPublished : July 5, 2026, 12:02 p.m. | 1 hour, 42 minutes ago\n  \nDescription :An unauthenticated improper input validation vulnerability in the POST /fetch_cve_data endpoint in cve-search. A remote attacker can manipulate request parameters controlling the MongoDB collection, projected fields, and regular-expression filters to read arbitrary application MongoDB collections. This can expose administrative usernames and password hashes from the mgmt_users collection, enabling offline password cracking and potential administrative account compromise.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59509\n  \nPublished : July 5, 2026, 12:02 p.m. | 1 hour, 42 minutes ago\n  \nDescription :An unauthenticated improper input validation vulnerability in the POST /fetch_cve_data endpoint in cve-search. A remote attacker can manipulate request parameters controlling the MongoDB collection, projected fields, and regular-expression filters to read arbitrary application MongoDB collections. This can expose administrative usernames and password hashes from the mgmt_users collection, enabling offline password cracking and potential administrative account compromise.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-59509 - cve-search에서 읽은 인증되지 않은 임의 MongoDB 컬렉션",
+      "summary_ko": "CVE ID:CVE-2026-59509\n  \n게시일 : 2026년 7월 5일 오후 12시 02분 | 1 hour, 42 minutes ago\n  \n설명:cve-search의 POST /fetch_cve_data 엔드포인트에 있는 인증되지 않은 부적절한 입력 유효성 검사 취약점입니다. 원격 공격자는 MongoDB 컬렉션, 프로젝션 필드 및 정규식 필터를 제어하는 ​​요청 매개 변수를 조작하여 임의 애플리케이션 MongoDB 컬렉션을 읽을 수 있습니다. 이로 인해 mgmt_users 컬렉션의 관리 사용자 이름과 비밀번호 해시가 노출되어 오프라인 비밀번호 크래킹 및 관리 계정 손상 가능성이 발생할 수 있습니다.\n  \n심각도: 9.2 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-59509\n2. 26.07.05 오후9:02\n3. An unauthenticated improper input validation vulne",
+      "cve_id": "CVE-2026-59509",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59509",
+      "source": "cvefeed",
+      "published": "2026-07-05T21:02:06+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-14570 - Crypt::DSA versions before 1.22 for Perl draw the DSA signing nonce and private key from a biased random generator, leading to private-key recovery",
       "summary": "CVE ID :CVE-2026-14570\n  \nPublished : July 5, 2026, 2:17 a.m. | 5 hours, 11 minutes ago\n  \nDescription :Crypt::DSA versions before 1.22 for Perl draw the DSA signing nonce and private key from a biased random generator, leading to private-key recovery.\n\n\"Crypt::DSA::Util::makerandom forces the high bit of every value it returns to obtain an exactly N-bit integer for prime search. The signing nonce and the private key are drawn from makerandom. Because the high bit is always set, the result is not uniform: its top bit is fixed, producing insecure values.\"\n\nAn attacker who collects a modest number of signatures under an affected key, together with the public key, can recover the private key with a lattice attack.\n\nKeys used to sign with an affected version should be considered compromised and new keys should be generated.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-14570\n  \nPublished : July 5, 2026, 2:17 a.m. | 5 hours, 11 minutes ago\n  \nDescription :Crypt::DSA versions before 1.22 for Perl draw the DSA signing nonce and private key from a biased random generator, leading to private-key recovery.\n\n\"Crypt::DSA::Util::makerandom forces the high bit of every value it returns to obtain an exactly N-bit integer for prime search. The signing nonce and the private key are drawn from makerandom. Because the high bit is always set, the result is not uniform: its top bit is fixed, producing insecure values.\"\n\nAn attacker who collects a modest number of signatures under an affected key, together with the public key, can recover the private key with a lattice attack.\n\nKeys used to sign with an affected version should be considered compromised and new keys should be generated.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2032,36 +2047,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-50281",
       "source": "cvefeed",
       "published": "2026-07-03T01:02:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45499 Azure OpenAI Elevation of Privilege Vulnerability",
-      "summary": "Server-side request forgery (ssrf) in Azure OpenAI allows an authorized attacker to elevate privileges over a network.",
-      "description": "Server-side request forgery (ssrf) in Azure OpenAI allows an authorized attacker to elevate privileges over a network.",
-      "title_ko": "CVE-2026-45499 Azure OpenAI 권한 상승 취약성",
-      "summary_ko": "Azure OpenAI의 서버 측 요청 위조(ssrf)를 통해 권한 있는 공격자가 네트워크를 통해 권한을 상승시킬 수 있습니다.",
-      "summary_3lines": "1. CVE-2026-45499\n2. MSRC\n3. Server-side request forgery (ssrf) in Azure OpenAI",
-      "cve_id": "CVE-2026-45499",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45499",
-      "source": "msrc",
-      "published": "2026-07-02T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-50521 Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
-      "summary": "Added Edge software to the Security Updates table.  Customers that are running supported version of Edge are encouraged to update to the indicated version to be protected from this vulnerability.",
-      "description": "Added Edge software to the Security Updates table.  Customers that are running supported version of Edge are encouraged to update to the indicated version to be protected from this vulnerability.",
-      "title_ko": "CVE-2026-50521 Microsoft Edge(Chromium 기반) 원격 코드 실행 취약점",
-      "summary_ko": "보안 업데이트 표에 Edge 소프트웨어가 추가되었습니다.  지원되는 Edge 버전을 실행 중인 고객은 이 취약점으로부터 보호되도록 표시된 버전으로 업데이트하는 것이 좋습니다.",
-      "summary_3lines": "1. CVE-2026-50521\n2. MSRC\n3. Added Edge software to the Security Updates table.",
-      "cve_id": "CVE-2026-50521",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50521",
-      "source": "msrc",
-      "published": "2026-07-02T23:00:00+09:00",
       "lang": "en"
     }
   ],
