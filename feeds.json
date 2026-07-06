@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-06T20:32:45.249774+09:00",
+  "fetched_at": "2026-07-06T21:02:46.124285+09:00",
   "security_news": [
     {
       "title": "휴대폰 개통 '얼굴 도장' 필수…대포폰 막는 '안면 인식' 개통 시행",
@@ -1515,6 +1515,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "ISC Stormcast For Monday, July 6th, 2026 https://isc.sans.edu/podcastdetail/9994, (Mon, Jul 6th)",
+      "summary": "",
+      "description": "",
+      "title_ko": "ISC Stormcast 2026년 7월 6일 월요일 https://isc.sans.edu/podcastdetail/9994, (7월 6일 월요일)",
+      "summary_ko": null,
+      "summary_3lines": "1. ISC Stormcast For Monday, July 6th, 2026 https://i\n2. SANS_ISC\n3. 설명 없음",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33122",
+      "source": "sans_isc",
+      "published": "2026-07-06T20:36:06+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-56810 - mint buffers an entire chunked response chunk in memory in Mint.HTTP1.decode_body/5",
+      "summary": "CVE ID :CVE-2026-56810\n  \nPublished : July 6, 2026, 11:16 a.m. | 28 minutes ago\n  \nDescription :Allocation of Resources Without Limits or Throttling vulnerability in elixir-mint mint (Mint.HTTP1 module) allows a denial of service via an oversized chunked transfer-encoded response.\n\nThis vulnerability is associated with program files lib/mint/http1.ex and program routines 'Elixir.Mint.HTTP1':decode_body/5, 'Elixir.Mint.HTTP1':add_body_to_buffer/2.\n\nWhen Mint decodes a chunked HTTP response body, it accumulates each partial fragment of the current chunk in the connection's data_buffer (an unbounded iolist) via add_body_to_buffer/2 and does not emit the data to the caller until the full declared chunk length has been received. The chunk size is taken directly from the server and parsed with no upper bound, so a malicious or compromised server can announce one enormous chunk (for example a size line of 7FFFFFFF, about 2 GiB) and then send the body bytes slowly without ever completing the chunk. The client buffers every received byte while it waits for a completion that never arrives, and because no data responses are produced until the chunk finishes, a caller that otherwise streams large content-length bodies safely gains no protection. An unauthenticated remote server (reachable whenever a client follows redirects, fetches user-supplied URLs, or processes webhooks) can drive the client's memory arbitrarily high and trigger an out-of-memory condition.\n\nThis issue affects mint: from 0.5.0 before 1.9.1.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56810\n  \nPublished : July 6, 2026, 11:16 a.m. | 28 minutes ago\n  \nDescription :Allocation of Resources Without Limits or Throttling vulnerability in elixir-mint mint (Mint.HTTP1 module) allows a denial of service via an oversized chunked transfer-encoded response.\n\nThis vulnerability is associated with program files lib/mint/http1.ex and program routines 'Elixir.Mint.HTTP1':decode_body/5, 'Elixir.Mint.HTTP1':add_body_to_buffer/2.\n\nWhen Mint decodes a chunked HTTP response body, it accumulates each partial fragment of the current chunk in the connection's data_buffer (an unbounded iolist) via add_body_to_buffer/2 and does not emit the data to the caller until the full declared chunk length has been received. The chunk size is taken directly from the server and parsed with no upper bound, so a malicious or compromised server can announce one enormous chunk (for example a size line of 7FFFFFFF, about 2 GiB) and then send the body bytes slowly without ever completing the chunk. The client buffers every received byte while it waits for a completion that never arrives, and because no data responses are produced until the chunk finishes, a caller that otherwise streams large content-length bodies safely gains no protection. An unauthenticated remote server (reachable whenever a client follows redirects, fetches user-supplied URLs, or processes webhooks) can drive the client's memory arbitrarily high and trigger an out-of-memory condition.\n\nThis issue affects mint: from 0.5.0 before 1.9.1.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56810 - mint는 Mint.HTTP1.decode_body/5의 메모리에 전체 청크된 응답 청크를 버퍼링합니다.",
+      "summary_ko": "CVE ID:CVE-2026-56810\n  \n게시일 : 2026년 7월 6일 오전 11시 16분 | 28분 전\n  \n설명: elixir-mint mint(Mint.HTTP1 모듈)의 제한 없는 리소스 할당 또는 제한 취약점으로 인해 대규모 청크 전송 인코딩 응답을 통한 서비스 거부가 허용됩니다.\n\n이 취약점은 프로그램 파일 lib/mint/http1.ex 및 프로그램 루틴 'Elixir.Mint.HTTP1':decode_body/5, 'Elixir.Mint.HTTP1':add_body_to_buffer/2와 연관되어 있습니다.\n\nMint가 청크된 HTTP 응답 본문을 디코딩할 때 add_body_to_buffer/2를 통해 연결의 data_buffer(제한되지 않은 iolist)에 현재 청크의 각 부분 조각을 축적하고 선언된 전체 청크 길이가 수신될 때까지 호출자에게 데이터를 내보내지 않습니다. 청크 크기는 서버에서 직접 가져오고 상한 없이 구문 분석되므로 악의적이거나 손상된 서버는 하나의 거대한 청크(예: 7FFFFFFFF 크기 라인, 약 2GiB)를 발표한 다음 청크를 완료하지 않고 본문 바이트를 천천히 보낼 수 있습니다. 클라이언트는 도착하지 않는 완료를 기다리는 동안 수신된 모든 바이트를 버퍼링하며, 청크가 완료될 때까지 데이터 응답이 생성되지 않기 때문에 큰 콘텐츠 길이의 본문을 스트리밍하는 호출자는 안전하게 보호받을 수 없습니다. 인증되지 않은 원격 서버(클라이언트가 리디렉션을 따르거나 사용자가 제공한 URL을 가져오거나 웹후크를 처리할 때마다 연결할 수 있음)는 클라이언트의 메모리를 임의로 높게 구동하고 메모리 부족 상태를 유발할 수 있습니다.\n\n이 문제는 민트(0.5.0부터 1.9.1까지)에 영향을 미칩니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56810\n2. 26.07.06 오후8:16\n3. Allocation of Resources Without Limits or Throttli",
+      "cve_id": "CVE-2026-56810",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56810",
+      "source": "cvefeed",
+      "published": "2026-07-06T20:16:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-9165 - Stackrox: stackrox: unbounded graphql query depth allows authenticated denial of service",
       "summary": "CVE ID :CVE-2026-9165\n  \nPublished : July 6, 2026, 9:16 a.m. | 28 minutes ago\n  \nDescription :A flaw was found in Red Hat Advanced Cluster Security for Kubernetes (RHACS). Central does not limit the depth of GraphQL queries served on the authenticated GraphQL API. An authenticated user with a valid API token can send deeply nested queries that cause excessive resource consumption in Central, resulting in a denial of service for the management plane.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
