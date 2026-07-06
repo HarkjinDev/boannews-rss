@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-06T23:01:34.637058+09:00",
+  "fetched_at": "2026-07-06T23:31:44.370481+09:00",
   "security_news": [
+    {
+      "title": "\"러 해커, 영국 관리·외교관 이메일 계정 해킹\"…英 텔레그래프",
+      "summary": "NHS 의사 출신 사이버보안 전문가인 사이프 아베드 박사는 이번 침해가 환자 안전에 영향을 미치는 \"재앙적 사고\"로 이어질 수 있다고 경고했다. 영국 국가사이버보안센터(NCSC)는 긴급 경보를 발령하고, 이미 공격을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 러 해커, 영국 관리·외교관 이메일 계정 해킹\n2. NHS 의사 \"환자 안전 재앙적 사고\" 경고\n3. NCSC, 긴급 경보 발령 및 공격 조사 중",
+      "link": "https://n.news.naver.com/mnews/article/421/0009043819?sid=104",
+      "source": "naver",
+      "published": "2026-07-06T23:22:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Max severity Adobe ColdFusion flaw now exploited in attacks",
       "summary": "Attackers are now exploiting a maximum-severity Adobe ColdFusion vulnerability tracked as CVE-2026-48282, the Canadian Center for Cyber Security (CCCS) warned on Thursday. [...]",
@@ -1548,18 +1560,6 @@
       "source": "naver",
       "published": "2026-07-04T01:41:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[사설]해킹-피싱 명의 도용 대출, 금융사 책임도 함께 물어야",
-      "summary": "해킹이나 보이스피싱 등으로 명의를 도용당한 피해자들이 실제 빌린 적도 없는 거액의 대출금을 고스란히... 휴대전화 해킹으로 빼낸 운전면허증으로 거액을 빌린 사건에서도 법원은 은행 편을 들었다. 해킹범이 신분증을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 해킹·피싱 명의 도용 피해, 금융사도 책임 묻기 시작\n2. 휴대폰 해킹으로 운전면허증 탈취, 거액 대출 사건 발생\n3. 법원, 과거엔 은행 편들었으나 인식 변화 필요",
-      "link": "https://n.news.naver.com/mnews/article/020/0003731434?sid=110",
-      "source": "naver",
-      "published": "2026-07-03T23:25:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1579,6 +1579,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-13705 - Imager versions before 1.032 for Perl have a heap out-of-bounds read in the bundled Imager::File::SGI reader via a 16-bit RLE literal run in read_rgb_16_rle",
+      "summary": "CVE ID :CVE-2026-13705\n  \nPublished : July 6, 2026, 1:16 p.m. | 28 minutes ago\n  \nDescription :Imager versions before 1.032 for Perl have a heap out-of-bounds read in the bundled Imager::File::SGI reader via a 16-bit RLE literal run in read_rgb_16_rle.\n\nread_rgb_16_rle guards each literal run with if (count > data_left), but count is a pixel count while every 16-bit sample consumes two bytes. The copy loop reads inp[0] * 256 + inp[1] and advances two bytes per pixel, so a run with data_left / 2 < count <= data_left passes the guard yet consumes 2 * count bytes and reads past the end of the buffer. The 8-bit path is unaffected because there one pixel is one byte.\n\nReading a crafted SGI image through Imager->read triggers the over-read before the parser rejects the malformed image, which can crash the process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-13705\n  \nPublished : July 6, 2026, 1:16 p.m. | 28 minutes ago\n  \nDescription :Imager versions before 1.032 for Perl have a heap out-of-bounds read in the bundled Imager::File::SGI reader via a 16-bit RLE literal run in read_rgb_16_rle.\n\nread_rgb_16_rle guards each literal run with if (count > data_left), but count is a pixel count while every 16-bit sample consumes two bytes. The copy loop reads inp[0] * 256 + inp[1] and advances two bytes per pixel, so a run with data_left / 2 < count <= data_left passes the guard yet consumes 2 * count bytes and reads past the end of the buffer. The 8-bit path is unaffected because there one pixel is one byte.\n\nReading a crafted SGI image through Imager->read triggers the over-read before the parser rejects the malformed image, which can crash the process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-13705 - Perl용 1.032 이전 Imager 버전에는 read_rgb_16_rle에서 실행되는 16비트 RLE 리터럴을 통해 번들 Imager::File::SGI 판독기에서 범위를 벗어난 힙 읽기가 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-13705\n  \n게시일 : 2026년 7월 6일 오후 1시 16분 | 28분 전\n  \n설명:Perl용 1.032 이전 Imager 버전에는 read_rgb_16_rle에서 실행되는 16비트 RLE 리터럴을 통해 번들 Imager::File::SGI 판독기에서 범위를 벗어난 힙 읽기가 있습니다.\n\nread_rgb_16_rle은 if(count > data_left)를 사용하여 각 리터럴 실행을 보호하지만 count는 픽셀 수이며 모든 16비트 샘플은 2바이트를 소비합니다. 복사 루프는 inp[0] * 256 + inp[1]을 읽고 픽셀당 2바이트를 진행하므로 data_left / 2 < count <= data_left를 사용한 실행은 가드를 통과하지만 2 * count 바이트를 소비하고 버퍼 끝을 지나 읽습니다. 8비트 경로는 1픽셀이 1바이트이므로 영향을 받지 않습니다.\n\nImager->read를 통해 조작된 SGI 이미지를 읽으면 파서가 잘못된 형식의 이미지를 거부하기 전에 초과 읽기가 트리거되어 프로세스가 중단될 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-13705\n2. 26.07.06 오후10:16\n3. Imager versions before 1.032 for Perl have a heap ",
+      "cve_id": "CVE-2026-13705",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13705",
+      "source": "cvefeed",
+      "published": "2026-07-06T22:16:32+09:00",
+      "lang": "en"
+    },
+    {
       "title": "ISC Stormcast For Monday, July 6th, 2026 https://isc.sans.edu/podcastdetail/9994, (Mon, Jul 6th)",
       "summary": "",
       "description": "",
@@ -1591,6 +1606,21 @@
       "link": "https://isc.sans.edu/diary/rss/33122",
       "source": "sans_isc",
       "published": "2026-07-06T20:36:06+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-49297 - Apache Airflow Google provider: Path traversal via GCS object names → local/SFTP filesystem (GCSToSFTPOperator + GCSTimeSpanFileTransformOperator)",
+      "summary": "CVE ID :CVE-2026-49297\n  \nPublished : July 6, 2026, 11:16 a.m. | 2 hours, 28 minutes ago\n  \nDescription :Apache Airflow's Google provider operators `GCSToSFTPOperator` and `GCSTimeSpanFileTransformOperator` joined GCS object names returned by the bucket listing API directly to a destination filesystem path without normalisation or containment check. A user with write access to the source GCS bucket (typically a different trust principal than the DAG author — partner uploads, ingest-only service accounts, public-data buckets) could create an object whose name contains `..` segments and cause the DAG run to write the downloaded blob outside the configured destination (the SFTP `destination_path` for `GCSToSFTPOperator`; the worker-local temp directory for `GCSTimeSpanFileTransformOperator`), enabling overwrite of arbitrary files on the SFTP server or the worker host. Affects deployments that ingest from buckets writable by less-trusted principals. Users are advised to upgrade to `apache-airflow-providers-google` 22.2.1 or later.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-49297\n  \nPublished : July 6, 2026, 11:16 a.m. | 2 hours, 28 minutes ago\n  \nDescription :Apache Airflow's Google provider operators `GCSToSFTPOperator` and `GCSTimeSpanFileTransformOperator` joined GCS object names returned by the bucket listing API directly to a destination filesystem path without normalisation or containment check. A user with write access to the source GCS bucket (typically a different trust principal than the DAG author — partner uploads, ingest-only service accounts, public-data buckets) could create an object whose name contains `..` segments and cause the DAG run to write the downloaded blob outside the configured destination (the SFTP `destination_path` for `GCSToSFTPOperator`; the worker-local temp directory for `GCSTimeSpanFileTransformOperator`), enabling overwrite of arbitrary files on the SFTP server or the worker host. Affects deployments that ingest from buckets writable by less-trusted principals. Users are advised to upgrade to `apache-airflow-providers-google` 22.2.1 or later.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-49297 - Apache Airflow Google 공급자: GCS 개체 이름을 통한 경로 탐색 → 로컬/SFTP 파일 시스템(GCSToSFTPOperator + GCSTimeSpanFileTransformOperator)",
+      "summary_ko": "CVE ID:CVE-2026-49297\n  \n게시일 : 2026년 7월 6일 오전 11시 16분 | 2시간 28분 전\n  \n설명:Apache Airflow의 Google 공급자 연산자 `GCSToSFTPOperator` 및 `GCSTimeSpanFileTransformOperator`는 버킷 목록 API에서 반환된 GCS 객체 이름을 정규화 또는 포함 확인 없이 대상 파일 시스템 경로에 직접 결합했습니다. 소스 GCS 버킷(일반적으로 DAG 작성자와 다른 신뢰 주체(파트너 업로드, 수집 전용 서비스 계정, 공개 데이터 버킷))에 대한 쓰기 액세스 권한이 있는 사용자는 이름에 '..' 세그먼트가 포함된 객체를 생성하고 DAG 실행으로 인해 구성된 대상('GCSToSFTPOperator'의 경우 SFTP 'destination_path', 'GCSTimeSpanFileTransformOperator'의 경우 작업자-로컬 임시 디렉터리) 외부에 다운로드된 blob을 쓰게 되어 임의 파일을 덮어쓸 수 있습니다. SFTP 서버 또는 작업자 호스트. 신뢰도가 낮은 주체가 쓸 수 있는 버킷에서 수집하는 배포에 영향을 미칩니다. 사용자는 `apache-airflow-providers-google` 22.2.1 이상으로 업그레이드하는 것이 좋습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-49297\n2. 26.07.06 오후8:16\n3. Apache Airflow's Google provider operators `GCSToS",
+      "cve_id": "CVE-2026-49297",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49297",
+      "source": "cvefeed",
+      "published": "2026-07-06T20:16:30+09:00",
       "lang": "en"
     },
     {
