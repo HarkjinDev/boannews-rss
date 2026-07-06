@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-06T21:33:19.726584+09:00",
+  "fetched_at": "2026-07-06T22:01:46.114650+09:00",
   "security_news": [
+    {
+      "title": "Proof-of-Concept Exploit Released for Linux ‘Bad Epoll’ Root Access Vulnerability",
+      "summary": "Organizations are urged to patch after proof-of-concept code makes the Linux root escalation flaw easier to exploit.\nThe post Proof-of-Concept Exploit Released for Linux ‘Bad Epoll’ Root Access Vulnerability appeared first on SecurityWeek.",
+      "content": "",
+      "title_ko": "Linux 'Bad Epoll' 루트 액세스 취약점에 대한 개념 증명 익스플로잇 공개",
+      "summary_ko": "개념 증명 코드를 통해 Linux 루트 에스컬레이션 결함을 더 쉽게 악용할 수 있게 된 후 조직에서는 패치를 적용해야 합니다.\nLinux 'Bad Epoll' 루트 액세스 취약점에 대해 발표된 개념 증명 익스플로잇 게시글이 SecurityWeek에 처음 등장했습니다.",
+      "summary_3lines": "1. 리눅스 'Bad Epoll' 권한승격 취약점에 PoC 공개\n2. 악성코드 없이 루트 접근 가능, 공격 방식 구체화\n3. 보안업체 패치 권고, SecurityWeek 최초 보도",
+      "link": "https://www.securityweek.com/proof-of-concept-exploit-released-for-linux-bad-epoll-root-access-vulnerability/",
+      "source": "securityweek",
+      "published": "2026-07-06T21:48:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "서머파이 자동화 볼트 해킹…DAI 600만달러 탈취",
       "summary": "서머파이의 자동화 볼트가 해킹 공격을 받아 DAI 스테이블코인 약 600만달러가 유출됐다. 6일(현지시간) 블록체인 매체 유투데이(U.Today)에 따르면 공격자는 6540만달러 규모의 플래시론으로 볼트 내부 유동성을...",
@@ -1795,21 +1807,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55945",
       "source": "msrc",
       "published": "2026-07-03T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-56015 - Net::IP::LPM versions through 1.10 for Perl allow a heap out-of-bounds read via an unbounded prefix length",
-      "summary": "CVE ID :CVE-2026-56015\n  \nPublished : July 3, 2026, 12:56 p.m. | 57 minutes ago\n  \nDescription :Net::IP::LPM versions through 1.10 for Perl allow a heap out-of-bounds read via an unbounded prefix length.\n\nadd() passes the prefix string to the trie builder addPrefixToTrie() without checking it against the address width.\n\naddPrefixToTrie() then walks the prefix buffer by prefix_length bits, reading prefix[byte] for byte up to prefix_len/8, where prefix is the 4-byte (IPv4) or 16-byte (IPv6) packed address. A prefix length greater than 32 for IPv4 or 128 for IPv6, for example add(\"1.2.3.4/255\", $v) or add(\"2001:db8::/255\", $v), reads past the end of the packed address.\n\nThe out-of-bounds read happens during trie construction and is bounded: the prefix length is stored as an unsigned char, so the bit walk reads at most 32 bytes from the start of the packed address, a short distance past the end of the 4-byte or 16-byte buffer. It is detectable under AddressSanitizer, valgrind, or a hardened allocator, where it can abort the process. Lookups and dump() format only the valid address width, so the out-of-bounds bytes are not exposed through the module's API.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-56015\n  \nPublished : July 3, 2026, 12:56 p.m. | 57 minutes ago\n  \nDescription :Net::IP::LPM versions through 1.10 for Perl allow a heap out-of-bounds read via an unbounded prefix length.\n\nadd() passes the prefix string to the trie builder addPrefixToTrie() without checking it against the address width.\n\naddPrefixToTrie() then walks the prefix buffer by prefix_length bits, reading prefix[byte] for byte up to prefix_len/8, where prefix is the 4-byte (IPv4) or 16-byte (IPv6) packed address. A prefix length greater than 32 for IPv4 or 128 for IPv6, for example add(\"1.2.3.4/255\", $v) or add(\"2001:db8::/255\", $v), reads past the end of the packed address.\n\nThe out-of-bounds read happens during trie construction and is bounded: the prefix length is stored as an unsigned char, so the bit walk reads at most 32 bytes from the start of the packed address, a short distance past the end of the 4-byte or 16-byte buffer. It is detectable under AddressSanitizer, valgrind, or a hardened allocator, where it can abort the process. Lookups and dump() format only the valid address width, so the out-of-bounds bytes are not exposed through the module's API.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-56015 - Perl용 Net::IP::LPM 버전 1.10부터 무제한 접두사 길이를 통해 범위를 벗어난 힙 읽기를 허용합니다.",
-      "summary_ko": "CVE ID:CVE-2026-56015\n  \n게시일 : 2026년 7월 3일 오후 12시 56분 | 57분 전\n  \n설명 :Net::IP::LPM 버전 1.10부터 Perl은 무제한 접두사 길이를 통해 범위를 벗어난 힙 읽기를 허용합니다.\n\nadd()는 주소 너비에 대해 확인하지 않고 접두사 문자열을 트라이 빌더 addPrefixToTrie()에 전달합니다.\n\n그런 다음 addPrefixToTrie()는 prefix_length 비트만큼 접두사 버퍼를 탐색하여 최대 prefix_len/8 바이트까지 prefix[byte]를 읽습니다. 여기서 prefix는 4바이트(IPv4) 또는 16바이트(IPv6) 압축 주소입니다. IPv4의 경우 32, IPv6의 경우 128보다 긴 접두사 길이(예: add(\"1.2.3.4/255\", $v) 또는 add(\"2001:db8::/255\", $v))는 압축된 주소의 끝을 지나 읽습니다.\n\n범위를 벗어난 읽기는 트라이 구성 중에 발생하며 제한됩니다. 접두사 길이는 부호 없는 문자로 저장되므로 비트 워크는 4바이트 또는 16바이트 버퍼의 끝을 지나 짧은 거리인 압축된 주소의 시작 부분에서 최대 32바이트를 읽습니다. 이는 AddressSanitizer, valgrind 또는 강화된 할당자에서 감지될 수 있으며 프로세스를 중단할 수 있습니다. 조회 및 dump()는 유효한 주소 너비만 형식화하므로 범위를 벗어난 바이트는 모듈의 API를 통해 노출되지 않습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-56015\n2. 26.07.03 오후9:56\n3. Net::IP::LPM versions through 1.10 for Perl allow ",
-      "cve_id": "CVE-2026-56015",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56015",
-      "source": "cvefeed",
-      "published": "2026-07-03T21:56:04+09:00",
       "lang": "en"
     }
   ],
