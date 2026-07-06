@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-07T04:01:29.592873+09:00",
+  "fetched_at": "2026-07-07T04:32:15.207064+09:00",
   "security_news": [
     {
       "title": "안전하다더니 뒤통수...이더리움 디파이, 해킹 피해로 600만 달러 유출",
@@ -1587,6 +1587,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54291 - Silent channel-binding authentication downgrade via unsupported certificate algorithms",
+      "summary": "CVE ID :CVE-2026-54291\n  \nPublished : July 6, 2026, 6:55 p.m. | 34 minutes ago\n  \nDescription :pgjdbc is an open source postgresql JDBC Driver. In releases 42.7.4 through 42.7.11, channelBinding=require connections can be silently downgraded from SCRAM-SHA-256-PLUS with channel binding to plain SCRAM-SHA-256 without it, losing the man-in-the-middle protection the setting is meant to guarantee. An attacker who can intercept the TLS connection can trigger the downgrade with a certificate whose signature algorithm has no tls-server-end-point channel-binding hash, because the bundled com.ongres.scram:scram-client returns an empty byte array instead of failing and pgJDBC ScramAuthenticator checks only that the server advertised a PLUS mechanism, without rejecting the empty binding or checking that the negotiated mechanism uses channel binding. This issue is fixed in version 42.7.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54291\n  \nPublished : July 6, 2026, 6:55 p.m. | 34 minutes ago\n  \nDescription :pgjdbc is an open source postgresql JDBC Driver. In releases 42.7.4 through 42.7.11, channelBinding=require connections can be silently downgraded from SCRAM-SHA-256-PLUS with channel binding to plain SCRAM-SHA-256 without it, losing the man-in-the-middle protection the setting is meant to guarantee. An attacker who can intercept the TLS connection can trigger the downgrade with a certificate whose signature algorithm has no tls-server-end-point channel-binding hash, because the bundled com.ongres.scram:scram-client returns an empty byte array instead of failing and pgJDBC ScramAuthenticator checks only that the server advertised a PLUS mechanism, without rejecting the empty binding or checking that the negotiated mechanism uses channel binding. This issue is fixed in version 42.7.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54291 - 지원되지 않는 인증서 알고리즘을 통한 자동 채널 바인딩 인증 다운그레이드",
+      "summary_ko": "CVE ID:CVE-2026-54291\n  \n게시일 : 2026년 7월 6일 오후 6시 55분 | 34분 전\n  \n설명 :pgjdbc는 오픈 소스 postgresql JDBC 드라이버입니다. 릴리스 42.7.4부터 42.7.11까지,channelBinding=require 연결은 채널 바인딩이 있는 SCRAM-SHA-256-PLUS에서 이를 사용하지 않고 일반 SCRAM-SHA-256으로 자동으로 다운그레이드될 수 있으며, 설정에서 보장하는 중간자 보호 기능을 잃게 됩니다. TLS 연결을 가로챌 수 있는 공격자는 서명 알고리즘에 tls-server-end-point 채널 바인딩 해시가 없는 인증서로 다운그레이드를 트리거할 수 있습니다. 왜냐하면 번들 com.ongres.scram:scram-client가 실패 대신 빈 바이트 배열을 반환하고 pgJDBC ScramAuthenticator는 빈 바인딩을 거부하거나 협상된 메커니즘이 채널 바인딩을 사용하는지 확인하지 않고 서버가 PLUS 메커니즘을 광고했는지만 확인하기 때문입니다. 이 문제는 버전 42.7.12에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54291\n2. 26.07.07 오전3:55\n3. pgjdbc is an open source postgresql JDBC Driver. I",
+      "cve_id": "CVE-2026-54291",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54291",
+      "source": "cvefeed",
+      "published": "2026-07-07T03:55:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-40257 - OP-TEE has SHA-3 accelerated finalize heap overflow",
       "summary": "CVE ID :CVE-2026-40257\n  \nPublished : July 6, 2026, 4:26 p.m. | 48 minutes ago\n  \nDescription :OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology. Starting in version 3.21.0 and prior to version 4.11.0, the ARM Crypto Extensions accelerated SHA-3 implementation has an off-by-one error that can cause a massive heap overflow that corrupts all TEE kernel memory following the hash state. This affects all platforms built with `CFG_CRYPTO_WITH_CE82=y` (ARMv8.2+ with SHA3 Crypto Extensions). Version 4.11.0 contains a patch. As a workaround, disable SHA3 Crypto Extensions with `CFG_CRYPTO_WITH_CE82=n`.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
