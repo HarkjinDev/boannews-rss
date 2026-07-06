@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-07T05:31:22.070613+09:00",
+  "fetched_at": "2026-07-07T06:01:31.667792+09:00",
   "security_news": [
     {
       "title": "안전하다더니 뒤통수...이더리움 디파이, 해킹 피해로 600만 달러 유출",
@@ -1572,18 +1572,6 @@
       "source": "naver",
       "published": "2026-07-04T06:22:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "해킹 시대, 투자 공식 바뀌었다…‘보안’이 최고의 보험",
-      "summary": "생성형 AI 확산으로 데이터 활용이 증가하면서 해킹 수법도 진화하고 있다. 최근에는 단순한 개인정보 탈취를 넘어 AI 모델 자체를 공격하거나 학습 데이터를 조작하고, 클라우드를 해킹하는 등 수법도 진화하고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 해킹 시대, 투자 공식 바뀌었다…‘보안’이 최고의 보험 생성형 AI 확산으로 데이터 활용이\n2. 최근에는 단순한 개인정보 탈취를 넘어 AI 모델 자체를 공격하거나 학습 데이터를 조작하고,",
-      "link": "https://n.news.naver.com/mnews/article/243/0000099991?sid=105",
-      "source": "naver",
-      "published": "2026-07-04T06:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2050,21 +2038,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-14617",
       "source": "cvefeed",
       "published": "2026-07-04T06:45:10+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12481 - Deserialization of Untrusted Data in keras-team/keras",
-      "summary": "CVE ID :CVE-2026-12481\n  \nPublished : July 3, 2026, 8:36 p.m. | 2 hours, 52 minutes ago\n  \nDescription :A vulnerability in keras-team/keras version 3.14.0 allows for arbitrary code execution due to improper handling of deserialization in the `Lambda` layer. Specifically, the `_raise_for_lambda_deserialization()` function fails to enforce the safe-mode guard when `safe_mode` is set to `None`, which is the default value when `from_config()` is called outside of a `SafeModeScope` context. This logic error conflates `None` (unset/default-deny) with `False` (explicitly disabled), bypassing the guard and allowing attacker-controlled `marshal` bytecode to be deserialized. Affected call sites include `keras.layers.deserialize(config)`, `keras.models.clone_model(model)`, and any direct invocation of `Lambda.from_config(config)` without an enclosing `SafeModeScope(True)`. This vulnerability can be exploited to achieve arbitrary OS-level code execution in the context of the server or user process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12481\n  \nPublished : July 3, 2026, 8:36 p.m. | 2 hours, 52 minutes ago\n  \nDescription :A vulnerability in keras-team/keras version 3.14.0 allows for arbitrary code execution due to improper handling of deserialization in the `Lambda` layer. Specifically, the `_raise_for_lambda_deserialization()` function fails to enforce the safe-mode guard when `safe_mode` is set to `None`, which is the default value when `from_config()` is called outside of a `SafeModeScope` context. This logic error conflates `None` (unset/default-deny) with `False` (explicitly disabled), bypassing the guard and allowing attacker-controlled `marshal` bytecode to be deserialized. Affected call sites include `keras.layers.deserialize(config)`, `keras.models.clone_model(model)`, and any direct invocation of `Lambda.from_config(config)` without an enclosing `SafeModeScope(True)`. This vulnerability can be exploited to achieve arbitrary OS-level code execution in the context of the server or user process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-12481 - keras-team/keras에서 신뢰할 수 없는 데이터의 역직렬화",
-      "summary_ko": "CVE ID:CVE-2026-12481\n  \n게시일 : 2026년 7월 3일 오후 8시 36분 | 2시간 52분 전\n  \n설명 :keras-team/keras 버전 3.14.0의 취약점으로 인해 `Lambda` 레이어의 역직렬화 처리가 잘못되어 임의 코드 실행이 허용됩니다. 특히 `safe_mode`가 `None`으로 설정된 경우 `_raise_for_lambda_deserialization()` 함수는 안전 모드 가드를 적용하지 못합니다. 이는 `from_config()`가 `SafeModeScope` 컨텍스트 외부에서 호출될 때 기본값입니다. 이 논리 오류는 `None`(설정되지 않음/기본 거부)을 `False`(명시적으로 비활성화됨)와 결합하여 가드를 우회하고 공격자가 제어하는 ​​`marshal` 바이트 코드를 역직렬화할 수 있도록 합니다. 영향을 받는 호출 사이트에는 `keras.layers.deserialize(config)`, `keras.models.clone_model(model)` 및 `SafeModeScope(True)`를 포함하지 않는 `Lambda.from_config(config)`의 직접 호출이 포함됩니다. 이 취약점을 악용하여 서버 또는 사용자 프로세스의 컨텍스트에서 임의의 OS 수준 코드를 실행할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12481\n2. 26.07.04 오전5:36\n3. A vulnerability in keras-team/keras version 3.14.0",
-      "cve_id": "CVE-2026-12481",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12481",
-      "source": "cvefeed",
-      "published": "2026-07-04T05:36:05+09:00",
       "lang": "en"
     }
   ],
