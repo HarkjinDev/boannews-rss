@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-07T02:01:26.428637+09:00",
+  "fetched_at": "2026-07-07T02:33:01.337909+09:00",
   "security_news": [
+    {
+      "title": "보안업체 “북한 연계 추정 해커…‘유명 개발도구 위장’ 악성코드 배...",
+      "summary": "전체를 해킹하려는 소프트웨어 공급망 공격입니다. 해커들은 이를 통해 컴퓨터 환경을 감시하거나 컴퓨터... 라자루스는 김수키, 안다리엘과 더불어 북한 정찰총국 소속으로 알려진 해킹 조직입니다. 연구소는 개발자와...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 연계 해커, 개발도구 위장 악성코드로 공격 시도\n2. 라자루스, 김수키, 안다리엘 조직 등 연루 추정\n3. 소프트웨어 공급망 공격으로 컴퓨터 환경 감시 목적",
+      "link": "https://www.voakorea.com/a/lazarus-hacking-070626/8168684.html",
+      "source": "naver",
+      "published": "2026-07-07T02:09:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "Threat Actors Probe Gitea Docker Flaw CVE-2026-20896 13 Days After Disclosure",
+      "summary": "Threat actors have been observed attempting to exploit a recently patched critical security flaw in Gitea Docker images, according to Sysdig.\n\nThe vulnerability in question is CVE-2026-20896 (CVSS score: 9.8), a vulnerability that stems from the DevOps platform trusting the \"X-WEBAUTH-USER\" header from any source IP address, effectively allowing an unauthenticated internet client to get elevated",
+      "content": "",
+      "title_ko": "위협 행위자 프로브 Gitea Docker 결함 CVE-2026-20896 공개 후 13일",
+      "summary_ko": "Sysdig에 따르면 위협 ​​행위자들이 최근 패치된 Gitea Docker 이미지의 심각한 보안 결함을 악용하려고 시도하는 것이 관찰되었습니다.\n\n문제의 취약점은 CVE-2026-20896(CVSS 점수: 9.8)입니다. 이 취약점은 DevOps 플랫폼이 모든 소스 IP 주소의 \"X-WEBAUTH-USER\" 헤더를 신뢰하여 인증되지 않은 인터넷 클라이언트의 권한이 효과적으로 상승하는 데서 발생합니다.",
+      "summary_3lines": "1. Gitea Docker 취약점 CVE-2026-20896(점수 9.8) 공격 시도\n2. \"X-WEBAUTH-USER\" 헤더 신뢰로 인해 인증 없이 권한 상승\n3. 패치 13일 만에 악의적 행위자 공격 시도 확인",
+      "link": "https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html",
+      "source": "thehackernews",
+      "published": "2026-07-07T01:28:59+09:00",
+      "lang": "en"
+    },
     {
       "title": "\"러 해커, 영국 관리·외교관 이메일 계정 해킹\"…英 텔레그래프",
       "summary": "NHS 의사 출신 사이버보안 전문가인 사이프 아베드 박사는 이번 침해가 환자 안전에 영향을 미치는 \"재앙적 사고\"로 이어질 수 있다고 경고했다. 영국 국가사이버보안센터(NCSC)는 긴급 경보를 발령하고, 이미 공격을...",
@@ -1539,6 +1563,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-40257 - OP-TEE has SHA-3 accelerated finalize heap overflow",
+      "summary": "CVE ID :CVE-2026-40257\n  \nPublished : July 6, 2026, 4:26 p.m. | 48 minutes ago\n  \nDescription :OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology. Starting in version 3.21.0 and prior to version 4.11.0, the ARM Crypto Extensions accelerated SHA-3 implementation has an off-by-one error that can cause a massive heap overflow that corrupts all TEE kernel memory following the hash state. This affects all platforms built with `CFG_CRYPTO_WITH_CE82=y` (ARMv8.2+ with SHA3 Crypto Extensions). Version 4.11.0 contains a patch. As a workaround, disable SHA3 Crypto Extensions with `CFG_CRYPTO_WITH_CE82=n`.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-40257\n  \nPublished : July 6, 2026, 4:26 p.m. | 48 minutes ago\n  \nDescription :OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology. Starting in version 3.21.0 and prior to version 4.11.0, the ARM Crypto Extensions accelerated SHA-3 implementation has an off-by-one error that can cause a massive heap overflow that corrupts all TEE kernel memory following the hash state. This affects all platforms built with `CFG_CRYPTO_WITH_CE82=y` (ARMv8.2+ with SHA3 Crypto Extensions). Version 4.11.0 contains a patch. As a workaround, disable SHA3 Crypto Extensions with `CFG_CRYPTO_WITH_CE82=n`.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-40257 - OP-TEE에는 SHA-3 가속 마무리 힙 오버플로가 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-40257\n  \n게시일 : 2026년 7월 6일 오후 4시 26분 | 48분 전\n  \n설명 :OP-TEE는 Arm에서 실행되는 비보안 Linux 커널의 동반자로 설계된 TEE(신뢰할 수 있는 실행 환경)입니다. TrustZone 기술을 사용하는 Cortex-A 코어. 버전 3.21.0부터 버전 4.11.0 이전에는 ARM Crypto Extensions 가속 SHA-3 구현에 해시 상태에 따라 모든 TEE 커널 메모리를 손상시키는 대규모 힙 오버플로를 일으킬 수 있는 개별 오류가 있습니다. 이는 `CFG_CRYPTO_WITH_CE82=y`(SHA3 암호화 확장이 포함된 ARMv8.2+)로 구축된 모든 플랫폼에 영향을 미칩니다. 버전 4.11.0에는 패치가 포함되어 있습니다. 해결 방법으로 'CFG_CRYPTO_WITH_CE82=n'을 사용하여 SHA3 암호화 확장을 비활성화하세요.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-40257\n2. 26.07.07 오전1:26\n3. OP-TEE is a Trusted Execution Environment (TEE) de",
+      "cve_id": "CVE-2026-40257",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-40257",
+      "source": "cvefeed",
+      "published": "2026-07-07T01:26:20+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-43825 - Apache OpenNLP :: Core :: ML :: LibSVM: Unsafe Java Deserialization in SvmDoccatModel",
+      "summary": "CVE ID :CVE-2026-43825\n  \nPublished : July 6, 2026, 3:42 p.m. | 1 hour, 32 minutes ago\n  \nDescription :Untrusted Java Deserialization in Apache OpenNLP SvmDoccatModel\n\nVersions Affected:\n  before 3.0.0-M4 (libsvm document categorization module; introduced in\n  OPENNLP-1808 and only present on the 3.x line)\n\nDescription:\nSvmDoccatModel.deserialize(InputStream) reads an attacker-controlled\nstream with java.io.ObjectInputStream and calls readObject() without an\nObjectInputFilter installed. ObjectInputStream materialises every class\nreferenced in the stream before the resulting object is cast to\nSvmDoccatModel, so the cast that follows readObject() executes only\nafter the foreign object graph has already been deserialised in full.\n\nIf a Java deserialization gadget chain is available on the consumer's\nclasspath, a crafted payload supplied to\ndeserialize() executes arbitrary code in the JVM that loads it. Apache\nOpenNLP itself does not ship a known gadget chain, so the realistic\nrisk is to downstream applications that embed the libsvm module\nalongside vulnerable transitive dependencies. The method is public and\nstatic, so any caller can pass an untrusted stream to it directly.\n\nThe practical impact is remote code execution against processes that\nload SvmDoccatModel instances from untrusted or semi-trusted origins.\n\nMitigation:\n\n3.x users should upgrade to 3.0.0-M4.\n\nUsers who cannot upgrade immediately should treat all serialized\nSvmDoccatModel streams as untrusted input unless their provenance is\nverified, and should avoid invoking SvmDoccatModel.deserialize() on\nstreams supplied by end users or fetched from third-party sources\nwithout integrity checks.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-43825\n  \nPublished : July 6, 2026, 3:42 p.m. | 1 hour, 32 minutes ago\n  \nDescription :Untrusted Java Deserialization in Apache OpenNLP SvmDoccatModel\n\nVersions Affected:\n  before 3.0.0-M4 (libsvm document categorization module; introduced in\n  OPENNLP-1808 and only present on the 3.x line)\n\nDescription:\nSvmDoccatModel.deserialize(InputStream) reads an attacker-controlled\nstream with java.io.ObjectInputStream and calls readObject() without an\nObjectInputFilter installed. ObjectInputStream materialises every class\nreferenced in the stream before the resulting object is cast to\nSvmDoccatModel, so the cast that follows readObject() executes only\nafter the foreign object graph has already been deserialised in full.\n\nIf a Java deserialization gadget chain is available on the consumer's\nclasspath, a crafted payload supplied to\ndeserialize() executes arbitrary code in the JVM that loads it. Apache\nOpenNLP itself does not ship a known gadget chain, so the realistic\nrisk is to downstream applications that embed the libsvm module\nalongside vulnerable transitive dependencies. The method is public and\nstatic, so any caller can pass an untrusted stream to it directly.\n\nThe practical impact is remote code execution against processes that\nload SvmDoccatModel instances from untrusted or semi-trusted origins.\n\nMitigation:\n\n3.x users should upgrade to 3.0.0-M4.\n\nUsers who cannot upgrade immediately should treat all serialized\nSvmDoccatModel streams as untrusted input unless their provenance is\nverified, and should avoid invoking SvmDoccatModel.deserialize() on\nstreams supplied by end users or fetched from third-party sources\nwithout integrity checks.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-43825 - Apache OpenNLP :: Core :: ML :: LibSVM: SvmDoccatModel의 안전하지 않은 Java 역직렬화",
+      "summary_ko": "CVE ID:CVE-2026-43825\n  \n게시일 : 2026년 7월 6일 오후 3시 42분 | 1시간 32분 전\n  \n설명:Apache OpenNLP SvmDoccatModel의 신뢰할 수 없는 Java 역직렬화\n\n영향을 받는 버전:\n  3.0.0-M4 이전(libsvm 문서 분류 모듈, 다음에 도입됨)\n  OPENNLP-1808이며 3.x 라인에만 존재함)\n\n설명:\nSvmDoccatModel.deserialize(InputStream)은 공격자가 제어하는 스트림을 읽습니다.\njava.io.ObjectInputStream을 사용하여 스트림하고 readObject()를 호출합니다.\nObjectInputFilter가 설치되었습니다. ObjectInputStream은 모든 클래스를 구체화합니다.\n결과 객체가 캐스팅되기 전에 스트림에서 참조됩니다.\nSvmDoccatModel이므로 readObject() 다음에 오는 캐스트는 다음과 같은 캐스트만 실행합니다.\n이물질 그래프가 이미 완전히 역직렬화된 후입니다.\n\nJava 역직렬화 가젯 체인을 소비자에서 사용할 수 있는 경우\n클래스패스(classpath)는 다음에 제공되는 제작된 페이로드입니다.\ndeserialize()는 이를 로드하는 JVM에서 임의의 코드를 실행합니다. 아파치\nOpenNLP 자체는 알려진 가젯 체인을 제공하지 않으므로 현실적입니다.\n위험은 libsvm 모듈을 포함하는 다운스트림 애플리케이션에 있습니다.\n취약한 전이적 종속성과 함께. 방법은 공개적이고\n정적이므로 모든 호출자가 신뢰할 수 없는 스트림을 직접 전달할 수 있습니다.\n\n실질적인 영향은 프로세스에 대한 원격 코드 실행입니다.\n신뢰할 수 없거나 부분적으로 신뢰할 수 있는 출처에서 SvmDoccatModel 인스턴스를 로드합니다.\n\n완화:\n\n3.x 사용자는 3.0.0-M4로 업그레이드해야 합니다.\n\n즉시 업그레이드할 수 없는 사용자는 직렬화된 모든 제품을 처리해야 합니다.\nSvmDoccatModel은 출처가 확실하지 않은 한 신뢰할 수 없는 입력으로 스트리밍합니다.\n확인되었으며 SvmDoccatModel.deserialize()를 호출하지 않아야 합니다.\n최종 사용자가 제공하거나 타사 소스에서 가져온 스트림\n무결성 검사 없이.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-43825\n2. 26.07.07 오전12:42\n3. Untrusted Java Deserialization in Apache OpenNLP S",
+      "cve_id": "CVE-2026-43825",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-43825",
+      "source": "cvefeed",
+      "published": "2026-07-07T00:42:04+09:00",
+      "lang": "en"
+    },
     {
       "title": "RCS and DNS: The NAPTR Record, (Mon, Jul 6th)",
       "summary": "Over the last year, with recent updates to iOS and Android, RCS (Rich Communication Services) has become an increasingly used protocol [1]. RCS is supposed to eventually replace SMS, and in addition to richer formatting, provides added (but optional) security. RCS messages may be end-to-end encrypted and digitally signed. Unlike SMS, which was \"bolted on\" to existing voice-focused phone standards. The SMS standard was based on old-fashioned pagers and allowed for limited clear-text communications. RCS is built from the ground up around modern IP-based network infrastructure and behaves more like IP chat services (think iMessage, WhatsApp...). RCS defines the message format, while protocols like SIP are used to establish connections and transport messages.\r",
