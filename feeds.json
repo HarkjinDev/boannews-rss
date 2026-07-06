@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-07T04:32:15.207064+09:00",
+  "fetched_at": "2026-07-07T05:01:31.762623+09:00",
   "security_news": [
     {
       "title": "안전하다더니 뒤통수...이더리움 디파이, 해킹 피해로 600만 달러 유출",
@@ -1587,6 +1587,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-14898 - OpenAI Codex Information Disclosure via Remote Image Rendering",
+      "summary": "CVE ID :CVE-2026-14898\n  \nPublished : July 6, 2026, 7:41 p.m. | 3 minutes ago\n  \nDescription :The OpenAI Codex desktop app for macOS rendered remote images from Markdown in model responses. An attacker who could place an indirect prompt injection in content processed by Codex, such as a connected-tool result or another untrusted source, could induce the model to construct a remote image URL containing sensitive data. The app automatically fetched that URL when rendering the response, sending the embedded data to an attacker-controlled server without a separate user click. Successful exploitation could exfiltrate secrets and other information accessible in the Codex session, including API keys, source code, and data returned by connected tools. No direct integrity or availability impact was demonstrated, and there is no known exploitation in the wild.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-14898\n  \nPublished : July 6, 2026, 7:41 p.m. | 3 minutes ago\n  \nDescription :The OpenAI Codex desktop app for macOS rendered remote images from Markdown in model responses. An attacker who could place an indirect prompt injection in content processed by Codex, such as a connected-tool result or another untrusted source, could induce the model to construct a remote image URL containing sensitive data. The app automatically fetched that URL when rendering the response, sending the embedded data to an attacker-controlled server without a separate user click. Successful exploitation could exfiltrate secrets and other information accessible in the Codex session, including API keys, source code, and data returned by connected tools. No direct integrity or availability impact was demonstrated, and there is no known exploitation in the wild.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-14898 - 원격 이미지 렌더링을 통한 OpenAI Codex 정보 공개",
+      "summary_ko": "CVE ID:CVE-2026-14898\n  \n게시일 : 2026년 7월 6일 오후 7시 41분 | 3분 전\n  \n설명: macOS용 OpenAI Codex 데스크톱 앱은 모델 응답에서 Markdown의 원격 이미지를 렌더링했습니다. 연결된 도구 결과 또는 신뢰할 수 없는 다른 소스와 같이 Codex에서 처리한 콘텐츠에 간접적인 프롬프트 삽입을 배치할 수 있는 공격자는 모델이 민감한 데이터가 포함된 원격 이미지 URL을 구성하도록 유도할 수 있습니다. 앱은 응답을 렌더링할 때 자동으로 해당 URL을 가져와 별도의 사용자 클릭 없이 포함된 데이터를 공격자가 제어하는 ​​서버로 보냅니다. 악용에 성공하면 API 키, 소스 코드, 연결된 도구에서 반환된 데이터를 포함하여 Codex 세션에서 액세스할 수 있는 비밀 및 기타 정보가 유출될 수 있습니다. 무결성이나 가용성에 대한 직접적인 영향은 입증되지 않았으며, 실제로 알려진 악용 사례도 없습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-14898\n2. 26.07.07 오전4:41\n3. The OpenAI Codex desktop app for macOS rendered re",
+      "cve_id": "CVE-2026-14898",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-14898",
+      "source": "cvefeed",
+      "published": "2026-07-07T04:41:36+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-58404 - Hugo security.http.urls deny rules bypassed by alternate IPv4 encodings",
+      "summary": "CVE ID :CVE-2026-58404\n  \nPublished : July 6, 2026, 7:16 p.m. | 29 minutes ago\n  \nDescription :Hugo is a static site generator. From v0.162.0 through v0.163.0, the default security.http.urls policy denies requests to loopback, internal, and cloud-metadata IPv4 literals, but the deny rule only matched dotted-decimal notation, so alternate IPv4 encodings of the same addresses, including integer, hex, or octal, passed the policy. When a template passes an untrusted or data-derived URL to resources.GetRemote and the host platform uses the cgo system resolver, these encodings resolve to the blocked address, allowing build-time server-side requests to loopback and internal services, including the cloud-metadata endpoint in hosted or CI builds; the same check is reused on redirects, so the gap also applies to each redirect hop. This issue is fixed in v0.163.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-58404\n  \nPublished : July 6, 2026, 7:16 p.m. | 29 minutes ago\n  \nDescription :Hugo is a static site generator. From v0.162.0 through v0.163.0, the default security.http.urls policy denies requests to loopback, internal, and cloud-metadata IPv4 literals, but the deny rule only matched dotted-decimal notation, so alternate IPv4 encodings of the same addresses, including integer, hex, or octal, passed the policy. When a template passes an untrusted or data-derived URL to resources.GetRemote and the host platform uses the cgo system resolver, these encodings resolve to the blocked address, allowing build-time server-side requests to loopback and internal services, including the cloud-metadata endpoint in hosted or CI builds; the same check is reused on redirects, so the gap also applies to each redirect hop. This issue is fixed in v0.163.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-58404 - Hugo security.http.urls는 대체 IPv4 인코딩으로 우회된 규칙을 거부합니다.",
+      "summary_ko": "CVE ID:CVE-2026-58404\n  \n게시일 : 2026년 7월 6일 오후 7시 16분 | 29분 전\n  \n설명 :Hugo는 정적 사이트 생성기입니다. v0.162.0부터 v0.163.0까지 기본 security.http.urls 정책은 루프백, 내부 및 클라우드 메타데이터 IPv4 리터럴에 대한 요청을 거부하지만 거부 규칙은 점으로 구분된 십진수 표기법만 일치하므로 정수, 16진수 또는 8진수를 포함한 동일한 주소의 대체 IPv4 인코딩이 정책을 통과했습니다. 템플릿이 신뢰할 수 없거나 데이터 파생된 URL을 resources.GetRemote에 전달하고 호스트 플랫폼이 cgo 시스템 확인자를 사용하는 경우 이러한 인코딩은 차단된 주소로 확인되어 호스트 또는 CI 빌드의 클라우드 메타데이터 끝점을 포함하여 루프백 및 내부 서비스에 대한 빌드 시간 서버 측 요청을 허용합니다. 리디렉션 시 동일한 확인이 재사용되므로 각 리디렉션 홉에도 간격이 적용됩니다. 이 문제는 v0.163.1에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-58404\n2. 26.07.07 오전4:16\n3. Hugo is a static site generator. From v0.162.0 thr",
+      "cve_id": "CVE-2026-58404",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58404",
+      "source": "cvefeed",
+      "published": "2026-07-07T04:16:15+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54291 - Silent channel-binding authentication downgrade via unsupported certificate algorithms",
       "summary": "CVE ID :CVE-2026-54291\n  \nPublished : July 6, 2026, 6:55 p.m. | 34 minutes ago\n  \nDescription :pgjdbc is an open source postgresql JDBC Driver. In releases 42.7.4 through 42.7.11, channelBinding=require connections can be silently downgraded from SCRAM-SHA-256-PLUS with channel binding to plain SCRAM-SHA-256 without it, losing the man-in-the-middle protection the setting is meant to guarantee. An attacker who can intercept the TLS connection can trigger the downgrade with a certificate whose signature algorithm has no tls-server-end-point channel-binding hash, because the bundled com.ongres.scram:scram-client returns an empty byte array instead of failing and pgJDBC ScramAuthenticator checks only that the server advertised a PLUS mechanism, without rejecting the empty binding or checking that the negotiated mechanism uses channel binding. This issue is fixed in version 42.7.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
