@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-07T05:01:31.762623+09:00",
+  "fetched_at": "2026-07-07T05:31:22.070613+09:00",
   "security_news": [
     {
       "title": "안전하다더니 뒤통수...이더리움 디파이, 해킹 피해로 600만 달러 유출",
@@ -1600,6 +1600,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-14898",
       "source": "cvefeed",
       "published": "2026-07-07T04:41:36+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-55646 - vLLM speech-to-text endpoints allocate full upload before enforcing the audio file-size limit",
+      "summary": "CVE ID :CVE-2026-55646\n  \nPublished : July 6, 2026, 7:41 p.m. | 31 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. From 0.22.0 to 0.23.0, the /v1/audio/transcriptions and /v1/audio/translations routes call request.file.read() to fully materialize an uploaded audio file into memory before vLLM checks the documented VLLM_MAX_AUDIO_CLIP_FILESIZE_MB compressed upload size limit (default 25 MB) later in the speech-to-text preprocessing step, so an API caller who can reach those routes can submit an oversized multipart upload and cause vLLM to allocate memory proportional to the uploaded file size before the request is rejected as too large, creating memory pressure or terminating the process depending on deployment resource limits. This issue is fixed in version 0.24.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55646\n  \nPublished : July 6, 2026, 7:41 p.m. | 31 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. From 0.22.0 to 0.23.0, the /v1/audio/transcriptions and /v1/audio/translations routes call request.file.read() to fully materialize an uploaded audio file into memory before vLLM checks the documented VLLM_MAX_AUDIO_CLIP_FILESIZE_MB compressed upload size limit (default 25 MB) later in the speech-to-text preprocessing step, so an API caller who can reach those routes can submit an oversized multipart upload and cause vLLM to allocate memory proportional to the uploaded file size before the request is rejected as too large, creating memory pressure or terminating the process depending on deployment resource limits. This issue is fixed in version 0.24.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-55646 - vLLM 음성-텍스트 엔드포인트는 오디오 파일 크기 제한을 적용하기 전에 전체 업로드를 할당합니다.",
+      "summary_ko": "CVE ID:CVE-2026-55646\n  \n게시일 : 2026년 7월 6일 오후 7시 41분 | 31분 전\n  \n설명 :vLLM은 대규모 언어 모델을 위한 추론 및 제공 엔진입니다. 0.22.0에서 0.23.0까지, /v1/audio/transcriptions 및 /v1/audio/translations 경로는 request.file.read()를 호출하여 업로드된 오디오 파일을 메모리에 완전히 구체화한 후 vLLM이 나중에 음성-텍스트 전처리 단계에서 문서화된 VLLM_MAX_AUDIO_CLIP_FILESIZE_MB 압축 업로드 크기 제한(기본값 25MB)을 확인하므로 API 호출자는 다음을 수행할 수 있습니다. 이러한 경로에 도달하면 크기가 너무 큰 멀티파트 업로드를 제출할 수 있으며 요청이 너무 크다고 거부되기 전에 vLLM이 업로드된 파일 크기에 비례하여 메모리를 할당하게 되므로 배포 리소스 제한에 따라 메모리 압박이 발생하거나 프로세스가 종료됩니다. 이 문제는 버전 0.24.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-55646\n2. 26.07.07 오전4:41\n3. vLLM is an inference and serving engine for large ",
+      "cve_id": "CVE-2026-55646",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55646",
+      "source": "cvefeed",
+      "published": "2026-07-07T04:41:11+09:00",
       "lang": "en"
     },
     {
