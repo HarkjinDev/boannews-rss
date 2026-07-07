@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-07T22:02:06.983432+09:00",
+  "fetched_at": "2026-07-07T22:31:25.479921+09:00",
   "security_news": [
     {
       "title": "딥시크, 칩까지 직접 만든다…중국 AI ‘홀로서기’ 승부수",
@@ -2248,6 +2248,21 @@
       "lang": "en"
     },
     {
+      "title": "[remote] Hydra - Stack Buffer Overflow",
+      "summary": "Hydra - Stack Buffer Overflow",
+      "description": "Hydra - Stack Buffer Overflow",
+      "title_ko": "[원격] Hydra - 스택 버퍼 오버플로",
+      "summary_ko": "Hydra - 스택 버퍼 오버플로",
+      "summary_3lines": "1. [remote] Hydra - Stack Buffer Overflow\n2. EXPLOITDB\n3. Hydra - Stack Buffer Overflow",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52622",
+      "source": "exploitdb",
+      "published": "2026-07-07T09:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "[webapps] Tenable Nessus 10.12.1 - SQL Injection",
       "summary": "Tenable Nessus 10.12.1 - SQL Injection",
       "description": "Tenable Nessus 10.12.1 - SQL Injection",
@@ -2725,21 +2740,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2024-1248",
       "source": "cvefeed",
       "published": "2026-07-05T05:38:49+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-14535 - Fickling MLAllowlist analysis pass rendered inoperative by shared mutable state in AnalysisContext.shorten_code()",
-      "summary": "CVE ID :CVE-2026-14535\n  \nPublished : July 4, 2026, 1:31 p.m. | 3 hours, 42 minutes ago\n  \nDescription :In Trail of Bits fickling versions up to and including 0.1.11, the UnsafeImportsML analysis pass unconditionally calls AnalysisContext.shorten_code(node) on every import node it inspects, regardless of whether the import is flagged as unsafe. This call registers the shortened code representation in the shared AnalysisContext.reported_shortened_code set. When the MLAllowlist analysis pass subsequently runs, it calls the same shorten_code() method, receives already_reported=True for every import, and executes a continue statement that skips its allowlist check entirely. This renders MLAllowlist dead code for all imports — it never evaluates whether an import is in the ML allowlist or not. The MLAllowlist pass was designed to catch imports of modules outside the known-safe ML ecosystem (torch, numpy, transformers, etc.) that slip past the UnsafeImports denylist. With MLAllowlist inoperative, any standard library module not in the UNSAFE_IMPORTS denylist can be invoked via pickle deserialization while fickling's check_safety() returns LIKELY_SAFE. The fickling.load() API chains check_safety() into pickle.loads() as an explicit security gate, meaning a LIKELY_SAFE verdict causes the payload to be deserialized and executed. The root cause is shared mutable state between independently-correct analysis passes — UnsafeImportsML works as designed in isolation, MLAllowlist works as designed in isolation, but the shared reported_shortened_code set causes UnsafeImportsML to poison MLAllowlist's deduplication logic.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-14535\n  \nPublished : July 4, 2026, 1:31 p.m. | 3 hours, 42 minutes ago\n  \nDescription :In Trail of Bits fickling versions up to and including 0.1.11, the UnsafeImportsML analysis pass unconditionally calls AnalysisContext.shorten_code(node) on every import node it inspects, regardless of whether the import is flagged as unsafe. This call registers the shortened code representation in the shared AnalysisContext.reported_shortened_code set. When the MLAllowlist analysis pass subsequently runs, it calls the same shorten_code() method, receives already_reported=True for every import, and executes a continue statement that skips its allowlist check entirely. This renders MLAllowlist dead code for all imports — it never evaluates whether an import is in the ML allowlist or not. The MLAllowlist pass was designed to catch imports of modules outside the known-safe ML ecosystem (torch, numpy, transformers, etc.) that slip past the UnsafeImports denylist. With MLAllowlist inoperative, any standard library module not in the UNSAFE_IMPORTS denylist can be invoked via pickle deserialization while fickling's check_safety() returns LIKELY_SAFE. The fickling.load() API chains check_safety() into pickle.loads() as an explicit security gate, meaning a LIKELY_SAFE verdict causes the payload to be deserialized and executed. The root cause is shared mutable state between independently-correct analysis passes — UnsafeImportsML works as designed in isolation, MLAllowlist works as designed in isolation, but the shared reported_shortened_code set causes UnsafeImportsML to poison MLAllowlist's deduplication logic.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID :CVE-2026-14535\n  \n게시일 : 2026년 7월 4일 오후 1시 31분 | 3시간 42분 전\n  \n설명: 0.1.11까지의 Trail of Bits 변덕스러운 버전에서 UnsafeImportsML 분석 단계는 가져오기가 안전하지 않은 것으로 플래그 지정되었는지 여부에 관계없이 검사하는 모든 가져오기 노드에서 무조건 AnalysisContext.shorten_code(node)를 호출합니다. 이 호출은 공유 AnalysisContext.reported_shortened_code 세트에 단축 코드 표현을 등록합니다. 이후에 MLAllowlist 분석 단계가 실행되면 동일한 short_code() 메서드를 호출하고 모든 가져오기에 대해 이미_reported=True를 수신하며 허용 목록 검사를 완전히 건너뛰는 continue 문을 실행합니다. 이는 모든 가져오기에 대해 MLAllowlist 데드 코드를 렌더링합니다. 가져오기가 ML 허용 목록에 있는지 여부를 평가하지 않습니다. MLAllowlist 패스는 UnsafeImports 거부 목록을 통과하는 안전한 것으로 알려진 ML 생태계(토치, numpy, 변환기 등) 외부의 모듈 가져오기를 포착하도록 설계되었습니다. MLAllowlist가 작동하지 않으면 UNSAFE_IMPORTS 거부 목록에 없는 표준 라이브러리 모듈은 피클 역직렬화를 통해 호출될 수 있으며 fickleing의 check_safety()는 LIKELY_SAFE를 반환합니다. fickling.load() API는 check_safety()를 명시적인 보안 게이트로 pickle.loads()에 연결합니다. 즉, LIKELY_SAFE 결과로 인해 페이로드가 역직렬화되고 실행됩니다. 근본 원인은 독립적으로 올바른 분석 패스 간에 변경 가능한 상태를 공유하는 것입니다. UnsafeImportsML은 격리된 상태로 설계된 대로 작동하고, MLAllowlist는 격리된 상태로 작동하지만, 공유된 reporter_shortened_code 세트로 인해 UnsafeImportsML이 MLAllowlist의 중복 제거 논리를 손상시킵니다.\n  \nSeverity: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-14535\n2. 26.07.04 오후10:31\n3. In Trail of Bits fickling versions up to and inclu",
-      "cve_id": "CVE-2026-14535",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-14535",
-      "source": "cvefeed",
-      "published": "2026-07-04T22:31:14+09:00",
       "lang": "en"
     }
   ],
