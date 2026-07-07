@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-08T07:31:32.902971+09:00",
+  "fetched_at": "2026-07-08T08:01:38.047536+09:00",
   "security_news": [
+    {
+      "title": "KT 해킹 과징금 7월 결론 전망...불확실성 해소될까",
+      "summary": "[사진: KT] KT 해킹 사고에 대한 개인정보보호위원회의 과징금 규모가 이달 중 최종 확정될 전망이다. 개인정보위가 앞서 SK텔레콤 해킹 사고에 1300억원대 과징금 처분을 내린 만큼 KT 제재 수위에도 업계 관심이 쏠린다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KT 해킹 관련 개인정보위 과징금 7월 중 결론 전망\n2. SK텔레콤 1300억원대 과징금 선례 고려, KT 제재 수위 주목\n3. 개인정보 유출 사고에 따른 과징금 규모 이달 확정 예상",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=681964",
+      "source": "naver",
+      "published": "2026-07-08T07:30:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "AI 피싱은 왜 맞춤법이 완벽한가",
       "summary": "세계경제포럼(WEF)은 2026년 사이버보안 전망에서 AI 기반 사이버 사기를 랜섬웨어를 제치고 CEO들의 1순위 우려로 꼽았다. 맞춤법을 보고 판단하던 시대는 끝났다. \"이제 피싱 메일의 맞춤법이 당신보다 정확하다.\" * 본...",
@@ -2127,6 +2139,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-46672 - Actual: CSV Formula Injection in `@actual-app/cli` `--format csv` Output via Custom `escapeCsv` Helper",
+      "summary": "CVE ID :CVE-2026-46672\n  \nPublished : July 7, 2026, 8:55 p.m. | 34 minutes ago\n  \nDescription :Actual is a local-first personal finance app. Prior to 26.6.0, @actual-app/cli ships a hand-rolled CSV serializer in packages/cli/src/output.ts used whenever the global --format csv option is passed, whose escapeCsv helper only handles RFC 4180 delimiter, quote, and newline escaping and does not neutralize standard CSV formula-injection prefixes. Any CLI command that streams an object array containing user-controlled strings, including transactions list, accounts list, payees list, categories list, tags list, category-groups list, rules list, schedules list, and query, can emit cells that auto-evaluate when the resulting CSV is opened in Excel, LibreOffice Calc, or Google Sheets, enabling data exfiltration and arbitrary formula execution. This issue is fixed in version 26.6.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-46672\n  \nPublished : July 7, 2026, 8:55 p.m. | 34 minutes ago\n  \nDescription :Actual is a local-first personal finance app. Prior to 26.6.0, @actual-app/cli ships a hand-rolled CSV serializer in packages/cli/src/output.ts used whenever the global --format csv option is passed, whose escapeCsv helper only handles RFC 4180 delimiter, quote, and newline escaping and does not neutralize standard CSV formula-injection prefixes. Any CLI command that streams an object array containing user-controlled strings, including transactions list, accounts list, payees list, categories list, tags list, category-groups list, rules list, schedules list, and query, can emit cells that auto-evaluate when the resulting CSV is opened in Excel, LibreOffice Calc, or Google Sheets, enabling data exfiltration and arbitrary formula execution. This issue is fixed in version 26.6.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-46672 - 실제: 사용자 정의 `escapeCsv` 도우미를 통해 `@actual-app/cli` `--format csv` 출력에 CSV 수식 삽입",
+      "summary_ko": "CVE ID:CVE-2026-46672\n  \n게시일 : 2026년 7월 7일 오후 8시 55분 | 34분 전\n  \n설명 :Actual은 지역 최초의 개인 금융 앱입니다. 26.6.0 이전에는 @actual-app/cli가 global --format csv 옵션이 전달될 때마다 사용되는 packages/cli/src/output.ts에 수동으로 만든 CSV 직렬 변환기를 제공합니다. 이 직렬 변환기의 escapeCsv 도우미는 RFC 4180 구분 기호, 따옴표 및 개행 이스케이프만 처리하고 표준 CSV 수식 주입 접두사를 무력화하지 않습니다. 거래 목록, 계정 목록, 수취인 목록, 카테고리 목록, 태그 목록, 카테고리 그룹 목록, 규칙 목록, 일정 목록, 쿼리 등 사용자 제어 문자열이 포함된 개체 배열을 스트리밍하는 모든 CLI 명령은 결과 CSV가 Excel, LibreOffice Calc 또는 Google Sheets에서 열릴 때 자동 평가되는 셀을 내보낼 수 있어 데이터 유출 및 임의 수식 실행이 가능합니다. 이 문제는 버전 26.6.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-46672\n2. 26.07.08 오전5:55\n3. Actual is a local-first personal finance app. Prio",
+      "cve_id": "CVE-2026-46672",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46672",
+      "source": "cvefeed",
+      "published": "2026-07-08T05:55:02+09:00",
+      "lang": "ro"
+    },
     {
       "title": "More Odd DNS Records: NIMLOC, (Tue, Jul 7th)",
       "summary": "Yesterday, I talked about NAPTR records and how they are related to RCS. But there is another \"odd\" record that shows up in my DNS logs. This one isn&#;x26;#;39;t new, but I don&#;x26;#;39;t think I ever covered it: NIMLOC. At least that is what Zeek calls it. But let&#;x26;#;39;s see what it is all about.\r",
