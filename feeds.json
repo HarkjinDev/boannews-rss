@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-07T08:31:30.281117+09:00",
+  "fetched_at": "2026-07-07T09:03:48.385294+09:00",
   "security_news": [
+    {
+      "title": "[ISEC 2026 미리보기] 체크멀, 안티랜섬웨어 넘어 데이터 유출 방지 포트폴리오 출격",
+      "summary": "상황 인식 기반 랜섬웨어 탐지 엔진 적용된 ‘AppCheck Pro’10월 출시될 차세대 내부 정보 유출 실시간 차단 아키텍처 공개[보안뉴스 조재호 기자] 랜섬웨어 방어를 넘어 데이터 유출 방지 영역으로 사업을 확장 중인 체크멀이 ‘ISEC 2026’ 현장에서 차세대 통합 보안 청사진을 제시한다. 오는 10월 출시를 목표로 개발 중인 상황 인식 기반 내부",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 체크멀, 랜섬웨어 넘어 데이터 유출 방지 포트폴리오 공개\n2. 상황 인식 기반 탐지 엔진 'AppCheck Pro' 10월 출시 예정\n3. 내부 정보 유출 실시간 차단 아키텍처 공개",
+      "link": "http://www.boannews.com/media/view.asp?idx=144520&kind=&sub_kind=",
+      "source": "boannews",
+      "published": "2026-07-07T08:38:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "외주 재위탁 과정서 우리은행 개인정보 유출…은행권 '제3자 리스크'에...",
+      "summary": "그러나 위탁·재위탁 과정의 관리 공백이 정보보안 사고로 이어질 수 있다는 점이 확인되면서 내부통제 차원에서 제3자 리스크 관리를 강화해야 한다는 목소리가 커지고 있다. 금융권에서는 향후 금감원 후속 점검...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 우리은행, 외주 재위탁 과정서 개인정보 유출 발생\n2. 위탁·재위탁 관리 공백으로 인한 보안 사고 확인\n3. 금융권, 제3자 리스크 관리 강화 및 금감원 점검 예정",
+      "link": "https://n.news.naver.com/mnews/article/277/0005786322?sid=101",
+      "source": "naver",
+      "published": "2026-07-07T08:31:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[역사속 오늘·7.7·소서] 노태우 대통령 7·7 선언(1988)·노구교 사건·...",
       "summary": "7 디도스(DDoS) 대란, 국내외 주요 웹사이트 디도스 공격에 마비- 해커들이 청와대 백악관 네이버 이메일 옥션 등 국내외 주요 웹사이트 동시다발적 DDoS 공격, 사이버 테러는 사흘 만에 진정국면에 들어갔으나...",
@@ -1611,6 +1635,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-53646 - FOSSBilling: Client password reset token reuse allows persistent account takeover",
+      "summary": "CVE ID :CVE-2026-53646\n  \nPublished : July 6, 2026, 11:16 p.m. | 28 minutes ago\n  \nDescription :FOSSBilling is a free, open-source billing and client management system. In versions 0.5.6 through 0.7.2, when a `ClientPasswordReset` record already exists for a client (from a previous unexpired reset request), subsequent calls to the `reset_password` guest API endpoint reuse the existing token instead of generating a new one. The 15-minute validity window is anchored to the first request's `created_at` timestamp, not the time of the most recent email. An attacker who obtained the original reset link remains able to use it even after the victim requests a new reset, because the original token is never invalidated or rotated. Version 0.8.0 patches the issue. Some workarounds are available. Configure a reverse proxy (e.g., Nginx, Apache, Cloudflare) to apply per-IP rate limiting to the `/client/reset-password` endpoint to minimize the window of opportunity, and/or manually clear expired `client_password_reset` records from the database after a client reports a suspected compromise.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53646\n  \nPublished : July 6, 2026, 11:16 p.m. | 28 minutes ago\n  \nDescription :FOSSBilling is a free, open-source billing and client management system. In versions 0.5.6 through 0.7.2, when a `ClientPasswordReset` record already exists for a client (from a previous unexpired reset request), subsequent calls to the `reset_password` guest API endpoint reuse the existing token instead of generating a new one. The 15-minute validity window is anchored to the first request's `created_at` timestamp, not the time of the most recent email. An attacker who obtained the original reset link remains able to use it even after the victim requests a new reset, because the original token is never invalidated or rotated. Version 0.8.0 patches the issue. Some workarounds are available. Configure a reverse proxy (e.g., Nginx, Apache, Cloudflare) to apply per-IP rate limiting to the `/client/reset-password` endpoint to minimize the window of opportunity, and/or manually clear expired `client_password_reset` records from the database after a client reports a suspected compromise.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53646 - FOSSBilling: 클라이언트 비밀번호 재설정 토큰 재사용으로 지속적인 계정 탈취가 가능합니다.",
+      "summary_ko": "CVE ID:CVE-2026-53646\n  \n게시일 : 2026년 7월 6일 오후 11시 16분 | 28분 전\n  \n설명:FOSSBilling은 무료 오픈 소스 청구 및 클라이언트 관리 시스템입니다. 버전 0.5.6~0.7.2에서는 만료되지 않은 이전 재설정 요청으로 인해 클라이언트에 `ClientPasswordReset` 레코드가 이미 존재하는 경우 `reset_password` 게스트 API 엔드포인트에 대한 후속 호출에서 새 토큰을 생성하는 대신 기존 토큰을 재사용합니다. 15분 유효 기간은 가장 최근 이메일 시간이 아닌 첫 번째 요청의 'created_at' 타임스탬프에 고정됩니다. 원본 재설정 링크를 얻은 공격자는 피해자가 새로운 재설정을 요청한 후에도 해당 링크를 사용할 수 있습니다. 원본 토큰은 무효화되거나 회전되지 않기 때문입니다. 버전 0.8.0에서는 문제가 패치되었습니다. 몇 가지 해결 방법을 사용할 수 있습니다. 역방향 프록시(예: Nginx, Apache, Cloudflare)를 구성하여 '/client/reset-password' 엔드포인트에 IP당 속도 제한을 적용하여 기회 창을 최소화하거나 클라이언트가 의심되는 손상을 보고한 후 데이터베이스에서 만료된 'client_password_reset' 레코드를 수동으로 삭제하세요.\n  \n심각도: 7.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-53646\n2. 26.07.07 오전8:16\n3. FOSSBilling is a free, open-source billing and cli",
+      "cve_id": "CVE-2026-53646",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53646",
+      "source": "cvefeed",
+      "published": "2026-07-07T08:16:56+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-38979 - Ajenti Clickjacking Vulnerability",
+      "summary": "CVE ID :CVE-2026-38979\n  \nPublished : July 6, 2026, 10:16 p.m. | 1 hour, 28 minutes ago\n  \nDescription :ajenti through v2.2.13 has a clickjacking weakness in the browser-facing login and administrative UI. In ajenti-core/aj/http.py, the core HTTP response path initializes an empty header list, forwards handler-added headers verbatim, and finalizes responses through WSGI start_response() without adding anti-framing protections such as X-Frame-Options or a Content-Security-Policy frame-ancestors restriction.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-38979\n  \nPublished : July 6, 2026, 10:16 p.m. | 1 hour, 28 minutes ago\n  \nDescription :ajenti through v2.2.13 has a clickjacking weakness in the browser-facing login and administrative UI. In ajenti-core/aj/http.py, the core HTTP response path initializes an empty header list, forwards handler-added headers verbatim, and finalizes responses through WSGI start_response() without adding anti-framing protections such as X-Frame-Options or a Content-Security-Policy frame-ancestors restriction.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-38979 - Ajenti 클릭재킹 취약점",
+      "summary_ko": "CVE ID:CVE-2026-38979\n  \n게시일 : 2026년 7월 6일 오후 10시 16분 | 1시간 28분 전\n  \n설명 :ajenti v2.2.13부터 브라우저에 표시되는 로그인 및 관리 UI에 클릭재킹 취약점이 있습니다. ajenti-core/aj/http.py에서 핵심 HTTP 응답 경로는 빈 헤더 목록을 초기화하고, 처리기가 추가된 헤더를 그대로 전달하고, X-Frame-Options 또는 Content-Security-Policy 프레임 조상 제한과 같은 프레임 방지 보호를 추가하지 않고 WSGI start_response()를 통해 응답을 마무리합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-38979\n2. 26.07.07 오전7:16\n3. ajenti through v2.2.13 has a clickjacking weakness",
+      "cve_id": "CVE-2026-38979",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-38979",
+      "source": "cvefeed",
+      "published": "2026-07-07T07:16:49+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-14898 - OpenAI Codex Information Disclosure via Remote Image Rendering",
       "summary": "CVE ID :CVE-2026-14898\n  \nPublished : July 6, 2026, 7:41 p.m. | 3 minutes ago\n  \nDescription :The OpenAI Codex desktop app for macOS rendered remote images from Markdown in model responses. An attacker who could place an indirect prompt injection in content processed by Codex, such as a connected-tool result or another untrusted source, could induce the model to construct a remote image URL containing sensitive data. The app automatically fetched that URL when rendering the response, sending the embedded data to an attacker-controlled server without a separate user click. Successful exploitation could exfiltrate secrets and other information accessible in the Codex session, including API keys, source code, and data returned by connected tools. No direct integrity or availability impact was demonstrated, and there is no known exploitation in the wild.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
