@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-09T02:31:38.682089+09:00",
+  "fetched_at": "2026-07-09T03:01:30.746866+09:00",
   "security_news": [
     {
       "title": "China-Linked APT Expands Arsenal With New ‘Leash’ Backdoors",
@@ -3493,21 +3493,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10656",
       "source": "cvefeed",
       "published": "2026-07-06T07:23:36+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59510 - Authenticated Path Traversal in AIL Framework PDF Object Handling Enables Potential Arbitrary File Read",
-      "summary": "CVE ID :CVE-2026-59510\n  \nPublished : July 5, 2026, 5:52 p.m. | 12 minutes ago\n  \nDescription :AIL Framework contains a path traversal vulnerability in its PDF object handling. Prior to commit 14c618fce4d1df02358717c48ea903706abecdf2, the PDF.get_filepath() function constructed a file path by joining the configured PDF storage directory with a path derived from a PDF object identifier, without verifying that the resolved path remained within the intended PDF_FOLDER directory.\n\nAn authenticated attacker able to invoke PDF object operations with a crafted identifier could use relative traversal sequences or absolute path components to cause AIL Framework to open files located outside the PDF storage directory. This could allow disclosure of files readable by the AIL process, including application configuration, credentials, or other sensitive local data. This vulnerability is potential due to additional errors before being able to be executed.\n\nThe fix canonicalises the resulting path with os.path.realpath() and rejects paths whose common directory is outside the configured PDF directory.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59510\n  \nPublished : July 5, 2026, 5:52 p.m. | 12 minutes ago\n  \nDescription :AIL Framework contains a path traversal vulnerability in its PDF object handling. Prior to commit 14c618fce4d1df02358717c48ea903706abecdf2, the PDF.get_filepath() function constructed a file path by joining the configured PDF storage directory with a path derived from a PDF object identifier, without verifying that the resolved path remained within the intended PDF_FOLDER directory.\n\nAn authenticated attacker able to invoke PDF object operations with a crafted identifier could use relative traversal sequences or absolute path components to cause AIL Framework to open files located outside the PDF storage directory. This could allow disclosure of files readable by the AIL process, including application configuration, credentials, or other sensitive local data. This vulnerability is potential due to additional errors before being able to be executed.\n\nThe fix canonicalises the resulting path with os.path.realpath() and rejects paths whose common directory is outside the configured PDF directory.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-59510 - AIL 프레임워크 PDF 객체 처리의 인증된 경로 탐색으로 인해 잠재적인 임의 파일 읽기가 가능해졌습니다.",
-      "summary_ko": "CVE ID:CVE-2026-59510\n  \n게시일 : 2026년 7월 5일 오후 5시 52분 | 12분 전\n  \n설명:AIL 프레임워크에는 PDF 개체 처리에 경로 탐색 취약점이 포함되어 있습니다. 14c618fce4d1df02358717c48ea903706abecdf2를 커밋하기 전에 PDF.get_filepath() 함수는 확인된 경로가 의도한 PDF_FOLDER 디렉터리 내에 남아 있는지 확인하지 않고 구성된 PDF 저장소 디렉터리를 PDF 개체 식별자에서 파생된 경로와 결합하여 파일 경로를 구성했습니다.\n\n조작된 식별자를 사용하여 PDF 개체 작업을 호출할 수 있는 인증된 공격자는 상대 순회 시퀀스 또는 절대 경로 구성 요소를 사용하여 AIL 프레임워크가 PDF 저장소 디렉터리 외부에 있는 파일을 열도록 할 수 있습니다. 이로 인해 애플리케이션 구성, 자격 증명 또는 기타 민감한 로컬 데이터를 포함하여 AIL 프로세스에서 읽을 수 있는 파일이 공개될 수 있습니다. 본 취약점은 실행되기 전 추가적인 오류로 인해 발생할 가능성이 있습니다.\n\n수정 사항은 os.path.realpath()를 사용하여 결과 경로를 정규화하고 공통 디렉터리가 구성된 PDF 디렉터리 외부에 있는 경로를 거부합니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-59510\n2. 26.07.06 오전2:52\n3. AIL Framework contains a path traversal vulnerabil",
-      "cve_id": "CVE-2026-59510",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59510",
-      "source": "cvefeed",
-      "published": "2026-07-06T02:52:29+09:00",
       "lang": "en"
     }
   ],
