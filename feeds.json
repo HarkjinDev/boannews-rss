@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-09T07:03:20.384803+09:00",
+  "fetched_at": "2026-07-09T07:32:49.807460+09:00",
   "security_news": [
+    {
+      "title": "[Who Is ?] 김범석 쿠팡아이엔씨 이사회 의장 겸 최고경영자",
+      "summary": "이번 사고는 단순 외부 해킹보다 내부 권한 관리와 인증키 관리 부실이 핵심 쟁점으로 떠올랐다는 점에서... 개인정보 유출 사태는 단순한 해킹 사고를 넘어 쿠팡의 보안 체계와 초기 대응, 경영진 책임 문제로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 쿠팡 개인정보 유출 사태, 김범석 쿠팡아이엔씨 의장 겸 CEO 책임 논란\n2. 내부 권한 관리 및 인증키 관리 부실로 외부 해킹 이상의 보안 사고 발생\n3. 보안 체계 및 경영진 대응 방식에 대한 법적·사회적 비판 확산",
+      "link": "https://www.businesspost.co.kr/BP?command=article_view&num=439930",
+      "source": "naver",
+      "published": "2026-07-09T07:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "중국, 접속 금지한 클로드 코드에 백도어 경고...앤트로픽 \"원래 못 쓰는...",
       "summary": "중국 정부가 미국 AI 기업 앤트로픽(Anthropic)의 코딩 도구 클로드 코드(Claude Code)에 대해 '백도어(backdoor·비밀통로)' 보안 경고를 발령했다. 중국 공업정보화부(MIIT) 산하 국가취약점데이터베이스(NVDB)는 7월 8일...",
@@ -2676,18 +2688,6 @@
       "source": "naver",
       "published": "2026-07-06T07:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "AX 경쟁 본격화되는데…망분리 완화 첫 승부서 밀린 KB·농협은행",
-      "summary": "신한은행과 하나은행, 우리은행, 카카오뱅크가 먼저 AI 기반 보안 체계 검증 기회를 확보한 가운데... 2013년 금융권 전산장애와 개인정보 유출 사고 이후 보안 강화를 위해 도입됐다. 그러나 생성형 AI와 클라우드 기반...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KB·농협은행, AI 기반 보안 검증서 2013년 금융권 전산장애·개인정보 유출 사고 후 \n2. 생성형 AI·클라우드 기반 공격 방식으로 망분리 완화 조치 취소\n3. 신한·하나·우리·카카오뱅크, AX 경쟁서 AI 보안 체계 검증 기회 확보",
-      "link": "https://dealsite.co.kr/articles/164691",
-      "source": "naver",
-      "published": "2026-07-06T07:22:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3529,21 +3529,6 @@
       "link": "https://www.exploit-db.com/exploits/52611",
       "source": "exploitdb",
       "published": "2026-07-06T09:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-10656 - NULL-pointer dereference DoS in MAX32 USB device controller transfer-completion handlers",
-      "summary": "CVE ID :CVE-2026-10656\n  \nPublished : July 5, 2026, 10:23 p.m. | 1 hour, 5 minutes ago\n  \nDescription :The MAX32xxx USB device controller driver (drivers/usb/udc/udc_max32.c, compatible adi_max32_usbhs) dereferenced an endpoint buffer in its OUT and IN transfer-completion handlers without checking it for NULL. udc_event_xfer_out_done() called net_buf_add(buf, ep_request->actlen) immediately after buf = udc_buf_get(ep_cfg), where udc_buf_get() returns NULL when the endpoint FIFO is empty. A transfer-completion event is queued from interrupt context and processed asynchronously by the driver thread; between queuing and processing, the endpoint FIFO can be drained by host-controlled control flow — in particular udc_setup_received() drains the EP0 OUT/IN FIFOs whenever a new SETUP packet arrives, and dequeue/disable/purge paths drain it likewise. A USB host that aborts an in-flight EP0 control transfer with a new SETUP packet (legal USB behavior) can therefore cause a stale XFER_OUT_DONE event to be processed against an empty FIFO, producing net_buf_add(NULL, ...), a near-NULL pointer dereference that faults and crashes the device. No authentication is required; the attacker is the USB host the device is connected to (physical bus access). Impact is denial of service (device crash). The defect was introduced when the MAX32 UDC driver was added and shipped in Zephyr v4.4.0. The fix adds NULL-buffer checks that return early with UDC_EVT_ERROR/-ENOBUFS in both the OUT-done and IN-done handlers.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-10656\n  \nPublished : July 5, 2026, 10:23 p.m. | 1 hour, 5 minutes ago\n  \nDescription :The MAX32xxx USB device controller driver (drivers/usb/udc/udc_max32.c, compatible adi_max32_usbhs) dereferenced an endpoint buffer in its OUT and IN transfer-completion handlers without checking it for NULL. udc_event_xfer_out_done() called net_buf_add(buf, ep_request->actlen) immediately after buf = udc_buf_get(ep_cfg), where udc_buf_get() returns NULL when the endpoint FIFO is empty. A transfer-completion event is queued from interrupt context and processed asynchronously by the driver thread; between queuing and processing, the endpoint FIFO can be drained by host-controlled control flow — in particular udc_setup_received() drains the EP0 OUT/IN FIFOs whenever a new SETUP packet arrives, and dequeue/disable/purge paths drain it likewise. A USB host that aborts an in-flight EP0 control transfer with a new SETUP packet (legal USB behavior) can therefore cause a stale XFER_OUT_DONE event to be processed against an empty FIFO, producing net_buf_add(NULL, ...), a near-NULL pointer dereference that faults and crashes the device. No authentication is required; the attacker is the USB host the device is connected to (physical bus access). Impact is denial of service (device crash). The defect was introduced when the MAX32 UDC driver was added and shipped in Zephyr v4.4.0. The fix adds NULL-buffer checks that return early with UDC_EVT_ERROR/-ENOBUFS in both the OUT-done and IN-done handlers.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10656 - MAX32 USB 장치 컨트롤러 전송 완료 핸들러의 NULL 포인터 역참조 DoS",
-      "summary_ko": "CVE ID:CVE-2026-10656\n  \n게시일 : 2026년 7월 5일 오후 10시 23분 | 1시간, 5분 전\n  \n설명: MAX32xxx USB 장치 컨트롤러 드라이버(drivers/usb/udc/udc_max32.c, 호환 adi_max32_usbhs)가 NULL을 확인하지 않고 OUT 및 IN 전송 완료 핸들러에서 엔드포인트 버퍼를 역참조했습니다. udc_event_xfer_out_done()은 buf = udc_buf_get(ep_cfg) 직후에 net_buf_add(buf, ep_request->actlen)을 호출했습니다. 여기서 udc_buf_get()은 엔드포인트 FIFO가 비어 있을 때 NULL을 반환합니다. 전송 완료 이벤트는 인터럽트 컨텍스트에서 대기하고 드라이버 스레드에 의해 비동기적으로 처리됩니다. 큐잉과 처리 사이에서 엔드포인트 FIFO는 호스트 제어 제어 흐름에 의해 비워질 수 있습니다. 특히 udc_setup_received()는 새 SETUP 패킷이 도착할 때마다 EP0 OUT/IN FIFO를 비우고 대기열 제거/비활성화/제거 경로도 마찬가지로 이를 비우게 됩니다. 따라서 새로운 SETUP 패킷(합법적인 USB 동작)으로 진행 중인 EP0 제어 전송을 중단하는 USB 호스트는 빈 FIFO에 대해 오래된 XFER_OUT_DONE 이벤트를 처리하여 장치에 오류를 일으키고 충돌시키는 거의 NULL 포인터 역참조인 net_buf_add(NULL, ...)를 생성할 수 있습니다. 인증이 필요하지 않습니다. 공격자는 장치가 연결된 USB 호스트입니다(물리적 버스 액세스). 영향은 서비스 거부(장치 충돌)입니다. 이 결함은 MAX32 UDC 드라이버가 Zephyr v4.4.0에 추가되어 출시될 때 발생했습니다. 수정 사항은 OUT-done 및 IN-done 핸들러 모두에서 UDC_EVT_ERROR/-ENOBUFS를 사용하여 조기에 반환하는 NULL 버퍼 검사를 추가합니다.\n  \n심각도: 4.6 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10656\n2. 26.07.06 오전7:23\n3. The MAX32xxx USB device controller driver (drivers",
-      "cve_id": "CVE-2026-10656",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10656",
-      "source": "cvefeed",
-      "published": "2026-07-06T07:23:36+09:00",
       "lang": "en"
     }
   ],
