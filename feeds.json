@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-08T22:31:32.324232+09:00",
+  "fetched_at": "2026-07-08T23:02:00.746594+09:00",
   "security_news": [
+    {
+      "title": "가짜 결제창 주의보… 카드정보 이렇게 털린다",
+      "summary": "금융보안원이 최근 국내 일부 온라인 쇼핑몰에 해킹·피싱 공격으로 신용카드 정보가 탈취된 정황을... 페이지를 해킹 등을 통해 구성하는 식으로 이뤄졌다. 피싱 페이지는 결제를 위해 카드 정보나 비밀번호, 주민등록번호...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융보안원, 국내 온라인 쇼핑몰 카드정보 해킹·피싱 공격 확인\n2. 결제페이지 위조해 카드정보·비밀번호·주민번호 유출\n3. 피해자 대상 보안점검 강화 조치 중",
+      "link": "https://www.ggilbo.com/news/articleView.html?idxno=1167648",
+      "source": "naver",
+      "published": "2026-07-08T22:50:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "세종시 병원 홈페이지 해킹 개인정보 유출…\"진료 기록 등은 안전\"",
       "summary": "사건접수 다음 날(6월 26일) 사건을 넘겨받은 세종경찰청 사이버수사대는 이날 해당 사건을 서울경찰청으로 이송했다. 해커로 추정되는 인물이 병원에 보낸 협박 이메일이 서울경찰청에서 수사 중인 기존 해킹 사건과...",
@@ -2668,6 +2680,36 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-6371 - Stored XSS in Limatek's LimRAD NAC",
+      "summary": "CVE ID :CVE-2026-6371\n  \nPublished : 2026年7月8日12:17 | 55分 ago\n  \nDescription :Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Limatek System Inc. LimRAD NAC allows Stored XSS.\n\nThis issue affects LimRAD NAC: through 08072026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-6371\n  \nPublished : 2026年7月8日12:17 | 55分 ago\n  \nDescription :Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Limatek System Inc. LimRAD NAC allows Stored XSS.\n\nThis issue affects LimRAD NAC: through 08072026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-6371 - Limatek의 LimRAD NAC에 저장된 XSS",
+      "summary_ko": "CVE ID:CVE-2026-6371\n  \n게시일 : 2026년 7월 8일 12:17 | 55분 전\n  \n설명: Limatek System Inc. LimRAD NAC의 웹 페이지 생성('교차 사이트 스크립팅') 중 입력의 부적절한 무효화 취약점은 저장된 XSS를 허용합니다.\n\n이 문제는 LimRAD NAC(08072026까지)에 영향을 미칩니다. 참고: 이 공개에 대해 공급업체에 조기에 연락했지만 어떤 방식으로도 응답하지 않았습니다.\n  \n심각도: 4.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-6371\n2. 26.07.08 오후9:17\n3. Improper neutralization of input during web page g",
+      "cve_id": "CVE-2026-6371",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6371",
+      "source": "cvefeed",
+      "published": "2026-07-08T21:17:20+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-15041 - 389-ds-base: 389-ds-base: non-constant-time comparison in pbkdf2-sha256 password verification",
+      "summary": "CVE ID :CVE-2026-15041\n  \nPublished : 2026年7月8日11:16 | 1時間, 56分 ago\n  \nDescription :A flaw was found in 389 Directory Server. The PBKDF2-SHA256 password verification function uses standard memcmp() for comparing password hashes instead of a constant-time comparison function. A remote attacker could potentially use timing measurements of LDAP bind attempts to infer partial hash information, though practical exploitation is extremely difficult due to PBKDF2 computational overhead.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-15041\n  \nPublished : 2026年7月8日11:16 | 1時間, 56分 ago\n  \nDescription :A flaw was found in 389 Directory Server. The PBKDF2-SHA256 password verification function uses standard memcmp() for comparing password hashes instead of a constant-time comparison function. A remote attacker could potentially use timing measurements of LDAP bind attempts to infer partial hash information, though practical exploitation is extremely difficult due to PBKDF2 computational overhead.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-15041 - 389-ds-base: 389-ds-base: pbkdf2-sha256 비밀번호 확인의 비상시 비교",
+      "summary_ko": "CVE ID:CVE-2026-15041\n  \n게시일 : 2026년 7월 8일 11:16 | 1시간, 56분 전\n  \n설명 :389 Directory Server에서 결함이 발견되었습니다. PBKDF2-SHA256 비밀번호 확인 기능은 상수 시간 비교 기능 대신 비밀번호 해시 비교를 위해 표준 memcmp()를 사용합니다. 원격 공격자는 잠재적으로 LDAP 바인드 시도의 타이밍 측정을 사용하여 부분 해시 정보를 추론할 수 있지만 PBKDF2 계산 오버헤드로 인해 실제 활용은 매우 어렵습니다.\n  \n심각도: 3.7 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-15041\n2. 26.07.08 오후8:16\n3. A flaw was found in 389 Directory Server. The PBKD",
+      "cve_id": "CVE-2026-15041",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15041",
+      "source": "cvefeed",
+      "published": "2026-07-08T20:16:26+09:00",
+      "lang": "en"
+    },
+    {
       "title": "My Stack Simulator, (Wed, Jul 8th)",
       "summary": "The stack is a memory region where a program stores temporary data -&#;x26;#;xc2;&#;x26;#;xa0;like local variables and return addresses. Think of the stack as a pile of plates in your kitchen: you can only add a new plate to the top, and you can only take one away from the top too. Programs use this same \"last in, first out\" principle to keep track of what they&#;x26;#;39;re doing. Every time a function is called, the program pushes a new plate onto the stack containing things like local variables and the address to return to once the function finishes. When the function is done, that plate is popped off the top, and execution resumes exactly where it left off. This simple mechanism is what allows programs to call functions within functions within functions, and always find their way back -&#;x26;#;xc2;&#;x26;#;xa0;but it&#;x26;#;39;s also precisely why a stack that grows too large, or gets overwritten with unexpected data, becomes a favorite target for attackers looking to hijack a program&#;x26;#;39;s execution flow.\r",
       "description": "The stack is a memory region where a program stores temporary data -&#;x26;#;xc2;&#;x26;#;xa0;like local variables and return addresses. Think of the stack as a pile of plates in your kitchen: you can only add a new plate to the top, and you can only take one away from the top too. Programs use this same \"last in, first out\" principle to keep track of what they&#;x26;#;39;re doing. Every time a function is called, the program pushes a new plate onto the stack containing things like local variables and the address to return to once the function finishes. When the function is done, that plate is popped off the top, and execution resumes exactly where it left off. This simple mechanism is what allows programs to call functions within functions within functions, and always find their way back -&#;x26;#;xc2;&#;x26;#;xa0;but it&#;x26;#;39;s also precisely why a stack that grows too large, or gets overwritten with unexpected data, becomes a favorite target for attackers looking to hijack a program&#;x26;#;39;s execution flow.\r",
@@ -2695,6 +2737,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-57245",
       "source": "cvefeed",
       "published": "2026-07-08T16:36:22+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[webapps] Joomla Page Builder CK  3.5.10 -  Arbitrary File Upload",
+      "summary": "Joomla Page Builder CK  3.5.10 -  Arbitrary File Upload",
+      "description": "Joomla Page Builder CK  3.5.10 -  Arbitrary File Upload",
+      "title_ko": "[webapps] Joomla Page Builder CK 3.5.10 - 임의 파일 업로드",
+      "summary_ko": "Joomla Page Builder CK 3.5.10 - 임의 파일 업로드",
+      "summary_3lines": "1. [webapps] Joomla Page Builder CK 3.5.10 - Arbitrar\n2. EXPLOITDB\n3. Joomla Page Builder CK 3.5.10 - Arbitrary File Upl",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52626",
+      "source": "exploitdb",
+      "published": "2026-07-08T09:00:00+09:00",
       "lang": "en"
     },
     {
