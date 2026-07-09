@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-09T23:01:47.299477+09:00",
+  "fetched_at": "2026-07-09T23:31:28.593919+09:00",
   "security_news": [
     {
       "title": "[#시큐리티 포커스] 나루씨큐리티 '이노비즈 AA등급' 획득·롯데건설 '부...",
@@ -2580,21 +2580,24 @@
       "source": "thehackernews",
       "published": "2026-07-07T01:28:59+09:00",
       "lang": "en"
-    },
-    {
-      "title": "\"러 해커, 영국 관리·외교관 이메일 계정 해킹\"…英 텔레그래프",
-      "summary": "NHS 의사 출신 사이버보안 전문가인 사이프 아베드 박사는 이번 침해가 환자 안전에 영향을 미치는 \"재앙적 사고\"로 이어질 수 있다고 경고했다. 영국 국가사이버보안센터(NCSC)는 긴급 경보를 발령하고, 이미 공격을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 러 해커, 영국 관리·외교관 이메일 계정 해킹\n2. NHS 의사 \"환자 안전 재앙적 사고\" 경고\n3. NCSC, 긴급 경보 발령 및 공격 조사 중",
-      "link": "https://n.news.naver.com/mnews/article/421/0009043819?sid=104",
-      "source": "naver",
-      "published": "2026-07-06T23:22:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-12593 - Privilege escalation via forged API token creation in Axivion Dashboard OIDC/OAuth2/SSO subsystem",
+      "summary": "CVE ID :CVE-2026-12593\n  \nPublished : July 9, 2026, 12:29 p.m. | 1 hour, 34 minutes ago\n  \nDescription :The implementation of an internal and undocumented Dashboard API endpoint (POST /api/users/~/{user}/tokens) forgot to ensure an HTTP request for creating an API Token for another user had sufficient permission to do so.\n\n\n\n\n\nPrecondition for successful exploitation was a preexisting internal user (with more privileges than the attacker), the attacker knowing its login name and the attacker being able to authenticate to the Dashboard via OAuth/OIDC. The attacker would then have had to forge a token creation API request on behalf of the other user and could have authenticated and finalized the token creation with their own OAuth/OIDC credentials. In the worst case, this would mean an attacker could have become Dashboard Administrator and been able to perform all administrative actions if the preexisting internal user had administrative privileges. In combination with a separate weakness, this could have further led to code execution on the host system running the Dashboard with the privileges of the OS-User running the Dashboard server.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-12593\n  \nPublished : July 9, 2026, 12:29 p.m. | 1 hour, 34 minutes ago\n  \nDescription :The implementation of an internal and undocumented Dashboard API endpoint (POST /api/users/~/{user}/tokens) forgot to ensure an HTTP request for creating an API Token for another user had sufficient permission to do so.\n\n\n\n\n\nPrecondition for successful exploitation was a preexisting internal user (with more privileges than the attacker), the attacker knowing its login name and the attacker being able to authenticate to the Dashboard via OAuth/OIDC. The attacker would then have had to forge a token creation API request on behalf of the other user and could have authenticated and finalized the token creation with their own OAuth/OIDC credentials. In the worst case, this would mean an attacker could have become Dashboard Administrator and been able to perform all administrative actions if the preexisting internal user had administrative privileges. In combination with a separate weakness, this could have further led to code execution on the host system running the Dashboard with the privileges of the OS-User running the Dashboard server.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-12593 - Axivion Dashboard OIDC/OAuth2/SSO 하위 시스템에서 위조된 API 토큰 생성을 통한 권한 상승",
+      "summary_ko": "CVE ID:CVE-2026-12593\n  \n게시일 : 2026년 7월 9일 오후 12시 29분 | 1시간 34분 전\n  \n설명: 내부 및 문서화되지 않은 Dashboard API 엔드포인트(POST /api/users/~/{user}/tokens) 구현 시 다른 사용자를 위한 API 토큰을 생성하기 위한 HTTP 요청에 충분한 권한이 있는지 확인하는 것을 잊었습니다.\n\n\n\n\n\n성공적인 악용을 위한 전제 조건은 기존 내부 사용자(공격자보다 더 많은 권한을 가짐), 공격자가 자신의 로그인 이름을 알고 있고 공격자가 OAuth/OIDC를 통해 대시보드에 인증할 수 있어야 한다는 것이었습니다. 그런 다음 공격자는 다른 사용자를 대신하여 토큰 생성 API 요청을 위조해야 하고 자신의 OAuth/OIDC 사용자 인증 정보를 사용하여 토큰 생성을 인증하고 완료할 수 있습니다. 최악의 경우 이는 공격자가 대시보드 관리자가 되어 기존 내부 사용자에게 관리 권한이 있는 경우 모든 관리 작업을 수행할 수 있음을 의미합니다. 별도의 약점과 함께 이로 인해 대시보드 서버를 실행하는 OS 사용자의 권한으로 대시보드를 실행하는 호스트 시스템에서 코드가 실행될 수 있습니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-12593\n2. 26.07.09 오후9:29\n3. The implementation of an internal and undocumented",
+      "cve_id": "CVE-2026-12593",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12593",
+      "source": "cvefeed",
+      "published": "2026-07-09T21:29:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-12590 - body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
       "summary": "CVE ID :CVE-2026-12590\n  \nPublished : July 9, 2026, 10:21 a.m. | 54 minutes ago\n  \nDescription :Impact: In body-parser versions prior to 1.20.6 (1.x line) and 2.3.0 (2.x line), when the parser is configured with an invalid limit option value such as an unparseable string or NaN, bytes.parse returns null and the request body size check is silently skipped. Applications that rely on limit as their primary safeguard against oversized request bodies will accept arbitrarily large payloads, leading to excessive memory and CPU usage and denial of service. Patches: This issue is fixed in body-parser 1.20.6 and 2.3.0. After the fix, invalid limit values throw a clear error at parser construction time instead of silently disabling enforcement, while null and undefined continue to fall back to the default limit of 100kb. Workarounds: Validate the limit value before passing it to body-parser. For example, parse the value at startup and reject any configuration where the result is null or a non-finite number.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
