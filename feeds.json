@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-10T00:31:21.039228+09:00",
+  "fetched_at": "2026-07-10T01:01:43.311384+09:00",
   "security_news": [
+    {
+      "title": "머스크 ‘반값 AI’ 승부수… ‘그록 4.5’ 공개, 앤스로픽 등 맹추격",
+      "summary": "그록 4.5에도 해킹 악용을 막는 제한 장치가 적용됐다. 커서는 “취약점을 찾아 고치는 정상적인 보안 작업은 허용하되 시스템에 해를 끼치려는 악의적 명령은 차단하겠다”고 밝혔다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 엘론 머스크 xAI, ‘그록 4.5’ 공개해 반값 AI 경쟁 가속화\n2. 시스템 해킹 악용 차단 기능 탑재, 정상적 보안 테스트 허용\n3. 앤스로픽 등 경쟁사 맹추격, 악의적 명령 차단 방침 강조",
+      "link": "https://n.news.naver.com/mnews/article/020/0003732851?sid=101",
+      "source": "naver",
+      "published": "2026-07-10T00:31:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[#시큐리티 포커스] 나루씨큐리티 '이노비즈 AA등급' 획득·롯데건설 '부...",
       "summary": "롯데건설은 아파트 월패드 해킹 우려에 대응해 '홈네트워크 및 아파트 커뮤니티 시스템 통합 보안체계'를... 신종 해킹 수법 'SPCA'를 선제 개발해 취약점을 차단했다. 허준범 고려대 컴퓨터학과 교수가 이끄는...",
@@ -3601,21 +3613,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-40257",
       "source": "cvefeed",
       "published": "2026-07-07T01:26:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-43825 - Apache OpenNLP :: Core :: ML :: LibSVM: Unsafe Java Deserialization in SvmDoccatModel",
-      "summary": "CVE ID :CVE-2026-43825\n  \nPublished : July 6, 2026, 3:42 p.m. | 1 hour, 32 minutes ago\n  \nDescription :Untrusted Java Deserialization in Apache OpenNLP SvmDoccatModel\n\nVersions Affected:\n  before 3.0.0-M4 (libsvm document categorization module; introduced in\n  OPENNLP-1808 and only present on the 3.x line)\n\nDescription:\nSvmDoccatModel.deserialize(InputStream) reads an attacker-controlled\nstream with java.io.ObjectInputStream and calls readObject() without an\nObjectInputFilter installed. ObjectInputStream materialises every class\nreferenced in the stream before the resulting object is cast to\nSvmDoccatModel, so the cast that follows readObject() executes only\nafter the foreign object graph has already been deserialised in full.\n\nIf a Java deserialization gadget chain is available on the consumer's\nclasspath, a crafted payload supplied to\ndeserialize() executes arbitrary code in the JVM that loads it. Apache\nOpenNLP itself does not ship a known gadget chain, so the realistic\nrisk is to downstream applications that embed the libsvm module\nalongside vulnerable transitive dependencies. The method is public and\nstatic, so any caller can pass an untrusted stream to it directly.\n\nThe practical impact is remote code execution against processes that\nload SvmDoccatModel instances from untrusted or semi-trusted origins.\n\nMitigation:\n\n3.x users should upgrade to 3.0.0-M4.\n\nUsers who cannot upgrade immediately should treat all serialized\nSvmDoccatModel streams as untrusted input unless their provenance is\nverified, and should avoid invoking SvmDoccatModel.deserialize() on\nstreams supplied by end users or fetched from third-party sources\nwithout integrity checks.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-43825\n  \nPublished : July 6, 2026, 3:42 p.m. | 1 hour, 32 minutes ago\n  \nDescription :Untrusted Java Deserialization in Apache OpenNLP SvmDoccatModel\n\nVersions Affected:\n  before 3.0.0-M4 (libsvm document categorization module; introduced in\n  OPENNLP-1808 and only present on the 3.x line)\n\nDescription:\nSvmDoccatModel.deserialize(InputStream) reads an attacker-controlled\nstream with java.io.ObjectInputStream and calls readObject() without an\nObjectInputFilter installed. ObjectInputStream materialises every class\nreferenced in the stream before the resulting object is cast to\nSvmDoccatModel, so the cast that follows readObject() executes only\nafter the foreign object graph has already been deserialised in full.\n\nIf a Java deserialization gadget chain is available on the consumer's\nclasspath, a crafted payload supplied to\ndeserialize() executes arbitrary code in the JVM that loads it. Apache\nOpenNLP itself does not ship a known gadget chain, so the realistic\nrisk is to downstream applications that embed the libsvm module\nalongside vulnerable transitive dependencies. The method is public and\nstatic, so any caller can pass an untrusted stream to it directly.\n\nThe practical impact is remote code execution against processes that\nload SvmDoccatModel instances from untrusted or semi-trusted origins.\n\nMitigation:\n\n3.x users should upgrade to 3.0.0-M4.\n\nUsers who cannot upgrade immediately should treat all serialized\nSvmDoccatModel streams as untrusted input unless their provenance is\nverified, and should avoid invoking SvmDoccatModel.deserialize() on\nstreams supplied by end users or fetched from third-party sources\nwithout integrity checks.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-43825 - Apache OpenNLP :: Core :: ML :: LibSVM: SvmDoccatModel의 안전하지 않은 Java 역직렬화",
-      "summary_ko": "CVE ID:CVE-2026-43825\n  \n게시일 : 2026년 7월 6일 오후 3시 42분 | 1시간 32분 전\n  \n설명:Apache OpenNLP SvmDoccatModel의 신뢰할 수 없는 Java 역직렬화\n\n영향을 받는 버전:\n  3.0.0-M4 이전(libsvm 문서 분류 모듈, 다음에 도입됨)\n  OPENNLP-1808이며 3.x 라인에만 존재함)\n\n설명:\nSvmDoccatModel.deserialize(InputStream)은 공격자가 제어하는 스트림을 읽습니다.\njava.io.ObjectInputStream을 사용하여 스트림하고 readObject()를 호출합니다.\nObjectInputFilter가 설치되었습니다. ObjectInputStream은 모든 클래스를 구체화합니다.\n결과 객체가 캐스팅되기 전에 스트림에서 참조됩니다.\nSvmDoccatModel이므로 readObject() 다음에 오는 캐스트는 다음과 같은 캐스트만 실행합니다.\n이물질 그래프가 이미 완전히 역직렬화된 후입니다.\n\nJava 역직렬화 가젯 체인을 소비자에서 사용할 수 있는 경우\n클래스패스(classpath)는 다음에 제공되는 제작된 페이로드입니다.\ndeserialize()는 이를 로드하는 JVM에서 임의의 코드를 실행합니다. 아파치\nOpenNLP 자체는 알려진 가젯 체인을 제공하지 않으므로 현실적입니다.\n위험은 libsvm 모듈을 포함하는 다운스트림 애플리케이션에 있습니다.\n취약한 전이적 종속성과 함께. 방법은 공개적이고\n정적이므로 모든 호출자가 신뢰할 수 없는 스트림을 직접 전달할 수 있습니다.\n\n실질적인 영향은 프로세스에 대한 원격 코드 실행입니다.\n신뢰할 수 없거나 부분적으로 신뢰할 수 있는 출처에서 SvmDoccatModel 인스턴스를 로드합니다.\n\n완화:\n\n3.x 사용자는 3.0.0-M4로 업그레이드해야 합니다.\n\n즉시 업그레이드할 수 없는 사용자는 직렬화된 모든 제품을 처리해야 합니다.\nSvmDoccatModel은 출처가 확실하지 않은 한 신뢰할 수 없는 입력으로 스트리밍합니다.\n확인되었으며 SvmDoccatModel.deserialize()를 호출하지 않아야 합니다.\n최종 사용자가 제공하거나 타사 소스에서 가져온 스트림\n무결성 검사 없이.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-43825\n2. 26.07.07 오전12:42\n3. Untrusted Java Deserialization in Apache OpenNLP S",
-      "cve_id": "CVE-2026-43825",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-43825",
-      "source": "cvefeed",
-      "published": "2026-07-07T00:42:04+09:00",
       "lang": "en"
     }
   ],
