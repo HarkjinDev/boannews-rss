@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-10T05:01:38.178468+09:00",
+  "fetched_at": "2026-07-10T05:31:26.162728+09:00",
   "security_news": [
     {
       "title": "내 스마트폰 속, 나를 파는 스파이[AI가 바꾸는 세상]",
@@ -2559,6 +2559,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-59148 - Mockoon: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
+      "summary": "CVE ID :CVE-2026-59148\n  \nPublished : July 9, 2026, 7:17 p.m. | 44 minutes ago\n  \nDescription :Mockoon provides way to design and run mock APIs. Prior to 9.7.0, Mockoon's admin API in commons-server/src/libs/server/admin-api.ts is mounted on the same Express listener as user-defined mock routes, enabled by default in shipped runtimes, serves Access-Control-Allow-Origin: * with write methods allowed, and has no authentication. Any unauthenticated caller who can reach the mock server port can read MOCKOON_* environment variables, write arbitrary process environment variables through /mockoon-admin/env-vars, rewrite mock route bodies, statuses, and headers through PUT /mockoon-admin/environment, read transaction logs and SSE streams, and purge state. This issue is fixed in version 9.7.0.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59148\n  \nPublished : July 9, 2026, 7:17 p.m. | 44 minutes ago\n  \nDescription :Mockoon provides way to design and run mock APIs. Prior to 9.7.0, Mockoon's admin API in commons-server/src/libs/server/admin-api.ts is mounted on the same Express listener as user-defined mock routes, enabled by default in shipped runtimes, serves Access-Control-Allow-Origin: * with write methods allowed, and has no authentication. Any unauthenticated caller who can reach the mock server port can read MOCKOON_* environment variables, write arbitrary process environment variables through /mockoon-admin/env-vars, rewrite mock route bodies, statuses, and headers through PUT /mockoon-admin/environment, read transaction logs and SSE streams, and purge state. This issue is fixed in version 9.7.0.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-59148 - Mockoon: 인증되지 않은 관리 API + 와일드카드 CORS로 인해 모의 상태 하이재킹 및 비밀 절도가 허용됩니다.",
+      "summary_ko": "CVE ID:CVE-2026-59148\n  \n게시일 : 2026년 7월 9일 오후 7시 17분 | 44분 전\n  \n설명 : Mockoon은 모의 API를 설계하고 실행하는 방법을 제공합니다. 9.7.0 이전에는 commons-server/src/libs/server/admin-api.ts에 있는 Mockoon의 관리 API가 사용자 정의 모의 경로와 동일한 Express 리스너에 마운트되어 기본적으로 제공된 런타임에서 활성화되고 쓰기 방법이 허용되는 Access-Control-Allow-Origin: *을 제공하며 인증이 없습니다. 모의 서버 포트에 도달할 수 있는 인증되지 않은 호출자는 MOCKOON_* 환경 변수를 읽고, /mockoon-admin/env-vars를 통해 임의의 프로세스 환경 변수를 쓰고, PUT /mockoon-admin/environment를 통해 모의 경로 본문, 상태 및 헤더를 다시 작성하고, 트랜잭션 로그 및 SSE 스트림을 읽고, 상태를 제거할 수 있습니다. 이 문제는 버전 9.7.0에서 해결되었습니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-59148\n2. 26.07.10 오전4:17\n3. Mockoon provides way to design and run mock APIs. ",
+      "cve_id": "CVE-2026-59148",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59148",
+      "source": "cvefeed",
+      "published": "2026-07-10T04:17:07+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-0285 - PAN-OS: Server-Side Request Forgery Vulnerability in Management Web Interface",
+      "summary": "CVE ID :CVE-2026-0285\n  \nPublished : July 9, 2026, 7:17 p.m. | 44 minutes ago\n  \nDescription :A server-side request forgery (SSRF) vulnerability in Palo Alto Networks PAN-OS software enables an authenticated administrator with network access to the management web interface to make unauthorized requests from the firewall to internal services.\n\n\n\nThe security risk posed by this issue is minimized when the management interface is restricted to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 . \n\nPanorama, Cloud NGFW, and Prisma® Access are not impacted by this vulnerability.\n  \nSeverity: 4.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-0285\n  \nPublished : July 9, 2026, 7:17 p.m. | 44 minutes ago\n  \nDescription :A server-side request forgery (SSRF) vulnerability in Palo Alto Networks PAN-OS software enables an authenticated administrator with network access to the management web interface to make unauthorized requests from the firewall to internal services.\n\n\n\nThe security risk posed by this issue is minimized when the management interface is restricted to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 . \n\nPanorama, Cloud NGFW, and Prisma® Access are not impacted by this vulnerability.\n  \nSeverity: 4.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-0285 - PAN-OS: 관리 웹 인터페이스의 서버 측 요청 위조 취약점",
+      "summary_ko": "CVE ID:CVE-2026-0285\n  \n게시일 : 2026년 7월 9일 오후 7시 17분 | 44분 전\n  \n설명: Palo Alto Networks PAN-OS 소프트웨어의 서버 측 요청 위조(SSRF) 취약점으로 인해 인증된 관리자가 관리 웹 인터페이스에 대한 네트워크 액세스 권한을 갖고 방화벽에서 내부 서비스로 무단 요청을 할 수 있습니다.\n\n\n\n권장되는 모범 사례 배포 지침(https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431)에 따라 관리 인터페이스가 신뢰할 수 있는 내부 IP 주소로만 제한되면 이 문제로 인한 보안 위험이 최소화됩니다. \n\nPanorama, Cloud NGFW 및 Prisma® Access는 이 취약점의 영향을 받지 않습니다.\n  \n심각도: 4.7 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-0285\n2. 26.07.10 오전4:17\n3. A server-side request forgery (SSRF) vulnerability",
+      "cve_id": "CVE-2026-0285",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-0285",
+      "source": "cvefeed",
+      "published": "2026-07-10T04:17:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-60109 - Zeek < 8.0.9 Null Pointer Dereference DoS via Kerberos KRB_ERROR Parsing",
       "summary": "CVE ID :CVE-2026-60109\n  \nPublished : July 9, 2026, 3:16 p.m. | 52 minutes ago\n  \nDescription :Zeek before 8.0.9 contains a null pointer dereference vulnerability in its Kerberos protocol analyzer that allows unauthenticated remote attackers to crash the sensor by sending a crafted KRB_ERROR message with error-code 25 (KDC_ERR_PREAUTH_REQUIRED) containing a PA-DATA element with padata-type 2, 3, 11, or 19. Attackers can exploit a parser and analyzer state mismatch where proc_padata() dereferences an uninitialized pa_data_element field selected by the wrong parsing arm, triggering a crash via a single UDP or TCP packet to port 88 without any credentials or prior authentication.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
