@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-09T18:31:43.349511+09:00",
+  "fetched_at": "2026-07-09T19:01:52.463355+09:00",
   "security_news": [
+    {
+      "title": "“취약점 찾아내면 취약한 기업이라 오해”... CVD·VDP 정착하려면?",
+      "summary": "집단지성 통한 보안 사각지대 해소 효과CVDVDP는 일시적 이벤트 형태로 운영하는 모의해킹이나 버그바운티와... 박 과장은 내부 모의해킹보다 외부 연구자들이 찾은 블랙박스 모의해킹으로 중요한 취약점들을 더 많이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVD·VDP 도입 논의, 취약점 집단지능 분석 확대\n2. 외부 연구자 블랙박스 테스트, 내부 모의해킹보다 취약점 23% 더 발견\n3. 일회성 이벤트형 운영 지적, 지속적 프로그램 전환 권고",
+      "link": "http://www.boannews.com/media/view.asp?idx=144614&kind=2",
+      "source": "naver",
+      "published": "2026-07-09T18:46:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"불안감 자극 후 개인정보 빼내\" 네이버, 피싱 메올 피해 주의 당부… 대...",
       "summary": "또 피싱 메일 링크를 통해 네이버 로그인 페이지처럼 보이는 화면에 접속하면 정상적인 로그인 주소인지 확인해야 하며, 낯선 도메인과 보안 경고, 짧은 주소는 주의할 것을 강조했다. 만약 이미 피싱 메일을 통해 접속한...",
@@ -2580,30 +2592,6 @@
       "source": "naver",
       "published": "2026-07-06T19:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "AI가 해킹 과외?…日 뒤집은 '사이버 공격' 범인 정체",
-      "summary": "일본 경시청에 따르면 그는 챗GPT의 도움을 받아 제작한 해킹 프로그램으로 범행한 것으로 조사됐다. 경시청은 그가 반다이 채널 서버의 취약점을 찾아낸 뒤 타인의 계정 정보를 손에 넣어 공격을 실행했다고 설명했다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 일본 경시청, 챗GPT 활용해 반다이 채널 서버 해킹\n2. 챗GPT로 취약점 분석 후 타인 계정 정보 유출\n3. 일본 경시청, 해킹 수법 규명 중",
-      "link": "https://n.news.naver.com/mnews/article/215/0001257786?sid=104",
-      "source": "naver",
-      "published": "2026-07-06T18:47:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "7월 6일 퇴근길 팟캐스트 1억2865만달러 청산 속 바이낸스 유럽 거래 중...",
-      "summary": "보안 이슈도 이어졌다. 서머파이는 공격으로 약 600만달러를 탈취당한 것으로 파악됐고, 지갑 생성 취약점인 'Ill Bloom' 악용으로 다수 계정이 계속 위험에 노출된 것으로 전해졌다. 개별 프로젝트 해킹과 지갑 보안...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 서머파이, 'Ill Bloom' 취약점으로 600만달러 탈취\n2. 지갑 생성 취약점 악용해 다수 계정 위험 노출\n3. 바이낸스 유럽, 7월6일 청산 과정서 보안 이슈 지속",
-      "link": "https://www.tokenpost.kr/news/insights/375323",
-      "source": "naver",
-      "published": "2026-07-06T18:34:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2905,6 +2893,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59997",
       "source": "msrc",
       "published": "2026-07-09T17:01:15+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-5523 - Divi Form Builder <= 5.1.8 - Authenticated (Subscriber+) Missing Authorization to Privilege Escalation via User Profile Update Form",
+      "summary": "CVE ID :CVE-2026-5523\n  \nPublished : July 9, 2026, 6:16 a.m. | 1 hour, 48 minutes ago\n  \nDescription :The Divi Form Builder plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 5.1.8. This is due to the update_user() function accepting a user ID parameter from form submissions without verifying that the authenticated user has permission to edit that specific user account, and the handle_register_submission() function only checking if any user is logged in rather than validating permissions for the target user. This makes it possible for authenticated attackers, with subscriber-level access and above, to change the email address and password of any user account, including administrators, resulting in complete account takeover.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-5523\n  \nPublished : July 9, 2026, 6:16 a.m. | 1 hour, 48 minutes ago\n  \nDescription :The Divi Form Builder plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 5.1.8. This is due to the update_user() function accepting a user ID parameter from form submissions without verifying that the authenticated user has permission to edit that specific user account, and the handle_register_submission() function only checking if any user is logged in rather than validating permissions for the target user. This makes it possible for authenticated attackers, with subscriber-level access and above, to change the email address and password of any user account, including administrators, resulting in complete account takeover.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-5523 ​​- Divi Form Builder <= 5.1.8 - 인증된(구독자+) 사용자 프로필 업데이트 양식을 통한 권한 상승에 대한 권한 누락",
+      "summary_ko": "CVE ID:CVE-2026-5523\n  \n게시일 : 2026년 7월 9일 오전 6시 16분 | 1시간 48분 전\n  \n설명 : WordPress용 Divi Form Builder 플러그인은 5.1.8 이하 버전에서 Missing Authorization에 취약합니다. 이는 인증된 사용자가 특정 사용자 계정을 편집할 수 있는 권한이 있는지 확인하지 않고 양식 제출에서 사용자 ID 매개변수를 받아들이는 update_user() 함수와 대상 사용자에 대한 권한을 검증하는 대신 사용자가 로그인되어 있는지만 확인하는 handler_register_submission() 함수 때문입니다. 이를 통해 구독자 수준 이상의 액세스 권한을 가진 인증된 공격자가 관리자를 포함한 모든 사용자 계정의 이메일 주소와 비밀번호를 변경하여 계정을 완전히 탈취할 수 있습니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-5523\n2. 26.07.09 오후3:16\n3. The Divi Form Builder plugin for WordPress is vuln",
+      "cve_id": "CVE-2026-5523",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-5523",
+      "source": "cvefeed",
+      "published": "2026-07-09T15:16:21+09:00",
       "lang": "en"
     },
     {
