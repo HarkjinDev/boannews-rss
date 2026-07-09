@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-10T07:01:28.646041+09:00",
+  "fetched_at": "2026-07-10T07:32:38.352703+09:00",
   "security_news": [
+    {
+      "title": "하나투어 '와신상담' 10년…여행업계 정보보호 표준 될까",
+      "summary": "하나투어는 2017년 악성 프로그램을 이용한 해킹 공격으로 49만여명의 개인정보가 유출돼 안전조치 위반... B2C 업계를 표적으로 한 해킹 공격이 늘어나는 데다 2027년부터 정보보호공시 의무 기준에서 매출액 요건이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 하나투어 2017년 악성코드 공격으로 49만명 개인정보 유출\n2. 해킹 방식은 악성프로그램 이용한 시스템 침해\n3. 2027년부터 여행업 정보보호공시 의무 강화 예정",
+      "link": "https://www.ngetnews.com/news/articleView.html?idxno=551410",
+      "source": "naver",
+      "published": "2026-07-10T07:16:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "⑤해킹 은폐·거짓 보고…중징계 받을까 [표류하는 새KT]",
       "summary": "통신과 보안에 안일했던 KT의 인식이 고스란히 드러나는 부분이다. 앞서 KT는 경영 효율화를 이유로 2024년... 소비자주권시민회의는 \"보안 부실을 낳은 KT에 2000억원 과징금은 최소한의 책임 조치\"라며 \"개인정보위는...",
@@ -2548,6 +2560,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-33800 - Junos OS: MX Series: In a VC scenario a high rate of micro-BFD session flaps will cause an FPC crash",
+      "summary": "CVE ID :CVE-2026-33800\n  \nPublished : July 9, 2026, 9:16 p.m. | 53 minutes ago\n  \nDescription :An Unchecked Input for Loop Condition vulnerability in the Packet Forwarding Engine (pfe) of Juniper Networks Junos OS on MX Series allows an unauthenticated, adjacent attacker to cause a Denial-of-Service (DoS).Micro-BFD session flaps generate respective up/down events which are queued by PFEMAN for processing. Especially in a Virtual-Chassis (VC) scenario with locality‑bias configured, processing takes a significant amount of time for each event. If these sessions keep flapping, new events are constantly added, and in turn PFEMAN never completes processing these events. This results in the PFEMAN watchdog timer expiring, which causes the FPC to crash and restart, representing a complete service outage.\n\n\nThis issue only affects MX series FPCs up to and including MPC9. It does not affect MPC10/11, LC4800/9600 and MX304.\n\nThis issue affects Junos OS on MX Series:\n\n\n  *  all versions before 23.2R2-S7,\n  *  23.4 versions before 23.4R2-S8,\n  *  24.2 versions before 24.2R2-S4,\n  *  24.4 versions before 24.4R2-S3,\n  *  25.2 versions before 25.2R2.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-33800\n  \nPublished : July 9, 2026, 9:16 p.m. | 53 minutes ago\n  \nDescription :An Unchecked Input for Loop Condition vulnerability in the Packet Forwarding Engine (pfe) of Juniper Networks Junos OS on MX Series allows an unauthenticated, adjacent attacker to cause a Denial-of-Service (DoS).Micro-BFD session flaps generate respective up/down events which are queued by PFEMAN for processing. Especially in a Virtual-Chassis (VC) scenario with locality‑bias configured, processing takes a significant amount of time for each event. If these sessions keep flapping, new events are constantly added, and in turn PFEMAN never completes processing these events. This results in the PFEMAN watchdog timer expiring, which causes the FPC to crash and restart, representing a complete service outage.\n\n\nThis issue only affects MX series FPCs up to and including MPC9. It does not affect MPC10/11, LC4800/9600 and MX304.\n\nThis issue affects Junos OS on MX Series:\n\n\n  *  all versions before 23.2R2-S7,\n  *  23.4 versions before 23.4R2-S8,\n  *  24.2 versions before 24.2R2-S4,\n  *  24.4 versions before 24.4R2-S3,\n  *  25.2 versions before 25.2R2.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-33800 - Junos OS: MX 시리즈: VC 시나리오에서 마이크로 BFD 세션 플랩 비율이 높으면 FPC 충돌이 발생합니다.",
+      "summary_ko": "CVE ID:CVE-2026-33800\n  \n게시일 : 2026년 7월 9일 오후 9시 16분 | 53분 전\n  \n설명: MX 시리즈의 Juniper Networks Junos OS에 있는 PFE(패킷 전달 엔진)의 루프 상태에 대한 확인되지 않은 입력 취약점으로 인해 인증되지 않은 인접 공격자가 서비스 거부(DoS)를 유발할 수 있습니다. Micro-BFD 세션 플랩은 처리를 위해 PFEMAN에 의해 대기되는 각각의 작동/중단 이벤트를 생성합니다. 특히 지역성 편향이 구성된 가상 섀시(VC) 시나리오에서는 각 이벤트를 처리하는 데 상당한 시간이 걸립니다. 이러한 세션이 계속해서 펄럭이면 새 이벤트가 지속적으로 추가되고 결과적으로 PFEMAN은 이러한 이벤트 처리를 완료하지 않습니다. 이로 인해 PFEMAN 감시 타이머가 만료되어 FPC가 충돌하고 다시 시작되어 완전한 서비스 중단을 나타냅니다.\n\n\n이 문제는 MPC9까지의 MX 시리즈 FPC에만 영향을 미칩니다. MPC10/11, LC4800/9600 및 MX304에는 영향을 미치지 않습니다.\n\n이 문제는 MX 시리즈의 Junos OS에 영향을 미칩니다.\n\n\n  * 23.2R2-S7 이전의 모든 버전,\n  * 23.4R2-S8 이전의 23.4 버전,\n  * 24.2R2-S4 이전의 24.2 버전,\n  * 24.4R2-S3 이전의 24.4 버전,\n  * 25.2R2 이전의 25.2 버전.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-33800\n2. 26.07.10 오전6:16\n3. An Unchecked Input for Loop Condition vulnerabilit",
+      "cve_id": "CVE-2026-33800",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-33800",
+      "source": "cvefeed",
+      "published": "2026-07-10T06:16:55+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-59148 - Mockoon: Unauthenticated admin API + wildcard CORS allows mock-state hijack and secret theft",
       "summary": "CVE ID :CVE-2026-59148\n  \nPublished : July 9, 2026, 7:17 p.m. | 44 minutes ago\n  \nDescription :Mockoon provides way to design and run mock APIs. Prior to 9.7.0, Mockoon's admin API in commons-server/src/libs/server/admin-api.ts is mounted on the same Express listener as user-defined mock routes, enabled by default in shipped runtimes, serves Access-Control-Allow-Origin: * with write methods allowed, and has no authentication. Any unauthenticated caller who can reach the mock server port can read MOCKOON_* environment variables, write arbitrary process environment variables through /mockoon-admin/env-vars, rewrite mock route bodies, statuses, and headers through PUT /mockoon-admin/environment, read transaction logs and SSE streams, and purge state. This issue is fixed in version 9.7.0.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-59148\n  \nPublished : July 9, 2026, 7:17 p.m. | 44 minutes ago\n  \nDescription :Mockoon provides way to design and run mock APIs. Prior to 9.7.0, Mockoon's admin API in commons-server/src/libs/server/admin-api.ts is mounted on the same Express listener as user-defined mock routes, enabled by default in shipped runtimes, serves Access-Control-Allow-Origin: * with write methods allowed, and has no authentication. Any unauthenticated caller who can reach the mock server port can read MOCKOON_* environment variables, write arbitrary process environment variables through /mockoon-admin/env-vars, rewrite mock route bodies, statuses, and headers through PUT /mockoon-admin/environment, read transaction logs and SSE streams, and purge state. This issue is fixed in version 9.7.0.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3565,21 +3592,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-53646",
       "source": "cvefeed",
       "published": "2026-07-07T08:16:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-38979 - Ajenti Clickjacking Vulnerability",
-      "summary": "CVE ID :CVE-2026-38979\n  \nPublished : July 6, 2026, 10:16 p.m. | 1 hour, 28 minutes ago\n  \nDescription :ajenti through v2.2.13 has a clickjacking weakness in the browser-facing login and administrative UI. In ajenti-core/aj/http.py, the core HTTP response path initializes an empty header list, forwards handler-added headers verbatim, and finalizes responses through WSGI start_response() without adding anti-framing protections such as X-Frame-Options or a Content-Security-Policy frame-ancestors restriction.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-38979\n  \nPublished : July 6, 2026, 10:16 p.m. | 1 hour, 28 minutes ago\n  \nDescription :ajenti through v2.2.13 has a clickjacking weakness in the browser-facing login and administrative UI. In ajenti-core/aj/http.py, the core HTTP response path initializes an empty header list, forwards handler-added headers verbatim, and finalizes responses through WSGI start_response() without adding anti-framing protections such as X-Frame-Options or a Content-Security-Policy frame-ancestors restriction.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-38979 - Ajenti 클릭재킹 취약점",
-      "summary_ko": "CVE ID:CVE-2026-38979\n  \n게시일 : 2026년 7월 6일 오후 10시 16분 | 1시간 28분 전\n  \n설명 :ajenti v2.2.13부터 브라우저에 표시되는 로그인 및 관리 UI에 클릭재킹 취약점이 있습니다. ajenti-core/aj/http.py에서 핵심 HTTP 응답 경로는 빈 헤더 목록을 초기화하고, 처리기가 추가된 헤더를 그대로 전달하고, X-Frame-Options 또는 Content-Security-Policy 프레임 조상 제한과 같은 프레임 방지 보호를 추가하지 않고 WSGI start_response()를 통해 응답을 마무리합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-38979\n2. 26.07.07 오전7:16\n3. ajenti through v2.2.13 has a clickjacking weakness",
-      "cve_id": "CVE-2026-38979",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-38979",
-      "source": "cvefeed",
-      "published": "2026-07-07T07:16:49+09:00",
       "lang": "en"
     }
   ],
