@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-10T01:01:43.311384+09:00",
+  "fetched_at": "2026-07-10T01:31:22.089272+09:00",
   "security_news": [
     {
       "title": "머스크 ‘반값 AI’ 승부수… ‘그록 4.5’ 공개, 앤스로픽 등 맹추격",
@@ -2580,18 +2580,6 @@
       "source": "darkreading",
       "published": "2026-07-07T01:36:50+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Threat Actors Probe Gitea Docker Flaw CVE-2026-20896 13 Days After Disclosure",
-      "summary": "Threat actors have been observed attempting to exploit a recently patched critical security flaw in Gitea Docker images, according to Sysdig.\n\nThe vulnerability in question is CVE-2026-20896 (CVSS score: 9.8), a vulnerability that stems from the DevOps platform trusting the \"X-WEBAUTH-USER\" header from any source IP address, effectively allowing an unauthenticated internet client to get elevated",
-      "content": "",
-      "title_ko": "위협 행위자 프로브 Gitea Docker 결함 CVE-2026-20896 공개 후 13일",
-      "summary_ko": "Sysdig에 따르면 위협 ​​행위자들이 최근 패치된 Gitea Docker 이미지의 심각한 보안 결함을 악용하려고 시도하는 것이 관찰되었습니다.\n\n문제의 취약점은 CVE-2026-20896(CVSS 점수: 9.8)입니다. 이 취약점은 DevOps 플랫폼이 모든 소스 IP 주소의 \"X-WEBAUTH-USER\" 헤더를 신뢰하여 인증되지 않은 인터넷 클라이언트의 권한이 효과적으로 상승하는 데서 발생합니다.",
-      "summary_3lines": "1. Gitea Docker 취약점 CVE-2026-20896(점수 9.8) 공격 시도\n2. \"X-WEBAUTH-USER\" 헤더 신뢰로 인해 인증 없이 권한 상승\n3. 패치 13일 만에 악의적 행위자 공격 시도 확인",
-      "link": "https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html",
-      "source": "thehackernews",
-      "published": "2026-07-07T01:28:59+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -3598,21 +3586,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-54291",
       "source": "cvefeed",
       "published": "2026-07-07T03:55:01+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-40257 - OP-TEE has SHA-3 accelerated finalize heap overflow",
-      "summary": "CVE ID :CVE-2026-40257\n  \nPublished : July 6, 2026, 4:26 p.m. | 48 minutes ago\n  \nDescription :OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology. Starting in version 3.21.0 and prior to version 4.11.0, the ARM Crypto Extensions accelerated SHA-3 implementation has an off-by-one error that can cause a massive heap overflow that corrupts all TEE kernel memory following the hash state. This affects all platforms built with `CFG_CRYPTO_WITH_CE82=y` (ARMv8.2+ with SHA3 Crypto Extensions). Version 4.11.0 contains a patch. As a workaround, disable SHA3 Crypto Extensions with `CFG_CRYPTO_WITH_CE82=n`.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-40257\n  \nPublished : July 6, 2026, 4:26 p.m. | 48 minutes ago\n  \nDescription :OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology. Starting in version 3.21.0 and prior to version 4.11.0, the ARM Crypto Extensions accelerated SHA-3 implementation has an off-by-one error that can cause a massive heap overflow that corrupts all TEE kernel memory following the hash state. This affects all platforms built with `CFG_CRYPTO_WITH_CE82=y` (ARMv8.2+ with SHA3 Crypto Extensions). Version 4.11.0 contains a patch. As a workaround, disable SHA3 Crypto Extensions with `CFG_CRYPTO_WITH_CE82=n`.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-40257 - OP-TEE에는 SHA-3 가속 마무리 힙 오버플로가 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-40257\n  \n게시일 : 2026년 7월 6일 오후 4시 26분 | 48분 전\n  \n설명 :OP-TEE는 Arm에서 실행되는 비보안 Linux 커널의 동반자로 설계된 TEE(신뢰할 수 있는 실행 환경)입니다. TrustZone 기술을 사용하는 Cortex-A 코어. 버전 3.21.0부터 버전 4.11.0 이전에는 ARM Crypto Extensions 가속 SHA-3 구현에 해시 상태에 따라 모든 TEE 커널 메모리를 손상시키는 대규모 힙 오버플로를 일으킬 수 있는 개별 오류가 있습니다. 이는 `CFG_CRYPTO_WITH_CE82=y`(SHA3 암호화 확장이 포함된 ARMv8.2+)로 구축된 모든 플랫폼에 영향을 미칩니다. 버전 4.11.0에는 패치가 포함되어 있습니다. 해결 방법으로 'CFG_CRYPTO_WITH_CE82=n'을 사용하여 SHA3 암호화 확장을 비활성화하세요.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-40257\n2. 26.07.07 오전1:26\n3. OP-TEE is a Trusted Execution Environment (TEE) de",
-      "cve_id": "CVE-2026-40257",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-40257",
-      "source": "cvefeed",
-      "published": "2026-07-07T01:26:20+09:00",
       "lang": "en"
     }
   ],
