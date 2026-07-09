@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-09T22:01:55.044459+09:00",
+  "fetched_at": "2026-07-09T22:31:24.257881+09:00",
   "security_news": [
     {
       "title": "\"AI로 인해 CISO 업무 2.5배 늘어···업무 증가세 더욱 가속화\"",
@@ -2580,18 +2580,6 @@
       "source": "naver",
       "published": "2026-07-06T23:22:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Max severity Adobe ColdFusion flaw now exploited in attacks",
-      "summary": "Attackers are now exploiting a maximum-severity Adobe ColdFusion vulnerability tracked as CVE-2026-48282, the Canadian Center for Cyber Security (CCCS) warned on Thursday. [...]",
-      "content": "",
-      "title_ko": "최대 심각도 Adobe ColdFusion 결함, 이제 공격에 악용됨",
-      "summary_ko": "캐나다 사이버 보안 센터(CCCS)는 목요일에 공격자들이 CVE-2026-48282로 추적되는 최대 심각도의 Adobe ColdFusion 취약점을 악용하고 있다고 경고했습니다. [...]",
-      "summary_3lines": "1. 아도비 콜드퓨전 최고위험 취약점(CVE-2026-48282) 공격 발생\n2. 캐나다 사이버보안센터(CCCS) \"악성코드 주입 공격 중\" 경고\n3. 패치 미적용 시 서버 제어권 유출 위험, 즉시 업데이트 권고",
-      "link": "https://www.bleepingcomputer.com/news/security/max-severity-adobe-coldfusion-flaw-now-exploited-in-attacks/",
-      "source": "bleepingcomputer",
-      "published": "2026-07-06T22:18:37+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -3643,21 +3631,6 @@
       "link": "https://isc.sans.edu/diary/rss/33124",
       "source": "sans_isc",
       "published": "2026-07-06T22:35:58+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-13705 - Imager versions before 1.032 for Perl have a heap out-of-bounds read in the bundled Imager::File::SGI reader via a 16-bit RLE literal run in read_rgb_16_rle",
-      "summary": "CVE ID :CVE-2026-13705\n  \nPublished : July 6, 2026, 1:16 p.m. | 28 minutes ago\n  \nDescription :Imager versions before 1.032 for Perl have a heap out-of-bounds read in the bundled Imager::File::SGI reader via a 16-bit RLE literal run in read_rgb_16_rle.\n\nread_rgb_16_rle guards each literal run with if (count > data_left), but count is a pixel count while every 16-bit sample consumes two bytes. The copy loop reads inp[0] * 256 + inp[1] and advances two bytes per pixel, so a run with data_left / 2 < count <= data_left passes the guard yet consumes 2 * count bytes and reads past the end of the buffer. The 8-bit path is unaffected because there one pixel is one byte.\n\nReading a crafted SGI image through Imager->read triggers the over-read before the parser rejects the malformed image, which can crash the process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-13705\n  \nPublished : July 6, 2026, 1:16 p.m. | 28 minutes ago\n  \nDescription :Imager versions before 1.032 for Perl have a heap out-of-bounds read in the bundled Imager::File::SGI reader via a 16-bit RLE literal run in read_rgb_16_rle.\n\nread_rgb_16_rle guards each literal run with if (count > data_left), but count is a pixel count while every 16-bit sample consumes two bytes. The copy loop reads inp[0] * 256 + inp[1] and advances two bytes per pixel, so a run with data_left / 2 < count <= data_left passes the guard yet consumes 2 * count bytes and reads past the end of the buffer. The 8-bit path is unaffected because there one pixel is one byte.\n\nReading a crafted SGI image through Imager->read triggers the over-read before the parser rejects the malformed image, which can crash the process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-13705 - Perl용 1.032 이전 Imager 버전에는 read_rgb_16_rle에서 실행되는 16비트 RLE 리터럴을 통해 번들 Imager::File::SGI 판독기에서 범위를 벗어난 힙 읽기가 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-13705\n  \n게시일 : 2026년 7월 6일 오후 1시 16분 | 28분 전\n  \n설명:Perl용 1.032 이전 Imager 버전에는 read_rgb_16_rle에서 실행되는 16비트 RLE 리터럴을 통해 번들 Imager::File::SGI 판독기에서 범위를 벗어난 힙 읽기가 있습니다.\n\nread_rgb_16_rle은 if(count > data_left)를 사용하여 각 리터럴 실행을 보호하지만 count는 픽셀 수이며 모든 16비트 샘플은 2바이트를 소비합니다. 복사 루프는 inp[0] * 256 + inp[1]을 읽고 픽셀당 2바이트를 진행하므로 data_left / 2 < count <= data_left를 사용한 실행은 가드를 통과하지만 2 * count 바이트를 소비하고 버퍼 끝을 지나 읽습니다. 8비트 경로는 1픽셀이 1바이트이므로 영향을 받지 않습니다.\n\nImager->read를 통해 조작된 SGI 이미지를 읽으면 파서가 잘못된 형식의 이미지를 거부하기 전에 초과 읽기가 트리거되어 프로세스가 중단될 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-13705\n2. 26.07.06 오후10:16\n3. Imager versions before 1.032 for Perl have a heap ",
-      "cve_id": "CVE-2026-13705",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13705",
-      "source": "cvefeed",
-      "published": "2026-07-06T22:16:32+09:00",
       "lang": "en"
     }
   ],
