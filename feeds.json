@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-10T04:01:40.883522+09:00",
+  "fetched_at": "2026-07-10T04:31:22.903746+09:00",
   "security_news": [
     {
       "title": "New GigaWiper Windows Backdoor Bundles Disk Wiping, Fake Ransomware, and Spyware",
@@ -3580,21 +3580,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-55646",
       "source": "cvefeed",
       "published": "2026-07-07T04:41:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58404 - Hugo security.http.urls deny rules bypassed by alternate IPv4 encodings",
-      "summary": "CVE ID :CVE-2026-58404\n  \nPublished : July 6, 2026, 7:16 p.m. | 29 minutes ago\n  \nDescription :Hugo is a static site generator. From v0.162.0 through v0.163.0, the default security.http.urls policy denies requests to loopback, internal, and cloud-metadata IPv4 literals, but the deny rule only matched dotted-decimal notation, so alternate IPv4 encodings of the same addresses, including integer, hex, or octal, passed the policy. When a template passes an untrusted or data-derived URL to resources.GetRemote and the host platform uses the cgo system resolver, these encodings resolve to the blocked address, allowing build-time server-side requests to loopback and internal services, including the cloud-metadata endpoint in hosted or CI builds; the same check is reused on redirects, so the gap also applies to each redirect hop. This issue is fixed in v0.163.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-58404\n  \nPublished : July 6, 2026, 7:16 p.m. | 29 minutes ago\n  \nDescription :Hugo is a static site generator. From v0.162.0 through v0.163.0, the default security.http.urls policy denies requests to loopback, internal, and cloud-metadata IPv4 literals, but the deny rule only matched dotted-decimal notation, so alternate IPv4 encodings of the same addresses, including integer, hex, or octal, passed the policy. When a template passes an untrusted or data-derived URL to resources.GetRemote and the host platform uses the cgo system resolver, these encodings resolve to the blocked address, allowing build-time server-side requests to loopback and internal services, including the cloud-metadata endpoint in hosted or CI builds; the same check is reused on redirects, so the gap also applies to each redirect hop. This issue is fixed in v0.163.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-58404 - Hugo security.http.urls는 대체 IPv4 인코딩으로 우회된 규칙을 거부합니다.",
-      "summary_ko": "CVE ID:CVE-2026-58404\n  \n게시일 : 2026년 7월 6일 오후 7시 16분 | 29분 전\n  \n설명 :Hugo는 정적 사이트 생성기입니다. v0.162.0부터 v0.163.0까지 기본 security.http.urls 정책은 루프백, 내부 및 클라우드 메타데이터 IPv4 리터럴에 대한 요청을 거부하지만 거부 규칙은 점으로 구분된 십진수 표기법만 일치하므로 정수, 16진수 또는 8진수를 포함한 동일한 주소의 대체 IPv4 인코딩이 정책을 통과했습니다. 템플릿이 신뢰할 수 없거나 데이터 파생된 URL을 resources.GetRemote에 전달하고 호스트 플랫폼이 cgo 시스템 확인자를 사용하는 경우 이러한 인코딩은 차단된 주소로 확인되어 호스트 또는 CI 빌드의 클라우드 메타데이터 끝점을 포함하여 루프백 및 내부 서비스에 대한 빌드 시간 서버 측 요청을 허용합니다. 리디렉션 시 동일한 확인이 재사용되므로 각 리디렉션 홉에도 간격이 적용됩니다. 이 문제는 v0.163.1에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-58404\n2. 26.07.07 오전4:16\n3. Hugo is a static site generator. From v0.162.0 thr",
-      "cve_id": "CVE-2026-58404",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58404",
-      "source": "cvefeed",
-      "published": "2026-07-07T04:16:15+09:00",
       "lang": "en"
     }
   ],
