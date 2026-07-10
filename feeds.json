@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-11T05:31:26.227449+09:00",
+  "fetched_at": "2026-07-11T06:01:35.385755+09:00",
   "security_news": [
     {
       "title": "김정은, 대남공작 조직 대폭 강화… 도발 수위 높일듯",
@@ -3671,21 +3671,6 @@
       "source": "cvefeed",
       "published": "2026-07-08T07:16:52+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46672 - Actual: CSV Formula Injection in `@actual-app/cli` `--format csv` Output via Custom `escapeCsv` Helper",
-      "summary": "CVE ID :CVE-2026-46672\n  \nPublished : July 7, 2026, 8:55 p.m. | 34 minutes ago\n  \nDescription :Actual is a local-first personal finance app. Prior to 26.6.0, @actual-app/cli ships a hand-rolled CSV serializer in packages/cli/src/output.ts used whenever the global --format csv option is passed, whose escapeCsv helper only handles RFC 4180 delimiter, quote, and newline escaping and does not neutralize standard CSV formula-injection prefixes. Any CLI command that streams an object array containing user-controlled strings, including transactions list, accounts list, payees list, categories list, tags list, category-groups list, rules list, schedules list, and query, can emit cells that auto-evaluate when the resulting CSV is opened in Excel, LibreOffice Calc, or Google Sheets, enabling data exfiltration and arbitrary formula execution. This issue is fixed in version 26.6.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-46672\n  \nPublished : July 7, 2026, 8:55 p.m. | 34 minutes ago\n  \nDescription :Actual is a local-first personal finance app. Prior to 26.6.0, @actual-app/cli ships a hand-rolled CSV serializer in packages/cli/src/output.ts used whenever the global --format csv option is passed, whose escapeCsv helper only handles RFC 4180 delimiter, quote, and newline escaping and does not neutralize standard CSV formula-injection prefixes. Any CLI command that streams an object array containing user-controlled strings, including transactions list, accounts list, payees list, categories list, tags list, category-groups list, rules list, schedules list, and query, can emit cells that auto-evaluate when the resulting CSV is opened in Excel, LibreOffice Calc, or Google Sheets, enabling data exfiltration and arbitrary formula execution. This issue is fixed in version 26.6.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46672 - 실제: 사용자 정의 `escapeCsv` 도우미를 통해 `@actual-app/cli` `--format csv` 출력에 CSV 수식 삽입",
-      "summary_ko": "CVE ID:CVE-2026-46672\n  \n게시일 : 2026년 7월 7일 오후 8시 55분 | 34분 전\n  \n설명 :Actual은 지역 최초의 개인 금융 앱입니다. 26.6.0 이전에는 @actual-app/cli가 global --format csv 옵션이 전달될 때마다 사용되는 packages/cli/src/output.ts에 수동으로 만든 CSV 직렬 변환기를 제공합니다. 이 직렬 변환기의 escapeCsv 도우미는 RFC 4180 구분 기호, 따옴표 및 개행 이스케이프만 처리하고 표준 CSV 수식 주입 접두사를 무력화하지 않습니다. 거래 목록, 계정 목록, 수취인 목록, 카테고리 목록, 태그 목록, 카테고리 그룹 목록, 규칙 목록, 일정 목록, 쿼리 등 사용자 제어 문자열이 포함된 개체 배열을 스트리밍하는 모든 CLI 명령은 결과 CSV가 Excel, LibreOffice Calc 또는 Google Sheets에서 열릴 때 자동 평가되는 셀을 내보낼 수 있어 데이터 유출 및 임의 수식 실행이 가능합니다. 이 문제는 버전 26.6.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46672\n2. 26.07.08 오전5:55\n3. Actual is a local-first personal finance app. Prio",
-      "cve_id": "CVE-2026-46672",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46672",
-      "source": "cvefeed",
-      "published": "2026-07-08T05:55:02+09:00",
-      "lang": "ro"
     }
   ],
   "reputation": [
