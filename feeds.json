@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-10T21:32:01.885523+09:00",
+  "fetched_at": "2026-07-10T22:01:29.006009+09:00",
   "security_news": [
     {
       "title": "'정찰정보총국' 힘 실어준 북한…사이버전 전방위 강화?",
@@ -2640,21 +2640,24 @@
       "source": "naver",
       "published": "2026-07-08T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "딥시크, 칩까지 직접 만든다…중국 AI ‘홀로서기’ 승부수",
-      "summary": "그러나 사이버보안 전문가용 미토스는 여전히 일부 ‘신뢰할 수 있는’ 미국 기관에만 제공된다. 중국 당국은 미토스가 소프트웨어 취약점을 악용할 수 있다며 미국이 이를 이용할 가능성을 우려하고 있다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중국 딥시크, AI 칩 자체 개발 추진\n2. 미토스, 신뢰 기관만 사용…중국 보안 우려\n3. 중국, 미토스 소프트웨어 취약점 악용 가능성 경계",
-      "link": "https://n.news.naver.com/mnews/article/011/0004639165?sid=104",
-      "source": "naver",
-      "published": "2026-07-07T21:52:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-53363 - xfrm: iptfs: preserve shared-frag marker in iptfs_consume_frags()",
+      "summary": "CVE ID :CVE-2026-53363\n  \nPublished : July 10, 2026, 12:17 p.m. | 27 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: iptfs: preserve shared-frag marker in iptfs_consume_frags()\n\niptfs_consume_frags() transfers paged fragments from one socket buffer\nto another but fails to propagate the SKBFL_SHARED_FRAG flag. This is\nthe same class of bug that was fixed in skb_try_coalesce() for\nCVE-2026-46300: when fragments backed by read-only page-cache pages are\nmerged, the marker indicating their shared nature must be preserved so\nthat ESP can decide correctly whether in-place encryption is safe.\n\nApply the same two-line fix used in skb_try_coalesce() to\niptfs_consume_frags().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53363\n  \nPublished : July 10, 2026, 12:17 p.m. | 27 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: iptfs: preserve shared-frag marker in iptfs_consume_frags()\n\niptfs_consume_frags() transfers paged fragments from one socket buffer\nto another but fails to propagate the SKBFL_SHARED_FRAG flag. This is\nthe same class of bug that was fixed in skb_try_coalesce() for\nCVE-2026-46300: when fragments backed by read-only page-cache pages are\nmerged, the marker indicating their shared nature must be preserved so\nthat ESP can decide correctly whether in-place encryption is safe.\n\nApply the same two-line fix used in skb_try_coalesce() to\niptfs_consume_frags().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53363 - xfrm: iptfs: iptfs_consume_frags()에서 공유 조각 마커 유지",
+      "summary_ko": "CVE ID:CVE-2026-53363\n  \n게시일 : 2026년 7월 10일 오후 12시 17분 | 27분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nxfrm: iptfs: iptfs_consume_frags()에서 공유 조각 마커를 유지합니다.\n\niptfs_consume_frags()는 하나의 소켓 버퍼에서 페이징된 조각을 전송합니다.\nSKBFL_SHARED_FRAG 플래그를 전파하는 데 실패했습니다. 이것은\nskb_try_coalesce()에서 수정된 동일한 클래스의 버그\nCVE-2026-46300: 읽기 전용 페이지 캐시 페이지가 지원하는 조각이\n병합된 경우 공유 특성을 나타내는 마커는 보존되어야 합니다.\nESP는 내부 암호화가 안전한지 올바르게 결정할 수 있습니다.\n\nskb_try_coalesce()에 사용된 것과 동일한 두 줄 수정을 적용하여\niptfs_consume_frags().\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-53363\n2. 26.07.10 오후9:17\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-53363",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53363",
+      "source": "cvefeed",
+      "published": "2026-07-10T21:17:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-58225 - SQL injection via unescaped dollar-quote in Postgrex.Notifications reconnect replay causes notification denial of service",
       "summary": "CVE ID :CVE-2026-58225\n  \nPublished : July 10, 2026, 11:16 a.m. | 58 minutes ago\n  \nDescription :SQL Injection vulnerability in elixir-ecto postgrex allows an attacker who can influence a LISTEN channel name to inject SQL into the reconnect replay query, causing a denial of service of the notification connection.\n\nPostgrex.Notifications sanitizes channel names with quote_channel/1, which doubles double quotes so the name is safe inside a double-quoted identifier. This protects the single-statement LISTEN and UNLISTEN paths. On every (re)connect, however, handle_connect/1 replays all registered channels at once by concatenating their LISTEN statements and wrapping them in a dollar-quoted anonymous code block (DO $$BEGIN ... END$$). quote_channel/1 does not escape the $$ dollar-quote delimiter that opens and closes this block.\n\nThe listen/3 guards only reject null bytes and names longer than 63 bytes, so a channel name containing $$ passes validation unchanged. Once such a name is embedded, its $$ prematurely terminates the outer dollar-quoted string and PostgreSQL parses the remainder as additional top-level statements. Because handle_connect/1 runs on every (re)connect, the malformed replay query is rejected each time and the notification connection never re-establishes its subscriptions, silently dropping notifications for every channel sharing that connection.\n\nAn application is affected when it passes untrusted input (for example a tenant or user identifier) as a channel name to Postgrex.Notifications.listen/3. The double-quote doubling prevents forming a fully valid injected statement, so arbitrary SQL execution is not possible, but the corrupted query reliably breaks the shared notification connection for all tenants, resulting in denial of service.\n\nThis issue affects postgrex: from 0.16.0 before 0.22.3.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
