@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-11T07:01:42.594461+09:00",
+  "fetched_at": "2026-07-11T07:31:32.836410+09:00",
   "security_news": [
     {
       "title": "김정은, 대남공작 조직 대폭 강화… 도발 수위 높일듯",
@@ -2640,30 +2640,6 @@
       "source": "naver",
       "published": "2026-07-08T08:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "KT 해킹 과징금 7월 결론 전망...불확실성 해소될까",
-      "summary": "[사진: KT] KT 해킹 사고에 대한 개인정보보호위원회의 과징금 규모가 이달 중 최종 확정될 전망이다. 개인정보위가 앞서 SK텔레콤 해킹 사고에 1300억원대 과징금 처분을 내린 만큼 KT 제재 수위에도 업계 관심이 쏠린다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KT 해킹 관련 개인정보위 과징금 7월 중 결론 전망\n2. SK텔레콤 1300억원대 과징금 선례 고려, KT 제재 수위 주목\n3. 개인정보 유출 사고에 따른 과징금 규모 이달 확정 예상",
-      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=681964",
-      "source": "naver",
-      "published": "2026-07-08T07:30:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "AI 피싱은 왜 맞춤법이 완벽한가",
-      "summary": "세계경제포럼(WEF)은 2026년 사이버보안 전망에서 AI 기반 사이버 사기를 랜섬웨어를 제치고 CEO들의 1순위 우려로 꼽았다. 맞춤법을 보고 판단하던 시대는 끝났다. \"이제 피싱 메일의 맞춤법이 당신보다 정확하다.\" * 본...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. WEF, 2026년 AI 사기 1순위 우려\n2. AI, 완벽한 맞춤법으로 CEO 속여\n3. 맞춤법 아닌 내용으로 피싱 구분",
-      "link": "https://www.dailyt.co.kr/newsView/dlt202607070009",
-      "source": "naver",
-      "published": "2026-07-08T07:22:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3655,21 +3631,6 @@
       "link": "https://www.exploit-db.com/exploits/52626",
       "source": "exploitdb",
       "published": "2026-07-08T09:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46354 - Coder: PKCS#7 signature bypass in Azure instance identity allows unauthenticated agent token theft",
-      "summary": "CVE ID :CVE-2026-46354\n  \nPublished : July 7, 2026, 10:16 p.m. | 1 hour, 12 minutes ago\n  \nDescription :Coder allows organizations to provision remote development environments via Terraform. In versions prior tp 2.24.5, 2.29.13, 2.30.8, 2.31.12, 2.32.2, and 2.33.3, `azureidentity.Validate()` verifies that the PKCS#7 signer certificate chains to a trusted Azure CA but never verifies the PKCS#7 signature itself. An attacker can embed a legitimate Azure certificate alongside arbitrary content e.g. `{\"vmId\":\"\"}` and the forged `vmId` will be accepted returning the victim workspace agent's session token. No authentication is required. The attacker only needs to know a target VM's `vmId` which is a `UUIDv4`. That's a practical limitation which would typically require prior access to be exploited. Versions 2.24.5, 2.29.13, 2.30.8, 2.31.12, 2.32.2, and 2.33.3 patch the issue. As a workaround, reconfigure any Azure templates to use token authentication rather than `azure-instance-identity`.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-46354\n  \nPublished : July 7, 2026, 10:16 p.m. | 1 hour, 12 minutes ago\n  \nDescription :Coder allows organizations to provision remote development environments via Terraform. In versions prior tp 2.24.5, 2.29.13, 2.30.8, 2.31.12, 2.32.2, and 2.33.3, `azureidentity.Validate()` verifies that the PKCS#7 signer certificate chains to a trusted Azure CA but never verifies the PKCS#7 signature itself. An attacker can embed a legitimate Azure certificate alongside arbitrary content e.g. `{\"vmId\":\"\"}` and the forged `vmId` will be accepted returning the victim workspace agent's session token. No authentication is required. The attacker only needs to know a target VM's `vmId` which is a `UUIDv4`. That's a practical limitation which would typically require prior access to be exploited. Versions 2.24.5, 2.29.13, 2.30.8, 2.31.12, 2.32.2, and 2.33.3 patch the issue. As a workaround, reconfigure any Azure templates to use token authentication rather than `azure-instance-identity`.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46354 - Coder: Azure 인스턴스 ID의 PKCS#7 서명 우회로 인해 인증되지 않은 에이전트 토큰 도용이 허용됩니다.",
-      "summary_ko": "CVE ID:CVE-2026-46354\n  \n게시일 : 2026년 7월 7일 오후 10시 16분 | 1시간, 12분 전\n  \n설명 :Coder를 사용하면 조직이 Terraform을 통해 원격 개발 환경을 프로비저닝할 수 있습니다. tp 2.24.5, 2.29.13, 2.30.8, 2.31.12, 2.32.2 및 2.33.3 이전 버전에서 'azureidentity.Validate()'는 PKCS#7 서명자 인증서가 신뢰할 수 있는 Azure CA에 체인인지 확인하지만 PKCS#7 서명 자체는 확인하지 않습니다. 공격자는 임의 콘텐츠와 함께 합법적인 Azure 인증서를 포함할 수 있습니다. `{\"vmId\":\"\"}` 및 위조된 `vmId`가 허용되어 피해자 작업공간 에이전트의 세션 토큰을 반환합니다. 인증이 필요하지 않습니다. 공격자는 'UUIDv4'인 대상 VM의 'vmId'만 알면 됩니다. 이는 일반적으로 악용되기 위해 사전 액세스가 필요한 실질적인 제한 사항입니다. 버전 2.24.5, 2.29.13, 2.30.8, 2.31.12, 2.32.2 및 2.33.3에서는 문제가 패치됩니다. 해결 방법으로 'azure-instance-identity' 대신 토큰 인증을 사용하도록 Azure 템플릿을 재구성하세요.\n  \n심각도: 9.1 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46354\n2. 26.07.08 오전7:16\n3. Coder allows organizations to provision remote dev",
-      "cve_id": "CVE-2026-46354",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46354",
-      "source": "cvefeed",
-      "published": "2026-07-08T07:16:52+09:00",
       "lang": "en"
     }
   ],
