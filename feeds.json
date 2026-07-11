@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-11T08:31:29.562426+09:00",
+  "fetched_at": "2026-07-11T09:03:00.628478+09:00",
   "security_news": [
+    {
+      "title": "은행권, AI 확산에 보안투자 늘려...정보보호 경쟁 '가속'",
+      "summary": "모바일·인공지능(AI) 기반 금융서비스가 빠르게 확산되는 가운데 해킹과 개인정보 유출 등 사이버 위협도 고도화되면서 정보보호가 단순한 비용이 아닌 핵심 투자 분야로 자리 잡고 있다. 금융당국도 정보보호...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 은행권, AI 확산에 따른 사이버 위협 증가\n2. 모바일·AI 기반 금융 서비스 증가, 해킹·정보 유출 고도화\n3. 정보보호, 단순 비용 아닌 핵심 투자로 부상",
+      "link": "https://daily.hankooki.com/news/articleView.html?idxno=1384890",
+      "source": "naver",
+      "published": "2026-07-11T09:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "영남이공대, 초·중등 교장(감) 60명 대상 '실습으로 배우는 AI 리터러시...",
+      "summary": "특히 생성형 AI의 확산과 함께 사이버 보안 위협, 개인정보 보호 문제, 인공지능 윤리 이슈가 동시에... 이번 직무연수는 대학이 보유한 사이버보안 교육 인프라를 지역 교육기관과 공유하는 대표적인 산학·지역협력...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 영남이공대, 초·중등 교장 60명 대상 AI 리터러시 연수\n2. 생성형 AI 확산으로 보안 위협·개인정보 유출·윤리 문제 다각도 분석\n3. 대학 사이버보안 인프라 지역교육청과 공유, 산학·지역협력 모델 확산",
+      "link": "https://n.news.naver.com/mnews/article/030/0003446677?sid=102",
+      "source": "naver",
+      "published": "2026-07-11T08:32:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "김정은, 대남공작 조직 대폭 강화… 도발 수위 높일듯",
       "summary": "미국 ‘소니 픽쳐스’ 해킹 배후로 꼽히는 라자루스 그룹, 한국수력원자력의 원전 도면을 일부 탈취한 김수키 등도 정찰정보총국 산하 해킹 조직으로 알려졌다. 특히 북한이 올 2월 9차 당대회로 ‘김정은 3기 지도부’를...",
@@ -2568,21 +2592,24 @@
       "source": "naver",
       "published": "2026-07-08T09:16:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[ISEC 2026 미리보기] 엔피코어, 차세대 XDR 플랫폼 ‘InspectorX’-랜섬웨어 솔루션 ‘RansomZ’ 소개",
-      "summary": "통합 보안 플랫폼 ‘Inspector X’와 클라우드 기반 ‘RansomZERO’로 동남아 시장 공략[보안뉴스 한세희 기자] 엔피코어(NPCore)가 8월 11일부터 12일까지 서울 코엑스(COEX)에서 열리는 국내 최대 규모 사이버보안 콘퍼런스 및 전시회인 제20회 국제 시큐리티 콘퍼런스(ISEC 2026)에 참가해 자체 개발한 XDR 플랫폼 ‘Inspe",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 엔피코어, ISEC 2026서 XDR 플랫폼 'InspectorX'·랜섬웨어 솔루션 'Ra\n2. 통합 보안 플랫폼 'Inspector X'·클라우드 기반 'RansomZERO'로 동남아 \n3. 서울 코엑스서 8월 11~12일 국내 최대 사이버보안 전시회 참가",
-      "link": "http://www.boannews.com/media/view.asp?idx=144527&kind=&sub_kind=",
-      "source": "boannews",
-      "published": "2026-07-08T08:52:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-55187 - Mailpit: Incomplete SSRF protection in Link Check API via IPv6 transition mechanisms (follow-up to CVE-2026-27808)",
+      "summary": "CVE ID :CVE-2026-55187\n  \nPublished : July 10, 2026, 10:16 p.m. | 32 minutes ago\n  \nDescription :Mailpit is an email testing tool and API for developers. Prior to 1.30.2, the remediation shipped for CVE-2026-27808 is incomplete because the tools.IsInternalIP deny-list in internal/tools/net.go relies on Go's standard library classification helpers and does not block IPv6 transition mechanisms or prefixes such as NAT64, 6to4, IPv4-compatible IPv6, ISATAP, fec0::/10, and 2001:db8::/32. An attacker who can deliver email and invoke POST /api/v1/message/{ID}/link-check can coerce the Link Check API's safeDialContext path into dialing internal destinations and can use status-code and error feedback to map internal service reachability, including cloud metadata endpoints. This issue is fixed in version 1.30.2.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55187\n  \nPublished : July 10, 2026, 10:16 p.m. | 32 minutes ago\n  \nDescription :Mailpit is an email testing tool and API for developers. Prior to 1.30.2, the remediation shipped for CVE-2026-27808 is incomplete because the tools.IsInternalIP deny-list in internal/tools/net.go relies on Go's standard library classification helpers and does not block IPv6 transition mechanisms or prefixes such as NAT64, 6to4, IPv4-compatible IPv6, ISATAP, fec0::/10, and 2001:db8::/32. An attacker who can deliver email and invoke POST /api/v1/message/{ID}/link-check can coerce the Link Check API's safeDialContext path into dialing internal destinations and can use status-code and error feedback to map internal service reachability, including cloud metadata endpoints. This issue is fixed in version 1.30.2.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-55187 - Mailpit: IPv6 전환 메커니즘을 통한 Link Check API의 불완전한 SSRF 보호(CVE-2026-27808에 대한 후속 조치)",
+      "summary_ko": "CVE ID:CVE-2026-55187\n  \n게시일 : 2026년 7월 10일 오후 10시 16분 | 32분 전\n  \n설명 :Mailpit은 개발자를 위한 이메일 테스트 도구이자 API입니다. 1.30.2 이전에는 CVE-2026-27808에 대해 제공된 수정 사항이 불완전합니다. 왜냐하면 Internal/tools/net.go의 tools.IsInternalIP 거부 목록은 Go의 표준 라이브러리 분류 도우미에 의존하고 NAT64, 6to4, IPv4 호환 IPv6, ISATAP, fec0::/10 및 IPv6 전환 메커니즘이나 접두사를 차단하지 않기 때문입니다. 2001:db8::/32. 이메일을 전달하고 POST /api/v1/message/{ID}/link-check를 호출할 수 있는 공격자는 Link Check API의 safeDialContext 경로를 강제하여 내부 대상에 전화를 걸 수 있으며 상태 코드 및 오류 피드백을 사용하여 클라우드 메타데이터 엔드포인트를 포함한 내부 서비스 연결 가능성을 매핑할 수 있습니다. 이 문제는 버전 1.30.2에서 해결되었습니다.\n  \n심각도: 5.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-55187\n2. 26.07.11 오전7:16\n3. Mailpit is an email testing tool and API for devel",
+      "cve_id": "CVE-2026-55187",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55187",
+      "source": "cvefeed",
+      "published": "2026-07-11T07:16:43+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-55501 - 9router: Login brute-force protection bypass via spoofed X-Forwarded-For header",
       "summary": "CVE ID :CVE-2026-55501\n  \nPublished : July 10, 2026, 3:23 p.m. | 56 minutes ago\n  \nDescription :9Router is an AI router & token saver. Prior to 0.4.80, the dashboard login rate limiter in src/lib/auth/loginLimiter.js derives the client identity from the attacker-controlled X-Forwarded-For HTTP header, and src/app/api/auth/login/route.js uses that spoofable value for checkLock and recordFail. A remote attacker can rotate the X-Forwarded-For value on each login attempt to receive a fresh rate-limit bucket, bypass the 5-attempt threshold and progressive lockout durations, and perform unlimited brute-force attempts against the dashboard password. This issue is fixed in version 0.4.80.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3511,66 +3538,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-57245",
       "source": "cvefeed",
       "published": "2026-07-08T16:36:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "[webapps] Krayin CRM v2.2.x - Authenticated Remote Code Execution",
-      "summary": "Krayin CRM v2.2.x - Authenticated Remote Code Execution",
-      "description": "Krayin CRM v2.2.x - Authenticated Remote Code Execution",
-      "title_ko": "[webapps] Krayin CRM v2.2.x - 인증된 원격 코드 실행",
-      "summary_ko": "Krayin CRM v2.2.x - 인증된 원격 코드 실행",
-      "summary_3lines": "1. [webapps] Krayin CRM v2.2.x - Authenticated Remote\n2. EXPLOITDB\n3. Krayin CRM v2.2.x - Authenticated Remote Code Exec",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.exploit-db.com/exploits/52629",
-      "source": "exploitdb",
-      "published": "2026-07-08T09:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "[webapps] Langflow 1.9.0 - RCE",
-      "summary": "Langflow 1.9.0 - RCE",
-      "description": "Langflow 1.9.0 - RCE",
-      "title_ko": "[웹앱] Langflow 1.9.0 - RCE",
-      "summary_ko": "랭플로우 1.9.0 - RCE",
-      "summary_3lines": "1. [webapps] Langflow 1.9.0 - RCE\n2. EXPLOITDB\n3. Langflow 1.9.0 - RCE",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.exploit-db.com/exploits/52627",
-      "source": "exploitdb",
-      "published": "2026-07-08T09:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "[webapps] Atarim WordPress Plugin  4.2.2 - Sensitive Information Exposure",
-      "summary": "Atarim WordPress Plugin  4.2.2 - Sensitive Information Exposure",
-      "description": "Atarim WordPress Plugin  4.2.2 - Sensitive Information Exposure",
-      "title_ko": "[webapps] Atarim WordPress 플러그인 4.2.2 - 민감한 정보 노출",
-      "summary_ko": "Atarim WordPress 플러그인 4.2.2 - 민감한 정보 노출",
-      "summary_3lines": "1. [webapps] Atarim WordPress Plugin 4.2.2 - Sensitiv\n2. EXPLOITDB\n3. Atarim WordPress Plugin 4.2.2 - Sensitive Informat",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.exploit-db.com/exploits/52628",
-      "source": "exploitdb",
-      "published": "2026-07-08T09:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "[webapps] Joomla Page Builder CK  3.5.10 -  Arbitrary File Upload",
-      "summary": "Joomla Page Builder CK  3.5.10 -  Arbitrary File Upload",
-      "description": "Joomla Page Builder CK  3.5.10 -  Arbitrary File Upload",
-      "title_ko": "[webapps] Joomla Page Builder CK 3.5.10 - 임의 파일 업로드",
-      "summary_ko": "Joomla Page Builder CK 3.5.10 - 임의 파일 업로드",
-      "summary_3lines": "1. [webapps] Joomla Page Builder CK 3.5.10 - Arbitrar\n2. EXPLOITDB\n3. Joomla Page Builder CK 3.5.10 - Arbitrary File Upl",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.exploit-db.com/exploits/52626",
-      "source": "exploitdb",
-      "published": "2026-07-08T09:00:00+09:00",
       "lang": "en"
     }
   ],
