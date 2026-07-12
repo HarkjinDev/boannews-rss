@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-13T06:01:44.148355+09:00",
+  "fetched_at": "2026-07-13T06:32:52.526281+09:00",
   "security_news": [
+    {
+      "title": "우리은행, 40억 금융사고에 외주 관리도 구멍…1.7만건 개인정보 유출",
+      "summary": "재위탁도 확대되면서 관리 범위 역시 넓어지고 있지만, 관리 공백이 정보보안 사고로 이어질 수 있다는 지적이 있다. 금감원은 지난해 전 금융권에 제3자 업무 위탁 리스크 관리 강화를 주문했다. 관련 가이드라인을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 우리은행, 40억 원 금융사고로 1.7만건 개인정보 유출\n2. 외주 관리 공백·재위탁 확대로 제3자 위탁 리스크 노출\n3. 금감원, 금융권 제3자 위탁 정보보안 강화 가이드라인 주문",
+      "link": "https://realty.chosun.com/site/data/html_dir/2026/07/10/2026071001200.html",
+      "source": "naver",
+      "published": "2026-07-13T06:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "“해커보다 빨리 움직이고 AI 주권 찾아라”...미토스 사태가 남긴 교훈...",
       "summary": "문제는 사이버 해킹 집단이 미토스를 악용하면 가장 강력한 공격 도구가 될 수 있다는 점이다. 미토스로 금융사나 정부 보안의 치명적 결함을 찾아내 재현하면 심각한 개인정보 유출과 시스템 마비가 벌어질 수 있기...",
@@ -1308,30 +1320,6 @@
       "source": "naver",
       "published": "2026-07-10T07:16:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "⑤해킹 은폐·거짓 보고…중징계 받을까 [표류하는 새KT]",
-      "summary": "통신과 보안에 안일했던 KT의 인식이 고스란히 드러나는 부분이다. 앞서 KT는 경영 효율화를 이유로 2024년... 소비자주권시민회의는 \"보안 부실을 낳은 KT에 2000억원 과징금은 최소한의 책임 조치\"라며 \"개인정보위는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KT, 2000억원 과징금 가능성 거론\n2. 해킹 은폐·거짓 보고 등 보안 부실 드러남\n3. 소비자주권시민회의, 최소한 책임 촉구",
-      "link": "https://it.chosun.com/news/articleView.html?idxno=2023092165094",
-      "source": "naver",
-      "published": "2026-07-10T06:30:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "'모두의 창업' 5천명 정보유출 통지 후 87명 피해 신고 접수",
-      "summary": "의원 \"중기부, 보안 체계 점검하고 재발 방지 대책 마련해야\" '모두의 창업' 선정자 수십명이 개인정보... 막기 위해 보안 체계를 전면 점검하고, 철저한 원인 규명과 재발 방지 대책 마련에 총력을 기울여야 한다\"고 강조했다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. '모두의 창업' 5천 명 정보유출, 87명 피해 신고\n2. 개인정보 유출 경로 및 방식은 아직 불분명\n3. 중기부, 보안 체계 점검 및 재발 방지 대책 요구",
-      "link": "https://n.news.naver.com/mnews/article/001/0016186512?sid=101",
-      "source": "naver",
-      "published": "2026-07-10T06:11:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2008,21 +1996,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-55605",
       "source": "cvefeed",
       "published": "2026-07-10T07:17:06+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-33800 - Junos OS: MX Series: In a VC scenario a high rate of micro-BFD session flaps will cause an FPC crash",
-      "summary": "CVE ID :CVE-2026-33800\n  \nPublished : July 9, 2026, 9:16 p.m. | 53 minutes ago\n  \nDescription :An Unchecked Input for Loop Condition vulnerability in the Packet Forwarding Engine (pfe) of Juniper Networks Junos OS on MX Series allows an unauthenticated, adjacent attacker to cause a Denial-of-Service (DoS).Micro-BFD session flaps generate respective up/down events which are queued by PFEMAN for processing. Especially in a Virtual-Chassis (VC) scenario with locality‑bias configured, processing takes a significant amount of time for each event. If these sessions keep flapping, new events are constantly added, and in turn PFEMAN never completes processing these events. This results in the PFEMAN watchdog timer expiring, which causes the FPC to crash and restart, representing a complete service outage.\n\n\nThis issue only affects MX series FPCs up to and including MPC9. It does not affect MPC10/11, LC4800/9600 and MX304.\n\nThis issue affects Junos OS on MX Series:\n\n\n  *  all versions before 23.2R2-S7,\n  *  23.4 versions before 23.4R2-S8,\n  *  24.2 versions before 24.2R2-S4,\n  *  24.4 versions before 24.4R2-S3,\n  *  25.2 versions before 25.2R2.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-33800\n  \nPublished : July 9, 2026, 9:16 p.m. | 53 minutes ago\n  \nDescription :An Unchecked Input for Loop Condition vulnerability in the Packet Forwarding Engine (pfe) of Juniper Networks Junos OS on MX Series allows an unauthenticated, adjacent attacker to cause a Denial-of-Service (DoS).Micro-BFD session flaps generate respective up/down events which are queued by PFEMAN for processing. Especially in a Virtual-Chassis (VC) scenario with locality‑bias configured, processing takes a significant amount of time for each event. If these sessions keep flapping, new events are constantly added, and in turn PFEMAN never completes processing these events. This results in the PFEMAN watchdog timer expiring, which causes the FPC to crash and restart, representing a complete service outage.\n\n\nThis issue only affects MX series FPCs up to and including MPC9. It does not affect MPC10/11, LC4800/9600 and MX304.\n\nThis issue affects Junos OS on MX Series:\n\n\n  *  all versions before 23.2R2-S7,\n  *  23.4 versions before 23.4R2-S8,\n  *  24.2 versions before 24.2R2-S4,\n  *  24.4 versions before 24.4R2-S3,\n  *  25.2 versions before 25.2R2.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-33800 - Junos OS: MX 시리즈: VC 시나리오에서 마이크로 BFD 세션 플랩 비율이 높으면 FPC 충돌이 발생합니다.",
-      "summary_ko": "CVE ID:CVE-2026-33800\n  \n게시일 : 2026년 7월 9일 오후 9시 16분 | 53분 전\n  \n설명: MX 시리즈의 Juniper Networks Junos OS에 있는 PFE(패킷 전달 엔진)의 루프 상태에 대한 확인되지 않은 입력 취약점으로 인해 인증되지 않은 인접 공격자가 서비스 거부(DoS)를 유발할 수 있습니다. Micro-BFD 세션 플랩은 처리를 위해 PFEMAN에 의해 대기되는 각각의 작동/중단 이벤트를 생성합니다. 특히 지역성 편향이 구성된 가상 섀시(VC) 시나리오에서는 각 이벤트를 처리하는 데 상당한 시간이 걸립니다. 이러한 세션이 계속해서 펄럭이면 새 이벤트가 지속적으로 추가되고 결과적으로 PFEMAN은 이러한 이벤트 처리를 완료하지 않습니다. 이로 인해 PFEMAN 감시 타이머가 만료되어 FPC가 충돌하고 다시 시작되어 완전한 서비스 중단을 나타냅니다.\n\n\n이 문제는 MPC9까지의 MX 시리즈 FPC에만 영향을 미칩니다. MPC10/11, LC4800/9600 및 MX304에는 영향을 미치지 않습니다.\n\n이 문제는 MX 시리즈의 Junos OS에 영향을 미칩니다.\n\n\n  * 23.2R2-S7 이전의 모든 버전,\n  * 23.4R2-S8 이전의 23.4 버전,\n  * 24.2R2-S4 이전의 24.2 버전,\n  * 24.4R2-S3 이전의 24.4 버전,\n  * 25.2R2 이전의 25.2 버전.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-33800\n2. 26.07.10 오전6:16\n3. An Unchecked Input for Loop Condition vulnerabilit",
-      "cve_id": "CVE-2026-33800",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-33800",
-      "source": "cvefeed",
-      "published": "2026-07-10T06:16:55+09:00",
       "lang": "en"
     }
   ],
