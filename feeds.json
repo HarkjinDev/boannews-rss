@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-12T22:02:45.994316+09:00",
+  "fetched_at": "2026-07-12T22:31:49.594011+09:00",
   "security_news": [
     {
       "title": "[이슈칼럼] 잇따른 개인정보 유출, 해법은 예방 중심의 개인정보 보호 ...",
@@ -1323,6 +1323,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-56271 - Flowise - Weak Default JWT Secrets in Authentication Middleware",
+      "summary": "CVE ID :CVE-2026-56271\n  \nPublished : July 12, 2026, 12:16 p.m. | 35 minutes ago\n  \nDescription :Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded default JWT secrets ('auth_token', 'refresh_token') and default audience and issuer values ('AUDIENCE', 'ISSUER') in the enterprise passport authentication middleware (packages/server/src/enterprise/middleware/passport/index.ts). When the corresponding environment variables (JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER) are not set, the application silently falls back to these publicly known defaults, allowing an attacker to forge valid JWTs and impersonate any user, including administrators, resulting in authentication bypass.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56271\n  \nPublished : July 12, 2026, 12:16 p.m. | 35 minutes ago\n  \nDescription :Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded default JWT secrets ('auth_token', 'refresh_token') and default audience and issuer values ('AUDIENCE', 'ISSUER') in the enterprise passport authentication middleware (packages/server/src/enterprise/middleware/passport/index.ts). When the corresponding environment variables (JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER) are not set, the application silently falls back to these publicly known defaults, allowing an attacker to forge valid JWTs and impersonate any user, including administrators, resulting in authentication bypass.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56271 - Flowise - 인증 미들웨어의 취약한 기본 JWT 비밀",
+      "summary_ko": "CVE ID:CVE-2026-56271\n  \n게시일 : 2026년 7월 12일 오후 12시 16분 | 35분 전\n  \n설명: 3.1.0 이전의 Flowise(영향을 받는 버전 3.0.13 이하)는 기업 여권 인증 미들웨어(packages/server/src/enterprise/middleware/passport/index.ts)에서 약한 하드코딩된 기본 JWT 비밀('auth_token', 'refresh_token')과 기본 대상 및 발급자 값('AUDIENCE', 'ISSUER')을 사용합니다. 해당 환경 변수(JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER)가 설정되지 않은 경우 애플리케이션은 자동으로 공개적으로 알려진 기본값으로 대체되어 공격자가 유효한 JWT를 위조하고 관리자를 포함한 모든 사용자를 가장하여 인증을 우회할 수 있습니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56271\n2. 26.07.12 오후9:16\n3. Flowise before 3.1.0 (affected versions 3.0.13 and",
+      "cve_id": "CVE-2026-56271",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56271",
+      "source": "cvefeed",
+      "published": "2026-07-12T21:16:45+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-59874 node-tar: Negative tar entry size causes infinite loop in archive replace",
       "summary": "Information published.",
