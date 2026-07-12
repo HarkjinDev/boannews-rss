@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-12T23:32:28.339510+09:00",
+  "fetched_at": "2026-07-13T00:01:37.406366+09:00",
   "security_news": [
     {
       "title": "[이슈칼럼] 잇따른 개인정보 유출, 해법은 예방 중심의 개인정보 보호 ...",
@@ -1985,51 +1985,6 @@
       "source": "cvefeed",
       "published": "2026-07-10T00:15:08+09:00",
       "lang": "en"
-    },
-    {
-      "title": "HiveOn 제품 보안 업데이트 권고",
-      "summary": "1. 에이치투오시스템테크놀로지社의 HiveOn 제품에서 발생하는 취약점을 해결한 보안 업데이트 \n2. 영향받는 버전을 사용 중인 시스템 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "description": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 에이치투오시스템테크놀로지社의 HiveOn 제품에서 발생하는 취약점을 해결한 보안 업데이트 \n2. 영향받는 버전을 사용 중인 시스템 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72129",
-      "source": "krcert_notice",
-      "published": "2026-07-10T00:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "SoftManager 제품 보안 주의 권고",
-      "summary": "1. WBJ소프트社의 SoftManager 제품 취약점에 대한 조치 방안 발표\n2. 영향받는 버전을 사용 중인 사용자는 해결 방안에 따라 보안 조치 권고",
-      "description": "",
-      "title_ko": "SoftManager 제품 보안 주의 권고",
-      "summary_ko": null,
-      "summary_3lines": "1. WBJ소프트社의 SoftManager 제품 취약점에 대한 조치 방안 발표\n2. 영향받는 버전을 사용 중인 사용자는 해결 방안에 따라 보안 조치 권고",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72128",
-      "source": "krcert_notice",
-      "published": "2026-07-10T00:00:00+09:00",
-      "lang": "da"
-    },
-    {
-      "title": "CVE-2025-58146 - XAPI UTF-8 string handling",
-      "summary": "CVE ID :CVE-2025-58146\n  \nPublished : July 9, 2026, 2:42 p.m. | 1 hour, 27 minutes ago\n  \nDescription :There are multiple issues.\n\n 1. Updates to the XAPI database sanitise input strings, but try\n    generating the notification using the unsanitised input.  This\n    causes the database's event thread to terminate and cease further\n    processing.\n\n 2. XAPI's UTF-8 encoder implements v3.0 of the Unicode spec, but XAPI\n    uses libraries which conform to the stricter v3.1 of the Unicode\n    spec.  This causes some strings to be accepted as valid UTF-8 by\n    XAPI, but rejected by other libraries in use.  Notably, such strings\n    can be entered into the database, after which the database can no\n    longer be loaded.\n\n 3. There is no input sanitisation for Map/Set updates on objects in the\n    XAPI database.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2025-58146\n  \nPublished : July 9, 2026, 2:42 p.m. | 1 hour, 27 minutes ago\n  \nDescription :There are multiple issues.\n\n 1. Updates to the XAPI database sanitise input strings, but try\n    generating the notification using the unsanitised input.  This\n    causes the database's event thread to terminate and cease further\n    processing.\n\n 2. XAPI's UTF-8 encoder implements v3.0 of the Unicode spec, but XAPI\n    uses libraries which conform to the stricter v3.1 of the Unicode\n    spec.  This causes some strings to be accepted as valid UTF-8 by\n    XAPI, but rejected by other libraries in use.  Notably, such strings\n    can be entered into the database, after which the database can no\n    longer be loaded.\n\n 3. There is no input sanitisation for Map/Set updates on objects in the\n    XAPI database.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2025-58146 - XAPI UTF-8 문자열 처리",
-      "summary_ko": "CVE ID:CVE-2025-58146\n  \n게시일 : 2026년 7월 9일 오후 2시 42분 | 1시간 27분 전\n  \n설명:여러 가지 문제가 있습니다.\n\n 1. XAPI 데이터베이스 업데이트는 입력 문자열을 삭제하지만 다음을 시도해 보세요.\n    삭제되지 않은 입력을 사용하여 알림을 생성합니다.  이\n    데이터베이스의 이벤트 스레드가 종료되고 더 이상 중단됩니다.\n    처리.\n\n 2. XAPI의 UTF-8 인코더는 유니코드 사양 v3.0을 구현하지만 XAPI\n    보다 엄격한 유니코드 v3.1을 준수하는 라이브러리를 사용합니다.\n    사양  이로 인해 일부 문자열이 유효한 UTF-8로 허용됩니다.\n    XAPI이지만 사용 중인 다른 라이브러리에서 거부되었습니다.  특히, 그러한 문자열은\n    데이터베이스에 입력할 수 있으며 그 후에는 데이터베이스에 입력할 수 없습니다.\n    더 이상로드되지 않습니다.\n\n 3. 개체에 대한 맵/설정 업데이트에 대한 입력 삭제가 없습니다.\n    XAPI 데이터베이스.\n  \n심각도: 9.4 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2025-58146\n2. 26.07.09 오후11:42\n3. There are multiple issues. 1. Updates to the XAPI ",
-      "cve_id": "CVE-2025-58146",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2025-58146",
-      "source": "cvefeed",
-      "published": "2026-07-09T23:42:22+09:00",
-      "lang": "no"
     }
   ],
   "reputation": []
