@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-12T19:01:35.561594+09:00",
+  "fetched_at": "2026-07-12T19:31:32.275378+09:00",
   "security_news": [
     {
       "title": "[이슈칼럼] 잇따른 개인정보 유출, 해법은 예방 중심의 개인정보 보호 ...",
@@ -1380,18 +1380,6 @@
       "source": "naver",
       "published": "2026-07-09T20:17:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'기본 보안 미흡'…락앤락 등 3곳, 과징금 7억 철퇴",
-      "summary": "/제공= 개인정보보호위원회개인정보보호위원회가 대규모 회원 정보 유출 사태를 일으킨 락앤락 등 3개 기업에 총 7억원대 과징금을 부과했다. 접근 권한 제한이나 암호화 같은 기본적인 안전조치를 미흡하게...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 락앤락 등 3곳, 과징금 7억 원 부과\n2. 접근 권한·암호화 등 기본 보안 미흡\n3. 개인정보보호위, 대규모 정보 유출 사태 조사",
-      "link": "https://news.mtn.co.kr/news-detail/2026070917190737277",
-      "source": "naver",
-      "published": "2026-07-09T19:16:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2128,21 +2116,6 @@
       "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-02",
       "source": "cisa",
       "published": "2026-07-09T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12590 - body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
-      "summary": "CVE ID :CVE-2026-12590\n  \nPublished : July 9, 2026, 10:21 a.m. | 54 minutes ago\n  \nDescription :Impact: In body-parser versions prior to 1.20.6 (1.x line) and 2.3.0 (2.x line), when the parser is configured with an invalid limit option value such as an unparseable string or NaN, bytes.parse returns null and the request body size check is silently skipped. Applications that rely on limit as their primary safeguard against oversized request bodies will accept arbitrarily large payloads, leading to excessive memory and CPU usage and denial of service. Patches: This issue is fixed in body-parser 1.20.6 and 2.3.0. After the fix, invalid limit values throw a clear error at parser construction time instead of silently disabling enforcement, while null and undefined continue to fall back to the default limit of 100kb. Workarounds: Validate the limit value before passing it to body-parser. For example, parse the value at startup and reject any configuration where the result is null or a non-finite number.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12590\n  \nPublished : July 9, 2026, 10:21 a.m. | 54 minutes ago\n  \nDescription :Impact: In body-parser versions prior to 1.20.6 (1.x line) and 2.3.0 (2.x line), when the parser is configured with an invalid limit option value such as an unparseable string or NaN, bytes.parse returns null and the request body size check is silently skipped. Applications that rely on limit as their primary safeguard against oversized request bodies will accept arbitrarily large payloads, leading to excessive memory and CPU usage and denial of service. Patches: This issue is fixed in body-parser 1.20.6 and 2.3.0. After the fix, invalid limit values throw a clear error at parser construction time instead of silently disabling enforcement, while null and undefined continue to fall back to the default limit of 100kb. Workarounds: Validate the limit value before passing it to body-parser. For example, parse the value at startup and reject any configuration where the result is null or a non-finite number.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-12590 - 유효하지 않은 제한 값이 자동으로 크기 적용을 비활성화하는 경우 서비스 거부에 취약한 body-parser",
-      "summary_ko": "CVE ID:CVE-2026-12590\n  \n게시일 : 2026년 7월 9일 오전 10시 21분 | 54분 전\n  \n설명:영향: 1.20.6(1.x 라인) 및 2.3.0(2.x 라인) 이전의 body-parser 버전에서 파서가 구문 분석할 수 없는 문자열 또는 NaN과 같은 잘못된 제한 옵션 값으로 구성된 경우 bytes.parse가 null을 반환하고 요청 본문 크기 확인이 자동으로 건너뛰게 됩니다. 크기가 너무 큰 요청 본문에 대한 기본 보호 장치로 제한을 사용하는 애플리케이션은 임의로 큰 페이로드를 허용하므로 과도한 메모리 및 CPU 사용과 서비스 거부가 발생합니다. 패치: 이 문제는 body-parser 1.20.6 및 2.3.0에서 수정되었습니다. 수정 후 유효하지 않은 제한 값은 적용을 자동으로 비활성화하는 대신 파서 생성 시 명확한 오류를 발생시키는 반면, null 및 정의되지 않은 값은 계속해서 기본 제한인 100kb로 대체됩니다. 해결 방법: 제한 값을 body-parser에 전달하기 전에 유효성을 검사하십시오. 예를 들어 시작 시 값을 구문 분석하고 결과가 null이거나 무한한 숫자인 구성을 거부합니다.\n  \n심각도: 3.7 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12590\n2. 26.07.09 오후7:21\n3. Impact: In body-parser versions prior to 1.20.6 (1",
-      "cve_id": "CVE-2026-12590",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12590",
-      "source": "cvefeed",
-      "published": "2026-07-09T19:21:10+09:00",
       "lang": "en"
     }
   ],
