@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-14T04:31:26.882029+09:00",
+  "fetched_at": "2026-07-14T05:01:42.346711+09:00",
   "security_news": [
+    {
+      "title": "Hackers backdoor Jscrambler npm package with infostealer malware",
+      "summary": "The Jscrambler client-side web security company disclosed that a threat actor published a malicious version of its npm package that has been downloaded almost 1,500 times. [...]",
+      "content": "",
+      "title_ko": "Infostealer 악성 코드가 포함된 해커 백도어 Jscrambler npm 패키지",
+      "summary_ko": "Jscrambler 클라이언트 측 웹 보안 회사는 위협 행위자가 거의 1,500회 다운로드된 npm 패키지의 악성 버전을 게시했다고 밝혔습니다. [...]",
+      "summary_3lines": "1. Jscrambler npm 패키지에 악성코드 삽입 시도\n2. 정보 탈취 악성코드, 1,500회 다운로드\n3. Jscrambler, 악성 버전 제거 및 조사 착수",
+      "link": "https://www.bleepingcomputer.com/news/security/hackers-backdoor-jscrambler-npm-package-with-infostealer-malware/",
+      "source": "bleepingcomputer",
+      "published": "2026-07-14T04:44:19+09:00",
+      "lang": "en"
+    },
     {
       "title": "GigaWiper Lets Threat Actors Choose Their Own Destructive Attack",
       "summary": "A modular implant borrows from various malware families to combine both backdoor and wiper activities to maximize impact and minimize operational output.",
@@ -1371,6 +1383,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-55772 - CedarJava has a type confusion vulnerability",
+      "summary": "CVE ID :CVE-2026-55772\n  \nPublished : July 13, 2026, 6:44 p.m. | 22 minutes ago\n  \nDescription :CedarJava is an open source Java implementation of the Cedar policy language, used for fine-grained authorization decisions. In versions prior to 2.3.6, 3.4.1 and 4.9.0, under certain circumstances, improper input handling could allow Record-to-Entity type confusion across the Java-Rust FFI boundary. CedarJava sends authorization requests to the Rust cedar-policy evaluator as JSON. The JSON protocol reserves magic single-key object shapes (__entity and __extn) for entity references and extension values. When serializing a CedarMap, there is no validation preventing these reserved keys from being used. If an integrating service builds a CedarMap from caller-supplied key/value data (such as request headers, user-defined metadata, or resource tags), an actor who controls those keys could cause the Rust evaluator to interpret a record as an entity reference. This issue requires the integrating service to build a CedarMap where the an actor controls the keys, and a policy must reference that value in a when/unless clause. This vulnerability has been fixed in versions 2.3.6, 3.4.1, and 4.9.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55772\n  \nPublished : July 13, 2026, 6:44 p.m. | 22 minutes ago\n  \nDescription :CedarJava is an open source Java implementation of the Cedar policy language, used for fine-grained authorization decisions. In versions prior to 2.3.6, 3.4.1 and 4.9.0, under certain circumstances, improper input handling could allow Record-to-Entity type confusion across the Java-Rust FFI boundary. CedarJava sends authorization requests to the Rust cedar-policy evaluator as JSON. The JSON protocol reserves magic single-key object shapes (__entity and __extn) for entity references and extension values. When serializing a CedarMap, there is no validation preventing these reserved keys from being used. If an integrating service builds a CedarMap from caller-supplied key/value data (such as request headers, user-defined metadata, or resource tags), an actor who controls those keys could cause the Rust evaluator to interpret a record as an entity reference. This issue requires the integrating service to build a CedarMap where the an actor controls the keys, and a policy must reference that value in a when/unless clause. This vulnerability has been fixed in versions 2.3.6, 3.4.1, and 4.9.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-55772 - CedarJava에는 유형 혼동 취약점이 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-55772\n  \n게시일 : 2026년 7월 13일 오후 6시 44분 | 22분 전\n  \n설명 :CedarJava는 세부적인 인증 결정에 사용되는 Cedar 정책 언어의 오픈 소스 Java 구현입니다. 2.3.6, 3.4.1 및 4.9.0 이전 버전에서는 특정 상황에서 부적절한 입력 처리로 인해 Java-Rust FFI 경계에서 레코드-엔티티 유형 혼동이 발생할 수 있습니다. CedarJava는 Rust cedar-policy 평가자에게 JSON으로 인증 요청을 보냅니다. JSON 프로토콜은 엔터티 참조 및 확장 값에 대한 마법의 단일 키 개체 형태(__entity 및 __extn)를 예약합니다. CedarMap을 직렬화할 때 이러한 예약된 키가 사용되는 것을 방지하는 유효성 검사가 없습니다. 통합 서비스가 호출자 제공 키/값 데이터(예: 요청 헤더, 사용자 정의 메타데이터 또는 리소스 태그)에서 CedarMap을 구축하는 경우 해당 키를 제어하는 ​​행위자는 Rust 평가자가 레코드를 엔터티 참조로 해석하도록 할 수 있습니다. 이 문제에서는 행위자가 키를 제어하는 ​​CedarMap을 구축하기 위해 통합 서비스가 필요하며 정책은 when/unless 절에서 해당 값을 참조해야 합니다. 이 취약점은 버전 2.3.6, 3.4.1 및 4.9에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-55772\n2. 26.07.14 오전3:44\n3. CedarJava is an open source Java implementation of",
+      "cve_id": "CVE-2026-55772",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55772",
+      "source": "cvefeed",
+      "published": "2026-07-14T03:44:47+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-58228 - Scheme validation bypass in Phoenix.LiveView.Utils leads to XSS via <.link>",
+      "summary": "CVE ID :CVE-2026-58228\n  \nPublished : July 13, 2026, 6:04 p.m. | 1 hour, 3 minutes ago\n  \nDescription :Cross-site scripting vulnerability in phoenixframework phoenix_live_view allows an attacker to bypass URL scheme validation and execute JavaScript in a victim's browser session.\n\nThe Phoenix.LiveView.Utils.valid_destination!/2 and Phoenix.LiveView.Utils.valid_live_navigation_destination!/2 functions in lib/phoenix_live_view/utils.ex rely on an internal uri_scheme/1 helper that only detects a scheme when the input's first byte is an ASCII letter. Inputs beginning with an ASCII control character or space fall through to a nil-returning clause, causing the URL to be treated as a safe relative path.\n\nStandard browsers implement the WHATWG URL parser, which strips leading C0 control and space characters before parsing. As a result, an input such as \" javascript:alert(1)\" is passed unchanged into <.link href={...}> and, when clicked, is parsed by the browser as a javascript: URL that executes attacker-controlled script in the victim's session.\n\nApplications that render user-supplied URLs (for example profile links, redirect targets, or external references) via <.link href={...}> are affected.\n\nThis issue affects phoenix_live_view: from 1.2.2 before 1.2.7.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-58228\n  \nPublished : July 13, 2026, 6:04 p.m. | 1 hour, 3 minutes ago\n  \nDescription :Cross-site scripting vulnerability in phoenixframework phoenix_live_view allows an attacker to bypass URL scheme validation and execute JavaScript in a victim's browser session.\n\nThe Phoenix.LiveView.Utils.valid_destination!/2 and Phoenix.LiveView.Utils.valid_live_navigation_destination!/2 functions in lib/phoenix_live_view/utils.ex rely on an internal uri_scheme/1 helper that only detects a scheme when the input's first byte is an ASCII letter. Inputs beginning with an ASCII control character or space fall through to a nil-returning clause, causing the URL to be treated as a safe relative path.\n\nStandard browsers implement the WHATWG URL parser, which strips leading C0 control and space characters before parsing. As a result, an input such as \" javascript:alert(1)\" is passed unchanged into <.link href={...}> and, when clicked, is parsed by the browser as a javascript: URL that executes attacker-controlled script in the victim's session.\n\nApplications that render user-supplied URLs (for example profile links, redirect targets, or external references) via <.link href={...}> are affected.\n\nThis issue affects phoenix_live_view: from 1.2.2 before 1.2.7.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-58228 - Phoenix.LiveView.Utils의 체계 검증 우회가 <.link>를 통해 XSS로 연결됩니다.",
+      "summary_ko": "CVE ID:CVE-2026-58228\n  \n게시일 : 2026년 7월 13일 오후 6시 4분 | 1시간, 3분 전\n  \n설명 : phoenixframework phoenix_live_view의 교차 사이트 스크립팅 취약점으로 인해 공격자가 URL 구성표 유효성 검사를 우회하고 피해자의 브라우저 세션에서 JavaScript를 실행할 수 있습니다.\n\nlib/phoenix_live_view/utils.ex의 Phoenix.LiveView.Utils.valid_destination!/2 및 Phoenix.LiveView.Utils.valid_live_navigation_destination!/2 함수는 입력의 첫 번째 바이트가 ASCII 문자인 경우에만 구성표를 감지하는 내부 uri_scheme/1 도우미를 사용합니다. ASCII 제어 문자나 공백으로 시작하는 입력은 nil-returning 절로 전달되어 URL이 안전한 상대 경로로 처리됩니다.\n\n표준 브라우저는 구문 분석 전에 선행 C0 제어 및 공백 문자를 제거하는 WHATWG URL 구문 분석기를 구현합니다. 결과적으로 \" javascript:alert(1)\"와 같은 입력은 <.link href={...}>에 변경 없이 전달되고, 클릭하면 브라우저에서 피해자의 세션에서 공격자가 제어하는 ​​스크립트를 실행하는 javascript: URL로 구문 분석됩니다.\n\n<.link href={...}>를 통해 사용자 제공 URL(예: 프로필 링크, 리디렉션 대상 또는 외부 참조)을 렌더링하는 애플리케이션이 영향을 받습니다.\n\n이 문제는 phoenix_live_view에 영향을 미칩니다: 1.2.2부터 1.2.7까지.\n  \n심각도: 5.1 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-58228\n2. 26.07.14 오전3:04\n3. Cross-site scripting vulnerability in phoenixframe",
+      "cve_id": "CVE-2026-58228",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58228",
+      "source": "cvefeed",
+      "published": "2026-07-14T03:04:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53365 - vsock/virtio: fix zerocopy completion for multi-skb sends",
       "summary": "CVE ID :CVE-2026-53365\n  \nPublished : July 13, 2026, 5:33 p.m. | 41 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvsock/virtio: fix zerocopy completion for multi-skb sends\n\nWhen a large message is fragmented into multiple skbs, the zerocopy\nuarg is only allocated and attached to the last skb in the loop.\nNon-final skbs carry pinned user pages with no completion tracking,\nso the kernel has no way to notify userspace when those pages are safe\nto reuse. If the loop breaks early the uarg is never allocated at all,\nleaking pinned pages with no completion notification.\n\nFix this by following the approach used by TCP: allocate the zerocopy\nuarg (if not provided by the caller) before the send loop and attach\nit to every skb via skb_zcopy_set(), which takes a reference per skb.\nEach skb's completion properly decrements the refcount, and the\nnotification only fires after the last skb is freed.\nOn failure, if no data was sent, the uarg is cleanly aborted via\nnet_zcopy_put_abort().\n\nThis issue was initially discovered by sashiko while reviewing commit\n1cb36e252211 (\"vsock/virtio: fix MSG_ZEROCOPY pinned-pages accounting\")\nbut was pre-existing.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
