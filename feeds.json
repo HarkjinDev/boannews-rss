@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-07-14T07:01:35.824316+09:00",
+  "fetched_at": "2026-07-14T07:33:55.177351+09:00",
   "security_news": [
+    {
+      "title": "티빙 개인정보 유출 일파만파…KT 보상 고객 41만명도 포함",
+      "summary": "이번 사태는 플랫폼 간 제휴 서비스가 확대되는 가운데 한 업체의 보안 사고가 다른 회사 고객에게까지 연쇄적으로 번질 수 있다는 점을 보여준다. 향후 조사에서는 전체 유출 규모뿐 아니라 제휴 이용자의 정보 보관...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 티빙 개인정보 유출로 KT 41만 고객 포함 보상\n2. 제휴 서비스 보안 사고로 고객 정보 유출 확대\n3. 전체 유출 규모 및 제휴자 데이터 보관 조사 중",
+      "link": "https://www.sjsori.com/news/articleView.html?idxno=87595",
+      "source": "naver",
+      "published": "2026-07-14T07:28:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[은행 정보보호 경쟁력] 정보보호에도 공공성 입힌 기업은행…민관 공동...",
+      "summary": "자체 화이트해커팀을 활용한 공격자 관점의 실전 모의해킹도 병행하며 금융보안원과 함께 전자금융기반시설 보안 취약점 분석·평가도 진행 중이다. IBK기업은행은 임직원 대상 정보보호 문화 확산에도 힘을 쏟고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 기업은행, 금융보안원과 모의해킹 진행\n2. 자체 화이트해커팀 활용, 전자금융 취약점 분석\n3. 임직원 정보보호 문화 확산 집중",
+      "link": "https://dealsite.co.kr/articles/165158",
+      "source": "naver",
+      "published": "2026-07-14T07:12:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "양종희 \"머니무브, 위기 아닌 기회\"...KB금융, WM·CIB·AI ‘3년 전략’...",
+      "summary": "KB금융은 자체 개발한 AI 에이전트와 외부 전문기관의 AI 에이전트를 모의해킹에 활용하고, AI 에이전트와 로봇프로세스자동화(RPA)를 결합한 24시간 보안 모니터링 체계를 구축했다. 올해 1월에는 그룹 사이버보안센터를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KB금융, AI 에이전트·RPA 결합 24시간 보안 모니터링\n2. 모의 해킹으로 AI 에이전트 취약점 점검 및 개선\n3. 그룹 사이버보안센터 통해 AI·WM·CIB 전략 강화",
+      "link": "https://www.fntimes.com/html/view.php?ud=2026071315240453665e6e69892f_18",
+      "source": "naver",
+      "published": "2026-07-14T07:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[정보보호 테크] ⑦KT, 보안 투자 증가율 '최저'…올해 증액 시험대",
       "summary": "해킹 위협이 지속되면서 사이버 보안의 중요성이 부각되면서 국내 시스템통합(SI)도 이에 대응한 인프라... 이외에도 KT는 국내 최초 IT·네트워크 통합 사이버보안센터를 중심으로 단말과 네트워크, 서버 전 영역을...",
@@ -2008,21 +2044,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59856",
       "source": "msrc",
       "published": "2026-07-11T17:01:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55187 - Mailpit: Incomplete SSRF protection in Link Check API via IPv6 transition mechanisms (follow-up to CVE-2026-27808)",
-      "summary": "CVE ID :CVE-2026-55187\n  \nPublished : July 10, 2026, 10:16 p.m. | 32 minutes ago\n  \nDescription :Mailpit is an email testing tool and API for developers. Prior to 1.30.2, the remediation shipped for CVE-2026-27808 is incomplete because the tools.IsInternalIP deny-list in internal/tools/net.go relies on Go's standard library classification helpers and does not block IPv6 transition mechanisms or prefixes such as NAT64, 6to4, IPv4-compatible IPv6, ISATAP, fec0::/10, and 2001:db8::/32. An attacker who can deliver email and invoke POST /api/v1/message/{ID}/link-check can coerce the Link Check API's safeDialContext path into dialing internal destinations and can use status-code and error feedback to map internal service reachability, including cloud metadata endpoints. This issue is fixed in version 1.30.2.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55187\n  \nPublished : July 10, 2026, 10:16 p.m. | 32 minutes ago\n  \nDescription :Mailpit is an email testing tool and API for developers. Prior to 1.30.2, the remediation shipped for CVE-2026-27808 is incomplete because the tools.IsInternalIP deny-list in internal/tools/net.go relies on Go's standard library classification helpers and does not block IPv6 transition mechanisms or prefixes such as NAT64, 6to4, IPv4-compatible IPv6, ISATAP, fec0::/10, and 2001:db8::/32. An attacker who can deliver email and invoke POST /api/v1/message/{ID}/link-check can coerce the Link Check API's safeDialContext path into dialing internal destinations and can use status-code and error feedback to map internal service reachability, including cloud metadata endpoints. This issue is fixed in version 1.30.2.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-55187 - Mailpit: IPv6 전환 메커니즘을 통한 Link Check API의 불완전한 SSRF 보호(CVE-2026-27808에 대한 후속 조치)",
-      "summary_ko": "CVE ID:CVE-2026-55187\n  \n게시일 : 2026년 7월 10일 오후 10시 16분 | 32분 전\n  \n설명 :Mailpit은 개발자를 위한 이메일 테스트 도구이자 API입니다. 1.30.2 이전에는 CVE-2026-27808에 대해 제공된 수정 사항이 불완전합니다. 왜냐하면 Internal/tools/net.go의 tools.IsInternalIP 거부 목록은 Go의 표준 라이브러리 분류 도우미에 의존하고 NAT64, 6to4, IPv4 호환 IPv6, ISATAP, fec0::/10 및 IPv6 전환 메커니즘이나 접두사를 차단하지 않기 때문입니다. 2001:db8::/32. 이메일을 전달하고 POST /api/v1/message/{ID}/link-check를 호출할 수 있는 공격자는 Link Check API의 safeDialContext 경로를 강제하여 내부 대상에 전화를 걸 수 있으며 상태 코드 및 오류 피드백을 사용하여 클라우드 메타데이터 엔드포인트를 포함한 내부 서비스 연결 가능성을 매핑할 수 있습니다. 이 문제는 버전 1.30.2에서 해결되었습니다.\n  \n심각도: 5.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-55187\n2. 26.07.11 오전7:16\n3. Mailpit is an email testing tool and API for devel",
-      "cve_id": "CVE-2026-55187",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55187",
-      "source": "cvefeed",
-      "published": "2026-07-11T07:16:43+09:00",
       "lang": "en"
     }
   ],
