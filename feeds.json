@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-13T21:02:44.072167+09:00",
+  "fetched_at": "2026-07-13T21:31:43.159362+09:00",
   "security_news": [
     {
       "title": "익산소방서, 대학생 청년 직무인턴 배치.. 소방 행정 실무 경험 제공",
@@ -1368,30 +1368,6 @@
       "source": "naver",
       "published": "2026-07-10T23:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'정찰정보총국' 힘 실어준 북한…사이버전 전방위 강화?",
-      "summary": "라자루스, 김수키 같은 북한 해커 조직을 지휘하는 기관으로 알려져, 북한의 사이버 공세가 강화될 거라는... 라자루스, 김수키 같은 북한 해킹 그룹의 컨트롤타워가 정찰총국으로 알려져 있는 걸 고려하면, 사이버상...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 정찰정보총국, 라자루스·김수키 해킹 조직 지휘\n2. 사이버 공격 통제 체계 강화로 공세 확대 우려\n3. 국제적 사이버전 위협 심화 가능성 제기",
-      "link": "https://n.news.naver.com/mnews/article/055/0001371573?sid=100",
-      "source": "naver",
-      "published": "2026-07-10T21:19:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "유전자 검사 업체 23andMe 고객정보 유출…4,675만 달러 보상",
-      "summary": "연방 파산법원은 2023년 발생한 대규모 해킹 사고와 관련해 23andMe가 피해 고객들에게 총 4,675만 달러를 지급하는 합의안을 승인했다. 법원은 이미 지급된 1,429만 달러를 제외한 나머지 금액을 추가로 지급하도록...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 23andMe 고객정보 4,675만 달러 보상 합의\n2. 2023년 대규모 해킹으로 개인정보 유출\n3. 연방 파산법원 승인, 1,429만 달러 추가 지급",
-      "link": "https://www.radiokorea.com/news/article.php?uid=499062",
-      "source": "naver",
-      "published": "2026-07-10T21:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1993,21 +1969,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-61437",
       "source": "cvefeed",
       "published": "2026-07-10T22:58:06+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53363 - xfrm: iptfs: preserve shared-frag marker in iptfs_consume_frags()",
-      "summary": "CVE ID :CVE-2026-53363\n  \nPublished : July 10, 2026, 12:17 p.m. | 27 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: iptfs: preserve shared-frag marker in iptfs_consume_frags()\n\niptfs_consume_frags() transfers paged fragments from one socket buffer\nto another but fails to propagate the SKBFL_SHARED_FRAG flag. This is\nthe same class of bug that was fixed in skb_try_coalesce() for\nCVE-2026-46300: when fragments backed by read-only page-cache pages are\nmerged, the marker indicating their shared nature must be preserved so\nthat ESP can decide correctly whether in-place encryption is safe.\n\nApply the same two-line fix used in skb_try_coalesce() to\niptfs_consume_frags().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53363\n  \nPublished : July 10, 2026, 12:17 p.m. | 27 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: iptfs: preserve shared-frag marker in iptfs_consume_frags()\n\niptfs_consume_frags() transfers paged fragments from one socket buffer\nto another but fails to propagate the SKBFL_SHARED_FRAG flag. This is\nthe same class of bug that was fixed in skb_try_coalesce() for\nCVE-2026-46300: when fragments backed by read-only page-cache pages are\nmerged, the marker indicating their shared nature must be preserved so\nthat ESP can decide correctly whether in-place encryption is safe.\n\nApply the same two-line fix used in skb_try_coalesce() to\niptfs_consume_frags().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53363 - xfrm: iptfs: iptfs_consume_frags()에서 공유 조각 마커 유지",
-      "summary_ko": "CVE ID:CVE-2026-53363\n  \n게시일 : 2026년 7월 10일 오후 12시 17분 | 27분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nxfrm: iptfs: iptfs_consume_frags()에서 공유 조각 마커를 유지합니다.\n\niptfs_consume_frags()는 하나의 소켓 버퍼에서 페이징된 조각을 전송합니다.\nSKBFL_SHARED_FRAG 플래그를 전파하는 데 실패했습니다. 이것은\nskb_try_coalesce()에서 수정된 동일한 클래스의 버그\nCVE-2026-46300: 읽기 전용 페이지 캐시 페이지가 지원하는 조각이\n병합된 경우 공유 특성을 나타내는 마커는 보존되어야 합니다.\nESP는 내부 암호화가 안전한지 올바르게 결정할 수 있습니다.\n\nskb_try_coalesce()에 사용된 것과 동일한 두 줄 수정을 적용하여\niptfs_consume_frags().\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53363\n2. 26.07.10 오후9:17\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-53363",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53363",
-      "source": "cvefeed",
-      "published": "2026-07-10T21:17:22+09:00",
       "lang": "en"
     }
   ],
