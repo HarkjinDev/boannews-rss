@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-14T00:01:28.651118+09:00",
+  "fetched_at": "2026-07-14T00:31:20.447633+09:00",
   "security_news": [
     {
       "title": "[하나금융] 하나은행 빠른 해외송금 / 하나카드 AI 통합 구독",
@@ -1924,36 +1924,6 @@
       "link": "https://isc.sans.edu/diary/rss/33138",
       "source": "sans_isc",
       "published": "2026-07-11T00:52:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55501 - 9router: Login brute-force protection bypass via spoofed X-Forwarded-For header",
-      "summary": "CVE ID :CVE-2026-55501\n  \nPublished : July 10, 2026, 3:23 p.m. | 56 minutes ago\n  \nDescription :9Router is an AI router & token saver. Prior to 0.4.80, the dashboard login rate limiter in src/lib/auth/loginLimiter.js derives the client identity from the attacker-controlled X-Forwarded-For HTTP header, and src/app/api/auth/login/route.js uses that spoofable value for checkLock and recordFail. A remote attacker can rotate the X-Forwarded-For value on each login attempt to receive a fresh rate-limit bucket, bypass the 5-attempt threshold and progressive lockout durations, and perform unlimited brute-force attempts against the dashboard password. This issue is fixed in version 0.4.80.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55501\n  \nPublished : July 10, 2026, 3:23 p.m. | 56 minutes ago\n  \nDescription :9Router is an AI router & token saver. Prior to 0.4.80, the dashboard login rate limiter in src/lib/auth/loginLimiter.js derives the client identity from the attacker-controlled X-Forwarded-For HTTP header, and src/app/api/auth/login/route.js uses that spoofable value for checkLock and recordFail. A remote attacker can rotate the X-Forwarded-For value on each login attempt to receive a fresh rate-limit bucket, bypass the 5-attempt threshold and progressive lockout durations, and perform unlimited brute-force attempts against the dashboard password. This issue is fixed in version 0.4.80.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-55501 - 9router: 스푸핑된 X-Forwarded-For 헤더를 통한 로그인 무차별 대입 보호 우회",
-      "summary_ko": "CVE ID:CVE-2026-55501\n  \n게시일 : 2026년 7월 10일 오후 3시 23분 | 56분 전\n  \n설명 :9Router는 AI 라우터 및 토큰 보호기입니다. 0.4.80 이전에는 src/lib/auth/loginLimiter.js의 대시보드 로그인 속도 제한기는 공격자가 제어하는 ​​X-Forwarded-For HTTP 헤더에서 클라이언트 ID를 파생하고 src/app/api/auth/login/route.js는 checkLock 및 RecordFail에 해당 스푸핑 가능한 값을 사용합니다. 원격 공격자는 로그인을 시도할 때마다 X-Forwarded-For 값을 교체하여 새로운 속도 제한 버킷을 수신하고, 5회 시도 임계값과 점진적인 잠금 기간을 우회하고, 대시보드 비밀번호에 대해 무제한 무차별 공격을 수행할 수 있습니다. 이 문제는 버전 0.4.80에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-55501\n2. 26.07.11 오전12:23\n3. 9Router is an AI router & token saver. Prior to 0.",
-      "cve_id": "CVE-2026-55501",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55501",
-      "source": "cvefeed",
-      "published": "2026-07-11T00:23:53+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-57994 - phpMyFAQ - Information Disclosure of Inactive FAQ Content via Public API Endpoints",
-      "summary": "CVE ID :CVE-2026-57994\n  \nPublished : July 10, 2026, 3:16 p.m. | 1 hour, 3 minutes ago\n  \nDescription :phpMyFAQ before 4.1.5 applies inconsistent active=yes and publication-date filtering across its public FAQ API endpoints, allowing unauthenticated attackers to retrieve inactive (draft or review-only) FAQ content. Specifically, GET /api/v3.1/faq/{categoryId}/{faqId} returns the inactive FAQ title and full answer, while GET /api/v3.1/faqs/tags/{tagId} and GET /api/v4.0/faqs/tags/{tagId} return the inactive FAQ title and answer preview, disclosing non-public content.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-57994\n  \nPublished : July 10, 2026, 3:16 p.m. | 1 hour, 3 minutes ago\n  \nDescription :phpMyFAQ before 4.1.5 applies inconsistent active=yes and publication-date filtering across its public FAQ API endpoints, allowing unauthenticated attackers to retrieve inactive (draft or review-only) FAQ content. Specifically, GET /api/v3.1/faq/{categoryId}/{faqId} returns the inactive FAQ title and full answer, while GET /api/v3.1/faqs/tags/{tagId} and GET /api/v4.0/faqs/tags/{tagId} return the inactive FAQ title and answer preview, disclosing non-public content.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-57994 - phpMyFAQ - 공개 API 엔드포인트를 통한 비활성 FAQ 콘텐츠 정보 공개",
-      "summary_ko": "CVE ID:CVE-2026-57994\n  \n게시일 : 2026년 7월 10일 오후 3시 16분 | 1시간, 3분 전\n  \n설명 :4.1.5 이전의 phpMyFAQ는 공개 FAQ API 엔드포인트 전체에 일관되지 않은 active=yes 및 게시 날짜 필터링을 적용하여 인증되지 않은 공격자가 비활성(초안 또는 검토 전용) FAQ 콘텐츠를 검색할 수 있도록 합니다. 특히 GET /api/v3.1/faq/{categoryId}/{faqId}는 비활성 FAQ 제목과 전체 답변을 반환하는 반면, GET /api/v3.1/faqs/tags/{tagId} 및 GET /api/v4.0/faqs/tags/{tagId}는 비활성 FAQ 제목과 답변 미리 보기를 반환하여 비공개 콘텐츠를 공개합니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-57994\n2. 26.07.11 오전12:16\n3. phpMyFAQ before 4.1.5 applies inconsistent active=",
-      "cve_id": "CVE-2026-57994",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57994",
-      "source": "cvefeed",
-      "published": "2026-07-11T00:16:47+09:00",
       "lang": "en"
     }
   ],
