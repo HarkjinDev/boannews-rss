@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-14T17:31:52.803542+09:00",
+  "fetched_at": "2026-07-14T18:01:26.540654+09:00",
   "security_news": [
     {
       "title": "해킹조직 샤이니헌터스, 세일즈포스 '신뢰 연결' 악용해 기업 정보 탈취",
@@ -1600,6 +1600,36 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-12480 Arbitrary HDF5 File Read via Virtual Dataset Bypass in keras-team/keras",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-12480 가상 데이터 세트 우회를 통한 임의 HDF5 파일 읽기 inkeras-team/keras",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-12480\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-12480",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12480",
+      "source": "msrc",
+      "published": "2026-07-14T17:38:59+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-58233 - Remote Code Execution vulnerability in SAP Change and Transport System Attach Tool (ctsattach)",
+      "summary": "CVE ID :CVE-2026-58233\n  \nPublished : July 14, 2026, 1:16 a.m. | 6 hours, 1 minute ago\n  \nDescription :SAP Change and Transport System Attach Tool (ctsattach) allows an authenticated attacker to supply a specially crafted archive file which, when processed by the application�s library, can trigger insecure deserialization and lead to remote code execution (RCE) on the system. Successful exploitation requires a victim to process the malicious archive, enabling the attacker to execute the RCE and extract sensitive information and gain control over the system and its processes. This vulnerability has a high impact on confidentiality and integrity of the data, with a low impact on the availability of the system.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-58233\n  \nPublished : July 14, 2026, 1:16 a.m. | 6 hours, 1 minute ago\n  \nDescription :SAP Change and Transport System Attach Tool (ctsattach) allows an authenticated attacker to supply a specially crafted archive file which, when processed by the application�s library, can trigger insecure deserialization and lead to remote code execution (RCE) on the system. Successful exploitation requires a victim to process the malicious archive, enabling the attacker to execute the RCE and extract sensitive information and gain control over the system and its processes. This vulnerability has a high impact on confidentiality and integrity of the data, with a low impact on the availability of the system.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-58233 - SAP Change and Transport System Attach Tool(ctsattach)의 원격 코드 실행 취약점",
+      "summary_ko": "CVE ID:CVE-2026-58233\n  \n게시일 : 2026년 7월 14일 오전 1시 16분 | 6시간, 1분 전\n  \n설명:SAP 변경 및 전송 시스템 연결 도구(ctsattach)를 사용하면 인증된 공격자가 특별히 제작된 아카이브 파일을 제공할 수 있으며, 이 아카이브 파일은 애플리케이션 라이브러리에서 처리될 때 안전하지 않은 역직렬화를 트리거하고 시스템에서 원격 코드 실행(RCE)으로 이어질 수 있습니다. 악용에 성공하려면 피해자가 악성 아카이브를 처리해야 공격자가 RCE를 실행하고 민감한 정보를 추출하고 시스템과 프로세스에 대한 제어권을 얻을 수 있습니다. 이 취약점은 데이터의 기밀성과 무결성에 큰 영향을 미치며 시스템 가용성에는 낮은 영향을 미칩니다.\n  \n심각도: 7.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-58233\n2. 26.07.14 오전10:16\n3. SAP Change and Transport System Attach Tool (ctsat",
+      "cve_id": "CVE-2026-58233",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58233",
+      "source": "cvefeed",
+      "published": "2026-07-14T10:16:18+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-44767 - Allowlist Bypass in setThemeRoot() Enables Cross-Origin CSS Injection",
       "summary": "CVE ID :CVE-2026-44767\n  \nPublished : July 14, 2026, 12:22 a.m. | 47 minutes ago\n  \nDescription :setThemeRoot() failed to enforce the sap-allowed-theme-origins allowlist. An attacker-controlled absolute cross-origin URL could be stored and used directly to construct a  element, even when no  tag was present in the document. The same bypass was reachable via the ?sap-themeRoot URL parameter.Exploitation requires attacker-influenced input (e.g., a URL query parameter, tenant configuration, or user-supplied setting) to reach setThemeRoot(). A successful exploit allows an attacker to inject arbitrary CSS into the victim page, enabling:- UI redressing and clickjacking- Phishing overlays- Visual defacement- Limited data exfiltration via CSS attribute selectors targeting predictable DOM content\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-44767\n  \nPublished : July 14, 2026, 12:22 a.m. | 47 minutes ago\n  \nDescription :setThemeRoot() failed to enforce the sap-allowed-theme-origins allowlist. An attacker-controlled absolute cross-origin URL could be stored and used directly to construct a  element, even when no  tag was present in the document. The same bypass was reachable via the ?sap-themeRoot URL parameter.Exploitation requires attacker-influenced input (e.g., a URL query parameter, tenant configuration, or user-supplied setting) to reach setThemeRoot(). A successful exploit allows an attacker to inject arbitrary CSS into the victim page, enabling:- UI redressing and clickjacking- Phishing overlays- Visual defacement- Limited data exfiltration via CSS attribute selectors targeting predictable DOM content\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2032,51 +2062,6 @@
       "link": "https://isc.sans.edu/diary/rss/33146",
       "source": "sans_isc",
       "published": "2026-07-11T18:07:06+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54908 Pion DTLS: Denial of service via panic while parsing a crafted ECDHE_PSK ServerKeyExchange message",
-      "summary": "Information published.",
-      "description": "Information published.",
-      "title_ko": "CVE-2026-54908 Pion DTLS: 조작된 ECDHE_PSK ServerKeyExchange 메시지를 구문 분석하는 동안 패닉을 통한 서비스 거부",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-54908\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-54908",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54908",
-      "source": "msrc",
-      "published": "2026-07-11T17:41:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45571 go-git: Crafted repositories may modify main and submodule .git directories",
-      "summary": "Information published.",
-      "description": "Information published.",
-      "title_ko": "CVE-2026-45571 go-git: 제작된 리포지토리가 기본 및 하위 모듈 .git 디렉터리를 수정할 수 있음",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-45571\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-45571",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45571",
-      "source": "msrc",
-      "published": "2026-07-11T17:39:50+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2024-7598 Network restriction bypass via race condition during namespace termination",
-      "summary": "Information published.",
-      "description": "Information published.",
-      "title_ko": "CVE-2024-7598 네임스페이스 종료 중 경쟁 조건을 통한 네트워크 제한 우회",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2024-7598\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2024-7598",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-7598",
-      "source": "msrc",
-      "published": "2026-07-11T17:38:52+09:00",
       "lang": "en"
     }
   ],
