@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-14T23:31:26.393062+09:00",
+  "fetched_at": "2026-07-15T00:01:28.590625+09:00",
   "security_news": [
     {
       "title": "해킹 아닌 설정 실수…라인야후 게임 이용자 정보 710만건 유출",
@@ -1752,21 +1752,24 @@
       "source": "naver",
       "published": "2026-07-12T05:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[IT 소식 톺아보기- 7월 2주차] 美, 랜섬웨어 협상가가 범죄 조직과 범죄...",
-      "summary": "이번 주에는 미국의 보안기업 전문가가 해킹그룹과 공모해 기업의 뒤통수를 쳐 징역형을 선고받았다는 소식, 일본의 한 IT·웹 서비스 개발 기업의 일부 검증용 서버에서 부정접근 사고가 발생해 개인정보 유출까지...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 美 보안 전문가, 해킹 그룹과 공모해 징역형 선고\n2. 일본 IT 기업 검증 서버 부정 접근, 개인정보 유출 발생\n3. 랜섬웨어 협상가, 범죄 조직과 결탁해 징역형",
-      "link": "https://www.m-economynews.com/news/article.html?no=68659",
-      "source": "naver",
-      "published": "2026-07-11T23:56:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-10577 - Rockwell Automation 1715 Redundant IO – Access Control Vulnerability",
+      "summary": "CVE ID :CVE-2026-10577\n  \nPublished : July 14, 2026, 1:18 p.m. | 58 minutes ago\n  \nDescription :A security issue exists within the 1715-AENTR EtherNet/IP Adapter. The affected product exposes a network-accessible debug port that does not enforce proper privilege controls, allowing unauthenticated remote access to intrusive command-line interface (CLI) commands. If exploited, a threat actor could read or delete files, stop tasks, modify memory, and change I/O states, potentially impacting the confidentiality, integrity, and availability of the device.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10577\n  \nPublished : July 14, 2026, 1:18 p.m. | 58 minutes ago\n  \nDescription :A security issue exists within the 1715-AENTR EtherNet/IP Adapter. The affected product exposes a network-accessible debug port that does not enforce proper privilege controls, allowing unauthenticated remote access to intrusive command-line interface (CLI) commands. If exploited, a threat actor could read or delete files, stop tasks, modify memory, and change I/O states, potentially impacting the confidentiality, integrity, and availability of the device.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10577 - Rockwell Automation 1715 중복 IO – 액세스 제어 취약점",
+      "summary_ko": "CVE ID:CVE-2026-10577\n  \n게시일 : 2026년 7월 14일 오후 1시 18분 | 58분 전\n  \n설명:1715-AENTR EtherNet/IP 어댑터 내에 보안 문제가 있습니다. 영향을 받는 제품은 적절한 권한 제어를 적용하지 않는 네트워크 액세스 가능 디버그 포트를 노출하여 침입적인 명령줄 인터페이스(CLI) 명령에 대한 인증되지 않은 원격 액세스를 허용합니다. 악용될 경우 위협 행위자는 파일을 읽거나 삭제하고, 작업을 중지하고, 메모리를 수정하고, I/O 상태를 변경하여 잠재적으로 장치의 기밀성, 무결성 및 가용성에 영향을 미칠 수 있습니다.\n  \n심각도: 10.0 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10577\n2. 26.07.14 오후10:18\n3. A security issue exists within the 1715-AENTR Ethe",
+      "cve_id": "CVE-2026-10577",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10577",
+      "source": "cvefeed",
+      "published": "2026-07-14T22:18:13+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-15043 - DBI::SQL::Nano versions from 1.42 before 1.651 for Perl have inverted <= and >= SQL operators on text",
       "summary": "CVE ID :CVE-2026-15043\n  \nPublished : July 14, 2026, 9:44 a.m. | 31 minutes ago\n  \nDescription :DBI::SQL::Nano versions from 1.42 before 1.651 for Perl have inverted <= and >= SQL operators on text.\n\nDBI::SQL::Nano, DBI's built-in mini-SQL engine, evaluated WHERE predicates incorrectly in some cases. In the non-numeric string branch of the is_matched method, <= was evaluated using Perl's ge operator, and >= was evaluated using Perl's le operator.\n\nSQL::Nano is the fallback query engine for DBI's file-backed drivers (DBD::File, DBD::DBM, CSV-style drivers) whenever SQL::Statement is not installed, and is forced whenever DBI_SQL_NANO=1. Queries over such tables use these predicates directly.\n\nThe impact depends on the context. Where an application relies on a WHERE clause to filter file-backed data for policy or authorization, an inverted <=>= comparison silently returns the wrong rows.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
