@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-14T08:32:34.588603+09:00",
+  "fetched_at": "2026-07-14T09:01:31.464264+09:00",
   "security_news": [
     {
       "title": "[김승연의 청년 사다리②] 한화금융, '문 밖 취준생' 불확실성 지운다",
@@ -1416,21 +1416,24 @@
       "source": "naver",
       "published": "2026-07-11T09:12:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "은행권, AI 확산에 보안투자 늘려...정보보호 경쟁 '가속'",
-      "summary": "모바일·인공지능(AI) 기반 금융서비스가 빠르게 확산되는 가운데 해킹과 개인정보 유출 등 사이버 위협도 고도화되면서 정보보호가 단순한 비용이 아닌 핵심 투자 분야로 자리 잡고 있다. 금융당국도 정보보호...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 은행권, AI 확산에 따른 사이버 위협 증가\n2. 모바일·AI 기반 금융 서비스 증가, 해킹·정보 유출 고도화\n3. 정보보호, 단순 비용 아닌 핵심 투자로 부상",
-      "link": "https://daily.hankooki.com/news/articleView.html?idxno=1384890",
-      "source": "naver",
-      "published": "2026-07-11T09:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-57856 - Cockpit CMS Path Traversal via Bucket Name in Bucket File Storage API",
+      "summary": "CVE ID :CVE-2026-57856\n  \nPublished : July 13, 2026, 10:41 p.m. | 27 minutes ago\n  \nDescription :Cockpit CMS contains a path traversal vulnerability in the Bucket file storage API (/system/buckets/api). The api() method in modules/System/Controller/Buckets.php sanitizes the bucket name with preg_replace('/[^a-zA-Z0-9-_\\\\.]/','', $bucket), which permits '..' and '../' sequences. The sanitized value is interpolated into a Flysystem path as uploads://buckets/{bucket}. Flysystem's WhitespacePathNormalizer resolves 'buckets/..' to the empty string (the uploads storage root) without raising PathTraversalDetected because the '..' has a preceding component to consume. An authenticated low-privileged user can send a crafted request with a '../' bucket name to list, upload, and delete files across all buckets, including those belonging to other users or roles\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-57856\n  \nPublished : July 13, 2026, 10:41 p.m. | 27 minutes ago\n  \nDescription :Cockpit CMS contains a path traversal vulnerability in the Bucket file storage API (/system/buckets/api). The api() method in modules/System/Controller/Buckets.php sanitizes the bucket name with preg_replace('/[^a-zA-Z0-9-_\\\\.]/','', $bucket), which permits '..' and '../' sequences. The sanitized value is interpolated into a Flysystem path as uploads://buckets/{bucket}. Flysystem's WhitespacePathNormalizer resolves 'buckets/..' to the empty string (the uploads storage root) without raising PathTraversalDetected because the '..' has a preceding component to consume. An authenticated low-privileged user can send a crafted request with a '../' bucket name to list, upload, and delete files across all buckets, including those belonging to other users or roles\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID :CVE-2026-57856\n  \nPublished : July 13, 2026, 10:41 p.m. | 27 minutes ago\n  \nDescription :Cockpit CMS contains a path traversal vulnerability in the Bucket file storage API (/system/buckets/api). The api() method in modules/System/Controller/Buckets.php sanitizes the bucket name with preg_replace('/[^a-zA-Z0-9-_\\\\.]/','', $bucket), which permits '..' and '../' sequences. The sanitized value is interpolated into a Flysystem path as uploads://buckets/{bucket}. Flysystem's WhitespacePathNormalizer resolves 'buckets/..' to the empty string (the uploads storage root) without raising PathTraversalDetected because the '..' has a preceding component to consume. An authenticated low-privileged user can send a crafted request with a '../' bucket name to list, upload, and delete files across all buckets, including those belonging to other users or roles\n  \nSeverity: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-57856\n2. 26.07.14 오전7:41\n3. Cockpit CMS contains a path traversal vulnerabilit",
+      "cve_id": "CVE-2026-57856",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57856",
+      "source": "cvefeed",
+      "published": "2026-07-14T07:41:23+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-55772 - CedarJava has a type confusion vulnerability",
       "summary": "CVE ID :CVE-2026-55772\n  \nPublished : July 13, 2026, 6:44 p.m. | 22 minutes ago\n  \nDescription :CedarJava is an open source Java implementation of the Cedar policy language, used for fine-grained authorization decisions. In versions prior to 2.3.6, 3.4.1 and 4.9.0, under certain circumstances, improper input handling could allow Record-to-Entity type confusion across the Java-Rust FFI boundary. CedarJava sends authorization requests to the Rust cedar-policy evaluator as JSON. The JSON protocol reserves magic single-key object shapes (__entity and __extn) for entity references and extension values. When serializing a CedarMap, there is no validation preventing these reserved keys from being used. If an integrating service builds a CedarMap from caller-supplied key/value data (such as request headers, user-defined metadata, or resource tags), an actor who controls those keys could cause the Rust evaluator to interpret a record as an entity reference. This issue requires the integrating service to build a CedarMap where the an actor controls the keys, and a policy must reference that value in a when/unless clause. This vulnerability has been fixed in versions 2.3.6, 3.4.1, and 4.9.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
