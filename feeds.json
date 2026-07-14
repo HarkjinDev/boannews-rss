@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-14T11:01:39.287713+09:00",
+  "fetched_at": "2026-07-14T11:31:24.647282+09:00",
   "security_news": [
     {
       "title": "'큰손 매수'인 줄 알았더니…로빈후드 창업자 지갑 복구 문구 유출에 밈...",
@@ -1431,6 +1431,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-44767 - Allowlist Bypass in setThemeRoot() Enables Cross-Origin CSS Injection",
+      "summary": "CVE ID :CVE-2026-44767\n  \nPublished : July 14, 2026, 12:22 a.m. | 47 minutes ago\n  \nDescription :setThemeRoot() failed to enforce the sap-allowed-theme-origins allowlist. An attacker-controlled absolute cross-origin URL could be stored and used directly to construct a  element, even when no  tag was present in the document. The same bypass was reachable via the ?sap-themeRoot URL parameter.Exploitation requires attacker-influenced input (e.g., a URL query parameter, tenant configuration, or user-supplied setting) to reach setThemeRoot(). A successful exploit allows an attacker to inject arbitrary CSS into the victim page, enabling:- UI redressing and clickjacking- Phishing overlays- Visual defacement- Limited data exfiltration via CSS attribute selectors targeting predictable DOM content\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-44767\n  \nPublished : July 14, 2026, 12:22 a.m. | 47 minutes ago\n  \nDescription :setThemeRoot() failed to enforce the sap-allowed-theme-origins allowlist. An attacker-controlled absolute cross-origin URL could be stored and used directly to construct a  element, even when no  tag was present in the document. The same bypass was reachable via the ?sap-themeRoot URL parameter.Exploitation requires attacker-influenced input (e.g., a URL query parameter, tenant configuration, or user-supplied setting) to reach setThemeRoot(). A successful exploit allows an attacker to inject arbitrary CSS into the victim page, enabling:- UI redressing and clickjacking- Phishing overlays- Visual defacement- Limited data exfiltration via CSS attribute selectors targeting predictable DOM content\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-44767 - setThemeRoot()의 허용 목록 우회로 인해 Cross-Origin CSS 삽입이 활성화됨",
+      "summary_ko": "CVE ID:CVE-2026-44767\n  \n게시일 : 2026년 7월 14일 오전 12시 22분 | 47분 전\n  \n설명 :setThemeRoot()가 sap-allowed-theme-origins 허용 목록을 적용하지 못했습니다. 공격자가 제어하는 ​​절대 교차 원본 URL은 문서에 태그가 없는 경우에도 저장되어 요소를 구성하는 데 직접 사용될 수 있습니다. ?sap-themeRoot URL 매개변수를 통해 동일한 우회에 도달할 수 있습니다. 악용하려면 setThemeRoot()에 도달하려면 공격자의 영향을 받는 입력(예: URL 쿼리 매개변수, 테넌트 구성 또는 사용자 제공 설정)이 필요합니다. 악용에 성공하면 공격자는 임의의 CSS를 피해자 페이지에 삽입하여 다음을 수행할 수 있습니다. - UI 수정 및 클릭재킹 - 피싱 오버레이 - 시각적 훼손 - 예측 가능한 DOM 콘텐츠를 대상으로 하는 CSS 속성 선택기를 통한 제한된 데이터 유출\n  \n심각도: 6.1 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-44767\n2. 26.07.14 오전9:22\n3. setThemeRoot() failed to enforce the sap-allowed-t",
+      "cve_id": "CVE-2026-44767",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-44767",
+      "source": "cvefeed",
+      "published": "2026-07-14T09:22:05+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-57856 - Cockpit CMS Path Traversal via Bucket Name in Bucket File Storage API",
       "summary": "CVE ID :CVE-2026-57856\n  \nPublished : July 13, 2026, 10:41 p.m. | 27 minutes ago\n  \nDescription :Cockpit CMS contains a path traversal vulnerability in the Bucket file storage API (/system/buckets/api). The api() method in modules/System/Controller/Buckets.php sanitizes the bucket name with preg_replace('/[^a-zA-Z0-9-_\\\\.]/','', $bucket), which permits '..' and '../' sequences. The sanitized value is interpolated into a Flysystem path as uploads://buckets/{bucket}. Flysystem's WhitespacePathNormalizer resolves 'buckets/..' to the empty string (the uploads storage root) without raising PathTraversalDetected because the '..' has a preceding component to consume. An authenticated low-privileged user can send a crafted request with a '../' bucket name to list, upload, and delete files across all buckets, including those belonging to other users or roles\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
