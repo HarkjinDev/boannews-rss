@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-15T06:32:51.983071+09:00",
+  "fetched_at": "2026-07-15T07:01:49.374744+09:00",
   "security_news": [
+    {
+      "title": "IBM 주가 25% 폭락…\"AI 투자 열풍에 소프트웨어 예산 줄었다\"",
+      "summary": "또 AI를 활용한 해킹 기술이 빠르게 발전하면서 기업들이 소프트웨어보다 사이버보안 투자에 예산을 우선 배정하고 있다고 설명했다. 로이터는 올해 앤트로픽의 AI 모델 '미토스(Mythos)'가 기존 소프트웨어와 암호화...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 투자 열풍으로 IBM 주가 25% 폭락\n2. AI 해킹 기술 발달로 사이버보안 투자 우선 배정\n3. 앤트로픽 AI 모델 '미토스'는 소프트웨어와 암호화...",
+      "link": "https://n.news.naver.com/mnews/article/421/0009059859?sid=101",
+      "source": "naver",
+      "published": "2026-07-15T06:44:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "SonicWall warns of SMA1000 flaws exploited in zero-day attacks, patch now",
       "summary": "SonicWall warns that threat actors have been exploiting two SMA1000 vulnerabilities, tracked as CVE-2026-15409 and CVE-2026-15410, in zero-day attacks and urges customers to install the newly released security updates. [...]",
@@ -1851,6 +1863,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-48761 - Symfony: HtmlSanitizer UrlAttributeSanitizer Misses URL Attributes on , , , <img> and the URL Inside <meta http-equiv=\"refresh\"> content",
+      "summary": "CVE ID :CVE-2026-48761\n  \nPublished : July 14, 2026, 8:17 p.m. | 25 minutes ago\n  \nDescription :Symfony is a PHP framework for web and console applications and a set of reusable PHP components. From 6.1.0 until 6.4.41, 7.4.13, and 8.0.13, UrlAttributeSanitizer::getSupportedAttributes() omitted URL-bearing attributes on ,",
+      "description": "CVE ID :CVE-2026-48761\n  \nPublished : July 14, 2026, 8:17 p.m. | 25 minutes ago\n  \nDescription :Symfony is a PHP framework for web and console applications and a set of reusable PHP components. From 6.1.0 until 6.4.41, 7.4.13, and 8.0.13, UrlAttributeSanitizer::getSupportedAttributes() omitted URL-bearing attributes on ,",
+      "title_ko": "CVE-2026-48761 - Symfony: HtmlSanitizer UrlAttributeSanitizer가 , , , <img> 및 <meta http-equiv=\"refresh\"> 콘텐츠 내부의 URL에서 URL 속성을 누락함",
+      "summary_ko": "CVE ID:CVE-2026-48761\n  \n게시일 : 2026년 7월 14일 오후 8시 17분 | 25분 전\n  \n설명 :Symfony는 웹 및 콘솔 애플리케이션을 위한 PHP 프레임워크이자 재사용 가능한 PHP 구성 요소 세트입니다. 6.1.0부터 6.4.41, 7.4.13 및 8.0.13까지 UrlAttributeSanitizer::getSupportedAttributes()는 에서 URL 포함 속성을 생략했습니다.",
+      "summary_3lines": "1. CVE-2026-48761\n2. 26.07.15 오전5:17\n3. Symfony is a PHP framework for web and console app",
+      "cve_id": "CVE-2026-48761",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48761",
+      "source": "cvefeed",
+      "published": "2026-07-15T05:17:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-45067 - Symfony: Email Header / SMTP Command Injection via CRLF in Symfony\\Component\\Mime\\Address",
       "summary": "CVE ID :CVE-2026-45067\n  \nPublished : July 14, 2026, 5:41 p.m. | 34 minutes ago\n  \nDescription :### Description\n\n`Symfony\\Component\\Mime\\Address` is the value-object every Symfony Mailer address (to/cc/bcc/from/reply-to) flows through; its constructor is documented as validating the address and throwing on invalid input, so developers treat it as a security boundary.\n\nThe constructor accepts email addresses whose local-part (the part before `@`) is an RFC-5322 *quoted string* containing raw `\\r\\n` bytes — e.g. `\"x\\r\\nBcc: attacker@evil\"@example.com`. The stored address is later emitted verbatim into (1) the rendered message headers and (2) `SmtpTransport`'s `MAIL FROM:<...>` / `RCPT TO:<...>` protocol lines, turning the embedded CRLF into a new mail header and/or a new SMTP command.\n\n### Resolution\n\nThe `Address` constructor now rejects addresses containing line breaks.\n\nThe patch for this issue is available [here](https://github.com/symfony/symfony/commit/dc2dbd29211eb4ddc451373fa1374fb926e94604) for branch 5.4.\n\n### Credits\n\nWe would like to thank Claude Mythos Preview (via Project Glasswing) for reporting the issue and providing the fix.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
