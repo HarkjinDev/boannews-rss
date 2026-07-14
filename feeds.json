@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-15T01:31:40.027497+09:00",
+  "fetched_at": "2026-07-15T02:01:40.981328+09:00",
   "security_news": [
     {
       "title": "Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown",
@@ -1780,6 +1780,66 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-12523 - Resource exhaustion in quiche HTTP/3 and QPACK layers",
+      "summary": "CVE ID :CVE-2026-12523\n  \nPublished : July 14, 2026, 3:51 p.m. | 25 minutes ago\n  \nDescription :Summary\n\n\n\nCloudflare quiche's HTTP/3 layer was discovered to be vulnerable to resource exhaustion (i.e., memory) by means of specially crafted HTTP/3 frames.\n\n\n\n\nImpact\n\n\n\nHTTP/3 defines multiple frame types to support HTTP message exchanges and connection management. Each frame has a length and a payload whose length depends on the frame type. quiche was found to be vulnerable when parsing some frame types to pre-allocating memory based on the declared length. An attacker would not need to send the number of declared bytes to trigger this issue.\n\n\n\nIn addition, quiche was found to not apply QPACK decompression limits correctly. This could allow an attacker to send specially crafted HEADERS frames that would cause more memory commitment than otherwise advertised by MAX_FIELD_SECTION_SIZE (configured by set_max_field_section_size()).\n\n\n\n\n\n\nMitigation:\n\n  *  \n\nUsers are requested to upgrade to quiche 0.29.3 which is the earliest version containing the fix for this issue.\n\n\n\n\n\n\n\n\n\nCredits: Disclosed responsibly by Sébastien Féry\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-12523\n  \nPublished : July 14, 2026, 3:51 p.m. | 25 minutes ago\n  \nDescription :Summary\n\n\n\nCloudflare quiche's HTTP/3 layer was discovered to be vulnerable to resource exhaustion (i.e., memory) by means of specially crafted HTTP/3 frames.\n\n\n\n\nImpact\n\n\n\nHTTP/3 defines multiple frame types to support HTTP message exchanges and connection management. Each frame has a length and a payload whose length depends on the frame type. quiche was found to be vulnerable when parsing some frame types to pre-allocating memory based on the declared length. An attacker would not need to send the number of declared bytes to trigger this issue.\n\n\n\nIn addition, quiche was found to not apply QPACK decompression limits correctly. This could allow an attacker to send specially crafted HEADERS frames that would cause more memory commitment than otherwise advertised by MAX_FIELD_SECTION_SIZE (configured by set_max_field_section_size()).\n\n\n\n\n\n\nMitigation:\n\n  *  \n\nUsers are requested to upgrade to quiche 0.29.3 which is the earliest version containing the fix for this issue.\n\n\n\n\n\n\n\n\n\nCredits: Disclosed responsibly by Sébastien Féry\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-12523 - Quiche HTTP/3 및 QPACK 레이어의 리소스 고갈",
+      "summary_ko": "CVE ID:CVE-2026-12523\n  \n게시일 : 2026년 7월 14일 오후 3시 51분 | 25분 전\n  \n설명 :요약\n\n\n\nCloudflare quiche의 HTTP/3 계층은 특별히 제작된 HTTP/3 프레임을 통해 리소스 고갈(예: 메모리)에 취약한 것으로 밝혀졌습니다.\n\n\n\n\n영향\n\n\n\nHTTP/3은 HTTP 메시지 교환 및 연결 관리를 지원하기 위해 여러 프레임 유형을 정의합니다. 각 프레임에는 길이와 프레임 유형에 따라 길이가 달라지는 페이로드가 있습니다. quiche는 선언된 길이에 따라 메모리를 사전 할당하기 위해 일부 프레임 유형을 구문 분석할 때 취약한 것으로 나타났습니다. 공격자는 이 문제를 유발하기 위해 선언된 바이트 수를 보낼 필요가 없습니다.\n\n\n\n또한, 키슈에서는 QPACK 감압 한계를 올바르게 적용하지 않는 것으로 나타났습니다. 이로 인해 공격자는 MAX_FIELD_SECTION_SIZE(set_max_field_section_size()로 구성)에 의해 광고된 것보다 더 많은 메모리 할당을 유발하는 특수 제작된 HEADERS 프레임을 보낼 수 있습니다.\n\n\n\n\n\n\n완화:\n\n  *  \n\n사용자는 이 문제에 대한 수정 사항이 포함된 가장 초기 버전인 Quiche 0.29.3으로 업그레이드해야 합니다.\n\n\n\n\n\n\n\n\n\n크레딧: Sébastien Féry가 책임 있게 공개함\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-12523\n2. 26.07.15 오전12:51\n3. Summary Cloudflare quiche's HTTP/3 layer was disco",
+      "cve_id": "CVE-2026-12523",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12523",
+      "source": "cvefeed",
+      "published": "2026-07-15T00:51:28+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-60119 - Hi.Events v1.10.0-beta XSS via Event Title JSON.stringify Injection",
+      "summary": "CVE ID :CVE-2026-60119\n  \nPublished : July 14, 2026, 3:44 p.m. | 31 minutes ago\n  \nDescription :Hi.Events through v1.10.0-beta contains a cross-site scripting vulnerability that allows authenticated attackers with event creation or edit permissions to inject arbitrary HTML and JavaScript by embedding a malicious event title containing the",
+      "description": "CVE ID :CVE-2026-60119\n  \nPublished : July 14, 2026, 3:44 p.m. | 31 minutes ago\n  \nDescription :Hi.Events through v1.10.0-beta contains a cross-site scripting vulnerability that allows authenticated attackers with event creation or edit permissions to inject arbitrary HTML and JavaScript by embedding a malicious event title containing the",
+      "title_ko": "CVE-2026-60119 - 이벤트 제목 JSON.stringify 삽입을 통한 Hi.Events v1.10.0-beta XSS",
+      "summary_ko": "CVE ID:CVE-2026-60119\n  \n게시일 : 2026년 7월 14일 오후 3시 44분 | 31분 전\n  \n설명: v1.10.0-beta를 통한 Hi.Events에는 이벤트 생성 또는 편집 권한이 있는 인증된 공격자가",
+      "summary_3lines": "1. CVE-2026-60119\n2. 26.07.15 오전12:44\n3. Hi.Events through v1.10.0-beta contains a cross-si",
+      "cve_id": "CVE-2026-60119",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-60119",
+      "source": "cvefeed",
+      "published": "2026-07-15T00:44:34+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-59204 - Pillow JPEG2000 tiled decode retains a growing scratch buffer and can be used for denial of service",
+      "summary": "CVE ID :CVE-2026-59204\n  \nPublished : July 14, 2026, 3:38 p.m. | 37 minutes ago\n  \nDescription :Pillow is a Python imaging library. From 8.2.0 through 12.2.0, src/libImaging/Jpeg2KDecode.c accumulates total_component_width across every tile in a JPEG2000 image instead of recomputing it per tile, allowing a crafted tiled JPEG2000 file to force substantially higher transient memory usage and trigger out-of-memory failures during decoding. This issue is fixed in version 12.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59204\n  \nPublished : July 14, 2026, 3:38 p.m. | 37 minutes ago\n  \nDescription :Pillow is a Python imaging library. From 8.2.0 through 12.2.0, src/libImaging/Jpeg2KDecode.c accumulates total_component_width across every tile in a JPEG2000 image instead of recomputing it per tile, allowing a crafted tiled JPEG2000 file to force substantially higher transient memory usage and trigger out-of-memory failures during decoding. This issue is fixed in version 12.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-59204 - Pillow JPEG2000 타일 디코드는 증가하는 스크래치 버퍼를 유지하며 서비스 거부에 사용될 수 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-59204\n  \n게시일 : 2026년 7월 14일 오후 3시 38분 | 37분 전\n  \n설명 :Pillow는 Python 이미징 라이브러리입니다. 8.2.0부터 12.2.0까지, src/libImaging/Jpeg2KDecode.c는 타일별로 다시 계산하는 대신 JPEG2000 이미지의 모든 타일에 걸쳐 total_comComponent_width를 누적하므로, 제작된 타일형 JPEG2000 파일이 훨씬 더 높은 임시 메모리 사용량을 강제로 적용하고 디코딩 중에 메모리 부족 오류를 유발할 수 있습니다. 이 문제는 버전 12.3.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-59204\n2. 26.07.15 오전12:38\n3. Pillow is a Python imaging library. From 8.2.0 thr",
+      "cve_id": "CVE-2026-59204",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59204",
+      "source": "cvefeed",
+      "published": "2026-07-15T00:38:29+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-52840 - Easy!Appointments has server-side request forgery in CalDAV connection test that exposes the deployment's internal network",
+      "summary": "CVE ID :CVE-2026-52840\n  \nPublished : July 14, 2026, 3:23 p.m. | 52 minutes ago\n  \nDescription :Easy!Appointments is a self hosted appointment scheduler. In versions prior to 1.6.0, `Caldav::connect_to_server` at `application/controllers/Caldav.php:60` hands the request's `caldav_url` to a Guzzle `REPORT` call without scheme or host validation. A logged-in backend user (admin, provider, or secretary) reaches loopback, RFC1918, and link-local hosts on the deployment's network. The Guzzle exception path returns the upstream status code plus ~120 bytes of response body in the JSON `message` field (`Caldav.php:74-78`), so the SSRF is semi-blind. Version 1.6.0 contains a patch.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-52840\n  \nPublished : July 14, 2026, 3:23 p.m. | 52 minutes ago\n  \nDescription :Easy!Appointments is a self hosted appointment scheduler. In versions prior to 1.6.0, `Caldav::connect_to_server` at `application/controllers/Caldav.php:60` hands the request's `caldav_url` to a Guzzle `REPORT` call without scheme or host validation. A logged-in backend user (admin, provider, or secretary) reaches loopback, RFC1918, and link-local hosts on the deployment's network. The Guzzle exception path returns the upstream status code plus ~120 bytes of response body in the JSON `message` field (`Caldav.php:74-78`), so the SSRF is semi-blind. Version 1.6.0 contains a patch.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-52840 - Easy!Appointments에는 배포의 내부 네트워크를 노출하는 CalDAV 연결 테스트에서 서버 측 요청 위조가 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-52840\n  \n게시일 : 2026년 7월 14일 오후 3시 23분 | 52분 전\n  \n설명 :Easy!Appointments는 자체 호스팅 약속 스케줄러입니다. 1.6.0 이전 버전에서는 `application/controllers/Caldav.php:60`의 `Caldav::connect_to_server`가 구성표나 호스트 검증 없이 요청의 `caldav_url`을 Guzzle `REPORT` 호출로 전달합니다. 로그인한 백엔드 사용자(관리자, 공급자 또는 비서)는 배포 네트워크의 루프백, RFC1918 및 링크 로컬 호스트에 도달합니다. Guzzle 예외 경로는 JSON `message` 필드(`Caldav.php:74-78`)에 업스트림 상태 코드와 최대 120바이트의 응답 본문을 반환하므로 SSRF는 반맹검 상태입니다. 버전 1.6.0에는 패치가 포함되어 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-52840\n2. 26.07.15 오전12:23\n3. Easy!Appointments is a self hosted appointment sch",
+      "cve_id": "CVE-2026-52840",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-52840",
+      "source": "cvefeed",
+      "published": "2026-07-15T00:23:59+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-10577 - Rockwell Automation 1715 Redundant IO – Access Control Vulnerability",
       "summary": "CVE ID :CVE-2026-10577\n  \nPublished : July 14, 2026, 1:18 p.m. | 58 minutes ago\n  \nDescription :A security issue exists within the 1715-AENTR EtherNet/IP Adapter. The affected product exposes a network-accessible debug port that does not enforce proper privilege controls, allowing unauthenticated remote access to intrusive command-line interface (CLI) commands. If exploited, a threat actor could read or delete files, stop tasks, modify memory, and change I/O states, potentially impacting the confidentiality, integrity, and availability of the device.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-10577\n  \nPublished : July 14, 2026, 1:18 p.m. | 58 minutes ago\n  \nDescription :A security issue exists within the 1715-AENTR EtherNet/IP Adapter. The affected product exposes a network-accessible debug port that does not enforce proper privilege controls, allowing unauthenticated remote access to intrusive command-line interface (CLI) commands. If exploited, a threat actor could read or delete files, stop tasks, modify memory, and change I/O states, potentially impacting the confidentiality, integrity, and availability of the device.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2303,21 +2363,6 @@
       "source": "msrc",
       "published": "2026-07-12T07:40:13+09:00",
       "lang": "vi"
-    },
-    {
-      "title": "CVE-2026-10660 - Shared reassembly buffer in Bluetooth BAP Broadcast Assistant enables cross-connection memory corruption",
-      "summary": "CVE ID :CVE-2026-10660\n  \nPublished : July 11, 2026, 5 p.m. | 16 minutes ago\n  \nDescription :The Bluetooth BAP Broadcast Assistant GATT client in subsys/bluetooth/audio/bap_broadcast_assistant.c reassembled remote Broadcast Receive State data into a single file-static net_buf_simple (att_buf, BT_ATT_MAX_ATTRIBUTE_LEN = 512 bytes) shared by all connection instances, while the BUSY flag, long-read handle, and reset/offset state were per-connection.\n\nWhen the device acts as a Broadcast Assistant connected to multiple Scan Delegator peripherals, notification and long-read callbacks from different connections interleave on the shared buffer: the append in notify_handler (net_buf_simple_add_mem at the not-busy branch) performs no tailroom check, so receive-state notifications from two or more delegators accumulate on the same 512-byte buffer and, with a sufficiently large configured ATT MTU (BT_L2CAP_TX_MTU up to 2000) and two-to-three concurrent connections, write past the buffer into adjacent .bss (net_buf_simple_add only asserts in debug builds).\n\nEven below the overflow threshold, one connection's net_buf_simple_reset zeroes the shared length while another connection's reassembly and GATT read offset are in flight, mixing one peer's data into another's parse. A malicious or compromised Scan Delegator (or two colluding peers) over BLE can trigger this, causing out-of-bounds writes (memory corruption / denial of service) and cross-connection data corruption.\n\nThe fix moves the buffer into the per-connection instance struct so each connection reassembles into its own buffer. Affects Zephyr releases shipping the Broadcast Assistant with the shared buffer, including v4.4.0 and earlier.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-10660\n  \nPublished : July 11, 2026, 5 p.m. | 16 minutes ago\n  \nDescription :The Bluetooth BAP Broadcast Assistant GATT client in subsys/bluetooth/audio/bap_broadcast_assistant.c reassembled remote Broadcast Receive State data into a single file-static net_buf_simple (att_buf, BT_ATT_MAX_ATTRIBUTE_LEN = 512 bytes) shared by all connection instances, while the BUSY flag, long-read handle, and reset/offset state were per-connection.\n\nWhen the device acts as a Broadcast Assistant connected to multiple Scan Delegator peripherals, notification and long-read callbacks from different connections interleave on the shared buffer: the append in notify_handler (net_buf_simple_add_mem at the not-busy branch) performs no tailroom check, so receive-state notifications from two or more delegators accumulate on the same 512-byte buffer and, with a sufficiently large configured ATT MTU (BT_L2CAP_TX_MTU up to 2000) and two-to-three concurrent connections, write past the buffer into adjacent .bss (net_buf_simple_add only asserts in debug builds).\n\nEven below the overflow threshold, one connection's net_buf_simple_reset zeroes the shared length while another connection's reassembly and GATT read offset are in flight, mixing one peer's data into another's parse. A malicious or compromised Scan Delegator (or two colluding peers) over BLE can trigger this, causing out-of-bounds writes (memory corruption / denial of service) and cross-connection data corruption.\n\nThe fix moves the buffer into the per-connection instance struct so each connection reassembles into its own buffer. Affects Zephyr releases shipping the Broadcast Assistant with the shared buffer, including v4.4.0 and earlier.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10660 - Bluetooth BAP Broadcast Assistant의 공유 리어셈블리 버퍼로 인해 교차 연결 메모리 손상이 발생함",
-      "summary_ko": "CVE ID:CVE-2026-10660\n  \n게시일 : 2026년 7월 11일 오후 5시 | 16분 전\n  \n설명: subsys/bluetooth/audio/bap_broadcast_assistant.c의 Bluetooth BAP Broadcast Assistant GATT 클라이언트는 원격 브로드캐스트 수신 상태 데이터를 모든 연결 인스턴스에서 공유하는 단일 파일 정적 net_buf_simple(att_buf, BT_ATT_MAX_ATTRIBUTE_LEN = 512바이트)로 재조립했으며, BUSY 플래그, 긴 읽기 핸들 및 재설정/오프셋 상태는 연결별로 이루어졌습니다.\n\n장치가 여러 Scan Delegator 주변 장치에 연결된 Broadcast Assistant 역할을 하면 서로 다른 연결의 알림 및 장시간 읽기 콜백이 공유 버퍼에 인터리빙됩니다. inform_handler(not-busy 분기의 net_buf_simple_add_mem)에 추가하면 tailroom 확인이 수행되지 않으므로 두 명 이상의 위임자의 수신 상태 알림이 동일한 512바이트 버퍼에 누적되고 충분히 크게 구성된 ATT MTU(BT_L2CAP_TX_MTU up)가 있습니다. 2000까지) 및 2~3개의 동시 연결이 있는 경우 버퍼를 지나 인접한 .bss에 기록합니다(net_buf_simple_add는 디버그 빌드에서만 어설션합니다).\n\n오버플로 임계값 아래에서도 한 연결의 net_buf_simple_reset은 공유 길이를 0으로 만들고 다른 연결의 리어셈블리 및 GATT 읽기 오프셋이 진행 중인 동안 한 피어의 데이터를 다른 피어의 구문 분석에 혼합합니다. BLE를 통한 악의적이거나 손상된 Scan Delegator(또는 공모하는 두 피어)는 이를 트리거하여 범위를 벗어난 쓰기(메모리 손상/서비스 거부) 및 교차 연결 데이터 손상을 일으킬 수 있습니다.\n\n수정 사항은 버퍼를 연결별 인스턴스 구조로 이동하여 각 연결이 자체 버퍼로 재조립되도록 합니다. v4.4.0 이하를 포함하여 공유 버퍼와 함께 Broadcast Assistant를 제공하는 Zephyr 릴리스에 영향을 줍니다.\n  \n심각도: 6.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10660\n2. 26.07.12 오전2:00\n3. The Bluetooth BAP Broadcast Assistant GATT client ",
-      "cve_id": "CVE-2026-10660",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10660",
-      "source": "cvefeed",
-      "published": "2026-07-12T02:00:13+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
