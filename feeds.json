@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-15T23:01:52.609796+09:00",
+  "fetched_at": "2026-07-15T23:32:26.342668+09:00",
   "security_news": [
+    {
+      "title": "We built a vulnerability vending machine: AI tokens in, zero-days out",
+      "summary": "Intruder built an AI-powered \"vulnerability vending machine\" that combines code slicing with LLMs to automatically discover complex software vulnerabilities. The company explains how the system found and exploited a previously unknown WordPress plugin zero-day, with additional discoveries already under responsible disclosure. [...]",
+      "content": "",
+      "title_ko": "우리는 취약성 자판기를 구축했습니다. AI 토큰이 들어오고 제로데이가 종료됩니다.",
+      "summary_ko": "Intruder는 코드 슬라이싱과 LLM을 결합하여 복잡한 소프트웨어 취약점을 자동으로 발견하는 AI 기반 \"취약성 자동 판매기\"를 구축했습니다. 이 회사는 시스템이 이전에 알려지지 않은 WordPress 플러그인 제로데이를 어떻게 발견하고 활용했는지 설명하며, 추가 발견은 이미 책임 있는 공개로 진행되고 있습니다. [...]",
+      "summary_3lines": "1. 인트루더, AI 기반 취약점 판매기로 워드프레스 플러그인 제로데이 발견\n2. 코드 슬라이싱+LLM 자동 분석으로 복잡한 소프트웨어 취약점 탐지\n3. 책임 있는 공개 진행 중, 추가 발견물 포함 1건 이상 보고",
+      "link": "https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/",
+      "source": "bleepingcomputer",
+      "published": "2026-07-15T23:01:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "Firefox, Chrome, Adobe, and VMware Updates Fix Multiple Critical Security Flaws",
       "summary": "Mozilla has released updates to address two critical flaws in Firefox for which it warned that exploit code has been published.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-15718, an invalid pointer in the JavaScript: WebAssembly component\n  CVE-2026-15719, a site isolation in the DOM: Navigation component\n\n\"We are aware that exploit code for this is public, however we are not aware of",
@@ -2236,6 +2248,21 @@
   ],
   "vulnerability": [
     {
+      "title": "Establishing a Coordinated Vulnerability Disclosure Program to Work With Security Researchers",
+      "summary": "Developed by CISA, the National Security Agency (NSA) and international partners, this joint guidance contains best practices for software manufacturers and online service providers to design and implement a coordinated vulnerability disclosure (CVD) program for working with external security researchers that includes a clear vulnerability disclosure policy (VDP) and process for triaging, remediating and assigning Common Vulnerabilities and Exposures (CVE) identifiers to reported vulnerabilities. The guidance also provides considerations for leveraging third-party intermediaries, like CISA or other national computer security incident response teams, to substitute or supplement a CVD program. By implementing a robust CVD program aligned with this guidance, organizations can work transparently and collaboratively with security researchers to remediate vulnerabilities, build constructive relationships, enhance product security while improving vulnerability management processes, and demonstrate their dedication to protecting customers.",
+      "description": "Developed by CISA, the National Security Agency (NSA) and international partners, this joint guidance contains best practices for software manufacturers and online service providers to design and implement a coordinated vulnerability disclosure (CVD) program for working with external security researchers that includes a clear vulnerability disclosure policy (VDP) and process for triaging, remediating and assigning Common Vulnerabilities and Exposures (CVE) identifiers to reported vulnerabilities. The guidance also provides considerations for leveraging third-party intermediaries, like CISA or other national computer security incident response teams, to substitute or supplement a CVD program. By implementing a robust CVD program aligned with this guidance, organizations can work transparently and collaboratively with security researchers to remediate vulnerabilities, build constructive relationships, enhance product security while improving vulnerability management processes, and demonstrate their dedication to protecting customers.",
+      "title_ko": "보안 연구원과 협력하기 위한 조정된 취약점 공개 프로그램 구축",
+      "summary_ko": "CISA, NSA(국가안보국) 및 국제 파트너가 개발한 이 공동 지침에는 소프트웨어 제조업체와 온라인 서비스 제공업체가 외부 보안 연구원과 협력하기 위한 CVD(조정된 취약성 공개) 프로그램을 설계하고 구현하는 모범 사례가 포함되어 있습니다. 여기에는 명확한 취약성 공개 정책(VDP)과 보고된 취약성에 대한 CVE(Common Vulnerability and Exposures) 식별자를 분류, 교정 및 할당하는 프로세스가 포함됩니다. 또한 이 지침은 CVD 프로그램을 대체하거나 보완하기 위해 CISA 또는 기타 국가 컴퓨터 보안 사고 대응 팀과 같은 제3자 중개자를 활용하는 데 대한 고려 사항을 제공합니다. 이 지침에 부합하는 강력한 CVD 프로그램을 구현함으로써 조직은 보안 연구원과 투명하고 협력하여 취약성을 해결하고, 건설적인 관계를 구축하고, 취약성 관리 프로세스를 개선하는 동시에 제품 보안을 강화하고, 고객 보호에 대한 헌신을 보여줄 수 있습니다.",
+      "summary_3lines": "1. Establishing a Coordinated Vulnerability Disclosur\n2. CISA\n3. Developed by CISA, the National Security Agency (N",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/resources-tools/resources/establishing-coordinated-vulnerability-disclosure-program-work-security-researchers",
+      "source": "cisa",
+      "published": "2026-07-15T21:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-61449 - Grav before 2.0.2 Decompression Bomb via Forged ZIP Size",
       "summary": "CVE ID :CVE-2026-61449\n  \nPublished : July 15, 2026, 11:25 a.m. | 51 minutes ago\n  \nDescription :Grav 2.0.1 contains a decompression-bomb size-cap bypass in ZipArchiver and GPM\\Installer. The size bound introduced in 2.0.1 sums the uncompressed size declared in each entry's ZIP central-directory header (ZipArchive::statIndex()['size']) and rejects archives exceeding system.gpm.archive.max_uncompressed_size before extraction. Because this declared size is attacker-forgeable and is not cross-checked against the actual inflated stream, a crafted archive declaring tiny per-entry sizes passes the cap while extractTo() writes the real, much larger content, filling disk or exhausting inodes. The archive must be supplied by a package source or admin upload (admin/operator trust). Fixed in 2.0.2. This is an incomplete fix for GHSA-928x-9mpw-8h56.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-61449\n  \nPublished : July 15, 2026, 11:25 a.m. | 51 minutes ago\n  \nDescription :Grav 2.0.1 contains a decompression-bomb size-cap bypass in ZipArchiver and GPM\\Installer. The size bound introduced in 2.0.1 sums the uncompressed size declared in each entry's ZIP central-directory header (ZipArchive::statIndex()['size']) and rejects archives exceeding system.gpm.archive.max_uncompressed_size before extraction. Because this declared size is attacker-forgeable and is not cross-checked against the actual inflated stream, a crafted archive declaring tiny per-entry sizes passes the cap while extractTo() writes the real, much larger content, filling disk or exhausting inodes. The archive must be supplied by a package source or admin upload (admin/operator trust). Fixed in 2.0.2. This is an incomplete fix for GHSA-928x-9mpw-8h56.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2579,6 +2606,21 @@
       "source": "krcert_notice",
       "published": "2026-07-15T00:00:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "CVE-2026-57097 Microsoft XML Security Feature Bypass Vulnerability",
+      "summary": "Untrusted search path in Microsoft XML allows an unauthorized attacker to bypass a security feature with a physical attack.",
+      "description": "Untrusted search path in Microsoft XML allows an unauthorized attacker to bypass a security feature with a physical attack.",
+      "title_ko": "CVE-2026-57097 Microsoft XML 보안 기능 우회 취약점",
+      "summary_ko": "Microsoft XML의 신뢰할 수 없는 검색 경로를 사용하면 무단 공격자가 물리적 공격을 통해 보안 기능을 우회할 수 있습니다.",
+      "summary_3lines": "1. CVE-2026-57097\n2. MSRC\n3. Untrusted search path in Microsoft XML allows an u",
+      "cve_id": "CVE-2026-57097",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57097",
+      "source": "msrc",
+      "published": "2026-07-14T23:00:00+09:00",
+      "lang": "en"
     },
     {
       "title": "CVE-2026-42982 Windows Secure Kernel Mode Elevation of Privilege Vulnerability",
