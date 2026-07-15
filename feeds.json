@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-16T07:01:38.785207+09:00",
+  "fetched_at": "2026-07-16T07:33:18.474561+09:00",
   "security_news": [
+    {
+      "title": "티빙 해킹 사태 일파만파...억울한 통신사·플랫폼 이용자",
+      "summary": "보안업계 관계자는 \"편리하라고 만든 간편 로그인이 개인정보 유출의 통로가 된 셈\"이라며 \"근본적인 대책과... 조사단은 티빙의 침해 경로와 보안 조치뿐 아니라 가입 경로별 피해 규모, 제휴 서비스에서 전달된 정보 등을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 티빙 해킹 사태로 통신사·플랫폼 이용자 10만명 이상 피해\n2. 간편 로그인 통해 개인정보 유출, 보안 조치 미흡 지적\n3. 조사단, 침해 경로·제휴사 정보 전달 조사 중",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=684234",
+      "source": "naver",
+      "published": "2026-07-16T07:30:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[카드사 ESG]④ 롯데카드, 해킹 후 보안체계 대수술",
+      "summary": "▲ CISO 대표 직속 개편...보안 의사결정 강화 재발 방지 대책은 단기 보완 조치보다 조직 체계와 의사결정... 정보보호센터는 보안정책팀·보안기술전략팀·개인정보보호팀·침해위협대응팀 등 4개 팀으로 구성됐다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 롯데카드, 해킹 후 CISO 대표 직속 개편\n2. 정보보호센터 4개 팀(보안정책·기술전략 등)으로 재편\n3. 보안 의사결정 체계 강화 및 재발 방지 조직 개선",
+      "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=850334",
+      "source": "naver",
+      "published": "2026-07-16T07:08:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "MS 최다 패치 당일, 윈도우 제로데이 “레거시하이브” 또 공개",
       "summary": "앞서 함께 패치된 셰어포인트 서버(SharePoint Server) 및 액티브 디렉터리 페더레이션 서비스(AD FS) 관련 취약점이 이미 실제 공격에 악용돼 미국 사이버보안·인프라보안국(CISA)의 알려진 악용 취약점(KEV) 목록에 오른...",
@@ -2244,21 +2268,69 @@
       "source": "naver",
       "published": "2026-07-13T07:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[이혁중 CISO의 현장 보안 인사이트-7] 서버가 뚫린 것인가, 조직이 뚫린 것인가: 침해사고가 드러내는 조직의 민낯",
-      "summary": "[이 연재는 이혁중 CISO가 2026년 6월부터 데일리시큐를 통해 매주 한 편씩, 보안 현장에서 축적한 경험과 통찰을 전할 예정이다. 30년 가까이 CISO·CPO로 현장을 지켜온 경험을 바탕으로, 기술보다 운영, 솔루션보다 기본, 규제보다 실행의 문제를 짚어간다. 보안과 개인정보보호가 만나는 현실의 질문에 답을 찾아가는 연재가 될 예정이다.-데일리시큐 편집자-]“개인정보가 유출되었습니다.” 퇴근길 이런 전화를 받아 보신 적이 있으십니까? 순간 “올 것이 왔구나” 하는 생각이 들더군요. 이번 차수는 그 경험을 기반으로 작성하고자",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [이혁중 CISO의 현장 보안 인사이트-7] 서버가 뚫린 것인가, 조직이 뚫린 것인가: 침\n2. 30년 가까이 CISO·CPO로 현장을 지켜온 경험을 바탕으로, 기술보다 운영, 솔루션보다\n3. 보안과 개인정보보호가 만나는 현실의 질문에 답을 찾아가는 연재가 될 예정이다.-데일리시큐 ",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207567",
-      "source": "dailysecu",
-      "published": "2026-07-13T07:15:28+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54458 - AVideo: Unauthenticated Stored DOM Cross-Site Scripting via Per-Client Metadata Broadcast in YPTSocket Plugin",
+      "summary": "CVE ID :CVE-2026-54458\n  \nPublished : July 15, 2026, 9:33 p.m. | 44 minutes ago\n  \nDescription :WWBN AVideo is an open source video platform. Versions prior to 29.0 contain a stored DOM Cross-Site Scripting vulnerability in the YPTSocket plugin. Any unauthenticated remote attacker can execute arbitrary JavaScript in the authenticated origin of every administrator currently viewing a page that renders the YPTSocket online-users debug panel. plugin/YPTSocket/getWebSocket.json.php issues a signed WebSocket token to any anonymous caller, and MessageSQLiteV2::onOpen at plugin/YPTSocket/MessageSQLiteV2.php lines 91 and 110 reads the attacker-controlled webSocketSelfURI and page_title query parameters from the WebSocket connection URL with no validation. Both values persist into the in-memory SQLite connections table and broadcast inside the users_id_online array sent to every connected client; on the client, plugin/YPTSocket/script.js::updateSocketUserCard interpolates the broadcast page_title into an HTML template literal that is passed to jQuery $.append(html), which parses attacker bytes into live DOM nodes including  with inline event handlers. Successful attackers can can read non-HttpOnly cookies and the CSRF token rendered into the admin dashboard, issue authenticated requests to any admin-only endpoint, exfiltrate the admin dashboard DOM, and chain into any admin-context mutation. When the victim is an AVideo administrator, the attacker turns a single anonymous WebSocket connection into full administrative takeover via the admin's own session. This issue has been patched by https://github.com/WWBN/AVideo/commit/8be71e53ccbe9b84b30870db386fb4d2b11e1c16.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54458\n  \nPublished : July 15, 2026, 9:33 p.m. | 44 minutes ago\n  \nDescription :WWBN AVideo is an open source video platform. Versions prior to 29.0 contain a stored DOM Cross-Site Scripting vulnerability in the YPTSocket plugin. Any unauthenticated remote attacker can execute arbitrary JavaScript in the authenticated origin of every administrator currently viewing a page that renders the YPTSocket online-users debug panel. plugin/YPTSocket/getWebSocket.json.php issues a signed WebSocket token to any anonymous caller, and MessageSQLiteV2::onOpen at plugin/YPTSocket/MessageSQLiteV2.php lines 91 and 110 reads the attacker-controlled webSocketSelfURI and page_title query parameters from the WebSocket connection URL with no validation. Both values persist into the in-memory SQLite connections table and broadcast inside the users_id_online array sent to every connected client; on the client, plugin/YPTSocket/script.js::updateSocketUserCard interpolates the broadcast page_title into an HTML template literal that is passed to jQuery $.append(html), which parses attacker bytes into live DOM nodes including  with inline event handlers. Successful attackers can can read non-HttpOnly cookies and the CSRF token rendered into the admin dashboard, issue authenticated requests to any admin-only endpoint, exfiltrate the admin dashboard DOM, and chain into any admin-context mutation. When the victim is an AVideo administrator, the attacker turns a single anonymous WebSocket connection into full administrative takeover via the admin's own session. This issue has been patched by https://github.com/WWBN/AVideo/commit/8be71e53ccbe9b84b30870db386fb4d2b11e1c16.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54458 - AVideo: YPTSocket 플러그인의 클라이언트별 메타데이터 브로드캐스트를 통한 인증되지 않은 저장된 DOM 교차 사이트 스크립팅",
+      "summary_ko": "CVE ID:CVE-2026-54458\n  \n게시일 : 2026년 7월 15일 오후 9시 33분 | 44분 전\n  \n설명 :WWBN AVideo는 오픈 소스 비디오 플랫폼입니다. 29.0 이전 버전에는 YPTSocket 플러그인에 저장된 DOM 교차 사이트 스크립팅 취약점이 포함되어 있습니다. 인증되지 않은 원격 공격자는 현재 YPTSocket 온라인 사용자 디버그 패널을 렌더링하는 페이지를 보고 있는 모든 관리자의 인증된 원본에서 임의의 JavaScript를 실행할 수 있습니다. Plugin/YPTSocket/getWebSocket.json.php는 서명된 WebSocket 토큰을 익명의 호출자에게 발행하고, Plugin/YPTSocket/MessageSQLiteV2.php 라인 91 및 110의 MessageSQLiteV2::onOpen은 검증 없이 WebSocket 연결 URL에서 공격자가 제어하는 ​​webSocketSelfURI 및 page_title 쿼리 매개변수를 읽습니다. 두 값 모두 메모리 내 SQLite 연결 테이블에 유지되며 연결된 모든 클라이언트에 전송된 users_id_online 배열 내부에서 브로드캐스트됩니다. 클라이언트에서 플러그인/YPTSocket/script.js::updateSocketUserCard는 브로드캐스트 page_title을 jQuery $.append(html)로 전달되는 HTML 템플릿 리터럴로 보간합니다. 이 리터럴은 공격자 바이트를 인라인 이벤트 핸들러를 포함하여 라이브 DOM 노드로 구문 분석합니다. 성공적인 공격자는 비HttpOnly 쿠키와 관리 대시보드에 렌더링된 CSRF 토큰을 읽고, 모든 관리 전용 엔드포인트에 인증된 요청을 발행하고, 관리 대시보드 DOM을 유출하고, 모든 관리 컨텍스트 변형에 연결할 수 있습니다. 피해자가 AVideo 관리자인 경우 공격자는 단일 익명 WebSocket 연결을 관리자 자신의 세션을 통해 전체 관리 인수로 전환합니다. 이 문제는 https://github.com/WWBN/AVideo/commit/8be71e53ccbe9b84b30870db386fb4d2b11e1c16에서 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54458\n2. 26.07.16 오전6:33\n3. WWBN AVideo is an open source video platform. Vers",
+      "cve_id": "CVE-2026-54458",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54458",
+      "source": "cvefeed",
+      "published": "2026-07-16T06:33:27+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-63175 - Cross-Capture Session Data Leakage Due to Shared Mutable State in Looklyloo - PlaywrightCapture",
+      "summary": "CVE ID :CVE-2026-63175\n  \nPublished : July 15, 2026, 9:26 p.m. | 51 minutes ago\n  \nDescription :PlaywrightCapture stored capture-specific configuration and runtime data as mutable class-level variables rather than instance-level variables. Consequently, multiple Capture objects running within the same Python process could share state, including HTTP headers, cookies, browser storage, HTTP credentials, proxy configuration, user-agent settings, geolocation information, and captured request data.\n\nIn a multi-user or concurrent deployment, information supplied during one capture could therefore persist and be reused by a subsequent or parallel capture. This could result in the disclosure of authentication cookies, credentials, browser storage, or captured request data belonging to another user. It could also cause requests to be performed with another capture's authentication context, headers, or proxy configuration, potentially enabling unauthorized access to remote resources or interference with other capture operations.\n\nThe vulnerability is resolved by initializing all capture-specific settings and request data as instance variables in the Capture constructor, ensuring that state is isolated between capture operations.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63175\n  \nPublished : July 15, 2026, 9:26 p.m. | 51 minutes ago\n  \nDescription :PlaywrightCapture stored capture-specific configuration and runtime data as mutable class-level variables rather than instance-level variables. Consequently, multiple Capture objects running within the same Python process could share state, including HTTP headers, cookies, browser storage, HTTP credentials, proxy configuration, user-agent settings, geolocation information, and captured request data.\n\nIn a multi-user or concurrent deployment, information supplied during one capture could therefore persist and be reused by a subsequent or parallel capture. This could result in the disclosure of authentication cookies, credentials, browser storage, or captured request data belonging to another user. It could also cause requests to be performed with another capture's authentication context, headers, or proxy configuration, potentially enabling unauthorized access to remote resources or interference with other capture operations.\n\nThe vulnerability is resolved by initializing all capture-specific settings and request data as instance variables in the Capture constructor, ensuring that state is isolated between capture operations.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-63175 - Looklyloo의 공유 변경 가능 상태로 인한 교차 캡처 세션 데이터 유출 - PlaywrightCapture",
+      "summary_ko": "CVE ID:CVE-2026-63175\n  \n게시일 : 2026년 7월 15일 오후 9시 26분 | 51분 전\n  \n설명 : PlaywrightCapture는 캡처별 구성 및 런타임 데이터를 인스턴스 수준 변수가 아닌 변경 가능한 클래스 수준 변수로 저장했습니다. 결과적으로 동일한 Python 프로세스 내에서 실행되는 여러 Capture 개체는 HTTP 헤더, 쿠키, 브라우저 저장소, HTTP 자격 증명, 프록시 구성, 사용자 에이전트 설정, 지리적 위치 정보 및 캡처된 요청 데이터를 포함한 상태를 공유할 수 있습니다.\n\n따라서 다중 사용자 또는 동시 배포에서는 한 번의 캡처 중에 제공된 정보가 지속되어 후속 또는 병렬 캡처에서 재사용될 수 있습니다. 이로 인해 다른 사용자에게 속한 인증 쿠키, 자격 증명, 브라우저 저장소 또는 캡처된 요청 데이터가 공개될 수 있습니다. 또한 다른 캡처의 인증 컨텍스트, 헤더 또는 프록시 구성을 사용하여 요청이 수행되도록 하여 잠재적으로 원격 리소스에 대한 무단 액세스를 허용하거나 다른 캡처 작업을 방해할 수 있습니다.\n\n모든 캡처 관련 설정과 요청 데이터를 캡처 생성자의 인스턴스 변수로 초기화하여 캡처 작업 간에 상태가 격리되도록 함으로써 취약점이 해결됩니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-63175\n2. 26.07.16 오전6:26\n3. PlaywrightCapture stored capture-specific configur",
+      "cve_id": "CVE-2026-63175",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63175",
+      "source": "cvefeed",
+      "published": "2026-07-16T06:26:26+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-45313 - Sandboxie-Plus: Sandboxie APC Injection Sandbox Escape",
+      "summary": "CVE ID :CVE-2026-45313\n  \nPublished : July 15, 2026, 9:21 p.m. | 56 minutes ago\n  \nDescription :Sandboxie-Plus is an open source sandbox-based isolation software for Windows. Prior to 1.17.6, GuiServer::WndHookRegisterSlave in Sandboxie/core/svc/GuiServer.cpp stores attacker-supplied hthread and hproc fields from a GUI_WND_HOOK_REGISTER request without validating that the thread belongs to the sandboxed process or that the function pointer is in the caller address space, and GuiServer::WndHookNotifySlave then calls OpenThread(THREAD_SET_CONTEXT, FALSE, whk->hthread) and QueueUserAPC((PAPCFUNC)whk->hproc, hThread, (ULONG_PTR)req->threadid) as SYSTEM, allowing a sandboxed process to execute arbitrary code in an unsandboxed host process. This issue is fixed in version 1.17.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-45313\n  \nPublished : July 15, 2026, 9:21 p.m. | 56 minutes ago\n  \nDescription :Sandboxie-Plus is an open source sandbox-based isolation software for Windows. Prior to 1.17.6, GuiServer::WndHookRegisterSlave in Sandboxie/core/svc/GuiServer.cpp stores attacker-supplied hthread and hproc fields from a GUI_WND_HOOK_REGISTER request without validating that the thread belongs to the sandboxed process or that the function pointer is in the caller address space, and GuiServer::WndHookNotifySlave then calls OpenThread(THREAD_SET_CONTEXT, FALSE, whk->hthread) and QueueUserAPC((PAPCFUNC)whk->hproc, hThread, (ULONG_PTR)req->threadid) as SYSTEM, allowing a sandboxed process to execute arbitrary code in an unsandboxed host process. This issue is fixed in version 1.17.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-45313 - Sandboxie-Plus: Sandboxie APC 주입 샌드박스 이스케이프",
+      "summary_ko": "CVE ID:CVE-2026-45313\n  \n게시일 : 2026년 7월 15일 오후 9시 21분 | 56분 전\n  \n설명 :Sandboxie-Plus는 Windows용 오픈 소스 샌드박스 기반 격리 소프트웨어입니다. 1.17.6 이전에는 Sandboxie/core/svc/GuiServer.cpp의 GuiServer::WndHookRegisterSlave는 스레드가 샌드박스 프로세스에 속해 있는지 또는 함수 포인터가 호출자 주소 공간에 있는지 확인하지 않고 GUI_WND_HOOK_REGISTER 요청에서 공격자가 제공한 hthread 및 hproc 필드를 저장하고 GuiServer::WndHookNotifySlave는 다음을 호출합니다. OpenThread(THREAD_SET_CONTEXT, FALSE, whk->hthread) 및 QueueUserAPC((PAPCFUNC)whk->hproc, hThread, (ULONG_PTR)req->threadid)를 SYSTEM으로 사용하여 샌드박스 처리된 프로세스가 샌드박스 처리되지 않은 호스트 프로세스에서 임의의 코드를 실행할 수 있도록 허용합니다. 이 문제는 버전 1.17.6에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-45313\n2. 26.07.16 오전6:21\n3. Sandboxie-Plus is an open source sandbox-based iso",
+      "cve_id": "CVE-2026-45313",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45313",
+      "source": "cvefeed",
+      "published": "2026-07-16T06:21:23+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-52888 - NocoBase: Sensitive Data Exposure via SQL Blacklist Bypass",
+      "summary": "CVE ID :CVE-2026-52888\n  \nPublished : July 15, 2026, 9:16 p.m. | 1 hour ago\n  \nDescription :NocoBase is an AI-powered no-code/low-code platform for building business applications and enterprise solutions. In 2.0.59 and earlier, NocoBase @nocobase/plugin-collection-sql used the checkSQL() function in packages/plugins/@nocobase/plugin-collection-sql/src/server/utils.ts with an incomplete keyword blacklist that did not restrict PostgreSQL system catalog tables such as pg_shadow, pg_roles, and pg_stat_activity, allowing an admin-role user to read password hashes and database metadata through the SQL Collection feature. This vulnerability is fixed in 2.1.0-alpha.46.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-52888\n  \nPublished : July 15, 2026, 9:16 p.m. | 1 hour ago\n  \nDescription :NocoBase is an AI-powered no-code/low-code platform for building business applications and enterprise solutions. In 2.0.59 and earlier, NocoBase @nocobase/plugin-collection-sql used the checkSQL() function in packages/plugins/@nocobase/plugin-collection-sql/src/server/utils.ts with an incomplete keyword blacklist that did not restrict PostgreSQL system catalog tables such as pg_shadow, pg_roles, and pg_stat_activity, allowing an admin-role user to read password hashes and database metadata through the SQL Collection feature. This vulnerability is fixed in 2.1.0-alpha.46.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-52888 - NocoBase: SQL 블랙리스트 우회를 통한 민감한 데이터 노출",
+      "summary_ko": "CVE ID:CVE-2026-52888\n  \n게시일 : 2026년 7월 15일 오후 9시 16분 | 1시간 전\n  \n설명:NocoBase는 비즈니스 애플리케이션 및 엔터프라이즈 솔루션 구축을 위한 AI 기반 노코드/로우코드 플랫폼입니다. 2.0.59 및 이전 버전에서 NocoBase @nocobase/plugin-collection-sql은 pg_shadow, pg_roles 및 pg_stat_activity와 같은 PostgreSQL 시스템 카탈로그 테이블을 제한하지 않는 불완전한 키워드 블랙리스트와 함께 packages/plugins/@nocobase/plugin-collection-sql/src/server/utils.ts의 checkSQL() 함수를 사용하여 관리자 역할 사용자가 비밀번호 해시 및 SQL 컬렉션 기능을 통한 데이터베이스 메타데이터. 이 취약점은 2.1.0-alpha.46에서 수정되었습니다.\n  \n심각도: 6.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-52888\n2. 26.07.16 오전6:16\n3. NocoBase is an AI-powered no-code/low-code platfor",
+      "cve_id": "CVE-2026-52888",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-52888",
+      "source": "cvefeed",
+      "published": "2026-07-16T06:16:54+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-15746 - Credential disclosure in Strands Agents Tools elasticsearch_memory tool",
       "summary": "CVE ID :CVE-2026-15746\n  \nPublished : July 15, 2026, 6:35 p.m. | 42 minutes ago\n  \nDescription :Strands Agents is an open-source Python SDK for building and running AI agents. The strands-agents-tools package provides pre-built tools for use with the SDK, including the elasticsearch_memory tool for agent memory storage. We identified CVE-2026-15746, a server-side request forgery (SSRF) issue in the elasticsearch_memory tool. The tool exposed its connection parameters (es_url, cloud_id, api_key) as fields the large language model (LLM) could control through the tool schema. When a caller omitted the api_key parameter, the tool fell back to the operator's ELASTICSEARCH_API_KEY environment variable and sent it to whichever host the LLM specified. A crafted prompt could cause the tool to connect to a threat-actor-controlled server and disclose the operator's Elasticsearch API key in the Authorization header.\n\n\n\nWe recommend you upgrade to strands-agents-tools version 0.7.0 or later. As a precautionary measure, we recommend all operators rotate their ELASTICSEARCH_API_KEY, even if there is no indication the credential was exposed.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
