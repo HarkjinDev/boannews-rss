@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-15T15:03:28.948706+09:00",
+  "fetched_at": "2026-07-15T15:32:43.505861+09:00",
   "security_news": [
+    {
+      "title": "[단독] 정보통신기획평가원도 해커에 뚫렸다… 수년간 쌓인 연구자 정보...",
+      "summary": "이달 6일 개인정보 접속기록관리시스템 해킹 지난해 12월 직원 개인정보 유출 후 7개월 만 과학기술정보통신부 산하 연구개발(R&D) 관리 전문 기관인 정보통신기획평가원(IITP)의 개인정보접속기록관리 시스템이 해킹됐다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 정보통신기획평가원, 6일 개인정보 접속기록관리시스템 해킹… 7개월 전 유출 이어\n2. 해커가 연구자 개인정보 및 접속기록",
+      "link": "https://n.news.naver.com/mnews/article/366/0001179418?sid=105",
+      "source": "naver",
+      "published": "2026-07-15T15:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[무기화되는 AI①] 급증하는 취약점···정부 정책도 바꾸어",
       "summary": "미 사이버사령부의 기밀 시스템 대부분을 해킹하는 데 성공한 것으로 알려진다. 이 모델을 사이버 보안에 활용하면 공격자가 취약점을 악용하기 전에 찾아서 조치할 수 있으므로 보안 위협을 크게 낮출 수 있다. 그러나...",
@@ -2040,33 +2052,24 @@
       "source": "naver",
       "published": "2026-07-12T15:43:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "우리 軍 사이버공격 1만9천 건 육박…AI 무장한 北, 전문인력은 軍 떠난...",
-      "summary": "“주요 보안업체 분석 결과 북한이 악성코드 제작과 위장 취업 등 기존 해킹 기법에 AI를 활용한 흔적이... AI와 사이버보안 분야에 대한 민간 기업의 투자 확대와 처우 개선으로 우수 인재들이 군 대신 기업과...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 우리 군, AI 무장 북한발 사이버 공격 1만9천 건 육박\n2. 북한, AI 활용 악성코드 제작·위장 취업 등 기법 고도화\n3. 군 우수 인력, 민간 기업으로 이탈하며 사이버 방어력 약화",
-      "link": "https://n.news.naver.com/mnews/article/468/0001253202?sid=100",
-      "source": "naver",
-      "published": "2026-07-12T15:27:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "'유출 한 번에 치명상'…유통업계 보안 투자 급증",
-      "summary": "사이버 보안 역량 강화에 속도를 내고 있다. /ChatGPT로 생성한 이미지 고객 개인정보 유출이 기업의 존폐를... 일제히 보안 투자와 전담 인력을 늘리며 대응책 마련에 분주한 모습이다. 12일 유통업계와 한국인터넷진흥원...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 유통업계, 개인정보 유출로 존폐 위협 느껴\n2. ChatGPT 이미지 생성 등 보안 투자 급증\n3. 한국인터넷진흥원, 기업 보안 역량 강화 지원",
-      "link": "http://www.metroseoul.co.kr/article/20260712500226",
-      "source": "naver",
-      "published": "2026-07-12T15:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-12281 - Shibboleth < 2.5.4 - Unauthenticated Administrator Account Creation via Identity Header Spoofing",
+      "summary": "CVE ID :CVE-2026-12281\n  \nPublished : July 15, 2026, 6 a.m. | 16 minutes ago\n  \nDescription :The Shibboleth WordPress plugin before 2.5.4 does not fail closed when its HTTP header identity mode is enabled without an anti-spoofing key, treating any request that carries identity headers as an authenticated session without verifying them. On a deployment where untrusted client headers reach the application, an unauthenticated attacker can log in with forged identity headers and, when automatic account creation and the default administrator role mapping are enabled, create and sign in as a new administrator. Exploitation requires the non-default HTTP header attribute mode, an empty or absent spoof key, automatic account creation enabled, and a deployment that does not strip untrusted client headers before they reach the application.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-12281\n  \nPublished : July 15, 2026, 6 a.m. | 16 minutes ago\n  \nDescription :The Shibboleth WordPress plugin before 2.5.4 does not fail closed when its HTTP header identity mode is enabled without an anti-spoofing key, treating any request that carries identity headers as an authenticated session without verifying them. On a deployment where untrusted client headers reach the application, an unauthenticated attacker can log in with forged identity headers and, when automatic account creation and the default administrator role mapping are enabled, create and sign in as a new administrator. Exploitation requires the non-default HTTP header attribute mode, an empty or absent spoof key, automatic account creation enabled, and a deployment that does not strip untrusted client headers before they reach the application.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-12281 - Shibboleth < 2.5.4 - ID 헤더 스푸핑을 통한 인증되지 않은 관리자 계정 생성",
+      "summary_ko": "CVE ID:CVE-2026-12281\n  \n게시일 : 2026년 7월 15일 오전 6시 | 16분 전\n  \n설명: 2.5.4 이전의 Shibboleth WordPress 플러그인은 스푸핑 방지 키 없이 HTTP 헤더 ID 모드가 활성화되어 ID 헤더를 전달하는 모든 요청을 확인하지 않고 인증된 세션으로 처리할 때 실패 실패하지 않습니다. 신뢰할 수 없는 클라이언트 헤더가 애플리케이션에 도달하는 배포에서는 인증되지 않은 공격자가 위조된 ID 헤더를 사용하여 로그인할 수 있으며, 자동 계정 생성 및 기본 관리자 역할 매핑이 활성화되면 새 관리자를 생성하고 로그인할 수 있습니다. 악용하려면 기본이 아닌 HTTP 헤더 속성 모드, 비어 있거나 없는 스푸핑 키, 자동 계정 생성 활성화, 신뢰할 수 없는 클라이언트 헤더가 애플리케이션에 도달하기 전에 제거하지 않는 배포가 필요합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-12281\n2. 26.07.15 오후3:00\n3. The Shibboleth WordPress plugin before 2.5.4 does ",
+      "cve_id": "CVE-2026-12281",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12281",
+      "source": "cvefeed",
+      "published": "2026-07-15T15:00:02+09:00",
+      "lang": "en"
+    },
     {
       "title": "Recent DShield SIEM Update, (Tue, Jul 14th)",
       "summary": "The last update to the DShield SIEM [4] was in Sep 2025 which contained some minor tweaks. This update currently is using ELK stack version 8.19.15, contains some additional dashboards and new logs.\r",
