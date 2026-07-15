@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-15T21:01:51.366814+09:00",
+  "fetched_at": "2026-07-15T21:31:46.412294+09:00",
   "security_news": [
+    {
+      "title": "대구·경북, 인공지능·로봇 융합보안 동맹",
+      "summary": "AI 기반 로봇이 제조·의료·물류 등 산업과 일상 영역으로 확산하면서 해킹과 데이터 유출 등 사이버 위협에 대응할 융합보안 기술의 중요성도 커지고 있다. AI·로봇 시스템이 수집·처리하는 데이터와 산업시설을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 대구·경북, AI·로봇 융합보안 동맹 체결\n2. 제조·의료·물류 시스템 해킹·데이터 유출 대응\n3. 150개사 보호, 공동 대응팀 운영 계획",
+      "link": "https://www.naeil.com/news/read/595495?ref=naver",
+      "source": "naver",
+      "published": "2026-07-15T21:04:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[기획] 우리은행 개인정보 유출…이중 조사에 '반쪽 보안투자' 논란",
       "summary": "높아진다\"며 \"실제 해킹 사고에서 CI 정보가 유출되면 기업이 말하는 것처럼 '암호화돼 있어서 괜찮다'고만... 앞서 KS한국고용정보 인사시스템 해킹 사건 당시, 우리은행은 콜센터 고객상담 업무를 2008년부터 해당...",
@@ -2200,6 +2212,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-61449 - Grav before 2.0.2 Decompression Bomb via Forged ZIP Size",
+      "summary": "CVE ID :CVE-2026-61449\n  \nPublished : July 15, 2026, 11:25 a.m. | 51 minutes ago\n  \nDescription :Grav 2.0.1 contains a decompression-bomb size-cap bypass in ZipArchiver and GPM\\Installer. The size bound introduced in 2.0.1 sums the uncompressed size declared in each entry's ZIP central-directory header (ZipArchive::statIndex()['size']) and rejects archives exceeding system.gpm.archive.max_uncompressed_size before extraction. Because this declared size is attacker-forgeable and is not cross-checked against the actual inflated stream, a crafted archive declaring tiny per-entry sizes passes the cap while extractTo() writes the real, much larger content, filling disk or exhausting inodes. The archive must be supplied by a package source or admin upload (admin/operator trust). Fixed in 2.0.2. This is an incomplete fix for GHSA-928x-9mpw-8h56.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-61449\n  \nPublished : July 15, 2026, 11:25 a.m. | 51 minutes ago\n  \nDescription :Grav 2.0.1 contains a decompression-bomb size-cap bypass in ZipArchiver and GPM\\Installer. The size bound introduced in 2.0.1 sums the uncompressed size declared in each entry's ZIP central-directory header (ZipArchive::statIndex()['size']) and rejects archives exceeding system.gpm.archive.max_uncompressed_size before extraction. Because this declared size is attacker-forgeable and is not cross-checked against the actual inflated stream, a crafted archive declaring tiny per-entry sizes passes the cap while extractTo() writes the real, much larger content, filling disk or exhausting inodes. The archive must be supplied by a package source or admin upload (admin/operator trust). Fixed in 2.0.2. This is an incomplete fix for GHSA-928x-9mpw-8h56.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-61449 - 위조된 ZIP 크기를 통한 2.0.2 감압 폭탄 이전의 중력",
+      "summary_ko": "CVE ID:CVE-2026-61449\n  \n게시일 : 2026년 7월 15일 오전 11시 25분 | 51분 전\n  \n설명:Grav 2.0.1에는 ZipArchiver 및 GPM\\Installer의 압축 해제 폭탄 크기 제한 우회 기능이 포함되어 있습니다. 2.0.1에 도입된 크기 제한은 각 항목의 ZIP 중앙 디렉터리 헤더(ZipArchive::statIndex()['size'])에 선언된 압축되지 않은 크기를 합산하고 추출 전에 system.gpm.archive.max_uncompressed_size를 초과하는 아카이브를 거부합니다. 이 선언된 크기는 공격자가 위조할 수 있고 실제 팽창된 스트림에 대해 교차 확인되지 않기 때문에 작은 항목당 크기를 선언하는 조작된 아카이브는 한도를 전달하는 반면 extractTo()는 훨씬 더 큰 실제 콘텐츠를 작성하여 디스크를 채우거나 inode를 소진시킵니다. 아카이브는 패키지 소스 또는 관리자 업로드(관리자/운영자 신뢰)를 통해 제공되어야 합니다. 2.0.2에서 수정되었습니다. 이는 GHSA-928x-9mpw-8h56에 대한 불완전한 수정입니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-61449\n2. 26.07.15 오후8:25\n3. Grav 2.0.1 contains a decompression-bomb size-cap ",
+      "cve_id": "CVE-2026-61449",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61449",
+      "source": "cvefeed",
+      "published": "2026-07-15T20:25:43+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-58208 NATS Server: MQTT-over-WebSocket Path Can Crash WebSocket-Only JetStream Servers Before MQTT Is Enabled",
       "summary": "Information published.",
       "description": "Information published.",
@@ -3007,36 +3034,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45489",
       "source": "msrc",
       "published": "2026-07-12T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-56271 - Flowise - Weak Default JWT Secrets in Authentication Middleware",
-      "summary": "CVE ID :CVE-2026-56271\n  \nPublished : July 12, 2026, 12:16 p.m. | 35 minutes ago\n  \nDescription :Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded default JWT secrets ('auth_token', 'refresh_token') and default audience and issuer values ('AUDIENCE', 'ISSUER') in the enterprise passport authentication middleware (packages/server/src/enterprise/middleware/passport/index.ts). When the corresponding environment variables (JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER) are not set, the application silently falls back to these publicly known defaults, allowing an attacker to forge valid JWTs and impersonate any user, including administrators, resulting in authentication bypass.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-56271\n  \nPublished : July 12, 2026, 12:16 p.m. | 35 minutes ago\n  \nDescription :Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded default JWT secrets ('auth_token', 'refresh_token') and default audience and issuer values ('AUDIENCE', 'ISSUER') in the enterprise passport authentication middleware (packages/server/src/enterprise/middleware/passport/index.ts). When the corresponding environment variables (JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER) are not set, the application silently falls back to these publicly known defaults, allowing an attacker to forge valid JWTs and impersonate any user, including administrators, resulting in authentication bypass.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-56271 - Flowise - 인증 미들웨어의 취약한 기본 JWT 비밀",
-      "summary_ko": "CVE ID:CVE-2026-56271\n  \n게시일 : 2026년 7월 12일 오후 12시 16분 | 35분 전\n  \n설명: 3.1.0 이전의 Flowise(영향을 받는 버전 3.0.13 이하)는 기업 여권 인증 미들웨어(packages/server/src/enterprise/middleware/passport/index.ts)에서 약한 하드코딩된 기본 JWT 비밀('auth_token', 'refresh_token')과 기본 대상 및 발급자 값('AUDIENCE', 'ISSUER')을 사용합니다. 해당 환경 변수(JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER)가 설정되지 않은 경우 애플리케이션은 자동으로 공개적으로 알려진 기본값으로 대체되어 공격자가 유효한 JWT를 위조하고 관리자를 포함한 모든 사용자를 가장하여 인증을 우회할 수 있습니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-56271\n2. 26.07.12 오후9:16\n3. Flowise before 3.1.0 (affected versions 3.0.13 and",
-      "cve_id": "CVE-2026-56271",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56271",
-      "source": "cvefeed",
-      "published": "2026-07-12T21:16:45+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-56252 - Capgo - Scope Isolation Failure in Webhook Test Endpoint",
-      "summary": "CVE ID :CVE-2026-56252\n  \nPublished : July 12, 2026, 12:16 p.m. | 2 hours, 18 minutes ago\n  \nDescription :Capgo before 12.128.2 contains a scope isolation vulnerability in the POST /webhooks/test endpoint that allows app-scoped API keys to invoke org-scoped webhook operations. Attackers with app-scoped credentials can trigger signed outbound webhook deliveries for arbitrary organization webhooks outside their declared app boundary, bypassing the limited_to_apps authorization check.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-56252\n  \nPublished : July 12, 2026, 12:16 p.m. | 2 hours, 18 minutes ago\n  \nDescription :Capgo before 12.128.2 contains a scope isolation vulnerability in the POST /webhooks/test endpoint that allows app-scoped API keys to invoke org-scoped webhook operations. Attackers with app-scoped credentials can trigger signed outbound webhook deliveries for arbitrary organization webhooks outside their declared app boundary, bypassing the limited_to_apps authorization check.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-56252 - Capgo - 웹훅 테스트 엔드포인트의 범위 격리 실패",
-      "summary_ko": "CVE ID:CVE-2026-56252\n  \n게시일 : 2026년 7월 12일 오후 12시 16분 | 2시간 18분 전\n  \n설명: 12.128.2 이전의 Capgo에는 앱 범위 API 키가 조직 범위 웹후크 작업을 호출하도록 허용하는 POST /webhooks/test 엔드포인트에 범위 격리 취약점이 포함되어 있습니다. 앱 범위 자격 증명을 가진 공격자는 Limited_to_apps 인증 확인을 우회하여 선언된 앱 경계 외부의 임의 조직 웹훅에 대해 서명된 아웃바운드 웹훅 전달을 트리거할 수 있습니다.\n  \n심각도: 5.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-56252\n2. 26.07.12 오후9:16\n3. Capgo before 12.128.2 contains a scope isolation v",
-      "cve_id": "CVE-2026-56252",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56252",
-      "source": "cvefeed",
-      "published": "2026-07-12T21:16:44+09:00",
       "lang": "en"
     }
   ],
