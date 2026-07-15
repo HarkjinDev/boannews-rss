@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-16T00:01:57.654850+09:00",
+  "fetched_at": "2026-07-16T00:31:42.190656+09:00",
   "security_news": [
     {
       "title": "개인정보 유출에도…'쿠팡' 반성은커녕 로비만 하는데",
@@ -2220,45 +2220,24 @@
       "source": "naver",
       "published": "2026-07-13T00:47:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "정보보호의 달, 보험권 보안 인프라·인증 고도화",
-      "summary": "생성형 인공지능(AI) 도입, 클라우드 전환, 망분리 완화 등 디지털 금융 환경 변화로 해킹 리스크가... IT 프로젝트 추진 시 보안성 검토를 거치고, 구축된 IT 시스템을 대상으로 모의해킹, 서버 취약점 점검...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 보험사, AI·클라우드 전환 시 보안 강화\n2. IT 프로젝트 시 보안성 검토, 모의해킹 실시\n3. 망분리 완화 등 변화 속 해킹 리스크 대응",
-      "link": "https://www.insnews.co.kr/news/articleView.html?idxno=91760",
-      "source": "naver",
-      "published": "2026-07-13T00:02:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "재택 부업 미끼 보이스피싱 확산… 보험금 보상도 주의",
-      "summary": "보이스피싱 관련 보험은 피싱·파밍·메모리해킹 등으로 발생한 예금 부당 인출이나 사기에 의한 송금·이체 피해 등을 보장한다. 다만 보험에 가입했더라도 모든 피해가 보상되는 것은 아니다. 보험금 지급을 위해서는 경찰...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 재택 부업 미끼 보이스피싱 증가, 보험금 보상 주의 필요\n2. 피싱·파밍·메모",
-      "link": "https://www.insnews.co.kr/news/articleView.html?idxno=91753",
-      "source": "naver",
-      "published": "2026-07-13T00:02:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[연중기획-새로운 리스크, 새로운 규제 ⑤] 국제질서·금융불안·AI 위협...",
-      "summary": "국제분쟁과 관세, 공급망 재편, AI, 해킹, 금융사기 등은 거시경제와 외교안보 영역의 문제처럼 보이지만... AI와 해킹은 개인정보 유출과 금융사기, 디지털 금융 불신으로 연결된다. 리스크가 더 이상 먼 나라의 외교...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 및 해킹으로 개인정보 유출·금융사기 증가(건수 미제시)\n2. AI 기반 해킹 기법으로 디지털 금융 불신 확산\n3. 거시경제·외교안보 리스크로 연결(구체적 대응 미제시)",
-      "link": "https://www.insnews.co.kr/news/articleView.html?idxno=91660",
-      "source": "naver",
-      "published": "2026-07-13T00:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-61740 - LightRAG: Authentication bypass: hardcoded DEFAULT_TOKEN_SECRET and public /auth-status defeat LIGHTRAG_API_KEY protection",
+      "summary": "CVE ID :CVE-2026-61740\n  \nPublished : July 15, 2026, 2:14 p.m. | 1 hour, 5 minutes ago\n  \nDescription :LightRAG provides simple and fast retrieval-augmented generation. Prior to 1.5.4, when LightRAG is deployed with LIGHTRAG_API_KEY set but AUTH_ACCOUNTS unset, X-API-Key protection can be bypassed because lightrag/api/auth.py falls back to a hardcoded DEFAULT_TOKEN_SECRET, /auth-status and /login can mint guest JWTs, and combined_dependency in lightrag/api/utils_api.py accepts a valid guest token before checking the API key. A remote unauthenticated attacker can call endpoints guarded by combined_auth, including document read, upload, deletion, graph mutation, and query endpoints. This vulnerability is fixed in 1.5.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-61740\n  \nPublished : July 15, 2026, 2:14 p.m. | 1 hour, 5 minutes ago\n  \nDescription :LightRAG provides simple and fast retrieval-augmented generation. Prior to 1.5.4, when LightRAG is deployed with LIGHTRAG_API_KEY set but AUTH_ACCOUNTS unset, X-API-Key protection can be bypassed because lightrag/api/auth.py falls back to a hardcoded DEFAULT_TOKEN_SECRET, /auth-status and /login can mint guest JWTs, and combined_dependency in lightrag/api/utils_api.py accepts a valid guest token before checking the API key. A remote unauthenticated attacker can call endpoints guarded by combined_auth, including document read, upload, deletion, graph mutation, and query endpoints. This vulnerability is fixed in 1.5.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-61740 - LightRAG: 인증 우회: 하드코딩된 DEFAULT_TOKEN_SECRET 및 공개 /auth-status가 LIGHTRAG_API_KEY 보호를 무효화합니다.",
+      "summary_ko": "CVE ID:CVE-2026-61740\n  \n게시일 : 2026년 7월 15일 오후 2시 14분 | 1시간, 5분 전\n  \n설명:LightRAG는 간단하고 빠른 검색 증강 생성을 제공합니다. 1.5.4 이전에는 LIGHTRAG_API_KEY가 설정되어 있지만 AUTH_ACCOUNTS가 설정되지 않은 상태로 LightRAG가 배포되면 lightrag/api/auth.py가 하드코딩된 DEFAULT_TOKEN_SECRET으로 대체되고 /auth-status 및 /login이 게스트 JWT를 생성할 수 있고 lightrag/api/utils_api.py의 Combined_dependent가 유효한 게스트를 허용하므로 X-API 키 보호를 우회할 수 있습니다. API 키를 확인하기 전에 토큰을 확인하세요. 인증되지 않은 원격 공격자는 문서 읽기, 업로드, 삭제, 그래프 변형, 쿼리 엔드포인트를 포함하여 Combined_auth로 보호되는 엔드포인트를 호출할 수 있습니다. 이 취약점은 1.5.4에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-61740\n2. 26.07.15 오후11:14\n3. LightRAG provides simple and fast retrieval-augmen",
+      "cve_id": "CVE-2026-61740",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61740",
+      "source": "cvefeed",
+      "published": "2026-07-15T23:14:41+09:00",
+      "lang": "en"
+    },
     {
       "title": "Establishing a Coordinated Vulnerability Disclosure Program to Work With Security Researchers",
       "summary": "Developed by CISA, the National Security Agency (NSA) and international partners, this joint guidance contains best practices for software manufacturers and online service providers to design and implement a coordinated vulnerability disclosure (CVD) program for working with external security researchers that includes a clear vulnerability disclosure policy (VDP) and process for triaging, remediating and assigning Common Vulnerabilities and Exposures (CVE) identifiers to reported vulnerabilities. The guidance also provides considerations for leveraging third-party intermediaries, like CISA or other national computer security incident response teams, to substitute or supplement a CVD program. By implementing a robust CVD program aligned with this guidance, organizations can work transparently and collaboratively with security researchers to remediate vulnerabilities, build constructive relationships, enhance product security while improving vulnerability management processes, and demonstrate their dedication to protecting customers.",
