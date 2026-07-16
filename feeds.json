@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-17T02:31:29.301520+09:00",
+  "fetched_at": "2026-07-17T03:01:37.943136+09:00",
   "security_news": [
+    {
+      "title": "EU \"구글, 경쟁 AI·검색엔진에 안드로이드 핵심기능 개방하라\"",
+      "summary": "\"공정경쟁 촉진 차원\"…구글 \"사이버보안 등 위협\" 반발 현윤경 특파원 = 구글은 1년 내로 안드로이드... 다만 구글은 데이터를 제공하기 전에 특정 데이터를 공개하는 것이 사이버보안이나 개인정보 보호에 위험을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. EU, 구글에 안드로이드 핵심 기능 개방 요구\n2. 경쟁 AI/검색 엔진 공정 경쟁 위해 개방 압박\n3. 구글, 사이버보안 위협 이유로 반발하며 데이터 공개 난색",
+      "link": "https://n.news.naver.com/mnews/article/001/0016200028?sid=104",
+      "source": "naver",
+      "published": "2026-07-17T02:27:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "자산 보관하는 지갑이 쓰레기였다니…시장 뒤흔든 폭탄선언에 투자자 패...",
       "summary": "해킹과 피싱 범죄로부터 가상자산을 지켜줄 최후의 보루로 통했던 실물 보안 장치에 대한 근본적인 의구심이 확산하며 투자자들 사이에서 극심한 혼란이 빚어지고 있다. 블록체인상의 불법 자금 흐름과 해킹 범죄를...",
@@ -3295,21 +3307,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-58228",
       "source": "cvefeed",
       "published": "2026-07-14T03:04:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53365 - vsock/virtio: fix zerocopy completion for multi-skb sends",
-      "summary": "CVE ID :CVE-2026-53365\n  \nPublished : July 13, 2026, 5:33 p.m. | 41 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvsock/virtio: fix zerocopy completion for multi-skb sends\n\nWhen a large message is fragmented into multiple skbs, the zerocopy\nuarg is only allocated and attached to the last skb in the loop.\nNon-final skbs carry pinned user pages with no completion tracking,\nso the kernel has no way to notify userspace when those pages are safe\nto reuse. If the loop breaks early the uarg is never allocated at all,\nleaking pinned pages with no completion notification.\n\nFix this by following the approach used by TCP: allocate the zerocopy\nuarg (if not provided by the caller) before the send loop and attach\nit to every skb via skb_zcopy_set(), which takes a reference per skb.\nEach skb's completion properly decrements the refcount, and the\nnotification only fires after the last skb is freed.\nOn failure, if no data was sent, the uarg is cleanly aborted via\nnet_zcopy_put_abort().\n\nThis issue was initially discovered by sashiko while reviewing commit\n1cb36e252211 (\"vsock/virtio: fix MSG_ZEROCOPY pinned-pages accounting\")\nbut was pre-existing.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53365\n  \nPublished : July 13, 2026, 5:33 p.m. | 41 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvsock/virtio: fix zerocopy completion for multi-skb sends\n\nWhen a large message is fragmented into multiple skbs, the zerocopy\nuarg is only allocated and attached to the last skb in the loop.\nNon-final skbs carry pinned user pages with no completion tracking,\nso the kernel has no way to notify userspace when those pages are safe\nto reuse. If the loop breaks early the uarg is never allocated at all,\nleaking pinned pages with no completion notification.\n\nFix this by following the approach used by TCP: allocate the zerocopy\nuarg (if not provided by the caller) before the send loop and attach\nit to every skb via skb_zcopy_set(), which takes a reference per skb.\nEach skb's completion properly decrements the refcount, and the\nnotification only fires after the last skb is freed.\nOn failure, if no data was sent, the uarg is cleanly aborted via\nnet_zcopy_put_abort().\n\nThis issue was initially discovered by sashiko while reviewing commit\n1cb36e252211 (\"vsock/virtio: fix MSG_ZEROCOPY pinned-pages accounting\")\nbut was pre-existing.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53365 - vsock/virtio: 다중 skb 전송에 대한 zerocopy 완료 수정",
-      "summary_ko": "CVE ID:CVE-2026-53365\n  \n게시일 : 2026년 7월 13일 오후 5시 33분 | 41분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nvsock/virtio: 다중 skb 전송에 대한 zerocopy 완료 수정\n\n큰 메시지가 여러 skbs로 조각화되면 제로카피는\nuarg는 루프의 마지막 skb에만 할당되고 연결됩니다.\n최종이 아닌 skbs는 완료 추적 없이 고정된 사용자 페이지를 전달합니다.\n따라서 커널은 해당 페이지가 안전할 때 사용자 공간에 알릴 방법이 없습니다.\n재사용합니다. 루프가 일찍 중단되면 uarg가 전혀 할당되지 않습니다.\n완료 알림 없이 고정된 페이지가 누출됩니다.\n\nTCP에서 사용하는 접근 방식에 따라 이 문제를 해결하세요. zerocopy를 할당하세요.\n전송 루프 앞에 uarg(호출자가 제공하지 않은 경우) 및 연결\nskb당 참조를 취하는 skb_zcopy_set()을 통해 모든 skb에 전달됩니다.\n각 skb가 완료되면 참조 횟수가 적절하게 감소하고\n마지막 skb가 해제된 후에만 알림이 실행됩니다.\n실패 시 데이터가 전송되지 않은 경우 uarg는 다음을 통해 완전히 중단됩니다.\nnet_zcopy_put_abort().\n\n이 문제는 커밋을 검토하는 동안 sashiko가 처음 발견했습니다.\n1cb36e252211 (\"vsock/virtio: MSG_ZEROCOPY 고정 페이지 계정 수정\")\n하지만 기존에 있었어요.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53365\n2. 26.07.14 오전2:33\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-53365",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53365",
-      "source": "cvefeed",
-      "published": "2026-07-14T02:33:52+09:00",
       "lang": "en"
     }
   ],
