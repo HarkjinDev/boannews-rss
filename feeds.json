@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-17T01:01:42.533473+09:00",
+  "fetched_at": "2026-07-17T01:31:25.631841+09:00",
   "security_news": [
     {
       "title": "자산 보관하는 지갑이 쓰레기였다니…시장 뒤흔든 폭탄선언에 투자자 패...",
@@ -2436,18 +2436,6 @@
       "source": "darkreading",
       "published": "2026-07-14T01:50:54+09:00",
       "lang": "en"
-    },
-    {
-      "title": "LAPD 차량번호판 인식카메라 중단…개인정보 논란 확산",
-      "summary": "경찰은 데이터 소유권과 보안, 개인정보 보호, 정보 공유, 정보 유출 통보 절차 등에 대한 계약 내용이 충분히 명확하지 않다고 설명했다. 차량번호판 인식카메라는 도난 차량과 용의 차량을 추적하는 수사에 활용돼...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. LAPD, 차량번호판 인식카메라 중단…개인정보 보호 논란\n2. 계약서, 데이터 소유권·보안 규정 미흡",
-      "link": "https://www.radiokorea.com/news/article.php?uid=499226",
-      "source": "naver",
-      "published": "2026-07-14T01:16:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3334,21 +3322,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-53365",
       "source": "cvefeed",
       "published": "2026-07-14T02:33:52+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59245 - Apache Airflow FAB provider: FAB auth manager: a DAG named \"DAGs\" hijacks the global all-DAGs permission (access_control privilege escalation via resource_name() collision)",
-      "summary": "CVE ID :CVE-2026-59245\n  \nPublished : July 13, 2026, 4:16 p.m. | 1 hour ago\n  \nDescription :In the Apache Airflow FAB auth manager, a DAG whose `dag_id` is `DAGs` collided with the global all-DAGs permission resource name produced by `resource_name()`, so a user granted per-DAG `access_control` on that one DAG was silently granted the global all-DAGs permission (privilege escalation). The escalation triggers when a DAG named `DAGs` exists and a lower-privileged user is given per-DAG access to it, granting that user read/edit access to every DAG. Users are advised to upgrade to `apache-airflow-providers-fab` 3.7.2 or later, which disambiguates the resource-name collision.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59245\n  \nPublished : July 13, 2026, 4:16 p.m. | 1 hour ago\n  \nDescription :In the Apache Airflow FAB auth manager, a DAG whose `dag_id` is `DAGs` collided with the global all-DAGs permission resource name produced by `resource_name()`, so a user granted per-DAG `access_control` on that one DAG was silently granted the global all-DAGs permission (privilege escalation). The escalation triggers when a DAG named `DAGs` exists and a lower-privileged user is given per-DAG access to it, granting that user read/edit access to every DAG. Users are advised to upgrade to `apache-airflow-providers-fab` 3.7.2 or later, which disambiguates the resource-name collision.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-59245 - Apache Airflow FAB 제공자: FAB 인증 관리자: \"DAGs\"라는 DAG가 전역 모든 DAG 권한을 탈취합니다(resource_name() 충돌을 통한 access_control 권한 에스컬레이션).",
-      "summary_ko": "CVE ID:CVE-2026-59245\n  \n게시일 : 2026년 7월 13일 오후 4시 16분 | 1시간 전\n  \n설명: Apache Airflow FAB 인증 관리자에서 `dag_id`가 `DAGs`인 DAG가 `resource_name()`에 의해 생성된 전역 all-DAG 권한 리소스 이름과 충돌했습니다. 따라서 해당 DAG에 대해 DAG별 'access_control'을 부여한 사용자에게 전역 all-DAG 권한(권한 에스컬레이션)이 자동으로 부여되었습니다. 'DAGs'라는 DAG가 존재하고 권한이 낮은 사용자에게 DAG별 액세스 권한이 부여되어 해당 사용자에게 모든 DAG에 대한 읽기/수정 액세스 권한이 부여되면 에스컬레이션이 트리거됩니다. 사용자는 리소스 이름 충돌을 명확하게 하는 `apache-airflow-providers-fab` 3.7.2 이상으로 업그레이드하는 것이 좋습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-59245\n2. 26.07.14 오전1:16\n3. In the Apache Airflow FAB auth manager, a DAG whos",
-      "cve_id": "CVE-2026-59245",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59245",
-      "source": "cvefeed",
-      "published": "2026-07-14T01:16:41+09:00",
       "lang": "en"
     }
   ],
