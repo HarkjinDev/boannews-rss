@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-17T03:31:32.314201+09:00",
+  "fetched_at": "2026-07-17T04:01:34.025082+09:00",
   "security_news": [
     {
       "title": "EU \"구글, 경쟁 AI·검색엔진에 안드로이드 핵심기능 개방하라\"",
@@ -3307,21 +3307,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-57856",
       "source": "cvefeed",
       "published": "2026-07-14T07:41:23+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55772 - CedarJava has a type confusion vulnerability",
-      "summary": "CVE ID :CVE-2026-55772\n  \nPublished : July 13, 2026, 6:44 p.m. | 22 minutes ago\n  \nDescription :CedarJava is an open source Java implementation of the Cedar policy language, used for fine-grained authorization decisions. In versions prior to 2.3.6, 3.4.1 and 4.9.0, under certain circumstances, improper input handling could allow Record-to-Entity type confusion across the Java-Rust FFI boundary. CedarJava sends authorization requests to the Rust cedar-policy evaluator as JSON. The JSON protocol reserves magic single-key object shapes (__entity and __extn) for entity references and extension values. When serializing a CedarMap, there is no validation preventing these reserved keys from being used. If an integrating service builds a CedarMap from caller-supplied key/value data (such as request headers, user-defined metadata, or resource tags), an actor who controls those keys could cause the Rust evaluator to interpret a record as an entity reference. This issue requires the integrating service to build a CedarMap where the an actor controls the keys, and a policy must reference that value in a when/unless clause. This vulnerability has been fixed in versions 2.3.6, 3.4.1, and 4.9.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55772\n  \nPublished : July 13, 2026, 6:44 p.m. | 22 minutes ago\n  \nDescription :CedarJava is an open source Java implementation of the Cedar policy language, used for fine-grained authorization decisions. In versions prior to 2.3.6, 3.4.1 and 4.9.0, under certain circumstances, improper input handling could allow Record-to-Entity type confusion across the Java-Rust FFI boundary. CedarJava sends authorization requests to the Rust cedar-policy evaluator as JSON. The JSON protocol reserves magic single-key object shapes (__entity and __extn) for entity references and extension values. When serializing a CedarMap, there is no validation preventing these reserved keys from being used. If an integrating service builds a CedarMap from caller-supplied key/value data (such as request headers, user-defined metadata, or resource tags), an actor who controls those keys could cause the Rust evaluator to interpret a record as an entity reference. This issue requires the integrating service to build a CedarMap where the an actor controls the keys, and a policy must reference that value in a when/unless clause. This vulnerability has been fixed in versions 2.3.6, 3.4.1, and 4.9.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-55772 - CedarJava에는 유형 혼동 취약점이 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-55772\n  \n게시일 : 2026년 7월 13일 오후 6시 44분 | 22분 전\n  \n설명 :CedarJava는 세부적인 인증 결정에 사용되는 Cedar 정책 언어의 오픈 소스 Java 구현입니다. 2.3.6, 3.4.1 및 4.9.0 이전 버전에서는 특정 상황에서 부적절한 입력 처리로 인해 Java-Rust FFI 경계에서 레코드-엔티티 유형 혼동이 발생할 수 있습니다. CedarJava는 Rust cedar-policy 평가자에게 JSON으로 인증 요청을 보냅니다. JSON 프로토콜은 엔터티 참조 및 확장 값에 대한 마법의 단일 키 개체 형태(__entity 및 __extn)를 예약합니다. CedarMap을 직렬화할 때 이러한 예약된 키가 사용되는 것을 방지하는 유효성 검사가 없습니다. 통합 서비스가 호출자 제공 키/값 데이터(예: 요청 헤더, 사용자 정의 메타데이터 또는 리소스 태그)에서 CedarMap을 구축하는 경우 해당 키를 제어하는 ​​행위자는 Rust 평가자가 레코드를 엔터티 참조로 해석하도록 할 수 있습니다. 이 문제에서는 행위자가 키를 제어하는 ​​CedarMap을 구축하기 위해 통합 서비스가 필요하며 정책은 when/unless 절에서 해당 값을 참조해야 합니다. 이 취약점은 버전 2.3.6, 3.4.1 및 4.9에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-55772\n2. 26.07.14 오전3:44\n3. CedarJava is an open source Java implementation of",
-      "cve_id": "CVE-2026-55772",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55772",
-      "source": "cvefeed",
-      "published": "2026-07-14T03:44:47+09:00",
       "lang": "en"
     }
   ],
