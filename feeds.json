@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-16T22:31:45.230016+09:00",
+  "fetched_at": "2026-07-16T23:01:55.991671+09:00",
   "security_news": [
+    {
+      "title": "“화면 공유하는 순간 털린다”… 애플, 페이스타임 금융 사기 경고",
+      "summary": "신뢰성 높은 플랫폼을 이용하기 때문에 의심을 피하면서도, 별다른 해킹 없이 정보 유출이 가능하다는 설명이다. 전문가들은 페이스타임 사기 피해를 예방하기 위해 다음과 같은 주의 사항을 당부했다. △ 화면 공유 금지...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 애플, 페이스타임 금융 사기로 사용자 주의 촉구\n2. 화면 공유 시 금융 정보 노출, 해킹 없이 정보 유출 가능\n3. 화면 공유 금지 등 피해 예방 수칙 준수해야",
+      "link": "https://n.news.naver.com/mnews/article/030/0003448608?sid=104",
+      "source": "naver",
+      "published": "2026-07-16T22:31:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "20+ Hijacked Government Websites Became an Attack Channel",
       "summary": "More than 20 Brazilian government websites were hijacked and turned into malware delivery channels in an active PhantomEnigma campaign uncovered by ANY.RUN, a leading provider of interactive malware analysis and threat intelligence solutions.\n\nThe investigation revealed previously undocumented backdoor behavior, hidden infrastructure relationships, and multiple attack arms behind a campaign",
@@ -2436,21 +2448,24 @@
       "source": "naver",
       "published": "2026-07-13T23:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[금융] KB금융 중소기업 안전지원 / 삼성화재 정보보호 표창 / 우리은행...",
-      "summary": "정보보호 투자를 확대하고 사이버 공격과 개인정보 유출에 대응하는 관리체계를 강화한 점을 인정받았다. 삼성화재는 주민등록번호뿐 아니라 고객의 이름과 연락처 등 주요 개인정보도 암호화하고 있다. 보안...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 삼성화재 정보보호 표창 수상\n2. 주민등록번호·고객정보 암호화\n3. KB금융 중소기업 보안 지원 확대",
-      "link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2231607",
-      "source": "naver",
-      "published": "2026-07-13T23:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-9494 - ubuntu-pro-client Information Disclosure via Cleartext Bearer Token Exposure in Process Command Line",
+      "summary": "CVE ID :CVE-2026-9494\n  \nPublished : July 16, 2026, 12:12 p.m. | 1 hour, 5 minutes ago\n  \nDescription :An information disclosure vulnerability exists in Canonical ubuntu-pro-client (formerly ubuntu-advantage-tools). The client validates Ubuntu Pro APT credentials by executing /usr/lib/apt/apt-helper using the download-file command. During this process, the secret bearer token is embedded directly in\nthe cleartext URL component passed via the command-line arguments (argv), resulting in a URL format such as https://bearer:@esm.ubuntu.com/.../. On systems utilizing a default-mounted /proc file system where process-hiding mitigations (such as hidepid) are disabled, an unprivileged local attacker can\nmonitor system processes and read the sensitive bearer token directly from /proc/cmdline while the helper process is actively running. This leaked token can subsequently be used to gain unauthorized access to the victim's Ubuntu Pro or Expanded Security Maintenance (ESM) repositories.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-9494\n  \nPublished : July 16, 2026, 12:12 p.m. | 1 hour, 5 minutes ago\n  \nDescription :An information disclosure vulnerability exists in Canonical ubuntu-pro-client (formerly ubuntu-advantage-tools). The client validates Ubuntu Pro APT credentials by executing /usr/lib/apt/apt-helper using the download-file command. During this process, the secret bearer token is embedded directly in\nthe cleartext URL component passed via the command-line arguments (argv), resulting in a URL format such as https://bearer:@esm.ubuntu.com/.../. On systems utilizing a default-mounted /proc file system where process-hiding mitigations (such as hidepid) are disabled, an unprivileged local attacker can\nmonitor system processes and read the sensitive bearer token directly from /proc/cmdline while the helper process is actively running. This leaked token can subsequently be used to gain unauthorized access to the victim's Ubuntu Pro or Expanded Security Maintenance (ESM) repositories.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-9494\n  \n게시일 : 2026년 7월 16일 오후 12시 12분 | 1시간, 5분 전\n  \n설명: Canonical ubuntu-pro-client(이전 ubuntu-advantage-tools)에 정보 공개 취약성이 존재합니다. 클라이언트는 download-file 명령을 사용하여 /usr/lib/apt/apt-helper를 실행하여 Ubuntu Pro APT 자격 증명의 유효성을 검사합니다. 이 과정에서 비밀 전달자 토큰이 직접 삽입됩니다.\n명령줄 인수(argv)를 통해 전달된 일반 텍스트 URL 구성 요소로, https://bearer:@esm.ubuntu.com/.../와 같은 URL 형식이 됩니다. 프로세스 숨김 완화(예: hidepid)가 비활성화된 기본 탑재 /proc 파일 시스템을 활용하는 시스템에서 권한 없는 로컬 공격자는 다음을 수행할 수 있습니다.\n도우미 프로세스가 활발하게 실행되는 동안 시스템 프로세스를 모니터링하고 /proc/cmdline에서 직접 중요한 전달자 토큰을 읽습니다. 이 유출된 토큰은 이후 피해자의 Ubuntu Pro 또는 ESM(확장 보안 유지 관리) 저장소에 대한 무단 액세스를 얻는 데 사용될 수 있습니다.\n  \n심각도: 5.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-9494\n2. 26.07.16 오후9:12\n3. An information disclosure vulnerability exists in ",
+      "cve_id": "CVE-2026-9494",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9494",
+      "source": "cvefeed",
+      "published": "2026-07-16T21:12:27+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-15103 - WPFunnels <= 3.12.8 - Authenticated (Funnel Manager+) Privilege Escalation via 'group_id' Path Parameter",
       "summary": "CVE ID :CVE-2026-15103\n  \nPublished : July 16, 2026, 8:26 a.m. | 41 minutes ago\n  \nDescription :The WPFunnels – Funnel Builder for WooCommerce with Checkout & One Click Upsell plugin for WordPress is vulnerable to Privilege Escalation via arbitrary option update in all versions up to, and including, 3.12.8. This is due to the `update_settings()` REST callback failing to validate the `group_id` path parameter against an allowlist of permitted option names before passing it directly to `get_option()` and `update_option()`, allowing the built-in `wp_user_roles` option — which satisfies the route's loose `[\\w-]+` regex — to be targeted. This makes it possible for authenticated attackers with the `wpf_manage_funnels` capability and above to elevate their privileges to administrator by writing a crafted role definition containing arbitrary capabilities into the `wp_user_roles` option, thereby granting any WordPress role full site administrator access. The `wpf_manage_funnels` capability is typically assigned to the Funnel Manager custom role created by the plugin, meaning this role is the minimum required to exploit the vulnerability.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
