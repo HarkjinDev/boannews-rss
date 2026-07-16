@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-17T07:31:29.619986+09:00",
+  "fetched_at": "2026-07-17T08:01:41.896215+09:00",
   "security_news": [
     {
       "title": "EU \"구글, 경쟁 AI·검색엔진에 안드로이드 핵심기능 개방하라\"",
@@ -3293,24 +3293,23 @@
       "source": "cvefeed",
       "published": "2026-07-14T09:22:05+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-57856 - Cockpit CMS Path Traversal via Bucket Name in Bucket File Storage API",
-      "summary": "CVE ID :CVE-2026-57856\n  \nPublished : July 13, 2026, 10:41 p.m. | 27 minutes ago\n  \nDescription :Cockpit CMS contains a path traversal vulnerability in the Bucket file storage API (/system/buckets/api). The api() method in modules/System/Controller/Buckets.php sanitizes the bucket name with preg_replace('/[^a-zA-Z0-9-_\\\\.]/','', $bucket), which permits '..' and '../' sequences. The sanitized value is interpolated into a Flysystem path as uploads://buckets/{bucket}. Flysystem's WhitespacePathNormalizer resolves 'buckets/..' to the empty string (the uploads storage root) without raising PathTraversalDetected because the '..' has a preceding component to consume. An authenticated low-privileged user can send a crafted request with a '../' bucket name to list, upload, and delete files across all buckets, including those belonging to other users or roles\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-57856\n  \nPublished : July 13, 2026, 10:41 p.m. | 27 minutes ago\n  \nDescription :Cockpit CMS contains a path traversal vulnerability in the Bucket file storage API (/system/buckets/api). The api() method in modules/System/Controller/Buckets.php sanitizes the bucket name with preg_replace('/[^a-zA-Z0-9-_\\\\.]/','', $bucket), which permits '..' and '../' sequences. The sanitized value is interpolated into a Flysystem path as uploads://buckets/{bucket}. Flysystem's WhitespacePathNormalizer resolves 'buckets/..' to the empty string (the uploads storage root) without raising PathTraversalDetected because the '..' has a preceding component to consume. An authenticated low-privileged user can send a crafted request with a '../' bucket name to list, upload, and delete files across all buckets, including those belonging to other users or roles\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID :CVE-2026-57856\n  \nPublished : July 13, 2026, 10:41 p.m. | 27 minutes ago\n  \nDescription :Cockpit CMS contains a path traversal vulnerability in the Bucket file storage API (/system/buckets/api). The api() method in modules/System/Controller/Buckets.php sanitizes the bucket name with preg_replace('/[^a-zA-Z0-9-_\\\\.]/','', $bucket), which permits '..' and '../' sequences. The sanitized value is interpolated into a Flysystem path as uploads://buckets/{bucket}. Flysystem's WhitespacePathNormalizer resolves 'buckets/..' to the empty string (the uploads storage root) without raising PathTraversalDetected because the '..' has a preceding component to consume. An authenticated low-privileged user can send a crafted request with a '../' bucket name to list, upload, and delete files across all buckets, including those belonging to other users or roles\n  \nSeverity: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-57856\n2. 26.07.14 오전7:41\n3. Cockpit CMS contains a path traversal vulnerabilit",
-      "cve_id": "CVE-2026-57856",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57856",
-      "source": "cvefeed",
-      "published": "2026-07-14T07:41:23+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
+    {
+      "title": "고립된 유시민, 조선일보의 갈라치기 프레임: 슬로우레터 7월17일.",
+      "summary": "송경희(개인정보보호위 위원장)는 “개인정보 침해 사고를 은닉하거나 폐기하는 행위가 나중에 적발되면... 박홍근(기획예산처 장관)은 페이스북에 “동지의 언어라고는 믿기 어렵다”며 “걱정이 아니라 (실패하라는)...",
+      "description": "송경희(개인정보보호위 위원장)는 “개인정보 침해 사고를 은닉하거나 폐기하는 행위가 나중에 적발되면... 박홍근(기획예산처 장관)은 페이스북에 “동지의 언어라고는 믿기 어렵다”며 “걱정이 아니라 (실패하라는)...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 개인정보위 위원장, 사고 은닉/폐기 처벌 경고\n2. 기획예산처 장관, '동지 언어' 비판\n3. (해당 뉴스에는 구체적인 보안 사건, 공격 방식, 유출 내용, 영향 범위, 수치, CVE ",
+      "keyword_matched": "기획예산처",
+      "link": "https://slownews.kr/163376",
+      "source": "naver_rep",
+      "published": "2026-07-17T07:38:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "개인정보위, 유출 정보 불법 유통에 징역형 신설",
       "summary": "급증하는 개인정보 침해 사고에 대응해 사후 보상 체계를 개편하고 불법 정보 유통 행위와 조사 방해 기업에... 기획예산처 등 관계 부처와 협의해 통합기금 마련도 추진한다. 중소·영세기업에 대해서는 경미한 위반 시...",
