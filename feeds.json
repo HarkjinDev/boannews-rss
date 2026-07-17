@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-17T13:01:34.006509+09:00",
+  "fetched_at": "2026-07-17T13:31:50.467976+09:00",
   "security_news": [
+    {
+      "title": "코카콜라, 랜섬웨어 공격에 페어라이프 유제품 생산 중단",
+      "summary": "16일(현지시간) 테크크런치에 따르면 코카콜라는 미국 증권거래위원회 공시를 통해 페어라이프가 해킹 피해를 입었고 생산 시스템에도 영향이 발생했다고 밝혔다. 페어라이프 미국 내 생산 운영은 현재 일시 중단된...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 코카콜라 자회사 페어라이프, 랜섬웨어 공격으로 중단\n2. 미국 내 생산 시스템 해킹 피해 발생\n3. 현재 페어라이프 미국 생산 운영 일시 중단",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=684968",
+      "source": "naver",
+      "published": "2026-07-17T13:16:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "중간선거 앞둔 트럼프, 강성지지층 겨냥 부정선거론 26분 연설",
+      "summary": "또한 2020년 베네수엘라에서 선거가 디지털 방식으로 조작된 사례를 들면서 미국의 투표 기기와 개표 시스템이 해킹과 조작, 부패의 위험에 노출돼 있다고 주장했다. 그는 그러면서 중국, 러시아, 이란, 북한 등 대표적...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 트럼프, 2020년 베네수엘라 디지털 조작 사례 제시\n2. 미국 투표·개표 시스템, 해킹·조작·부패 위험 주장\n3. 부정선거론 확산, 중간선거 앞둔 강성 지지층 겨냥",
+      "link": "https://n.news.naver.com/mnews/article/001/0016200504?sid=104",
+      "source": "naver",
+      "published": "2026-07-17T13:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "트럼프 '中대선 개입' 연설 후폭풍…민주·전직 정보수장 \"위험한 주장...",
       "summary": "이날 뉴욕타임스(NYT), CNN 등 외신에 따르면 트럼프 대통령은 백악관 이스트룸에서 약 30분간 진행한 연설에서 기밀 해제한 정보 문서를 공개하며 \"미국 선거 인프라의 충격적인 취약점\"과 중국의 해킹·외국의 선거 개입...",
@@ -2400,21 +2424,24 @@
       "source": "dailysecu",
       "published": "2026-07-14T13:41:25+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'해킹 은폐' KT, '역대급' 과징금 위기…2000억원 넘기나",
-      "summary": "최근 SK텔레콤과 쿠팡에 개인정보 유출로 인해 대규모 과징금이 잇따라 부과된 데다, KT는 해킹 은폐 의혹과... 앞서 KT는 지난해 9월 불법 초소형 기지국(펨토셀)을 통한 해킹으로 가입자식별번호(IMSI), 단말기식별번호...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KT, 해킹 은폐 의혹으로 2000억원 과징금 위기\n2. 불법 펨토셀로 IMSI·IMEI 유출\n3. 과징금 200억원 초과 가능성",
-      "link": "https://n.news.naver.com/mnews/article/629/0000515914?sid=101",
-      "source": "naver",
-      "published": "2026-07-14T13:24:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-62241 - clawvet < 0.7.5 Hard-coded JWT Secret Session Forgery",
+      "summary": "CVE ID :CVE-2026-62241\n  \nPublished : July 17, 2026, 2:18 a.m. | 2 hours ago\n  \nDescription :clawvet self-hosted API server (apps/api) before 0.7.5 hard-codes a fallback JWT secret ('clawvet-dev-secret-change-me') in auth.ts and ships it as the default in .env.example. Because GET /api/v1/scans returns scan records containing userId values without authentication, a remote unauthenticated attacker can harvest a victim's userId, forge a valid HS256 cg_session cookie offline using the known secret, and call GET /api/v1/auth/me to obtain the victim's email address, subscription plan, and secret apiKey. The published clawvet npm package (CLI only) is not affected.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-62241\n  \nPublished : July 17, 2026, 2:18 a.m. | 2 hours ago\n  \nDescription :clawvet self-hosted API server (apps/api) before 0.7.5 hard-codes a fallback JWT secret ('clawvet-dev-secret-change-me') in auth.ts and ships it as the default in .env.example. Because GET /api/v1/scans returns scan records containing userId values without authentication, a remote unauthenticated attacker can harvest a victim's userId, forge a valid HS256 cg_session cookie offline using the known secret, and call GET /api/v1/auth/me to obtain the victim's email address, subscription plan, and secret apiKey. The published clawvet npm package (CLI only) is not affected.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-62241 -clawvet < 0.7.5 하드 코딩된 JWT 비밀 세션 위조",
+      "summary_ko": "CVE ID:CVE-2026-62241\n  \n게시일 : 2026년 7월 17일 오전 2시 18분 | 2시간 전\n  \n설명 :clawvet 0.7.5 이전의 자체 호스팅 API 서버(apps/api)는 auth.ts에 대체 JWT 비밀('clawvet-dev-secret-change-me')을 하드 코딩하고 이를 .env.example의 기본값으로 제공합니다. GET /api/v1/scans는 인증 없이 userId 값이 포함된 스캔 레코드를 반환하므로 인증되지 않은 원격 공격자는 피해자의 userId를 수집하고, 알려진 비밀을 사용하여 오프라인에서 유효한 HS256 cg_session 쿠키를 위조하고, GET /api/v1/auth/me를 호출하여 피해자의 이메일 주소, 구독 계획 및 비밀 apiKey를 얻을 수 있습니다. 게시된 Clawvet npm 패키지(CLI만 해당)는 영향을 받지 않습니다.\n  \n심각도: 9.3 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-62241\n2. 26.07.17 오전11:18\n3. clawvet self-hosted API server (apps/api) before 0",
+      "cve_id": "CVE-2026-62241",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62241",
+      "source": "cvefeed",
+      "published": "2026-07-17T11:18:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-34150 - Wazuh: Heap buffer overflow in wazuh-analysisd via rootcheck event parsing",
       "summary": "CVE ID :CVE-2026-34150\n  \nPublished : July 17, 2026, 12:16 a.m. | 1 hour, 11 minutes ago\n  \nDescription :Wazuh is a free and open source platform used for threat prevention, detection, and response. In versions 1.0.0 and above, prior to 4.14.5, a heap buffer overflow in wazuh-analysisd allows an unauthenticated remote attacker to crash the Wazuh manager's analysis engine, causing complete loss of SIEM alert processing. The attack exploits the default configuration shipped in the official wazuh/wazuh-docker deployment with default configuration. An attacker can enroll with authd without a password to obtain a valid agent ID and encryption key, connect to remoted over the Wazuh agent protocol, and inject rootcheck events containing  {key: value}  patterns longer than 30 bytes that trigger a sprintf overflow of a 30-byte buffer in W_JSON_ParseRootcheck, corrupting the heap and crashing wazuh-analysisd so that all alert processing silently stops while the dashboard and API keep showing stale data.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
