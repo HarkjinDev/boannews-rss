@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-18T06:01:20.601362+09:00",
+  "fetched_at": "2026-07-18T06:31:29.920440+09:00",
   "security_news": [
     {
       "title": "Inc Ransomware Exploits SonicWall SMA Zero-Days",
@@ -2100,33 +2100,39 @@
       "source": "naver",
       "published": "2026-07-15T06:44:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "SonicWall warns of SMA1000 flaws exploited in zero-day attacks, patch now",
-      "summary": "SonicWall warns that threat actors have been exploiting two SMA1000 vulnerabilities, tracked as CVE-2026-15409 and CVE-2026-15410, in zero-day attacks and urges customers to install the newly released security updates. [...]",
-      "content": "",
-      "title_ko": "SonicWall, 제로데이 공격에 악용되는 SMA1000 결함 경고, 지금 패치",
-      "summary_ko": "SonicWall은 위협 행위자가 제로데이 공격에서 CVE-2026-15409 및 CVE-2026-15410으로 추적되는 두 가지 SMA1000 취약점을 악용하고 있다고 경고하고 고객에게 새로 출시된 보안 업데이트를 설치할 것을 촉구합니다. [...]",
-      "summary_3lines": "1. SonicWall, SMA1000 취약점(CVE-2026-15409, CVE-2026-15\n2. 공격자는 SMA1000 기기 침투 위해 제로데이 취약점 악용\n3. SonicWall, 즉각적 보안 업데이트 설치 권고",
-      "link": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/",
-      "source": "bleepingcomputer",
-      "published": "2026-07-15T06:23:24+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "국가적 기밀 많은 '방산' 한화에어로스페이스·한화시스템 정보보호 투...",
-      "summary": "사진= 한화 제공한화갤러리아는 정보보호관리체계를 운영하고 취약점 진단과 개선, 대외서비스 모의해킹, 임직원 메일 해킹훈련 등을 실시하며 정보보호 인식 제고 활동을 이어가고 있다. 한화엔진은 정보보호...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한화 방산 기업, 정보보호 강화 나선다.\n2. 취약점 진단, 모의 해킹, 메일 훈련 실시.\n3. 정보보호 인식 제고 및 체계 운영.",
-      "link": "http://www.consumernews.co.kr/news/articleView.html?idxno=759317",
-      "source": "naver",
-      "published": "2026-07-15T06:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Chromium: CVE-2026-15904 Use after free in Ozone",
+      "summary": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.",
+      "description": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.",
+      "title_ko": "크롬: CVE-2026-15904 오존에서 무료로 사용",
+      "summary_ko": "이 CVE는 Chrome에서 할당되었습니다.  Microsoft Edge(Chromium 기반)는 이 취약점을 해결하는 Chromium을 수집합니다. 자세한 내용은 [Google Chrome 릴리스](https://chromereleases.googleblog.com/2025)를 참조하세요.",
+      "summary_3lines": "1. CVE-2026-15904\n2. MSRC\n3. This CVE was assigned by Chrome. Microsoft Edge (C",
+      "cve_id": "CVE-2026-15904",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15904",
+      "source": "msrc",
+      "published": "2026-07-18T09:42:43+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-45785 - OpenMcdf: Uncatchable infinite loop in DirectoryTree.TryGetDirectoryEntry on crafted CFB directory cycle",
+      "summary": "CVE ID :CVE-2026-45785\n  \nPublished : July 17, 2026, 8:37 p.m. | 29 minutes ago\n  \nDescription :OpenMcdf is a fully .NET / C# library to manipulate Compound File Binary File Format files, also known as Structured Storage. In 3.1.3 and earlier, the BST name-lookup loop in DirectoryTree.TryGetDirectoryEntry (OpenMcdf/DirectoryTree.cs:35-46) walks directory entries by repeatedly calling directories.TryGetSibling(child, siblingType, validateColor). A crafted CFB file with cyclic Left/Right sibling links among directory entries, constructed so the per-step BST-order check in TryGetSibling (DirectoryEntries.cs:84-85) is satisfied at every step, drives this while (child is not null) loop forever. There is no cycle detection in TryGetDirectoryEntry, and the bug is reachable from RootStorage.OpenStorage(name), TryOpenStorage(name), OpenStream(name), and TryOpenStream(name), causing an unrecoverable denial of service. This issue is fixed in version 3.1.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-45785\n  \nPublished : July 17, 2026, 8:37 p.m. | 29 minutes ago\n  \nDescription :OpenMcdf is a fully .NET / C# library to manipulate Compound File Binary File Format files, also known as Structured Storage. In 3.1.3 and earlier, the BST name-lookup loop in DirectoryTree.TryGetDirectoryEntry (OpenMcdf/DirectoryTree.cs:35-46) walks directory entries by repeatedly calling directories.TryGetSibling(child, siblingType, validateColor). A crafted CFB file with cyclic Left/Right sibling links among directory entries, constructed so the per-step BST-order check in TryGetSibling (DirectoryEntries.cs:84-85) is satisfied at every step, drives this while (child is not null) loop forever. There is no cycle detection in TryGetDirectoryEntry, and the bug is reachable from RootStorage.OpenStorage(name), TryOpenStorage(name), OpenStream(name), and TryOpenStream(name), causing an unrecoverable denial of service. This issue is fixed in version 3.1.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-45785 - OpenMcdf: 조작된 CFB 디렉터리 주기의 DirectoryTree.TryGetDirectoryEntry에서 캐치할 수 없는 무한 루프",
+      "summary_ko": "CVE ID:CVE-2026-45785\n  \n게시일 : 2026년 7월 17일 오후 8시 37분 | 29분 전\n  \n설명:OpenMcdf는 구조적 저장소라고도 알려진 복합 파일 바이너리 파일 형식 파일을 조작하는 완전한 .NET/C# 라이브러리입니다. 3.1.3 이하에서는 DirectoryTree.TryGetDirectoryEntry(OpenMcdf/DirectoryTree.cs:35-46)의 BST 이름 조회 루프가 디렉터리.TryGetSibling(child, siblingType, verifyColor)을 반복적으로 호출하여 디렉터리 항목을 탐색합니다. TryGetSibling(DirectoryEntries.cs:84-85)의 단계별 BST 순서 확인이 모든 단계에서 충족되도록 구성된 디렉터리 항목 간의 순환 왼쪽/오른쪽 형제 링크가 있는 제작된 CFB 파일은 이 while(자식은 null이 아님) 루프를 영원히 구동합니다. TryGetDirectoryEntry에는 주기 감지 기능이 없으며 RootStorage.OpenStorage(이름), TryOpenStorage(이름), OpenStream(이름) 및 TryOpenStream(이름)에서 버그에 접근할 수 있어 복구할 수 없는 서비스 거부가 발생합니다. 이 문제는 버전 3.1.4에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-45785\n2. 26.07.18 오전5:37\n3. OpenMcdf is a fully .NET / C# library to manipulat",
+      "cve_id": "CVE-2026-45785",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45785",
+      "source": "cvefeed",
+      "published": "2026-07-18T05:37:23+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53712 - SCRAM: Silent channel-binding authentication downgrade via unsupported certificate algorithms",
       "summary": "CVE ID :CVE-2026-53712\n  \nPublished : July 17, 2026, 7:17 p.m. | 13 minutes ago\n  \nDescription :SCRAM (Salted Challenge Response Authentication Mechanism) is part of the family of Simple Authentication and Security Layer (SASL, RFC 4422) authentication mechanisms. Prior to 3.3, a flaw in com.ongres.scram:scram-client and com.ongres.scram:scram-common allows an attacker capable of a TLS man-in-the-middle attack to silently downgrade a connection from SCRAM-SHA-256-PLUS with channel binding to standard SCRAM-SHA-256 without channel binding when TlsServerEndpoint processes an X.509 certificate using a modern signature algorithm such as Ed25519; getChannelBindingData() can return an empty byte array after NoSuchAlgorithmException, and the ScramClient builder treats that as absent channel-binding data. This issue is fixed in version 3.3.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
