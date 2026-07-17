@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-18T03:31:09.898405+09:00",
+  "fetched_at": "2026-07-18T04:01:31.851520+09:00",
   "security_news": [
     {
       "title": "HollowByte DDoS flaw bloats OpenSSL server memory with 11-byte payload",
@@ -540,6 +540,18 @@
       "source": "naver",
       "published": "2026-07-16T16:31:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Zoom Patches Critical Windows Flaw That Could Enable Account Takeover",
+      "summary": "Zoom has released security updates for a critical security flaw impacting Zoom Workplace for Windows that could facilitate account takeover.\n\nThe vulnerability, tracked as CVE-2026-53412 (CVSS score: 9.8), affects Zoom Workplace for Windows before version 7.0.0 and Zoom Workplace VDI Client for Windows before version 7.0.10, 6.6.15, and 6.5.18 in their respective branches.\n\n\"Improper Input",
+      "content": "",
+      "title_ko": "Zoom, 계정 탈취를 가능하게 하는 심각한 Windows 결함 패치",
+      "summary_ko": "Zoom은 계정 탈취를 용이하게 할 수 있는 Windows용 Zoom Workplace에 영향을 미치는 심각한 보안 결함에 대한 보안 업데이트를 출시했습니다.\n\nCVE-2026-53412(CVSS 점수: 9.8)로 추적된 이 취약점은 해당 분기의 Windows용 Zoom Workplace 버전 7.0.0 이전과 Windows용 Zoom Workplace VDI 클라이언트 버전 7.0.10, 6.6.15 및 6.5.18 이전에 영향을 미칩니다.\n\n\"부적절한 입력",
+      "summary_3lines": "1. Zoom, 윈도우 계정 탈취 가능한 중요 취약점 CVE-2026-53412 패치\n2. 윈도우 Zoom Workplace 7.0.0 미만 버전서 심각한 보안 결함 발견\n3. 9.8 CVSS 점수의 계정 탈취 위험, 최신 버전으로 업데이트 권고",
+      "link": "https://thehackernews.com/2026/07/zoom-patches-critical-windows-flaw-that.html",
+      "source": "thehackernews",
+      "published": "2026-07-16T16:22:44+09:00",
+      "lang": "en"
     },
     {
       "title": "“협력사가 곧 포스코의 경쟁력”… 포스코그룹, 5300개 협력사 상생 확...",
@@ -2136,21 +2148,39 @@
       "source": "naver",
       "published": "2026-07-15T04:32:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Microsoft Patches Record 622 Vulnerabilities, Including Two Exploited Zero-Days",
-      "summary": "Two flaws in Active Directory and SharePoint Server have been exploited as zero-days, and a BitLocker bug was publicly disclosed.\nThe post Microsoft Patches Record 622 Vulnerabilities, Including Two Exploited Zero-Days appeared first on SecurityWeek.",
-      "content": "",
-      "title_ko": "Microsoft 패치, 악용된 제로데이 2건을 포함하여 622건의 취약점 발견",
-      "summary_ko": "Active Directory와 SharePoint Server의 두 가지 결함이 제로데이로 악용되었으며 BitLocker 버그가 공개되었습니다.\nMicrosoft 패치가 악용된 2개의 제로데이를 포함하여 622개의 취약점을 기록했다는 게시물이 SecurityWeek에 처음으로 등장했습니다.",
-      "summary_3lines": "1. 마이크로소프트, 622개 취약점 패치\n2. AD, SharePoint 서버 2개 제로데이 공격 악용\n3. BitLocker에도 공개된 취약점 발견",
-      "link": "https://www.securityweek.com/microsoft-patches-record-622-vulnerabilities-including-two-exploited-zero-days/",
-      "source": "securityweek",
-      "published": "2026-07-15T03:50:20+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-48015 - Shopware: Stored XSS via SVG file upload — no SVG sanitization",
+      "summary": "CVE ID :CVE-2026-48015\n  \nPublished : July 17, 2026, 5:53 p.m. | 26 minutes ago\n  \nDescription :Shopware is an open commerce platform. Prior to 6.6.10.18 and 6.7.10.1, SVG files are in the allowed_extensions whitelist in src/Core/Framework/Resources/config/packages/shopware.yaml and can be uploaded via the media manager without SVG content sanitization in the upload pipeline from MediaUploadController to FileSaver to TypeDetector, allowing malicious SVG JavaScript such as onload,",
+      "description": "CVE ID :CVE-2026-48015\n  \nPublished : July 17, 2026, 5:53 p.m. | 26 minutes ago\n  \nDescription :Shopware is an open commerce platform. Prior to 6.6.10.18 and 6.7.10.1, SVG files are in the allowed_extensions whitelist in src/Core/Framework/Resources/config/packages/shopware.yaml and can be uploaded via the media manager without SVG content sanitization in the upload pipeline from MediaUploadController to FileSaver to TypeDetector, allowing malicious SVG JavaScript such as onload,",
+      "title_ko": "CVE-2026-48015 - Shopware: SVG 파일 업로드를 통해 저장된 XSS — SVG 삭제 없음",
+      "summary_ko": "CVE ID:CVE-2026-48015\n  \n게시일 : 2026년 7월 17일 오후 5시 53분 | 26분 전\n  \n설명 :Shopware는 오픈 커머스 플랫폼입니다. 6.6.10.18 및 6.7.10.1 이전에는 SVG 파일이 src/Core/Framework/Resources/config/packages/shopware.yaml의 allowed_extensions 화이트리스트에 있으며 MediaUploadController에서 FileSaver, TypeDetector로의 업로드 파이프라인에서 SVG 콘텐츠 삭제 없이 미디어 관리자를 통해 업로드할 수 있어 onload와 같은 악성 SVG JavaScript가 허용됩니다.",
+      "summary_3lines": "1. CVE-2026-48015\n2. 26.07.18 오전2:53\n3. Shopware is an open commerce platform. Prior to 6.",
+      "cve_id": "CVE-2026-48015",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48015",
+      "source": "cvefeed",
+      "published": "2026-07-18T02:53:01+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-49215 - Symfony UX: CSRF Protection Bypass in symfony/ux-live-component — Accept Header is CORS-Safelisted",
+      "summary": "CVE ID :CVE-2026-49215\n  \nPublished : July 17, 2026, 5:17 p.m. | 1 hour, 1 minute ago\n  \nDescription :Symfony UX is a JavaScript ecosystem for Symfony. From 2.22.0 until 2.36.0 and 3.1.0, Symfony\\UX\\LiveComponent\\EventListener\\LiveComponentSubscriber::isLiveComponentRequest() gates #[LiveAction] invocations on Accept: application/vnd.live-component+html, but the Accept header is CORS-safelisted and cross-origin fetch() can set it without preflight, allowing forged cross-origin #[LiveAction] requests against a victim session when applications use SameSite=None, credentials: 'include', a permissive cookie policy, or a same-origin pivot. This issue is fixed in versions 2.36.0 and 3.1.0.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-49215\n  \nPublished : July 17, 2026, 5:17 p.m. | 1 hour, 1 minute ago\n  \nDescription :Symfony UX is a JavaScript ecosystem for Symfony. From 2.22.0 until 2.36.0 and 3.1.0, Symfony\\UX\\LiveComponent\\EventListener\\LiveComponentSubscriber::isLiveComponentRequest() gates #[LiveAction] invocations on Accept: application/vnd.live-component+html, but the Accept header is CORS-safelisted and cross-origin fetch() can set it without preflight, allowing forged cross-origin #[LiveAction] requests against a victim session when applications use SameSite=None, credentials: 'include', a permissive cookie policy, or a same-origin pivot. This issue is fixed in versions 2.36.0 and 3.1.0.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-49215 - Symfony UX: Symfony/ux-live-comComponent의 CSRF 보호 우회 - 수락 헤더가 CORS 안전 목록에 있음",
+      "summary_ko": "CVE ID:CVE-2026-49215\n  \n게시일 : 2026년 7월 17일 오후 5시 17분 | 1시간, 1분 전\n  \n설명 :Symfony UX는 Symfony를 위한 JavaScript 생태계입니다. 2.22.0부터 2.36.0 및 3.1.0까지 Symfony\\UX\\LiveComponent\\EventListener\\LiveComponentSubscriber::isLiveComponentRequest()는 Accept에 대한 #[LiveAction] 호출을 게이트합니다: application/vnd.live-comComponent+html. 그러나 Accept 헤더는 CORS 안전 목록에 있으며 교차 출처 fetch()는 프리플라이트 없이 이를 설정할 수 있으므로 위조된 교차 출처를 허용합니다. #[LiveAction] 애플리케이션이 SameSite=None, 자격 증명: 'include', 허용 쿠키 정책 또는 동일 출처 피벗을 사용할 때 피해자 세션에 대해 요청합니다. 이 문제는 버전 2.36.0 및 3.1.0에서 해결되었습니다.\n  \n심각도: 2.1 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-49215\n2. 26.07.18 오전2:17\n3. Symfony UX is a JavaScript ecosystem for Symfony. ",
+      "cve_id": "CVE-2026-49215",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49215",
+      "source": "cvefeed",
+      "published": "2026-07-18T02:17:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-57860 - ForgeCode Arbitrary Code Execution via Unvetted .mcp.json in Untrusted Repository",
       "summary": "CVE ID :CVE-2026-57860\n  \nPublished : July 17, 2026, 5:17 p.m. | 13 minutes ago\n  \nDescription :ForgeCode (tailcallhq/forgecode), an AI pair-programming CLI, automatically loads and executes the MCP servers defined in a repository's .mcp.json file on startup without user confirmation. A malicious repository can supply a crafted .mcp.json whose mcpServers entries specify arbitrary command and args values (for example, command: bash with args: ['-c', 'touch /tmp/pwned']). When a user runs the forge CLI inside a cloned untrusted repository, the specified commands are spawned with the invoking user's privileges, resulting in arbitrary code execution. This provides a reliable initial-access and persistence primitive against developers who evaluate untrusted repositories with ForgeCode.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3019,6 +3049,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48761",
       "source": "cvefeed",
       "published": "2026-07-15T05:17:10+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Microsoft Patch Tuesday July 2026 - The AI Acopolypse is Here , (Tue, Jul 14th)",
+      "summary": "This patch Tuesday includes a staggering&#;x26;#;xc2;&#;x26;#;xa0;622 vulnerabilities, not including another 427 vulnerabilities in Chromium, affecting Microsoft&#;x26;#;39;s Edge browser. 62 of the vulnerabilities are rated critical. One was disclosed before today, and two have already been exploited.\r",
+      "description": "This patch Tuesday includes a staggering&#;x26;#;xc2;&#;x26;#;xa0;622 vulnerabilities, not including another 427 vulnerabilities in Chromium, affecting Microsoft&#;x26;#;39;s Edge browser. 62 of the vulnerabilities are rated critical. One was disclosed before today, and two have already been exploited.\r",
+      "title_ko": "2026년 7월 화요일 Microsoft 패치 - AI Acopolypse 출시(7월 14일 화요일)",
+      "summary_ko": "이번 패치 화요일에는 Microsoft Edge 브라우저에 영향을 미치는 Chromium의 또 다른 427 취약점을 제외한 엄청난 양의 622 취약점이 포함되어 있습니다. 취약점 중 62개는 심각한 수준으로 평가되었습니다. 한 건은 오늘 이전에 공개됐고, 두 건은 이미 악용됐다.",
+      "summary_3lines": "1. Microsoft Patch Tuesday July 2026 - The AI Acopoly\n2. SANS_ISC\n3. This patch Tuesday includes a staggering&#;x26;#;x",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33154",
+      "source": "sans_isc",
+      "published": "2026-07-15T04:14:58+09:00",
       "lang": "en"
     }
   ],
