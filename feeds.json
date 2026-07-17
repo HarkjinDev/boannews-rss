@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-18T02:31:16.553987+09:00",
+  "fetched_at": "2026-07-18T03:01:31.188404+09:00",
   "security_news": [
+    {
+      "title": "HollowByte DDoS flaw bloats OpenSSL server memory with 11-byte payload",
+      "summary": "A vulnerability dubbed HollowByte allows unauthenticated attackers to trigger a denial-of-service (DoS) condition on OpenSSL servers with a malicious payload of just 11 bytes. [...]",
+      "content": "",
+      "title_ko": "HollowByte DDoS 결함으로 인해 11바이트 페이로드로 OpenSSL 서버 메모리가 팽창함",
+      "summary_ko": "HollowByte라는 취약점을 통해 인증되지 않은 공격자가 단 11바이트의 악성 페이로드로 OpenSSL 서버에서 서비스 거부(DoS) 조건을 실행할 수 있습니다. [...]",
+      "summary_3lines": "1. OpenSSL 서버, 11바이트 페이로드로 HollowByte 취약점 공격\n2. 인증 없는 공격자가 DoS 조건 트리거 가능\n3. OpenSSL 서버 메모리 부풀려 서비스 거부 유발",
+      "link": "https://www.bleepingcomputer.com/news/security/hollowbyte-ddos-flaw-bloats-openssl-server-memory-with-11-byte-payload/",
+      "source": "bleepingcomputer",
+      "published": "2026-07-18T02:56:21+09:00",
+      "lang": "en"
+    },
     {
       "title": "FATF \"북한, 캄보디아 금융 인프라 통해 해킹 가상자산 세탁\"",
       "summary": "자금세탁 방지를 위한 국제기구가 북한이 캄보디아 기반 금융 인프라를 이용해 해킹으로 탈취한... 보고서는 북한 연계 해킹 조직이 탈취한 가상자산을 세탁하는 과정에서 캄보디아에 기반을 둔 한 금융서비스 기업이...",
@@ -2160,18 +2172,6 @@
       "source": "bleepingcomputer",
       "published": "2026-07-15T03:01:36+09:00",
       "lang": "en"
-    },
-    {
-      "title": "녹사 파이 X 계정 해킹 의심…지갑 연결 주의",
-      "summary": "보안업계는 최근 가상자산 프로젝트의 소셜 계정 탈취 사례가 잇따르고 있다며, 허위 에어드롭·토큰 청구·피싱 링크를 통한 악성 계약 승인에 주의해야 한다고 당부했다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 녹사 파이 X 계정 해킹 의심, 악성 계약 승인 주의.\n2. 허위 에어드롭·토큰 청구 피싱 링크 주의.\n3. 가상자산 프로젝트 소셜 계정 탈취 사례 잇따름.",
-      "link": "https://www.tokenpost.kr/news/breaking/377806",
-      "source": "naver",
-      "published": "2026-07-15T02:58:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3028,21 +3028,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48761",
       "source": "cvefeed",
       "published": "2026-07-15T05:17:10+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45067 - Symfony: Email Header / SMTP Command Injection via CRLF in Symfony\\Component\\Mime\\Address",
-      "summary": "CVE ID :CVE-2026-45067\n  \nPublished : July 14, 2026, 5:41 p.m. | 34 minutes ago\n  \nDescription :### Description\n\n`Symfony\\Component\\Mime\\Address` is the value-object every Symfony Mailer address (to/cc/bcc/from/reply-to) flows through; its constructor is documented as validating the address and throwing on invalid input, so developers treat it as a security boundary.\n\nThe constructor accepts email addresses whose local-part (the part before `@`) is an RFC-5322 *quoted string* containing raw `\\r\\n` bytes — e.g. `\"x\\r\\nBcc: attacker@evil\"@example.com`. The stored address is later emitted verbatim into (1) the rendered message headers and (2) `SmtpTransport`'s `MAIL FROM:<...>` / `RCPT TO:<...>` protocol lines, turning the embedded CRLF into a new mail header and/or a new SMTP command.\n\n### Resolution\n\nThe `Address` constructor now rejects addresses containing line breaks.\n\nThe patch for this issue is available [here](https://github.com/symfony/symfony/commit/dc2dbd29211eb4ddc451373fa1374fb926e94604) for branch 5.4.\n\n### Credits\n\nWe would like to thank Claude Mythos Preview (via Project Glasswing) for reporting the issue and providing the fix.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-45067\n  \nPublished : July 14, 2026, 5:41 p.m. | 34 minutes ago\n  \nDescription :### Description\n\n`Symfony\\Component\\Mime\\Address` is the value-object every Symfony Mailer address (to/cc/bcc/from/reply-to) flows through; its constructor is documented as validating the address and throwing on invalid input, so developers treat it as a security boundary.\n\nThe constructor accepts email addresses whose local-part (the part before `@`) is an RFC-5322 *quoted string* containing raw `\\r\\n` bytes — e.g. `\"x\\r\\nBcc: attacker@evil\"@example.com`. The stored address is later emitted verbatim into (1) the rendered message headers and (2) `SmtpTransport`'s `MAIL FROM:<...>` / `RCPT TO:<...>` protocol lines, turning the embedded CRLF into a new mail header and/or a new SMTP command.\n\n### Resolution\n\nThe `Address` constructor now rejects addresses containing line breaks.\n\nThe patch for this issue is available [here](https://github.com/symfony/symfony/commit/dc2dbd29211eb4ddc451373fa1374fb926e94604) for branch 5.4.\n\n### Credits\n\nWe would like to thank Claude Mythos Preview (via Project Glasswing) for reporting the issue and providing the fix.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-45067 - Symfony: Symfony\\Component\\Mime\\Address에서 CRLF를 통해 이메일 헤더/SMTP 명령 삽입",
-      "summary_ko": "CVE ID:CVE-2026-45067\n  \n게시일 : 2026년 7월 14일 오후 5시 41분 | 34분 전\n  \n설명 :### 설명\n\n`Symfony\\Component\\Mime\\Address`는 모든 Symfony 메일러 주소(to/cc/bcc/from/reply-to)가 통과하는 값 개체입니다. 해당 생성자는 주소의 유효성을 검사하고 잘못된 입력을 던지는 것으로 문서화되어 있으므로 개발자는 이를 보안 경계로 취급합니다.\n\n생성자는 로컬 부분(`@` 이전 부분)이 원시 `\\r\\n` 바이트를 포함하는 RFC-5322 *인용 문자열*인 이메일 주소를 허용합니다. `\"x\\r\\nBcc: Attacker@evil\"@example.com`. 저장된 주소는 나중에 (1) 렌더링된 메시지 헤더 및 (2) `SmtpTransport`의 `MAIL FROM:<...>` / `RCPT TO:<...>` 프로토콜 라인으로 축어적으로 방출되어 포함된 CRLF를 새 메일 헤더 및/또는 새 SMTP 명령으로 바꿉니다.\n\n### 해상도\n\n`Address` 생성자는 이제 줄 바꿈이 포함된 주소를 거부합니다.\n\n이 문제에 대한 패치는 [여기](https://github.com/symfony/symfony/commit/dc2dbd29211eb4ddc451373fa1374fb926e94604)에서 브랜치 5.4에 사용할 수 있습니다.\n\n### 크레딧\n\n문제를 보고하고 수정 사항을 제공해 주신 Claude Mythos Preview(Project Glasswing을 통해)에게 감사드립니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-45067\n2. 26.07.15 오전2:41\n3. ### Description `Symfony\\Component\\Mime\\Address` i",
-      "cve_id": "CVE-2026-45067",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45067",
-      "source": "cvefeed",
-      "published": "2026-07-15T02:41:53+09:00",
       "lang": "en"
     }
   ],
