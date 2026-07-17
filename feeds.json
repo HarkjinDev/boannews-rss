@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-17T17:31:34.875736+09:00",
+  "fetched_at": "2026-07-17T18:02:03.899061+09:00",
   "security_news": [
+    {
+      "title": "에어비앤비 CEO 계정 해킹… AI 풍긴 RWA 홍보글 확산",
+      "summary": "정교한 보안과 정보 검증의 필요성에 직면하고 있다. 기사요약 by TokenPost.ai 시장 해석 이번 사건은 단순... 또한 AI 기반 피싱 가능성이 높아지는 만큼 보안 인식 강화가 중요하다. 용어정리 RWA(실물자산 토큰화): 부동산...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 에어비앤비 CEO 계정 해킹, RWA 홍보글 확산\n2. AI 이용 피싱 공격, 정보 검증 중요성 부각\n3. 보안 인식 강화 및 정교한 보안 시스템 요구",
+      "link": "https://www.tokenpost.kr/news/blockchain/378792",
+      "source": "naver",
+      "published": "2026-07-17T17:58:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "얼굴 스캔하는데, 개인정보 유출되면 어쩌나",
+      "summary": "해킹된 사이트는 원본 사진을 삭제하지 않고 그대로 저장한 것으로 드러났다. 유출된 정보를 바탕으로 3D 마스크를 만들어보니 결제에 성공했다는 연구 결과도 나왔다. 이 사고 이후 2021년 중국 당국은 얼굴 인식 규제를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 원본 사진 삭제 안 한 사이트서 개인정보 유출\n2. 3D 마스크로 결제 성공, 얼굴 인식 악용 가능성\n3. 2021년 중국, 얼굴 인식 규제 강화",
+      "link": "https://n.news.naver.com/mnews/article/015/0005311137?sid=101",
+      "source": "naver",
+      "published": "2026-07-17T17:57:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "F5, NGINX 치명적 취약점 긴급 패치…원격 코드 실행 가능",
       "summary": "F5가 웹 서버 소프트웨어인 NGINX(엔진엑스)에서 발견된 보안 취약점 3건을 수정하는 보안 업데이트를 공개했다. 이 가운데 가장 심각한 취약점은 원격 코드 실행(RCE)으로 이어질 수 있어 인터넷에 공개된 서버는 신속한 업데이트가 필요하다.가장 위험한 취약점은 CVE-2026-42533이다. CVSS 9.2점의 치명적(Critical) 등급으로, NGINX의 map 기능에서 발생하는 힙 버퍼 오버플로우 문제다. 공격자는 인증 없이 조작된 HTTP 요청만으로 NGINX 워커 프로세스를 비정상 종료시킬 수 있다. 주소 공간 배치 난",
@@ -2292,18 +2316,6 @@
       "source": "naver",
       "published": "2026-07-14T18:06:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[연합뉴스 이 시각 헤드라인] - 18:00",
-      "summary": "전문보기: https://www.yna.co.kr/view/AKR20260714085351504 ■ 티빙 해킹, 제휴 가입자까지 번졌다…피해 확산 우려 티빙 개인정보 유출 사고로 플랫폼·통신사 등 제휴 채널을 통해 가입한 이용자들의 개인정보도 유출된...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 티빙 해킹, 제휴 가입자까지 개인정보 유출\n2. 플랫폼·통신사 등 제휴 채널 이용자 정보 유출\n3. 피해 확산 우려, 추가 피해 방지 노력",
-      "link": "https://n.news.naver.com/mnews/article/001/0016194555?sid=100",
-      "source": "naver",
-      "published": "2026-07-14T18:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3265,51 +3277,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2025-40945",
       "source": "cvefeed",
       "published": "2026-07-14T18:19:08+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-15183 - Input Validation Vulnerabilities in Snowflake Spark Connector",
-      "summary": "CVE ID :CVE-2026-15183\n  \nPublished : July 14, 2026, 8:42 a.m. | 34 minutes ago\n  \nDescription :Multiple input validation vulnerabilities in the Snowflake Spark Connector (spark-snowflake) versions prior to 3.2.1 can allow attackers to exfiltrate OAuth client credentials, execute arbitrary SQL with the connector's Snowflake role, or redirect COPY operations to attacker-controlled storage. An attacker could exploit these vulnerabilities by supplying a crafted OAuth token request URL, placing malicious files in an ingestion pipeline, injecting SQL via staging options in a shared Spark environment , or issuing runtime SET commands in a shared Spark-SQL session to inject arbitrary SQL into the SnowflakeFallbackCatalog's option map, which executes under the cluster admin's JDBC credentials. Successful exploitation may result in credential theft, unauthorized access to Snowflake account data, or privilege escalation within connected infrastructure.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-15183\n  \nPublished : July 14, 2026, 8:42 a.m. | 34 minutes ago\n  \nDescription :Multiple input validation vulnerabilities in the Snowflake Spark Connector (spark-snowflake) versions prior to 3.2.1 can allow attackers to exfiltrate OAuth client credentials, execute arbitrary SQL with the connector's Snowflake role, or redirect COPY operations to attacker-controlled storage. An attacker could exploit these vulnerabilities by supplying a crafted OAuth token request URL, placing malicious files in an ingestion pipeline, injecting SQL via staging options in a shared Spark environment , or issuing runtime SET commands in a shared Spark-SQL session to inject arbitrary SQL into the SnowflakeFallbackCatalog's option map, which executes under the cluster admin's JDBC credentials. Successful exploitation may result in credential theft, unauthorized access to Snowflake account data, or privilege escalation within connected infrastructure.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-15183 - Snowflake Spark Connector의 입력 유효성 검사 취약점",
-      "summary_ko": "CVE ID:CVE-2026-15183\n  \n게시일 : 2026년 7월 14일 오전 8시 42분 | 34분 전\n  \n설명: 3.2.1 이전 Snowflake Spark 커넥터(spark-snowflake) 버전의 여러 입력 유효성 검사 취약성으로 인해 공격자가 OAuth 클라이언트 자격 증명을 유출하거나 커넥터의 Snowflake 역할로 임의 SQL을 실행하거나 COPY 작업을 공격자가 제어하는 저장소로 리디렉션할 수 있습니다. 공격자는 조작된 OAuth 토큰 요청 URL을 제공하거나, 수집 파이프라인에 악성 파일을 배치하거나, ​​공유 Spark 환경의 스테이징 옵션을 통해 SQL을 주입하거나, 공유 Spark-SQL 세션에서 런타임 SET 명령을 실행하여 클러스터 관리자의 JDBC 자격 증명에 따라 실행되는 SnowflakeFallbackCatalog의 옵션 맵에 임의의 SQL을 주입함으로써 이러한 취약점을 악용할 수 있습니다. 악용에 성공하면 자격 증명 도용, Snowflake 계정 데이터에 대한 무단 액세스 또는 연결된 인프라 내 권한 상승이 발생할 수 있습니다.\n  \n심각도: 9.2 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-15183\n2. 26.07.14 오후5:42\n3. Multiple input validation vulnerabilities in the S",
-      "cve_id": "CVE-2026-15183",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15183",
-      "source": "cvefeed",
-      "published": "2026-07-14T17:42:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12480 Arbitrary HDF5 File Read via Virtual Dataset Bypass in keras-team/keras",
-      "summary": "Information published.",
-      "description": "Information published.",
-      "title_ko": "CVE-2026-12480 가상 데이터 세트 우회를 통한 임의 HDF5 파일 읽기 inkeras-team/keras",
-      "summary_ko": "정보가 게시되었습니다.",
-      "summary_3lines": "1. CVE-2026-12480\n2. MSRC\n3. Information published.",
-      "cve_id": "CVE-2026-12480",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12480",
-      "source": "msrc",
-      "published": "2026-07-14T17:38:59+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59246 - Zero-length HTTP/2 CONTINUATION frames bypass Mint's header-block byte-size cap and exhaust client memory",
-      "summary": "CVE ID :CVE-2026-59246\n  \nPublished : July 14, 2026, 8:37 a.m. | 40 minutes ago\n  \nDescription :Allocation of resources without limits vulnerability in elixir-mint mint allows a remote HTTP/2 server to exhaust memory on the client host and cause a denial of service.\n\nThe Mint.HTTP2.handle_continuation/3 function in lib/mint/http2.ex accumulates the header-block fragment carried by each HTTP/2 CONTINUATION frame into a growing conn.headers_being_processed nesting, one level deeper per frame, and only releases it when a frame with the END_HEADERS flag arrives. The only guard on this accumulator is Mint.HTTP2.assert_header_block_within_max_size/2, which sums the byte size of the fragments received so far. Because a CONTINUATION frame is permitted by the protocol to carry a zero-length payload, an unbounded chain of zero-length CONTINUATION frames adds no bytes to the running total, never trips the size cap, and never emits END_HEADERS, yet each frame still nests the accumulator one level deeper.\n\nA malicious HTTP/2 server (reachable directly, via an attacker-controlled redirect, via SSRF, or via a man-in-the-middle) can open a stream by sending a HEADERS frame without END_HEADERS and then stream zero-length CONTINUATION frames indefinitely. Client memory grows one cons cell per frame received; sustained bandwidth from the peer drives the BEAM node running the Mint client to memory exhaustion and eventual out-of-memory termination.\n\nThis issue affects mint: from 0.1.0 before 1.9.2.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59246\n  \nPublished : July 14, 2026, 8:37 a.m. | 40 minutes ago\n  \nDescription :Allocation of resources without limits vulnerability in elixir-mint mint allows a remote HTTP/2 server to exhaust memory on the client host and cause a denial of service.\n\nThe Mint.HTTP2.handle_continuation/3 function in lib/mint/http2.ex accumulates the header-block fragment carried by each HTTP/2 CONTINUATION frame into a growing conn.headers_being_processed nesting, one level deeper per frame, and only releases it when a frame with the END_HEADERS flag arrives. The only guard on this accumulator is Mint.HTTP2.assert_header_block_within_max_size/2, which sums the byte size of the fragments received so far. Because a CONTINUATION frame is permitted by the protocol to carry a zero-length payload, an unbounded chain of zero-length CONTINUATION frames adds no bytes to the running total, never trips the size cap, and never emits END_HEADERS, yet each frame still nests the accumulator one level deeper.\n\nA malicious HTTP/2 server (reachable directly, via an attacker-controlled redirect, via SSRF, or via a man-in-the-middle) can open a stream by sending a HEADERS frame without END_HEADERS and then stream zero-length CONTINUATION frames indefinitely. Client memory grows one cons cell per frame received; sustained bandwidth from the peer drives the BEAM node running the Mint client to memory exhaustion and eventual out-of-memory termination.\n\nThis issue affects mint: from 0.1.0 before 1.9.2.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-59246 - 길이가 0인 HTTP/2 CONTINUATION 프레임이 Mint의 헤더 블록 바이트 크기 한도를 우회하고 클라이언트 메모리를 소모합니다.",
-      "summary_ko": "CVE ID:CVE-2026-59246\n  \n게시일 : 2026년 7월 14일 오전 8시 37분 | 40분 전\n  \n설명 : elixir-mint mint의 제한 없는 리소스 할당 취약점으로 인해 원격 HTTP/2 서버가 클라이언트 호스트의 메모리를 소진시키고 서비스 거부를 일으킬 수 있습니다.\n\nlib/mint/http2.ex의 Mint.HTTP2.handle_continuation/3 함수는 각 HTTP/2 CONTINUATION 프레임에 의해 전달되는 헤더 블록 조각을 프레임당 한 단계 더 깊은 conn.headers_being_processed 중첩으로 축적하고 END_HEADERS 플래그가 있는 프레임이 도착할 때만 이를 해제합니다. 이 누산기의 유일한 가드는 Mint.HTTP2.assert_header_block_within_max_size/2이며, 이는 지금까지 수신된 조각의 바이트 크기를 합산합니다. CONTINUATION 프레임은 프로토콜에서 길이가 0인 페이로드를 전달하는 것을 허용하므로 길이가 0인 CONTINUATION 프레임의 무제한 체인은 실행 총계에 바이트를 추가하지 않고 크기 제한을 트립하지 않으며 END_HEADERS를 내보내지 않지만 각 프레임은 여전히 ​​누산기를 한 수준 더 깊게 중첩합니다.\n\n악의적인 HTTP/2 서버(공격자가 제어하는 ​​리디렉션, SSRF 또는 중간자(man-in-the-middle)를 통해 직접 연결 가능)는 END_HEADERS 없이 HEADERS 프레임을 전송하여 스트림을 연 다음 길이가 0인 CONTINUATION 프레임을 무기한 스트리밍할 수 있습니다. 클라이언트 메모리는 수신된 프레임당 하나의 단점 셀을 증가시킵니다. 피어의 지속적인 대역폭은 Mint 클라이언트를 실행하는 BEAM 노드를 메모리 고갈 및 최종 메모리 부족 종료로 몰아갑니다.\n\n이 문제는 민트(0.1.0부터 1.9.2까지)에 영향을 미칩니다.\n  \n심각도: 6.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-59246\n2. 26.07.14 오후5:37\n3. Allocation of resources without limits vulnerabili",
-      "cve_id": "CVE-2026-59246",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59246",
-      "source": "cvefeed",
-      "published": "2026-07-14T17:37:04+09:00",
       "lang": "en"
     }
   ],
