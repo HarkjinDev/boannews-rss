@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-18T01:01:35.570749+09:00",
+  "fetched_at": "2026-07-18T01:31:14.998167+09:00",
   "security_news": [
     {
       "title": "맥OS 악성코드, 텔레그램 세션 탈취·암호화폐 지갑 데이터 유출 위험",
@@ -2160,21 +2160,24 @@
       "source": "naver",
       "published": "2026-07-15T02:58:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown",
-      "summary": "Progress Software has confirmed that a high-severity zero-day vulnerability is behind the emergency shutdown of ShareFile Storage Zone Controllers last week and has released security updates to patch the flaw. [...]",
-      "content": "",
-      "title_ko": "진행 상황에서 Storage Zone 종료 뒤에 숨은 ShareFile 제로데이 결함이 확인되었습니다.",
-      "summary_ko": "Progress Software는 지난 주 ShareFile Storage Zone Controller의 긴급 종료 뒤에 심각도가 높은 제로데이 취약점이 있음을 확인하고 결함을 패치하기 위한 보안 업데이트를 출시했습니다. [...]",
-      "summary_3lines": "1. Progress, ShareFile Storage Zone Controller 제로데이 취\n2. 저장소의 제로데이 취약점 공격으로 긴급 차단 발생\n3. Progress, 보안 업데이트 배포로 취약점 패치 완료",
-      "link": "https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/",
-      "source": "bleepingcomputer",
-      "published": "2026-07-15T01:08:47+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-63097 - Dendrite 0.13.8 syncapi /context Endpoint Post-Leave State Exposure",
+      "summary": "CVE ID :CVE-2026-63097\n  \nPublished : July 17, 2026, 3:32 p.m. | 46 minutes ago\n  \nDescription :Dendrite through 0.13.8 contains an improper access control vulnerability in the syncapi /context endpoint (syncapi/routing/context.go) that allows authenticated local users to access post-leave room state events by exploiting a flawed membership check that evaluates only the RoomExists field while ignoring IsInRoom, HasBeenInRoom, and Membership fields. Attackers who have left a room can call the rooms context API endpoint for a previously permitted event and receive unfiltered current room state that the /messages and /sync endpoints correctly withhold.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63097\n  \nPublished : July 17, 2026, 3:32 p.m. | 46 minutes ago\n  \nDescription :Dendrite through 0.13.8 contains an improper access control vulnerability in the syncapi /context endpoint (syncapi/routing/context.go) that allows authenticated local users to access post-leave room state events by exploiting a flawed membership check that evaluates only the RoomExists field while ignoring IsInRoom, HasBeenInRoom, and Membership fields. Attackers who have left a room can call the rooms context API endpoint for a previously permitted event and receive unfiltered current room state that the /messages and /sync endpoints correctly withhold.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-63097 - Dendrite 0.13.8 syncapi /context 엔드포인트 퇴장 후 상태 노출",
+      "summary_ko": "CVE ID:CVE-2026-63097\n  \n게시일 : 2026년 7월 17일 오후 3시 32분 | 46분 전\n  \n설명: 0.13.8까지의 Dendrite에는 IsInRoom, HasBeenInRoom 및 Membership 필드를 무시하고 RoomExists 필드만 평가하는 결함 있는 멤버십 검사를 악용하여 인증된 로컬 사용자가 퇴실 후 룸 상태 이벤트에 액세스할 수 있도록 허용하는 syncapi /context 엔드포인트(syncapi/routing/context.go)에 부적절한 액세스 제어 취약점이 포함되어 있습니다. 룸을 떠난 공격자는 이전에 허용된 이벤트에 대해 룸 컨텍스트 API 엔드포인트를 호출하고 /messages 및 /sync 엔드포인트가 올바르게 보류하는 필터링되지 않은 현재 룸 상태를 수신할 수 있습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-63097\n2. 26.07.18 오전12:32\n3. Dendrite through 0.13.8 contains an improper acces",
+      "cve_id": "CVE-2026-63097",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63097",
+      "source": "cvefeed",
+      "published": "2026-07-18T00:32:45+09:00",
+      "lang": "fr"
+    },
     {
       "title": "CVE-2026-59252 - Missing gas_limit validation in mpp Tempo fee-payer enables wallet drain",
       "summary": "CVE ID :CVE-2026-59252\n  \nPublished : July 17, 2026, 10:11 a.m. | 1 hour, 18 minutes ago\n  \nDescription :Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to drain the fee-payer wallet, resulting in denial of service for legitimate clients.\n\nWhen the mpp Elixir library is configured as fee payer (fee_payer: true), the MPP.Methods.Tempo payment method co-signs and broadcasts a client-supplied EVM transaction without first validating that the client-supplied gas_limit is sufficient to complete the intended call. A malicious client can submit a signed transferWithMemo transaction with gas_limit deliberately set just below the amount required for successful execution. The server co-signs the transaction and broadcasts it via rpc_broadcast_sync. The transaction runs out of gas during EVM execution and reverts, but the fee-payer wallet is still charged for the burned gas while the client pays nothing and receives no resource. Repeated requests from one or more malicious clients drain the fee-payer wallet at near-zero cost to the attacker, ultimately preventing the server from sponsoring gas for legitimate payment requests.\n\nThe wait_for_confirmation = false (optimistic) path is also affected: it invokes simulate_payment_call via eth_call, but that simulation omits the gas parameter and therefore does not catch out-of-gas conditions.\n\nThis issue affects mpp: from 0.2.0 before 0.6.0.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
