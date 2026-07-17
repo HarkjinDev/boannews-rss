@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-18T03:01:31.188404+09:00",
+  "fetched_at": "2026-07-18T03:31:09.898405+09:00",
   "security_news": [
     {
       "title": "HollowByte DDoS flaw bloats OpenSSL server memory with 11-byte payload",
@@ -2148,33 +2148,24 @@
       "source": "securityweek",
       "published": "2026-07-15T03:50:20+09:00",
       "lang": "en"
-    },
-    {
-      "title": "SAP Patches CVSS 9.9 NetWeaver ABAP Flaw That Could Expose or Modify Data",
-      "summary": "SAP has rolled out updates to address multiple vulnerabilities as part of its July 2026 security updates, including a critical flaw in SAP NetWeaver Application Server ABAP.\n\nThe vulnerability in question is CVE-2026-44747 (CVSS score: 9.9), an out-of-bounds write flaw that allows an authenticated attacker to leverage logical errors in memory management to cause a memory corruption that could",
-      "content": "",
-      "title_ko": "SAP, 데이터를 노출하거나 수정할 수 있는 CVSS 9.9 NetWeaver ABAP 결함 패치",
-      "summary_ko": "SAP는 2026년 7월 보안 업데이트의 일부로 SAP NetWeaver Application Server ABAP의 심각한 결함을 포함하여 여러 취약점을 해결하기 위한 업데이트를 출시했습니다.\n\n문제의 취약점은 CVE-2026-44747(CVSS 점수: 9.9)입니다. 이는 인증된 공격자가 메모리 관리의 논리적 오류를 활용하여 메모리 손상을 일으킬 수 있는 범위를 벗어난 쓰기 결함입니다.",
-      "summary_3lines": "1. SAP, 2026년 7월 보안 업데이트로 NetWeaver ABAP 취약점(CVE-2026\n2. 인증된 공격자가 메모리 관리 오류로 데이터 노출·변조 가능\n3. CVSS 9.9 고위험 취약점, SAP NetWeaver Application Server",
-      "link": "https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html",
-      "source": "thehackernews",
-      "published": "2026-07-15T03:17:57+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Microsoft July 2026 Patch Tuesday fixes massive 570 flaws, 3 zero-days",
-      "summary": "Today is Microsoft's July 2026 Patch Tuesday, and with it comes security updates for a record-breaking 570 flaws, including two zero-day vulnerabilities exploited in attacks and one publicly disclosed. [...]",
-      "content": "",
-      "title_ko": "Microsoft 2026년 7월 패치 화요일, 대규모 결함 570개, 제로데이 3개 수정",
-      "summary_ko": "오늘은 Microsoft의 2026년 7월 패치 화요일이며, 공격에 악용된 제로데이 취약점 2개와 공개적으로 공개된 취약점 1개를 포함하여 기록적인 570개 결함에 대한 보안 업데이트가 제공됩니다. [...]",
-      "summary_3lines": "1. 마이크로소프트 2026년 7월, 570개 취약점 패치\n2. 제로데이 3개 포함, 2개는 실제 공격에 악용\n3. 윈도우 및 서버 등 광범위한 제품군 영향",
-      "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/",
-      "source": "bleepingcomputer",
-      "published": "2026-07-15T03:01:36+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-57860 - ForgeCode Arbitrary Code Execution via Unvetted .mcp.json in Untrusted Repository",
+      "summary": "CVE ID :CVE-2026-57860\n  \nPublished : July 17, 2026, 5:17 p.m. | 13 minutes ago\n  \nDescription :ForgeCode (tailcallhq/forgecode), an AI pair-programming CLI, automatically loads and executes the MCP servers defined in a repository's .mcp.json file on startup without user confirmation. A malicious repository can supply a crafted .mcp.json whose mcpServers entries specify arbitrary command and args values (for example, command: bash with args: ['-c', 'touch /tmp/pwned']). When a user runs the forge CLI inside a cloned untrusted repository, the specified commands are spawned with the invoking user's privileges, resulting in arbitrary code execution. This provides a reliable initial-access and persistence primitive against developers who evaluate untrusted repositories with ForgeCode.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-57860\n  \nPublished : July 17, 2026, 5:17 p.m. | 13 minutes ago\n  \nDescription :ForgeCode (tailcallhq/forgecode), an AI pair-programming CLI, automatically loads and executes the MCP servers defined in a repository's .mcp.json file on startup without user confirmation. A malicious repository can supply a crafted .mcp.json whose mcpServers entries specify arbitrary command and args values (for example, command: bash with args: ['-c', 'touch /tmp/pwned']). When a user runs the forge CLI inside a cloned untrusted repository, the specified commands are spawned with the invoking user's privileges, resulting in arbitrary code execution. This provides a reliable initial-access and persistence primitive against developers who evaluate untrusted repositories with ForgeCode.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-57860 - 신뢰할 수 없는 저장소의 검증되지 않은 .mcp.json을 통한 ForgeCode 임의 코드 실행",
+      "summary_ko": "CVE ID:CVE-2026-57860\n  \n게시일 : 2026년 7월 17일 오후 5시 17분 | 13분 전\n  \n설명: AI 쌍 프로그래밍 CLI인 ForgeCode(tailcallhq/forgecode)는 시작 시 사용자 확인 없이 저장소의 .mcp.json 파일에 정의된 MCP 서버를 자동으로 로드하고 실행합니다. 악성 저장소는 mcpServers 항목이 임의의 명령 및 인수 값을 지정하는 조작된 .mcp.json을 제공할 수 있습니다(예: 명령: bash with args: ['-c', 'touch /tmp/pwned']). 사용자가 복제된 신뢰할 수 없는 저장소 내에서 Forge CLI를 실행하면 호출하는 사용자의 권한으로 지정된 명령이 생성되어 임의 코드가 실행됩니다. 이는 ForgeCode를 사용하여 신뢰할 수 없는 저장소를 평가하는 개발자에 대해 안정적인 초기 액세스 및 지속성 기본 요소를 제공합니다.\n  \n심각도: 8.4 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-57860\n2. 26.07.18 오전2:17\n3. ForgeCode (tailcallhq/forgecode), an AI pair-progr",
+      "cve_id": "CVE-2026-57860",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57860",
+      "source": "cvefeed",
+      "published": "2026-07-18T02:17:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-63097 - Dendrite 0.13.8 syncapi /context Endpoint Post-Leave State Exposure",
       "summary": "CVE ID :CVE-2026-63097\n  \nPublished : July 17, 2026, 3:32 p.m. | 46 minutes ago\n  \nDescription :Dendrite through 0.13.8 contains an improper access control vulnerability in the syncapi /context endpoint (syncapi/routing/context.go) that allows authenticated local users to access post-leave room state events by exploiting a flawed membership check that evaluates only the RoomExists field while ignoring IsInRoom, HasBeenInRoom, and Membership fields. Attackers who have left a room can call the rooms context API endpoint for a previously permitted event and receive unfiltered current room state that the /messages and /sync endpoints correctly withhold.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
