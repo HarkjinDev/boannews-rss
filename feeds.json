@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-17T16:31:48.306646+09:00",
+  "fetched_at": "2026-07-17T17:01:34.737229+09:00",
   "security_news": [
     {
       "title": "Fresh SharePoint Vulnerability Exploited Soon After Disclosure",
@@ -2316,18 +2316,6 @@
       "source": "thehackernews",
       "published": "2026-07-14T17:02:33+09:00",
       "lang": "en"
-    },
-    {
-      "title": "한국IT직업전문학교, 정보보안 진로상담 운영…2027학년도 신입생 모집",
-      "summary": "학교 측은 최근 기업과 공공기관의 업무 환경이 클라우드와 AI, 모바일 중심으로 변화하면서 해킹, 개인정보... 사이버해킹 융합형 인재를 육성하고 있으며, 정보보안학과에서는 학생들의 산업 진출을 위한 진로로드맵도...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한국IT직업전문학교, 정보보안 진로상담 운영\n2. 클라우드/AI/모바일 중심 변화, 해킹/개인정보 위협 대응\n3. 사이버해킹 융합형 인재 육성, 취업 진로로드맵 제공",
-      "link": "https://www.ekn.kr/web/view.php?key=20260714024552431",
-      "source": "naver",
-      "published": "2026-07-14T16:50:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3334,21 +3322,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-59246",
       "source": "cvefeed",
       "published": "2026-07-14T17:37:04+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-57898 - Eclipse BaSyx Java Server SDK Arbitrary File Write",
-      "summary": "CVE ID :CVE-2026-57898\n  \nPublished : July 14, 2026, 7:51 a.m. | 1 hour, 26 minutes ago\n  \nDescription :In Eclipse BaSyx Java Server SDK versions 2.0.0-milestone-05 to 2.0.0-milestone-12, deployments using the MongoDB backend are vulnerable to an unauthenticated arbitrary file write through the AAS thumbnail API.\n\n\n\n\nThe AAS thumbnail upload path accepted a client-controlled fileName request parameter and passed it through repository file handling as both a repository key and, during thumbnail retrieval, a local filesystem path. With the MongoDB file repository, the supplied filename was treated as an opaque GridFS key and was not normalized or restricted as a filesystem path. A remote attacker could upload thumbnail content using an absolute or traversal-style filename, then trigger thumbnail retrieval so that the uploaded bytes were written to the attacker-chosen path on the server filesystem.\n\n\n\n\nThis could allow writing files anywhere the Java process has permission to write and may lead to remote code execution. The default InMemory backend is not affected by this specific path because it normalizes and restricts file paths to its temporary directory.\n\n\n\n\nThe issue is fixed in Eclipse BaSyx Java Server SDK 2.0.0-milestone-13.\n  \nSeverity: 9.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-57898\n  \nPublished : July 14, 2026, 7:51 a.m. | 1 hour, 26 minutes ago\n  \nDescription :In Eclipse BaSyx Java Server SDK versions 2.0.0-milestone-05 to 2.0.0-milestone-12, deployments using the MongoDB backend are vulnerable to an unauthenticated arbitrary file write through the AAS thumbnail API.\n\n\n\n\nThe AAS thumbnail upload path accepted a client-controlled fileName request parameter and passed it through repository file handling as both a repository key and, during thumbnail retrieval, a local filesystem path. With the MongoDB file repository, the supplied filename was treated as an opaque GridFS key and was not normalized or restricted as a filesystem path. A remote attacker could upload thumbnail content using an absolute or traversal-style filename, then trigger thumbnail retrieval so that the uploaded bytes were written to the attacker-chosen path on the server filesystem.\n\n\n\n\nThis could allow writing files anywhere the Java process has permission to write and may lead to remote code execution. The default InMemory backend is not affected by this specific path because it normalizes and restricts file paths to its temporary directory.\n\n\n\n\nThe issue is fixed in Eclipse BaSyx Java Server SDK 2.0.0-milestone-13.\n  \nSeverity: 9.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-57898 - Eclipse BaSyx Java Server SDK 임의 파일 쓰기",
-      "summary_ko": "CVE ID:CVE-2026-57898\n  \n게시일 : 2026년 7월 14일 오전 7시 51분 | 1시간 26분 전\n  \n설명:Eclipse BaSyx Java Server SDK 버전 2.0.0-milestone-05 ~ 2.0.0-milestone-12에서 MongoDB 백엔드를 사용한 배포는 AAS 썸네일 API를 통한 인증되지 않은 임의 파일 쓰기에 취약합니다.\n\n\n\n\nAAS 썸네일 업로드 경로는 클라이언트 제어 fileName 요청 매개변수를 수락하고 이를 저장소 키와 썸네일 검색 중에 로컬 파일 시스템 경로로 처리하는 저장소 파일을 통해 전달했습니다. MongoDB 파일 저장소에서는 제공된 파일 이름이 불투명한 GridFS 키로 처리되었으며 파일 시스템 경로로 정규화되거나 제한되지 않았습니다. 원격 공격자는 절대 또는 순회 스타일 파일 이름을 사용하여 썸네일 콘텐츠를 업로드한 다음 업로드된 바이트가 서버 파일 시스템에서 공격자가 선택한 경로에 기록되도록 썸네일 검색을 트리거할 수 있습니다.\n\n\n\n\n이를 통해 Java 프로세스에 쓰기 권한이 있는 모든 위치에서 파일을 쓸 수 있으며 원격 코드 실행이 발생할 수 있습니다. 기본 InMemory 백엔드는 파일 경로를 임시 디렉터리로 정규화하고 제한하므로 이 특정 경로의 영향을 받지 않습니다.\n\n\n\n\n이 문제는 Eclipse BaSyx Java Server SDK 2.0.0-milestone-13에서 해결되었습니다.\n  \n심각도: 9.0 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-57898\n2. 26.07.14 오후4:51\n3. In Eclipse BaSyx Java Server SDK versions 2.0.0-mi",
-      "cve_id": "CVE-2026-57898",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57898",
-      "source": "cvefeed",
-      "published": "2026-07-14T16:51:19+09:00",
       "lang": "en"
     }
   ],
