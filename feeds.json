@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-18T04:01:31.851520+09:00",
+  "fetched_at": "2026-07-18T04:31:25.705706+09:00",
   "security_news": [
     {
       "title": "HollowByte DDoS flaw bloats OpenSSL server memory with 11-byte payload",
@@ -2138,6 +2138,18 @@
       "lang": "ko"
     },
     {
+      "title": "Microsoft Patches Record 622 Flaws, Including Two Zero-Days Under Active Attack",
+      "summary": "Microsoft shipped its largest Patch Tuesday on record today, and two of the fixes close holes that attackers are already exploiting. The release covers 622 of Microsoft's own CVEs by its Security Update Guide count, more than triple June's previous high of around 200.\n\nThose two live bugs are the ones to grab first. Microsoft credits incident responders for both. Both are",
+      "content": "",
+      "title_ko": "Microsoft 패치, 적극적인 공격을 받고 있는 2개의 제로데이를 포함하여 622개의 결함 기록",
+      "summary_ko": "Microsoft는 오늘 사상 최대 규모의 패치 화요일을 발표했으며, 두 가지 수정 사항을 통해 공격자가 이미 악용하고 있는 취약점을 해결했습니다. 이 릴리스에는 보안 업데이트 가이드 수에 따라 Microsoft 자체 CVE 622개가 포함되어 있으며, 이는 6월의 이전 최고치인 약 200개보다 세 배 이상 많은 것입니다.\n\n그 두 개의 살아있는 벌레가 먼저 잡아야 할 것입니다. Microsoft는 사고 대응자에게 두 가지 모두를 인정합니다. 둘 다",
+      "summary_3lines": "1. 마이크로소프트, 622건 취약점 패치, 2건은 제로데이 공격 중\n2. 622건 중 2건은 이미 악용된 제로데이 취약점\n3. 보안 업데이트로 2건 제로데이 즉시 패치 완료",
+      "link": "https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html",
+      "source": "thehackernews",
+      "published": "2026-07-15T05:25:47+09:00",
+      "lang": "en"
+    },
+    {
       "title": "美법원 “트럼프, 사익 위한 국세청 소송은 부적절” 비판",
       "summary": "이에 트럼프 대통령은 “국세청이 보안 관리를 못 해 개인정보가 유출됐으니 정부가 책임져야 한다”며 국세청을 상대로 100억 달러(약 15조 원) 규모의 손해배상 청구 소송을 제기했다. 이후 트럼프 대통령은 지난해...",
       "content": "",
@@ -2151,6 +2163,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-9135 - Policies Component Dynamic CodeInput Fields Bypass Custom Component Validation",
+      "summary": "CVE ID :CVE-2026-9135\n  \nPublished : July 17, 2026, 6:48 p.m. | 18 minutes ago\n  \nDescription :IBM Langflow OSS 1.0.0 through 1.10.0 Langflow versions up to 1.9.2 (commit 94981c443d4918517b9e8163d70fc598dc33a32d) contain a code injection vulnerability in the Policies component's ToolGuard integration that bypasses the allow_custom_components=false security control. The vulnerability exists because the validation mechanism only checks the main component source code in node_template[\"code\"][\"value\"] but fails to validate dynamic CodeInput fields that store generated ToolGuard Python files. Attackers can embed malicious Python code in these unvalidated dynamic fields, which are persisted in Flow.data and later executed server-side when a guarded tool is invoked through the ToolGuard runtime. This allows authenticated users with flow creation privileges to achieve arbitrary Python code execution on the backend despite custom component restrictions. The vulnerability can be escalated through cross-tenant flow manipulation via the agentic MCP update_flow_component_field tool, which accepts attacker-controlled user_id parameters, enabling attackers to inject malicious code into victim users' flows. When combined with publicly accessible flows and specific misconfigurations (AUTO_LOGIN=true, NEW_USER_IS_ACTIVE=true), the attack can be conducted with reduced authentication requirements.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-9135\n  \nPublished : July 17, 2026, 6:48 p.m. | 18 minutes ago\n  \nDescription :IBM Langflow OSS 1.0.0 through 1.10.0 Langflow versions up to 1.9.2 (commit 94981c443d4918517b9e8163d70fc598dc33a32d) contain a code injection vulnerability in the Policies component's ToolGuard integration that bypasses the allow_custom_components=false security control. The vulnerability exists because the validation mechanism only checks the main component source code in node_template[\"code\"][\"value\"] but fails to validate dynamic CodeInput fields that store generated ToolGuard Python files. Attackers can embed malicious Python code in these unvalidated dynamic fields, which are persisted in Flow.data and later executed server-side when a guarded tool is invoked through the ToolGuard runtime. This allows authenticated users with flow creation privileges to achieve arbitrary Python code execution on the backend despite custom component restrictions. The vulnerability can be escalated through cross-tenant flow manipulation via the agentic MCP update_flow_component_field tool, which accepts attacker-controlled user_id parameters, enabling attackers to inject malicious code into victim users' flows. When combined with publicly accessible flows and specific misconfigurations (AUTO_LOGIN=true, NEW_USER_IS_ACTIVE=true), the attack can be conducted with reduced authentication requirements.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-9135 - 정책 구성 요소 동적 코드 입력 필드가 사용자 정의 구성 요소 유효성 검사를 우회함",
+      "summary_ko": "CVE ID:CVE-2026-9135\n  \n게시일 : 2026년 7월 17일 오후 6시 48분 | 18분 전\n  \n설명:IBM Langflow OSS 1.0.0부터 1.10.0까지 Langflow 버전 1.9.2(커밋 94981c443d4918517b9e8163d70fc598dc33a32d)에는 정책 구성요소의 ToolGuard 통합에 허용_custom_comComponents=false 보안 제어를 우회하는 코드 주입 취약점이 포함되어 있습니다. 유효성 검사 메커니즘이 node_template[\"code\"][\"value\"]의 주요 구성 요소 소스 코드만 확인하고 생성된 ToolGuard Python 파일을 저장하는 동적 CodeInput 필드의 유효성을 검사하지 못하기 때문에 취약점이 존재합니다. 공격자는 이러한 검증되지 않은 동적 필드에 악성 Python 코드를 삽입할 수 있습니다. 이 코드는 Flow.data에 유지되고 나중에 ToolGuard 런타임을 통해 보호된 도구가 호출될 때 서버 측에서 실행됩니다. 이를 통해 흐름 생성 권한이 있는 인증된 사용자는 사용자 지정 구성 요소 제한에도 불구하고 백엔드에서 임의의 Python 코드를 실행할 수 있습니다. 공격자가 제어하는 ​​user_id 매개변수를 허용하는 에이전트 MCP update_flow_comComponent_field 도구를 통해 테넌트 간 흐름 조작을 통해 취약점이 확대될 수 있으며, 이를 통해 공격자는 피해자 사용자의 흐름에 악성 코드를 주입할 수 있습니다. 공개적으로 액세스 가능한 흐름 및 특정 잘못된 구성(AUTO_LOGIN=true, NEW_USER_IS_ACTIVE=true)과 결합되면 인증 요구 사항을 줄여 공격을 수행할 수 있습니다.\n  \n심각도: 9.9 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-9135\n2. 26.07.18 오전3:48\n3. IBM Langflow OSS 1.0.0 through 1.10.0 Langflow ver",
+      "cve_id": "CVE-2026-9135",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9135",
+      "source": "cvefeed",
+      "published": "2026-07-18T03:48:55+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-48015 - Shopware: Stored XSS via SVG file upload — no SVG sanitization",
       "summary": "CVE ID :CVE-2026-48015\n  \nPublished : July 17, 2026, 5:53 p.m. | 26 minutes ago\n  \nDescription :Shopware is an open commerce platform. Prior to 6.6.10.18 and 6.7.10.1, SVG files are in the allowed_extensions whitelist in src/Core/Framework/Resources/config/packages/shopware.yaml and can be uploaded via the media manager without SVG content sanitization in the upload pipeline from MediaUploadController to FileSaver to TypeDetector, allowing malicious SVG JavaScript such as onload,",
@@ -3049,21 +3076,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48761",
       "source": "cvefeed",
       "published": "2026-07-15T05:17:10+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Microsoft Patch Tuesday July 2026 - The AI Acopolypse is Here , (Tue, Jul 14th)",
-      "summary": "This patch Tuesday includes a staggering&#;x26;#;xc2;&#;x26;#;xa0;622 vulnerabilities, not including another 427 vulnerabilities in Chromium, affecting Microsoft&#;x26;#;39;s Edge browser. 62 of the vulnerabilities are rated critical. One was disclosed before today, and two have already been exploited.\r",
-      "description": "This patch Tuesday includes a staggering&#;x26;#;xc2;&#;x26;#;xa0;622 vulnerabilities, not including another 427 vulnerabilities in Chromium, affecting Microsoft&#;x26;#;39;s Edge browser. 62 of the vulnerabilities are rated critical. One was disclosed before today, and two have already been exploited.\r",
-      "title_ko": "2026년 7월 화요일 Microsoft 패치 - AI Acopolypse 출시(7월 14일 화요일)",
-      "summary_ko": "이번 패치 화요일에는 Microsoft Edge 브라우저에 영향을 미치는 Chromium의 또 다른 427 취약점을 제외한 엄청난 양의 622 취약점이 포함되어 있습니다. 취약점 중 62개는 심각한 수준으로 평가되었습니다. 한 건은 오늘 이전에 공개됐고, 두 건은 이미 악용됐다.",
-      "summary_3lines": "1. Microsoft Patch Tuesday July 2026 - The AI Acopoly\n2. SANS_ISC\n3. This patch Tuesday includes a staggering&#;x26;#;x",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33154",
-      "source": "sans_isc",
-      "published": "2026-07-15T04:14:58+09:00",
       "lang": "en"
     }
   ],
