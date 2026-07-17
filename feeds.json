@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-18T06:31:29.920440+09:00",
+  "fetched_at": "2026-07-18T07:01:18.544469+09:00",
   "security_news": [
     {
       "title": "Inc Ransomware Exploits SonicWall SMA Zero-Days",
@@ -2064,42 +2064,6 @@
       "source": "naver",
       "published": "2026-07-15T07:02:00+09:00",
       "lang": "en"
-    },
-    {
-      "title": "\"하루 만에 104조 증발했다\"…역대급 폭락 기록한 'IT 공룡'",
-      "summary": "AI를 활용한 해킹 기술이 발전하면서 고객사들이 일반 소프트웨어보다 사이버보안 분야에 먼저 예산을... 인프라와 사이버보안으로의 투자 이동이 얼마나 오래 지속될지가 핵심 변수\"라고 말했다. IBM은 오는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. IT 공룡, AI 해킹 발전으로 하루 만에 104조 증발.\n2. 일반 SW 대신 사이버보안 예산 우선 투자.\n3. IBM은 인프라와 사이버보안 투자 지속 관건.",
-      "link": "https://n.news.naver.com/mnews/article/015/0005310087?sid=105",
-      "source": "naver",
-      "published": "2026-07-15T07:01:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Records Are Made to Be Broken: Patch Tuesday Raises Triage Stakes",
-      "summary": "Three of the 622 CVEs for which Microsoft issued patches this week are zero-days; there are more than 60 critical vulnerabilities.",
-      "content": "",
-      "title_ko": "기록은 깨질 예정입니다: 화요일 패치로 선별 위험 증가",
-      "summary_ko": "이번 주에 Microsoft가 패치를 발표한 622개 CVE 중 3개는 제로데이입니다. 심각한 취약점이 60개 이상 있습니다.",
-      "summary_3lines": "1. 마이크로소프트, 622개 CVE 패치 배포… 3개 제로데이 포함\n2. 제로데이 포함 60개 이상 중대 취약점 긴급 대응 필요\n3. 시스템 취약점 대응 시급… 패치 적용 권고",
-      "link": "https://www.darkreading.com/vulnerabilities-threats/records-broken-patch-tuesday-raises-triage-stakes",
-      "source": "darkreading",
-      "published": "2026-07-15T06:50:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "IBM 주가 25% 폭락…\"AI 투자 열풍에 소프트웨어 예산 줄었다\"",
-      "summary": "또 AI를 활용한 해킹 기술이 빠르게 발전하면서 기업들이 소프트웨어보다 사이버보안 투자에 예산을 우선 배정하고 있다고 설명했다. 로이터는 올해 앤트로픽의 AI 모델 '미토스(Mythos)'가 기존 소프트웨어와 암호화...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 투자 열풍으로 IBM 주가 25% 폭락\n2. AI 해킹 기술 발달로 사이버보안 투자 우선 배정\n3. 앤트로픽 AI 모델 '미토스'는 소프트웨어와 암호화...",
-      "link": "https://n.news.naver.com/mnews/article/421/0009059859?sid=101",
-      "source": "naver",
-      "published": "2026-07-15T06:44:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2131,6 +2095,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-45785",
       "source": "cvefeed",
       "published": "2026-07-18T05:37:23+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-15415 - Path traversal and arbitrary file write in the workflow linters of aws-healthomics-mcp-server",
+      "summary": "CVE ID :CVE-2026-15415\n  \nPublished : July 17, 2026, 7:36 p.m. | 42 minutes ago\n  \nDescription :AWS HealthOmics is a HIPAA-eligible service that fully manages the compute, storage, and workflow engine infrastructure required to run bioinformatics analyses at scale for clinical diagnostics, drug discovery, and agricultural research.\n\n\n\nImproper limitation of a pathname to a restricted directory in the linting tools of the AWS HealthOmics MCP Server (aws-healthomics-mcp-server) before version 0.0.36 might allow an actor who can influence the MCP agent to write an actor-controlled content to arbitrary locations outside the intended workflow bundle directory, via directory traversal sequences in the workflow_files input.\n\n\n\n\nTo remediate this issue, users should upgrade to version 0.0.36 or later.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-15415\n  \nPublished : July 17, 2026, 7:36 p.m. | 42 minutes ago\n  \nDescription :AWS HealthOmics is a HIPAA-eligible service that fully manages the compute, storage, and workflow engine infrastructure required to run bioinformatics analyses at scale for clinical diagnostics, drug discovery, and agricultural research.\n\n\n\nImproper limitation of a pathname to a restricted directory in the linting tools of the AWS HealthOmics MCP Server (aws-healthomics-mcp-server) before version 0.0.36 might allow an actor who can influence the MCP agent to write an actor-controlled content to arbitrary locations outside the intended workflow bundle directory, via directory traversal sequences in the workflow_files input.\n\n\n\n\nTo remediate this issue, users should upgrade to version 0.0.36 or later.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-15415 - aws-healthomics-mcp-server의 워크플로 린터에서 경로 탐색 및 임의 파일 쓰기",
+      "summary_ko": "CVE ID:CVE-2026-15415\n  \n게시일 : 2026년 7월 17일 오후 7시 36분 | 42분 전\n  \n설명:AWS HealthOmics는 임상 진단, 약물 발견 및 농업 연구를 위해 대규모 생물정보학 분석을 실행하는 데 필요한 컴퓨팅, 스토리지 및 워크플로 엔진 인프라를 완벽하게 관리하는 HIPAA 적격 서비스입니다.\n\n\n\n버전 0.0.36 이전 AWS HealthOmics MCP 서버(aws-healthomics-mcp-server)의 Linting 도구에서 제한된 디렉터리에 대한 경로 이름을 잘못 제한하면 MCP 에이전트에 영향을 미칠 수 있는 행위자가 워크플로 입력의 디렉터리 순회 시퀀스를 통해 의도된 워크플로 번들 디렉터리 외부의 임의 위치에 행위자 제어 콘텐츠를 쓸 수 있습니다.\n\n\n\n\n이 문제를 해결하려면 사용자는 버전 0.0.36 이상으로 업그레이드해야 합니다.\n  \n심각도: 6.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-15415\n2. 26.07.18 오전4:36\n3. AWS HealthOmics is a HIPAA-eligible service that f",
+      "cve_id": "CVE-2026-15415",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15415",
+      "source": "cvefeed",
+      "published": "2026-07-18T04:36:13+09:00",
       "lang": "en"
     },
     {
