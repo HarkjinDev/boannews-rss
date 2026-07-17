@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-18T00:31:17.305898+09:00",
+  "fetched_at": "2026-07-18T01:01:35.570749+09:00",
   "security_news": [
+    {
+      "title": "맥OS 악성코드, 텔레그램 세션 탈취·암호화폐 지갑 데이터 유출 위험",
+      "summary": "오데일리는 보안 연구진을 인용해 맥OS 기기를 대상으로 한 정보 탈취 악성코드가 암호화폐 이용자를... 보안 전문가들은 감염이 의심되는 기기를 즉시 신뢰할 수 없는 기기로 간주하고, 모든 텔레그램 활성 세션을 종료한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. macOS 악성코드, 텔레그램 세션 탈취·암호화폐 지갑 데이터 유출 위험\n2. 보안 전문가, 감염 기기 즉시 신뢰 중단 및 텔레그램 세션 종료 권고",
+      "link": "https://www.tokenpost.kr/news/breaking/378872",
+      "source": "naver",
+      "published": "2026-07-18T00:48:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "In Other News: Iran Tracks US Military Phones, CrashStealer macOS Malware, CVD Blueprint",
       "summary": "Noteworthy stories that might have slipped under the radar: OpenClaw AI agents exploited via WhatsApp, ransomware hits naval defense firm TKMS, Lidl discloses data breach.\nThe post In Other News: Iran Tracks US Military Phones, CrashStealer macOS Malware, CVD Blueprint appeared first on SecurityWeek.",
@@ -2160,18 +2172,6 @@
       "source": "bleepingcomputer",
       "published": "2026-07-15T01:08:47+09:00",
       "lang": "en"
-    },
-    {
-      "title": "[2026 OT 보안 솔루션 리포트] 세계가 주목하는 한국 첨단 제조업, OT 보...",
-      "summary": "또 다른 이란 연계 그룹 한달라(Handala)도 6월 미국 캘리포니아주 약 200만명의 시민에 상수도 서비스를 제공하는 캘리포니아워터서비스(Cal Water)를 해킹했다며 5GB 분량의 고객 개인정보와 결제 정보 등 데이터를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 이란 연계 그룹 한달라, 캘리포니아 워터 서비스 해킹\n2. 5GB 고객 개인/결제 정보 유출 시도\n3. 200만 명 상수도 서비스 대상 공격",
-      "link": "http://www.boannews.com/media/view.asp?idx=144688&kind=3",
-      "source": "naver",
-      "published": "2026-07-15T00:52:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3028,51 +3028,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-45067",
       "source": "cvefeed",
       "published": "2026-07-15T02:41:53+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12523 - Resource exhaustion in quiche HTTP/3 and QPACK layers",
-      "summary": "CVE ID :CVE-2026-12523\n  \nPublished : July 14, 2026, 3:51 p.m. | 25 minutes ago\n  \nDescription :Summary\n\n\n\nCloudflare quiche's HTTP/3 layer was discovered to be vulnerable to resource exhaustion (i.e., memory) by means of specially crafted HTTP/3 frames.\n\n\n\n\nImpact\n\n\n\nHTTP/3 defines multiple frame types to support HTTP message exchanges and connection management. Each frame has a length and a payload whose length depends on the frame type. quiche was found to be vulnerable when parsing some frame types to pre-allocating memory based on the declared length. An attacker would not need to send the number of declared bytes to trigger this issue.\n\n\n\nIn addition, quiche was found to not apply QPACK decompression limits correctly. This could allow an attacker to send specially crafted HEADERS frames that would cause more memory commitment than otherwise advertised by MAX_FIELD_SECTION_SIZE (configured by set_max_field_section_size()).\n\n\n\n\n\n\nMitigation:\n\n  *  \n\nUsers are requested to upgrade to quiche 0.29.3 which is the earliest version containing the fix for this issue.\n\n\n\n\n\n\n\n\n\nCredits: Disclosed responsibly by Sébastien Féry\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12523\n  \nPublished : July 14, 2026, 3:51 p.m. | 25 minutes ago\n  \nDescription :Summary\n\n\n\nCloudflare quiche's HTTP/3 layer was discovered to be vulnerable to resource exhaustion (i.e., memory) by means of specially crafted HTTP/3 frames.\n\n\n\n\nImpact\n\n\n\nHTTP/3 defines multiple frame types to support HTTP message exchanges and connection management. Each frame has a length and a payload whose length depends on the frame type. quiche was found to be vulnerable when parsing some frame types to pre-allocating memory based on the declared length. An attacker would not need to send the number of declared bytes to trigger this issue.\n\n\n\nIn addition, quiche was found to not apply QPACK decompression limits correctly. This could allow an attacker to send specially crafted HEADERS frames that would cause more memory commitment than otherwise advertised by MAX_FIELD_SECTION_SIZE (configured by set_max_field_section_size()).\n\n\n\n\n\n\nMitigation:\n\n  *  \n\nUsers are requested to upgrade to quiche 0.29.3 which is the earliest version containing the fix for this issue.\n\n\n\n\n\n\n\n\n\nCredits: Disclosed responsibly by Sébastien Féry\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-12523 - Quiche HTTP/3 및 QPACK 레이어의 리소스 고갈",
-      "summary_ko": "CVE ID:CVE-2026-12523\n  \n게시일 : 2026년 7월 14일 오후 3시 51분 | 25분 전\n  \n설명 :요약\n\n\n\nCloudflare quiche의 HTTP/3 계층은 특별히 제작된 HTTP/3 프레임을 통해 리소스 고갈(예: 메모리)에 취약한 것으로 밝혀졌습니다.\n\n\n\n\n영향\n\n\n\nHTTP/3은 HTTP 메시지 교환 및 연결 관리를 지원하기 위해 여러 프레임 유형을 정의합니다. 각 프레임에는 길이와 프레임 유형에 따라 길이가 달라지는 페이로드가 있습니다. quiche는 선언된 길이에 따라 메모리를 사전 할당하기 위해 일부 프레임 유형을 구문 분석할 때 취약한 것으로 나타났습니다. 공격자는 이 문제를 유발하기 위해 선언된 바이트 수를 보낼 필요가 없습니다.\n\n\n\n또한, 키슈에서는 QPACK 감압 한계를 올바르게 적용하지 않는 것으로 나타났습니다. 이로 인해 공격자는 MAX_FIELD_SECTION_SIZE(set_max_field_section_size()로 구성)에 의해 광고된 것보다 더 많은 메모리 할당을 유발하는 특수 제작된 HEADERS 프레임을 보낼 수 있습니다.\n\n\n\n\n\n\n완화:\n\n  *  \n\n사용자는 이 문제에 대한 수정 사항이 포함된 가장 초기 버전인 Quiche 0.29.3으로 업그레이드해야 합니다.\n\n\n\n\n\n\n\n\n\n크레딧: Sébastien Féry가 책임 있게 공개함\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12523\n2. 26.07.15 오전12:51\n3. Summary Cloudflare quiche's HTTP/3 layer was disco",
-      "cve_id": "CVE-2026-12523",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12523",
-      "source": "cvefeed",
-      "published": "2026-07-15T00:51:28+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-60119 - Hi.Events v1.10.0-beta XSS via Event Title JSON.stringify Injection",
-      "summary": "CVE ID :CVE-2026-60119\n  \nPublished : July 14, 2026, 3:44 p.m. | 31 minutes ago\n  \nDescription :Hi.Events through v1.10.0-beta contains a cross-site scripting vulnerability that allows authenticated attackers with event creation or edit permissions to inject arbitrary HTML and JavaScript by embedding a malicious event title containing the",
-      "description": "CVE ID :CVE-2026-60119\n  \nPublished : July 14, 2026, 3:44 p.m. | 31 minutes ago\n  \nDescription :Hi.Events through v1.10.0-beta contains a cross-site scripting vulnerability that allows authenticated attackers with event creation or edit permissions to inject arbitrary HTML and JavaScript by embedding a malicious event title containing the",
-      "title_ko": "CVE-2026-60119 - 이벤트 제목 JSON.stringify 삽입을 통한 Hi.Events v1.10.0-beta XSS",
-      "summary_ko": "CVE ID:CVE-2026-60119\n  \n게시일 : 2026년 7월 14일 오후 3시 44분 | 31분 전\n  \n설명: v1.10.0-beta를 통한 Hi.Events에는 이벤트 생성 또는 편집 권한이 있는 인증된 공격자가",
-      "summary_3lines": "1. CVE-2026-60119\n2. 26.07.15 오전12:44\n3. Hi.Events through v1.10.0-beta contains a cross-si",
-      "cve_id": "CVE-2026-60119",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-60119",
-      "source": "cvefeed",
-      "published": "2026-07-15T00:44:34+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59204 - Pillow JPEG2000 tiled decode retains a growing scratch buffer and can be used for denial of service",
-      "summary": "CVE ID :CVE-2026-59204\n  \nPublished : July 14, 2026, 3:38 p.m. | 37 minutes ago\n  \nDescription :Pillow is a Python imaging library. From 8.2.0 through 12.2.0, src/libImaging/Jpeg2KDecode.c accumulates total_component_width across every tile in a JPEG2000 image instead of recomputing it per tile, allowing a crafted tiled JPEG2000 file to force substantially higher transient memory usage and trigger out-of-memory failures during decoding. This issue is fixed in version 12.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59204\n  \nPublished : July 14, 2026, 3:38 p.m. | 37 minutes ago\n  \nDescription :Pillow is a Python imaging library. From 8.2.0 through 12.2.0, src/libImaging/Jpeg2KDecode.c accumulates total_component_width across every tile in a JPEG2000 image instead of recomputing it per tile, allowing a crafted tiled JPEG2000 file to force substantially higher transient memory usage and trigger out-of-memory failures during decoding. This issue is fixed in version 12.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-59204 - Pillow JPEG2000 타일 디코드는 증가하는 스크래치 버퍼를 유지하며 서비스 거부에 사용될 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-59204\n  \n게시일 : 2026년 7월 14일 오후 3시 38분 | 37분 전\n  \n설명 :Pillow는 Python 이미징 라이브러리입니다. 8.2.0부터 12.2.0까지, src/libImaging/Jpeg2KDecode.c는 타일별로 다시 계산하는 대신 JPEG2000 이미지의 모든 타일에 걸쳐 total_comComponent_width를 누적하므로, 제작된 타일형 JPEG2000 파일이 훨씬 더 높은 임시 메모리 사용량을 강제로 적용하고 디코딩 중에 메모리 부족 오류를 유발할 수 있습니다. 이 문제는 버전 12.3.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-59204\n2. 26.07.15 오전12:38\n3. Pillow is a Python imaging library. From 8.2.0 thr",
-      "cve_id": "CVE-2026-59204",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59204",
-      "source": "cvefeed",
-      "published": "2026-07-15T00:38:29+09:00",
       "lang": "en"
     }
   ],
