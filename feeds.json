@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-18T00:01:17.386186+09:00",
+  "fetched_at": "2026-07-18T00:31:17.305898+09:00",
   "security_news": [
     {
       "title": "In Other News: Iran Tracks US Military Phones, CrashStealer macOS Malware, CVD Blueprint",
@@ -3073,21 +3073,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-59204",
       "source": "cvefeed",
       "published": "2026-07-15T00:38:29+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-52840 - Easy!Appointments has server-side request forgery in CalDAV connection test that exposes the deployment's internal network",
-      "summary": "CVE ID :CVE-2026-52840\n  \nPublished : July 14, 2026, 3:23 p.m. | 52 minutes ago\n  \nDescription :Easy!Appointments is a self hosted appointment scheduler. In versions prior to 1.6.0, `Caldav::connect_to_server` at `application/controllers/Caldav.php:60` hands the request's `caldav_url` to a Guzzle `REPORT` call without scheme or host validation. A logged-in backend user (admin, provider, or secretary) reaches loopback, RFC1918, and link-local hosts on the deployment's network. The Guzzle exception path returns the upstream status code plus ~120 bytes of response body in the JSON `message` field (`Caldav.php:74-78`), so the SSRF is semi-blind. Version 1.6.0 contains a patch.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-52840\n  \nPublished : July 14, 2026, 3:23 p.m. | 52 minutes ago\n  \nDescription :Easy!Appointments is a self hosted appointment scheduler. In versions prior to 1.6.0, `Caldav::connect_to_server` at `application/controllers/Caldav.php:60` hands the request's `caldav_url` to a Guzzle `REPORT` call without scheme or host validation. A logged-in backend user (admin, provider, or secretary) reaches loopback, RFC1918, and link-local hosts on the deployment's network. The Guzzle exception path returns the upstream status code plus ~120 bytes of response body in the JSON `message` field (`Caldav.php:74-78`), so the SSRF is semi-blind. Version 1.6.0 contains a patch.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-52840 - Easy!Appointments에는 배포의 내부 네트워크를 노출하는 CalDAV 연결 테스트에서 서버 측 요청 위조가 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-52840\n  \n게시일 : 2026년 7월 14일 오후 3시 23분 | 52분 전\n  \n설명 :Easy!Appointments는 자체 호스팅 약속 스케줄러입니다. 1.6.0 이전 버전에서는 `application/controllers/Caldav.php:60`의 `Caldav::connect_to_server`가 구성표나 호스트 검증 없이 요청의 `caldav_url`을 Guzzle `REPORT` 호출로 전달합니다. 로그인한 백엔드 사용자(관리자, 공급자 또는 비서)는 배포 네트워크의 루프백, RFC1918 및 링크 로컬 호스트에 도달합니다. Guzzle 예외 경로는 JSON `message` 필드(`Caldav.php:74-78`)에 업스트림 상태 코드와 최대 120바이트의 응답 본문을 반환하므로 SSRF는 반맹검 상태입니다. 버전 1.6.0에는 패치가 포함되어 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-52840\n2. 26.07.15 오전12:23\n3. Easy!Appointments is a self hosted appointment sch",
-      "cve_id": "CVE-2026-52840",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-52840",
-      "source": "cvefeed",
-      "published": "2026-07-15T00:23:59+09:00",
       "lang": "en"
     }
   ],
