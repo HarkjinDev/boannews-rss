@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-19T03:31:12.141302+09:00",
+  "fetched_at": "2026-07-19T04:01:14.111488+09:00",
   "security_news": [
     {
       "title": "CISA, 실제 공격 악용된 포티샌드박스·셰어포인트 취약점 3건 긴급 경고",
@@ -2221,21 +2221,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-52888",
       "source": "cvefeed",
       "published": "2026-07-16T06:16:54+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-15746 - Credential disclosure in Strands Agents Tools elasticsearch_memory tool",
-      "summary": "CVE ID :CVE-2026-15746\n  \nPublished : July 15, 2026, 6:35 p.m. | 42 minutes ago\n  \nDescription :Strands Agents is an open-source Python SDK for building and running AI agents. The strands-agents-tools package provides pre-built tools for use with the SDK, including the elasticsearch_memory tool for agent memory storage. We identified CVE-2026-15746, a server-side request forgery (SSRF) issue in the elasticsearch_memory tool. The tool exposed its connection parameters (es_url, cloud_id, api_key) as fields the large language model (LLM) could control through the tool schema. When a caller omitted the api_key parameter, the tool fell back to the operator's ELASTICSEARCH_API_KEY environment variable and sent it to whichever host the LLM specified. A crafted prompt could cause the tool to connect to a threat-actor-controlled server and disclose the operator's Elasticsearch API key in the Authorization header.\n\n\n\nWe recommend you upgrade to strands-agents-tools version 0.7.0 or later. As a precautionary measure, we recommend all operators rotate their ELASTICSEARCH_API_KEY, even if there is no indication the credential was exposed.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-15746\n  \nPublished : July 15, 2026, 6:35 p.m. | 42 minutes ago\n  \nDescription :Strands Agents is an open-source Python SDK for building and running AI agents. The strands-agents-tools package provides pre-built tools for use with the SDK, including the elasticsearch_memory tool for agent memory storage. We identified CVE-2026-15746, a server-side request forgery (SSRF) issue in the elasticsearch_memory tool. The tool exposed its connection parameters (es_url, cloud_id, api_key) as fields the large language model (LLM) could control through the tool schema. When a caller omitted the api_key parameter, the tool fell back to the operator's ELASTICSEARCH_API_KEY environment variable and sent it to whichever host the LLM specified. A crafted prompt could cause the tool to connect to a threat-actor-controlled server and disclose the operator's Elasticsearch API key in the Authorization header.\n\n\n\nWe recommend you upgrade to strands-agents-tools version 0.7.0 or later. As a precautionary measure, we recommend all operators rotate their ELASTICSEARCH_API_KEY, even if there is no indication the credential was exposed.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-15746 - Strands Agents 도구 elasticsearch_memory 도구의 자격 증명 공개",
-      "summary_ko": "CVE ID:CVE-2026-15746\n  \n게시일 : 2026년 7월 15일 오후 6시 35분 | 42분 전\n  \n설명:Strands Agents는 AI 에이전트를 구축하고 실행하기 위한 오픈 소스 Python SDK입니다. Strands-agents-tools 패키지는 에이전트 메모리 저장을 위한 elasticsearch_memory 도구를 포함하여 SDK와 함께 사용할 수 있는 사전 구축된 도구를 제공합니다. Elasticsearch_memory 도구에서 SSRF(서버 측 요청 위조) 문제인 CVE-2026-15746을 확인했습니다. 도구는 LLM(대형 언어 모델)이 도구 스키마를 통해 제어할 수 있는 필드로 연결 매개변수(es_url, cloud_id, api_key)를 노출했습니다. 호출자가 api_key 매개변수를 생략하면 도구는 운영자의 ELASTICSEARCH_API_KEY 환경 변수로 대체하여 LLM이 지정한 호스트로 전송했습니다. 조작된 프롬프트를 통해 도구는 위협 행위자가 제어하는 ​​서버에 연결하고 인증 헤더에 운영자의 Elasticsearch API 키를 공개할 수 있습니다.\n\n\n\nStrands-agents-tools 버전 0.7.0 이상으로 업그레이드하는 것이 좋습니다. 예방 조치로 자격 증명이 노출되었다는 표시가 없더라도 모든 운영자는 ELASTICSEARCH_API_KEY를 교체하는 것이 좋습니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-15746\n2. 26.07.16 오전3:35\n3. Strands Agents is an open-source Python SDK for bu",
-      "cve_id": "CVE-2026-15746",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15746",
-      "source": "cvefeed",
-      "published": "2026-07-16T03:35:47+09:00",
       "lang": "en"
     }
   ],
