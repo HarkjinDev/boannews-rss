@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-18T20:01:19.433556+09:00",
+  "fetched_at": "2026-07-18T20:31:15.848943+09:00",
   "security_news": [
     {
       "title": "보안 서비스 시장 2030년 1280억 달러…전문서비스 성장 '견인'",
@@ -1584,30 +1584,6 @@
       "source": "naver",
       "published": "2026-07-15T20:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "노바인시큐-크로커스, 글로벌 사이버보안 컨설팅 사업 확대 맞손",
-      "summary": "헥사랩스가 보유한 공격자 관점의 모의해킹과 취약점 진단 기술을 기반으로 보안 사업을 새로운 성장축으로 육성하고 있다. 양사는 이번 협력을 통해 보안 정책과 관리체계 수립부터 취약점 진단, 기술 검증까지 아우르는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 헥사랩스, 노바인시큐와 보안 사업 공동 추진\n2. 모의해킹, 취약점 진단 기술 기반 서비스 제공\n3. 보안 정책부터 기술 검증까지 협력 확대",
-      "link": "https://n.news.naver.com/mnews/article/030/0003448263?sid=105",
-      "source": "naver",
-      "published": "2026-07-15T20:28:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Researcher Drops New Windows Zero-Day PoC Hours After Microsoft Patch Tuesday",
-      "summary": "Security researcher Chaotic Eclipse (aka Nightmare-Eclipse) has released a new proof-of-concept (PoC) exploit called LegacyHive.\n\nIt has been described as a Windows User Profile Service arbitrary hive load elevation of privileges vulnerability. The Windows User Profile Service, also referred to as ProfSvc, is a core system component that manages user accounts and environments.\n\n\"The PoC requires",
-      "content": "",
-      "title_ko": "연구원, 화요일 Microsoft 패치 이후 새로운 Windows 제로데이 PoC 시간 중단",
-      "summary_ko": "보안 연구원인 Chaotic Eclipse(일명 Nightmare-Eclipse)는 LegacyHive라는 새로운 개념 증명(PoC) 익스플로잇을 출시했습니다.\n\n이는 Windows 사용자 프로필 서비스 임의 하이브 로드 권한 상승 취약점으로 설명되었습니다. ProfSvc라고도 하는 Windows 사용자 프로필 서비스는 사용자 계정과 환경을 관리하는 핵심 시스템 구성 요소입니다.\n\n\"PoC에는 다음이 필요합니다.",
-      "summary_3lines": "1. LegacyHive, 윈도우 사용자 프로필 서비스 취약점 PoC 공개\n2. 'Chaotic Eclipse'가 윈도우 제로데이 취약점 PoC 출시\n3. 윈도우 사용자 환경 침해 가능성 시사",
-      "link": "https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html",
-      "source": "thehackernews",
-      "published": "2026-07-15T20:07:07+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -2359,21 +2335,6 @@
       "link": "https://www.cisa.gov/resources-tools/resources/establishing-coordinated-vulnerability-disclosure-program-work-security-researchers",
       "source": "cisa",
       "published": "2026-07-15T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-61449 - Grav before 2.0.2 Decompression Bomb via Forged ZIP Size",
-      "summary": "CVE ID :CVE-2026-61449\n  \nPublished : July 15, 2026, 11:25 a.m. | 51 minutes ago\n  \nDescription :Grav 2.0.1 contains a decompression-bomb size-cap bypass in ZipArchiver and GPM\\Installer. The size bound introduced in 2.0.1 sums the uncompressed size declared in each entry's ZIP central-directory header (ZipArchive::statIndex()['size']) and rejects archives exceeding system.gpm.archive.max_uncompressed_size before extraction. Because this declared size is attacker-forgeable and is not cross-checked against the actual inflated stream, a crafted archive declaring tiny per-entry sizes passes the cap while extractTo() writes the real, much larger content, filling disk or exhausting inodes. The archive must be supplied by a package source or admin upload (admin/operator trust). Fixed in 2.0.2. This is an incomplete fix for GHSA-928x-9mpw-8h56.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-61449\n  \nPublished : July 15, 2026, 11:25 a.m. | 51 minutes ago\n  \nDescription :Grav 2.0.1 contains a decompression-bomb size-cap bypass in ZipArchiver and GPM\\Installer. The size bound introduced in 2.0.1 sums the uncompressed size declared in each entry's ZIP central-directory header (ZipArchive::statIndex()['size']) and rejects archives exceeding system.gpm.archive.max_uncompressed_size before extraction. Because this declared size is attacker-forgeable and is not cross-checked against the actual inflated stream, a crafted archive declaring tiny per-entry sizes passes the cap while extractTo() writes the real, much larger content, filling disk or exhausting inodes. The archive must be supplied by a package source or admin upload (admin/operator trust). Fixed in 2.0.2. This is an incomplete fix for GHSA-928x-9mpw-8h56.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-61449 - 위조된 ZIP 크기를 통한 2.0.2 감압 폭탄 이전의 중력",
-      "summary_ko": "CVE ID:CVE-2026-61449\n  \n게시일 : 2026년 7월 15일 오전 11시 25분 | 51분 전\n  \n설명:Grav 2.0.1에는 ZipArchiver 및 GPM\\Installer의 압축 해제 폭탄 크기 제한 우회 기능이 포함되어 있습니다. 2.0.1에 도입된 크기 제한은 각 항목의 ZIP 중앙 디렉터리 헤더(ZipArchive::statIndex()['size'])에 선언된 압축되지 않은 크기를 합산하고 추출 전에 system.gpm.archive.max_uncompressed_size를 초과하는 아카이브를 거부합니다. 이 선언된 크기는 공격자가 위조할 수 있고 실제 팽창된 스트림에 대해 교차 확인되지 않기 때문에 작은 항목당 크기를 선언하는 조작된 아카이브는 한도를 전달하는 반면 extractTo()는 훨씬 더 큰 실제 콘텐츠를 작성하여 디스크를 채우거나 inode를 소진시킵니다. 아카이브는 패키지 소스 또는 관리자 업로드(관리자/운영자 신뢰)를 통해 제공되어야 합니다. 2.0.2에서 수정되었습니다. 이는 GHSA-928x-9mpw-8h56에 대한 불완전한 수정입니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-61449\n2. 26.07.15 오후8:25\n3. Grav 2.0.1 contains a decompression-bomb size-cap ",
-      "cve_id": "CVE-2026-61449",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61449",
-      "source": "cvefeed",
-      "published": "2026-07-15T20:25:43+09:00",
       "lang": "en"
     }
   ],
