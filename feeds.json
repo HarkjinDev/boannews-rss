@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-19T06:31:39.395630+09:00",
+  "fetched_at": "2026-07-19T07:03:26.819655+09:00",
   "security_news": [
+    {
+      "title": "'2만 명 정보 유출·소액결제 피해' KT 제재 임박",
+      "summary": "19일 개인정보보호위원회는 29일 전체 회의를 열고 KT의 초소형 기지국(펨토셀) 해킹 침해 사고에 대한 과징금 부과 등 최종 제재안을 심의·의결할 방침이다. 앞서 개인정보위는 5월 조사를 마무리한 뒤 처분...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KT 펨토셀 해킹으로 2만 명 정보 유출\n2. 소액결제 결함 이용, 2만 건 이상 피해 발생\n3. 개인정보위, KT에 과징금 등 제재 최종 의결",
+      "link": "https://www.globale.co.kr/news/articleView.html?idxno=39398",
+      "source": "naver",
+      "published": "2026-07-19T06:54:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "KT 개인정보 유출 제재 이달 중 결론…과징금 규모 촉각",
+      "summary": "앞서 SK텔레콤 역시 지난해 해킹 사고 당시 수천억원대 과징금이 예상됐으나 감경 사유 등이 참작돼 최종 1천348억원을 부과받은 바 있다. 현재 역대 최대 과징금 기록은 개인정보 3천756만명이 유출된 쿠팡에 부과된...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KT 개인정보 유출 제재 이달 중 결론…과징금 규모 촉각 앞서 SK텔레콤 역시 지난해 해킹\n2. 현재 역대 최대 과징금 기록은 개인정보 3천756만명이 유출된 쿠팡에 부과된...",
+      "link": "https://n.news.naver.com/mnews/article/001/0016201499?sid=105",
+      "source": "naver",
+      "published": "2026-07-19T06:45:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Update now: 7-Zip fixes RCE flaw exploitable with malicious archives",
       "summary": "7-Zip version 26.02 was released to fix a remote code execution vulnerability that could allow attackers to execute malicious code by convincing users to open specially crafted compressed files. [...]",
@@ -2128,21 +2152,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-55576",
       "source": "cvefeed",
       "published": "2026-07-16T07:17:26+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54458 - AVideo: Unauthenticated Stored DOM Cross-Site Scripting via Per-Client Metadata Broadcast in YPTSocket Plugin",
-      "summary": "CVE ID :CVE-2026-54458\n  \nPublished : July 15, 2026, 9:33 p.m. | 44 minutes ago\n  \nDescription :WWBN AVideo is an open source video platform. Versions prior to 29.0 contain a stored DOM Cross-Site Scripting vulnerability in the YPTSocket plugin. Any unauthenticated remote attacker can execute arbitrary JavaScript in the authenticated origin of every administrator currently viewing a page that renders the YPTSocket online-users debug panel. plugin/YPTSocket/getWebSocket.json.php issues a signed WebSocket token to any anonymous caller, and MessageSQLiteV2::onOpen at plugin/YPTSocket/MessageSQLiteV2.php lines 91 and 110 reads the attacker-controlled webSocketSelfURI and page_title query parameters from the WebSocket connection URL with no validation. Both values persist into the in-memory SQLite connections table and broadcast inside the users_id_online array sent to every connected client; on the client, plugin/YPTSocket/script.js::updateSocketUserCard interpolates the broadcast page_title into an HTML template literal that is passed to jQuery $.append(html), which parses attacker bytes into live DOM nodes including  with inline event handlers. Successful attackers can can read non-HttpOnly cookies and the CSRF token rendered into the admin dashboard, issue authenticated requests to any admin-only endpoint, exfiltrate the admin dashboard DOM, and chain into any admin-context mutation. When the victim is an AVideo administrator, the attacker turns a single anonymous WebSocket connection into full administrative takeover via the admin's own session. This issue has been patched by https://github.com/WWBN/AVideo/commit/8be71e53ccbe9b84b30870db386fb4d2b11e1c16.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54458\n  \nPublished : July 15, 2026, 9:33 p.m. | 44 minutes ago\n  \nDescription :WWBN AVideo is an open source video platform. Versions prior to 29.0 contain a stored DOM Cross-Site Scripting vulnerability in the YPTSocket plugin. Any unauthenticated remote attacker can execute arbitrary JavaScript in the authenticated origin of every administrator currently viewing a page that renders the YPTSocket online-users debug panel. plugin/YPTSocket/getWebSocket.json.php issues a signed WebSocket token to any anonymous caller, and MessageSQLiteV2::onOpen at plugin/YPTSocket/MessageSQLiteV2.php lines 91 and 110 reads the attacker-controlled webSocketSelfURI and page_title query parameters from the WebSocket connection URL with no validation. Both values persist into the in-memory SQLite connections table and broadcast inside the users_id_online array sent to every connected client; on the client, plugin/YPTSocket/script.js::updateSocketUserCard interpolates the broadcast page_title into an HTML template literal that is passed to jQuery $.append(html), which parses attacker bytes into live DOM nodes including  with inline event handlers. Successful attackers can can read non-HttpOnly cookies and the CSRF token rendered into the admin dashboard, issue authenticated requests to any admin-only endpoint, exfiltrate the admin dashboard DOM, and chain into any admin-context mutation. When the victim is an AVideo administrator, the attacker turns a single anonymous WebSocket connection into full administrative takeover via the admin's own session. This issue has been patched by https://github.com/WWBN/AVideo/commit/8be71e53ccbe9b84b30870db386fb4d2b11e1c16.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54458 - AVideo: YPTSocket 플러그인의 클라이언트별 메타데이터 브로드캐스트를 통한 인증되지 않은 저장된 DOM 교차 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-54458\n  \n게시일 : 2026년 7월 15일 오후 9시 33분 | 44분 전\n  \n설명 :WWBN AVideo는 오픈 소스 비디오 플랫폼입니다. 29.0 이전 버전에는 YPTSocket 플러그인에 저장된 DOM 교차 사이트 스크립팅 취약점이 포함되어 있습니다. 인증되지 않은 원격 공격자는 현재 YPTSocket 온라인 사용자 디버그 패널을 렌더링하는 페이지를 보고 있는 모든 관리자의 인증된 원본에서 임의의 JavaScript를 실행할 수 있습니다. Plugin/YPTSocket/getWebSocket.json.php는 서명된 WebSocket 토큰을 익명의 호출자에게 발행하고, Plugin/YPTSocket/MessageSQLiteV2.php 라인 91 및 110의 MessageSQLiteV2::onOpen은 검증 없이 WebSocket 연결 URL에서 공격자가 제어하는 ​​webSocketSelfURI 및 page_title 쿼리 매개변수를 읽습니다. 두 값 모두 메모리 내 SQLite 연결 테이블에 유지되며 연결된 모든 클라이언트에 전송된 users_id_online 배열 내부에서 브로드캐스트됩니다. 클라이언트에서 플러그인/YPTSocket/script.js::updateSocketUserCard는 브로드캐스트 page_title을 jQuery $.append(html)로 전달되는 HTML 템플릿 리터럴로 보간합니다. 이 리터럴은 공격자 바이트를 인라인 이벤트 핸들러를 포함하여 라이브 DOM 노드로 구문 분석합니다. 성공적인 공격자는 비HttpOnly 쿠키와 관리 대시보드에 렌더링된 CSRF 토큰을 읽고, 모든 관리 전용 엔드포인트에 인증된 요청을 발행하고, 관리 대시보드 DOM을 유출하고, 모든 관리 컨텍스트 변형에 연결할 수 있습니다. 피해자가 AVideo 관리자인 경우 공격자는 단일 익명 WebSocket 연결을 관리자 자신의 세션을 통해 전체 관리 인수로 전환합니다. 이 문제는 https://github.com/WWBN/AVideo/commit/8be71e53ccbe9b84b30870db386fb4d2b11e1c16에서 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54458\n2. 26.07.16 오전6:33\n3. WWBN AVideo is an open source video platform. Vers",
-      "cve_id": "CVE-2026-54458",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54458",
-      "source": "cvefeed",
-      "published": "2026-07-16T06:33:27+09:00",
       "lang": "en"
     }
   ],
