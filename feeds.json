@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-20T00:01:06.087924+09:00",
+  "fetched_at": "2026-07-20T00:32:10.852459+09:00",
   "security_news": [
+    {
+      "title": "일본 보험사들, 위탁업체 해킹에 고객정보 유출 비상",
+      "summary": "일본 주요 손해보험사들이 손해조사 업무를 위탁한 기관이 랜섬웨어 공격을 받으면서 고객 개인정보 유출 우려가 확산되고 있다. 현재까지 개인정보가 실제로 악용된 사례는 확인되지 않았지만, 보험사들은 해당...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 일본 손보사, 위탁기관 랜섬웨어 공격에 정보 유출 우려\n2. 고객 개인정보 수만 건 유출 가능성 제기\n3. 보험사, 고객 보호 위한 대응 논의 중",
+      "link": "https://www.insnews.co.kr/news/articleView.html?idxno=91819",
+      "source": "naver",
+      "published": "2026-07-20T00:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "의료기관 노린 랜섬웨어 급증…공급망·의료 IT 기업이 새로운 표적",
       "summary": "미국 국가안보국(NSA)을 비롯해 여러 국가의 사이버보안 기관은 7월 13일 공동 권고문을 통해 러시아 연계 해킹 조직이 보안 설정이 미흡한 라우터와 네트워크 장비를 악용해 주요 기반시설을 공격하고 있다고...",
@@ -876,21 +888,24 @@
       "source": "naver",
       "published": "2026-07-17T02:27:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "자산 보관하는 지갑이 쓰레기였다니…시장 뒤흔든 폭탄선언에 투자자 패...",
-      "summary": "해킹과 피싱 범죄로부터 가상자산을 지켜줄 최후의 보루로 통했던 실물 보안 장치에 대한 근본적인 의구심이 확산하며 투자자들 사이에서 극심한 혼란이 빚어지고 있다. 블록체인상의 불법 자금 흐름과 해킹 범죄를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 실물 보안 장치, 의심 확산\n2. 블록체인 불법 자금, 해킹 범죄\n3. 투자자, 극심한 혼란 겪어",
-      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=469110",
-      "source": "naver",
-      "published": "2026-07-17T00:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Scans for Hikvision Intelligent Security API, (Sun, Jul 19th)",
+      "summary": "We have been following issues with Hikvision cameras for a long, long time. Like many similar products, Hikvision cameras have a long history of vulnerabilities and are often targeted by internet-wide scans that our honeypot network detects.\r",
+      "description": "We have been following issues with Hikvision cameras for a long, long time. Like many similar products, Hikvision cameras have a long history of vulnerabilities and are often targeted by internet-wide scans that our honeypot network detects.\r",
+      "title_ko": "Hikvision Intelligent Security API 검사(7월 19일 일요일)",
+      "summary_ko": "우리는 오랫동안 Hikvision 카메라 문제를 추적해 왔습니다. 많은 유사한 제품과 마찬가지로 Hikvision 카메라는 오랫동안 취약한 역사를 가지고 있으며 허니팟 네트워크가 감지하는 인터넷 전체 스캔의 대상이 되는 경우가 많습니다.",
+      "summary_3lines": "1. Scans for Hikvision Intelligent Security API, (Sun\n2. SANS_ISC\n3. We have been following issues with Hikvision camer",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33164",
+      "source": "sans_isc",
+      "published": "2026-07-20T00:00:38+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-63823 - keys: Pin request_key_auth payload in instantiate paths",
       "summary": "CVE ID :CVE-2026-63823\n  \nPublished : July 19, 2026, 12:16 p.m. | 2 hours, 4 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nkeys: Pin request_key_auth payload in instantiate paths\n\nA: request_key()       B: KEYCTL_INSTANTIATE_IOV\n================       =========================\n\ncreate auth key\nstore rka in auth key\nwait for helper\n                       get auth key\n                       load rka from auth key\n                       copy user payload\n                       sleep on #PF\n\nhelper completed\ndetach and free rka\ndestroy auth key\n                       wake up\n                       use rka->target_key\n                       **USE-AFTER-FREE**\n\nGive request_key_auth payloads a refcount.  Take a payload reference while\nauthkey->sem stabilizes the payload and revocation state.  Hold that\nreference across the instantiate and reject paths.  Drop the auth key\nowning reference from revoke and destroy.\n\n[jarkko: Replaced the first two paragraphs of text with an actual\n concurrency scenario.]\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
