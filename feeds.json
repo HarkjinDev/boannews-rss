@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-19T21:02:24.244001+09:00",
+  "fetched_at": "2026-07-19T21:31:15.775883+09:00",
   "security_news": [
     {
       "title": "한국국토정보공사,‘윤리경영 교육’실시",
@@ -1444,21 +1444,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50652",
       "source": "msrc",
       "published": "2026-07-16T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-9494 - ubuntu-pro-client Information Disclosure via Cleartext Bearer Token Exposure in Process Command Line",
-      "summary": "CVE ID :CVE-2026-9494\n  \nPublished : July 16, 2026, 12:12 p.m. | 1 hour, 5 minutes ago\n  \nDescription :An information disclosure vulnerability exists in Canonical ubuntu-pro-client (formerly ubuntu-advantage-tools). The client validates Ubuntu Pro APT credentials by executing /usr/lib/apt/apt-helper using the download-file command. During this process, the secret bearer token is embedded directly in\nthe cleartext URL component passed via the command-line arguments (argv), resulting in a URL format such as https://bearer:@esm.ubuntu.com/.../. On systems utilizing a default-mounted /proc file system where process-hiding mitigations (such as hidepid) are disabled, an unprivileged local attacker can\nmonitor system processes and read the sensitive bearer token directly from /proc/cmdline while the helper process is actively running. This leaked token can subsequently be used to gain unauthorized access to the victim's Ubuntu Pro or Expanded Security Maintenance (ESM) repositories.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-9494\n  \nPublished : July 16, 2026, 12:12 p.m. | 1 hour, 5 minutes ago\n  \nDescription :An information disclosure vulnerability exists in Canonical ubuntu-pro-client (formerly ubuntu-advantage-tools). The client validates Ubuntu Pro APT credentials by executing /usr/lib/apt/apt-helper using the download-file command. During this process, the secret bearer token is embedded directly in\nthe cleartext URL component passed via the command-line arguments (argv), resulting in a URL format such as https://bearer:@esm.ubuntu.com/.../. On systems utilizing a default-mounted /proc file system where process-hiding mitigations (such as hidepid) are disabled, an unprivileged local attacker can\nmonitor system processes and read the sensitive bearer token directly from /proc/cmdline while the helper process is actively running. This leaked token can subsequently be used to gain unauthorized access to the victim's Ubuntu Pro or Expanded Security Maintenance (ESM) repositories.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-9494\n  \n게시일 : 2026년 7월 16일 오후 12시 12분 | 1시간, 5분 전\n  \n설명: Canonical ubuntu-pro-client(이전 ubuntu-advantage-tools)에 정보 공개 취약성이 존재합니다. 클라이언트는 download-file 명령을 사용하여 /usr/lib/apt/apt-helper를 실행하여 Ubuntu Pro APT 자격 증명의 유효성을 검사합니다. 이 과정에서 비밀 전달자 토큰이 직접 삽입됩니다.\n명령줄 인수(argv)를 통해 전달된 일반 텍스트 URL 구성 요소로, https://bearer:@esm.ubuntu.com/.../와 같은 URL 형식이 됩니다. 프로세스 숨김 완화(예: hidepid)가 비활성화된 기본 탑재 /proc 파일 시스템을 활용하는 시스템에서 권한 없는 로컬 공격자는 다음을 수행할 수 있습니다.\n도우미 프로세스가 활발하게 실행되는 동안 시스템 프로세스를 모니터링하고 /proc/cmdline에서 직접 중요한 전달자 토큰을 읽습니다. 이 유출된 토큰은 이후 피해자의 Ubuntu Pro 또는 ESM(확장 보안 유지 관리) 저장소에 대한 무단 액세스를 얻는 데 사용될 수 있습니다.\n  \n심각도: 5.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-9494\n2. 26.07.16 오후9:12\n3. An information disclosure vulnerability exists in ",
-      "cve_id": "CVE-2026-9494",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9494",
-      "source": "cvefeed",
-      "published": "2026-07-16T21:12:27+09:00",
       "lang": "en"
     }
   ],
