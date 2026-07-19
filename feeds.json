@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-19T23:02:14.984473+09:00",
+  "fetched_at": "2026-07-19T23:32:34.198777+09:00",
   "security_news": [
+    {
+      "title": "의료기관 노린 랜섬웨어 급증…공급망·의료 IT 기업이 새로운 표적",
+      "summary": "미국 국가안보국(NSA)을 비롯해 여러 국가의 사이버보안 기관은 7월 13일 공동 권고문을 통해 러시아 연계 해킹 조직이 보안 설정이 미흡한 라우터와 네트워크 장비를 악용해 주요 기반시설을 공격하고 있다고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 의료기관 노린 랜섬웨어 급증…공급망·의료 IT 기업이 새로운 표적 미국 국가안보국(NSA)",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207676",
+      "source": "naver",
+      "published": "2026-07-19T23:26:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "SonicWall SMA Zero-Days Exploited Before Disclosure to Gain Root Access",
+      "summary": "A previously undocumented threat actor has been attributed to the exploitation of recently disclosed SonicWall Secure Mobile Access (SMA) 1000 series VPN appliances as zero-days prior their public disclosure since June 22, 2026.\n\nCybersecurity company Volexity is tracking the activity under the moniker UTA0533. The discovery was made following an incident response investigation earlier this",
+      "content": "",
+      "title_ko": "루트 액세스 권한을 얻기 위해 공개되기 전에 SonicWall SMA 제로데이 악용",
+      "summary_ko": "이전에 문서화되지 않은 위협 행위자는 최근 공개된 SonicWall Secure Mobile Access(SMA) 1000 시리즈 VPN 어플라이언스를 2026년 6월 22일 이후 공개되기 0일 전으로 악용한 것으로 추정됩니다.\n\n사이버 보안 회사 Volexity는 UTA0533이라는 이름으로 활동을 추적하고 있습니다. 이 발견은 올해 초 사고 대응 조사를 통해 이루어졌습니다.",
+      "summary_3lines": "1. 루트 액세스 권한을 얻기 위해 공개되기 전에 SonicWall SMA 제로데이 악용 이전에\n2. 사이버 보안 회사 Volexity는 UTA0533이라는 이름으로 활동을 추적하고 있습니다.\n3. 이 발견은 올해 초 사고 대응 조사를 통해 이루어졌습니다.",
+      "link": "https://thehackernews.com/2026/07/sonicwall-sma-zero-days-exploited.html",
+      "source": "thehackernews",
+      "published": "2026-07-19T22:18:56+09:00",
+      "lang": "en"
+    },
     {
       "title": "한국국토정보공사,‘윤리경영 교육’실시",
       "summary": "디지털 보안과 관련해서도 인공지능(AI)을 비롯한 디지털 기술의 도입과 대규모 개인정보 유출사고를 언급하며, 단 한 건의 정보 유출사고도 발생하지 않도록 전사적인 보안 경각심을 유지해 달라고 강조했다. 이번...",
@@ -864,21 +888,24 @@
       "source": "naver",
       "published": "2026-07-17T00:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "걸그룹 멤버, 친언니에 \"사랑해\" 문자했다가..'보이스피싱' 의심 큰일날...",
-      "summary": "이어 채영은 \"둘째 언니는 '사기당했나', '해킹?', '보이스피싱?'이라고 했다\"라고 전했다. 이후 채영은 \"언니가 보이스피싱인 줄 알고 전화가 온다\"라며 전화를 받았고, 채영의 언니는 \"왜 그러고 사라져?\"라고 했다. 이어...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 걸그룹 멤버 채영, 언니에게 \"사랑해\" 문자 후 보이스피싱 의심\n2. 언니는 채영에게 해킹, 보이스피싱 가능성 제기하며 불안 호소\n3. 채영 언니, 보이스피싱 의심으로 채영에게 전화 걸어 상황 파악",
-      "link": "https://m.entertain.naver.com/article/108/0003453563",
-      "source": "naver",
-      "published": "2026-07-16T23:19:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-63823 - keys: Pin request_key_auth payload in instantiate paths",
+      "summary": "CVE ID :CVE-2026-63823\n  \nPublished : July 19, 2026, 12:16 p.m. | 2 hours, 4 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nkeys: Pin request_key_auth payload in instantiate paths\n\nA: request_key()       B: KEYCTL_INSTANTIATE_IOV\n================       =========================\n\ncreate auth key\nstore rka in auth key\nwait for helper\n                       get auth key\n                       load rka from auth key\n                       copy user payload\n                       sleep on #PF\n\nhelper completed\ndetach and free rka\ndestroy auth key\n                       wake up\n                       use rka->target_key\n                       **USE-AFTER-FREE**\n\nGive request_key_auth payloads a refcount.  Take a payload reference while\nauthkey->sem stabilizes the payload and revocation state.  Hold that\nreference across the instantiate and reject paths.  Drop the auth key\nowning reference from revoke and destroy.\n\n[jarkko: Replaced the first two paragraphs of text with an actual\n concurrency scenario.]\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63823\n  \nPublished : July 19, 2026, 12:16 p.m. | 2 hours, 4 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nkeys: Pin request_key_auth payload in instantiate paths\n\nA: request_key()       B: KEYCTL_INSTANTIATE_IOV\n================       =========================\n\ncreate auth key\nstore rka in auth key\nwait for helper\n                       get auth key\n                       load rka from auth key\n                       copy user payload\n                       sleep on #PF\n\nhelper completed\ndetach and free rka\ndestroy auth key\n                       wake up\n                       use rka->target_key\n                       **USE-AFTER-FREE**\n\nGive request_key_auth payloads a refcount.  Take a payload reference while\nauthkey->sem stabilizes the payload and revocation state.  Hold that\nreference across the instantiate and reject paths.  Drop the auth key\nowning reference from revoke and destroy.\n\n[jarkko: Replaced the first two paragraphs of text with an actual\n concurrency scenario.]\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-63823 - 키: 인스턴스화 경로에 request_key_auth 페이로드 고정",
+      "summary_ko": "CVE ID:CVE-2026-63823\n  \n게시일 : 2026년 7월 19일 오후 12시 16분 | 2시간, 4분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\n키: 인스턴스화 경로에 request_key_auth 페이로드 고정\n\nA: request_key() B: KEYCTL_INSTANTIATE_IOV\n================ ==========================\n\n인증 키 생성\nrka를 인증 키에 저장\n도우미를 기다리세요\n                       인증 키 받기\n                       인증 키에서 rka 로드\n                       사용자 페이로드 복사\n                       #PF에서 자요\n\n도우미 완료\nrka를 분리하고 해제하세요.\n인증 키 파기\n                       일어나\n                       rka->target_key를 사용하세요.\n                       **무료 사용 후**\n\nrequest_key_auth 페이로드에 참조 횟수를 부여하세요.  페이로드 참조를 수행하는 동안\nauthkey->sem은 페이로드 및 해지 상태를 안정화합니다.  잠깐만요\n인스턴스화 및 거부 경로 전반에 걸쳐 참조합니다.  인증 키 삭제\n취소 및 삭제로부터 참조를 소유합니다.\n\n[jarkko: 텍스트의 처음 두 단락을 실제 내용으로 대체했습니다.\n 동시 시나리오.]\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-63823\n2. 26.07.19 오후9:16\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-63823",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63823",
+      "source": "cvefeed",
+      "published": "2026-07-19T21:16:55+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-63833 - ntfs3: reject direct userspace writes to reserved $LX* xattrs",
       "summary": "CVE ID :CVE-2026-63833\n  \nPublished : July 19, 2026, 12:02 p.m. | 19 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nntfs3: reject direct userspace writes to reserved $LX* xattrs\n\nNTFS3 uses $LXUID, $LXGID, $LXMOD and $LXDEV as internal WSL\npermission metadata and reloads them into i_uid, i_gid and i_mode\nfrom ntfs_get_wsl_perm().\n\nBecause the empty-prefix xattr handler also lets file owners call\nsetxattr() on these names directly, an unprivileged writer on a\nwritable ntfs3 mount can plant root ownership and S_ISUID on their own\nfile and gain euid 0 after inode reload.\n\nReject direct userspace writes to the reserved $LX* names. Internal\nntfs3 metadata updates are unchanged because ntfs_save_wsl_perm()\nwrites them via ntfs_set_ea() directly.\n\n[almaz.alexandrovich@paragon-software.com: added an additional check for non privileged users]\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -1283,6 +1310,21 @@
       "source": "cvefeed",
       "published": "2026-07-18T00:32:45+09:00",
       "lang": "fr"
+    },
+    {
+      "title": "CVE-2026-56159 DHCP Server Service Remote Code Execution Vulnerability",
+      "summary": "Added acknowledgements. This is an informational change only.",
+      "description": "Added acknowledgements. This is an informational change only.",
+      "title_ko": "CVE-2026-56159 DHCP 서버 서비스 원격 코드 실행 취약점",
+      "summary_ko": "승인을 추가했습니다. 이는 정보 제공용 변경일 뿐입니다.",
+      "summary_3lines": "1. CVE-2026-56159\n2. MSRC\n3. Added acknowledgements. This is an informational c",
+      "cve_id": "CVE-2026-56159",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56159",
+      "source": "msrc",
+      "published": "2026-07-17T23:00:00+09:00",
+      "lang": "en"
     },
     {
       "title": "CVE-2026-59252 - Missing gas_limit validation in mpp Tempo fee-payer enables wallet drain",
