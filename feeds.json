@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-19T22:02:56.340859+09:00",
+  "fetched_at": "2026-07-19T22:31:13.157256+09:00",
   "security_news": [
     {
       "title": "한국국토정보공사,‘윤리경영 교육’실시",
@@ -876,18 +876,6 @@
       "source": "naver",
       "published": "2026-07-16T23:19:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "“화면 공유하는 순간 털린다”… 애플, 페이스타임 금융 사기 경고",
-      "summary": "신뢰성 높은 플랫폼을 이용하기 때문에 의심을 피하면서도, 별다른 해킹 없이 정보 유출이 가능하다는 설명이다. 전문가들은 페이스타임 사기 피해를 예방하기 위해 다음과 같은 주의 사항을 당부했다. △ 화면 공유 금지...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 애플, 페이스타임 금융 사기로 사용자 주의 촉구\n2. 화면 공유 시 금융 정보 노출, 해킹 없이 정보 유출 가능\n3. 화면 공유 금지 등 피해 예방 수칙 준수해야",
-      "link": "https://n.news.naver.com/mnews/article/030/0003448608?sid=104",
-      "source": "naver",
-      "published": "2026-07-16T22:31:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1039,6 +1027,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-63813",
       "source": "cvefeed",
       "published": "2026-07-19T21:02:14+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-53370 - perf/x86/intel: Improve validation and configuration of ACR masks",
+      "summary": "CVE ID :CVE-2026-53370\n  \nPublished : July 19, 2026, 9:17 a.m. | 2 hours, 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nperf/x86/intel: Improve validation and configuration of ACR masks\n\nCurrently there are several issues on the user space ACR mask validation\nand configuration.\n- The validation for user space ACR mask (attr.config2) is incomplete,\n  e.g., the ACR mask could include the index which belongs to another\n  ACR events group, but it's not validated.\n- An early return on an invalid ACR mask caused all subsequent ACR groups\n  to be skipped.\n- The stale hardware ACR mask (hw.config1) is not cleared before setting\n  new hardware ACR mask.\n\nThe following changes address all of the above issues.\n- Figure out the event index group of an ACR group. Any bits in the\n  user-space mask not present in the index group are now dropped.\n- Instead of an early return on invalid bits, drop only the invalid\n  portions and continue iterating through all ACR events to ensure full\n  configuration.\n- Explicitly clear the stale hardware ACR mask for each event prior to\n  writing the new configuration.\n\nBesides, a non-leader event member of ACR group could be disabled in\ntheory. This could cause bit-shifting errors in the acr_mask of remaining\ngroup members. But since ACR sampling requires all events to be active,\nthis should not be a big concern in real use case. Add a \"FIXME\" comment\nto notice this risk.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53370\n  \nPublished : July 19, 2026, 9:17 a.m. | 2 hours, 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nperf/x86/intel: Improve validation and configuration of ACR masks\n\nCurrently there are several issues on the user space ACR mask validation\nand configuration.\n- The validation for user space ACR mask (attr.config2) is incomplete,\n  e.g., the ACR mask could include the index which belongs to another\n  ACR events group, but it's not validated.\n- An early return on an invalid ACR mask caused all subsequent ACR groups\n  to be skipped.\n- The stale hardware ACR mask (hw.config1) is not cleared before setting\n  new hardware ACR mask.\n\nThe following changes address all of the above issues.\n- Figure out the event index group of an ACR group. Any bits in the\n  user-space mask not present in the index group are now dropped.\n- Instead of an early return on invalid bits, drop only the invalid\n  portions and continue iterating through all ACR events to ensure full\n  configuration.\n- Explicitly clear the stale hardware ACR mask for each event prior to\n  writing the new configuration.\n\nBesides, a non-leader event member of ACR group could be disabled in\ntheory. This could cause bit-shifting errors in the acr_mask of remaining\ngroup members. But since ACR sampling requires all events to be active,\nthis should not be a big concern in real use case. Add a \"FIXME\" comment\nto notice this risk.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53370 - perf/x86/intel: ACR 마스크의 검증 및 구성 개선",
+      "summary_ko": "CVE ID:CVE-2026-53370\n  \n게시일 : 2026년 7월 19일 오전 9시 17분 | 2시간, 24분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nperf/x86/intel: ACR 마스크의 검증 및 구성 개선\n\n현재 사용자 공간 ACR 마스크 유효성 검사에 몇 가지 문제가 있습니다.\n그리고 구성.\n- 사용자 공간 ACR 마스크(attr.config2)에 대한 유효성 검사가 불완전합니다.\n  예를 들어 ACR 마스크에는 다른 마스크에 속한 인덱스가 포함될 수 있습니다.\n  ACR 이벤트 그룹이지만 검증되지 않았습니다.\n- 유효하지 않은 ACR 마스크의 조기 반환으로 인해 모든 후속 ACR 그룹이 발생했습니다.\n  건너뜁니다.\n- 오래된 하드웨어 ACR 마스크(hw.config1)는 설정 전에 지워지지 않습니다.\n  새로운 하드웨어 ACR 마스크.\n\n다음 변경 사항은 위의 모든 문제를 해결합니다.\n- ACR 그룹의 이벤트 인덱스 그룹을 파악한다. 다음의 모든 비트\n  인덱스 그룹에 없는 사용자 공간 마스크는 이제 삭제됩니다.\n- 유효하지 않은 비트를 조기에 반환하는 대신 유효하지 않은 비트만 삭제합니다.\n  모든 ACR 이벤트를 계속 반복하여 전체를 보장합니다.\n  구성.\n- 이전에 각 이벤트에 대해 오래된 하드웨어 ACR 마스크를 명시적으로 지웁니다.\n  새로운 구성을 작성 중입니다.\n\n게다가 ACR 그룹의 리더가 아닌 이벤트 구성원은 다음에서 비활성화될 수 있습니다.\n이론. 이로 인해 남은 acr_mask에서 비트 이동 오류가 발생할 수 있습니다.\n그룹 구성원. 하지만 ACR 샘플링을 위해서는 모든 이벤트가 활성화되어야 하므로,\n이는 실제 사용 사례에서는 큰 문제가 되지 않습니다. \"FIXME\" 코멘트 추가\n이 위험을 알아차리기 위해서입니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-53370\n2. 26.07.19 오후6:17\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-53370",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53370",
+      "source": "cvefeed",
+      "published": "2026-07-19T18:17:02+09:00",
       "lang": "en"
     },
     {
