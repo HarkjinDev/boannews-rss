@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-20T04:01:03.491680+09:00",
+  "fetched_at": "2026-07-20T04:30:58.804124+09:00",
   "security_news": [
     {
       "title": "일본 보험사들, 위탁업체 해킹에 고객정보 유출 비상",
@@ -1657,21 +1657,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-55173",
       "source": "cvefeed",
       "published": "2026-07-17T05:41:26+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54526 - Argo Workflows: Incomplete fix for CVE-2026-31892: ArtifactGC.PodSpecPatch bypass of Strict/Secure templateReferencing",
-      "summary": "CVE ID :CVE-2026-54526\n  \nPublished : July 16, 2026, 7:07 p.m. | 10 minutes ago\n  \nDescription :Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Prior to 3.7.15 and 4.0.6, the allow-list fix for CVE-2026-31892 is incomplete because workflow/util/merge.go ValidateUserOverrides and SanitizeUserWorkflowSpec walk only the top-level fields of WorkflowSpec via reflection, and WorkflowSpec.ArtifactGC is allow-listed wholesale; the struct behind that field, WorkflowLevelArtifactGC, has a PodSpecPatch sub-field whose contents flow unmodified into util.ApplyPodSpecPatch on the artifact-GC pod, the same sink the original fix closed for WorkflowSpec.PodSpecPatch, so a user submitting a Workflow under templateReferencing: Strict or Secure (against a referenced WorkflowTemplate that declares an output artifact and setting spec.artifactGC.strategy: OnWorkflowCompletion) can still inject an arbitrary strategic merge patch into the artifact-GC pod, including hostPath volumes, privileged: true, arbitrary image and command, and hostNetwork: true, defeating the stated purpose of Strict/Secure reference mode. This issue is fixed in versions 3.7.15 and 4.0.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54526\n  \nPublished : July 16, 2026, 7:07 p.m. | 10 minutes ago\n  \nDescription :Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Prior to 3.7.15 and 4.0.6, the allow-list fix for CVE-2026-31892 is incomplete because workflow/util/merge.go ValidateUserOverrides and SanitizeUserWorkflowSpec walk only the top-level fields of WorkflowSpec via reflection, and WorkflowSpec.ArtifactGC is allow-listed wholesale; the struct behind that field, WorkflowLevelArtifactGC, has a PodSpecPatch sub-field whose contents flow unmodified into util.ApplyPodSpecPatch on the artifact-GC pod, the same sink the original fix closed for WorkflowSpec.PodSpecPatch, so a user submitting a Workflow under templateReferencing: Strict or Secure (against a referenced WorkflowTemplate that declares an output artifact and setting spec.artifactGC.strategy: OnWorkflowCompletion) can still inject an arbitrary strategic merge patch into the artifact-GC pod, including hostPath volumes, privileged: true, arbitrary image and command, and hostNetwork: true, defeating the stated purpose of Strict/Secure reference mode. This issue is fixed in versions 3.7.15 and 4.0.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54526 - Argo 워크플로: CVE-2026-31892에 대한 불완전한 수정: 엄격한/보안 템플릿의 ArtifactGC.PodSpecPatch 우회",
-      "summary_ko": "CVE ID:CVE-2026-54526\n  \n게시일 : 2026년 7월 16일 오후 7시 07분 | 10분 전\n  \n설명:Argo Workflows는 Kubernetes에서 병렬 작업을 조정하기 위한 오픈 소스 컨테이너 기반 워크플로 엔진입니다. 3.7.15 및 4.0.6 이전에는 CVE-2026-31892에 대한 허용 목록 수정이 불완전합니다. 왜냐하면 Workflow/util/merge.go ValidateUserOverrides 및 SanitizeUserWorkflowSpec은 리플렉션을 통해 WorkflowSpec의 최상위 필드만 이동하고 WorkflowSpec.ArtifactGC는 허용 목록에 모두 포함되어 있기 때문입니다. 해당 필드 뒤의 구조체인 WorkflowLevelArtifactGC에는 내용이 수정되지 않은 PodSpecPatch 하위 필드가 있으며 그 내용은 이슈 GC Pod의 util.ApplyPodSpecPatch로 전달됩니다. 동일한 싱크는 WorkflowSpec.PodSpecPatch에 대해 원래 수정 사항이 닫혔으므로 사용자는 templateReferencing: Strict 또는 Secure(출력 아티팩트 및 설정을 선언하는 참조된 WorkflowTemplate에 대해)에서 워크플로를 제출합니다. spec.artifactGC.strategy: OnWorkflowCompletion)은 여전히 임의의 전략적 병합 패치를 아티팩트-GC 포드에 주입할 수 있습니다(hostPath 볼륨, 특권: true, 임의 이미지 및 명령, 호스트 네트워크: true 포함). 이는 엄격/보안 참조 모드의 명시된 목적을 무효화합니다. 이 문제는 버전 3.7.15 및 4.0.6에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54526\n2. 26.07.17 오전4:07\n3. Argo Workflows is an open source container-native ",
-      "cve_id": "CVE-2026-54526",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54526",
-      "source": "cvefeed",
-      "published": "2026-07-17T04:07:30+09:00",
       "lang": "en"
     }
   ],
