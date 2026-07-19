@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-19T19:31:22.667033+09:00",
+  "fetched_at": "2026-07-19T20:01:20.696571+09:00",
   "security_news": [
     {
       "title": "중수청 출범 코앞인데 … 기술유출 수사관할 '혼선'",
@@ -900,21 +900,24 @@
       "source": "thehackernews",
       "published": "2026-07-16T20:17:23+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CISA orders feds to patch actively exploited Oracle flaw by Saturday",
-      "summary": "CISA has ordered federal agencies to secure their systems by Saturday against ongoing attacks exploiting a critical vulnerability in the Oracle E-Business Suite financial application. [...]",
-      "content": "",
-      "title_ko": "CISA는 연방정부에 토요일까지 적극적으로 악용된 오라클 결함을 패치하라고 명령했습니다.",
-      "summary_ko": "CISA는 Oracle E-Business Suite 금융 애플리케이션의 심각한 취약점을 악용하는 지속적인 공격으로부터 토요일까지 시스템을 보호하도록 연방 기관에 명령했습니다. [...]",
-      "summary_3lines": "1. CISA, 연방 기관에 오라클 EBS 취약점 긴급 패치 명령\n2. 금융 애플리케이션 취약점 악용해 지속적 공격 발생\n3. 토요일까지 패치 의무화… 보안 조치 지침 강제 적용",
-      "link": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-flaw-by-saturday/",
-      "source": "bleepingcomputer",
-      "published": "2026-07-16T19:56:03+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-53371 - RDMA/ionic: bound node_desc sysfs read with %.64s",
+      "summary": "CVE ID :CVE-2026-53371\n  \nPublished : July 19, 2026, 9:17 a.m. | 1 hour, 4 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/ionic: bound node_desc sysfs read with %.64s\n\nnode_desc[64] in struct ib_device is not guaranteed to be NUL-\nterminated. The core IB sysfs handler uses \"%.64s\" for exactly this\nreason (drivers/infiniband/core/sysfs.c:1307), since node_desc_store()\nperforms a raw memcpy of up to IB_DEVICE_NODE_DESC_MAX bytes with no NUL\ntermination:\n\n  memcpy(desc.node_desc, buf, min_t(int, count, IB_DEVICE_NODE_DESC_MAX));\n\nIf exactly 64 bytes are written via the node_desc sysfs file, the array\ncontains no NUL byte. The ionic hca_type_show() handler uses unbounded\n\"%s\" and will read past the end of node_desc into adjacent fields of\nstruct ib_device until it encounters a NUL.\n\nionic supports IB_DEVICE_MODIFY_NODE_DESC, so this is triggerable by\nuserspace.\n\nMatch the core handler and bound the format specifier.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53371\n  \nPublished : July 19, 2026, 9:17 a.m. | 1 hour, 4 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/ionic: bound node_desc sysfs read with %.64s\n\nnode_desc[64] in struct ib_device is not guaranteed to be NUL-\nterminated. The core IB sysfs handler uses \"%.64s\" for exactly this\nreason (drivers/infiniband/core/sysfs.c:1307), since node_desc_store()\nperforms a raw memcpy of up to IB_DEVICE_NODE_DESC_MAX bytes with no NUL\ntermination:\n\n  memcpy(desc.node_desc, buf, min_t(int, count, IB_DEVICE_NODE_DESC_MAX));\n\nIf exactly 64 bytes are written via the node_desc sysfs file, the array\ncontains no NUL byte. The ionic hca_type_show() handler uses unbounded\n\"%s\" and will read past the end of node_desc into adjacent fields of\nstruct ib_device until it encounters a NUL.\n\nionic supports IB_DEVICE_MODIFY_NODE_DESC, so this is triggerable by\nuserspace.\n\nMatch the core handler and bound the format specifier.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53371 - RDMA/ionic: %.64s로 읽은 바인딩된 node_desc sysfs",
+      "summary_ko": "CVE ID:CVE-2026-53371\n  \n게시일 : 2026년 7월 19일 오전 9시 17분 | 1시간, 4분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nRDMA/ionic: %.64s로 읽은 바인딩된 node_desc sysfs\n\nstruct ib_device의 node_desc[64]는 NUL-이 보장되지 않습니다.\n종료되었습니다. 핵심 IB sysfs 핸들러는 정확히 이를 위해 \"%.64s\"를 사용합니다.\n이유(drivers/infiniband/core/sysfs.c:1307), node_desc_store() 이후\nNUL 없이 최대 IB_DEVICE_NODE_DESC_MAX 바이트의 원시 memcpy를 수행합니다.\n종료:\n\n  memcpy(desc.node_desc, buf, min_t(int, count, IB_DEVICE_NODE_DESC_MAX));\n\nnode_desc sysfs 파일을 통해 정확히 64바이트가 기록되면 배열은\nNUL 바이트가 없습니다. ionic hca_type_show() 핸들러는 무제한을 사용합니다.\n\"%s\"이며 node_desc의 끝을 지나 인접한 필드로 읽습니다.\nNUL을 만날 때까지 ib_device를 구조화합니다.\n\nionic은 IB_DEVICE_MODIFY_NODE_DESC를 지원하므로 이는 다음을 통해 트리거될 수 있습니다.\n사용자 공간.\n\n코어 핸들러를 일치시키고 형식 지정자를 바인딩합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-53371\n2. 26.07.19 오후6:17\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-53371",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53371",
+      "source": "cvefeed",
+      "published": "2026-07-19T18:17:02+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-16198 - Sipeed PicoClaw First Run Setup access_control.go authentication bypass",
       "summary": "CVE ID :CVE-2026-16198\n  \nPublished : July 18, 2026, 11:30 p.m. | 51 minutes ago\n  \nDescription :A vulnerability was detected in Sipeed PicoClaw up to 0.2.9. The impacted element is an unknown function of the file web/backend/middleware/access_control.go of the component First Run Setup. Performing a manipulation of the argument allowed_cidrs results in authentication bypass using alternate channel. The attack may be initiated remotely. The attack's complexity is rated as high. The exploitability is regarded as difficult. The exploit is now public and may be used. The patch is named 017601354be38cb027ff3ffb01aed79bd5d12610. Applying a patch is the recommended action to fix this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
