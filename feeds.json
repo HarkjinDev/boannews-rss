@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-20T03:30:56.935372+09:00",
+  "fetched_at": "2026-07-20T04:01:03.491680+09:00",
   "security_news": [
     {
       "title": "일본 보험사들, 위탁업체 해킹에 고객정보 유출 비상",
@@ -1672,21 +1672,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-54526",
       "source": "cvefeed",
       "published": "2026-07-17T04:07:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53536 - Activepieces: Cross-tenant file download via missing JWT audience check on step-files signed URL",
-      "summary": "CVE ID :CVE-2026-53536\n  \nPublished : July 16, 2026, 6:48 p.m. | 29 minutes ago\n  \nDescription :Activepieces is an open source AI workflow automation platform. Prior to 0.83.0, the /v1/step-files/signed download endpoint verified the supplied JWT against the shared signing secret but did not check the token's audience, and combined with a missing null-check on the decoded fileId, this allowed any caller holding any valid Activepieces JWT (including a freshly created user's own access token) to receive a step-file belonging to another tenant. The file returned was whatever PostgreSQL happened to scan first for type = FLOW_STEP_FILE, varying over time as the database changed, so an authenticated user could obtain step-file attachments belonging to other tenants on the same instance; the attacker could not target a specific victim or file, and the access was read-only with no integrity or availability impact. This issue is fixed in version 0.83.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53536\n  \nPublished : July 16, 2026, 6:48 p.m. | 29 minutes ago\n  \nDescription :Activepieces is an open source AI workflow automation platform. Prior to 0.83.0, the /v1/step-files/signed download endpoint verified the supplied JWT against the shared signing secret but did not check the token's audience, and combined with a missing null-check on the decoded fileId, this allowed any caller holding any valid Activepieces JWT (including a freshly created user's own access token) to receive a step-file belonging to another tenant. The file returned was whatever PostgreSQL happened to scan first for type = FLOW_STEP_FILE, varying over time as the database changed, so an authenticated user could obtain step-file attachments belonging to other tenants on the same instance; the attacker could not target a specific victim or file, and the access was read-only with no integrity or availability impact. This issue is fixed in version 0.83.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53536 - Activepieces: 단계 파일 서명 URL에 대한 누락된 JWT 대상 확인을 통해 교차 테넌트 파일 다운로드",
-      "summary_ko": "CVE ID:CVE-2026-53536\n  \n게시일 : 2026년 7월 16일 오후 6시 48분 | 29분 전\n  \n설명:Activepieces는 오픈 소스 AI 워크플로우 자동화 플랫폼입니다. 0.83.0 이전에는 /v1/step-files/signed 다운로드 엔드포인트가 공유 서명 비밀에 대해 제공된 JWT를 확인했지만 토큰의 대상자를 확인하지 않았으며 디코딩된 fileId에 누락된 null 확인과 결합되어 이로 인해 유효한 Activepieces JWT(새로 생성된 사용자의 자체 액세스 토큰 포함)를 보유하는 모든 호출자가 다른 테넌트에 속한 단계 파일을 수신할 수 있었습니다. 반환된 파일은 PostgreSQL이 먼저 FLOW_STEP_FILE 유형을 검색하여 데이터베이스가 변경됨에 따라 시간이 지남에 따라 달라지므로 인증된 사용자가 동일한 인스턴스의 다른 테넌트에 속하는 단계 파일 첨부 파일을 얻을 수 있었던 것입니다. 공격자는 특정 피해자나 파일을 표적으로 삼을 수 없었고 액세스는 무결성이나 가용성에 영향을 주지 않고 읽기 전용이었습니다. 이 문제는 버전 0.83.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53536\n2. 26.07.17 오전3:48\n3. Activepieces is an open source AI workflow automat",
-      "cve_id": "CVE-2026-53536",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53536",
-      "source": "cvefeed",
-      "published": "2026-07-17T03:48:30+09:00",
       "lang": "en"
     }
   ],
