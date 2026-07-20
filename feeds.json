@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-21T05:31:02.633676+09:00",
+  "fetched_at": "2026-07-21T06:02:37.716037+09:00",
   "security_news": [
+    {
+      "title": "'따릉이 개인정보 유출' 피해자 462만명에 '30일 정기권' 보상",
+      "summary": "아울러 재발 방지를 위해 정기 보안 진단과 모의 침투 테스트를 정례화하고, 정보기술(IT) 인력 보강 및... 사과드린다\"며 \"보안 체계를 전면 재정비해 안심하고 따릉이를 이용하실 수 있도록 총력을 다하겠다\"고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. '따릉이 개인정보 유출' 피해자 462만명에 '30일 정기권' 보상 아울러 재발 방지를 위\n2. 사과드린다\"며 \"보안 체계를 전면 재정비해 안심하고 따릉이를 이용하실 수 있도록 총력을 다",
+      "link": "https://n.news.naver.com/mnews/article/001/0016204731?sid=102",
+      "source": "naver",
+      "published": "2026-07-21T06:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "美 AI 규제 강화하는데 컨트롤타워는 공백…트럼프 AI정책 흔들",
+      "summary": "트럼프 행정부는 최근 ‘골드 이글(Gold Eagle)’이라는 AI 보안 허브도 출범시켜 AI가 찾아낸 사이버보안 취약점을 정부와 기업이 공동 관리하는 체계 구축에도 나섰다. 다만 규제는 강화되는 반면 정책 방향은 잇따라...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 美 AI 규제 강화하는데 컨트롤타워는 공백…트럼프 AI정책 흔들 트럼프 행정부는 최근 ‘골\n2. 다만 규제는 강화되는 반면 정책 방향은 잇따라...",
+      "link": "https://n.news.naver.com/mnews/article/018/0006333471?sid=105",
+      "source": "naver",
+      "published": "2026-07-21T05:42:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[단독]국립외교원 해킹에 외교관 등 6000명 정보 털렸다",
       "summary": "서버가 해킹돼 전현직 외교관과 정부 부처 파견 주재관 6000여 명의 이름과 직책 등 개인정보가 유출된 것으로 알려졌다. 정보 당국은 전 세계에서 활동 중인 외교관과 주재관의 개인정보를 노린 북한 관련 조직의 해킹...",
@@ -2458,21 +2482,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15904",
       "source": "msrc",
       "published": "2026-07-18T09:42:43+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45785 - OpenMcdf: Uncatchable infinite loop in DirectoryTree.TryGetDirectoryEntry on crafted CFB directory cycle",
-      "summary": "CVE ID :CVE-2026-45785\n  \nPublished : July 17, 2026, 8:37 p.m. | 29 minutes ago\n  \nDescription :OpenMcdf is a fully .NET / C# library to manipulate Compound File Binary File Format files, also known as Structured Storage. In 3.1.3 and earlier, the BST name-lookup loop in DirectoryTree.TryGetDirectoryEntry (OpenMcdf/DirectoryTree.cs:35-46) walks directory entries by repeatedly calling directories.TryGetSibling(child, siblingType, validateColor). A crafted CFB file with cyclic Left/Right sibling links among directory entries, constructed so the per-step BST-order check in TryGetSibling (DirectoryEntries.cs:84-85) is satisfied at every step, drives this while (child is not null) loop forever. There is no cycle detection in TryGetDirectoryEntry, and the bug is reachable from RootStorage.OpenStorage(name), TryOpenStorage(name), OpenStream(name), and TryOpenStream(name), causing an unrecoverable denial of service. This issue is fixed in version 3.1.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-45785\n  \nPublished : July 17, 2026, 8:37 p.m. | 29 minutes ago\n  \nDescription :OpenMcdf is a fully .NET / C# library to manipulate Compound File Binary File Format files, also known as Structured Storage. In 3.1.3 and earlier, the BST name-lookup loop in DirectoryTree.TryGetDirectoryEntry (OpenMcdf/DirectoryTree.cs:35-46) walks directory entries by repeatedly calling directories.TryGetSibling(child, siblingType, validateColor). A crafted CFB file with cyclic Left/Right sibling links among directory entries, constructed so the per-step BST-order check in TryGetSibling (DirectoryEntries.cs:84-85) is satisfied at every step, drives this while (child is not null) loop forever. There is no cycle detection in TryGetDirectoryEntry, and the bug is reachable from RootStorage.OpenStorage(name), TryOpenStorage(name), OpenStream(name), and TryOpenStream(name), causing an unrecoverable denial of service. This issue is fixed in version 3.1.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-45785 - OpenMcdf: 조작된 CFB 디렉터리 주기의 DirectoryTree.TryGetDirectoryEntry에서 캐치할 수 없는 무한 루프",
-      "summary_ko": "CVE ID:CVE-2026-45785\n  \n게시일 : 2026년 7월 17일 오후 8시 37분 | 29분 전\n  \n설명:OpenMcdf는 구조적 저장소라고도 알려진 복합 파일 바이너리 파일 형식 파일을 조작하는 완전한 .NET/C# 라이브러리입니다. 3.1.3 이하에서는 DirectoryTree.TryGetDirectoryEntry(OpenMcdf/DirectoryTree.cs:35-46)의 BST 이름 조회 루프가 디렉터리.TryGetSibling(child, siblingType, verifyColor)을 반복적으로 호출하여 디렉터리 항목을 탐색합니다. TryGetSibling(DirectoryEntries.cs:84-85)의 단계별 BST 순서 확인이 모든 단계에서 충족되도록 구성된 디렉터리 항목 간의 순환 왼쪽/오른쪽 형제 링크가 있는 제작된 CFB 파일은 이 while(자식은 null이 아님) 루프를 영원히 구동합니다. TryGetDirectoryEntry에는 주기 감지 기능이 없으며 RootStorage.OpenStorage(이름), TryOpenStorage(이름), OpenStream(이름) 및 TryOpenStream(이름)에서 버그에 접근할 수 있어 복구할 수 없는 서비스 거부가 발생합니다. 이 문제는 버전 3.1.4에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-45785\n2. 26.07.18 오전5:37\n3. OpenMcdf is a fully .NET / C# library to manipulat",
-      "cve_id": "CVE-2026-45785",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45785",
-      "source": "cvefeed",
-      "published": "2026-07-18T05:37:23+09:00",
       "lang": "en"
     }
   ],
