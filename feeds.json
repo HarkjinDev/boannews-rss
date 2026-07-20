@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-21T03:31:00.824598+09:00",
+  "fetched_at": "2026-07-21T04:01:08.067227+09:00",
   "security_news": [
     {
       "title": "Exposed Server Reveals AI-Assisted Phishing Toolkit Behind WebDAV Malware Campaign",
@@ -1324,6 +1324,21 @@
   ],
   "vulnerability": [
     {
+      "title": "WordPress Exploitation Underway (CVE-2026-63030), (Mon, Jul 20th)",
+      "summary": "Last week, Searchlight Cyber released details about a vulnerability they are calling \"wp2shell\". The vulnerability was initially announced without a CVE number. But now has been assigned CVE-2026-63030. Many WordPress plugin vulnerabilities are never assigned CVE numbers. But wp2shell is different. It is a SQL injection vulnerability in WordPress Core, not a plugin, and can lead to unauthenticated remote code execution. Shortly after being announced, the vulnerability started to be exploited.\r",
+      "description": "Last week, Searchlight Cyber released details about a vulnerability they are calling \"wp2shell\". The vulnerability was initially announced without a CVE number. But now has been assigned CVE-2026-63030. Many WordPress plugin vulnerabilities are never assigned CVE numbers. But wp2shell is different. It is a SQL injection vulnerability in WordPress Core, not a plugin, and can lead to unauthenticated remote code execution. Shortly after being announced, the vulnerability started to be exploited.\r",
+      "title_ko": "WordPress 악용 진행 중(CVE-2026-63030), (7월 20일 월요일)",
+      "summary_ko": "지난주 Searchlight Cyber는 \"wp2shell\"이라고 불리는 취약점에 대한 세부 정보를 공개했습니다. 이 취약점은 처음에 CVE 번호 없이 발표되었습니다. 그러나 이제 CVE-2026-63030이 할당되었습니다. 많은 WordPress 플러그인 취약성에는 CVE 번호가 할당되지 않습니다. 하지만 wp2shell은 다릅니다. 이는 플러그인이 아닌 WordPress Core의 SQL 주입 취약점으로, 인증되지 않은 원격 코드 실행으로 이어질 수 있습니다. 이 취약점은 발표된 지 얼마 지나지 않아 악용되기 시작했습니다.",
+      "summary_3lines": "1. CVE-2026-63030\n2. SANS_ISC\n3. Last week, Searchlight Cyber released details abou",
+      "cve_id": "CVE-2026-63030",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33168",
+      "source": "sans_isc",
+      "published": "2026-07-21T03:41:24+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-8169 - ExtremeXOS Debug-Mode Privilege Escalation via Weak PRNG",
       "summary": "CVE ID :CVE-2026-8169\n  \nPublished : July 20, 2026, 5:33 p.m. | 49 minutes ago\n  \nDescription :ExtremeXOS (EXOS) uses a challenge-response mechanism to authorize access to the privileged debug-mode function. The challenge value is generated using an insufficiently random source, which under certain conditions may allow an attacker to predict the expected response and activate debug-mode without authorization. Depending on device configuration and version, this may enable escalation to root-level access and persistent modification of the device software stack. Exploitation requires either a valid low-privilege account on the device (remote scenario) or physical serial console access (local scenario). This vulnerability is distinct from CVE-2017-14329, which addressed a different issue involving Python script privileges.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-8169\n  \nPublished : July 20, 2026, 5:33 p.m. | 49 minutes ago\n  \nDescription :ExtremeXOS (EXOS) uses a challenge-response mechanism to authorize access to the privileged debug-mode function. The challenge value is generated using an insufficiently random source, which under certain conditions may allow an attacker to predict the expected response and activate debug-mode without authorization. Depending on device configuration and version, this may enable escalation to root-level access and persistent modification of the device software stack. Exploitation requires either a valid low-privilege account on the device (remote scenario) or physical serial console access (local scenario). This vulnerability is distinct from CVE-2017-14329, which addressed a different issue involving Python script privileges.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2476,21 +2491,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-53712",
       "source": "cvefeed",
       "published": "2026-07-18T04:17:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-9135 - Policies Component Dynamic CodeInput Fields Bypass Custom Component Validation",
-      "summary": "CVE ID :CVE-2026-9135\n  \nPublished : July 17, 2026, 6:48 p.m. | 18 minutes ago\n  \nDescription :IBM Langflow OSS 1.0.0 through 1.10.0 Langflow versions up to 1.9.2 (commit 94981c443d4918517b9e8163d70fc598dc33a32d) contain a code injection vulnerability in the Policies component's ToolGuard integration that bypasses the allow_custom_components=false security control. The vulnerability exists because the validation mechanism only checks the main component source code in node_template[\"code\"][\"value\"] but fails to validate dynamic CodeInput fields that store generated ToolGuard Python files. Attackers can embed malicious Python code in these unvalidated dynamic fields, which are persisted in Flow.data and later executed server-side when a guarded tool is invoked through the ToolGuard runtime. This allows authenticated users with flow creation privileges to achieve arbitrary Python code execution on the backend despite custom component restrictions. The vulnerability can be escalated through cross-tenant flow manipulation via the agentic MCP update_flow_component_field tool, which accepts attacker-controlled user_id parameters, enabling attackers to inject malicious code into victim users' flows. When combined with publicly accessible flows and specific misconfigurations (AUTO_LOGIN=true, NEW_USER_IS_ACTIVE=true), the attack can be conducted with reduced authentication requirements.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-9135\n  \nPublished : July 17, 2026, 6:48 p.m. | 18 minutes ago\n  \nDescription :IBM Langflow OSS 1.0.0 through 1.10.0 Langflow versions up to 1.9.2 (commit 94981c443d4918517b9e8163d70fc598dc33a32d) contain a code injection vulnerability in the Policies component's ToolGuard integration that bypasses the allow_custom_components=false security control. The vulnerability exists because the validation mechanism only checks the main component source code in node_template[\"code\"][\"value\"] but fails to validate dynamic CodeInput fields that store generated ToolGuard Python files. Attackers can embed malicious Python code in these unvalidated dynamic fields, which are persisted in Flow.data and later executed server-side when a guarded tool is invoked through the ToolGuard runtime. This allows authenticated users with flow creation privileges to achieve arbitrary Python code execution on the backend despite custom component restrictions. The vulnerability can be escalated through cross-tenant flow manipulation via the agentic MCP update_flow_component_field tool, which accepts attacker-controlled user_id parameters, enabling attackers to inject malicious code into victim users' flows. When combined with publicly accessible flows and specific misconfigurations (AUTO_LOGIN=true, NEW_USER_IS_ACTIVE=true), the attack can be conducted with reduced authentication requirements.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-9135 - 정책 구성 요소 동적 코드 입력 필드가 사용자 정의 구성 요소 유효성 검사를 우회함",
-      "summary_ko": "CVE ID:CVE-2026-9135\n  \n게시일 : 2026년 7월 17일 오후 6시 48분 | 18분 전\n  \n설명:IBM Langflow OSS 1.0.0부터 1.10.0까지 Langflow 버전 1.9.2(커밋 94981c443d4918517b9e8163d70fc598dc33a32d)에는 정책 구성요소의 ToolGuard 통합에 허용_custom_comComponents=false 보안 제어를 우회하는 코드 주입 취약점이 포함되어 있습니다. 유효성 검사 메커니즘이 node_template[\"code\"][\"value\"]의 주요 구성 요소 소스 코드만 확인하고 생성된 ToolGuard Python 파일을 저장하는 동적 CodeInput 필드의 유효성을 검사하지 못하기 때문에 취약점이 존재합니다. 공격자는 이러한 검증되지 않은 동적 필드에 악성 Python 코드를 삽입할 수 있습니다. 이 코드는 Flow.data에 유지되고 나중에 ToolGuard 런타임을 통해 보호된 도구가 호출될 때 서버 측에서 실행됩니다. 이를 통해 흐름 생성 권한이 있는 인증된 사용자는 사용자 지정 구성 요소 제한에도 불구하고 백엔드에서 임의의 Python 코드를 실행할 수 있습니다. 공격자가 제어하는 ​​user_id 매개변수를 허용하는 에이전트 MCP update_flow_comComponent_field 도구를 통해 테넌트 간 흐름 조작을 통해 취약점이 확대될 수 있으며, 이를 통해 공격자는 피해자 사용자의 흐름에 악성 코드를 주입할 수 있습니다. 공개적으로 액세스 가능한 흐름 및 특정 잘못된 구성(AUTO_LOGIN=true, NEW_USER_IS_ACTIVE=true)과 결합되면 인증 요구 사항을 줄여 공격을 수행할 수 있습니다.\n  \n심각도: 9.9 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-9135\n2. 26.07.18 오전3:48\n3. IBM Langflow OSS 1.0.0 through 1.10.0 Langflow ver",
-      "cve_id": "CVE-2026-9135",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9135",
-      "source": "cvefeed",
-      "published": "2026-07-18T03:48:55+09:00",
       "lang": "en"
     }
   ],
