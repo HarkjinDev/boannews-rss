@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-21T04:01:08.067227+09:00",
+  "fetched_at": "2026-07-21T04:31:03.857174+09:00",
   "security_news": [
     {
       "title": "Exposed Server Reveals AI-Assisted Phishing Toolkit Behind WebDAV Malware Campaign",
@@ -2476,21 +2476,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-15415",
       "source": "cvefeed",
       "published": "2026-07-18T04:36:13+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53712 - SCRAM: Silent channel-binding authentication downgrade via unsupported certificate algorithms",
-      "summary": "CVE ID :CVE-2026-53712\n  \nPublished : July 17, 2026, 7:17 p.m. | 13 minutes ago\n  \nDescription :SCRAM (Salted Challenge Response Authentication Mechanism) is part of the family of Simple Authentication and Security Layer (SASL, RFC 4422) authentication mechanisms. Prior to 3.3, a flaw in com.ongres.scram:scram-client and com.ongres.scram:scram-common allows an attacker capable of a TLS man-in-the-middle attack to silently downgrade a connection from SCRAM-SHA-256-PLUS with channel binding to standard SCRAM-SHA-256 without channel binding when TlsServerEndpoint processes an X.509 certificate using a modern signature algorithm such as Ed25519; getChannelBindingData() can return an empty byte array after NoSuchAlgorithmException, and the ScramClient builder treats that as absent channel-binding data. This issue is fixed in version 3.3.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53712\n  \nPublished : July 17, 2026, 7:17 p.m. | 13 minutes ago\n  \nDescription :SCRAM (Salted Challenge Response Authentication Mechanism) is part of the family of Simple Authentication and Security Layer (SASL, RFC 4422) authentication mechanisms. Prior to 3.3, a flaw in com.ongres.scram:scram-client and com.ongres.scram:scram-common allows an attacker capable of a TLS man-in-the-middle attack to silently downgrade a connection from SCRAM-SHA-256-PLUS with channel binding to standard SCRAM-SHA-256 without channel binding when TlsServerEndpoint processes an X.509 certificate using a modern signature algorithm such as Ed25519; getChannelBindingData() can return an empty byte array after NoSuchAlgorithmException, and the ScramClient builder treats that as absent channel-binding data. This issue is fixed in version 3.3.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53712 - SCRAM: 지원되지 않는 인증서 알고리즘을 통한 자동 채널 바인딩 인증 다운그레이드",
-      "summary_ko": "CVE ID:CVE-2026-53712\n  \n게시일 : 2026년 7월 17일 오후 7시 17분 | 13분 전\n  \n설명 :SCRAM(Salted Challenge Response Authentication Mechanism)은 SASL, RFC 4422(Simple Authentication and Security Layer) 인증 메커니즘 제품군의 일부입니다. 3.3 이전에는 com.ongres.scram:scram-client 및 com.ongres.scram:scram-common의 결함으로 인해 TlsServerEndpoint가 다음과 같은 최신 서명 알고리즘을 사용하여 X.509 인증서를 처리할 때 TLS 중간자 공격이 가능한 공격자가 채널 바인딩이 있는 SCRAM-SHA-256-PLUS에서 채널 바인딩 없이 표준 SCRAM-SHA-256으로 연결을 자동으로 다운그레이드할 수 있었습니다. Ed25519; getChannelBindingData()는 NoSuchAlgorithmException 후에 빈 바이트 배열을 반환할 수 있으며 ScramClient 빌더는 이를 채널 바인딩 데이터가 없는 것으로 처리합니다. 이 문제는 버전 3.3에서 해결되었습니다.\n  \n심각도: 8.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53712\n2. 26.07.18 오전4:17\n3. SCRAM (Salted Challenge Response Authentication Me",
-      "cve_id": "CVE-2026-53712",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53712",
-      "source": "cvefeed",
-      "published": "2026-07-18T04:17:16+09:00",
       "lang": "en"
     }
   ],
