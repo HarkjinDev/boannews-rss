@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-20T18:01:35.285771+09:00",
+  "fetched_at": "2026-07-20T18:32:23.901537+09:00",
   "security_news": [
+    {
+      "title": "Critical ServiceNow code execution flaw now exploited in attacks",
+      "summary": "Attackers have begun exploiting a critical vulnerability (CVE-2026-6875) in the ServiceNow AI Platform, according to threat intelligence company Defused. [...]",
+      "content": "",
+      "title_ko": "치명적인 ServiceNow 코드 실행 결함, 이제 공격에 악용됨",
+      "summary_ko": "위협 정보 회사인 Defused에 따르면 공격자들이 ServiceNow AI 플랫폼의 심각한 취약점(CVE-2026-6875)을 악용하기 시작했습니다. [...]",
+      "summary_3lines": "1. 심각한 ServiceNow 코드 실행 결함, 이제 공격에 악용 위협 정보 회사인 Defus",
+      "link": "https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/",
+      "source": "bleepingcomputer",
+      "published": "2026-07-20T18:29:20+09:00",
+      "lang": "en"
+    },
     {
       "title": "말로 송금하고 조회…저축은행도 'AI 금융' 경쟁",
       "summary": "개인정보 보호와 해킹 대응 등은 과제입니다.금융당국이 AI 활용 범위와 보안 책임에 대한 구체적인 기준을 마련해야 한다는 목소리도 나옵니다.[권영관 / 웰컴저축은행 AICT서비스본부 전무 : 금융당국에서도...",
@@ -1296,18 +1308,6 @@
       "source": "bleepingcomputer",
       "published": "2026-07-17T20:05:30+09:00",
       "lang": "en"
-    },
-    {
-      "title": "법무법인 린, 보안기업 스텔스솔루션과 해킹 피해 통합 대응체계 구축",
-      "summary": "법무법인 린(대표변호사 임진석)이 사이버 보안 전문기업 스텔스솔루션(대표 박유한)과 함께 해킹 피해... 스텔스솔루션은 전직 사이버작전사령부 인력으로 구성된 레드팀을 통해 침해 경로와 데이터 유출 규모 등을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 법무법인 린, 스텔스솔루션과 통합 대응체계 구축\n2. 레드팀, 침해 경로 및 데이터 유출 규모 분석\n3. 해킹 피해 시 전문적이고 신속한 대응 가능",
-      "link": "https://www.lawtimes.co.kr/news/articleView.html?idxno=223704",
-      "source": "naver",
-      "published": "2026-07-17T18:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1339,6 +1339,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45784",
       "source": "msrc",
       "published": "2026-07-20T17:40:39+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-13577 - Dancer2 versions through 2.1.0 for Perl generate insecure session ids when CSPRNG modules are unavailable",
+      "summary": "CVE ID :CVE-2026-13577\n  \nPublished : July 20, 2026, 8:16 a.m. | 52 minutes ago\n  \nDescription :Dancer2 versions through 2.1.0 for Perl generate insecure session ids when CSPRNG modules are unavailable.\n\nDancer2::Core::Role::SessionFactory::generate_id silently falls back to a built-in rand-derived session id when both Math::Random::ISAAC::XS and Crypt::URandom are unavailable.\n\nThe fallback session id is generated from a SHA-1 hash of a call to the built-in rand function, the absolute path of the Dancer2::Core::Role::SessionFactory module, an internal counter, the process id, the module instance memory address, and a shuffled string of characters (using the List::Util::shuffle function, which also uses the built-in rand function).\n\nThese are all low-entropy and easily guessed sources.\n\nThe built-in rand() function is seeded with 32-bits and considered unsuitable for security applications.\n\nPredictable session ids could allow an attacker to gain access to systems.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-13577\n  \nPublished : July 20, 2026, 8:16 a.m. | 52 minutes ago\n  \nDescription :Dancer2 versions through 2.1.0 for Perl generate insecure session ids when CSPRNG modules are unavailable.\n\nDancer2::Core::Role::SessionFactory::generate_id silently falls back to a built-in rand-derived session id when both Math::Random::ISAAC::XS and Crypt::URandom are unavailable.\n\nThe fallback session id is generated from a SHA-1 hash of a call to the built-in rand function, the absolute path of the Dancer2::Core::Role::SessionFactory module, an internal counter, the process id, the module instance memory address, and a shuffled string of characters (using the List::Util::shuffle function, which also uses the built-in rand function).\n\nThese are all low-entropy and easily guessed sources.\n\nThe built-in rand() function is seeded with 32-bits and considered unsuitable for security applications.\n\nPredictable session ids could allow an attacker to gain access to systems.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-13577 - Perl용 Dancer2 버전 2.1.0부터 CSPRNG 모듈을 사용할 수 없을 때 안전하지 않은 세션 ID를 생성합니다.",
+      "summary_ko": "CVE ID:CVE-2026-13577\n  \n게시일 : 2026년 7월 20일 오전 8시 16분 | 52분 전\n  \n설명:Perl용 Dancer2 버전 2.1.0부터 CSPRNG 모듈을 사용할 수 없을 때 안전하지 않은 세션 ID를 생성합니다.\n\nDancer2::Core::Role::SessionFactory::generate_id는 Math::Random::ISAAC::XS 및 Crypt::URandom을 모두 사용할 수 없는 경우 자동으로 기본 제공 Rand 파생 세션 ID로 대체됩니다.\n\n대체 세션 ID는 내장 rand 함수 호출의 SHA-1 해시, Dancer2::Core::Role::SessionFactory 모듈의 절대 경로, 내부 카운터, 프로세스 ID, 모듈 인스턴스 메모리 주소 및 섞인 문자열(내장 rand 함수도 사용하는 List::Util::shuffle 함수 사용)에서 생성됩니다.\n\n이것들은 모두 엔트로피가 낮고 쉽게 추측할 수 있는 소스입니다.\n\n내장된 rand() 함수는 32비트로 시드되어 보안 응용 프로그램에 적합하지 않은 것으로 간주됩니다.\n\n예측 가능한 세션 ID를 사용하면 공격자가 시스템에 액세스할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-13577\n2. 26.07.20 오후5:16\n3. Dancer2 versions through 2.1.0 for Perl generate i",
+      "cve_id": "CVE-2026-13577",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13577",
+      "source": "cvefeed",
+      "published": "2026-07-20T17:16:28+09:00",
       "lang": "en"
     },
     {
