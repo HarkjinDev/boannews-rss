@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-20T22:31:06.932990+09:00",
+  "fetched_at": "2026-07-20T23:01:13.112348+09:00",
   "security_news": [
     {
       "title": "[로펌 zip중탐구] 법무법인 바른 \"사이버 보안 위협, 기업 내부통제와 정...",
@@ -1336,6 +1336,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-64622 - Network-AI 5.12.2 through 5.13.3 Missing Authorization via ApprovalInbox",
+      "summary": "CVE ID :CVE-2026-64622\n  \nPublished : July 20, 2026, 12:19 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Network-AI (npm: network-ai) versions 5.12.2 through 5.13.3 fail to apply the configured authorization check (checkAuth/secret) to the ApprovalInbox GET read routes, so even when an operator configures a secret, unauthenticated actors can access sensitive approval request details. The GET /approvals/?status=all, GET /approvals/:id, GET /approvals/stats, and GET /approvals/sse routes disclose full ApprovalEntry content including action/target shell-command strings, file paths, justifications, and risk levels. All responses also carry a hardcoded Access-Control-Allow-Origin: * header, enabling cross-origin disclosure from any website the operator visits. This is an incomplete fix for GHSA-mxjx-28vx-xjjj.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-64622\n  \nPublished : July 20, 2026, 12:19 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Network-AI (npm: network-ai) versions 5.12.2 through 5.13.3 fail to apply the configured authorization check (checkAuth/secret) to the ApprovalInbox GET read routes, so even when an operator configures a secret, unauthenticated actors can access sensitive approval request details. The GET /approvals/?status=all, GET /approvals/:id, GET /approvals/stats, and GET /approvals/sse routes disclose full ApprovalEntry content including action/target shell-command strings, file paths, justifications, and risk levels. All responses also carry a hardcoded Access-Control-Allow-Origin: * header, enabling cross-origin disclosure from any website the operator visits. This is an incomplete fix for GHSA-mxjx-28vx-xjjj.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-64622 - Network-AI 5.12.2~5.13.3 ApprovalInbox를 통한 승인 누락",
+      "summary_ko": "CVE ID:CVE-2026-64622\n  \n게시일 : 2026년 7월 20일 오후 12시 19분 | 1시간 27분 전\n  \n설명:Network-AI(npm: network-ai) 버전 5.12.2~5.13.3은 구성된 권한 확인(checkAuth/secret)을 ApprovalInbox GET 읽기 경로에 적용하지 못하므로 운영자가 비밀을 구성하더라도 인증되지 않은 행위자가 민감한 승인 요청 세부 정보에 액세스할 수 있습니다. GET /approvals/?status=all, GET /approvals/:id, GET /approvals/stats 및 GET /approvals/sse 경로는 작업/대상 셸 명령 문자열, 파일 경로, 근거 및 위험 수준을 포함한 전체 ApprovalEntry 콘텐츠를 공개합니다. 모든 응답에는 하드코딩된 Access-Control-Allow-Origin: * 헤더도 포함되어 있어 운영자가 방문하는 모든 웹사이트에서 출처 간 공개가 가능합니다. 이는 GHSA-mxjx-28vx-xjjj에 대한 불완전한 수정 사항입니다.\n  \n심각도: 9.3 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-64622\n2. 26.07.20 오후9:19\n3. Network-AI (npm: network-ai) versions 5.12.2 throu",
+      "cve_id": "CVE-2026-64622",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64622",
+      "source": "cvefeed",
+      "published": "2026-07-20T21:19:47+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-15813 - Kronosnet: kronosnet: memory corruption and out-of-bounds access via malformed network packet defragmentation",
       "summary": "CVE ID :CVE-2026-15813\n  \nPublished : July 20, 2026, 10:36 a.m. | 1 hour, 10 minutes ago\n  \nDescription :A vulnerability was found in the network packet de-fragmentation engine of kronosnet (Version affected <= 1.34). The internal reassembly code does not properly validate sequence numbers of incoming payload fragments. An attacker can exploit this lack of verification by transmitting malformed packets with corrupted sequence parameters. Under specific conditions, this forces the packet processing layer to parse data outside the designated bounds of the internal memory structures, causing an out-of-bounds memory access or heap corruption. This behavior can result in sudden application crashes or system instability.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-15813\n  \nPublished : July 20, 2026, 10:36 a.m. | 1 hour, 10 minutes ago\n  \nDescription :A vulnerability was found in the network packet de-fragmentation engine of kronosnet (Version affected <= 1.34). The internal reassembly code does not properly validate sequence numbers of incoming payload fragments. An attacker can exploit this lack of verification by transmitting malformed packets with corrupted sequence parameters. Under specific conditions, this forces the packet processing layer to parse data outside the designated bounds of the internal memory structures, causing an out-of-bounds memory access or heap corruption. This behavior can result in sudden application crashes or system instability.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2294,21 +2309,6 @@
       "source": "cvefeed",
       "published": "2026-07-18T00:32:45+09:00",
       "lang": "fr"
-    },
-    {
-      "title": "CVE-2026-56159 DHCP Server Service Remote Code Execution Vulnerability",
-      "summary": "Added acknowledgements. This is an informational change only.",
-      "description": "Added acknowledgements. This is an informational change only.",
-      "title_ko": "CVE-2026-56159 DHCP 서버 서비스 원격 코드 실행 취약점",
-      "summary_ko": "승인을 추가했습니다. 이는 정보 제공용 변경일 뿐입니다.",
-      "summary_3lines": "1. CVE-2026-56159\n2. MSRC\n3. Added acknowledgements. This is an informational c",
-      "cve_id": "CVE-2026-56159",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56159",
-      "source": "msrc",
-      "published": "2026-07-17T23:00:00+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
