@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-20T19:03:36.024993+09:00",
+  "fetched_at": "2026-07-20T19:32:15.499487+09:00",
   "security_news": [
+    {
+      "title": "[로펌 zip중탐구] 법무법인 바른 \"사이버 보안 위협, 기업 내부통제와 정...",
+      "summary": "사이버 보안을 위협하는 기술이 이를 방어하는 기술보다 빠르게 발전하고 있는 점을 고려한다면 '해킹을... 해킹으로 인해 개인정보가 유출되면 정보의 주체가 되는 국민뿐만 아니라 기업 역시 피해자로 볼 수 있다는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [로펌 zip중탐구] 법무법인 바른 \"사이버 보안 위협, 기업 내부통제와 정...\n2. 사이버 보안을 위협하는 기술이 이를 방어하는 기술보다 빠르게 발전하고 있는 점을 고려한다면\n3. 해킹으로 인해 개인정보가 유출되면 정보의 주체가 되는 국민뿐만 아니라 기업 역시 피해자로 ",
+      "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260720010007012",
+      "source": "naver",
+      "published": "2026-07-20T19:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "재외공관 근무자 등 개인정보 털려...국립외교원 교육시스템 해킹",
       "summary": "전·현직 외교부 본부와 재외공관 근무 직원 등의 개인정보 유출 정황이 확인됐다. 외교부는 20일 국립외교원 온라인교육시스템을 대상으로 한 보안 취약점 악용 공격으로 이 같은 정황이 확인됐다고 밝혔다. 외교부에...",
@@ -2293,21 +2305,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56159",
       "source": "msrc",
       "published": "2026-07-17T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59252 - Missing gas_limit validation in mpp Tempo fee-payer enables wallet drain",
-      "summary": "CVE ID :CVE-2026-59252\n  \nPublished : July 17, 2026, 10:11 a.m. | 1 hour, 18 minutes ago\n  \nDescription :Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to drain the fee-payer wallet, resulting in denial of service for legitimate clients.\n\nWhen the mpp Elixir library is configured as fee payer (fee_payer: true), the MPP.Methods.Tempo payment method co-signs and broadcasts a client-supplied EVM transaction without first validating that the client-supplied gas_limit is sufficient to complete the intended call. A malicious client can submit a signed transferWithMemo transaction with gas_limit deliberately set just below the amount required for successful execution. The server co-signs the transaction and broadcasts it via rpc_broadcast_sync. The transaction runs out of gas during EVM execution and reverts, but the fee-payer wallet is still charged for the burned gas while the client pays nothing and receives no resource. Repeated requests from one or more malicious clients drain the fee-payer wallet at near-zero cost to the attacker, ultimately preventing the server from sponsoring gas for legitimate payment requests.\n\nThe wait_for_confirmation = false (optimistic) path is also affected: it invokes simulate_payment_call via eth_call, but that simulation omits the gas parameter and therefore does not catch out-of-gas conditions.\n\nThis issue affects mpp: from 0.2.0 before 0.6.0.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59252\n  \nPublished : July 17, 2026, 10:11 a.m. | 1 hour, 18 minutes ago\n  \nDescription :Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to drain the fee-payer wallet, resulting in denial of service for legitimate clients.\n\nWhen the mpp Elixir library is configured as fee payer (fee_payer: true), the MPP.Methods.Tempo payment method co-signs and broadcasts a client-supplied EVM transaction without first validating that the client-supplied gas_limit is sufficient to complete the intended call. A malicious client can submit a signed transferWithMemo transaction with gas_limit deliberately set just below the amount required for successful execution. The server co-signs the transaction and broadcasts it via rpc_broadcast_sync. The transaction runs out of gas during EVM execution and reverts, but the fee-payer wallet is still charged for the burned gas while the client pays nothing and receives no resource. Repeated requests from one or more malicious clients drain the fee-payer wallet at near-zero cost to the attacker, ultimately preventing the server from sponsoring gas for legitimate payment requests.\n\nThe wait_for_confirmation = false (optimistic) path is also affected: it invokes simulate_payment_call via eth_call, but that simulation omits the gas parameter and therefore does not catch out-of-gas conditions.\n\nThis issue affects mpp: from 0.2.0 before 0.6.0.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-59252 - mpp Tempo 수수료 지불자의 gas_limit 검증 누락으로 인해 지갑이 소모됩니다.",
-      "summary_ko": "CVE ID:CVE-2026-59252\n  \n게시일 : 2026년 7월 17일 오전 10시 11분 | 1시간, 18분 전\n  \n설명:ZenHive mpp 입력의 지정된 수량에 대한 부적절한 검증으로 인해 인증되지 않은 원격 클라이언트가 수수료 지불자 지갑을 고갈시켜 합법적인 클라이언트에 대한 서비스가 거부될 수 있습니다.\n\nmpp Elixir 라이브러리가 수수료 지불자로 구성되면(fee_payer: true) MPP.Methods.Tempo 지불 방법은 클라이언트가 제공한 gas_limit가 의도한 호출을 완료하는 데 충분하다는 것을 먼저 확인하지 않고 클라이언트가 제공한 EVM 트랜잭션을 공동 서명하고 브로드캐스트합니다. 악의적인 클라이언트는 성공적인 실행에 필요한 금액 바로 아래로 의도적으로 설정된 gas_limit를 사용하여 서명된 transferWithMemo 트랜잭션을 제출할 수 있습니다. 서버는 트랜잭션에 공동 서명하고 rpc_broadcast_sync를 통해 이를 브로드캐스트합니다. EVM 실행 중에 트랜잭션의 가스가 소진되어 되돌려지지만 클라이언트가 비용을 지불하지 않고 리소스도 받지 못하는 동안 수수료 납부자 지갑에는 여전히 연소된 가스에 대한 비용이 청구됩니다. 하나 이상의 악의적인 클라이언트로부터의 반복적인 요청은 공격자에게 거의 0에 가까운 비용으로 수수료 지불자 지갑을 고갈시켜 궁극적으로 서버가 합법적인 지불 요청에 대해 가스를 후원하지 못하게 합니다.\n\nwait_for_confirmation = false(낙관적) 경로도 영향을 받습니다. eth_call을 통해simulate_pay_call을 호출하지만 해당 시뮬레이션은 가스 매개변수를 생략하므로 가스 부족 조건을 포착하지 못합니다.\n\n이 문제는 mpp: 0.2.0부터 0.6.0까지 영향을 미칩니다.\n  \n심각도: 8.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-59252\n2. 26.07.17 오후7:11\n3. Improper Validation of Specified Quantity in Input",
-      "cve_id": "CVE-2026-59252",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59252",
-      "source": "cvefeed",
-      "published": "2026-07-17T19:11:54+09:00",
       "lang": "en"
     }
   ],
