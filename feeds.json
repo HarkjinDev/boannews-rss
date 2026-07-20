@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-21T00:01:13.179906+09:00",
+  "fetched_at": "2026-07-21T00:31:03.855787+09:00",
   "security_news": [
     {
       "title": "[로펌 zip중탐구] 법무법인 바른 \"사이버 보안 위협, 기업 내부통제와 정...",
@@ -1323,6 +1323,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2024-35248 Microsoft Dynamics 365 Business Central Elevation of Privilege Vulnerability",
+      "summary": "Updated the build numbers.  This is an informational update only.",
+      "description": "Updated the build numbers.  This is an informational update only.",
+      "title_ko": "CVE-2024-35248 Microsoft Dynamics 365 Business Central 권한 상승 취약성",
+      "summary_ko": "빌드 번호를 업데이트했습니다.  이는 정보 제공용 업데이트일 뿐입니다.",
+      "summary_3lines": "1. CVE-2024-35248\n2. MSRC\n3. Updated the build numbers. This is an informationa",
+      "cve_id": "CVE-2024-35248",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-35248",
+      "source": "msrc",
+      "published": "2026-07-20T23:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-64622 - Network-AI 5.12.2 through 5.13.3 Missing Authorization via ApprovalInbox",
       "summary": "CVE ID :CVE-2026-64622\n  \nPublished : July 20, 2026, 12:19 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Network-AI (npm: network-ai) versions 5.12.2 through 5.13.3 fail to apply the configured authorization check (checkAuth/secret) to the ApprovalInbox GET read routes, so even when an operator configures a secret, unauthenticated actors can access sensitive approval request details. The GET /approvals/?status=all, GET /approvals/:id, GET /approvals/stats, and GET /approvals/sse routes disclose full ApprovalEntry content including action/target shell-command strings, file paths, justifications, and risk levels. All responses also carry a hardcoded Access-Control-Allow-Origin: * header, enabling cross-origin disclosure from any website the operator visits. This is an incomplete fix for GHSA-mxjx-28vx-xjjj.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
