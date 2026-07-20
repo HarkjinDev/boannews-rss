@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-21T08:02:24.537881+09:00",
+  "fetched_at": "2026-07-21T08:32:28.192582+09:00",
   "security_news": [
+    {
+      "title": "[기자수첩] 개인정보 유출과 괘씸죄",
+      "summary": "이런 상황에서 개인정보 유출 사고가 발생하자 단순한 보안 사고를 넘어 정치·정책 이슈로까지 번졌다. 정치권 입장에서도 ‘탈팡’이나 ‘외국계 플랫폼 규제’와 같은 메시지를 던지기 좋은 환경이었다. 반면 티빙이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 이런 상황에서 개인정보 유출 사고가 발생하자 단순한 보안 사고를 넘어 정치·정책 이슈로까지\n2. 정치권 입장에서도 ‘탈팡’이나 ‘외국계 플랫폼 규제’와 같은 메시지를 던지기 좋은 환경이었",
+      "link": "https://dealsite.co.kr/articles/165514",
+      "source": "naver",
+      "published": "2026-07-21T08:26:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "블핑 제니, 이번엔 트럭 데이트 포착…한여름의 낭만",
+      "summary": "이후 제니와 뷔의 동행 사진을 해킹으로 유출됐으나, 둘은 이와 관련해 입을 닫았다. 2023년 12월 둘 사이 결별설이 나온 후에는 더 이상 둘의 사진이 유포되지 않았다. 제니는 1996년생으로 2018년 블랙핑크로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 블핑 제니, 이번엔 트럭 데이트 포착…한여름의 낭만 이후 제니와 뷔의 동행 사진을 해킹으로\n2. 2023년 12월 둘 사이 결별설이 나온 후에는 더 이상 둘의 사진이 유포되지 않았다.\n3. 제니는 1996년생으로 2018년 블랙핑크로...",
+      "link": "https://m.entertain.naver.com/article/415/0000050208",
+      "source": "naver",
+      "published": "2026-07-21T08:07:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Estée Lauder discloses data breach via Oracle E-Business flaw",
       "summary": "Cosmetics giant Estée Lauder is notifying customers of a data breach after hackers exploited a flaw in Oracle E-Business Suite that the company used for human resources (HR) operations. [...]",
@@ -1452,18 +1476,6 @@
       "source": "naver",
       "published": "2026-07-18T09:01:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[속담으로 배우는 100가지 보안 습관 66] 아는 길도 물어가라(6)-보이스피싱 의심되면 꼭 해야 할 행동",
-      "summary": "보이스피싱 의심 시 112 또는 1332에 신고하세요보안 사고의 90%는 해킹이 아니라 ‘실수’에서 시작된다. 그래서 우리는 기술보다 습관을 배워야 한다. 속담으로 배우는 100가지 보안 습관에서는 △스마트폰 보안 △계정·비밀번호 △PC·인터넷 △생활 보안 △금융·개인정보 등 100가지 보안 습관을 속담과 연관시켜 소개한다. 보안은 어렵지 않다. 지키느냐,",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 보이스피싱 의심 시 112·1332 신고를\n2. 사고 90%는 해킹 아닌 '실수'로 발생\n3. 습관으로 보안 습관 100가지 소개",
-      "link": "http://www.boannews.com/media/view.asp?idx=144218&kind=&sub_kind=",
-      "source": "boannews",
-      "published": "2026-07-18T08:32:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1495,6 +1507,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-47134",
       "source": "cvefeed",
       "published": "2026-07-21T06:17:22+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-64651 - AI SDK OpenCode Harness Tool Relay Authorization Bypass",
+      "summary": "CVE ID :CVE-2026-64651\n  \nPublished : July 20, 2026, 9:16 p.m. | 32 minutes ago\n  \nDescription :The `@ai-sdk/harness-opencode` tool connects HarnessAgent to OpenCode through a sandboxed bridge. Prior to version 1.0.28, the tool relay authorizes requests from any process whose command line contains an allowed helper script path (`host-tool-mcp.mjs`). This allows untrusted code executing in the sandbox to invoke arbitrary host-exposed tools including secret lookups, deployment operations, and cloud API calls without a corresponding model-authorized tool-call event. Exploitation requires a Linux environment (the vulnerable fallback checks `process.platform === 'linux'` and reads `/proc`); an active harness session with one or more host-provided tools; and untrusted code executing in the sandbox (e.g. a malicious dependency, build script, or lifecycle hook) The fix in version 1.0.28 removes the process-path authorization fallback entirely. Relay requests are now only accepted after exact, short-lived, one-time authorization matching the tool name and input from a bridge-observed model event. Some workarounds are available. Do not run the OpenCode harness on untrusted repositories or with untrusted dependencies, and/or limit host-exposed tools to non-sensitive operations when working with untrusted code.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-64651\n  \nPublished : July 20, 2026, 9:16 p.m. | 32 minutes ago\n  \nDescription :The `@ai-sdk/harness-opencode` tool connects HarnessAgent to OpenCode through a sandboxed bridge. Prior to version 1.0.28, the tool relay authorizes requests from any process whose command line contains an allowed helper script path (`host-tool-mcp.mjs`). This allows untrusted code executing in the sandbox to invoke arbitrary host-exposed tools including secret lookups, deployment operations, and cloud API calls without a corresponding model-authorized tool-call event. Exploitation requires a Linux environment (the vulnerable fallback checks `process.platform === 'linux'` and reads `/proc`); an active harness session with one or more host-provided tools; and untrusted code executing in the sandbox (e.g. a malicious dependency, build script, or lifecycle hook) The fix in version 1.0.28 removes the process-path authorization fallback entirely. Relay requests are now only accepted after exact, short-lived, one-time authorization matching the tool name and input from a bridge-observed model event. Some workarounds are available. Do not run the OpenCode harness on untrusted repositories or with untrusted dependencies, and/or limit host-exposed tools to non-sensitive operations when working with untrusted code.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-64651 - AI SDK OpenCode 하네스 도구 릴레이 인증 우회",
+      "summary_ko": "CVE ID:CVE-2026-64651\n  \n게시일 : 2026년 7월 20일 오후 9시 16분 | 32분 전\n  \n설명:`@ai-sdk/harness-opencode` 도구는 샌드박스 브리지를 통해 HarnessAgent를 OpenCode에 연결합니다. 버전 1.0.28 이전에는 도구 릴레이가 명령줄에 허용된 도우미 스크립트 경로(`host-tool-mcp.mjs`)가 포함된 모든 프로세스의 요청을 승인합니다. 이를 통해 샌드박스에서 실행되는 신뢰할 수 없는 코드가 해당 모델 인증 도구 호출 이벤트 없이 비밀 조회, 배포 작업 및 클라우드 API 호출을 포함한 임의의 호스트 노출 도구를 호출할 수 있습니다. 악용하려면 Linux 환경이 필요합니다(취약한 폴백은 `process.platform === 'linux'`를 확인하고 `/proc`을 읽습니다). 하나 이상의 호스트 제공 도구를 사용한 활성 하네스 세션 및 샌드박스에서 실행되는 신뢰할 수 없는 코드(예: 악의적인 종속성, 빌드 스크립트 또는 수명 주기 후크) 버전 1.0.28의 수정 사항은 프로세스 경로 인증 폴백을 완전히 제거합니다. 릴레이 요청은 이제 도구 이름 및 교량 관찰 모델 이벤트의 입력과 일치하는 정확하고 단기적인 일회성 인증 후에만 허용됩니다. 몇 가지 해결 방법을 사용할 수 있습니다. 신뢰할 수 없는 리포지토리 또는 신뢰할 수 없는 종속성에서 OpenCode 하네스를 실행하지 말고, 신뢰할 수 없는 코드로 작업할 때 호스트 노출 도구를 민감하지 않은 작업으로 제한하지 마세요.\n  \n심각도: 6.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-64651\n2. 26.07.21 오전6:16\n3. The `@ai-sdk/harness-opencode` tool connects Harne",
+      "cve_id": "CVE-2026-64651",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64651",
+      "source": "cvefeed",
+      "published": "2026-07-21T06:16:50+09:00",
       "lang": "en"
     },
     {
