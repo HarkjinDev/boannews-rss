@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-21T22:31:24.372957+09:00",
+  "fetched_at": "2026-07-21T23:01:28.761550+09:00",
   "security_news": [
     {
       "title": "해커 뛰어넘은 AI… '미토스 쇼크'에 국회 움직일까?",
@@ -2316,21 +2316,24 @@
       "source": "naver",
       "published": "2026-07-19T00:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[IT 소식 톺아보기- 7월 3주차] 언스트앤영, 해킹으로 고객 정보 유출.....",
-      "summary": "이번 주에는 회계·컨설팅 기업 언스트앤영에서 제삼자 지원 티켓 시스템이 해킹돼 고객 데이터가... 언스트앤영, 제삼자 지원 시스템 해킹으로 고객 세금 정보 유출 확인 글로벌 회계·컨설팅 기업 언스트앤영(Ernst...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 언스트앤영, 제삼자 시스템 해킹으로 고객 세금 정보 유출\n2. 지원 티켓 시스템 통해 다수 고객 데이터 접근 및 유출\n3. 정확한 유출 규모는 아직 미확인, 조사 진행 중",
-      "link": "https://www.m-economynews.com/news/article.html?no=68861",
-      "source": "naver",
-      "published": "2026-07-18T22:58:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Captive Portal Detection, (Tue, Jul 21st)",
+      "summary": "Not everything our honeypots detect is an attack. Sometimes it is just \"odd traffic\", and this is one example: Our \"First Seen\" list currently includes \"http://detectportal.firefox.co\r",
+      "description": "Not everything our honeypots detect is an attack. Sometimes it is just \"odd traffic\", and this is one example: Our \"First Seen\" list currently includes \"http://detectportal.firefox.co\r",
+      "title_ko": "종속 포털 감지(7월 21일 화요일)",
+      "summary_ko": "허니팟이 감지하는 모든 것이 공격인 것은 아닙니다. 때때로 이는 단지 \"이상한 트래픽\"일 수 있으며 이는 한 가지 예입니다. 현재 \"처음 본\" 목록에는 \"http://Detectportal.firefox.co\"가 포함되어 있습니다.",
+      "summary_3lines": "1. Captive Portal Detection, (Tue, Jul 21st)\n2. SANS_ISC\n3. Not everything our honeypots detect is an attack. ",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33172",
+      "source": "sans_isc",
+      "published": "2026-07-21T22:44:56+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-65007 - Grav before 1.0.8 Missing Authorization on API Key Generation",
       "summary": "CVE ID :CVE-2026-65007\n  \nPublished : July 21, 2026, 11:39 a.m. | 42 minutes ago\n  \nDescription :The Grav api plugin (grav-plugin-api) before 1.0.8 fails to properly authorize API key generation and revocation: the plugin intercepts the apiKeyGenerate/apiKeyRevoke admin tasks before the account-management ACL runs and authorizes the caller on only the admin.login permission (the baseline permission held by every panel user). This allows any user with admin.login to mint a persistent API key bound to any account, and the forged key inherits the target account's API permissions. On installs where an API-enabled account holds broader permissions, this enables account impersonation and privilege escalation up to account takeover.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
