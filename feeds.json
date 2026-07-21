@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-21T11:02:22.679775+09:00",
+  "fetched_at": "2026-07-21T11:31:01.447020+09:00",
   "security_news": [
     {
       "title": "몸무게까지 유출됐는데… 보상은 '따릉이 5000원 이용권'",
@@ -1635,6 +1635,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-63728 - Gitleaks Secret Exfiltration via Non-Hermetic Sprig Template Functions in Report Template Feature",
+      "summary": "CVE ID :CVE-2026-63728\n  \nPublished : July 21, 2026, 12:17 a.m. | 1 hour, 33 minutes ago\n  \nDescription :Gitleaks prior to 8.30.1 contains a template injection vulnerability that allows attackers who can supply or influence report templates to read arbitrary environment variables and exfiltrate sensitive data by leveraging non-hermetic Sprig template functions. Attackers can craft malicious report templates using the env, expandenv, and getHostByName functions to extract credentials, tokens, and API keys from the host process and exfiltrate them through DNS queries, including secrets discovered during the scan itself.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63728\n  \nPublished : July 21, 2026, 12:17 a.m. | 1 hour, 33 minutes ago\n  \nDescription :Gitleaks prior to 8.30.1 contains a template injection vulnerability that allows attackers who can supply or influence report templates to read arbitrary environment variables and exfiltrate sensitive data by leveraging non-hermetic Sprig template functions. Attackers can craft malicious report templates using the env, expandenv, and getHostByName functions to extract credentials, tokens, and API keys from the host process and exfiltrate them through DNS queries, including secrets discovered during the scan itself.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-63728 - 보고서 템플릿 기능의 비밀폐형 장식 템플릿 기능을 통한 Gitleaks 비밀 유출",
+      "summary_ko": "CVE ID:CVE-2026-63728\n  \n게시일 : 2026년 7월 21일 오전 12시 17분 | 1시간 33분 전\n  \n설명 : 8.30.1 이전의 Gitleaks에는 보고서 템플릿을 제공하거나 영향을 줄 수 있는 공격자가 비밀폐형 Sprig 템플릿 기능을 활용하여 임의의 환경 변수를 읽고 민감한 데이터를 유출할 수 있는 템플릿 주입 취약점이 포함되어 있습니다. 공격자는 env, Expandenv 및 getHostByName 함수를 사용하여 악성 보고서 템플릿을 만들어 호스트 프로세스에서 자격 증명, 토큰 및 API 키를 추출하고 스캔 자체 중에 발견된 비밀을 포함하여 DNS 쿼리를 통해 이를 유출할 수 있습니다.\n  \n심각도: 8.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-63728\n2. 26.07.21 오전9:17\n3. Gitleaks prior to 8.30.1 contains a template injec",
+      "cve_id": "CVE-2026-63728",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63728",
+      "source": "cvefeed",
+      "published": "2026-07-21T09:17:48+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-44510 - Rsync: Receiver-side out-of-bounds read enables remote DoS from malicious server",
       "summary": "CVE ID :CVE-2026-44510\n  \nPublished : July 20, 2026, 10:17 p.m. | 1 hour, 2 minutes ago\n  \nDescription :Rsync is a file-copying tool that uses a delta-transfer algorithm to synchronize remote and local files. In versions prior to 3.4.3, the receiver-side out-of-bounds array read in rsync's recv_files() lets a malicious rsync server (or any peer acting in the sender role) deterministically crash any rsync client that pulls from it. The trigger is fully wire-protocol-level, requires no special options on the victim, and works for both rsync:// URLs and remote-shell pulls; since inc_recurse is the protocol-30+ default, any client doing a normal recursive pull against an attacker-controlled URL is exposed. A malicious server sets CF_INC_RECURSE, sends a flist whose first sorted entry is not the leading \".\" directory (causing parent_ndx to be set to -1), then sends a transfer record with ndx = 0 and an iflag omitting ITEM_TRANSFER, causing the receiver to read 8 bytes before the allocated pointer array and dereference the result in f_name(). The impact is crash-only: the out-of-bounds read lands in glibc mmap chunk metadata and dereferences to an unmapped low address, producing a SEGV that cannot be leveraged into an exploit (confirmed on glibc x86-64 Linux; non-glibc allocators not audited). This issue is fixed in version 3.4.3.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
