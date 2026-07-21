@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-22T03:01:13.333293+09:00",
+  "fetched_at": "2026-07-22T03:31:19.182246+09:00",
   "security_news": [
+    {
+      "title": "북 해킹 조직, 가상자산 업계 표적…‘클릭픽스’ 위장취업 미끼 신종 ...",
+      "summary": "북한 연계 사이버 해킹 조직이 위장 채용 면접을 미끼로 악성코드를 유포하는 새로운 사이버 공격을 펼치고... 북한 연계 사이버 해킹 조직이 가상자산과 웹3 분야 종사자들을 겨냥해 위장 취업 면접을 미끼로 악성코드를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북 해킹 조직, 가상자산 업계 겨냥\n2. 위장 채용 면접 미끼로 악성코드 유포\n3. 웹3 종사자들에게 신종 공격 시도",
+      "link": "https://www.voakorea.com/a/north-korea-cyber-campaign-072126/8174450.html",
+      "source": "naver",
+      "published": "2026-07-22T03:09:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Critical wp2shell WordPress flaws exploited to install webshells",
       "summary": "Hackers are exploiting the \"wp2shell\" critical vulnerability suite (CVE-2026-63030 and CVE-2026-60137) affecting WordPress Core to deploy persistent webshells and install malicious plugins on affected servers. [...]",
@@ -2379,6 +2391,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-47407 - PraisonAI Platform has a cross-workspace IDOR + member-role privilege escalation",
+      "summary": "CVE ID :CVE-2026-47407\n  \nPublished : July 21, 2026, 5:17 p.m. | 1 hour, 5 minutes ago\n  \nDescription :PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Prior to version 0.1.4, the Platform server exposes resources under `/api/v1/workspaces/{workspace_id}/...` and protects them with a `require_workspace_member(workspace_id)` FastAPI dependency. The dependency only checks that the caller is a member of the workspace_id in the URL prefix. The route handlers then look up the inner resource (`agent_id`, `issue_id`, `project_id`, `label_id`, `comment_id`, `dependency_id`) by primary key alone. The resource's own `workspace_id` is never compared to the URL's `workspace_id`. A user can therefore put their own workspace in the URL prefix and any other workspace's resource ID in the path. The auth check passes, since they really are a member of the prefix workspace. The service then returns the cross-tenant resource for read, update, or delete. There is a second bug in the member-management routes (`add_member`, `update_member_role`, `remove_member`, `update_workspace`, `delete_workspace`). Each one inherits the default `min_role=\"member\"` from `require_workspace_member`. Any basic member can therefore promote themselves to admin or owner, demote or remove other members, and delete the workspace. The role hierarchy exists in the schema but is not enforced. Registration is open at `/api/v1/auth/register` with no email verification. The default server bind is `0.0.0.0:8000` (`python -m praisonai_platform`). One curl from any unauthenticated network position is enough to bootstrap into the system. PraisonAI Platform version 0.1.4 patches the issue.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-47407\n  \nPublished : July 21, 2026, 5:17 p.m. | 1 hour, 5 minutes ago\n  \nDescription :PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Prior to version 0.1.4, the Platform server exposes resources under `/api/v1/workspaces/{workspace_id}/...` and protects them with a `require_workspace_member(workspace_id)` FastAPI dependency. The dependency only checks that the caller is a member of the workspace_id in the URL prefix. The route handlers then look up the inner resource (`agent_id`, `issue_id`, `project_id`, `label_id`, `comment_id`, `dependency_id`) by primary key alone. The resource's own `workspace_id` is never compared to the URL's `workspace_id`. A user can therefore put their own workspace in the URL prefix and any other workspace's resource ID in the path. The auth check passes, since they really are a member of the prefix workspace. The service then returns the cross-tenant resource for read, update, or delete. There is a second bug in the member-management routes (`add_member`, `update_member_role`, `remove_member`, `update_workspace`, `delete_workspace`). Each one inherits the default `min_role=\"member\"` from `require_workspace_member`. Any basic member can therefore promote themselves to admin or owner, demote or remove other members, and delete the workspace. The role hierarchy exists in the schema but is not enforced. Registration is open at `/api/v1/auth/register` with no email verification. The default server bind is `0.0.0.0:8000` (`python -m praisonai_platform`). One curl from any unauthenticated network position is enough to bootstrap into the system. PraisonAI Platform version 0.1.4 patches the issue.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-47407 - PraisonAI 플랫폼에는 작업 공간 간 IDOR + 구성원 역할 권한 에스컬레이션 기능이 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-47407\n  \n게시일 : 2026년 7월 21일 오후 5시 17분 | 1시간, 5분 전\n  \n설명:PraisonAI 플랫폼은 PraisonAI 다중 에이전트 팀 시스템을 위한 플랫폼 레이어입니다. 버전 0.1.4 이전에는 Platform 서버가 `/api/v1/workspaces/{workspace_id}/...` 아래에 리소스를 노출하고 `require_workspace_member(workspace_id)` FastAPI 종속성을 통해 이를 보호했습니다. 종속성은 호출자가 URL 접두사에 있는 작업 영역 ID의 구성원인지만 확인합니다. 그런 다음 경로 핸들러는 기본 키만으로 내부 리소스(`agent_id`, `issue_id`, `project_id`, `label_id`, `comment_id`, `dependent_id`)를 찾습니다. 리소스 자체 `workspace_id`는 URL의 `workspace_id`와 비교되지 않습니다. 따라서 사용자는 URL 접두사에 자신의 작업 영역을 입력하고 경로에 다른 작업 영역의 리소스 ID를 입력할 수 있습니다. 실제로 접두사 작업 공간의 구성원이므로 인증 확인이 통과됩니다. 그런 다음 서비스는 읽기, 업데이트 또는 삭제를 위해 교차 테넌트 리소스를 반환합니다. 구성원 관리 경로(`add_member`, `update_member_role`, `remove_member`, `update_workspace`, `delete_workspace`)에 두 번째 버그가 있습니다. 각각은 `require_workspace_member`에서 기본 `min_role=\"member\"`를 상속합니다. 따라서 모든 기본 멤버는 자신을 관리자 또는 소유자로 승격시키고, 다른 멤버를 강등 또는 제거하고, 작업 영역을 삭제할 수 있습니다. 역할 계층 구조는 스키마에 존재하지만 적용되지는 않습니다. 등록은 이메일 확인 없이 `/api/v1/auth/register`에서 열립니다. 기본 서버 바인딩은 `0.0.0.0:8000`(`python -m praisonai_platform`)입니다. 인증되지 않은 네트워크 위치에서 한 번 컬하면 시스템에 부트스트랩하기에 충분합니다. PraisonAI Platform 버전 0.1.4에서는 이 문제를 패치합니다.\n  \n심각도: 9.4 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-47407\n2. 26.07.22 오전2:17\n3. PraisonAI Platform is the platform layer for the P",
+      "cve_id": "CVE-2026-47407",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47407",
+      "source": "cvefeed",
+      "published": "2026-07-22T02:17:09+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-47122 - Sparkle's AppInstaller post-stage-1 XPC listener accepts unvalidated connections, allowing spoofed appcast item data injection",
       "summary": "CVE ID :CVE-2026-47122\n  \nPublished : July 21, 2026, 3:16 p.m. | 39 minutes ago\n  \nDescription :Sparkle is a software update framework for macOS. In versions up to and including 2.9.1, `Autoupdate/AppInstaller.m`'s `shouldAcceptNewConnection:` only enforces `SUCodeSigningVerifier validateConnection:` before stage 1 completes. After `_performedStage1Installation = YES`, new connections to the registered Mach service `-spki` are accepted from any local process without team-ID or code-signing checks. As of time of publication, no known patched versions are available.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
