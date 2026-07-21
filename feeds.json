@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-22T03:31:19.182246+09:00",
+  "fetched_at": "2026-07-22T04:01:26.051592+09:00",
   "security_news": [
     {
       "title": "북 해킹 조직, 가상자산 업계 표적…‘클릭픽스’ 위장취업 미끼 신종 ...",
@@ -2404,6 +2404,36 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-47407",
       "source": "cvefeed",
       "published": "2026-07-22T02:17:09+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-16454 - Privilege Escalation in Eclipse hawkBit DDI allows Tenant-Isolated Firmware Exfiltration",
+      "summary": "CVE ID :CVE-2026-16454\n  \nPublished : July 21, 2026, 5:17 p.m. | 39 minutes ago\n  \nDescription :In Eclipse hawkBit versions 1.0.3 and prior, a privilege escalation vulnerability (CWE-284 / CWE-862) has been identified in the Direct Device Integration (DDI) Controller.\n\n\n\nThis vulnerability allows an authenticated device to escalate its permissions and bypass the strict boundaries of its assigned updates. Under normal operation, a device should be restricted strictly to the specific firmware artifacts explicitly assigned to it. However, this flaw enables any authenticated device to bypass this restriction and download any firmware artifact within the same tenant.\n\n\n\nThis is not an authentication bypass; the requesting device must possess valid credentials for its respective tenant. Instead, the issue stems from a flaw in object-level authorization validation.\n\n\n\nA related, lower-severity helper issue exists in the listing software modules artifacts metadata endpoint. This endpoint does not enforce assignment checks, enabling an authenticated device to list and enumerate available firmware artifacts, which can facilitate targeted exfiltration using the main download authorization bypass.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-16454\n  \nPublished : July 21, 2026, 5:17 p.m. | 39 minutes ago\n  \nDescription :In Eclipse hawkBit versions 1.0.3 and prior, a privilege escalation vulnerability (CWE-284 / CWE-862) has been identified in the Direct Device Integration (DDI) Controller.\n\n\n\nThis vulnerability allows an authenticated device to escalate its permissions and bypass the strict boundaries of its assigned updates. Under normal operation, a device should be restricted strictly to the specific firmware artifacts explicitly assigned to it. However, this flaw enables any authenticated device to bypass this restriction and download any firmware artifact within the same tenant.\n\n\n\nThis is not an authentication bypass; the requesting device must possess valid credentials for its respective tenant. Instead, the issue stems from a flaw in object-level authorization validation.\n\n\n\nA related, lower-severity helper issue exists in the listing software modules artifacts metadata endpoint. This endpoint does not enforce assignment checks, enabling an authenticated device to list and enumerate available firmware artifacts, which can facilitate targeted exfiltration using the main download authorization bypass.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-16454 - Eclipse hawkBit DDI의 권한 상승으로 인해 테넌트 격리 펌웨어 유출이 허용됨",
+      "summary_ko": "CVE ID:CVE-2026-16454\n  \n게시일 : 2026년 7월 21일 오후 5시 17분 | 39분 전\n  \n설명:Eclipse hawkBit 버전 1.0.3 이하에서는 DDI(직접 장치 통합) 컨트롤러에서 권한 에스컬레이션 취약점(CWE-284/CWE-862)이 식별되었습니다.\n\n\n\n이 취약점을 통해 인증된 장치는 권한을 확대하고 할당된 업데이트의 엄격한 경계를 우회할 수 있습니다. 정상 작동 시 기기는 명시적으로 할당된 특정 펌웨어 아티팩트로 엄격하게 제한되어야 합니다. 그러나 이 결함으로 인해 인증된 모든 기기는 이 제한을 우회하고 동일한 테넌트 내에서 펌웨어 아티팩트를 다운로드할 수 있습니다.\n\n\n\n이는 인증 우회가 아닙니다. 요청 장치는 해당 테넌트에 대한 유효한 자격 증명을 가지고 있어야 합니다. 대신, 이 문제는 객체 수준 인증 검증의 결함으로 인해 발생합니다.\n\n\n\n소프트웨어 모듈 아티팩트 메타데이터 엔드포인트 목록에 심각도가 낮은 관련 도우미 문제가 존재합니다. 이 엔드포인트는 할당 확인을 시행하지 않으므로 인증된 장치가 사용 가능한 펌웨어 아티팩트를 나열하고 열거할 수 있으므로 기본 다운로드 인증 우회를 사용하여 표적 유출을 용이하게 할 수 있습니다.\n  \n심각도: 4.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-16454\n2. 26.07.22 오전2:17\n3. In Eclipse hawkBit versions 1.0.3 and prior, a pri",
+      "cve_id": "CVE-2026-16454",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-16454",
+      "source": "cvefeed",
+      "published": "2026-07-22T02:17:05+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-15829 - SQL Injection and Security Boundary Bypass in googleapis/mcp-toolbox",
+      "summary": "CVE ID :CVE-2026-15829\n  \nPublished : July 21, 2026, 5:17 p.m. | 39 minutes ago\n  \nDescription :A SQL injection (CWE-89) and security boundary bypass (CWE-863) vulnerability exists in the prebuilt BigQuery forecasting tool (bigquery-forecast) of googleapis/mcp-toolbox.\n\nThe tool accepts client-controlled parameters (data_col, timestamp_col, and id_cols) as plain strings and interpolates them unescaped via fmt.Sprintf directly into a generated AI.FORECAST table-valued SELECT statement. While MCP Toolbox utilizes an allowedDatasets mechanism to restrict queries, this defense only validates the history_data parameter; the final assembled query is executed without re-validation.\n\nAn attacker can break out of the string literal fields (such as timestamp_col) to inject a valid multi-statement or cross-dataset query block. This allows an unauthorized user to bypass the operator-configured allowedDatasets boundary and read arbitrary BigQuery tables.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-15829\n  \nPublished : July 21, 2026, 5:17 p.m. | 39 minutes ago\n  \nDescription :A SQL injection (CWE-89) and security boundary bypass (CWE-863) vulnerability exists in the prebuilt BigQuery forecasting tool (bigquery-forecast) of googleapis/mcp-toolbox.\n\nThe tool accepts client-controlled parameters (data_col, timestamp_col, and id_cols) as plain strings and interpolates them unescaped via fmt.Sprintf directly into a generated AI.FORECAST table-valued SELECT statement. While MCP Toolbox utilizes an allowedDatasets mechanism to restrict queries, this defense only validates the history_data parameter; the final assembled query is executed without re-validation.\n\nAn attacker can break out of the string literal fields (such as timestamp_col) to inject a valid multi-statement or cross-dataset query block. This allows an unauthorized user to bypass the operator-configured allowedDatasets boundary and read arbitrary BigQuery tables.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-15829 - googleapis/mcp-toolbox의 SQL 삽입 및 보안 경계 우회",
+      "summary_ko": "CVE ID:CVE-2026-15829\n  \n게시일 : 2026년 7월 21일 오후 5시 17분 | 39분 전\n  \n설명: googleapis/mcp-toolbox의 사전 빌드된 BigQuery 예측 도구(bigquery-forecast)에 SQL 삽입(CWE-89) 및 보안 경계 우회(CWE-863) 취약점이 존재합니다.\n\n이 도구는 클라이언트 제어 매개변수(data_col, timestamp_col 및 id_cols)를 일반 문자열로 허용하고 fmt.Sprintf를 통해 이스케이프되지 않은 매개변수를 생성된 AI.FORECAST 테이블 값 SELECT 문에 직접 보간합니다. MCP 도구 상자는 allowedDatasets 메커니즘을 활용하여 쿼리를 제한하지만 이 방어는 History_data 매개변수만 검증합니다. 최종적으로 조합된 쿼리는 재검증 없이 실행됩니다.\n\n공격자는 문자열 리터럴 필드(예: timestamp_col)를 중단하여 유효한 다중 문 또는 교차 데이터 세트 쿼리 블록을 삽입할 수 있습니다. 이를 통해 승인되지 않은 사용자가 운영자가 구성한 allowedDatasets 경계를 우회하고 임의의 BigQuery 테이블을 읽을 수 있습니다.\n  \n심각도: 8.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-15829\n2. 26.07.22 오전2:17\n3. A SQL injection (CWE-89) and security boundary byp",
+      "cve_id": "CVE-2026-15829",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15829",
+      "source": "cvefeed",
+      "published": "2026-07-22T02:17:05+09:00",
       "lang": "en"
     },
     {
