@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-21T08:32:28.192582+09:00",
+  "fetched_at": "2026-07-21T09:02:37.534681+09:00",
   "security_news": [
+    {
+      "title": "EU CRA 취약점 의무 보고 D-60…수출 기업을 위한 기술적 대응 아젠다 및...",
+      "summary": "오는 2026년 9월 중순 시행되는 EU CRA 제14조는 제조사가 제품 내 치명적인 보안 결함을 인지한 시점부터 24시간 이내에 유럽연합 사이버보안기구(ENISA)에 초동 보고할 것을 규정하고 있다. 이를 이행하지 못할 경우 CE 보안...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. EU CRA 취약점 의무 보고 D-60…수출 기업을 위한 기술적 대응 아젠다 및...\n2. 오는 2026년 9월 중순 시행되는 EU CRA 제14조는 제조사가 제품 내 치명적인 보안\n3. 이를 이행하지 못할 경우 CE 보안...",
+      "link": "https://www.epnc.co.kr/news/articleView.html?idxno=404488",
+      "source": "naver",
+      "published": "2026-07-21T09:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[속담으로 배우는 100가지 보안 습관 69] 아는 길도 물어가라(9)-이체 한도 줄여야 하는 이유",
+      "summary": "이체 한도는 필요한 만큼만 최소로 설정하세요보안 사고의 90%는 해킹이 아니라 ‘실수’에서 시작된다. 그래서 우리는 기술보다 습관을 배워야 한다. 속담으로 배우는 100가지 보안 습관에서는 △스마트폰 보안 △계정·비밀번호 △PC·인터넷 △생활 보안 △금융·개인정보 등 100가지 보안 습관을 속담과 연관시켜 소개한다. 보안은 어렵지 않다. 지키느냐, 안 지키",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [속담으로 배우는 100가지 보안 습관 69] 아는 길도 물어가라(9)-이체 한도 줄여야 \n2. 그래서 우리는 기술보다 습관을 배워야 한다.\n3. 속담으로 배우는 100가지 보안 습관에서는 △스마트폰 보안 △계정·비밀번호 △PC·인터넷 ",
+      "link": "http://www.boannews.com/media/view.asp?idx=144221&kind=&sub_kind=",
+      "source": "boannews",
+      "published": "2026-07-21T08:47:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[기자수첩] 개인정보 유출과 괘씸죄",
       "summary": "이런 상황에서 개인정보 유출 사고가 발생하자 단순한 보안 사고를 넘어 정치·정책 이슈로까지 번졌다. 정치권 입장에서도 ‘탈팡’이나 ‘외국계 플랫폼 규제’와 같은 메시지를 던지기 좋은 환경이었다. 반면 티빙이...",
@@ -1464,21 +1488,24 @@
       "source": "naver",
       "published": "2026-07-18T10:26:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "티빙 해킹, 네이버·카카오 등 제휴 가입자까지 털렸다 [국회 방청석]",
-      "summary": "이 과정에서 이용자의 이름, 이메일 주소, 휴대전화 번호 등 본인인증 정보가 티빙에 저장되는데, 이번 해킹으로 SNS 아이디와 함께 외부에 유출된 것으로 파악됐다. KT를 통해 티빙 이용권을 제공받은 고객들의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 티빙 해킹으로 네이버, 카카오 등 제휴 가입자 털림.\n2. 이름, 이메일, 전화번호 등 본인인증 정보 유출.\n3. KT 제휴 이용권 고객 정보도 유출된 것으로 파악.",
-      "link": "https://n.news.naver.com/mnews/article/024/0000106948?sid=102",
-      "source": "naver",
-      "published": "2026-07-18T09:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-44510 - Rsync: Receiver-side out-of-bounds read enables remote DoS from malicious server",
+      "summary": "CVE ID :CVE-2026-44510\n  \nPublished : July 20, 2026, 10:17 p.m. | 1 hour, 2 minutes ago\n  \nDescription :Rsync is a file-copying tool that uses a delta-transfer algorithm to synchronize remote and local files. In versions prior to 3.4.3, the receiver-side out-of-bounds array read in rsync's recv_files() lets a malicious rsync server (or any peer acting in the sender role) deterministically crash any rsync client that pulls from it. The trigger is fully wire-protocol-level, requires no special options on the victim, and works for both rsync:// URLs and remote-shell pulls; since inc_recurse is the protocol-30+ default, any client doing a normal recursive pull against an attacker-controlled URL is exposed. A malicious server sets CF_INC_RECURSE, sends a flist whose first sorted entry is not the leading \".\" directory (causing parent_ndx to be set to -1), then sends a transfer record with ndx = 0 and an iflag omitting ITEM_TRANSFER, causing the receiver to read 8 bytes before the allocated pointer array and dereference the result in f_name(). The impact is crash-only: the out-of-bounds read lands in glibc mmap chunk metadata and dereferences to an unmapped low address, producing a SEGV that cannot be leveraged into an exploit (confirmed on glibc x86-64 Linux; non-glibc allocators not audited). This issue is fixed in version 3.4.3.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-44510\n  \nPublished : July 20, 2026, 10:17 p.m. | 1 hour, 2 minutes ago\n  \nDescription :Rsync is a file-copying tool that uses a delta-transfer algorithm to synchronize remote and local files. In versions prior to 3.4.3, the receiver-side out-of-bounds array read in rsync's recv_files() lets a malicious rsync server (or any peer acting in the sender role) deterministically crash any rsync client that pulls from it. The trigger is fully wire-protocol-level, requires no special options on the victim, and works for both rsync:// URLs and remote-shell pulls; since inc_recurse is the protocol-30+ default, any client doing a normal recursive pull against an attacker-controlled URL is exposed. A malicious server sets CF_INC_RECURSE, sends a flist whose first sorted entry is not the leading \".\" directory (causing parent_ndx to be set to -1), then sends a transfer record with ndx = 0 and an iflag omitting ITEM_TRANSFER, causing the receiver to read 8 bytes before the allocated pointer array and dereference the result in f_name(). The impact is crash-only: the out-of-bounds read lands in glibc mmap chunk metadata and dereferences to an unmapped low address, producing a SEGV that cannot be leveraged into an exploit (confirmed on glibc x86-64 Linux; non-glibc allocators not audited). This issue is fixed in version 3.4.3.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-44510 - Rsync: 수신측 범위를 벗어난 읽기로 인해 악성 서버로부터 원격 DoS가 가능해짐",
+      "summary_ko": "CVE ID:CVE-2026-44510\n  \n게시일 : 2026년 7월 20일 오후 10시 17분 | 1시간, 2분 전\n  \n설명 :Rsync는 델타 전송 알고리즘을 사용하여 원격 및 로컬 파일을 동기화하는 파일 복사 도구입니다. 3.4.3 이전 버전에서는 rsync의 recv_files()에서 읽은 수신측 범위를 벗어난 배열을 통해 악의적인 rsync 서버(또는 발신자 역할을 수행하는 모든 피어)가 해당 서버에서 가져오는 모든 rsync 클라이언트를 결정적으로 충돌시킬 수 있습니다. 트리거는 완전한 유선 프로토콜 수준이며 피해자에 대한 특별한 옵션이 필요하지 않으며 rsync:// URL과 원격 셸 풀 모두에 대해 작동합니다. inc_recurse는 프로토콜 30+ 기본값이므로 공격자가 제어하는 ​​URL에 대해 일반적인 재귀 풀을 수행하는 모든 클라이언트가 노출됩니다. 악의적인 서버는 CF_INC_RECURSE를 설정하고 첫 번째 정렬 항목이 선행 \".\"이 아닌 Flist를 보냅니다. 그런 다음(parent_ndx가 -1로 설정됨) ndx = 0과 iflag로 ITEM_TRANSFER를 생략한 전송 레코드를 전송하여 수신자가 할당된 포인터 배열 앞의 8바이트를 읽고 f_name()에서 결과를 역참조하게 합니다. 영향은 충돌에만 해당됩니다. 범위를 벗어난 읽기는 glibc mmap 청크 메타데이터에 도달하고 매핑되지 않은 낮은 주소를 역참조하여 악용에 활용할 수 없는 SEGV를 생성합니다(glibc x86-64 Linux에서 확인됨, glibc가 아닌 할당자는 감사되지 않음). 이 문제는 버전 3.4.3에서 해결되었습니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-44510\n2. 26.07.21 오전7:17\n3. Rsync is a file-copying tool that uses a delta-tra",
+      "cve_id": "CVE-2026-44510",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-44510",
+      "source": "cvefeed",
+      "published": "2026-07-21T07:17:13+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-57495 - AgenticMail: Unauthenticated inbound mail triggers bypassPermissions resume of the operator's Claude Code session (bridge-wake)",
       "summary": "CVE ID :CVE-2026-57495\n  \nPublished : July 20, 2026, 10:09 p.m. | 12 minutes ago\n  \nDescription :AgenticMail gives AI agents real email addresses and phone numbers. In @agenticmail/claudecode prior to version 0.2.39, @agenticmail/codex prior to version 0.1.33, @agenticmail/core prior to version 0.9.43, and @agenticmail/openclaw prior to version 0.5.71, two inbound-mail handlers act on a privileged effect without verifying that the sender is the operator, while a sibling handler in the same repo does. The higher-impact one: any external email routed to the bridge inbox causes the dispatcher to resume the operator's Claude Code session with `permissionMode: 'bypassPermissions'`, embedding the attacker-controlled `from`/`subject`/`preview` verbatim into the prompt the resumed agent reads — an indirect prompt injection into a fully-privileged agent (Bash/Write/Edit/WebFetch + the agenticmail MCP toolbelt) running as the operator's OAuth identity. The sibling operator-query email-reply hook gates the same untrusted-From provenance with `isOperatorReplySender(replyFrom, config.operatorEmail)` (fail-closed); the bridge-wake path — a strictly higher-privilege effect — has no equivalent. @agenticmail/claudecode 0.2.39, @agenticmail/codex 0.1.33, @agenticmail/core 0.9.43, and @agenticmail/openclaw 0.5.71 contain a fix.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
