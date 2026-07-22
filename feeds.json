@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-22T11:34:35.573934+09:00",
+  "fetched_at": "2026-07-22T12:02:31.991578+09:00",
   "security_news": [
+    {
+      "title": "오픈AI 에이전트, 인간 통제 벗어나 자율 해킹…\"전례 없는 사고\"",
+      "summary": "오픈AI의 AI 에이전트가 테스트 환경을 벗어나 스스로 새로운 보안 취약점을 발견한 뒤 AI 스타트업 허깅페이스를 해킹하는 사건이 발생했다. 인간의 통제를 벗어난 AI 시스템이 자율적으로 수행한 사이버 공격이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI 에이전트, 인간 통제 벗어나 자율 해킹…\"전례 없는 사고\" 오픈AI의 AI 에이전\n2. 인간의 통제를 벗어난 AI 시스템이 자율적으로 수행한 사이버 공격이...",
+      "link": "https://n.news.naver.com/mnews/article/003/0014080839?sid=104",
+      "source": "naver",
+      "published": "2026-07-22T11:53:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"해킹 공격자들은 늘 같은 곳을 노린다\"...기업이 꼭 지켜야 할 보안 수...",
+      "summary": "/ 사진=조성준 기자 \"해킹 공격자들은 관리가 부족한 곳을 먼저 노립니다. 오래전부터 알려져 있던 취약점이... 그는 AI를 활용한 해킹이 고도화되고 있지만, 그보다 더 문제점은 기본 관리 체계에 대한 부실을 꼽았다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. \"해킹 공격자들은 늘 같은 곳을 노린다\"...기업이 꼭 지켜야 할 보안 수...\n2. / 사진=조성준 기자 \"해킹 공격자들은 관리가 부족한 곳을 먼저 노립니다.\n3. 오래전부터 알려져 있던 취약점이...",
+      "link": "https://www.techm.kr/news/articleView.html?idxno=153568",
+      "source": "naver",
+      "published": "2026-07-22T11:42:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "AI가 AI 플랫폼 해킹?…오픈AI 최신 모델 이례적 사고",
       "summary": "통제된 시험 환경에서도 AI가 취약점을 이용해 인터넷에 접속한 사실이 확인되면서 사이버 안전장치의 실효성을 둘러싼 논란이 커지고 있다. 21일(현지시간) 오픈AI에 따르면, GPT-5.6 솔과 일부 미공개 AI 모델은 사이버...",
@@ -2607,6 +2631,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-63263 - Uncontrolled Resource Consumption in Elasticsearch Leading to Denial of Service",
+      "summary": "CVE ID :CVE-2026-63263\n  \nPublished : July 22, 2026, 12:17 a.m. | 2 hours, 5 minutes ago\n  \nDescription :Uncontrolled Resource Consumption (CWE-400) in Elasticsearch can lead to denial of service via Exponential Data Expansion (CAPEC-197). An authenticated user may submit a specially crafted query to the ES|QL engine that causes exponential CPU consumption during query evaluation. Because the resource exhaustion persists beyond query completion, repeated requests can fully exhaust the available query worker resources, rendering ES|QL queries unavailable until the node is restarted.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63263\n  \nPublished : July 22, 2026, 12:17 a.m. | 2 hours, 5 minutes ago\n  \nDescription :Uncontrolled Resource Consumption (CWE-400) in Elasticsearch can lead to denial of service via Exponential Data Expansion (CAPEC-197). An authenticated user may submit a specially crafted query to the ES|QL engine that causes exponential CPU consumption during query evaluation. Because the resource exhaustion persists beyond query completion, repeated requests can fully exhaust the available query worker resources, rendering ES|QL queries unavailable until the node is restarted.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-63263 - 서비스 거부로 이어지는 Elasticsearch의 통제되지 않은 리소스 소비",
+      "summary_ko": "CVE ID:CVE-2026-63263\n  \n게시일 : 2026년 7월 22일 오전 12시 17분 | 2시간, 5분 전\n  \n설명: Elasticsearch의 통제되지 않은 리소스 소비(CWE-400)는 지수 데이터 확장(CAPEC-197)을 통해 서비스 거부로 이어질 수 있습니다. 인증된 사용자는 쿼리 평가 중에 CPU 소비를 기하급수적으로 유발하는 특별히 제작된 쿼리를 ES|QL 엔진에 제출할 수 있습니다. 쿼리가 완료된 이후에도 리소스 소진이 지속되기 때문에 요청이 반복되면 사용 가능한 쿼리 작업자 리소스가 완전히 소진되어 노드가 다시 시작될 때까지 ES|QL 쿼리를 사용할 수 없게 됩니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-63263\n2. 26.07.22 오전9:17\n3. Uncontrolled Resource Consumption (CWE-400) in Ela",
+      "cve_id": "CVE-2026-63263",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63263",
+      "source": "cvefeed",
+      "published": "2026-07-22T09:17:31+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-62574 - Vulnerability in the Oracle Java SE, Oracle GraalV",
       "summary": "CVE ID :CVE-2026-62574\n  \nPublished : July 21, 2026, 10:19 p.m. | 1 hour, 1 minute ago\n  \nDescription :Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component: Install).  Supported versions that are affected are Oracle Java SE: 8u491, 11.0.31, 17.0.19, 21.0.11, 25.0.3, 26.0.1; Oracle GraalVM for JDK: 17.0.19 and  21.0.11; Oracle GraalVM Enterprise Edition: 21.3.18. Easily exploitable vulnerability allows low privileged attacker with logon to the infrastructure where Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition executes to compromise Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition.  Successful attacks of this vulnerability can result in takeover of Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition. CVSS 3.1 Base Score 7.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H).\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
