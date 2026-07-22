@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-22T23:02:39.819381+09:00",
+  "fetched_at": "2026-07-22T23:31:27.259311+09:00",
   "security_news": [
     {
       "title": "“AI가 해킹했다? 본질은 통제 실패”…티오리 박세준 대표가 본 ‘AI 에...",
@@ -3180,21 +3180,24 @@
       "source": "naver",
       "published": "2026-07-20T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "의료기관 노린 랜섬웨어 급증…공급망·의료 IT 기업이 새로운 표적",
-      "summary": "미국 국가안보국(NSA)을 비롯해 여러 국가의 사이버보안 기관은 7월 13일 공동 권고문을 통해 러시아 연계 해킹 조직이 보안 설정이 미흡한 라우터와 네트워크 장비를 악용해 주요 기반시설을 공격하고 있다고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 의료기관 노린 랜섬웨어 급증…공급망·의료 IT 기업이 새로운 표적 미국 국가안보국(NSA)",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207676",
-      "source": "naver",
-      "published": "2026-07-19T23:26:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-56444 - Degradation of resolution service when 'discard-timeout' and 'serve-expired-client-timeout' are combined in unusual configuration",
+      "summary": "CVE ID :CVE-2026-56444\n  \nPublished : July 22, 2026, 1:10 p.m. | 19 minutes ago\n  \nDescription :In NLnet Labs Unbound 1.20.0 up to and including 1.25.1, when Unbound is configured with 'serve-expired: yes' and 'serve-expired-client-timeout > discard-timeout > 0' (contrary to the suggested values), the discard-timeout branch during the serve expired logic drops an aged client reply without performing the correct accounting for the number of reply addresses for the query. Other identical branches outside of serve expired perform the correct decrement. Since the counter is never decremented in such scenario, it can reach the maximum limit and new clients for duplicate in-flight queries are silently dropped resulting in degradation of resolution service. A malicious actor can exploit the vulnerability by querying the resolver for a client-controlled slow-on-demand authoritative zone that can drive the counter past the threshold. Shipped defaults for 'serve-expired-client-timeout: 1800' and 'discard-timeout: 1900' make the branch unreachable.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56444\n  \nPublished : July 22, 2026, 1:10 p.m. | 19 minutes ago\n  \nDescription :In NLnet Labs Unbound 1.20.0 up to and including 1.25.1, when Unbound is configured with 'serve-expired: yes' and 'serve-expired-client-timeout > discard-timeout > 0' (contrary to the suggested values), the discard-timeout branch during the serve expired logic drops an aged client reply without performing the correct accounting for the number of reply addresses for the query. Other identical branches outside of serve expired perform the correct decrement. Since the counter is never decremented in such scenario, it can reach the maximum limit and new clients for duplicate in-flight queries are silently dropped resulting in degradation of resolution service. A malicious actor can exploit the vulnerability by querying the resolver for a client-controlled slow-on-demand authoritative zone that can drive the counter past the threshold. Shipped defaults for 'serve-expired-client-timeout: 1800' and 'discard-timeout: 1900' make the branch unreachable.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56444 - 'discard-timeout'과 'serve-expired-client-timeout'이 비정상적인 구성으로 결합된 경우 확인 서비스 성능 저하",
+      "summary_ko": "CVE ID:CVE-2026-56444\n  \n게시일 : 2026년 7월 22일 오후 1시 10분 | 19분 전\n  \n설명:NLnet Labs Unbound 1.20.0(1.25.1 포함)에서 Unbound가 'serve-expired: yes' 및 'serve-expired-client-timeout > Discard-timeout > 0'(제안된 값과 반대)으로 구성되면 서비스 만료 로직 중 폐기 시간 초과 분기가 쿼리에 대한 응답 주소 수에 대한 올바른 계산을 수행하지 않고 오래된 클라이언트 응답을 삭제합니다. 만료된 서비스 외부의 다른 동일한 분기가 올바른 감소를 수행합니다. 이러한 시나리오에서는 카운터가 감소하지 않으므로 최대 한도에 도달할 수 있으며 중복된 진행 중인 쿼리에 대한 새 클라이언트가 자동으로 삭제되어 확인 서비스가 저하됩니다. 악의적인 행위자는 카운터가 임계값을 초과하도록 할 수 있는 클라이언트 제어 요청 시 느린 권한 영역에 대해 확인자에게 쿼리하여 취약점을 악용할 수 있습니다. 'serve-expired-client-timeout: 1800' 및 'discard-timeout: 1900'에 대한 기본 제공으로 인해 분기에 연결할 수 없습니다.\n  \n심각도: 5.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56444\n2. 26.07.22 오후10:10\n3. In NLnet Labs Unbound 1.20.0 up to and including 1",
+      "cve_id": "CVE-2026-56444",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56444",
+      "source": "cvefeed",
+      "published": "2026-07-22T22:10:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-42533 NGINX Map directive and Regex matching vulnerability",
       "summary": "Information published.",
