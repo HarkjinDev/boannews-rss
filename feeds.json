@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-22T18:03:15.316414+09:00",
+  "fetched_at": "2026-07-22T18:32:20.674746+09:00",
   "security_news": [
+    {
+      "title": "[현장] AI가 해킹 고도화해도…\"침해사고 예방은 기본부터\"",
+      "summary": "(사진: 김호준 기자)  \"인공지능(AI) 기술이 공격에 악용되면서 해킹의 진입 장벽이 낮아졌다. 늘어난... 서버 해킹(97건), 랜섬웨어(53건), 악성 메일(29건)이 뒤를 이었다. 올 상반기 사례에서는 그간 공격 기법을 변형한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [현장] AI가 해킹 고도화해도…\"침해사고 예방은 기본부터\" (사진: 김호준 기자) \"인공\n2. 서버 해킹(97건), 랜섬웨어(53건), 악성 메일(29건)이 뒤를 이었다.\n3. 올 상반기 사례에서는 그간 공격 기법을 변형한...",
+      "link": "https://www.itdaily.kr/news/articleView.html?idxno=240537",
+      "source": "naver",
+      "published": "2026-07-22T18:26:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "해킹 테스트 통과하려 ‘탈옥’ 후 외부사이트 해킹한 오픈AI 새 모델 [...",
       "summary": "보안업계에선 고도화되는 AI모델에 대한 통제 강화가 필요하다는 지적이 나온다. 21일(현지시간) 오픈AI는... 위해 보안 안전장치를 일부 해제했다. 이후 AI모델에 실제 소프트웨어의 취약점을 활용해 공격 코드를...",
@@ -4831,36 +4843,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-63813",
       "source": "cvefeed",
       "published": "2026-07-19T21:02:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53370 - perf/x86/intel: Improve validation and configuration of ACR masks",
-      "summary": "CVE ID :CVE-2026-53370\n  \nPublished : July 19, 2026, 9:17 a.m. | 2 hours, 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nperf/x86/intel: Improve validation and configuration of ACR masks\n\nCurrently there are several issues on the user space ACR mask validation\nand configuration.\n- The validation for user space ACR mask (attr.config2) is incomplete,\n  e.g., the ACR mask could include the index which belongs to another\n  ACR events group, but it's not validated.\n- An early return on an invalid ACR mask caused all subsequent ACR groups\n  to be skipped.\n- The stale hardware ACR mask (hw.config1) is not cleared before setting\n  new hardware ACR mask.\n\nThe following changes address all of the above issues.\n- Figure out the event index group of an ACR group. Any bits in the\n  user-space mask not present in the index group are now dropped.\n- Instead of an early return on invalid bits, drop only the invalid\n  portions and continue iterating through all ACR events to ensure full\n  configuration.\n- Explicitly clear the stale hardware ACR mask for each event prior to\n  writing the new configuration.\n\nBesides, a non-leader event member of ACR group could be disabled in\ntheory. This could cause bit-shifting errors in the acr_mask of remaining\ngroup members. But since ACR sampling requires all events to be active,\nthis should not be a big concern in real use case. Add a \"FIXME\" comment\nto notice this risk.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53370\n  \nPublished : July 19, 2026, 9:17 a.m. | 2 hours, 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nperf/x86/intel: Improve validation and configuration of ACR masks\n\nCurrently there are several issues on the user space ACR mask validation\nand configuration.\n- The validation for user space ACR mask (attr.config2) is incomplete,\n  e.g., the ACR mask could include the index which belongs to another\n  ACR events group, but it's not validated.\n- An early return on an invalid ACR mask caused all subsequent ACR groups\n  to be skipped.\n- The stale hardware ACR mask (hw.config1) is not cleared before setting\n  new hardware ACR mask.\n\nThe following changes address all of the above issues.\n- Figure out the event index group of an ACR group. Any bits in the\n  user-space mask not present in the index group are now dropped.\n- Instead of an early return on invalid bits, drop only the invalid\n  portions and continue iterating through all ACR events to ensure full\n  configuration.\n- Explicitly clear the stale hardware ACR mask for each event prior to\n  writing the new configuration.\n\nBesides, a non-leader event member of ACR group could be disabled in\ntheory. This could cause bit-shifting errors in the acr_mask of remaining\ngroup members. But since ACR sampling requires all events to be active,\nthis should not be a big concern in real use case. Add a \"FIXME\" comment\nto notice this risk.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53370 - perf/x86/intel: ACR 마스크의 검증 및 구성 개선",
-      "summary_ko": "CVE ID:CVE-2026-53370\n  \n게시일 : 2026년 7월 19일 오전 9시 17분 | 2시간, 24분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nperf/x86/intel: ACR 마스크의 검증 및 구성 개선\n\n현재 사용자 공간 ACR 마스크 유효성 검사에 몇 가지 문제가 있습니다.\n그리고 구성.\n- 사용자 공간 ACR 마스크(attr.config2)에 대한 유효성 검사가 불완전합니다.\n  예를 들어 ACR 마스크에는 다른 마스크에 속한 인덱스가 포함될 수 있습니다.\n  ACR 이벤트 그룹이지만 검증되지 않았습니다.\n- 유효하지 않은 ACR 마스크의 조기 반환으로 인해 모든 후속 ACR 그룹이 발생했습니다.\n  건너뜁니다.\n- 오래된 하드웨어 ACR 마스크(hw.config1)는 설정 전에 지워지지 않습니다.\n  새로운 하드웨어 ACR 마스크.\n\n다음 변경 사항은 위의 모든 문제를 해결합니다.\n- ACR 그룹의 이벤트 인덱스 그룹을 파악한다. 다음의 모든 비트\n  인덱스 그룹에 없는 사용자 공간 마스크는 이제 삭제됩니다.\n- 유효하지 않은 비트를 조기에 반환하는 대신 유효하지 않은 비트만 삭제합니다.\n  모든 ACR 이벤트를 계속 반복하여 전체를 보장합니다.\n  구성.\n- 이전에 각 이벤트에 대해 오래된 하드웨어 ACR 마스크를 명시적으로 지웁니다.\n  새로운 구성을 작성 중입니다.\n\n게다가 ACR 그룹의 리더가 아닌 이벤트 구성원은 다음에서 비활성화될 수 있습니다.\n이론. 이로 인해 남은 acr_mask에서 비트 이동 오류가 발생할 수 있습니다.\n그룹 구성원. 하지만 ACR 샘플링을 위해서는 모든 이벤트가 활성화되어야 하므로,\n이는 실제 사용 사례에서는 큰 문제가 되지 않습니다. \"FIXME\" 코멘트 추가\n이 위험을 알아차리기 위해서입니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53370\n2. 26.07.19 오후6:17\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-53370",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53370",
-      "source": "cvefeed",
-      "published": "2026-07-19T18:17:02+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53371 - RDMA/ionic: bound node_desc sysfs read with %.64s",
-      "summary": "CVE ID :CVE-2026-53371\n  \nPublished : July 19, 2026, 9:17 a.m. | 1 hour, 4 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/ionic: bound node_desc sysfs read with %.64s\n\nnode_desc[64] in struct ib_device is not guaranteed to be NUL-\nterminated. The core IB sysfs handler uses \"%.64s\" for exactly this\nreason (drivers/infiniband/core/sysfs.c:1307), since node_desc_store()\nperforms a raw memcpy of up to IB_DEVICE_NODE_DESC_MAX bytes with no NUL\ntermination:\n\n  memcpy(desc.node_desc, buf, min_t(int, count, IB_DEVICE_NODE_DESC_MAX));\n\nIf exactly 64 bytes are written via the node_desc sysfs file, the array\ncontains no NUL byte. The ionic hca_type_show() handler uses unbounded\n\"%s\" and will read past the end of node_desc into adjacent fields of\nstruct ib_device until it encounters a NUL.\n\nionic supports IB_DEVICE_MODIFY_NODE_DESC, so this is triggerable by\nuserspace.\n\nMatch the core handler and bound the format specifier.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53371\n  \nPublished : July 19, 2026, 9:17 a.m. | 1 hour, 4 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/ionic: bound node_desc sysfs read with %.64s\n\nnode_desc[64] in struct ib_device is not guaranteed to be NUL-\nterminated. The core IB sysfs handler uses \"%.64s\" for exactly this\nreason (drivers/infiniband/core/sysfs.c:1307), since node_desc_store()\nperforms a raw memcpy of up to IB_DEVICE_NODE_DESC_MAX bytes with no NUL\ntermination:\n\n  memcpy(desc.node_desc, buf, min_t(int, count, IB_DEVICE_NODE_DESC_MAX));\n\nIf exactly 64 bytes are written via the node_desc sysfs file, the array\ncontains no NUL byte. The ionic hca_type_show() handler uses unbounded\n\"%s\" and will read past the end of node_desc into adjacent fields of\nstruct ib_device until it encounters a NUL.\n\nionic supports IB_DEVICE_MODIFY_NODE_DESC, so this is triggerable by\nuserspace.\n\nMatch the core handler and bound the format specifier.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53371 - RDMA/ionic: %.64s로 읽은 바인딩된 node_desc sysfs",
-      "summary_ko": "CVE ID:CVE-2026-53371\n  \n게시일 : 2026년 7월 19일 오전 9시 17분 | 1시간, 4분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nRDMA/ionic: %.64s로 읽은 바인딩된 node_desc sysfs\n\nstruct ib_device의 node_desc[64]는 NUL-이 보장되지 않습니다.\n종료되었습니다. 핵심 IB sysfs 핸들러는 정확히 이를 위해 \"%.64s\"를 사용합니다.\n이유(drivers/infiniband/core/sysfs.c:1307), node_desc_store() 이후\nNUL 없이 최대 IB_DEVICE_NODE_DESC_MAX 바이트의 원시 memcpy를 수행합니다.\n종료:\n\n  memcpy(desc.node_desc, buf, min_t(int, count, IB_DEVICE_NODE_DESC_MAX));\n\nnode_desc sysfs 파일을 통해 정확히 64바이트가 기록되면 배열은\nNUL 바이트가 없습니다. ionic hca_type_show() 핸들러는 무제한을 사용합니다.\n\"%s\"이며 node_desc의 끝을 지나 인접한 필드로 읽습니다.\nNUL을 만날 때까지 ib_device를 구조화합니다.\n\nionic은 IB_DEVICE_MODIFY_NODE_DESC를 지원하므로 이는 다음을 통해 트리거될 수 있습니다.\n사용자 공간.\n\n코어 핸들러를 일치시키고 형식 지정자를 바인딩합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53371\n2. 26.07.19 오후6:17\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-53371",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53371",
-      "source": "cvefeed",
-      "published": "2026-07-19T18:17:02+09:00",
       "lang": "en"
     }
   ],
