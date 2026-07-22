@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-23T02:31:20.004781+09:00",
+  "fetched_at": "2026-07-23T03:01:27.688347+09:00",
   "security_news": [
     {
       "title": "Swiss rail giant Stadler rejects $12.3M ransom demand after cyberattack",
@@ -3219,6 +3219,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "Rondo Meets Geoserver, (Wed, Jul 22nd)",
+      "summary": "This isn&#;x26;#;39;t a new attack, but something I saw \"pop-up\" in our logs this week:\r",
+      "description": "This isn&#;x26;#;39;t a new attack, but something I saw \"pop-up\" in our logs this week:\r",
+      "title_ko": "Rondo, Geoserver를 만나다, (7월 22일 수요일)",
+      "summary_ko": "이것은 새로운 공격은 아니지만 이번 주에 로그에서 \"팝업\"으로 본 것입니다.",
+      "summary_3lines": "1. Rondo Meets Geoserver, (Wed, Jul 22nd)\n2. SANS_ISC\n3. This isn&#;x26;#;39;t a new attack, but something ",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33176",
+      "source": "sans_isc",
+      "published": "2026-07-23T02:35:33+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-10822 - Key Record using PRIVATEDNS algorithm may lead to unexpected exit",
       "summary": "CVE ID :CVE-2026-10822\n  \nPublished : July 22, 2026, 3:16 p.m. | 43 minutes ago\n  \nDescription :If BIND encounters a particular invalid data structure in a DNS record, it will accept the invalid data, and may subsequently abort and exit.\n\nBIND will first need to store a DNS record for a key (KEY, DNSKEY, etc.). That key must specify a PRIVATEDNS algorithm (253), and in the algorithm identifier, improperly give a length longer than the actual identifier data. The invalid identifier will be stored. If BIND later needs to render that record to text, it will use the invalid length during processing, leading to a consistency check failing.\nThis issue affects BIND 9 versions 9.18.0 through 9.18.50, 9.20.0 through 9.20.24, 9.21.0 through 9.21.23, 9.18.11-S1 through 9.18.50-S1, and 9.20.9-S1 through 9.20.24-S1.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
