@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-24T03:01:15.887162+09:00",
+  "fetched_at": "2026-07-24T03:31:31.311086+09:00",
   "security_news": [
+    {
+      "title": "거래소 떠나는 이용자들…셀프 커스터디·직접 스왑 확산",
+      "summary": "데이터를 보관하지 않는 구조 덕분에 해킹이나 규제 이슈로 인한 정보 유출 가능성 자체가 낮다는 점이... 최근 중앙화 거래소 파산, 출금 제한, 해킹 등 리스크가 반복되면서 사용자들이 자산을 직접 관리하려는 경향이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 중앙화 거래소 파산/출금 제한 반복\n2. 이용자, 자산 직접 관리(셀프 커스터디) 확산\n3. 해킹/규제 리스크 대비 목적",
+      "link": "https://www.tokenpost.kr/news/cryptocurrency/380670",
+      "source": "naver",
+      "published": "2026-07-24T03:06:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Russian hackers exploit Zimbra zero-click flaw for email theft",
       "summary": "CISA is warning that the Russian state-sponsored hacking group Laundry Bear, also known as Void Blizzard, is targeting organizations using Zimbra Collaboration email servers by combining phishing attacks with the exploitation of a now-patched Zimbra vulnerability. [...]",
@@ -3303,6 +3315,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-44210 - Kata Containers have VM Escape via virtiofsd Argument Injection through Default-Enabled Pod Annotations",
+      "summary": "CVE ID :CVE-2026-44210\n  \nPublished : July 23, 2026, 5:32 p.m. | 34 minutes ago\n  \nDescription :Kata Containers is an open source project focusing on a standard implementation of lightweight Virtual Machines (VMs) that perform like containers. Versions prior to 3.31.0 ship with a default configuration that allows pod creators to inject arbitrary command-line arguments into the virtiofsd process through the `io.katacontainers.config.hypervisor.virtio_fs_extra_args` pod annotation. By injecting `-o source=/` along with `--no-announce-submounts` and `--sandbox=none`, an attacker can override the virtiofsd shared directory to serve the entire host root filesystem into the guest VM. Combined with the `kernel_params` annotation (also enabled by default) to activate the agent debug console, the attacker can mount the host filesystem from inside the VM and read or write any file on the host, including /etc/shadow. Version 3.31.0 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-44210\n  \nPublished : July 23, 2026, 5:32 p.m. | 34 minutes ago\n  \nDescription :Kata Containers is an open source project focusing on a standard implementation of lightweight Virtual Machines (VMs) that perform like containers. Versions prior to 3.31.0 ship with a default configuration that allows pod creators to inject arbitrary command-line arguments into the virtiofsd process through the `io.katacontainers.config.hypervisor.virtio_fs_extra_args` pod annotation. By injecting `-o source=/` along with `--no-announce-submounts` and `--sandbox=none`, an attacker can override the virtiofsd shared directory to serve the entire host root filesystem into the guest VM. Combined with the `kernel_params` annotation (also enabled by default) to activate the agent debug console, the attacker can mount the host filesystem from inside the VM and read or write any file on the host, including /etc/shadow. Version 3.31.0 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-44210 - Kata 컨테이너에는 기본 활성화된 포드 주석을 통한 virtiofsd 인수 주입을 통한 VM 이스케이프 기능이 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-44210\n  \n게시일 : 2026년 7월 23일 오후 5시 32분 | 34분 전\n  \n설명 :Kata Containers는 컨테이너처럼 작동하는 경량 가상 머신(VM)의 표준 구현에 초점을 맞춘 오픈 소스 프로젝트입니다. 3.31.0 이전 버전에는 포드 생성자가 'io.katacontainers.config.hypervisor.virtio_fs_extra_args' 포드 주석을 통해 virtiofsd 프로세스에 임의의 명령줄 인수를 삽입할 수 있는 기본 구성이 함께 제공됩니다. `--no-announce-submounts` 및 `--sandbox=none`과 함께 `-o source=/`를 주입함으로써 공격자는 virtiofsd 공유 디렉터리를 재정의하여 전체 호스트 루트 파일 시스템을 게스트 VM에 제공할 수 있습니다. 에이전트 디버그 콘솔을 활성화하기 위해 'kernel_params' 주석(기본적으로 활성화됨)과 결합하면 공격자는 VM 내부에서 호스트 파일 시스템을 마운트하고 /etc/shadow를 포함하여 호스트의 모든 파일을 읽거나 쓸 수 있습니다. 버전 3.31.0에서는 문제가 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-44210\n2. 26.07.24 오전2:32\n3. Kata Containers is an open source project focusing",
+      "cve_id": "CVE-2026-44210",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-44210",
+      "source": "cvefeed",
+      "published": "2026-07-24T02:32:23+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-47769 - APIFold Vulnerable to Unauthenticated Webhook Event Injection",
+      "summary": "CVE ID :CVE-2026-47769\n  \nPublished : July 23, 2026, 5:23 p.m. | 43 minutes ago\n  \nDescription :APIFold reads an OpenAPI 3.x or Swagger 2.x specification and generates a live, production-ready MCP server endpoint. Prior to commit 7f19b52280f414f57af2b79a95333d1c8fbeece5, the `/webhooks/:serverSlug/:eventName` endpoint accepts arbitrary unauthenticated JSON and stores it in Redis and the `webhook_events` PostgreSQL table without any signature check or authentication requirement. The root cause is that `createWebhookRouter` is called at `server.ts:188` without a `validators` map, so `receivers.ts:80`'s optional-chaining guard evaluates to `undefined` and the signature-validation block (`receiver.ts:81–95`) is unconditionally skipped. Any unauthenticated network client that knows a valid server slug can inject arbitrary payloads, which are subsequently served as trusted resource state to legitimate MCP clients. Commit 7f19b52280f414f57af2b79a95333d1c8fbeece5 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-47769\n  \nPublished : July 23, 2026, 5:23 p.m. | 43 minutes ago\n  \nDescription :APIFold reads an OpenAPI 3.x or Swagger 2.x specification and generates a live, production-ready MCP server endpoint. Prior to commit 7f19b52280f414f57af2b79a95333d1c8fbeece5, the `/webhooks/:serverSlug/:eventName` endpoint accepts arbitrary unauthenticated JSON and stores it in Redis and the `webhook_events` PostgreSQL table without any signature check or authentication requirement. The root cause is that `createWebhookRouter` is called at `server.ts:188` without a `validators` map, so `receivers.ts:80`'s optional-chaining guard evaluates to `undefined` and the signature-validation block (`receiver.ts:81–95`) is unconditionally skipped. Any unauthenticated network client that knows a valid server slug can inject arbitrary payloads, which are subsequently served as trusted resource state to legitimate MCP clients. Commit 7f19b52280f414f57af2b79a95333d1c8fbeece5 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-47769 - 인증되지 않은 웹훅 이벤트 삽입에 취약한 APIFold",
+      "summary_ko": "CVE ID:CVE-2026-47769\n  \n게시일 : 2026년 7월 23일 오후 5시 23분 | 43분 전\n  \n설명 :APIFold는 OpenAPI 3.x 또는 Swagger 2.x 사양을 읽고 프로덕션에 즉시 사용 가능한 MCP 서버 엔드포인트를 생성합니다. 7f19b52280f414f57af2b79a95333d1c8fbeece5를 커밋하기 전에 `/webhooks/:serverSlug/:eventName` 엔드포인트는 인증되지 않은 임의의 JSON을 수락하고 이를 서명 확인이나 인증 요구 사항 없이 Redis 및 `webhook_events` PostgreSQL 테이블에 저장합니다. 근본 원인은 `createWebhookRouter`가 `validators` 맵 없이 `server.ts:188`에서 호출되므로 `receivers.ts:80`의 선택적 연결 가드가 `정의되지 않음`으로 평가되고 서명 유효성 검사 블록(`receiver.ts:81–95`)이 무조건 건너뛰기 때문입니다. 유효한 서버 슬러그를 알고 있는 인증되지 않은 네트워크 클라이언트는 임의의 페이로드를 주입할 수 있으며, 이는 이후 합법적인 MCP 클라이언트에 신뢰할 수 있는 리소스 상태로 제공됩니다. 7f19b52280f414f57af2b79a95333d1c8fbeece5를 커밋하여 문제를 패치합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-47769\n2. 26.07.24 오전2:23\n3. APIFold reads an OpenAPI 3.x or Swagger 2.x specif",
+      "cve_id": "CVE-2026-47769",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47769",
+      "source": "cvefeed",
+      "published": "2026-07-24T02:23:27+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-47743 - Shopper: Multiple data integrity and disclosure issues in admin Livewire components",
+      "summary": "CVE ID :CVE-2026-47743\n  \nPublished : July 23, 2026, 5:20 p.m. | 46 minutes ago\n  \nDescription :Shopper is a Headless e-commerce Admin Panel. Prior to 2.8.0, three related defects on admin Livewire components allowed data tampering, sensitive data disclosure, and stored XSS. First, several Livewire components in the admin panel exposed Eloquent model identifiers as public properties without the `#[Locked]` attribute. An authenticated user could rewrite the wire payload from the browser to target any record id, bypassing the implicit scoping enforced by the page routing. Second, `Customers/Create::store()` re-passed a `Hidden` `_password` form field straight into the create payload. The plaintext password was rendered into the HTML and transported through the Livewire snapshot in clear text, exposing credentials in the page DOM and in any logging that captures Livewire payloads. Finally, the product barcode field was rendered through `DNS1DFacade::getBarcodeHTML()` with `{!! !!}`. An attacker with `edit_products` permission could persist malicious payload in the barcode field that would execute in the browser of any admin user viewing that product, enabling session theft and privileged-action chaining. Starting in v2.8.0, all vulnerable Livewire model identifiers are now marked `#[Locked]`; `Customers/Create` no longer round-trips the password through a Hidden form field; the plaintext password is hashed at action boundary and never returned to the client; and the product barcode rendering now escapes the value before passing it to the barcode generator and the output is wrapped in an `` context that does not interpret event handlers. No known workarounds are available.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-47743\n  \nPublished : July 23, 2026, 5:20 p.m. | 46 minutes ago\n  \nDescription :Shopper is a Headless e-commerce Admin Panel. Prior to 2.8.0, three related defects on admin Livewire components allowed data tampering, sensitive data disclosure, and stored XSS. First, several Livewire components in the admin panel exposed Eloquent model identifiers as public properties without the `#[Locked]` attribute. An authenticated user could rewrite the wire payload from the browser to target any record id, bypassing the implicit scoping enforced by the page routing. Second, `Customers/Create::store()` re-passed a `Hidden` `_password` form field straight into the create payload. The plaintext password was rendered into the HTML and transported through the Livewire snapshot in clear text, exposing credentials in the page DOM and in any logging that captures Livewire payloads. Finally, the product barcode field was rendered through `DNS1DFacade::getBarcodeHTML()` with `{!! !!}`. An attacker with `edit_products` permission could persist malicious payload in the barcode field that would execute in the browser of any admin user viewing that product, enabling session theft and privileged-action chaining. Starting in v2.8.0, all vulnerable Livewire model identifiers are now marked `#[Locked]`; `Customers/Create` no longer round-trips the password through a Hidden form field; the plaintext password is hashed at action boundary and never returned to the client; and the product barcode rendering now escapes the value before passing it to the barcode generator and the output is wrapped in an `` context that does not interpret event handlers. No known workarounds are available.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-47743 - 구매자: 관리자 Livewire 구성 요소의 여러 데이터 무결성 및 공개 문제",
+      "summary_ko": "CVE ID:CVE-2026-47743\n  \n게시일 : 2026년 7월 23일 오후 5시 20분 | 46분 전\n  \n설명 : 구매자는 헤드리스 전자 상거래 관리자 패널입니다. 2.8.0 이전에는 관리 Livewire 구성 요소의 세 가지 관련 결함으로 인해 데이터 변조, 민감한 데이터 공개 및 저장된 XSS가 허용되었습니다. 첫째, 관리 패널의 여러 Livewire 구성 요소는 `#[Locked]` 속성 없이 Eloquent 모델 식별자를 공개 속성으로 노출했습니다. 인증된 사용자는 페이지 라우팅에 의해 적용되는 암시적 범위 지정을 우회하여 브라우저에서 와이어 페이로드를 다시 작성하여 레코드 ID를 대상으로 할 수 있습니다. 둘째, `Customers/Create::store()`는 `Hidden` `_password` 양식 필드를 생성 페이로드에 직접 다시 전달했습니다. 일반 텍스트 비밀번호는 HTML로 렌더링되어 Livewire 스냅샷을 통해 일반 텍스트로 전송되어 페이지 DOM 및 Livewire 페이로드를 캡처하는 모든 로깅에 자격 증명이 노출됩니다. 마지막으로 제품 바코드 필드는 `{!!'를 사용하여 `DNS1DFacade::getBarcodeHTML()`을 통해 렌더링되었습니다. !!}`. 'edit_products' 권한이 있는 공격자는 해당 제품을 보는 모든 관리자의 브라우저에서 실행되는 악성 페이로드를 바코드 필드에 유지하여 세션 도용 및 권한 있는 작업 연결을 활성화할 수 있습니다. v2.8.0부터 모든 취약한 Livewire 모델 식별자는 이제 `#[Locked]`로 표시됩니다. '고객/생성'은 더 이상 숨겨진 양식 필드를 통해 비밀번호를 왕복하지 않습니다. 일반 텍스트 비밀번호는 작업 경계에서 해시되고 클라이언트에 반환되지 않습니다. 이제 제품 바코드 렌더링은 값을 바코드 생성기로 전달하기 전에 값을 이스케이프하고 출력은 이벤트 핸들러를 해석하지 않는 '컨텍스트'로 래핑됩니다. 알려진 해결 방법은 없습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-47743\n2. 26.07.24 오전2:20\n3. Shopper is a Headless e-commerce Admin Panel. Prio",
+      "cve_id": "CVE-2026-47743",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47743",
+      "source": "cvefeed",
+      "published": "2026-07-24T02:20:25+09:00",
+      "lang": "en"
+    },
     {
       "title": "When the \"Autonomous Attacker\" Is Your Own AI Model, (Thu, Jul 23rd)",
       "summary": "Two disclosures, five days apart, described the same intrusion from opposite ends â€”\r",
