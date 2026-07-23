@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-24T05:01:18.021635+09:00",
+  "fetched_at": "2026-07-24T05:31:18.159914+09:00",
   "security_news": [
+    {
+      "title": "체크포인트 스마트콘솔 인증우회, 패치 전부터 이미 뚫렸다",
+      "summary": "이스라엘 보안업체 체크포인트 소프트웨어(Check Point Software)가 자사 보안관리 제품에서 발견된 치명적 인증우회 취약점이 실제 공격에 악용된 사실을 확인했다. 문제의 결함은 CVE-2026-16232로, 스마트콘솔...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 체크포인트 스마트콘솔 CVE-2026-16232 취약점 악용 확인.\n2. 패치 전부터 인증우회 공격으로 실제 악용.\n3. 체크포인트, 해당 취약점 악용 사례 확인.",
+      "link": "https://www.wikitree.co.kr/articles/1148170",
+      "source": "naver",
+      "published": "2026-07-24T05:22:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[단독] 외교관 이어 군인도 털렸다…이름·병명 등 8GB 유출 정황",
+      "summary": "최근 국립외교원 해킹 사태로 외교관들의 신상 정보가 대량으로 유출된 데 이어 군인들의 민감 정보도 불상의 침투자에게 노출된 셈이다. 북한과 중국 등이 전방위적으로 사이버전 능력을 강화하는 가운데 정부...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 외교관에 이어 군인 8GB 정보 유출 정황\n2. 이름, 병명 등 민감 정보 노출\n3. 북중 사이버전 강화 속에 보안 우려 증가",
+      "link": "https://n.news.naver.com/mnews/article/025/0003539825?sid=100",
+      "source": "naver",
+      "published": "2026-07-24T05:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "FATF \"북한, 디파이 해킹으로 ‘확산자금’ 조달\"…‘규제 강화’ 권고",
       "summary": "또 올해 북한의 해킹 범죄를 대표적인 확산자금조달 위험 사례로 제시하면서, 관련 규제와 감독 강화를... FATF는 규제와 감독 강화 필요성을 지적하며 북한 연계 해커들의 디파이 해킹을 확산자금조달 위험 사례로...",
@@ -4723,21 +4747,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-64651",
       "source": "cvefeed",
       "published": "2026-07-21T06:16:50+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55219 - Paymenter: Race condition in payWithCredit() enables credit double-spend",
-      "summary": "CVE ID :CVE-2026-55219\n  \nPublished : July 20, 2026, 8:20 p.m. | 59 minutes ago\n  \nDescription :Paymenter is a free and open-source webshop solution for management of hosting services. In versions prior to 1.5.5, the credit payment implementation in app/Livewire/Invoices/Show.php executes a pessimistic row lock (lockForUpdate()) outside of an active database transaction. Because MySQL/MariaDB requires an enclosing transaction to enforce row-level locks, the guard is ineffective. Concurrent payment requests can exploit this race condition to read the same credit balance simultaneously, allowing users to pay multiple invoices using the same credit balance. In database systems like MySQL, a row lock only works inside a formal transaction; without one, the lock is completely ignored. Because there is no active lock, two payment requests sent at the exact same millisecond can look at the database at the same time. Both requests see the original credit balance, decide it is sufficient, and approve the payment. Because the payment processes successfully through ExtensionHelper::addPayment(), the application provisions the corresponding services or digital goods, resulting in direct financial or resource loss to the platform. This issue has been fixed in version 1.5.5.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55219\n  \nPublished : July 20, 2026, 8:20 p.m. | 59 minutes ago\n  \nDescription :Paymenter is a free and open-source webshop solution for management of hosting services. In versions prior to 1.5.5, the credit payment implementation in app/Livewire/Invoices/Show.php executes a pessimistic row lock (lockForUpdate()) outside of an active database transaction. Because MySQL/MariaDB requires an enclosing transaction to enforce row-level locks, the guard is ineffective. Concurrent payment requests can exploit this race condition to read the same credit balance simultaneously, allowing users to pay multiple invoices using the same credit balance. In database systems like MySQL, a row lock only works inside a formal transaction; without one, the lock is completely ignored. Because there is no active lock, two payment requests sent at the exact same millisecond can look at the database at the same time. Both requests see the original credit balance, decide it is sufficient, and approve the payment. Because the payment processes successfully through ExtensionHelper::addPayment(), the application provisions the corresponding services or digital goods, resulting in direct financial or resource loss to the platform. This issue has been fixed in version 1.5.5.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-55219 - 지불자: payWithCredit()의 경쟁 조건으로 인해 크레딧 이중 지불이 가능해졌습니다.",
-      "summary_ko": "CVE ID:CVE-2026-55219\n  \n게시일 : 2026년 7월 20일 오후 8시 20분 | 59분 전\n  \n설명 :Paymenter는 호스팅 서비스 관리를 위한 무료 오픈 소스 웹숍 솔루션입니다. 1.5.5 이전 버전에서는 app/Livewire/Invoices/Show.php의 신용 결제 구현이 활성 데이터베이스 트랜잭션 외부에서 비관적 행 잠금(lockForUpdate())을 실행합니다. MySQL/MariaDB는 행 수준 잠금을 적용하기 위해 인클로징 트랜잭션이 필요하기 때문에 가드는 효과적이지 않습니다. 동시 지불 요청은 이 경쟁 조건을 활용하여 동일한 신용 잔액을 동시에 읽을 수 있으므로 사용자는 동일한 신용 잔액을 사용하여 여러 송장을 지불할 수 있습니다. MySQL과 같은 데이터베이스 시스템에서 행 잠금은 공식 트랜잭션 내에서만 작동합니다. 하나도 없으면 잠금이 완전히 무시됩니다. 활성 잠금이 없기 때문에 정확히 동일한 밀리초에 전송된 두 개의 결제 요청이 동시에 데이터베이스를 볼 수 있습니다. 두 요청 모두 원래 크레딧 잔액을 확인하고 충분하다고 판단한 후 결제를 승인합니다. ExtensionHelper::addPayment()를 통해 결제가 성공적으로 처리되기 때문에 애플리케이션은 해당 서비스나 디지털 상품을 프로비저닝하여 플랫폼에 직접적인 재정적 또는 리소스 손실을 초래합니다. 이 문제는 버전 1.5.5에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-55219\n2. 26.07.21 오전5:20\n3. Paymenter is a free and open-source webshop soluti",
-      "cve_id": "CVE-2026-55219",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55219",
-      "source": "cvefeed",
-      "published": "2026-07-21T05:20:44+09:00",
       "lang": "en"
     }
   ],
