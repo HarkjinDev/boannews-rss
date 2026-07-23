@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-24T01:01:16.293036+09:00",
+  "fetched_at": "2026-07-24T01:31:21.588688+09:00",
   "security_news": [
     {
       "title": "[군포 민선 9기 연속기획⑥] 한대희 시장, AI와 녹색대전환으로 미래 연...",
@@ -4768,36 +4768,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-35217",
       "source": "cvefeed",
       "published": "2026-07-21T01:39:49+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58414 - Network-AI: EnvironmentManager.backup() follows symlinked directories and copies files outside the environment root into backups",
-      "summary": "CVE ID :CVE-2026-58414\n  \nPublished : July 20, 2026, 4:28 p.m. | 51 minutes ago\n  \nDescription :Network-AI is a TypeScript/Node.js multi-agent orchestrator. Prior to version 5.12.2, `EnvironmentManager.backup()` recursively collects files using `_collectBackupFiles()`. `_collectBackupFiles()` uses `statSync(full)`, which follows symlinks. If `data/` contains a symlink to a directory outside the environment root, backup recursion follows the symlink and copies external files into `data//.backups//`. An attacker who can place a symlink under the environment data directory can cause backup operations to disclose files outside the environment root into backup artifacts. The issue is fixed in v5.12.2. `_collectBackupFiles()` now uses `lstatSync` instead of `statSync` and skips any entry where `isSymbolicLink()` is true. Symlinks are never traversed, so `backup()` can no longer follow a link out of the environment root and copy external files into a backup artifact.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-58414\n  \nPublished : July 20, 2026, 4:28 p.m. | 51 minutes ago\n  \nDescription :Network-AI is a TypeScript/Node.js multi-agent orchestrator. Prior to version 5.12.2, `EnvironmentManager.backup()` recursively collects files using `_collectBackupFiles()`. `_collectBackupFiles()` uses `statSync(full)`, which follows symlinks. If `data/` contains a symlink to a directory outside the environment root, backup recursion follows the symlink and copies external files into `data//.backups//`. An attacker who can place a symlink under the environment data directory can cause backup operations to disclose files outside the environment root into backup artifacts. The issue is fixed in v5.12.2. `_collectBackupFiles()` now uses `lstatSync` instead of `statSync` and skips any entry where `isSymbolicLink()` is true. Symlinks are never traversed, so `backup()` can no longer follow a link out of the environment root and copy external files into a backup artifact.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-58414 - Network-AI: EnvironmentManager.backup()은 심볼릭 링크된 디렉터리를 따라가며 환경 루트 외부의 파일을 백업으로 복사합니다.",
-      "summary_ko": "CVE ID:CVE-2026-58414\n  \n게시일 : 2026년 7월 20일 오후 4시 28분 | 51분 전\n  \n설명:Network-AI는 TypeScript/Node.js 다중 에이전트 조정자입니다. 버전 5.12.2 이전에는 `EnvironmentManager.backup()`이 `_collectBackupFiles()`를 사용하여 파일을 반복적으로 수집합니다. `_collectBackupFiles()`는 심볼릭 링크를 따르는 `statSync(full)`를 사용합니다. `data/`에 환경 루트 외부 디렉터리에 대한 심볼릭 링크가 포함되어 있는 경우 백업 재귀는 심볼릭 링크를 따라 외부 파일을 `data//.backups//`에 복사합니다. 환경 데이터 디렉터리 아래에 심볼릭 링크를 배치할 수 있는 공격자는 백업 작업이 환경 루트 외부의 파일을 백업 아티팩트에 공개하도록 할 수 있습니다. 이 문제는 v5.12.2에서 수정되었습니다. `_collectBackupFiles()`는 이제 `statSync` 대신 `lstatSync`를 사용하고 `isSymbolicLink()`가 true인 모든 항목을 건너뜁니다. Symlink는 절대 통과되지 않으므로 'backup()'은 더 이상 환경 루트 외부의 링크를 따라갈 수 없으며 외부 파일을 백업 아티팩트에 복사할 수 없습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-58414\n2. 26.07.21 오전1:28\n3. Network-AI is a TypeScript/Node.js multi-agent orc",
-      "cve_id": "CVE-2026-58414",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58414",
-      "source": "cvefeed",
-      "published": "2026-07-21T01:28:29+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-64206 - Bluetooth: L2CAP: cancel pending_rx_work before taking conn->lock",
-      "summary": "CVE ID :CVE-2026-64206\n  \nPublished : July 20, 2026, 4:27 p.m. | 51 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: L2CAP: cancel pending_rx_work before taking conn->lock\n\nl2cap_conn_del() takes conn->lock and then calls cancel_work_sync() for\npending_rx_work.  process_pending_rx() takes the same mutex, so teardown\ncan deadlock against the worker it is flushing.\n\nThis issue was found by our static analysis tool and then manually\nreviewed against the current tree.\n\nThe grounded PoC kept the l2cap_conn_ready() -> queue_work(...,\n&conn->pending_rx_work) submit path, the l2cap_conn_del() ->\ncancel_work_sync(&conn->pending_rx_work) teardown path, and the\nprocess_pending_rx() -> mutex_lock(&conn->lock) worker edge.  Lockdep\n\n  WARNING: possible circular locking dependency detected\n  process_pending_rx+0x21/0x2a [vuln_msv]\n  l2cap_conn_del.constprop.0+0x3f/0x4e [vuln_msv]\n  *** DEADLOCK ***\n\nCancel pending_rx_work before taking conn->lock, matching the existing\nlock-before-drain ordering used for the two delayed works in the same\nteardown path.  The pending_rx queue is still purged after the work has\nbeen cancelled and conn->lock has been acquired.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-64206\n  \nPublished : July 20, 2026, 4:27 p.m. | 51 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: L2CAP: cancel pending_rx_work before taking conn->lock\n\nl2cap_conn_del() takes conn->lock and then calls cancel_work_sync() for\npending_rx_work.  process_pending_rx() takes the same mutex, so teardown\ncan deadlock against the worker it is flushing.\n\nThis issue was found by our static analysis tool and then manually\nreviewed against the current tree.\n\nThe grounded PoC kept the l2cap_conn_ready() -> queue_work(...,\n&conn->pending_rx_work) submit path, the l2cap_conn_del() ->\ncancel_work_sync(&conn->pending_rx_work) teardown path, and the\nprocess_pending_rx() -> mutex_lock(&conn->lock) worker edge.  Lockdep\n\n  WARNING: possible circular locking dependency detected\n  process_pending_rx+0x21/0x2a [vuln_msv]\n  l2cap_conn_del.constprop.0+0x3f/0x4e [vuln_msv]\n  *** DEADLOCK ***\n\nCancel pending_rx_work before taking conn->lock, matching the existing\nlock-before-drain ordering used for the two delayed works in the same\nteardown path.  The pending_rx queue is still purged after the work has\nbeen cancelled and conn->lock has been acquired.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-64206 - 블루투스: L2CAP: 연결->잠금을 수행하기 전에 보류 중인_rx_work 취소",
-      "summary_ko": "CVE ID:CVE-2026-64206\n  \n게시일 : 2026년 7월 20일 오후 4시 27분 | 51분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nBluetooth: L2CAP: 연결->잠금을 수행하기 전에 보류 중인_rx_work 취소\n\nl2cap_conn_del()은 conn->lock을 취한 다음 cancel_work_sync()를 호출합니다.\n보류 중_rx_work.  process_pending_rx()는 동일한 뮤텍스를 사용하므로 분해가 가능합니다.\n플러시하는 작업자에 대해 교착 상태가 발생할 수 있습니다.\n\n이 문제는 당사의 정적 분석 도구를 통해 발견된 후 수동으로 발견되었습니다.\n현재 트리와 비교하여 검토됩니다.\n\n접지 PoC는 l2cap_conn_ready() -> queue_work(...,\n&conn->pending_rx_work) 제출 경로, l2cap_conn_del() ->\ncancel_work_sync(&conn->pending_rx_work) 해체 경로 및\nprocess_pending_rx() -> mutex_lock(&conn->lock) 작업자 에지.  락뎁\n\n  경고: 가능한 순환 잠금 종속성이 감지되었습니다.\n  process_pending_rx+0x21/0x2a [vuln_msv]\n  l2cap_conn_del.constprop.0+0x3f/0x4e [vuln_msv]\n  *** 교착 상태 ***\n\nconn->lock을 수행하기 전에 보류 중인_rx_work를 취소하여 기존과 일치합니다.\n동일한 작업에서 두 개의 지연된 작업에 사용되는 배수 전 잠금 순서\n분해 경로.  Pending_rx 대기열은 작업이 완료된 후에도 여전히 제거됩니다.\n취소되었으며 conn->lock이 획득되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-64206\n2. 26.07.21 오전1:27\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-64206",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64206",
-      "source": "cvefeed",
-      "published": "2026-07-21T01:27:53+09:00",
       "lang": "en"
     }
   ],
