@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-23T21:02:27.871258+09:00",
+  "fetched_at": "2026-07-23T21:32:29.745104+09:00",
   "security_news": [
+    {
+      "title": "AFX 트레이드 356억 원 해킹…스마트컨트랙트 아닌 서명 키 탈취",
+      "summary": "스마트컨트랙트 취약점이 아닌 ‘오프체인 키 탈취’가 원인이라는 점에서 보안 구조에 경고등이 켜졌다.... 5개 서명 키로 자금 이동 승인…의도된 시스템 악용 보안 업체 블록에이드에 따르면 공격자는 총 5개의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AFX 트레이드 356억 원 해킹…스마트컨트랙트 아닌 서명 키 탈취 스마트컨트랙트 취약점이\n2. 5개 서명 키로 자금 이동 승인…의도된 시스템 악용 보안 업체 블록에이드에 따르면 공격자는",
+      "link": "https://www.tokenpost.kr/news/blockchain/380523",
+      "source": "naver",
+      "published": "2026-07-23T21:28:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "타이코, 175만 달러 보안 사고 사후 분석 공개",
+      "summary": "이더리움 레이어2 프로젝트 타이코가 지난 6월 21일 발생한 보안 사고 사후 분석을 공개했다. 공격자는 약... 다만 브리지 일일 한도와 보안위원회의 긴급 중단 조치로 추가 자금 유출은 차단됐다. 타이코는 취약점을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 타이코, 175만 달러 보안 사고 사후 분석 공개 이더리움 레이어2 프로젝트 타이코가 지난\n2. 다만 브리지 일일 한도와 보안위원회의 긴급 중단 조치로 추가 자금 유출은 차단됐다.\n3. 타이코는 취약점을...",
+      "link": "https://www.tokenpost.kr/news/breaking/380517",
+      "source": "naver",
+      "published": "2026-07-23T21:16:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "New RefluXFS Linux flaw lets attackers gain root privileges",
       "summary": "A nine-year-old race condition vulnerability in the Linux kernel's XFS filesystem, tracked as CVE-2026-64600, allows local attackers to overwrite protected files and gain root privileges. [...]",
@@ -3220,6 +3244,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-65606 - SiYuan before v3.7.2 Cross-Site Scripting to RCE",
+      "summary": "CVE ID :CVE-2026-65606\n  \nPublished : July 23, 2026, 11:42 a.m. | 41 minutes ago\n  \nDescription :SiYuan before v3.7.2 contains a cross-site scripting vulnerability in the siyuan:// protocol handler. When a siyuan://plugins/ link references a name that is not an installed plugin, the application opens a custom tab and inserts the link's icon parameter into the tab header via innerHTML without escaping it (app/src/layout/Tab.ts), allowing injection of an  element. Because the SiYuan Desktop renderer runs with nodeIntegration:true, the injected JavaScript can access Node's require and call require('child_process').execSync(...), escalating the cross-site scripting into arbitrary operating-system command execution.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-65606\n  \nPublished : July 23, 2026, 11:42 a.m. | 41 minutes ago\n  \nDescription :SiYuan before v3.7.2 contains a cross-site scripting vulnerability in the siyuan:// protocol handler. When a siyuan://plugins/ link references a name that is not an installed plugin, the application opens a custom tab and inserts the link's icon parameter into the tab header via innerHTML without escaping it (app/src/layout/Tab.ts), allowing injection of an  element. Because the SiYuan Desktop renderer runs with nodeIntegration:true, the injected JavaScript can access Node's require and call require('child_process').execSync(...), escalating the cross-site scripting into arbitrary operating-system command execution.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-65606 - v3.7.2 이전의 SiYuan RCE에 대한 크로스 사이트 스크립팅",
+      "summary_ko": "CVE ID:CVE-2026-65606\n  \n게시일 : 2026년 7월 23일 오전 11시 42분 | 41분 전\n  \n설명: v3.7.2 이전의 SiYuan에는 siyuan:// 프로토콜 핸들러에 크로스 사이트 스크립팅 취약점이 포함되어 있습니다. siyuan://plugins/ 링크가 설치된 플러그인이 아닌 이름을 참조하는 경우 애플리케이션은 사용자 정의 탭을 열고 링크의 아이콘 매개변수를 이스케이프 처리하지 않고 innerHTML(app/src/layout/Tab.ts)을 통해 탭 헤더에 삽입하여 요소 삽입을 허용합니다. SiYuan 데스크탑 렌더러는 nodeIntegration:true로 실행되기 때문에 주입된 JavaScript는 Node의 require에 액세스하고 require('child_process').execSync(...)를 호출하여 사이트 간 스크립팅을 임의의 운영 체제 명령 실행으로 확대할 수 있습니다.\n  \n심각도: 9.6 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-65606\n2. 26.07.23 오후8:42\n3. SiYuan before v3.7.2 contains a cross-site scripti",
+      "cve_id": "CVE-2026-65606",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-65606",
+      "source": "cvefeed",
+      "published": "2026-07-23T20:42:14+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-54171 Excon: redact additional sensitive/risky headers when following redirects",
       "summary": "Information published.",
       "description": "Information published.",
@@ -4762,21 +4801,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-45139",
       "source": "cvefeed",
       "published": "2026-07-20T22:58:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-64622 - Network-AI 5.12.2 through 5.13.3 Missing Authorization via ApprovalInbox",
-      "summary": "CVE ID :CVE-2026-64622\n  \nPublished : July 20, 2026, 12:19 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Network-AI (npm: network-ai) versions 5.12.2 through 5.13.3 fail to apply the configured authorization check (checkAuth/secret) to the ApprovalInbox GET read routes, so even when an operator configures a secret, unauthenticated actors can access sensitive approval request details. The GET /approvals/?status=all, GET /approvals/:id, GET /approvals/stats, and GET /approvals/sse routes disclose full ApprovalEntry content including action/target shell-command strings, file paths, justifications, and risk levels. All responses also carry a hardcoded Access-Control-Allow-Origin: * header, enabling cross-origin disclosure from any website the operator visits. This is an incomplete fix for GHSA-mxjx-28vx-xjjj.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-64622\n  \nPublished : July 20, 2026, 12:19 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Network-AI (npm: network-ai) versions 5.12.2 through 5.13.3 fail to apply the configured authorization check (checkAuth/secret) to the ApprovalInbox GET read routes, so even when an operator configures a secret, unauthenticated actors can access sensitive approval request details. The GET /approvals/?status=all, GET /approvals/:id, GET /approvals/stats, and GET /approvals/sse routes disclose full ApprovalEntry content including action/target shell-command strings, file paths, justifications, and risk levels. All responses also carry a hardcoded Access-Control-Allow-Origin: * header, enabling cross-origin disclosure from any website the operator visits. This is an incomplete fix for GHSA-mxjx-28vx-xjjj.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-64622 - Network-AI 5.12.2~5.13.3 ApprovalInbox를 통한 승인 누락",
-      "summary_ko": "CVE ID:CVE-2026-64622\n  \n게시일 : 2026년 7월 20일 오후 12시 19분 | 1시간 27분 전\n  \n설명:Network-AI(npm: network-ai) 버전 5.12.2~5.13.3은 구성된 권한 확인(checkAuth/secret)을 ApprovalInbox GET 읽기 경로에 적용하지 못하므로 운영자가 비밀을 구성하더라도 인증되지 않은 행위자가 민감한 승인 요청 세부 정보에 액세스할 수 있습니다. GET /approvals/?status=all, GET /approvals/:id, GET /approvals/stats 및 GET /approvals/sse 경로는 작업/대상 셸 명령 문자열, 파일 경로, 근거 및 위험 수준을 포함한 전체 ApprovalEntry 콘텐츠를 공개합니다. 모든 응답에는 하드코딩된 Access-Control-Allow-Origin: * 헤더도 포함되어 있어 운영자가 방문하는 모든 웹사이트에서 출처 간 공개가 가능합니다. 이는 GHSA-mxjx-28vx-xjjj에 대한 불완전한 수정 사항입니다.\n  \n심각도: 9.3 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-64622\n2. 26.07.20 오후9:19\n3. Network-AI (npm: network-ai) versions 5.12.2 throu",
-      "cve_id": "CVE-2026-64622",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64622",
-      "source": "cvefeed",
-      "published": "2026-07-20T21:19:47+09:00",
       "lang": "en"
     }
   ],
