@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-23T23:02:38.566238+09:00",
+  "fetched_at": "2026-07-23T23:31:33.014156+09:00",
   "security_news": [
     {
       "title": "스위스 철도기업 스타들러 레일, 에베레스트 랜섬웨어에 123억 원 협박…...",
@@ -3319,6 +3319,36 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-65900 - DOMPurify before 3.4.8 Template Expression Injection via RETURN_DOM",
+      "summary": "CVE ID :CVE-2026-65900\n  \nPublished : July 23, 2026, 1:16 p.m. | 18 minutes ago\n  \nDescription :DOMPurify versions >=3.0.0 and before 3.4.8, when configured with SAFE_FOR_TEMPLATES together with a DOM output mode (RETURN_DOM, RETURN_DOM_FRAGMENT, or IN_PLACE), fail to strip template expressions (e.g. ${evil}, {{evil}}, <%evil%>) inside  element content. The final normalization/scrub pass (_scrubTemplateExpressions) uses a NodeIterator and node.normalize() that do not descend into template.content, so expressions that only form after adjacent text nodes merge survive sanitization. This bypasses SAFE_FOR_TEMPLATES and can allow a downstream template engine to evaluate attacker-supplied expressions. The string output path is not affected.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-65900\n  \nPublished : July 23, 2026, 1:16 p.m. | 18 minutes ago\n  \nDescription :DOMPurify versions >=3.0.0 and before 3.4.8, when configured with SAFE_FOR_TEMPLATES together with a DOM output mode (RETURN_DOM, RETURN_DOM_FRAGMENT, or IN_PLACE), fail to strip template expressions (e.g. ${evil}, {{evil}}, <%evil%>) inside  element content. The final normalization/scrub pass (_scrubTemplateExpressions) uses a NodeIterator and node.normalize() that do not descend into template.content, so expressions that only form after adjacent text nodes merge survive sanitization. This bypasses SAFE_FOR_TEMPLATES and can allow a downstream template engine to evaluate attacker-supplied expressions. The string output path is not affected.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-65900 - 3.4.8 이전의 DOMPurify RETURN_DOM을 통한 템플릿 표현식 주입",
+      "summary_ko": "CVE ID:CVE-2026-65900\n  \n게시일 : 2026년 7월 23일 오후 1시 16분 | 18분 전\n  \n설명 :DOMPurify 버전 3.0.0 이상 및 3.4.8 이전에서는 DOM 출력 모드(RETURN_DOM, RETURN_DOM_FRAGMENT 또는 IN_PLACE)와 함께 SAFE_FOR_TEMPLATES로 구성된 경우 요소 콘텐츠 내에서 템플릿 표현식(예: ${evil}, {{evil}}, <%evil%>)을 제거하지 못합니다. 최종 정규화/스크럽 패스(_scrubTemplateExpressions)는 template.content로 내려오지 않는 NodeIterator 및 node.normalize()를 사용하므로 인접한 텍스트 노드가 병합된 후에만 형성되는 표현식은 삭제 상태를 유지합니다. 이는 SAFE_FOR_TEMPLATES를 우회하고 다운스트림 템플릿 엔진이 공격자가 제공한 표현식을 평가하도록 허용할 수 있습니다. 문자열 출력 경로는 영향을 받지 않습니다.\n  \n심각도: 6.1 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-65900\n2. 26.07.23 오후10:16\n3. DOMPurify versions >=3.0.0 and before 3.4.8, when ",
+      "cve_id": "CVE-2026-65900",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-65900",
+      "source": "cvefeed",
+      "published": "2026-07-23T22:16:19+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-14257 - brace-expansion DoS via unbounded expansion length causing an out-of-memory process crash",
+      "summary": "CVE ID :CVE-2026-14257\n  \nPublished : July 23, 2026, 12:54 p.m. | 40 minutes ago\n  \nDescription :brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-14257\n  \nPublished : July 23, 2026, 12:54 p.m. | 40 minutes ago\n  \nDescription :brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-14257 - 무제한 확장 길이를 통한 중괄호 확장 DoS로 인해 메모리 부족 프로세스 충돌이 발생함",
+      "summary_ko": "CVE ID:CVE-2026-14257\n  \n게시일 : 2026년 7월 23일 오후 12시 54분 | 40분 전\n  \n설명 :5.0.7을 통한 중괄호 확장은 메모리 고갈을 통한 서비스 거부에 취약합니다. Expand() 함수는 max 옵션(기본값 100,000)을 사용하여 결과 수를 제한하지만 각 결과 문자열의 길이를 제한하지는 않습니다. 여러 개의 중괄호 그룹을 연결함으로써 공격자는 결과 수를 제한 이하로 유지하면서 각 결과를 점진적으로 길게 만듭니다. 따라서 프로세스가 치명적이고 포착할 수 없는 메모리 부족 오류에 도달할 때까지 총 메모리는 수와 문자열 길이에 따라 확장됩니다. 약 7.5KB의 입력('{a,b}'.repeat(1500))이 기본 Node.js 프로세스를 충돌시킵니다. 공격자의 영향을 받은 문자열을 중괄호 확장.expand()에 전달하는 모든 애플리케이션(직접적으로 또는 minimatch/glob 중괄호 패턴을 통해 전이적으로)은 작은 요청으로 인해 중단될 수 있습니다. 누적된 출력 및 중간 배열을 제한하는 maxLength 옵션(기본값 4,000,000)을 추가하여 5.0.8에서 수정되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-14257\n2. 26.07.23 오후9:54\n3. brace-expansion through 5.0.7 is vulnerable to den",
+      "cve_id": "CVE-2026-14257",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-14257",
+      "source": "cvefeed",
+      "published": "2026-07-23T21:54:23+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-65606 - SiYuan before v3.7.2 Cross-Site Scripting to RCE",
       "summary": "CVE ID :CVE-2026-65606\n  \nPublished : July 23, 2026, 11:42 a.m. | 41 minutes ago\n  \nDescription :SiYuan before v3.7.2 contains a cross-site scripting vulnerability in the siyuan:// protocol handler. When a siyuan://plugins/ link references a name that is not an installed plugin, the application opens a custom tab and inserts the link's icon parameter into the tab header via innerHTML without escaping it (app/src/layout/Tab.ts), allowing injection of an  element. Because the SiYuan Desktop renderer runs with nodeIntegration:true, the injected JavaScript can access Node's require and call require('child_process').execSync(...), escalating the cross-site scripting into arbitrary operating-system command execution.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-65606\n  \nPublished : July 23, 2026, 11:42 a.m. | 41 minutes ago\n  \nDescription :SiYuan before v3.7.2 contains a cross-site scripting vulnerability in the siyuan:// protocol handler. When a siyuan://plugins/ link references a name that is not an installed plugin, the application opens a custom tab and inserts the link's icon parameter into the tab header via innerHTML without escaping it (app/src/layout/Tab.ts), allowing injection of an  element. Because the SiYuan Desktop renderer runs with nodeIntegration:true, the injected JavaScript can access Node's require and call require('child_process').execSync(...), escalating the cross-site scripting into arbitrary operating-system command execution.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3676,6 +3706,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10822",
       "source": "cvefeed",
       "published": "2026-07-23T00:16:51+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-50407 Windows Resilient File System (ReFS) Elevation of Privilege Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": "CVE-2026-50407 Windows ReFS(복원력 있는 파일 시스템) 권한 상승 취약성",
+      "summary_ko": "승인을 업데이트했습니다. 이는 정보 제공용 변경일 뿐입니다.",
+      "summary_3lines": "1. CVE-2026-50407\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-50407",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50407",
+      "source": "msrc",
+      "published": "2026-07-22T23:00:00+09:00",
       "lang": "en"
     },
     {
@@ -4832,21 +4877,6 @@
       "source": "krcert_notice",
       "published": "2026-07-21T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-46516 - Frogman vulnerable to stored XSS in chat console formatter (escalation vector in multi-admin deployments)",
-      "summary": "CVE ID :CVE-2026-46516\n  \nPublished : July 20, 2026, 2:23 p.m. | 57 minutes ago\n  \nDescription :Frogman provides headless FreePBX control. Prior to version 1.6.6, Frogman's chat-console markdown formatter (`assets/js/chat.js`'s `formatMarkdown`) inserted regex capture groups as raw HTML in four template patterns: inline code, bold, markdown links, and download links. Tool responses that reflect user-controlled fields — extension names, ring-group descriptions, IVR names, queue descriptions, etc. — could carry an HTML/JavaScript payload that executes when another admin views the response through Frogman chat. The payload runs in the viewer's session, with the viewer's permissions. FreePBX's own admin GUI escapes these same fields via `freepbx_htmlspecialchars()` throughout its view templates. The chat formatter was the leaky side. Version 1.6.6 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-46516\n  \nPublished : July 20, 2026, 2:23 p.m. | 57 minutes ago\n  \nDescription :Frogman provides headless FreePBX control. Prior to version 1.6.6, Frogman's chat-console markdown formatter (`assets/js/chat.js`'s `formatMarkdown`) inserted regex capture groups as raw HTML in four template patterns: inline code, bold, markdown links, and download links. Tool responses that reflect user-controlled fields — extension names, ring-group descriptions, IVR names, queue descriptions, etc. — could carry an HTML/JavaScript payload that executes when another admin views the response through Frogman chat. The payload runs in the viewer's session, with the viewer's permissions. FreePBX's own admin GUI escapes these same fields via `freepbx_htmlspecialchars()` throughout its view templates. The chat formatter was the leaky side. Version 1.6.6 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46516 - Frogman은 채팅 콘솔 포맷터에 저장된 XSS에 취약합니다(다중 관리자 배포의 에스컬레이션 벡터).",
-      "summary_ko": "CVE ID:CVE-2026-46516\n  \n게시일 : 2026년 7월 20일 오후 2시 23분 | 57분 전\n  \n설명 :Frogman은 헤드리스 FreePBX 제어를 제공합니다. 버전 1.6.6 이전에는 Frogman의 채팅 콘솔 마크다운 포맷터(`assets/js/chat.js`의 `formatMarkdown`)가 정규식 캡처 그룹을 인라인 코드, 굵게, 마크다운 링크, 다운로드 링크의 네 가지 템플릿 패턴에 원시 HTML로 삽입했습니다. 내선 이름, 전화 수신 그룹 설명, IVR 이름, 대기열 설명 등 사용자 제어 필드를 반영하는 도구 응답에는 다른 관리자가 Frogman 채팅을 통해 응답을 볼 때 실행되는 HTML/JavaScript 페이로드가 포함될 수 있습니다. 페이로드는 뷰어의 권한을 사용하여 뷰어의 세션에서 실행됩니다. FreePBX의 자체 관리 GUI는 뷰 템플릿 전체에서 `freepbx_htmlspecialchars()`를 통해 이러한 동일한 필드를 이스케이프합니다. 채팅 포맷터는 누출되는 측면이었습니다. 버전 1.6.6에서는 문제가 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46516\n2. 26.07.20 오후11:23\n3. Frogman provides headless FreePBX control. Prior t",
-      "cve_id": "CVE-2026-46516",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46516",
-      "source": "cvefeed",
-      "published": "2026-07-20T23:23:23+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
