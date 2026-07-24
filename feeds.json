@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-24T22:31:04.961071+09:00",
+  "fetched_at": "2026-07-24T23:01:39.877046+09:00",
   "security_news": [
     {
       "title": "“코로나 재택이후 뚫려…‘분리 망’ 연결이 문제”",
@@ -4012,36 +4012,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-47390",
       "source": "cvefeed",
       "published": "2026-07-21T23:47:53+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47121 - Sparkle: Binary delta apply intermediate-symlink traversal in malicious .delta",
-      "summary": "CVE ID :CVE-2026-47121\n  \nPublished : July 21, 2026, 1:53 p.m. | 29 minutes ago\n  \nDescription :Sparkle is a software update framework for macOS. Prior to version 2.9.2, `Autoupdate/SUBinaryDeltaApply.m` enforces `relativePath.pathComponents containsObject:@\"..\"` and rejects writes whose immediate parent directory IS itself a symbolic link, but does not detect symlinks deeper in the relative path. `Autoupdate/SPUSparkleDeltaArchive.m`'s `extractItem:` will create symlinks in the destination tree from archive content (no `..` check on the symlink target), and a subsequent `Extract` item targeting `/foo/bar` then escapes the destination tree via `fopen(path, \"wb\")` because the kernel resolves the intermediate symlink during the open call. This is a defense-in-depth issue: exploitation requires a maliciously-crafted `.delta` that passes EdDSA signature verification, i.e. EdDSA private-key compromise. With the AppInstaller running as root for system-domain installs, it gives the holder of a stolen signing key arbitrary file write at root level via the delta-apply path, which is a strictly broader primitive than the \"drop-in replacement bundle\" install they would otherwise have. Version 2.9.2 contains a patch for the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47121\n  \nPublished : July 21, 2026, 1:53 p.m. | 29 minutes ago\n  \nDescription :Sparkle is a software update framework for macOS. Prior to version 2.9.2, `Autoupdate/SUBinaryDeltaApply.m` enforces `relativePath.pathComponents containsObject:@\"..\"` and rejects writes whose immediate parent directory IS itself a symbolic link, but does not detect symlinks deeper in the relative path. `Autoupdate/SPUSparkleDeltaArchive.m`'s `extractItem:` will create symlinks in the destination tree from archive content (no `..` check on the symlink target), and a subsequent `Extract` item targeting `/foo/bar` then escapes the destination tree via `fopen(path, \"wb\")` because the kernel resolves the intermediate symlink during the open call. This is a defense-in-depth issue: exploitation requires a maliciously-crafted `.delta` that passes EdDSA signature verification, i.e. EdDSA private-key compromise. With the AppInstaller running as root for system-domain installs, it gives the holder of a stolen signing key arbitrary file write at root level via the delta-apply path, which is a strictly broader primitive than the \"drop-in replacement bundle\" install they would otherwise have. Version 2.9.2 contains a patch for the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47121 - Sparkle: 바이너리 델타는 악성 .delta에 중간 심볼릭 링크 순회를 적용합니다.",
-      "summary_ko": "CVE ID:CVE-2026-47121\n  \n게시일 : 2026년 7월 21일 오후 1시 53분 | 29분 전\n  \n설명 :Sparkle은 macOS용 소프트웨어 업데이트 프레임워크입니다. 버전 2.9.2 이전에는 `Autoupdate/SUBinaryDeltaApply.m`이 `relativePath.pathComponents containObject:@\"..\"`를 시행하고 직계 상위 디렉토리 자체가 심볼릭 링크인 쓰기를 거부하지만 상대 경로에서 더 깊은 심볼릭 링크는 감지하지 않습니다. `Autoupdate/SPUSparkleDeltaArchive.m`의 `extractItem:`은 아카이브 콘텐츠에서 대상 트리에 심볼릭 링크를 생성하고(심볼릭 링크 대상에 대한 `..` 확인 없음), `/foo/bar`를 대상으로 하는 후속 `Extract` 항목은 그런 다음 `fopen(path, \"wb\")`를 통해 대상 트리를 이스케이프합니다. 왜냐하면 커널이 공개 호출 중에 중간 심볼릭 링크를 확인하기 때문입니다. 이는 심층 방어 문제입니다. 악용하려면 EdDSA 서명 확인을 통과하는 악의적으로 제작된 '.delta'(예: EdDSA 개인 키 손상)가 필요합니다. 시스템 도메인 설치를 위해 루트로 실행되는 AppInstaller를 사용하면 도난당한 서명 키 소유자에게 델타 적용 경로를 통해 루트 수준에서 임의 파일 쓰기를 제공합니다. 이는 \"드롭인 교체 번들\" 설치보다 훨씬 더 광범위한 기본 요소입니다. 버전 2.9.2에는 이 문제에 대한 패치가 포함되어 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47121\n2. 26.07.21 오후10:53\n3. Sparkle is a software update framework for macOS. ",
-      "cve_id": "CVE-2026-47121",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47121",
-      "source": "cvefeed",
-      "published": "2026-07-21T22:53:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Captive Portal Detection, (Tue, Jul 21st)",
-      "summary": "Not everything our honeypots detect is an attack. Sometimes it is just \"odd traffic\", and this is one example: Our \"First Seen\" list currently includes \"http://detectportal.firefox.co\r",
-      "description": "Not everything our honeypots detect is an attack. Sometimes it is just \"odd traffic\", and this is one example: Our \"First Seen\" list currently includes \"http://detectportal.firefox.co\r",
-      "title_ko": "종속 포털 감지(7월 21일 화요일)",
-      "summary_ko": "허니팟이 감지하는 모든 것이 공격인 것은 아닙니다. 때때로 이는 단지 \"이상한 트래픽\"일 수 있으며 이는 한 가지 예입니다. 현재 \"처음 본\" 목록에는 \"http://Detectportal.firefox.co\"가 포함되어 있습니다.",
-      "summary_3lines": "1. Captive Portal Detection, (Tue, Jul 21st)\n2. SANS_ISC\n3. Not everything our honeypots detect is an attack. ",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33172",
-      "source": "sans_isc",
-      "published": "2026-07-21T22:44:56+09:00",
       "lang": "en"
     }
   ],
