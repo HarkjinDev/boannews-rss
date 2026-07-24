@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-25T01:31:32.494924+09:00",
+  "fetched_at": "2026-07-25T02:01:23.696061+09:00",
   "security_news": [
     {
       "title": "BlueNoroff Zoom Phishing Kit Profiles Crypto Wallets Before Malware Delivery",
@@ -2796,18 +2796,6 @@
       "source": "naver",
       "published": "2026-07-22T03:09:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Critical wp2shell WordPress flaws exploited to install webshells",
-      "summary": "Hackers are exploiting the \"wp2shell\" critical vulnerability suite (CVE-2026-63030 and CVE-2026-60137) affecting WordPress Core to deploy persistent webshells and install malicious plugins on affected servers. [...]",
-      "content": "",
-      "title_ko": "웹쉘 설치에 악용되는 중요한 wp2shell WordPress 결함",
-      "summary_ko": "해커들은 WordPress Core에 영향을 미치는 \"wp2shell\" 심각한 취약점 제품군(CVE-2026-63030 및 CVE-2026-60137)을 악용하여 영향을 받는 서버에 영구 웹셸을 배포하고 악성 플러그인을 설치하고 있습니다. [...]",
-      "summary_3lines": "1. 웹셸 설치에 악용되는 심각한 wp2shell WordPress 결함 해커는 WordPres",
-      "link": "https://www.bleepingcomputer.com/news/security/critical-wp2shell-wordpress-flaws-exploited-to-install-webshells/",
-      "source": "bleepingcomputer",
-      "published": "2026-07-22T01:41:50+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -2914,6 +2902,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-64235",
       "source": "cvefeed",
       "published": "2026-07-25T00:27:40+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-64233 - usb: gadget: uvc: hold opts->lock across XU walks in uvc_function_bind",
+      "summary": "CVE ID :CVE-2026-64233\n  \nPublished : July 24, 2026, 3:27 p.m. | 22 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nusb: gadget: uvc: hold opts->lock across XU walks in uvc_function_bind\n\nuvc_function_bind() walks &opts->extension_units twice without holding\nopts->lock:\n\n  - directly, for the iExtension string-descriptor fixup loop;\n  - indirectly, four times via uvc_copy_descriptors() (once per speed),\n    where the helper iterates uvc->desc.extension_units (which aliases\n    &opts->extension_units) to size and emit XU descriptors.\n\nThe configfs side (uvcg_extension_make / uvcg_extension_drop, in\ndrivers/usb/gadget/function/uvc_configfs.c) takes opts->lock around its\nlist_add_tail / list_del operations.  A privileged userspace process\nthat holds the configfs subtree open and writes the gadget UDC name\nto bind the function while concurrently rmdir()'ing an extensions\nsubdir can race uvcg_extension_drop() against the bind-time list walks\nand dereference a freed struct uvcg_extension.\n\nHold opts->lock from the start of the XU string-descriptor fixup\nthrough the last uvc_copy_descriptors() call, releasing on the\ndescriptor-error path via a new error_unlock label that drops the\nlock before falling through to the existing error label.  This\nmatches the locking discipline of the configfs callbacks and removes\nthe only remaining unsynchronised reader of the XU list during bind.\n\nReachability: only privileged processes that can mount configfs and\nwrite to gadget UDC files can trigger the race, so this is a\ncorrectness fix rather than a security boundary.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-64233\n  \nPublished : July 24, 2026, 3:27 p.m. | 22 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nusb: gadget: uvc: hold opts->lock across XU walks in uvc_function_bind\n\nuvc_function_bind() walks &opts->extension_units twice without holding\nopts->lock:\n\n  - directly, for the iExtension string-descriptor fixup loop;\n  - indirectly, four times via uvc_copy_descriptors() (once per speed),\n    where the helper iterates uvc->desc.extension_units (which aliases\n    &opts->extension_units) to size and emit XU descriptors.\n\nThe configfs side (uvcg_extension_make / uvcg_extension_drop, in\ndrivers/usb/gadget/function/uvc_configfs.c) takes opts->lock around its\nlist_add_tail / list_del operations.  A privileged userspace process\nthat holds the configfs subtree open and writes the gadget UDC name\nto bind the function while concurrently rmdir()'ing an extensions\nsubdir can race uvcg_extension_drop() against the bind-time list walks\nand dereference a freed struct uvcg_extension.\n\nHold opts->lock from the start of the XU string-descriptor fixup\nthrough the last uvc_copy_descriptors() call, releasing on the\ndescriptor-error path via a new error_unlock label that drops the\nlock before falling through to the existing error label.  This\nmatches the locking discipline of the configfs callbacks and removes\nthe only remaining unsynchronised reader of the XU list during bind.\n\nReachability: only privileged processes that can mount configfs and\nwrite to gadget UDC files can trigger the race, so this is a\ncorrectness fix rather than a security boundary.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-64233 - usb: 가젯: uvc: uvc_function_bind에서 XU 워크 전반에 걸쳐 opts->잠금을 유지합니다.",
+      "summary_ko": "CVE ID:CVE-2026-64233\n  \n게시일 : 2026년 7월 24일 오후 3시 27분 | 22분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nusb: 가젯: uvc: uvc_function_bind의 XU 워크에서 opts->잠금을 유지합니다.\n\nuvc_function_bind()는 유지하지 않고 &opts->extension_units를 두 번 이동합니다.\n선택->잠금:\n\n  - iExtension 문자열 설명자 수정 루프의 경우 직접;\n  - 간접적으로, uvc_copy_descriptors()를 통해 4회(속도당 1회),\n    여기서 도우미는 uvc->desc.extension_units(별칭)를 반복합니다.\n    &opts->extension_units)를 사용하여 XU 설명자의 크기를 지정하고 내보냅니다.\n\nconfigfs 측(uvcg_extension_make / uvcg_extension_drop,\ndrivers/usb/gadget/function/uvc_configfs.c)는 opts->lock을 사용합니다.\nlist_add_tail / list_del 작업.  권한 있는 사용자 공간 프로세스\nconfigfs 하위 트리를 열어두고 가젯 UDC 이름을 기록합니다.\n확장 기능을 동시에 rmdir()하는 동안 함수를 바인딩하려면\nsubdir은 바인딩 시간 목록 탐색에 대해 uvcg_extension_drop()을 경주할 수 있습니다.\n해제된 구조체 uvcg_extension을 역참조합니다.\n\nXU 문자열 설명자 수정 시작 시 opts->lock을 유지하세요.\n마지막 uvc_copy_descriptors() 호출을 통해\n설명자 오류 경로는 오류를 삭제하는 새로운 error_unlock 레이블을 통해 이루어집니다.\n기존 오류 라벨에 도달하기 전에 잠급니다.  이\nconfigfs 콜백의 잠금 규칙과 일치하고 제거합니다.\n바인딩하는 동안 XU 목록의 동기화되지 않은 유일한 판독기입니다.\n\n접근성: configfs를 마운트할 수 있는 권한 있는 프로세스만\n가젯 UDC 파일에 쓰면 경쟁이 발생할 수 있으므로 이는\n보안 경계보다는 정확성 수정.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-64233\n2. 26.07.25 오전12:27\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-64233",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64233",
+      "source": "cvefeed",
+      "published": "2026-07-25T00:27:39+09:00",
       "lang": "en"
     },
     {
