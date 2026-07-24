@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-25T05:01:19.021121+09:00",
+  "fetched_at": "2026-07-25T05:31:22.024060+09:00",
   "security_news": [
+    {
+      "title": "앤트로픽, '가성비' 앞세운 AI '오퍼스5' 출시…GPT-5.6 능가",
+      "summary": "다만 앤트로픽은 오퍼스5가 보안 취약점을 발견하는 성능은 일부 신뢰하는 파트너에게만 제공된 최상위 모델 '미토스5'와 비슷하지만, 이 취약점을 악용해 사이버 위협으로 전환하는 해킹 능력은 미토스5보다...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 앤트로픽, '가성비' AI '오퍼스5' 출시\n2. 미토스5와 유사한 보안 취약점 발견 성능\n3. 해킹 능력은 미토스5보다 낮아",
+      "link": "https://n.news.naver.com/mnews/article/374/0000523653?sid=104",
+      "source": "naver",
+      "published": "2026-07-25T05:26:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Hermes AI agent used to automate attack on Thai Finance Ministry",
       "summary": "A threat actor used the open-source Hermes AI agent in unattended \"YOLO\" mode to automate post-exploitation activity during an alleged breach of Thailand's Ministry of Finance. [...]",
@@ -2772,21 +2784,24 @@
       "source": "naver",
       "published": "2026-07-22T05:52:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "해킹당한 국립외교원, 5개월 지나 외부 공개",
-      "summary": "국립외교원 온라인교육시스템이 약 10개월 동안 해킹당해 외교부·재외공관 직원 등 최대 1만명의 개인정보가... 상태”라며 “여타 국가 등 배후의 해킹 조직을 포함해 모든 가능성을 배제하지 않고 있다”고 언급했다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국립외교원, 10개월간 해킹으로 최대 1만명 개인정보 유출\n2. 외교부·재외공관 직원 대상, 악성코드 감염 추정\n3. 5개월 후 외부 공개, 배후 세력 조사 중",
-      "link": "https://n.news.naver.com/mnews/article/081/0003663211?sid=102",
-      "source": "naver",
-      "published": "2026-07-22T05:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-48021 - epa4all Security Incident: Implement keystore based on Telematik TSL, implement hostname check and certificate check for lib-vau",
+      "summary": "CVE ID :CVE-2026-48021\n  \nPublished : July 24, 2026, 7:16 p.m. | 1 hour, 7 minutes ago\n  \nDescription :In epa4all, prior to version 2026-05-20, an attacker who can intercept the TLS connection between epa4all and the ePA backend can complete the VAU handshake with attacker-controlled keys and obtain the session encryption keys. All inner HTTP traffic (patient consent decisions, medication data, document operations, authorization tokens, and entitlement queries) becomes readable and modifiable. The attacker can also inject arbitrary requests through the hijacked channel. This issue has been patched in version 2026-05-20.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-48021\n  \nPublished : July 24, 2026, 7:16 p.m. | 1 hour, 7 minutes ago\n  \nDescription :In epa4all, prior to version 2026-05-20, an attacker who can intercept the TLS connection between epa4all and the ePA backend can complete the VAU handshake with attacker-controlled keys and obtain the session encryption keys. All inner HTTP traffic (patient consent decisions, medication data, document operations, authorization tokens, and entitlement queries) becomes readable and modifiable. The attacker can also inject arbitrary requests through the hijacked channel. This issue has been patched in version 2026-05-20.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-48021 - epa4all 보안 사고: Telematik TSL을 기반으로 키 저장소 구현, lib-vau에 대한 호스트 이름 확인 및 인증서 확인 구현",
+      "summary_ko": "CVE ID:CVE-2026-48021\n  \n게시일 : 2026년 7월 24일 오후 7시 16분 | 1시간, 7분 전\n  \n설명: 2026-05-20 버전 이전의 epa4all에서는 epa4all과 ePA 백엔드 간의 TLS 연결을 가로챌 수 있는 공격자가 공격자가 제어하는 키로 VAU 핸드셰이크를 완료하고 세션 암호화 키를 얻을 수 있습니다. 모든 내부 HTTP 트래픽(환자 동의 결정, 약물 데이터, 문서 작업, 인증 토큰 및 자격 쿼리)을 읽고 수정할 수 있게 됩니다. 공격자는 하이재킹된 채널을 통해 임의의 요청을 주입할 수도 있습니다. 이 문제는 2026-05-20 버전에서 패치되었습니다.\n  \n심각도: 9.1 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-48021\n2. 26.07.25 오전4:16\n3. In epa4all, prior to version 2026-05-20, an attack",
+      "cve_id": "CVE-2026-48021",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48021",
+      "source": "cvefeed",
+      "published": "2026-07-25T04:16:58+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-48036 - Hulumi: Drift classifier fails open on adapter errors and over-promotes Mixed verdicts",
       "summary": "CVE ID :CVE-2026-48036\n  \nPublished : July 24, 2026, 6:44 p.m. | 37 minutes ago\n  \nDescription :Hulumi is an open-source toolkit that ships secure-by-default cloud and platform infrastructure components for Pulumi. Prior to version 1.4.0, consumers running drift detection in CI / cron could see transient adapter failures silently cached as \"all clear\" — masking real attacks for up to six hours — or see ordinary provider-version churn falsely promoted to incident severity. Either way, the verdict source was unreliable for downstream incident workflows that gate on it. This issue has been patched in version 1.4.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
