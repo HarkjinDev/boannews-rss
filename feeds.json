@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-24T18:31:30.934052+09:00",
+  "fetched_at": "2026-07-24T19:01:35.767913+09:00",
   "security_news": [
+    {
+      "title": "軍 의료영상시스템 해킹 정황…국방부 \"관계자 3명 징계 절차 진행 중\"",
+      "summary": "국군의무사령부 모바일 의료영상저장전송시스템(PACS)에 비(非)인가자가 접속한 정황이 확인됐다. 8GB(기가바이트)에 달하는 개인정보의 유출 가능성이 제기되는 가운데 국방부는 관계자 3명에 대한 징계 절차에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국군의무사령부 의료영상시스템에 비인가자 접속 정황\n2. 8GB 개인정보 유출 가능성 제기, 관계자 3명 징계 절차 진행\n3. 국방부, 추가 피해 방지 위한 조사 및 보안 강화 조치",
+      "link": "https://n.news.naver.com/mnews/article/008/0005390692?sid=100",
+      "source": "naver",
+      "published": "2026-07-24T18:48:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "OKX 등, 2026년 상반기 웹3 보안 보고서 발표",
+      "summary": "이 가운데 해킹·도난 관련 거래는 약 241만건, 피싱 관련 거래는 약 148만건, 사기 관련 거래는 약 99만건으로 집계됐다. OKX 웹3 온체인 인텔리전스 태그 라이브러리는 11억개 이상의 태그로 420개 이상 체인을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. OKX 웹3 보안 보고서, 241만건 해킹/도난 거래 집계\n2. 피싱 148만건, 사기 99만건 포함… 11억개 태그 분석\n3. 420개 이상 체인 대상… 웹3 보안 위협 노출",
+      "link": "https://www.tokenpost.kr/news/breaking/380957",
+      "source": "naver",
+      "published": "2026-07-24T18:34:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "‘외교관 이메일 노출’ 국립외교원 해킹 사태가 남긴 과제",
       "summary": "전산망 해킹 사건을 둘러싼 외교부의 늑장 공개·보고 논란이 커지고 있다. 외교부는 해킹 정황을 파악한 뒤 기술적 분석과 피해 범위 확인에 시간이 필요했다는 입장이지만, 외교관 개인정보가 유출된 중대한 외교·안보...",
@@ -2940,21 +2964,24 @@
       "source": "naver",
       "published": "2026-07-21T19:05:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "초유의 외교관 1만 건 정보 유출, 北 소행? 외교부 \"중립적으로 볼 것\"",
-      "summary": "국립외교원 온라인 교육 시스템 해킹, 5개월 지나서야 공개…\"국가 안보 무관치 않아 신중 기했다\" 국립외교원 온라인교육시스템이 해킹 공격을 받아 외교관을 비롯한 공무원들의 정보가 유출된 것으로 전해졌다. 정부는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국립외교원 온라인 교육 시스템 해킹, 외교관 1만 건 정보 유출\n2. 북한 소행 가능성 제기, 5개월 지나 공개\n3. 국가 안보 관련 신중 검토, 현재 조사 중",
-      "link": "https://n.news.naver.com/mnews/article/002/0002449149?sid=100",
-      "source": "naver",
-      "published": "2026-07-21T18:32:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-63317 - Apache OpenNLP: Arbitrary Class Instantiation in GeneratorFactory via Feature Descriptor XML",
+      "summary": "CVE ID :CVE-2026-63317\n  \nPublished : July 24, 2026, 8:07 a.m. | 47 minutes ago\n  \nDescription :Arbitrary Class Instantiation via XML Feature Generator Descriptor and Format Name in Apache OpenNLP\n\nVersions Affected: \n\n- before 2.5.10\n- before 3.0.0-M5\n\nDescription: \n\nThree code paths in Apache OpenNLP load a class by its fully-qualified name via Class.forName() and invoke its no-arg constructor without any prior validation of the class name or its type. \n\nThe affected paths are: \n\n(1) GeneratorFactory, which reads the class attribute of generator elements in an XML feature generator descriptor; such descriptors are embedded as artifacts in model archives (e.g. TokenNameFinder and POSTagger models) and are parsed during model loading, so an attacker who can supply a crafted model archive controls the class name directly. \n\n(2) StreamFactoryRegistry.getFactory(Class, String), which falls back to interpreting an unregistered format name as the fully-qualified class name of an ObjectStreamFactory; this is exploitable in applications that pass untrusted format names (e.g. exposing the -format parameter of the command-line tooling to external input). \n\n(3) StringInterners, which instantiates the interner implementation named by the opennlp.interner.class system property; this value is normally deployer-controlled, so it is hardened as defense in depth rather than being independently attacker-reachable.\n\nExploitation requires a class with attacker-useful side effects in its static initializer or no-arg constructor (JNDI lookup, outbound network I/O, filesystem access) to be present on the classpath, so this is not drop-in remote code execution. T\n\nMitigation: \n\nUpgrade to a fixed release. \n\nThe fix routes all three paths through ExtensionLoader.instantiateExtension(...), which consults a package-prefix allowlist before Class.forName() is invoked, so a disallowed class is never loaded, initialized, or constructed. \nClasses under the opennlp. prefix remain permitted by default. Deployments that load models referencing feature generator factories, object stream factories, or string interners outside opennlp.* must opt those packages in, either programmatically via ExtensionLoader.registerAllowedPackage(String) before the first model load, or by setting the OPENNLP_EXT_ALLOWED_PACKAGES system property to a comma-separated list of allowed package prefixes. \n\nUsers who cannot upgrade immediately should ensure all model files and format names are sourced from trusted origins and should audit their classpath for classes with side-effecting static initializers or constructors.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63317\n  \nPublished : July 24, 2026, 8:07 a.m. | 47 minutes ago\n  \nDescription :Arbitrary Class Instantiation via XML Feature Generator Descriptor and Format Name in Apache OpenNLP\n\nVersions Affected: \n\n- before 2.5.10\n- before 3.0.0-M5\n\nDescription: \n\nThree code paths in Apache OpenNLP load a class by its fully-qualified name via Class.forName() and invoke its no-arg constructor without any prior validation of the class name or its type. \n\nThe affected paths are: \n\n(1) GeneratorFactory, which reads the class attribute of generator elements in an XML feature generator descriptor; such descriptors are embedded as artifacts in model archives (e.g. TokenNameFinder and POSTagger models) and are parsed during model loading, so an attacker who can supply a crafted model archive controls the class name directly. \n\n(2) StreamFactoryRegistry.getFactory(Class, String), which falls back to interpreting an unregistered format name as the fully-qualified class name of an ObjectStreamFactory; this is exploitable in applications that pass untrusted format names (e.g. exposing the -format parameter of the command-line tooling to external input). \n\n(3) StringInterners, which instantiates the interner implementation named by the opennlp.interner.class system property; this value is normally deployer-controlled, so it is hardened as defense in depth rather than being independently attacker-reachable.\n\nExploitation requires a class with attacker-useful side effects in its static initializer or no-arg constructor (JNDI lookup, outbound network I/O, filesystem access) to be present on the classpath, so this is not drop-in remote code execution. T\n\nMitigation: \n\nUpgrade to a fixed release. \n\nThe fix routes all three paths through ExtensionLoader.instantiateExtension(...), which consults a package-prefix allowlist before Class.forName() is invoked, so a disallowed class is never loaded, initialized, or constructed. \nClasses under the opennlp. prefix remain permitted by default. Deployments that load models referencing feature generator factories, object stream factories, or string interners outside opennlp.* must opt those packages in, either programmatically via ExtensionLoader.registerAllowedPackage(String) before the first model load, or by setting the OPENNLP_EXT_ALLOWED_PACKAGES system property to a comma-separated list of allowed package prefixes. \n\nUsers who cannot upgrade immediately should ensure all model files and format names are sourced from trusted origins and should audit their classpath for classes with side-effecting static initializers or constructors.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-63317 - Apache OpenNLP: 기능 설명자 XML을 통한 GeneratorFactory의 임의 클래스 인스턴스화",
+      "summary_ko": "CVE ID:CVE-2026-63317\n  \n게시일 : 2026년 7월 24일 오전 8시 07분 | 47분 전\n  \n설명:Apache OpenNLP의 XML 기능 생성기 설명자 및 형식 이름을 통한 임의 클래스 인스턴스화\n\n영향을 받는 버전: \n\n- 2.5.10 이전\n- 3.0.0-M5 이전\n\n설명: \n\nApache OpenNLP의 세 가지 코드 경로는 Class.forName()을 통해 정규화된 이름으로 클래스를 로드하고 클래스 이름이나 유형에 대한 사전 검증 없이 인수가 없는 생성자를 호출합니다. \n\n영향을 받는 경로는 다음과 같습니다. \n\n(1) XML 기능 생성기 설명자에 있는 생성기 요소의 클래스 속성을 읽는 GeneratorFactory; 이러한 설명자는 모델 아카이브(예: TokenNameFinder 및 POSTagger 모델)에 아티팩트로 포함되고 모델 로드 중에 구문 분석되므로 조작된 모델 아카이브를 제공할 수 있는 공격자가 클래스 이름을 직접 제어합니다. \n\n(2) StreamFactoryRegistry.getFactory(Class, String)는 등록되지 않은 형식 이름을 ObjectStreamFactory의 정규화된 클래스 이름으로 해석하는 것으로 대체됩니다. 이는 신뢰할 수 없는 형식 이름을 전달하는 애플리케이션에서 악용될 수 있습니다(예: 명령줄 도구의 -format 매개변수를 외부 입력에 노출). \n\n(3) StringInterners는 opennlp.interner.class 시스템 속성으로 명명된 내부 구현을 인스턴스화합니다. 이 값은 일반적으로 배포자가 제어하므로 공격자가 독립적으로 접근할 수 있는 것이 아니라 심층 방어를 위해 강화됩니다.\n\n악용을 위해서는 정적 초기화 프로그램 또는 인수 없는 생성자(JNDI 조회, 아웃바운드 네트워크 I/O, 파일 시스템 액세스)에 공격자에게 유용한 부작용이 있는 클래스가 클래스 경로에 있어야 하므로 이는 드롭인 원격 코드 실행이 아닙니다. 티\n\n완화: \n\n고정 릴리스로 업그레이드하세요. \n\n수정 사항은 Class.forName()이 호출되기 전에 패키지 접두사 허용 목록을 참조하는 ExtensionLoader.instantiateExtension(...)을 통해 세 가지 경로를 모두 라우팅하므로 허용되지 않는 클래스는 로드, 초기화 또는 생성되지 않습니다. \nopennlp 아래의 클래스. 접두사는 기본적으로 허용됩니다. 기능 생성기 팩토리, 개체 스트림 팩토리 또는 opennlp.* 외부의 문자열 내부자를 참조하는 모델을 로드하는 배포에서는 첫 번째 모델 로드 전에 ExtensionLoader.registerAllowedPackage(String)를 통해 프로그래밍 방식으로 또는 OPENNLP_EXT_ALLOWED_PACKAGES 시스템 속성을 허용된 패키지 접두사의 쉼표로 구분된 목록으로 설정하여 해당 패키지를 선택해야 합니다. \n\n즉시 업그레이드할 수 없는 사용자는 모든 모델 파일과 형식 이름이 신뢰할 수 있는 출처에서 나온 것인지 확인해야 하며 부작용을 일으키는 정적 초기화 프로그램이나 생성자가 있는 클래스에 대한 클래스 경로를 감사해야 합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-63317\n2. 26.07.24 오후5:07\n3. Arbitrary Class Instantiation via XML Feature Gene",
+      "cve_id": "CVE-2026-63317",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63317",
+      "source": "cvefeed",
+      "published": "2026-07-24T17:07:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-59676 Local File Deletion Attack Vector in rm_rf() in seunshare",
       "summary": "Information published.",
@@ -2968,6 +2995,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59676",
       "source": "msrc",
       "published": "2026-07-24T17:02:21+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-15704 - CWE-863: ABAC authorization bypass via trailing slash route normalization in Eclipse BaSyx Go Components",
+      "summary": "CVE ID :CVE-2026-15704\n  \nPublished : July 24, 2026, 7:41 a.m. | 1 hour, 14 minutes ago\n  \nDescription :In Eclipse BaSyx Go Components versions up to and including 1.0.0, ABAC-enabled deployments are vulnerable to an authorization bypass caused by inconsistent trailing-slash handling between the ABAC middleware and the HTTP router.\n\n\n\nThe shared router configuration used Chi's `middleware.StripSlashes`, so a request such as `GET /shells/` was dispatched to the registered `GET /shells` route. However, the ABAC middleware evaluated the original request path including the trailing slash. If ABAC route lookup did not find a matching slash-suffixed route, the request was passed onward and the router then stripped the slash and executed the protected handler without the intended ABAC authorization decision and without the expected ABAC query filters.\n\n\n\nAn unauthenticated or unauthorized network attacker could append a trailing slash to protected API routes to reach handlers that should have been denied by ABAC policy. Depending on the exposed component, HTTP method, and deployed policy, this could allow unauthorized read, create, update, delete, or upload operations.\n\n\n\nThe issue affects ABAC-enabled deployments of services that use the shared router and ABAC middleware, including AAS Repository, Submodel Repository, AAS Registry, Submodel Registry, Concept Description Repository, Discovery, AAS Environment upload, and related services. The issue is fixed in Eclipse BaSyx Go Components v1.0.1.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-15704\n  \nPublished : July 24, 2026, 7:41 a.m. | 1 hour, 14 minutes ago\n  \nDescription :In Eclipse BaSyx Go Components versions up to and including 1.0.0, ABAC-enabled deployments are vulnerable to an authorization bypass caused by inconsistent trailing-slash handling between the ABAC middleware and the HTTP router.\n\n\n\nThe shared router configuration used Chi's `middleware.StripSlashes`, so a request such as `GET /shells/` was dispatched to the registered `GET /shells` route. However, the ABAC middleware evaluated the original request path including the trailing slash. If ABAC route lookup did not find a matching slash-suffixed route, the request was passed onward and the router then stripped the slash and executed the protected handler without the intended ABAC authorization decision and without the expected ABAC query filters.\n\n\n\nAn unauthenticated or unauthorized network attacker could append a trailing slash to protected API routes to reach handlers that should have been denied by ABAC policy. Depending on the exposed component, HTTP method, and deployed policy, this could allow unauthorized read, create, update, delete, or upload operations.\n\n\n\nThe issue affects ABAC-enabled deployments of services that use the shared router and ABAC middleware, including AAS Repository, Submodel Repository, AAS Registry, Submodel Registry, Concept Description Repository, Discovery, AAS Environment upload, and related services. The issue is fixed in Eclipse BaSyx Go Components v1.0.1.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-15704 - CWE-863: Eclipse BaSyx Go 구성 요소의 후행 슬래시 경로 정규화를 통한 ABAC 인증 우회",
+      "summary_ko": "CVE ID:CVE-2026-15704\n  \n게시일 : 2026년 7월 24일 오전 7시 41분 | 1시간, 14분 전\n  \n설명 : 1.0.0 이하의 Eclipse BaSyx Go 구성 요소 버전에서 ABAC 지원 배포는 ABAC 미들웨어와 HTTP 라우터 간의 일관되지 않은 후행 슬래시 처리로 인해 발생하는 인증 우회에 취약합니다.\n\n\n\n공유 라우터 구성은 Chi의 'middleware.StripSlashes'를 사용했기 때문에 'GET /shells/'와 같은 요청이 등록된 'GET /shells' 경로로 전달되었습니다. 그러나 ABAC 미들웨어는 후행 슬래시를 포함하여 원래 요청 경로를 평가했습니다. ABAC 경로 조회에서 일치하는 슬래시 접미사 경로를 찾지 못한 경우 요청이 계속 전달되고 라우터는 슬래시를 제거하고 의도한 ABAC 인증 결정 및 예상 ABAC 쿼리 필터 없이 보호된 핸들러를 실행했습니다.\n\n\n\n인증되지 않았거나 승인되지 않은 네트워크 공격자는 ABAC 정책에 의해 거부되어야 하는 핸들러에 도달하기 위해 보호된 API 경로에 후행 슬래시를 추가할 수 있습니다. 노출된 구성 요소, HTTP 메서드 및 배포된 정책에 따라 무단 읽기, 생성, 업데이트, 삭제 또는 업로드 작업이 허용될 수 있습니다.\n\n\n\n이 문제는 AAS 저장소, 하위 모델 저장소, AAS 레지스트리, 하위 모델 레지스트리, 개념 설명 저장소, 검색, AAS 환경 업로드 및 관련 서비스를 포함하여 공유 라우터 및 ABAC 미들웨어를 사용하는 서비스의 ABAC 지원 배포에 영향을 미칩니다. 이 문제는 Eclipse BaSyx Go 구성 요소 v1.0.1에서 해결되었습니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-15704\n2. 26.07.24 오후4:41\n3. In Eclipse BaSyx Go Components versions up to and ",
+      "cve_id": "CVE-2026-15704",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15704",
+      "source": "cvefeed",
+      "published": "2026-07-24T16:41:42+09:00",
       "lang": "en"
     },
     {
