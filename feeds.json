@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-25T04:31:11.271093+09:00",
+  "fetched_at": "2026-07-25T05:01:19.021121+09:00",
   "security_news": [
     {
       "title": "Hermes AI agent used to automate attack on Thai Finance Ministry",
@@ -2784,21 +2784,24 @@
       "source": "naver",
       "published": "2026-07-22T05:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[단독]정보기관 요원 수백명 포함 1만명 정보 털린 외교부, 알고도 5개월...",
-      "summary": "외교부 산하 국립외교원 온라인 교육시스템이 해킹 공격을 받아 해외에 파견된 정보기관 요원 수백 명의 개인정보가 유출된 것으로 알려졌다. 정부는 북한 소행 가능성이 거론되는 이번 해킹으로 해외 파견 정보기관...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 외교부 국립외교원 시스템 해킹, 정보기관 요원 수백 명 포함 1만 명 정보 유출\n2. 북한 소행 가능성 제기, 해외 파견 요원 개인정보 유출\n3. 외교부, 5개월간 파악 못 하고 보안 허점 노출",
-      "link": "https://n.news.naver.com/mnews/article/020/0003735589?sid=100",
-      "source": "naver",
-      "published": "2026-07-22T04:34:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-48036 - Hulumi: Drift classifier fails open on adapter errors and over-promotes Mixed verdicts",
+      "summary": "CVE ID :CVE-2026-48036\n  \nPublished : July 24, 2026, 6:44 p.m. | 37 minutes ago\n  \nDescription :Hulumi is an open-source toolkit that ships secure-by-default cloud and platform infrastructure components for Pulumi. Prior to version 1.4.0, consumers running drift detection in CI / cron could see transient adapter failures silently cached as \"all clear\" — masking real attacks for up to six hours — or see ordinary provider-version churn falsely promoted to incident severity. Either way, the verdict source was unreliable for downstream incident workflows that gate on it. This issue has been patched in version 1.4.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-48036\n  \nPublished : July 24, 2026, 6:44 p.m. | 37 minutes ago\n  \nDescription :Hulumi is an open-source toolkit that ships secure-by-default cloud and platform infrastructure components for Pulumi. Prior to version 1.4.0, consumers running drift detection in CI / cron could see transient adapter failures silently cached as \"all clear\" — masking real attacks for up to six hours — or see ordinary provider-version churn falsely promoted to incident severity. Either way, the verdict source was unreliable for downstream incident workflows that gate on it. This issue has been patched in version 1.4.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-48036 - Hulumi: 어댑터 오류로 인해 드리프트 분류자가 실패하고 혼합 판정을 과도하게 승격함",
+      "summary_ko": "CVE ID:CVE-2026-48036\n  \n게시일 : 2026년 7월 24일 오후 6시 44분 | 37분 전\n  \n설명 :Hulumi는 기본적으로 안전한 Pulumi용 클라우드 및 플랫폼 인프라 구성 요소를 제공하는 오픈 소스 툴킷입니다. 버전 1.4.0 이전에는 CI/cron에서 드리프트 감지를 실행하는 소비자는 최대 6시간 동안 실제 공격을 마스킹하는 \"완전 클리어\"로 자동으로 캐시된 일시적인 어댑터 오류를 보거나 일반 공급자 버전 변동이 사고 심각도로 잘못 승격되는 것을 볼 수 있었습니다. 어느 쪽이든, 판정 소스는 이를 기반으로 하는 다운스트림 사건 워크플로에 대해 신뢰할 수 없었습니다. 이 문제는 버전 1.4.0에서 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-48036\n2. 26.07.25 오전3:44\n3. Hulumi is an open-source toolkit that ships secure",
+      "cve_id": "CVE-2026-48036",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48036",
+      "source": "cvefeed",
+      "published": "2026-07-25T03:44:05+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-66035 - libssh2 Heap Buffer Overflow via ETM Cipher Negotiation",
       "summary": "CVE ID :CVE-2026-66035\n  \nPublished : July 24, 2026, 4:45 p.m. | 17 minutes ago\n  \nDescription :libssh2 through 1.11.1, fixed in commit 42e33d8, contains a pre-authentication heap buffer overflow vulnerability that allows a malicious SSH server to corrupt heap metadata in any connecting client by sending a packet with a packet_length smaller than the cipher's block size during Encrypt-then-MAC cipher negotiation. In the fullpacket() function in src/transport.c, the ETM path allocates a buffer of packet_length bytes but copies blocksize minus one bytes via memcpy, causing an overflow that on 32-bit glibc writes attacker-controlled bytes into an adjacent chunk's SIZE field, enabling tcache bin confusion, overlapping live objects, and function pointer overwrite during the session handshake before authentication.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3952,36 +3955,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-62574",
       "source": "cvefeed",
       "published": "2026-07-22T07:19:09+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47667 - CImg Library: Uncontrolled Memory Allocation and Memory Leak in `_load_analyze()` via Crafted NIfTI/Analyze Header",
-      "summary": "CVE ID :CVE-2026-47667\n  \nPublished : July 21, 2026, 7:57 p.m. | 24 minutes ago\n  \nDescription :CImg Library is a C++ library for image processing. Prior to version 4.0.0 in `_load_analyze()`, the header_size field is read as an `unsigned int` from the first 4 bytes of an Analyze/NIfTI file and passed directly to `new unsigned char[header_size]` without being bounded against the actual file size. A value up to ~4 GB is accepted. If the subsequent `fread` returns `short`  as it will for any malformed file), the function throws a `CImgIOException` and the allocated buffer is never freed. A 6-byte crafted file is sufficient to trigger an allocation of ~1.3 GB per call, with the full allocation leaked on every error path. The issue is reachable via `load_analyze()` and the generic `load()` when the file extension is .hdr, .img, or .nii. Version 4.0.0 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47667\n  \nPublished : July 21, 2026, 7:57 p.m. | 24 minutes ago\n  \nDescription :CImg Library is a C++ library for image processing. Prior to version 4.0.0 in `_load_analyze()`, the header_size field is read as an `unsigned int` from the first 4 bytes of an Analyze/NIfTI file and passed directly to `new unsigned char[header_size]` without being bounded against the actual file size. A value up to ~4 GB is accepted. If the subsequent `fread` returns `short`  as it will for any malformed file), the function throws a `CImgIOException` and the allocated buffer is never freed. A 6-byte crafted file is sufficient to trigger an allocation of ~1.3 GB per call, with the full allocation leaked on every error path. The issue is reachable via `load_analyze()` and the generic `load()` when the file extension is .hdr, .img, or .nii. Version 4.0.0 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47667 - CImg 라이브러리: 제작된 NIfTI/Analyze 헤더를 통해 `_load_analyze()`에서 제어되지 않은 메모리 할당 및 메모리 누수",
-      "summary_ko": "CVE ID:CVE-2026-47667\n  \n게시일 : 2026년 7월 21일 오후 7시 57분 | 24분 전\n  \n설명 :CImg Library는 이미지 처리를 위한 C++ 라이브러리입니다. 버전 4.0.0 이전에는 `_load_analyze()`에서 header_size 필드를 Analyze/NIfTI 파일의 처음 4바이트에서 `unsigned int`로 읽어 실제 파일 크기에 제한을 두지 않고 `new unsigned char[header_size]`에 직접 전달했습니다. 최대 4GB의 값이 허용됩니다. 잘못된 형식의 파일과 마찬가지로 후속 `fread`가 `short`를 반환하는 경우 함수는 `CImgIOException`을 발생시키고 할당된 버퍼는 결코 해제되지 않습니다. 6바이트로 제작된 파일은 호출당 최대 1.3GB의 할당을 트리거하는 데 충분하며 모든 오류 경로에서 전체 할당이 누출됩니다. 이 문제는 파일 확장자가 .hdr, .img 또는 .nii인 경우 'load_analyze()' 및 일반 'load()'를 통해 도달할 수 있습니다. 버전 4.0.0에서는 문제가 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47667\n2. 26.07.22 오전4:57\n3. CImg Library is a C++ library for image processing",
-      "cve_id": "CVE-2026-47667",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47667",
-      "source": "cvefeed",
-      "published": "2026-07-22T04:57:49+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-46403 - Klever-Go KVM read-only execution can commit contract delete and upgrade side effects",
-      "summary": "CVE ID :CVE-2026-46403\n  \nPublished : July 21, 2026, 7:51 p.m. | 31 minutes ago\n  \nDescription :Klever-Go is the Go implementation of the Klever blockchain protocol. Prior to 1.7.17, KVM exposes `ExecuteReadOnlyWithTypedArguments` as a read-only execution mechanism. The hook saves the previous read-only state, sets `runtime.SetReadOnly(true)`, executes the destination context, and then restores the previous read-only state. However, the indirect contract delete and upgrade paths do not reject execution when `runtime.ReadOnly()` is true. As a result, a contract reached through read-only execution can call the production delete hook for a target contract it owns. The delete path appends the target address to `vmOutput.DeletedAccounts`, the output context merges `DeletedAccounts` into the caller output, and the smart contract processor later processes the VM output by deleting accounts listed in that field. The root cause is that read-only mode is applied as runtime state, but not enforced by the state-changing delete and upgrade host-core paths. This breaks the expected isolation boundary for workflows that rely on read-only calls to inspect another contract without allowing that callee to produce state-changing VM output. The issue is fixed in v1.7.17. Contract delete and upgrade host-core paths now reject execution when `runtime.ReadOnly()` is true. The invariant is regression-tested for delete, upgrade, storage writes, value transfers, and any VM output field that can later mutate chain state.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-46403\n  \nPublished : July 21, 2026, 7:51 p.m. | 31 minutes ago\n  \nDescription :Klever-Go is the Go implementation of the Klever blockchain protocol. Prior to 1.7.17, KVM exposes `ExecuteReadOnlyWithTypedArguments` as a read-only execution mechanism. The hook saves the previous read-only state, sets `runtime.SetReadOnly(true)`, executes the destination context, and then restores the previous read-only state. However, the indirect contract delete and upgrade paths do not reject execution when `runtime.ReadOnly()` is true. As a result, a contract reached through read-only execution can call the production delete hook for a target contract it owns. The delete path appends the target address to `vmOutput.DeletedAccounts`, the output context merges `DeletedAccounts` into the caller output, and the smart contract processor later processes the VM output by deleting accounts listed in that field. The root cause is that read-only mode is applied as runtime state, but not enforced by the state-changing delete and upgrade host-core paths. This breaks the expected isolation boundary for workflows that rely on read-only calls to inspect another contract without allowing that callee to produce state-changing VM output. The issue is fixed in v1.7.17. Contract delete and upgrade host-core paths now reject execution when `runtime.ReadOnly()` is true. The invariant is regression-tested for delete, upgrade, storage writes, value transfers, and any VM output field that can later mutate chain state.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-46403 - Klever-Go KVM 읽기 전용 실행으로 인해 계약 삭제 및 업그레이드 부작용이 발생할 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-46403\n  \n게시일 : 2026년 7월 21일 오후 7시 51분 | 31분 전\n  \n설명:Klever-Go는 Klever 블록체인 프로토콜을 Go로 구현한 것입니다. 1.7.17 이전에는 KVM이 'ExecuteReadOnlyWithTypedArguments'를 읽기 전용 실행 메커니즘으로 노출했습니다. 후크는 이전 읽기 전용 상태를 저장하고 `runtime.SetReadOnly(true)`를 설정하고 대상 컨텍스트를 실행한 다음 이전 읽기 전용 상태를 복원합니다. 그러나 간접 계약 삭제 및 업그레이드 경로는 `runtime.ReadOnly()`가 true인 경우 실행을 거부하지 않습니다. 결과적으로 읽기 전용 실행을 통해 도달한 계약은 자신이 소유한 대상 계약에 대한 생산 삭제 후크를 호출할 수 있습니다. 삭제 경로는 대상 주소를 'vmOutput.DeletedAccounts'에 추가하고, 출력 컨텍스트는 'DeletedAccounts'를 호출자 출력에 병합하며, 스마트 계약 프로세서는 나중에 해당 필드에 나열된 계정을 삭제하여 VM 출력을 처리합니다. 근본 원인은 읽기 전용 모드가 런타임 상태로 적용되지만 상태 변경 삭제 및 업그레이드 호스트 코어 경로에 의해 적용되지 않는다는 것입니다. 이는 호출 수신자가 상태 변경 VM 출력을 생성하도록 허용하지 않고 다른 계약을 검사하기 위해 읽기 전용 호출에 의존하는 워크플로에 대한 예상 격리 경계를 깨뜨립니다. 이 문제는 v1.7.17에서 수정되었습니다. 이제 'runtime.ReadOnly()'가 true인 경우 계약 삭제 및 호스트 코어 경로 업그레이드가 실행을 거부합니다. 불변성은 삭제, 업그레이드, 스토리지 쓰기, 값 전송 및 나중에 체인 상태를 변경할 수 있는 모든 VM 출력 필드에 대해 회귀 테스트를 거쳤습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-46403\n2. 26.07.22 오전4:51\n3. Klever-Go is the Go implementation of the Klever b",
-      "cve_id": "CVE-2026-46403",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-46403",
-      "source": "cvefeed",
-      "published": "2026-07-22T04:51:18+09:00",
       "lang": "en"
     }
   ],
