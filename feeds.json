@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-26T00:32:30.916420+09:00",
+  "fetched_at": "2026-07-26T01:03:37.814925+09:00",
   "security_news": [
     {
       "title": "매일 타던 따릉이가 털리다니…개인 맞춤형 공공서비스 보안 '비상'",
@@ -1884,30 +1884,6 @@
       "source": "bleepingcomputer",
       "published": "2026-07-23T01:59:17+09:00",
       "lang": "en"
-    },
-    {
-      "title": "해킹에 털린 따릉이, 보상은 딸랑 5000원?",
-      "summary": "10대 해킹범 2명이 2024년 6월 따릉이 서버를 해킹해 개인정보를 빼돌린 것으로 조사됐다. 서울시는 시설공단이 개인정보가 유출된 사실을 알고도 별다른 조치를 하지 않았다며 공단 관계자들을 경찰에 수사 의뢰했다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 10대 해커 2명, 2024년 6월 따릉이 서버 해킹\n2. 따릉이 개인정보 유출, 서울시설공단 은폐 의혹\n3. 서울시, 공단 관계자 경찰 수사 의뢰",
-      "link": "https://n.news.naver.com/mnews/article/023/0003989107?sid=102",
-      "source": "naver",
-      "published": "2026-07-23T00:46:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[한마당] 해킹 산업의 시대",
-      "summary": "국가에서 사이버 범죄조직을 운영하는 대표적 나라는 북한이다. 특히 북한은 가상자산에 눈독을 들인다.... 국가 간 사이버 전쟁에 조직적으로 해커를 동원하기까지 한다. 정보와 데이터의 가치가 갈수록 커지는 만큼...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국가에서 사이버 범죄조직을 운영하는 대표적 나라는 북한이다.\n2. 특히 북한은 가상자산에 눈독을 들인다.... 국가 간 사이버 전쟁에 조직적으로 해커를 동원\n3. 정보와 데이터의 가치가 갈수록 커지는 만큼...",
-      "link": "https://n.news.naver.com/mnews/article/005/0001862571?sid=110",
-      "source": "naver",
-      "published": "2026-07-23T00:41:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1924,6 +1900,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10681",
       "source": "cvefeed",
       "published": "2026-07-25T22:23:07+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-64520 - firmware: arm_ffa: Bound PARTITION_INFO_GET_REGS copies",
+      "summary": "CVE ID :CVE-2026-64520\n  \nPublished : July 25, 2026, 10:17 a.m. | 4 hours, 7 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nfirmware: arm_ffa: Bound PARTITION_INFO_GET_REGS copies\n\nThe register-based PARTITION_INFO_GET path trusted the firmware-provided\nindices when copying partition descriptors into the caller buffer.\nReject inconsistent counts or index progressions so the copy loop cannot\nwrite past the allocated array.\n\n(fixed cur_idx when exactly one descriptor in the first fragment)\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-64520\n  \nPublished : July 25, 2026, 10:17 a.m. | 4 hours, 7 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nfirmware: arm_ffa: Bound PARTITION_INFO_GET_REGS copies\n\nThe register-based PARTITION_INFO_GET path trusted the firmware-provided\nindices when copying partition descriptors into the caller buffer.\nReject inconsistent counts or index progressions so the copy loop cannot\nwrite past the allocated array.\n\n(fixed cur_idx when exactly one descriptor in the first fragment)\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-64520 - 펌웨어: arm_ffa: PARTITION_INFO_GET_REGS 복사본 바인딩",
+      "summary_ko": "CVE ID:CVE-2026-64520\n  \n게시일 : 2026년 7월 25일 오전 10시 17분 | 4시간, 7분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\n펌웨어: arm_ffa: PARTITION_INFO_GET_REGS 복사본 바인딩\n\n레지스터 기반 PARTITION_INFO_GET 경로는 펌웨어 제공을 신뢰했습니다.\n파티션 설명자를 호출자 버퍼에 복사할 때 인덱스입니다.\n일관되지 않은 개수 또는 인덱스 진행을 거부하여 복사 루프가 불가능하도록 합니다.\n할당된 배열을 지나서 씁니다.\n\n(첫 번째 조각에 정확히 하나의 설명자가 있을 때 cur_idx를 수정했습니다.)\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-64520\n2. 26.07.25 오후7:17\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-64520",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64520",
+      "source": "cvefeed",
+      "published": "2026-07-25T19:17:38+09:00",
       "lang": "en"
     },
     {
