@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-25T23:02:49.502130+09:00",
+  "fetched_at": "2026-07-25T23:32:42.148059+09:00",
   "security_news": [
     {
       "title": "Fastjson 1.x RCE Vulnerability Targeted in Attacks With No Patched Available",
@@ -1924,6 +1924,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-10681 - SMP race in `thread_idx_alloc()` lets concurrent `k_object_alloc(K_OBJ_THREAD)` callers share a kernel-object permission slot",
+      "summary": "CVE ID :CVE-2026-10681\n  \nPublished : July 25, 2026, 1:23 p.m. | 52 minutes ago\n  \nDescription :In Zephyr's userspace dynamic-objects subsystem, thread_idx_alloc() in kernel/userspace/userspace.c allocated a new thread permission index from the global _thread_idx_map[] bitmap without holding lists_lock.\n\nOn SMP systems, two user-mode threads invoking the k_object_alloc(K_OBJ_THREAD) syscall concurrently can both observe the same low free bit, perform the same non-atomic RMW to clear it, and return the identical tidx.\n\nThe two newly created K_OBJ_THREAD objects are then assigned the same thread_id, so the two user threads alias a single bit position in every kernel object's perms[] bitfield: any subsequent grant of access on a kernel object to one thread is implicitly a grant to the other, defeating userspace ACL isolation. A secondary lost-update window between the unlocked &=~BIT() in alloc and the locked |= BIT() in thread_idx_free() can also leak entries from the thread-index pool.\n\nThe defect is reachable from any user-mode thread via the unrestricted __syscall k_object_alloc and is gated on CONFIG_USERSPACE, CONFIG_DYNAMIC_OBJECTS, and CONFIG_SMP. The flaw was introduced when the per-thread permission index was added in 2018 and is present in every release up to and including v4.4.0. Fixed by holding lists_lock across the bitmap RMW and the permissions clear (and inlining the obj_list traversal that previously took the lock itself).\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10681\n  \nPublished : July 25, 2026, 1:23 p.m. | 52 minutes ago\n  \nDescription :In Zephyr's userspace dynamic-objects subsystem, thread_idx_alloc() in kernel/userspace/userspace.c allocated a new thread permission index from the global _thread_idx_map[] bitmap without holding lists_lock.\n\nOn SMP systems, two user-mode threads invoking the k_object_alloc(K_OBJ_THREAD) syscall concurrently can both observe the same low free bit, perform the same non-atomic RMW to clear it, and return the identical tidx.\n\nThe two newly created K_OBJ_THREAD objects are then assigned the same thread_id, so the two user threads alias a single bit position in every kernel object's perms[] bitfield: any subsequent grant of access on a kernel object to one thread is implicitly a grant to the other, defeating userspace ACL isolation. A secondary lost-update window between the unlocked &=~BIT() in alloc and the locked |= BIT() in thread_idx_free() can also leak entries from the thread-index pool.\n\nThe defect is reachable from any user-mode thread via the unrestricted __syscall k_object_alloc and is gated on CONFIG_USERSPACE, CONFIG_DYNAMIC_OBJECTS, and CONFIG_SMP. The flaw was introduced when the per-thread permission index was added in 2018 and is present in every release up to and including v4.4.0. Fixed by holding lists_lock across the bitmap RMW and the permissions clear (and inlining the obj_list traversal that previously took the lock itself).\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10681 - `thread_idx_alloc()`의 SMP 경쟁으로 인해 동시 `k_object_alloc(K_OBJ_THREAD)` 호출자가 커널 개체 권한 슬롯을 공유할 수 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-10681\n  \n게시일 : 2026년 7월 25일 오후 1시 23분 | 52분 전\n  \n설명: Zephyr의 사용자 공간 동적 개체 하위 시스템에서 kernel/userspace/userspace.c의 thread_idx_alloc()는 목록_잠금을 유지하지 않고 전역 _thread_idx_map[] 비트맵에서 새 스레드 권한 인덱스를 할당했습니다.\n\nSMP 시스템에서 k_object_alloc(K_OBJ_THREAD) syscall을 동시에 호출하는 두 개의 사용자 모드 스레드는 모두 동일한 낮은 여유 비트를 관찰하고 동일한 비원자 RMW를 수행하여 이를 지우고 동일한 tidx를 반환할 수 있습니다.\n\n그런 다음 새로 생성된 두 개의 K_OBJ_THREAD 개체에 동일한 thread_id가 할당되므로 두 사용자 스레드는 모든 커널 개체의 perms[] 비트 필드에서 단일 비트 위치의 별칭을 지정합니다. 커널 개체에 대한 한 스레드에 대한 후속 액세스 권한 부여는 암시적으로 다른 스레드에 대한 권한 부여로, 사용자 공간 ACL 격리를 무효화합니다. alloc의 잠금 해제된 &=~BIT()와 thread_idx_free()의 잠긴 |= BIT() 사이의 보조 손실 업데이트 창으로 인해 스레드 인덱스 풀에서 항목이 누출될 수도 있습니다.\n\n결함은 제한되지 않은 __syscall k_object_alloc을 통해 모든 사용자 모드 스레드에서 도달할 수 있으며 CONFIG_USERSPACE, CONFIG_DYNAMIC_OBJECTS 및 CONFIG_SMP에서 제어됩니다. 이 결함은 2018년에 스레드별 권한 인덱스가 추가되었을 때 도입되었으며 v4.4.0을 포함한 모든 릴리스에 존재합니다. 비트맵 RMW 전체에서 list_lock을 유지하고 권한을 삭제하여 수정했습니다(그리고 이전에 잠금 자체를 취했던 obj_list 탐색을 인라인 처리함).\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10681\n2. 26.07.25 오후10:23\n3. In Zephyr's userspace dynamic-objects subsystem, t",
+      "cve_id": "CVE-2026-10681",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10681",
+      "source": "cvefeed",
+      "published": "2026-07-25T22:23:07+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-64529 - crypto: qat - remove unused character device and IOCTLs",
       "summary": "CVE ID :CVE-2026-64529\n  \nPublished : July 25, 2026, 9:24 a.m. | 46 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: qat - remove unused character device and IOCTLs\n\nThe QAT driver exposes a character device (qat_adf_ctl) with IOCTLs\nfor device configuration, start, stop, status query and enumeration.\nThese IOCTLs are not part of any public uAPI header and have no known\nin-tree or out-of-tree users. Device lifecycle is already managed via\nsysfs.\n\nThe ioctl interface also increases the attack surface and is the\nsubject of a number of bug reports.\n\nRemove the character device, the IOCTL definitions, and the related\ndata structures (adf_dev_status_info, adf_user_cfg_key_val,\nadf_user_cfg_section, adf_user_cfg_ctl_data). Drop the now-unused\nadf_cfg_user.h header and strip adf_ctl_drv.c down to the minimal\nmodule_init/module_exit hooks for workqueue, AER, and crypto/compression\nalgorithm registration.\n\nClean up leftover dead code that was only reachable from the removed\nIOCTL paths: adf_cfg_del_all(), adf_devmgr_verify_id(),\nadf_devmgr_get_num_dev(), adf_devmgr_get_dev_by_id(),\nadf_get_vf_real_id() and the unused ADF_CFG macros.\n\nAdditionally, drop the entry associated to QAT IOCTLs in\nioctl-number.rst.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-64529\n  \nPublished : July 25, 2026, 9:24 a.m. | 46 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: qat - remove unused character device and IOCTLs\n\nThe QAT driver exposes a character device (qat_adf_ctl) with IOCTLs\nfor device configuration, start, stop, status query and enumeration.\nThese IOCTLs are not part of any public uAPI header and have no known\nin-tree or out-of-tree users. Device lifecycle is already managed via\nsysfs.\n\nThe ioctl interface also increases the attack surface and is the\nsubject of a number of bug reports.\n\nRemove the character device, the IOCTL definitions, and the related\ndata structures (adf_dev_status_info, adf_user_cfg_key_val,\nadf_user_cfg_section, adf_user_cfg_ctl_data). Drop the now-unused\nadf_cfg_user.h header and strip adf_ctl_drv.c down to the minimal\nmodule_init/module_exit hooks for workqueue, AER, and crypto/compression\nalgorithm registration.\n\nClean up leftover dead code that was only reachable from the removed\nIOCTL paths: adf_cfg_del_all(), adf_devmgr_verify_id(),\nadf_devmgr_get_num_dev(), adf_devmgr_get_dev_by_id(),\nadf_get_vf_real_id() and the unused ADF_CFG macros.\n\nAdditionally, drop the entry associated to QAT IOCTLs in\nioctl-number.rst.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2626,6 +2641,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50243",
       "source": "msrc",
       "published": "2026-07-23T17:05:28+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-41637 Degradation of resolution service from improperly accounted client-terminated DNS-over-QUIC queries",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-41637 부적절하게 계정된 클라이언트 종료 DNS-over-QUIC 쿼리로 인해 확인 서비스 저하",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-41637\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-41637",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41637",
+      "source": "msrc",
+      "published": "2026-07-23T17:05:22+09:00",
       "lang": "en"
     },
     {
