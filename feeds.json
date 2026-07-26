@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-26T22:02:37.559815+09:00",
+  "fetched_at": "2026-07-26T22:32:01.710880+09:00",
   "security_news": [
     {
       "title": "위믹스 네트워크, 보안 사고 의심…70만달러 이상 유출 가능성",
@@ -1644,30 +1644,6 @@
       "source": "naver",
       "published": "2026-07-23T22:42:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "경복대학교 소프트웨어융합학과 RealizeSoft 팀, '제3회 대한민국 학생창...",
-      "summary": "사이버보안 전공은 보안 취약점 분석, 모의 해킹, 보안 관제 및 솔루션 운영 실습을 통한 정보 보안 전문가 양성을 클라우드서비스 전공은 구글(Google), 아마존(AWS), 마이크로소프트(MS) 등 글로벌 클라우드 플랫폼...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 경복대학교 RealizeSoft 팀, 해킹방어대회 3회 연속 수상\n2. 모의 해킹, 보안 관제 실습 통해 정보 보안 전문가 양성\n3. 클라우드 전공은 Google, AWS, MS 등 활용 능력 강화",
-      "link": "https://www.cnbnews.com/news/articleView.html?idxno=1009055",
-      "source": "naver",
-      "published": "2026-07-23T22:20:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "비트멕스, 2026년 9월 운영 종료…무기한 선물 개척자 퇴장",
-      "summary": "그럼에도 보안 측면에서는 11년간 단 한 건의 해킹이나 자산 유출 없이 운영을 이어온 점은 업계에서 드문 기록으로 평가된다. 크립토 파생시장, 새로운 경쟁 국면으로 비트멕스의 퇴장은 단순한 거래소 하나의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 비트멕스, 2026년 9월 운영 종료\n2. 11년간 단 한 건의 해킹/자산 유출 없이 운영\n3. 크립토 파생시장, 새로운 경쟁 국면 진입",
-      "link": "https://www.tokenpost.kr/news/cryptocurrency/380540",
-      "source": "naver",
-      "published": "2026-07-23T22:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2314,21 +2290,6 @@
       "link": "https://isc.sans.edu/diary/rss/33180",
       "source": "sans_isc",
       "published": "2026-07-23T22:40:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-65900 - DOMPurify before 3.4.8 Template Expression Injection via RETURN_DOM",
-      "summary": "CVE ID :CVE-2026-65900\n  \nPublished : July 23, 2026, 1:16 p.m. | 18 minutes ago\n  \nDescription :DOMPurify versions >=3.0.0 and before 3.4.8, when configured with SAFE_FOR_TEMPLATES together with a DOM output mode (RETURN_DOM, RETURN_DOM_FRAGMENT, or IN_PLACE), fail to strip template expressions (e.g. ${evil}, {{evil}}, <%evil%>) inside  element content. The final normalization/scrub pass (_scrubTemplateExpressions) uses a NodeIterator and node.normalize() that do not descend into template.content, so expressions that only form after adjacent text nodes merge survive sanitization. This bypasses SAFE_FOR_TEMPLATES and can allow a downstream template engine to evaluate attacker-supplied expressions. The string output path is not affected.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-65900\n  \nPublished : July 23, 2026, 1:16 p.m. | 18 minutes ago\n  \nDescription :DOMPurify versions >=3.0.0 and before 3.4.8, when configured with SAFE_FOR_TEMPLATES together with a DOM output mode (RETURN_DOM, RETURN_DOM_FRAGMENT, or IN_PLACE), fail to strip template expressions (e.g. ${evil}, {{evil}}, <%evil%>) inside  element content. The final normalization/scrub pass (_scrubTemplateExpressions) uses a NodeIterator and node.normalize() that do not descend into template.content, so expressions that only form after adjacent text nodes merge survive sanitization. This bypasses SAFE_FOR_TEMPLATES and can allow a downstream template engine to evaluate attacker-supplied expressions. The string output path is not affected.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-65900 - 3.4.8 이전의 DOMPurify RETURN_DOM을 통한 템플릿 표현식 주입",
-      "summary_ko": "CVE ID:CVE-2026-65900\n  \n게시일 : 2026년 7월 23일 오후 1시 16분 | 18분 전\n  \n설명 :DOMPurify 버전 3.0.0 이상 및 3.4.8 이전에서는 DOM 출력 모드(RETURN_DOM, RETURN_DOM_FRAGMENT 또는 IN_PLACE)와 함께 SAFE_FOR_TEMPLATES로 구성된 경우 요소 콘텐츠 내에서 템플릿 표현식(예: ${evil}, {{evil}}, <%evil%>)을 제거하지 못합니다. 최종 정규화/스크럽 패스(_scrubTemplateExpressions)는 template.content로 내려오지 않는 NodeIterator 및 node.normalize()를 사용하므로 인접한 텍스트 노드가 병합된 후에만 형성되는 표현식은 삭제 상태를 유지합니다. 이는 SAFE_FOR_TEMPLATES를 우회하고 다운스트림 템플릿 엔진이 공격자가 제공한 표현식을 평가하도록 허용할 수 있습니다. 문자열 출력 경로는 영향을 받지 않습니다.\n  \n심각도: 6.1 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-65900\n2. 26.07.23 오후10:16\n3. DOMPurify versions >=3.0.0 and before 3.4.8, when ",
-      "cve_id": "CVE-2026-65900",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-65900",
-      "source": "cvefeed",
-      "published": "2026-07-23T22:16:19+09:00",
       "lang": "en"
     }
   ],
