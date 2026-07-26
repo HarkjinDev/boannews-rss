@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-26T14:31:20.246083+09:00",
+  "fetched_at": "2026-07-26T15:01:26.941599+09:00",
   "security_news": [
+    {
+      "title": "바이낸스, 해킹 차단 위해 매달 직원에 모의 피싱 테스트",
+      "summary": "모의 공격은 바이낸스 내부 윤리 해킹 조직인 레드팀이 맡는다. 레드팀은 시스템에 침투해 취약점을 찾는 동시에 직원 대상 가짜 공격 시나리오도 설계한다. 바이낸스는 보안 수준이 개선되는지 확인하기 위해 이런...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 바이낸스, 보안 강화 위해 매달 직원 대상 모의 피싱 테스트 실시\n2. 레드팀이 가짜 피싱 시나리오 설계, 직원들의 보안 의식 점검\n3. 지속적인 모의 공격으로 전반적인 보안 수준 향상 목표",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=687047",
+      "source": "naver",
+      "published": "2026-07-26T14:54:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[ET시론] AI 시대, 공공기관 개인정보 보호는 기술보다 거버넌스가 우선",
       "summary": "더욱 주목해야 할 점은 유출의 상당수가 첨단 해킹보다 업무과실과 내부 관리체계의 미흡에서 비롯되고... 특히 유출 원인을 살펴보면 업무과실이 64%로 가장 높은 비중을 차지했고, 해킹은 32%로 나타났다. 위반 유형...",
@@ -1776,21 +1788,24 @@
       "source": "naver",
       "published": "2026-07-23T15:06:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "개인정보 유출 역대 최악…상반기 피해 통지 4억7000만건",
-      "summary": "ITRC는 대규모 해킹 사고가 잇따르면서 피해 규모가 급증했다고 분석했다. 교육 플랫폼 '캔버스(Canvas)' 운영사 인스트럭처 홀딩스 해킹 사고로만 약 2억7500만 건의 피해 통지가 발생해 전체의 58%를 차지했다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 상반기 4억 7천만 건 개인정보 유출, 역대 최악\n2. 캔버스(Canvas) 운영사 해킹으로 2억 7500만 건 피해\n3. ITRC, 대규모 해킹 사고 증가 분석",
-      "link": "https://www.koreadaily.com/article/20260722224921035",
-      "source": "naver",
-      "published": "2026-07-23T14:50:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-63720 - datamodel-code-generator Code Injection via Unvalidated customBasePath Schema Field",
+      "summary": "CVE ID :CVE-2026-63720\n  \nPublished : July 26, 2026, 3:51 a.m. | 1 hour, 30 minutes ago\n  \nDescription :datamodel-code-generator prior to version 0.70.0 contains a code injection vulnerability that allows attackers who control input schemas to achieve remote code execution by supplying a malicious customBasePath value containing embedded newlines and a dot-free Python expression. The crafted value is emitted verbatim into a generated 'from ... import ...' statement without identifier validation, causing arbitrary Python code to execute when the generated module is imported.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63720\n  \nPublished : July 26, 2026, 3:51 a.m. | 1 hour, 30 minutes ago\n  \nDescription :datamodel-code-generator prior to version 0.70.0 contains a code injection vulnerability that allows attackers who control input schemas to achieve remote code execution by supplying a malicious customBasePath value containing embedded newlines and a dot-free Python expression. The crafted value is emitted verbatim into a generated 'from ... import ...' statement without identifier validation, causing arbitrary Python code to execute when the generated module is imported.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-63720 - 검증되지 않은 customBasePath 스키마 필드를 통한 datamodel-code-generator 코드 주입",
+      "summary_ko": "CVE ID:CVE-2026-63720\n  \n게시일 : 2026년 7월 26일 오전 3시 51분 | 1시간 30분 전\n  \n설명 : 0.70.0 이전 버전의 datamodel-code-generator에는 입력 스키마를 제어하는 공격자가 포함된 새 줄과 점이 없는 Python 표현식이 포함된 악의적인 customBasePath 값을 제공하여 원격 코드 실행을 달성할 수 있는 코드 주입 취약점이 포함되어 있습니다. 제작된 값은 식별자 유효성 검사 없이 생성된 'from ... import ...' 문으로 그대로 방출되어 생성된 모듈을 가져올 때 임의의 Python 코드가 실행됩니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-63720\n2. 26.07.26 오후12:51\n3. datamodel-code-generator prior to version 0.70.0 c",
+      "cve_id": "CVE-2026-63720",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63720",
+      "source": "cvefeed",
+      "published": "2026-07-26T12:51:18+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-10681 - SMP race in `thread_idx_alloc()` lets concurrent `k_object_alloc(K_OBJ_THREAD)` callers share a kernel-object permission slot",
       "summary": "CVE ID :CVE-2026-10681\n  \nPublished : July 25, 2026, 1:23 p.m. | 52 minutes ago\n  \nDescription :In Zephyr's userspace dynamic-objects subsystem, thread_idx_alloc() in kernel/userspace/userspace.c allocated a new thread permission index from the global _thread_idx_map[] bitmap without holding lists_lock.\n\nOn SMP systems, two user-mode threads invoking the k_object_alloc(K_OBJ_THREAD) syscall concurrently can both observe the same low free bit, perform the same non-atomic RMW to clear it, and return the identical tidx.\n\nThe two newly created K_OBJ_THREAD objects are then assigned the same thread_id, so the two user threads alias a single bit position in every kernel object's perms[] bitfield: any subsequent grant of access on a kernel object to one thread is implicitly a grant to the other, defeating userspace ACL isolation. A secondary lost-update window between the unlocked &=~BIT() in alloc and the locked |= BIT() in thread_idx_free() can also leak entries from the thread-index pool.\n\nThe defect is reachable from any user-mode thread via the unrestricted __syscall k_object_alloc and is gated on CONFIG_USERSPACE, CONFIG_DYNAMIC_OBJECTS, and CONFIG_SMP. The flaw was introduced when the per-thread permission index was added in 2018 and is present in every release up to and including v4.4.0. Fixed by holding lists_lock across the bitmap RMW and the permissions clear (and inlining the obj_list traversal that previously took the lock itself).\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2779,36 +2794,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-38753",
       "source": "msrc",
       "published": "2026-07-23T17:02:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-64600 - xfs: resample the data fork mapping after cycling ILOCK",
-      "summary": "CVE ID :CVE-2026-64600\n  \nPublished : July 23, 2026, 5:46 a.m. | 16 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nxfs: resample the data fork mapping after cycling ILOCK\n\nxfs_reflink_fill_{cow_hole,delalloc} are both presented with an inode,\na data fork mapping, and a cow fork mapping.  Unfortunately, these two\nhelpers cycle the ILOCK to grab a transaction, which means that the\nmappings are stale as soon as we reacquire the ILOCK.  Currently we\nrefresh the cow fork mapping by re-calling xfs_find_trim_cow_extent, but\nwe don't refresh the data fork mapping beforehand, which means that the\nxfs_bmap_trim_cow in that function queries the refcount btree about the\nwrong physical blocks and returns an inaccurate value in *shared.\n\nIf *shared is now false, the directio write proceeds with a stale data\nfork mapping.  Fix this by querying the data fork mapping if the\nsequence counter changes across the ILOCK cycle.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-64600\n  \nPublished : July 23, 2026, 5:46 a.m. | 16 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nxfs: resample the data fork mapping after cycling ILOCK\n\nxfs_reflink_fill_{cow_hole,delalloc} are both presented with an inode,\na data fork mapping, and a cow fork mapping.  Unfortunately, these two\nhelpers cycle the ILOCK to grab a transaction, which means that the\nmappings are stale as soon as we reacquire the ILOCK.  Currently we\nrefresh the cow fork mapping by re-calling xfs_find_trim_cow_extent, but\nwe don't refresh the data fork mapping beforehand, which means that the\nxfs_bmap_trim_cow in that function queries the refcount btree about the\nwrong physical blocks and returns an inaccurate value in *shared.\n\nIf *shared is now false, the directio write proceeds with a stale data\nfork mapping.  Fix this by querying the data fork mapping if the\nsequence counter changes across the ILOCK cycle.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-64600 - xfs: ILOCK을 순환한 후 데이터 포크 매핑을 다시 샘플링합니다.",
-      "summary_ko": "CVE ID :CVE-2026-64600\n  \n게시일 : 2026년 7월 23일 오전 5시 46분 | 16분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nxfs: ILOCK을 순환한 후 데이터 포크 매핑을 다시 샘플링합니다.\n\nxfs_reflink_fill_{cow_hole,delalloc}은 둘 다 inode와 함께 제공됩니다.\n데이터 포크 매핑과 소 포크 매핑이 있습니다.  안타깝게도 이 둘은\n도우미는 트랜잭션을 확보하기 위해 ILOCK을 순환합니다.\nILOCK을 다시 획득하자마자 매핑은 오래되었습니다.  현재 우리는\nxfs_find_trim_cow_extent를 다시 호출하여 소 포크 매핑을 새로 고치지만\n우리는 데이터 포크 매핑을 미리 새로 고치지 않습니다.\n해당 함수의 xfs_bmap_trim_cow는 refcount btree에 대해 쿼리합니다.\n잘못된 물리적 블록을 발견하고 *shared에 부정확한 값을 반환합니다.\n\n*shared가 이제 false이면 directio write는 오래된 데이터로 진행됩니다.\n포크 매핑.  다음과 같은 경우 데이터 포크 매핑을 쿼리하여 이 문제를 해결하세요.\nILOCK 사이클에 걸쳐 시퀀스 카운터가 변경됩니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-64600\n2. 26.07.23 오후2:46\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-64600",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64600",
-      "source": "cvefeed",
-      "published": "2026-07-23T14:46:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-7232 - FormCraft <= 3.9.14 - Unauthenticated Stored Cross-Site Scripting via Matrix Field Sub-Parameters",
-      "summary": "CVE ID :CVE-2026-7232\n  \nPublished : July 23, 2026, 5:35 a.m. | 27 minutes ago\n  \nDescription :The FormCraft plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the '[parameter name]' parameter in all versions up to, and including, 3.9.14 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit chain combines a server-side gap — where composite matrix sub-field keys such as field2_0 and field2_1 are never passed through the sanitization loop and are stored raw via $wpdb->insert() — with a client-side gap where DOMPurify is only invoked when typeof field.value === 'string', but matrix values arrive from the server as arrays, bypassing the check before being mapped to strings and injected into the DOM. Additionally, the same sink is reachable via a second attack vector: array-typed field values are passed through htmlentities() on submission but later reversed by html_entity_decode() at formcraft-main.php:2608 and :2122, restoring the malicious payload before storage and rendering.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-7232\n  \nPublished : July 23, 2026, 5:35 a.m. | 27 minutes ago\n  \nDescription :The FormCraft plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the '[parameter name]' parameter in all versions up to, and including, 3.9.14 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit chain combines a server-side gap — where composite matrix sub-field keys such as field2_0 and field2_1 are never passed through the sanitization loop and are stored raw via $wpdb->insert() — with a client-side gap where DOMPurify is only invoked when typeof field.value === 'string', but matrix values arrive from the server as arrays, bypassing the check before being mapped to strings and injected into the DOM. Additionally, the same sink is reachable via a second attack vector: array-typed field values are passed through htmlentities() on submission but later reversed by html_entity_decode() at formcraft-main.php:2608 and :2122, restoring the malicious payload before storage and rendering.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-7232 - FormCraft <= 3.9.14 - 매트릭스 필드 하위 매개변수를 통한 인증되지 않은 저장된 교차 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-7232\n  \n게시일 : 2026년 7월 23일 오전 5시 35분 | 27분 전\n  \n설명 : WordPress용 FormCraft 플러그인은 입력 삭제 및 출력 이스케이프가 충분하지 않아 3.9.14까지의 모든 버전에서 '[매개변수 이름]' 매개변수를 통한 저장된 교차 사이트 스크립팅에 취약합니다. 이로 인해 인증되지 않은 공격자가 사용자가 삽입된 페이지에 액세스할 때마다 실행되는 임의의 웹 스크립트를 페이지에 삽입할 수 있습니다. 익스플로잇 체인은 field2_0 및 field2_1과 같은 복합 매트릭스 하위 필드 키가 삭제 루프를 통과하지 않고 $wpdb->insert()를 통해 원시 저장되는 서버 측 갭과 typeof field.value === 'string'일 때만 DOMPurify가 호출되지만 매트릭스 값은 문자열에 매핑되고 DOM에 주입되기 전에 검사를 우회하여 서버에서 배열로 도착하는 클라이언트 측 갭을 결합합니다. 또한 두 번째 공격 벡터를 통해 동일한 싱크에 도달할 수 있습니다. 배열 유형 필드 값은 제출 시 htmlentities()를 통해 전달되지만 나중에 formcraft-main.php:2608 및 :2122에서 html_entity_decode()에 의해 역전되어 저장 및 렌더링 전에 악성 페이로드를 복원합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-7232\n2. 26.07.23 오후2:35\n3. The FormCraft plugin for WordPress is vulnerable t",
-      "cve_id": "CVE-2026-7232",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-7232",
-      "source": "cvefeed",
-      "published": "2026-07-23T14:35:54+09:00",
       "lang": "en"
     }
   ],
