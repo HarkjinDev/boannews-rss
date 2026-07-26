@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-27T07:31:01.654910+09:00",
+  "fetched_at": "2026-07-27T08:01:11.982996+09:00",
   "security_news": [
+    {
+      "title": "\"특정 코인만 올인하다 골로 간다\"… 카르다노 수장의 뼈 때리는 독점 ...",
+      "summary": "브리지 해킹과 보안 취약점 사태를 두고 암호화폐 산업 전반의 성숙을 강력히 촉구했다. 근본적인 보안 대책... 서로 다른 블록체인을 연결하는 '브리지' 메커니즘에서 대규모 해킹 사태가 반복되는 현상은 기본적 보안...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 카르다노 수장, 브리지 해킹 반복에 보안 촉구\n2. 블록체인 브리지, 근본적 보안 취약점 반복 발생\n3. 암호화폐 산업 성숙 및 보안 대책 강화 필요",
+      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=471637",
+      "source": "naver",
+      "published": "2026-07-27T07:50:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "홍콩H지수 ELS 제재, 7월 결론 미뤄지나",
       "summary": "이 사안은 지난해 9월 해킹으로 고객 297만명의 정보가 유출된 사건으로, 금감원은 지난 4월 말 영업정지 4.... 다만 외부 해킹 피해에 대해 금융회사에 영업정지를 부과하는 전례가 거의 없다는 점은 금융당국에도...",
@@ -1675,6 +1687,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10681",
       "source": "cvefeed",
       "published": "2026-07-25T22:23:07+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-66012 - SiYuan before v3.7.2 Unauthenticated Administrator Takeover via MCP",
+      "summary": "CVE ID :CVE-2026-66012\n  \nPublished : July 25, 2026, 11:17 a.m. | 1 day, 10 hours ago\n  \nDescription :SiYuan before v3.7.2 contains a missing authorization vulnerability in the POST /mcp kernel endpoint, which is gated only by a general auth check (model.CheckAuth) with no admin-role or read-only enforcement. This exposes 31 MCP tools, including a file tool with list/read/write/delete/rename/copy actions across the entire workspace. When the Publish server is enabled in anonymous mode (Conf.Publish.Enable=true and Conf.Publish.Auth.Enable=false), the Publish reverse proxy attaches an anonymous RoleReader JWT to proxied requests, allowing a remote unauthenticated attacker to reach /mcp. The attacker can read conf/conf.json to extract accessAuthCode, api.token, and cookieKey in plaintext, write arbitrary files in the workspace, and plant a plugin into data/plugins/ that executes with nodeIntegration:true and no contextIsolation on the next desktop launch, leading to administrator takeover.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-66012\n  \nPublished : July 25, 2026, 11:17 a.m. | 1 day, 10 hours ago\n  \nDescription :SiYuan before v3.7.2 contains a missing authorization vulnerability in the POST /mcp kernel endpoint, which is gated only by a general auth check (model.CheckAuth) with no admin-role or read-only enforcement. This exposes 31 MCP tools, including a file tool with list/read/write/delete/rename/copy actions across the entire workspace. When the Publish server is enabled in anonymous mode (Conf.Publish.Enable=true and Conf.Publish.Auth.Enable=false), the Publish reverse proxy attaches an anonymous RoleReader JWT to proxied requests, allowing a remote unauthenticated attacker to reach /mcp. The attacker can read conf/conf.json to extract accessAuthCode, api.token, and cookieKey in plaintext, write arbitrary files in the workspace, and plant a plugin into data/plugins/ that executes with nodeIntegration:true and no contextIsolation on the next desktop launch, leading to administrator takeover.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-66012 - v3.7.2 이전의 SiYuan이 MCP를 통해 인증되지 않은 관리자를 인수했습니다.",
+      "summary_ko": "CVE ID:CVE-2026-66012\n  \n게시일 : 2026년 7월 25일 오전 11시 17분 | 1일, 10시간 전\n  \n설명: v3.7.2 이전의 SiYuan에는 관리자 역할이나 읽기 전용 적용 없이 일반 인증 확인(model.CheckAuth)에 의해서만 제어되는 POST /mcp 커널 엔드포인트에 누락된 인증 취약점이 포함되어 있습니다. 이는 전체 작업 공간에 걸쳐 목록/읽기/쓰기/삭제/이름 바꾸기/복사 작업이 포함된 파일 도구를 포함하여 31개의 MCP 도구를 노출합니다. 게시 서버가 익명 모드(Conf.Publish.Enable=true 및 Conf.Publish.Auth.Enable=false)에서 활성화되면 게시 역방향 프록시는 익명 RoleReader JWT를 프록시 요청에 연결하여 인증되지 않은 원격 공격자가 /mcp에 도달할 수 있도록 합니다. 공격자는 conf/conf.json을 읽어 일반 텍스트로 accessAuthCode, api.token 및 cookieKey를 추출하고, 작업 공간에 임의의 파일을 쓰고, 다음 데스크톱 실행 시 contextIsolation 없이 nodeIntegration:true로 실행되는 플러그인을 data/plugins/에 심어 관리자를 탈취할 수 있습니다.\n  \n심각도: 10.0 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-66012\n2. 26.07.25 오후8:17\n3. SiYuan before v3.7.2 contains a missing authorizat",
+      "cve_id": "CVE-2026-66012",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-66012",
+      "source": "cvefeed",
+      "published": "2026-07-25T20:17:19+09:00",
       "lang": "en"
     },
     {
