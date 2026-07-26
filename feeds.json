@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-26T21:32:04.762277+09:00",
+  "fetched_at": "2026-07-26T22:02:37.559815+09:00",
   "security_news": [
     {
       "title": "위믹스 네트워크, 보안 사고 의심…70만달러 이상 유출 가능성",
@@ -1668,18 +1668,6 @@
       "source": "naver",
       "published": "2026-07-23T22:08:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "6시간 새 3건 뚫린 브리지…3500만달러 유출, 신뢰 위기 커졌다",
-      "summary": "하루 사이 연쇄 해킹이 발생하면서 디파이 인프라 전반에 대한 신뢰가 크게 흔들리고 있다. 이번 공격은... 6시간 동안 3건 해킹…3500만달러 이상 유출 블록체인 데이터와 보안업체 블록에이드, 펙쉴드 분석에 따르면...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 6시간 새 3건 뚫린 브리지…3500만달러 유출, 신뢰 위기 커졌다 하루 사이 연쇄 해킹이\n2. 6시간 동안 3건 해킹…3500만달러 이상 유출 블록체인 데이터와 보안업체 블록에이드, 펙",
-      "link": "https://www.tokenpost.kr/news/blockchain/380526",
-      "source": "naver",
-      "published": "2026-07-23T21:38:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2341,21 +2329,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-65900",
       "source": "cvefeed",
       "published": "2026-07-23T22:16:19+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-14257 - brace-expansion DoS via unbounded expansion length causing an out-of-memory process crash",
-      "summary": "CVE ID :CVE-2026-14257\n  \nPublished : July 23, 2026, 12:54 p.m. | 40 minutes ago\n  \nDescription :brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-14257\n  \nPublished : July 23, 2026, 12:54 p.m. | 40 minutes ago\n  \nDescription :brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-14257 - 무제한 확장 길이를 통한 중괄호 확장 DoS로 인해 메모리 부족 프로세스 충돌이 발생함",
-      "summary_ko": "CVE ID:CVE-2026-14257\n  \n게시일 : 2026년 7월 23일 오후 12시 54분 | 40분 전\n  \n설명 :5.0.7을 통한 중괄호 확장은 메모리 고갈을 통한 서비스 거부에 취약합니다. Expand() 함수는 max 옵션(기본값 100,000)을 사용하여 결과 수를 제한하지만 각 결과 문자열의 길이를 제한하지는 않습니다. 여러 개의 중괄호 그룹을 연결함으로써 공격자는 결과 수를 제한 이하로 유지하면서 각 결과를 점진적으로 길게 만듭니다. 따라서 프로세스가 치명적이고 포착할 수 없는 메모리 부족 오류에 도달할 때까지 총 메모리는 수와 문자열 길이에 따라 확장됩니다. 약 7.5KB의 입력('{a,b}'.repeat(1500))이 기본 Node.js 프로세스를 충돌시킵니다. 공격자의 영향을 받은 문자열을 중괄호 확장.expand()에 전달하는 모든 애플리케이션(직접적으로 또는 minimatch/glob 중괄호 패턴을 통해 전이적으로)은 작은 요청으로 인해 중단될 수 있습니다. 누적된 출력 및 중간 배열을 제한하는 maxLength 옵션(기본값 4,000,000)을 추가하여 5.0.8에서 수정되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-14257\n2. 26.07.23 오후9:54\n3. brace-expansion through 5.0.7 is vulnerable to den",
-      "cve_id": "CVE-2026-14257",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-14257",
-      "source": "cvefeed",
-      "published": "2026-07-23T21:54:23+09:00",
       "lang": "en"
     }
   ],
