@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-27T04:02:08.249586+09:00",
+  "fetched_at": "2026-07-27T04:32:14.445995+09:00",
   "security_news": [
     {
       "title": "편의점 ‘2사 2색’ ESG 전략…GS ‘보안’ vs BGF ‘상생’",
@@ -1538,6 +1538,18 @@
       "lang": "ko"
     },
     {
+      "title": "Russian Hackers Exploit Zimbra Zero-Day Against US, Ukraine Targets",
+      "summary": "A state-sponsored threat group, dubbed \"Laundry Bear,\" sends \"half-click\" phishing emails that require a victim only to open or preview the message.",
+      "content": "",
+      "title_ko": "러시아 해커, 미국과 우크라이나 목표물에 대해 Zimbra 제로데이 악용",
+      "summary_ko": "\"Laundry Bear\"라고 불리는 국가 후원 위협 그룹은 피해자가 메시지를 열거나 미리보기만 하면 되는 \"반클릭\" 피싱 이메일을 보냅니다.",
+      "summary_3lines": "1. 러시아 해커, 미국과 우크라이나를 대상으로 Zimbra 제로데이 공격 \"Laundry Be",
+      "link": "https://www.darkreading.com/cyberattacks-data-breaches/russian-hackers-zimbra-zero-day-us-ukraine-targets",
+      "source": "darkreading",
+      "published": "2026-07-24T06:23:18+09:00",
+      "lang": "de"
+    },
+    {
       "title": "23앤드미 합의 1.5억달러 중 실제 회수 1800만달러뿐",
       "summary": "다른 웹사이트에서 새어나간 아이디·비밀번호를 대량으로 대입해 로그인을 시도하는 해킹 기법이다. 조사 결과 이번에 악용된 비밀번호 중 상당수는 과거 유전정보 서비스 마이헤리티지(MyHeritage.com) 유출...",
       "content": "",
@@ -2158,21 +2170,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-16764",
       "source": "cvefeed",
       "published": "2026-07-24T06:30:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48012 - Shopware SSO referer trust leading to an arbitrary redirect target",
-      "summary": "CVE ID :CVE-2026-48012\n  \nPublished : July 23, 2026, 7:16 p.m. | 1 hour, 7 minutes ago\n  \nDescription :Shopware is an open commerce platform. Versions 6.7.3.0 through 6.7.10.0 have an open redirect in Shopware's public SSO entry point at `GET /api/oauth/sso/auth`. When the endpoint is reached without the expected SSO session state, the application falls back to the request's `Referer` header and uses that value as the redirect destination. In the validated behavior, the server does not restrict that fallback target to same-origin URLs, does not require a relative path, and does not reject dangerous schemes such as `javascript:`. As a result, an unauthenticated request can turn this endpoint into a reusable redirect primitive whose destination is fully controlled by attacker-supplied request metadata. The security problem is not limited to a harmless navigation mismatch. The endpoint sits under `/api/oauth/`, which gives the redirect a trustworthy application-controlled origin and makes it suitable for phishing chains, branded redirect abuse, and cases where client software automatically follows redirects issued by a trusted host. The attached evidence also shows that the response is not only an HTTP `302` with a user-controlled `Location` header. The HTML body contains a matching meta refresh tag and redirect link built from the same attacker-controlled value. In the validated proof, the endpoint redirects to `https://attacker.example/poc` when that URL is supplied through `Referer`, and it also reflects `javascript:alert(1)` into `Location` and the HTML redirect body without any scheme filtering. This report therefore stays conservative and claims an open redirect with arbitrary redirect targets, while noting that the lack of scheme restrictions makes the behavior materially worse than a same-scheme external redirect. Version 6.7.10.1 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48012\n  \nPublished : July 23, 2026, 7:16 p.m. | 1 hour, 7 minutes ago\n  \nDescription :Shopware is an open commerce platform. Versions 6.7.3.0 through 6.7.10.0 have an open redirect in Shopware's public SSO entry point at `GET /api/oauth/sso/auth`. When the endpoint is reached without the expected SSO session state, the application falls back to the request's `Referer` header and uses that value as the redirect destination. In the validated behavior, the server does not restrict that fallback target to same-origin URLs, does not require a relative path, and does not reject dangerous schemes such as `javascript:`. As a result, an unauthenticated request can turn this endpoint into a reusable redirect primitive whose destination is fully controlled by attacker-supplied request metadata. The security problem is not limited to a harmless navigation mismatch. The endpoint sits under `/api/oauth/`, which gives the redirect a trustworthy application-controlled origin and makes it suitable for phishing chains, branded redirect abuse, and cases where client software automatically follows redirects issued by a trusted host. The attached evidence also shows that the response is not only an HTTP `302` with a user-controlled `Location` header. The HTML body contains a matching meta refresh tag and redirect link built from the same attacker-controlled value. In the validated proof, the endpoint redirects to `https://attacker.example/poc` when that URL is supplied through `Referer`, and it also reflects `javascript:alert(1)` into `Location` and the HTML redirect body without any scheme filtering. This report therefore stays conservative and claims an open redirect with arbitrary redirect targets, while noting that the lack of scheme restrictions makes the behavior materially worse than a same-scheme external redirect. Version 6.7.10.1 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48012 - 임의 리디렉션 대상으로 이어지는 Shopware SSO 리퍼러 ​​신뢰",
-      "summary_ko": "CVE ID:CVE-2026-48012\n  \n게시일 : 2026년 7월 23일 오후 7시 16분 | 1시간, 7분 전\n  \n설명 :Shopware는 오픈 커머스 플랫폼입니다. 버전 6.7.3.0부터 6.7.10.0까지는 Shopware의 공개 SSO 진입점 'GET /api/oauth/sso/auth'에 공개 리디렉션이 있습니다. 예상되는 SSO 세션 상태 없이 엔드포인트에 도달하면 애플리케이션은 요청의 'Referer' 헤더로 대체되고 해당 값을 리디렉션 대상으로 사용합니다. 검증된 동작에서 서버는 해당 대체 대상을 동일한 출처 URL로 제한하지 않고 상대 경로를 요구하지 않으며 `javascript:`와 같은 위험한 체계를 거부하지 않습니다. 결과적으로 인증되지 않은 요청은 이 엔드포인트를 공격자가 제공한 요청 메타데이터에 의해 대상이 완전히 제어되는 재사용 가능한 리디렉션 기본 요소로 전환할 수 있습니다. 보안 문제는 무해한 탐색 불일치에만 국한되지 않습니다. 엔드포인트는 '/api/oauth/' 아래에 위치하여 리디렉션에 신뢰할 수 있는 애플리케이션 제어 원본을 제공하고 피싱 체인, 브랜드 리디렉션 남용 및 클라이언트 소프트웨어가 신뢰할 수 있는 호스트에서 발행한 리디렉션을 자동으로 따르는 경우에 적합합니다. 첨부된 증거는 또한 응답이 사용자가 제어하는 ​​'Location' 헤더가 있는 HTTP '302'만이 아니라는 것을 보여줍니다. HTML 본문에는 일치하는 메타 새로 고침 태그와 동일한 공격자가 제어하는 ​​값으로 작성된 리디렉션 링크가 포함되어 있습니다. 검증된 증명에서 엔드포인트는 `Referer`를 통해 해당 URL이 제공되면 `https://attacker.example/poc`로 리디렉션되며, 스키마 필터링 없이 `javascript:alert(1)`를 `Location` 및 HTML 리디렉션 본문에 반영합니다. 따라서 이 보고서는 보수적인 입장을 유지하고 임의의 리디렉션 대상을 사용하는 개방형 리디렉션을 주장하며, 체계 제한이 없기 때문에 동일한 체계의 외부 리디렉션보다 동작이 실질적으로 더 나쁘다는 점을 지적합니다. 버전 6.7.10.1에서는 문제가 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48012\n2. 26.07.24 오전4:16\n3. Shopware is an open commerce platform. Versions 6.",
-      "cve_id": "CVE-2026-48012",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48012",
-      "source": "cvefeed",
-      "published": "2026-07-24T04:16:38+09:00",
       "lang": "en"
     }
   ],
