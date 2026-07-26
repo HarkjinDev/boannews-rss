@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-27T02:32:03.542633+09:00",
+  "fetched_at": "2026-07-27T03:01:10.442495+09:00",
   "security_news": [
     {
       "title": "편의점 ‘2사 2색’ ESG 전략…GS ‘보안’ vs BGF ‘상생’",
@@ -2209,21 +2209,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48012",
       "source": "cvefeed",
       "published": "2026-07-24T04:16:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-44210 - Kata Containers have VM Escape via virtiofsd Argument Injection through Default-Enabled Pod Annotations",
-      "summary": "CVE ID :CVE-2026-44210\n  \nPublished : July 23, 2026, 5:32 p.m. | 34 minutes ago\n  \nDescription :Kata Containers is an open source project focusing on a standard implementation of lightweight Virtual Machines (VMs) that perform like containers. Versions prior to 3.31.0 ship with a default configuration that allows pod creators to inject arbitrary command-line arguments into the virtiofsd process through the `io.katacontainers.config.hypervisor.virtio_fs_extra_args` pod annotation. By injecting `-o source=/` along with `--no-announce-submounts` and `--sandbox=none`, an attacker can override the virtiofsd shared directory to serve the entire host root filesystem into the guest VM. Combined with the `kernel_params` annotation (also enabled by default) to activate the agent debug console, the attacker can mount the host filesystem from inside the VM and read or write any file on the host, including /etc/shadow. Version 3.31.0 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-44210\n  \nPublished : July 23, 2026, 5:32 p.m. | 34 minutes ago\n  \nDescription :Kata Containers is an open source project focusing on a standard implementation of lightweight Virtual Machines (VMs) that perform like containers. Versions prior to 3.31.0 ship with a default configuration that allows pod creators to inject arbitrary command-line arguments into the virtiofsd process through the `io.katacontainers.config.hypervisor.virtio_fs_extra_args` pod annotation. By injecting `-o source=/` along with `--no-announce-submounts` and `--sandbox=none`, an attacker can override the virtiofsd shared directory to serve the entire host root filesystem into the guest VM. Combined with the `kernel_params` annotation (also enabled by default) to activate the agent debug console, the attacker can mount the host filesystem from inside the VM and read or write any file on the host, including /etc/shadow. Version 3.31.0 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-44210 - Kata 컨테이너에는 기본 활성화된 포드 주석을 통한 virtiofsd 인수 주입을 통한 VM 이스케이프 기능이 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-44210\n  \n게시일 : 2026년 7월 23일 오후 5시 32분 | 34분 전\n  \n설명 :Kata Containers는 컨테이너처럼 작동하는 경량 가상 머신(VM)의 표준 구현에 초점을 맞춘 오픈 소스 프로젝트입니다. 3.31.0 이전 버전에는 포드 생성자가 'io.katacontainers.config.hypervisor.virtio_fs_extra_args' 포드 주석을 통해 virtiofsd 프로세스에 임의의 명령줄 인수를 삽입할 수 있는 기본 구성이 함께 제공됩니다. `--no-announce-submounts` 및 `--sandbox=none`과 함께 `-o source=/`를 주입함으로써 공격자는 virtiofsd 공유 디렉터리를 재정의하여 전체 호스트 루트 파일 시스템을 게스트 VM에 제공할 수 있습니다. 에이전트 디버그 콘솔을 활성화하기 위해 'kernel_params' 주석(기본적으로 활성화됨)과 결합하면 공격자는 VM 내부에서 호스트 파일 시스템을 마운트하고 /etc/shadow를 포함하여 호스트의 모든 파일을 읽거나 쓸 수 있습니다. 버전 3.31.0에서는 문제가 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-44210\n2. 26.07.24 오전2:32\n3. Kata Containers is an open source project focusing",
-      "cve_id": "CVE-2026-44210",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-44210",
-      "source": "cvefeed",
-      "published": "2026-07-24T02:32:23+09:00",
       "lang": "en"
     }
   ],
