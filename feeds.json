@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-27T21:32:15.006114+09:00",
+  "fetched_at": "2026-07-27T22:01:08.943120+09:00",
   "security_news": [
     {
       "title": "위믹스 또 보안 사고..WEMIX$ 522만개 비정상 발행·77억원대 자산 유출",
@@ -1683,6 +1683,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-17534 - Kimi Code FetchURL SSRF protection bypass via DNS-resolving hostnames and redirects",
+      "summary": "CVE ID :CVE-2026-17534\n  \nPublished : July 27, 2026, 10:16 a.m. | 2 hours, 9 minutes ago\n  \nDescription :Kimi Code (@moonshot-ai/kimi-code) before 0.27.0 implements FetchURL SSRF hardening as a static hostname and IP-literal denylist in assertSafeFetchTarget, without resolving DNS or re-validating hosts after HTTP redirects. An attacker who can influence a FetchURL call (for example via prompt injection) can supply a crafted public hostname that resolves to loopback or another internal address, or a public URL that redirects to such a target, and thereby reach internal network services that the denylist was intended to block. FetchURL is included in the default auto-approve tool set, so the call does not require interactive user confirmation in manual mode.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-17534\n  \nPublished : July 27, 2026, 10:16 a.m. | 2 hours, 9 minutes ago\n  \nDescription :Kimi Code (@moonshot-ai/kimi-code) before 0.27.0 implements FetchURL SSRF hardening as a static hostname and IP-literal denylist in assertSafeFetchTarget, without resolving DNS or re-validating hosts after HTTP redirects. An attacker who can influence a FetchURL call (for example via prompt injection) can supply a crafted public hostname that resolves to loopback or another internal address, or a public URL that redirects to such a target, and thereby reach internal network services that the denylist was intended to block. FetchURL is included in the default auto-approve tool set, so the call does not require interactive user confirmation in manual mode.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-17534 - DNS 확인 호스트 이름 및 리디렉션을 통한 Kimi Code FetchURL SSRF 보호 우회",
+      "summary_ko": "CVE ID:CVE-2026-17534\n  \n게시일 : 2026년 7월 27일 오전 10시 16분 | 2시간, 9분 전\n  \n설명 :0.27.0 이전의 Kimi 코드(@moonshot-ai/kimi-code)는 HTTP 리디렉션 후 DNS를 확인하거나 호스트를 다시 검증하지 않고 FetchURL SSRF 강화를 주장SafeFetchTarget의 정적 호스트 이름 및 IP 리터럴 거부 목록으로 구현합니다. FetchURL 호출(예: 프롬프트 삽입을 통해)에 영향을 미칠 수 있는 공격자는 루프백이나 다른 내부 주소로 확인되는 조작된 공개 호스트 이름 또는 그러한 대상으로 리디렉션되는 공개 URL을 제공하여 차단 목록이 차단하려고 했던 내부 네트워크 서비스에 도달할 수 있습니다. FetchURL은 기본 자동 승인 도구 세트에 포함되어 있으므로 호출 시 수동 모드에서 대화형 사용자 확인이 필요하지 않습니다.\n  \n심각도: 5.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-17534\n2. 26.07.27 오후7:16\n3. Kimi Code (@moonshot-ai/kimi-code) before 0.27.0 i",
+      "cve_id": "CVE-2026-17534",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-17534",
+      "source": "cvefeed",
+      "published": "2026-07-27T19:16:37+09:00",
+      "lang": "en"
+    },
     {
       "title": "Java Spring Boot \"heapdump\" scans, (Mon, Jul 27th)",
       "summary": "Spring Boot exposes the endpoint \"/actuator/heapdump\" to collect debug information. By default, the endpoint will return a file heapdump.hprof, which includes a binary heapdump that can be used to analyze the current state of the application. Non-Java readers may be familiar with a similar concept, core dumps, which are produced by binaries to expose a memory image at the time the software crashes. \"heapdumps\" are the Java analog to \"core-dumps\". The heapdump often includes secrets used by the application to connect to backend systems. API keys, database passwords, and other sensitive data may be exposed in the heapdump.\r",
