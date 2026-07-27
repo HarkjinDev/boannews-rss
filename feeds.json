@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-27T22:01:08.943120+09:00",
+  "fetched_at": "2026-07-27T22:31:14.293197+09:00",
   "security_news": [
+    {
+      "title": "PTC Windchill Vulnerability Exploited in Ransomware Campaign",
+      "summary": "The critical unsafe deserialization flaw allows attackers to execute arbitrary code remotely, without authentication.\nThe post PTC Windchill Vulnerability Exploited in Ransomware Campaign appeared first on SecurityWeek.",
+      "content": "",
+      "title_ko": "랜섬웨어 캠페인에서 PTC Windchill 취약점 악용",
+      "summary_ko": "치명적이고 안전하지 않은 역직렬화 결함으로 인해 공격자는 인증 없이 원격으로 임의 코드를 실행할 수 있습니다.\n랜섬웨어 캠페인에서 악용된 PTC Windchill 취약점이 SecurityWeek에 처음으로 게재되었습니다.",
+      "summary_3lines": "1. PTC Windchill 취약점, 랜섬웨어 공격에 악용\n2. 인증 없이 원격 코드 실행 가능, PTC Windchill 제로데이 사용\n3. 공격자는 시스템 접근 권한 획득, 데이터 암호화 가능",
+      "link": "https://www.securityweek.com/ptc-windchill-vulnerability-exploited-in-ransomware-campaign/",
+      "source": "securityweek",
+      "published": "2026-07-27T22:19:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "위믹스 또 보안 사고..WEMIX$ 522만개 비정상 발행·77억원대 자산 유출",
       "summary": "/사진=연합 위메이드의 블록체인 생태계 위믹스(WEMIX)에서 또 보안 사고가 발생했다. 달러 연동... 지난해 3월에도 약 90억원 규모의 위믹스 해킹 사고가 발생한 데 이어 1년여 만에 유사한 보안 문제가...",
@@ -1683,6 +1695,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-59689 - Progress LoadMaster, ECS Connection Manager, Object Scale Connection Manager, and MOVEit WAF Improper Authorization Allows Privilege Escalation to Root",
+      "summary": "CVE ID :CVE-2026-59689\n  \nPublished : July 27, 2026, 12:25 p.m. | 56 minutes ago\n  \nDescription :An Incorrect Authorization vulnerability in Progress Software LoadMaster, ECS Connection Manager, Object Scale Connection Manager, and MOVEit WAF allows an authenticated attacker with low privileges to escalate privileges to root on the affected appliance, potentially resulting in full system compromise.\n  \nSeverity: 8.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59689\n  \nPublished : July 27, 2026, 12:25 p.m. | 56 minutes ago\n  \nDescription :An Incorrect Authorization vulnerability in Progress Software LoadMaster, ECS Connection Manager, Object Scale Connection Manager, and MOVEit WAF allows an authenticated attacker with low privileges to escalate privileges to root on the affected appliance, potentially resulting in full system compromise.\n  \nSeverity: 8.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-59689 - Progress LoadMaster, ECS 연결 관리자, Object Scale 연결 관리자 및 MOVEit WAF 부적절한 권한 부여로 인해 루트로 권한 상승이 허용됨",
+      "summary_ko": "CVE ID:CVE-2026-59689\n  \n게시일 : 2026년 7월 27일 오후 12시 25분 | 56분 전\n  \n설명: Progress Software LoadMaster, ECS Connection Manager, Object Scale Connection Manager 및 MOVEit WAF의 잘못된 인증 취약점으로 인해 낮은 권한을 가진 인증된 공격자가 영향을 받는 어플라이언스의 루트로 권한을 승격할 수 있으며 이로 인해 전체 시스템이 손상될 수 있습니다.\n  \n심각도: 8.0 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-59689\n2. 26.07.27 오후9:25\n3. An Incorrect Authorization vulnerability in Progre",
+      "cve_id": "CVE-2026-59689",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59689",
+      "source": "cvefeed",
+      "published": "2026-07-27T21:25:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-17534 - Kimi Code FetchURL SSRF protection bypass via DNS-resolving hostnames and redirects",
       "summary": "CVE ID :CVE-2026-17534\n  \nPublished : July 27, 2026, 10:16 a.m. | 2 hours, 9 minutes ago\n  \nDescription :Kimi Code (@moonshot-ai/kimi-code) before 0.27.0 implements FetchURL SSRF hardening as a static hostname and IP-literal denylist in assertSafeFetchTarget, without resolving DNS or re-validating hosts after HTTP redirects. An attacker who can influence a FetchURL call (for example via prompt injection) can supply a crafted public hostname that resolves to loopback or another internal address, or a public URL that redirects to such a target, and thereby reach internal network services that the denylist was intended to block. FetchURL is included in the default auto-approve tool set, so the call does not require interactive user confirmation in manual mode.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
