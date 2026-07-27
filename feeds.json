@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-28T01:01:13.907718+09:00",
+  "fetched_at": "2026-07-28T01:32:25.049146+09:00",
   "security_news": [
+    {
+      "title": "샤이니헌터스, EY 고객 세무자료 탈취 주장…공급망 공격 가능성 제기",
+      "summary": "외부 사이버보안 전문업체와 조사한 결과, 공격자는 3월 28일부터 4월 12일까지 시스템에 무단으로 접근한 것으로 확인됐다. 유출 문서에는 세금 신고서에 포함됐거나 신고서 작성에 사용된 개인정보와 금융정보가 담겨...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 샤이니헌터스, EY 고객 세무자료 탈취 주장\n2. 3월 28일~4월 12일, 개인/금융정보 담은 세금 신고서 등 유출\n3. 공급망 공격 가능성, 아직 영향 범위는 불분명",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207806",
+      "source": "naver",
+      "published": "2026-07-28T01:24:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "호텔 와이파이 접속했는데 계정 탈취…DNS 바꿔 마이크로소프트 365 로그인 가로채",
+      "summary": "호텔과 컨벤션센터의 공용 와이파이 장비를 해킹한 뒤 이용자를 가짜 마이크로소프트 365 로그인 화면으로 보내 계정을 탈취하는 공격이 확인됐다.공격자는 직원의 노트북이나 스마트폰을 직접 감염시키지 않았다. 호텔 내부의 와이파이 게이트웨이 장비를 먼저 장악하고 도메인네임시스템(DNS) 설정을 바꿨다. 이용자가 정상적인 마이크로소프트 로그인 주소에 접속해도 공격자가 만든 피싱 사이트로 연결되도록 한 것이다.해당 공격은 최소 2026년 6월부터 이어졌다. 보안업체 렐리아퀘스트(ReliaQuest)는 7월 23일 공개한 분석에서 미국 여러",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 호텔 와이파이 접속했는데 계정 탈취…DNS 바꿔 마이크로소프트 365 로그인 가로채 호텔과\n2. 호텔 내부의 와이파이 게이트웨이 장비를 먼저 장악하고 도메인네임시스템(DNS) 설정을 바꿨\n3. 이용자가 정상적인 마이크로소프트 로그인 주소에 접속해도 공격자가 만든 피싱 사이트로 연결되",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207804",
+      "source": "dailysecu",
+      "published": "2026-07-28T01:04:25+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[역사속 오늘·7.28·유두] 경성도서관 개관(1922)·국어기본법 시행(200...",
       "summary": "서버 해킹당해 3,500만 명의 회원정보 유출2014 강원도 춘천 '레고랜드' 조성부지 대규모 선사 유적 발굴 공개2016 헌법재판소, 김영란법 합헌 결정2016 헌법재판소, 군형법상 추행죄(한국법률에서 유일하게 동성애...",
@@ -1671,6 +1695,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54890 - BEAM VM crash via integer underflow in binary_to_term BIT_BINARY_EXT decoding",
+      "summary": "CVE ID :CVE-2026-54890\n  \nPublished : July 27, 2026, 3:39 p.m. | 49 minutes ago\n  \nDescription :Integer Underflow (Wrap or Wraparound) vulnerability in erlang otp erlang/otp (erts modules), erlang otp erts (erts modules) allows Forced Integer Overflow, Excessive Allocation. This vulnerability is associated with program files erts/emulator/beam/external.c, emulator/beam/external.c.\n\nThe BIT_BINARY_EXT tag (77) handler in the External Term Format (ETF) decoder accepts an encoding with both length and trailing-bits fields set to zero. The subsequent computation of the bitstring size underflows an unsigned integer, producing a value of roughly 2^64 that is then passed as a memory allocation size. The allocator aborts the entire node with a message such as \"Cannot allocate 2305843009213693951 bytes of memory (of type binary)\".\n\nThe crash is a VM-level abort, not an Erlang-level exception. It cannot be intercepted by supervision trees, by try/catch, or by passing the [safe] option to binary_to_term/2 (which only restricts atom creation and does not perform structural validation of binary encodings).\n\nAny application that decodes ETF from untrusted sources via binary_to_term/1,2 or enif_binary_to_term() is exposed. The Erlang distribution protocol also decodes incoming terms through the same code path, but distribution is expected to run on trusted networks per the OTP Secure Coding Guidelines (DSG-011).\n\nThis issue affects OTP from OTP 27.0 before OTP 29.0.4, OTP 28.5.0.4 and OTP 27.3.4.15, corresponding to erts from 15.0 before 17.0.4, 16.4.0.4 and 15.2.7.11.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54890\n  \nPublished : July 27, 2026, 3:39 p.m. | 49 minutes ago\n  \nDescription :Integer Underflow (Wrap or Wraparound) vulnerability in erlang otp erlang/otp (erts modules), erlang otp erts (erts modules) allows Forced Integer Overflow, Excessive Allocation. This vulnerability is associated with program files erts/emulator/beam/external.c, emulator/beam/external.c.\n\nThe BIT_BINARY_EXT tag (77) handler in the External Term Format (ETF) decoder accepts an encoding with both length and trailing-bits fields set to zero. The subsequent computation of the bitstring size underflows an unsigned integer, producing a value of roughly 2^64 that is then passed as a memory allocation size. The allocator aborts the entire node with a message such as \"Cannot allocate 2305843009213693951 bytes of memory (of type binary)\".\n\nThe crash is a VM-level abort, not an Erlang-level exception. It cannot be intercepted by supervision trees, by try/catch, or by passing the [safe] option to binary_to_term/2 (which only restricts atom creation and does not perform structural validation of binary encodings).\n\nAny application that decodes ETF from untrusted sources via binary_to_term/1,2 or enif_binary_to_term() is exposed. The Erlang distribution protocol also decodes incoming terms through the same code path, but distribution is expected to run on trusted networks per the OTP Secure Coding Guidelines (DSG-011).\n\nThis issue affects OTP from OTP 27.0 before OTP 29.0.4, OTP 28.5.0.4 and OTP 27.3.4.15, corresponding to erts from 15.0 before 17.0.4, 16.4.0.4 and 15.2.7.11.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54890 - Binary_to_term BIT_BINARY_EXT 디코딩에서 정수 언더플로를 통한 BEAM VM 충돌",
+      "summary_ko": "CVE ID:CVE-2026-54890\n  \n게시일 : 2026년 7월 27일 오후 3시 39분 | 49분 전\n  \n설명:erlang otp erlang/otp(erts 모듈), erlang otp erts(erts 모듈)의 정수 언더플로(래핑 또는 랩어라운드) 취약점으로 인해 강제 정수 오버플로, 과도한 할당이 허용됩니다. 이 취약점은 프로그램 파일 erts/emulator/beam/external.c, Emulator/beam/external.c와 관련이 있습니다.\n\nETF(External Term Format) 디코더의 BIT_BINARY_EXT 태그(77) 처리기는 길이 및 후행 비트 필드가 모두 0으로 설정된 인코딩을 허용합니다. 비트스트링 크기의 후속 계산은 부호 없는 정수를 언더플로우하여 대략 2^64의 값을 생성한 다음 메모리 할당 크기로 전달됩니다. 할당자는 \"2305843009213693951바이트의 메모리(바이너리 유형)를 할당할 수 없습니다\"와 같은 메시지와 함께 전체 노드를 중단합니다.\n\n충돌은 Erlang 수준 예외가 아닌 VM 수준 중단입니다. 감독 트리, try/catch 또는 [safe] 옵션을 binary_to_term/2(원자 생성만 제한하고 바이너리 인코딩의 구조적 유효성 검사를 수행하지 않음)에 전달하여 차단할 수 없습니다.\n\nBinary_to_term/1,2 또는 enif_binary_to_term()을 통해 신뢰할 수 없는 소스에서 ETF를 디코딩하는 모든 애플리케이션이 노출됩니다. Erlang 배포 프로토콜은 동일한 코드 경로를 통해 들어오는 용어도 디코딩하지만 배포는 OTP 보안 코딩 지침(DSG-011)에 따라 신뢰할 수 있는 네트워크에서 실행될 것으로 예상됩니다.\n\n이 문제는 17.0.4, 16.4.0.4 및 15.2.7.11 이전 15.0의 erts에 해당하는 OTP 29.0.4 이전 OTP 27.0, OTP 28.5.0.4 및 OTP 27.3.4.15의 OTP에 영향을 미칩니다.\n  \n심각도: 8.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54890\n2. 26.07.28 오전12:39\n3. Integer Underflow (Wrap or Wraparound) vulnerabili",
+      "cve_id": "CVE-2026-54890",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54890",
+      "source": "cvefeed",
+      "published": "2026-07-28T00:39:03+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-50333 Windows Spaceport.sys Elevation of Privilege Vulnerability",
       "summary": "Updated an acknowledgement. This is an informational change only.",
