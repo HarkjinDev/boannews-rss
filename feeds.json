@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-07-28T20:02:23.618995+09:00",
+  "fetched_at": "2026-07-28T20:32:49.528385+09:00",
   "security_news": [
+    {
+      "title": "친족 증거인멸까지 면책하는 한국…프랑스는 ‘숨겨주기만’ 허용",
+      "summary": "배우자 또는 부모, 자녀인 경우가 ‘경찰관 가족 사건’에 해당한다”고 설명했다. 이 중에서 경찰 수사관이 자기 가족이 피해자인 해킹 피싱 사건을 직접 수사한 사건 1건은 정식 감찰이 진행되고 있는 것으로 파악됐다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 경찰관 가족 사건, 면책 허용에 따른 감찰 1건 진행\n2. 친족 범죄 증거 인멸 면책, 프랑스는 '숨겨주기'만 허용\n3. 배우자·부모·자녀 포함, 경찰 수사관 가족 사건 감찰",
+      "link": "https://n.news.naver.com/mnews/article/020/0003737152?sid=102",
+      "source": "naver",
+      "published": "2026-07-28T20:27:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[인터뷰] 김진수 KISIA 회장 \"성과 중심 KISIA로...K-시큐리티 국가전략...",
+      "summary": "첨단 기술을 개발하더라도 해킹으로 설계도와 연구데이터가 유출되면 오랜 기간 축적한 국가 경쟁력이 한순간에 사라질 수 있기 때문이다. \"방산과 반도체, 원자력 기술이 사이버 공격으로 유출되면 앞으로 10년, 20년...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KISIA 김진수 회장, 방산·반도체 등 핵심 기술 유출 경고\n2. 첨단 기술 설계도·연구 데이터 유출 시 국가 경쟁력 상실\n3. K-시큐리티 국가전략으로 사이버 공격 위협 대응 강조",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207827",
+      "source": "naver",
+      "published": "2026-07-28T20:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "경찰 가족 사건 117건 확인, 44건 이송…규정 위반 1건 감찰(종합2보)",
+      "summary": "해당 경찰관은 해킹 피싱 피해를 본 가족의 사건을 직접 맡은 것으로 알려졌다. 이번 조사는 사건관계인이 해당 사건을 수사하는 경찰서에 근무하는 경찰관의 배우자 및 직계 존비속으로 확인된 사건에 대해 수사...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 경찰 가족 사건 117건 확인, 44건 이송…규정 위반 1건 감찰(종합2보) 해당 경찰관은\n2. 이번 조사는 사건관계인이 해당 사건을 수사하는 경찰서에 근무하는 경찰관의 배우자 및 직계 ",
+      "link": "https://n.news.naver.com/mnews/article/421/0009084237?sid=102",
+      "source": "naver",
+      "published": "2026-07-28T20:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "관공서라 믿었는데…대리구매 신종 ‘신종 수법’ 주의보",
       "summary": "이와 함께 왓츠업, 텔레그램 등 SNS 서비스의 공식 문자메시로 위장해 “계정에 보안상 위험 요소가 발견됐으니 보안인증을 해야 한다”고 속인 뒤 탈취한 개인정보 등을 피싱범죄에 악용한 사례도 있었다. 이에...",
@@ -2980,21 +3016,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10681",
       "source": "cvefeed",
       "published": "2026-07-25T22:23:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-66012 - SiYuan before v3.7.2 Unauthenticated Administrator Takeover via MCP",
-      "summary": "CVE ID :CVE-2026-66012\n  \nPublished : July 25, 2026, 11:17 a.m. | 1 day, 10 hours ago\n  \nDescription :SiYuan before v3.7.2 contains a missing authorization vulnerability in the POST /mcp kernel endpoint, which is gated only by a general auth check (model.CheckAuth) with no admin-role or read-only enforcement. This exposes 31 MCP tools, including a file tool with list/read/write/delete/rename/copy actions across the entire workspace. When the Publish server is enabled in anonymous mode (Conf.Publish.Enable=true and Conf.Publish.Auth.Enable=false), the Publish reverse proxy attaches an anonymous RoleReader JWT to proxied requests, allowing a remote unauthenticated attacker to reach /mcp. The attacker can read conf/conf.json to extract accessAuthCode, api.token, and cookieKey in plaintext, write arbitrary files in the workspace, and plant a plugin into data/plugins/ that executes with nodeIntegration:true and no contextIsolation on the next desktop launch, leading to administrator takeover.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-66012\n  \nPublished : July 25, 2026, 11:17 a.m. | 1 day, 10 hours ago\n  \nDescription :SiYuan before v3.7.2 contains a missing authorization vulnerability in the POST /mcp kernel endpoint, which is gated only by a general auth check (model.CheckAuth) with no admin-role or read-only enforcement. This exposes 31 MCP tools, including a file tool with list/read/write/delete/rename/copy actions across the entire workspace. When the Publish server is enabled in anonymous mode (Conf.Publish.Enable=true and Conf.Publish.Auth.Enable=false), the Publish reverse proxy attaches an anonymous RoleReader JWT to proxied requests, allowing a remote unauthenticated attacker to reach /mcp. The attacker can read conf/conf.json to extract accessAuthCode, api.token, and cookieKey in plaintext, write arbitrary files in the workspace, and plant a plugin into data/plugins/ that executes with nodeIntegration:true and no contextIsolation on the next desktop launch, leading to administrator takeover.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-66012 - v3.7.2 이전의 SiYuan이 MCP를 통해 인증되지 않은 관리자를 인수했습니다.",
-      "summary_ko": "CVE ID:CVE-2026-66012\n  \n게시일 : 2026년 7월 25일 오전 11시 17분 | 1일, 10시간 전\n  \n설명: v3.7.2 이전의 SiYuan에는 관리자 역할이나 읽기 전용 적용 없이 일반 인증 확인(model.CheckAuth)에 의해서만 제어되는 POST /mcp 커널 엔드포인트에 누락된 인증 취약점이 포함되어 있습니다. 이는 전체 작업 공간에 걸쳐 목록/읽기/쓰기/삭제/이름 바꾸기/복사 작업이 포함된 파일 도구를 포함하여 31개의 MCP 도구를 노출합니다. 게시 서버가 익명 모드(Conf.Publish.Enable=true 및 Conf.Publish.Auth.Enable=false)에서 활성화되면 게시 역방향 프록시는 익명 RoleReader JWT를 프록시 요청에 연결하여 인증되지 않은 원격 공격자가 /mcp에 도달할 수 있도록 합니다. 공격자는 conf/conf.json을 읽어 일반 텍스트로 accessAuthCode, api.token 및 cookieKey를 추출하고, 작업 공간에 임의의 파일을 쓰고, 다음 데스크톱 실행 시 contextIsolation 없이 nodeIntegration:true로 실행되는 플러그인을 data/plugins/에 심어 관리자를 탈취할 수 있습니다.\n  \n심각도: 10.0 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-66012\n2. 26.07.25 오후8:17\n3. SiYuan before v3.7.2 contains a missing authorizat",
-      "cve_id": "CVE-2026-66012",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-66012",
-      "source": "cvefeed",
-      "published": "2026-07-25T20:17:19+09:00",
       "lang": "en"
     }
   ],
