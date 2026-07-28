@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-29T07:02:15.595469+09:00",
+  "fetched_at": "2026-07-29T07:31:02.065144+09:00",
   "security_news": [
     {
       "title": "[기고] 공공 커스터디, 국가 디지털 인프라로 만들어야",
@@ -2739,6 +2739,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "Chromium: CVE-2026-13032 Use after free in WebGL",
+      "summary": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
+      "description": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
+      "title_ko": "Chromium: CVE-2026-13032 WebGL에서 무료 후 사용",
+      "summary_ko": "이 CVE는 Chrome에서 할당되었습니다.  Microsoft Edge(Chromium 기반)는 이 취약점을 해결하는 Chromium을 수집합니다. 자세한 내용은 [Google Chrome 릴리스](https://chromereleases.googleblog.com/2026)를 참조하세요.",
+      "summary_3lines": "1. CVE-2026-13032\n2. MSRC\n3. This CVE was assigned by Chrome. Microsoft Edge (C",
+      "cve_id": "CVE-2026-13032",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13032",
+      "source": "msrc",
+      "published": "2026-07-29T07:03:48+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-55555 - Dompdf: File existence oracle via font-face stylesheet declaration",
       "summary": "CVE ID :CVE-2026-55555\n  \nPublished : July 28, 2026, 7:23 p.m. | 6 minutes ago\n  \nDescription :Dompdf is an HTML to PDF converter for PHP. Versions 3.15 and prior are vulnerable to a File Existence Oracle attack through the manipulation of the CSS @font-face directive. By providing malicious HTML that references local files via the file:// protocol repeatedly, an attacker can trigger PHP memory exhaustion. Because Dompdf behaves differently depending on whether a referenced local file exists (an existing file is processed repeatedly until it triggers an \"Allowed memory size exhausted\" crash, whereas a missing file fails fast or is ignored and never hits the memory limit), an attacker can use this observable discrepancy as an oracle to enumerate sensitive files on the server regardless of CHROOT restrictions. Exploitation requires the attacker to supply unrestricted or unsanitized HTML in a request that permits large data, plus a configuration where Dompdf's memory limit is low enough to be exhausted (with  $_dompdf_show_warnings=true  making the overflow easier to reach). This issue has been fixed in version 3.16.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
