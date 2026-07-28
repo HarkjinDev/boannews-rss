@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-07-28T16:01:28.041092+09:00",
+  "fetched_at": "2026-07-28T16:31:30.658834+09:00",
   "security_news": [
+    {
+      "title": "AI 모델 노린 랜섬웨어 등장…학습 가중치까지 암호화해 복구 비용 폭증...",
+      "summary": "문제의 취약점은 2025년 5월 미국 사이버보안·인프라보안국(CISA) '악용 중인 취약점(KEV)' 목록에 등록됐고 랭플로우는 1.3.0 버전에서 이를 수정했다. 그러나 공격 대상 서버는 14개월 넘게 패치하지 않은...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 모델 학습 가중치 노린 랜섬웨어 등장\n2. 랭플로우 1.3.0 이전 버전 취약점 악용\n3. CISA KEV 목록 등재, 14개월 미패치 서버 위협",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=687682",
+      "source": "naver",
+      "published": "2026-07-28T16:18:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "클롭 랜섬웨어 하위 조직, PTC 윈드칠·플렉스PLM 취약점 악용 정황",
+      "summary": "사이버보안. [사진: 셔터스톡] 클롭(Cl0p) 랜섬웨어 제휴 조직이 PTC 제품수명주기관리(PLM) 플랫폼 윈드칠과 플렉스PLM 에 있는 심각한 원격코드실행(RCE) 취약점을 악용하려는 정황이 포착됐다. 27일(현지시간)...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 클롭 랜섬웨어 조직, PTC 윈드칠/플렉스PLM RCE 취약점 악용.\n2. RCE 취약점 이용, 원격 코드 실행 시도 포착.\n3. PTC PLM 플랫폼 대상 공격 가능성 있음.",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=687678",
+      "source": "naver",
+      "published": "2026-07-28T16:06:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[이슈포커스] 방심하는 사이 개인정보 유출…대기업·은행 이어 정부기...",
+      "summary": "정부기관까지 해킹과 정보 유출 사고에서 자유롭지 못한 상황이다. 최근 몇 년간 국내외에서는 수백만 명에서... - 개인정보 유출은 어떻게 발생할까 개인정보 유출의 원인은 다양하지만 가장 큰 원인으로는 해킹 공격이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 정부기관도 개인정보 유출 사고 겪음\n2. 해킹 공격으로 수백만 명 정보 유출\n3. 금융기관까지 개인정보 유출 위험",
+      "link": "http://www.sisacast.kr/news/articleView.html?idxno=98155",
+      "source": "naver",
+      "published": "2026-07-28T16:04:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "외교관 등 1만명 정보 털린 외교부, 표준화 보안 체계 구축 검토",
       "summary": "/ 사진=김민우 기자외교관과 재외공관 파견 공무원 등 최대 1만건의 신상정보가 유출된 국립외교원 해킹 사태를 겪은 외교부가 신규 인터넷 정보시스템을 통해 표준화된 보안 체계 구축 방안을 검토한다. 외교부와...",
@@ -2404,6 +2440,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-15730 - GamiPress <= 7.9.9.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'heading_size' Shortcode Attribute",
+      "summary": "CVE ID :CVE-2026-15730\n  \nPublished : July 28, 2026, 6:54 a.m. | 35 minutes ago\n  \nDescription :The GamiPress – Gamification plugin to reward points, achievements, badges & ranks in WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'heading_size' Shortcode Attribute in all versions up to, and including, 7.9.9.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The wp_kses_post filter applied at post save does not neutralize this payload because only the inert shortcode text is stored in post_content; the dangerous HTML is synthesized at render time by the shortcode handler, entirely bypassing save-time sanitization.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-15730\n  \nPublished : July 28, 2026, 6:54 a.m. | 35 minutes ago\n  \nDescription :The GamiPress – Gamification plugin to reward points, achievements, badges & ranks in WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'heading_size' Shortcode Attribute in all versions up to, and including, 7.9.9.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The wp_kses_post filter applied at post save does not neutralize this payload because only the inert shortcode text is stored in post_content; the dangerous HTML is synthesized at render time by the shortcode handler, entirely bypassing save-time sanitization.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-15730 - GamiPress <= 7.9.9.1 - 'heading_size' 단축 코드 속성을 통해 인증된(Contributor+) 저장된 교차 사이트 스크립팅",
+      "summary_ko": "CVE ID:CVE-2026-15730\n  \n게시일 : 2026년 7월 28일 오전 6시 54분 | 35분 전\n  \n설명:GamiPress – WordPress용 WordPress 플러그인에서 포인트, 업적, 배지 및 순위를 보상하는 게임화 플러그인은 입력 삭제 및 출력 이스케이프가 충분하지 않기 때문에 7.9.9.1까지의 모든 버전에서 'heading_size' 단축 코드 속성을 통한 저장된 교차 사이트 스크립팅에 취약합니다. 이를 통해 기여자 수준 이상의 액세스 권한을 가진 인증된 공격자가 사용자가 삽입된 페이지에 액세스할 때마다 실행되는 임의의 웹 스크립트를 페이지에 삽입할 수 있습니다. 사후 저장 시 적용된 wp_kses_post 필터는 비활성 단축 코드 텍스트만 post_content에 저장되므로 이 페이로드를 무력화하지 않습니다. 위험한 HTML은 렌더링 시 단축 코드 처리기에 의해 합성되어 저장 시간 삭제를 완전히 우회합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-15730\n2. 26.07.28 오후3:54\n3. The GamiPress – Gamification plugin to reward poin",
+      "cve_id": "CVE-2026-15730",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15730",
+      "source": "cvefeed",
+      "published": "2026-07-28T15:54:36+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-66825 - Cross-Site Scripting via Unsafe URL Schemes in Pivotick Property Links",
       "summary": "CVE ID :CVE-2026-66825\n  \nPublished : July 27, 2026, 8:20 p.m. | 1 hour, 2 minutes ago\n  \nDescription :Pivotick contains a cross-site scripting vulnerability in the sidebar property-list component. Values associated with link-like properties, such as url, uri, href, link, website, or homepage, were rendered as hyperlinks without validating their URL scheme.\n\nAn attacker able to supply or influence node or edge property data could provide a malicious value using the javascript: scheme, including variants obfuscated with whitespace or control characters. If a user clicked the generated property link, attacker-controlled JavaScript could execute in the context of the Pivotick application.\n\nSuccessful exploitation could allow the attacker to access information available to the victim’s browser session or perform actions with the victim’s privileges. The vulnerability was addressed by normalizing property values and preventing URLs with non-allowlisted schemes from being rendered as clickable links.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-66825\n  \nPublished : July 27, 2026, 8:20 p.m. | 1 hour, 2 minutes ago\n  \nDescription :Pivotick contains a cross-site scripting vulnerability in the sidebar property-list component. Values associated with link-like properties, such as url, uri, href, link, website, or homepage, were rendered as hyperlinks without validating their URL scheme.\n\nAn attacker able to supply or influence node or edge property data could provide a malicious value using the javascript: scheme, including variants obfuscated with whitespace or control characters. If a user clicked the generated property link, attacker-controlled JavaScript could execute in the context of the Pivotick application.\n\nSuccessful exploitation could allow the attacker to access information available to the victim’s browser session or perform actions with the victim’s privileges. The vulnerability was addressed by normalizing property values and preventing URLs with non-allowlisted schemes from being rendered as clickable links.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2927,21 +2978,6 @@
       "source": "cvefeed",
       "published": "2026-07-25T17:51:57+09:00",
       "lang": "ca"
-    },
-    {
-      "title": "Chromium: CVE-2026-16804 Use after free in Input",
-      "summary": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
-      "description": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
-      "title_ko": "Chromium: CVE-2026-16804 입력 시 무료 후 사용",
-      "summary_ko": "이 CVE는 Chrome에서 할당되었습니다.  Microsoft Edge(Chromium 기반)는 이 취약점을 해결하는 Chromium을 수집합니다. 자세한 내용은 [Google Chrome 릴리스](https://chromereleases.googleblog.com/2026)를 참조하세요.",
-      "summary_3lines": "1. CVE-2026-16804\n2. MSRC\n3. This CVE was assigned by Chrome. Microsoft Edge (C",
-      "cve_id": "CVE-2026-16804",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-16804",
-      "source": "msrc",
-      "published": "2026-07-25T16:29:49+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
