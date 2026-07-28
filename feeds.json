@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-28T23:01:50.520396+09:00",
+  "fetched_at": "2026-07-28T23:31:23.385275+09:00",
   "security_news": [
+    {
+      "title": "[오늘과 내일/문병기]‘미토스급’ AI가 북한에 넘어간다면",
+      "summary": "국립외교원 온라인교육시스템 해킹은 우리 사이버 안보 체계의 허점을 고스란히 드러냈다. 해커는 지난해... 국립외교원 해킹이 더욱 우려스러운 것은 이 사건이 ‘AI 보안 전쟁’을 촉발시킨 ‘미토스 쇼크(Mythos Shock)...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [오늘과 내일/문병기]‘미토스급’ AI가 북한에 넘어간다면 국립외교원 온라인교육시스템 해킹\n2. 국립외교원 해킹이 더욱 우려스러운 것은 이 사건이 ‘AI 보안 전쟁’을 촉발시킨 ‘미토스 ",
+      "link": "https://n.news.naver.com/mnews/article/020/0003737173?sid=110",
+      "source": "naver",
+      "published": "2026-07-28T23:13:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "국산 AI CCTV, 안전도시 울산 이끌어야",
       "summary": "또한 8천942대에 달하는 방대한 CCTV 영상 데이터가 고성능 AI 모델에 학습·분석되는 과정에서 발생할 개인정보 침해 우려와 민감 데이터 유출 위험을 차단할 철저한 보안 가이드라인이 수립돼야 한다. 따라서 울산시와...",
@@ -2608,6 +2620,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-62436 - grant-table: version change racing with other operations",
+      "summary": "CVE ID :CVE-2026-62436\n  \nPublished : July 28, 2026, 1:19 p.m. | 1 hour, 11 minutes ago\n  \nDescription :[This CNA information record relates to multiple CVEs; the\ntext explains which aspects/vulnerabilities correspond to which CVE.]\n\nWith the introduction of Grant Table v2 came the requirement to be able to\nswitch between versions.  Switching from v1 to v2 reduces the number of\nvalid grant references, as a bigger shared entry structure is then needed\nwhile the shared table doesn't change size.  Switching from v2 back to v1\nthe status frames, which are separate in v2, go away.\n\nCode holding, but intermediately dropping and then re-acquiring the grant\ntable lock, sometimes wrongly assumes that said properties wouldn't change\nacross the window in time where the lock is not being held.\n\nThe v1 -> v2 issue is CVE-2026-62435.\n\nThe v2 -> v1 issue is CVE-2026-62436.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-62436\n  \nPublished : July 28, 2026, 1:19 p.m. | 1 hour, 11 minutes ago\n  \nDescription :[This CNA information record relates to multiple CVEs; the\ntext explains which aspects/vulnerabilities correspond to which CVE.]\n\nWith the introduction of Grant Table v2 came the requirement to be able to\nswitch between versions.  Switching from v1 to v2 reduces the number of\nvalid grant references, as a bigger shared entry structure is then needed\nwhile the shared table doesn't change size.  Switching from v2 back to v1\nthe status frames, which are separate in v2, go away.\n\nCode holding, but intermediately dropping and then re-acquiring the grant\ntable lock, sometimes wrongly assumes that said properties wouldn't change\nacross the window in time where the lock is not being held.\n\nThe v1 -> v2 issue is CVE-2026-62435.\n\nThe v2 -> v1 issue is CVE-2026-62436.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-62436 - 부여 테이블: 다른 작업과의 버전 변경 경쟁",
+      "summary_ko": "CVE ID:CVE-2026-62436\n  \n게시일 : 2026년 7월 28일 오후 1시 19분 | 1시간 11분 전\n  \n설명:[이 CNA 정보 기록은 여러 CVE와 관련이 있습니다. 는\n텍스트에서는 어떤 측면/취약성이 어떤 CVE에 해당하는지 설명합니다.]\n\nGrant Table v2가 도입되면서 다음을 수행할 수 있어야 한다는 요구 사항이 생겼습니다.\n버전 간 전환  v1에서 v2로 전환하면\n더 큰 공유 항목 구조가 필요하므로 유효한 부여 참조\n공유 테이블의 크기는 변경되지 않습니다.  v2에서 v1로 다시 전환\nv2에서는 별도의 상태 프레임이 사라집니다.\n\n코드를 보유하고 있으나 중간에 포기했다가 다시 부여를 획득함\n테이블 잠금, 때때로 해당 속성이 변경되지 않을 것이라고 잘못 가정함\n자물쇠가 걸려 있지 않은 시간에 창문을 가로질러.\n\nv1 -> v2 문제는 CVE-2026-62435입니다.\n\nv2 -> v1 문제는 CVE-2026-62436입니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-62436\n2. 26.07.28 오후10:19\n3. [This CNA information record relates to multiple C",
+      "cve_id": "CVE-2026-62436",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62436",
+      "source": "cvefeed",
+      "published": "2026-07-28T22:19:02+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-66913 - Zip Bomb in Lookyloo Capture Upload Allows Denial of Service",
       "summary": "CVE ID :CVE-2026-66913\n  \nPublished : July 28, 2026, 12:19 p.m. | 10 minutes ago\n  \nDescription :Lookyloo did not enforce limits on the decompressed size of uploaded capture archives and compressed HAR files.\n\nAn attacker could submit a specially crafted ZIP, gzip, or zlib-compressed capture containing data that expands to a very large size during processing. Because the application decompressed this content directly in memory without first limiting the output size, processing the malicious capture could exhaust available memory, terminate a web or worker process, or make the Lookyloo instance unavailable.\n\nThe vulnerability affects both full Lookyloo capture archive imports and API submissions containing gzip-compressed HAR data. Repeated exploitation could cause a persistent denial-of-service condition until the affected processes or instance are restarted.\n\nThe patch introduces:\n\n  *  A 1 GB cumulative uncompressed-size limit for imported capture archives.\n  *  Size-limited gzip and zlib decompression for compressed HAR files.\n  *  Explicit detection and handling of suspected zip bombs.\n  *  An HTTP 400 response when an oversized compressed HAR file is submitted through the API.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-66913\n  \nPublished : July 28, 2026, 12:19 p.m. | 10 minutes ago\n  \nDescription :Lookyloo did not enforce limits on the decompressed size of uploaded capture archives and compressed HAR files.\n\nAn attacker could submit a specially crafted ZIP, gzip, or zlib-compressed capture containing data that expands to a very large size during processing. Because the application decompressed this content directly in memory without first limiting the output size, processing the malicious capture could exhaust available memory, terminate a web or worker process, or make the Lookyloo instance unavailable.\n\nThe vulnerability affects both full Lookyloo capture archive imports and API submissions containing gzip-compressed HAR data. Repeated exploitation could cause a persistent denial-of-service condition until the affected processes or instance are restarted.\n\nThe patch introduces:\n\n  *  A 1 GB cumulative uncompressed-size limit for imported capture archives.\n  *  Size-limited gzip and zlib decompression for compressed HAR files.\n  *  Explicit detection and handling of suspected zip bombs.\n  *  An HTTP 400 response when an oversized compressed HAR file is submitted through the API.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2620,6 +2647,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-66913",
       "source": "cvefeed",
       "published": "2026-07-28T21:19:20+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CI Fortify – Advice for isolating vital systems",
+      "summary": "CI Fortify – Advice for isolating vital systemsCISA and the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC), in collaboration with the Federal Bureau of Investigation and international partners, released joint guidance CI Fortify – Advice for isolating vital systems. This guidance contains practical steps for critical infrastructure (CI) organizations to isolate vital operational technology and enabling systems from all other networks in the event of disruption or crisis and operate in isolation for an extended period. Developed to address escalating cyber threats, the guidance outlines key steps for identifying critical systems, mapping connections, and implementing effective separation points. By following these recommendations, organizations can enhance their resilience, minimize disruption, and maintain essential services during cyber incidents or geopolitical crises.",
+      "description": "CI Fortify – Advice for isolating vital systemsCISA and the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC), in collaboration with the Federal Bureau of Investigation and international partners, released joint guidance CI Fortify – Advice for isolating vital systems. This guidance contains practical steps for critical infrastructure (CI) organizations to isolate vital operational technology and enabling systems from all other networks in the event of disruption or crisis and operate in isolation for an extended period. Developed to address escalating cyber threats, the guidance outlines key steps for identifying critical systems, mapping connections, and implementing effective separation points. By following these recommendations, organizations can enhance their resilience, minimize disruption, and maintain essential services during cyber incidents or geopolitical crises.",
+      "title_ko": "CI Fortify – 핵심 시스템 분리에 대한 조언",
+      "summary_ko": "CI Fortify – 필수 시스템 격리를 위한 조언CISA와 호주 신호국 산하 호주 사이버 보안 센터(ASD의 ACSC)는 연방 수사국 및 국제 파트너와 협력하여 CI Fortify – 필수 시스템 격리를 위한 공동 지침을 발표했습니다. 이 지침에는 중요 인프라(CI) 조직이 중단이나 위기 상황이 발생할 경우 중요한 운영 기술을 격리하고 다른 모든 네트워크에서 시스템을 활성화하고 장기간 격리된 상태로 운영할 수 있는 실질적인 단계가 포함되어 있습니다. 증가하는 사이버 위협을 해결하기 위해 개발된 이 지침은 중요한 시스템을 식별하고, 연결을 매핑하고, 효과적인 분리 지점을 구현하기 위한 주요 단계를 간략하게 설명합니다. 이러한 권장 사항을 따르면 조직은 복원력을 강화하고 중단을 최소화하며 사이버 사고 또는 지정학적 위기 중에 필수 서비스를 유지할 수 있습니다.",
+      "summary_3lines": "1. CI Fortify – Advice for isolating vital systems\n2. CISA\n3. CI Fortify – Advice for isolating vital systemsCIS",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/resources-tools/resources/ci-fortify-advice-isolating-vital-systems",
+      "source": "cisa",
+      "published": "2026-07-28T21:00:00+09:00",
       "lang": "en"
     },
     {
