@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-29T01:31:04.142518+09:00",
+  "fetched_at": "2026-07-29T02:01:17.193887+09:00",
   "security_news": [
+    {
+      "title": "KT 과징금 얼마나...오늘 '개인정보유출' 제재 심의",
+      "summary": "해킹된 정보로 소액결제 피해까지 있었던 만큼 과징금 규모가 얼마나 될지에 관심이 쏠리고 있습니다.... 해킹 피해자 일부인 368명의 정보로 2억 4천만 원이 넘는 소액결제가 이뤄진 겁니다. [KT 소액결제 피해자 (지난해...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KT, 개인정보 유출로 368명 2.4억 소액결제 피해 발생\n2. 해킹된 정보로 발생한 소액결제 피해 규모에 관심 집중\n3. 과징금 규모, 오늘(13일) 개인정보보호위원회서 심의",
+      "link": "https://n.news.naver.com/mnews/article/052/0002385877?sid=102",
+      "source": "naver",
+      "published": "2026-07-29T01:33:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "원자력·전자통신연구원은 ‘해킹 자동문’… 서버 98%에 백신 안 깔려",
       "summary": "감사원, 국책 연구기관 6곳 감사 보안 취약점 드러나도 방치하고 퇴직할 때 하드 떼어가도 몰라 원자력·항공우주 등 국가 전략 산업 분야 연구·개발을 수행하는 국책 연구기관들이 정보 보안 조치를 제대로 하지 않고...",
@@ -2655,6 +2667,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-61609 - Pterodactyl's shared global rate-limit key on login and 2FA checkpoint enables unauthenticated panel-wide authentication lockout (DoS)",
+      "summary": "CVE ID :CVE-2026-61609\n  \nPublished : July 28, 2026, 3:45 p.m. | 40 minutes ago\n  \nDescription :Pterodactyl is a free, open-source game server management panel. From 1.7.0 until 1.13.0, the authentication rate limiter defined in RouteServiceProvider::configureRateLimiting() applied a single global bucket to the login and two-factor checkpoint endpoints instead of keying by IP or account: the fall-through Limit::perMinute(10) covering POST /auth/login and POST /auth/login/checkpoint omitted ->by(), so Laravel derived a constant cache key (md5('authentication')) shared by every request. An unauthenticated attacker sending roughly ten requests per minute from a single IP, most cheaply against the checkpoint endpoint (which has no reCAPTCHA), exhausts the shared counter and causes HTTP 429 for every user attempting to log in or complete two-factor authentication, a panel-wide authentication denial of service that also locks out administrators. This issue is fixed in version 1.13.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-61609\n  \nPublished : July 28, 2026, 3:45 p.m. | 40 minutes ago\n  \nDescription :Pterodactyl is a free, open-source game server management panel. From 1.7.0 until 1.13.0, the authentication rate limiter defined in RouteServiceProvider::configureRateLimiting() applied a single global bucket to the login and two-factor checkpoint endpoints instead of keying by IP or account: the fall-through Limit::perMinute(10) covering POST /auth/login and POST /auth/login/checkpoint omitted ->by(), so Laravel derived a constant cache key (md5('authentication')) shared by every request. An unauthenticated attacker sending roughly ten requests per minute from a single IP, most cheaply against the checkpoint endpoint (which has no reCAPTCHA), exhausts the shared counter and causes HTTP 429 for every user attempting to log in or complete two-factor authentication, a panel-wide authentication denial of service that also locks out administrators. This issue is fixed in version 1.13.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-61609 - 로그인 시 Pterodactyl의 공유 글로벌 속도 제한 키와 2FA 체크포인트로 인해 인증되지 않은 패널 전체 인증 잠금(DoS)이 가능해졌습니다.",
+      "summary_ko": "CVE ID:CVE-2026-61609\n  \n게시일 : 2026년 7월 28일 오후 3시 45분 | 40분 전\n  \n설명 :Pterodactyl은 무료 오픈 소스 게임 서버 관리 패널입니다. 1.7.0부터 1.13.0까지, RouteServiceProvider::configureRateLimiting()에 정의된 인증 속도 제한기는 IP 또는 계정에 의한 키 입력 대신 로그인 및 2단계 체크포인트 엔드포인트에 단일 전역 버킷을 적용했습니다. POST /auth/login 및 POST /auth/login/checkpoint를 다루는 Fall-through Limit::perMinute(10)는 생략되었습니다. ->by()이므로 Laravel은 상수 캐시 키를 파생했습니다. (md5('authentication'))은 모든 요청에서 공유됩니다. 단일 IP에서 분당 약 10개의 요청을 보내는 인증되지 않은 공격자는 체크포인트 엔드포인트(reCAPTCHA가 없음)에 대해 가장 저렴하게 공유 카운터를 소진시키고 로그인을 시도하는 모든 사용자에 대해 HTTP 429를 발생시키거나 2단계 인증을 완료합니다. 즉, 패널 전체의 인증 서비스 거부로 관리자도 잠깁니다. 이 문제는 버전 1.13.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-61609\n2. 26.07.29 오전12:45\n3. Pterodactyl is a free, open-source game server man",
+      "cve_id": "CVE-2026-61609",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61609",
+      "source": "cvefeed",
+      "published": "2026-07-29T00:45:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-67178 - Open Redirect in MISP Installer-Generated Apache Configuration",
       "summary": "CVE ID :CVE-2026-67178\n  \nPublished : July 28, 2026, 2:30 p.m. | 52 minutes ago\n  \nDescription :MISP installation scripts generated an Apache HTTP virtual-host configuration containing an incorrectly formatted HTTP-to-HTTPS redirect:\n\nRedirect permanent / https://misp.example\n\nApache’s Redirect directive appends any portion of the requested path that follows the matched prefix to the configured destination URL. Because the destination did not end with /, attacker-controlled path content was appended directly to the hostname rather than to its URL path.\n\nFor example, a request resembling:\n\nhttp://misp.example/@attacker.example/\n\ncould result in a redirect resembling:\n\nhttps://misp.example@attacker.example/\n\nUnder standard URL parsing, misp.example is interpreted as user information and attacker.example as the destination host. An unauthenticated remote attacker could therefore construct a URL hosted under the legitimate MISP domain that redirects users to an attacker-controlled website.\n\nThe vulnerability could be used for phishing, credential collection, or potentially disclosing sensitive query-string information preserved during the redirect. Exploitation requires a user to follow the crafted HTTP URL.\n\nThe fix adds the missing trailing slash to the redirect destination, ensuring that appended request data remains part of the path on the configured MISP host.\n\n\n\nExisting installationsExisting MISP installations should review their Apache HTTP virtual-host configuration and ensure that the HTTPS redirect destination ends with a trailing slash:\n\nRedirect permanent / https://misp.example/\n\nAfter updating the configuration, validate it with apachectl configtest and reload or restart Apache for the change to take effect\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
