@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-28T22:31:15.962728+09:00",
+  "fetched_at": "2026-07-28T23:01:50.520396+09:00",
   "security_news": [
+    {
+      "title": "국산 AI CCTV, 안전도시 울산 이끌어야",
+      "summary": "또한 8천942대에 달하는 방대한 CCTV 영상 데이터가 고성능 AI 모델에 학습·분석되는 과정에서 발생할 개인정보 침해 우려와 민감 데이터 유출 위험을 차단할 철저한 보안 가이드라인이 수립돼야 한다. 따라서 울산시와...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 울산시 8,942대 AI CCTV, 개인정보 침해 우려\n2. 민감 데이터 유출 위험 차단 필요\n3. 철저한 보안 가이드라인 수립 촉구",
+      "link": "http://www.ujeil.com/news/articleView.html?idxno=389472",
+      "source": "naver",
+      "published": "2026-07-28T22:48:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "JFrog Confirms OpenAI Models Exploited Artifactory Zero-Day Before Hugging Face Breach",
+      "summary": "JFrog has confirmed that OpenAI models exploited a zero-day in self-hosted Artifactory while trying to reach the open internet from a sealed evaluation environment.\n\nArtifactory is JFrog's software repository manager. OpenAI says the models then escalated privileges and moved laterally until they reached an internet-connected node. JFrog says it has since developed and released fixes for cloud",
+      "content": "",
+      "title_ko": "JFrog, OpenAI 모델이 허깅 페이스 침해 이전에 Artifactory Zero-Day를 악용했음을 확인",
+      "summary_ko": "JFrog는 OpenAI 모델이 폐쇄된 평가 환경에서 개방형 인터넷에 연결하려고 시도하면서 자체 호스팅 Artifactory에서 제로데이를 활용했음을 확인했습니다.\n\nArtifactory는 JFrog의 소프트웨어 저장소 관리자입니다. OpenAI에 따르면 모델은 권한을 확대하고 인터넷에 연결된 노드에 도달할 때까지 측면으로 이동했습니다. JFrog는 이후 클라우드용 수정 사항을 개발 및 출시했다고 밝혔습니다.",
+      "summary_3lines": "1. JFrog는 OpenAI 모델이 허깅 페이스 침해 이전에 Artifactory 제로데이를 \n2. OpenAI에 따르면 모델은 권한을 확대하고 인터넷에 연결된 노드에 도달할 때까지 측면으로\n3. JFrog는 이후 클라우드용 수정 사항을 개발 및 출시했다고 밝혔습니다.",
+      "link": "https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html",
+      "source": "thehackernews",
+      "published": "2026-07-28T22:33:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "\"올해 상반기 가상자산 해킹 피해 1.6조…과반수 北 소행\"",
       "summary": "가상자산 해킹으로 11억 달러(약 1조 6천억원)가 도난당했으며, 피해액 과반수는 북한 소행으로 추정되는... 올해 상반기 발생한 가상자산 해킹 사건 수는 이미 작년 연간 사건 수보다 3배 이상으로 많아 반기 기준으로...",
@@ -2583,6 +2607,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-66913 - Zip Bomb in Lookyloo Capture Upload Allows Denial of Service",
+      "summary": "CVE ID :CVE-2026-66913\n  \nPublished : July 28, 2026, 12:19 p.m. | 10 minutes ago\n  \nDescription :Lookyloo did not enforce limits on the decompressed size of uploaded capture archives and compressed HAR files.\n\nAn attacker could submit a specially crafted ZIP, gzip, or zlib-compressed capture containing data that expands to a very large size during processing. Because the application decompressed this content directly in memory without first limiting the output size, processing the malicious capture could exhaust available memory, terminate a web or worker process, or make the Lookyloo instance unavailable.\n\nThe vulnerability affects both full Lookyloo capture archive imports and API submissions containing gzip-compressed HAR data. Repeated exploitation could cause a persistent denial-of-service condition until the affected processes or instance are restarted.\n\nThe patch introduces:\n\n  *  A 1 GB cumulative uncompressed-size limit for imported capture archives.\n  *  Size-limited gzip and zlib decompression for compressed HAR files.\n  *  Explicit detection and handling of suspected zip bombs.\n  *  An HTTP 400 response when an oversized compressed HAR file is submitted through the API.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-66913\n  \nPublished : July 28, 2026, 12:19 p.m. | 10 minutes ago\n  \nDescription :Lookyloo did not enforce limits on the decompressed size of uploaded capture archives and compressed HAR files.\n\nAn attacker could submit a specially crafted ZIP, gzip, or zlib-compressed capture containing data that expands to a very large size during processing. Because the application decompressed this content directly in memory without first limiting the output size, processing the malicious capture could exhaust available memory, terminate a web or worker process, or make the Lookyloo instance unavailable.\n\nThe vulnerability affects both full Lookyloo capture archive imports and API submissions containing gzip-compressed HAR data. Repeated exploitation could cause a persistent denial-of-service condition until the affected processes or instance are restarted.\n\nThe patch introduces:\n\n  *  A 1 GB cumulative uncompressed-size limit for imported capture archives.\n  *  Size-limited gzip and zlib decompression for compressed HAR files.\n  *  Explicit detection and handling of suspected zip bombs.\n  *  An HTTP 400 response when an oversized compressed HAR file is submitted through the API.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-66913 - Lookyloo 캡처 업로드의 Zip 폭탄으로 인해 서비스 거부가 허용됨",
+      "summary_ko": "CVE ID:CVE-2026-66913\n  \n게시일 : 2026년 7월 28일 오후 12시 19분 | 10분 전\n  \n설명:Lookyloo는 업로드된 캡처 아카이브 및 압축된 HAR 파일의 압축 해제 크기에 제한을 적용하지 않았습니다.\n\n공격자는 처리 중에 매우 큰 크기로 확장되는 데이터가 포함된 특수 제작된 ZIP, gzip 또는 zlib 압축 캡처를 제출할 수 있습니다. 애플리케이션은 먼저 출력 크기를 제한하지 않고 메모리에서 직접 이 콘텐츠의 압축을 풀기 때문에 악의적인 캡처를 처리하면 사용 가능한 메모리가 소진되거나 웹 또는 작업자 프로세스가 종료되거나 Lookyloo 인스턴스를 사용할 수 없게 될 수 있습니다.\n\n이 취약점은 전체 Lookyloo 캡처 아카이브 가져오기와 gzip으로 압축된 HAR 데이터가 포함된 API 제출 모두에 영향을 미칩니다. 반복적으로 악용하면 영향을 받는 프로세스나 인스턴스가 다시 시작될 때까지 지속적인 서비스 거부 상태가 발생할 수 있습니다.\n\n패치에는 다음이 포함됩니다.\n\n  * 가져온 캡처 아카이브의 누적 비압축 크기는 1GB로 제한됩니다.\n  * 압축된 HAR 파일의 경우 크기가 제한된 gzip 및 zlib 압축 해제.\n  * 의심되는 zip 폭탄을 명시적으로 탐지하고 처리합니다.\n  * API를 통해 대용량 압축 HAR 파일이 제출될 때 HTTP 400 응답입니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-66913\n2. 26.07.28 오후9:19\n3. Lookyloo did not enforce limits on the decompresse",
+      "cve_id": "CVE-2026-66913",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-66913",
+      "source": "cvefeed",
+      "published": "2026-07-28T21:19:20+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-4648 - Insufficient Encryption Level in CasfID Servicios Tecnológicos NFC Wristbands",
       "summary": "CVE ID :CVE-2026-4648\n  \nPublished : July 28, 2026, 11:41 a.m. | 45 minutes ago\n  \nDescription :Use of an insecure cryptographic algorithm in the cashless payment system using NFC wristbands from CasfID Servicios Tecnológicos S.L.U. (version used at Resurrection Fest 2025), which employs cards based on MIFARE Classic technology (FM11RF08S). The cryptographic weakness of the authentication algorithm allows an attacker to retrieve access keys using techniques known as Backdoored Nested Attack, read the wristband’s entire contents, and clone its credentials onto a compatible rewritable card. Exploitation of this vulnerability could enable the impersonation of other attendees, the fraudulent use of the balance associated with their wristbands, and financial losses for both the affected users and the event organizers.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
