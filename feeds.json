@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-29T00:31:49.063455+09:00",
+  "fetched_at": "2026-07-29T01:01:38.230965+09:00",
   "security_news": [
+    {
+      "title": "원자력·전자통신연구원은 ‘해킹 자동문’… 서버 98%에 백신 안 깔려",
+      "summary": "감사원, 국책 연구기관 6곳 감사 보안 취약점 드러나도 방치하고 퇴직할 때 하드 떼어가도 몰라 원자력·항공우주 등 국가 전략 산업 분야 연구·개발을 수행하는 국책 연구기관들이 정보 보안 조치를 제대로 하지 않고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 원자력·전자통신연구원 등 국책 연구기관 6곳 감사\n2. 서버 98% 백신 미설치, 퇴직 시 하드 탈취 방치\n3. 국가 전략 산업 연구기관 보안 취약점 드러나",
+      "link": "https://n.news.naver.com/mnews/article/023/0003990171?sid=100",
+      "source": "naver",
+      "published": "2026-07-29T00:48:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "100개 넘는 AI 보안 에이전트가 협업… ‘AI 해커’ 잡아내",
+      "summary": "‘퍼셉션’ 안에서는 레드·블루·그린이라는 3팀이 공조해 해킹을 막는다. 마치 해커처럼 모의 공격을 실행해 보는 ‘레드’와 공격을 탐지하고 진단하는 ‘블루’, 취약점을 차단하고 수정하는 ‘그린’ 팀 소속...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 100개 AI 보안 에이전트, 3개 팀 협업\n2. 모의 해킹·탐지·취약점 차단으로 위협 탐지\n3. AI 해커 공격 효과적 차단 및 방어 강화",
+      "link": "https://n.news.naver.com/mnews/article/023/0003990118?sid=105",
+      "source": "naver",
+      "published": "2026-07-29T00:33:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "AI 해킹, AI로 막는다… 빅테크 ‘주도권 싸움’",
       "summary": "인공지능(AI)이 스스로 보안 취약점을 찾고 해킹까지 실행하는 ‘자율형 사이버 공격’이 현실화되면서 글로벌 빅테크들은 AI를 방패 삼아 맞대응에 나섰다. 사이버 보안의 패러다임이 ‘AI 대 AI’의 선제적 방어...",
@@ -2631,6 +2655,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-67178 - Open Redirect in MISP Installer-Generated Apache Configuration",
+      "summary": "CVE ID :CVE-2026-67178\n  \nPublished : July 28, 2026, 2:30 p.m. | 52 minutes ago\n  \nDescription :MISP installation scripts generated an Apache HTTP virtual-host configuration containing an incorrectly formatted HTTP-to-HTTPS redirect:\n\nRedirect permanent / https://misp.example\n\nApache’s Redirect directive appends any portion of the requested path that follows the matched prefix to the configured destination URL. Because the destination did not end with /, attacker-controlled path content was appended directly to the hostname rather than to its URL path.\n\nFor example, a request resembling:\n\nhttp://misp.example/@attacker.example/\n\ncould result in a redirect resembling:\n\nhttps://misp.example@attacker.example/\n\nUnder standard URL parsing, misp.example is interpreted as user information and attacker.example as the destination host. An unauthenticated remote attacker could therefore construct a URL hosted under the legitimate MISP domain that redirects users to an attacker-controlled website.\n\nThe vulnerability could be used for phishing, credential collection, or potentially disclosing sensitive query-string information preserved during the redirect. Exploitation requires a user to follow the crafted HTTP URL.\n\nThe fix adds the missing trailing slash to the redirect destination, ensuring that appended request data remains part of the path on the configured MISP host.\n\n\n\nExisting installationsExisting MISP installations should review their Apache HTTP virtual-host configuration and ensure that the HTTPS redirect destination ends with a trailing slash:\n\nRedirect permanent / https://misp.example/\n\nAfter updating the configuration, validate it with apachectl configtest and reload or restart Apache for the change to take effect\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-67178\n  \nPublished : July 28, 2026, 2:30 p.m. | 52 minutes ago\n  \nDescription :MISP installation scripts generated an Apache HTTP virtual-host configuration containing an incorrectly formatted HTTP-to-HTTPS redirect:\n\nRedirect permanent / https://misp.example\n\nApache’s Redirect directive appends any portion of the requested path that follows the matched prefix to the configured destination URL. Because the destination did not end with /, attacker-controlled path content was appended directly to the hostname rather than to its URL path.\n\nFor example, a request resembling:\n\nhttp://misp.example/@attacker.example/\n\ncould result in a redirect resembling:\n\nhttps://misp.example@attacker.example/\n\nUnder standard URL parsing, misp.example is interpreted as user information and attacker.example as the destination host. An unauthenticated remote attacker could therefore construct a URL hosted under the legitimate MISP domain that redirects users to an attacker-controlled website.\n\nThe vulnerability could be used for phishing, credential collection, or potentially disclosing sensitive query-string information preserved during the redirect. Exploitation requires a user to follow the crafted HTTP URL.\n\nThe fix adds the missing trailing slash to the redirect destination, ensuring that appended request data remains part of the path on the configured MISP host.\n\n\n\nExisting installationsExisting MISP installations should review their Apache HTTP virtual-host configuration and ensure that the HTTPS redirect destination ends with a trailing slash:\n\nRedirect permanent / https://misp.example/\n\nAfter updating the configuration, validate it with apachectl configtest and reload or restart Apache for the change to take effect\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-67178 - MISP 설치 프로그램에서 생성된 Apache 구성의 오픈 리디렉션",
+      "summary_ko": "CVE ID:CVE-2026-67178\n  \n게시일 : 2026년 7월 28일 오후 2시 30분 | 52분 전\n  \n설명:MISP 설치 스크립트는 잘못된 형식의 HTTP-HTTPS 리디렉션을 포함하는 Apache HTTP 가상 호스트 구성을 생성했습니다.\n\n영구 리디렉션 / https://misp.example\n\nApache의 Redirect 지시문은 일치하는 접두사 뒤에 오는 요청 경로의 일부를 구성된 대상 URL에 추가합니다. 대상이 /로 끝나지 않았기 때문에 공격자가 제어하는 ​​경로 콘텐츠가 URL 경로가 아닌 호스트 이름에 직접 추가되었습니다.\n\n예를 들어 다음과 유사한 요청이 있습니다.\n\nhttp://misp.example/@attacker.example/\n\n다음과 유사한 리디렉션이 발생할 수 있습니다.\n\nhttps://misp.example@attacker.example/\n\n표준 URL 구문 분석에서 misp.example은 사용자 정보로 해석되고 Attacker.example은 대상 호스트로 해석됩니다. 따라서 인증되지 않은 원격 공격자는 사용자를 공격자가 제어하는 ​​웹 사이트로 리디렉션하는 합법적인 MISP 도메인에서 호스팅되는 URL을 구성할 수 있습니다.\n\n이 취약점은 피싱, 자격 증명 수집 또는 리디렉션 중에 보존된 민감한 쿼리 문자열 정보 공개에 사용될 수 있습니다. 악용하려면 사용자가 조작된 HTTP URL을 따라야 합니다.\n\n수정 사항은 누락된 후행 슬래시를 리디렉션 대상에 추가하여 추가된 요청 데이터가 구성된 MISP 호스트 경로의 일부로 유지되도록 합니다.\n\n\n\n기존 설치기존 MISP 설치는 Apache HTTP 가상 호스트 구성을 검토하고 HTTPS 리디렉션 대상이 후행 슬래시로 끝나는지 확인해야 합니다.\n\n영구 리디렉션 / https://misp.example/\n\n구성을 업데이트한 후 apachectl configtest로 유효성을 검사하고 변경 사항이 적용되도록 Apache를 다시 로드하거나 다시 시작하세요.\n  \n심각도: 7.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-67178\n2. 26.07.28 오후11:30\n3. MISP installation scripts generated an Apache HTTP",
+      "cve_id": "CVE-2026-67178",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-67178",
+      "source": "cvefeed",
+      "published": "2026-07-28T23:30:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-62436 - grant-table: version change racing with other operations",
       "summary": "CVE ID :CVE-2026-62436\n  \nPublished : July 28, 2026, 1:19 p.m. | 1 hour, 11 minutes ago\n  \nDescription :[This CNA information record relates to multiple CVEs; the\ntext explains which aspects/vulnerabilities correspond to which CVE.]\n\nWith the introduction of Grant Table v2 came the requirement to be able to\nswitch between versions.  Switching from v1 to v2 reduces the number of\nvalid grant references, as a bigger shared entry structure is then needed\nwhile the shared table doesn't change size.  Switching from v2 back to v1\nthe status frames, which are separate in v2, go away.\n\nCode holding, but intermediately dropping and then re-acquiring the grant\ntable lock, sometimes wrongly assumes that said properties wouldn't change\nacross the window in time where the lock is not being held.\n\nThe v1 -> v2 issue is CVE-2026-62435.\n\nThe v2 -> v1 issue is CVE-2026-62436.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
