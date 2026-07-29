@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-30T01:01:25.478604+09:00",
+  "fetched_at": "2026-07-30T01:31:15.296057+09:00",
   "security_news": [
     {
       "title": "“탈옥 오픈AI 에이전트가 해킹한 기업, 허깅페이스 외 더 있어”",
@@ -2979,6 +2979,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-60113 - AIT-DSN < 2.2.2 Missing Authentication via SLE API Routes",
+      "summary": "CVE ID :CVE-2026-60113\n  \nPublished : July 29, 2026, 3:40 p.m. | 46 minutes ago\n  \nDescription :AMMOS Instrument Toolkit (AIT) Deep Space Network (DSN) Interface before 2.2.2 contains a missing authentication vulnerability in the Space Link Extension (SLE) interface manager that allows unauthenticated network attackers to access seven unprotected API routes by sending direct HTTP requests with no credentials. Attackers can reach the exposed SLE endpoints to start or stop Deep Space Network communication sessions, retrieve telemetry frame data, and inject arbitrary frames into active spacecraft links.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-60113\n  \nPublished : July 29, 2026, 3:40 p.m. | 46 minutes ago\n  \nDescription :AMMOS Instrument Toolkit (AIT) Deep Space Network (DSN) Interface before 2.2.2 contains a missing authentication vulnerability in the Space Link Extension (SLE) interface manager that allows unauthenticated network attackers to access seven unprotected API routes by sending direct HTTP requests with no credentials. Attackers can reach the exposed SLE endpoints to start or stop Deep Space Network communication sessions, retrieve telemetry frame data, and inject arbitrary frames into active spacecraft links.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-60113 - AIT-DSN < 2.2.2 SLE API 경로를 통한 인증 누락",
+      "summary_ko": "CVE ID:CVE-2026-60113\n  \n게시일 : 2026년 7월 29일 오후 3시 40분 | 46분 전\n  \n설명: 2.2.2 이전의 AIT(AMMOS Instrument Toolkit) DSN(Deep Space Network) 인터페이스에는 인증되지 않은 네트워크 공격자가 자격 증명 없이 직접 HTTP 요청을 보내 7개의 보호되지 않은 API 경로에 액세스할 수 있도록 허용하는 SLE(Space Link Extension) 인터페이스 관리자에 누락된 인증 취약점이 포함되어 있습니다. 공격자는 노출된 SLE 엔드포인트에 도달하여 Deep Space Network 통신 세션을 시작 또는 중지하고, 원격 측정 프레임 데이터를 검색하고, 활성 우주선 링크에 임의 프레임을 삽입할 수 있습니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-60113\n2. 26.07.30 오전12:40\n3. AMMOS Instrument Toolkit (AIT) Deep Space Network ",
+      "cve_id": "CVE-2026-60113",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-60113",
+      "source": "cvefeed",
+      "published": "2026-07-30T00:40:26+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-67217 - cJSON JSON Patch Non-Atomic Application Destroys Data Before Validation",
       "summary": "CVE ID :CVE-2026-67217\n  \nPublished : July 29, 2026, 1:32 p.m. | 55 minutes ago\n  \nDescription :cJSON through 1.7.19 applies RFC 6902 JSON Patch operations non-atomically in apply_patch() in cJSON_Utils.c. For a replace operation that is missing its value member, or a move operation whose destination path cannot be resolved, the existing target member is detached and deleted before the operation is fully validated, so the target document is mutated while cJSONUtils_ApplyPatches() or cJSONUtils_ApplyPatchesCaseSensitive() returns a failure status. An attacker who can supply the patch document can destroy addressable members of the target document even though the API reports that the patch failed, defeating the all-or-nothing behavior callers rely on to reject bad patches.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
