@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-30T07:31:07.606069+09:00",
+  "fetched_at": "2026-07-30T08:01:25.542521+09:00",
   "security_news": [
+    {
+      "title": "AI 해킹 사례에 트럼프 “규제 검토…기업 성과 막지 않을 것”",
+      "summary": "해당 행정명령은 정부와 AI 기업 간 협력을 통해 첨단 모델의 사이버보안 능력을 사전에 점검하는 체계를 구축하는 데 초점을 맞췄다. 다만 AI 모델 개발과 출시를 정부가 직접 허가하는 면허제나 사전 승인제를 도입하는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 트럼프 \"AI 사이버보안 능력 점검 강화\"\n2. AI 기업과 협력, 첨단 모델 보안 점검\n3. 면허제/사전승인제는 도입 않기로",
+      "link": "https://n.news.naver.com/mnews/article/030/0003452422?sid=105",
+      "source": "naver",
+      "published": "2026-07-30T07:41:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "KT 개인정보 유출 과징금 오늘 공개…법정 상한 1950억, 박윤영 號 첫 시...",
       "summary": "KT의 불법 초소형기지국(펨토셀) 해킹 사고에 대한 정부 제재 수위가 30일 공개된다. 개인정보 유출 인원은 SK텔레콤 유심 정보 해킹 사고보다 적지만, 무단 소액결제라는 실제 금전 피해가 발생한 데다 신고 지연과 보안...",
@@ -2928,21 +2940,39 @@
       "source": "naver",
       "published": "2026-07-27T08:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"특정 코인만 올인하다 골로 간다\"… 카르다노 수장의 뼈 때리는 독점 ...",
-      "summary": "브리지 해킹과 보안 취약점 사태를 두고 암호화폐 산업 전반의 성숙을 강력히 촉구했다. 근본적인 보안 대책... 서로 다른 블록체인을 연결하는 '브리지' 메커니즘에서 대규모 해킹 사태가 반복되는 현상은 기본적 보안...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 카르다노 수장, 브리지 해킹 반복에 보안 촉구\n2. 블록체인 브리지, 근본적 보안 취약점 반복 발생\n3. 암호화폐 산업 성숙 및 보안 대책 강화 필요",
-      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=471637",
-      "source": "naver",
-      "published": "2026-07-27T07:50:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2025-67406 - Advocate Office Management System SQL Injection",
+      "summary": "CVE ID :CVE-2025-67406\n  \nPublished : July 29, 2026, 10:16 p.m. | 13 minutes ago\n  \nDescription :https://www.sourcecodester.com Advocate office management system 1.0 is affected by: SQL Injection. The impact is: execute arbitrary code (remote). The component is: control/activate_case.php,?id=1. The attack vector is: A SQL Injection vulnerability exists in the activate_case.php in parameter id endpoint of Advocate office management system. Unsanitized user input in the specified parameter is interpolated directly into an SQL query, allowing attackers to infer or extract data and, in some cases, execute stacked/time-based payloads. ¶¶ Affected Component & Parameter Affected Endpoint URL: http://localhost/advocate/kortex_lite/control/activate_case.php?id=1 HTTP Method: GET Vulnerable File: activate_case.php Parameter: id Vector Location: GET Injection Techniques (as identified by sqlmap) Type: error-based Title: MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE) Payload: id=1 AND EXTRACTVALUE(6268,CONCAT(0x5c,0x71766b6a71,(SELECT (ELT(6268=6268,1))),0x716a7a6b71)) Type: time-based blind Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP) Payload: id=1 AND (SELECT 4464 FROM (SELECT(SLEEP(5)))aHqo) Proof of Concept (Burp Repeater)\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2025-67406\n  \nPublished : July 29, 2026, 10:16 p.m. | 13 minutes ago\n  \nDescription :https://www.sourcecodester.com Advocate office management system 1.0 is affected by: SQL Injection. The impact is: execute arbitrary code (remote). The component is: control/activate_case.php,?id=1. The attack vector is: A SQL Injection vulnerability exists in the activate_case.php in parameter id endpoint of Advocate office management system. Unsanitized user input in the specified parameter is interpolated directly into an SQL query, allowing attackers to infer or extract data and, in some cases, execute stacked/time-based payloads. ¶¶ Affected Component & Parameter Affected Endpoint URL: http://localhost/advocate/kortex_lite/control/activate_case.php?id=1 HTTP Method: GET Vulnerable File: activate_case.php Parameter: id Vector Location: GET Injection Techniques (as identified by sqlmap) Type: error-based Title: MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE) Payload: id=1 AND EXTRACTVALUE(6268,CONCAT(0x5c,0x71766b6a71,(SELECT (ELT(6268=6268,1))),0x716a7a6b71)) Type: time-based blind Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP) Payload: id=1 AND (SELECT 4464 FROM (SELECT(SLEEP(5)))aHqo) Proof of Concept (Burp Repeater)\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2025-67406 - 사무실 관리 시스템 SQL 주입 옹호",
+      "summary_ko": "CVE ID:CVE-2025-67406\n  \n게시일 : 2026년 7월 29일 오후 10시 16분 | 13분 전\n  \n설명:https://www.sourcecodester.com Advocate Office 관리 시스템 1.0은 다음의 영향을 받습니다: SQL 주입. 영향은 다음과 같습니다. 임의의 코드를 실행합니다(원격). 구성요소는 control/activate_case.php,?id=1입니다. 공격 벡터는 다음과 같습니다. Advocate 사무실 관리 시스템의 매개변수 ID 엔드포인트에 있는 activate_case.php에 SQL 주입 취약점이 존재합니다. 지정된 매개변수의 정제되지 않은 사용자 입력은 SQL 쿼리에 직접 보간되어 공격자가 데이터를 추론하거나 추출하고 경우에 따라 스택/시간 기반 페이로드를 실행할 수 있습니다. ¶¶ 영향을 받는 구성 요소 및 매개 변수 영향을 받는 끝점 URL: http://localhost/advocate/kortex_lite/control/activate_case.php?id=1 HTTP 방법: GET Vulnerable 파일: activate_case.php 매개 변수: id 벡터 위치: GET 주입 기술(sqlmap으로 식별) 유형: 오류 기반 제목: MySQL >= 5.1 AND 오류 기반 - WHERE, HAVING, ORDER BY 또는 GROUP BY 절(EXTRACTVALUE) 페이로드: id=1 AND EXTRACTVALUE(6268,CONCAT(0x5c,0x71766b6a71,(SELECT (ELT(6268=6268,1))),0x716a7a6b71)) 유형: 시간 기반 블라인드 제목: MySQL >= 5.0.12 AND 시간 기반 블라인드(쿼리 SLEEP) 페이로드: id=1 AND (SELECT 4464 FROM (SELECT(SLEEP(5)))aHqo) 개념 증명(버프 반복기)\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2025-67406\n2. 26.07.30 오전7:16\n3. https://www.sourcecodester.com Advocate office man",
+      "cve_id": "CVE-2025-67406",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2025-67406",
+      "source": "cvefeed",
+      "published": "2026-07-30T07:16:51+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-65975 - Pydantic AI AG-UI Adapter: A dangling client-submitted tool call can execute when a trailing message is dropped during `sanitize_messages`",
+      "summary": "CVE ID :CVE-2026-65975\n  \nPublished : July 29, 2026, 9:17 p.m. | 1 hour, 13 minutes ago\n  \nDescription :Pydantic AI is a Python agent framework for building applications and workflows with Generative AI. In versions 1.88.0 up to but not including 1.107.1 and 2.0.0b1 up to but not including 2.5.0, the UI adapters (AG-UI via Agent.to_ag_ui()/AGUIAdapter, and Vercel AI via VercelAIAdapter) use sanitize_messages to strip unresolved (\"dangling\") client-submitted tool calls from untrusted message history before it reaches the agent, a defense-in-depth default that prevents the agent from executing tool calls the model never emitted. However, the strip anchored to a message index computed before sanitization ran, so when a trailing client message sanitized to empty and was dropped (for example a client system message under the default manage_system_prompt='server'), a preceding assistant response carrying an unresolved tool call became the new tail and was dispatched without inspection. As a result, a remote client could cause a registered, non-approval server tool to run with client-supplied arguments rather than arguments the model produced. The impact is bounded by what the affected tools do and is most significant for applications that gate tool execution in a model-request hook (before_model_request / after_model_request), since a forged call skips the model turn and bypasses that guardrail; approval-gated tools (requires_approval=True) are not auto-executed by this path. This issue has been fixed in versions 1.107.1 and 2.5.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-65975\n  \nPublished : July 29, 2026, 9:17 p.m. | 1 hour, 13 minutes ago\n  \nDescription :Pydantic AI is a Python agent framework for building applications and workflows with Generative AI. In versions 1.88.0 up to but not including 1.107.1 and 2.0.0b1 up to but not including 2.5.0, the UI adapters (AG-UI via Agent.to_ag_ui()/AGUIAdapter, and Vercel AI via VercelAIAdapter) use sanitize_messages to strip unresolved (\"dangling\") client-submitted tool calls from untrusted message history before it reaches the agent, a defense-in-depth default that prevents the agent from executing tool calls the model never emitted. However, the strip anchored to a message index computed before sanitization ran, so when a trailing client message sanitized to empty and was dropped (for example a client system message under the default manage_system_prompt='server'), a preceding assistant response carrying an unresolved tool call became the new tail and was dispatched without inspection. As a result, a remote client could cause a registered, non-approval server tool to run with client-supplied arguments rather than arguments the model produced. The impact is bounded by what the affected tools do and is most significant for applications that gate tool execution in a model-request hook (before_model_request / after_model_request), since a forged call skips the model turn and bypasses that guardrail; approval-gated tools (requires_approval=True) are not auto-executed by this path. This issue has been fixed in versions 1.107.1 and 2.5.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-65975 - Pydantic AI AG-UI 어댑터: 'sanitize_messages' 중에 후행 메시지가 삭제되면 매달린 클라이언트 제출 도구 호출이 실행될 수 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-65975\n  \n게시일 : 2026년 7월 29일 오후 9시 17분 | 1시간, 13분 전\n  \n설명 :Pydantic AI는 Generative AI를 사용하여 애플리케이션과 워크플로를 구축하기 위한 Python 에이전트 프레임워크입니다. 버전 1.88.0(1.107.1 제외) 및 2.0.0b1(2.5.0 제외)에서 UI 어댑터(Agent.to_ag_ui()/AGUIAdapter를 통한 AG-UI 및 VercelAIAdapter를 통한 Vercel AI)는 sanitize_messages를 사용하여 해결되지 않은(\"매달려 있는\") 클라이언트 제출 도구 호출이 도달하기 전에 신뢰할 수 없는 메시지 기록에서 제거합니다. 에이전트는 모델이 내보낸 적이 없는 도구 호출을 에이전트가 실행하지 못하도록 방지하는 심층 방어 기본값입니다. 그러나 삭제가 실행되기 전에 계산된 메시지 인덱스에 고정된 스트립이므로 후행 클라이언트 메시지가 비어 있도록 삭제되고 삭제될 때(예: 기본 관리_system_prompt='server' 아래의 클라이언트 시스템 메시지) 해결되지 않은 도구 호출을 전달하는 이전 보조 응답이 새로운 꼬리가 되어 검사 없이 전달되었습니다. 결과적으로 원격 클라이언트는 등록된 비승인 서버 도구가 모델이 생성한 인수가 아닌 클라이언트 제공 인수를 사용하여 실행되도록 할 수 있습니다. 영향은 영향을 받는 도구가 수행하는 작업에 따라 제한되며 모델 요청 후크(before_model_request / after_model_request)에서 도구 실행을 제어하는 ​​애플리케이션의 경우 가장 중요합니다. 위조된 호출은 모델 전환을 건너뛰고 해당 가드레일을 우회하기 때문입니다. 승인 관리 도구(requires_approval=True)는 이 경로에 의해 자동 실행되지 않습니다. 이 문제는 버전 1.107.1 및 2.5.0에서 해결되었습니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-65975\n2. 26.07.30 오전6:17\n3. Pydantic AI is a Python agent framework for buildi",
+      "cve_id": "CVE-2026-65975",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-65975",
+      "source": "cvefeed",
+      "published": "2026-07-30T06:17:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-67428 - Flyto2 Core: Multiple HTTP-family modules fetch client-controlled URLs without the SSRF guard their siblings apply (SSRF to internal/metadata)",
       "summary": "CVE ID :CVE-2026-67428\n  \nPublished : July 29, 2026, 7:16 p.m. | 18 minutes ago\n  \nDescription :Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.7, HTTP-emitting modules including src/core/modules/third_party/developer/http/requests.py, core.api.http_get, core.api.http_post, graphql.query, graphql.mutation, monitor.http_check, communication.slack_send, notification.discord.send_message, notification.slack.send_message, notification.teams.send_message, ai.vision_analyze, verify.visual_diff, browser.proxy_rotate, and the agent and llm inline base_url branch fetch caller-controlled URLs without validate_url_with_env_config, allowing SSRF to internal or metadata endpoints. This issue is fixed in version 2.26.7.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
