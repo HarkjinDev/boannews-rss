@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-29T15:03:38.982756+09:00",
+  "fetched_at": "2026-07-29T15:31:00.070182+09:00",
   "security_news": [
     {
       "title": "롯데카드 최종 제재안 심의 코앞…영업정지 수위 '촉각'",
@@ -2880,33 +2880,24 @@
       "source": "naver",
       "published": "2026-07-26T16:01:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "해킹·정보유출 막는다… 제주 소상공인 전용 보안거점 가동",
-      "summary": "해킹과 개인정보 유출에 취약한 제주지역 중소기업과 소상공인을 위한 전용 정보보호 거점이 문을 연다.... SECaaS는 기업이 자체 보안장비를 구매·관리하지 않고 인터넷을 통해 해킹 차단과 웹 보안, 악성코드 대응 같은...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 해킹·정보유출 막는다… 제주 소상공인 전용 보안거점 가동 해킹과 개인정보 유출에 취약한 제\n2. SECaaS는 기업이 자체 보안장비를 구매·관리하지 않고 인터넷을 통해 해킹 차단과 웹 보",
-      "link": "https://n.news.naver.com/mnews/article/014/0005552930?sid=102",
-      "source": "naver",
-      "published": "2026-07-26T15:11:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "버러스-이더리움 브릿지, 두 달 만에 또 해킹...754만달러 상당 자산 유...",
-      "summary": "블록체인 보안 업체 블록에이드에 따르면 공격자는 22일(현지시간)  5월 침해 때와 같은 취약점을 악용해... 보안업체 서틱도 이번 해킹을 포착했고 손실액을 약 753만 달러로 추산했다. 서틱은 공격자가 버러스...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 버러스-이더리움 브릿지, 두 달 만에 또 해킹...754만달러 상당 자산 유... 블록체인\n2. 서틱은 공격자가 버러스...",
-      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=687050",
-      "source": "naver",
-      "published": "2026-07-26T15:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-18072 - Advanced Responsive Video Embedder for Rumble, Odysee, YouTube, Vimeo, Kick … 10.8.7 - Unauthenticated Authentication Bypass via Hardcoded Backdoor in '_wplogin' Parameter",
+      "summary": "CVE ID :CVE-2026-18072\n  \nPublished : July 29, 2026, 5:16 a.m. | 1 hour, 13 minutes ago\n  \nDescription :The Advanced Responsive Video Embedder for Rumble, Odysee, YouTube, Vimeo, Kick … plugin for WordPress is vulnerable to Authentication Bypass via a Hardcoded Backdoor in version 10.8.7. The vulnerability exists because the `_arve_uc_init()` function — registered on WordPress's `init` hook at priority 1 so that it runs before any authentication checks on every request — reads an attacker-supplied token from the `_wplogin` (or `_wpm`) parameter and compares it against a hardcoded SHA-256 hash embedded directly in the plugin source, with no nonce verification, no capability check, and no password validation anywhere in the flow. Because this static hash constitutes a set of universal credentials that are publicly accessible in the plugin's source code, unauthenticated attackers can supply the known token to be authenticated as an arbitrarily selected existing administrator account, gaining full administrative control over the affected WordPress site. This was likely introduced by an attacker who gained commit access to the developers account.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-18072\n  \nPublished : July 29, 2026, 5:16 a.m. | 1 hour, 13 minutes ago\n  \nDescription :The Advanced Responsive Video Embedder for Rumble, Odysee, YouTube, Vimeo, Kick … plugin for WordPress is vulnerable to Authentication Bypass via a Hardcoded Backdoor in version 10.8.7. The vulnerability exists because the `_arve_uc_init()` function — registered on WordPress's `init` hook at priority 1 so that it runs before any authentication checks on every request — reads an attacker-supplied token from the `_wplogin` (or `_wpm`) parameter and compares it against a hardcoded SHA-256 hash embedded directly in the plugin source, with no nonce verification, no capability check, and no password validation anywhere in the flow. Because this static hash constitutes a set of universal credentials that are publicly accessible in the plugin's source code, unauthenticated attackers can supply the known token to be authenticated as an arbitrarily selected existing administrator account, gaining full administrative control over the affected WordPress site. This was likely introduced by an attacker who gained commit access to the developers account.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-18072 - Rumble, Odysee, YouTube, Vimeo, Kick …을 위한 고급 반응형 비디오 임베더 10.8.7 - '_wplogin' 매개변수의 하드코딩된 백도어를 통해 인증되지 않은 인증 우회",
+      "summary_ko": "CVE ID:CVE-2026-18072\n  \n게시일 : 2026년 7월 29일 오전 5시 16분 | 1시간, 13분 전\n  \n설명 : WordPress용 Rumble, Odysee, YouTube, Vimeo, Kick 플러그인용 고급 반응형 비디오 임베더는 버전 10.8.7의 하드코딩된 백도어를 통한 인증 우회에 취약합니다. 이 취약점은 WordPress의 'init' 후크에 우선순위 1로 등록되어 모든 요청에 ​​대한 인증 확인 전에 실행되는 '_arve_uc_init()' 함수가 '_wplogin'(또는 '_wpm') 매개변수에서 공격자가 제공한 토큰을 읽고 이를 플러그인 소스에 직접 내장된 하드코딩된 SHA-256 해시와 비교하기 때문에 발생합니다. 이때 논스 확인도, 기능 확인도, 흐름의 어느 곳에서도 비밀번호 확인이 이루어지지 않습니다. 이 정적 해시는 플러그인 소스 코드에서 공개적으로 액세스할 수 있는 범용 자격 증명 세트를 구성하기 때문에 인증되지 않은 공격자는 임의로 선택된 기존 관리자 계정으로 인증할 알려진 토큰을 제공하여 영향을 받는 WordPress 사이트에 대한 완전한 관리 제어권을 얻을 수 있습니다. 이는 개발자 계정에 대한 커밋 액세스 권한을 얻은 공격자가 도입했을 가능성이 높습니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-18072\n2. 26.07.29 오후2:16\n3. The Advanced Responsive Video Embedder for Rumble,",
+      "cve_id": "CVE-2026-18072",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18072",
+      "source": "cvefeed",
+      "published": "2026-07-29T14:16:40+09:00",
+      "lang": "en"
+    },
     {
       "title": "Chromium: CVE-2026-13032 Use after free in WebGL",
       "summary": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
