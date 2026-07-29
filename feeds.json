@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-29T18:31:43.858042+09:00",
+  "fetched_at": "2026-07-29T19:01:15.562602+09:00",
   "security_news": [
     {
       "title": "산업부 공동 관리 '에너지 사이버관제'…연말부터 기후부가 맡는다",
@@ -2928,21 +2928,24 @@
       "source": "naver",
       "published": "2026-07-26T20:08:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "전승절 앞둔 북러 '군사·첩보 동맹'",
-      "summary": "해외 첩보와 해킹, 정찰위성 운용을 아우르는 정보 활동을 강화하려는 포석으로 풀이된다. 국가정보원은 러시아가 북한군 파병의 대가로 정찰위성 기술을 제공하고 있다고 밝힌 바 있다. 월스트리트저널(WSJ)는 25일...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한-러시아, 전승절 앞두고 군사·첩보 동맹 강화\n2. 러시아, 북한군 파병 대가로 정찰위성 기술 제공 추정\n3. 국가정보원, 북러 간 정보 활동 강화 동향 주시",
-      "link": "https://n.news.naver.com/mnews/article/088/0001020725?sid=104",
-      "source": "naver",
-      "published": "2026-07-26T18:44:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-64557 - Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_new_connection_cb()",
+      "summary": "CVE ID :CVE-2026-64557\n  \nPublished : July 29, 2026, 8:01 a.m. | 1 hour, 21 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: L2CAP: Fix use-after-free in l2cap_sock_new_connection_cb()\n\nl2cap_sock_new_connection_cb() returned l2cap_pi(sk)->chan after\nrelease_sock(parent). Once the parent lock is dropped the newly\nenqueued child socket sk is reachable via the accept queue, so another\ntask can accept and free it before the callback dereferences sk,\nresulting in a use-after-free.\n\nRework the ->new_connection() op so the core, rather than the callback,\nowns the child channel's lifetime. The op now receives a pre-allocated\nnew_chan and returns an errno instead of allocating and returning a\nchannel. l2cap_new_connection() allocates the child channel and links\nit into the conn list via __l2cap_chan_add() before invoking the\ncallback, so the conn-list reference keeps the channel alive once\nrelease_sock(parent) exposes the socket to other tasks.\n\nChannel configuration that was duplicated in l2cap_sock_init() and the\nvarious new_connection callbacks is consolidated into\nl2cap_chan_set_defaults(), which now inherits from the parent channel\nwhen one is supplied.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-64557\n  \nPublished : July 29, 2026, 8:01 a.m. | 1 hour, 21 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: L2CAP: Fix use-after-free in l2cap_sock_new_connection_cb()\n\nl2cap_sock_new_connection_cb() returned l2cap_pi(sk)->chan after\nrelease_sock(parent). Once the parent lock is dropped the newly\nenqueued child socket sk is reachable via the accept queue, so another\ntask can accept and free it before the callback dereferences sk,\nresulting in a use-after-free.\n\nRework the ->new_connection() op so the core, rather than the callback,\nowns the child channel's lifetime. The op now receives a pre-allocated\nnew_chan and returns an errno instead of allocating and returning a\nchannel. l2cap_new_connection() allocates the child channel and links\nit into the conn list via __l2cap_chan_add() before invoking the\ncallback, so the conn-list reference keeps the channel alive once\nrelease_sock(parent) exposes the socket to other tasks.\n\nChannel configuration that was duplicated in l2cap_sock_init() and the\nvarious new_connection callbacks is consolidated into\nl2cap_chan_set_defaults(), which now inherits from the parent channel\nwhen one is supplied.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-64557 - 블루투스: L2CAP: l2cap_sock_new_connection_cb()에서 use-after-free 수정",
+      "summary_ko": "CVE ID:CVE-2026-64557\n  \n게시일 : 2026년 7월 29일 오전 8시 01분 | 1시간 21분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nBluetooth: L2CAP: l2cap_sock_new_connection_cb()에서 use-after-free 수정\n\nl2cap_sock_new_connection_cb()는 이후 l2cap_pi(sk)->chan을 반환했습니다.\nrelease_sock(부모). 상위 잠금이 삭제되면 새로\n대기열에 추가된 하위 소켓 sk는 승인 대기열을 통해 도달할 수 있으므로 다른\n작업은 콜백이 sk를 역참조하기 전에 이를 수락하고 해제할 수 있습니다.\n결과적으로 free-after-free가 발생합니다.\n\n->new_connection() 작업을 재작업하여 콜백이 아닌 코어가\n하위 채널의 수명을 소유합니다. 이제 op는 사전 할당된\nnew_chan을 할당하고 반환하는 대신 errno를 반환합니다.\n채널. l2cap_new_connection()은 하위 채널과 링크를 할당합니다.\n호출하기 전에 __l2cap_chan_add()를 통해 conn 목록에 추가합니다.\n콜백이므로 conn-list 참조는 채널을 한 번 활성 상태로 유지합니다.\nrelease_sock(parent)는 소켓을 다른 작업에 노출합니다.\n\nl2cap_sock_init()에서 중복된 채널 구성과\n다양한 new_connection 콜백이 통합되었습니다.\nl2cap_chan_set_defaults(), 이제 상위 채널에서 상속됩니다.\n하나 공급되면.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-64557\n2. 26.07.29 오후5:01\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-64557",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64557",
+      "source": "cvefeed",
+      "published": "2026-07-29T17:01:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "Apple Patches Everything (July 2026), (Wed, Jul 29th)",
       "summary": "I am a bit late with this summary, but this week Apple released updates to all its operating systems and Safari. The Safari update, as usual, targets macOS prior to macOS 26. macOS updates covered the two older versions (14 and 15), while other operating system patches only covered the current 26 versions.\r",
