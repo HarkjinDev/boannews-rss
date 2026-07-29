@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-29T22:01:26.305128+09:00",
+  "fetched_at": "2026-07-29T22:31:22.420556+09:00",
   "security_news": [
     {
       "title": "\"노로그\" 약속한 VPN에서 5,800만 건 접속기록 유출…이용자 개인정보 대...",
@@ -2967,6 +2967,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-50642 - Terminal Escape Injection in diff‑so‑fancy",
+      "summary": "CVE ID :CVE-2026-50642\n  \nPublished : July 29, 2026, 11:16 a.m. | 47 minutes ago\n  \nDescription :diff‑so‑fancy does not properly sanitize non‑SGR terminal control sequences before outputting diff data. The application only strips ANSI SGR sequences while allowing other control characters, including carriage return (\\r) and escape sequences (e.g., OSC, CSI), to pass through unsanitized.\n\nAn attacker can embed malicious control sequences in filenames, diff metadata, or file content that are rendered directly in the terminal during diff viewing. This can lead to output manipulation, including filename spoofing, terminal screen clearing, and clipboard injection via supported escape sequences.\n\nSuccessful exploitation may mislead users during code review, alter terminal state, or result in unintended command execution through clipboard hijacking.\n\nThis issue has been fixed in the commit 9c81294\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-50642\n  \nPublished : July 29, 2026, 11:16 a.m. | 47 minutes ago\n  \nDescription :diff‑so‑fancy does not properly sanitize non‑SGR terminal control sequences before outputting diff data. The application only strips ANSI SGR sequences while allowing other control characters, including carriage return (\\r) and escape sequences (e.g., OSC, CSI), to pass through unsanitized.\n\nAn attacker can embed malicious control sequences in filenames, diff metadata, or file content that are rendered directly in the terminal during diff viewing. This can lead to output manipulation, including filename spoofing, terminal screen clearing, and clipboard injection via supported escape sequences.\n\nSuccessful exploitation may mislead users during code review, alter terminal state, or result in unintended command execution through clipboard hijacking.\n\nThis issue has been fixed in the commit 9c81294\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-50642 - Diff-So-Fancy의 터미널 탈출 주입",
+      "summary_ko": "CVE ID:CVE-2026-50642\n  \n게시일 : 2026년 7월 29일 오전 11시 16분 | 47분 전\n  \n설명 :diff‑so‑fancy는 diff 데이터를 출력하기 전에 비SGR 터미널 제어 시퀀스를 적절하게 삭제하지 않습니다. 애플리케이션은 캐리지 리턴(\\r) 및 이스케이프 시퀀스(예: OSC, CSI)를 포함한 다른 제어 문자가 삭제되지 않은 채로 통과하도록 허용하면서 ANSI SGR 시퀀스만 제거합니다.\n\n공격자는 diff 보기 중에 터미널에 직접 렌더링되는 파일 이름, diff 메타데이터 또는 파일 콘텐츠에 악성 제어 시퀀스를 삽입할 수 있습니다. 이로 인해 파일 이름 스푸핑, 터미널 화면 지우기, 지원되는 이스케이프 시퀀스를 통한 클립보드 삽입 등의 출력 조작이 발생할 수 있습니다.\n\n악용에 성공하면 코드 검토 중에 사용자를 오도하거나, 터미널 상태를 변경하거나, 클립보드 하이재킹을 통해 의도하지 않은 명령 실행이 발생할 수 있습니다.\n\n이 문제는 커밋 9c81294에서 해결되었습니다.\n  \n심각도: 4.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-50642\n2. 26.07.29 오후8:16\n3. diff‑so‑fancy does not properly sanitize non‑SGR t",
+      "cve_id": "CVE-2026-50642",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-50642",
+      "source": "cvefeed",
+      "published": "2026-07-29T20:16:49+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-56390 - Arbitrary Output Location Change in GNU Bison",
       "summary": "CVE ID :CVE-2026-56390\n  \nPublished : July 29, 2026, 11:16 a.m. | 1 hour, 13 minutes ago\n  \nDescription :GNU Bison improperly handles grammar‑defined output paths. Grammar directives such as %output and %header allow specifying file paths, which are accepted without restriction and override caller‑supplied output options. \nWhen processing attacker-supplied grammar, this behavior allows directing generated files to arbitrary writable locations on the filesystem, potentially overwriting existing files accessible to the Bison process.\n\nMaintainers of this project were notified about this vulnerability, and fixed the issue in commit 8d101c19d4d9aaedf83a448c925513742d4efcf0. However, they did not provide vulnerable version range. Version 3.8.2 was tested and confirmed as vulnerable, other versions were not tested but might also be vulnerable.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
