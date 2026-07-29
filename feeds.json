@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-29T21:01:12.168398+09:00",
+  "fetched_at": "2026-07-29T21:31:23.130839+09:00",
   "security_news": [
+    {
+      "title": "Mythos Asks the Right Question. It Doesn't Answer It.",
+      "summary": "AI is compressing exploit timelines. The real question isn't whether your vulnerability management playbook needs to change, it's which part of it you've been getting wrong all along.\n\nThe conversation happening in security circles right now goes something like this: Mythos is here. Exploit timelines are collapsing. Does the vulnerability management playbook need to change?\n\nThe honest answer is",
+      "content": "",
+      "title_ko": "미토스는 올바른 질문을 합니다. 그것은 대답하지 않습니다.",
+      "summary_ko": "AI는 익스플로잇 타임라인을 압축하고 있습니다. 진짜 질문은 취약성 관리 플레이북을 변경해야 하는지 여부가 아니라, 그 중 어느 부분을 계속 잘못 알고 있었는지입니다.\n\n현재 보안계에서 벌어지고 있는 대화는 다음과 같습니다. Mythos가 여기에 있습니다. 익스플로잇 타임라인이 무너지고 있습니다. 취약점 관리 플레이북을 변경해야 합니까?\n\n솔직한 대답은",
+      "summary_3lines": "1. AI, 'Mythos' 등장으로 익스플로잇 타임라인 단축\n2. 기존 취약점 관리 방식 재검토 필요성 대두\n3. 보안 업계, AI 기반 공격 속도 변화 주목",
+      "link": "https://thehackernews.com/2026/07/mythos-asks-right-question-it-doesnt.html",
+      "source": "thehackernews",
+      "published": "2026-07-29T21:15:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "'대체 불가' 은행 전산 체계...지주계열 IT사 관리 '복구 역량' 강화",
       "summary": "클라우드와 서비스형 소프트웨어(SaaS) 등 외부 IT 서비스 이용이 늘면서 수탁업체의 장애나 해킹, 정보 유출이 금융회사와 소비자 피해로 번지는 것을 막기 위해서다. 금융회사는 계약 전 현장실사를 통해 수탁업체의...",
@@ -2931,6 +2943,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-56390 - Arbitrary Output Location Change in GNU Bison",
+      "summary": "CVE ID :CVE-2026-56390\n  \nPublished : July 29, 2026, 11:16 a.m. | 1 hour, 13 minutes ago\n  \nDescription :GNU Bison improperly handles grammar‑defined output paths. Grammar directives such as %output and %header allow specifying file paths, which are accepted without restriction and override caller‑supplied output options. \nWhen processing attacker-supplied grammar, this behavior allows directing generated files to arbitrary writable locations on the filesystem, potentially overwriting existing files accessible to the Bison process.\n\nMaintainers of this project were notified about this vulnerability, and fixed the issue in commit 8d101c19d4d9aaedf83a448c925513742d4efcf0. However, they did not provide vulnerable version range. Version 3.8.2 was tested and confirmed as vulnerable, other versions were not tested but might also be vulnerable.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56390\n  \nPublished : July 29, 2026, 11:16 a.m. | 1 hour, 13 minutes ago\n  \nDescription :GNU Bison improperly handles grammar‑defined output paths. Grammar directives such as %output and %header allow specifying file paths, which are accepted without restriction and override caller‑supplied output options. \nWhen processing attacker-supplied grammar, this behavior allows directing generated files to arbitrary writable locations on the filesystem, potentially overwriting existing files accessible to the Bison process.\n\nMaintainers of this project were notified about this vulnerability, and fixed the issue in commit 8d101c19d4d9aaedf83a448c925513742d4efcf0. However, they did not provide vulnerable version range. Version 3.8.2 was tested and confirmed as vulnerable, other versions were not tested but might also be vulnerable.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56390 - GNU Bison의 임의 출력 위치 변경",
+      "summary_ko": "CVE ID:CVE-2026-56390\n  \n게시일 : 2026년 7월 29일 오전 11시 16분 | 1시간, 13분 전\n  \n설명 :GNU Bison이 문법 정의 출력 경로를 부적절하게 처리합니다. %output 및 %header와 같은 문법 지시문을 사용하면 제한 없이 허용되는 파일 경로를 지정할 수 있으며 호출자가 제공한 출력 옵션을 재정의합니다. \n공격자가 제공한 문법을 ​​처리할 때 이 동작을 통해 생성된 파일을 파일 시스템의 임의 쓰기 가능한 위치로 보낼 수 있으며 잠재적으로 Bison 프로세스에 액세스할 수 있는 기존 파일을 덮어쓸 수 있습니다.\n\n이 프로젝트의 유지관리자는 이 취약점에 대한 알림을 받고 커밋 8d101c19d4d9aaedf83a448c925513742d4efcf0의 문제를 해결했습니다. 그러나 취약한 버전 범위를 제공하지 않았습니다. 버전 3.8.2는 테스트를 거쳐 취약한 것으로 확인되었으며, 다른 버전은 테스트되지 않았지만 취약할 수도 있습니다.\n  \n심각도: 4.6 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56390\n2. 26.07.29 오후8:16\n3. GNU Bison improperly handles grammar‑defined outpu",
+      "cve_id": "CVE-2026-56390",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56390",
+      "source": "cvefeed",
+      "published": "2026-07-29T20:16:49+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-64557 - Bluetooth: L2CAP: Fix use-after-free in l2cap_sock_new_connection_cb()",
       "summary": "CVE ID :CVE-2026-64557\n  \nPublished : July 29, 2026, 8:01 a.m. | 1 hour, 21 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: L2CAP: Fix use-after-free in l2cap_sock_new_connection_cb()\n\nl2cap_sock_new_connection_cb() returned l2cap_pi(sk)->chan after\nrelease_sock(parent). Once the parent lock is dropped the newly\nenqueued child socket sk is reachable via the accept queue, so another\ntask can accept and free it before the callback dereferences sk,\nresulting in a use-after-free.\n\nRework the ->new_connection() op so the core, rather than the callback,\nowns the child channel's lifetime. The op now receives a pre-allocated\nnew_chan and returns an errno instead of allocating and returning a\nchannel. l2cap_new_connection() allocates the child channel and links\nit into the conn list via __l2cap_chan_add() before invoking the\ncallback, so the conn-list reference keeps the channel alive once\nrelease_sock(parent) exposes the socket to other tasks.\n\nChannel configuration that was duplicated in l2cap_sock_init() and the\nvarious new_connection callbacks is consolidated into\nl2cap_chan_set_defaults(), which now inherits from the parent channel\nwhen one is supplied.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
