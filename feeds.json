@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-30T18:30:58.865588+09:00",
+  "fetched_at": "2026-07-30T19:01:31.352132+09:00",
   "security_news": [
+    {
+      "title": "[이수영의 IT 칼럼] 빠르고 똑똑한 'AI 복지' ... 모두에게 안전한가",
+      "summary": "우리는 흔히 디지털 보안을 해킹이나 개인정보 유출을 막는 기술로 이해한다. 물론 그것도 중요하다. 하지만 복지에서 말하는 안전은 조금 다르다. 복지의 안전은 단순히 시스템을 보호하는 것이 아니라 사람을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 기술은 복지 안전을 강화하지만, 개인정보 유출 위험도 존재.\n2. AI 기반의 맞춤형 서비스가 사생활 침해 가능성 내포.\n3. AI 복지 도입 시, 윤리적 고려와 개인 정보 보호 강화 필수.",
+      "link": "https://www.dailyt.co.kr/newsView/dlt202607300013",
+      "source": "naver",
+      "published": "2026-07-30T18:54:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "천룡CC, 회원 개인정보 유출…생년월일·주소·ID 등 해킹 피해 확인",
+      "summary": "천룡컨트리클럽 사진=SNS 천룡컨트리클럽(천룡CC)이 외부 해킹으로 회원 및 고객의 개인정보가 유출된 사실을 확인하고 사과문을 발표했다.천룡CC는 30일 회원들에게 발송한 안내문을 통해 \"지난 27일 신원 미상의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 천룡CC, 회원 개인정보(생년월일, 주소, ID) 해킹 피해 발생\n2. 외부 해킹으로 회원 및 고객 개인정보 유출 확인\n3. 천룡CC, 회원들에게 해당 사실 안내 및 사과문 발표",
+      "link": "https://wemakenews.co.kr/news/view.php?no=25937",
+      "source": "naver",
+      "published": "2026-07-30T18:50:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[연합뉴스 이 시각 헤드라인] - 18:00",
       "summary": "사이버보안 경고가 나왔다. 특히 이용자가 자주 찾는 사이트에 접속하는 것만으로도 구버전 보안프로그램의 취약점을 통해 악성코드에 감염될 수 있는 사례가 확인됐다. 보안업계에서는 올해 상반기 수차례...",
@@ -4483,21 +4507,6 @@
       "link": "https://isc.sans.edu/diary/rss/33188",
       "source": "sans_isc",
       "published": "2026-07-27T19:04:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-17527 - Virt-cdi-operator: containerized-data-importer: cdi.kubevirt.io:view aggregated clusterrole grants create on datavolumes/source, allowing unauthorized pvc clone",
-      "summary": "CVE ID :CVE-2026-17527\n  \nPublished : July 27, 2026, 9:31 a.m. | 54 minutes ago\n  \nDescription :In containerized-data-importer (CDI), the aggregated cdi.kubevirt.io:view ClusterRole, intended to provide read-only access to CDI resources, includes a rule granting create on the datavolumes/source subresource. CDI's DataVolume clone authorization accepts this permission as sufficient to authorize cloning the contents of any PVC the caller can name, without requiring write access to the source namespace. A user or service account bound to the view role, commonly granted cluster-wide via ClusterRoleBinding, who also has ordinary write access (edit/admin) to any single namespace, can use this to exfiltrate the contents of any PVC in the cluster into a namespace they control, bypassing namespace isolation and the read-only guarantee of the view role.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-17527\n  \nPublished : July 27, 2026, 9:31 a.m. | 54 minutes ago\n  \nDescription :In containerized-data-importer (CDI), the aggregated cdi.kubevirt.io:view ClusterRole, intended to provide read-only access to CDI resources, includes a rule granting create on the datavolumes/source subresource. CDI's DataVolume clone authorization accepts this permission as sufficient to authorize cloning the contents of any PVC the caller can name, without requiring write access to the source namespace. A user or service account bound to the view role, commonly granted cluster-wide via ClusterRoleBinding, who also has ordinary write access (edit/admin) to any single namespace, can use this to exfiltrate the contents of any PVC in the cluster into a namespace they control, bypassing namespace isolation and the read-only guarantee of the view role.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-17527 - Virt-cdi-operator: Containerized-data-importer: cdi.kubevirt.io:view 집계된 클러스터 역할은 데이터 볼륨/소스에 생성을 부여하여 무단 PVC 복제를 허용합니다.",
-      "summary_ko": "CVE ID:CVE-2026-17527\n  \n게시일 : 2026년 7월 27일 오전 9시 31분 | 54분 전\n  \n설명: 컨테이너화된 데이터 가져오기(CDI)에서 CDI 리소스에 대한 읽기 전용 액세스를 제공하기 위한 집계된 cdi.kubevirt.io:view ClusterRole에는 datavolumes/source 하위 리소스에 대한 생성을 허용하는 규칙이 포함되어 있습니다. CDI의 DataVolume 복제 인증은 소스 네임스페이스에 대한 쓰기 액세스를 요구하지 않고 호출자가 이름을 지정할 수 있는 PVC의 내용을 복제하는 데 충분한 권한을 부여하는 데 이 권한을 허용합니다. 단일 네임스페이스에 대한 일반 쓰기 액세스(편집/관리)도 갖고 있는 ClusterRoleBinding을 통해 일반적으로 클러스터 전체에 부여되는 보기 역할에 바인딩된 사용자 또는 서비스 계정은 이를 사용하여 클러스터에 있는 PVC의 콘텐츠를 자신이 제어하는 ​​네임스페이스로 추출하여 네임스페이스 격리 및 보기 역할의 읽기 전용 보장을 우회할 수 있습니다.\n  \n심각도: 7.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-17527\n2. 26.07.27 오후6:31\n3. In containerized-data-importer (CDI), the aggregat",
-      "cve_id": "CVE-2026-17527",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-17527",
-      "source": "cvefeed",
-      "published": "2026-07-27T18:31:40+09:00",
       "lang": "en"
     }
   ],
