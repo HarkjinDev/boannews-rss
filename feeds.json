@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-31T02:01:16.438782+09:00",
+  "fetched_at": "2026-07-31T02:31:12.192136+09:00",
   "security_news": [
     {
       "title": "아마존, ‘북한 오픈소스 공급망 해킹’ 공개…“AI 활용 공격 고도화”",
@@ -3648,18 +3648,6 @@
       "source": "naver",
       "published": "2026-07-28T02:33:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "위믹스, 연이은 해킹 피해로 77억원 유출…보안 우려 심화",
-      "summary": "지난해 대규모 해킹으로 한 차례 신뢰에 타격을 입은 데 이어 비슷한 보안 문제가 반복되면서, 위믹스 생태계... 이 사건 이후 위믹스는 보안 문제를 이유로 국내 가상자산 거래소 협의체인 디지털자산거래소 공동협의체...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 위믹스, 연이은 해킹으로 77억원 유출\n2. 작년 해킹 후에도 유사 보안 문제 반복\n3. DAXA 등 보안 우려 심화, 신뢰도 하락",
-      "link": "https://www.tokenpost.kr/news/cryptocurrency/381880",
-      "source": "naver",
-      "published": "2026-07-28T02:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4411,36 +4399,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10682",
       "source": "cvefeed",
       "published": "2026-07-28T03:30:49+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45623 - PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments",
-      "summary": "CVE ID :CVE-2026-45623\n  \nPublished : July 27, 2026, 5:23 p.m. | 32 minutes ago\n  \nDescription :PostCSS takes a CSS file and provides an API to analyze and modify its rules by transforming the rules into an Abstract Syntax Tree. In versions 8.5.11 and prior, the PreviousMap parses the /*# sourceMappingURL=PATH */ comment from any CSS string passed to process() and dereferences PATH against the local filesystem with no scheme, allowlist, or traversal check. An attacker who controls the CSS input can cause the host process to read any file readable by Node and leak the first ~10 bytes of its content through the resulting JSON.parse SyntaxError message. The bug also yields a precise file-existence oracle and a controllable-read primitive that may be combined with large-file targets for DoS. The behaviour is triggered with PostCSS's default options — no from, no map, no plugins required — and is therefore reachable from any pipeline that runs untrusted CSS through PostCSS (CMS themes, user-uploaded styles, browser-extension/userstyle processors, build pipelines for third-party packages, blog comment renderers, etc.). This issue has been fixed in version 8.5.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-45623\n  \nPublished : July 27, 2026, 5:23 p.m. | 32 minutes ago\n  \nDescription :PostCSS takes a CSS file and provides an API to analyze and modify its rules by transforming the rules into an Abstract Syntax Tree. In versions 8.5.11 and prior, the PreviousMap parses the /*# sourceMappingURL=PATH */ comment from any CSS string passed to process() and dereferences PATH against the local filesystem with no scheme, allowlist, or traversal check. An attacker who controls the CSS input can cause the host process to read any file readable by Node and leak the first ~10 bytes of its content through the resulting JSON.parse SyntaxError message. The bug also yields a precise file-existence oracle and a controllable-read primitive that may be combined with large-file targets for DoS. The behaviour is triggered with PostCSS's default options — no from, no map, no plugins required — and is therefore reachable from any pipeline that runs untrusted CSS through PostCSS (CMS themes, user-uploaded styles, browser-extension/userstyle processors, build pipelines for third-party packages, blog comment renderers, etc.). This issue has been fixed in version 8.5.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-45623 - PostCSS: CSS 댓글의 공격자가 제어하는 ​​sourceMappingURL을 통한 임의 파일 읽기 및 정보 공개",
-      "summary_ko": "CVE ID:CVE-2026-45623\n  \n게시일 : 2026년 7월 27일 오후 5시 23분 | 32분 전\n  \n설명 :PostCSS는 CSS 파일을 가져와서 규칙을 추상 구문 트리로 변환하여 규칙을 분석하고 수정하는 API를 제공합니다. 버전 8.5.11 이하에서 PreviousMap은 process()에 전달된 CSS 문자열에서 /*# sourceMappingURL=PATH */ 주석을 구문 분석하고 구성표, 허용 목록 또는 순회 검사 없이 로컬 파일 시스템에 대해 PATH를 역참조합니다. CSS 입력을 제어하는 ​​공격자는 호스트 프로세스가 Node에서 읽을 수 있는 모든 파일을 읽도록 하고 결과 JSON.parse SyntaxError 메시지를 통해 해당 콘텐츠의 처음 ~10바이트를 유출할 수 있습니다. 이 버그는 또한 DoS에 대한 대용량 파일 대상과 결합될 수 있는 정밀한 파일 존재 오라클과 제어 가능한 읽기 기본 요소를 생성합니다. 이 동작은 PostCSS의 기본 옵션(from 없음, 지도 없음, 플러그인 필요 없음)으로 트리거되므로 PostCSS를 통해 신뢰할 수 없는 CSS를 실행하는 모든 파이프라인(CMS 테마, 사용자 업로드 스타일, 브라우저 확장/사용자 스타일 프로세서, 타사 패키지용 빌드 파이프라인, 블로그 댓글 렌더러 등)에서 도달할 수 있습니다. 이 문제는 버전 8.5.12에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-45623\n2. 26.07.28 오전2:23\n3. PostCSS takes a CSS file and provides an API to an",
-      "cve_id": "CVE-2026-45623",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45623",
-      "source": "cvefeed",
-      "published": "2026-07-28T02:23:13+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54272 - ip-address: Misclassification of IPv4-mapped/NAT64 IPv6 addresses can bypass SSRF and trust-boundary checks",
-      "summary": "CVE ID :CVE-2026-54272\n  \nPublished : July 27, 2026, 5:13 p.m. | 42 minutes ago\n  \nDescription :ip-address is a library for parsing and manipulating IPv4 and IPv6 addresses in JavaScript. Versions 10.1.1 through 10.2.0 are vulnerable to SSRF through misclassification of IPv4-mapped/NAT64 IPv6 addresses. Address6.getType() classifies an address by matching it against a table of known IPv6 special-use prefixes, returning Global unicast when nothing matches. That table had no entry for the IPv4-mapped range (::ffff:0:0/96), so every mapped address fell through to Global unicast; NAT64 addresses matched their own NAT64 … labels. The boolean checks isLoopback, isUnspecified, and isMulticast compared getType() against a fixed label and so returned false, while isLinkLocal and isULA checked only the native IPv6 ranges. The library already exposed isMapped4() and to4(), but did not apply them inside these checks, so a mapped or NAT64 address was never normalized to its embedded IPv4 address before classification. For IPv4-mapped addresses the host OS routes to the IPv4 stack, so the misclassification is reachable on any dual-stack host. For NAT64, the classification bypass is unconditional but end-to-end reachability additionally requires a NAT64/DNS64 gateway in the deployment network.This issue has been fixed in version 10.2.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54272\n  \nPublished : July 27, 2026, 5:13 p.m. | 42 minutes ago\n  \nDescription :ip-address is a library for parsing and manipulating IPv4 and IPv6 addresses in JavaScript. Versions 10.1.1 through 10.2.0 are vulnerable to SSRF through misclassification of IPv4-mapped/NAT64 IPv6 addresses. Address6.getType() classifies an address by matching it against a table of known IPv6 special-use prefixes, returning Global unicast when nothing matches. That table had no entry for the IPv4-mapped range (::ffff:0:0/96), so every mapped address fell through to Global unicast; NAT64 addresses matched their own NAT64 … labels. The boolean checks isLoopback, isUnspecified, and isMulticast compared getType() against a fixed label and so returned false, while isLinkLocal and isULA checked only the native IPv6 ranges. The library already exposed isMapped4() and to4(), but did not apply them inside these checks, so a mapped or NAT64 address was never normalized to its embedded IPv4 address before classification. For IPv4-mapped addresses the host OS routes to the IPv4 stack, so the misclassification is reachable on any dual-stack host. For NAT64, the classification bypass is unconditional but end-to-end reachability additionally requires a NAT64/DNS64 gateway in the deployment network.This issue has been fixed in version 10.2.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-54272 - ip-address: IPv4 매핑/NAT64 IPv6 주소의 잘못된 분류로 인해 SSRF 및 신뢰 경계 검사를 우회할 수 있음",
-      "summary_ko": "CVE ID:CVE-2026-54272\n  \n게시일 : 2026년 7월 27일 오후 5시 13분 | 42분 전\n  \n설명 :ip-address는 JavaScript에서 IPv4 및 IPv6 주소를 구문 분석하고 조작하기 위한 라이브러리입니다. 버전 10.1.1~10.2.0은 IPv4 매핑/NAT64 IPv6 주소의 잘못된 분류로 인해 SSRF에 취약합니다. Address6.getType()은 알려진 IPv6 특수 사용 접두사 테이블과 비교하여 주소를 분류하고, 일치하는 항목이 없으면 글로벌 유니캐스트를 반환합니다. 해당 테이블에는 IPv4 매핑 범위(::ffff:0:0/96)에 대한 항목이 없으므로 매핑된 모든 주소가 글로벌 유니캐스트로 전달되었습니다. NAT64 주소는 자체 NAT64 … 레이블과 일치합니다. 부울 검사는 isLoopback, isUnspecified 및 isMulticast가 getType()을 고정 레이블과 비교하여 false를 반환하는 반면 isLinkLocal 및 isULA는 기본 IPv6 범위만 검사합니다. 라이브러리는 이미 isMapped4() 및 to4()를 노출했지만 이러한 검사 내에 이를 적용하지 않았으므로 매핑된 주소 또는 NAT64 주소는 분류 전에 내장된 IPv4 주소로 정규화되지 않았습니다. IPv4 매핑 주소의 경우 호스트 OS는 IPv4 스택으로 라우팅되므로 모든 이중 스택 호스트에서 잘못된 분류에 도달할 수 있습니다. NAT64의 경우 분류 우회는 무조건적이지만 종단 간 연결을 위해서는 배포 네트워크에 NAT64/DNS64 게이트웨이가 추가로 필요합니다. 이 문제는 버전 10.2.1에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-54272\n2. 26.07.28 오전2:13\n3. ip-address is a library for parsing and manipulati",
-      "cve_id": "CVE-2026-54272",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54272",
-      "source": "cvefeed",
-      "published": "2026-07-28T02:13:09+09:00",
       "lang": "en"
     }
   ],
