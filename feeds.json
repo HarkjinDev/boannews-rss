@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-31T01:32:23.116093+09:00",
+  "fetched_at": "2026-07-31T02:01:16.438782+09:00",
   "security_news": [
     {
       "title": "아마존, ‘북한 오픈소스 공급망 해킹’ 공개…“AI 활용 공격 고도화”",
@@ -3660,18 +3660,6 @@
       "source": "naver",
       "published": "2026-07-28T02:08:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "샤이니헌터스 유출정보 악용한 협박메일 확산…\"48시간 내 비트코인 2천...",
-      "summary": "해킹 조직 샤이니헌터스(ShinyHunters)가 과거 공개한 개인정보를 악용해 비트코인 2천달러를 요구하는... 이메일을 받은 사람이 실제 해킹으로 기기와 계정이 장악됐다고 믿도록 만들기 위한 수법이다. 확인된 협박메일에는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 샤이니헌터스, 개인정보 유출 악용해 비트코인 2천 달러 요구\n2. 실제 해킹처럼 보이게 기기·계정 장악 위협 협박\n3. 추가 피해 막기 위한 주의 및 신고 필요",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207807",
-      "source": "naver",
-      "published": "2026-07-28T01:34:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3703,6 +3691,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-23985",
       "source": "cvefeed",
       "published": "2026-07-31T01:17:10+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-65635 - Boruta dynamic client registration allows creation of over-privileged OAuth clients",
+      "summary": "CVE ID :CVE-2026-65635\n  \nPublished : July 30, 2026, 3:16 p.m. | 29 minutes ago\n  \nDescription :Improper Isolation or Compartmentalization vulnerability in malach-it boruta (Elixir.Boruta.Openid module) allows attackers to register OpenID Connect clients with administrative privileges through the dynamic client registration entry point. Boruta.Openid.register_client/3 forwards caller-supplied registration parameters to the administrative client creation path without a public/admin field-level allowlist, so an unauthenticated registrant can set security-sensitive attributes including supported grant types, authorized scopes, PKCE enforcement, public refresh and revocation behavior, token lifetimes, and signing settings. The library does not distinguish between metadata a public registrant is allowed to set and administrative controls that should require operator approval.\n\nThis vulnerability is associated with program files lib/boruta/openid.ex and program routines 'Elixir.Boruta.Openid':register_client/3, 'Elixir.Boruta.Openid':parse_registration_params/2.\n\nThis issue affects boruta from 2.3.0 before 2.3.7.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-65635\n  \nPublished : July 30, 2026, 3:16 p.m. | 29 minutes ago\n  \nDescription :Improper Isolation or Compartmentalization vulnerability in malach-it boruta (Elixir.Boruta.Openid module) allows attackers to register OpenID Connect clients with administrative privileges through the dynamic client registration entry point. Boruta.Openid.register_client/3 forwards caller-supplied registration parameters to the administrative client creation path without a public/admin field-level allowlist, so an unauthenticated registrant can set security-sensitive attributes including supported grant types, authorized scopes, PKCE enforcement, public refresh and revocation behavior, token lifetimes, and signing settings. The library does not distinguish between metadata a public registrant is allowed to set and administrative controls that should require operator approval.\n\nThis vulnerability is associated with program files lib/boruta/openid.ex and program routines 'Elixir.Boruta.Openid':register_client/3, 'Elixir.Boruta.Openid':parse_registration_params/2.\n\nThis issue affects boruta from 2.3.0 before 2.3.7.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-65635 - Boruta 동적 클라이언트 등록을 통해 과도한 권한이 부여된 OAuth 클라이언트 생성 가능",
+      "summary_ko": "CVE ID:CVE-2026-65635\n  \n게시일 : 2026년 7월 30일 오후 3시 16분 | 29분 전\n  \n설명:malach-it boruta(Elixir.Boruta.Openid 모듈)의 부적절한 격리 또는 구획화 취약점으로 인해 공격자가 동적 클라이언트 등록 진입점을 통해 관리 권한으로 OpenID Connect 클라이언트를 등록할 수 있습니다. Boruta.Openid.register_client/3은 공개/관리 필드 수준 허용 목록 없이 호출자 제공 등록 매개변수를 관리 클라이언트 생성 경로에 전달하므로 인증되지 않은 등록자는 지원되는 부여 유형, 승인된 범위, PKCE 시행, 공개 새로 고침 및 취소 동작, 토큰 수명 및 서명 설정을 포함하여 보안에 민감한 속성을 설정할 수 있습니다. 도서관은 공개 등록자가 설정할 수 있는 메타데이터와 운영자 승인이 필요한 관리 제어를 구분하지 않습니다.\n\n이 취약점은 프로그램 파일 lib/boruta/openid.ex 및 프로그램 루틴 'Elixir.Boruta.Openid':register_client/3, 'Elixir.Boruta.Openid':parse_registration_params/2와 연관되어 있습니다.\n\n이 문제는 2.3.0 이전 2.3.7의 보루타에 영향을 미칩니다.\n  \n심각도: 8.3 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-65635\n2. 26.07.31 오전12:16\n3. Improper Isolation or Compartmentalization vulnera",
+      "cve_id": "CVE-2026-65635",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-65635",
+      "source": "cvefeed",
+      "published": "2026-07-31T00:16:35+09:00",
       "lang": "en"
     },
     {
