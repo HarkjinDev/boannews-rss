@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-30T22:31:04.877178+09:00",
+  "fetched_at": "2026-07-30T23:01:12.786099+09:00",
   "security_news": [
     {
       "title": "\"고연봉 드립니다\"...구직자 노린 '북한 해킹' 실체",
@@ -3684,21 +3684,24 @@
       "source": "naver",
       "published": "2026-07-28T00:04:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "오픈소스 AI 보안 동맹 출범…폐쇄형 모델 한계 드러났다",
-      "summary": "크립토 시장도 영향…해킹 위협 고도화 글로벌 보안 경계가 높아진 가운데, 암호화폐 시장 역시 주요... 최근 해킹은 기술 취약점보다 ‘권한 악용’과 ‘복잡한 절차 공격’이 중심이 되고 있습니다. AI는 이런...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 오픈소스 AI 보안 동맹 출범…폐쇄형 모델 한계 드러났다 크립토 시장도 영향…해킹 위협 고\n2. 최근 해킹은 기술 취약점보다 ‘권한 악용’과 ‘복잡한 절차 공격’이 중심이 되고 있습니다.",
-      "link": "https://www.tokenpost.kr/news/ai/381787",
-      "source": "naver",
-      "published": "2026-07-27T22:52:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-18378 - Project-koku/koku-metrics-operator: koku-metrics-operator: cluster pull-secret token exfiltration via user-controlled api_url (ssrf / confused deputy)",
+      "summary": "CVE ID :CVE-2026-18378\n  \nPublished : July 30, 2026, noon | 27 minutes ago\n  \nDescription :A flaw was found in koku-metrics-operator. The operator's CostManagementMetricsConfig custom resource allows user able to edit the CR to specify an arbitrary upload URL. When authentication.type is set to token (the default), the cluster-global Red Hat Cloud pull-secret bearer token is attached to HTTP requests sent to this user-controlled URL, allowing the attacker to obtain the token.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-18378\n  \nPublished : July 30, 2026, noon | 27 minutes ago\n  \nDescription :A flaw was found in koku-metrics-operator. The operator's CostManagementMetricsConfig custom resource allows user able to edit the CR to specify an arbitrary upload URL. When authentication.type is set to token (the default), the cluster-global Red Hat Cloud pull-secret bearer token is attached to HTTP requests sent to this user-controlled URL, allowing the attacker to obtain the token.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-18378 - Project-koku/koku-metrics-operator: koku-metrics-operator: 사용자 제어 api_url을 통한 클러스터 풀 비밀 토큰 유출(ssrf / 혼란스러운 대리인)",
+      "summary_ko": "CVE ID:CVE-2026-18378\n  \n게시일 : 2026년 7월 30일 정오 | 27분 전\n  \n설명 : koku-metrics-operator에서 결함이 발견되었습니다. 운영자의 CostManagementMetricsConfig 사용자 정의 리소스를 통해 사용자는 CR을 편집하여 임의의 업로드 URL을 지정할 수 있습니다. 인증.유형이 토큰(기본값)으로 설정되면 클러스터 전역 Red Hat Cloud 풀-비밀 전달자 토큰이 이 사용자 제어 URL로 전송된 HTTP 요청에 첨부되어 공격자가 토큰을 얻을 수 있습니다.\n  \n심각도: 7.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-18378\n2. 26.07.30 오후9:00\n3. A flaw was found in koku-metrics-operator. The ope",
+      "cve_id": "CVE-2026-18378",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18378",
+      "source": "cvefeed",
+      "published": "2026-07-30T21:00:27+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-18353 - Unauthenticated SSRF in PIA via OIDC issuer allowlist bypass",
       "summary": "CVE ID :CVE-2026-18353\n  \nPublished : July 30, 2026, 8:16 a.m. | 14 minutes ago\n  \nDescription :PIA's `POST /v1/upload/sbom` endpoint accepts a Bearer JWT and checks its **unverified** `iss` claim against an issuer allowlist using Python's `urlparse` before performing OIDC discovery with `requests`. Because `urlparse` and `requests`/`urllib3` parse an authority string containing a backslash (e.g. `https://attacker-host\\@ci.eclipse.org/`) into *different* hostnames, an attacker can craft an issuer that passes the allowlist check yet drives `requests` — and subsequently `urllib.request.urlopen` for JWKS retrieval — to connect to an arbitrary attacker-chosen host, port, and scheme.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4387,21 +4390,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-54890",
       "source": "cvefeed",
       "published": "2026-07-28T00:39:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-50333 Windows Spaceport.sys Elevation of Privilege Vulnerability",
-      "summary": "Updated an acknowledgement. This is an informational change only.",
-      "description": "Updated an acknowledgement. This is an informational change only.",
-      "title_ko": "CVE-2026-50333 Windows Spaceport.sys 권한 상승 취약점",
-      "summary_ko": "승인을 업데이트했습니다. 이는 정보 제공용 변경일 뿐입니다.",
-      "summary_3lines": "1. CVE-2026-50333\n2. MSRC\n3. Updated an acknowledgement. This is an information",
-      "cve_id": "CVE-2026-50333",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50333",
-      "source": "msrc",
-      "published": "2026-07-27T23:00:00+09:00",
       "lang": "en"
     }
   ],
