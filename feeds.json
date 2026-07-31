@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-01T03:31:08.733337+09:00",
+  "fetched_at": "2026-08-01T04:01:04.823124+09:00",
   "security_news": [
     {
       "title": "미 하원의원들, ‘북한 IT 인력 겨냥 법안’ 공동 발의",
@@ -4396,21 +4396,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-50737",
       "source": "cvefeed",
       "published": "2026-07-29T04:17:36+09:00",
-      "lang": "ro"
-    },
-    {
-      "title": "CVE-2026-18107 - Criu: criu: container escape via rseq critical section hijack during checkpoint/restore",
-      "summary": "CVE ID :CVE-2026-18107\n  \nPublished : July 28, 2026, 6:32 p.m. | 50 minutes ago\n  \nDescription :A flaw was found in CRIU's handling of restartable sequences (rseq) during checkpoint/restore. A malicious process inside a container can register an rseq critical section that hijacks CRIU's parasite code injection during checkpoint, allowing it to spoof the process credentials saved in the checkpoint image. On restore, the container process gains elevated capabilities and zeroed UIDs/GIDs.\n\nThe practical impact on Red Hat products is limited by several factors: checkpoint/restore requires root privileges (podman) or cluster-admin RBAC (OpenShift) to trigger and cannot be initiated from within the container itself; on OpenShift prior to 4.17 the feature required explicit opt-in, and on 4.17+ the kubelet checkpoint API RBAC is not configured by default; OpenShift enforces user namespaces by default for regular workloads (hostUsers is gated behind admin-only SCCs), which makes the spoofed capabilities namespace-scoped and ineffective for privilege escalation; SELinux type enforcement (container_t) blocks privilege transitions independently of capabilities; seccomp filters persist through checkpoint/restore and cannot be corrupted via the parasite; and kernel mount namespace ownership checks on RHEL 9/10 kernels prevent mount-based container escape even with spoofed capabilities.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-18107\n  \nPublished : July 28, 2026, 6:32 p.m. | 50 minutes ago\n  \nDescription :A flaw was found in CRIU's handling of restartable sequences (rseq) during checkpoint/restore. A malicious process inside a container can register an rseq critical section that hijacks CRIU's parasite code injection during checkpoint, allowing it to spoof the process credentials saved in the checkpoint image. On restore, the container process gains elevated capabilities and zeroed UIDs/GIDs.\n\nThe practical impact on Red Hat products is limited by several factors: checkpoint/restore requires root privileges (podman) or cluster-admin RBAC (OpenShift) to trigger and cannot be initiated from within the container itself; on OpenShift prior to 4.17 the feature required explicit opt-in, and on 4.17+ the kubelet checkpoint API RBAC is not configured by default; OpenShift enforces user namespaces by default for regular workloads (hostUsers is gated behind admin-only SCCs), which makes the spoofed capabilities namespace-scoped and ineffective for privilege escalation; SELinux type enforcement (container_t) blocks privilege transitions independently of capabilities; seccomp filters persist through checkpoint/restore and cannot be corrupted via the parasite; and kernel mount namespace ownership checks on RHEL 9/10 kernels prevent mount-based container escape even with spoofed capabilities.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-18107 - Criu: cruu: 체크포인트/복원 중 rseq 중요 섹션 하이재킹을 통한 컨테이너 탈출",
-      "summary_ko": "CVE ID:CVE-2026-18107\n  \n게시일 : 2026년 7월 28일 오후 6시 32분 | 50분 전\n  \n설명: 체크포인트/복원 중 CRIU의 재시작 가능 시퀀스(rseq) 처리에서 결함이 발견되었습니다. 컨테이너 내부의 악성 프로세스는 체크포인트 중에 CRIU의 기생충 코드 삽입을 하이재킹하는 rseq 중요 섹션을 등록하여 체크포인트 이미지에 저장된 프로세스 자격 증명을 스푸핑할 수 있습니다. 복원 시 컨테이너 프로세스는 향상된 기능과 0으로 설정된 UID/GID를 얻습니다.\n\nRed Hat 제품에 대한 실질적인 영향은 여러 요소에 의해 제한됩니다. 체크포인트/복원을 실행하려면 루트 권한(podman) 또는 클러스터 관리자 RBAC(OpenShift)가 필요하며 컨테이너 자체 내에서 시작할 수 없습니다. 4.17 이전의 OpenShift에서는 이 기능을 사용하려면 명시적인 옵트인이 필요했고, 4.17+에서는 kubelet 체크포인트 API RBAC가 기본적으로 구성되지 않았습니다. OpenShift는 일반 워크로드에 대해 기본적으로 사용자 네임스페이스를 적용합니다(hostUsers는 관리자 전용 SCC 뒤에서 제어됨). 이는 스푸핑된 기능을 네임스페이스 범위로 지정하고 권한 에스컬레이션에 효과적이지 않게 만듭니다. SELinux 유형 적용(container_t)은 기능과 관계없이 권한 전환을 차단합니다. seccomp 필터는 체크포인트/복원을 통해 지속되며 기생충을 통해 손상될 수 없습니다. RHEL 9/10 커널의 커널 마운트 네임스페이스 소유권 확인은 스푸핑 기능이 있어도 마운트 기반 컨테이너 이스케이프를 방지합니다.\n  \n심각도: 7.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-18107\n2. 26.07.29 오전3:32\n3. A flaw was found in CRIU's handling of restartable",
-      "cve_id": "CVE-2026-18107",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18107",
-      "source": "cvefeed",
-      "published": "2026-07-29T03:32:37+09:00",
       "lang": "ro"
     }
   ],
