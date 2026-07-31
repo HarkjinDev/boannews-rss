@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-01T06:01:04.976528+09:00",
+  "fetched_at": "2026-08-01T06:31:14.196591+09:00",
   "security_news": [
+    {
+      "title": "5G 과장·해킹 은폐…KT '겹악재'",
+      "summary": "KT가 인공지능(AI)과 클라우드를 차기 성장사업으로 키우는 시점에 보안과 신뢰 문제가 불거졌다는 점은... 이어 \"개인정보보호 보호 체계 전반을 원점에서 재정비하고 있으며, 보안 투자를 확대하고 전사적...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KT, 5G 과장·해킹 은폐 의혹으로 '겹악재'\n2. 개인정보보호 체계 재정비 및 보안 투자 확대\n3. AI·클라우드 성장 동력에 신뢰 문제 불거져",
+      "link": "https://news.mtn.co.kr/news-detail/2026073116273872877",
+      "source": "naver",
+      "published": "2026-08-01T06:14:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "미 하원의원들, ‘북한 IT 인력 겨냥 법안’ 공동 발의",
       "summary": "국무장관이 사이버보안 기업과 금융기관, 가상자산 플랫폼과 협력하도록 했습니다. 인공지능과 합성 신원을 이용한 위장 수법에 대응하는 조항도 포함됐습니다. 또 '정의에 대한 보상(Rewards for Justice)' 프로그램의...",
@@ -3588,33 +3600,24 @@
       "source": "naver",
       "published": "2026-07-29T06:34:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "미국, 휴머노이드·4족보행 로봇 수입 전면 금지",
-      "summary": "또 해킹을 통해 로봇이 원격으로 탈취될 가능성도 배제할 수 없다고 지적했다. 전력 인버터 역시 외국 기업이 원격으로 장비를 끄거나 데이터를 수집·유출할 수 있으며, 전력망과 데이터센터를 겨냥한 사이버 공격의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 미국, 휴머노이드·4족보행 로봇 수입 금지\n2. 로봇 해킹으로 원격 탈취 및 데이터 유출 가능성\n3. 전력망·데이터센터 노린 사이버 공격 우려",
-      "link": "https://n.news.naver.com/mnews/article/014/0005554259?sid=101",
-      "source": "naver",
-      "published": "2026-07-29T06:20:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[사설] 충청 정보보호 클러스터 사이버보안 거점으로",
-      "summary": "행정·금융·의료·교통은 물론 기업의 생산시설까지 정보통신망으로 연결된 시대에 단 한 번의 해킹이나 정보 유출도 막대한 경제적 손실과 사회적 혼란으로 이어질 수 있다. 사이버보안은 더 이상 일부 전문기관이나...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 충청 정보보호 클러스터, 사이버보안 거점으로\n2. 정보통신망 연결로 해킹·정보 유출 막대한 손실\n3. 보안 강화로 경제적 손실 및 사회적 혼란 방지",
-      "link": "https://www.cctoday.co.kr/news/articleView.html?idxno=2233960",
-      "source": "naver",
-      "published": "2026-07-29T06:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-53551 - free5GC AUSF: null byte injection in supiOrSuci causes HTTP 500 internal service failure",
+      "summary": "CVE ID :CVE-2026-53551\n  \nPublished : July 31, 2026, 8:12 p.m. | 15 minutes ago\n  \nDescription :free5GC is an open-source implementation of the 5G core network. Prior to 1.4.5, the free5GC AUSF (Authentication Server Function) does not validate the supiOrSuci field in UE authentication requests. Null bytes (\\x00) and other control characters pass through JSON parsing unchanged and are forwarded to the UDM in an unescaped URL path. This causes Go's net/url.Parse() to fail, returning HTTP 500 \"System failure\" and leaking internal stack traces. An unauthenticated attacker can trigger this at scale causing denial of service for all subscribers attempting authentication through the affected AUSF. This vulnerability is fixed in 1.4.5.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53551\n  \nPublished : July 31, 2026, 8:12 p.m. | 15 minutes ago\n  \nDescription :free5GC is an open-source implementation of the 5G core network. Prior to 1.4.5, the free5GC AUSF (Authentication Server Function) does not validate the supiOrSuci field in UE authentication requests. Null bytes (\\x00) and other control characters pass through JSON parsing unchanged and are forwarded to the UDM in an unescaped URL path. This causes Go's net/url.Parse() to fail, returning HTTP 500 \"System failure\" and leaking internal stack traces. An unauthenticated attacker can trigger this at scale causing denial of service for all subscribers attempting authentication through the affected AUSF. This vulnerability is fixed in 1.4.5.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53551 - free5GC AUSF: supiOrSuci에 널 바이트 삽입으로 인해 HTTP 500 내부 서비스 오류 발생",
+      "summary_ko": "CVE ID:CVE-2026-53551\n  \n게시일 : 2026년 7월 31일 오후 8시 12분 | 15분 전\n  \n설명 :free5GC는 5G 코어 네트워크의 오픈 소스 구현입니다. 1.4.5 이전에는 free5GC AUSF(인증 서버 기능)가 UE 인증 요청에서 supiOrSuci 필드를 검증하지 않았습니다. Null 바이트(\\x00) 및 기타 제어 문자는 변경되지 않고 JSON 구문 분석을 통과하며 이스케이프되지 않은 URL 경로로 UDM으로 전달됩니다. 이로 인해 Go의 net/url.Parse()가 실패하고 HTTP 500 \"시스템 오류\"가 반환되고 내부 스택 추적이 누출됩니다. 인증되지 않은 공격자는 이를 대규모로 트리거하여 영향을 받는 AUSF를 통해 인증을 시도하는 모든 가입자에 대한 서비스 거부를 유발할 수 있습니다. 이 취약점은 1.4.5에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-53551\n2. 26.08.01 오전5:12\n3. free5GC is an open-source implementation of the 5G",
+      "cve_id": "CVE-2026-53551",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53551",
+      "source": "cvefeed",
+      "published": "2026-08-01T05:12:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-17566 - pgAdmin 4: RCE via backslash-escape mismatch in Import/Export Data query guard (incomplete defense, sibling gap to CVE-2025-13780)",
       "summary": "CVE ID :CVE-2026-17566\n  \nPublished : July 31, 2026, 4 p.m. | 27 minutes ago\n  \nDescription :pgAdmin 4's Import/Export Data tool builds a psql \\copy (...) command line by interpolating a user-supplied SQL query into a Jinja template and passing the rendered line to psql via --command. To stop an attacker from breaking out of the (...) wrapper, create_import_export_job() (route POST /import_export/job/, gated only by the ordinary, commonly-granted tools_import_export_data permission) validated the query with a hand-written parenthesis-balance checker, _is_query_parens_balanced(). That checker always treated a backslash before a single quote (\\') as escaping the quote, i.e. as if standard_conforming_strings were off. PostgreSQL has defaulted standard_conforming_strings to on since 9.1 (2010), the default on every PostgreSQL version pgAdmin 4 currently supports (13-18); under that default psql's own \\copy tokenizer treats \\ as an ordinary character, so a single quote immediately after it closes the string literal. A query such as SELECT 'a\\') TO PROGRAM 'echo pwned' x' was therefore accepted as \"balanced\" by pgAdmin's checker (which believed the ) was still inside the string), while psql, run through the actual rendered command line, closes the string at that point and treats the following ) as the end of the wrapping \\copy (...) subquery, exposing an attacker-chosen TO PROGRAM '' clause that psql executes via popen() -- independent of a subsequent syntax error later on the same line. This is the same class of bug as CVE-2025-12762/CVE-2025-13780 (RCE via psql meta-command/COPY injection during PLAIN-format dump restore), reached through an independently written defense in a different module (Import/Export Data rather than Restore) that had its own, different logic bug (inverted backslash-escape semantics rather than a BOM-defeated regex anchor).\n\nThe fix rejects any backslash inside a single-quoted string in the query outright, rather than picking one of the two possible psql interpretations. This is intentionally conservative: because the correct interpretation of \\ depends on the target server's standard_conforming_strings setting, which the checker cannot reliably know at validation time, refusing the query is safer than guessing.\n\nThis issue affects pgAdmin 4: from the introduction of _is_query_parens_balanced() before 9.18.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
