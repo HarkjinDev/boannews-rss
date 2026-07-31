@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-01T04:01:04.823124+09:00",
+  "fetched_at": "2026-08-01T04:31:03.034421+09:00",
   "security_news": [
     {
       "title": "미 하원의원들, ‘북한 IT 인력 겨냥 법안’ 공동 발의",
@@ -4367,36 +4367,6 @@
       "source": "msrc",
       "published": "2026-07-29T07:03:48+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55555 - Dompdf: File existence oracle via font-face stylesheet declaration",
-      "summary": "CVE ID :CVE-2026-55555\n  \nPublished : July 28, 2026, 7:23 p.m. | 6 minutes ago\n  \nDescription :Dompdf is an HTML to PDF converter for PHP. Versions 3.15 and prior are vulnerable to a File Existence Oracle attack through the manipulation of the CSS @font-face directive. By providing malicious HTML that references local files via the file:// protocol repeatedly, an attacker can trigger PHP memory exhaustion. Because Dompdf behaves differently depending on whether a referenced local file exists (an existing file is processed repeatedly until it triggers an \"Allowed memory size exhausted\" crash, whereas a missing file fails fast or is ignored and never hits the memory limit), an attacker can use this observable discrepancy as an oracle to enumerate sensitive files on the server regardless of CHROOT restrictions. Exploitation requires the attacker to supply unrestricted or unsanitized HTML in a request that permits large data, plus a configuration where Dompdf's memory limit is low enough to be exhausted (with  $_dompdf_show_warnings=true  making the overflow easier to reach). This issue has been fixed in version 3.16.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55555\n  \nPublished : July 28, 2026, 7:23 p.m. | 6 minutes ago\n  \nDescription :Dompdf is an HTML to PDF converter for PHP. Versions 3.15 and prior are vulnerable to a File Existence Oracle attack through the manipulation of the CSS @font-face directive. By providing malicious HTML that references local files via the file:// protocol repeatedly, an attacker can trigger PHP memory exhaustion. Because Dompdf behaves differently depending on whether a referenced local file exists (an existing file is processed repeatedly until it triggers an \"Allowed memory size exhausted\" crash, whereas a missing file fails fast or is ignored and never hits the memory limit), an attacker can use this observable discrepancy as an oracle to enumerate sensitive files on the server regardless of CHROOT restrictions. Exploitation requires the attacker to supply unrestricted or unsanitized HTML in a request that permits large data, plus a configuration where Dompdf's memory limit is low enough to be exhausted (with  $_dompdf_show_warnings=true  making the overflow easier to reach). This issue has been fixed in version 3.16.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-55555 - Dompdf: 글꼴 스타일 시트 선언을 통한 파일 존재 oracle",
-      "summary_ko": "CVE ID:CVE-2026-55555\n  \n게시일 : 2026년 7월 28일 오후 7시 23분 | 6분 전\n  \n설명 :Dompdf는 PHP용 HTML-PDF 변환기입니다. 버전 3.15 및 이전 버전은 CSS @font-face 지시어 조작을 통한 File Existence Oracle 공격에 취약합니다. file:// 프로토콜을 통해 로컬 파일을 반복적으로 참조하는 악성 HTML을 제공함으로써 공격자는 PHP 메모리 고갈을 유발할 수 있습니다. Dompdf는 참조된 로컬 파일이 존재하는지 여부에 따라 다르게 동작하기 때문에(기존 파일은 \"허용 메모리 크기 소진\" 충돌이 발생할 때까지 반복적으로 처리되는 반면 누락된 파일은 빠르게 실패하거나 무시되고 메모리 제한에 도달하지 않음) 공격자는 이 관찰 가능한 불일치를 오라클로 사용하여 CHROOT 제한에 관계없이 서버의 민감한 파일을 열거할 수 있습니다. 악용을 위해서는 공격자가 대규모 데이터를 허용하는 요청에 제한되지 않거나 정리되지 않은 HTML을 제공해야 하며 Dompdf의 메모리 제한이 소진될 만큼 낮은 구성($_dompdf_show_warnings=true를 사용하여 오버플로에 더 쉽게 도달하도록 함)을 제공해야 합니다. 이 문제는 버전 3.16에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-55555\n2. 26.07.29 오전4:23\n3. Dompdf is an HTML to PDF converter for PHP. Versio",
-      "cve_id": "CVE-2026-55555",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55555",
-      "source": "cvefeed",
-      "published": "2026-07-29T04:23:45+09:00",
-      "lang": "fr"
-    },
-    {
-      "title": "CVE-2026-50737 - pglogical Privilege Escalation via Default Expression Execution",
-      "summary": "CVE ID :CVE-2026-50737\n  \nPublished : July 28, 2026, 7:17 p.m. | 12 minutes ago\n  \nDescription :When applying replicated changes for a row that is missing one or more columns, pglogical evaluates the affected table's default expressions on the subscriber. Because the apply worker runs at a privilege level equivalent to a PostgreSQL superuser in default installations, any function invoked by such a default expression also runs at that privilege. A party acting as the publisher can use this path to cause functions to be executed on the subscriber as superuser, escalating from a role permitted to use pglogical to full superuser.\n\nThis is a second, independent path to the same superuser escalation tracked under CVE-2026-50736 (the pglogical queue issue). To exploit the issue an attacker must be able to direct a subscription at an endpoint they control. In default installations this requires privileges normally reserved for a superuser, so the issue is most relevant to managed deployments where the ability to create subscriptions has been delegated to non-superuser roles.\n  \nSeverity: 9.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-50737\n  \nPublished : July 28, 2026, 7:17 p.m. | 12 minutes ago\n  \nDescription :When applying replicated changes for a row that is missing one or more columns, pglogical evaluates the affected table's default expressions on the subscriber. Because the apply worker runs at a privilege level equivalent to a PostgreSQL superuser in default installations, any function invoked by such a default expression also runs at that privilege. A party acting as the publisher can use this path to cause functions to be executed on the subscriber as superuser, escalating from a role permitted to use pglogical to full superuser.\n\nThis is a second, independent path to the same superuser escalation tracked under CVE-2026-50736 (the pglogical queue issue). To exploit the issue an attacker must be able to direct a subscription at an endpoint they control. In default installations this requires privileges normally reserved for a superuser, so the issue is most relevant to managed deployments where the ability to create subscriptions has been delegated to non-superuser roles.\n  \nSeverity: 9.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-50737 - 기본 표현식 실행을 통한 pglogical 권한 상승",
-      "summary_ko": "CVE ID:CVE-2026-50737\n  \n게시일 : 2026년 7월 28일 오후 7시 17분 | 12분 전\n  \n설명: 하나 이상의 열이 누락된 행에 대해 복제된 변경 사항을 적용할 때 pglogical은 구독자에서 영향을 받는 테이블의 기본 표현식을 평가합니다. 적용 작업자는 기본 설치에서 PostgreSQL 수퍼유저와 동일한 권한 수준에서 실행되므로 이러한 기본 표현식에 의해 호출되는 모든 함수도 해당 권한에서 실행됩니다. 게시자 역할을 하는 당사자는 이 경로를 사용하여 구독자에서 슈퍼유저로 기능이 실행되도록 할 수 있으며, pglogical 사용이 허용된 역할에서 전체 슈퍼유저로 승격됩니다.\n\n이는 CVE-2026-50736(pglogical 대기열 문제)에 따라 추적되는 동일한 수퍼유저 에스컬레이션에 대한 두 번째 독립 경로입니다. 이 문제를 악용하려면 공격자가 자신이 제어하는 ​​엔드포인트에서 구독을 지시할 수 있어야 합니다. 기본 설치에서는 일반적으로 수퍼유저에게 예약된 권한이 필요하므로 이 문제는 구독 생성 기능이 수퍼유저가 아닌 역할에 위임된 관리형 배포와 가장 관련이 있습니다.\n  \n심각도: 9.0 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-50737\n2. 26.07.29 오전4:17\n3. When applying replicated changes for a row that is",
-      "cve_id": "CVE-2026-50737",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-50737",
-      "source": "cvefeed",
-      "published": "2026-07-29T04:17:36+09:00",
-      "lang": "ro"
     }
   ],
   "reputation": []
