@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-01T02:31:15.813668+09:00",
+  "fetched_at": "2026-08-01T03:01:19.352814+09:00",
   "security_news": [
     {
       "title": "미 하원의원들, ‘북한 IT 인력 겨냥 법안’ 공동 발의",
@@ -12,6 +12,18 @@
       "source": "naver",
       "published": "2026-08-01T02:13:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "HollowFrame Loader Deploys Matryoshka Backdoor in Spear-Phishing Attack on Law Firm",
+      "summary": "Cybersecurity researchers have shed light on a previously undocumented Go-based loader framework called HollowFrame and a Rust-based malware family tracked as Matryoshka.\n\nAccording to Blackpoint Cyber, the intrusion sequence begins with a spear-phishing message containing a link to an encrypted archive, which holds a Windows Shortcut (LNK). Executing the file triggers a multi-stage chain that",
+      "content": "",
+      "title_ko": "HollowFrame 로더, 법률 회사에 대한 스피어 피싱 공격에 Matryoshka 백도어 배포",
+      "summary_ko": "사이버 보안 연구원들은 이전에 문서화되지 않은 Go 기반 로더 프레임워크인 HollowFrame과 Matryoshka로 추적되는 Rust 기반 악성 코드 계열을 밝혀냈습니다.\n\nBlackpoint Cyber에 따르면 침입 순서는 Windows 바로 가기(LNK)가 포함된 암호화된 아카이브에 대한 링크가 포함된 스피어 피싱 메시지로 시작됩니다. 파일을 실행하면 다단계 체인이 트리거됩니다.",
+      "summary_3lines": "1. HollowFrame 로더, Matryoshka 악성코드 사용\n2. 스피어 피싱 통해 LNK 파일 실행, 다단계 공격 감행\n3. 로펌 대상, 정보 유출 및 시스템 장악 가능성",
+      "link": "https://thehackernews.com/2026/07/hollowframe-loader-deploys-matryoshka.html",
+      "source": "thehackernews",
+      "published": "2026-08-01T01:39:31+09:00",
+      "lang": "en"
     },
     {
       "title": "첫 국산 이지스함 2032년 軍에 인도",
@@ -4424,21 +4436,6 @@
       "source": "cvefeed",
       "published": "2026-07-29T03:32:37+09:00",
       "lang": "ro"
-    },
-    {
-      "title": "CVE-2026-48025 - nebula-mesh: Decrypted CA private key persists in heap after signing",
-      "summary": "CVE ID :CVE-2026-48025\n  \nPublished : July 28, 2026, 5:40 p.m. | 19 minutes ago\n  \nDescription :nebula-mesh is a self-hosted control plane for Slack Nebula mesh virtual private network. Prior to version 0.3.7, internal/pki/resolver.go:36-64 constructs a CAManager with the plaintext ed25519.PrivateKey after unwrapping via the master key; internal/pki/ca.go:13-16 stores it. Callers at internal/api/enroll.go:116, internal/api/updates.go:297, and internal/api/mobile_bundle.go:40 use the manager for one Sign() and drop the reference on function return — but the underlying slice contents are not wiped before release. The keystore package's contract (internal/keystore/keystore.go doc: \"Callers MUST zeroise the returned plaintext DEK as soon as it is no longer needed\") is not met by the CAManager consumer. Decrypted CA private keys persist in process heap until Go's GC scavenges the underlying slice — minutes to hours under load, indefinitely on idle servers. This issue has been patched in version 0.3.7.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48025\n  \nPublished : July 28, 2026, 5:40 p.m. | 19 minutes ago\n  \nDescription :nebula-mesh is a self-hosted control plane for Slack Nebula mesh virtual private network. Prior to version 0.3.7, internal/pki/resolver.go:36-64 constructs a CAManager with the plaintext ed25519.PrivateKey after unwrapping via the master key; internal/pki/ca.go:13-16 stores it. Callers at internal/api/enroll.go:116, internal/api/updates.go:297, and internal/api/mobile_bundle.go:40 use the manager for one Sign() and drop the reference on function return — but the underlying slice contents are not wiped before release. The keystore package's contract (internal/keystore/keystore.go doc: \"Callers MUST zeroise the returned plaintext DEK as soon as it is no longer needed\") is not met by the CAManager consumer. Decrypted CA private keys persist in process heap until Go's GC scavenges the underlying slice — minutes to hours under load, indefinitely on idle servers. This issue has been patched in version 0.3.7.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48025 - nebula-mesh: 해독된 CA 개인 키가 서명 후에도 힙에 유지됩니다.",
-      "summary_ko": "CVE ID:CVE-2026-48025\n  \n게시일 : 2026년 7월 28일 오후 5시 40분 | 19분 전\n  \n설명:nebula-mesh는 Slack Nebula 메시 가상 사설망을 위한 자체 호스팅 제어 평면입니다. 버전 0.3.7 이전에는 Internal/pki/resolver.go:36-64가 마스터 키를 통해 래핑을 해제한 후 일반 텍스트 ed25519.PrivateKey를 사용하여 CAManager를 구성합니다. Internal/pki/ca.go:13-16에 저장됩니다. Internal/api/enroll.go:116, Internal/api/updates.go:297 및 Internal/api/mobile_bundle.go:40의 호출자는 하나의 Sign()에 대해 관리자를 사용하고 함수 반환 시 참조를 삭제합니다. 그러나 기본 슬라이스 내용은 릴리스 전에 지워지지 않습니다. 키 저장소 패키지의 계약(internal/keystore/keystore.go doc: \"호출자는 더 이상 필요하지 않은 즉시 반환된 일반 텍스트 DEK를 초기화해야 합니다.\")이 CAManager 소비자에 의해 충족되지 않습니다. 해독된 CA 개인 키는 Go의 GC가 기본 슬라이스를 청소할 때까지 프로세스 힙에 유지됩니다(부하가 있는 경우 몇 분에서 몇 시간까지 유휴 서버에서 무기한). 이 문제는 버전 0.3.7에서 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48025\n2. 26.07.29 오전2:40\n3. nebula-mesh is a self-hosted control plane for Sla",
-      "cve_id": "CVE-2026-48025",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48025",
-      "source": "cvefeed",
-      "published": "2026-07-29T02:40:37+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
