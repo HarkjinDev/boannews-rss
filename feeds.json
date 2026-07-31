@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-07-31T22:01:04.987446+09:00",
+  "fetched_at": "2026-07-31T22:31:11.151420+09:00",
   "security_news": [
+    {
+      "title": "AI해킹 AI로 막는다... MS, 프로젝트 퍼셉션 공개일은?",
+      "summary": "사진=마이크로소프트 인공지능이 실제 시스템의 취약점을 찾아 공격하는 위협이 현실화한 가운데 마이크로소프트(MS)가 AI를 활용해 AI 공격을 방어하는 보안 플랫폼을 공개했다. MS는 지난 27일(현지시간) 미국...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. MS, AI 공격 방어 위한 '프로젝트 퍼셉션' 공개\n2. AI가 시스템 취약점 찾아 공격하는 위협에 대비\n3. AI 보안 플랫폼으로 AI 기반 공격에 대응",
+      "link": "https://www.ggilbo.com/news/articleView.html?idxno=1171991",
+      "source": "naver",
+      "published": "2026-07-31T22:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[Opinion] 그들이 가상 세계를 탈출할 때, 우리는 현실을 탈출한다 - 대...",
       "summary": "그리고 VIP 대기실에 입성해 그곳과 연결되는 서버실을 해킹하고 유출된 모든 정보를 되찾는 것이다.이를 위해 멤버들은 수면제로 조직원들을 재우고, CCTV룸에 진입해 카드 게임 현장을 살펴보며 조작 패턴을 파악한다....",
@@ -4411,21 +4423,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-67178",
       "source": "cvefeed",
       "published": "2026-07-28T23:30:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-62436 - grant-table: version change racing with other operations",
-      "summary": "CVE ID :CVE-2026-62436\n  \nPublished : July 28, 2026, 1:19 p.m. | 1 hour, 11 minutes ago\n  \nDescription :[This CNA information record relates to multiple CVEs; the\ntext explains which aspects/vulnerabilities correspond to which CVE.]\n\nWith the introduction of Grant Table v2 came the requirement to be able to\nswitch between versions.  Switching from v1 to v2 reduces the number of\nvalid grant references, as a bigger shared entry structure is then needed\nwhile the shared table doesn't change size.  Switching from v2 back to v1\nthe status frames, which are separate in v2, go away.\n\nCode holding, but intermediately dropping and then re-acquiring the grant\ntable lock, sometimes wrongly assumes that said properties wouldn't change\nacross the window in time where the lock is not being held.\n\nThe v1 -> v2 issue is CVE-2026-62435.\n\nThe v2 -> v1 issue is CVE-2026-62436.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-62436\n  \nPublished : July 28, 2026, 1:19 p.m. | 1 hour, 11 minutes ago\n  \nDescription :[This CNA information record relates to multiple CVEs; the\ntext explains which aspects/vulnerabilities correspond to which CVE.]\n\nWith the introduction of Grant Table v2 came the requirement to be able to\nswitch between versions.  Switching from v1 to v2 reduces the number of\nvalid grant references, as a bigger shared entry structure is then needed\nwhile the shared table doesn't change size.  Switching from v2 back to v1\nthe status frames, which are separate in v2, go away.\n\nCode holding, but intermediately dropping and then re-acquiring the grant\ntable lock, sometimes wrongly assumes that said properties wouldn't change\nacross the window in time where the lock is not being held.\n\nThe v1 -> v2 issue is CVE-2026-62435.\n\nThe v2 -> v1 issue is CVE-2026-62436.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-62436 - 부여 테이블: 다른 작업과의 버전 변경 경쟁",
-      "summary_ko": "CVE ID:CVE-2026-62436\n  \n게시일 : 2026년 7월 28일 오후 1시 19분 | 1시간 11분 전\n  \n설명:[이 CNA 정보 기록은 여러 CVE와 관련이 있습니다. 는\n텍스트에서는 어떤 측면/취약성이 어떤 CVE에 해당하는지 설명합니다.]\n\nGrant Table v2가 도입되면서 다음을 수행할 수 있어야 한다는 요구 사항이 생겼습니다.\n버전 간 전환  v1에서 v2로 전환하면\n더 큰 공유 항목 구조가 필요하므로 유효한 부여 참조\n공유 테이블의 크기는 변경되지 않습니다.  v2에서 v1로 다시 전환\nv2에서는 별도의 상태 프레임이 사라집니다.\n\n코드를 보유하고 있으나 중간에 포기했다가 다시 부여를 획득함\n테이블 잠금, 때때로 해당 속성이 변경되지 않을 것이라고 잘못 가정함\n자물쇠가 걸려 있지 않은 시간에 창문을 가로질러.\n\nv1 -> v2 문제는 CVE-2026-62435입니다.\n\nv2 -> v1 문제는 CVE-2026-62436입니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-62436\n2. 26.07.28 오후10:19\n3. [This CNA information record relates to multiple C",
-      "cve_id": "CVE-2026-62436",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62436",
-      "source": "cvefeed",
-      "published": "2026-07-28T22:19:02+09:00",
       "lang": "en"
     }
   ],
