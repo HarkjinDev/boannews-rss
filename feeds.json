@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-01T00:31:04.331791+09:00",
+  "fetched_at": "2026-08-01T01:02:20.947295+09:00",
   "security_news": [
+    {
+      "title": "첫 국산 이지스함 2032년 軍에 인도",
+      "summary": "한화오션은 드론과 미사일을 겹겹이 요격하는 다층 방어체계, 해상 작전망 해킹을 감시하는 사이버보안관제체계, 적은 인원으로 함정을 운용할 수 있는 스마트함교와 병력절감 자동화 기술을 KDDX에 적용해 2030년대...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 한화오션, KDDX에 첨단 기술 적용\n2. 드론·미사일 요격, 사이버보안 강화\n3. 2030년대 해군 인도 목표",
+      "link": "https://n.news.naver.com/mnews/article/023/0003990785?sid=101",
+      "source": "naver",
+      "published": "2026-08-01T00:41:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "시스코 방화벽 제로데이, CVSS 5.3인데 왜 '고위험'?…8월1일까지 패치 ...",
       "summary": "(Cisco)의 보안 방화벽 관리 제품인 시큐어 방화벽 관리센터(Secure Firewall Management Center, FMC) 소프트웨어에서 실제 공격에 이용된 제로데이 취약점이 발견됐다. 미국 사이버보안·인프라보안국(CISA)은 이 결함을...",
@@ -3648,30 +3660,6 @@
       "source": "naver",
       "published": "2026-07-29T01:33:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "원자력·전자통신연구원은 ‘해킹 자동문’… 서버 98%에 백신 안 깔려",
-      "summary": "감사원, 국책 연구기관 6곳 감사 보안 취약점 드러나도 방치하고 퇴직할 때 하드 떼어가도 몰라 원자력·항공우주 등 국가 전략 산업 분야 연구·개발을 수행하는 국책 연구기관들이 정보 보안 조치를 제대로 하지 않고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 원자력·전자통신연구원 등 국책 연구기관 6곳 감사\n2. 서버 98% 백신 미설치, 퇴직 시 하드 탈취 방치\n3. 국가 전략 산업 연구기관 보안 취약점 드러나",
-      "link": "https://n.news.naver.com/mnews/article/023/0003990171?sid=100",
-      "source": "naver",
-      "published": "2026-07-29T00:48:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "100개 넘는 AI 보안 에이전트가 협업… ‘AI 해커’ 잡아내",
-      "summary": "‘퍼셉션’ 안에서는 레드·블루·그린이라는 3팀이 공조해 해킹을 막는다. 마치 해커처럼 모의 공격을 실행해 보는 ‘레드’와 공격을 탐지하고 진단하는 ‘블루’, 취약점을 차단하고 수정하는 ‘그린’ 팀 소속...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 100개 AI 보안 에이전트, 3개 팀 협업\n2. 모의 해킹·탐지·취약점 차단으로 위협 탐지\n3. AI 해커 공격 효과적 차단 및 방어 강화",
-      "link": "https://n.news.naver.com/mnews/article/023/0003990118?sid=105",
-      "source": "naver",
-      "published": "2026-07-29T00:33:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4378,21 +4366,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48025",
       "source": "cvefeed",
       "published": "2026-07-29T02:40:37+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-61609 - Pterodactyl's shared global rate-limit key on login and 2FA checkpoint enables unauthenticated panel-wide authentication lockout (DoS)",
-      "summary": "CVE ID :CVE-2026-61609\n  \nPublished : July 28, 2026, 3:45 p.m. | 40 minutes ago\n  \nDescription :Pterodactyl is a free, open-source game server management panel. From 1.7.0 until 1.13.0, the authentication rate limiter defined in RouteServiceProvider::configureRateLimiting() applied a single global bucket to the login and two-factor checkpoint endpoints instead of keying by IP or account: the fall-through Limit::perMinute(10) covering POST /auth/login and POST /auth/login/checkpoint omitted ->by(), so Laravel derived a constant cache key (md5('authentication')) shared by every request. An unauthenticated attacker sending roughly ten requests per minute from a single IP, most cheaply against the checkpoint endpoint (which has no reCAPTCHA), exhausts the shared counter and causes HTTP 429 for every user attempting to log in or complete two-factor authentication, a panel-wide authentication denial of service that also locks out administrators. This issue is fixed in version 1.13.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-61609\n  \nPublished : July 28, 2026, 3:45 p.m. | 40 minutes ago\n  \nDescription :Pterodactyl is a free, open-source game server management panel. From 1.7.0 until 1.13.0, the authentication rate limiter defined in RouteServiceProvider::configureRateLimiting() applied a single global bucket to the login and two-factor checkpoint endpoints instead of keying by IP or account: the fall-through Limit::perMinute(10) covering POST /auth/login and POST /auth/login/checkpoint omitted ->by(), so Laravel derived a constant cache key (md5('authentication')) shared by every request. An unauthenticated attacker sending roughly ten requests per minute from a single IP, most cheaply against the checkpoint endpoint (which has no reCAPTCHA), exhausts the shared counter and causes HTTP 429 for every user attempting to log in or complete two-factor authentication, a panel-wide authentication denial of service that also locks out administrators. This issue is fixed in version 1.13.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-61609 - 로그인 시 Pterodactyl의 공유 글로벌 속도 제한 키와 2FA 체크포인트로 인해 인증되지 않은 패널 전체 인증 잠금(DoS)이 가능해졌습니다.",
-      "summary_ko": "CVE ID:CVE-2026-61609\n  \n게시일 : 2026년 7월 28일 오후 3시 45분 | 40분 전\n  \n설명 :Pterodactyl은 무료 오픈 소스 게임 서버 관리 패널입니다. 1.7.0부터 1.13.0까지, RouteServiceProvider::configureRateLimiting()에 정의된 인증 속도 제한기는 IP 또는 계정에 의한 키 입력 대신 로그인 및 2단계 체크포인트 엔드포인트에 단일 전역 버킷을 적용했습니다. POST /auth/login 및 POST /auth/login/checkpoint를 다루는 Fall-through Limit::perMinute(10)는 생략되었습니다. ->by()이므로 Laravel은 상수 캐시 키를 파생했습니다. (md5('authentication'))은 모든 요청에서 공유됩니다. 단일 IP에서 분당 약 10개의 요청을 보내는 인증되지 않은 공격자는 체크포인트 엔드포인트(reCAPTCHA가 없음)에 대해 가장 저렴하게 공유 카운터를 소진시키고 로그인을 시도하는 모든 사용자에 대해 HTTP 429를 발생시키거나 2단계 인증을 완료합니다. 즉, 패널 전체의 인증 서비스 거부로 관리자도 잠깁니다. 이 문제는 버전 1.13.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-61609\n2. 26.07.29 오전12:45\n3. Pterodactyl is a free, open-source game server man",
-      "cve_id": "CVE-2026-61609",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61609",
-      "source": "cvefeed",
-      "published": "2026-07-29T00:45:57+09:00",
       "lang": "en"
     }
   ],
