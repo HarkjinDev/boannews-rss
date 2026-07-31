@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-07-31T19:02:16.481214+09:00",
+  "fetched_at": "2026-07-31T19:32:22.426279+09:00",
   "security_news": [
+    {
+      "title": "코스피 반등에도 비트코인 무반응…해킹 악재 속 6만4300달러 버텼다",
+      "summary": "콜드카드 해킹에도 ‘무반응’…비트코인 안정성 부각 이번 주 가장 큰 암호화폐 이슈는 하드웨어 지갑 해킹 사건이었다. 구형 콜드카드 Mk3 지갑의 취약점을 노린 공격으로 약 594 BTC가 30분도 채 되지 않아 탈취됐다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 코스피 반등에도 비트코인 무반응…해킹 악재 속 6만4300달러 버텼다 콜드카드 해킹에도 ‘\n2. 구형 콜드카드 Mk3 지갑의 취약점을 노린 공격으로 약 594 BTC가 30분도 채 되지 ",
+      "link": "https://www.tokenpost.kr/news/cryptocurrency/383316",
+      "source": "naver",
+      "published": "2026-07-31T19:10:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "롯데카드 45일 영업정지…제재 부담 줄었지만 '회원 지키기' 과제",
+      "summary": "31일 금융권에 따르면, 금융위원회는 이날 정례회의를 열고 지난해 발생한 롯데카드 해킹 사고와 관련해 1.... 롯데카드는 지난해 9월 1일 해킹 침해사고에 따른 정보유출 사실을 금융당국에 신고했으며 이후 금감원은...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 롯데카드 45일 영업정지…제재 부담 줄었지만 '회원 지키기' 과제 31일 금융권에 따르면,\n2. 롯데카드는 지난해 9월 1일 해킹 침해사고에 따른 정보유출 사실을 금융당국에 신고했으며 이",
+      "link": "https://www.ntoday.co.kr/news/articleView.html?idxno=128521",
+      "source": "naver",
+      "published": "2026-07-31T19:06:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[보안이슈 진단] 롯데카드 기관 제재 기관 제재 1.5개월로 감경…CISO 개...",
       "summary": "금융위원회가 297만명의 고객 신용정보가 유출된 롯데카드 해킹 사고와 관련해 신규 카드 발급 업무를 1.... 금융위, 해킹 사고 최초 업무정지…신규 회원 카드 발급만 제한 금융위원회는 7월 31일 제14차 회의를 열고...",
@@ -4483,21 +4507,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-4648",
       "source": "cvefeed",
       "published": "2026-07-28T20:41:15+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-65624 - Cowboy HTTP/1.1 max_headers Bypass via Duplicate Header Names Enables Memory Exhaustion",
-      "summary": "CVE ID :CVE-2026-65624\n  \nPublished : July 28, 2026, 10:16 a.m. | 13 minutes ago\n  \nDescription :Allocation of Resources Without Limits or Throttling vulnerability in ninenines cowboy allows an unauthenticated remote attacker to exhaust connection process memory over HTTP/1.1.\n\nThe HTTP/1.1 handler in cowboy_http enforces the max_headers limit by counting the number of distinct header names in a map (maps:size(Headers)). When a request contains multiple header lines with the same name, the values are concatenated into a single ever-growing binary stored under that one map key (\", \" for regular headers, \"; \" for cookies), so the map size stays at one and the max_headers cap (default 100) is never reached. Because no accumulator bounds the total number of header lines or the total byte size of the header block (only per-line max_header_name_length and max_header_value_length apply), an unauthenticated client can send an arbitrary number of header lines with the same name and grow the connection process's binary memory to arbitrary size within the request window.\n\nThe impact per connection is bounded by request_timeout (default 5 seconds, not reset by header data), and by max_heap_size when set (the offending connection process is killed once its heap grows past the limit). When max_heap_size is left at the default (unset), sustained abuse can drive the Erlang VM into out-of-memory conditions.\n\nThis issue affects cowboy from 2.0.0-pre.4 before 2.18.0.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-65624\n  \nPublished : July 28, 2026, 10:16 a.m. | 13 minutes ago\n  \nDescription :Allocation of Resources Without Limits or Throttling vulnerability in ninenines cowboy allows an unauthenticated remote attacker to exhaust connection process memory over HTTP/1.1.\n\nThe HTTP/1.1 handler in cowboy_http enforces the max_headers limit by counting the number of distinct header names in a map (maps:size(Headers)). When a request contains multiple header lines with the same name, the values are concatenated into a single ever-growing binary stored under that one map key (\", \" for regular headers, \"; \" for cookies), so the map size stays at one and the max_headers cap (default 100) is never reached. Because no accumulator bounds the total number of header lines or the total byte size of the header block (only per-line max_header_name_length and max_header_value_length apply), an unauthenticated client can send an arbitrary number of header lines with the same name and grow the connection process's binary memory to arbitrary size within the request window.\n\nThe impact per connection is bounded by request_timeout (default 5 seconds, not reset by header data), and by max_heap_size when set (the offending connection process is killed once its heap grows past the limit). When max_heap_size is left at the default (unset), sustained abuse can drive the Erlang VM into out-of-memory conditions.\n\nThis issue affects cowboy from 2.0.0-pre.4 before 2.18.0.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-65624 - Cowboy HTTP/1.1 max_headers 중복 헤더 이름을 통한 우회로 인해 메모리 고갈이 발생함",
-      "summary_ko": "CVE ID:CVE-2026-65624\n  \n게시일 : 2026년 7월 28일 오전 10시 16분 | 13분 전\n  \n설명: ninenines cowboy의 제한 없는 리소스 할당 또는 제한 취약점으로 인해 인증되지 않은 원격 공격자가 HTTP/1.1을 통해 연결 프로세스 메모리를 소진할 수 있습니다.\n\ncowboy_http의 HTTP/1.1 핸들러는 맵(maps:size(Headers))의 개별 헤더 이름 수를 계산하여 max_headers 제한을 적용합니다. 요청에 동일한 이름을 가진 여러 헤더 행이 포함된 경우 값은 하나의 맵 키(일반 헤더의 경우 \", \", 쿠키의 경우 \"; \")에 저장되어 점점 커지는 단일 바이너리로 연결되므로 맵 크기는 1로 유지되고 max_headers 캡(기본값 100)에 도달하지 않습니다. 헤더 라인의 총 수 또는 헤더 블록의 총 바이트 크기를 제한하는 누산기가 없기 때문에(라인당 max_header_name_length 및 max_header_value_length만 적용) 인증되지 않은 클라이언트는 동일한 이름을 가진 임의 수의 헤더 라인을 보내고 요청 창 내에서 연결 프로세스의 바이너리 메모리를 임의 크기로 늘릴 수 있습니다.\n\n연결당 영향은 request_timeout(기본값 5초, 헤더 데이터에 의해 재설정되지 않음) 및 설정된 경우 max_heap_size(힙이 제한을 초과하면 문제가 되는 연결 프로세스가 종료됨)로 제한됩니다. max_heap_size가 기본값(설정되지 않음)으로 유지되면 지속적인 남용으로 인해 Erlang VM이 메모리 부족 상태에 빠질 수 있습니다.\n\n이 문제는 2.18.0 이전 2.0.0-pre.4의 카우보이에 영향을 미칩니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-65624\n2. 26.07.28 오후7:16\n3. Allocation of Resources Without Limits or Throttli",
-      "cve_id": "CVE-2026-65624",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-65624",
-      "source": "cvefeed",
-      "published": "2026-07-28T19:16:50+09:00",
       "lang": "en"
     }
   ],
