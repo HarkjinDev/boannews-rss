@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-01T14:32:31.277959+09:00",
+  "fetched_at": "2026-08-01T15:04:36.642558+09:00",
   "security_news": [
     {
       "title": "오픈AI, GPT 모델 ‘통제이탈’ 정황 추가 발견…해킹 조사 확대",
@@ -3360,45 +3360,24 @@
       "source": "naver",
       "published": "2026-07-29T15:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "롯데카드 최종 제재안 심의 코앞…영업정지 수위 '촉각'",
-      "summary": "서울 종로구 광화문 롯데카드 본사 전경 이미지./롯데카드 지난해 대규모 해킹사고가 발생한 롯데카드의... 앞서 롯데카드에서는 지난해 외부해킹으로 297만 명의 개인정보가 유출되는 사고가 발생했다. 이에 따라...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 롯데카드, 297만 명 개인정보 유출 사고\n2. 외부 해킹으로 인한 개인정보 유출 발생\n3. 최종 제재안 심의, 영업정지 여부 주목",
-      "link": "http://www.metroseoul.co.kr/article/20260729500343",
-      "source": "naver",
-      "published": "2026-07-29T14:46:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[해킹을 결제하시겠습니까?] #10. 새 체크카드 등록 후 5분, 해킹은 여기...",
-      "summary": "새 체크카드를 받으면 대부분 비밀번호 등록만 마친 뒤 바로 사용한다. 하지만 카드도 스마트폰처럼 초기 설정이 필요하다. 해외결제와 결제 알림, 사용 한도 등 기본 보안 설정을 확인하지 않으면 카드 정보 유출이나...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 새 체크카드 등록 후 5분 내 해킹 위험\n2. 비밀번호 등록만 하면 해외결제, 알림 등 보안 설정 미흡\n3. 카드 정보 유출 등 보안 위협 발생 가능성",
-      "link": "http://www.boannews.com/media/view.asp?idx=144870&kind=3",
-      "source": "naver",
-      "published": "2026-07-29T14:44:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "경찰청, '외교관 정보 1만건 유출' 국립외교원 해킹 수사 착수",
-      "summary": "온라인교육시스템 해킹 사건과 관련해 수사에 나섰다. 29일 경찰에 따르면 경찰청 국가수사본부 사이버테러수사대는 지난 20일 국립외교원 온라인교육시스템 해킹 사실이 보도된 직후 사건을 인지하고 입건 전 조사...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 경찰청, '외교관 정보 1만건 유출' 국립외교원 해킹 수사 착수 온라인교육시스템 해킹 사건\n2. 29일 경찰에 따르면 경찰청 국가수사본부 사이버테러수사대는 지난 20일 국립외교원 온라인교",
-      "link": "https://n.news.naver.com/mnews/article/003/0014095802?sid=102",
-      "source": "naver",
-      "published": "2026-07-29T14:43:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-15414 - Subscriptions for WooCommerce <= 2.0.0 - Authenticated (Contributor+) Privilege Escalation via '_wps_plan_user_role' Membership Plan Meta",
+      "summary": "CVE ID :CVE-2026-15414\n  \nPublished : Aug. 1, 2026, 3:16 a.m. | 1 hour, 59 minutes ago\n  \nDescription :The Subscriptions for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.0.0. This is due to the `save_meta_boxes()` function persisting the `_wps_plan_user_role` membership plan meta from `$_POST` without an allowlist that excludes privileged roles — the only validations applied, `sanitize_key()` and `wp_roles()->is_role()`, both accept `'administrator'` as a valid value, and the UI's `disabled` attribute on the role dropdown is a client-side-only control trivially bypassed via DevTools or a direct POST request; additionally, because the `wps_membership_plan` custom post type is registered with `capability_type => 'post'`, any user who can edit posts satisfies the `current_user_can('edit_post', $post_id)` guard in `save_meta_boxes()`. This makes it possible for authenticated attackers, with Contributor-level access and above, to escalate their privileges to Administrator by storing `'administrator'` as the role granted on membership acquisition, which the Pro companion plugin then applies via `add_role()` during membership lifecycle events. Successful exploitation requires the Subscriptions for WooCommerce Pro companion plugin to be active, as it is the component that reads the stored `_wps_plan_user_role` meta via `get_post_meta()` and calls `add_role()` to apply the role during membership lifecycle events.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-15414\n  \nPublished : Aug. 1, 2026, 3:16 a.m. | 1 hour, 59 minutes ago\n  \nDescription :The Subscriptions for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.0.0. This is due to the `save_meta_boxes()` function persisting the `_wps_plan_user_role` membership plan meta from `$_POST` without an allowlist that excludes privileged roles — the only validations applied, `sanitize_key()` and `wp_roles()->is_role()`, both accept `'administrator'` as a valid value, and the UI's `disabled` attribute on the role dropdown is a client-side-only control trivially bypassed via DevTools or a direct POST request; additionally, because the `wps_membership_plan` custom post type is registered with `capability_type => 'post'`, any user who can edit posts satisfies the `current_user_can('edit_post', $post_id)` guard in `save_meta_boxes()`. This makes it possible for authenticated attackers, with Contributor-level access and above, to escalate their privileges to Administrator by storing `'administrator'` as the role granted on membership acquisition, which the Pro companion plugin then applies via `add_role()` during membership lifecycle events. Successful exploitation requires the Subscriptions for WooCommerce Pro companion plugin to be active, as it is the component that reads the stored `_wps_plan_user_role` meta via `get_post_meta()` and calls `add_role()` to apply the role during membership lifecycle events.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-15414 - WooCommerce <= 2.0.0 구독 - '_wps_plan_user_role' 멤버십 계획 메타를 통해 인증된(기여자+) 권한 상승",
+      "summary_ko": "CVE ID:CVE-2026-15414\n  \n게시일 : 2026년 8월 1일 오전 3시 16분 | 1시간 59분 전\n  \n설명 :WordPress용 WooCommerce 구독 플러그인은 2.0.0 이하 버전에서 권한 상승에 취약합니다. 이는 권한 있는 역할을 제외하는 허용 목록 없이 `$_POST`에서 `_wps_plan_user_role` 멤버십 계획 메타를 유지하는 `save_meta_boxes()` 함수 때문입니다. 적용된 유일한 검증인 `sanitize_key()` 및 `wp_roles()->is_role()`는 둘 다 유효한 값으로 `administrator'`를 허용하고 역할에 대한 UI의 `disabled` 속성을 허용합니다. 드롭다운은 DevTools 또는 직접 POST 요청을 통해 간단하게 우회되는 클라이언트측 전용 컨트롤입니다. 또한 `wps_membership_plan` 사용자 정의 게시물 유형은 `capability_type => 'post'`로 등록되므로 게시물을 편집할 수 있는 모든 사용자는 `save_meta_boxes()`의 `current_user_can('edit_post', $post_id)` 가드를 충족합니다. 이를 통해 기여자 수준 이상의 액세스 권한을 가진 인증된 공격자가 멤버십 획득 시 부여된 역할로 '관리자'를 저장하여 관리자에게 자신의 권한을 승격할 수 있으며, Pro 컴패니언 플러그인은 멤버십 수명 주기 이벤트 중에 'add_role()'을 통해 이를 적용합니다. 성공적으로 활용하려면 WooCommerce Pro 구독 플러그인이 활성화되어 있어야 합니다. 이는 `get_post_meta()`를 통해 저장된 `_wps_plan_user_role` 메타를 읽고 `add_role()`을 호출하여 멤버십 수명 주기 이벤트 중에 역할을 적용하는 구성 요소이기 때문입니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-15414\n2. 26.08.01 오후12:16\n3. The Subscriptions for WooCommerce plugin for WordP",
+      "cve_id": "CVE-2026-15414",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15414",
+      "source": "cvefeed",
+      "published": "2026-08-01T12:16:25+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53551 - free5GC AUSF: null byte injection in supiOrSuci causes HTTP 500 internal service failure",
       "summary": "CVE ID :CVE-2026-53551\n  \nPublished : July 31, 2026, 8:12 p.m. | 15 minutes ago\n  \nDescription :free5GC is an open-source implementation of the 5G core network. Prior to 1.4.5, the free5GC AUSF (Authentication Server Function) does not validate the supiOrSuci field in UE authentication requests. Null bytes (\\x00) and other control characters pass through JSON parsing unchanged and are forwarded to the UDM in an unescaped URL path. This causes Go's net/url.Parse() to fail, returning HTTP 500 \"System failure\" and leaking internal stack traces. An unauthenticated attacker can trigger this at scale causing denial of service for all subscribers attempting authentication through the affected AUSF. This vulnerability is fixed in 1.4.5.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
