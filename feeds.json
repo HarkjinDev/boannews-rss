@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-02T06:01:20.629207+09:00",
+  "fetched_at": "2026-08-02T06:31:10.691690+09:00",
   "security_news": [
     {
       "title": "외부에서 내부로, 이제는 AI로...진화하는 해킹 주체",
@@ -3132,30 +3132,6 @@
       "source": "bleepingcomputer",
       "published": "2026-07-30T06:35:40+09:00",
       "lang": "en"
-    },
-    {
-      "title": "KT 개인정보 유출 과징금 오늘 공개…법정 상한 1950억, 박윤영 號 첫 시...",
-      "summary": "KT의 불법 초소형기지국(펨토셀) 해킹 사고에 대한 정부 제재 수위가 30일 공개된다. 개인정보 유출 인원은 SK텔레콤 유심 정보 해킹 사고보다 적지만, 무단 소액결제라는 실제 금전 피해가 발생한 데다 신고 지연과 보안...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KT, 펨토셀 해킹으로 1950억 과징금 가능성\n2. 소액결제 등 금전 피해 발생, 신고 지연 및 보안 미흡\n3. SKT보다 적지만 실제 피해 발생, 정부 제재 수위 공개",
-      "link": "https://www.ceoscoredaily.com/page/view/2026073004530144263",
-      "source": "naver",
-      "published": "2026-07-30T06:10:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "5대 제약사 정보보호 투자 80억원 돌파, 전담인력은 정체",
-      "summary": "상위제약사들은 보안시스템 구축과 함께 임직원 교육, 악성메일 대응훈련, 모의해킹, 취약점 점검 등의 활동도 진행했다. 한미약품은 개인정보보호 배상책임보험과 개인ㆍ정보보호위원회 월례회, 팀별 보안...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 5대 제약사 정보보호 투자 80억원 돌파, 전담인력은 정체 상위제약사들은 보안시스템 구축과\n2. 한미약품은 개인정보보호 배상책임보험과 개인ㆍ정보보호위원회 월례회, 팀별 보안...",
-      "link": "http://www.newsmp.com/news/articleView.html?idxno=256882",
-      "source": "naver",
-      "published": "2026-07-30T06:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3712,21 +3688,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2025-67406",
       "source": "cvefeed",
       "published": "2026-07-30T07:16:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-65975 - Pydantic AI AG-UI Adapter: A dangling client-submitted tool call can execute when a trailing message is dropped during `sanitize_messages`",
-      "summary": "CVE ID :CVE-2026-65975\n  \nPublished : July 29, 2026, 9:17 p.m. | 1 hour, 13 minutes ago\n  \nDescription :Pydantic AI is a Python agent framework for building applications and workflows with Generative AI. In versions 1.88.0 up to but not including 1.107.1 and 2.0.0b1 up to but not including 2.5.0, the UI adapters (AG-UI via Agent.to_ag_ui()/AGUIAdapter, and Vercel AI via VercelAIAdapter) use sanitize_messages to strip unresolved (\"dangling\") client-submitted tool calls from untrusted message history before it reaches the agent, a defense-in-depth default that prevents the agent from executing tool calls the model never emitted. However, the strip anchored to a message index computed before sanitization ran, so when a trailing client message sanitized to empty and was dropped (for example a client system message under the default manage_system_prompt='server'), a preceding assistant response carrying an unresolved tool call became the new tail and was dispatched without inspection. As a result, a remote client could cause a registered, non-approval server tool to run with client-supplied arguments rather than arguments the model produced. The impact is bounded by what the affected tools do and is most significant for applications that gate tool execution in a model-request hook (before_model_request / after_model_request), since a forged call skips the model turn and bypasses that guardrail; approval-gated tools (requires_approval=True) are not auto-executed by this path. This issue has been fixed in versions 1.107.1 and 2.5.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-65975\n  \nPublished : July 29, 2026, 9:17 p.m. | 1 hour, 13 minutes ago\n  \nDescription :Pydantic AI is a Python agent framework for building applications and workflows with Generative AI. In versions 1.88.0 up to but not including 1.107.1 and 2.0.0b1 up to but not including 2.5.0, the UI adapters (AG-UI via Agent.to_ag_ui()/AGUIAdapter, and Vercel AI via VercelAIAdapter) use sanitize_messages to strip unresolved (\"dangling\") client-submitted tool calls from untrusted message history before it reaches the agent, a defense-in-depth default that prevents the agent from executing tool calls the model never emitted. However, the strip anchored to a message index computed before sanitization ran, so when a trailing client message sanitized to empty and was dropped (for example a client system message under the default manage_system_prompt='server'), a preceding assistant response carrying an unresolved tool call became the new tail and was dispatched without inspection. As a result, a remote client could cause a registered, non-approval server tool to run with client-supplied arguments rather than arguments the model produced. The impact is bounded by what the affected tools do and is most significant for applications that gate tool execution in a model-request hook (before_model_request / after_model_request), since a forged call skips the model turn and bypasses that guardrail; approval-gated tools (requires_approval=True) are not auto-executed by this path. This issue has been fixed in versions 1.107.1 and 2.5.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-65975 - Pydantic AI AG-UI 어댑터: 'sanitize_messages' 중에 후행 메시지가 삭제되면 매달린 클라이언트 제출 도구 호출이 실행될 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-65975\n  \n게시일 : 2026년 7월 29일 오후 9시 17분 | 1시간, 13분 전\n  \n설명 :Pydantic AI는 Generative AI를 사용하여 애플리케이션과 워크플로를 구축하기 위한 Python 에이전트 프레임워크입니다. 버전 1.88.0(1.107.1 제외) 및 2.0.0b1(2.5.0 제외)에서 UI 어댑터(Agent.to_ag_ui()/AGUIAdapter를 통한 AG-UI 및 VercelAIAdapter를 통한 Vercel AI)는 sanitize_messages를 사용하여 해결되지 않은(\"매달려 있는\") 클라이언트 제출 도구 호출이 도달하기 전에 신뢰할 수 없는 메시지 기록에서 제거합니다. 에이전트는 모델이 내보낸 적이 없는 도구 호출을 에이전트가 실행하지 못하도록 방지하는 심층 방어 기본값입니다. 그러나 삭제가 실행되기 전에 계산된 메시지 인덱스에 고정된 스트립이므로 후행 클라이언트 메시지가 비어 있도록 삭제되고 삭제될 때(예: 기본 관리_system_prompt='server' 아래의 클라이언트 시스템 메시지) 해결되지 않은 도구 호출을 전달하는 이전 보조 응답이 새로운 꼬리가 되어 검사 없이 전달되었습니다. 결과적으로 원격 클라이언트는 등록된 비승인 서버 도구가 모델이 생성한 인수가 아닌 클라이언트 제공 인수를 사용하여 실행되도록 할 수 있습니다. 영향은 영향을 받는 도구가 수행하는 작업에 따라 제한되며 모델 요청 후크(before_model_request / after_model_request)에서 도구 실행을 제어하는 ​​애플리케이션의 경우 가장 중요합니다. 위조된 호출은 모델 전환을 건너뛰고 해당 가드레일을 우회하기 때문입니다. 승인 관리 도구(requires_approval=True)는 이 경로에 의해 자동 실행되지 않습니다. 이 문제는 버전 1.107.1 및 2.5.0에서 해결되었습니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-65975\n2. 26.07.30 오전6:17\n3. Pydantic AI is a Python agent framework for buildi",
-      "cve_id": "CVE-2026-65975",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-65975",
-      "source": "cvefeed",
-      "published": "2026-07-30T06:17:47+09:00",
       "lang": "en"
     }
   ],
