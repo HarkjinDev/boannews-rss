@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-01T14:02:37.626216+09:00",
+  "fetched_at": "2026-08-01T14:32:31.277959+09:00",
   "security_news": [
+    {
+      "title": "오픈AI, GPT 모델 ‘통제이탈’ 정황 추가 발견…해킹 조사 확대",
+      "summary": "허깅페이스 해킹 조사 중 추가 이탈 사례 확인 “외부망 유출 없어”…AI 안전관리·규제 논의 확산 오픈AI. 로이터연합뉴스 오픈AI가 최근 발생한 인공지능(AI) 모델의 해킹 사고를 조사하는 과정에서 또 다른 AI 모델들이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI, GPT 모델 ‘통제이탈’ 정황 추가 발견…해킹 조사 확대 허깅페이스 해킹 조사 \n2. 로이터연합뉴스 오픈AI가 최근 발생한 인공지능(AI) 모델의 해킹 사고를 조사하는 과정에서",
+      "link": "https://n.news.naver.com/mnews/article/022/0004147601?sid=104",
+      "source": "naver",
+      "published": "2026-08-01T14:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[북한 브리핑 7.26~8.1] 40도 폭염 속 북·중 접근과 북·러 밀착…김정...",
       "summary": "그러나 북한 연계 해킹조직의 공격과 풍계리 핵실험장 주변 탈북민의 염색체 이상 등 국제사회의 우려를... 외형적인 성장에도 주민 생활과 남북한 경제력 격차는 여전히 매우 크다.◇ 북한 연계 해킹조직, 세계 클라우드...",
@@ -4075,21 +4087,6 @@
       "link": "https://isc.sans.edu/diary/rss/33196",
       "source": "sans_isc",
       "published": "2026-07-29T16:32:37+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-18072 - Advanced Responsive Video Embedder for Rumble, Odysee, YouTube, Vimeo, Kick … 10.8.7 - Unauthenticated Authentication Bypass via Hardcoded Backdoor in '_wplogin' Parameter",
-      "summary": "CVE ID :CVE-2026-18072\n  \nPublished : July 29, 2026, 5:16 a.m. | 1 hour, 13 minutes ago\n  \nDescription :The Advanced Responsive Video Embedder for Rumble, Odysee, YouTube, Vimeo, Kick … plugin for WordPress is vulnerable to Authentication Bypass via a Hardcoded Backdoor in version 10.8.7. The vulnerability exists because the `_arve_uc_init()` function — registered on WordPress's `init` hook at priority 1 so that it runs before any authentication checks on every request — reads an attacker-supplied token from the `_wplogin` (or `_wpm`) parameter and compares it against a hardcoded SHA-256 hash embedded directly in the plugin source, with no nonce verification, no capability check, and no password validation anywhere in the flow. Because this static hash constitutes a set of universal credentials that are publicly accessible in the plugin's source code, unauthenticated attackers can supply the known token to be authenticated as an arbitrarily selected existing administrator account, gaining full administrative control over the affected WordPress site. This was likely introduced by an attacker who gained commit access to the developers account.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-18072\n  \nPublished : July 29, 2026, 5:16 a.m. | 1 hour, 13 minutes ago\n  \nDescription :The Advanced Responsive Video Embedder for Rumble, Odysee, YouTube, Vimeo, Kick … plugin for WordPress is vulnerable to Authentication Bypass via a Hardcoded Backdoor in version 10.8.7. The vulnerability exists because the `_arve_uc_init()` function — registered on WordPress's `init` hook at priority 1 so that it runs before any authentication checks on every request — reads an attacker-supplied token from the `_wplogin` (or `_wpm`) parameter and compares it against a hardcoded SHA-256 hash embedded directly in the plugin source, with no nonce verification, no capability check, and no password validation anywhere in the flow. Because this static hash constitutes a set of universal credentials that are publicly accessible in the plugin's source code, unauthenticated attackers can supply the known token to be authenticated as an arbitrarily selected existing administrator account, gaining full administrative control over the affected WordPress site. This was likely introduced by an attacker who gained commit access to the developers account.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-18072 - Rumble, Odysee, YouTube, Vimeo, Kick …을 위한 고급 반응형 비디오 임베더 10.8.7 - '_wplogin' 매개변수의 하드코딩된 백도어를 통해 인증되지 않은 인증 우회",
-      "summary_ko": "CVE ID:CVE-2026-18072\n  \n게시일 : 2026년 7월 29일 오전 5시 16분 | 1시간, 13분 전\n  \n설명 : WordPress용 Rumble, Odysee, YouTube, Vimeo, Kick 플러그인용 고급 반응형 비디오 임베더는 버전 10.8.7의 하드코딩된 백도어를 통한 인증 우회에 취약합니다. 이 취약점은 WordPress의 'init' 후크에 우선순위 1로 등록되어 모든 요청에 ​​대한 인증 확인 전에 실행되는 '_arve_uc_init()' 함수가 '_wplogin'(또는 '_wpm') 매개변수에서 공격자가 제공한 토큰을 읽고 이를 플러그인 소스에 직접 내장된 하드코딩된 SHA-256 해시와 비교하기 때문에 발생합니다. 이때 논스 확인도, 기능 확인도, 흐름의 어느 곳에서도 비밀번호 확인이 이루어지지 않습니다. 이 정적 해시는 플러그인 소스 코드에서 공개적으로 액세스할 수 있는 범용 자격 증명 세트를 구성하기 때문에 인증되지 않은 공격자는 임의로 선택된 기존 관리자 계정으로 인증할 알려진 토큰을 제공하여 영향을 받는 WordPress 사이트에 대한 완전한 관리 제어권을 얻을 수 있습니다. 이는 개발자 계정에 대한 커밋 액세스 권한을 얻은 공격자가 도입했을 가능성이 높습니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-18072\n2. 26.07.29 오후2:16\n3. The Advanced Responsive Video Embedder for Rumble,",
-      "cve_id": "CVE-2026-18072",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18072",
-      "source": "cvefeed",
-      "published": "2026-07-29T14:16:40+09:00",
       "lang": "en"
     }
   ],
