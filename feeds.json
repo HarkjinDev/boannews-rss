@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-01T21:02:41.546935+09:00",
+  "fetched_at": "2026-08-01T21:33:36.353072+09:00",
   "security_news": [
     {
       "title": "Ruby on Rails Patches Critical Vulnerability",
@@ -3144,45 +3144,24 @@
       "source": "naver",
       "published": "2026-07-29T23:48:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"노로그\" 약속한 VPN에서 5,800만 건 접속기록 유출…이용자 개인정보 대...",
-      "summary": "해외 보안 연구진과 복수의 보안 커뮤니티에 따르면 러시아 기반 VPN 서비스 스플릿VPN(SplitVPN, 구 노트VPN)의 데이터베이스가 해킹된 뒤 약 17GB 분량의 SQL 데이터가 사이버범죄 포럼 '알테넨(Altenen)'을 통해 유포되고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 스플릿VPN, 5,800만 건 접속 기록 17GB 유출\n2. SQL 데이터, 알테넨 포럼 통해 유포\n3. 개인정보 대량 유출, 보안 우려 증폭",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207856",
-      "source": "naver",
-      "published": "2026-07-29T21:32:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "BNY, 펀드 소유권 기록 블록체인으로 이전…월가 토큰화 경쟁 본격화",
-      "summary": "스마트컨트랙트 오류, 해킹, 체인 간 연결(브리지) 취약점 같은 기술적 리스크가 핵심이다. 따라서 보안 검증과 규제 프레임 구축이 병행되지 않으면 확산 속도는 제한될 수 있다. TP AI 유의사항 TokenPost.ai 기반 언어...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. BNY, 펀드 소유권 기록 블록체인 이전\n2. 스마트컨트랙트 오류, 브리지 취약점 등 기술적 리스크 부상\n3. 보안 검증, 규제 프레임 구축 병행해야 확산",
-      "link": "https://www.tokenpost.kr/news/blockchain/382659",
-      "source": "naver",
-      "published": "2026-07-29T21:30:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Mythos Asks the Right Question. It Doesn't Answer It.",
-      "summary": "AI is compressing exploit timelines. The real question isn't whether your vulnerability management playbook needs to change, it's which part of it you've been getting wrong all along.\n\nThe conversation happening in security circles right now goes something like this: Mythos is here. Exploit timelines are collapsing. Does the vulnerability management playbook need to change?\n\nThe honest answer is",
-      "content": "",
-      "title_ko": "미토스는 올바른 질문을 합니다. 그것은 대답하지 않습니다.",
-      "summary_ko": "AI는 익스플로잇 타임라인을 압축하고 있습니다. 진짜 질문은 취약성 관리 플레이북을 변경해야 하는지 여부가 아니라, 그 중 어느 부분을 계속 잘못 알고 있었는지입니다.\n\n현재 보안계에서 벌어지고 있는 대화는 다음과 같습니다. Mythos가 여기에 있습니다. 익스플로잇 타임라인이 무너지고 있습니다. 취약점 관리 플레이북을 변경해야 합니까?\n\n솔직한 대답은",
-      "summary_3lines": "1. AI, 'Mythos' 등장으로 익스플로잇 타임라인 단축\n2. 기존 취약점 관리 방식 재검토 필요성 대두\n3. 보안 업계, AI 기반 공격 속도 변화 주목",
-      "link": "https://thehackernews.com/2026/07/mythos-asks-right-question-it-doesnt.html",
-      "source": "thehackernews",
-      "published": "2026-07-29T21:15:00+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-18536 - Data::Entropy versions before 0.010 for Perl read remote entropy sources over plain HTTP",
+      "summary": "CVE ID :CVE-2026-18536\n  \nPublished : Aug. 1, 2026, 11:16 a.m. | 43 minutes ago\n  \nDescription :Data::Entropy versions before 0.010 for Perl read remote entropy sources over plain HTTP.\n\nThe Data::Entropy::RawSource::RandomOrg and Data::Entropy::RawSource::RandomnumbersInfo remote sources are accessed over plain HTTP.\n\nThe Data::Entropy::RawSource::RandomOrg integrity check trivially matches any non-empty byte string.\n\nAny on-path attacker, such as open WiFi, a compromised ISP, captive portal, or a hostile egress proxy substitutes the response and thereby chooses the bytes returned by rand_bits and rand_int for every application that selected one of these sources via with_entropy_source. The _checkbuf method response is equally attacker-controlled, so the retry/sleep behaviour is steerable too.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-18536\n  \nPublished : Aug. 1, 2026, 11:16 a.m. | 43 minutes ago\n  \nDescription :Data::Entropy versions before 0.010 for Perl read remote entropy sources over plain HTTP.\n\nThe Data::Entropy::RawSource::RandomOrg and Data::Entropy::RawSource::RandomnumbersInfo remote sources are accessed over plain HTTP.\n\nThe Data::Entropy::RawSource::RandomOrg integrity check trivially matches any non-empty byte string.\n\nAny on-path attacker, such as open WiFi, a compromised ISP, captive portal, or a hostile egress proxy substitutes the response and thereby chooses the bytes returned by rand_bits and rand_int for every application that selected one of these sources via with_entropy_source. The _checkbuf method response is equally attacker-controlled, so the retry/sleep behaviour is steerable too.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-18536 - Perl의 0.010 이전 Data::Entropy 버전은 일반 HTTP를 통해 원격 엔트로피 소스를 읽습니다.",
+      "summary_ko": "CVE ID:CVE-2026-18536\n  \n게시일 : 2026년 8월 1일 오전 11시 16분 | 43분 전\n  \n설명 :Data::Perl의 0.010 이전 엔트로피 버전은 일반 HTTP를 통해 원격 엔트로피 소스를 읽습니다.\n\nData::Entropy::RawSource::RandomOrg 및 Data::Entropy::RawSource::RandomnumbersInfo 원격 소스는 일반 HTTP를 통해 액세스됩니다.\n\nData::Entropy::RawSource::RandomOrg 무결성 검사는 비어 있지 않은 바이트 문자열과 간단하게 일치합니다.\n\n개방형 WiFi, 손상된 ISP, 종속 포털 또는 적대적인 송신 프록시와 같은 모든 경로 공격자는 응답을 대체하여 with_entropy_source를 통해 이러한 소스 중 하나를 선택한 모든 애플리케이션에 대해 rand_bits 및 rand_int가 반환한 바이트를 선택합니다. _checkbuf 메서드 응답은 공격자가 동일하게 제어하므로 재시도/절전 동작도 조정 가능합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-18536\n2. 26.08.01 오후8:16\n3. Data::Entropy versions before 0.010 for Perl read ",
+      "cve_id": "CVE-2026-18536",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18536",
+      "source": "cvefeed",
+      "published": "2026-08-01T20:16:38+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-18059 - PixelYourSite <= 11.2.1 - Unauthenticated Sensitive Information Exposure via Order-Received Endpoint Missing Key Validation",
       "summary": "CVE ID :CVE-2026-18059\n  \nPublished : Aug. 1, 2026, 9:17 a.m. | 43 minutes ago\n  \nDescription :The PixelYourSite – Your smart PIXEL (TAG) & API Manager plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 11.2.1 via the getWooPurchaseEventParams. This makes it possible for unauthenticated attackers to extract WooCommerce purchase metadata — including product names, product IDs, quantities, per-item prices, order totals, currency, and order/transaction IDs — for any existing order by supplying an invalid or arbitrary order key. This is exploitable against any known or enumerated order ID, as the plugin resolves the order from the URL path variable alone and emits the full woo_purchase tracking payload into the page HTML via the pysOptions JavaScript object across its Facebook, Google Analytics, and Google Tag Manager integrations regardless of key validity.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
