@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-01T22:02:50.097389+09:00",
+  "fetched_at": "2026-08-01T22:33:40.525987+09:00",
   "security_news": [
+    {
+      "title": "보안 사고 발생, 기술 부서만 대응해선 안 되는 이유",
+      "summary": "해킹은 핵심 산업 기술과 데이터가 외부로 빠져나가는 ‘국부의 유출’ 통로이자, 국가 중요 공급망을... 해킹은 어떻게 이루어지는가? 책에서는 해킹이 정교한 첨단 기술보다는 지극히 단순하고 치명적인 ‘기본의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 해킹, 기술·데이터 유출로 국부 유출 발생\n2. 첨단 기술보다 단순한 기본기 공격으로 이루어져\n3. 국가 중요 공급망 위협, 기술 부서만 대응 부족",
+      "link": "https://n.news.naver.com/mnews/article/018/0006342212?sid=101",
+      "source": "naver",
+      "published": "2026-08-01T22:15:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "솔라나 CISO 경고…크립토 보안 위협, 해킹서 AI 사기로 옮겨가나",
+      "summary": "“해킹의 시작은 블록체인 밖에서” 솔라나(SOL) 재단의 최고정보보호책임자(CISO) 마이클 코츠(Michael Coates)... 왜 요즘 암호화폐 해킹은 블록체인 밖에서 시작되나요? 많은 공격이 키 관리, 계정 로그인, 이메일 피싱 같은...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 솔라나 CISO, AI 사기 주의 당부\n2. 계정 로그인, 이메일 피싱 등 블록체인 밖 공격 증가\n3. 크립토 보안 위협, 해킹 넘어 AI 사기로 확산 우려",
+      "link": "https://www.tokenpost.kr/news/tech/383653",
+      "source": "naver",
+      "published": "2026-08-01T22:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Ruby on Rails Patches Critical Vulnerability",
       "summary": "The flaw can be exploited by unauthenticated attackers to read arbitrary files and potentially achieve remote code execution (RCE).\nThe post Ruby on Rails Patches Critical Vulnerability appeared first on SecurityWeek.",
@@ -3791,21 +3815,6 @@
       "source": "krcert_notice",
       "published": "2026-07-30T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-67217 - cJSON JSON Patch Non-Atomic Application Destroys Data Before Validation",
-      "summary": "CVE ID :CVE-2026-67217\n  \nPublished : July 29, 2026, 1:32 p.m. | 55 minutes ago\n  \nDescription :cJSON through 1.7.19 applies RFC 6902 JSON Patch operations non-atomically in apply_patch() in cJSON_Utils.c. For a replace operation that is missing its value member, or a move operation whose destination path cannot be resolved, the existing target member is detached and deleted before the operation is fully validated, so the target document is mutated while cJSONUtils_ApplyPatches() or cJSONUtils_ApplyPatchesCaseSensitive() returns a failure status. An attacker who can supply the patch document can destroy addressable members of the target document even though the API reports that the patch failed, defeating the all-or-nothing behavior callers rely on to reject bad patches.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-67217\n  \nPublished : July 29, 2026, 1:32 p.m. | 55 minutes ago\n  \nDescription :cJSON through 1.7.19 applies RFC 6902 JSON Patch operations non-atomically in apply_patch() in cJSON_Utils.c. For a replace operation that is missing its value member, or a move operation whose destination path cannot be resolved, the existing target member is detached and deleted before the operation is fully validated, so the target document is mutated while cJSONUtils_ApplyPatches() or cJSONUtils_ApplyPatchesCaseSensitive() returns a failure status. An attacker who can supply the patch document can destroy addressable members of the target document even though the API reports that the patch failed, defeating the all-or-nothing behavior callers rely on to reject bad patches.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-67217 - cJSON JSON 패치 비원자적 애플리케이션이 검증 전에 데이터를 삭제함",
-      "summary_ko": "CVE ID:CVE-2026-67217\n  \n게시일 : 2026년 7월 29일 오후 1시 32분 | 55분 전\n  \n설명 :cJSON 1.7.19는 cJSON_Utils.c의 apply_patch()에서 RFC 6902 JSON 패치 작업을 비원자적으로 적용합니다. 해당 값 멤버가 누락된 바꾸기 작업 또는 대상 경로를 확인할 수 없는 이동 작업의 경우 작업의 유효성이 완전히 검사되기 전에 기존 대상 멤버가 분리 및 삭제되므로 cJSONUtils_ApplyPatches() 또는 cJSONUtils_ApplyPatchesCaseSensitive()가 실패 상태를 반환하는 동안 대상 문서가 변경됩니다. 패치 문서를 제공할 수 있는 공격자는 API가 패치가 실패했다고 보고하더라도 대상 문서의 주소 지정 가능한 구성원을 파괴하여 호출자가 잘못된 패치를 거부하기 위해 의존하는 전부 아니면 전무 동작을 무력화할 수 있습니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-67217\n2. 26.07.29 오후10:32\n3. cJSON through 1.7.19 applies RFC 6902 JSON Patch o",
-      "cve_id": "CVE-2026-67217",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-67217",
-      "source": "cvefeed",
-      "published": "2026-07-29T22:32:04+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
