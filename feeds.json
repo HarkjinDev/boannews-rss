@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-01T16:01:39.372361+09:00",
+  "fetched_at": "2026-08-01T16:31:38.099312+09:00",
   "security_news": [
     {
       "title": "\"맥북도 안심 못한다\"…가짜 업데이트에 속아 北 해커에 가상자산 탈취",
@@ -3324,21 +3324,24 @@
       "source": "naver",
       "published": "2026-07-29T16:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[법과 상식 사이] 왜 요즘 보안사고가 끊이지 않을까",
-      "summary": "요즘은 한 기업의 보안사고가 채 잊히기도 전에 또 다른 사고가 이어진다. 개인정보가 유출되고, 서비스가 멈추며, 내부 자료가 외부로 빠져나간다. 기업들도 보안 조직을 만들고 시스템을 점검하며 적지 않은 비용을 쓴다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 수많은 기업에서 개인정보 유출, 서비스 중단 등 사고 발생\n2. 보안 조직 및 시스템 점검에 막대한 비용 지출\n3. 보안사고가 끊이지 않아 사회적 문제로 대두",
-      "link": "https://n.news.naver.com/mnews/article/092/0002432382?sid=105",
-      "source": "naver",
-      "published": "2026-07-29T16:21:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Phishing Campaigns Targeting AI Solutions Providers, (Sat, Aug 1st)",
+      "summary": "Most phishing campaigns rely on the fact that the victim is afraid to loose \"something\": money, access to information, ... Many brands have been impersonated by campaigns but I spotted some phishing emails that focus on AI services like ChatGPT.\r",
+      "description": "Most phishing campaigns rely on the fact that the victim is afraid to loose \"something\": money, access to information, ... Many brands have been impersonated by campaigns but I spotted some phishing emails that focus on AI services like ChatGPT.\r",
+      "title_ko": "AI 솔루션 제공업체를 노린 피싱 캠페인 (8.1(토))",
+      "summary_ko": "대부분의 피싱 캠페인은 피해자가 \"무언가\"(돈, 정보에 대한 액세스 등)를 잃을까 봐 두려워한다는 사실에 의존합니다. 많은 브랜드가 캠페인에 의해 사칭되었지만 ChatGPT와 같은 AI 서비스에 초점을 맞춘 일부 피싱 이메일을 발견했습니다.",
+      "summary_3lines": "1. Phishing Campaigns Targeting AI Solutions Provider\n2. SANS_ISC\n3. Most phishing campaigns rely on the fact that the ",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33206",
+      "source": "sans_isc",
+      "published": "2026-08-01T16:22:32+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-15414 - Subscriptions for WooCommerce <= 2.0.0 - Authenticated (Contributor+) Privilege Escalation via '_wps_plan_user_role' Membership Plan Meta",
       "summary": "CVE ID :CVE-2026-15414\n  \nPublished : Aug. 1, 2026, 3:16 a.m. | 1 hour, 59 minutes ago\n  \nDescription :The Subscriptions for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.0.0. This is due to the `save_meta_boxes()` function persisting the `_wps_plan_user_role` membership plan meta from `$_POST` without an allowlist that excludes privileged roles — the only validations applied, `sanitize_key()` and `wp_roles()->is_role()`, both accept `'administrator'` as a valid value, and the UI's `disabled` attribute on the role dropdown is a client-side-only control trivially bypassed via DevTools or a direct POST request; additionally, because the `wps_membership_plan` custom post type is registered with `capability_type => 'post'`, any user who can edit posts satisfies the `current_user_can('edit_post', $post_id)` guard in `save_meta_boxes()`. This makes it possible for authenticated attackers, with Contributor-level access and above, to escalate their privileges to Administrator by storing `'administrator'` as the role granted on membership acquisition, which the Pro companion plugin then applies via `add_role()` during membership lifecycle events. Successful exploitation requires the Subscriptions for WooCommerce Pro companion plugin to be active, as it is the component that reads the stored `_wps_plan_user_role` meta via `get_post_meta()` and calls `add_role()` to apply the role during membership lifecycle events.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
