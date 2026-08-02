@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-03T01:32:12.175058+09:00",
+  "fetched_at": "2026-08-03T02:02:24.421610+09:00",
   "security_news": [
+    {
+      "title": "도지코인(DOGE) 커뮤니티 인사, 콜드카드 사태 경고...\"당장 자금 옮겨라...",
+      "summary": "인터넷에 연결된 기기에 시드 문구를 입력하면 악성 프로그램이나 해킹에 노출될 위험이 커진다. 문제의 취약점은 2021년 3월 배포된 콜드카드 펌웨어에서 발견됐다. 공격자는 보안성이 떨어지는 소프트웨어...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 도지코인(DOGE) 커뮤니티 인사, 콜드카드 펌웨어 취약점 경고\n2. 인터넷 연결된 기기에 시드 문구 입력 시 악성 프로그램 노출 위험\n3. 2021년 3월 펌웨어 취약점, 자금 즉시 이동 권고",
+      "link": "http://coinreaders.com/250764",
+      "source": "naver",
+      "published": "2026-08-03T01:32:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[김병필의 인공지능 개척시대] 울타리를 넘은 인공지능",
       "summary": "AI 해킹시험서 격리 벽 뚫고 탈출 사이버보안 위협 현실화하는 중 안전연구소 제 역할 하게 보완을 필자는 지난달 벌어진 오픈AI 모델의 해킹 사건을 꼽고 싶다. 오픈AI는 새로 개발한 AI의 해킹 능력을 시험하고 있었다....",
@@ -1971,6 +1983,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-10774 - PSA key-slot leak in Bluetooth Mesh subnet deletion leading to resource-exhaustion DoS",
+      "summary": "CVE ID :CVE-2026-10774\n  \nPublished : Aug. 2, 2026, 3:16 p.m. | 54 minutes ago\n  \nDescription :Zephyr's Bluetooth Mesh subnet key management leaks one PSA Crypto key slot on every subnet-key teardown. In subsys/bluetooth/mesh/subnet.c, net_keys_create() imports the Private Beacon Key into a PSA key slot under CONFIG_BT_MESH_PRIV_BEACONS (enabled by default), but subnet_keys_destroy() guarded the matching psa_destroy_key() with CONFIG_BT_MESH_V1d1. That Kconfig symbol was removed when explicit Mesh 1.0.1 support was dropped, so the destroy branch became permanently dead code and the import is never balanced by a destroy.\n\nThe imbalanced teardown is reached every time subnet keys are destroyed: deleting a subnet (Config Server NetKey Delete), completing a Key Refresh Procedure (which retires the old key set), and resetting/re-provisioning the node. The over-the-air triggers are processed only under the node's device key, so they are exercisable by the provisioner or network administrator that owns the node, reachable over the Bluetooth Mesh network.\n\nWith the default CONFIG_MBEDTLS_PSA_KEY_SLOT_COUNT of 16, repeated add/delete or key-refresh cycles exhaust the shared PSA key-slot pool after roughly a dozen rounds. Once exhausted, bt_mesh_private_beacon_key() and thus subnet creation fail: the node can no longer add subnets or complete key refresh, and other PSA crypto consumers on the device may be starved, until the device is rebooted. The fix aligns the destroy guard with the import guard (CONFIG_BT_MESH_PRIV_BEACONS) so each slot is freed.\n  \nSeverity: 2.4 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10774\n  \nPublished : Aug. 2, 2026, 3:16 p.m. | 54 minutes ago\n  \nDescription :Zephyr's Bluetooth Mesh subnet key management leaks one PSA Crypto key slot on every subnet-key teardown. In subsys/bluetooth/mesh/subnet.c, net_keys_create() imports the Private Beacon Key into a PSA key slot under CONFIG_BT_MESH_PRIV_BEACONS (enabled by default), but subnet_keys_destroy() guarded the matching psa_destroy_key() with CONFIG_BT_MESH_V1d1. That Kconfig symbol was removed when explicit Mesh 1.0.1 support was dropped, so the destroy branch became permanently dead code and the import is never balanced by a destroy.\n\nThe imbalanced teardown is reached every time subnet keys are destroyed: deleting a subnet (Config Server NetKey Delete), completing a Key Refresh Procedure (which retires the old key set), and resetting/re-provisioning the node. The over-the-air triggers are processed only under the node's device key, so they are exercisable by the provisioner or network administrator that owns the node, reachable over the Bluetooth Mesh network.\n\nWith the default CONFIG_MBEDTLS_PSA_KEY_SLOT_COUNT of 16, repeated add/delete or key-refresh cycles exhaust the shared PSA key-slot pool after roughly a dozen rounds. Once exhausted, bt_mesh_private_beacon_key() and thus subnet creation fail: the node can no longer add subnets or complete key refresh, and other PSA crypto consumers on the device may be starved, until the device is rebooted. The fix aligns the destroy guard with the import guard (CONFIG_BT_MESH_PRIV_BEACONS) so each slot is freed.\n  \nSeverity: 2.4 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10774 - Bluetooth Mesh 서브넷 삭제에서 PSA 키 슬롯 누출로 인해 리소스가 고갈되는 DoS",
+      "summary_ko": "CVE ID:CVE-2026-10774\n  \n게시일 : 2026년 8월 2일 오후 3시 16분 | 54분 전\n  \n설명: Zephyr의 Bluetooth Mesh 서브넷 키 관리는 모든 서브넷 키 분해 시 하나의 PSA 암호화 키 슬롯을 유출합니다. subsys/bluetooth/mesh/subnet.c에서 net_keys_create()는 개인 비콘 키를 CONFIG_BT_MESH_PRIV_BEACONS(기본적으로 활성화됨) 아래의 PSA 키 슬롯으로 가져오지만 subnet_keys_destroy()는 CONFIG_BT_MESH_V1d1을 사용하여 일치하는 psa_destroy_key()를 보호합니다. 명시적인 Mesh 1.0.1 지원이 중단되었을 때 해당 Kconfig 기호가 제거되었으므로 destroy 분기가 영구적으로 데드 코드가 되었고 가져오기가 destroy로 균형을 이루지 않습니다.\n\n서브넷 키가 폐기될 때마다 불균형 해제가 발생합니다. 즉, 서브넷 삭제(구성 서버 NetKey 삭제), 키 새로 고침 절차 완료(이전 키 세트 폐기), 노드 재설정/재프로비저닝이 수행됩니다. 무선 트리거는 노드의 장치 키에서만 처리되므로 노드를 소유한 프로비저너 또는 네트워크 관리자가 실행할 수 있으며 Bluetooth Mesh 네트워크를 통해 연결할 수 있습니다.\n\n기본 CONFIG_MBEDTLS_PSA_KEY_SLOT_COUNT가 16인 경우 반복되는 추가/삭제 또는 키 새로 고침 주기는 대략 12회 라운드 후에 공유 PSA 키 슬롯 풀을 소진합니다. 일단 소진되면 bt_mesh_private_beacon_key() 및 그에 따른 서브넷 생성이 실패합니다. 노드는 더 이상 서브넷을 추가하거나 키 새로 고침을 완료할 수 없으며 장치가 재부팅될 때까지 장치의 다른 PSA 암호화 소비자가 중단될 수 있습니다. 수정 사항은 파괴 가드를 가져오기 가드(CONFIG_BT_MESH_PRIV_BEACONS)와 정렬하여 각 슬롯이 해제되도록 합니다.\n  \n심각도: 2.4 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10774\n2. 26.08.03 오전12:16\n3. Zephyr's Bluetooth Mesh subnet key management leak",
+      "cve_id": "CVE-2026-10774",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10774",
+      "source": "cvefeed",
+      "published": "2026-08-03T00:16:33+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-9856 - Path Traversal in huggingface/transformers",
+      "summary": "CVE ID :CVE-2026-9856\n  \nPublished : Aug. 2, 2026, 3:10 p.m. | 1 hour ago\n  \nDescription :A vulnerability in huggingface/transformers versions <=5.8.0.dev0 allows an attacker to perform arbitrary file writes via path traversal. The issue resides in the `save_pretrained()` methods of `PreTrainedTokenizerBase` and `ProcessorMixin`, where keys from the `chat_template` dictionary are used directly as filenames without proper validation. An attacker can exploit this by publishing a malicious Hugging Face Hub repository with a crafted `tokenizer_config.json` file. When a victim downloads and saves the tokenizer or processor, the attacker-controlled keys can escape the intended save directory, enabling arbitrary file writes with attacker-controlled content. This vulnerability affects multiple processors inheriting from `ProcessorMixin`, including Idefics, Florence, Gemma, Phi, and Qwen-VL.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-9856\n  \nPublished : Aug. 2, 2026, 3:10 p.m. | 1 hour ago\n  \nDescription :A vulnerability in huggingface/transformers versions <=5.8.0.dev0 allows an attacker to perform arbitrary file writes via path traversal. The issue resides in the `save_pretrained()` methods of `PreTrainedTokenizerBase` and `ProcessorMixin`, where keys from the `chat_template` dictionary are used directly as filenames without proper validation. An attacker can exploit this by publishing a malicious Hugging Face Hub repository with a crafted `tokenizer_config.json` file. When a victim downloads and saves the tokenizer or processor, the attacker-controlled keys can escape the intended save directory, enabling arbitrary file writes with attacker-controlled content. This vulnerability affects multiple processors inheriting from `ProcessorMixin`, including Idefics, Florence, Gemma, Phi, and Qwen-VL.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-9856 - 허깅 페이스/트랜스포머의 경로 탐색",
+      "summary_ko": "CVE ID:CVE-2026-9856\n  \n게시일 : 2026년 8월 2일 오후 3시 10분 | 1시간 전\n  \n설명 :huggingface/transformers 버전 <=5.8.0.dev0의 취약점으로 인해 공격자가 경로 탐색을 통해 임의의 파일 쓰기를 수행할 수 있습니다. 문제는 'PreTrainedTokenizerBase' 및 'ProcessorMixin'의 'save_pretrained()' 메서드에 있습니다. 여기서 'chat_template' 사전의 키는 적절한 유효성 검사 없이 파일 이름으로 직접 사용됩니다. 공격자는 조작된 `tokenizer_config.json` 파일을 사용하여 악성 Hugging Face Hub 저장소를 게시하여 이를 악용할 수 있습니다. 피해자가 토크나이저나 프로세서를 다운로드하고 저장하면 공격자가 제어하는 ​​키가 의도한 저장 디렉터리를 벗어나 공격자가 제어하는 ​​콘텐츠로 임의 파일 쓰기가 가능해집니다. 이 취약점은 Idefics, Florence, Gemma, Phi 및 Qwen-VL을 포함하여 'ProcessorMixin'에서 상속된 여러 프로세서에 영향을 미칩니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-9856\n2. 26.08.03 오전12:10\n3. A vulnerability in huggingface/transformers versio",
+      "cve_id": "CVE-2026-9856",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9856",
+      "source": "cvefeed",
+      "published": "2026-08-03T00:10:53+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-68582 - Vikunja 0.24.0 Broken Object Level Authorization via Link-Share Token",
       "summary": "CVE ID :CVE-2026-68582\n  \nPublished : Aug. 2, 2026, 1:16 p.m. | 1 hour, 15 minutes ago\n  \nDescription :Vikunja versions >= 0.24.0 and <= 2.3.0 contain a broken object level authorization (BOLA) vulnerability in the task-collection endpoint (GET /api/v1/projects/{project}/views/{view}/tasks). The endpoint loads the requested project view from the URL path without verifying the caller is authorized for it. For a link-share token holder, the task scope is pinned to the share's own project, but the view is taken from the attacker-controlled path and never re-validated. As a result, a holder of any project share link can read any other tenant's kanban bucket records — bucket titles and the full created_by user object (username, name, id) — for every view in the instance. The same missing pre-authorization view load also creates a project/view-ID existence oracle (404 vs. non-404) usable by link shares and ordinary authenticated users. Task contents remain constrained to the share's own project and are not disclosed. Fixed in 2.4.0.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
