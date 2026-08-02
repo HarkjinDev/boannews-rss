@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-02T23:02:17.719822+09:00",
+  "fetched_at": "2026-08-02T23:32:20.006751+09:00",
   "security_news": [
+    {
+      "title": "\"QR코드 한 방에 다 털렸다\"...美 국세청, 암호화폐 투자자 노린 피싱 경...",
+      "summary": "코인베이스(Coinbase, COIN)와 사이버보안 기업 다크타워(Darktower)는 사기 조직이 사용한 기반 시설을 추적했다. 가짜 사이트의 도메인은 위조 서한이 유포되기 직전 홍콩 등록기관을 통해 개설됐다. 웹사이트는 루마니아...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. \"QR코드 한 방에 다 털렸다\"...美 국세청, 암호화폐 투자자 노린 피싱 경... 코인베\n2. 가짜 사이트의 도메인은 위조 서한이 유포되기 직전 홍콩 등록기관을 통해 개설됐다.\n3. 웹사이트는 루마니아...",
+      "link": "http://coinreaders.com/250760",
+      "source": "naver",
+      "published": "2026-08-02T23:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[박철웅의 AI디코딩] 사건의 지평선, 렌즈 뒤에는 아무도 없다",
       "summary": "유출된 영상 일부는 다크웹에서 거래됐고, 해킹된 아파트 명단까지 온라인에 유포됐다. 가장 사적인 공간이... 일부 단지는 뒤늦게 해킹방지 인증을 내세우며 대응에 나섰지만, 이미 새어 나간 영상은 되돌릴 수 없었다....",
@@ -1960,6 +1972,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-68582 - Vikunja 0.24.0 Broken Object Level Authorization via Link-Share Token",
+      "summary": "CVE ID :CVE-2026-68582\n  \nPublished : Aug. 2, 2026, 1:16 p.m. | 1 hour, 15 minutes ago\n  \nDescription :Vikunja versions >= 0.24.0 and <= 2.3.0 contain a broken object level authorization (BOLA) vulnerability in the task-collection endpoint (GET /api/v1/projects/{project}/views/{view}/tasks). The endpoint loads the requested project view from the URL path without verifying the caller is authorized for it. For a link-share token holder, the task scope is pinned to the share's own project, but the view is taken from the attacker-controlled path and never re-validated. As a result, a holder of any project share link can read any other tenant's kanban bucket records — bucket titles and the full created_by user object (username, name, id) — for every view in the instance. The same missing pre-authorization view load also creates a project/view-ID existence oracle (404 vs. non-404) usable by link shares and ordinary authenticated users. Task contents remain constrained to the share's own project and are not disclosed. Fixed in 2.4.0.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-68582\n  \nPublished : Aug. 2, 2026, 1:16 p.m. | 1 hour, 15 minutes ago\n  \nDescription :Vikunja versions >= 0.24.0 and <= 2.3.0 contain a broken object level authorization (BOLA) vulnerability in the task-collection endpoint (GET /api/v1/projects/{project}/views/{view}/tasks). The endpoint loads the requested project view from the URL path without verifying the caller is authorized for it. For a link-share token holder, the task scope is pinned to the share's own project, but the view is taken from the attacker-controlled path and never re-validated. As a result, a holder of any project share link can read any other tenant's kanban bucket records — bucket titles and the full created_by user object (username, name, id) — for every view in the instance. The same missing pre-authorization view load also creates a project/view-ID existence oracle (404 vs. non-404) usable by link shares and ordinary authenticated users. Task contents remain constrained to the share's own project and are not disclosed. Fixed in 2.4.0.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-68582 - Vikunja 0.24.0 링크 공유 토큰을 통한 손상된 개체 수준 인증",
+      "summary_ko": "CVE ID:CVE-2026-68582\n  \n게시일 : 2026년 8월 2일 오후 1시 16분 | 1시간, 15분 전\n  \n설명: Vikunja 버전 >= 0.24.0 및 <= 2.3.0에는 작업 수집 엔드포인트(GET /api/v1/projects/{project}/views/{view}/tasks)에 손상된 개체 수준 인증(BOLA) 취약점이 포함되어 있습니다. 엔드포인트는 호출자에게 권한이 있는지 확인하지 않고 URL 경로에서 요청된 프로젝트 보기를 로드합니다. 링크 공유 토큰 보유자의 경우 작업 범위는 공유 자체 프로젝트에 고정되지만 보기는 공격자가 제어하는 ​​경로에서 가져오고 다시 검증되지 않습니다. 결과적으로 모든 프로젝트 공유 링크의 소유자는 인스턴스의 모든 보기에 대해 다른 테넌트의 간반 버킷 레코드(버킷 제목 및 전체created_by 사용자 개체(사용자 이름, 이름, ID))를 읽을 수 있습니다. 동일한 누락된 사전 승인 보기 로드는 링크 공유 및 일반 인증된 사용자가 사용할 수 있는 프로젝트/보기 ID 존재 Oracle(404 대 404가 아닌)도 생성합니다. 작업 내용은 공유 자체 프로젝트로 제한되며 공개되지 않습니다. 2.4.0에서 수정되었습니다.\n  \n심각도: 9.3 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-68582\n2. 26.08.02 오후10:16\n3. Vikunja versions >= 0.24.0 and <= 2.3.0 contain a ",
+      "cve_id": "CVE-2026-68582",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68582",
+      "source": "cvefeed",
+      "published": "2026-08-02T22:16:54+09:00",
+      "lang": "sq"
+    },
+    {
       "title": "Atomic MacOS (AMOS) stealer infection, (Sun, Aug 2nd)",
       "summary": "Introduction\r",
       "description": "Introduction\r",
@@ -2347,21 +2374,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-65635",
       "source": "cvefeed",
       "published": "2026-07-31T00:16:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-60075 - Date::Manip versions through 6.99 for Perl allow CPU exhaustion via quadratic backtracking in the unanchored time substitution in _parse_time",
-      "summary": "CVE ID :CVE-2026-60075\n  \nPublished : July 30, 2026, 2:17 p.m. | 14 minutes ago\n  \nDescription :Date::Manip versions through 6.99 for Perl allow CPU exhaustion via quadratic backtracking in the unanchored time substitution in _parse_time.\n\n_parse_time removes a time from anywhere in the string with the unanchored substitution `s/$timerx/ /`, where $timerx is an auto-generated alternation of time patterns reached through a leading `(?:$atrx|^|\\s+)`. The engine therefore retries the match at every position of an interior whitespace run: at each start position the leading `\\s+` consumes the rest of the run greedily, the time alternation fails because the run holds no digits, and the engine backtracks a space at a time across the run before advancing the start position, which is quadratic in the length of the run. No time need be present in the string for this to happen, only a long run of whitespace, and the parse time rises about fourfold for each doubling of the run: a few kilobytes of whitespace costs seconds of CPU per parse and tens of kilobytes costs minutes.\n\nAny caller that passes an untrusted string of unbounded length to ParseDate(), Date::Manip::Date->parse() or ->parse_time() can be made to spend unbounded CPU in a single parse, a denial of service.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-60075\n  \nPublished : July 30, 2026, 2:17 p.m. | 14 minutes ago\n  \nDescription :Date::Manip versions through 6.99 for Perl allow CPU exhaustion via quadratic backtracking in the unanchored time substitution in _parse_time.\n\n_parse_time removes a time from anywhere in the string with the unanchored substitution `s/$timerx/ /`, where $timerx is an auto-generated alternation of time patterns reached through a leading `(?:$atrx|^|\\s+)`. The engine therefore retries the match at every position of an interior whitespace run: at each start position the leading `\\s+` consumes the rest of the run greedily, the time alternation fails because the run holds no digits, and the engine backtracks a space at a time across the run before advancing the start position, which is quadratic in the length of the run. No time need be present in the string for this to happen, only a long run of whitespace, and the parse time rises about fourfold for each doubling of the run: a few kilobytes of whitespace costs seconds of CPU per parse and tens of kilobytes costs minutes.\n\nAny caller that passes an untrusted string of unbounded length to ParseDate(), Date::Manip::Date->parse() or ->parse_time() can be made to spend unbounded CPU in a single parse, a denial of service.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-60075 - Perl용 Date::Manip 버전 6.99부터 _parse_time의 고정되지 않은 시간 대체에서 2차 역추적을 통해 CPU 소모를 허용합니다.",
-      "summary_ko": "CVE ID:CVE-2026-60075\n  \n게시일 : 2026년 7월 30일 오후 2시 17분 | 14분 전\n  \n설명 :Date::Perl용 6.99까지의 Manip 버전은 _parse_time의 고정되지 않은 시간 대체에서 2차 역추적을 통해 CPU 소모를 허용합니다.\n\n_parse_time은 고정되지 않은 대체 `s/$timerx/ /`를 사용하여 문자열의 어느 위치에서든 시간을 제거합니다. 여기서 $timerx는 선행 `(?:$atrx|^|\\s+)`를 통해 도달한 시간 패턴의 자동 생성 대체입니다. 따라서 엔진은 내부 공백 실행의 모든 ​​위치에서 일치를 다시 시도합니다. 각 시작 위치에서 선행 `\\s+`는 실행의 나머지 부분을 탐욕스럽게 소비하고, 실행에 숫자가 없기 때문에 시간 교체가 실패하며, 엔진은 실행 길이에서 2차인 시작 위치로 전진하기 전에 실행 전체에서 한 번에 한 공간씩 역추적합니다. 이 일이 발생하려면 문자열에 시간이 필요하지 않으며 공백이 길게 실행될 뿐이며 구문 분석 시간은 실행이 두 배로 늘어날 때마다 약 4배 증가합니다. 몇 킬로바이트의 공백은 구문 분석당 몇 초의 CPU 비용이 들고 수십 킬로바이트에는 몇 분이 소요됩니다.\n\n제한되지 않은 길이의 신뢰할 수 없는 문자열을 ParseDate(), Date::Manip::Date->parse() 또는 ->parse_time()에 전달하는 모든 호출자는 단일 구문 분석, 즉 서비스 거부에서 제한되지 않은 CPU를 소비하게 될 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-60075\n2. 26.07.30 오후11:17\n3. Date::Manip versions through 6.99 for Perl allow C",
-      "cve_id": "CVE-2026-60075",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-60075",
-      "source": "cvefeed",
-      "published": "2026-07-30T23:17:02+09:00",
       "lang": "en"
     }
   ],
