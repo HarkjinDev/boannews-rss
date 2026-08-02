@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-03T01:01:12.277414+09:00",
+  "fetched_at": "2026-08-03T01:32:12.175058+09:00",
   "security_news": [
     {
       "title": "[김병필의 인공지능 개척시대] 울타리를 넘은 인공지능",
@@ -1968,18 +1968,6 @@
       "source": "naver",
       "published": "2026-07-31T05:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "아마존, ‘북한 오픈소스 공급망 해킹’ 공개…“AI 활용 공격 고도화”",
-      "summary": "북한 연계 해킹 조직이 전 세계 개발자들이 사용하는 오픈소스 소프트웨어 라이브러리를 조직적으로 공격해... 아마존이 29일 공식 보안 보고서를 통해 북한 연계 해킹 조직이 전 세계 소프트웨어 개발에 광범위하게...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 아마존, ‘북한 오픈소스 공급망 해킹’ 공개…“AI 활용 공격 고도화” 북한 연계 해킹 조\n2. 아마존이 29일 공식 보안 보고서를 통해 북한 연계 해킹 조직이 전 세계 소프트웨어 개발에",
-      "link": "https://www.voakorea.com/a/amazon-reveals-new-evidence-of-open-source-supply-chain-attacks-by-north-korean-hacking-group-073026/8180845.html",
-      "source": "naver",
-      "published": "2026-07-31T01:12:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2341,36 +2329,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-51272",
       "source": "cvefeed",
       "published": "2026-07-31T04:18:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-58222 - Samba: samba ad ldap compare filter injection and trusted-request confusion disclose protected attributes",
-      "summary": "CVE ID :CVE-2026-58222\n  \nPublished : July 30, 2026, 4:17 p.m. | 13 minutes ago\n  \nDescription :A security flaw combining LDAP filter injection and improper authorization checks was found in Samba Active Directory Domain Controller (AD DC). When processing LDAP Compare requests, Samba fails to properly validate user-supplied attribute names and executes the resulting internal database search in a trusted context, bypassing normal Access Control List (ACL) enforcement. An authenticated low-privilege domain user can exploit these flaws to disclose confidential Active Directory attributes that would normally be inaccessible. The disclosed information may be leveraged to derive sensitive authentication material, potentially leading to privilege escalation and complete domain compromise. For example: In deployments configured with Group Managed Service Accounts (gMSAs), an attacker can extract the \"msKds-RootKeyData\" attribute and derive gMSA passwords offline, potentially leading to complete domain compromise if privileged gMSAs are present.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-58222\n  \nPublished : July 30, 2026, 4:17 p.m. | 13 minutes ago\n  \nDescription :A security flaw combining LDAP filter injection and improper authorization checks was found in Samba Active Directory Domain Controller (AD DC). When processing LDAP Compare requests, Samba fails to properly validate user-supplied attribute names and executes the resulting internal database search in a trusted context, bypassing normal Access Control List (ACL) enforcement. An authenticated low-privilege domain user can exploit these flaws to disclose confidential Active Directory attributes that would normally be inaccessible. The disclosed information may be leveraged to derive sensitive authentication material, potentially leading to privilege escalation and complete domain compromise. For example: In deployments configured with Group Managed Service Accounts (gMSAs), an attacker can extract the \"msKds-RootKeyData\" attribute and derive gMSA passwords offline, potentially leading to complete domain compromise if privileged gMSAs are present.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-58222 - Samba: Samba 광고 LDAP 비교 필터 삽입 및 신뢰할 수 있는 요청 혼동으로 인해 보호된 속성 공개",
-      "summary_ko": "CVE ID:CVE-2026-58222\n  \n게시일 : 2026년 7월 30일 오후 4시 17분 | 13분 전\n  \n설명: Samba Active Directory 도메인 컨트롤러(AD DC)에서 LDAP 필터 삽입과 부적절한 인증 확인을 결합한 보안 결함이 발견되었습니다. LDAP 비교 요청을 처리할 때 Samba는 사용자가 제공한 속성 이름을 제대로 확인하지 못하고 신뢰할 수 있는 컨텍스트에서 결과 내부 데이터베이스 검색을 실행하여 일반적인 ACL(액세스 제어 목록) 적용을 우회합니다. 인증된 낮은 권한의 도메인 사용자는 이러한 결함을 악용하여 일반적으로 액세스할 수 없는 기밀 Active Directory 특성을 공개할 수 있습니다. 공개된 정보는 민감한 인증 자료를 도출하는 데 활용될 수 있으며, 잠재적으로 권한 상승 및 완전한 도메인 손상으로 이어질 수 있습니다. 예: gMSA(그룹 관리 서비스 계정)로 구성된 배포에서 공격자는 \"msKds-RootKeyData\" 특성을 추출하고 gMSA 암호를 오프라인으로 파생할 수 있으며 권한 있는 gMSA가 있는 경우 잠재적으로 완전한 도메인 손상으로 이어질 수 있습니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-58222\n2. 26.07.31 오전1:17\n3. A security flaw combining LDAP filter injection an",
-      "cve_id": "CVE-2026-58222",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58222",
-      "source": "cvefeed",
-      "published": "2026-07-31T01:17:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-23985 - Apache Superset: Regular Expression Denial of Service (ReDoS) in SQL Parser",
-      "summary": "CVE ID :CVE-2026-23985\n  \nPublished : July 30, 2026, 4:17 p.m. | 13 minutes ago\n  \nDescription :A Regular Expression Denial of Service (ReDoS) vulnerability exists in Apache Superset versions 1.5.0 through 5.0.0. The vulnerability is located in the sql_parse.py component, specifically within the SQL_REGEX used for parsing SQL statements in the sqlparse library integration.\nThe affected regular expression contains overlapping disjunctions that share a common outer quantifier. An authenticated attacker can exploit this by sending a maliciously crafted input string (specifically a long sequence of backslashes or similar characters) to endpoints that process SQL queries\n\nThis issue affects Apache Superset: before 6.0.0.\n\nUsers are recommended to upgrade to version 6.0.0, which fixes the issue. \n\nWorkarounds:\n● WAF Rules: Implement Web Application Firewall (WAF) rules to detect and block\nrequests containing excessively long sequences of backslashes or suspicious repeated\npatterns in the queries.extras.where parameter.\n● Rate Limiting: Ensure strict rate limiting is applied to the /api/v1/chart/data endpoint to\nreduce the impact of potential attacks.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-23985\n  \nPublished : July 30, 2026, 4:17 p.m. | 13 minutes ago\n  \nDescription :A Regular Expression Denial of Service (ReDoS) vulnerability exists in Apache Superset versions 1.5.0 through 5.0.0. The vulnerability is located in the sql_parse.py component, specifically within the SQL_REGEX used for parsing SQL statements in the sqlparse library integration.\nThe affected regular expression contains overlapping disjunctions that share a common outer quantifier. An authenticated attacker can exploit this by sending a maliciously crafted input string (specifically a long sequence of backslashes or similar characters) to endpoints that process SQL queries\n\nThis issue affects Apache Superset: before 6.0.0.\n\nUsers are recommended to upgrade to version 6.0.0, which fixes the issue. \n\nWorkarounds:\n● WAF Rules: Implement Web Application Firewall (WAF) rules to detect and block\nrequests containing excessively long sequences of backslashes or suspicious repeated\npatterns in the queries.extras.where parameter.\n● Rate Limiting: Ensure strict rate limiting is applied to the /api/v1/chart/data endpoint to\nreduce the impact of potential attacks.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-23985 - Apache Superset: SQL 구문 분석기의 정규식 서비스 거부(ReDoS)",
-      "summary_ko": "CVE ID:CVE-2026-23985\n  \n게시일 : 2026년 7월 30일 오후 4시 17분 | 13분 전\n  \n설명:Apache Superset 버전 1.5.0~5.0.0에 정규식 서비스 거부(ReDoS) 취약점이 존재합니다. 취약점은 sql_parse.py 구성 요소, 특히 sqlparse 라이브러리 통합에서 SQL 문을 구문 분석하는 데 사용되는 SQL_REGEX 내에 있습니다.\n영향을 받은 정규식에는 공통 외부 수량자를 공유하는 중복되는 분리가 포함되어 있습니다. 인증된 공격자는 SQL 쿼리를 처리하는 엔드포인트에 악의적으로 제작된 입력 문자열(특히 긴 백슬래시 또는 유사한 문자 시퀀스)을 보내 이를 악용할 수 있습니다.\n\n이 문제는 Apache Superset: 6.0.0 이전에 영향을 미칩니다.\n\n사용자는 문제를 해결하는 버전 6.0.0으로 업그레이드하는 것이 좋습니다. \n\n해결 방법:\n● WAF 규칙: 웹 애플리케이션 방화벽(WAF) 규칙을 구현하여 탐지 및 차단\n지나치게 긴 백슬래시 시퀀스가 포함되어 있거나 의심스러운 반복이 포함된 요청\nquery.extras.where 매개변수의 패턴.\n● 속도 제한: 엄격한 속도 제한이 /api/v1/chart/data 엔드포인트에 적용되어 있는지 확인합니다.\n잠재적인 공격의 영향을 줄입니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-23985\n2. 26.07.31 오전1:17\n3. A Regular Expression Denial of Service (ReDoS) vul",
-      "cve_id": "CVE-2026-23985",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-23985",
-      "source": "cvefeed",
-      "published": "2026-07-31T01:17:10+09:00",
       "lang": "en"
     }
   ],
