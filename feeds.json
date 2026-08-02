@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-03T07:32:12.169735+09:00",
+  "fetched_at": "2026-08-03T08:01:00.284302+09:00",
   "security_news": [
     {
       "title": "['챗GPT 해킹' 후폭풍②] 시킨 적 없는데 왜 해킹했나…AI의 '목표 집착...",
@@ -2004,30 +2004,6 @@
       "source": "naver",
       "published": "2026-07-31T08:22:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'해킹 과징금 540억' KT, 행정소송 나설까",
-      "summary": "개보위는 특히 해킹으로 개인정보가 유출된 데 그치지 않고 소액결제 인증에 사용된 SMS·ARS까지 탈취돼... SK텔레콤은 올해 1월 유심 해킹 사태에 따른 개보위 1350억 원 과징금 처분을 놓고 행정소송 절차에 들어갔다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KT, 개인정보 유출 및 SMS/ARS 탈취로 540억 과징금\n2. 개보위, 해킹으로 인한 피해 및 인증 시스템 탈취 지적\n3. SK텔레콤도 1350억 과징금에 행정소송 진행 중",
-      "link": "https://n.news.naver.com/mnews/article/421/0009089642?sid=105",
-      "source": "naver",
-      "published": "2026-07-31T07:37:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "'과징금 쇼크' 피한 KT…신뢰 회복 과제",
-      "summary": "[사진: 연합뉴스] KT가 무단 소액결제 해킹 사고와 관련해 개인정보보호위원회로부터 539억7900만원의... 앞서 유심 해킹 사태를 겪었던 SK텔레콤은 관련 부문 매출의 1% 수준인 1348억원을 부과받은 바 있다. 이번 과징금에...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KT, 539억7900만원 과징금 부과 유예\n2. 1만 7천여 건 소액결제 해킹으로 인한 317억원 피해\n3. 신뢰 회복과 개인정보보호 강화 조치 필요",
-      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=688351",
-      "source": "naver",
-      "published": "2026-07-31T07:34:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2105,6 +2081,21 @@
       "source": "cvefeed",
       "published": "2026-08-02T22:16:54+09:00",
       "lang": "sq"
+    },
+    {
+      "title": "CVE-2026-68579 - FreeRDP before 3.30.0 Heap Overflow via CliprdrStream_Read",
+      "summary": "CVE ID :CVE-2026-68579\n  \nPublished : 2 de agosto de 2026 a las 13:16 | 8 horas, 55 minutos ago\n  \nDescription :FreeRDP before 3.30.0 (<= 3.29.0) contains a heap-based buffer overflow in the Windows clipboard client's CliprdrStream_Read function (client/Windows/wf_cliprdr.c). When an OLE paste consumer (e.g. explorer.exe) calls IStream::Read with a fixed-size buffer of cb bytes, CliprdrStream_Read requests file contents from the RDP server and then copies the response into the caller's buffer using the server-supplied length (req_fsize) instead of cb. A malicious or compromised RDP server can return an oversized CB_FILECONTENTS_RESPONSE, causing an out-of-bounds write of attacker-controlled data into the paste consumer's heap buffer when a user pastes server-offered clipboard file contents.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-68579\n  \nPublished : 2 de agosto de 2026 a las 13:16 | 8 horas, 55 minutos ago\n  \nDescription :FreeRDP before 3.30.0 (<= 3.29.0) contains a heap-based buffer overflow in the Windows clipboard client's CliprdrStream_Read function (client/Windows/wf_cliprdr.c). When an OLE paste consumer (e.g. explorer.exe) calls IStream::Read with a fixed-size buffer of cb bytes, CliprdrStream_Read requests file contents from the RDP server and then copies the response into the caller's buffer using the server-supplied length (req_fsize) instead of cb. A malicious or compromised RDP server can return an oversized CB_FILECONTENTS_RESPONSE, causing an out-of-bounds write of attacker-controlled data into the paste consumer's heap buffer when a user pastes server-offered clipboard file contents.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-68579 - 3.30.0 이전의 FreeRDP CliprdrStream_Read를 통한 힙 오버플로",
+      "summary_ko": "CVE ID:CVE-2026-68579\n  \n게시 날짜: 2026년 2월 2일 오전 13시 16분 | 8시간, 55분 전\n  \n설명: 3.30.0 이전의 FreeRDP(<= 3.29.0)에는 Windows 클립보드 클라이언트의 CliprdrStream_Read 함수(client/Windows/wf_cliprdr.c)에 힙 기반 버퍼 오버플로가 포함되어 있습니다. OLE 붙여넣기 소비자(예: explorer.exe)가 cb 바이트의 고정 크기 버퍼로 IStream::Read를 호출하면 CliprdrStream_Read는 RDP 서버에서 파일 콘텐츠를 요청한 다음 cb 대신 서버 제공 길이(req_fsize)를 사용하여 응답을 호출자의 버퍼에 복사합니다. 악의적이거나 손상된 RDP 서버는 크기가 너무 큰 CB_FILECONTENTS_RESPONSE를 반환할 수 있으며, 이로 인해 사용자가 서버에서 제공하는 클립보드 파일 콘텐츠를 붙여넣을 때 공격자가 제어하는 ​​데이터가 붙여넣기 소비자의 힙 버퍼에 범위를 벗어나는 쓰기가 발생합니다.\n  \n심각도: 9.6 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-68579\n2. 26.08.02 오후10:16\n3. FreeRDP before 3.30.0 (<= 3.29.0) contains a heap-",
+      "cve_id": "CVE-2026-68579",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68579",
+      "source": "cvefeed",
+      "published": "2026-08-02T22:16:53+09:00",
+      "lang": "en"
     },
     {
       "title": "CVE-2026-18571 - Keycloak-services: keycloak-services: fgap v2 group assignment bypass during user creation",
