@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-03T04:31:30.189019+09:00",
+  "fetched_at": "2026-08-03T05:01:15.485894+09:00",
   "security_news": [
+    {
+      "title": "콜드카드 8800만 달러 해킹 폭탄\"… 암호화폐 보관 비상",
+      "summary": "알렉스 손 갤럭시 리서치 리서치 책임자는 \"취약점을 노린 해킹 공격이 여전히 현재 진행형으로 이어지고 있다\"며 \"탈취된 비트코인은 아직 공격자 주소에 동결되어 있으나 추가 피해를 막기 위한 선제적 조치가...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 콜드카드, 8800만 달러 암호화폐 해킹 공격 발생\n2. 취약점 노린 공격, 비트코인 탈취 후 공격자 주소에 동결\n3. 추가 피해 막기 위한 선제적 조치 시급",
+      "link": "https://www.g-enews.com/view.php?ud=202608030450265611e7e8286d56_1",
+      "source": "naver",
+      "published": "2026-08-03T04:52:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "솔라나, 70달러대 초반 등락 속 '알펜글로우' 업그레이드 기대",
       "summary": "지갑 해킹, ETF 자금 유출 등 거시적 역풍과 함께 8월을 불안하게 시작했다고 평가했다. 연초 대비 약 41... 이는 솔라나 생태계와 해킹 사건을 잘못 연관짓는 것을 방지하기 위한 조치다. 현재 솔라나는 스트레스를...",
@@ -1980,18 +1992,6 @@
       "source": "naver",
       "published": "2026-07-31T05:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'내부 유출'과 '외부 해킹'은 같은가…롯데카드 중징계 결론 임박",
-      "summary": "금융당국이 297만명의 고객정보가 유출된 롯데카드 해킹 사고에 대한 최종 제재 수위를 조만간 결정한다. 금융감독원이 의결한 영업정지 4.5개월과 과징금 50억원이 그대로 유지될지가 핵심이다. 이번 결정은 외부 해킹으...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 롯데카드, 297만 고객정보 유출 사고 제재 결정 임박\n2. 외부 해킹으로 인한 사고, 금융당국 최종 제재 수위 결정\n3. 영업정지 4.5개월, 과징금 50억원 유지 여부 주목",
-      "link": "https://n.news.naver.com/mnews/article/417/0001153810?sid=101",
-      "source": "naver",
-      "published": "2026-07-31T05:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2008,6 +2008,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-10848",
       "source": "cvefeed",
       "published": "2026-08-03T02:16:58+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-65321 - PyAthena 3.35.4 SQL Injection via DefaultParameterFormatter DELETE/CTAS",
+      "summary": "CVE ID :CVE-2026-65321\n  \nPublished : Aug. 2, 2026, 3:16 p.m. | 3 hours, 12 minutes ago\n  \nDescription :PyAthena prior to 3.35.4 contains a sql injection vulnerability that allows unauthenticated attackers to inject arbitrary SQL by exploiting improper quote-escaping in DefaultParameterFormatter.format(), which routes DELETE and CTAS statements to the _escape_hive function that backslash-escapes single quotes rather than doubling them. Because Athena and Trino do not treat backslashes as escape characters inside string literals, attacker-supplied input such as a single quote followed by SQL syntax causes the parser to terminate the string literal prematurely, enabling data exfiltration via UNION SELECT, execution of destructive statements, and attacker-controlled CTAS destination and content.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-65321\n  \nPublished : Aug. 2, 2026, 3:16 p.m. | 3 hours, 12 minutes ago\n  \nDescription :PyAthena prior to 3.35.4 contains a sql injection vulnerability that allows unauthenticated attackers to inject arbitrary SQL by exploiting improper quote-escaping in DefaultParameterFormatter.format(), which routes DELETE and CTAS statements to the _escape_hive function that backslash-escapes single quotes rather than doubling them. Because Athena and Trino do not treat backslashes as escape characters inside string literals, attacker-supplied input such as a single quote followed by SQL syntax causes the parser to terminate the string literal prematurely, enabling data exfiltration via UNION SELECT, execution of destructive statements, and attacker-controlled CTAS destination and content.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-65321 - PyAthena 3.35.4 DefaultParameterFormatter DELETE/CTAS를 통한 SQL 주입",
+      "summary_ko": "CVE ID:CVE-2026-65321\n  \n게시일 : 2026년 8월 2일 오후 3시 16분 | 3시간, 12분 전\n  \n설명: 3.35.4 이전의 PyAthena에는 인증되지 않은 공격자가 DefaultParameterFormatter.format()의 부적절한 인용 이스케이프 처리를 이용하여 임의의 SQL을 주입할 수 있는 SQL 주입 취약점이 포함되어 있습니다. 이 취약점은 DELETE 및 CTAS 문을 작은따옴표를 두 배로 늘리는 대신 백슬래시로 이스케이프하는 _escape_hive 함수로 라우팅합니다. Athena와 Trino는 백슬래시를 문자열 리터럴 내의 이스케이프 문자로 처리하지 않기 때문에 SQL 구문 뒤에 오는 작은따옴표와 같은 공격자가 제공한 입력으로 인해 파서가 문자열 리터럴을 조기에 종료하게 되어 UNION SELECT를 통한 데이터 유출, 파괴적인 문 실행, 공격자가 제어하는 ​​CTAS 대상 및 콘텐츠가 가능해집니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-65321\n2. 26.08.03 오전12:16\n3. PyAthena prior to 3.35.4 contains a sql injection ",
+      "cve_id": "CVE-2026-65321",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-65321",
+      "source": "cvefeed",
+      "published": "2026-08-03T00:16:33+09:00",
       "lang": "en"
     },
     {
