@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-03T04:01:06.411500+09:00",
+  "fetched_at": "2026-08-03T04:31:30.189019+09:00",
   "security_news": [
+    {
+      "title": "솔라나, 70달러대 초반 등락 속 '알펜글로우' 업그레이드 기대",
+      "summary": "지갑 해킹, ETF 자금 유출 등 거시적 역풍과 함께 8월을 불안하게 시작했다고 평가했다. 연초 대비 약 41... 이는 솔라나 생태계와 해킹 사건을 잘못 연관짓는 것을 방지하기 위한 조치다. 현재 솔라나는 스트레스를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 솔라나, 70달러대 초반 등락, '알펜글로우' 업그레이드 기대\n2. 지갑 해킹, ETF 자금 유출 등 거시적 역풍으로 8월 불안\n3. 연초 대비 약 41% 하락, 생태계 해킹 연관 방지 노력",
+      "link": "https://www.tokenpost.kr/news/cryptocurrency/383961",
+      "source": "naver",
+      "published": "2026-08-03T04:16:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "도지코인(DOGE) 커뮤니티 인사, 콜드카드 사태 경고...\"당장 자금 옮겨라...",
       "summary": "인터넷에 연결된 기기에 시드 문구를 입력하면 악성 프로그램이나 해킹에 노출될 위험이 커진다. 문제의 취약점은 2021년 3월 배포된 콜드카드 펌웨어에서 발견됐다. 공격자는 보안성이 떨어지는 소프트웨어...",
@@ -2356,36 +2368,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-67528",
       "source": "cvefeed",
       "published": "2026-07-31T05:18:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-61536 - Banks: Unsafe importlib.import_module of attacker-controlled Tool.import_path in CompletionExtension allows RCE",
-      "summary": "CVE ID :CVE-2026-61536\n  \nPublished : July 30, 2026, 7:18 p.m. | 1 hour, 12 minutes ago\n  \nDescription :Banks generates meaningful LLM prompts using a simple template language. In versions prior to 2.4.3, banks parses Tool JSON objects from the rendered body of {% completion %} blocks and later resolves their import_path field through importlib.import_module(...) + getattr(...) to obtain the callable that handles a tool call. There is no allowlist or sanitization on import_path, so any importable Python attribute (e.g. os.system, subprocess.getoutput) can be selected. When the LLM emits a tool_calls entry whose function.name matches the attacker-supplied tool name, the resolved callable is invoked with kwargs decoded from tool_call.function.arguments, yielding arbitrary code execution in the banks-hosting process. This is distinct from GHSA-gphh-9q3h-jgpp / CVE-2026-44209. That advisory was fixed in 2.4.2 by switching src/banks/env.py from Environment to SandboxedEnvironment. The fix does not touch src/banks/extensions/completion.py, and the unsafe import + getattr chain still executes on 2.4.2. The malicious Tool JSON is plain text in the rendered template body — it requires no Jinja attribute access, so the sandbox is irrelevant. This issue has been fixed in version 2.4.3.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-61536\n  \nPublished : July 30, 2026, 7:18 p.m. | 1 hour, 12 minutes ago\n  \nDescription :Banks generates meaningful LLM prompts using a simple template language. In versions prior to 2.4.3, banks parses Tool JSON objects from the rendered body of {% completion %} blocks and later resolves their import_path field through importlib.import_module(...) + getattr(...) to obtain the callable that handles a tool call. There is no allowlist or sanitization on import_path, so any importable Python attribute (e.g. os.system, subprocess.getoutput) can be selected. When the LLM emits a tool_calls entry whose function.name matches the attacker-supplied tool name, the resolved callable is invoked with kwargs decoded from tool_call.function.arguments, yielding arbitrary code execution in the banks-hosting process. This is distinct from GHSA-gphh-9q3h-jgpp / CVE-2026-44209. That advisory was fixed in 2.4.2 by switching src/banks/env.py from Environment to SandboxedEnvironment. The fix does not touch src/banks/extensions/completion.py, and the unsafe import + getattr chain still executes on 2.4.2. The malicious Tool JSON is plain text in the rendered template body — it requires no Jinja attribute access, so the sandbox is irrelevant. This issue has been fixed in version 2.4.3.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-61536 - 은행: CompletionExtension에 있는 공격자가 제어하는 ​​Tool.import_path의 안전하지 않은 importlib.import_module이 RCE를 허용합니다.",
-      "summary_ko": "CVE ID:CVE-2026-61536\n  \n게시일 : 2026년 7월 30일 오후 7시 18분 | 1시간, 12분 전\n  \n설명 :Banks는 간단한 템플릿 언어를 사용하여 의미 있는 LLM 프롬프트를 생성합니다. 2.4.3 이전 버전에서 은행은 {% 완료 %} 블록의 렌더링된 본문에서 도구 JSON 개체를 구문 분석하고 나중에 importlib.import_module(...) + getattr(...)을 통해 import_path 필드를 확인하여 도구 호출을 처리하는 콜러블을 얻습니다. import_path에는 허용 목록이나 삭제가 없으므로 가져올 수 있는 Python 속성(예: os.system, subprocess.getoutput)을 선택할 수 있습니다. LLM이 function.name이 공격자가 제공한 도구 이름과 일치하는 tool_calls 항목을 내보내면 tool_call.function.arguments에서 디코딩된 kwargs를 사용하여 확인된 콜러블이 호출되어 은행 호스팅 프로세스에서 임의의 코드가 실행됩니다. 이는 GHSA-gphh-9q3h-jgpp/CVE-2026-44209와 다릅니다. 해당 권고는 src/banks/env.py를 Environment에서 SandboxedEnvironment로 전환하여 2.4.2에서 수정되었습니다. 수정 사항은 src/banks/extensions/completion.py를 건드리지 않으며 안전하지 않은 import + getattr 체인은 2.4.2에서 계속 실행됩니다. 악성 도구 JSON은 렌더링된 템플릿 본문의 일반 텍스트입니다. Jinja 속성 액세스가 필요하지 않으므로 샌드박스는 관련이 없습니다. 이 문제는 버전 2.4.3에서 수정되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-61536\n2. 26.07.31 오전4:18\n3. Banks generates meaningful LLM prompts using a sim",
-      "cve_id": "CVE-2026-61536",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61536",
-      "source": "cvefeed",
-      "published": "2026-07-31T04:18:34+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-51272 - ESP32-audioI2S Heap-Based Buffer Overflow",
-      "summary": "CVE ID :CVE-2026-51272\n  \nPublished : July 30, 2026, 7:18 p.m. | 1 hour, 13 minutes ago\n  \nDescription :In schreibfaul1 ESP32-audioI2S 3.4.5, a heap-based buffer overflow vulnerability exists in the latinToUTF8() character encoding conversion function. The function calculates required buffer size by simply doubling input length and reallocates ps_ptr heap buffer without strict boundary validation. Malicious oversized input can trigger insufficient buffer allocation and out-of-bounds write during Latin-1 to UTF-8 conversion, leading to code execution, information disclosure, denial of service or privilege escalation.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-51272\n  \nPublished : July 30, 2026, 7:18 p.m. | 1 hour, 13 minutes ago\n  \nDescription :In schreibfaul1 ESP32-audioI2S 3.4.5, a heap-based buffer overflow vulnerability exists in the latinToUTF8() character encoding conversion function. The function calculates required buffer size by simply doubling input length and reallocates ps_ptr heap buffer without strict boundary validation. Malicious oversized input can trigger insufficient buffer allocation and out-of-bounds write during Latin-1 to UTF-8 conversion, leading to code execution, information disclosure, denial of service or privilege escalation.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-51272 - ESP32-audioI2S 힙 기반 버퍼 오버플로",
-      "summary_ko": "CVE ID:CVE-2026-51272\n  \n게시일 : 2026년 7월 30일 오후 7시 18분 | 1시간, 13분 전\n  \n설명 :schreibfaul1 ESP32-audioI2S 3.4.5의 latinToUTF8() 문자 인코딩 변환 함수에 힙 기반 버퍼 오버플로 취약점이 존재합니다. 이 함수는 입력 길이를 두 배로 늘려 필요한 버퍼 크기를 계산하고 엄격한 경계 검증 없이 ps_ptr 힙 버퍼를 재할당합니다. 악의적인 크기가 큰 입력은 Latin-1에서 UTF-8로 변환하는 동안 불충분한 버퍼 할당과 범위를 벗어난 쓰기를 유발하여 코드 실행, 정보 공개, 서비스 거부 또는 권한 상승으로 이어질 수 있습니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-51272\n2. 26.07.31 오전4:18\n3. In schreibfaul1 ESP32-audioI2S 3.4.5, a heap-based",
-      "cve_id": "CVE-2026-51272",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-51272",
-      "source": "cvefeed",
-      "published": "2026-07-31T04:18:05+09:00",
       "lang": "en"
     }
   ],
