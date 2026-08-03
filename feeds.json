@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-04T05:01:13.636693+09:00",
+  "fetched_at": "2026-08-04T05:32:21.721680+09:00",
   "security_news": [
+    {
+      "title": "12년 만에 또 영업정지 롯데카드…“회원 13만 명 이탈 가능성”",
+      "summary": "이번 제재는 지난해 정보유출 해킹사고가 발생한 데 따른 것이다. 롯데카드는 오는 9월 15일까지 신규 회원 모집과 신규 카드 발급, 신규 카드대출 취급을 중단한다. 다만 기존 회원의 카드 이용과 카드론, 현금서비스...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 롯데카드, 13만 명 이탈 우려 속 영업정지\n2. 작년 정보유출 해킹 사고로 9월 15일까지 신규 영업 중단\n3. 기존 회원 카드 이용 및 카드론, 현금서비스는 정상 운영",
+      "link": "https://n.news.naver.com/mnews/article/018/0006343574?sid=101",
+      "source": "naver",
+      "published": "2026-08-04T05:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "덩치 키우는 가상자산 거래소…이용자 보호가 경쟁력 가른다[가상자산...",
+      "summary": "해킹 방어와 자산 보관을 넘어 정보 오인과 오주문, 가짜 앱·사칭 피싱을 예방하는 역량이 거래소 경쟁력으로 떠올랐다. 3일 가상자산 업계에 따르면 거래소가 다루는 이용자 보호 영역은 해킹 방어와 고객 자산 보관에서...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 덩치 키우는 가상자산 거래소…이용자 보호가 경쟁력 가른다[가상자산...\n2. 해킹 방어와 자산 보관을 넘어 정보 오인과 오주문, 가짜 앱·사칭 피싱을 예방하는 역량이 \n3. 3일 가상자산 업계에 따르면 거래소가 다루는 이용자 보호 영역은 해킹 방어와 고객 자산 보",
+      "link": "https://www.etoday.co.kr/news/view/2608749",
+      "source": "naver",
+      "published": "2026-08-04T05:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "미 백악관, 4일 오픈AI 등 AI 기업 소집…안전성 시험 논의",
       "summary": "백악관 관계자는 이날 행정부가 미국 최첨단 AI 모델의 해킹 능력을 측정하는 자율 사이버보안 시험의 세부... 앞서 오픈AI는 자사 AI 에이전트 하나가 시험 환경을 벗어나 AI 기업 허깅페이스의 시스템을 해킹했다고...",
@@ -2020,6 +2044,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-48031 - Go Restful API Boilerplate: Hardcoded JWT Secret \"random\" Allows Token Forgery",
+      "summary": "CVE ID :CVE-2026-48031\n  \nPublished : Aug. 3, 2026, 7:05 p.m. | 42 minutes ago\n  \nDescription :go-base is a Go RESTful API Boilerplate template with JWT Authentication, backed by PostgreSQL. In versions prior to 2026-05-18, the JWT signing secret is hardcoded to the known string \"random\", letting any attacker who reads the public repository forge tokens for arbitrary users, including admin roles, and completely bypass authentication on all protected endpoints. This value is set in two places: the dev.env template (line 10) and a programmatic fallback in cmd/serve.go (line 35), so the application uses it even when no .env file is present. The original mitigation in auth/jwt/tokenauth.go (lines 22 to 25) only caught the exact string \"random\", letting other weak secrets through, and replaced it with an in-memory key that was not persisted, invalidating all tokens on every restart and effectively causing a denial-of-service. This issue has been fixed in version 2026-05-18.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-48031\n  \nPublished : Aug. 3, 2026, 7:05 p.m. | 42 minutes ago\n  \nDescription :go-base is a Go RESTful API Boilerplate template with JWT Authentication, backed by PostgreSQL. In versions prior to 2026-05-18, the JWT signing secret is hardcoded to the known string \"random\", letting any attacker who reads the public repository forge tokens for arbitrary users, including admin roles, and completely bypass authentication on all protected endpoints. This value is set in two places: the dev.env template (line 10) and a programmatic fallback in cmd/serve.go (line 35), so the application uses it even when no .env file is present. The original mitigation in auth/jwt/tokenauth.go (lines 22 to 25) only caught the exact string \"random\", letting other weak secrets through, and replaced it with an in-memory key that was not persisted, invalidating all tokens on every restart and effectively causing a denial-of-service. This issue has been fixed in version 2026-05-18.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-48031 - Go Restful API 상용구: 하드코딩된 JWT 비밀 \"무작위\"로 인해 토큰 위조가 허용됨",
+      "summary_ko": "CVE ID:CVE-2026-48031\n  \n게시일 : 2026년 8월 3일 오후 7시 5분 | 42분 전\n  \n설명 :go-base는 PostgreSQL이 지원하는 JWT 인증을 사용하는 Go RESTful API 상용구 템플릿입니다. 2026-05-18 이전 버전에서는 JWT 서명 비밀이 알려진 문자열 \"random\"으로 하드코딩되어 공용 저장소를 읽는 모든 공격자가 관리자 역할을 포함하여 임의의 사용자에 대한 토큰을 위조하고 모든 보호된 엔드포인트에서 인증을 완전히 우회할 수 있습니다. 이 값은 dev.env 템플릿(10행)과 cmd/serve.go의 프로그래밍 방식 폴백(35행)의 두 위치에서 설정되므로 애플리케이션은 .env 파일이 없는 경우에도 이 값을 사용합니다. auth/jwt/tokenauth.go(22~25행)의 원래 완화는 정확한 문자열 \"random\"만 포착하여 다른 약한 비밀을 통과시키고 이를 지속되지 않는 메모리 내 키로 대체하여 다시 시작할 때마다 모든 토큰을 무효화하고 효과적으로 서비스 거부를 유발합니다. 이 문제는 2026-05-18 버전에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-48031\n2. 26.08.04 오전4:05\n3. go-base is a Go RESTful API Boilerplate template w",
+      "cve_id": "CVE-2026-48031",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48031",
+      "source": "cvefeed",
+      "published": "2026-08-04T04:05:50+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2025-15629 - Weak Session Key Generation in TP-Link Omada Adoption Protocol",
       "summary": "CVE ID :CVE-2025-15629\n  \nPublished : Aug. 3, 2026, 5:50 p.m. | 46 minutes ago\n  \nDescription :A cryptographic\nweakness exists in the Omada adoption protocol where session encryption keys\nused to protect communications between controllers and managed devices may be\npredictable due to insufficient entropy in session key generation.\n\n\n\n\n\n\n\n\n\nAn attacker\nwho successfully intercepts adoption-related communications may be able to recover\nsession encryption keys and decrypt affected communications.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2025-15629\n  \nPublished : Aug. 3, 2026, 5:50 p.m. | 46 minutes ago\n  \nDescription :A cryptographic\nweakness exists in the Omada adoption protocol where session encryption keys\nused to protect communications between controllers and managed devices may be\npredictable due to insufficient entropy in session key generation.\n\n\n\n\n\n\n\n\n\nAn attacker\nwho successfully intercepts adoption-related communications may be able to recover\nsession encryption keys and decrypt affected communications.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2332,21 +2371,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-15414",
       "source": "cvefeed",
       "published": "2026-08-01T12:16:25+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53551 - free5GC AUSF: null byte injection in supiOrSuci causes HTTP 500 internal service failure",
-      "summary": "CVE ID :CVE-2026-53551\n  \nPublished : July 31, 2026, 8:12 p.m. | 15 minutes ago\n  \nDescription :free5GC is an open-source implementation of the 5G core network. Prior to 1.4.5, the free5GC AUSF (Authentication Server Function) does not validate the supiOrSuci field in UE authentication requests. Null bytes (\\x00) and other control characters pass through JSON parsing unchanged and are forwarded to the UDM in an unescaped URL path. This causes Go's net/url.Parse() to fail, returning HTTP 500 \"System failure\" and leaking internal stack traces. An unauthenticated attacker can trigger this at scale causing denial of service for all subscribers attempting authentication through the affected AUSF. This vulnerability is fixed in 1.4.5.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53551\n  \nPublished : July 31, 2026, 8:12 p.m. | 15 minutes ago\n  \nDescription :free5GC is an open-source implementation of the 5G core network. Prior to 1.4.5, the free5GC AUSF (Authentication Server Function) does not validate the supiOrSuci field in UE authentication requests. Null bytes (\\x00) and other control characters pass through JSON parsing unchanged and are forwarded to the UDM in an unescaped URL path. This causes Go's net/url.Parse() to fail, returning HTTP 500 \"System failure\" and leaking internal stack traces. An unauthenticated attacker can trigger this at scale causing denial of service for all subscribers attempting authentication through the affected AUSF. This vulnerability is fixed in 1.4.5.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53551 - free5GC AUSF: supiOrSuci에 널 바이트 삽입으로 인해 HTTP 500 내부 서비스 오류 발생",
-      "summary_ko": "CVE ID:CVE-2026-53551\n  \n게시일 : 2026년 7월 31일 오후 8시 12분 | 15분 전\n  \n설명 :free5GC는 5G 코어 네트워크의 오픈 소스 구현입니다. 1.4.5 이전에는 free5GC AUSF(인증 서버 기능)가 UE 인증 요청에서 supiOrSuci 필드를 검증하지 않았습니다. Null 바이트(\\x00) 및 기타 제어 문자는 변경되지 않고 JSON 구문 분석을 통과하며 이스케이프되지 않은 URL 경로로 UDM으로 전달됩니다. 이로 인해 Go의 net/url.Parse()가 실패하고 HTTP 500 \"시스템 오류\"가 반환되고 내부 스택 추적이 누출됩니다. 인증되지 않은 공격자는 이를 대규모로 트리거하여 영향을 받는 AUSF를 통해 인증을 시도하는 모든 가입자에 대한 서비스 거부를 유발할 수 있습니다. 이 취약점은 1.4.5에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53551\n2. 26.08.01 오전5:12\n3. free5GC is an open-source implementation of the 5G",
-      "cve_id": "CVE-2026-53551",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53551",
-      "source": "cvefeed",
-      "published": "2026-08-01T05:12:57+09:00",
       "lang": "en"
     }
   ],
