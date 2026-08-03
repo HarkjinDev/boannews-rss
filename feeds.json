@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-04T03:32:07.916301+09:00",
+  "fetched_at": "2026-08-04T04:02:17.212395+09:00",
   "security_news": [
+    {
+      "title": "리버뱅크, 랜섬웨어 공격으로 데이터 탈취…\"공격자가 삭제했다고 확인...",
+      "summary": "사이버보안 업계에서는 랜섬웨어 조직이 협상 과정에서 데이터 삭제를 약속하거나 삭제 증거를 제시하는... 이 때문에 많은 보안 전문가들은 공격자의 삭제 약속만으로 정보 유출 위험이 완전히 해소됐다고 판단해서는 안...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 리버뱅크, 랜섬웨어 공격으로 데이터 탈취 확인\n2. 공격자가 데이터 삭제 약속했으나 정보 유출 위험 상존\n3. 보안 전문가, 삭제 약속만으로 위험 해소 판단 경계",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207906",
+      "source": "naver",
+      "published": "2026-08-04T03:46:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "8월 비트코인 변동성 확대 전망",
       "summary": "최근 발생한 '콜드카드' 해킹 사건도 시장 변수로 지목된다. 비트코인 전용 하드웨어 지갑인 '콜드카드' 시스템에서는 최근 취약점 공격으로 최소 3,800만 달러(약 530억원) 규모의 비트코인이 탈취됐다. 현재까지 해킹...",
@@ -1995,6 +2007,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2025-15629 - Weak Session Key Generation in TP-Link Omada Adoption Protocol",
+      "summary": "CVE ID :CVE-2025-15629\n  \nPublished : Aug. 3, 2026, 5:50 p.m. | 46 minutes ago\n  \nDescription :A cryptographic\nweakness exists in the Omada adoption protocol where session encryption keys\nused to protect communications between controllers and managed devices may be\npredictable due to insufficient entropy in session key generation.\n\n\n\n\n\n\n\n\n\nAn attacker\nwho successfully intercepts adoption-related communications may be able to recover\nsession encryption keys and decrypt affected communications.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2025-15629\n  \nPublished : Aug. 3, 2026, 5:50 p.m. | 46 minutes ago\n  \nDescription :A cryptographic\nweakness exists in the Omada adoption protocol where session encryption keys\nused to protect communications between controllers and managed devices may be\npredictable due to insufficient entropy in session key generation.\n\n\n\n\n\n\n\n\n\nAn attacker\nwho successfully intercepts adoption-related communications may be able to recover\nsession encryption keys and decrypt affected communications.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2025-15629\n  \n게시일 : 2026년 8월 3일 오후 5시 50분 | 46분 전\n  \n설명:암호화\n세션 암호화 키가 있는 Omada 채택 프로토콜에 약점이 존재합니다.\n컨트롤러와 관리 장치 간의 통신을 보호하는 데 사용될 수 있습니다.\n세션 키 생성 시 엔트로피가 부족하여 예측 가능합니다.\n\n\n\n\n\n\n\n\n\n공격자\n입양 관련 통신을 성공적으로 차단한 사람은 회복할 수 있습니다.\n세션 암호화 키를 사용하고 영향을 받은 통신의 암호를 해독합니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2025-15629\n2. 26.08.04 오전2:50\n3. A cryptographic weakness exists in the Omada adopt",
+      "cve_id": "CVE-2025-15629",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2025-15629",
+      "source": "cvefeed",
+      "published": "2026-08-04T02:50:44+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-18248 - @fastify/aws-lambda vulnerable to Lambda event spoofing via client-controlled x-apigateway-event header",
       "summary": "CVE ID :CVE-2026-18248\n  \nPublished : Aug. 3, 2026, 3:20 p.m. | 54 minutes ago\n  \nDescription :@fastify/aws-lambda version 6.4.0 decorates each Fastify request with request.awsLambda.event and request.awsLambda.context, values that applications are documented to use for authorization decisions such as reading API Gateway authorizer claims. In the default configuration, the getter that populates this decoration reads the client-controlled x-apigateway-event and x-apigateway-context HTTP headers before falling back to the trusted internal request token, and those reserved headers are not stripped from the incoming event. An unauthenticated attacker who can set a single HTTP header can therefore forge the entire Lambda proxy event, including the authorizer context, and override the genuine one. This results in a full authentication and authorization bypass and privilege escalation for any application that trusts request.awsLambda.event for identity or access control. Only version 6.4.0 is affected. Patches: upgrade to @fastify/aws-lambda 6.4.1, which resolves the decoration only through the internal per-invocation token and strips the reserved headers before the request is processed.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
