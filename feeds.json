@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-04T07:02:37.049946+09:00",
+  "fetched_at": "2026-08-04T07:31:10.845780+09:00",
   "security_news": [
+    {
+      "title": "오일러 상승·비트코인 보합·리플XRP 약세…해킹 부담",
+      "summary": "콜드카드 해킹으로 약 9000만달러 상당의 비트코인이 유출되고 스트래티지가 보유 물량 일부를... ○ 콜드카드 해킹·스트래티지 매각에 경계심 인베스팅닷컴이 전한 8월 3일 미국 시장 흐름에서 비트코인은 미국...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오일러 상승·비트코인 보합·리플XRP 약세…해킹 부담 콜드카드 해킹으로 약 9000만달러 \n2. ○ 콜드카드 해킹·스트래티지 매각에 경계심 인베스팅닷컴이 전한 8월 3일 미국 시장 흐름에",
+      "link": "https://www.topstarnews.net/news/articleView.html?idxno=16154116",
+      "source": "naver",
+      "published": "2026-08-04T07:08:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "북한 배후 해킹 공격이 전세계 절반 이상 차지",
       "summary": "국가가 배후로 있는 전 세계 해킹 사건의 절반 이상을 북한 연계 해킹 조직이 차지하는 등 가장 큰 위협이라고 미국의 글로벌 사이버 보안업체가 밝혔다. 미국의 소리(VOA)에 따르면 보안업체 크라우드스트라이크는...",
@@ -2100,33 +2112,39 @@
       "source": "naver",
       "published": "2026-08-01T08:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "걸리면 비트코인 ‘탈탈’…북한 해커, 맥OS까지 노렸다",
-      "summary": "북한과 연계된 해킹 조직이 애플의 맥(macOS) 운영체제를 겨냥한 악성코드 유포에 나선 것으로 나타났다.... 올시큐어는 이번 사례가 북한 해킹 조직의 공격 범위가 특정 표적을 넘어 일반 인터넷 이용자까지 확대되고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해커, 맥OS 노린 악성코드 유포\n2. 비트코인 탈취 목적, 일반 이용자 대상 공격\n3. 올시큐어, 공격 범위 확대 경고",
-      "link": "https://n.news.naver.com/mnews/article/029/0003040065?sid=101",
-      "source": "naver",
-      "published": "2026-08-01T07:27:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "\"北, 맥OS 겨냥 악성코드공격…걸리면 가산자산 '탈탈'\"",
-      "summary": "VOA, 美보안업체 보고서 인용 보도 북한에 연계된 해킹 조직이 애플 컴퓨터의 운영체제(macOS)를 표적으로 악성코드 유포활동을 벌이고 있는 것으로 파악됐다고 미국의소리(VOA) 방송이 1일 전했다. 미국의 사이버 보안업체...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해킹 조직, macOS 겨냥 악성코드 유포\n2. 가상자산 탈취 목적, 시스템 침투 및 정보 유출\n3. 맥OS 사용자 주의, 백신 프로그램 최신화 필요",
-      "link": "https://n.news.naver.com/mnews/article/001/0016228012?sid=100",
-      "source": "naver",
-      "published": "2026-08-01T07:15:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-69249 - python-cryptography: Duplicate self-signed intermediates can cause exponential path-building",
+      "summary": "CVE ID :CVE-2026-69249\n  \nPublished : Aug. 3, 2026, 9:26 p.m. | 1 hour, 3 minutes ago\n  \nDescription :python-cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to 49.0.0, when resolving invalid certificate chains that include duplicate copies of self-signed certificates, the processing recursively invokes the same candidate, leading to an exponential blowup. Although the limitation that the chain depth cannot exceed a specified maximum depth prevents unbounded recursion and guarantees termination, an attacker-controlled certificate chain can lead the processing to easily take more than 5s to reject in testing. This amplification could form the basis for a resource exhaustion denial of service attack. The core issue arises in the recursive nature of build_chain_inner, which does not de-duplicate against previously analyzed candidates. As the correctness of validation is not affected, the integrity of a system cannot be compromised through this vector, only its availability. This issue is fixed in 49.0.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-69249\n  \nPublished : Aug. 3, 2026, 9:26 p.m. | 1 hour, 3 minutes ago\n  \nDescription :python-cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to 49.0.0, when resolving invalid certificate chains that include duplicate copies of self-signed certificates, the processing recursively invokes the same candidate, leading to an exponential blowup. Although the limitation that the chain depth cannot exceed a specified maximum depth prevents unbounded recursion and guarantees termination, an attacker-controlled certificate chain can lead the processing to easily take more than 5s to reject in testing. This amplification could form the basis for a resource exhaustion denial of service attack. The core issue arises in the recursive nature of build_chain_inner, which does not de-duplicate against previously analyzed candidates. As the correctness of validation is not affected, the integrity of a system cannot be compromised through this vector, only its availability. This issue is fixed in 49.0.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-69249\n  \n게시일 : 2026년 8월 3일 오후 9시 26분 | 1시간, 3분 전\n  \n설명 :python-cryptography는 Python 개발자에게 암호화 기본 요소와 방법을 공개하도록 설계된 패키지입니다. 49.0.0 이전에는 자체 서명된 인증서의 중복 복사본을 포함하는 유효하지 않은 인증서 체인을 해결할 때 처리 과정에서 동일한 후보를 반복적으로 호출하여 기하급수적인 폭발이 발생했습니다. 체인 깊이가 지정된 최대 깊이를 초과할 수 없다는 제한으로 인해 무제한 재귀가 방지되고 종료가 보장되지만, 공격자가 제어하는 ​​인증서 체인으로 인해 처리가 테스트에서 거부되는 데 5초 이상이 쉽게 걸릴 수 있습니다. 이러한 증폭은 리소스 고갈 서비스 거부 공격의 기초를 형성할 수 있습니다. 핵심 문제는 이전에 분석된 후보에 대해 중복을 제거하지 않는 build_chain_inner의 반복적 특성에서 발생합니다. 검증의 정확성은 영향을 받지 않으므로 시스템의 무결성은 이 벡터를 통해 손상될 수 없으며 가용성만 손상될 수 있습니다. 이 문제는 49.0.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-69249\n2. 26.08.04 오전6:26\n3. python-cryptography is a package designed to expos",
+      "cve_id": "CVE-2026-69249",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-69249",
+      "source": "cvefeed",
+      "published": "2026-08-04T06:26:45+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-66065 - Ouroboros: Untrusted project .env can still reach RCE via omitted execution-routing keys (Incomplete fix of CVE-2026-47211)",
+      "summary": "CVE ID :CVE-2026-66065\n  \nPublished : Aug. 3, 2026, 9:16 p.m. | 1 hour, 13 minutes ago\n  \nDescription :Ouroboros is a local-first runtime for AI coding agents that records their actions and applies user-defined policies to constrain behavior. Versions prior to 0.42.1 have an incomplete denylist. Several execution-routing keys of the same RCE class were omitted, so a malicious cloned repo can still reach arbitrary command execution by shipping a .env (auto-loaded at import, with no review step). The CVE-2026-47211 fix added _UNTRUSTED_ENV_DENYLIST to stop an untrusted project-directory .env from redirecting execution, but it did not account for all keys. The backend config-home and MCP/plugin roots bypass the approval gate by pointing the nested agent, MCP servers, and plugin roster at attacker config. Other variables re-enable blocked local transports, replace sub-agent prompts, switch backends, and lower tool approval classes, further weakening the approval gate. This issue has been fixed in version 0.42.1.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-66065\n  \nPublished : Aug. 3, 2026, 9:16 p.m. | 1 hour, 13 minutes ago\n  \nDescription :Ouroboros is a local-first runtime for AI coding agents that records their actions and applies user-defined policies to constrain behavior. Versions prior to 0.42.1 have an incomplete denylist. Several execution-routing keys of the same RCE class were omitted, so a malicious cloned repo can still reach arbitrary command execution by shipping a .env (auto-loaded at import, with no review step). The CVE-2026-47211 fix added _UNTRUSTED_ENV_DENYLIST to stop an untrusted project-directory .env from redirecting execution, but it did not account for all keys. The backend config-home and MCP/plugin roots bypass the approval gate by pointing the nested agent, MCP servers, and plugin roster at attacker config. Other variables re-enable blocked local transports, replace sub-agent prompts, switch backends, and lower tool approval classes, further weakening the approval gate. This issue has been fixed in version 0.42.1.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-66065\n  \n게시일 : 2026년 8월 3일 오후 9시 16분 | 1시간, 13분 전\n  \n설명:Ouroboros는 작업을 기록하고 사용자 정의 정책을 적용하여 동작을 제한하는 AI 코딩 에이전트를 위한 로컬 우선 런타임입니다. 0.42.1 이전 버전에는 불완전한 거부 목록이 있습니다. 동일한 RCE 클래스의 여러 실행 라우팅 키가 생략되었으므로 악의적으로 복제된 저장소는 .env(가져오기 시 자동 로드, 검토 단계 없음)를 전달하여 여전히 임의 명령 실행에 도달할 수 있습니다. CVE-2026-47211 수정 사항은 신뢰할 수 없는 프로젝트 디렉터리 .env의 실행 리디렉션을 중지하기 위해 _UNTRUSTED_ENV_DENYLIST를 추가했지만 모든 키를 고려하지는 않았습니다. 백엔드 config-home 및 MCP/플러그인 루트는 공격자 구성에서 중첩된 에이전트, MCP 서버 및 플러그인 목록을 가리켜 승인 게이트를 우회합니다. 다른 변수는 차단된 로컬 전송을 다시 활성화하고, 하위 에이전트 프롬프트를 교체하고, 백엔드를 전환하고, 도구 승인 등급을 낮추어 승인 게이트를 더욱 약화시킵니다. 이 문제는 버전 0.42.1에서 수정되었습니다.\n  \n심각도: 8.4 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-66065\n2. 26.08.04 오전6:16\n3. Ouroboros is a local-first runtime for AI coding a",
+      "cve_id": "CVE-2026-66065",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-66065",
+      "source": "cvefeed",
+      "published": "2026-08-04T06:16:41+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-69198 - ip-address: a CIDR suffix on the parsed address suppresses special-use classification and can bypass SSRF and trust-boundary checks",
       "summary": "CVE ID :CVE-2026-69198\n  \nPublished : Aug. 3, 2026, 8:17 p.m. | 15 minutes ago\n  \nDescription :ip-address is a library for parsing and manipulating IPv4 and IPv6 addresses in JavaScript. From 10.1.1 until 10.2.2, every special-use classification method is built on isInSubnet, which short-circuits to false whenever the address's own subnet mask is shorter than the reference range's mask. That mask comes verbatim from the CIDR suffix on the parsed input, so appending a suffix such as /0 suppresses classification entirely: isLoopback(), isPrivate(), isLinkLocal(), isCGNAT(), isMulticast(), isUnspecified(), isBroadcast(), isULA(), and getType() all report an internal address as unremarkable, while correctForm() and address still return the real internal target. An application that builds a network trust-boundary decision on these checks, for example a filter intended to block Server-Side Request Forgery, or SSRF, may therefore treat an internal target as external and allow the request. The underlying bit comparison is correct, and mask(n) already returns the first n bits of the full parsed address independently of subnetMask; the defect is solely that the containment guard sits in the classification path. This issue is fixed in version 10.2.2.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
