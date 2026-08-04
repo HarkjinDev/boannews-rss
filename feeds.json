@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-05T05:31:37.004187+09:00",
+  "fetched_at": "2026-08-05T06:02:42.112739+09:00",
   "security_news": [
+    {
+      "title": "쿠팡, 매출 신기록에도 8천350억원 영업손실… 적자 전환",
+      "summary": "유통 플랫폼 기업은 물류, 마케팅, 고객 보상, 정보보안 투자 같은 비용이 실적에 직접 반영되기 때문에... 특히 개인정보 유출 사태 이후 보안 강화와 고객 신뢰 회복에 필요한 지출이 계속될 가능성이 있는 만큼...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 쿠팡, 매출 신기록 달성에도 8,350억 원 영업손실 기록\n2. 개인정보 유출 사태 후 보안 강화 및 고객 신뢰 회복 지출 증가\n3. 물류·마케팅·보상 등 비용 부담으로 적자 전환",
+      "link": "https://www.tokenpost.kr/news/economy/385324",
+      "source": "naver",
+      "published": "2026-08-05T05:54:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "구글 패스키 마스터키, 유출되면 영구 노출…패스-타-키 공격",
       "summary": "트러스티드 플랫폼 모듈(TPM, 기기 내 하드웨어 보안칩)이 탑재된 윈도우 PC에 악성코드가 이미 설치돼... 이는 사용자 계정에 동기화된 모든 패스키를 암호화하는 마스터키, 이른바 보안 도메인 시크릿(Security Domain...",
@@ -2535,6 +2547,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-70480 - Open WebUI: Client-side SSRF via unrestricted external resource loading in Vega/Vega-Lite chart rendering",
+      "summary": "CVE ID :CVE-2026-70480\n  \nPublished : Aug. 4, 2026, 8:16 p.m. | 18 minutes ago\n  \nDescription :Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.6.34 until 0.11.0, Open WebUI renders vega and vega-lite fenced code blocks in chat content by building a Vega view in the viewer browser without a restricted resource loader. Any user who can place such a block where another user will see it can make that user browser issue attacker-chosen outbound GET requests and read responses from same-origin or CORS-permissive targets into the rendered page. This issue is fixed in 0.11.0.\n  \nSeverity: 4.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-70480\n  \nPublished : Aug. 4, 2026, 8:16 p.m. | 18 minutes ago\n  \nDescription :Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.6.34 until 0.11.0, Open WebUI renders vega and vega-lite fenced code blocks in chat content by building a Vega view in the viewer browser without a restricted resource loader. Any user who can place such a block where another user will see it can make that user browser issue attacker-chosen outbound GET requests and read responses from same-origin or CORS-permissive targets into the rendered page. This issue is fixed in 0.11.0.\n  \nSeverity: 4.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-70480 - 개방형 WebUI: Vega/Vega-Lite 차트 렌더링에서 무제한 외부 리소스 로딩을 통한 클라이언트 측 SSRF",
+      "summary_ko": "CVE ID:CVE-2026-70480\n  \n게시일 : 2026년 8월 4일 오후 8시 16분 | 18분 전\n  \n설명 :Open WebUI는 확장 가능하고 기능이 풍부하며 사용자 친화적인 자체 호스팅 AI 플랫폼입니다. 0.6.34부터 0.11.0까지 Open WebUI는 제한된 리소스 로더 없이 뷰어 브라우저에서 Vega 보기를 구축하여 채팅 콘텐츠에서 vega 및 vega-lite 펜스 코드 블록을 렌더링합니다. 다른 사용자가 볼 수 있는 블록을 배치할 수 있는 사용자는 해당 사용자 브라우저가 공격자가 선택한 아웃바운드 GET 요청을 발행하고 동일 출처 또는 CORS 허용 대상의 응답을 렌더링된 페이지로 읽도록 할 수 있습니다. 이 문제는 0.11.0에서 해결되었습니다.\n  \n심각도: 4.1 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-70480\n2. 26.08.05 오전5:16\n3. Open WebUI is an extensible, feature-rich, and use",
+      "cve_id": "CVE-2026-70480",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-70480",
+      "source": "cvefeed",
+      "published": "2026-08-05T05:16:54+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-69254 - Flowise: RCE via NodeVM Sandbox Escape in executeJavaScriptCode() nodeVMOptions Override",
       "summary": "CVE ID :CVE-2026-69254\n  \nPublished : Aug. 4, 2026, 4:16 p.m. | 30 minutes ago\n  \nDescription :Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.3, executeJavaScriptCode() accepted caller-provided nodeVMOptions and merged them over the default NodeVM security settings in packages/components/src/utils.ts. An authenticated attacker reaching packages/server/src/routes/node-custom-functions/index.ts could run a custom function that imported flowise-components/dist/src/utils.js, called executeJavaScriptCode() again with nodeVMOptions.require.builtin set to allow all built-in modules, and then required child_process to execute arbitrary system commands as root on the Flowise server. This issue is fixed in version 3.1.3.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
