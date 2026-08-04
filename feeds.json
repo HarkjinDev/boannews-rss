@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-04T18:01:31.796870+09:00",
+  "fetched_at": "2026-08-04T18:31:23.847342+09:00",
   "security_news": [
+    {
+      "title": "[주간보안동향] ‘국가배후 해킹조직 해킹 주의’…민관 합동 사이버보...",
+      "summary": "국가배후 해킹조직의 해킹 공격 주의…합동 사이버보안 권고문 발표 국가정보원, 경찰청, 한국인터넷진흥원(KISA), 금융보안원과 민관 합동분석협의체(안랩·S2W·엔키화이트햇·플레인비트)가 지난 30일 국가배후...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국가배후 해킹조직, 민관 합동 분석협의체 통해 주의 당부\n2. 국가정보원, 경찰청, KISA, 금융보안원, 안랩 등 협력\n3. 사이버 공격 주의보 발령, 합동 보안 권고문 발표",
+      "link": "https://it.donga.com/109304/",
+      "source": "naver",
+      "published": "2026-08-04T18:18:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[배종찬의 보안 빅데이터] ‘AI 스스로 해킹’하는 시대, 통제 가능한가",
       "summary": "실제로 지난 7월 21일 오픈AI는 자사의 최신 모델 GPT-5.6 솔과 미공개 모델이 내부 사이버보안 평가를 받던 중... 강력한 보안 도구가 되지만 통제를 벗어나면 곧바로 공격자가 된다. 실제로 앤트로픽 역시 지난해 자사 AI...",
@@ -2959,21 +2971,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-18536",
       "source": "cvefeed",
       "published": "2026-08-01T20:16:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-18059 - PixelYourSite <= 11.2.1 - Unauthenticated Sensitive Information Exposure via Order-Received Endpoint Missing Key Validation",
-      "summary": "CVE ID :CVE-2026-18059\n  \nPublished : Aug. 1, 2026, 9:17 a.m. | 43 minutes ago\n  \nDescription :The PixelYourSite – Your smart PIXEL (TAG) & API Manager plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 11.2.1 via the getWooPurchaseEventParams. This makes it possible for unauthenticated attackers to extract WooCommerce purchase metadata — including product names, product IDs, quantities, per-item prices, order totals, currency, and order/transaction IDs — for any existing order by supplying an invalid or arbitrary order key. This is exploitable against any known or enumerated order ID, as the plugin resolves the order from the URL path variable alone and emits the full woo_purchase tracking payload into the page HTML via the pysOptions JavaScript object across its Facebook, Google Analytics, and Google Tag Manager integrations regardless of key validity.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-18059\n  \nPublished : Aug. 1, 2026, 9:17 a.m. | 43 minutes ago\n  \nDescription :The PixelYourSite – Your smart PIXEL (TAG) & API Manager plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 11.2.1 via the getWooPurchaseEventParams. This makes it possible for unauthenticated attackers to extract WooCommerce purchase metadata — including product names, product IDs, quantities, per-item prices, order totals, currency, and order/transaction IDs — for any existing order by supplying an invalid or arbitrary order key. This is exploitable against any known or enumerated order ID, as the plugin resolves the order from the URL path variable alone and emits the full woo_purchase tracking payload into the page HTML via the pysOptions JavaScript object across its Facebook, Google Analytics, and Google Tag Manager integrations regardless of key validity.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-18059 - PixelYourSite <= 11.2.1 - 주문 수신 엔드포인트 누락 키 검증을 통한 인증되지 않은 민감한 정보 노출",
-      "summary_ko": "CVE ID:CVE-2026-18059\n  \n게시일 : 2026년 8월 1일 오전 9시 17분 | 43분 전\n  \n설명:PixelYourSite – WordPress용 스마트 PIXEL(TAG) 및 API 관리자 플러그인은 getWooPurchaseEventParams를 통해 11.2.1까지의 모든 버전에서 민감한 정보 노출에 취약합니다. 이를 통해 인증되지 않은 공격자가 유효하지 않거나 임의의 주문 키를 제공하여 기존 주문에 대해 제품 이름, 제품 ID, 수량, 항목당 가격, 주문 총액, ​​통화 및 주문/거래 ID를 포함한 WooCommerce 구매 메타데이터를 추출할 수 있습니다. 플러그인은 URL 경로 변수만으로 주문을 확인하고 키 유효성에 관계없이 Facebook, Google Analytics 및 Google 태그 관리자 통합 전체에서 pysOptions JavaScript 개체를 통해 전체 woo_purchase 추적 페이로드를 페이지 HTML로 내보내므로 알려진 또는 열거된 주문 ID에 대해 악용할 수 있습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-18059\n2. 26.08.01 오후6:17\n3. The PixelYourSite – Your smart PIXEL (TAG) & API M",
-      "cve_id": "CVE-2026-18059",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18059",
-      "source": "cvefeed",
-      "published": "2026-08-01T18:17:01+09:00",
       "lang": "en"
     }
   ],
