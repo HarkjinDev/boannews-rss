@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-04T23:01:14.054142+09:00",
+  "fetched_at": "2026-08-04T23:30:59.440623+09:00",
   "security_news": [
     {
       "title": "[보안칼럼] 침해사고와 보안 인증",
@@ -2556,21 +2556,24 @@
       "source": "naver",
       "published": "2026-08-01T23:58:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "KAIST, 국내 유일 MS 인공지능 안전성 연구 참여",
-      "summary": "연구팀은 생성형 인공지능을 대상으로 해킹과 개인정보 유출, 프롬프트 조작 등 다양한 공격 방식을 분석하고 이를 막는 기술을 연구하고 있다. 최근에는 인공지능이 인터넷 검색이나 업무를 수행하는 ‘AI...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KAIST, MS와 생성형 AI 보안 연구 참여\n2. AI 해킹, 개인정보 유출, 프롬프트 조작 분석\n3. AI 안전성 확보 위한 기술 연구 진행",
-      "link": "https://www.naeil.com/news/read/597363?ref=naver",
-      "source": "naver",
-      "published": "2026-08-01T23:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-70372 - Koha: SQL Injection in reports/bor_issues_top.pl",
+      "summary": "CVE ID :CVE-2026-70372\n  \nPublished : Aug. 4, 2026, 1:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :Koha's reports/bor_issues_top.pl builds dynamic SQL in sub calculate by concatenating several user-controlled request parameters directly into the query string. The Criteria parameter is only normalized by a table-name prefix and is never whitelisted, landing verbatim in identifier positions (SELECT DISTINCTROW, GROUP BY, ORDER BY); Filter values are concatenated raw into single-quoted LIKE, BETWEEN, and comparison fragments, and the Limit parameter is appended raw to a LIMIT clause. An authenticated staff user holding the reports module permission can inject arbitrary SQL and read any table reachable by the Koha database user, including borrowers (password hashes, two-factor secrets, personal data), api_keys, and sessions.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-70372\n  \nPublished : Aug. 4, 2026, 1:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :Koha's reports/bor_issues_top.pl builds dynamic SQL in sub calculate by concatenating several user-controlled request parameters directly into the query string. The Criteria parameter is only normalized by a table-name prefix and is never whitelisted, landing verbatim in identifier positions (SELECT DISTINCTROW, GROUP BY, ORDER BY); Filter values are concatenated raw into single-quoted LIKE, BETWEEN, and comparison fragments, and the Limit parameter is appended raw to a LIMIT clause. An authenticated staff user holding the reports module permission can inject arbitrary SQL and read any table reachable by the Koha database user, including borrowers (password hashes, two-factor secrets, personal data), api_keys, and sessions.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-70372 - Koha: 보고서/bor_issues_top.pl에 SQL 삽입",
+      "summary_ko": "CVE ID:CVE-2026-70372\n  \n게시일 : 2026년 8월 4일 오후 1시 18분 | 1시간 11분 전\n  \n설명 :Koha의 보고서/bor_issues_top.pl은 여러 사용자 제어 요청 매개변수를 쿼리 문자열에 직접 연결하여 하위 계산에 동적 SQL을 구축합니다. Criteria 매개변수는 테이블 이름 접두사로만 정규화되며 화이트리스트에 포함되지 않으며 식별자 위치(SELECT DISTINCTROW, GROUP BY, ORDER BY)에 그대로 포함됩니다. 필터 값은 작은 따옴표로 묶인 LIKE, BETWEEN 및 비교 조각으로 원시 연결되며 Limit 매개변수는 LIMIT 절에 원시로 추가됩니다. 보고서 모듈 권한을 보유한 인증된 직원 사용자는 임의의 SQL을 삽입하고 차용자(비밀번호 해시, 2단계 비밀, 개인 데이터), api_keys 및 세션을 포함하여 Koha 데이터베이스 사용자가 접근할 수 있는 모든 테이블을 읽을 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-70372\n2. 26.08.04 오후10:18\n3. Koha's reports/bor_issues_top.pl builds dynamic SQ",
+      "cve_id": "CVE-2026-70372",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-70372",
+      "source": "cvefeed",
+      "published": "2026-08-04T22:18:58+09:00",
+      "lang": "en"
+    },
     {
       "title": "Botnet Hunting for Vulnerabilities in Diagnostic Tools, (Tue, Aug 4th)",
       "summary": "This morning, I noticed specific sources \"hunting\" for vulnerabilities in URLs that I haven&#;x26;#;39;t noticed before. All of these URLs appear to be associated with diagnostic tools:\r",
