@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-04T12:03:25.369400+09:00",
+  "fetched_at": "2026-08-04T12:32:12.339897+09:00",
   "security_news": [
+    {
+      "title": "“해킹 표적 된 중소기업 구한다”…경과원, ‘사이버 방화벽’ 구축 지...",
+      "summary": "특히 이미 해킹 등 사이버 침해 피해를 겪은 기업은 기존 수혜 여부와 상관없이 우선 지원 대상에 포함된다. 사업에 선정된 기업은 보안 전문가의 진단을 통해 서버·네트워크 인프라 및 개인정보 관리체계의 허점을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. “해킹 표적 된 중소기업 구한다”…경과원, ‘사이버 방화벽’ 구축 지...\n2. 특히 이미 해킹 등 사이버 침해 피해를 겪은 기업은 기존 수혜 여부와 상관없이 우선 지원 \n3. 사업에 선정된 기업은 보안 전문가의 진단을 통해 서버·네트워크 인프라 및 개인정보 관리체계",
+      "link": "https://www.viva100.com/article/20260804500569",
+      "source": "naver",
+      "published": "2026-08-04T12:08:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "지니언스, 올해 상반기 매출 249억…EDR 분야 성장",
+      "summary": "보안 전문인력이 부족한 기업을 대상으로 제공하는 MDR 서비스 고객도 두 배 이상 증가했다. 해외에서는... 지니언스는 미토스 사례처럼 생성형 인공지능(AI)을 활용한 자율 해킹과 파일리스 랜섬웨어 등 보안 위협이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 지니언스, 올해 상반기 매출 249억…EDR 분야 성장 보안 전문인력이 부족한 기업을 대상\n2. 지니언스는 미토스 사례처럼 생성형 인공지능(AI)을 활용한 자율 해킹과 파일리스 랜섬웨어 ",
+      "link": "https://www.thelec.kr/news/articleView.html?idxno=60506",
+      "source": "naver",
+      "published": "2026-08-04T12:04:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "통신3사, '갤럭시 Z8' 시리즈 사전 개통…폴드8 선호도 '뚜렷'",
       "summary": "폰케어 가입 고객에게는 휴대폰과 태블릿, 워치, 무선이어폰 파손 보장과 피싱·해킹 피해 보상을 제공하며, 폰체인지 서비스는 기존 단말 반납 시 출고가의 최대 50%를 보장한다. 제휴카드 할인과 KT 다이렉트샵 전용...",
@@ -2304,18 +2328,6 @@
       "source": "naver",
       "published": "2026-08-01T13:26:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "한전KDN, 디지털 교육시설 'KDN IT움·IT ON' 환경 개선...\"OS 업그레이드...",
-      "summary": "교육용 PC는 운영체제와 보안 프로그램이 최신 상태로 유지되지 않으면 악성코드 감염이나 개인정보 유출 위험이 높아질 수 있어 공공기관과 교육기관에서는 정기적인 소프트웨어 업데이트와 보안 점검을 권고하고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한전KDN, KDN IT움·IT ON 환경 개선\n2. OS 업그레이드로 악성코드 감염 및 정보 유출 방지\n3. 교육시설 PC 보안 강화로 안전한 학습 환경 조성",
-      "link": "http://www.econonews.co.kr/news/articleView.html?idxno=442193",
-      "source": "naver",
-      "published": "2026-08-01T12:32:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2722,21 +2734,6 @@
       "link": "https://isc.sans.edu/diary/rss/33206",
       "source": "sans_isc",
       "published": "2026-08-01T16:22:32+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-15414 - Subscriptions for WooCommerce <= 2.0.0 - Authenticated (Contributor+) Privilege Escalation via '_wps_plan_user_role' Membership Plan Meta",
-      "summary": "CVE ID :CVE-2026-15414\n  \nPublished : Aug. 1, 2026, 3:16 a.m. | 1 hour, 59 minutes ago\n  \nDescription :The Subscriptions for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.0.0. This is due to the `save_meta_boxes()` function persisting the `_wps_plan_user_role` membership plan meta from `$_POST` without an allowlist that excludes privileged roles — the only validations applied, `sanitize_key()` and `wp_roles()->is_role()`, both accept `'administrator'` as a valid value, and the UI's `disabled` attribute on the role dropdown is a client-side-only control trivially bypassed via DevTools or a direct POST request; additionally, because the `wps_membership_plan` custom post type is registered with `capability_type => 'post'`, any user who can edit posts satisfies the `current_user_can('edit_post', $post_id)` guard in `save_meta_boxes()`. This makes it possible for authenticated attackers, with Contributor-level access and above, to escalate their privileges to Administrator by storing `'administrator'` as the role granted on membership acquisition, which the Pro companion plugin then applies via `add_role()` during membership lifecycle events. Successful exploitation requires the Subscriptions for WooCommerce Pro companion plugin to be active, as it is the component that reads the stored `_wps_plan_user_role` meta via `get_post_meta()` and calls `add_role()` to apply the role during membership lifecycle events.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-15414\n  \nPublished : Aug. 1, 2026, 3:16 a.m. | 1 hour, 59 minutes ago\n  \nDescription :The Subscriptions for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.0.0. This is due to the `save_meta_boxes()` function persisting the `_wps_plan_user_role` membership plan meta from `$_POST` without an allowlist that excludes privileged roles — the only validations applied, `sanitize_key()` and `wp_roles()->is_role()`, both accept `'administrator'` as a valid value, and the UI's `disabled` attribute on the role dropdown is a client-side-only control trivially bypassed via DevTools or a direct POST request; additionally, because the `wps_membership_plan` custom post type is registered with `capability_type => 'post'`, any user who can edit posts satisfies the `current_user_can('edit_post', $post_id)` guard in `save_meta_boxes()`. This makes it possible for authenticated attackers, with Contributor-level access and above, to escalate their privileges to Administrator by storing `'administrator'` as the role granted on membership acquisition, which the Pro companion plugin then applies via `add_role()` during membership lifecycle events. Successful exploitation requires the Subscriptions for WooCommerce Pro companion plugin to be active, as it is the component that reads the stored `_wps_plan_user_role` meta via `get_post_meta()` and calls `add_role()` to apply the role during membership lifecycle events.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-15414 - WooCommerce <= 2.0.0 구독 - '_wps_plan_user_role' 멤버십 계획 메타를 통해 인증된(기여자+) 권한 상승",
-      "summary_ko": "CVE ID:CVE-2026-15414\n  \n게시일 : 2026년 8월 1일 오전 3시 16분 | 1시간 59분 전\n  \n설명 :WordPress용 WooCommerce 구독 플러그인은 2.0.0 이하 버전에서 권한 상승에 취약합니다. 이는 권한 있는 역할을 제외하는 허용 목록 없이 `$_POST`에서 `_wps_plan_user_role` 멤버십 계획 메타를 유지하는 `save_meta_boxes()` 함수 때문입니다. 적용된 유일한 검증인 `sanitize_key()` 및 `wp_roles()->is_role()`는 둘 다 유효한 값으로 `administrator'`를 허용하고 역할에 대한 UI의 `disabled` 속성을 허용합니다. 드롭다운은 DevTools 또는 직접 POST 요청을 통해 간단하게 우회되는 클라이언트측 전용 컨트롤입니다. 또한 `wps_membership_plan` 사용자 정의 게시물 유형은 `capability_type => 'post'`로 등록되므로 게시물을 편집할 수 있는 모든 사용자는 `save_meta_boxes()`의 `current_user_can('edit_post', $post_id)` 가드를 충족합니다. 이를 통해 기여자 수준 이상의 액세스 권한을 가진 인증된 공격자가 멤버십 획득 시 부여된 역할로 '관리자'를 저장하여 관리자에게 자신의 권한을 승격할 수 있으며, Pro 컴패니언 플러그인은 멤버십 수명 주기 이벤트 중에 'add_role()'을 통해 이를 적용합니다. 성공적으로 활용하려면 WooCommerce Pro 구독 플러그인이 활성화되어 있어야 합니다. 이는 `get_post_meta()`를 통해 저장된 `_wps_plan_user_role` 메타를 읽고 `add_role()`을 호출하여 멤버십 수명 주기 이벤트 중에 역할을 적용하는 구성 요소이기 때문입니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-15414\n2. 26.08.01 오후12:16\n3. The Subscriptions for WooCommerce plugin for WordP",
-      "cve_id": "CVE-2026-15414",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15414",
-      "source": "cvefeed",
-      "published": "2026-08-01T12:16:25+09:00",
       "lang": "en"
     }
   ],
