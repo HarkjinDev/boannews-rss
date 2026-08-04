@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-04T17:01:07.203665+09:00",
+  "fetched_at": "2026-08-04T17:31:20.480475+09:00",
   "security_news": [
+    {
+      "title": "두배로 키운 2차 '모두의창업' 이달 시행…\"국가창업열풍 지속\"",
+      "summary": "2차는 1차에서 발생한 개인정보 유출 사고와 관련해 보안체계를 전면 개편하고, 1라운드에서부터 대학·청소년·소셜·글로벌 등 리그를 나눠 창업자를 모집하는 것이 특징이다. 1라운드 선발 규모도 1만명으로 1차보다 두...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. '모두의창업' 2차 시행, 1만명 모집\n2. 1차 개인정보 유출 사고 후 보안체계 개편\n3. 대학, 청소년 등 리그 나눠 창업자 모집",
+      "link": "https://n.news.naver.com/mnews/article/008/0005395593?sid=101",
+      "source": "naver",
+      "published": "2026-08-04T17:25:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "北, 'IT 자금줄' 겨눈 11개국에 \"사이버 위협은 美\" 반발",
+      "summary": "미국의소리(VOA)가 지난달 3일 보도한 TRM랩스 보고서에 따르면 올해 상반기 북한 연계 해킹조직이 빼낸... 안랩 시큐리티 인렐리전스 센터(ASEC)는 지난 1월 북한 해킹조직 ‘페이머스 천리마’가 가짜 원격근무 채용 공고를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한, 올해 상반기 11개국서 10억 달러 상당 암호화폐 빼돌려\n2. 페이머스 천리마, 가짜 채용 공고 통해 원격 근무자 사칭\n3. 사이버 위협 배후에 미국 있다며 반발",
+      "link": "https://n.news.naver.com/mnews/article/629/0000521717?sid=100",
+      "source": "naver",
+      "published": "2026-08-04T17:21:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "박창훈 신한카드 대표 \"나, 떨고 있나?\"...임기 앞두고 정보유출 제재 촉...",
       "summary": "이번 사건은 외부 해킹으로 고객정보가 유출된 롯데카드 사고와 성격이 다르다. 외부 공격이 아니라 내부 직원의 정보 제공 행위가 약 3년간 이어졌고, 회사의 자체 감사나 점검이 아닌 공익제보를 통해 드러났기 때문이다....",
@@ -2475,6 +2499,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-64565 - Input: ims-pcu - fix heap-buffer-overflow in ims_pcu_process_data()",
+      "summary": "CVE ID :CVE-2026-64565\n  \nPublished : Aug. 4, 2026, 7:16 a.m. | 58 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nInput: ims-pcu - fix heap-buffer-overflow in ims_pcu_process_data()\n\nThe `ims_pcu_process_data()` processes incoming URB data byte by byte.\nHowever, it fails to check if the `read_pos` index exceeds\nIMS_PCU_BUF_SIZE.\n\nIf a malicious USB device sends a packet larger than IMS_PCU_BUF_SIZE,\n`read_pos` will increment indefinitely. Moreover, since `read_pos` is\nlocated immediately after `read_buf`, the attacker can overwrite\n`read_pos` itself to arbitrarily control the index.\n\nThis manipulated `read_pos` is subsequently used in\n`ims_pcu_handle_response()` to copy data into `cmd_buf`, leading to a\nheap buffer overflow.\n\nSpecifically, an attacker can overwrite the `cmd_done.wait.head` located\nat offset 136 relative to `cmd_buf` in the `ims_pcu_handle_response()`.\nConsequently, when the driver calls `complete(&pcu->cmd_done)`, it\ntriggers a control flow hijack by using the manipulated pointer.\n\nFix this by adding a bounds check for `read_pos` before writing to\n`read_buf`. If the packet is too long, discard it, log a warning,\nand reset the parser state.\n\n[dtor: factor out resetting packet state, reset checksum as well]\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-64565\n  \nPublished : Aug. 4, 2026, 7:16 a.m. | 58 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nInput: ims-pcu - fix heap-buffer-overflow in ims_pcu_process_data()\n\nThe `ims_pcu_process_data()` processes incoming URB data byte by byte.\nHowever, it fails to check if the `read_pos` index exceeds\nIMS_PCU_BUF_SIZE.\n\nIf a malicious USB device sends a packet larger than IMS_PCU_BUF_SIZE,\n`read_pos` will increment indefinitely. Moreover, since `read_pos` is\nlocated immediately after `read_buf`, the attacker can overwrite\n`read_pos` itself to arbitrarily control the index.\n\nThis manipulated `read_pos` is subsequently used in\n`ims_pcu_handle_response()` to copy data into `cmd_buf`, leading to a\nheap buffer overflow.\n\nSpecifically, an attacker can overwrite the `cmd_done.wait.head` located\nat offset 136 relative to `cmd_buf` in the `ims_pcu_handle_response()`.\nConsequently, when the driver calls `complete(&pcu->cmd_done)`, it\ntriggers a control flow hijack by using the manipulated pointer.\n\nFix this by adding a bounds check for `read_pos` before writing to\n`read_buf`. If the packet is too long, discard it, log a warning,\nand reset the parser state.\n\n[dtor: factor out resetting packet state, reset checksum as well]\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-64565 - 입력: ims-pcu - ims_pcu_process_data()의 힙 버퍼 오버플로 수정",
+      "summary_ko": "CVE ID:CVE-2026-64565\n  \n게시일 : 2026년 8월 4일 오전 7시 16분 | 58분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\n입력: ims-pcu - ims_pcu_process_data()의 힙 버퍼 오버플로 수정\n\n`ims_pcu_process_data()`는 들어오는 URB 데이터를 바이트 단위로 처리합니다.\n그러나 `read_pos` 인덱스가 초과하는지 확인하지 못합니다.\nIMS_PCU_BUF_SIZE.\n\n악성 USB 장치가 IMS_PCU_BUF_SIZE보다 큰 패킷을 보내는 경우,\n`read_pos`는 무한정 증가합니다. 게다가 `read_pos`는\n'read_buf' 바로 뒤에 위치하므로 공격자가 덮어쓸 수 있습니다.\n`read_pos` 자체로 인덱스를 임의로 제어할 수 있습니다.\n\n이 조작된 `read_pos`는 이후에 사용됩니다.\n`ims_pcu_handle_response()`는 데이터를 `cmd_buf`에 복사하여\n힙 버퍼 오버플로.\n\n특히, 공격자는 위치한 `cmd_done.wait.head`를 덮어쓸 수 있습니다.\n`ims_pcu_handle_response()`의 `cmd_buf`를 기준으로 오프셋 136에 있습니다.\n결과적으로 드라이버가 `complete(&pcu->cmd_done)`을 호출하면\n조작된 포인터를 사용하여 제어 흐름 하이재킹을 트리거합니다.\n\n쓰기 전에 `read_pos`에 대한 경계 검사를 추가하여 이 문제를 해결하세요.\n'read_buf'. 패킷이 너무 길면 폐기하고 경고를 기록합니다.\n파서 상태를 재설정합니다.\n\n[dtor: 패킷 상태 재설정을 제외하고 체크섬도 재설정]\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-64565\n2. 26.08.04 오후4:16\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-64565",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64565",
+      "source": "cvefeed",
+      "published": "2026-08-04T16:16:31+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-64563 - rhashtable: clear stale iter->p on table restart",
+      "summary": "CVE ID :CVE-2026-64563\n  \nPublished : Aug. 4, 2026, 7:16 a.m. | 58 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nrhashtable: clear stale iter->p on table restart\n\nrhashtable_walk_start_check() has two restart paths when resuming a walk.\nWhen iter->walker.tbl is valid, it re-validates iter->p against the table\nand sets iter->p = NULL if the object is gone.  When iter->walker.tbl is\nNULL (table was freed during resize), it resets slot and skip but forgets\nto clear iter->p.\n\nrhashtable_walk_next() then dereferences the stale iter->p, reading\nfreed memory.  This is a use-after-free.\n\nAny caller that does multi-fragment rhashtable walks across\nwalk_stop/walk_start boundaries is affected.  Concrete cases include\nnetlink_diag (__netlink_diag_dump in net/netlink/diag.c) and TIPC\n(tipc_nl_sk_walk in net/tipc/socket.c).\n\nCrash stack (netlink_diag):\n  BUG: KASAN: slab-use-after-free in rhashtable_walk_next+0x365/0x3c0\n  Read of size 8 at addr ffff88801a9d2438 (freed kmalloc-2k, offset 1080)\n  Call Trace:\n   rhashtable_walk_next+0x365/0x3c0 (lib/rhashtable.c:1016)\n   __netlink_diag_dump+0x160/0x760 (net/netlink/diag.c:122)\n   netlink_diag_dump+0xc2/0x240\n   netlink_dump+0x5bc/0x1270\n   netlink_recvmsg+0x7a3/0x980\n   sock_recvmsg+0x1bc/0x200\n   __sys_recvfrom+0x1d4/0x2c0\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-64563\n  \nPublished : Aug. 4, 2026, 7:16 a.m. | 58 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nrhashtable: clear stale iter->p on table restart\n\nrhashtable_walk_start_check() has two restart paths when resuming a walk.\nWhen iter->walker.tbl is valid, it re-validates iter->p against the table\nand sets iter->p = NULL if the object is gone.  When iter->walker.tbl is\nNULL (table was freed during resize), it resets slot and skip but forgets\nto clear iter->p.\n\nrhashtable_walk_next() then dereferences the stale iter->p, reading\nfreed memory.  This is a use-after-free.\n\nAny caller that does multi-fragment rhashtable walks across\nwalk_stop/walk_start boundaries is affected.  Concrete cases include\nnetlink_diag (__netlink_diag_dump in net/netlink/diag.c) and TIPC\n(tipc_nl_sk_walk in net/tipc/socket.c).\n\nCrash stack (netlink_diag):\n  BUG: KASAN: slab-use-after-free in rhashtable_walk_next+0x365/0x3c0\n  Read of size 8 at addr ffff88801a9d2438 (freed kmalloc-2k, offset 1080)\n  Call Trace:\n   rhashtable_walk_next+0x365/0x3c0 (lib/rhashtable.c:1016)\n   __netlink_diag_dump+0x160/0x760 (net/netlink/diag.c:122)\n   netlink_diag_dump+0xc2/0x240\n   netlink_dump+0x5bc/0x1270\n   netlink_recvmsg+0x7a3/0x980\n   sock_recvmsg+0x1bc/0x200\n   __sys_recvfrom+0x1d4/0x2c0\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-64563 - rhashtable: 테이블 재시작 시 오래된 iter->p 지우기",
+      "summary_ko": "CVE ID:CVE-2026-64563\n  \n게시일 : 2026년 8월 4일 오전 7시 16분 | 58분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nrhashtable: 테이블 재시작 시 오래된 iter->p 지우기\n\nrhashtable_walk_start_check()에는 걷기를 재개할 때 두 개의 다시 시작 경로가 있습니다.\niter->walker.tbl이 유효하면 테이블에 대해 iter->p를 다시 검증합니다.\n객체가 사라지면 iter->p = NULL로 설정됩니다.  iter->walker.tbl이 있을 때\nNULL(크기 조정 중에 테이블이 해제됨), 슬롯을 재설정하고 건너뛰지만 잊어버립니다.\niter->p를 지우려면\n\nrhashtable_walk_next()는 오래된 iter->p를 역참조하여 읽습니다.\n해제된 메모리.  사용 후 무료입니다.\n\n다중 조각 래쉬테이블을 수행하는 모든 호출자는 건너뜁니다.\nwalk_stop/walk_start 경계가 영향을 받습니다.  구체적인 사례는 다음과 같습니다\nnetlink_diag(net/netlink/diag.c의 __netlink_diag_dump) 및 TIPC\n(net/tipc/socket.c의tipc_nl_sk_walk)\n\n충돌 스택(netlink_diag):\n  버그: KASAN: rhashtable_walk_next+0x365/0x3c0에서 slab-use-after-free\n  주소 ffff88801a9d2438에서 크기 8 읽기(해제된 kmalloc-2k, 오프셋 1080)\n  통화 추적:\n   rhashtable_walk_next+0x365/0x3c0 (lib/rhashtable.c:1016)\n   __netlink_diag_dump+0x160/0x760 (net/netlink/diag.c:122)\n   netlink_diag_dump+0xc2/0x240\n   netlink_dump+0x5bc/0x1270\n   netlink_recvmsg+0x7a3/0x980\n   sock_recvmsg+0x1bc/0x200\n   __sys_recvfrom+0x1d4/0x2c0\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-64563\n2. 26.08.04 오후4:16\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-64563",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64563",
+      "source": "cvefeed",
+      "published": "2026-08-04T16:16:31+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-16035 - miniOrange 2FA < 6.2.7 - Subscriber+ Arbitrary-Recipient OTP Send",
+      "summary": "CVE ID :CVE-2026-16035\n  \nPublished : Aug. 4, 2026, 7:16 a.m. | 58 minutes ago\n  \nDescription :The miniOrange 2FA  WordPress plugin before 6.2.7 does not restrict who can trigger its second-factor configuration OTP send, nor bind the OTP recipient to the enrolling user's own address, allowing a low-privileged user to send one-time-passcode emails to arbitrary recipients and to exhaust the site's metered OTP allowance, preventing legitimate users from receiving their second-factor codes.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-16035\n  \nPublished : Aug. 4, 2026, 7:16 a.m. | 58 minutes ago\n  \nDescription :The miniOrange 2FA  WordPress plugin before 6.2.7 does not restrict who can trigger its second-factor configuration OTP send, nor bind the OTP recipient to the enrolling user's own address, allowing a low-privileged user to send one-time-passcode emails to arbitrary recipients and to exhaust the site's metered OTP allowance, preventing legitimate users from receiving their second-factor codes.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-16035 - miniOrange 2FA < 6.2.7 - 구독자+ 임의-수신자 OTP 전송",
+      "summary_ko": "CVE ID:CVE-2026-16035\n  \n게시일 : 2026년 8월 4일 오전 7시 16분 | 58분 전\n  \n설명:6.2.7 이전의 miniOrange 2FA WordPress 플러그인은 2단계 구성 OTP 전송을 실행할 수 있는 사람을 제한하지 않으며, OTP 수신자를 등록 사용자의 자신의 주소에 바인딩하지 않습니다. 따라서 권한이 낮은 사용자가 임의의 수신자에게 일회용 비밀번호 이메일을 보내고 사이트의 계량된 OTP 허용량을 소진하여 합법적인 사용자가 2단계 코드를 수신하지 못하도록 할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-16035\n2. 26.08.04 오후4:16\n3. The miniOrange 2FA WordPress plugin before 6.2.7 d",
+      "cve_id": "CVE-2026-16035",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-16035",
+      "source": "cvefeed",
+      "published": "2026-08-04T16:16:29+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-11835 - Caliptra Update-Reset Secure-Boot Bypass via Attacker-Chosen AXI Staging Address (TOCTOU)",
       "summary": "CVE ID :CVE-2026-11835\n  \nPublished : Aug. 4, 2026, 12:03 a.m. | 29 minutes ago\n  \nDescription :Time-of-check time-of-use (TOCTOU) vulnerability combined with missing input validation in Caliptra Core ROM (UpdateResetFlow::run()) in subsystem mode allows a compromised local attacker to silently bypass secure boot by supplying an AXI staging address that is not validated against the strap-configured SS_EXTERNAL_STAGING_AREA_BASE_ADDR, enabling firmware to be modified between verification and loading into ICCM. Attestation continues to report the originally verified image digest, masking the compromise. Exploitation requires a compromised MCU firmware with AXI manager access to unprotected SRAM reachable by Caliptra.\n\nThis issue affects Core ROM: 2.1.0 through 2.1.1.\n  \nSeverity: 5.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
