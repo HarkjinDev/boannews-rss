@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-04T21:31:19.268018+09:00",
+  "fetched_at": "2026-08-04T22:01:18.292637+09:00",
   "security_news": [
+    {
+      "title": "해킹이 바꾼 통신사 미래…LGU+, 보안 M&A 참전",
+      "summary": "사진=연합뉴스  사이버 공격이 기업의 존폐를 좌우하는 시대가 되면서 통신사들의 경쟁 무대도... 사이버보안 분야에서는 다양한 보안기업들과 협력하는 동시에 보안 전략 수립부터 시스템 보호, 침해사고 대응까지...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 해킹이 바꾼 통신사 미래…LGU+, 보안 M&A 참전 사진=연합뉴스 사이버 공격이 기업의 \n2. 사이버보안 분야에서는 다양한 보안기업들과 협력하는 동시에 보안 전략 수립부터 시스템 보호,",
+      "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=314254",
+      "source": "naver",
+      "published": "2026-08-04T21:56:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "채용 제안 첨부 파일 클릭만 해도 해킹",
       "summary": "북한 등 국가의 지원을 받는 것으로 알려진 해킹조직이 국민들의 사용 빈도가 높은 웹사이트 등을 악용해 해킹 공격을 시도하고 있어 주의가 요구된다. 경찰청과 국가정보원, 한국인터넷진흥원, 금융보안원 등은 최근 합동...",
@@ -2571,6 +2583,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "Botnet Hunting for Vulnerabilities in Diagnostic Tools, (Tue, Aug 4th)",
+      "summary": "This morning, I noticed specific sources \"hunting\" for vulnerabilities in URLs that I haven&#;x26;#;39;t noticed before. All of these URLs appear to be associated with diagnostic tools:\r",
+      "description": "This morning, I noticed specific sources \"hunting\" for vulnerabilities in URLs that I haven&#;x26;#;39;t noticed before. All of these URLs appear to be associated with diagnostic tools:\r",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "오늘 아침, 저는 이전에 알아차리지 못했던 URL의 취약점을 \"사냥\"하는 특정 소스를 발견했습니다. 다음 URL은 모두 진단 도구와 연결된 것으로 보입니다.",
+      "summary_3lines": "1. Botnet Hunting for Vulnerabilities in Diagnostic T\n2. SANS_ISC\n3. This morning, I noticed specific sources \"hunting\"",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33214",
+      "source": "sans_isc",
+      "published": "2026-08-04T21:46:19+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-66884 - Oidcc.Plug.AuthorizationCallback accepts callbacks with no authorize session or no state parameter, defeating CSRF protection",
+      "summary": "CVE ID :CVE-2026-66884\n  \nPublished : Aug. 4, 2026, 12:16 p.m. | 13 minutes ago\n  \nDescription :Cross-Site Request Forgery vulnerability in Erlang Ecosystem Foundation oidcc_plug (Oidcc.Plug.AuthorizationCallback module) allows an attacker to make a victim's browser complete an authorization flow the victim never initiated.\n\nThis vulnerability is associated with program file lib/oidcc/plug/authorization_callback.ex and program routine Oidcc.Plug.AuthorizationCallback.call/2.\n\nA callback request that carries no Oidcc.Plug.Authorize session is processed with every security check disabled rather than being rejected. call/2 substitutes permissive defaults for the absent session, and each downstream check treats its value as nothing to compare and returns :ok, so the nonce, state, PKCE, peer IP and user agent checks are all skipped. A separate clause of check_state/2 also accepts a state-less request when a verifier is present.\n\nAn attacker obtains an authorization code for their own provider account, then induces the victim to visit the callback endpoint with that code and no state parameter. The application signs the victim in as the attacker, so the victim's subsequent actions occur in the attacker's account where the attacker can read them. Applications reusing one callback for both signing in and linking a provider account are further exposed to account takeover, the attacker's account becoming linked to the victim's.\n\nThe permissive fallback serves no conforming flow. Third-party-initiated login reaches a relying party at a separate login initiation endpoint and causes it to send a fresh authentication request, and this library implements no such endpoint. Oidcc.Plug.Authorize always sends a state parameter, which an authorization server must echo, so no legitimate callback lacks one.\n\nThis issue affects oidcc_plug: from 0.2.0-beta.1 before 0.5.0.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-66884\n  \nPublished : Aug. 4, 2026, 12:16 p.m. | 13 minutes ago\n  \nDescription :Cross-Site Request Forgery vulnerability in Erlang Ecosystem Foundation oidcc_plug (Oidcc.Plug.AuthorizationCallback module) allows an attacker to make a victim's browser complete an authorization flow the victim never initiated.\n\nThis vulnerability is associated with program file lib/oidcc/plug/authorization_callback.ex and program routine Oidcc.Plug.AuthorizationCallback.call/2.\n\nA callback request that carries no Oidcc.Plug.Authorize session is processed with every security check disabled rather than being rejected. call/2 substitutes permissive defaults for the absent session, and each downstream check treats its value as nothing to compare and returns :ok, so the nonce, state, PKCE, peer IP and user agent checks are all skipped. A separate clause of check_state/2 also accepts a state-less request when a verifier is present.\n\nAn attacker obtains an authorization code for their own provider account, then induces the victim to visit the callback endpoint with that code and no state parameter. The application signs the victim in as the attacker, so the victim's subsequent actions occur in the attacker's account where the attacker can read them. Applications reusing one callback for both signing in and linking a provider account are further exposed to account takeover, the attacker's account becoming linked to the victim's.\n\nThe permissive fallback serves no conforming flow. Third-party-initiated login reaches a relying party at a separate login initiation endpoint and causes it to send a fresh authentication request, and this library implements no such endpoint. Oidcc.Plug.Authorize always sends a state parameter, which an authorization server must echo, so no legitimate callback lacks one.\n\nThis issue affects oidcc_plug: from 0.2.0-beta.1 before 0.5.0.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-66884 - Oidcc.Plug.AuthorizationCallback은 승인 세션이나 상태 매개변수가 없는 콜백을 허용하여 CSRF 보호를 무력화합니다.",
+      "summary_ko": "CVE ID:CVE-2026-66884\n  \n게시일 : 2026년 8월 4일 오후 12시 16분 | 13분 전\n  \n설명: Erlang Ecosystem Foundation oidcc_plug(Oidcc.Plug.AuthorizationCallback 모듈)의 교차 사이트 요청 위조 취약성으로 인해 공격자는 피해자의 브라우저가 피해자가 시작하지 않은 인증 흐름을 완료하도록 할 수 있습니다.\n\n이 취약점은 프로그램 파일 lib/oidcc/plug/authorization_callback.ex 및 프로그램 루틴 Oidcc.Plug.AuthorizationCallback.call/2와 연관되어 있습니다.\n\nOidcc.Plug.Authorize 세션이 없는 콜백 요청은 거부되지 않고 모든 보안 검사가 비활성화된 상태로 처리됩니다. call/2는 부재 세션에 대한 허용 기본값을 대체하고 각 다운스트림 검사는 해당 값을 비교할 값이 아닌 것으로 간주하고 :ok를 반환하므로 nonce, 상태, PKCE, 피어 IP 및 사용자 에이전트 검사는 모두 건너뜁니다. check_state/2의 별도 절은 검증자가 있는 경우 상태 없는 요청도 허용합니다.\n\n공격자는 자신의 공급자 계정에 대한 인증 코드를 얻은 다음 피해자가 상태 매개변수 없이 해당 코드를 사용하여 콜백 엔드포인트를 방문하도록 유도합니다. 애플리케이션은 피해자를 공격자로 로그인하므로 피해자의 후속 작업은 공격자가 읽을 수 있는 공격자의 계정에서 발생합니다. 로그인 및 공급자 계정 연결에 하나의 콜백을 재사용하는 애플리케이션은 계정 탈취에 더욱 노출되어 공격자의 계정이 피해자의 계정에 연결됩니다.\n\n허용적 대체는 적합한 흐름을 제공하지 않습니다. 제3자 시작 로그인은 별도의 로그인 시작 끝점에서 신뢰 당사자에게 도달하여 새로운 인증 요청을 보내게 하며, 이 라이브러리는 그러한 끝점을 구현하지 않습니다. Oidcc.Plug.Authorize는 항상 인증 서버가 반영해야 하는 상태 매개변수를 전송하므로 합법적인 콜백에는 매개변수가 부족하지 않습니다.\n\n이 문제는 oidcc_plug에 영향을 미칩니다: 0.2.0-beta.1부터 0.5.0까지.\n  \n심각도: 2.1 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-66884\n2. 26.08.04 오후9:16\n3. Cross-Site Request Forgery vulnerability in Erlang",
+      "cve_id": "CVE-2026-66884",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-66884",
+      "source": "cvefeed",
+      "published": "2026-08-04T21:16:36+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-10050 - Digest authentication lossy encoding",
+      "summary": "CVE ID :CVE-2026-10050\n  \nPublished : Aug. 4, 2026, 11:22 a.m. | 1 hour, 7 minutes ago\n  \nDescription :In Eclipse Jetty, the Digest authentication server-side component uses ISO-8859-1 to encode the password as bytes.\n\n\n\nThis was done because the initial specification for HTTP did not specify explicitly a charset, and it was assumed to be ISO-8859-1 for historical reasons.\n\n\n\nIf the password contains characters that cannot be represented in ISO-8859-1, they are silently replaced by `?`. This happens with passwords that contain Chinese, Cyrillic or Greek characters, for example: `αβ123` converts to `??123`.\n\n\n\nAn attacker can send a request with a digest `Authorization` header crafted with a password made of only `?` characters; the server would match any password of the same length that contains non-ISO-8859-1 characters.\n\n\n\nRecent HTTP Digest [RFC-7616](https://datatracker.ietf.org/doc/html/rfc7616) supports a `charset` parameters that defaults to UTF-8 that allows for correct encoding/decoding of passwords.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10050\n  \nPublished : Aug. 4, 2026, 11:22 a.m. | 1 hour, 7 minutes ago\n  \nDescription :In Eclipse Jetty, the Digest authentication server-side component uses ISO-8859-1 to encode the password as bytes.\n\n\n\nThis was done because the initial specification for HTTP did not specify explicitly a charset, and it was assumed to be ISO-8859-1 for historical reasons.\n\n\n\nIf the password contains characters that cannot be represented in ISO-8859-1, they are silently replaced by `?`. This happens with passwords that contain Chinese, Cyrillic or Greek characters, for example: `αβ123` converts to `??123`.\n\n\n\nAn attacker can send a request with a digest `Authorization` header crafted with a password made of only `?` characters; the server would match any password of the same length that contains non-ISO-8859-1 characters.\n\n\n\nRecent HTTP Digest [RFC-7616](https://datatracker.ietf.org/doc/html/rfc7616) supports a `charset` parameters that defaults to UTF-8 that allows for correct encoding/decoding of passwords.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10050 - 다이제스트 인증 손실 인코딩",
+      "summary_ko": "CVE ID:CVE-2026-10050\n  \n게시일 : 2026년 8월 4일 오전 11시 22분 | 1시간, 7분 전\n  \n설명:Eclipse Jetty에서 다이제스트 인증 서버 측 구성 요소는 ISO-8859-1을 사용하여 비밀번호를 바이트로 인코딩합니다.\n\n\n\n이는 HTTP의 초기 사양이 문자 세트를 명시적으로 지정하지 않았고 역사적인 이유로 ISO-8859-1로 간주되었기 때문에 수행되었습니다.\n\n\n\n비밀번호에 ISO-8859-1에서 표시할 수 없는 문자가 포함되어 있으면 해당 문자는 자동으로 `?`로 대체됩니다. 이는 중국어, 키릴 문자 또는 그리스 문자가 포함된 비밀번호에서 발생합니다. 예를 들어 `αβ123`은 `??123`으로 변환됩니다.\n\n\n\n공격자는 `?` 문자로만 구성된 비밀번호로 만들어진 다이제스트 `Authorization` 헤더를 사용하여 요청을 보낼 수 있습니다. 서버는 ISO-8859-1이 아닌 문자를 포함하는 동일한 길이의 모든 비밀번호와 일치합니다.\n\n\n\n최근 HTTP 다이제스트[RFC-7616](https://datatracker.ietf.org/doc/html/rfc7616)는 비밀번호의 올바른 인코딩/디코딩을 허용하는 UTF-8을 기본값으로 하는 `charset` 매개변수를 지원합니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10050\n2. 26.08.04 오후8:22\n3. In Eclipse Jetty, the Digest authentication server",
+      "cve_id": "CVE-2026-10050",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10050",
+      "source": "cvefeed",
+      "published": "2026-08-04T20:22:43+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-64564 - sctp: don't free the ASCONF's own transport in DEL-IP processing",
       "summary": "CVE ID :CVE-2026-64564\n  \nPublished : Aug. 4, 2026, 7:16 a.m. | 1 hour, 13 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nsctp: don't free the ASCONF's own transport in DEL-IP processing\n\nsctp_process_asconf() caches the transport the ASCONF chunk is processed\nagainst in asconf->transport (== chunk->transport, set once in sctp_rcv()).\nFor an ASCONF located through its Address Parameter by\n__sctp_rcv_asconf_lookup(), that cached transport corresponds to the\nAddress Parameter, which need not be the packet's source address.\n\nsctp_process_asconf_param() rejects a DEL-IP for the packet source address\n(ADDIP D8, SCTP_ERROR_DEL_SRC_IP), but nothing protects asconf->transport.\nA single ASCONF can therefore carry, in order:\n\n    [Address Parameter L] [DEL-IP L] [DEL-IP 0.0.0.0]\n\nwhere L differs from the source. The DEL-IP for L passes the D8 check and\ncalls sctp_assoc_rm_peer() on the transport that asconf->transport still\npoints at, freeing it (RCU-deferred). The following wildcard DEL-IP then\nreuses the now-dangling asconf->transport in sctp_assoc_set_primary() and\nsctp_assoc_del_nonprimary_peers(): set_primary() dereferences the freed\ntransport (->ipaddr, ->state) and plants the dangling pointer into\nasoc->peer.primary_path / active_path, and del_nonprimary_peers(), keeping\nonly the pointer that is no longer on the list, removes every real\ntransport, leaving the association with a transport_count of 0 and\nprimary_path/active_path pointing at freed memory.\n\nReject a DEL-IP that targets the transport the ASCONF is being processed\nagainst, mirroring the existing source-address guard, so the wildcard\nbranch can never reuse a freed transport.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
