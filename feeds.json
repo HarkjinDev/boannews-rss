@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-06T06:01:08.363836+09:00",
+  "fetched_at": "2026-08-06T06:31:21.575367+09:00",
   "security_news": [
     {
       "title": "[사설] 뒤늦은 경찰 스타벅스 압색, 대체 무엇을 얻으려는 것인가",
@@ -2940,33 +2940,24 @@
       "source": "naver",
       "published": "2026-08-03T06:42:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "해킹된 호텔 와이파이로 악성코드 유포…카메라·마이크·키보드까지 해...",
-      "summary": "이 조직을 러시아계 해킹 그룹 '미드나이트 블리자드'의 작전 하위 조직으로 평가했다. 미드나이트 블리자드는 APT29, 코지 베어 등으로도 불린다. 미국과 영국 정부는 APT29를 러시아 대외정보국과 연계된 사이버 스파이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 러시아계 해킹 그룹 '미드나이트 블리자드'가 호텔 와이파이 노렸다.\n2. 호텔 와이파이 해킹 후 카메라, 마이크, 키로거 악성코드 유포.\n3. APT29(코지 베어)로도 불리는 이 조직은 러시아 대외정보국 연계.",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207885",
-      "source": "naver",
-      "published": "2026-08-03T06:22:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "개인정보 털려도 보상은 ‘복불복’…과징금은 국고로, 피해자는 각자도...",
-      "summary": "해킹과 개인정보 유출 사고가 반복되고 있지만 피해자에게 제공되는 통지와 보상은 기관·기업마다... 해킹에 따른 정보 유출을 이유로 금융회사에 업무정지 처분을 내린 것은 이번이 처음이다. 개인정보보호위원회도...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 개인정보 유출, 보상 복불복…과징금은 국고 귀속\n2. 금융회사 업무정지 첫 사례, 개인정보보호위 조사\n3. 피해자, 각자 소송 등 구제 노력 필요",
-      "link": "https://www.kukinews.com/article/view/kuk202607310157",
-      "source": "naver",
-      "published": "2026-08-03T06:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-71311 - rclone: FTP Command Arguments Permit CRLF Injection When Custom Encoding Preserves Newlines",
+      "summary": "CVE ID :CVE-2026-71311\n  \nPublished : Aug. 5, 2026, 8:33 p.m. | 14 minutes ago\n  \nDescription :rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.75.0, a valid but nondefault FTP filename encoding in backend/ftp/ftp.go can restore raw CR/LF immediately before an attacker-controlled path is interpolated into the line-oriented FTP control channel, and github.com/jlaffaye/ftp formats the argument through textproto.Conn.Cmd without rejecting CR or LF, allowing a filename such as victim CRLF DELE other-secret CRLF NOOP to inject an independent authenticated FTP command when the victim copies or syncs to a more-privileged FTP destination. This issue is fixed in 1.75.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-71311\n  \nPublished : Aug. 5, 2026, 8:33 p.m. | 14 minutes ago\n  \nDescription :rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.75.0, a valid but nondefault FTP filename encoding in backend/ftp/ftp.go can restore raw CR/LF immediately before an attacker-controlled path is interpolated into the line-oriented FTP control channel, and github.com/jlaffaye/ftp formats the argument through textproto.Conn.Cmd without rejecting CR or LF, allowing a filename such as victim CRLF DELE other-secret CRLF NOOP to inject an independent authenticated FTP command when the victim copies or syncs to a more-privileged FTP destination. This issue is fixed in 1.75.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-71311 - rclone: ​​사용자 정의 인코딩이 줄 바꿈을 보존하는 경우 FTP 명령 인수가 CRLF 주입을 허용합니다.",
+      "summary_ko": "CVE ID:CVE-2026-71311\n  \n게시일 : 2026년 8월 5일 오후 8시 33분 | 14분 전\n  \n설명 :rclone은 다양한 클라우드 스토리지 제공업체와 파일 및 디렉터리를 동기화하는 명령줄 프로그램입니다. 1.75.0 이전에는 backend/ftp/ftp.go의 유효하지만 기본이 아닌 FTP 파일 이름 인코딩은 공격자가 제어하는 경로가 라인 지향 FTP 제어 채널로 보간되기 직전에 원시 CR/LF를 복원할 수 있으며, github.com/jlaffaye/ftp는 CR 또는 LF를 거부하지 않고 textproto.Conn.Cmd를 통해 인수 형식을 지정하여 피해자 CRLF DELE 기타 비밀 CRLF NOOP와 같은 파일 이름이 주입되도록 허용합니다. 피해자가 더 많은 권한을 가진 FTP 대상에 복사하거나 동기화할 때 독립적으로 인증된 FTP 명령입니다. 이 문제는 1.75.0에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-71311\n2. 26.08.06 오전5:33\n3. rclone is a command-line program to sync files and",
+      "cve_id": "CVE-2026-71311",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-71311",
+      "source": "cvefeed",
+      "published": "2026-08-06T05:33:32+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-70616 - boringproxy 0.10.0 Resource Exhaustion DoS via GET /loading endpoint",
       "summary": "CVE ID :CVE-2026-70616\n  \nPublished : Aug. 5, 2026, 8:17 p.m. | 13 minutes ago\n  \nDescription :boringproxy through 0.10.0 contains a resource exhaustion vulnerability that allows any authenticated user to permanently exhaust server file descriptors, goroutines, and memory by sending requests to the GET /loading endpoint with attacker-supplied id query parameter values. Because the handler performs no map-lookup validity check and receives on a nil channel that blocks forever, with no timeout, no context cancellation, and no server-side reclamation due to absent HTTP server timeouts, each malicious request permanently holds one goroutine, one file descriptor, and approximately 50 kB of memory until the server's file descriptor limit is reached and listener Accept calls fail, halting all tunnel traffic forwarding for all users.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
