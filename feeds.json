@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-05T22:01:24.594543+09:00",
+  "fetched_at": "2026-08-05T22:30:56.560959+09:00",
   "security_news": [
     {
       "title": "url 누르는 순간 개인정보 다 털린다",
@@ -3725,36 +3725,6 @@
       "source": "krcert_notice",
       "published": "2026-08-03T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-68582 - Vikunja 0.24.0 Broken Object Level Authorization via Link-Share Token",
-      "summary": "CVE ID :CVE-2026-68582\n  \nPublished : Aug. 2, 2026, 1:16 p.m. | 1 hour, 15 minutes ago\n  \nDescription :Vikunja versions >= 0.24.0 and <= 2.3.0 contain a broken object level authorization (BOLA) vulnerability in the task-collection endpoint (GET /api/v1/projects/{project}/views/{view}/tasks). The endpoint loads the requested project view from the URL path without verifying the caller is authorized for it. For a link-share token holder, the task scope is pinned to the share's own project, but the view is taken from the attacker-controlled path and never re-validated. As a result, a holder of any project share link can read any other tenant's kanban bucket records — bucket titles and the full created_by user object (username, name, id) — for every view in the instance. The same missing pre-authorization view load also creates a project/view-ID existence oracle (404 vs. non-404) usable by link shares and ordinary authenticated users. Task contents remain constrained to the share's own project and are not disclosed. Fixed in 2.4.0.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-68582\n  \nPublished : Aug. 2, 2026, 1:16 p.m. | 1 hour, 15 minutes ago\n  \nDescription :Vikunja versions >= 0.24.0 and <= 2.3.0 contain a broken object level authorization (BOLA) vulnerability in the task-collection endpoint (GET /api/v1/projects/{project}/views/{view}/tasks). The endpoint loads the requested project view from the URL path without verifying the caller is authorized for it. For a link-share token holder, the task scope is pinned to the share's own project, but the view is taken from the attacker-controlled path and never re-validated. As a result, a holder of any project share link can read any other tenant's kanban bucket records — bucket titles and the full created_by user object (username, name, id) — for every view in the instance. The same missing pre-authorization view load also creates a project/view-ID existence oracle (404 vs. non-404) usable by link shares and ordinary authenticated users. Task contents remain constrained to the share's own project and are not disclosed. Fixed in 2.4.0.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-68582 - Vikunja 0.24.0 링크 공유 토큰을 통한 손상된 개체 수준 인증",
-      "summary_ko": "CVE ID:CVE-2026-68582\n  \n게시일 : 2026년 8월 2일 오후 1시 16분 | 1시간, 15분 전\n  \n설명: Vikunja 버전 >= 0.24.0 및 <= 2.3.0에는 작업 수집 엔드포인트(GET /api/v1/projects/{project}/views/{view}/tasks)에 손상된 개체 수준 인증(BOLA) 취약점이 포함되어 있습니다. 엔드포인트는 호출자에게 권한이 있는지 확인하지 않고 URL 경로에서 요청된 프로젝트 보기를 로드합니다. 링크 공유 토큰 보유자의 경우 작업 범위는 공유 자체 프로젝트에 고정되지만 보기는 공격자가 제어하는 ​​경로에서 가져오고 다시 검증되지 않습니다. 결과적으로 모든 프로젝트 공유 링크의 소유자는 인스턴스의 모든 보기에 대해 다른 테넌트의 간반 버킷 레코드(버킷 제목 및 전체created_by 사용자 개체(사용자 이름, 이름, ID))를 읽을 수 있습니다. 동일한 누락된 사전 승인 보기 로드는 링크 공유 및 일반 인증된 사용자가 사용할 수 있는 프로젝트/보기 ID 존재 Oracle(404 대 404가 아닌)도 생성합니다. 작업 내용은 공유 자체 프로젝트로 제한되며 공개되지 않습니다. 2.4.0에서 수정되었습니다.\n  \n심각도: 9.3 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-68582\n2. 26.08.02 오후10:16\n3. Vikunja versions >= 0.24.0 and <= 2.3.0 contain a ",
-      "cve_id": "CVE-2026-68582",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68582",
-      "source": "cvefeed",
-      "published": "2026-08-02T22:16:54+09:00",
-      "lang": "sq"
-    },
-    {
-      "title": "CVE-2026-68579 - FreeRDP before 3.30.0 Heap Overflow via CliprdrStream_Read",
-      "summary": "CVE ID :CVE-2026-68579\n  \nPublished : 2 de agosto de 2026 a las 13:16 | 8 horas, 55 minutos ago\n  \nDescription :FreeRDP before 3.30.0 (<= 3.29.0) contains a heap-based buffer overflow in the Windows clipboard client's CliprdrStream_Read function (client/Windows/wf_cliprdr.c). When an OLE paste consumer (e.g. explorer.exe) calls IStream::Read with a fixed-size buffer of cb bytes, CliprdrStream_Read requests file contents from the RDP server and then copies the response into the caller's buffer using the server-supplied length (req_fsize) instead of cb. A malicious or compromised RDP server can return an oversized CB_FILECONTENTS_RESPONSE, causing an out-of-bounds write of attacker-controlled data into the paste consumer's heap buffer when a user pastes server-offered clipboard file contents.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-68579\n  \nPublished : 2 de agosto de 2026 a las 13:16 | 8 horas, 55 minutos ago\n  \nDescription :FreeRDP before 3.30.0 (<= 3.29.0) contains a heap-based buffer overflow in the Windows clipboard client's CliprdrStream_Read function (client/Windows/wf_cliprdr.c). When an OLE paste consumer (e.g. explorer.exe) calls IStream::Read with a fixed-size buffer of cb bytes, CliprdrStream_Read requests file contents from the RDP server and then copies the response into the caller's buffer using the server-supplied length (req_fsize) instead of cb. A malicious or compromised RDP server can return an oversized CB_FILECONTENTS_RESPONSE, causing an out-of-bounds write of attacker-controlled data into the paste consumer's heap buffer when a user pastes server-offered clipboard file contents.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-68579 - 3.30.0 이전의 FreeRDP CliprdrStream_Read를 통한 힙 오버플로",
-      "summary_ko": "CVE ID:CVE-2026-68579\n  \n게시 날짜: 2026년 2월 2일 오전 13시 16분 | 8시간, 55분 전\n  \n설명: 3.30.0 이전의 FreeRDP(<= 3.29.0)에는 Windows 클립보드 클라이언트의 CliprdrStream_Read 함수(client/Windows/wf_cliprdr.c)에 힙 기반 버퍼 오버플로가 포함되어 있습니다. OLE 붙여넣기 소비자(예: explorer.exe)가 cb 바이트의 고정 크기 버퍼로 IStream::Read를 호출하면 CliprdrStream_Read는 RDP 서버에서 파일 콘텐츠를 요청한 다음 cb 대신 서버 제공 길이(req_fsize)를 사용하여 응답을 호출자의 버퍼에 복사합니다. 악의적이거나 손상된 RDP 서버는 크기가 너무 큰 CB_FILECONTENTS_RESPONSE를 반환할 수 있으며, 이로 인해 사용자가 서버에서 제공하는 클립보드 파일 콘텐츠를 붙여넣을 때 공격자가 제어하는 ​​데이터가 붙여넣기 소비자의 힙 버퍼에 범위를 벗어나는 쓰기가 발생합니다.\n  \n심각도: 9.6 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-68579\n2. 26.08.02 오후10:16\n3. FreeRDP before 3.30.0 (<= 3.29.0) contains a heap-",
-      "cve_id": "CVE-2026-68579",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68579",
-      "source": "cvefeed",
-      "published": "2026-08-02T22:16:53+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
