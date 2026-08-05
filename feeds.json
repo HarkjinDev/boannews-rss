@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-05T18:31:08.750532+09:00",
+  "fetched_at": "2026-08-05T19:01:24.582063+09:00",
   "security_news": [
+    {
+      "title": "국립목포대, '제5회 호남 청소년 해킹캠프' 성료…CTF 방식 자웅 겨뤄",
+      "summary": "국립목포대학교(총장 송하철)는 정보보호학과가 호남권 사이버보안 역량 강화 및 지역의 차세대 사이버보안 인재 양성을 위해 개최한 '제5회 호남 청소년 해킹캠프'를 개최했다고 5일 밝혔다. 호남 청소년 해킹캠프는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국립목포대, 호남 청소년 대상 해킹캠프 개최\n2. CTF 방식으로 사이버보안 역량 강화\n3. 지역 차세대 사이버보안 인재 양성 목표",
+      "link": "https://n.news.naver.com/mnews/article/030/0003454610?sid=102",
+      "source": "naver",
+      "published": "2026-08-05T18:57:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "이재명 대통령 \"부처별 AI, 결국 통합하게 될 것\"",
+      "summary": "또 국민 개인정보를 다루는 만큼 해킹과 개인정보 보호, 저작권 문제에 대한 대책이 있는지, 정부 AI를 어떤 방식으로 구축할 계획인지도 함께 질의했다. 현장 행정 서비스가 AI 중심으로 재편되는 과정에서 기능별 분화와...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 이재명 대통령, 부처별 AI 통합 및 개인정보 보호 대책 질의\n2. 정부 AI 구축 계획, 기능별 분화 및 통합 과정서 보안 위협 우려\n3. AI 중심 행정 서비스 재편, 개인정보 보호 및 저작권 문제 해결 필요",
+      "link": "https://n.news.naver.com/mnews/article/092/0002433129?sid=105",
+      "source": "naver",
+      "published": "2026-08-05T18:52:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "지시 없었는데 악성코드 심으려 한 AI…오픈AI·앤트로픽 시험서 무슨 일...",
       "summary": "연구진은 7개 AI 모델에 가상 전산망을 해킹해 특정 정보를 찾아내는 사이버보안 과제를 주고 인터넷 접속을 허용한 채 총 122차례 시험을 진행했다. 이 중 10차례 시험에서 AI 에이전트가 과제 범위를 벗어나 실제 사람과...",
@@ -2956,6 +2980,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-10090 - Multicluster-operators-subscription: multicluster-operators-subscription: namespace edit user can deploy cluster-scoped clusterrolebinding and become cluster-admin via application subscription",
+      "summary": "CVE ID :CVE-2026-10090\n  \nPublished : Aug. 5, 2026, 9:18 a.m. | 42 minutes ago\n  \nDescription :A flaw was found in the Application Subscription controller (multicluster-operators-subscription) of Red Hat Advanced Cluster Management for Kubernetes (ACM). A user with namespace-scoped \"edit\" privileges in an ACM hub namespace can create a Channel resource pointing to a Helm repository they control and a Subscription resource referencing it. The app-subscription controller fetches and applies the Helm chart contents with its own elevated authority, without verifying whether the subscription creator holds the \"open-cluster-management:subscription-admin\" role and without restricting applied resources to the subscription namespace. This allows the attacker to include cluster-scoped resources in the Helm chart, such as a ClusterRoleBinding granting the attacker's ServiceAccount the \"cluster-admin\" ClusterRole. Successful exploitation results in full cluster-admin privilege escalation. This contradicts the ACM documentation which states that non-subscription-admin users should have resources deployed into the subscription namespace only.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-10090\n  \nPublished : Aug. 5, 2026, 9:18 a.m. | 42 minutes ago\n  \nDescription :A flaw was found in the Application Subscription controller (multicluster-operators-subscription) of Red Hat Advanced Cluster Management for Kubernetes (ACM). A user with namespace-scoped \"edit\" privileges in an ACM hub namespace can create a Channel resource pointing to a Helm repository they control and a Subscription resource referencing it. The app-subscription controller fetches and applies the Helm chart contents with its own elevated authority, without verifying whether the subscription creator holds the \"open-cluster-management:subscription-admin\" role and without restricting applied resources to the subscription namespace. This allows the attacker to include cluster-scoped resources in the Helm chart, such as a ClusterRoleBinding granting the attacker's ServiceAccount the \"cluster-admin\" ClusterRole. Successful exploitation results in full cluster-admin privilege escalation. This contradicts the ACM documentation which states that non-subscription-admin users should have resources deployed into the subscription namespace only.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-10090 - Multicluster-operators-subscription: multicluster-operators-subscription: 네임스페이스 편집 사용자는 클러스터 범위 클러스터 역할 바인딩을 배포하고 애플리케이션 구독을 통해 클러스터 관리자가 될 수 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-10090\n  \n게시일 : 2026년 8월 5일 오전 9시 18분 | 42분 전\n  \n설명: ACM(Red Hat Advanced Cluster Management for Kubernetes)의 애플리케이션 서브스크립션 컨트롤러(multicluster-operators-subscription)에서 결함이 발견되었습니다. ACM 허브 네임스페이스에서 네임스페이스 범위 \"편집\" 권한이 있는 사용자는 자신이 제어하는 ​​Helm 리포지토리를 가리키는 채널 리소스와 이를 참조하는 구독 리소스를 생성할 수 있습니다. 앱 구독 컨트롤러는 구독 작성자가 \"open-cluster-management:subscription-admin\" 역할을 보유하고 있는지 확인하지 않고 적용되는 리소스를 구독 네임스페이스로 제한하지 않고 자체적인 상승된 권한으로 Helm 차트 콘텐츠를 가져오고 적용합니다. 이를 통해 공격자는 공격자의 ServiceAccount에 \"cluster-admin\" ClusterRole을 부여하는 ClusterRoleBinding과 같은 클러스터 범위 리소스를 Helm 차트에 포함할 수 있습니다. 악용에 성공하면 전체 클러스터 관리자 권한이 상승됩니다. 이는 구독 관리자가 아닌 사용자가 구독 네임스페이스에만 리소스를 배포해야 한다고 명시한 ACM 설명서와 모순됩니다.\n  \n심각도: 9.9 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-10090\n2. 26.08.05 오후6:18\n3. A flaw was found in the Application Subscription c",
+      "cve_id": "CVE-2026-10090",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10090",
+      "source": "cvefeed",
+      "published": "2026-08-05T18:18:14+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-71214 - NASA-AMMOS plandev: Client-Supplied session_variables Bypass Hasura-Origin Authorization in sequencing-server",
       "summary": "CVE ID :CVE-2026-71214\n  \nPublished : Aug. 5, 2026, 8:16 a.m. | 14 minutes ago\n  \nDescription :The Aerie/PlanDev sequencing-server's authorization middleware (sequencing-server/src/app.ts) derives the caller's Hasura session role via getHasuraSession(), which prefers a session_variables object taken directly from the client-supplied JSON request body over the Authorization header's JWT claims, with no verification that the request actually originated from Hasura. By setting {\"session_variables\":{\"x-hasura-role\":\"aerie_admin\"}} in the body of a request to POST /command-expansion/put-expansion with no Authorization header, an unauthenticated attacker satisfies the role check and can insert arbitrary expansion rules into sequencing.expansion_rule, which govern how spacecraft activities are translated into commands. Separately, POST /put-dictionary is explicitly listed in the ENDPOINTS_WHITELIST and is exempt from any authentication, allowing unauthenticated writes of command dictionaries.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-71214\n  \nPublished : Aug. 5, 2026, 8:16 a.m. | 14 minutes ago\n  \nDescription :The Aerie/PlanDev sequencing-server's authorization middleware (sequencing-server/src/app.ts) derives the caller's Hasura session role via getHasuraSession(), which prefers a session_variables object taken directly from the client-supplied JSON request body over the Authorization header's JWT claims, with no verification that the request actually originated from Hasura. By setting {\"session_variables\":{\"x-hasura-role\":\"aerie_admin\"}} in the body of a request to POST /command-expansion/put-expansion with no Authorization header, an unauthenticated attacker satisfies the role check and can insert arbitrary expansion rules into sequencing.expansion_rule, which govern how spacecraft activities are translated into commands. Separately, POST /put-dictionary is explicitly listed in the ENDPOINTS_WHITELIST and is exempt from any authentication, allowing unauthenticated writes of command dictionaries.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3013,6 +3052,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-71209",
       "source": "cvefeed",
       "published": "2026-08-05T17:16:43+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-71206 - shiori: JWT CheckToken Never Re-Validates Account State, Allowing Stale-Privilege Access After Deletion or Demotion",
+      "summary": "CVE ID :CVE-2026-71206\n  \nPublished : Aug. 5, 2026, 8:16 a.m. | 1 hour, 44 minutes ago\n  \nDescription :Shiori's CheckToken function (internal/domains/auth.go) validates only the JWT's HMAC signature and returns the embedded claims.Account object unmodified, never re-fetching the account from the database. No session store or token-revocation mechanism exists in the codebase. Deleting an account or demoting it from owner to a regular role has no effect on tokens already issued to that account — a deleted or demoted owner's token continues authenticating with its original owner-level privileges until natural expiry, which can be up to 30 days with 'remember me' enabled.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-71206\n  \nPublished : Aug. 5, 2026, 8:16 a.m. | 1 hour, 44 minutes ago\n  \nDescription :Shiori's CheckToken function (internal/domains/auth.go) validates only the JWT's HMAC signature and returns the embedded claims.Account object unmodified, never re-fetching the account from the database. No session store or token-revocation mechanism exists in the codebase. Deleting an account or demoting it from owner to a regular role has no effect on tokens already issued to that account — a deleted or demoted owner's token continues authenticating with its original owner-level privileges until natural expiry, which can be up to 30 days with 'remember me' enabled.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-71206 - shiori: JWT CheckToken은 계정 상태를 다시 검증하지 않으며 삭제 또는 강등 후 오래된 권한 액세스를 허용합니다.",
+      "summary_ko": "CVE ID:CVE-2026-71206\n  \n게시일 : 2026년 8월 5일 오전 8시 16분 | 1시간 44분 전\n  \n설명: Shiori의 CheckToken 기능(internal/domains/auth.go)은 JWT의 HMAC 서명만 검증하고 포함된 클레임을 반환합니다. 계정 개체는 수정되지 않고 데이터베이스에서 계정을 다시 가져오지 않습니다. 코드베이스에는 세션 저장소나 토큰 취소 메커니즘이 없습니다. 계정을 삭제하거나 소유자에서 일반 역할로 강등하는 것은 해당 계정에 이미 발급된 토큰에는 영향을 미치지 않습니다. 삭제되거나 강등된 소유자의 토큰은 자연 만료('기억하기'가 활성화된 경우 최대 30일이 소요될 수 있음)까지 원래 소유자 수준 권한으로 계속 인증됩니다.\n  \n심각도: 8.3 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-71206\n2. 26.08.05 오후5:16\n3. Shiori's CheckToken function (internal/domains/aut",
+      "cve_id": "CVE-2026-71206",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-71206",
+      "source": "cvefeed",
+      "published": "2026-08-05T17:16:42+09:00",
       "lang": "en"
     },
     {
