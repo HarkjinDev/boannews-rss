@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-07T04:02:19.823808+09:00",
+  "fetched_at": "2026-08-07T04:32:21.265790+09:00",
   "security_news": [
     {
       "title": "[블랙햇 USA 2026] \"취약점 발견 속도, 보고 가능한 속도의 10배…인간 연...",
@@ -3572,21 +3572,6 @@
       "source": "cvefeed",
       "published": "2026-08-04T05:17:25+09:00",
       "lang": "da"
-    },
-    {
-      "title": "CVE-2026-48031 - Go Restful API Boilerplate: Hardcoded JWT Secret \"random\" Allows Token Forgery",
-      "summary": "CVE ID :CVE-2026-48031\n  \nPublished : Aug. 3, 2026, 7:05 p.m. | 42 minutes ago\n  \nDescription :go-base is a Go RESTful API Boilerplate template with JWT Authentication, backed by PostgreSQL. In versions prior to 2026-05-18, the JWT signing secret is hardcoded to the known string \"random\", letting any attacker who reads the public repository forge tokens for arbitrary users, including admin roles, and completely bypass authentication on all protected endpoints. This value is set in two places: the dev.env template (line 10) and a programmatic fallback in cmd/serve.go (line 35), so the application uses it even when no .env file is present. The original mitigation in auth/jwt/tokenauth.go (lines 22 to 25) only caught the exact string \"random\", letting other weak secrets through, and replaced it with an in-memory key that was not persisted, invalidating all tokens on every restart and effectively causing a denial-of-service. This issue has been fixed in version 2026-05-18.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48031\n  \nPublished : Aug. 3, 2026, 7:05 p.m. | 42 minutes ago\n  \nDescription :go-base is a Go RESTful API Boilerplate template with JWT Authentication, backed by PostgreSQL. In versions prior to 2026-05-18, the JWT signing secret is hardcoded to the known string \"random\", letting any attacker who reads the public repository forge tokens for arbitrary users, including admin roles, and completely bypass authentication on all protected endpoints. This value is set in two places: the dev.env template (line 10) and a programmatic fallback in cmd/serve.go (line 35), so the application uses it even when no .env file is present. The original mitigation in auth/jwt/tokenauth.go (lines 22 to 25) only caught the exact string \"random\", letting other weak secrets through, and replaced it with an in-memory key that was not persisted, invalidating all tokens on every restart and effectively causing a denial-of-service. This issue has been fixed in version 2026-05-18.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48031 - Go Restful API 상용구: 하드코딩된 JWT 비밀 \"무작위\"로 인해 토큰 위조가 허용됨",
-      "summary_ko": "CVE ID:CVE-2026-48031\n  \n게시일 : 2026년 8월 3일 오후 7시 5분 | 42분 전\n  \n설명 :go-base는 PostgreSQL이 지원하는 JWT 인증을 사용하는 Go RESTful API 상용구 템플릿입니다. 2026-05-18 이전 버전에서는 JWT 서명 비밀이 알려진 문자열 \"random\"으로 하드코딩되어 공용 저장소를 읽는 모든 공격자가 관리자 역할을 포함하여 임의의 사용자에 대한 토큰을 위조하고 모든 보호된 엔드포인트에서 인증을 완전히 우회할 수 있습니다. 이 값은 dev.env 템플릿(10행)과 cmd/serve.go의 프로그래밍 방식 폴백(35행)의 두 위치에서 설정되므로 애플리케이션은 .env 파일이 없는 경우에도 이 값을 사용합니다. auth/jwt/tokenauth.go(22~25행)의 원래 완화는 정확한 문자열 \"random\"만 포착하여 다른 약한 비밀을 통과시키고 이를 지속되지 않는 메모리 내 키로 대체하여 다시 시작할 때마다 모든 토큰을 무효화하고 효과적으로 서비스 거부를 유발합니다. 이 문제는 2026-05-18 버전에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48031\n2. 26.08.04 오전4:05\n3. go-base is a Go RESTful API Boilerplate template w",
-      "cve_id": "CVE-2026-48031",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48031",
-      "source": "cvefeed",
-      "published": "2026-08-04T04:05:50+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
