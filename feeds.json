@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-07T12:04:37.211741+09:00",
+  "fetched_at": "2026-08-07T12:32:22.379585+09:00",
   "security_news": [
     {
       "title": "美보안업체에 뚫린 北해킹조직…1천640개 기업 공격 사실 확인",
@@ -2400,21 +2400,24 @@
       "source": "naver",
       "published": "2026-08-04T13:06:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "“해킹 표적 된 중소기업 구한다”…경과원, ‘사이버 방화벽’ 구축 지...",
-      "summary": "특히 이미 해킹 등 사이버 침해 피해를 겪은 기업은 기존 수혜 여부와 상관없이 우선 지원 대상에 포함된다. 사업에 선정된 기업은 보안 전문가의 진단을 통해 서버·네트워크 인프라 및 개인정보 관리체계의 허점을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. “해킹 표적 된 중소기업 구한다”…경과원, ‘사이버 방화벽’ 구축 지...\n2. 특히 이미 해킹 등 사이버 침해 피해를 겪은 기업은 기존 수혜 여부와 상관없이 우선 지원 \n3. 사업에 선정된 기업은 보안 전문가의 진단을 통해 서버·네트워크 인프라 및 개인정보 관리체계",
-      "link": "https://www.viva100.com/article/20260804500569",
-      "source": "naver",
-      "published": "2026-08-04T12:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-45198 - GPU DDK - RGXFWIF_SYSINIT::sCorememDataStore is untrusted",
+      "summary": "CVE ID :CVE-2026-45198\n  \nPublished : Aug. 7, 2026, 1:42 a.m. | 1 hour, 8 minutes ago\n  \nDescription :Kernel software from a non-secure operating system on a platform with Trusted Execution Environment support, may cause GPU Firmware to boot up using data from non-secure memory.\n\n\n\nThe GPU thread of control (Firmware) uses a pointer from non-secure memory belonging to the Rich Execution Environment (REE) when saving or retrieving internal data between the tightly coupled private memory to main memory. An attacker with control over the REE kernel may modify the pointer value, corrupting the data used by the GPU Firmware.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-45198\n  \nPublished : Aug. 7, 2026, 1:42 a.m. | 1 hour, 8 minutes ago\n  \nDescription :Kernel software from a non-secure operating system on a platform with Trusted Execution Environment support, may cause GPU Firmware to boot up using data from non-secure memory.\n\n\n\nThe GPU thread of control (Firmware) uses a pointer from non-secure memory belonging to the Rich Execution Environment (REE) when saving or retrieving internal data between the tightly coupled private memory to main memory. An attacker with control over the REE kernel may modify the pointer value, corrupting the data used by the GPU Firmware.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-45198 - GPU DDK - RGXFWIF_SYSINIT::sCorememDataStore를 신뢰할 수 없습니다.",
+      "summary_ko": "CVE ID:CVE-2026-45198\n  \n게시일 : 2026년 8월 7일 오전 1시 42분 | 1시간 8분 전\n  \n설명: Trusted Execution Environment를 지원하는 플랫폼의 비보안 운영 체제의 커널 소프트웨어로 인해 GPU 펌웨어가 비보안 메모리의 데이터를 사용하여 부팅될 수 있습니다.\n\n\n\nGPU 제어 스레드(펌웨어)는 긴밀하게 결합된 개인 메모리와 메인 메모리 사이의 내부 데이터를 저장하거나 검색할 때 REE(Rich Execution Environment)에 속하는 비보안 메모리의 포인터를 사용합니다. REE 커널을 제어할 수 있는 공격자는 포인터 값을 수정하여 GPU 펌웨어에서 사용하는 데이터를 손상시킬 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-45198\n2. 26.08.07 오전10:42\n3. Kernel software from a non-secure operating system",
+      "cve_id": "CVE-2026-45198",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45198",
+      "source": "cvefeed",
+      "published": "2026-08-07T10:42:54+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-71447 - Stored Cross-Site Scripting in Chat and Forum Translation Controls in ail-framework",
       "summary": "CVE ID :CVE-2026-71447\n  \nPublished : Aug. 6, 2026, 10:18 p.m. | 13 minutes ago\n  \nDescription :AIL Project contains a stored cross-site scripting vulnerability in the translation controls displayed for chat messages and forum posts.\n\nThe affected templates inserted message and post identifiers directly into inline JavaScript onclick handlers:\n\nonclick=\"translateMessageToPreferredLanguage('{{ message['id'] }}', '{{ mess_id_escape }}', this)\"\n\nand:\n\nonclick=\"translatePostToPreferredLanguage('{{ post['id'] }}', '{{ post_id_escape }}', this)\"\n\nThese values were HTML-template escaped but were not safely encoded for use as JavaScript string literals inside an HTML attribute. A specially crafted identifier containing quotation marks, escape characters, or other JavaScript syntax could therefore terminate the expected string argument and inject arbitrary JavaScript into the event handler.\n\nBecause the affected values are associated with indexed chat messages or forum posts, a malicious value may remain stored by AIL and be rendered whenever an analyst accesses the corresponding chat or forum explorer view.\n\nSuccessful exploitation requires the victim to click the affected Translate to preferred language button. The injected code would then execute in the victim’s browser under the security origin of the AIL instance.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
