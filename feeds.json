@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-08-08T06:01:13.508220+09:00",
+  "fetched_at": "2026-08-08T06:31:27.515076+09:00",
   "security_news": [
+    {
+      "title": "AI, 가둬도 뚫는다…중국산 '키미 K3' 탈출에 커지는 보안 경고음",
+      "summary": "K3'가 사이버보안 평가용 격리 환경(샌드박스)을 벗어났다. AI 보안기업 프론티어 시큐리티(Frontier... 연구진은 \"이는 학계에서 사용하는 일부 사이버보안 평가 방식이 보안 취약점에 노출돼 모델이 부정행위를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 중국산 AI '키미 K3' 샌드박스 탈출\n2. 샌드박스 우회, AI 모델 부정행위 가능성\n3. AI 보안 평가 방식의 취약점 노출",
+      "link": "https://n.news.naver.com/mnews/article/138/0002237086?sid=105",
+      "source": "naver",
+      "published": "2026-08-08T06:28:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[아하 인터뷰] \"흔들림 없는 '기본'이 핵심\"…하나카드의 보안 철학",
+      "summary": "(사진=하나카드) 안중근 하나카드 개인정보보호본부장 겸 정보보안 최고책임자(CISO)는 해킹 공격 기법이... 외부 해킹뿐 아니라 내부 임직원이나 외주 인력의 고의 또는 실수 역시 정보보호 사고로 이어질 수 있는 만큼...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 하나카드 안중근 CISO, 해킹 공격 기법 진화 강조\n2. 내부 임직원, 외주 인력 실수도 사고 가능성 언급\n3. 기본 보안 철학으로 사고 예방 주력",
+      "link": "https://www.asiatime.co.kr/article/20260731500076",
+      "source": "naver",
+      "published": "2026-08-08T06:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[인터뷰] 美 DARPA AI 사이버 챌린지 1위 이끈 김태수 마이크로소프트 부...",
+      "summary": "“지금까지 보안은 기본적으로 공격자가 유리한 게임이었습니다. 하지만, 방어자가 인공지능(AI) 덕분에... AI는 사이버보안에서 ‘양날의 검’이다. 해커는 AI를 이용해 상대의 취약점을 더 빠르게 찾아 공격을 고도화할...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. DARPA AI 사이버 챌린지 1위, 김태수 마이크로소프트 부사장이 이끌었다.\n2. AI는 공격자 유리 게임 전환, 취약점 발견 및 공격 고도화에 쓰인다.\n3. AI는 방어자에게도 유리, 사이버보안의 '양날의 검'으로 작용한다.",
+      "link": "https://n.news.naver.com/mnews/article/366/0001185021?sid=105",
+      "source": "naver",
+      "published": "2026-08-08T06:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Metabase SQLi zero-day exploited in customer data-theft attacks",
       "summary": "A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framework and Tally. [...]",
@@ -2520,21 +2556,54 @@
       "source": "naver",
       "published": "2026-08-05T06:58:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[단독] 美 1만명 고객 개인정보 유출 소송 봉합...대동USA, 법원에 합의...",
-      "summary": "지난해 2월 A씨는 대동USA가 사이버 공격을 당해 고객 약 1만명의 이름과 연락처, 생년월일, 은행 계좌·카드번호, 의료·건강 관련 정보 등이 유출됐다며 미국 노스캐롤라이나주(州) 웨이크 카운티 법원에 소송을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 대동USA, 고객 1만 명 개인정보 유출 관련 소송 합의\n2. 작년 2월, 이름, 연락처, 생년월일, 계좌·카드번호 등 유출\n3. 미국 노스캐롤라이나주 법원에 소송 제기 후 합의 봉합",
-      "link": "https://n.news.naver.com/mnews/article/366/0001184332?sid=101",
-      "source": "naver",
-      "published": "2026-08-05T06:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-47664 - Pathling: $import-pnp operation enables authenticated SSRF, credential leakage, and warehouse data poisoning",
+      "summary": "CVE ID :CVE-2026-47664\n  \nPublished : Aug. 7, 2026, 8:28 p.m. | 26 minutes ago\n  \nDescription :Pathling is a set of tools that make it easier to use FHIR and clinical terminology within health data analytics. Prior to version 2.0.0 of Pathling Server, the `$import-pnp` operation in Pathling Server accepts a caller-supplied `exportUrl` and uses it as the remote FHIR Bulk Export endpoint without constraining it to a trusted source. When PNP credentials are configured, Pathling builds a credentialed bulk-export client targeting the caller-chosen host, downloads manifest-selected files, and then reclassifies those staged files as trusted local `file://` imports - bypassing the configured `allowableSources` allowlist that protects the ordinary `$import` operation. This is fixed in Pathling Server 2.0.0. As a workaround, disable the `$import-pnp` operation (`pathling.operations.importPnpEnabled=false`) or do not configure PNP credentials.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-47664\n  \nPublished : Aug. 7, 2026, 8:28 p.m. | 26 minutes ago\n  \nDescription :Pathling is a set of tools that make it easier to use FHIR and clinical terminology within health data analytics. Prior to version 2.0.0 of Pathling Server, the `$import-pnp` operation in Pathling Server accepts a caller-supplied `exportUrl` and uses it as the remote FHIR Bulk Export endpoint without constraining it to a trusted source. When PNP credentials are configured, Pathling builds a credentialed bulk-export client targeting the caller-chosen host, downloads manifest-selected files, and then reclassifies those staged files as trusted local `file://` imports - bypassing the configured `allowableSources` allowlist that protects the ordinary `$import` operation. This is fixed in Pathling Server 2.0.0. As a workaround, disable the `$import-pnp` operation (`pathling.operations.importPnpEnabled=false`) or do not configure PNP credentials.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-47664 - Pathling: $import-pnp 작업을 통해 인증된 SSRF, 자격 증명 유출 및 웨어하우스 데이터 중독이 가능해졌습니다.",
+      "summary_ko": "CVE ID:CVE-2026-47664\n  \n게시일 : 2026년 8월 7일 오후 8시 28분 | 26분 전\n  \n설명: Pathling은 건강 데이터 분석 내에서 FHIR 및 임상 용어를 보다 쉽게 사용할 수 있도록 해주는 도구 세트입니다. Pathling Server 버전 2.0.0 이전에는 Pathling Server의 `$import-pnp` 작업이 호출자가 제공한 `exportUrl`을 허용하고 이를 신뢰할 수 있는 소스로 제한하지 않고 원격 FHIR 대량 내보내기 엔드포인트로 사용합니다. PNP 자격 증명이 구성되면 Pathling은 호출자가 선택한 호스트를 대상으로 하는 자격 증명 대량 내보내기 클라이언트를 구축하고 매니페스트에서 선택한 파일을 다운로드한 다음 해당 준비된 파일을 신뢰할 수 있는 로컬 `file://` 가져오기로 재분류합니다. 이는 일반적인 `$import` 작업을 보호하는 구성된 `allowableSources` 허용 목록을 우회합니다. 이 문제는 Pathling Server 2.0.0에서 수정되었습니다. 이 문제를 해결하려면 `$import-pnp` 작업을 비활성화하거나(`pathling.Operations.importPnpEnabled=false`) PNP 자격 증명을 구성하지 마세요.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-47664\n2. 26.08.08 오전5:28\n3. Pathling is a set of tools that make it easier to ",
+      "cve_id": "CVE-2026-47664",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47664",
+      "source": "cvefeed",
+      "published": "2026-08-08T05:28:06+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-62296 - HAPI FHIR: XHTML narrative parser unbounded recursion causes StackOverflow denial of service",
+      "summary": "CVE ID :CVE-2026-62296\n  \nPublished : Aug. 7, 2026, 8:16 p.m. | 37 minutes ago\n  \nDescription :HAPI FHIR is a complete implementation of the HL7 FHIR standard for healthcare interoperability in Java. Prior to 6.9.11, XhtmlParser.java imposes no maximum element nesting depth, so a deeply nested text.div narrative triggers unbounded recursion between parseElementInner() and parseElement(), raising a StackOverflowError. An attacker who can submit FHIR resources containing such narratives can thus crash a parsing or validation worker thread, affecting validator services and any application that parses attacker-supplied FHIR JSON or XML. This issue is fixed in version 6.9.11.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-62296\n  \nPublished : Aug. 7, 2026, 8:16 p.m. | 37 minutes ago\n  \nDescription :HAPI FHIR is a complete implementation of the HL7 FHIR standard for healthcare interoperability in Java. Prior to 6.9.11, XhtmlParser.java imposes no maximum element nesting depth, so a deeply nested text.div narrative triggers unbounded recursion between parseElementInner() and parseElement(), raising a StackOverflowError. An attacker who can submit FHIR resources containing such narratives can thus crash a parsing or validation worker thread, affecting validator services and any application that parses attacker-supplied FHIR JSON or XML. This issue is fixed in version 6.9.11.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-62296 - HAPI FHIR: XHTML 서술형 파서의 무제한 재귀로 인해 StackOverflow 서비스 거부가 발생함",
+      "summary_ko": "CVE ID:CVE-2026-62296\n  \n게시일 : 2026년 8월 7일 오후 8시 16분 | 37분 전\n  \n설명 :HAPI FHIR은 Java의 의료 상호 운용성을 위한 HL7 FHIR 표준을 완벽하게 구현합니다. 6.9.11 이전에는 XhtmlParser.java가 최대 요소 중첩 깊이를 적용하지 않았으므로 깊게 중첩된 text.div 설명은 구문 분석기()와 구문 분석기() 사이의 무제한 재귀를 트리거하여 StackOverflowError를 발생시킵니다. 따라서 이러한 설명이 포함된 FHIR 리소스를 제출할 수 있는 공격자는 구문 분석 또는 유효성 검사 작업자 스레드를 중단시켜 유효성 검사기 서비스와 공격자가 제공한 FHIR JSON 또는 XML을 구문 분석하는 모든 애플리케이션에 영향을 미칠 수 있습니다. 이 문제는 버전 6.9.11에서 해결되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-62296\n2. 26.08.08 오전5:16\n3. HAPI FHIR is a complete implementation of the HL7 ",
+      "cve_id": "CVE-2026-62296",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62296",
+      "source": "cvefeed",
+      "published": "2026-08-08T05:16:52+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-48039 - Meta Ads MCP: Unauthenticated HTTP MCP Tool Execution Leaks Operator Meta Access Token",
+      "summary": "CVE ID :CVE-2026-48039\n  \nPublished : Aug. 7, 2026, 8:16 p.m. | 37 minutes ago\n  \nDescription :Meta Ads MCP is a Model Context Protocol (MCP) server that lets AI assistants run Meta Ads. Prior to version 1.0.109, `AuthInjectionMiddleware.dispatch()` at `http_auth_integration.py:272` unconditionally forwards unauthenticated Streamable HTTP requests to downstream MCP tool handlers without issuing a `401` response, allowing any network-reachable caller to invoke MCP tools without authentication. When no per-request credential is present, tool handlers fall back to the `META_ACCESS_TOKEN` environment variable, and when the downstream Meta Graph API call fails, `api.py:263–269` serialises the raw `httpx` request URL—including the operator's `access_token` as a query parameter—into the JSON-RPC response body, delivering the credential to the unauthenticated caller. Version 1.0.109 fixes the issue.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-48039\n  \nPublished : Aug. 7, 2026, 8:16 p.m. | 37 minutes ago\n  \nDescription :Meta Ads MCP is a Model Context Protocol (MCP) server that lets AI assistants run Meta Ads. Prior to version 1.0.109, `AuthInjectionMiddleware.dispatch()` at `http_auth_integration.py:272` unconditionally forwards unauthenticated Streamable HTTP requests to downstream MCP tool handlers without issuing a `401` response, allowing any network-reachable caller to invoke MCP tools without authentication. When no per-request credential is present, tool handlers fall back to the `META_ACCESS_TOKEN` environment variable, and when the downstream Meta Graph API call fails, `api.py:263–269` serialises the raw `httpx` request URL—including the operator's `access_token` as a query parameter—into the JSON-RPC response body, delivering the credential to the unauthenticated caller. Version 1.0.109 fixes the issue.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-48039 - 메타 광고 MCP: 인증되지 않은 HTTP MCP 도구 실행으로 운영자 메타 액세스 토큰 유출",
+      "summary_ko": "CVE ID:CVE-2026-48039\n  \n게시일 : 2026년 8월 7일 오후 8시 16분 | 37분 전\n  \n설명:Meta Ads MCP는 AI 보조자가 메타 광고를 실행할 수 있게 해주는 MCP(Model Context Protocol) 서버입니다. 버전 1.0.109 이전에는 'http_auth_integration.py:272'의 'AuthInjectionMiddleware.dispatch()'가 '401' 응답을 발행하지 않고 인증되지 않은 스트리밍 가능 HTTP 요청을 다운스트림 MCP 도구 핸들러에 무조건 전달하여 네트워크에 연결할 수 있는 모든 호출자가 인증 없이 MCP 도구를 호출할 수 있도록 했습니다. 요청별 자격 증명이 없으면 도구 핸들러는 `META_ACCESS_TOKEN` 환경 변수로 대체되고 다운스트림 Meta Graph API 호출이 실패하면 `api.py:263–269`는 쿼리 매개변수로 연산자의 `access_token`을 포함한 원시 `httpx` 요청 URL을 JSON-RPC 응답 본문으로 직렬화하여 인증되지 않은 호출자에게 자격 증명을 전달합니다. 버전 1.0.109에서는 문제가 해결되었습니다.\n  \n심각도: 9.1 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-48039\n2. 26.08.08 오전5:16\n3. Meta Ads MCP is a Model Context Protocol (MCP) ser",
+      "cve_id": "CVE-2026-48039",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48039",
+      "source": "cvefeed",
+      "published": "2026-08-08T05:16:51+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-47362 - Datadog Android Application Sensitive Data Exposure via Unencrypted SQLite Databases",
       "summary": "CVE ID :CVE-2026-47362\n  \nPublished : Aug. 7, 2026, 6:17 p.m. | 32 minutes ago\n  \nDescription :The Datadog Android application stores operationally sensitive content in plaintext SQLite databases via Room. Two databases were reviewed: LocalNotificationDatabase (table local_notifications, columns including title, message, recipient, service, tags, and on-call/incident deeplinks) and SearchRecentDatabase (table search_recents, storing every in-app search query the user typed).\nA repository-wide search for SQLCipher, SupportFactory, openHelperFactory, or any Room encryption configuration returns no matches. Databases are stored as cleartext SQLite files in /data/data/com.datadog.app/databases/. At-rest protection therefore depends solely on the Android application sandbox — the standard Android baseline, adequate for many applications but flagged here as a hardening recommendation because the stored content is operationally sensitive (customer infrastructure monitoring metadata, incident notification recipients, and free-text search queries that may reveal service names, dashboards, and queries of interest).\nExploitation paths include rooted or jailbroken devices, adb backup if android:allowBackup is misconfigured for any build flavor, physical-device handover scenarios, and forensic acquisition.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3433,21 +3502,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-18817",
       "source": "cvefeed",
       "published": "2026-08-05T07:17:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-66901 - Google::Auth versions before 0.09 for Perl allow server side request forgery and credential exfiltration via unvalidated URLs taken from the credentials JSON",
-      "summary": "CVE ID :CVE-2026-66901\n  \nPublished : Aug. 4, 2026, 9:16 p.m. | 32 minutes ago\n  \nDescription :Google::Auth versions before 0.09 for Perl allow server side request forgery and credential exfiltration via unvalidated URLs taken from the credentials JSON.\n\nThe URLs the library requests are read from the credentials JSON, and their hosts were not checked against the universe domain before the request. For an external_account configuration, retrieve_subject_token fetched credential_source.url with headers from the same JSON, and fetch_access_token posted the subject token to token_url, then sent the STS access token it received to service_account_impersonation_url in an Authorization: Bearer header. The authorized_user, impersonated_service_account and service_account configurations posted the client secret and refresh token, the source access token, and a signed JWT assertion to their own JSON-supplied token_uri or impersonation URL.\n\nAny caller that builds credentials from a configuration it does not fully control issues those requests from the application's network position, reaching hosts the configuration names, including internal services and link-local metadata endpoints, and hands them the credentials each request carries. The service_account assertion is bound to aud, so it is not replayable against Google.\n\nVersion 0.06 added a _validate_url host check to the external_account class, keyed on a universe_domain read from the same credentials JSON. Version 0.07 gated a JSON-supplied universe domain behind GOOGLE_EXTERNAL_ACCOUNT_ALLOW_CUSTOM_UNIVERSES=1, deriving the pin flag from arguments that an earlier BUILDARGS pass had already merged on the make_creds path. Version 0.08 passed the pin decision through as an explicit constructor argument and moved _validate_url to Google::Auth::Credentials, adding the call to UserRefreshCredentials and ImpersonatedServiceAccountCredentials, and 0.09 added it to ServiceAccountCredentials.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-66901\n  \nPublished : Aug. 4, 2026, 9:16 p.m. | 32 minutes ago\n  \nDescription :Google::Auth versions before 0.09 for Perl allow server side request forgery and credential exfiltration via unvalidated URLs taken from the credentials JSON.\n\nThe URLs the library requests are read from the credentials JSON, and their hosts were not checked against the universe domain before the request. For an external_account configuration, retrieve_subject_token fetched credential_source.url with headers from the same JSON, and fetch_access_token posted the subject token to token_url, then sent the STS access token it received to service_account_impersonation_url in an Authorization: Bearer header. The authorized_user, impersonated_service_account and service_account configurations posted the client secret and refresh token, the source access token, and a signed JWT assertion to their own JSON-supplied token_uri or impersonation URL.\n\nAny caller that builds credentials from a configuration it does not fully control issues those requests from the application's network position, reaching hosts the configuration names, including internal services and link-local metadata endpoints, and hands them the credentials each request carries. The service_account assertion is bound to aud, so it is not replayable against Google.\n\nVersion 0.06 added a _validate_url host check to the external_account class, keyed on a universe_domain read from the same credentials JSON. Version 0.07 gated a JSON-supplied universe domain behind GOOGLE_EXTERNAL_ACCOUNT_ALLOW_CUSTOM_UNIVERSES=1, deriving the pin flag from arguments that an earlier BUILDARGS pass had already merged on the make_creds path. Version 0.08 passed the pin decision through as an explicit constructor argument and moved _validate_url to Google::Auth::Credentials, adding the call to UserRefreshCredentials and ImpersonatedServiceAccountCredentials, and 0.09 added it to ServiceAccountCredentials.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-66901 - Perl용 0.09 이전의 Google::Auth 버전에서는 자격 증명 JSON에서 가져온 확인되지 않은 URL을 통한 서버 측 요청 위조 및 자격 증명 추출이 허용됩니다.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-66901\n2. 26.08.05 오전6:16\n3. Google::Auth versions before 0.09 for Perl allow s",
-      "cve_id": "CVE-2026-66901",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-66901",
-      "source": "cvefeed",
-      "published": "2026-08-05T06:16:37+09:00",
       "lang": "en"
     }
   ],
