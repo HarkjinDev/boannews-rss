@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-08T01:31:08.396022+09:00",
+  "fetched_at": "2026-08-08T02:02:39.227112+09:00",
   "security_news": [
+    {
+      "title": "[블랙햇 USA 2026 현장] 해킹 도구 직접 돌리고 드론까지 공격…‘체험형 보안 행사’로 개최",
+      "summary": "미국 라스베이거스에서 열린 ‘블랙햇 USA 2026’은 키노트와 전문 연구 발표만으로 설명하기 어려운 행사였다. 행사장 한쪽에서는 인공지능(AI) 에이전트의 보안 취약점을 시험했고, 다른 공간에서는 참가자들이 드론을 날리며 공격 기법을 익혔다. 레고 블록 옆에서는 자물쇠 해제 기술을 배우고, 블랙햇 네트워크운영센터(NOC)에서는 행사장 네트워크를 실제로 방어하는 과정을 공개했다.올해 블랙햇은 8월 1일부터 6일까지 만달레이베이 컨벤션센터에서 진행됐다. 4일간의 전문 교육에 이어 서밋과 이틀간의 본행사가 열렸으며, 브리핑·아스널·비즈",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 블랙햇 USA 2026, 드론 공격 기법 체험 등 진행\n2. AI 에이전트 취약점 시험, 자물쇠 해제 기술 학습\n3. 블랙햇 NOC, 행사장 네트워크 실제 방어 공개",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207959",
+      "source": "dailysecu",
+      "published": "2026-08-08T01:52:02+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "‘5억 이상 피해’ 전세사기-보이스피싱 범죄, 중수청이 수사 가능[형사...",
+      "summary": "또 중수청은 군사기밀이나 산업기술 유출, 고위공직자범죄수사처(공수처)의 수사 대상이 아닌 공무원의 부정부패, 국가 시설을 겨냥한 해킹 사건 등을 다룬다. 담합이나 시장 질서 교란 등 공정거래법 위반 사건도...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 5억원 이상 전세사기, 보이스피싱 등 범죄 중수청 수사 가능\n2. 중수청, 군사기밀·공무원 부정부패·국가시설 해킹 수사\n3. 담합·시장 질서 교란 등 공정거래법 위반도 수사 대상",
+      "link": "https://n.news.naver.com/mnews/article/020/0003739407?sid=102",
+      "source": "naver",
+      "published": "2026-08-08T01:41:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "In Other News: AI Slop Limits Apple Bounties, North Carolina Port Attacks, Hackers Target Wall Street",
       "summary": "Noteworthy stories that might have slipped under the radar: ban on Chinese data center tech, QuickFox VPN supply chain attack, IEH Corporation mailbox breached via phishing.\nThe post In Other News: AI Slop Limits Apple Bounties, North Carolina Port Attacks, Hackers Target Wall Street appeared first on SecurityWeek.",
@@ -2523,6 +2547,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-17593 - Nexus Repository - Arbitrary Class Instantiation via Unsafe Realm Configuration",
+      "summary": "CVE ID :CVE-2026-17593\n  \nPublished : Aug. 7, 2026, 4:07 p.m. | 45 minutes ago\n  \nDescription :An account holding the nexus:settings:update permission in Nexus Repository 3 (or the equivalent nexus:settings permission in the legacy Nexus Repository 2) could submit arbitrary values as realm identifiers through an internal configuration API that did not validate them against the set of registered realms. Because unrecognized entries were persisted and re-evaluated on every realm load via a legacy code path, this could result in unintended code executing inside the Nexus Repository process, and in some cases a persistent authentication lockout that was not visible through the administrative UI.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-17593\n  \nPublished : Aug. 7, 2026, 4:07 p.m. | 45 minutes ago\n  \nDescription :An account holding the nexus:settings:update permission in Nexus Repository 3 (or the equivalent nexus:settings permission in the legacy Nexus Repository 2) could submit arbitrary values as realm identifiers through an internal configuration API that did not validate them against the set of registered realms. Because unrecognized entries were persisted and re-evaluated on every realm load via a legacy code path, this could result in unintended code executing inside the Nexus Repository process, and in some cases a persistent authentication lockout that was not visible through the administrative UI.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-17593 - Nexus 저장소 - 안전하지 않은 영역 구성을 통한 임의 클래스 인스턴스화",
+      "summary_ko": "CVE ID:CVE-2026-17593\n  \n게시일 : 2026년 8월 7일 오후 4시 07분 | 45분 전\n  \n설명: Nexus Repository 3의 nexus:settings:update 권한(또는 레거시 Nexus Repository 2의 동등한 nexus:settings 권한)을 보유한 계정은 등록된 영역 집합에 대해 유효성을 검사하지 않는 내부 구성 API를 통해 임의의 값을 영역 식별자로 제출할 수 있습니다. 인식할 수 없는 항목은 레거시 코드 경로를 통해 모든 영역 로드에서 유지되고 재평가되므로 Nexus Repository 프로세스 내에서 의도하지 않은 코드가 실행될 수 있으며 경우에 따라 관리 UI를 통해 표시되지 않는 지속적인 인증 잠금이 발생할 수 있습니다.\n  \n심각도: 7.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-17593\n2. 26.08.08 오전1:07\n3. An account holding the nexus:settings:update permi",
+      "cve_id": "CVE-2026-17593",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-17593",
+      "source": "cvefeed",
+      "published": "2026-08-08T01:07:43+09:00",
+      "lang": "en"
+    },
     {
       "title": "Linux Shell Forensic: Let?s Dive Into Atuin!, (Fri, Aug 7th)",
       "summary": "UNIX systems (including Linux) are well-known to record a lot of activities in many different locations. But there is one domain where they definitely lack of \"modern\" logging: shells. Most shells provide an historization of the typed commands through a flat file in the $HOME directory (ex: $HOME/.bash_history). They suffer of multiple problems:\r",
