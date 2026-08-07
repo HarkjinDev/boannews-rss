@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-07T22:02:17.983151+09:00",
+  "fetched_at": "2026-08-07T22:32:41.147347+09:00",
   "security_news": [
+    {
+      "title": "경찰 압수 코인 두나무가 관리한다…해킹시 사업자가 전액 보상",
+      "summary": "시스템은 100% 콜드월렛 보안환경을 갖추고 있고 다자간 연산, 분산 키 생성 등 다중 관리체계로 단일 키 유출로 인한 해킹을 막는다. 멀티시그 등 암호 보안 기술도 적용됐다. 두나무 관계자는 “이번 사업은 국가 자산...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 경찰 압수 코인, 두나무가 관리…해킹 시 전액 보상\n2. 100% 콜드월렛, 다중 관리 체계로 단일 키 유출 방지\n3. 멀티시그 등 암호 보안 기술 적용, 국가 자산 보호",
+      "link": "https://n.news.naver.com/mnews/article/022/0004149270?sid=101",
+      "source": "naver",
+      "published": "2026-08-07T22:24:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "New WordPress Pre-Auth XSS Could Lead to PHP Code Execution - Patch ASAP",
+      "summary": "WordPress has fixed a pre-authentication reflected cross-site scripting (XSS) flaw in its login screen that affects every version of the content management system. Under additional conditions, the bug can be chained into PHP code execution on the server.\n\nTracked as CVE-2026-64638 (CVSS score: 8.9), the High-severity vulnerability requires no attacker privileges. According to pwn.ai,",
+      "content": "",
+      "title_ko": "새로운 WordPress 사전 인증 XSS로 인해 PHP 코드 실행이 발생할 수 있음 - 최대한 빨리 패치 적용",
+      "summary_ko": "WordPress는 콘텐츠 관리 시스템의 모든 버전에 영향을 미치는 로그인 화면의 사전 인증 반영 XSS(교차 사이트 스크립팅) 결함을 수정했습니다. 추가 조건에서 버그는 서버의 PHP 코드 실행에 연결될 수 있습니다.\n\nCVE-2026-64638(CVSS 점수: 8.9)로 추적되는 심각도가 높은 취약점에는 공격자 권한이 필요하지 않습니다. pwn.ai에 따르면,",
+      "summary_3lines": "1. 새로운 WordPress 사전 인증 XSS로 인해 PHP 코드 실행이 발생할 수 있음 - \n2. 추가 조건에서 버그는 서버의 PHP 코드 실행에 연결될 수 있습니다.\n3. CVE-2026-64638(CVSS 점수: 8.9)로 추적되는 심각도가 높은 취약점에는 공",
+      "link": "https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html",
+      "source": "thehackernews",
+      "published": "2026-08-07T21:56:23+09:00",
+      "lang": "en"
+    },
     {
       "title": "‘추적 60분’ 인분 투척부터 개인정보 유출까지···“대신 복수해드...",
       "summary": "국민건강보험공단에서 내부 직원이 개인정보를 무단 조회하고 유출한 사건이 발생했고, 행정안전부에서도 해킹으로 8,785명의 개인정보가 유출됐다. 잇따른 개인정보 유출 사고에 대응하기 위해 개인정보보호위원회는...",
@@ -3424,21 +3448,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-69254",
       "source": "cvefeed",
       "published": "2026-08-05T01:16:29+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-70372 - Koha: SQL Injection in reports/bor_issues_top.pl",
-      "summary": "CVE ID :CVE-2026-70372\n  \nPublished : Aug. 4, 2026, 1:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :Koha's reports/bor_issues_top.pl builds dynamic SQL in sub calculate by concatenating several user-controlled request parameters directly into the query string. The Criteria parameter is only normalized by a table-name prefix and is never whitelisted, landing verbatim in identifier positions (SELECT DISTINCTROW, GROUP BY, ORDER BY); Filter values are concatenated raw into single-quoted LIKE, BETWEEN, and comparison fragments, and the Limit parameter is appended raw to a LIMIT clause. An authenticated staff user holding the reports module permission can inject arbitrary SQL and read any table reachable by the Koha database user, including borrowers (password hashes, two-factor secrets, personal data), api_keys, and sessions.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-70372\n  \nPublished : Aug. 4, 2026, 1:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :Koha's reports/bor_issues_top.pl builds dynamic SQL in sub calculate by concatenating several user-controlled request parameters directly into the query string. The Criteria parameter is only normalized by a table-name prefix and is never whitelisted, landing verbatim in identifier positions (SELECT DISTINCTROW, GROUP BY, ORDER BY); Filter values are concatenated raw into single-quoted LIKE, BETWEEN, and comparison fragments, and the Limit parameter is appended raw to a LIMIT clause. An authenticated staff user holding the reports module permission can inject arbitrary SQL and read any table reachable by the Koha database user, including borrowers (password hashes, two-factor secrets, personal data), api_keys, and sessions.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-70372 - Koha: 보고서/bor_issues_top.pl에 SQL 삽입",
-      "summary_ko": "CVE ID:CVE-2026-70372\n  \n게시일 : 2026년 8월 4일 오후 1시 18분 | 1시간 11분 전\n  \n설명 :Koha의 보고서/bor_issues_top.pl은 여러 사용자 제어 요청 매개변수를 쿼리 문자열에 직접 연결하여 하위 계산에 동적 SQL을 구축합니다. Criteria 매개변수는 테이블 이름 접두사로만 정규화되며 화이트리스트에 포함되지 않으며 식별자 위치(SELECT DISTINCTROW, GROUP BY, ORDER BY)에 그대로 포함됩니다. 필터 값은 작은 따옴표로 묶인 LIKE, BETWEEN 및 비교 조각으로 원시 연결되며 Limit 매개변수는 LIMIT 절에 원시로 추가됩니다. 보고서 모듈 권한을 보유한 인증된 직원 사용자는 임의의 SQL을 삽입하고 차용자(비밀번호 해시, 2단계 비밀, 개인 데이터), api_keys 및 세션을 포함하여 Koha 데이터베이스 사용자가 접근할 수 있는 모든 테이블을 읽을 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-70372\n2. 26.08.04 오후10:18\n3. Koha's reports/bor_issues_top.pl builds dynamic SQ",
-      "cve_id": "CVE-2026-70372",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-70372",
-      "source": "cvefeed",
-      "published": "2026-08-04T22:18:58+09:00",
       "lang": "en"
     }
   ],
