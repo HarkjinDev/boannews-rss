@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-08T01:01:15.821822+09:00",
+  "fetched_at": "2026-08-08T01:31:08.396022+09:00",
   "security_news": [
     {
       "title": "In Other News: AI Slop Limits Apple Bounties, North Carolina Port Attacks, Hackers Target Wall Street",
@@ -3421,21 +3421,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-70480",
       "source": "cvefeed",
       "published": "2026-08-05T05:16:54+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-69254 - Flowise: RCE via NodeVM Sandbox Escape in executeJavaScriptCode() nodeVMOptions Override",
-      "summary": "CVE ID :CVE-2026-69254\n  \nPublished : Aug. 4, 2026, 4:16 p.m. | 30 minutes ago\n  \nDescription :Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.3, executeJavaScriptCode() accepted caller-provided nodeVMOptions and merged them over the default NodeVM security settings in packages/components/src/utils.ts. An authenticated attacker reaching packages/server/src/routes/node-custom-functions/index.ts could run a custom function that imported flowise-components/dist/src/utils.js, called executeJavaScriptCode() again with nodeVMOptions.require.builtin set to allow all built-in modules, and then required child_process to execute arbitrary system commands as root on the Flowise server. This issue is fixed in version 3.1.3.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-69254\n  \nPublished : Aug. 4, 2026, 4:16 p.m. | 30 minutes ago\n  \nDescription :Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.3, executeJavaScriptCode() accepted caller-provided nodeVMOptions and merged them over the default NodeVM security settings in packages/components/src/utils.ts. An authenticated attacker reaching packages/server/src/routes/node-custom-functions/index.ts could run a custom function that imported flowise-components/dist/src/utils.js, called executeJavaScriptCode() again with nodeVMOptions.require.builtin set to allow all built-in modules, and then required child_process to execute arbitrary system commands as root on the Flowise server. This issue is fixed in version 3.1.3.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-69254 - Flowise: ExecuteJavaScriptCode() nodeVMOptions 재정의에서 NodeVM 샌드박스 이스케이프를 통한 RCE",
-      "summary_ko": "CVE ID:CVE-2026-69254\n  \n게시일 : 2026년 8월 4일 오후 4시 16분 | 30분 전\n  \n설명:Flowise는 맞춤형 대규모 언어 모델 흐름을 구축하기 위한 드래그 앤 드롭 사용자 인터페이스입니다. 3.1.3 이전에는 ExecuteJavaScriptCode()가 호출자가 제공한 nodeVMOptions를 수락하고 이를 packages/comComponents/src/utils.ts의 기본 NodeVM 보안 설정에 병합했습니다. packages/server/src/routes/node-custom-functions/index.ts에 도달하는 인증된 공격자는 모든 내장 모듈을 허용하도록 설정된 nodeVMOptions.require.buildin을 사용하여 runJavaScriptCode()라고 불리는 flowise-comComponents/dist/src/utils.js를 가져온 사용자 정의 함수를 다시 실행할 수 있으며, 그런 다음 Flowise 서버에서 루트로 임의의 시스템 명령을 실행하기 위해 child_process가 필요합니다. 이 문제는 버전 3.1.3에서 해결되었습니다.\n  \n심각도: 9.4 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-69254\n2. 26.08.05 오전1:16\n3. Flowise is a drag & drop user interface to build a",
-      "cve_id": "CVE-2026-69254",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-69254",
-      "source": "cvefeed",
-      "published": "2026-08-05T01:16:29+09:00",
       "lang": "en"
     }
   ],
