@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-08T05:01:05.373540+09:00",
+  "fetched_at": "2026-08-08T05:31:14.491824+09:00",
   "security_news": [
+    {
+      "title": "Metabase SQLi zero-day exploited in customer data-theft attacks",
+      "summary": "A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framework and Tally. [...]",
+      "content": "",
+      "title_ko": "고객 데이터 도용 공격에 악용된 메타베이스 SQLi 제로데이",
+      "summary_ko": "Framework 및 Tally에 영향을 미치는 것으로 알려진 데이터 도난 공격에서 고객 인스턴스를 침해하기 위한 제로데이 공격에서 심각한 메타베이스 SQL 주입 취약점이 악용되었습니다. [...]",
+      "summary_3lines": "1. Metabase SQLi 제로데이 공격으로 고객 데이터 유출\n2. Framework, Tally 등 고객 인스턴스 침해\n3. 다수 고객 정보 탈취 정황 포착",
+      "link": "https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/",
+      "source": "bleepingcomputer",
+      "published": "2026-08-08T05:14:46+09:00",
+      "lang": "en"
+    },
     {
       "title": "[미국 특징주] 리바이스, 최근 사이버 공격 물결 속 보안 침해 사실 공개",
       "summary": "리바이 스트라우스(종목코드: LEVI)가 최근 발생한 사이버보안 침해 사고를 7일(현지시간) 공개했다.... 이로써 리바이스는 전 세계적으로 늘어나고 있는 사이버 공격 및 랜섬웨어 피해 기업 명단에 새롭게 이름을...",
@@ -2532,18 +2544,6 @@
       "source": "naver",
       "published": "2026-08-05T05:54:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "구글 패스키 마스터키, 유출되면 영구 노출…패스-타-키 공격",
-      "summary": "트러스티드 플랫폼 모듈(TPM, 기기 내 하드웨어 보안칩)이 탑재된 윈도우 PC에 악성코드가 이미 설치돼... 이는 사용자 계정에 동기화된 모든 패스키를 암호화하는 마스터키, 이른바 보안 도메인 시크릿(Security Domain...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. TPM 탑재 윈도우 PC, 악성코드 설치 시 패스키 마스터키 위험\n2. 마스터키 유출 시 사용자 계정의 모든 패스키 영구 노출\n3. 보안 도메인 시크릿 탈취, 패스-타-키 공격 통해 계정 장악 가능",
-      "link": "https://www.wikitree.co.kr/articles/1150435",
-      "source": "naver",
-      "published": "2026-08-05T05:26:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3460,21 +3460,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-66901",
       "source": "cvefeed",
       "published": "2026-08-05T06:16:37+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-70480 - Open WebUI: Client-side SSRF via unrestricted external resource loading in Vega/Vega-Lite chart rendering",
-      "summary": "CVE ID :CVE-2026-70480\n  \nPublished : Aug. 4, 2026, 8:16 p.m. | 18 minutes ago\n  \nDescription :Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.6.34 until 0.11.0, Open WebUI renders vega and vega-lite fenced code blocks in chat content by building a Vega view in the viewer browser without a restricted resource loader. Any user who can place such a block where another user will see it can make that user browser issue attacker-chosen outbound GET requests and read responses from same-origin or CORS-permissive targets into the rendered page. This issue is fixed in 0.11.0.\n  \nSeverity: 4.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-70480\n  \nPublished : Aug. 4, 2026, 8:16 p.m. | 18 minutes ago\n  \nDescription :Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.6.34 until 0.11.0, Open WebUI renders vega and vega-lite fenced code blocks in chat content by building a Vega view in the viewer browser without a restricted resource loader. Any user who can place such a block where another user will see it can make that user browser issue attacker-chosen outbound GET requests and read responses from same-origin or CORS-permissive targets into the rendered page. This issue is fixed in 0.11.0.\n  \nSeverity: 4.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-70480 - 개방형 WebUI: Vega/Vega-Lite 차트 렌더링에서 무제한 외부 리소스 로딩을 통한 클라이언트 측 SSRF",
-      "summary_ko": "CVE ID:CVE-2026-70480\n  \n게시일 : 2026년 8월 4일 오후 8시 16분 | 18분 전\n  \n설명 :Open WebUI는 확장 가능하고 기능이 풍부하며 사용자 친화적인 자체 호스팅 AI 플랫폼입니다. 0.6.34부터 0.11.0까지 Open WebUI는 제한된 리소스 로더 없이 뷰어 브라우저에서 Vega 보기를 구축하여 채팅 콘텐츠에서 vega 및 vega-lite 펜스 코드 블록을 렌더링합니다. 다른 사용자가 볼 수 있는 블록을 배치할 수 있는 사용자는 해당 사용자 브라우저가 공격자가 선택한 아웃바운드 GET 요청을 발행하고 동일 출처 또는 CORS 허용 대상의 응답을 렌더링된 페이지로 읽도록 할 수 있습니다. 이 문제는 0.11.0에서 해결되었습니다.\n  \n심각도: 4.1 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-70480\n2. 26.08.05 오전5:16\n3. Open WebUI is an extensible, feature-rich, and use",
-      "cve_id": "CVE-2026-70480",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-70480",
-      "source": "cvefeed",
-      "published": "2026-08-05T05:16:54+09:00",
       "lang": "en"
     }
   ],
