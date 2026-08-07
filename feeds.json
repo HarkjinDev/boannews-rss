@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-07T20:02:31.289037+09:00",
+  "fetched_at": "2026-08-07T20:31:07.134995+09:00",
   "security_news": [
     {
       "title": "암호화폐 보유자 노린 ‘렌치 공격’, 구조적 위협 됐나…CertiK “상반기...",
@@ -3481,21 +3481,6 @@
       "link": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-216-01",
       "source": "cisa",
       "published": "2026-08-04T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-10050 - Digest authentication lossy encoding",
-      "summary": "CVE ID :CVE-2026-10050\n  \nPublished : Aug. 4, 2026, 11:22 a.m. | 1 hour, 7 minutes ago\n  \nDescription :In Eclipse Jetty, the Digest authentication server-side component uses ISO-8859-1 to encode the password as bytes.\n\n\n\nThis was done because the initial specification for HTTP did not specify explicitly a charset, and it was assumed to be ISO-8859-1 for historical reasons.\n\n\n\nIf the password contains characters that cannot be represented in ISO-8859-1, they are silently replaced by `?`. This happens with passwords that contain Chinese, Cyrillic or Greek characters, for example: `αβ123` converts to `??123`.\n\n\n\nAn attacker can send a request with a digest `Authorization` header crafted with a password made of only `?` characters; the server would match any password of the same length that contains non-ISO-8859-1 characters.\n\n\n\nRecent HTTP Digest [RFC-7616](https://datatracker.ietf.org/doc/html/rfc7616) supports a `charset` parameters that defaults to UTF-8 that allows for correct encoding/decoding of passwords.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-10050\n  \nPublished : Aug. 4, 2026, 11:22 a.m. | 1 hour, 7 minutes ago\n  \nDescription :In Eclipse Jetty, the Digest authentication server-side component uses ISO-8859-1 to encode the password as bytes.\n\n\n\nThis was done because the initial specification for HTTP did not specify explicitly a charset, and it was assumed to be ISO-8859-1 for historical reasons.\n\n\n\nIf the password contains characters that cannot be represented in ISO-8859-1, they are silently replaced by `?`. This happens with passwords that contain Chinese, Cyrillic or Greek characters, for example: `αβ123` converts to `??123`.\n\n\n\nAn attacker can send a request with a digest `Authorization` header crafted with a password made of only `?` characters; the server would match any password of the same length that contains non-ISO-8859-1 characters.\n\n\n\nRecent HTTP Digest [RFC-7616](https://datatracker.ietf.org/doc/html/rfc7616) supports a `charset` parameters that defaults to UTF-8 that allows for correct encoding/decoding of passwords.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10050 - 다이제스트 인증 손실 인코딩",
-      "summary_ko": "CVE ID:CVE-2026-10050\n  \n게시일 : 2026년 8월 4일 오전 11시 22분 | 1시간, 7분 전\n  \n설명:Eclipse Jetty에서 다이제스트 인증 서버 측 구성 요소는 ISO-8859-1을 사용하여 비밀번호를 바이트로 인코딩합니다.\n\n\n\n이는 HTTP의 초기 사양이 문자 세트를 명시적으로 지정하지 않았고 역사적인 이유로 ISO-8859-1로 간주되었기 때문에 수행되었습니다.\n\n\n\n비밀번호에 ISO-8859-1에서 표시할 수 없는 문자가 포함되어 있으면 해당 문자는 자동으로 `?`로 대체됩니다. 이는 중국어, 키릴 문자 또는 그리스 문자가 포함된 비밀번호에서 발생합니다. 예를 들어 `αβ123`은 `??123`으로 변환됩니다.\n\n\n\n공격자는 `?` 문자로만 구성된 비밀번호로 만들어진 다이제스트 `Authorization` 헤더를 사용하여 요청을 보낼 수 있습니다. 서버는 ISO-8859-1이 아닌 문자를 포함하는 동일한 길이의 모든 비밀번호와 일치합니다.\n\n\n\n최근 HTTP 다이제스트[RFC-7616](https://datatracker.ietf.org/doc/html/rfc7616)는 비밀번호의 올바른 인코딩/디코딩을 허용하는 UTF-8을 기본값으로 하는 `charset` 매개변수를 지원합니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10050\n2. 26.08.04 오후8:22\n3. In Eclipse Jetty, the Digest authentication server",
-      "cve_id": "CVE-2026-10050",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10050",
-      "source": "cvefeed",
-      "published": "2026-08-04T20:22:43+09:00",
       "lang": "en"
     }
   ],
