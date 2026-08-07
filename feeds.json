@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-08T07:02:22.022964+09:00",
+  "fetched_at": "2026-08-08T07:32:18.200168+09:00",
   "security_news": [
+    {
+      "title": "국가대표 AI '독파모' 2차 평가 본격화…오늘 국민 평가 시작",
+      "summary": "찾아내고 공격 코드까지 생성할 수 있는 수준에 도달했다는 점에서 주목받은 모델. 기존 해킹보다 훨씬 빠른 속도로 취약점 탐색과 공격 준비가 가능해지면서 AI 기반 사이버 공격 위험을 상징하는 사례로 거론된다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국가대표 AI '독파모' 2차 평가 본격화…오늘 국민 평가 시작 찾아내고 공격 코드까지 생\n2. 기존 해킹보다 훨씬 빠른 속도로 취약점 탐색과 공격 준비가 가능해지면서 AI 기반 사이버 ",
+      "link": "https://n.news.naver.com/mnews/article/421/0009103361?sid=105",
+      "source": "naver",
+      "published": "2026-08-08T07:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "문샷 '키미 K3', 해킹 평가용 샌드박스 우회",
       "summary": "중국 AI 기업 문샷이 최근 선보인 AI 모델 키미K3가 사이버보안 역량 평가 도중 테스트 환경을 벗어난 것으로 나타났다. 7일(현지시간) 테크크런치에 따르면 AI 보안업체 프런티어 시큐리티 연구진은 블로그 게시글에서...",
@@ -2532,18 +2544,6 @@
       "source": "naver",
       "published": "2026-08-05T07:43:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "갤럭시 \"콜드카드 취약점 악용 공격자 최소 15명\"",
-      "summary": "알렉스 손은 이번 공격이 피해 신고를 통해서만 새로운 공격자를 확인할 수 있었기 때문에 중앙화 거래소 해킹과는 양상이 달랐다고 설명했다. 1BTC 미만을 도난당한 한 피해자 신고를 계기로 126개 주소에서 12BTC가...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 갤럭시 콜드카드 취약점 악용한 공격자 최소 15명 확인\n2. 126개 주소에서 12 BTC 도난, 1BTC 미만 피해 신고 분석\n3. 중앙화 거래소 해킹과 다른 양상, 추가 피해자 추적",
-      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=689956",
-      "source": "naver",
-      "published": "2026-08-05T07:12:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2623,6 +2623,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2010-4052 Stack consumption vulnerability in the regcomp implementation in the GNU C Library (aka glibc or libc6) through 2.11.3, and 2.12.x through 2.12.2, allows context-dependent attackers to cause a denial of service (resource exhaustion) via a regular expression containing adjacent repetition operators, as demonstrated by a {10,}{10,}{10,}{10,} sequence in the proftpd.gnu.c exploit for ProFTPD.",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2010-4052 GNU C 라이브러리(glibc 또는 libc6이라고도 함)~2.11.3 및 2.12.x~2.12.2의 regcomp 구현에 대한 스택 소비 취약점으로 인해 컨텍스트 종속 공격자가 인접한 반복 연산자가 포함된 정규식을 통해 서비스 거부(리소스 소진)를 유발할 수 있습니다. ProFTPD용 proftpd.gnu.c 익스플로잇.",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2010-4052\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2010-4052",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2010-4052",
+      "source": "msrc",
+      "published": "2026-08-07T17:05:02+09:00",
+      "lang": "en"
+    },
+    {
       "title": "Linux Shell Forensic: Let?s Dive Into Atuin!, (Fri, Aug 7th)",
       "summary": "UNIX systems (including Linux) are well-known to record a lot of activities in many different locations. But there is one domain where they definitely lack of \"modern\" logging: shells. Most shells provide an historization of the typed commands through a flat file in the $HOME directory (ex: $HOME/.bash_history). They suffer of multiple problems:\r",
       "description": "UNIX systems (including Linux) are well-known to record a lot of activities in many different locations. But there is one domain where they definitely lack of \"modern\" logging: shells. Most shells provide an historization of the typed commands through a flat file in the $HOME directory (ex: $HOME/.bash_history). They suffer of multiple problems:\r",
@@ -2635,6 +2650,36 @@
       "link": "https://isc.sans.edu/diary/rss/33226",
       "source": "sans_isc",
       "published": "2026-08-07T16:22:28+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2016-2568 pkexec, when used with --user nonpriv, allows local users to escape to the parent session",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2016-2568 pkexec를 --user nonpriv와 함께 사용하면 로컬 사용자가 상위 세션으로 이스케이프할 수 있습니다.",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2016-2568\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2016-2568",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2016-2568",
+      "source": "msrc",
+      "published": "2026-08-07T16:20:17+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2007-3205 The parse_str function in (1) PHP, (2) Hardened-PHP, and (3) Suhosin, when called without a second parameter, might allow remote attackers to overwrite arbitrary variables by specifying variable names and values in the string to be parsed.  NOTE: it is not clear whether this is a design limitation of the function or a bug in PHP, although it is likely to be regarded as a bug in Hardened-PHP and Suhosin.",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2007-3205 (1) PHP, (2) Hardened-PHP 및 (3) Suhosin의 parse_str 함수를 두 번째 매개 변수 없이 호출하면 원격 공격자가 구문 분석할 문자열에 변수 이름과 값을 지정하여 임의의 변수를 덮어쓸 수 있습니다.  참고: 이것이 기능의 설계 제한인지 PHP의 버그인지는 확실하지 않지만 Hardened-PHP 및 Suhosin에서는 버그로 간주될 가능성이 높습니다.",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2007-3205\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2007-3205",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2007-3205",
+      "source": "msrc",
+      "published": "2026-08-07T16:19:25+09:00",
       "lang": "en"
     },
     {
@@ -3460,36 +3505,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-9273",
       "source": "cvefeed",
       "published": "2026-08-05T15:16:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45084 - OpenSIPS: Denial of service in presence.handle_publish() from unchecked Content-Type state",
-      "summary": "CVE ID :CVE-2026-45084\n  \nPublished : Aug. 4, 2026, 10:17 p.m. | 13 minutes ago\n  \nDescription :OpenSIPS is a Session Initiation Protocol (SIP) server implementation. Versions 3.4.0 through 3.6.5 contain a denial of service vulnerability in the presence module. When the presence module's handle_publish() function processes a SIP PUBLISH request with an Event: presence header and a message body while the configuration option enable_sphere_check=1 is set, it invokes the get_content_type() macro without first calling parse_content_type_hdr(), causing it to dereference uninitialized or NULL Content-Type parsing state and crash. If a Content-Type header is present but unparsed, msg->content_type->parsed is NULL and is dereferenced as a content_t pointer; if the request lacks a Content-Type header entirely, msg->content_type itself is NULL, and both cases lead to a crash. A remote attacker can therefore cause a denial of service against an affected instance with a single PUBLISH request over UDP or TCP, using either a valid Content-Type: application/pidf+xml request or one with the header removed, and the vulnerable code path itself does not enforce authentication (though a deployment's routing configuration may require it before this route is reached). The issue has been fixed in version 3.6.6 and 4.0.0-rc1.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-45084\n  \nPublished : Aug. 4, 2026, 10:17 p.m. | 13 minutes ago\n  \nDescription :OpenSIPS is a Session Initiation Protocol (SIP) server implementation. Versions 3.4.0 through 3.6.5 contain a denial of service vulnerability in the presence module. When the presence module's handle_publish() function processes a SIP PUBLISH request with an Event: presence header and a message body while the configuration option enable_sphere_check=1 is set, it invokes the get_content_type() macro without first calling parse_content_type_hdr(), causing it to dereference uninitialized or NULL Content-Type parsing state and crash. If a Content-Type header is present but unparsed, msg->content_type->parsed is NULL and is dereferenced as a content_t pointer; if the request lacks a Content-Type header entirely, msg->content_type itself is NULL, and both cases lead to a crash. A remote attacker can therefore cause a denial of service against an affected instance with a single PUBLISH request over UDP or TCP, using either a valid Content-Type: application/pidf+xml request or one with the header removed, and the vulnerable code path itself does not enforce authentication (though a deployment's routing configuration may require it before this route is reached). The issue has been fixed in version 3.6.6 and 4.0.0-rc1.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-45084 - OpenSIPS: 선택되지 않은 콘텐츠 유형 상태에서 존재 여부.handle_publish()의 서비스 거부",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-45084\n2. 26.08.05 오전7:17\n3. OpenSIPS is a Session Initiation Protocol (SIP) se",
-      "cve_id": "CVE-2026-45084",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45084",
-      "source": "cvefeed",
-      "published": "2026-08-05T07:17:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-18817 - Baserow Inactive Non-Staff User serializers.py BaserowImpersonateAuthTokenSerializer improper authorization",
-      "summary": "CVE ID :CVE-2026-18817\n  \nPublished : Aug. 4, 2026, 10:17 p.m. | 13 minutes ago\n  \nDescription :A security flaw has been discovered in Baserow up to 2.3.2. Affected by this issue is the function BaserowImpersonateAuthTokenSerializer of the file backend/src/baserow/api/admin/users/serializers.py of the component Inactive Non-Staff User Handler. Performing a manipulation results in improper authorization. Remote exploitation of the attack is possible. The complexity of an attack is rather high. The exploitation is known to be difficult. The presence of this vulnerability remains uncertain at this time. Upgrading to version 2.3.3 can resolve this issue. The affected component should be upgraded. The project maintainer explains: \"While the problem exists, I'm not really sure if it's a vulnerability. (....) Even though the back gives a token for a deactivate user, none of the endpoints actually work. That said, we will fix it, but so far it seems more like a bug instead of a vulnerability.\"\n  \nSeverity: 2.2 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-18817\n  \nPublished : Aug. 4, 2026, 10:17 p.m. | 13 minutes ago\n  \nDescription :A security flaw has been discovered in Baserow up to 2.3.2. Affected by this issue is the function BaserowImpersonateAuthTokenSerializer of the file backend/src/baserow/api/admin/users/serializers.py of the component Inactive Non-Staff User Handler. Performing a manipulation results in improper authorization. Remote exploitation of the attack is possible. The complexity of an attack is rather high. The exploitation is known to be difficult. The presence of this vulnerability remains uncertain at this time. Upgrading to version 2.3.3 can resolve this issue. The affected component should be upgraded. The project maintainer explains: \"While the problem exists, I'm not really sure if it's a vulnerability. (....) Even though the back gives a token for a deactivate user, none of the endpoints actually work. That said, we will fix it, but so far it seems more like a bug instead of a vulnerability.\"\n  \nSeverity: 2.2 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-18817 - Baserow 비활성 비직원 사용자 serializers.py BaserowImpersonateAuthTokenSerializer 부적절한 인증",
-      "summary_ko": "CVE ID:CVE-2026-18817\n  \n게시일 : 2026년 8월 4일 오후 10시 17분 | 13분 전\n  \n설명 : Baserow 최대 2.3.2에서 보안 결함이 발견되었습니다. 이 문제의 영향을 받는 것은 Inactive Non-Staff User Handler 구성 요소의 backend/src/baserow/api/admin/users/serializers.py 파일의 BaserowImpersonateAuthTokenSerializer 기능입니다. 조작을 수행하면 부적절한 승인이 발생합니다. 공격의 원격 이용이 가능합니다. 공격의 복잡성은 다소 높습니다. 착취가 어려운 것으로 알려져 있습니다. 현재로서는 이 취약점의 존재 여부가 불확실합니다. 버전 2.3.3으로 업그레이드하면 이 문제를 해결할 수 있습니다. 영향을 받는 구성 요소를 업그레이드해야 합니다. 프로젝트 관리자는 다음과 같이 설명합니다. \"문제가 존재하지만 이것이 취약점인지는 잘 모르겠습니다. (...) 뒷면이 비활성화된 사용자에 대한 토큰을 제공하더라도 실제로는 어떤 엔드포인트도 작동하지 않습니다. 즉, 우리가 고칠 것이지만 지금까지는 취약점이라기보다는 버그에 더 가까운 것 같습니다.\"\n  \n심각도: 2.2 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-18817\n2. 26.08.05 오전7:17\n3. A security flaw has been discovered in Baserow up ",
-      "cve_id": "CVE-2026-18817",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18817",
-      "source": "cvefeed",
-      "published": "2026-08-05T07:17:14+09:00",
       "lang": "en"
     }
   ],
