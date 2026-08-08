@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-08T11:01:17.759439+09:00",
+  "fetched_at": "2026-08-08T11:30:58.212941+09:00",
   "security_news": [
     {
       "title": "민주당 당원 커뮤니티 해킹에 정청래 책임론?…김민석 \"관리 무능 바로...",
@@ -2376,45 +2376,24 @@
       "source": "boannews",
       "published": "2026-08-05T11:37:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "롯데카드 해킹 사고, MBK 인수 후 정보보호 예산·인력 축소가 원인으로...",
-      "summary": "297만 명의 신용정보가 유출된 롯데카드 해킹 사고와 관련해 금융감독원이 정기검사 결과를 발표했다. 금감원은 롯데카드의 정보보호 예산과 인력 비중이 대주주 변경(MBK파트너스 인수) 전후로 크게 줄어든 점을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 롯데카드, MBK 인수 후 정보보호 예산·인력 축소로 297만 건 신용정보 유출\n2. 금융감독원, 정기검사 결과 MBK 인수 후 정보보호 예산·인력 축소가 원인 지목\n3. 297만 명 개인정보 유출로 소비자 피해 우려 및 금융권 보안 강화 필요성 제기",
-      "link": "http://www.queen.co.kr/news/articleView.html?idxno=461302",
-      "source": "naver",
-      "published": "2026-08-05T11:16:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[KB증권 금감원 제재 32건]④IT투자 1587억 어디 썼나",
-      "summary": "IT 투자가 전산 안정성, 디지털 서비스, AI, 클라우드 등 전반적인 시스템 경쟁력을 보여주는 지표라면 정보보호 투자는 해킹·정보유출·전자금융사고 예방 등 보안 역량을 보여주는 실질적 지표이기 때문이다. 그러나...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [KB증권 금감원 제재 32건]④IT투자 1587억 어디 썼나 IT 투자가 전산 안정성, ",
-      "link": "https://www.dailybrief.co.kr/news/articleView.html?idxno=6448",
-      "source": "naver",
-      "published": "2026-08-05T11:14:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[블랙햇 USA 2026] 미국 사이버 대응, 방어 넘어 공격 인프라 해체·군사작전 통합으로",
-      "summary": "[라스베이거스=데일리시큐 길민권 기자] 글로벌 사이버보안 행사 ‘블랙햇 USA 2026(Black Hat USA 2026)’이 8월 1일부터 6일까지 미국 라스베이거스에서 열리고 있다. 교육과 서밋, 브리핑, 비즈니스홀 프로그램으로 구성된 이번 행사에서는 AI 보안과 취약점 연구, 중요 기반시설 보호, 국가배후 사이버 위협 대응 등이 주요 의제로 다뤄졌다.8월 4일 비즈니스홀 메인 스테이지에서 열린 오프닝 세션 ‘Disruption, Defense and Operational Readiness’에는 미국 연방수사국(FBI), 사이버",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [블랙햇 USA 2026] 미국 사이버 대응, 방어 넘어 공격 인프라 해체·군사작전 통합으\n2. 교육과 서밋, 브리핑, 비즈니스홀 프로그램으로 구성된 이번 행사에서는 AI 보안과 취약점 ",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=207922",
-      "source": "dailysecu",
-      "published": "2026-08-05T11:02:58+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-8798 - Native entropy source retries the CPU entropy instructions without limit",
+      "summary": "CVE ID :CVE-2026-8798\n  \nPublished : Aug. 8, 2026, 1:16 a.m. | 33 minutes ago\n  \nDescription :In Bouncy Castle for Java FIPS (BC-FJA) before bc-fips 2.1.3, the native entropy source used on Intel platforms retried the CPU entropy instructions without any bound. RDSEED and RDRAND report failure through their carry flag, and the JNI seeding routine spun re-issuing the instruction for as long as that flag stayed clear, so a persistent failure of the on-chip entropy source - whether from a hardware fault, from the underlying DRBG being exhausted by contention across many cores, or from a hypervisor that does not provide the instruction - left the calling thread looping indefinitely inside the JNI call, where it could be neither interrupted nor timed out. Any operation drawing from the native entropy source could therefore hang, denying service to the application. The retry loops are now bounded (200 attempts for RDSEED and 20 for RDRAND, twice the baselines given in Intel's Digital Random Number Generator software implementation guide), pausing between attempts and, on exhaustion, clearing any partially written buffer and throwing rather than continuing to spin. The clear is performed by an un-elidable memzero, which uses a volatile pointer and an assembly memory barrier so that a compiler cannot optimise the erase away as a dead store. Bouncy Castle for Java (bcprov) is not affected, as it has no native entropy source; the 1.0.X and 2.0.X FIPS series are not affected.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-8798\n  \nPublished : Aug. 8, 2026, 1:16 a.m. | 33 minutes ago\n  \nDescription :In Bouncy Castle for Java FIPS (BC-FJA) before bc-fips 2.1.3, the native entropy source used on Intel platforms retried the CPU entropy instructions without any bound. RDSEED and RDRAND report failure through their carry flag, and the JNI seeding routine spun re-issuing the instruction for as long as that flag stayed clear, so a persistent failure of the on-chip entropy source - whether from a hardware fault, from the underlying DRBG being exhausted by contention across many cores, or from a hypervisor that does not provide the instruction - left the calling thread looping indefinitely inside the JNI call, where it could be neither interrupted nor timed out. Any operation drawing from the native entropy source could therefore hang, denying service to the application. The retry loops are now bounded (200 attempts for RDSEED and 20 for RDRAND, twice the baselines given in Intel's Digital Random Number Generator software implementation guide), pausing between attempts and, on exhaustion, clearing any partially written buffer and throwing rather than continuing to spin. The clear is performed by an un-elidable memzero, which uses a volatile pointer and an assembly memory barrier so that a compiler cannot optimise the erase away as a dead store. Bouncy Castle for Java (bcprov) is not affected, as it has no native entropy source; the 1.0.X and 2.0.X FIPS series are not affected.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-8798 - 기본 엔트로피 소스가 제한 없이 CPU 엔트로피 명령을 재시도합니다.",
+      "summary_ko": "CVE ID:CVE-2026-8798\n  \n게시일 : 2026년 8월 8일 오전 1시 16분 | 33분 전\n  \n설명:bc-fips 2.1.3 이전의 BC-FJA(Bouncy Castle for Java FIPS)에서는 Intel 플랫폼에서 사용된 기본 엔트로피 소스가 제한 없이 CPU 엔트로피 명령을 재시도했습니다. RDSEED 및 RDRAND는 캐리 플래그를 통해 실패를 보고하고 JNI 시드 루틴은 해당 플래그가 명확하게 유지되는 동안 명령을 다시 실행하도록 회전하므로 온칩 엔트로피 소스의 지속적인 실패(하드웨어 오류, 많은 코어에 걸친 경합으로 인해 소진되는 기본 DRBG 또는 명령을 제공하지 않는 하이퍼바이저 등)로 인해 호출 스레드가 JNI 호출 내부에서 무기한 루핑 상태가 되어 중단되거나 시간 초과될 수 없습니다. 따라서 기본 엔트로피 소스에서 그리는 모든 작업이 중단되어 애플리케이션에 대한 서비스가 거부될 수 있습니다. 재시도 루프는 이제 제한되어 있습니다(RDSEED의 경우 200회 시도, RDRAND의 경우 20회, Intel의 디지털 난수 생성기 소프트웨어 구현 가이드에 제공된 기준의 두 배). 시도 사이에 일시 중지되고, 소진되면 계속해서 회전하는 대신 부분적으로 작성된 버퍼를 지우고 던집니다. 지우기는 컴파일러가 데드 저장소로 지우기를 최적화할 수 없도록 휘발성 포인터와 어셈블리 메모리 장벽을 사용하는 비적격 memzero에 의해 수행됩니다. Bouncy Castle for Java(bcprov)는 기본 엔트로피 소스가 없으므로 영향을 받지 않습니다. 1.0.X 및 2.0.X FIPS 시리즈는 영향을 받지 않습니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-8798\n2. 26.08.08 오전10:16\n3. In Bouncy Castle for Java FIPS (BC-FJA) before bc-",
+      "cve_id": "CVE-2026-8798",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8798",
+      "source": "cvefeed",
+      "published": "2026-08-08T10:16:31+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-47127 - Ghostfolio has a Stripe subscription bypass",
       "summary": "CVE ID :CVE-2026-47127\n  \nPublished : Aug. 7, 2026, 10:43 p.m. | 19 minutes ago\n  \nDescription :Ghostfolio is an open source wealth management software. Prior to version 3.4.0, Ghostfolio's Stripe checkout success-URL handler at `GET /api/v1/subscription/stripe/callback?checkoutSessionId=` retrieves the Stripe Checkout Session by ID and unconditionally grants a Premium subscription to the session's `client_reference_id` — without ever checking `session.payment_status` or `session.status`. There is no separate Stripe webhook endpoint with `stripe-signature` verification; this callback is the sole code path that creates Stripe-driven subscriptions. Any authenticated user can self-grant a 1-year Premium subscription without ever paying. Version 3.4.0 rejects sessions unless `session.payment_status === 'paid'` AND `session.status === 'complete'` (fails closed). Additionally, new unique `stripeCheckoutSessionId` column → a session can't be redeemed twice (race-safe via DB unique constraint).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
