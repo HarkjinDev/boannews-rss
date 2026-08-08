@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-08T20:01:18.302742+09:00",
+  "fetched_at": "2026-08-08T20:31:21.037817+09:00",
   "security_news": [
+    {
+      "title": "Critical One-Click Vulnerability in Atlassian’s Rovo AI Exposed Enterprise Data",
+      "summary": "The RovoBlast attack method identified by Varonis researchers could have been exploited to steal Confluence, Jira and SharePoint data.\nThe post Critical One-Click Vulnerability in Atlassian’s Rovo AI Exposed Enterprise Data appeared first on SecurityWeek.",
+      "content": "",
+      "title_ko": "Atlassian Rovo AI의 심각한 원클릭 취약점으로 인해 기업 데이터 노출",
+      "summary_ko": "Varonis 연구원이 확인한 RovoBlast 공격 방법은 Confluence, Jira 및 SharePoint 데이터를 훔치는 데 악용되었을 수 있습니다.\nAtlassian Rovo AI 노출 기업 데이터의 심각한 원클릭 취약점에 대한 게시물이 SecurityWeek에 처음으로 게재되었습니다.",
+      "summary_3lines": "1. 아틀라시안 Rovo AI, 원클릭 취약점으로 기업 데이터 노출\n2. Varonis, RovoBlast 통해 Confluence, Jira, SharePoint\n3. 기업 데이터 유출 위험, 즉각적인 패치 및 보안 강화 필요",
+      "link": "https://www.securityweek.com/critical-one-click-vulnerability-in-atlassians-rovo-ai-exposed-enterprise-data/",
+      "source": "securityweek",
+      "published": "2026-08-08T20:30:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "민주당 \"개인정보 유출 당시 이상징후 확인…업체는 '이상 없음' 회신\"",
       "summary": "확인하고 보안 점검을 진행했지만 별다른 문제가 없다는 답변을 받았다고 해명했다. 민주당은 8일... 당은 당시 한국인터넷진흥원(KISA)에도 보안 점검 지원을 요청했다고 설명했다. 다만 \"타사 대형 유출 사고 대응이 겹쳐...",
@@ -3109,21 +3121,6 @@
       "link": "https://www.cisa.gov/news-events/alerts/2026/08/05/cisa-adds-one-known-exploited-vulnerability-catalog",
       "source": "cisa",
       "published": "2026-08-05T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-71247 - Documenso: Assistant Recipient Can Forge Another Signer's Signature in Sequential-Signing Documents",
-      "summary": "CVE ID :CVE-2026-71247\n  \nPublished : Aug. 5, 2026, 11:16 a.m. | 1 hour, 14 minutes ago\n  \nDescription :Documenso's sign-field-with-token.ts, used by the live document-signing UI, allows a recipient with the ASSISTANT role to fetch and complete fields belonging to any later-or-equal-order, not-yet-signed recipient in the same envelope, with no restriction on field type. The handler upserts a Signature record tied to the target field's recipientId with no check that field.type is SIGNATURE and the acting recipient owns it. A newer V2 signing path (sign-envelope-field.ts) explicitly blocks assistants from completing SIGNATURE fields, and the project's own test suite comments confirm this guard is absent from the V1 path used here. In a sequential-signing document, an assistant recipient can therefore forge another signer's signature field.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-71247\n  \nPublished : Aug. 5, 2026, 11:16 a.m. | 1 hour, 14 minutes ago\n  \nDescription :Documenso's sign-field-with-token.ts, used by the live document-signing UI, allows a recipient with the ASSISTANT role to fetch and complete fields belonging to any later-or-equal-order, not-yet-signed recipient in the same envelope, with no restriction on field type. The handler upserts a Signature record tied to the target field's recipientId with no check that field.type is SIGNATURE and the acting recipient owns it. A newer V2 signing path (sign-envelope-field.ts) explicitly blocks assistants from completing SIGNATURE fields, and the project's own test suite comments confirm this guard is absent from the V1 path used here. In a sequential-signing document, an assistant recipient can therefore forge another signer's signature field.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-71247 - Documenso: 보조 수신자가 순차 서명 문서에서 다른 서명자의 서명을 위조할 수 있음",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-71247\n2. 26.08.05 오후8:16\n3. Documenso's sign-field-with-token.ts, used by the ",
-      "cve_id": "CVE-2026-71247",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-71247",
-      "source": "cvefeed",
-      "published": "2026-08-05T20:16:27+09:00",
       "lang": "en"
     }
   ],
