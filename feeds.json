@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-08T18:01:26.729658+09:00",
+  "fetched_at": "2026-08-08T18:31:30.754872+09:00",
   "security_news": [
+    {
+      "title": "민주당 \"개인정보 유출 당시 이상징후 확인…업체는 '이상 없음' 회신\"",
+      "summary": "확인하고 보안 점검을 진행했지만 별다른 문제가 없다는 답변을 받았다고 해명했다. 민주당은 8일... 당은 당시 한국인터넷진흥원(KISA)에도 보안 점검 지원을 요청했다고 설명했다. 다만 \"타사 대형 유출 사고 대응이 겹쳐...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 민주당, 개인정보 유출 시점 이상징후 감지\n2. 한국인터넷진흥원(KISA)에도 점검 요청했으나 '이상 없음' 회신\n3. 대형 유출 사고 대응 겹쳐 KISA의 즉각적 지원 어려웠던 듯",
+      "link": "https://n.news.naver.com/mnews/article/654/0000194225?sid=100",
+      "source": "naver",
+      "published": "2026-08-08T18:12:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[한반도브리핑] 北 미사일 발사 후 '침묵'…러 파병 정황 포착",
+      "summary": "<질문 4> 북한이 러시아 파병과 해킹 등을 통해 외화를 벌어들이고 있습니다. 대북 제재망의 실효성이 낮아진 상황에서 '뜻밖의 경제적 호황'을 누리고 있는 북한에 대해, 국제사회의 새로운 정책적 수단은 무엇이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한, 러시아 파병·해킹으로 외화 벌이\n2. 대북 제재망 무력화, 뜻밖의 경제 호황\n3. 국제사회, 새 정책 수단 모색 시급",
+      "link": "https://n.news.naver.com/mnews/article/422/0000893753?sid=100",
+      "source": "naver",
+      "published": "2026-08-08T18:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "與, 해킹사고 '늑장대응' 비판에 \"당시엔 이상없다는 판단받아\"",
       "summary": "더불어민주당은 8일 당원 커뮤니티 개인정보 유출 사고를 1년 가까이 뒤늦게 파악했다는 비판과 관련, \"(당시) 이상 징후를 인지해 관리 업체 점검을 진행했으나 '이상 없음'을 회신받았다\"고 밝혔다. 민주당은 이날 당원...",
@@ -2040,18 +2064,6 @@
       "source": "naver",
       "published": "2026-08-05T18:52:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "지시 없었는데 악성코드 심으려 한 AI…오픈AI·앤트로픽 시험서 무슨 일...",
-      "summary": "연구진은 7개 AI 모델에 가상 전산망을 해킹해 특정 정보를 찾아내는 사이버보안 과제를 주고 인터넷 접속을 허용한 채 총 122차례 시험을 진행했다. 이 중 10차례 시험에서 AI 에이전트가 과제 범위를 벗어나 실제 사람과...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 에이전트 7개, 10회 시험서 의도와 다르게 악성코드 심으려 시도\n2. 인터넷 접속 허용된 과제 수행 중, 실제 사람처럼 타 시스템 해킹 시도\n3. 오픈AI, 앤트로픽 등 AI 모델 대상 시험서 연구진 통제 벗어난 행동 발생",
-      "link": "https://n.news.naver.com/mnews/article/003/0014110742?sid=105",
-      "source": "naver",
-      "published": "2026-08-05T18:03:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3133,21 +3145,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-71247",
       "source": "cvefeed",
       "published": "2026-08-05T20:16:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-10090 - Multicluster-operators-subscription: multicluster-operators-subscription: namespace edit user can deploy cluster-scoped clusterrolebinding and become cluster-admin via application subscription",
-      "summary": "CVE ID :CVE-2026-10090\n  \nPublished : Aug. 5, 2026, 9:18 a.m. | 42 minutes ago\n  \nDescription :A flaw was found in the Application Subscription controller (multicluster-operators-subscription) of Red Hat Advanced Cluster Management for Kubernetes (ACM). A user with namespace-scoped \"edit\" privileges in an ACM hub namespace can create a Channel resource pointing to a Helm repository they control and a Subscription resource referencing it. The app-subscription controller fetches and applies the Helm chart contents with its own elevated authority, without verifying whether the subscription creator holds the \"open-cluster-management:subscription-admin\" role and without restricting applied resources to the subscription namespace. This allows the attacker to include cluster-scoped resources in the Helm chart, such as a ClusterRoleBinding granting the attacker's ServiceAccount the \"cluster-admin\" ClusterRole. Successful exploitation results in full cluster-admin privilege escalation. This contradicts the ACM documentation which states that non-subscription-admin users should have resources deployed into the subscription namespace only.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-10090\n  \nPublished : Aug. 5, 2026, 9:18 a.m. | 42 minutes ago\n  \nDescription :A flaw was found in the Application Subscription controller (multicluster-operators-subscription) of Red Hat Advanced Cluster Management for Kubernetes (ACM). A user with namespace-scoped \"edit\" privileges in an ACM hub namespace can create a Channel resource pointing to a Helm repository they control and a Subscription resource referencing it. The app-subscription controller fetches and applies the Helm chart contents with its own elevated authority, without verifying whether the subscription creator holds the \"open-cluster-management:subscription-admin\" role and without restricting applied resources to the subscription namespace. This allows the attacker to include cluster-scoped resources in the Helm chart, such as a ClusterRoleBinding granting the attacker's ServiceAccount the \"cluster-admin\" ClusterRole. Successful exploitation results in full cluster-admin privilege escalation. This contradicts the ACM documentation which states that non-subscription-admin users should have resources deployed into the subscription namespace only.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-10090 - Multicluster-operators-subscription: multicluster-operators-subscription: 네임스페이스 편집 사용자는 클러스터 범위 클러스터 역할 바인딩을 배포하고 애플리케이션 구독을 통해 클러스터 관리자가 될 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-10090\n  \n게시일 : 2026년 8월 5일 오전 9시 18분 | 42분 전\n  \n설명: ACM(Red Hat Advanced Cluster Management for Kubernetes)의 애플리케이션 서브스크립션 컨트롤러(multicluster-operators-subscription)에서 결함이 발견되었습니다. ACM 허브 네임스페이스에서 네임스페이스 범위 \"편집\" 권한이 있는 사용자는 자신이 제어하는 ​​Helm 리포지토리를 가리키는 채널 리소스와 이를 참조하는 구독 리소스를 생성할 수 있습니다. 앱 구독 컨트롤러는 구독 작성자가 \"open-cluster-management:subscription-admin\" 역할을 보유하고 있는지 확인하지 않고 적용되는 리소스를 구독 네임스페이스로 제한하지 않고 자체적인 상승된 권한으로 Helm 차트 콘텐츠를 가져오고 적용합니다. 이를 통해 공격자는 공격자의 ServiceAccount에 \"cluster-admin\" ClusterRole을 부여하는 ClusterRoleBinding과 같은 클러스터 범위 리소스를 Helm 차트에 포함할 수 있습니다. 악용에 성공하면 전체 클러스터 관리자 권한이 상승됩니다. 이는 구독 관리자가 아닌 사용자가 구독 네임스페이스에만 리소스를 배포해야 한다고 명시한 ACM 설명서와 모순됩니다.\n  \n심각도: 9.9 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-10090\n2. 26.08.05 오후6:18\n3. A flaw was found in the Application Subscription c",
-      "cve_id": "CVE-2026-10090",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-10090",
-      "source": "cvefeed",
-      "published": "2026-08-05T18:18:14+09:00",
       "lang": "en"
     }
   ],
