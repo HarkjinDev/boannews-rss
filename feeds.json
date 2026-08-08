@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-09T07:32:20.847186+09:00",
+  "fetched_at": "2026-08-09T08:02:21.133213+09:00",
   "security_news": [
     {
       "title": "오픈AI 아스트라, 사이버보안 ‘크리티컬’ 등급 가능성에 개발 일부 중...",
@@ -2803,21 +2803,6 @@
       "link": "https://isc.sans.edu/diary/rss/33220",
       "source": "sans_isc",
       "published": "2026-08-06T09:15:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-67531 - FrontMCP: CodeCall sandbox escape -> host RCE via live Zod schema exposure by getTool",
-      "summary": "CVE ID :CVE-2026-67531\n  \nPublished : Aug. 5, 2026, 10:54 p.m. | 54 minutes ago\n  \nDescription :FrontMCP is a TypeScript-first framework for the Model Context Protocol (MCP). Prior to 1.5.7, the sandboxed codecall:execute tool exposes live host Zod schema instances to the script via getTool(), and because Zod v4 defines _zod as a non-configurable, non-writable own property, the ECMAScript Proxy invariants force the security membrane to hand back the raw host object, letting a script reach _zod.constr.constructor (the host Function constructor) and execute arbitrary code in the server process. A single tools/call is sufficient to escape the sandbox and achieve remote code execution as the server user, exposing everything the process holds such as OAuth client secrets, JWT_SECRET, session keys, database credentials, and cloud instance metadata. Because the framework's DEFAULT_AUTH_OPTIONS is public mode, an unconfigured server serves this to unauthenticated callers, and on authenticated servers an indirect prompt injection in tool output or fetched content can trigger it without a human attackerThis issue is fixed in version 1.5.7.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-67531\n  \nPublished : Aug. 5, 2026, 10:54 p.m. | 54 minutes ago\n  \nDescription :FrontMCP is a TypeScript-first framework for the Model Context Protocol (MCP). Prior to 1.5.7, the sandboxed codecall:execute tool exposes live host Zod schema instances to the script via getTool(), and because Zod v4 defines _zod as a non-configurable, non-writable own property, the ECMAScript Proxy invariants force the security membrane to hand back the raw host object, letting a script reach _zod.constr.constructor (the host Function constructor) and execute arbitrary code in the server process. A single tools/call is sufficient to escape the sandbox and achieve remote code execution as the server user, exposing everything the process holds such as OAuth client secrets, JWT_SECRET, session keys, database credentials, and cloud instance metadata. Because the framework's DEFAULT_AUTH_OPTIONS is public mode, an unconfigured server serves this to unauthenticated callers, and on authenticated servers an indirect prompt injection in tool output or fetched content can trigger it without a human attackerThis issue is fixed in version 1.5.7.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-67531 - FrontMCP: CodeCall 샌드박스 이스케이프 -> getTool의 라이브 Zod 스키마 노출을 통해 RCE 호스트",
-      "summary_ko": "CVE ID:CVE-2026-67531\n  \n게시일 : 2026년 8월 5일 오후 10시 54분 | 54분 전\n  \n설명 :FrontMCP는 MCP(Model Context Protocol)를 위한 TypeScript 우선 프레임워크입니다. 1.5.7 이전에는 샌드박스 코드 호출: 실행 도구가 getTool()을 통해 라이브 호스트 Zod 스키마 인스턴스를 스크립트에 노출했으며 Zod v4는 _zod를 구성할 수 없고 쓸 수 없는 자체 속성으로 정의했기 때문에 ECMAScript 프록시 불변은 보안 멤브레인이 원시 호스트 개체를 다시 반환하도록 강제하여 스크립트가 _zod.constr.constructor(호스트 함수 생성자)에 도달하고 임의의 코드를 실행할 수 있도록 합니다. 서버 프로세스. 단일 도구/호출로 샌드박스를 탈출하고 서버 사용자로서 원격 코드 실행을 달성하고 OAuth 클라이언트 비밀, JWT_SECRET, 세션 키, 데이터베이스 자격 증명 및 클라우드 인스턴스 메타데이터와 같이 프로세스가 보유한 모든 것을 노출하는 데 충분합니다. 프레임워크의 DEFAULT_AUTH_OPTIONS가 공개 모드이기 때문에 구성되지 않은 서버는 이를 인증되지 않은 호출자에게 제공하고, 인증된 서버에서는 도구 출력 또는 가져온 콘텐츠의 간접 프롬프트 삽입으로 인해 인간 공격자 없이 이를 트리거할 수 있습니다. 이 문제는 버전 1.5.7에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-67531\n2. 26.08.06 오전7:54\n3. FrontMCP is a TypeScript-first framework for the M",
-      "cve_id": "CVE-2026-67531",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-67531",
-      "source": "cvefeed",
-      "published": "2026-08-06T07:54:36+09:00",
       "lang": "en"
     }
   ],
