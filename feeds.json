@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-10T01:02:26.846681+09:00",
+  "fetched_at": "2026-08-10T01:32:25.110378+09:00",
   "security_news": [
     {
       "title": "더 코리아 시그널 \"한국의 국가 시스템 취약성 심각…중국의 먹이\"",
@@ -2368,36 +2368,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-71447",
       "source": "cvefeed",
       "published": "2026-08-07T07:18:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-68750 - Quadratic sibling re-flattening in the html_sanitize_ex traversal engine allows CPU-exhaustion denial of service",
-      "summary": "CVE ID :CVE-2026-68750\n  \nPublished : Aug. 6, 2026, 4:16 p.m. | 2 hours, 14 minutes ago\n  \nDescription :Inefficient Algorithmic Complexity vulnerability in the traversal engine in rrrene html_sanitize_ex allows an unauthenticated remote attacker to exhaust server CPU and memory via a flat run of sibling elements in sanitized HTML. The list clause of HtmlSanitizeEx.Traverser.traverse/2 recurses on the tail of a sibling list and then evaluates List.flatten([head] ++ tail) over the already flattened result, so every one of n siblings copies and re-walks the entire remaining tail. The flattening is only needed for the rare case where scrub returns several replacement nodes for one node, but the cost is paid across the whole tail at every step, making traversal quadratic in sibling count.\n\nThe traverser sits on every public entry point, so no particular scrubber or configuration is required and the payload needs only allowed tags. A 160 KB body of 20,000 sibling elements occupies a scheduler for roughly 1.7 seconds, and the cost grows faster than the body does.\n\nThis issue affects html_sanitize_ex: from 0.3.1 before 1.5.3.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-68750\n  \nPublished : Aug. 6, 2026, 4:16 p.m. | 2 hours, 14 minutes ago\n  \nDescription :Inefficient Algorithmic Complexity vulnerability in the traversal engine in rrrene html_sanitize_ex allows an unauthenticated remote attacker to exhaust server CPU and memory via a flat run of sibling elements in sanitized HTML. The list clause of HtmlSanitizeEx.Traverser.traverse/2 recurses on the tail of a sibling list and then evaluates List.flatten([head] ++ tail) over the already flattened result, so every one of n siblings copies and re-walks the entire remaining tail. The flattening is only needed for the rare case where scrub returns several replacement nodes for one node, but the cost is paid across the whole tail at every step, making traversal quadratic in sibling count.\n\nThe traverser sits on every public entry point, so no particular scrubber or configuration is required and the payload needs only allowed tags. A 160 KB body of 20,000 sibling elements occupies a scheduler for roughly 1.7 seconds, and the cost grows faster than the body does.\n\nThis issue affects html_sanitize_ex: from 0.3.1 before 1.5.3.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-68750 - html_sanitize_ex 순회 엔진의 2차 형제 재평탄화로 인해 CPU 소모 서비스 거부가 허용됩니다.",
-      "summary_ko": "CVE ID:CVE-2026-68750\n  \n게시일 : 2026년 8월 6일 오후 4시 16분 | 2시간, 14분 전\n  \n설명: rrrene html_sanitize_ex의 순회 엔진에 있는 비효율적인 알고리즘 복잡성 취약점으로 인해 인증되지 않은 원격 공격자가 삭제된 HTML에서 형제 요소의 평면 실행을 통해 서버 CPU와 메모리를 고갈시킬 수 있습니다. HtmlSanitizeEx.Traverser.traverse/2의 list 절은 형제 목록의 꼬리에서 반복된 다음 이미 평면화된 결과에 대해 List.Flatten([head] ++ tail)을 평가하므로 n 형제 모두가 나머지 꼬리 전체를 복사하고 다시 탐색합니다. 평탄화는 스크럽이 하나의 노드에 대해 여러 대체 노드를 반환하는 드문 경우에만 필요하지만 비용은 모든 단계에서 전체 꼬리에 걸쳐 지불되므로 순회는 형제 수에서 2차로 계산됩니다.\n\n순회자는 모든 공개 진입점에 위치하므로 특별한 스크러버나 구성이 필요하지 않으며 페이로드에는 허용된 태그만 필요합니다. 20,000개의 형제 요소로 구성된 160KB 본체는 약 1.7초 동안 스케줄러를 차지하며 비용은 본체보다 빠르게 증가합니다.\n\n이 문제는 html_sanitize_ex에 영향을 미칩니다: 0.3.1부터 1.5.3까지.\n  \n심각도: 8.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-68750\n2. 26.08.07 오전1:16\n3. Inefficient Algorithmic Complexity vulnerability i",
-      "cve_id": "CVE-2026-68750",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68750",
-      "source": "cvefeed",
-      "published": "2026-08-07T01:16:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-68747 - CSS sanitizer allowlist bypass in html_sanitize_ex via non-declaration input",
-      "summary": "CVE ID :CVE-2026-68747\n  \nPublished : Aug. 6, 2026, 4:16 p.m. | 2 hours, 14 minutes ago\n  \nDescription :Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') vulnerability in the CSS scrubber in rrrene html_sanitize_ex allows an unauthenticated remote attacker to inject CSS at-rules, including an import of a remote stylesheet, into a page served to other users. HtmlSanitizeEx.Scrubber.CSS.scrub/1 applies its property and value allowlist through a Regex.replace over substrings matching a property: value declaration pattern, so input that does not match that pattern is never inspected and is copied to the output unchanged. @import url(//attacker.example/style.css); survives, while the same URL inside a background: url(...) declaration is removed.\n\nElement boundaries are resolved before the scrubber runs, so injected content does not escape the",
-      "description": "CVE ID :CVE-2026-68747\n  \nPublished : Aug. 6, 2026, 4:16 p.m. | 2 hours, 14 minutes ago\n  \nDescription :Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') vulnerability in the CSS scrubber in rrrene html_sanitize_ex allows an unauthenticated remote attacker to inject CSS at-rules, including an import of a remote stylesheet, into a page served to other users. HtmlSanitizeEx.Scrubber.CSS.scrub/1 applies its property and value allowlist through a Regex.replace over substrings matching a property: value declaration pattern, so input that does not match that pattern is never inspected and is copied to the output unchanged. @import url(//attacker.example/style.css); survives, while the same URL inside a background: url(...) declaration is removed.\n\nElement boundaries are resolved before the scrubber runs, so injected content does not escape the",
-      "title_ko": "CVE-2026-68747 - 비선언 입력을 통해 html_sanitize_ex의 CSS 새니타이저 허용 목록 우회",
-      "summary_ko": "CVE ID:CVE-2026-68747\n  \n게시일 : 2026년 8월 6일 오후 4시 16분 | 2시간, 14분 전\n  \n설명 : rrrene html_sanitize_ex의 CSS 스크러버에 있는 다운스트림 구성 요소에서 사용하는 출력의 특수 요소의 부적절한 무력화('삽입') 취약점으로 인해 인증되지 않은 원격 공격자가 원격 스타일시트 가져오기를 포함하여 CSS at-규칙을 다른 사용자에게 제공되는 페이지에 삽입할 수 있습니다. HtmlSanitizeEx.Scrubber.CSS.scrub/1은 속성: 값 선언 패턴과 일치하는 하위 문자열에 대해 Regex.replace를 통해 속성 및 값 허용 목록을 적용하므로 해당 패턴과 일치하지 않는 입력은 검사되지 않으며 변경되지 않은 상태로 출력에 복사됩니다. @import url(//attacker.example/style.css); background: url(...) 선언 내의 동일한 URL은 제거됩니다.\n\n스크러버가 실행되기 전에 요소 경계가 확인되므로 삽입된 콘텐츠가",
-      "summary_3lines": "1. CVE-2026-68747\n2. 26.08.07 오전1:16\n3. Improper Neutralization of Special Elements in Out",
-      "cve_id": "CVE-2026-68747",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68747",
-      "source": "cvefeed",
-      "published": "2026-08-07T01:16:51+09:00",
       "lang": "en"
     }
   ],
