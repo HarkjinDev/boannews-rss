@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-10T07:02:16.740261+09:00",
+  "fetched_at": "2026-08-10T07:32:16.394668+09:00",
   "security_news": [
+    {
+      "title": "동네 보건소부터 응급실까지…의료 AI 전국망 깐다 [D:로그인]",
+      "summary": "의료 AI의 환각과 오류, 개인정보 유출을 막기 위한 윤리·보안 지침도 만든다. 비식별성이 확보된 가명정보 연구는 기관생명윤리위원회 심의를 면제하는 방안을 추진하는 대신 건강정보를 보험료나 대출 등 개인에게...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 전국 보건소, 응급실에 의료 AI 전국망 구축\n2. 의료 AI 환각·오류, 개인정보 유출 막기 위한 보안 지침 마련\n3. 가명정보 연구 시 윤리위 심의 면제 추진",
+      "link": "https://n.news.naver.com/mnews/article/119/0003120006?sid=102",
+      "source": "naver",
+      "published": "2026-08-10T07:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "오픈AI·앤트로픽·메타 잇단 사고…AI 해킹 위협, 기업 대응 시험대",
       "summary": "허깅페이스 해킹 사건을 계기로 AI 에이전트가 실제 사이버 공격 주체로 부상하면서 기업 보안 체계 전반에... 허깅페이스를 해킹했다. 이들 에이전트는 공격 전 몇 주 동안 내부 메시지 게시판을 만들어 취약점과...",
@@ -1344,18 +1356,6 @@
       "source": "naver",
       "published": "2026-08-07T07:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "제니티, 클로드·챗GPT 아틀라스 브라우저 해킹 기법 2건 공개",
-      "summary": "AI 보안업체 제니티가 크롬용 클로드와 챗GPT 아틀라스를 겨냥한 브라우저 해킹 기법 2건을 공개하며 계정 탈취와 피싱, 무단 아마존 결제까지 가능함을 보여줬다고 밝혔다고 시큐리티위크가 6일(현지시간) 보도했다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 제니티, 클로드·챗GPT 아틀라스 해킹 기법 2건 공개\n2. 계정 탈취, 피싱, 무단 아마존 결제 가능해\n3. AI 챗봇 확장 프로그램 보안 취약점 노출",
-      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=690785",
-      "source": "naver",
-      "published": "2026-08-07T07:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2272,21 +2272,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-45198",
       "source": "cvefeed",
       "published": "2026-08-07T10:42:54+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-71447 - Stored Cross-Site Scripting in Chat and Forum Translation Controls in ail-framework",
-      "summary": "CVE ID :CVE-2026-71447\n  \nPublished : Aug. 6, 2026, 10:18 p.m. | 13 minutes ago\n  \nDescription :AIL Project contains a stored cross-site scripting vulnerability in the translation controls displayed for chat messages and forum posts.\n\nThe affected templates inserted message and post identifiers directly into inline JavaScript onclick handlers:\n\nonclick=\"translateMessageToPreferredLanguage('{{ message['id'] }}', '{{ mess_id_escape }}', this)\"\n\nand:\n\nonclick=\"translatePostToPreferredLanguage('{{ post['id'] }}', '{{ post_id_escape }}', this)\"\n\nThese values were HTML-template escaped but were not safely encoded for use as JavaScript string literals inside an HTML attribute. A specially crafted identifier containing quotation marks, escape characters, or other JavaScript syntax could therefore terminate the expected string argument and inject arbitrary JavaScript into the event handler.\n\nBecause the affected values are associated with indexed chat messages or forum posts, a malicious value may remain stored by AIL and be rendered whenever an analyst accesses the corresponding chat or forum explorer view.\n\nSuccessful exploitation requires the victim to click the affected Translate to preferred language button. The injected code would then execute in the victim’s browser under the security origin of the AIL instance.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-71447\n  \nPublished : Aug. 6, 2026, 10:18 p.m. | 13 minutes ago\n  \nDescription :AIL Project contains a stored cross-site scripting vulnerability in the translation controls displayed for chat messages and forum posts.\n\nThe affected templates inserted message and post identifiers directly into inline JavaScript onclick handlers:\n\nonclick=\"translateMessageToPreferredLanguage('{{ message['id'] }}', '{{ mess_id_escape }}', this)\"\n\nand:\n\nonclick=\"translatePostToPreferredLanguage('{{ post['id'] }}', '{{ post_id_escape }}', this)\"\n\nThese values were HTML-template escaped but were not safely encoded for use as JavaScript string literals inside an HTML attribute. A specially crafted identifier containing quotation marks, escape characters, or other JavaScript syntax could therefore terminate the expected string argument and inject arbitrary JavaScript into the event handler.\n\nBecause the affected values are associated with indexed chat messages or forum posts, a malicious value may remain stored by AIL and be rendered whenever an analyst accesses the corresponding chat or forum explorer view.\n\nSuccessful exploitation requires the victim to click the affected Translate to preferred language button. The injected code would then execute in the victim’s browser under the security origin of the AIL instance.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-71447\n  \n게시일 : 2026년 8월 6일 오후 10시 18분 | 13분 전\n  \n설명:AIL 프로젝트에는 채팅 메시지 및 포럼 게시물에 대해 표시되는 번역 컨트롤에 저장된 교차 사이트 스크립팅 취약점이 포함되어 있습니다.\n\n영향을 받은 템플릿은 메시지 및 게시물 식별자를 인라인 JavaScript onclick 핸들러에 직접 삽입했습니다.\n\nonclick=\"translateMessageToPreferredLanguage('{{ message['id'] }}', '{{ mess_id_escape }}', this)\"\n\n그리고:\n\nonclick=\"translatePostToPreferredLanguage('{{ post['id'] }}', '{{ post_id_escape }}', this)\"\n\n이러한 값은 HTML 템플릿 이스케이프되었지만 HTML 속성 내에서 JavaScript 문자열 리터럴로 사용하기 위해 안전하게 인코딩되지 않았습니다. 따라서 따옴표, 이스케이프 문자 또는 기타 JavaScript 구문을 포함하는 특별히 제작된 식별자는 예상되는 문자열 인수를 종료하고 임의의 JavaScript를 이벤트 핸들러에 삽입할 수 있습니다.\n\n영향을 받는 값은 색인된 채팅 메시지 또는 포럼 게시물과 연결되어 있기 때문에 AIL에 의해 악의적인 값이 저장되어 분석가가 해당 채팅 또는 포럼 탐색기 보기에 액세스할 때마다 렌더링될 수 있습니다.\n\n악용에 성공하려면 피해자가 영향을 받은 기본 언어로 번역 버튼을 클릭해야 합니다. 삽입된 코드는 AIL 인스턴스의 보안 원본에 있는 피해자의 브라우저에서 실행됩니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-71447\n2. 26.08.07 오전7:18\n3. AIL Project contains a stored cross-site scripting",
-      "cve_id": "CVE-2026-71447",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-71447",
-      "source": "cvefeed",
-      "published": "2026-08-07T07:18:31+09:00",
       "lang": "en"
     }
   ],
