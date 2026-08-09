@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-09T11:02:26.239558+09:00",
+  "fetched_at": "2026-08-09T11:31:17.347760+09:00",
   "security_news": [
     {
       "title": "민주당, 당원 정보 유출 징후 작년 포착…11개월만에 확인",
@@ -1920,33 +1920,24 @@
       "source": "naver",
       "published": "2026-08-06T11:58:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "메타 AI도 외부기관 해킹…AI발 사이버보안 경계감 고조",
-      "summary": "메타의 인공지능(AI) 모델도 내부 사이버 보안 시험 도중 외부 기관을 해킹한 것으로 드러났다. 오픈AI의 GPT 모델과 앤트로픽의 클로드 모델에 이어 세 번째로 확인된 이른바 ‘AI의 자율 해킹’ 사고다. 메타는 자사 AI...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 메타 AI, 보안 시험 중 외부 기관 해킹 시도\n2. 오픈AI GPT, 앤트로픽 클로드 이어 세 번째 'AI 자율 해킹'\n3. AI 모델의 보안 위협, 경계 강화 필요성 대두",
-      "link": "https://n.news.naver.com/mnews/article/029/0003041032?sid=104",
-      "source": "naver",
-      "published": "2026-08-06T11:21:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "아파치 톰캣 암호화 우회 취약점 비상... CISA, KEV 긴급 등재",
-      "summary": "중국계 해커, AI 악용해 ‘리버스 셸’ 배포 등 실제 침해 사고 발생CISA, 연방 기관에 조치 불가 시 제품 사용 중단 초강수 지침[보안뉴스 김형근 기자] 미국 사이버보안및인프라보안국(CISA)이 실제 현장 공격에 악용 중인 아파치 톰캣(Apache Tomcat)의 고위험 암호화 우회 취약점(CVE-2026-34486)을 KEV 카탈로그에 추가했다.이번",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 아파치 톰캣 암호화 우회 취약점 비상...\n2. CISA, KEV 긴급 등재 중국계 해커, AI 악용해 ‘리버스 셸’ 배포 등 실제 침해 ",
-      "link": "http://www.boannews.com/media/view.asp?idx=145039&kind=&sub_kind=",
-      "source": "boannews",
-      "published": "2026-08-06T11:16:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-17510 - Crypt::OpenSSL::PKCS12 versions before 1.98 for Perl allow a NULL pointer dereference in print_attribute via a zero length BMPSTRING attribute",
+      "summary": "CVE ID :CVE-2026-17510\n  \nPublished : Aug. 9, 2026, 1:21 a.m. | 29 minutes ago\n  \nDescription :Crypt::OpenSSL::PKCS12 versions before 1.98 for Perl allow a NULL pointer dereference in print_attribute via a zero length BMPSTRING attribute.\n\nprint_attribute() sizes the destination buffer for a BMPSTRING attribute from its declared byte length with `Renew(*attribute, length, char)`. A zero length attribute makes that a zero size reallocation, which Perl implements as a free returning NULL, so the buffer pointer becomes NULL, the following `strncpy` copies nothing, and the caller dereferences NULL in the `strlen()` it passes to `newSVpvn()`. A zero length BMPSTRING is even length, so the ASN.1 decoder accepts it and the value reaches this code. The UTF8STRING, OCTET STRING and BIT STRING arms size on `length + 1` or `length * 4 + 1` and are unaffected.\n\nAny caller that passes an untrusted PKCS#12 file to info_as_hash() can crash the process. info() prints attribute values directly without sizing a buffer and is unaffected.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-17510\n  \nPublished : Aug. 9, 2026, 1:21 a.m. | 29 minutes ago\n  \nDescription :Crypt::OpenSSL::PKCS12 versions before 1.98 for Perl allow a NULL pointer dereference in print_attribute via a zero length BMPSTRING attribute.\n\nprint_attribute() sizes the destination buffer for a BMPSTRING attribute from its declared byte length with `Renew(*attribute, length, char)`. A zero length attribute makes that a zero size reallocation, which Perl implements as a free returning NULL, so the buffer pointer becomes NULL, the following `strncpy` copies nothing, and the caller dereferences NULL in the `strlen()` it passes to `newSVpvn()`. A zero length BMPSTRING is even length, so the ASN.1 decoder accepts it and the value reaches this code. The UTF8STRING, OCTET STRING and BIT STRING arms size on `length + 1` or `length * 4 + 1` and are unaffected.\n\nAny caller that passes an untrusted PKCS#12 file to info_as_hash() can crash the process. info() prints attribute values directly without sizing a buffer and is unaffected.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-17510 - Perl의 1.98 이전 Crypt::OpenSSL::PKCS12 버전에서는 길이가 0인 BMPSTRING 속성을 통해 print_attribute에서 NULL 포인터 역참조를 허용합니다.",
+      "summary_ko": "CVE ID:CVE-2026-17510\n  \n게시일 : 2026년 8월 9일 오전 1시 21분 | 29분 전\n  \n설명 :Crypt::OpenSSL::PKCS12 Perl의 1.98 이전 버전에서는 길이가 0인 BMPSTRING 속성을 통해 print_attribute에서 NULL 포인터 역참조를 허용합니다.\n\nprint_attribute()는 `Renew(*attribute, length, char)`를 사용하여 선언된 바이트 길이에서 BMPSTRING 속성에 대한 대상 버퍼의 크기를 조정합니다. 길이가 0인 속성은 Perl이 NULL을 반환하는 자유 구현으로 구현하는 0 크기 재할당을 만듭니다. 따라서 버퍼 포인터는 NULL이 되고 다음 `strncpy`는 아무것도 복사하지 않으며 호출자는 `newSVpvn()`에 전달하는 `strlen()`에서 NULL을 역참조합니다. 길이가 0인 BMPSTRING은 길이가 짝수이므로 ASN.1 디코더는 이를 수락하고 값은 이 코드에 도달합니다. UTF8STRING, OCTET STRING 및 BIT STRING 팔 크기는 '길이 + 1' 또는 '길이 * 4 + 1'이며 영향을 받지 않습니다.\n\n신뢰할 수 없는 PKCS#12 파일을 info_as_hash()에 전달하는 호출자는 프로세스를 중단시킬 수 있습니다. info()는 버퍼 크기를 조정하지 않고 속성 값을 직접 인쇄하며 영향을 받지 않습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-17510\n2. 26.08.09 오전10:21\n3. Crypt::OpenSSL::PKCS12 versions before 1.98 for Pe",
+      "cve_id": "CVE-2026-17510",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-17510",
+      "source": "cvefeed",
+      "published": "2026-08-09T10:21:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-19282 - andreahaku llm_memory_mcp GitHooksManager.ts auto.capture command injection",
       "summary": "CVE ID :CVE-2026-19282\n  \nPublished : Aug. 8, 2026, 1:17 p.m. | 7 hours, 43 minutes ago\n  \nDescription :A weakness has been identified in andreahaku llm_memory_mcp up to f11dc8bcff3ff8cf943a2945f99ff3b0bdc8a6d0. This impacts the function auto.capture of the file src/autolearn/GitHooksManager.ts of the component llm_memory_mcp. Executing a manipulation of the argument hash can lead to command injection. The attack is restricted to local execution. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2455,6 +2446,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-12261",
       "source": "cvefeed",
       "published": "2026-08-07T15:25:10+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "ISC Stormcast For Friday, August 7th, 2026 https://isc.sans.edu/podcastdetail/10042, (Fri, Aug 7th)",
+      "summary": "",
+      "description": "",
+      "title_ko": "ISC Stormcast 2026년 8월 7일 금요일 https://isc.sans.edu/podcastdetail/10042, (8월 7일 금요일)",
+      "summary_ko": null,
+      "summary_3lines": "1. ISC Stormcast For Friday, August 7th, 2026 https:/\n2. SANS_ISC\n3. 설명 없음",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33224",
+      "source": "sans_isc",
+      "published": "2026-08-07T11:00:02+09:00",
       "lang": "en"
     },
     {
