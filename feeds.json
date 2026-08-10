@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-11T01:01:12.044978+09:00",
+  "fetched_at": "2026-08-11T01:31:11.937258+09:00",
   "security_news": [
     {
       "title": "모든 사고의 책임은 AI 뒤에 숨은 진짜 사람 [아침을 열며]",
@@ -1600,6 +1600,21 @@
   ],
   "vulnerability": [
     {
+      "title": "Scans for Solana (Surfpool?) Endpoints, (Mon, Aug 10th)",
+      "summary": "Solana is a crypto platform known for speed. Developers like it to develop distributed applications or to implement crypto payments. To interact with the blockchain, APIs are provided for developers. These APIs will either \"speak\" JSON or gRPC. One implementation often used for development is \"surfpool,\" which is used to test programs before deploying them to a Solana network.\r",
+      "description": "Solana is a crypto platform known for speed. Developers like it to develop distributed applications or to implement crypto payments. To interact with the blockchain, APIs are provided for developers. These APIs will either \"speak\" JSON or gRPC. One implementation often used for development is \"surfpool,\" which is used to test programs before deploying them to a Solana network.\r",
+      "title_ko": "Solana(Surfpool?) 엔드포인트 검색(8월 10일 월요일)",
+      "summary_ko": "솔라나는 속도로 유명한 암호화폐 플랫폼입니다. 개발자는 분산 애플리케이션을 개발하거나 암호화폐 결제를 구현하는 것을 좋아합니다. 블록체인과 상호 작용하기 위해 개발자에게 API가 제공됩니다. 이러한 API는 JSON 또는 gRPC를 \"대화\"합니다. 개발에 자주 사용되는 구현 중 하나는 솔라나 네트워크에 프로그램을 배포하기 전에 프로그램을 테스트하는 데 사용되는 \"서프풀(surfpool)\"입니다.",
+      "summary_3lines": "1. Scans for Solana (Surfpool?) Endpoints, (Mon, Aug \n2. SANS_ISC\n3. Solana is a crypto platform known for speed. Devel",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33230",
+      "source": "sans_isc",
+      "published": "2026-08-11T01:24:45+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-72759 - cti-transmute Conversion History Authorization Bypass Leads to Sensitive Data Disclosure After Conversion Deletion",
       "summary": "CVE ID :CVE-2026-72759\n  \nPublished : Aug. 10, 2026, 2:19 p.m. | 29 minutes ago\n  \nDescription :In affected versions of MISP cti-transmute, the conversion-history details endpoint performs an incomplete authorization check. When a history record references a deleted conversion, the associated conversion lookup returns None. The previous logic only denied access when the conversion object existed and the visibility check failed. As a result, deleted conversions bypassed the authorization check and their retained history input/output could be disclosed to a user able to request the corresponding history entry. The July 22, 2026 commit changes the logic to deny access whenever the conversion is missing or the requester lacks permission\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-72759\n  \nPublished : Aug. 10, 2026, 2:19 p.m. | 29 minutes ago\n  \nDescription :In affected versions of MISP cti-transmute, the conversion-history details endpoint performs an incomplete authorization check. When a history record references a deleted conversion, the associated conversion lookup returns None. The previous logic only denied access when the conversion object existed and the visibility check failed. As a result, deleted conversions bypassed the authorization check and their retained history input/output could be disclosed to a user able to request the corresponding history entry. The July 22, 2026 commit changes the logic to deny access whenever the conversion is missing or the requester lacks permission\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2602,21 +2617,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-47362",
       "source": "cvefeed",
       "published": "2026-08-08T03:17:15+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-17593 - Nexus Repository - Arbitrary Class Instantiation via Unsafe Realm Configuration",
-      "summary": "CVE ID :CVE-2026-17593\n  \nPublished : Aug. 7, 2026, 4:07 p.m. | 45 minutes ago\n  \nDescription :An account holding the nexus:settings:update permission in Nexus Repository 3 (or the equivalent nexus:settings permission in the legacy Nexus Repository 2) could submit arbitrary values as realm identifiers through an internal configuration API that did not validate them against the set of registered realms. Because unrecognized entries were persisted and re-evaluated on every realm load via a legacy code path, this could result in unintended code executing inside the Nexus Repository process, and in some cases a persistent authentication lockout that was not visible through the administrative UI.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-17593\n  \nPublished : Aug. 7, 2026, 4:07 p.m. | 45 minutes ago\n  \nDescription :An account holding the nexus:settings:update permission in Nexus Repository 3 (or the equivalent nexus:settings permission in the legacy Nexus Repository 2) could submit arbitrary values as realm identifiers through an internal configuration API that did not validate them against the set of registered realms. Because unrecognized entries were persisted and re-evaluated on every realm load via a legacy code path, this could result in unintended code executing inside the Nexus Repository process, and in some cases a persistent authentication lockout that was not visible through the administrative UI.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-17593 - Nexus 저장소 - 안전하지 않은 영역 구성을 통한 임의 클래스 인스턴스화",
-      "summary_ko": "CVE ID:CVE-2026-17593\n  \n게시일 : 2026년 8월 7일 오후 4시 07분 | 45분 전\n  \n설명: Nexus Repository 3의 nexus:settings:update 권한(또는 레거시 Nexus Repository 2의 동등한 nexus:settings 권한)을 보유한 계정은 등록된 영역 집합에 대해 유효성을 검사하지 않는 내부 구성 API를 통해 임의의 값을 영역 식별자로 제출할 수 있습니다. 인식할 수 없는 항목은 레거시 코드 경로를 통해 모든 영역 로드에서 유지되고 재평가되므로 Nexus Repository 프로세스 내에서 의도하지 않은 코드가 실행될 수 있으며 경우에 따라 관리 UI를 통해 표시되지 않는 지속적인 인증 잠금이 발생할 수 있습니다.\n  \n심각도: 7.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-17593\n2. 26.08.08 오전1:07\n3. An account holding the nexus:settings:update permi",
-      "cve_id": "CVE-2026-17593",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-17593",
-      "source": "cvefeed",
-      "published": "2026-08-08T01:07:43+09:00",
       "lang": "en"
     }
   ],
