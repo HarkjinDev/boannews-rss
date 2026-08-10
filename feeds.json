@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-11T05:01:15.534246+09:00",
+  "fetched_at": "2026-08-11T05:33:26.039201+09:00",
   "security_news": [
+    {
+      "title": "[경제 단신] 이스타항공, AI 기반 난기류 예측 도입 외",
+      "summary": "사이버보안 콘퍼런스 데프콘 행사 기간에 개최되는 해킹방어대회다. 올해는 온라인 예선에 전 세계 686개 팀이 참여해 한국 6개 팀을 포함한 12개 팀이 본선에 진출했다. 한국 팀에는 정부가 운영하는 차세대 보안리더...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 데프콘 해킹방어대회 본선에 12개 팀 진출\n2. 한국 6개 팀 포함, 차세대 보안리더 양성 과정 팀 참가\n3. 전 세계 686개 팀 온라인 예선 참가",
+      "link": "https://n.news.naver.com/mnews/article/022/0004149965?sid=101",
+      "source": "naver",
+      "published": "2026-08-11T05:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "⚡ Weekly Recap: AI Goes Rogue, Metabase 0-Day, MCP Supply-Chain Attacks, and Router Backdoors",
       "summary": "A lot of security problems still begin with someone doing a completely normal thing. Cloning a repo. Answering a call. Leaving a box exposed. Trusting the default.\n\nThat pretty much covers the mood this week. Old bugs are back, supply chains are getting stranger, and some exploit paths are so short you wonder what was supposed to stop them in the first place.\n\nThat’s only part of it. Here’s",
@@ -1560,18 +1572,6 @@
       "source": "naver",
       "published": "2026-08-08T06:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Metabase SQLi zero-day exploited in customer data-theft attacks",
-      "summary": "A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framework and Tally. [...]",
-      "content": "",
-      "title_ko": "고객 데이터 도용 공격에 악용된 메타베이스 SQLi 제로데이",
-      "summary_ko": "Framework 및 Tally에 영향을 미치는 것으로 알려진 데이터 도난 공격에서 고객 인스턴스를 침해하기 위한 제로데이 공격에서 심각한 메타베이스 SQL 주입 취약점이 악용되었습니다. [...]",
-      "summary_3lines": "1. Metabase SQLi 제로데이 공격으로 고객 데이터 유출\n2. Framework, Tally 등 고객 인스턴스 침해\n3. 다수 고객 정보 탈취 정황 포착",
-      "link": "https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/",
-      "source": "bleepingcomputer",
-      "published": "2026-08-08T05:14:46+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -2593,51 +2593,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-11742",
       "source": "cvefeed",
       "published": "2026-08-08T07:16:57+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47664 - Pathling: $import-pnp operation enables authenticated SSRF, credential leakage, and warehouse data poisoning",
-      "summary": "CVE ID :CVE-2026-47664\n  \nPublished : Aug. 7, 2026, 8:28 p.m. | 26 minutes ago\n  \nDescription :Pathling is a set of tools that make it easier to use FHIR and clinical terminology within health data analytics. Prior to version 2.0.0 of Pathling Server, the `$import-pnp` operation in Pathling Server accepts a caller-supplied `exportUrl` and uses it as the remote FHIR Bulk Export endpoint without constraining it to a trusted source. When PNP credentials are configured, Pathling builds a credentialed bulk-export client targeting the caller-chosen host, downloads manifest-selected files, and then reclassifies those staged files as trusted local `file://` imports - bypassing the configured `allowableSources` allowlist that protects the ordinary `$import` operation. This is fixed in Pathling Server 2.0.0. As a workaround, disable the `$import-pnp` operation (`pathling.operations.importPnpEnabled=false`) or do not configure PNP credentials.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47664\n  \nPublished : Aug. 7, 2026, 8:28 p.m. | 26 minutes ago\n  \nDescription :Pathling is a set of tools that make it easier to use FHIR and clinical terminology within health data analytics. Prior to version 2.0.0 of Pathling Server, the `$import-pnp` operation in Pathling Server accepts a caller-supplied `exportUrl` and uses it as the remote FHIR Bulk Export endpoint without constraining it to a trusted source. When PNP credentials are configured, Pathling builds a credentialed bulk-export client targeting the caller-chosen host, downloads manifest-selected files, and then reclassifies those staged files as trusted local `file://` imports - bypassing the configured `allowableSources` allowlist that protects the ordinary `$import` operation. This is fixed in Pathling Server 2.0.0. As a workaround, disable the `$import-pnp` operation (`pathling.operations.importPnpEnabled=false`) or do not configure PNP credentials.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47664 - Pathling: $import-pnp 작업을 통해 인증된 SSRF, 자격 증명 유출 및 웨어하우스 데이터 중독이 가능해졌습니다.",
-      "summary_ko": "CVE ID:CVE-2026-47664\n  \n게시일 : 2026년 8월 7일 오후 8시 28분 | 26분 전\n  \n설명: Pathling은 건강 데이터 분석 내에서 FHIR 및 임상 용어를 보다 쉽게 사용할 수 있도록 해주는 도구 세트입니다. Pathling Server 버전 2.0.0 이전에는 Pathling Server의 `$import-pnp` 작업이 호출자가 제공한 `exportUrl`을 허용하고 이를 신뢰할 수 있는 소스로 제한하지 않고 원격 FHIR 대량 내보내기 엔드포인트로 사용합니다. PNP 자격 증명이 구성되면 Pathling은 호출자가 선택한 호스트를 대상으로 하는 자격 증명 대량 내보내기 클라이언트를 구축하고 매니페스트에서 선택한 파일을 다운로드한 다음 해당 준비된 파일을 신뢰할 수 있는 로컬 `file://` 가져오기로 재분류합니다. 이는 일반적인 `$import` 작업을 보호하는 구성된 `allowableSources` 허용 목록을 우회합니다. 이 문제는 Pathling Server 2.0.0에서 수정되었습니다. 이 문제를 해결하려면 `$import-pnp` 작업을 비활성화하거나(`pathling.Operations.importPnpEnabled=false`) PNP 자격 증명을 구성하지 마세요.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47664\n2. 26.08.08 오전5:28\n3. Pathling is a set of tools that make it easier to ",
-      "cve_id": "CVE-2026-47664",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47664",
-      "source": "cvefeed",
-      "published": "2026-08-08T05:28:06+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-62296 - HAPI FHIR: XHTML narrative parser unbounded recursion causes StackOverflow denial of service",
-      "summary": "CVE ID :CVE-2026-62296\n  \nPublished : Aug. 7, 2026, 8:16 p.m. | 37 minutes ago\n  \nDescription :HAPI FHIR is a complete implementation of the HL7 FHIR standard for healthcare interoperability in Java. Prior to 6.9.11, XhtmlParser.java imposes no maximum element nesting depth, so a deeply nested text.div narrative triggers unbounded recursion between parseElementInner() and parseElement(), raising a StackOverflowError. An attacker who can submit FHIR resources containing such narratives can thus crash a parsing or validation worker thread, affecting validator services and any application that parses attacker-supplied FHIR JSON or XML. This issue is fixed in version 6.9.11.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-62296\n  \nPublished : Aug. 7, 2026, 8:16 p.m. | 37 minutes ago\n  \nDescription :HAPI FHIR is a complete implementation of the HL7 FHIR standard for healthcare interoperability in Java. Prior to 6.9.11, XhtmlParser.java imposes no maximum element nesting depth, so a deeply nested text.div narrative triggers unbounded recursion between parseElementInner() and parseElement(), raising a StackOverflowError. An attacker who can submit FHIR resources containing such narratives can thus crash a parsing or validation worker thread, affecting validator services and any application that parses attacker-supplied FHIR JSON or XML. This issue is fixed in version 6.9.11.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-62296 - HAPI FHIR: XHTML 서술형 파서의 무제한 재귀로 인해 StackOverflow 서비스 거부가 발생함",
-      "summary_ko": "CVE ID:CVE-2026-62296\n  \n게시일 : 2026년 8월 7일 오후 8시 16분 | 37분 전\n  \n설명 :HAPI FHIR은 Java의 의료 상호 운용성을 위한 HL7 FHIR 표준을 완벽하게 구현합니다. 6.9.11 이전에는 XhtmlParser.java가 최대 요소 중첩 깊이를 적용하지 않았으므로 깊게 중첩된 text.div 설명은 구문 분석기()와 구문 분석기() 사이의 무제한 재귀를 트리거하여 StackOverflowError를 발생시킵니다. 따라서 이러한 설명이 포함된 FHIR 리소스를 제출할 수 있는 공격자는 구문 분석 또는 유효성 검사 작업자 스레드를 중단시켜 유효성 검사기 서비스와 공격자가 제공한 FHIR JSON 또는 XML을 구문 분석하는 모든 애플리케이션에 영향을 미칠 수 있습니다. 이 문제는 버전 6.9.11에서 해결되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-62296\n2. 26.08.08 오전5:16\n3. HAPI FHIR is a complete implementation of the HL7 ",
-      "cve_id": "CVE-2026-62296",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62296",
-      "source": "cvefeed",
-      "published": "2026-08-08T05:16:52+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48039 - Meta Ads MCP: Unauthenticated HTTP MCP Tool Execution Leaks Operator Meta Access Token",
-      "summary": "CVE ID :CVE-2026-48039\n  \nPublished : Aug. 7, 2026, 8:16 p.m. | 37 minutes ago\n  \nDescription :Meta Ads MCP is a Model Context Protocol (MCP) server that lets AI assistants run Meta Ads. Prior to version 1.0.109, `AuthInjectionMiddleware.dispatch()` at `http_auth_integration.py:272` unconditionally forwards unauthenticated Streamable HTTP requests to downstream MCP tool handlers without issuing a `401` response, allowing any network-reachable caller to invoke MCP tools without authentication. When no per-request credential is present, tool handlers fall back to the `META_ACCESS_TOKEN` environment variable, and when the downstream Meta Graph API call fails, `api.py:263–269` serialises the raw `httpx` request URL—including the operator's `access_token` as a query parameter—into the JSON-RPC response body, delivering the credential to the unauthenticated caller. Version 1.0.109 fixes the issue.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48039\n  \nPublished : Aug. 7, 2026, 8:16 p.m. | 37 minutes ago\n  \nDescription :Meta Ads MCP is a Model Context Protocol (MCP) server that lets AI assistants run Meta Ads. Prior to version 1.0.109, `AuthInjectionMiddleware.dispatch()` at `http_auth_integration.py:272` unconditionally forwards unauthenticated Streamable HTTP requests to downstream MCP tool handlers without issuing a `401` response, allowing any network-reachable caller to invoke MCP tools without authentication. When no per-request credential is present, tool handlers fall back to the `META_ACCESS_TOKEN` environment variable, and when the downstream Meta Graph API call fails, `api.py:263–269` serialises the raw `httpx` request URL—including the operator's `access_token` as a query parameter—into the JSON-RPC response body, delivering the credential to the unauthenticated caller. Version 1.0.109 fixes the issue.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48039 - 메타 광고 MCP: 인증되지 않은 HTTP MCP 도구 실행으로 운영자 메타 액세스 토큰 유출",
-      "summary_ko": "CVE ID:CVE-2026-48039\n  \n게시일 : 2026년 8월 7일 오후 8시 16분 | 37분 전\n  \n설명:Meta Ads MCP는 AI 보조자가 메타 광고를 실행할 수 있게 해주는 MCP(Model Context Protocol) 서버입니다. 버전 1.0.109 이전에는 'http_auth_integration.py:272'의 'AuthInjectionMiddleware.dispatch()'가 '401' 응답을 발행하지 않고 인증되지 않은 스트리밍 가능 HTTP 요청을 다운스트림 MCP 도구 핸들러에 무조건 전달하여 네트워크에 연결할 수 있는 모든 호출자가 인증 없이 MCP 도구를 호출할 수 있도록 했습니다. 요청별 자격 증명이 없으면 도구 핸들러는 `META_ACCESS_TOKEN` 환경 변수로 대체되고 다운스트림 Meta Graph API 호출이 실패하면 `api.py:263–269`는 쿼리 매개변수로 연산자의 `access_token`을 포함한 원시 `httpx` 요청 URL을 JSON-RPC 응답 본문으로 직렬화하여 인증되지 않은 호출자에게 자격 증명을 전달합니다. 버전 1.0.109에서는 문제가 해결되었습니다.\n  \n심각도: 9.1 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48039\n2. 26.08.08 오전5:16\n3. Meta Ads MCP is a Model Context Protocol (MCP) ser",
-      "cve_id": "CVE-2026-48039",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48039",
-      "source": "cvefeed",
-      "published": "2026-08-08T05:16:51+09:00",
       "lang": "en"
     }
   ],
