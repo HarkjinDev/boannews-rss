@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-11T05:33:26.039201+09:00",
+  "fetched_at": "2026-08-11T06:02:17.796411+09:00",
   "security_news": [
     {
       "title": "[경제 단신] 이스타항공, AI 기반 난기류 예측 도입 외",
@@ -1548,33 +1548,24 @@
       "source": "naver",
       "published": "2026-08-08T06:28:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[아하 인터뷰] \"흔들림 없는 '기본'이 핵심\"…하나카드의 보안 철학",
-      "summary": "(사진=하나카드) 안중근 하나카드 개인정보보호본부장 겸 정보보안 최고책임자(CISO)는 해킹 공격 기법이... 외부 해킹뿐 아니라 내부 임직원이나 외주 인력의 고의 또는 실수 역시 정보보호 사고로 이어질 수 있는 만큼...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 하나카드 안중근 CISO, 해킹 공격 기법 진화 강조\n2. 내부 임직원, 외주 인력 실수도 사고 가능성 언급\n3. 기본 보안 철학으로 사고 예방 주력",
-      "link": "https://www.asiatime.co.kr/article/20260731500076",
-      "source": "naver",
-      "published": "2026-08-08T06:02:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[인터뷰] 美 DARPA AI 사이버 챌린지 1위 이끈 김태수 마이크로소프트 부...",
-      "summary": "“지금까지 보안은 기본적으로 공격자가 유리한 게임이었습니다. 하지만, 방어자가 인공지능(AI) 덕분에... AI는 사이버보안에서 ‘양날의 검’이다. 해커는 AI를 이용해 상대의 취약점을 더 빠르게 찾아 공격을 고도화할...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. DARPA AI 사이버 챌린지 1위, 김태수 마이크로소프트 부사장이 이끌었다.\n2. AI는 공격자 유리 게임 전환, 취약점 발견 및 공격 고도화에 쓰인다.\n3. AI는 방어자에게도 유리, 사이버보안의 '양날의 검'으로 작용한다.",
-      "link": "https://n.news.naver.com/mnews/article/366/0001185021?sid=105",
-      "source": "naver",
-      "published": "2026-08-08T06:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2025-15683 - Multiple Unauthenticated Denial-of-Service Conditions",
+      "summary": "CVE ID :CVE-2025-15683\n  \nPublished : Aug. 10, 2026, 7:38 p.m. | 13 minutes ago\n  \nDescription :TBEA TLogger V2.1.0.0B0.0.0.0 contains multiple unauthenticated denial-of-service vulnerabilities in its web server. An unauthenticated remote attacker can invoke specific HTTP endpoints to reboot or reset the device, clear application data, or terminate the web server through a segmentation fault. In addition, multiple action endpoints process attacker-controlled parameters using unsafe string operations such as sprintf() and strcat() without adequate bounds checking, allowing crafted input to trigger buffer overflows and crash the web server. The affected endpoints include onRestart, onReset, ClearData, uploadInvFile, getIndiaRPData, YearCaparity, TotalfaultData, recordData, InvHistoryData, CollectHistoryData, InvFaultData, GetPortTableByParm, and UpdatePortConfig.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2025-15683\n  \nPublished : Aug. 10, 2026, 7:38 p.m. | 13 minutes ago\n  \nDescription :TBEA TLogger V2.1.0.0B0.0.0.0 contains multiple unauthenticated denial-of-service vulnerabilities in its web server. An unauthenticated remote attacker can invoke specific HTTP endpoints to reboot or reset the device, clear application data, or terminate the web server through a segmentation fault. In addition, multiple action endpoints process attacker-controlled parameters using unsafe string operations such as sprintf() and strcat() without adequate bounds checking, allowing crafted input to trigger buffer overflows and crash the web server. The affected endpoints include onRestart, onReset, ClearData, uploadInvFile, getIndiaRPData, YearCaparity, TotalfaultData, recordData, InvHistoryData, CollectHistoryData, InvFaultData, GetPortTableByParm, and UpdatePortConfig.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2025-15683 - 인증되지 않은 여러 서비스 거부 조건",
+      "summary_ko": "CVE ID:CVE-2025-15683\n  \n게시일 : 2026년 8월 10일 오후 7시 38분 | 13분 전\n  \n설명 :TBEA TLogger V2.1.0.0B0.0.0.0에는 웹 서버에 여러 개의 인증되지 않은 서비스 거부 취약점이 포함되어 있습니다. 인증되지 않은 원격 공격자는 특정 HTTP 엔드포인트를 호출하여 장치를 재부팅 또는 재설정하고, 애플리케이션 데이터를 지우거나, 분할 오류를 통해 웹 서버를 종료할 수 있습니다. 또한 여러 작업 엔드포인트는 적절한 범위 검사 없이 sprintf() 및 strcat()와 같은 안전하지 않은 문자열 작업을 사용하여 공격자가 제어하는 ​​매개 변수를 처리하므로 조작된 입력이 버퍼 오버플로를 유발하고 웹 서버를 충돌시킬 수 있습니다. 영향을 받는 엔드포인트에는 onRestart, onReset, ClearData, uploadInvFile, getIndiaRPData, YearCaparity, TotalfaultData, RecordData, InvHistoryData, CollectHistoryData, InvFaultData, GetPortTableByParm 및 UpdatePortConfig가 포함됩니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2025-15683\n2. 26.08.11 오전4:38\n3. TBEA TLogger V2.1.0.0B0.0.0.0 contains multiple un",
+      "cve_id": "CVE-2025-15683",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2025-15683",
+      "source": "cvefeed",
+      "published": "2026-08-11T04:38:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-68872 - Apache Airflow Amazon provider: amazon SSM / Secrets Manager backends: team-scope guard bypass resolves another team's Connection or Variable",
       "summary": "CVE ID :CVE-2026-68872\n  \nPublished : Aug. 10, 2026, 6:21 p.m. | 42 minutes ago\n  \nDescription :The AWS Systems Manager Parameter Store and Secrets Manager backends in Apache Airflow's Amazon provider resolved a team-scoped Connection or Variable id through the team-agnostic lookup when the team-scoped lookup missed. In a deployment running multi-team mode with either backend, a caller in one team could resolve a secret belonging to another team by supplying an id that spells out that team's namespace, obtaining its credentials in full. No unusual configuration is required beyond enabling multi-team mode and using one of these backends. Users are advised to upgrade to apache-airflow-providers-amazon 9.34.0 or later, which refuses the team-agnostic fall-through for an id that could name a team namespace.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
