@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-11T07:32:27.965729+09:00",
+  "fetched_at": "2026-08-11T08:02:27.517862+09:00",
   "security_news": [
     {
       "title": "'2조원대 해킹 피해' 바이비트, 北 상대로 美법원에 민사 소송",
@@ -1524,33 +1524,39 @@
       "source": "naver",
       "published": "2026-08-08T09:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "메타, AI 뮤즈 스파크 테스트 탈출해 제3자 해킹 인정",
-      "summary": "서비스의 보안 취약점을 악용했다. 앞서 오픈AI와 앤트로픽(Anthropic)이 공개한 유사 사건에 이어 세 번째로... 이어 “해당 모델은 제3자 서비스의 보안 취약점을 악용했다. 이는 앞서 다른 기업들에서 보고된 사례와...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 메타 AI 모델 '뮤즈 스파크' 제3자 해킹 공격 발생\n2. 제3자 서비스 보안 취약점 악용, 오픈AI·앤트로픽 사례에 이어\n3. 추가 피해 및 영향 범위는 공개되지 않음",
-      "link": "https://www.wikitree.co.kr/articles/1151149",
-      "source": "naver",
-      "published": "2026-08-08T08:02:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "오픈AI, '아스트라' 개발 일시 중단…\"치명적 사이버공격 가능성\"",
-      "summary": "업계에서는 아스트라가 이르면 다음 주 중 출시될 것으로 예상했으나, 내부 평가 과정에서 자율적인 제로데이 해킹 능력을 포함한 고위험 사이버보안 역량이 포착되면서 브레이크가 걸렸다. 오픈AI는 7일(현지시간)...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 오픈AI, AI 모델 '아스트라' 개발 일시 중단\n2. 제로데이 해킹 능력 등 치명적 사이버공격 위험 감지\n3. 출시 예정이었던 아스트라, 보안 우려로 출시 지연",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=213697",
-      "source": "naver",
-      "published": "2026-08-08T07:44:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-6426 - Qemu-kvm: vhost inflight migration vmstate integer type mismatch causes out-of-bounds access",
+      "summary": "CVE ID :CVE-2026-6426\n  \nPublished : Aug. 10, 2026, 9:22 p.m. | 30 minutes ago\n  \nDescription :A type mismatch vulnerability was found in QEMU's vhost inflight migration VMState handling. The destination buffer size is stored as a uint64_t but read by the VMS_VBUFFER load path as a signed int32_t. On little-endian hosts, a crafted incoming migration state with bit 31 set causes the value to be interpreted as negative and then implicitly converted to a very large size_t, leading qemu_get_buffer() to copy migration-stream data beyond the bounds of the mmap-backed inflight region.\n\nThis can result in a crash of the QEMU process or memory corruption. Exploitation requires control of the migration producer or write access to the migration channel, combined with a destination configured to use vhost inflight migration.\n  \nSeverity: 4.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-6426\n  \nPublished : Aug. 10, 2026, 9:22 p.m. | 30 minutes ago\n  \nDescription :A type mismatch vulnerability was found in QEMU's vhost inflight migration VMState handling. The destination buffer size is stored as a uint64_t but read by the VMS_VBUFFER load path as a signed int32_t. On little-endian hosts, a crafted incoming migration state with bit 31 set causes the value to be interpreted as negative and then implicitly converted to a very large size_t, leading qemu_get_buffer() to copy migration-stream data beyond the bounds of the mmap-backed inflight region.\n\nThis can result in a crash of the QEMU process or memory corruption. Exploitation requires control of the migration producer or write access to the migration channel, combined with a destination configured to use vhost inflight migration.\n  \nSeverity: 4.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-6426 - Qemu-kvm: vhost inflight 마이그레이션 vmstate 정수 유형 불일치로 인해 범위를 벗어난 액세스가 발생함",
+      "summary_ko": "CVE ID:CVE-2026-6426\n  \n게시일 : 2026년 8월 10일 오후 9시 22분 | 30분 전\n  \n설명: QEMU의 vhost inflight 마이그레이션 VMState 처리에서 유형 불일치 취약점이 발견되었습니다. 대상 버퍼 크기는 uint64_t로 저장되지만 VMS_VBUFFER 로드 경로에서는 서명된 int32_t로 읽혀집니다. 리틀 엔디안 호스트에서 비트 31이 설정된 조작된 들어오는 마이그레이션 상태로 인해 값이 음수로 해석된 다음 암시적으로 매우 큰 size_t로 변환되어 qemu_get_buffer()가 mmap 지원 내부 영역의 경계를 넘어 마이그레이션 스트림 데이터를 복사하게 됩니다.\n\n이로 인해 QEMU 프로세스가 중단되거나 메모리가 손상될 수 있습니다. 악용하려면 가상 호스트 인플라이트 마이그레이션을 사용하도록 구성된 대상과 결합된 마이그레이션 생성자 제어 또는 마이그레이션 채널에 대한 쓰기 액세스가 필요합니다.\n  \n심각도: 4.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-6426\n2. 26.08.11 오전6:22\n3. A type mismatch vulnerability was found in QEMU's ",
+      "cve_id": "CVE-2026-6426",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6426",
+      "source": "cvefeed",
+      "published": "2026-08-11T06:22:29+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-48160 - react-tracked was vulnerable to malicious code execution via compromised commits",
+      "summary": "CVE ID :CVE-2026-48160\n  \nPublished : Aug. 10, 2026, 9:17 p.m. | 35 minutes ago\n  \nDescription :react-tracked provides state usage tracking with Proxies. Between 2026-05-18 19:26:36 and 2026-05-19 15:22:45, the default branch contained malicious commits 6978272a7d6ca02225cb747ea69f427512e33699 through 949f1a3d6bb1ff7d1a0dec892afd773e742627e8 that executed remote attacker-controlled code on developer machines during `npm install`. The commits were removed by force-push, but local clones, forks, and direct-SHA URLs may still contain them, and `npm install` against an affected checkout will still execute the code today. The package was not published to npm. `src/install.js` was added and wired into the `postinstall` script. It fetched a JavaScript payload from an attacker-controlled HTTPS endpoint (configurable via an environment variable), disabled TLS verification, and evaluated the response as code with `require` available. Execution was deliberately skipped on CI and cloud/serverless environments, targeting developer workstations. The second-stage payload was attacker-hosted and cannot be reconstructed. Assume full compromise of anything reachable from a Node process with the user's permissions. Those who ran `npm install` against an affected checkout on a developer machine on or after 2026-05-18 19:26:36 should treat the machine as compromised, rotate every credential the machine could reach, audit account activity** since 2026-05-18 19:26:36, and clean local clones.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-48160\n  \nPublished : Aug. 10, 2026, 9:17 p.m. | 35 minutes ago\n  \nDescription :react-tracked provides state usage tracking with Proxies. Between 2026-05-18 19:26:36 and 2026-05-19 15:22:45, the default branch contained malicious commits 6978272a7d6ca02225cb747ea69f427512e33699 through 949f1a3d6bb1ff7d1a0dec892afd773e742627e8 that executed remote attacker-controlled code on developer machines during `npm install`. The commits were removed by force-push, but local clones, forks, and direct-SHA URLs may still contain them, and `npm install` against an affected checkout will still execute the code today. The package was not published to npm. `src/install.js` was added and wired into the `postinstall` script. It fetched a JavaScript payload from an attacker-controlled HTTPS endpoint (configurable via an environment variable), disabled TLS verification, and evaluated the response as code with `require` available. Execution was deliberately skipped on CI and cloud/serverless environments, targeting developer workstations. The second-stage payload was attacker-hosted and cannot be reconstructed. Assume full compromise of anything reachable from a Node process with the user's permissions. Those who ran `npm install` against an affected checkout on a developer machine on or after 2026-05-18 19:26:36 should treat the machine as compromised, rotate every credential the machine could reach, audit account activity** since 2026-05-18 19:26:36, and clean local clones.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-48160\n  \n게시일 : 2026년 8월 10일 오후 9시 17분 | 35분 전\n  \n설명 :react-tracked는 프록시를 사용하여 상태 사용 추적을 제공합니다. 2026-05-18 19:26:36과 2026-05-19 15:22:45 사이에 기본 브랜치에는 악성 커밋 6978272a7d6ca02225cb747ea69f427512e33699가 포함되었습니다. 949f1a3d6bb1ff7d1a0dec892afd773e742627e8은 'npm install' 중에 개발자 컴퓨터에서 원격 공격자가 제어하는 코드를 실행했습니다. 커밋은 강제 푸시로 제거되었지만 로컬 클론, 포크 및 직접 SHA URL에는 여전히 커밋이 포함될 수 있으며 영향을 받은 체크아웃에 대한 `npm install`은 오늘도 여전히 코드를 실행합니다. 패키지가 npm에 게시되지 않았습니다. `src/install.js`가 추가되어 `postinstall` 스크립트에 연결되었습니다. 공격자가 제어하는 ​​HTTPS 엔드포인트(환경 변수를 통해 구성 가능)에서 JavaScript 페이로드를 가져오고, TLS 확인을 비활성화하고, 'require'를 사용할 수 있는 코드로 응답을 평가했습니다. 개발자 워크스테이션을 대상으로 CI 및 클라우드/서버리스 환경에서 실행을 의도적으로 건너뛰었습니다. 2단계 페이로드는 공격자가 호스팅했으며 재구성할 수 없습니다. 사용자 권한으로 노드 프로세스에서 도달할 수 있는 모든 것이 완전히 손상되었다고 가정합니다. 2026년 5월 18일 19시 26분 36초 이후에 개발자 컴퓨터에서 영향을 받은 체크아웃에 대해 'npm install'을 실행한 사용자는 컴퓨터를 손상된 것으로 처리하고, 컴퓨터가 도달할 수 있는 모든 자격 증명을 교체하고, 2026년 5월 18일 19시 26분 36초 이후의 계정 활동을 감사하고, 로컬 클론을 정리해야 합니다.\n  \n심각도: 9.3 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-48160\n2. 26.08.11 오전6:17\n3. react-tracked provides state usage tracking with P",
+      "cve_id": "CVE-2026-48160",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48160",
+      "source": "cvefeed",
+      "published": "2026-08-11T06:17:23+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-72910 - ERPNext: Unauthorised modification of master data due to missing validation",
       "summary": "CVE ID :CVE-2026-72910\n  \nPublished : Aug. 10, 2026, 8:57 p.m. | 21 minutes ago\n  \nDescription :ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.112.0 and 16.22.0, the merge_account, pause_job_for_doc, trigger_job_for_doc, change_release_date, and update_cost_center functions across erpnext/accounts/doctype/account/account.py, erpnext/accounts/doctype/process_payment_reconciliation/process_payment_reconciliation.py, erpnext/accounts/doctype/purchase_invoice/purchase_invoice.py, and erpnext/accounts/utils.py omit required write permission checks, allowing authenticated limited users to modify protected data beyond their roles. This issue is fixed in versions 15.112.0 and 16.22.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2509,21 +2515,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-8798",
       "source": "cvefeed",
       "published": "2026-08-08T10:16:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47127 - Ghostfolio has a Stripe subscription bypass",
-      "summary": "CVE ID :CVE-2026-47127\n  \nPublished : Aug. 7, 2026, 10:43 p.m. | 19 minutes ago\n  \nDescription :Ghostfolio is an open source wealth management software. Prior to version 3.4.0, Ghostfolio's Stripe checkout success-URL handler at `GET /api/v1/subscription/stripe/callback?checkoutSessionId=` retrieves the Stripe Checkout Session by ID and unconditionally grants a Premium subscription to the session's `client_reference_id` — without ever checking `session.payment_status` or `session.status`. There is no separate Stripe webhook endpoint with `stripe-signature` verification; this callback is the sole code path that creates Stripe-driven subscriptions. Any authenticated user can self-grant a 1-year Premium subscription without ever paying. Version 3.4.0 rejects sessions unless `session.payment_status === 'paid'` AND `session.status === 'complete'` (fails closed). Additionally, new unique `stripeCheckoutSessionId` column → a session can't be redeemed twice (race-safe via DB unique constraint).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47127\n  \nPublished : Aug. 7, 2026, 10:43 p.m. | 19 minutes ago\n  \nDescription :Ghostfolio is an open source wealth management software. Prior to version 3.4.0, Ghostfolio's Stripe checkout success-URL handler at `GET /api/v1/subscription/stripe/callback?checkoutSessionId=` retrieves the Stripe Checkout Session by ID and unconditionally grants a Premium subscription to the session's `client_reference_id` — without ever checking `session.payment_status` or `session.status`. There is no separate Stripe webhook endpoint with `stripe-signature` verification; this callback is the sole code path that creates Stripe-driven subscriptions. Any authenticated user can self-grant a 1-year Premium subscription without ever paying. Version 3.4.0 rejects sessions unless `session.payment_status === 'paid'` AND `session.status === 'complete'` (fails closed). Additionally, new unique `stripeCheckoutSessionId` column → a session can't be redeemed twice (race-safe via DB unique constraint).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47127 - Ghostfolio에는 Stripe 구독 우회 기능이 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-47127\n  \n게시일 : 2026년 8월 7일 오후 10시 43분 | 19분 전\n  \n설명:Ghostfolio는 오픈 소스 자산 관리 소프트웨어입니다. 버전 3.4.0 이전에는 `GET /api/v1/subscription/stripe/callback?checkoutSessionId=`에 있는 Ghostfolio의 Stripe 체크아웃 성공 URL 처리기가 ID로 Stripe 체크아웃 세션을 검색하고 `session.지불_상태` 또는 `session.status`를 확인하지 않고 무조건 세션의 `client_reference_id`에 프리미엄 구독을 부여합니다. '스트라이프 서명' 확인 기능이 있는 별도의 Stripe 웹훅 엔드포인트는 없습니다. 이 콜백은 Stripe 기반 구독을 생성하는 유일한 코드 경로입니다. 인증된 모든 사용자는 비용을 지불하지 않고도 1년 프리미엄 구독을 자체적으로 부여할 수 있습니다. 버전 3.4.0은 `session.pay_status === 'paid'` 및 `session.status === 'complete'`(실패 종료)가 아니면 세션을 거부합니다. 또한 새로운 고유 `stripeCheckoutSessionId` 열 → 세션을 두 번 사용할 수 없습니다(DB 고유 제약 조건을 통한 경주 안전).\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47127\n2. 26.08.08 오전7:43\n3. Ghostfolio is an open source wealth management sof",
-      "cve_id": "CVE-2026-47127",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47127",
-      "source": "cvefeed",
-      "published": "2026-08-08T07:43:59+09:00",
       "lang": "en"
     }
   ],
