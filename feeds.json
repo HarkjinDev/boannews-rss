@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-12T01:01:25.230706+09:00",
+  "fetched_at": "2026-08-12T01:32:44.034182+09:00",
   "security_news": [
+    {
+      "title": "28억달러 훔친 북한, 범죄망 통해 세탁 경로 넓혔다",
+      "summary": "보고서가 제시한 대표 사례는 2025년 2월 발생한 바이비트 해킹이다. 미국 연방수사국(FBI)은 북한 정찰총국과 연계된 해킹 활동 ‘트레이더트레이터(TraderTraitor)’가 바이비트에서 약 15억달러(약 2조1255억원)의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한, 28억 달러 범죄 수익 세탁 경로 확대\n2. 트레이더트레이터, 바이비트서 15억 달러 해킹 시도\n3. FBI, 북한 해킹 조직 자금 세탁 규명",
+      "link": "https://www.tokenpost.kr/news/blockchain/388629",
+      "source": "naver",
+      "published": "2026-08-12T01:26:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "반도체와 컴퓨팅도 대출 담보로…월가의 실험 VS 도박[박신영의 개장전...",
+      "summary": "AI로 해킹까지 자동화…사이버보안주 신고가 AI가 사이버 공격의 새로운 도구로 떠오르면서... 쉽게 말하면 회사 직원들이 사용하는 PC와 노트북, 서버, 모바일 기기 등을 해킹으로부터 보호하는 사업입니다. AI를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 반도체와 컴퓨팅도 대출 담보로…월가의 실험 VS 도박[박신영의 개장전...\n2. AI로 해킹까지 자동화…사이버보안주 신고가 AI가 사이버 공격의 새로운 도구로 떠오르면서.\n3. 쉽게 말하면 회사 직원들이 사용하는 PC와 노트북, 서버, 모바일 기기 등을 해킹으로부터 ",
+      "link": "https://n.news.naver.com/mnews/article/015/0005319844?sid=104",
+      "source": "naver",
+      "published": "2026-08-12T01:07:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "RUSI \"북한, 2년간 가상자산 28억 달러 탈취…중국 범죄조직 활용해 모두...",
       "summary": "이는 사상 최대 규모의 단일 가상자산 탈취 사건으로 꼽히는 지난해 2월 바이비트 거래소 해킹을 포함한 수치입니다. 보고서는 특히 바이비트 해킹으로 탈취된 자금 전액이 지난해 9월까지 모두 현금화돼 법정화폐나...",
@@ -2115,6 +2139,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-72922 - AutoGPT: Webhook provider path confusion bypasses generic webhook secret verification",
+      "summary": "CVE ID :CVE-2026-72922\n  \nPublished : Aug. 11, 2026, 3:17 p.m. | 29 minutes ago\n  \nDescription :AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.70, AutoGPT's autogpt_platform/backend/backend/api/features/integrations/router.py webhook_ingress_generic route selected get_webhook_manager(provider) from the untrusted provider URL segment without verifying webhook.provider, allowing a request to /compass/webhooks/{webhook_id}/ingress to use CompassWebhookManager's inherited no-op BaseWebhooksManager.verify_signature instead of GenericWebhooksManager.verify_signature, bypass X-Webhook-Secret for a configured secret_token, and execute a generic webhook graph as its owner. This issue is fixed in version 0.6.70.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-72922\n  \nPublished : Aug. 11, 2026, 3:17 p.m. | 29 minutes ago\n  \nDescription :AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.70, AutoGPT's autogpt_platform/backend/backend/api/features/integrations/router.py webhook_ingress_generic route selected get_webhook_manager(provider) from the untrusted provider URL segment without verifying webhook.provider, allowing a request to /compass/webhooks/{webhook_id}/ingress to use CompassWebhookManager's inherited no-op BaseWebhooksManager.verify_signature instead of GenericWebhooksManager.verify_signature, bypass X-Webhook-Secret for a configured secret_token, and execute a generic webhook graph as its owner. This issue is fixed in version 0.6.70.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-72922 - AutoGPT: 웹훅 공급자 경로 혼동으로 일반 웹훅 비밀 확인을 우회합니다.",
+      "summary_ko": "CVE ID:CVE-2026-72922\n  \n게시일 : 2026년 8월 11일 오후 3시 17분 | 29분 전\n  \n설명:AutoGPT는 지속적인 인공 지능 에이전트를 생성, 배포 및 관리하기 위한 워크플로 자동화 플랫폼입니다. 0.6.70 이전에는 AutoGPT의 autogpt_platform/backend/backend/api/features/integrations/router.py webhook_ingress_generic 경로가 webhook.provider를 확인하지 않고 신뢰할 수 없는 공급자 URL 세그먼트에서 get_webhook_manager(provider)를 선택하여 /compass/webhooks/{webhook_id}/ingress에 대한 요청이 CompassWebhookManager를 사용할 수 있도록 허용했습니다. GenericWebhooksManager.verify_signature 대신 no-op BaseWebhooksManager.verify_signature를 상속하고 구성된 secret_token에 대해 X-Webhook-Secret을 우회하고 일반 Webhook 그래프를 소유자로 실행합니다. 이 문제는 버전 0.6.70에서 해결되었습니다.\n  \n심각도: 8.2 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-72922\n2. 26.08.12 오전12:17\n3. AutoGPT is a workflow automation platform for crea",
+      "cve_id": "CVE-2026-72922",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-72922",
+      "source": "cvefeed",
+      "published": "2026-08-12T00:17:38+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-72609 - Koha Community Koha - SQL Injection via ORDER BY Direction in acqui/parcels.pl",
       "summary": "CVE ID :CVE-2026-72609\n  \nPublished : Aug. 11, 2026, 12:17 p.m. | 1 hour, 5 minutes ago\n  \nDescription :An SQL injection vulnerability in Koha through 24.11.17, 25.05.12, 25.11.06, and 26.05.01 allows authenticated staff with the acquisition => order_receive permission to read arbitrary database contents via the orderby request parameter in acqui/parcels.pl. The parameter is passed to C4::Acquisition::GetInvoices, which allow-lists the column name but concatenates the direction token raw into the SQL ORDER BY clause without validation. Exploitation is blind (time-based) in production and allows extraction of patron PII, staff bcrypt password hashes, and two-factor secrets.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
