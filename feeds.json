@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-11T22:01:28.865702+09:00",
+  "fetched_at": "2026-08-11T22:31:32.863191+09:00",
   "security_news": [
+    {
+      "title": "SonicWall SMA1000, 랜섬웨어까지 악용됐다",
+      "summary": "미국 사이버보안·인프라보안국(CISA)이 SonicWall의 원격접속 게이트웨이 SMA1000에서 발견된 취약점 두 건이 랜섬웨어 공격에 실제로 악용되고 있다고 확인했다. 문제의 결함은 CVE-2026-15409와 CVE-2026-15410이다....",
+      "content": "",
+      "title_ko": "SonicWall SMA1000, 랜섬웨어까지 악용됐다",
+      "summary_ko": null,
+      "summary_3lines": "1. CISA, SonicWall SMA1000 취약점 CVE-2026-15409, CVE-20\n2. 해당 취약점, 랜섬웨어 공격에 실제 악용되어\n3. SonicWall, SMA1000 제품 사용자에게 즉시 패치 권고",
+      "link": "https://www.wikitree.co.kr/articles/1151840",
+      "source": "naver",
+      "published": "2026-08-11T22:26:00+09:00",
+      "lang": "it"
+    },
     {
       "title": "완전 자율주행 시대 '성큼'…사고 책임은?",
       "summary": "과정, 차량 결함 등을 함께 분석해야 하는 등 사고 원인을 규명하는 방식도 달라진다\"며 \"차량이 외부 통신망과 데이터를 주고받는 만큼 해킹과 개인정보 유출 등에 대비한 보안 체계도 함께 강화해야 한다\"고 말했다.",
@@ -2104,6 +2116,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-72609 - Koha Community Koha - SQL Injection via ORDER BY Direction in acqui/parcels.pl",
+      "summary": "CVE ID :CVE-2026-72609\n  \nPublished : Aug. 11, 2026, 12:17 p.m. | 1 hour, 5 minutes ago\n  \nDescription :An SQL injection vulnerability in Koha through 24.11.17, 25.05.12, 25.11.06, and 26.05.01 allows authenticated staff with the acquisition => order_receive permission to read arbitrary database contents via the orderby request parameter in acqui/parcels.pl. The parameter is passed to C4::Acquisition::GetInvoices, which allow-lists the column name but concatenates the direction token raw into the SQL ORDER BY clause without validation. Exploitation is blind (time-based) in production and allows extraction of patron PII, staff bcrypt password hashes, and two-factor secrets.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-72609\n  \nPublished : Aug. 11, 2026, 12:17 p.m. | 1 hour, 5 minutes ago\n  \nDescription :An SQL injection vulnerability in Koha through 24.11.17, 25.05.12, 25.11.06, and 26.05.01 allows authenticated staff with the acquisition => order_receive permission to read arbitrary database contents via the orderby request parameter in acqui/parcels.pl. The parameter is passed to C4::Acquisition::GetInvoices, which allow-lists the column name but concatenates the direction token raw into the SQL ORDER BY clause without validation. Exploitation is blind (time-based) in production and allows extraction of patron PII, staff bcrypt password hashes, and two-factor secrets.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-72609 - Koha 커뮤니티 Koha - acqui/parcels.pl의 ORDER BY 방향을 통한 SQL 주입",
+      "summary_ko": "CVE ID:CVE-2026-72609\n  \n게시일 : 2026년 8월 11일 오후 12시 17분 | 1시간, 5분 전\n  \n설명: 24.11.17, 25.05.12, 25.11.06 및 26.05.01까지 Koha에서 발생한 SQL 주입 취약점으로 인해 획득 => order_receive 권한이 있는 인증된 직원이 acqui/parcels.pl의 orderby 요청 매개변수를 통해 임의의 데이터베이스 콘텐츠를 읽을 수 있습니다. 매개변수는 C4::Acquisition::GetInvoices로 전달됩니다. 이는 열 이름을 허용 목록에 추가하지만 검증 없이 원시 방향 토큰을 SQL ORDER BY 절에 연결합니다. 악용은 생산 시 블라인드(시간 기반) 방식으로 이루어지며 고객 PII, 직원 bcrypt 비밀번호 해시 및 2단계 비밀을 추출할 수 있습니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-72609\n2. 26.08.11 오후9:17\n3. An SQL injection vulnerability in Koha through 24.",
+      "cve_id": "CVE-2026-72609",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-72609",
+      "source": "cvefeed",
+      "published": "2026-08-11T21:17:44+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-73161 - cti-transmute Conversion Table Allows XSS via Unescaped Cell Content During Search Highlighting",
       "summary": "CVE ID :CVE-2026-73161\n  \nPublished : Aug. 11, 2026, 9:07 a.m. | 14 minutes ago\n  \nDescription :Affected versions of cti-transmute improperly handle conversion-table values passed through the search highlighting feature. The highlight() function previously returned the underlying text directly when no search query was supplied, or performed a regex replacement that inserted  tags without first escaping the original content. Because the resulting value is used by an HTML-rendering sink, malicious markup contained in conversion data could be interpreted as HTML rather than displayed as text.\n\nThe fix introduces a shared highlightMatches() helper that first converts special characters such as <, >, &, and quotes into HTML entities. Only after escaping does the code insert the application-controlled  element used for search highlighting.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-73161\n  \nPublished : Aug. 11, 2026, 9:07 a.m. | 14 minutes ago\n  \nDescription :Affected versions of cti-transmute improperly handle conversion-table values passed through the search highlighting feature. The highlight() function previously returned the underlying text directly when no search query was supplied, or performed a regex replacement that inserted  tags without first escaping the original content. Because the resulting value is used by an HTML-rendering sink, malicious markup contained in conversion data could be interpreted as HTML rather than displayed as text.\n\nThe fix introduces a shared highlightMatches() helper that first converts special characters such as <, >, &, and quotes into HTML entities. Only after escaping does the code insert the application-controlled  element used for search highlighting.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3244,6 +3271,36 @@
       "lang": "en"
     },
     {
+      "title": "[webapps] Planyo_Online_Reservation_System  3.0 - Arbitrary File Read via SSRF",
+      "summary": "Planyo_Online_Reservation_System  3.0 - Arbitrary File Read via SSRF",
+      "description": "Planyo_Online_Reservation_System  3.0 - Arbitrary File Read via SSRF",
+      "title_ko": "[webapps] Planyo_Online_Reservation_System 3.0 - SSRF를 통한 임의 파일 읽기",
+      "summary_ko": "Planyo_Online_Reservation_System 3.0 - SSRF를 통한 임의 파일 읽기",
+      "summary_3lines": "1. [webapps] Planyo_Online_Reservation_System 3.0 - A\n2. EXPLOITDB\n3. Planyo_Online_Reservation_System 3.0 - Arbitrary F",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52636",
+      "source": "exploitdb",
+      "published": "2026-08-11T09:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[webapps] Ray 2.56.0 - Directory Traversal & Local File Inclusion",
+      "summary": "Ray 2.56.0 - Directory Traversal & Local File Inclusion",
+      "description": "Ray 2.56.0 - Directory Traversal & Local File Inclusion",
+      "title_ko": "[webapps] Ray 2.56.0 - 디렉터리 탐색 및 로컬 파일 포함",
+      "summary_ko": "Ray 2.56.0 - 디렉터리 탐색 및 로컬 파일 포함",
+      "summary_3lines": "1. [webapps] Ray 2.56.0 - Directory Traversal & Local\n2. EXPLOITDB\n3. Ray 2.56.0 - Directory Traversal & Local File Incl",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52635",
+      "source": "exploitdb",
+      "published": "2026-08-11T09:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-11811 - Socket file-descriptor leak in UpdateHub OTA client start_coap_client() leading to resource-exhaustion DoS",
       "summary": "CVE ID :CVE-2026-11811\n  \nPublished : Aug. 10, 2026, 10:55 p.m. | 23 minutes ago\n  \nDescription :The UpdateHub over-the-air update client's start_coap_client() in subsys/mgmt/updatehub/updatehub.c leaks the CoAP/DTLS socket descriptor on its connection-setup failure paths. The shared error: cleanup gated socket closing on a ret > 0 flag, but ret was set to -1 immediately after the socket was created, so when zsock_setsockopt() (DTLS) or zsock_connect() subsequently failed the gate was false and cleanup_connection() was never called. The open descriptor in the global ctx.sock was then overwritten by the next attempt, permanently leaking it from the socket / net_context pool until reboot.\n\nThe failing setup path is reached every time the OTA client tries to contact the UpdateHub server and the connection cannot be established — driven automatically by the periodic autohandler() poll (and on demand via the updatehub_probe()/updatehub_update() API or the updatehub run shell command). The DTLS handshake/connect outcome is influenceable by a network or on-path attacker who drops, resets, or otherwise disrupts traffic to the server, and also fails naturally whenever the server is unreachable.\n\nEach failed attempt permanently leaks one descriptor; once the shared socket pool is exhausted, networking degrades device-wide until the device is rebooted, a denial-of-service condition. Severity is low because the leak rate is bounded by the configured OTA poll interval (default once per 24 hours), the effect is gradual and recovered by reboot, and only builds with the UpdateHub client enabled are affected. There is no memory-corruption, information-disclosure, or authentication impact.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-11811\n  \nPublished : Aug. 10, 2026, 10:55 p.m. | 23 minutes ago\n  \nDescription :The UpdateHub over-the-air update client's start_coap_client() in subsys/mgmt/updatehub/updatehub.c leaks the CoAP/DTLS socket descriptor on its connection-setup failure paths. The shared error: cleanup gated socket closing on a ret > 0 flag, but ret was set to -1 immediately after the socket was created, so when zsock_setsockopt() (DTLS) or zsock_connect() subsequently failed the gate was false and cleanup_connection() was never called. The open descriptor in the global ctx.sock was then overwritten by the next attempt, permanently leaking it from the socket / net_context pool until reboot.\n\nThe failing setup path is reached every time the OTA client tries to contact the UpdateHub server and the connection cannot be established — driven automatically by the periodic autohandler() poll (and on demand via the updatehub_probe()/updatehub_update() API or the updatehub run shell command). The DTLS handshake/connect outcome is influenceable by a network or on-path attacker who drops, resets, or otherwise disrupts traffic to the server, and also fails naturally whenever the server is unreachable.\n\nEach failed attempt permanently leaks one descriptor; once the shared socket pool is exhausted, networking degrades device-wide until the device is rebooted, a denial-of-service condition. Severity is low because the leak rate is bounded by the configured OTA poll interval (default once per 24 hours), the effect is gradual and recovered by reboot, and only builds with the UpdateHub client enabled are affected. There is no memory-corruption, information-disclosure, or authentication impact.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4141,21 +4198,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-17510",
       "source": "cvefeed",
       "published": "2026-08-09T10:21:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-19282 - andreahaku llm_memory_mcp GitHooksManager.ts auto.capture command injection",
-      "summary": "CVE ID :CVE-2026-19282\n  \nPublished : Aug. 8, 2026, 1:17 p.m. | 7 hours, 43 minutes ago\n  \nDescription :A weakness has been identified in andreahaku llm_memory_mcp up to f11dc8bcff3ff8cf943a2945f99ff3b0bdc8a6d0. This impacts the function auto.capture of the file src/autolearn/GitHooksManager.ts of the component llm_memory_mcp. Executing a manipulation of the argument hash can lead to command injection. The attack is restricted to local execution. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-19282\n  \nPublished : Aug. 8, 2026, 1:17 p.m. | 7 hours, 43 minutes ago\n  \nDescription :A weakness has been identified in andreahaku llm_memory_mcp up to f11dc8bcff3ff8cf943a2945f99ff3b0bdc8a6d0. This impacts the function auto.capture of the file src/autolearn/GitHooksManager.ts of the component llm_memory_mcp. Executing a manipulation of the argument hash can lead to command injection. The attack is restricted to local execution. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-19282 - andreahaku llm_memory_mcp GitHooksManager.ts auto.capture 명령 삽입",
-      "summary_ko": "CVE ID:CVE-2026-19282\n  \n게시일 : 2026년 8월 8일 오후 1시 17분 | 7시간 43분 전\n  \n설명 : andreahaku llm_memory_mcp에서 최대 f11dc8bcff3ff8cf943a2945f99ff3b0bdc8a6d0까지 약점이 확인되었습니다. 이는 llm_memory_mcp 구성 요소의 src/autolearn/GitHooksManager.ts 파일의 auto.capture 기능에 영향을 미칩니다. 인수 해시를 조작하면 명령 주입이 발생할 수 있습니다. 공격은 로컬 실행으로 제한됩니다. 이 제품은 버전 관리를 사용하지 않습니다. 이것이 영향을 받는 릴리스와 영향을 받지 않는 릴리스에 대한 정보를 사용할 수 없는 이유입니다. 해당 프로젝트는 이슈 리포트를 통해 조기에 문제를 통보 받았으나 아직까지 답변을 하지 않았습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-19282\n2. 26.08.08 오후10:17\n3. A weakness has been identified in andreahaku llm_m",
-      "cve_id": "CVE-2026-19282",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-19282",
-      "source": "cvefeed",
-      "published": "2026-08-08T22:17:10+09:00",
       "lang": "en"
     }
   ],
