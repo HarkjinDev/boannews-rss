@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-12T06:32:45.453868+09:00",
+  "fetched_at": "2026-08-12T07:01:32.889582+09:00",
   "security_news": [
     {
       "title": "[사사건건] 서울 가양동 아파트 15층서 화재...사망자 2명, 母子 外",
@@ -2208,18 +2208,6 @@
       "source": "naver",
       "published": "2026-08-09T08:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "오픈AI 아스트라, 사이버보안 ‘크리티컬’ 등급 가능성에 개발 일부 중...",
-      "summary": "외부 테스트 참여 기관에는 고위험 평가를 위한 권장 보안 통제 사항이 제공된다.허깅페이스 해킹 사건과 잇따른 유사 사고이번 발표는 오픈AI가 이미 자율 AI 에이전트로 인한 사고 대응에 나선 상황에서 나왔다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 오픈AI 아스트라, 사이버보안 ‘크리티컬’ 등급 가능성에 개발 일부 중...\n2. 외부 테스트 참여 기관에는 고위험 평가를 위한 권장 보안 통제 사항이 제공된다.허깅페이스 ",
-      "link": "https://www.wikitree.co.kr/articles/1151262",
-      "source": "naver",
-      "published": "2026-08-09T06:56:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2236,6 +2224,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-19139",
       "source": "msrc",
       "published": "2026-08-12T09:01:49+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-48763 - TypeBot has Arbitrary S3 Object Write in deprecated public upload endpoint via attacker-controlled filePath",
+      "summary": "CVE ID :CVE-2026-48763\n  \nPublished : Aug. 11, 2026, 8:51 p.m. | 29 minutes ago\n  \nDescription :TypeBot is a chatbot builder tool. Versions prior to 3.17.0 expose a deprecated public upload endpoint at `GET /api/v1/typebots/{typebotId}/blocks/{blockId}/storage/upload-url` that accepts an attacker-controlled `filePath` and returns a presigned S3 `PUT` URL for that exact key. Because the endpoint only checks that the referenced typebot is public and that the referenced block is a file input block, an unauthenticated attacker who knows a valid public `typebotId` and `blockId` can request presigned upload URLs for arbitrary objects in the shared bucket, including `private/...` and other tenants' `public/...` paths. Version 3.17.0 fixes this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-48763\n  \nPublished : Aug. 11, 2026, 8:51 p.m. | 29 minutes ago\n  \nDescription :TypeBot is a chatbot builder tool. Versions prior to 3.17.0 expose a deprecated public upload endpoint at `GET /api/v1/typebots/{typebotId}/blocks/{blockId}/storage/upload-url` that accepts an attacker-controlled `filePath` and returns a presigned S3 `PUT` URL for that exact key. Because the endpoint only checks that the referenced typebot is public and that the referenced block is a file input block, an unauthenticated attacker who knows a valid public `typebotId` and `blockId` can request presigned upload URLs for arbitrary objects in the shared bucket, including `private/...` and other tenants' `public/...` paths. Version 3.17.0 fixes this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-48763\n  \n게시일 : 2026년 8월 11일 오후 8시 51분 | 29분 전\n  \n설명 :TypeBot은 챗봇 빌더 도구입니다. 3.17.0 이전 버전에서는 공격자가 제어하는 ​​`filePath`를 허용하고 해당 정확한 키에 대해 미리 서명된 S3 `PUT` URL을 반환하는 `GET /api/v1/typebots/{typebotId}/blocks/{blockId}/storage/upload-url`에서 더 이상 사용되지 않는 공개 업로드 엔드포인트를 노출합니다. 엔드포인트는 참조된 typebot이 공개이고 참조된 블록이 파일 입력 블록인지만 확인하기 때문에 유효한 공개 'typebotId' 및 'blockId'를 알고 있는 인증되지 않은 공격자는 'private/...' 및 기타 테넌트의 'public/...' 경로를 포함하여 공유 버킷의 임의 개체에 대해 미리 서명된 업로드 URL을 요청할 수 있습니다. 버전 3.17.0에서는 이 문제가 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-48763\n2. 26.08.12 오전5:51\n3. TypeBot is a chatbot builder tool. Versions prior ",
+      "cve_id": "CVE-2026-48763",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48763",
+      "source": "cvefeed",
+      "published": "2026-08-12T05:51:24+09:00",
       "lang": "en"
     },
     {
