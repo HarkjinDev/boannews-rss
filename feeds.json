@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-12T02:32:59.590193+09:00",
+  "fetched_at": "2026-08-12T03:01:24.923622+09:00",
   "security_news": [
     {
       "title": "저커버그, 6500단어 에세이로 오픈AI·앤트로픽 정조준",
@@ -24,6 +24,18 @@
       "source": "naver",
       "published": "2026-08-12T02:22:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Researchers Disclose AI-Assisted SharePoint Exploit Chain Reaching Unauthenticated RCE",
+      "summary": "Security researchers found a way to enter Microsoft SharePoint servers as any user, including an administrator, with no valid account. A significant part of the work that found it was done through an AI agent.\n\nThe flaw, tracked as CVE-2026-55040 (CVSS 9.1), affects SharePoint Server Subscription Edition, SharePoint Server 2019, and SharePoint Server 2016. Microsoft's",
+      "content": "",
+      "title_ko": "연구원들이 인증되지 않은 RCE에 도달하는 AI 지원 SharePoint 익스플로잇 체인 공개",
+      "summary_ko": "보안 연구원들은 유효한 계정 없이 관리자를 포함한 모든 사용자로 Microsoft SharePoint 서버에 들어갈 수 있는 방법을 찾았습니다. 이를 발견한 작업의 상당 부분은 AI 에이전트를 통해 수행되었습니다.\n\nCVE-2026-55040(CVSS 9.1)으로 추적되는 이 결함은 SharePoint Server Subscription Edition, SharePoint Server 2019 및 SharePoint Server 2016에 영향을 미칩니다.",
+      "summary_3lines": "1. AI, MS SharePoint 서버 무인증 RCE 가능성 발견\n2. CVE-2026-55040, 관리자 계정 없이 접근 가능\n3. SharePoint Server 2016, 2019, SE 대상",
+      "link": "https://thehackernews.com/2026/08/researchers-disclose-ai-assisted.html",
+      "source": "thehackernews",
+      "published": "2026-08-12T01:47:44+09:00",
+      "lang": "en"
     },
     {
       "title": "28억달러 훔친 북한, 범죄망 통해 세탁 경로 넓혔다",
@@ -2163,6 +2175,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "Microsoft Patch Tuesday August 2026, (Tue, Aug 11th)",
+      "summary": "This month we got patches for 418 vulnerabilities. Of these, 62 are critical, 1 is being exploited in the wild, and 2 were publicly disclosed as zero-days. Notable fixes include Windows privilege escalation, container tampering, and critical QUIC and DNS Server remote code execution bugs. \r",
+      "description": "This month we got patches for 418 vulnerabilities. Of these, 62 are critical, 1 is being exploited in the wild, and 2 were publicly disclosed as zero-days. Notable fixes include Windows privilege escalation, container tampering, and critical QUIC and DNS Server remote code execution bugs. \r",
+      "title_ko": "Microsoft 패치 2026년 8월 화요일(8월 11일 화요일)",
+      "summary_ko": "이번 달에는 418개 취약점에 대한 패치가 나왔습니다. 이 중 62개는 중요하고, 1개는 실제로 악용되고 있으며, 2개는 제로데이로 공개되었습니다. 주목할만한 수정 사항에는 Windows 권한 상승, 컨테이너 변조, 중요한 QUIC 및 DNS 서버 원격 코드 실행 버그가 포함됩니다.",
+      "summary_3lines": "1. Microsoft Patch Tuesday August 2026, (Tue, Aug 11t\n2. SANS_ISC\n3. This month we got patches for 418 vulnerabilities.",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33236",
+      "source": "sans_isc",
+      "published": "2026-08-12T02:54:49+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-48771 - ishankportfolio: Stored Contact Form Submission Exposure via Public Client-Side Database Configuration",
+      "summary": "CVE ID :CVE-2026-48771\n  \nPublished : Aug. 11, 2026, 5:20 p.m. | 26 minutes ago\n  \nDescription :ishankportfolio is a portfolio website. Prior to version 1.0.1, contact form submissions could potentially be exposed due to improperly secured client-side database configuration and insufficient access control policies. Applications using publicly exposed database credentials or permissive database rules may allow unauthorised users to read, modify, or abuse stored form submission data. This could impact personally identifiable information (PII) submitted through the website contact form, including names, email addresses, phone numbers, and messages. The issue has been patched in version 1.0.1. Users unable to upgrade immediately can reduce risk by disabling public read/write database access, rotating exposed API keys, restricting database policies to authenticated requests only, moving sensitive operations to secure backend/serverless functions, and/or monitoring database activity logs for suspicious access.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-48771\n  \nPublished : Aug. 11, 2026, 5:20 p.m. | 26 minutes ago\n  \nDescription :ishankportfolio is a portfolio website. Prior to version 1.0.1, contact form submissions could potentially be exposed due to improperly secured client-side database configuration and insufficient access control policies. Applications using publicly exposed database credentials or permissive database rules may allow unauthorised users to read, modify, or abuse stored form submission data. This could impact personally identifiable information (PII) submitted through the website contact form, including names, email addresses, phone numbers, and messages. The issue has been patched in version 1.0.1. Users unable to upgrade immediately can reduce risk by disabling public read/write database access, rotating exposed API keys, restricting database policies to authenticated requests only, moving sensitive operations to secure backend/serverless functions, and/or monitoring database activity logs for suspicious access.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-48771 - ishankportfolio: 공개 클라이언트 측 데이터베이스 구성을 통한 저장된 문의 양식 제출 노출",
+      "summary_ko": "CVE ID:CVE-2026-48771\n  \n게시일 : 2026년 8월 11일 오후 5시 20분 | 26분 전\n  \n설명 :ishankportfolio는 포트폴리오 웹사이트입니다. 버전 1.0.1 이전에는 부적절하게 보안된 클라이언트 측 데이터베이스 구성과 불충분한 액세스 제어 정책으로 인해 문의 양식 제출이 잠재적으로 노출될 수 있었습니다. 공개적으로 노출된 데이터베이스 자격 증명이나 허용된 데이터베이스 규칙을 사용하는 애플리케이션은 권한이 없는 사용자가 저장된 양식 제출 데이터를 읽거나 수정하거나 남용하는 것을 허용할 수 있습니다. 이는 이름, 이메일 주소, 전화번호, 메시지 등 웹사이트 문의 양식을 통해 제출된 개인 식별 정보(PII)에 영향을 미칠 수 있습니다. 이 문제는 버전 1.0.1에서 패치되었습니다. 즉시 업그레이드할 수 없는 사용자는 공개 읽기/쓰기 데이터베이스 액세스를 비활성화하고, 노출된 API 키를 교체하고, 데이터베이스 정책을 인증된 요청으로만 제한하고, 중요한 작업을 백엔드/서버리스 기능을 보호하도록 이동하고, 의심스러운 액세스가 있는지 데이터베이스 활동 로그를 모니터링함으로써 위험을 줄일 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-48771\n2. 26.08.12 오전2:20\n3. ishankportfolio is a portfolio website. Prior to v",
+      "cve_id": "CVE-2026-48771",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48771",
+      "source": "cvefeed",
+      "published": "2026-08-12T02:20:55+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-72922 - AutoGPT: Webhook provider path confusion bypasses generic webhook secret verification",
       "summary": "CVE ID :CVE-2026-72922\n  \nPublished : Aug. 11, 2026, 3:17 p.m. | 29 minutes ago\n  \nDescription :AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.70, AutoGPT's autogpt_platform/backend/backend/api/features/integrations/router.py webhook_ingress_generic route selected get_webhook_manager(provider) from the untrusted provider URL segment without verifying webhook.provider, allowing a request to /compass/webhooks/{webhook_id}/ingress to use CompassWebhookManager's inherited no-op BaseWebhooksManager.verify_signature instead of GenericWebhooksManager.verify_signature, bypass X-Webhook-Secret for a configured secret_token, and execute a generic webhook graph as its owner. This issue is fixed in version 0.6.70.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
