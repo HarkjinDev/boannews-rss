@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-08-11T08:32:33.481907+09:00",
+  "fetched_at": "2026-08-11T09:02:37.192883+09:00",
   "security_news": [
+    {
+      "title": "\"돈 안 주면 자료 공개\"…국제 랜섬웨어 조직 건라에 한-미 공동 대응",
+      "summary": "경찰청이 미국 연방수사국(FBI)과 함께 국제 랜섬웨어 조직 '건라(GUNRA)'의 최신 공격기법을 공개하고 국내외 기관·기업에 보안 강화를 당부했다. 경찰청 국가수사본부는 FBI, 사이버보안·인프라보안국(CISA), 국가안보국...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 경찰청, FBI와 국제 랜섬웨어 '건라(GUNRA)' 최신 공격기법 공개\n2. 건라, 금품 미지급 시 자료 공개 협박 및 공격 시도\n3. 한-미 공동 대응, 국내외 기관·기업 보안 강화 촉구",
+      "link": "https://n.news.naver.com/mnews/article/421/0009106952?sid=102",
+      "source": "naver",
+      "published": "2026-08-11T09:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "‘中 로봇청소기’ 에코백스 “데이터 보안 강화…고객 서비스 확대”",
+      "summary": "유럽연합(EU) 사이버 복원력법(CRA)과 인공지능법(AI Act) 등 각국의 사이버보안·개인정보 보호 관련 규제에 맞춰 제품 보안과 컴플라이언스 역량을 강화한다는 방침이다. 고객 편의 서비스도 확대한다. 네이버 공식 브랜드...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. ‘中 로봇청소기’ 에코백스 “데이터 보안 강화…고객 서비스 확대” 유럽연합(EU) 사이버 \n2. 고객 편의 서비스도 확대한다.\n3. 네이버 공식 브랜드...",
+      "link": "https://n.news.naver.com/mnews/article/029/0003041689?sid=101",
+      "source": "naver",
+      "published": "2026-08-11T08:44:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "오픈AI, 새 보안특화 모델 공개…'데이브레이크' 보안계획 재편",
+      "summary": "방어자의 취약점 보완 활동을 도울 뿐 자율적인 해킹 공격을 수행하기는 어려우리라는 것이다. 오픈AI는 또 'GPT-5.6 사이버'가 최근 AI발 보안 위협의 시작점이었던 '허깅페이스 해킹 사건'과 무관하다고 밝혔다. 앞서...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI, 보안특화 모델 '데이브레이크' 공개\n2. GPT-5.6 사이버, 허깅페이스 해킹 사건과 무관\n3. 방어자 지원, 자율 해킹은 어려울 전망",
+      "link": "https://n.news.naver.com/mnews/article/001/0016243660?sid=104",
+      "source": "naver",
+      "published": "2026-08-11T08:40:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "바이비트, 北정찰총국 상대로 미국서 소송..2조원대 가상자산 탈취",
       "summary": "천안함 폭침 등 공작성 도발이나, 각종 해킹 등 사이버전을 담당하는 것으로 알려져 있다. 미국 정부는 북한의 군사정보기관인 정찰정보총국을 가상자산 탈취, 랜섬웨어 유포 등 글로벌 해킹과 사이버 범죄를 직접...",
@@ -1563,6 +1599,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-11811 - Socket file-descriptor leak in UpdateHub OTA client start_coap_client() leading to resource-exhaustion DoS",
+      "summary": "CVE ID :CVE-2026-11811\n  \nPublished : Aug. 10, 2026, 10:55 p.m. | 23 minutes ago\n  \nDescription :The UpdateHub over-the-air update client's start_coap_client() in subsys/mgmt/updatehub/updatehub.c leaks the CoAP/DTLS socket descriptor on its connection-setup failure paths. The shared error: cleanup gated socket closing on a ret > 0 flag, but ret was set to -1 immediately after the socket was created, so when zsock_setsockopt() (DTLS) or zsock_connect() subsequently failed the gate was false and cleanup_connection() was never called. The open descriptor in the global ctx.sock was then overwritten by the next attempt, permanently leaking it from the socket / net_context pool until reboot.\n\nThe failing setup path is reached every time the OTA client tries to contact the UpdateHub server and the connection cannot be established — driven automatically by the periodic autohandler() poll (and on demand via the updatehub_probe()/updatehub_update() API or the updatehub run shell command). The DTLS handshake/connect outcome is influenceable by a network or on-path attacker who drops, resets, or otherwise disrupts traffic to the server, and also fails naturally whenever the server is unreachable.\n\nEach failed attempt permanently leaks one descriptor; once the shared socket pool is exhausted, networking degrades device-wide until the device is rebooted, a denial-of-service condition. Severity is low because the leak rate is bounded by the configured OTA poll interval (default once per 24 hours), the effect is gradual and recovered by reboot, and only builds with the UpdateHub client enabled are affected. There is no memory-corruption, information-disclosure, or authentication impact.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-11811\n  \nPublished : Aug. 10, 2026, 10:55 p.m. | 23 minutes ago\n  \nDescription :The UpdateHub over-the-air update client's start_coap_client() in subsys/mgmt/updatehub/updatehub.c leaks the CoAP/DTLS socket descriptor on its connection-setup failure paths. The shared error: cleanup gated socket closing on a ret > 0 flag, but ret was set to -1 immediately after the socket was created, so when zsock_setsockopt() (DTLS) or zsock_connect() subsequently failed the gate was false and cleanup_connection() was never called. The open descriptor in the global ctx.sock was then overwritten by the next attempt, permanently leaking it from the socket / net_context pool until reboot.\n\nThe failing setup path is reached every time the OTA client tries to contact the UpdateHub server and the connection cannot be established — driven automatically by the periodic autohandler() poll (and on demand via the updatehub_probe()/updatehub_update() API or the updatehub run shell command). The DTLS handshake/connect outcome is influenceable by a network or on-path attacker who drops, resets, or otherwise disrupts traffic to the server, and also fails naturally whenever the server is unreachable.\n\nEach failed attempt permanently leaks one descriptor; once the shared socket pool is exhausted, networking degrades device-wide until the device is rebooted, a denial-of-service condition. Severity is low because the leak rate is bounded by the configured OTA poll interval (default once per 24 hours), the effect is gradual and recovered by reboot, and only builds with the UpdateHub client enabled are affected. There is no memory-corruption, information-disclosure, or authentication impact.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-11811 - 리소스 고갈 DoS로 이어지는 UpdateHub OTA 클라이언트 start_coap_client()의 소켓 파일 설명자 누출",
+      "summary_ko": "CVE ID:CVE-2026-11811\n  \n게시일 : 2026년 8월 10일 오후 10시 55분 | 23분 전\n  \n설명: subsys/mgmt/updatehub/updatehub.c에 있는 UpdateHub 무선 업데이트 클라이언트의 start_coap_client()가 연결 설정 실패 경로에서 CoAP/DTLS 소켓 설명자를 유출합니다. 공유 오류: ret > 0 플래그에서 정리 게이트 소켓이 닫혔지만 소켓이 생성된 직후 ret가 -1로 설정되었으므로 zsock_setsockopt()(DTLS) 또는 zsock_connect()가 이후에 실패하면 게이트가 false이고 cleanup_connection()이 호출되지 않았습니다. 전역 ctx.sock의 열린 설명자는 다음 시도에서 덮어쓰여 재부팅할 때까지 소켓/net_context 풀에서 영구적으로 누출되었습니다.\n\n실패한 설정 경로는 OTA 클라이언트가 UpdateHub 서버에 연결을 시도할 때마다 연결이 설정되지 않습니다. 이는 정기적인 autohandler() 폴링에 의해 자동으로 실행됩니다(요청 시 updatehub_probe()/updatehub_update() API 또는 updatehub 실행 셸 명령을 통해). DTLS 핸드셰이크/연결 결과는 서버에 대한 트래픽을 삭제, 재설정 또는 방해하는 네트워크 또는 경로상의 공격자에 의해 영향을 받을 수 있으며 서버에 연결할 수 없을 때마다 자연스럽게 실패하기도 합니다.\n\n시도가 실패할 때마다 하나의 설명자가 영구적으로 유출됩니다. 공유 소켓 풀이 소진되면 장치가 재부팅될 때까지 장치 전체의 네트워킹 성능이 저하됩니다(서비스 거부 조건). 누출률은 구성된 OTA 폴링 간격(기본값은 24시간마다 한 번)으로 제한되고, 효과는 점진적이고 재부팅을 통해 복구되며, UpdateHub 클라이언트가 활성화된 빌드만 영향을 받기 때문에 심각도가 낮습니다. 메모리 손상, 정보 공개 또는 인증에 미치는 영향은 없습니다.\n  \n심각도: 3.7 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-11811\n2. 26.08.11 오전7:55\n3. The UpdateHub over-the-air update client's start_c",
+      "cve_id": "CVE-2026-11811",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11811",
+      "source": "cvefeed",
+      "published": "2026-08-11T07:55:17+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-8718 - Out-of-bounds write in DTLS peer Connection ID getsockopt (`TLS_DTLS_PEER_CID_VALUE`) in Zephyr net sockets/TLS",
+      "summary": "CVE ID :CVE-2026-8718\n  \nPublished : Aug. 10, 2026, 10:40 p.m. | 38 minutes ago\n  \nDescription :tls_opt_dtls_peer_connection_id_value_get() in subsys/net/lib/sockets/sockets_tls.c, which handles getsockopt(SOL_TLS, TLS_DTLS_PEER_CID_VALUE), passed the caller-supplied optval directly to mbedtls_ssl_get_peer_cid() without verifying the buffer was at least MBEDTLS_SSL_CID_OUT_LEN_MAX (default 32) bytes. mbedtls_ssl_get_peer_cid() copies the peer-negotiated DTLS Connection ID (length 1..MBEDTLS_SSL_CID_OUT_LEN_MAX) into that buffer without a destination-size parameter, so a caller-supplied optlen smaller than the CID causes a write of up to 31 bytes past the buffer end.\n\nIn CONFIG_USERSPACE builds the getsockopt syscall verifier (z_vrfy_zsock_getsockopt) bounce-buffers the user's optval into a kernel allocation of exactly optlen bytes (k_usermode_alloc_from_copy -> z_thread_malloc), so an unprivileged user thread that passes a small optlen on a connected DTLS socket with Connection ID enabled induces a kernel-heap buffer overflow, with the overflowing content being the remote peer's CID.\n\nThe defect requires CONFIG_MBEDTLS_SSL_DTLS_CONNECTION_ID, an established DTLS session with a negotiated peer CID, and (for the kernel-crossing case) CONFIG_USERSPACE. Introduced when the TLS_DTLS_CID option was added (v3.5.0).\n\nThe fix rejects callers whose optlen is below MBEDTLS_SSL_CID_OUT_LEN_MAX with -EINVAL.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-8718\n  \nPublished : Aug. 10, 2026, 10:40 p.m. | 38 minutes ago\n  \nDescription :tls_opt_dtls_peer_connection_id_value_get() in subsys/net/lib/sockets/sockets_tls.c, which handles getsockopt(SOL_TLS, TLS_DTLS_PEER_CID_VALUE), passed the caller-supplied optval directly to mbedtls_ssl_get_peer_cid() without verifying the buffer was at least MBEDTLS_SSL_CID_OUT_LEN_MAX (default 32) bytes. mbedtls_ssl_get_peer_cid() copies the peer-negotiated DTLS Connection ID (length 1..MBEDTLS_SSL_CID_OUT_LEN_MAX) into that buffer without a destination-size parameter, so a caller-supplied optlen smaller than the CID causes a write of up to 31 bytes past the buffer end.\n\nIn CONFIG_USERSPACE builds the getsockopt syscall verifier (z_vrfy_zsock_getsockopt) bounce-buffers the user's optval into a kernel allocation of exactly optlen bytes (k_usermode_alloc_from_copy -> z_thread_malloc), so an unprivileged user thread that passes a small optlen on a connected DTLS socket with Connection ID enabled induces a kernel-heap buffer overflow, with the overflowing content being the remote peer's CID.\n\nThe defect requires CONFIG_MBEDTLS_SSL_DTLS_CONNECTION_ID, an established DTLS session with a negotiated peer CID, and (for the kernel-crossing case) CONFIG_USERSPACE. Introduced when the TLS_DTLS_CID option was added (v3.5.0).\n\nThe fix rejects callers whose optlen is below MBEDTLS_SSL_CID_OUT_LEN_MAX with -EINVAL.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-8718 - Zephyr net 소켓/TLS의 DTLS 피어 연결 ID getsockopt(`TLS_DTLS_PEER_CID_VALUE`)에서 범위를 벗어난 쓰기",
+      "summary_ko": "CVE ID:CVE-2026-8718\n  \n게시일 : 2026년 8월 10일 오후 10시 40분 | 38분 전\n  \n설명: getsockopt(SOL_TLS, TLS_DTLS_PEER_CID_VALUE)를 처리하는 subsys/net/lib/sockets/sockets_tls.c의 tls_opt_dtls_peer_connection_id_value_get()은 버퍼가 최소한인지 확인하지 않고 호출자가 제공한 optval을 직접 mbedtls_ssl_get_peer_cid()에 전달했습니다. MBEDTLS_SSL_CID_OUT_LEN_MAX(기본값 32)바이트입니다. mbedtls_ssl_get_peer_cid()는 대상 크기 매개변수 없이 피어 협상 DTLS 연결 ID(길이 1..MBEDTLS_SSL_CID_OUT_LEN_MAX)를 해당 버퍼에 복사하므로 CID보다 작은 호출자 제공 optlen은 버퍼 끝을 지나 최대 31바이트의 쓰기를 발생시킵니다.\n\nCONFIG_USERSPACE에서는 getsockopt 시스템 호출 검증기(z_vrfy_zsock_getsockopt)가 사용자의 optval을 정확히 optlen 바이트의 커널 할당으로 바운스 버퍼링하므로(k_usermode_alloc_from_copy -> z_thread_malloc) 연결 ID가 활성화된 연결된 DTLS 소켓에서 작은 optlen을 전달하는 권한 없는 사용자 스레드는 다음과 같이 커널 힙 버퍼 오버플로를 유발합니다. 오버플로된 콘텐츠는 원격 피어의 CID입니다.\n\n결함에는 CONFIG_MBEDTLS_SSL_DTLS_CONNECTION_ID, 협상된 피어 CID가 있는 설정된 DTLS 세션 및 (커널 교차의 경우) CONFIG_USERSPACE가 필요합니다. TLS_DTLS_CID 옵션 추가(v3.5.0) 때 도입되었습니다.\n\n수정 사항은 -EINVAL을 사용하여 optlen이 MBEDTLS_SSL_CID_OUT_LEN_MAX보다 낮은 호출자를 거부합니다.\n  \n심각도: 8.4 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-8718\n2. 26.08.11 오전7:40\n3. tls_opt_dtls_peer_connection_id_value_get() in sub",
+      "cve_id": "CVE-2026-8718",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-8718",
+      "source": "cvefeed",
+      "published": "2026-08-11T07:40:26+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-6426 - Qemu-kvm: vhost inflight migration vmstate integer type mismatch causes out-of-bounds access",
       "summary": "CVE ID :CVE-2026-6426\n  \nPublished : Aug. 10, 2026, 9:22 p.m. | 30 minutes ago\n  \nDescription :A type mismatch vulnerability was found in QEMU's vhost inflight migration VMState handling. The destination buffer size is stored as a uint64_t but read by the VMS_VBUFFER load path as a signed int32_t. On little-endian hosts, a crafted incoming migration state with bit 31 set causes the value to be interpreted as negative and then implicitly converted to a very large size_t, leading qemu_get_buffer() to copy migration-stream data beyond the bounds of the mmap-backed inflight region.\n\nThis can result in a crash of the QEMU process or memory corruption. Exploitation requires control of the migration producer or write access to the migration channel, combined with a destination configured to use vhost inflight migration.\n  \nSeverity: 4.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
