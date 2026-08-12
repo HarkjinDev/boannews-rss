@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-13T06:31:45.419689+09:00",
+  "fetched_at": "2026-08-13T07:03:04.571694+09:00",
   "security_news": [
+    {
+      "title": "해킹 악재 바닥 지나는 통신3사…AIDC, 효자 가능성 보인다",
+      "summary": "지난해 하반기부터 통신업계 실적을 짓눌렀던 개인정보 유출(해킹) 사고 여파가 마무리 국면에... 통신 3사의 합산 영업이익은 지난해 2분기까지만 해도 1조 6000억 원을 웃돌았지만 하반기 들어 해킹 사고로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 통신3사, 개인정보 유출 사고 여파 마무리 국면.\n2. 작년 하반기 해킹 사고로 영업이익 1.6조 원 하락.\n3. AIDC, 통신업계 실적 회복 '효자' 가능성.",
+      "link": "https://n.news.naver.com/mnews/article/421/0009111235?sid=105",
+      "source": "naver",
+      "published": "2026-08-13T06:46:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "중국 연계 의심 해킹 세력, AI 에이전트로 대만 정부 대규모 침투",
+      "summary": "이스라엘 AI·사이버보안 기업 드림(Dream)의 분석에 따르면 공격은 2026년 7월 초 나흘 동안 진행됐다. 공격... AI 에이전트가 실제 공격 행위를 악의적인 침해가 아니라 정당한 보안 연구로 판단하도록 유도한 것이다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 중국 연계 의심 해킹 세력, AI 에이전트로 대만 정부 대규모 침투 이스라엘 AI·사이버보\n2. AI 에이전트가 실제 공격 행위를 악의적인 침해가 아니라 정당한 보안 연구로 판단하도록 유",
+      "link": "https://www.news2day.co.kr/article/20260813500014",
+      "source": "naver",
+      "published": "2026-08-13T06:34:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Hackers exploit critical Adobe Commerce flaw to hijack customer accounts",
       "summary": "Attempts to exploit a critical vulnerability (CVE-2026-71362) in Adobe's Commerce and Magento e-commerce platforms have been detected, potentially allowing attackers to hijack customer accounts. [...]",
@@ -2748,21 +2772,24 @@
       "source": "naver",
       "published": "2026-08-10T07:48:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "동네 보건소부터 응급실까지…의료 AI 전국망 깐다 [D:로그인]",
-      "summary": "의료 AI의 환각과 오류, 개인정보 유출을 막기 위한 윤리·보안 지침도 만든다. 비식별성이 확보된 가명정보 연구는 기관생명윤리위원회 심의를 면제하는 방안을 추진하는 대신 건강정보를 보험료나 대출 등 개인에게...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 전국 보건소, 응급실에 의료 AI 전국망 구축\n2. 의료 AI 환각·오류, 개인정보 유출 막기 위한 보안 지침 마련\n3. 가명정보 연구 시 윤리위 심의 면제 추진",
-      "link": "https://n.news.naver.com/mnews/article/119/0003120006?sid=102",
-      "source": "naver",
-      "published": "2026-08-10T07:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-73427 - Trix: XSS via JSON deserialization bypass in drag-and-drop (Level0InputController)",
+      "summary": "CVE ID :CVE-2026-73427\n  \nPublished : Aug. 12, 2026, 9:17 p.m. | 15 minutes ago\n  \nDescription :Trix is a what-you-see-is-what-you-get rich text editor for everyday writing. Prior to 2.1.18, Trix is vulnerable to cross-site scripting when a crafted application/x-trix-document JSON payload is dropped into an editor using the fallback Level0InputController, such as an embedded WebView without Input Events Level 2 support. The StringPiece.fromJSON method trusts href attributes from the JSON payload without sanitization, allowing a draggable element containing a javascript: URI to bypass DOMPurify sanitization and inject executable JavaScript into the DOM. Exploitation requires the victim to drag and drop attacker-controlled content, and server-side HTML sanitization can neutralize the payload on save. This issue is fixed in version 2.1.18.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-73427\n  \nPublished : Aug. 12, 2026, 9:17 p.m. | 15 minutes ago\n  \nDescription :Trix is a what-you-see-is-what-you-get rich text editor for everyday writing. Prior to 2.1.18, Trix is vulnerable to cross-site scripting when a crafted application/x-trix-document JSON payload is dropped into an editor using the fallback Level0InputController, such as an embedded WebView without Input Events Level 2 support. The StringPiece.fromJSON method trusts href attributes from the JSON payload without sanitization, allowing a draggable element containing a javascript: URI to bypass DOMPurify sanitization and inject executable JavaScript into the DOM. Exploitation requires the victim to drag and drop attacker-controlled content, and server-side HTML sanitization can neutralize the payload on save. This issue is fixed in version 2.1.18.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-73427 - Trix: 드래그 앤 드롭에서 JSON 역직렬화 우회를 통한 XSS(Level0InputController)",
+      "summary_ko": "CVE ID:CVE-2026-73427\n  \n게시일 : 2026년 8월 12일 오후 9시 17분 | 15분 전\n  \n설명 :Trix는 일상적인 글쓰기를 위한 서식 있는 텍스트 편집기입니다. 2.1.18 이전에 Trix는 입력 이벤트 레벨 2 지원이 없는 내장된 WebView와 같은 대체 Level0InputController를 사용하여 제작된 애플리케이션/x-trix-document JSON 페이로드가 편집기에 드롭될 때 크로스 사이트 스크립팅에 취약했습니다. StringPiece.fromJSON 메서드는 정리 없이 JSON 페이로드의 href 속성을 신뢰하여 javascript: URI가 포함된 드래그 가능한 요소가 DOMPurify 정리를 우회하고 실행 가능한 JavaScript를 DOM에 삽입할 수 있도록 허용합니다. 악용하려면 피해자가 공격자가 제어하는 ​​콘텐츠를 끌어서 놓아야 하며, 서버 측 HTML 삭제 처리를 통해 저장 시 페이로드를 무력화할 수 있습니다. 이 문제는 버전 2.1.18에서 해결되었습니다.\n  \n심각도: 2.1 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-73427\n2. 26.08.13 오전6:17\n3. Trix is a what-you-see-is-what-you-get rich text e",
+      "cve_id": "CVE-2026-73427",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73427",
+      "source": "cvefeed",
+      "published": "2026-08-13T06:17:41+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-73431 - Reusable Account Activation and Recovery Tokens Allow Repeated Account Takeover in vulnerability-lookup",
       "summary": "CVE ID :CVE-2026-73431\n  \nPublished : Aug. 12, 2026, 2:32 p.m. | 30 minutes ago\n  \nDescription :Vulnerability-Lookup contains an \nauthentication weakness in its account activation and password-recovery \nmechanism. Activation and recovery links were generated using stateless \nsigned tokens containing only the user's login. Although the token \nsignature and age were validated, the application did not track whether a\n token had already been successfully used. As a result, a captured \nactivation or password-recovery link remained valid for the entire \nconfigured TOKEN_VALIDITY_PERIOD, even after the associated password had been changed. \n\n\nAn attacker who obtains a valid \nactivation or recovery token could therefore replay it multiple times \nduring its validity period to set a new password and repeatedly take \ncontrol of the affected account. In addition, tokens were not bound to a\n specific purpose, allowing the same token mechanism to be used across \nactivation and recovery workflows. The patch introduces purpose-bound \ntokens and a random nonce whose SHA-256 digest is stored with the user \naccount. The nonce is invalidated after a successful password change, \nmaking tokens single-use, while issuing a new token invalidates any \npreviously issued token.  The password-setting operation now explicitly consumes the token before committing the account change. \n\n\nSuccessful exploitation requires \nthe attacker to obtain a currently valid activation or recovery link, \nbut does not require knowledge of the victim's existing password or an \nauthenticated session.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
