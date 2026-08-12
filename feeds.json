@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-12T21:01:42.467882+09:00",
+  "fetched_at": "2026-08-12T21:31:49.926065+09:00",
   "security_news": [
+    {
+      "title": "Hackers leverage new Microsoft SharePoint exploit in attacks",
+      "summary": "Hackers have already begun using a proof-of-concept (PoC) exploit for a critical Microsoft SharePoint vulnerability, published by cybersecurity company Rapid7 on Tuesday. [...]",
+      "content": "",
+      "title_ko": "해커는 공격에 새로운 Microsoft SharePoint 악용을 활용합니다.",
+      "summary_ko": "해커들은 이미 화요일에 사이버 보안 회사인 Rapid7에서 게시한 중요한 Microsoft SharePoint 취약점에 대한 개념 증명(PoC) 익스플로잇을 사용하기 시작했습니다. [...]",
+      "summary_3lines": "1. 해커, MS SharePoint 취약점 PoC 악용 시작\n2. Rapid7 공개, 제로데이 공격에 활용 우려\n3. 즉각적인 패치 및 보안 강화 권고",
+      "link": "https://www.bleepingcomputer.com/news/microsoft/hackers-leverage-new-microsoft-sharepoint-exploit-in-attacks/",
+      "source": "bleepingcomputer",
+      "published": "2026-08-12T21:25:37+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "해커가 원격에서 시스코 방화벽 멈춘다…CVE-2026-20349 공격 확인",
+      "summary": "어떤 국가 지원 해킹조직이나 사이버범죄 조직이 공격하고 있는지, 어느 국가와 기업이 표적이 됐는지도... 따라서 현 단계에서 특정 해킹조직이나 공격 캠페인과 연결하는 것은 이르다. 기업과 기관 보안담당자는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 시스코 방화벽 CVE-2026-20349 원격 공격 확인\n2. 해커, 방화벽 멈추는 공격 감행\n3. 국가 지원 조직 연관성은 아직 미확인",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208028",
+      "source": "naver",
+      "published": "2026-08-12T21:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "인텔·에이엠디, 취약점 80건 넘게 수정했다",
       "summary": "캐나다 사이버보안센터(Canadian Centre for Cyber Security)는 2월 10일 인텔, 12일 에이엠디 관련 안내를 각각 게시했다. 센터는 관리자와 사용자에게 각 업체의 보안 공지를 검토하고 필요한 완화 조치와 업데이트를...",
@@ -2715,6 +2739,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-11325 - cloudflare/pages-action is deprecated — migration required by September 18th, 2026",
+      "summary": "CVE ID :CVE-2026-11325\n  \nPublished : Aug. 12, 2026, 11:31 a.m. | 19 minutes ago\n  \nDescription :Description\n\n\n\nCloudflare was recently notified by external researchers of vulnerabilities in this archived repository, including a remote code execution issue in `src/index.ts` reachable from certain GitHub Actions workflow configurations. Successful exploitation may expose workflow secrets such as CLOUDFLARE_API_TOKEN and GITHUB_TOKEN to an attacker. Because this repository has been deprecated since 2024, Cloudflare will not be issuing patches. To remediate this issue, we recommend migrating to `cloudflare/wrangler-action` immediately. Consumers who have already migrated are not affected.\n\n\n\n\nSunset Date\n\n\n\nThe cloudflare/pages-action repository will be removed on 2026-09-07. Consumers must complete migration before 7th September to avoid CI disruption.\n\n\n\n\nAffected Versions\n\n\n\nAll published versions of cloudflare/pages-action, including consumers pinned to the v1 moving tag.\n\n\n\n\nPatched Versions\n\n\n\nNone. This repository will not receive further updates, including security patches.\n\n\n\n\nResolution / Migration Path\nMigrate all workflows using cloudflare/pages-action to `cloudflare/wrangler-action` before 2026-07-18. Refer to the wrangler-action README for the equivalent step configuration and migration guidance.\n\n\n\n\nCredit\n\n\n\nThanks to @agentka99 and @beg1nn3r for reporting their findings via Cloudflare's HackerOne program that informe\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-11325\n  \nPublished : Aug. 12, 2026, 11:31 a.m. | 19 minutes ago\n  \nDescription :Description\n\n\n\nCloudflare was recently notified by external researchers of vulnerabilities in this archived repository, including a remote code execution issue in `src/index.ts` reachable from certain GitHub Actions workflow configurations. Successful exploitation may expose workflow secrets such as CLOUDFLARE_API_TOKEN and GITHUB_TOKEN to an attacker. Because this repository has been deprecated since 2024, Cloudflare will not be issuing patches. To remediate this issue, we recommend migrating to `cloudflare/wrangler-action` immediately. Consumers who have already migrated are not affected.\n\n\n\n\nSunset Date\n\n\n\nThe cloudflare/pages-action repository will be removed on 2026-09-07. Consumers must complete migration before 7th September to avoid CI disruption.\n\n\n\n\nAffected Versions\n\n\n\nAll published versions of cloudflare/pages-action, including consumers pinned to the v1 moving tag.\n\n\n\n\nPatched Versions\n\n\n\nNone. This repository will not receive further updates, including security patches.\n\n\n\n\nResolution / Migration Path\nMigrate all workflows using cloudflare/pages-action to `cloudflare/wrangler-action` before 2026-07-18. Refer to the wrangler-action README for the equivalent step configuration and migration guidance.\n\n\n\n\nCredit\n\n\n\nThanks to @agentka99 and @beg1nn3r for reporting their findings via Cloudflare's HackerOne program that informe\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-11325 - cloudflare/pages-action은 더 이상 사용되지 않습니다. 2026년 9월 18일까지 마이그레이션이 필요합니다.",
+      "summary_ko": "CVE ID:CVE-2026-11325\n  \n게시일 : 2026년 8월 12일 오전 11시 31분 | 19분 전\n  \n설명 :설명\n\n\n\nCloudflare는 최근 특정 GitHub Actions 워크플로 구성에서 연결할 수 있는 'src/index.ts'의 원격 코드 실행 문제를 포함하여 이 보관된 저장소의 취약성에 대해 외부 연구원으로부터 통보를 받았습니다. 악용에 성공하면 CLOUDFLARE_API_TOKEN 및 GITHUB_TOKEN과 같은 워크플로 비밀이 공격자에게 노출될 수 있습니다. 이 저장소는 2024년부터 더 이상 사용되지 않으므로 Cloudflare는 패치를 발행하지 않습니다. 이 문제를 해결하려면 즉시 'cloudflare/wrangler-action'으로 마이그레이션하는 것이 좋습니다. 이미 마이그레이션한 소비자는 영향을 받지 않습니다.\n\n\n\n\n일몰 날짜\n\n\n\ncloudflare/pages-action 저장소는 2026년 9월 7일에 제거됩니다. CI 중단을 방지하려면 소비자는 9월 7일 이전에 마이그레이션을 완료해야 합니다.\n\n\n\n\n영향을 받는 버전\n\n\n\nv1 이동 태그에 고정된 소비자를 포함하여 cloudflare/pages-action의 모든 게시된 버전.\n\n\n\n\n패치된 버전\n\n\n\n없음. 이 저장소는 보안 패치를 포함한 추가 업데이트를 받지 않습니다.\n\n\n\n\n해결/이전 경로\n2026년 7월 18일 이전에 cloudflare/pages-action을 사용하는 모든 워크플로를 'cloudflare/wrangler-action'으로 마이그레이션하세요. 동등한 단계 구성 및 마이그레이션 지침은 wrangler-action README를 참조하세요.\n\n\n\n\n신용\n\n\n\nCloudflare의 HackerOne 프로그램을 통해 결과를 보고해 주신 @agentka99 및 @beg1nn3r에게 감사드립니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-11325\n2. 26.08.12 오후8:31\n3. Description Cloudflare was recently notified by ex",
+      "cve_id": "CVE-2026-11325",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-11325",
+      "source": "cvefeed",
+      "published": "2026-08-12T20:31:15+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-19566 - Net::CIDR::Set versions before 0.23 for Perl allow memory exhaustion and malformed set ranges via unbounded IPv6 prefix lengths",
       "summary": "CVE ID :CVE-2026-19566\n  \nPublished : Aug. 12, 2026, 8:39 a.m. | 24 minutes ago\n  \nDescription :Net::CIDR::Set versions before 0.23 for Perl allow memory exhaustion and malformed set ranges via unbounded IPv6 prefix lengths.\n\nThe _encode method accepts any prefix length matching `(0|[1-9][0-9]*)` and passes it to _width2bits(), which builds the mask as `'1' x ($width + 8)`, one character per bit. The _inc() method then unpacks the packed mask into a Perl array of one scalar per byte, so the prefix length alone sets the allocation size: `::/100000000` builds a 100 MB string and a 12.5 million element array. The value being tested is parsed, not just the configured ranges: contains() builds a set from its argument, and _guess_coder() tries the IPv4 coder and then the IPv6 coder, so an IPv4-only set expands an oversized IPv6 prefix length before the mixed address width check rejects it.\n\nAny caller that passes untrusted input to contains() or add() can exhaust process memory. A prefix length above 128 is also stored as a range that does not match the requested block: 2001:db8::/129 stringifies back unchanged, contains() of its own base address returns false, and removing it from a set drops the base address while the set still prints as covering it.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
