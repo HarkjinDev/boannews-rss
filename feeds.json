@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-12T22:31:21.475577+09:00",
+  "fetched_at": "2026-08-12T23:01:49.662146+09:00",
   "security_news": [
     {
       "title": "Hackers leverage new Microsoft SharePoint exploit in attacks",
@@ -2724,21 +2724,24 @@
       "source": "naver",
       "published": "2026-08-10T03:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "더 코리아 시그널 \"한국의 국가 시스템 취약성 심각…중국의 먹이\"",
-      "summary": "통신망 해킹, 정부정보자원 유출 사례 등을 다뤄온 미국 독립언론 더 코리아 시그널이 7일(현지시간)자 보도에서 한국의 국가정보자원서비스 화재와 대학 및 정부 해킹, 북한 해커 김스키 그룹의 해킹 등을 통해 한국의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한국 국가정보자원 화재, 대학·정부 해킹 심각\n2. 북한 김스키 그룹, 통신망 해킹으로 정보 유출\n3. 한국 시스템 취약성, 중국의 먹이로 악용 우려",
-      "link": "https://www.ccdailynews.com/news/articleView.html?idxno=2433101",
-      "source": "naver",
-      "published": "2026-08-09T22:54:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-53996 - NetBSD hdaudio(4) Driver Privilege Bypass Use-After-Free via HDAUDIO_FGRP_SETCONFIG ioctl",
+      "summary": "CVE ID :CVE-2026-53996\n  \nPublished : Aug. 12, 2026, 12:42 p.m. | 19 minutes ago\n  \nDescription :NetBSD's hdaudio(4) driver in sys/dev/hdaudio/hdaudio.c contains a missing access control vulnerability that allows unprivileged local attackers to invoke the HDAUDIO_FGRP_SETCONFIG ioctl without elevated permissions by exploiting the absence of an access check on /dev/hdaudioN device nodes. Attackers can repeatedly issue HDAUDIO_FGRP_SETCONFIG from one thread while keeping DMA and IRQs live from a second thread to trigger a use-after-free race condition in hdafg_detach() between stream_stop() and stream_disestablish(), where a latched DMA interrupt dereferences a freed callback pointer, resulting in outcomes ranging from audio-subsystem denial of service and kernel panic to potential local kernel privilege escalation.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53996\n  \nPublished : Aug. 12, 2026, 12:42 p.m. | 19 minutes ago\n  \nDescription :NetBSD's hdaudio(4) driver in sys/dev/hdaudio/hdaudio.c contains a missing access control vulnerability that allows unprivileged local attackers to invoke the HDAUDIO_FGRP_SETCONFIG ioctl without elevated permissions by exploiting the absence of an access check on /dev/hdaudioN device nodes. Attackers can repeatedly issue HDAUDIO_FGRP_SETCONFIG from one thread while keeping DMA and IRQs live from a second thread to trigger a use-after-free race condition in hdafg_detach() between stream_stop() and stream_disestablish(), where a latched DMA interrupt dereferences a freed callback pointer, resulting in outcomes ranging from audio-subsystem denial of service and kernel panic to potential local kernel privilege escalation.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53996 - NetBSD hdaudio(4) HDAUDIO_FGRP_SETCONFIG ioctl을 통해 드라이버 권한 우회 Use-After-Free",
+      "summary_ko": "CVE ID:CVE-2026-53996\n  \n게시일 : 2026년 8월 12일 오후 12시 42분 | 19분 전\n  \n설명:sys/dev/hdaudio/hdaudio.c에 있는 NetBSD의 hdaudio(4) 드라이버에는 권한이 없는 로컬 공격자가 /dev/hdaudioN 장치 노드에 대한 액세스 확인 부재를 이용하여 상승된 권한 없이 HDAUDIO_FGRP_SETCONFIG ioctl을 호출할 수 있도록 허용하는 누락된 액세스 제어 취약점이 포함되어 있습니다. 공격자는 두 번째 스레드에서 DMA 및 IRQ를 유지하면서 한 스레드에서 HDAUDIO_FGRP_SETCONFIG를 반복적으로 실행하여 stream_stop()과 stream_disfound() 사이의 hdafg_detach()에서 use-after-free 경쟁 조건을 트리거할 수 있습니다. 여기서 래치된 DMA 인터럽트는 해제된 콜백 포인터를 역참조하여 오디오 하위 시스템 서비스 거부 및 커널 패닉부터 잠재적인 로컬 커널 권한 상승까지 다양한 결과를 초래합니다.\n  \n심각도: 7.3 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-53996\n2. 26.08.12 오후9:42\n3. NetBSD's hdaudio(4) driver in sys/dev/hdaudio/hdau",
+      "cve_id": "CVE-2026-53996",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53996",
+      "source": "cvefeed",
+      "published": "2026-08-12T21:42:33+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-11325 - cloudflare/pages-action is deprecated — migration required by September 18th, 2026",
       "summary": "CVE ID :CVE-2026-11325\n  \nPublished : Aug. 12, 2026, 11:31 a.m. | 19 minutes ago\n  \nDescription :Description\n\n\n\nCloudflare was recently notified by external researchers of vulnerabilities in this archived repository, including a remote code execution issue in `src/index.ts` reachable from certain GitHub Actions workflow configurations. Successful exploitation may expose workflow secrets such as CLOUDFLARE_API_TOKEN and GITHUB_TOKEN to an attacker. Because this repository has been deprecated since 2024, Cloudflare will not be issuing patches. To remediate this issue, we recommend migrating to `cloudflare/wrangler-action` immediately. Consumers who have already migrated are not affected.\n\n\n\n\nSunset Date\n\n\n\nThe cloudflare/pages-action repository will be removed on 2026-09-07. Consumers must complete migration before 7th September to avoid CI disruption.\n\n\n\n\nAffected Versions\n\n\n\nAll published versions of cloudflare/pages-action, including consumers pinned to the v1 moving tag.\n\n\n\n\nPatched Versions\n\n\n\nNone. This repository will not receive further updates, including security patches.\n\n\n\n\nResolution / Migration Path\nMigrate all workflows using cloudflare/pages-action to `cloudflare/wrangler-action` before 2026-07-18. Refer to the wrangler-action README for the equivalent step configuration and migration guidance.\n\n\n\n\nCredit\n\n\n\nThanks to @agentka99 and @beg1nn3r for reporting their findings via Cloudflare's HackerOne program that informe\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
