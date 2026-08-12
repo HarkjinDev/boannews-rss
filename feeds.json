@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-13T08:02:49.321587+09:00",
+  "fetched_at": "2026-08-13T08:32:43.306406+09:00",
   "security_news": [
+    {
+      "title": "시스코 VPN 결함, 인증 없이 방화벽 재부팅시켜…실전 악용 확인",
+      "summary": "미국 사이버보안·인프라보안국(CISA)은 이 취약점을 이미 알려진 위험 취약점(KEV) 목록에 등재하고... 이 때문에 이번 활동이 사이버범죄, 스파이 활동, 핵티비즘, 혹은 단순 무작위 스캐닝 중 어디에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 시스코 VPN 결함, 인증 없이 방화벽 재부팅시켜…실전 악용 확인 미국 사이버보안·인프라보\n2. 이 때문에 이번 활동이 사이버범죄, 스파이 활동, 핵티비즘, 혹은 단순 무작위 스캐닝 중 ",
+      "link": "https://www.wikitree.co.kr/articles/1152121",
+      "source": "naver",
+      "published": "2026-08-13T08:28:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "서학개미·코인족 다 낚였네... 테슬라 이름 판 '지갑 싹쓸이' 피싱 공포...",
       "summary": "정교한 해킹 환경을 갖추게 된 셈이다. 사이버 보안 전문가는 \"단돈 수십만 원에 불과한 피싱 키트가 유포되면서 해킹의 문턱이 대폭 낮아졌다\"며 \"단순히 어설픈 메일이나 문자 수준을 넘어 지갑 잔고를 직접 정밀하게...",
@@ -2772,21 +2784,24 @@
       "source": "naver",
       "published": "2026-08-10T08:34:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "북 해커 김수키, AI로 무장해 공격…지니언스 분석",
-      "summary": "북한 정찰정보총국 산하 해킹조직으로 알려진 ‘김수키’(Kimsuky)가 생성형 AI를 사이버 공격 전반에... AI 활용 공격 흐름도 (사진=지니언스 위협 인텔리전스 보고서) 사이버 보안 전문기업 지니언스(263860)는 북한 해킹...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북 해커 김수키, AI로 무장해 공격…지니언스 분석 북한 정찰정보총국 산하 해킹조직으로 알\n2. AI 활용 공격 흐름도 (사진=지니언스 위협 인텔리전스 보고서) 사이버 보안 전문기업 지니",
-      "link": "https://n.news.naver.com/mnews/article/018/0006348485?sid=105",
-      "source": "naver",
-      "published": "2026-08-10T08:32:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-73493 - http4s-blaze-server: Unbounded WebSocket message aggregation",
+      "summary": "CVE ID :CVE-2026-73493\n  \nPublished : Aug. 12, 2026, 10:17 p.m. | 47 minutes ago\n  \nDescription :Http4s (http4s-blaze-server) is a minimal, idiomatic Scala interface for HTTP services. Prior to 0.23.18 and 1.0.0-M42, http4s-blaze-server aggregates fragments of an incoming WebSocket message with no limit on total size or fragment count. A client that completes a WebSocket handshake can send an unterminated fragmented message and drive unbounded heap growth in the server JVM, resulting in denial of service through OutOfMemoryError. Any http4s application serving WebSocket routes over BlazeServerBuilder is affected, no non-default configuration is required, and maxWebSocketBufferSize does not bound the aggregate because it bounds only individual frames. A single connection sending continuation frames that never set FIN forces the server to buffer every fragment until the heap is exhausted, terminating the JVM with OutOfMemoryError on the blaze selector thread. Small fragments amplify the cost through per-frame object overhead, so a modest volume of wire bytes is sufficient. This issue is fixed in versions 0.23.18 and 1.0.0-M42.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-73493\n  \nPublished : Aug. 12, 2026, 10:17 p.m. | 47 minutes ago\n  \nDescription :Http4s (http4s-blaze-server) is a minimal, idiomatic Scala interface for HTTP services. Prior to 0.23.18 and 1.0.0-M42, http4s-blaze-server aggregates fragments of an incoming WebSocket message with no limit on total size or fragment count. A client that completes a WebSocket handshake can send an unterminated fragmented message and drive unbounded heap growth in the server JVM, resulting in denial of service through OutOfMemoryError. Any http4s application serving WebSocket routes over BlazeServerBuilder is affected, no non-default configuration is required, and maxWebSocketBufferSize does not bound the aggregate because it bounds only individual frames. A single connection sending continuation frames that never set FIN forces the server to buffer every fragment until the heap is exhausted, terminating the JVM with OutOfMemoryError on the blaze selector thread. Small fragments amplify the cost through per-frame object overhead, so a modest volume of wire bytes is sufficient. This issue is fixed in versions 0.23.18 and 1.0.0-M42.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-73493 - http4s-blaze-server: 제한되지 않은 WebSocket 메시지 집계",
+      "summary_ko": "CVE ID:CVE-2026-73493\n  \n게시일 : 2026년 8월 12일 오후 10시 17분 | 47분 전\n  \n설명 :Http4s(http4s-blaze-server)는 HTTP 서비스를 위한 최소한의 관용적인 Scala 인터페이스입니다. 0.23.18 및 1.0.0-M42 이전에는 http4s-blaze-server가 전체 크기나 조각 수에 제한 없이 들어오는 WebSocket 메시지의 조각을 집계합니다. WebSocket 핸드셰이크를 완료한 클라이언트는 종료되지 않은 조각난 메시지를 보내고 서버 JVM에서 무제한의 힙 증가를 유도하여 OutOfMemoryError를 통해 서비스 거부가 발생할 수 있습니다. BlazeServerBuilder를 통해 WebSocket 경로를 제공하는 모든 http4s 애플리케이션이 영향을 받고 기본이 아닌 구성이 필요하지 않으며 maxWebSocketBufferSize는 개별 프레임만 바인딩하므로 집계를 바인딩하지 않습니다. FIN을 설정하지 않은 연속 프레임을 전송하는 단일 연결은 힙이 소진될 때까지 서버가 모든 조각을 버퍼링하도록 강제하여 블레이즈 선택기 스레드에서 OutOfMemoryError로 JVM을 종료합니다. 작은 조각은 프레임당 개체 오버헤드를 통해 비용을 증폭시키므로 적당한 양의 와이어 바이트이면 충분합니다. 이 문제는 버전 0.23.18 및 1.0.0-M42에서 해결되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-73493\n2. 26.08.13 오전7:17\n3. Http4s (http4s-blaze-server) is a minimal, idiomat",
+      "cve_id": "CVE-2026-73493",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73493",
+      "source": "cvefeed",
+      "published": "2026-08-13T07:17:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-73427 - Trix: XSS via JSON deserialization bypass in drag-and-drop (Level0InputController)",
       "summary": "CVE ID :CVE-2026-73427\n  \nPublished : Aug. 12, 2026, 9:17 p.m. | 15 minutes ago\n  \nDescription :Trix is a what-you-see-is-what-you-get rich text editor for everyday writing. Prior to 2.1.18, Trix is vulnerable to cross-site scripting when a crafted application/x-trix-document JSON payload is dropped into an editor using the fallback Level0InputController, such as an embedded WebView without Input Events Level 2 support. The StringPiece.fromJSON method trusts href attributes from the JSON payload without sanitization, allowing a draggable element containing a javascript: URI to bypass DOMPurify sanitization and inject executable JavaScript into the DOM. Exploitation requires the victim to drag and drop attacker-controlled content, and server-side HTML sanitization can neutralize the payload on save. This issue is fixed in version 2.1.18.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -5065,21 +5080,6 @@
       "link": "https://www.exploit-db.com/exploits/52632",
       "source": "exploitdb",
       "published": "2026-08-10T09:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12372 - Server-Side Request Forgery (SSRF) in nltk/nltk",
-      "summary": "CVE ID :CVE-2026-12372\n  \nPublished : Aug. 9, 2026, 11:16 p.m. | 6 hours, 34 minutes ago\n  \nDescription :A Server-Side Request Forgery (SSRF) vulnerability exists in nltk/nltk versions 3.9.4 and the current develop branch. The `nltk.pathsec.validate_network_url()` function, intended to prevent SSRF by rejecting internal network addresses, fails to reject IPs in the RFC 6598 shared address space (`100.64.0.0/10`). This occurs because Python's `ipaddress` module does not classify such addresses as `is_private` or `is_global`, and the current guard only checks `is_private` and a few explicit categories. An attacker who can influence a URL passed to NLTK's network-loading helpers can exploit this vulnerability to make a strict-mode application send requests to shared-address-space hosts, potentially exposing non-public infrastructure reachable from the application host. The impact is limited to SSRF-style confidentiality exposure, with no code execution claimed.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12372\n  \nPublished : Aug. 9, 2026, 11:16 p.m. | 6 hours, 34 minutes ago\n  \nDescription :A Server-Side Request Forgery (SSRF) vulnerability exists in nltk/nltk versions 3.9.4 and the current develop branch. The `nltk.pathsec.validate_network_url()` function, intended to prevent SSRF by rejecting internal network addresses, fails to reject IPs in the RFC 6598 shared address space (`100.64.0.0/10`). This occurs because Python's `ipaddress` module does not classify such addresses as `is_private` or `is_global`, and the current guard only checks `is_private` and a few explicit categories. An attacker who can influence a URL passed to NLTK's network-loading helpers can exploit this vulnerability to make a strict-mode application send requests to shared-address-space hosts, potentially exposing non-public infrastructure reachable from the application host. The impact is limited to SSRF-style confidentiality exposure, with no code execution claimed.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-12372 - nltk/nltk의 서버측 요청 위조(SSRF)",
-      "summary_ko": "CVE ID:CVE-2026-12372\n  \n게시일 : 2026년 8월 9일 오후 11시 16분 | 6시간, 34분 전\n  \n설명: SSRF(서버측 요청 위조) 취약점이 nltk/nltk 버전 3.9.4 및 현재 개발 브랜치에 존재합니다. 내부 네트워크 주소를 거부하여 SSRF를 방지하기 위한 `nltk.pathsec.validate_network_url()` 함수가 RFC 6598 공유 주소 공간(`100.64.0.0/10`)의 IP를 거부하지 못합니다. 이는 Python의 `ipaddress` 모듈이 이러한 주소를 `is_private` 또는 `is_global`로 분류하지 않고 현재 가드가 `is_private`과 몇 가지 명시적인 범주만 확인하기 때문에 발생합니다. NLTK의 네트워크 로딩 도우미에 전달된 URL에 영향을 줄 수 있는 공격자는 이 취약점을 악용하여 엄격 모드 응용 프로그램이 공유 주소 공간 호스트에 요청을 보내도록 할 수 있으며 잠재적으로 응용 프로그램 호스트에서 연결할 수 있는 비공개 인프라를 노출시킬 수 있습니다. 영향은 코드 실행이 주장되지 않은 SSRF 스타일 기밀 노출로 제한됩니다.\n  \n심각도: 3.7 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12372\n2. 26.08.10 오전8:16\n3. A Server-Side Request Forgery (SSRF) vulnerability",
-      "cve_id": "CVE-2026-12372",
-      "cvss": "0.0",
-      "severity": "Low",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12372",
-      "source": "cvefeed",
-      "published": "2026-08-10T08:16:35+09:00",
       "lang": "en"
     }
   ],
