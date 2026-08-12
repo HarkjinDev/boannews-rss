@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-12T12:02:59.398991+09:00",
+  "fetched_at": "2026-08-12T12:31:52.164297+09:00",
   "security_news": [
+    {
+      "title": "“비트코인, 기업이 더는 받쳐주지 않는다?”…코인피드, 매도 공시·레...",
+      "summary": "바이비트는 약 2조원 규모 해킹 피해와 관련해 미국 법원에 북한을 상대로 민사소송을 제기했다. 국가 단위 해킹 조직을 상대로 한 법적 대응이라는 점에서 상징성이 크지만, 동시에 중앙화 거래소 보안 리스크가...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 바이비트, 2조원 규모 해킹 관련 북한에 소송 제기\n2. 북한 해킹 조직, 중앙화 거래소 보안 취약점 이용 추정\n3. 거래소 보안 강화 및 국가 단위 법적 대응 필요성 대두",
+      "link": "https://www.tokenpost.kr/news/insights/388969",
+      "source": "naver",
+      "published": "2026-08-12T12:04:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "고객 여권정보 유출 제주항공, 일주일 지나도 원인 '오리무중'",
       "summary": "다만 사측은 해킹에 따른 유출은 아닌 것으로 파악됐다는 입장이다. 12일 항공업계에 따르면 지난 5일 제주항공 고객 100여명의 예약정보가 네이버에서 특정 편명과 좌석 등을 검색하면 검색 결과에 노출되는 사고가...",
@@ -2391,6 +2403,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-18961 - Social Login, Passkeys, Magic Link & Email OTP – Passwordless Login by VentraConnect <= 1.4.3 - Unauthenticated Authentication Bypass via Spotify OAuth Callback",
+      "summary": "CVE ID :CVE-2026-18961\n  \nPublished : Aug. 12, 2026, 2:25 a.m. | 1 hour, 2 minutes ago\n  \nDescription :The Social Login, Passkeys, Magic Link & Email OTP – Passwordless Login by VentraConnect plugin for WordPress is vulnerable to Authentication Bypass via Unverified Provider Email in all versions up to, and including, 1.4.3. This is due to the plugin trusting the unverified email field returned by Spotify's /v1/me endpoint as proof of mailbox ownership — Generic::normalize_common() copies this value into the normalized profile without requiring an email_verified assertion, and User_Links::link_or_login_user() subsequently passes it directly to get_user_by('email', $email) and issues a persistent authentication cookie via wp_set_auth_cookie() without a provider-specific verified-email gate, a local mailbox challenge, or a logged-in approval step. This makes it possible for unauthenticated attackers to log in as any existing WordPress user, including Administrators, by supplying a known target email address through a controlled Spotify OAuth flow, gaining full administrative access to the site.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-18961\n  \nPublished : Aug. 12, 2026, 2:25 a.m. | 1 hour, 2 minutes ago\n  \nDescription :The Social Login, Passkeys, Magic Link & Email OTP – Passwordless Login by VentraConnect plugin for WordPress is vulnerable to Authentication Bypass via Unverified Provider Email in all versions up to, and including, 1.4.3. This is due to the plugin trusting the unverified email field returned by Spotify's /v1/me endpoint as proof of mailbox ownership — Generic::normalize_common() copies this value into the normalized profile without requiring an email_verified assertion, and User_Links::link_or_login_user() subsequently passes it directly to get_user_by('email', $email) and issues a persistent authentication cookie via wp_set_auth_cookie() without a provider-specific verified-email gate, a local mailbox challenge, or a logged-in approval step. This makes it possible for unauthenticated attackers to log in as any existing WordPress user, including Administrators, by supplying a known target email address through a controlled Spotify OAuth flow, gaining full administrative access to the site.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-18961 - 소셜 로그인, 패스키, 매직 링크 및 이메일 OTP – VentraConnect를 통한 비밀번호 없는 로그인 <= 1.4.3 - Spotify OAuth 콜백을 통한 인증되지 않은 인증 우회",
+      "summary_ko": "CVE ID:CVE-2026-18961\n  \n게시일 : 2026년 8월 12일 오전 2시 25분 | 1시간, 2분 전\n  \n설명: WordPress용 소셜 로그인, 패스키, 매직 링크 및 이메일 OTP – VentraConnect 플러그인을 통한 비밀번호 없는 로그인은 1.4.3까지의 모든 버전에서 확인되지 않은 공급자 이메일을 통한 인증 우회에 취약합니다. 이는 메일함 소유권 증명으로 Spotify의 /v1/me 엔드포인트에서 반환된 확인되지 않은 이메일 필드를 플러그인이 신뢰하기 때문입니다. Generic::normalize_common()은 email_verified 어설션을 요구하지 않고 이 값을 정규화된 프로필에 복사하고 User_Links::link_or_login_user()는 이후에 이를 get_user_by('email', $email)에 직접 전달하고 없이 wp_set_auth_cookie()를 통해 영구 인증 쿠키를 발행합니다. 공급자별 이메일 확인 게이트, 로컬 사서함 질문 또는 로그인 승인 단계. 이를 통해 인증되지 않은 공격자가 제어된 Spotify OAuth 흐름을 통해 알려진 대상 이메일 주소를 제공하여 관리자를 포함한 기존 WordPress 사용자로 로그인하여 사이트에 대한 전체 관리 액세스 권한을 얻을 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-18961\n2. 26.08.12 오전11:25\n3. The Social Login, Passkeys, Magic Link & Email OTP",
+      "cve_id": "CVE-2026-18961",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18961",
+      "source": "cvefeed",
+      "published": "2026-08-12T11:25:05+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-68441 - net/sched: Handle TC_ACT_REDIRECT from qdisc filter chains",
       "summary": "CVE ID :CVE-2026-68441\n  \nPublished : Aug. 12, 2026, 12:17 a.m. | 46 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: Handle TC_ACT_REDIRECT from qdisc filter chains\n\nWhen a TC filter attached to a qdisc filter chain returns\nTC_ACT_REDIRECT (ex: via an eBPF program calling bpf_redirect() or an\nact_bpf action), the redirect was silently lost i.e no qdisc classify\nfunction handled TC_ACT_REDIRECT, so the packet fell through the\nswitch and was enqueued normally instead of being redirected.\n\nThis has been broken since bpf_redirect() was introduced for TC in\ncommit 27b29f63058d (\"bpf: add bpf_redirect() helper\"). We got lucky\nfor a long time because bpf_net_context was a per-CPU variable that\nwas always available.\n\ncommit 401cb7dae813 (\"net: Reference bpf_redirect_info via task_struct\non PREEMPT_RT.\") turned bpf_net_context into a task_struct member that\nis only set up by explicit callers. Without a caller setting it up,\nbpf_redirect() itself crashes with a NULL pointer dereference in\nbpf_net_ctx_get_ri(). However, even with bpf_net_context available,\nTC_ACT_REDIRECT from qdisc filter chains cannot be honored without\nadding skb_do_redirect() calls to every qdisc classify function, which\nwould require changes across net/sched/. Isolate it to ebpf core where\nit belongs.\n\nInstead, add a tcf_classify_qdisc() inline helper in pkt_cls.h, as a\nwrapper around tcf_classify() for use by qdisc classify functions and\ntcf_qevent_handle(). When the classify verdict is TC_ACT_REDIRECT,\nthe wrapper converts it to TC_ACT_SHOT, dropping the packet rather\nthan letting it continue silently. Dropping is preferred over\nletting the packet through because the user immediately sees packet\nloss. Silently passing the packet through would hide the problem and\nleave the user wondering why their redirect is not working.\n\nThe clsact fast path, tc_run() continues to call tcf_classify() directly\nand is unaffected: TC_ACT_REDIRECT is returned as-is and handled by\nsch_handle_egress/ingress() calling skb_do_redirect() as before.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
