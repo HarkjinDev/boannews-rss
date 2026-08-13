@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-13T22:31:39.851977+09:00",
+  "fetched_at": "2026-08-13T23:01:51.395996+09:00",
   "security_news": [
     {
       "title": "트레저 물류사 해킹에 고객 1만1742명 정보 유출",
@@ -2368,6 +2368,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-49478 - Fulcio has OIDC Discovery Redirect Following Allows SSRF and JWKS Substitution for Meta-Issuer Paths, with Kubernetes Service-Account Token Leakage",
+      "summary": "CVE ID :CVE-2026-49478\n  \nPublished : Aug. 13, 2026, 1:19 p.m. | 14 minutes ago\n  \nDescription :Fulcio is a certificate authority for issuing code signing certificates for an OpenID Connect (OIDC) identity. Versions through 1.8.5 improperly follow cross-host redirects and attach Kubernetes ServiceAccount tokens during OIDC discovery, allowing a malicious or compromised issuer to perform blind SSRF, substitute and cache malicious JWKS keys, or disclose ServiceAccount tokens to external hosts. Version 1.8.6 blocks cross-host redirects, restricts token injection, and restricts local token loading. No known workarounds are available.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-49478\n  \nPublished : Aug. 13, 2026, 1:19 p.m. | 14 minutes ago\n  \nDescription :Fulcio is a certificate authority for issuing code signing certificates for an OpenID Connect (OIDC) identity. Versions through 1.8.5 improperly follow cross-host redirects and attach Kubernetes ServiceAccount tokens during OIDC discovery, allowing a malicious or compromised issuer to perform blind SSRF, substitute and cache malicious JWKS keys, or disclose ServiceAccount tokens to external hosts. Version 1.8.6 blocks cross-host redirects, restricts token injection, and restricts local token loading. No known workarounds are available.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-49478 - Fulcio에는 Kubernetes 서비스 계정 토큰 유출을 통해 메타 발급자 경로에 대한 SSRF 및 JWKS 대체를 허용하는 OIDC 검색 리디렉션이 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-49478\n  \n게시일 : 2026년 8월 13일 오후 1시 19분 | 14분 전\n  \n설명:Fulcio는 OIDC(OpenID Connect) ID에 대한 코드 서명 인증서를 발급하는 인증 기관입니다. 1.8.5까지의 버전은 OIDC 검색 중에 호스트 간 리디렉션을 부적절하게 따르고 Kubernetes ServiceAccount 토큰을 연결하므로 악의적이거나 손상된 발급자가 블라인드 SSRF를 수행하고 악성 JWKS 키를 대체 및 캐시하거나 ServiceAccount 토큰을 외부 호스트에 공개할 수 있습니다. 버전 1.8.6은 호스트 간 리디렉션을 차단하고, 토큰 주입을 제한하고, 로컬 토큰 로드를 제한합니다. 알려진 해결 방법은 없습니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-49478\n2. 26.08.13 오후10:19\n3. Fulcio is a certificate authority for issuing code",
+      "cve_id": "CVE-2026-49478",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49478",
+      "source": "cvefeed",
+      "published": "2026-08-13T22:19:09+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-18945 - WP Helper Premium < 4.7.6 - Unauthenticated Order Data Disclosure and Order Manipulation via Missing Order Key Validation",
       "summary": "CVE ID :CVE-2026-18945\n  \nPublished : Aug. 13, 2026, 6:17 a.m. | 1 hour, 37 minutes ago\n  \nDescription :The WP Helper Premium WordPress plugin before 4.7.6 does not verify the order key when rendering its custom order confirmation page or when handling the related AJAX actions, allowing unauthenticated users to view other customers' order details, including personal information, as well as change the state of arbitrary orders.\n\nExploitation requires WooCommerce to be active and the WP Helper Premium WordPress plugin before 4.7.6's optional order confirmation page module to be enabled.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-18945\n  \nPublished : Aug. 13, 2026, 6:17 a.m. | 1 hour, 37 minutes ago\n  \nDescription :The WP Helper Premium WordPress plugin before 4.7.6 does not verify the order key when rendering its custom order confirmation page or when handling the related AJAX actions, allowing unauthenticated users to view other customers' order details, including personal information, as well as change the state of arbitrary orders.\n\nExploitation requires WooCommerce to be active and the WP Helper Premium WordPress plugin before 4.7.6's optional order confirmation page module to be enabled.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3493,6 +3508,21 @@
       "lang": "da"
     },
     {
+      "title": "CVE-2026-68404 wifi: cfg80211: use wiphy work for socket owner autodisconnect",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "CVE-2026-68404 wifi: cfg80211: 소켓 소유자 자동 연결 해제에 wiphy 작업 사용",
+      "summary_ko": "정보가 게시되었습니다.",
+      "summary_3lines": "1. CVE-2026-68404\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-68404",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68404",
+      "source": "msrc",
+      "published": "2026-08-11T17:11:52+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-68131 rbd: Reset positive result codes to zero in object map update path",
       "summary": "Information published.",
       "description": "Information published.",
@@ -4495,21 +4525,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-18503",
       "source": "cvefeed",
       "published": "2026-08-10T23:17:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-50309 Windows NTFS Remote Code Execution Vulnerability",
-      "summary": "Updated an acknowledgement. This is an informational change only.",
-      "description": "Updated an acknowledgement. This is an informational change only.",
-      "title_ko": "CVE-2026-50309 Windows NTFS 원격 코드 실행 취약점",
-      "summary_ko": "승인을 업데이트했습니다. 이는 정보 제공용 변경일 뿐입니다.",
-      "summary_3lines": "1. CVE-2026-50309\n2. MSRC\n3. Updated an acknowledgement. This is an information",
-      "cve_id": "CVE-2026-50309",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50309",
-      "source": "msrc",
-      "published": "2026-08-10T23:00:00+09:00",
       "lang": "en"
     }
   ],
