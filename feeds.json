@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-14T00:31:35.412599+09:00",
+  "fetched_at": "2026-08-14T01:01:46.865495+09:00",
   "security_news": [
+    {
+      "title": "러, 정유공장 지어주고 北은 연료 만들어주고",
+      "summary": "북한은 최근 3년 연속 3%대 경제 성장을 기록했는데, 중국과의 교역 확대뿐 아니라 러시아 파병, 해킹 등 각종 범죄 수익 등의 효과로 분석된다. 북한 최초 여성 외무상 최선희는 모스크바를 수시로 찾아 블라디미르 푸틴...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 러, 정유공장 건설 지원 의혹\n2. 북, 해킹 등 범죄 수익으로 경제 성장\n3. 최선희, 모스크바 수시 방문",
+      "link": "https://n.news.naver.com/mnews/article/023/0003992943?sid=104",
+      "source": "naver",
+      "published": "2026-08-14T00:47:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "쥬얼버그, 중국어권 겨냥 암호화폐 사기 운영 보도",
       "summary": "시만텍은 앞서 보안 게시물에서 중국어 이용자를 겨냥한 가짜 암호화폐 앱 다운로드 사이트를 통해 파탈랫(FatalRAT) 악성코드가 유포된 사례를 공개했다. 이 악성코드는 설치 뒤 개인정보 탈취와 키로깅에 악용될...",
@@ -2331,6 +2343,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-73557 - vLLM: Incomplete CVE-2025-62164 remediation can be bypassed by concurrent prompt parts",
+      "summary": "CVE ID :CVE-2026-73557\n  \nPublished : Aug. 13, 2026, 3:20 p.m. | 15 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. From 0.20.2rc0 until 0.26.0, safe_load_prompt_embeds in vllm/renderers/embed_utils.py uses torch.sparse.check_sparse_tensor_invariants, whose process-global save, enable, and restore state can be raced by concurrent prompt_embeds parts submitted to POST /v1/chat/completions through AsyncMultiModalItemTracker.resolve_items, asyncio.gather, and the default executor, allowing an invalid sparse tensor to reach tensor.to_dense despite the CVE-2025-62164 guard when enable_prompt_embeds is enabled. This issue is fixed in version 0.26.0.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-73557\n  \nPublished : Aug. 13, 2026, 3:20 p.m. | 15 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. From 0.20.2rc0 until 0.26.0, safe_load_prompt_embeds in vllm/renderers/embed_utils.py uses torch.sparse.check_sparse_tensor_invariants, whose process-global save, enable, and restore state can be raced by concurrent prompt_embeds parts submitted to POST /v1/chat/completions through AsyncMultiModalItemTracker.resolve_items, asyncio.gather, and the default executor, allowing an invalid sparse tensor to reach tensor.to_dense despite the CVE-2025-62164 guard when enable_prompt_embeds is enabled. This issue is fixed in version 0.26.0.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-73557 - vLLM: 불완전한 CVE-2025-62164 수정은 동시 프롬프트 부분으로 우회될 수 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-73557\n  \n게시일 : 2026년 8월 13일 오후 3시 20분 | 15분 전\n  \n설명 :vLLM은 대규모 언어 모델을 위한 추론 및 제공 엔진입니다. 0.20.2rc0부터 0.26.0까지 vllm/renderers/embed_utils.py의 safe_load_prompt_embeds는 torch.sparse.check_sparse_tensor_invariants를 사용합니다. 이 프로세스 전역 저장, 활성화 및 복원 상태는 다음을 통해 POST /v1/chat/completions에 제출된 동시 프롬프트_embeds 부분에 의해 경주될 수 있습니다. AsyncMultiModalItemTracker.resolve_items, asyncio.gather 및 기본 실행기로, 활성화 시 CVE-2025-62164 가드에도 불구하고 유효하지 않은 희소 텐서가 tensor.to_dense에 도달할 수 있습니다. 이 문제는 버전 0.26.0에서 해결되었습니다.\n  \n심각도: 6.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-73557\n2. 26.08.14 오전12:20\n3. vLLM is an inference and serving engine for large ",
+      "cve_id": "CVE-2026-73557",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73557",
+      "source": "cvefeed",
+      "published": "2026-08-14T00:20:18+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-44814 Windows DWM Core Library Information Disclosure  Vulnerability",
       "summary": "Acknowledgement Updated",
