@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-14T01:01:46.865495+09:00",
+  "fetched_at": "2026-08-14T01:31:37.962100+09:00",
   "security_news": [
     {
       "title": "러, 정유공장 지어주고 北은 연료 만들어주고",
@@ -11,6 +11,18 @@
       "link": "https://n.news.naver.com/mnews/article/023/0003992943?sid=104",
       "source": "naver",
       "published": "2026-08-14T00:47:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "‘가짜 회사’ 만들어 ‘북한 IT 인력’ 함정 채용…“입사 뒤 회사 시...",
+      "summary": "연구진은 북한 연계 해킹조직 라자루스 산하로 지목된 '페이머스 천리마(Famous Chollima)'의 모집책과 접촉해 스마트계약과 프론트엔드, 백엔드 개발자 등 모두 3명을 실제 회사 직원으로 채용하는 데 성공했으며, 이들이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 라자루스 산하 페이머스 천리마, 가짜 회사로 IT 인력 3명 채용\n2. 스마트계약, 프론트엔드, 백엔드 개발자를 함정 채용\n3. 실제 회사 직원처럼 위장해 추가 공격 시도",
+      "link": "https://www.voakorea.com/a/dprk-it-workers-fake-startup-081326/8185972.html",
+      "source": "naver",
+      "published": "2026-08-14T00:23:00+09:00",
       "lang": "ko"
     },
     {
@@ -4456,51 +4468,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-72734",
       "source": "cvefeed",
       "published": "2026-08-11T02:29:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Scans for Solana (Surfpool?) Endpoints, (Mon, Aug 10th)",
-      "summary": "Solana is a crypto platform known for speed. Developers like it to develop distributed applications or to implement crypto payments. To interact with the blockchain, APIs are provided for developers. These APIs will either \"speak\" JSON or gRPC. One implementation often used for development is \"surfpool,\" which is used to test programs before deploying them to a Solana network.\r",
-      "description": "Solana is a crypto platform known for speed. Developers like it to develop distributed applications or to implement crypto payments. To interact with the blockchain, APIs are provided for developers. These APIs will either \"speak\" JSON or gRPC. One implementation often used for development is \"surfpool,\" which is used to test programs before deploying them to a Solana network.\r",
-      "title_ko": "Solana(Surfpool?) 엔드포인트 검색(8월 10일 월요일)",
-      "summary_ko": "솔라나는 속도로 유명한 암호화폐 플랫폼입니다. 개발자는 분산 애플리케이션을 개발하거나 암호화폐 결제를 구현하는 것을 좋아합니다. 블록체인과 상호 작용하기 위해 개발자에게 API가 제공됩니다. 이러한 API는 JSON 또는 gRPC를 \"대화\"합니다. 개발에 자주 사용되는 구현 중 하나는 솔라나 네트워크에 프로그램을 배포하기 전에 프로그램을 테스트하는 데 사용되는 \"서프풀(surfpool)\"입니다.",
-      "summary_3lines": "1. Scans for Solana (Surfpool?) Endpoints, (Mon, Aug \n2. SANS_ISC\n3. Solana is a crypto platform known for speed. Devel",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33230",
-      "source": "sans_isc",
-      "published": "2026-08-11T01:24:45+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-72718 - goose: Arbitrary command execution in goose CLI via `goose review` via git core.fsmonitor",
-      "summary": "CVE ID :CVE-2026-72718\n  \nPublished : Aug. 10, 2026, 4:19 p.m. | 28 minutes ago\n  \nDescription :goose is general-purpose AI agent that runs on your machine. Prior to 1.44.0, the `goose review` command runs the system `git` executable to gather the diff for review without stripping attacker-controlled Git configuration. A malicious repository whose `.git/config` sets [`core] fsmonitor = ` causes Git to execute that command on the host during the index refresh performed by `git diff HEAD`. The command runs before goose contacts a model and without a submitted prompt, model call, tool approval, or trust prompt. The context-gathering Git process is not sandboxed and is outside goose's tool-permission model. Arbitrary commands run with the privileges and environment of the user running goose, allowing file access or modification and exfiltration of environment secrets and provider API keys. The vulnerable Git invocations are built by git_command() in crates/goose-cli/src/commands/review/handler.rs and are used by touched_files() and collect_diff() for `git diff --name-only HEAD` and `git diff HEAD`. This issue is fixed in version 1.44.0.\n  \nSeverity: 7.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-72718\n  \nPublished : Aug. 10, 2026, 4:19 p.m. | 28 minutes ago\n  \nDescription :goose is general-purpose AI agent that runs on your machine. Prior to 1.44.0, the `goose review` command runs the system `git` executable to gather the diff for review without stripping attacker-controlled Git configuration. A malicious repository whose `.git/config` sets [`core] fsmonitor = ` causes Git to execute that command on the host during the index refresh performed by `git diff HEAD`. The command runs before goose contacts a model and without a submitted prompt, model call, tool approval, or trust prompt. The context-gathering Git process is not sandboxed and is outside goose's tool-permission model. Arbitrary commands run with the privileges and environment of the user running goose, allowing file access or modification and exfiltration of environment secrets and provider API keys. The vulnerable Git invocations are built by git_command() in crates/goose-cli/src/commands/review/handler.rs and are used by touched_files() and collect_diff() for `git diff --name-only HEAD` and `git diff HEAD`. This issue is fixed in version 1.44.0.\n  \nSeverity: 7.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-72718 - goose: git core.fsmonitor를 통해 'goose review'를 통해 goose CLI에서 임의 명령 실행",
-      "summary_ko": "CVE ID:CVE-2026-72718\n  \n게시일 : 2026년 8월 10일 오후 4시 19분 | 28분 전\n  \n설명 :goose는 컴퓨터에서 실행되는 범용 AI 에이전트입니다. 1.44.0 이전에는 `goose review` 명령은 시스템 `git` 실행 파일을 실행하여 공격자가 제어하는 ​​Git 구성을 제거하지 않고 검토용 diff를 수집합니다. `.git/config`가 [`core] fsmonitor = `로 설정된 악성 저장소로 인해 Git은 `git diff HEAD`에 의해 수행된 인덱스 새로 고침 중에 호스트에서 해당 명령을 실행하게 됩니다. 이 명령은 goose가 모델에 연결하기 전에 제출된 프롬프트, 모델 호출, 도구 승인 또는 신뢰 프롬프트 없이 실행됩니다. 컨텍스트 수집 Git 프로세스는 샌드박스 처리되지 않으며 goose의 도구 권한 모델 외부에 있습니다. 임의의 명령은 goose를 실행하는 사용자의 권한과 환경으로 실행되어 파일 액세스 또는 수정과 환경 비밀 및 공급자 API 키의 유출을 허용합니다. 취약한 Git 호출은 crates/goose-cli/src/commands/review/handler.rs의 git_command()에 의해 구축되고 touch_files() 및 Collect_diff()에서 `git diff --name-only HEAD` 및 `git diff HEAD`에 사용됩니다. 이 문제는 버전 1.44.0에서 해결되었습니다.\n  \n심각도: 7.0 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-72718\n2. 26.08.11 오전1:19\n3. goose is general-purpose AI agent that runs on you",
-      "cve_id": "CVE-2026-72718",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-72718",
-      "source": "cvefeed",
-      "published": "2026-08-11T01:19:48+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47754 - unauthenticated path traversal in Metacat 2.x",
-      "summary": "CVE ID :CVE-2026-47754\n  \nPublished : Aug. 10, 2026, 4:19 p.m. | 28 minutes ago\n  \nDescription :Metacat is data repository software that helps researchers preserve, share, and discover data. Versions 2.x through 2.19.1 and all 1.x versions contain an unauthenticated path traversal in the `archiveEntryName` parameter of the `action=read` endpoint that is part of the original 1.x Metacat API. `ArchiveHandler.readArchiveEntry()` concatenates the user-supplied parameter into a filesystem path without validation, and the surrounding `hasReadPermission()` check is commented out. An unauthenticated remote attacker can read any file accessible to the Tomcat process by sending a single GET request. Proof-of-concept exploits have been demonstrated and verified against this vulnerability, and it should be considered easily exploitable for any Metacat deployment < 3.0.0 by any user with access to the 1.x API. Through this vulnerability, production 2.x deployments are exposed to credential theft, client certificate and private key exfiltration enabling member node impersonation within the federation, embargoed research data disclosure, and broad system reconnaissance. Given Metacat's deployment footprint across the DataONE network of repositories and federally funded research programs, the population of exposed 2.x instances is non-trivial. The vulnerability was eliminated in Metacat version 3.0.0 and after by eliminating the entire Metacat 1.x API that exposed this vulnerability. The vulnerability was remediated in April 2024 with the release of Metacat 3.0.0, which removed the legacy Metacat API including ArchiveHandler.java. The commit message and issue reference architectural cleanup, not a security fix, and no advisory or CVE was issued. The 2.x branch was not and will not be backported, as is standard practice in Metacat, which only supports the most current release. 2.19.1 remains vulnerable with identical code and is beyond its supported lifetime. As a workaround, disable or restrict 1.x API servlets. Because the vulnerable 1.x API is no longer used or necessary in most Metacat deployments, restricting access to the old API endpoints can reduce or eliminate exposure for 2.19.x deployments.  After removing those features, restart Tomcat or whichever software is hosting the servlets.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47754\n  \nPublished : Aug. 10, 2026, 4:19 p.m. | 28 minutes ago\n  \nDescription :Metacat is data repository software that helps researchers preserve, share, and discover data. Versions 2.x through 2.19.1 and all 1.x versions contain an unauthenticated path traversal in the `archiveEntryName` parameter of the `action=read` endpoint that is part of the original 1.x Metacat API. `ArchiveHandler.readArchiveEntry()` concatenates the user-supplied parameter into a filesystem path without validation, and the surrounding `hasReadPermission()` check is commented out. An unauthenticated remote attacker can read any file accessible to the Tomcat process by sending a single GET request. Proof-of-concept exploits have been demonstrated and verified against this vulnerability, and it should be considered easily exploitable for any Metacat deployment < 3.0.0 by any user with access to the 1.x API. Through this vulnerability, production 2.x deployments are exposed to credential theft, client certificate and private key exfiltration enabling member node impersonation within the federation, embargoed research data disclosure, and broad system reconnaissance. Given Metacat's deployment footprint across the DataONE network of repositories and federally funded research programs, the population of exposed 2.x instances is non-trivial. The vulnerability was eliminated in Metacat version 3.0.0 and after by eliminating the entire Metacat 1.x API that exposed this vulnerability. The vulnerability was remediated in April 2024 with the release of Metacat 3.0.0, which removed the legacy Metacat API including ArchiveHandler.java. The commit message and issue reference architectural cleanup, not a security fix, and no advisory or CVE was issued. The 2.x branch was not and will not be backported, as is standard practice in Metacat, which only supports the most current release. 2.19.1 remains vulnerable with identical code and is beyond its supported lifetime. As a workaround, disable or restrict 1.x API servlets. Because the vulnerable 1.x API is no longer used or necessary in most Metacat deployments, restricting access to the old API endpoints can reduce or eliminate exposure for 2.19.x deployments.  After removing those features, restart Tomcat or whichever software is hosting the servlets.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47754 - Metacat 2.x의 인증되지 않은 경로 탐색",
-      "summary_ko": "CVE ID:CVE-2026-47754\n  \n게시일 : 2026년 8월 10일 오후 4시 19분 | 28분 전\n  \n설명:Metacat은 연구자가 데이터를 보존, 공유 및 발견하는 데 도움이 되는 데이터 저장소 소프트웨어입니다. 버전 2.x부터 2.19.1까지와 모든 1.x 버전에는 원래 1.x Metacat API의 일부인 `action=read` 엔드포인트의 `archiveEntryName` 매개변수에 인증되지 않은 경로 탐색이 포함되어 있습니다. `ArchiveHandler.readArchiveEntry()`는 유효성 검사 없이 사용자 제공 매개변수를 파일 시스템 경로에 연결하고 주변 `hasReadPermission()` 검사는 주석 처리됩니다. 인증되지 않은 원격 공격자는 단일 GET 요청을 보내 Tomcat 프로세스에 액세스할 수 있는 모든 파일을 읽을 수 있습니다. 이 취약점에 대한 개념 증명 공격이 시연되고 검증되었으며 1.x API에 액세스하는 모든 사용자가 3.0.0 미만의 모든 Metacat 배포에서 쉽게 악용할 수 있는 것으로 간주되어야 합니다. 이 취약점을 통해 프로덕션 2.x 배포는 자격 증명 도용, 클라이언트 인증서 및 개인 키 유출에 노출되어 연합 내의 구성원 노드 가장, 금지된 연구 데이터 공개 및 광범위한 시스템 정찰을 가능하게 합니다. DataONE 리포지토리 네트워크와 연방 자금 지원 연구 프로그램 전반에 걸친 Metacat의 배포 공간을 고려하면 노출된 2.x 인스턴스의 수는 적지 않습니다. 이 취약점은 Metacat 버전 3.0.0 및 이후 버전에서 이 취약점을 노출한 전체 Metacat 1.x API를 제거하여 제거되었습니다. 이 취약점은 ArchiveHandler.java를 포함한 레거시 Metacat API를 제거한 Metacat 3.0.0의 출시로 2024년 4월에 해결되었습니다. 커밋 메시지 및 문제 참조 아키텍처 정리는 보안 수정이 아니며 권고 또는 CVE가 발행되지 않았습니다. 2.x 브랜치는 최신 릴리스만 지원하는 Metacat의 표준 관행처럼 백포트되지 않았으며 앞으로도 백포트되지 않을 것입니다. 2.19.1은 여전히 ​​동일한 코드에 취약하며 지원 수명이 지났습니다. 해결 방법으로 1.x API 서블릿을 비활성화하거나 제한하십시오. 취약한 1.x API는 대부분의 Metacat 배포에서 더 이상 사용되지 않거나 필요하지 않기 때문에 이전 API 엔드포인트에 대한 액세스를 제한하면 2.19.x 배포에 대한 노출을 줄이거나 제거할 수 있습니다.  해당 기능을 제거한 후 Tomcat 또는 서블릿을 호스팅하는 소프트웨어를 다시 시작하십시오.\n  \n심각도: 9.3 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47754\n2. 26.08.11 오전1:19\n3. Metacat is data repository software that helps res",
-      "cve_id": "CVE-2026-47754",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47754",
-      "source": "cvefeed",
-      "published": "2026-08-11T01:19:47+09:00",
       "lang": "en"
     }
   ],
