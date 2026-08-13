@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-14T01:31:37.962100+09:00",
+  "fetched_at": "2026-08-14T02:02:01.558059+09:00",
   "security_news": [
+    {
+      "title": "Critical VMware vCenter RCE flaw exploited for reverse SSH access",
+      "summary": "A recently patched critical vulnerability (CVE-2026-59310) in VMware vCenter Syslog Server is being exploited in an active campaign to deploy a reverse SSH tool for persistence and remote access. [...]",
+      "content": "",
+      "title_ko": "역방향 SSH 액세스에 악용되는 심각한 VMware vCenter RCE 결함",
+      "summary_ko": "VMware vCenter Syslog 서버의 최근 패치된 심각한 취약점(CVE-2026-59310)이 지속성 및 원격 액세스를 위한 역방향 SSH 도구를 배포하기 위한 활성 캠페인에서 악용되고 있습니다. [...]",
+      "summary_3lines": "1. VMware vCenter Syslog Server, CVE-2026-59310 취약점 악\n2. 공격자는 리버스 SSH 도구 배포로 원격 접근 확보\n3. 취약점 패치 및 시스템 점검 필요",
+      "link": "https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/",
+      "source": "bleepingcomputer",
+      "published": "2026-08-14T01:40:23+09:00",
+      "lang": "en"
+    },
     {
       "title": "러, 정유공장 지어주고 北은 연료 만들어주고",
       "summary": "북한은 최근 3년 연속 3%대 경제 성장을 기록했는데, 중국과의 교역 확대뿐 아니라 러시아 파병, 해킹 등 각종 범죄 수익 등의 효과로 분석된다. 북한 최초 여성 외무상 최선희는 모스크바를 수시로 찾아 블라디미르 푸틴...",
@@ -2368,6 +2380,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-73557",
       "source": "cvefeed",
       "published": "2026-08-14T00:20:18+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-73509 - OpenList: Authenticated users can rename files outside their base path via batch rename `src_name` traversal",
+      "summary": "CVE ID :CVE-2026-73509\n  \nPublished : Aug. 13, 2026, 3:20 p.m. | 13 minutes ago\n  \nDescription :OpenList a file list program that supports multiple storage. Prior to 4.2.4, the authenticated /api/fs/batch_rename handler in server/handles/fsbatch.go authorizes only the source directory produced by user.JoinPath(req.SrcDir) and validates renameObject.NewName with checkRelativePath, but does not validate attacker-controlled renameObject.SrcName, supplied as src_name, before concatenating it with the authorized path and passing the result to fs.Rename. A user with rename permission can use traversal segments in src_name to make path normalization select a file outside the authorized directory and configured base path, resulting in cross-user file integrity loss, limited availability impact, and file-existence disclosure through success or error responses. This issue is fixed in version 4.2.4.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-73509\n  \nPublished : Aug. 13, 2026, 3:20 p.m. | 13 minutes ago\n  \nDescription :OpenList a file list program that supports multiple storage. Prior to 4.2.4, the authenticated /api/fs/batch_rename handler in server/handles/fsbatch.go authorizes only the source directory produced by user.JoinPath(req.SrcDir) and validates renameObject.NewName with checkRelativePath, but does not validate attacker-controlled renameObject.SrcName, supplied as src_name, before concatenating it with the authorized path and passing the result to fs.Rename. A user with rename permission can use traversal segments in src_name to make path normalization select a file outside the authorized directory and configured base path, resulting in cross-user file integrity loss, limited availability impact, and file-existence disclosure through success or error responses. This issue is fixed in version 4.2.4.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-73509 - OpenList: 인증된 사용자는 `src_name` 일괄 이름 바꾸기 순회를 통해 기본 경로 외부의 파일 이름을 바꿀 수 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-73509\n  \n게시일 : 2026년 8월 13일 오후 3시 20분 | 13분 전\n  \n설명 :OpenList는 다중 저장을 지원하는 파일 목록 프로그램입니다. 4.2.4 이전에는 server/handles/fsbatch.go의 인증된 /api/fs/batch_rename 핸들러가 user.JoinPath(req.SrcDir)에 의해 생성된 소스 디렉터리만 승인하고 checkRelativePath를 사용하여 renameObject.NewName의 유효성을 검사하지만, 승인된 경로와 연결하고 결과를 전달하기 전에 src_name으로 제공된 공격자가 제어하는 renameObject.SrcName의 유효성을 검사하지는 않습니다. fs.이름 바꾸기. 이름 바꾸기 권한이 있는 사용자는 src_name의 순회 세그먼트를 사용하여 경로 정규화가 인증된 디렉터리 및 구성된 기본 경로 외부의 파일을 선택하도록 할 수 있으며, 이로 인해 사용자 간 파일 무결성 손실, 가용성 영향 제한, 성공 또는 오류 응답을 통한 파일 존재 공개가 발생합니다. 이 문제는 버전 4.2.4에서 해결되었습니다.\n  \n심각도: 7.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-73509\n2. 26.08.14 오전12:20\n3. OpenList a file list program that supports multipl",
+      "cve_id": "CVE-2026-73509",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73509",
+      "source": "cvefeed",
+      "published": "2026-08-14T00:20:17+09:00",
       "lang": "en"
     },
     {
