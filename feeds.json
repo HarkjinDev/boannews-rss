@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-13T21:01:46.234416+09:00",
+  "fetched_at": "2026-08-13T21:31:39.223134+09:00",
   "security_news": [
+    {
+      "title": "윈도 악성코드 탐지 92%, 맥OS는 8%…보안 위협 양상 갈렸다",
+      "summary": "피싱은 소프트웨어 취약점보다 사용자의 신뢰를 노리는 방식이어서 운영체제 보안만으로 막기 어렵다. 맥 기기가 기본적으로 안전하다는 인식은 의심스러운 메시지에 대한 경계를 늦출 수 있다. 마이크로소프트는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 윈도우 악성코드 탐지율 92%, 맥OS는 8%로 위협 양상 극명히 달라\n2. 피싱은 사용자 신뢰 노려 OS 보안만으론 막기 어려워\n3. 맥OS 기본 안전 인식, 의심 메시지 경계 늦출 수 있어",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=693042",
+      "source": "naver",
+      "published": "2026-08-13T21:04:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "개인정보 유출 2차피해 우려에도…경찰 수사는 난항",
       "summary": "[기자] 지난해 5월 SKT가 해킹되며 2천만명이 넘는 유심 정보가 유출됐습니다. 지난해 말에는 쿠팡 내부 직원이 3천만명 이상의 고객 정보를 빼돌렸습니다. 올해도 지난 6월 100만명 회원의 교육콘텐츠업체 '데이원컴퍼니...",
@@ -2340,18 +2352,6 @@
       "source": "thehackernews",
       "published": "2026-08-10T22:19:58+09:00",
       "lang": "en"
-    },
-    {
-      "title": "New Passkey Attacks Can Recover Synced Private Keys or Bypass Phishing-Resistant MFA",
-      "summary": "Three separate research efforts last week demonstrated ways to defeat passkey protections without breaking the cryptography they rest on.\n\nPasskeys are designed to replace reusable passwords and resist phishing. The attacks instead reused signed authentication material that Windows had exposed, abused a cloud-synced passkey system from malware already on the victim's machine, and used a ",
-      "content": "",
-      "title_ko": "새로운 패스키 공격으로 동기화된 개인 키를 복구하거나 피싱 방지 MFA를 우회할 수 있음",
-      "summary_ko": "지난주 세 가지 별도의 연구 노력을 통해 암호 키 보호를 해제하지 않고 암호 키 보호를 무력화하는 방법이 시연되었습니다.\n\n암호키는 재사용 가능한 암호를 대체하고 피싱을 방지하도록 설계되었습니다. 대신 공격은 Windows가 노출한 서명된 인증 자료를 재사용하고, 이미 피해자의 컴퓨터에 있는 맬웨어의 클라우드 동기화 패스키 시스템을 남용했으며,",
-      "summary_3lines": "1. 새로운 패스키 공격으로 동기화된 개인 키를 복구하거나 피싱 방지 MFA를 우회할 수 있음 \n2. 암호키는 재사용 가능한 암호를 대체하고 피싱을 방지하도록 설계되었습니다.\n3. 대신 공격은 Windows가 노출한 서명된 인증 자료를 재사용하고, 이미 피해자의 컴퓨터에",
-      "link": "https://thehackernews.com/2026/08/new-passkey-attacks-can-recover-synced.html",
-      "source": "thehackernews",
-      "published": "2026-08-10T21:25:04+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -4528,51 +4528,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-68414",
       "source": "cvefeed",
       "published": "2026-08-10T22:20:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-68092 - time/jiffies: Register jiffies clocksource before usage",
-      "summary": "CVE ID :CVE-2026-68092\n  \nPublished : Aug. 10, 2026, 12:17 p.m. | 1 hour ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ntime/jiffies: Register jiffies clocksource before usage\n\nTeddy reported that a XEN HVM has a long boot delay, which was bisected to\nthe recent enhancements to the negative motion detection. It turned out\nthat the jiffies clocksource is used in early boot before it is registered,\nwhich leaves the max_delta_raw field at zero. That causes the read out to\nbe clamped to the max delta of 0, which means time is not making progress.\n\nCure it by ensuring that it is initialized before its first usage in\ntimekeeping_init().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-68092\n  \nPublished : Aug. 10, 2026, 12:17 p.m. | 1 hour ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ntime/jiffies: Register jiffies clocksource before usage\n\nTeddy reported that a XEN HVM has a long boot delay, which was bisected to\nthe recent enhancements to the negative motion detection. It turned out\nthat the jiffies clocksource is used in early boot before it is registered,\nwhich leaves the max_delta_raw field at zero. That causes the read out to\nbe clamped to the max delta of 0, which means time is not making progress.\n\nCure it by ensuring that it is initialized before its first usage in\ntimekeeping_init().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-68092 - time/jiffies: 사용 전 jiffies 클럭 소스 등록",
-      "summary_ko": "CVE ID:CVE-2026-68092\n  \n게시일 : 2026년 8월 10일 오후 12시 17분 | 1시간 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\ntime/jiffies: 사용하기 전에 jiffies 클럭소스를 등록하세요.\n\nTeddy는 XEN HVM의 부팅 지연이 길다고 보고했습니다.\n최근 네거티브 모션 감지 기능이 향상되었습니다. 그것은 밝혀졌다\n등록되기 전 초기 부팅에서 jiffies 클럭 소스가 사용됩니다.\nmax_delta_raw 필드는 0으로 유지됩니다. 그로 인해 읽기가 발생합니다.\n최대 델타 0으로 고정됩니다. 이는 시간이 진행되지 않음을 의미합니다.\n\n처음 사용하기 전에 초기화되었는지 확인하여 치료합니다.\ntimekeeping_init().\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-68092\n2. 26.08.10 오후9:17\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-68092",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68092",
-      "source": "cvefeed",
-      "published": "2026-08-10T21:17:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-68086 - mm/khugepaged: write all dirty file folios when collapsing",
-      "summary": "CVE ID :CVE-2026-68086\n  \nPublished : Aug. 10, 2026, 12:17 p.m. | 1 hour ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nmm/khugepaged: write all dirty file folios when collapsing\n\n[There is no upstream commit, as this code was removed by upstream\n commit 044925f9b565 (\"mm: fs: remove filemap_nr_thps*() functions and their users\")]\n\nAs-is, khugepaged and writable-file opening exclude each other. A file\ncannot be open writeable and have THPs (because the filesystem is not aware\nof them). khugepaged will never collapse file pages for files that are\nopened writeable. On an open(O_RDWR/O_WRONLY), the page cache for that\nparticular file is dropped. This is fine because nothing could've been\ndirtied.\n\nHowever, there is an edge-case: collapse_file() might not be able to\ncoexist with concurrent writers, but it can coexist with dirty folios\n(from previous writers). Therefore, the following can happen:\n\nopen(file, O_RDWR)\nwrite(file)\nclose(file)\nmadvise(file_mapping, MADV_COLLAPSE, some non-dirty range)\nopen(file, O_RDWR)\n nr_thps > 0\n  truncate_inode_pages()\n    /* THPs are cleared out, but so are the dirty folios */\n\nWhen this edge-case happens, there is data loss, as the dirty folios are\nfully discarded.\n\nFix it by fully writing back the page cache (and waiting) when collapsing\nfile THPs. Doing so provides the guarantee that no dirty folio will be\nobserved while there are active THPs. To fully ensure this is safe, the\ninvalidate_lock needs to be held while doing the writeout, so that\ndo_dentry_open()'s page cache truncation excludes this write-and-wait.\n\nAs a side effect, move the nr_thps counter bumping outside the i_pages\nlock. This is correct since the counter itself is an atomic_t and the\nproducer <-> consumer correctness is provided by a full memory barrier:\nsmp_mb() in collapse_file()/memory barrier implied by full ordering in\nget_write_access() -> atomic_inc_unless_negative().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-68086\n  \nPublished : Aug. 10, 2026, 12:17 p.m. | 1 hour ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nmm/khugepaged: write all dirty file folios when collapsing\n\n[There is no upstream commit, as this code was removed by upstream\n commit 044925f9b565 (\"mm: fs: remove filemap_nr_thps*() functions and their users\")]\n\nAs-is, khugepaged and writable-file opening exclude each other. A file\ncannot be open writeable and have THPs (because the filesystem is not aware\nof them). khugepaged will never collapse file pages for files that are\nopened writeable. On an open(O_RDWR/O_WRONLY), the page cache for that\nparticular file is dropped. This is fine because nothing could've been\ndirtied.\n\nHowever, there is an edge-case: collapse_file() might not be able to\ncoexist with concurrent writers, but it can coexist with dirty folios\n(from previous writers). Therefore, the following can happen:\n\nopen(file, O_RDWR)\nwrite(file)\nclose(file)\nmadvise(file_mapping, MADV_COLLAPSE, some non-dirty range)\nopen(file, O_RDWR)\n nr_thps > 0\n  truncate_inode_pages()\n    /* THPs are cleared out, but so are the dirty folios */\n\nWhen this edge-case happens, there is data loss, as the dirty folios are\nfully discarded.\n\nFix it by fully writing back the page cache (and waiting) when collapsing\nfile THPs. Doing so provides the guarantee that no dirty folio will be\nobserved while there are active THPs. To fully ensure this is safe, the\ninvalidate_lock needs to be held while doing the writeout, so that\ndo_dentry_open()'s page cache truncation excludes this write-and-wait.\n\nAs a side effect, move the nr_thps counter bumping outside the i_pages\nlock. This is correct since the counter itself is an atomic_t and the\nproducer <-> consumer correctness is provided by a full memory barrier:\nsmp_mb() in collapse_file()/memory barrier implied by full ordering in\nget_write_access() -> atomic_inc_unless_negative().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-68086 - mm/khugepaged: 축소 시 더티 파일 Folio를 모두 작성합니다.",
-      "summary_ko": "CVE ID:CVE-2026-68086\n  \n게시일 : 2026년 8월 10일 오후 12시 17분 | 1시간 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nmm/khugepaged: 축소 시 더티 파일 Folio를 모두 작성합니다.\n\n[이 코드는 업스트림에서 제거되었으므로 업스트림 커밋이 없습니다.\n 커밋 044925f9b565 (\"mm: fs: filemap_nr_thps*() 함수 및 해당 사용자 제거\")]\n\n현재로서는 khugepaged와 쓰기 가능한 파일 열기가 서로 제외됩니다. 파일\n개방형 쓰기가 불가능하고 THP를 가질 수 없습니다(파일 시스템이 인식하지 못하기 때문에).\n그중). khugepaged는 다음과 같은 파일의 파일 페이지를 축소하지 않습니다.\n쓰기 가능하게 열었습니다. 열린(O_RDWR/O_WRONLY)에서 해당 페이지 캐시\n특정 파일이 삭제되었습니다. 아무 일도 없었으니까 괜찮아\n더러워진.\n\n그러나 극단적인 경우가 있습니다:collapse_file()이 실패할 수도 있습니다.\n동시 작가와 공존하지만 더티 Folio와 공존할 수도 있습니다.\n(이전 작가들로부터). 따라서 다음과 같은 일이 발생할 수 있습니다.\n\n열기(파일, O_RDWR)\n쓰기(파일)\n닫기(파일)\nmadvise(file_mapping, MADV_COLLAPSE, 일부 비더티 범위)\n열기(파일, O_RDWR)\n nr_thps > 0\n  truncate_inode_pages()\n    /* THP는 삭제되지만 더티 Folio도 삭제됩니다 */\n\n이러한 극단적인 상황이 발생하면 더티 Folio가 삭제되므로 데이터가 손실됩니다.\n완전히 폐기되었습니다.\n\n접을 때 페이지 캐시를 완전히 다시 쓰고 대기하여 문제를 해결하세요.\n파일 THP. 이렇게 하면 더러워진 Folio가 발생하지 않는다는 보장이 제공됩니다.\n활성 THP가 있는 동안 관찰됩니다. 이것이 안전하다는 것을 완전히 보장하기 위해,\nwriteout을 수행하는 동안에는validate_lock을 유지해야 합니다.\ndo_dentry_open()의 페이지 캐시 잘림은 이 쓰기 및 대기를 제외합니다.\n\n부작용으로 nr_thps 카운터를 i_pages 외부로 이동합니다.\n자물쇠. 카운터 자체가atom_t이고\n생산자 <-> 소비자 정확성은 전체 메모리 장벽에 의해 제공됩니다.\nCollapse_file()/메모리 장벽의 smp_mb()는 전체 순서에 의해 암시됩니다.\nget_write_access() ->omic_inc_unless_negative().\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-68086\n2. 26.08.10 오후9:17\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-68086",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68086",
-      "source": "cvefeed",
-      "published": "2026-08-10T21:17:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-68428 - KVM: x86/mmu: Fix use-after-free on vendor module reload",
-      "summary": "CVE ID :CVE-2026-68428\n  \nPublished : Aug. 10, 2026, 12:04 p.m. | 1 hour, 13 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: x86/mmu: Fix use-after-free on vendor module reload\n\nmmu_destroy_caches() destroys pte_list_desc_cache and\nmmu_page_header_cache, but leaves both pointers unchanged.  The pointers\nlive in kvm.ko, and therefore survive when a vendor module is unloaded\nwhile kvm.ko remains loaded.\n\nIf creation of pte_list_desc_cache fails during a subsequent vendor\nmodule load, its assignment sets pte_list_desc_cache to NULL and the\nerror path calls mmu_destroy_caches().  mmu_page_header_cache still\npoints to the cache destroyed during the preceding vendor module\nunload.  Passing that stale pointer to kmem_cache_destroy() causes a\nslab use-after-free.\n\nReproduce the issue on a v7.1.3 kernel with CONFIG_KASAN=y,\nCONFIG_KASAN_GENERIC=y, CONFIG_KVM=m, and CONFIG_KVM_INTEL=m.  A\none-shot test hook forces pte_list_desc_cache to NULL on the second\ninvocation of kvm_mmu_vendor_module_init():\n\n  1. Load kvm.ko and kvm-intel.ko, creating both caches.\n  2. Unload only kvm_intel, leaving kvm.ko loaded.\n  3. Reload kvm_intel and force initialization through the -ENOMEM path.\n\nKASAN reports:\n\n  BUG: KASAN: slab-use-after-free in\n  kvm_mmu_vendor_module_init+0x5b/0x170 [kvm]\n  ...\n  kmem_cache_destroy+0x21/0x1d0\n  kvm_mmu_vendor_module_init+0x5b/0x170 [kvm]\n  ...\n  Allocated by task 16817:\n  __kmem_cache_create_args+0x12c/0x3b0\n  __kmem_cache_create.constprop.0+0xb6/0xf0 [kvm]\n  kvm_mmu_vendor_module_init+0x13b/0x170 [kvm]\n  ...\n  Freed by task 16820:\n  kmem_cache_destroy+0x117/0x1d0\n  kvm_mmu_vendor_module_exit+0x21/0x30 [kvm]\n\nClear both pointers immediately after destroying their caches so that\nthe stored state reflects the caches' lifetime and repeated cleanup is\nsafe.\n\nWith the fix applied, the same injected vendor module reload fails with\n-ENOMEM as expected and produces no KASAN report.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-68428\n  \nPublished : Aug. 10, 2026, 12:04 p.m. | 1 hour, 13 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: x86/mmu: Fix use-after-free on vendor module reload\n\nmmu_destroy_caches() destroys pte_list_desc_cache and\nmmu_page_header_cache, but leaves both pointers unchanged.  The pointers\nlive in kvm.ko, and therefore survive when a vendor module is unloaded\nwhile kvm.ko remains loaded.\n\nIf creation of pte_list_desc_cache fails during a subsequent vendor\nmodule load, its assignment sets pte_list_desc_cache to NULL and the\nerror path calls mmu_destroy_caches().  mmu_page_header_cache still\npoints to the cache destroyed during the preceding vendor module\nunload.  Passing that stale pointer to kmem_cache_destroy() causes a\nslab use-after-free.\n\nReproduce the issue on a v7.1.3 kernel with CONFIG_KASAN=y,\nCONFIG_KASAN_GENERIC=y, CONFIG_KVM=m, and CONFIG_KVM_INTEL=m.  A\none-shot test hook forces pte_list_desc_cache to NULL on the second\ninvocation of kvm_mmu_vendor_module_init():\n\n  1. Load kvm.ko and kvm-intel.ko, creating both caches.\n  2. Unload only kvm_intel, leaving kvm.ko loaded.\n  3. Reload kvm_intel and force initialization through the -ENOMEM path.\n\nKASAN reports:\n\n  BUG: KASAN: slab-use-after-free in\n  kvm_mmu_vendor_module_init+0x5b/0x170 [kvm]\n  ...\n  kmem_cache_destroy+0x21/0x1d0\n  kvm_mmu_vendor_module_init+0x5b/0x170 [kvm]\n  ...\n  Allocated by task 16817:\n  __kmem_cache_create_args+0x12c/0x3b0\n  __kmem_cache_create.constprop.0+0xb6/0xf0 [kvm]\n  kvm_mmu_vendor_module_init+0x13b/0x170 [kvm]\n  ...\n  Freed by task 16820:\n  kmem_cache_destroy+0x117/0x1d0\n  kvm_mmu_vendor_module_exit+0x21/0x30 [kvm]\n\nClear both pointers immediately after destroying their caches so that\nthe stored state reflects the caches' lifetime and repeated cleanup is\nsafe.\n\nWith the fix applied, the same injected vendor module reload fails with\n-ENOMEM as expected and produces no KASAN report.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-68428 - KVM: x86/mmu: 공급업체 모듈 다시 로드 시 use-after-free 수정",
-      "summary_ko": "CVE ID:CVE-2026-68428\n  \n게시일 : 2026년 8월 10일 오후 12시 4분 | 1시간, 13분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nKVM: x86/mmu: 공급업체 모듈 다시 로드 시 use-after-free 수정\n\nmmu_destroy_caches()는 pte_list_desc_cache를 파괴하고\nmmu_page_header_cache이지만 두 포인터는 모두 변경되지 않은 상태로 유지됩니다.  포인터\nkvm.ko에 있으므로 공급업체 모듈이 언로드될 때 생존합니다.\nkvm.ko는 로드된 상태로 유지됩니다.\n\n후속 벤더 도중 pte_list_desc_cache 생성에 실패한 경우\n모듈 로드 시 해당 할당은 pte_list_desc_cache를 NULL로 설정하고\n오류 경로는 mmu_destroy_caches()를 호출합니다.  mmu_page_header_cache는 여전히\n이전 공급업체 모듈 중에 파괴된 캐시를 가리킵니다.\n언로드.  오래된 포인터를 kmem_cache_destroy()에 전달하면\n슬래브 사용 후 무료.\n\nCONFIG_KASAN=y를 사용하여 v7.1.3 커널에서 문제를 재현합니다.\nCONFIG_KASAN_GENERIC=y, CONFIG_KVM=m 및 CONFIG_KVM_INTEL=m.  에이\n원샷 테스트 후크는 두 번째 테스트에서 pte_list_desc_cache를 NULL로 강제 설정합니다.\nkvm_mmu_vendor_module_init() 호출:\n\n  1. kvm.ko 및 kvm-intel.ko를 로드하여 두 캐시를 모두 생성합니다.\n  2. kvm.ko는 로드된 채로 두고 kvm_intel만 언로드합니다.\n  3. kvm_intel을 다시 로드하고 -ENOMEM 경로를 통해 강제로 초기화합니다.\n\nKASAN은 다음과 같이 보고합니다.\n\n  BUG: KASAN: slab-use-after-free in\n  kvm_mmu_vendor_module_init+0x5b/0x170 [kvm]\n  ...\n  kmem_cache_destroy+0x21/0x1d0\n  kvm_mmu_vendor_module_init+0x5b/0x170 [kvm]\n  ...\n  작업 16817에 의해 할당됨:\n  __kmem_cache_create_args+0x12c/0x3b0\n  __kmem_cache_create.constprop.0+0xb6/0xf0 [kvm]\n  kvm_mmu_vendor_module_init+0x13b/0x170 [kvm]\n  ...\n  작업 16820에 의해 해제됨:\n  kmem_cache_destroy+0x117/0x1d0\n  kvm_mmu_vendor_module_exit+0x21/0x30 [kvm]\n\n캐시를 삭제한 후 즉시 두 포인터를 모두 지우십시오.\n저장된 상태는 캐시의 수명을 반영하며 반복되는 정리는\n안전하다.\n\n수정 사항을 적용하면 동일한 주입된 공급업체 모듈 다시 로드가 실패합니다.\n-ENOMEM은 예상대로이며 KASAN 보고서를 생성하지 않습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-68428\n2. 26.08.10 오후9:04\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-68428",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68428",
-      "source": "cvefeed",
-      "published": "2026-08-10T21:04:48+09:00",
       "lang": "en"
     }
   ],
