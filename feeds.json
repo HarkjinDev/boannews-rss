@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-15T04:01:00.399760+09:00",
+  "fetched_at": "2026-08-15T04:30:57.164049+09:00",
   "security_news": [
     {
       "title": "Hackers arrested over €30M bank fraud exploiting service provider flaw",
@@ -2977,36 +2977,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48763",
       "source": "cvefeed",
       "published": "2026-08-12T05:51:24+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48813 - Flawfinder output manipulation via untrusted filenames and source text",
-      "summary": "CVE ID :CVE-2026-48813\n  \nPublished : Aug. 11, 2026, 7:24 p.m. | 22 minutes ago\n  \nDescription :Flawfinder is a a static analysis tool for finding vulnerabilities in C/C++ source code. Versions prior to 2.0.20 have an improper input neutralization issue leading to output manipulation, specifically, Terminal/ANSI Escape Sequence Injection and XML Injection. A malicious file whose name contains ANSI escape sequences can end up being included in flawfinder's standard terminal output, with many effects. Untrusted fields (such as filenames, categories, or code context text) were not properly sanitized when generating structured reports. An attacker could exploit this to corrupt CSV formats or inject arbitrary XML attributes into SonarQube outputs via output_sonar(). It impacts those who use flawfinder to evaluate intentionally malicious filenames or file contents. This issue has been fully patched in Version 2.0.20 (released 2026-05-16). There is no configuration-based workaround within older versions of flawfinder. If an immediate upgrade is not possible, users can mitigate the risk by pre-scanning filenames, inspecting raw output, and/or restricting untrusted inputs.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48813\n  \nPublished : Aug. 11, 2026, 7:24 p.m. | 22 minutes ago\n  \nDescription :Flawfinder is a a static analysis tool for finding vulnerabilities in C/C++ source code. Versions prior to 2.0.20 have an improper input neutralization issue leading to output manipulation, specifically, Terminal/ANSI Escape Sequence Injection and XML Injection. A malicious file whose name contains ANSI escape sequences can end up being included in flawfinder's standard terminal output, with many effects. Untrusted fields (such as filenames, categories, or code context text) were not properly sanitized when generating structured reports. An attacker could exploit this to corrupt CSV formats or inject arbitrary XML attributes into SonarQube outputs via output_sonar(). It impacts those who use flawfinder to evaluate intentionally malicious filenames or file contents. This issue has been fully patched in Version 2.0.20 (released 2026-05-16). There is no configuration-based workaround within older versions of flawfinder. If an immediate upgrade is not possible, users can mitigate the risk by pre-scanning filenames, inspecting raw output, and/or restricting untrusted inputs.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48813 - 신뢰할 수 없는 파일 이름 및 소스 텍스트를 통한 Flawfinder 출력 조작",
-      "summary_ko": "CVE ID:CVE-2026-48813\n  \n게시일 : 2026년 8월 11일 오후 7시 24분 | 22분 전\n  \n설명 :Flawfinder는 C/C++ 소스 코드의 취약점을 찾기 위한 정적 분석 도구입니다. 2.0.20 이전 버전에는 출력 조작, 특히 터미널/ANSI 이스케이프 시퀀스 주입 및 XML 주입으로 이어지는 부적절한 입력 중립화 문제가 있습니다. 이름에 ANSI 이스케이프 시퀀스가 ​​포함된 악성 파일은 결국 Ffectfinder의 표준 터미널 출력에 포함될 수 있으며 많은 영향을 미칠 수 있습니다. 구조화된 보고서를 생성할 때 신뢰할 수 없는 필드(예: 파일 이름, 카테고리 또는 코드 컨텍스트 텍스트)가 제대로 정리되지 않았습니다. 공격자는 이를 악용하여 CSV 형식을 손상시키거나 output_sonar()를 통해 SonarQube 출력에 임의의 XML 속성을 삽입할 수 있습니다. 이는 의도적으로 악성 파일 이름이나 파일 내용을 평가하기 위해 결함 찾기를 사용하는 사람들에게 영향을 미칩니다. 이 문제는 버전 2.0.20(2026-05-16 출시)에서 완전히 패치되었습니다. 이전 버전의 Flawfinder에는 구성 기반 해결 방법이 없습니다. 즉각적인 업그레이드가 불가능한 경우 사용자는 파일 이름을 사전 검사하고, 원시 출력을 검사하고, 신뢰할 수 없는 입력을 제한하여 위험을 완화할 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48813\n2. 26.08.12 오전4:24\n3. Flawfinder is a a static analysis tool for finding",
-      "cve_id": "CVE-2026-48813",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48813",
-      "source": "cvefeed",
-      "published": "2026-08-12T04:24:53+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48809 - python-engineio has possible denial of service due to maximum payload size sometimes not being enforced",
-      "summary": "CVE ID :CVE-2026-48809\n  \nPublished : Aug. 11, 2026, 7:17 p.m. | 29 minutes ago\n  \nDescription :python-engineio is a Python implementation of the Engine.IO realtime client and server. Versions prior to 4.13.2 have two specific configurations of the python-engineio server in which the size of incoming messages is not checked before the messages are loaded into memory. An attacker can take advantage of these to cause unnecessary memory allocations in the python-engineio server. The two cases are POST requests, when using ASGI with the long polling transport and WebSocket messages, when using Aiohttp with the WebSocket transport. Version 4.13.2 addresses this issue. ASGI severs now only load the body of incoming requests into memory after the client is confirmed to be known and authenticated, and the payload size is below the maximum allowed size. Requests that do not comply with these requirements are discarded. Aiohttp servers configure the maximum payload size in the underlying WebSocket layer from Aiohttp, so that large messages are discarded by Aiohttp before they are delivered to python-engineio.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48809\n  \nPublished : Aug. 11, 2026, 7:17 p.m. | 29 minutes ago\n  \nDescription :python-engineio is a Python implementation of the Engine.IO realtime client and server. Versions prior to 4.13.2 have two specific configurations of the python-engineio server in which the size of incoming messages is not checked before the messages are loaded into memory. An attacker can take advantage of these to cause unnecessary memory allocations in the python-engineio server. The two cases are POST requests, when using ASGI with the long polling transport and WebSocket messages, when using Aiohttp with the WebSocket transport. Version 4.13.2 addresses this issue. ASGI severs now only load the body of incoming requests into memory after the client is confirmed to be known and authenticated, and the payload size is below the maximum allowed size. Requests that do not comply with these requirements are discarded. Aiohttp servers configure the maximum payload size in the underlying WebSocket layer from Aiohttp, so that large messages are discarded by Aiohttp before they are delivered to python-engineio.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-48809 - python-engineio는 때때로 최대 페이로드 크기가 적용되지 않아 서비스 거부 가능성이 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-48809\n  \n게시일 : 2026년 8월 11일 오후 7시 17분 | 29분 전\n  \n설명 :python-engineio는 Engine.IO 실시간 클라이언트 및 서버의 Python 구현입니다. 4.13.2 이전 버전에는 메시지가 메모리에 로드되기 전에 들어오는 메시지의 크기를 확인하지 않는 python-engineio 서버의 두 가지 특정 구성이 있습니다. 공격자는 이를 이용하여 python-engineio 서버에서 불필요한 메모리 할당을 유발할 수 있습니다. 두 가지 경우는 긴 폴링 전송과 함께 ASGI를 사용할 때의 POST 요청과 WebSocket 전송과 함께 Aiohttp를 사용할 때의 WebSocket 메시지입니다. 버전 4.13.2에서는 이 문제를 해결합니다. ASGI 서버는 이제 클라이언트가 알려지고 인증된 것으로 확인되고 페이로드 크기가 최대 허용 크기보다 작은 경우에만 들어오는 요청의 본문을 메모리에 로드합니다. 이러한 요구 사항을 준수하지 않는 요청은 삭제됩니다. Aiohttp 서버는 Aiohttp의 기본 WebSocket 레이어에서 최대 페이로드 크기를 구성하므로 큰 메시지는 python-engineio로 전달되기 전에 Aiohttp에서 삭제됩니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48809\n2. 26.08.12 오전4:17\n3. python-engineio is a Python implementation of the ",
-      "cve_id": "CVE-2026-48809",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48809",
-      "source": "cvefeed",
-      "published": "2026-08-12T04:17:37+09:00",
       "lang": "en"
     }
   ],
