@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-15T02:30:58.226415+09:00",
+  "fetched_at": "2026-08-15T03:01:14.344155+09:00",
   "security_news": [
     {
       "title": "[BIC2026] 북한 배경의 기묘한 아날로그 해킹 공포, '허미트 컴퓨타'",
@@ -2368,6 +2368,36 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-49989 - CrateDB's Blob HTTP handler bypasses authorization",
+      "summary": "CVE ID :CVE-2026-49989\n  \nPublished : Aug. 14, 2026, 5:18 p.m. | 24 minutes ago\n  \nDescription :CrateDB is a distributed SQL database. Prior to versions 6.2.8 and 6.3.2, any authenticated user can read or delete any blob whose SHA-1 digest they know, and can plant new blobs unconditionally, in any blob table, regardless of `GRANT`s. CrateDB has two ways to access blob storage: SQL (`SELECT ... FROM blob.` and friends) and the blob HTTP API (`GET|PUT|DELETE /_blobs/{table}/{digest}`). The SQL path goes through `AccessControl`, which is what enforces privilege grants; that's why `SELECT digest FROM blob.secret_blobs` fails for a user who has no grants on the table. The HTTP path authenticates the request but never asks `AccessControl` whether the authenticated user is allowed to touch the table. So a user with no grants gets `MissingPrivilegeException` from SQL and `200 OK` plus the blob bytes from `GET /_blobs/secret_blobs/`. Deployments that don't use `BLOB TABLE` are unaffected. Authentication itself still works; the bug is strictly that being authenticated as anyone is treated as sufficient for any blob op. Versions 6.2.8 and 6.3.2 fix the issue.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-49989\n  \nPublished : Aug. 14, 2026, 5:18 p.m. | 24 minutes ago\n  \nDescription :CrateDB is a distributed SQL database. Prior to versions 6.2.8 and 6.3.2, any authenticated user can read or delete any blob whose SHA-1 digest they know, and can plant new blobs unconditionally, in any blob table, regardless of `GRANT`s. CrateDB has two ways to access blob storage: SQL (`SELECT ... FROM blob.` and friends) and the blob HTTP API (`GET|PUT|DELETE /_blobs/{table}/{digest}`). The SQL path goes through `AccessControl`, which is what enforces privilege grants; that's why `SELECT digest FROM blob.secret_blobs` fails for a user who has no grants on the table. The HTTP path authenticates the request but never asks `AccessControl` whether the authenticated user is allowed to touch the table. So a user with no grants gets `MissingPrivilegeException` from SQL and `200 OK` plus the blob bytes from `GET /_blobs/secret_blobs/`. Deployments that don't use `BLOB TABLE` are unaffected. Authentication itself still works; the bug is strictly that being authenticated as anyone is treated as sufficient for any blob op. Versions 6.2.8 and 6.3.2 fix the issue.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-49989 - CrateDB의 Blob HTTP 핸들러가 인증을 우회합니다.",
+      "summary_ko": "CVE ID:CVE-2026-49989\n  \n게시일 : 2026년 8월 14일 오후 5시 18분 | 24분 전\n  \n설명:CrateDB는 분산 SQL 데이터베이스입니다. 버전 6.2.8 및 6.3.2 이전에는 인증된 모든 사용자가 SHA-1 다이제스트를 알고 있는 모든 blob을 읽거나 삭제할 수 있으며 'GRANT'에 관계없이 모든 blob 테이블에 무조건 새 blob을 심을 수 있습니다. CrateDB에는 Blob 저장소에 액세스하는 두 가지 방법이 있습니다. 즉, SQL(`SELECT ... FROM blob.` 및 그 외 친구)과 blob HTTP API(`GET|PUT|DELETE /_blobs/{table}/{digest}`)입니다. SQL 경로는 권한 부여를 시행하는 `AccessControl`을 통과합니다. 이것이 테이블에 대한 권한이 없는 사용자에 대해 `SELECT 다이제스트 FROM blob.secret_blobs`가 실패하는 이유입니다. HTTP 경로는 요청을 인증하지만 인증된 사용자가 테이블을 터치할 수 있는지 여부를 `AccessControl`에 묻지 않습니다. 따라서 권한 부여가 없는 사용자는 SQL에서 `MissingPrivilegeException`을 받고 `GET /_blobs/secret_blobs/`에서 blob 바이트와 함께 `200 OK`를 받습니다. 'BLOB TABLE'을 사용하지 않는 배포는 영향을 받지 않습니다. 인증 자체는 여전히 작동합니다. 버그는 엄밀히 말하면 모든 사람으로 인증되는 것이 모든 Blob 작업에 충분한 것으로 간주된다는 것입니다. 버전 6.2.8 및 6.3.2에서는 문제가 해결되었습니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-49989\n2. 26.08.15 오전2:18\n3. CrateDB is a distributed SQL database. Prior to ve",
+      "cve_id": "CVE-2026-49989",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49989",
+      "source": "cvefeed",
+      "published": "2026-08-15T02:18:27+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-47191 - kas checks out SHA-like git branches as valid commits",
+      "summary": "CVE ID :CVE-2026-47191\n  \nPublished : Aug. 14, 2026, 5:18 p.m. | 24 minutes ago\n  \nDescription :kas is a setup tool for bitbake based projects. Prior to version 5.3, when relying solely on a git commit ID (SHA-1 or SHA-256) to qualify if a checkout of a repository is equivalent to the state validated while adding its commit ID to a kas configuration, users may be tricked to check out a branch of the same name from this repository. This implies that the referenced repository has been taken over by an attacker and modified to carry such a branch. SHA-1 commits may also be replaced by creating hash collisions, so the primary impact of this issue is on SHA-256 commit IDs. Version 5.3 fixes the issue. As a workaround, avoid relying solely on the commit ID for integrity validation of a repository that might become under control of a malicious 3rd party. If available, additional validate cryptographically signed commits or tags. Alternatively, mirror the repository to a save place, validate its integrity, and use this instead of the original one.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-47191\n  \nPublished : Aug. 14, 2026, 5:18 p.m. | 24 minutes ago\n  \nDescription :kas is a setup tool for bitbake based projects. Prior to version 5.3, when relying solely on a git commit ID (SHA-1 or SHA-256) to qualify if a checkout of a repository is equivalent to the state validated while adding its commit ID to a kas configuration, users may be tricked to check out a branch of the same name from this repository. This implies that the referenced repository has been taken over by an attacker and modified to carry such a branch. SHA-1 commits may also be replaced by creating hash collisions, so the primary impact of this issue is on SHA-256 commit IDs. Version 5.3 fixes the issue. As a workaround, avoid relying solely on the commit ID for integrity validation of a repository that might become under control of a malicious 3rd party. If available, additional validate cryptographically signed commits or tags. Alternatively, mirror the repository to a save place, validate its integrity, and use this instead of the original one.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-47191 - kas가 SHA와 유사한 git 브랜치를 유효한 커밋으로 확인합니다.",
+      "summary_ko": "CVE ID:CVE-2026-47191\n  \n게시일 : 2026년 8월 14일 오후 5시 18분 | 24분 전\n  \n설명 :kas는 bitbake 기반 프로젝트를 위한 설정 도구입니다. 버전 5.3 이전에는 저장소의 체크아웃이 kas 구성에 커밋 ID를 추가하는 동안 검증된 상태와 동일한지 확인하기 위해 git 커밋 ID(SHA-1 또는 SHA-256)에만 의존하는 경우 사용자가 이 저장소에서 동일한 이름의 분기를 체크아웃하도록 속일 수 있습니다. 이는 참조된 저장소가 공격자에 의해 점유되어 해당 분기를 전달하도록 수정되었음을 의미합니다. SHA-1 커밋은 해시 충돌을 생성하여 대체될 수도 있으므로 이 문제의 주요 영향은 SHA-256 커밋 ID에 있습니다. 버전 5.3에서는 문제가 해결되었습니다. 해결 방법으로, 악의적인 제3자의 통제를 받을 수 있는 저장소의 무결성 검증을 위해 커밋 ID에만 의존하지 마십시오. 가능한 경우 암호화로 서명된 커밋 또는 태그를 추가로 확인하세요. 또는 저장소를 저장 위치에 미러링하고 무결성을 확인한 후 원본 대신 이를 사용하십시오.\n  \n심각도: 2.1 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-47191\n2. 26.08.15 오전2:18\n3. kas is a setup tool for bitbake based projects. Pr",
+      "cve_id": "CVE-2026-47191",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47191",
+      "source": "cvefeed",
+      "published": "2026-08-15T02:18:15+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-19884 - Eclipse Theia Git Extension Arbitrary Command Execution Vulnerability",
       "summary": "CVE ID :CVE-2026-19884\n  \nPublished : Aug. 14, 2026, 3:32 p.m. | 22 minutes ago\n  \nDescription :In Eclipse Theia versions up to and including 1.69.0, opening a folder starts source control integration without requiring the user to trust the folder first. This affects applications built on Theia that include the git integration, such as the Theia IDE. Both Theia's own `@theia/git` extension and the builtin VS Code `git` extension run git commands such as `git status` as soon as a repository is detected. Since git honors repository-local configuration, a folder containing an attacker-controlled `.git/config` with `core.fsmonitor` (or a comparable hook-like setting) causes the configured command to be executed. The configuration can be delivered by burying a bare repository inside a regular repository (OVE-20210718-0001), so cloning an attacker-supplied repository and opening it in a Theia-based application is sufficient to execute arbitrary commands with the privileges of the user, without any confirmation prompt.\n\n\n\nAs of 1.70.0, plugins that declare `capabilities.untrustedWorkspaces.supported: false`, which includes the builtin git extension, are no longer loaded or activated in an untrusted workspace, and the deprecated `@theia/git` extension has been removed, so no git command is executed against an untrusted folder.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-19884\n  \nPublished : Aug. 14, 2026, 3:32 p.m. | 22 minutes ago\n  \nDescription :In Eclipse Theia versions up to and including 1.69.0, opening a folder starts source control integration without requiring the user to trust the folder first. This affects applications built on Theia that include the git integration, such as the Theia IDE. Both Theia's own `@theia/git` extension and the builtin VS Code `git` extension run git commands such as `git status` as soon as a repository is detected. Since git honors repository-local configuration, a folder containing an attacker-controlled `.git/config` with `core.fsmonitor` (or a comparable hook-like setting) causes the configured command to be executed. The configuration can be delivered by burying a bare repository inside a regular repository (OVE-20210718-0001), so cloning an attacker-supplied repository and opening it in a Theia-based application is sufficient to execute arbitrary commands with the privileges of the user, without any confirmation prompt.\n\n\n\nAs of 1.70.0, plugins that declare `capabilities.untrustedWorkspaces.supported: false`, which includes the builtin git extension, are no longer loaded or activated in an untrusted workspace, and the deprecated `@theia/git` extension has been removed, so no git command is executed against an untrusted folder.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2965,21 +2995,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48809",
       "source": "cvefeed",
       "published": "2026-08-12T04:17:37+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Microsoft Patch Tuesday August 2026, (Tue, Aug 11th)",
-      "summary": "This month we got patches for 418 vulnerabilities. Of these, 62 are critical, 1 is being exploited in the wild, and 2 were publicly disclosed as zero-days. Notable fixes include Windows privilege escalation, container tampering, and critical QUIC and DNS Server remote code execution bugs. \r",
-      "description": "This month we got patches for 418 vulnerabilities. Of these, 62 are critical, 1 is being exploited in the wild, and 2 were publicly disclosed as zero-days. Notable fixes include Windows privilege escalation, container tampering, and critical QUIC and DNS Server remote code execution bugs. \r",
-      "title_ko": "Microsoft 패치 2026년 8월 화요일(8월 11일 화요일)",
-      "summary_ko": "이번 달에는 418개 취약점에 대한 패치가 나왔습니다. 이 중 62개는 중요하고, 1개는 실제로 악용되고 있으며, 2개는 제로데이로 공개되었습니다. 주목할만한 수정 사항에는 Windows 권한 상승, 컨테이너 변조, 중요한 QUIC 및 DNS 서버 원격 코드 실행 버그가 포함됩니다.",
-      "summary_3lines": "1. Microsoft Patch Tuesday August 2026, (Tue, Aug 11t\n2. SANS_ISC\n3. This month we got patches for 418 vulnerabilities.",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33236",
-      "source": "sans_isc",
-      "published": "2026-08-12T02:54:49+09:00",
       "lang": "en"
     }
   ],
