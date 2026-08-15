@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-16T05:32:08.494786+09:00",
+  "fetched_at": "2026-08-16T06:02:16.639069+09:00",
   "security_news": [
     {
       "title": "지오서버 제로데이 공개 직후 공격자 움직였다…수백 건 공격 탐색 포착",
@@ -1788,18 +1788,6 @@
       "source": "naver",
       "published": "2026-08-13T06:34:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Hackers exploit critical Adobe Commerce flaw to hijack customer accounts",
-      "summary": "Attempts to exploit a critical vulnerability (CVE-2026-71362) in Adobe's Commerce and Magento e-commerce platforms have been detected, potentially allowing attackers to hijack customer accounts. [...]",
-      "content": "",
-      "title_ko": "해커, 중요한 Adobe Commerce 결함을 악용하여 고객 계정 탈취",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. 어도비 커머스, CVE-2026-71362 취약점 악용 시도\n2. 고객 계정 탈취 가능성, 해커들이 공격 감지됨\n3. 어도비 커머스와 마젠토 플랫폼 대상 공격",
-      "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-adobe-commerce-flaw-to-hijack-customer-accounts/",
-      "source": "bleepingcomputer",
-      "published": "2026-08-13T05:54:59+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -2386,21 +2374,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-73427",
       "source": "cvefeed",
       "published": "2026-08-13T06:17:41+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-13622 - Kubevirt: virt-handler-rhel9: kubevirt: virt-handler migration proxy follows symlinks allowing container escape to host",
-      "summary": "CVE ID :CVE-2026-13622\n  \nPublished : Aug. 12, 2026, 8:46 p.m. | 18 minutes ago\n  \nDescription :A symlink following vulnerability was found in KubeVirt's virt-handler migration proxy. During live migration, virt-handler dials Unix sockets inside the target virt-launcher pod via /proc//root/ paths using net.Dial() without symlink protection. These socket paths reside in qemu-owned directories writable by the virt-launcher user. An attacker with namespace edit and pods/exec permissions can replace a migration proxy socket with a symlink to the host CRI-O socket. Because virt-handler runs as root in the host mount namespace, absolute symlink targets resolve against the host filesystem, and the bidirectional io.Copy proxy relays attacker-controlled bytes to the container runtime, enabling full node compromise.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-13622\n  \nPublished : Aug. 12, 2026, 8:46 p.m. | 18 minutes ago\n  \nDescription :A symlink following vulnerability was found in KubeVirt's virt-handler migration proxy. During live migration, virt-handler dials Unix sockets inside the target virt-launcher pod via /proc//root/ paths using net.Dial() without symlink protection. These socket paths reside in qemu-owned directories writable by the virt-launcher user. An attacker with namespace edit and pods/exec permissions can replace a migration proxy socket with a symlink to the host CRI-O socket. Because virt-handler runs as root in the host mount namespace, absolute symlink targets resolve against the host filesystem, and the bidirectional io.Copy proxy relays attacker-controlled bytes to the container runtime, enabling full node compromise.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-13622\n  \n게시일 : 2026년 8월 12일 오후 8시 46분 | 18분 전\n  \n설명: KubeVirt의 virt-handler 마이그레이션 프록시에서 심볼릭 링크 다음 취약점이 발견되었습니다. 실시간 마이그레이션 중에 virt-handler는 심볼릭 링크 보호 없이 net.Dial()을 사용하여 /proc//root/ 경로를 통해 대상 virt-launcher 포드 내부의 Unix 소켓에 전화를 겁니다. 이러한 소켓 경로는 virt-launcher 사용자가 쓸 수 있는 qemu 소유 디렉터리에 있습니다. 네임스페이스 편집 및 Pods/exec 권한이 있는 공격자는 마이그레이션 프록시 소켓을 호스트 CRI-O 소켓에 대한 심볼릭 링크로 대체할 수 있습니다. virt-handler는 호스트 마운트 네임스페이스에서 루트로 실행되므로 절대 심볼릭 링크 대상은 호스트 파일 시스템에 대해 확인되고 양방향 io.Copy 프록시는 공격자가 제어하는 ​​바이트를 컨테이너 런타임에 전달하여 전체 노드 손상을 가능하게 합니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-13622\n2. 26.08.13 오전5:46\n3. A symlink following vulnerability was found in Kub",
-      "cve_id": "CVE-2026-13622",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13622",
-      "source": "cvefeed",
-      "published": "2026-08-13T05:46:15+09:00",
       "lang": "en"
     }
   ],
