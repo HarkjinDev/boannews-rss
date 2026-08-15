@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-15T12:33:19.211141+09:00",
+  "fetched_at": "2026-08-15T13:02:44.252043+09:00",
   "security_news": [
+    {
+      "title": "서강대 학생·졸업생 개인정보 18만건 유출…\"외부 공격\"",
+      "summary": "후 보안 침해 대응 절차에 따라 긴급 조치를 취했다\"고 밝혔다. 유출된 개인정보 항목은 학번, 성명, 소속... 이후 추가 피해 확산 방지를 위한 보안 조치도 진행 중이다. 서강대는 \"이번 사안을 매우 엄중하게 받아들이고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 서강대 학생·졸업생 개인정보 18만건 유출…\"외부 공격\" 후 보안 침해 대응 절차에 따라 \n2. 유출된 개인정보 항목은 학번, 성명, 소속... 이후 추가 피해 확산 방지를 위한 보안 조\n3. 서강대는 \"이번 사안을 매우 엄중하게 받아들이고...",
+      "link": "https://n.news.naver.com/mnews/article/421/0009115662?sid=102",
+      "source": "naver",
+      "published": "2026-08-15T12:50:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "롯데카드, AI 보안 협의체 핵심 꿰찼다…'선제 방어' 구축 속도",
       "summary": "최근 금융사에 대한 해킹과 데이터 유출 위협이 커지면서 인프라 보안의 중요성이 대두되고 있다. 국가·산업·생태계 차원의 정보 보호 강화를 위해 선제적인 취약점 탐색과 자동화 대응 체계 구축이 요구되는 배경이다....",
@@ -2100,21 +2112,24 @@
       "source": "naver",
       "published": "2026-08-12T13:16:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[신한카드 ESG-G] ESG를 경영진 평가에…정보유출 뒤 내부통제 재정비",
-      "summary": "회사 측은 사고가 해킹 등 외부 침투에 따른 것은 아니며 보고서 작성 시점까지 유출 정보로 인한 피해는 확인되지 않았다는 입장이다. 이후 대응은 내부 정보 접근 과정에 초점이 맞춰졌다. 개인정보 접근권한을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [신한카드 ESG-G] ESG를 경영진 평가에…정보유출 뒤 내부통제 재정비 회사 측은 사고\n2. 이후 대응은 내부 정보 접근 과정에 초점이 맞춰졌다.\n3. 개인정보 접근권한을...",
-      "link": "http://www.press9.kr/news/articleView.html?idxno=80969",
-      "source": "naver",
-      "published": "2026-08-12T12:38:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-15341 - User Session Synchronizer <= 1.4.0 - Unauthenticated Authentication Bypass to Account Takeover via 'ussync-key', 'ussync-token', and 'ussync-ref' Parameters",
+      "summary": "CVE ID :CVE-2026-15341\n  \nPublished : Aug. 15, 2026, 3:16 a.m. | 22 minutes ago\n  \nDescription :The User Session Synchronizer plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 1.4.0. The `synchronize_session()` function, hooked on `init` and therefore executed on every request, performs no nonce, capability, or shared-secret validation against the attacker-supplied `ussync-key`, `ussync-token`, and `ussync-ref` parameters; when `ussync-key` references an unregistered slot, `get_option()` returns `false` for both the secret key and the domain list, causing the AES-256-CBC encryption key to degrade to the fully predictable `md5('')` and the referer allowlist to collapse to an empty-string match, while the AES IV is unconditionally hard-coded as `md5('another-secret')`. This makes it possible for unauthenticated attackers to supply a crafted request encrypting any known or guessable user email address in the `ussync-ref` parameter, causing the handler to call `wp_set_auth_cookie()` for the matched user and granting full authentication as that user — including administrators — with no prior knowledge of site secrets.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-15341\n  \nPublished : Aug. 15, 2026, 3:16 a.m. | 22 minutes ago\n  \nDescription :The User Session Synchronizer plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 1.4.0. The `synchronize_session()` function, hooked on `init` and therefore executed on every request, performs no nonce, capability, or shared-secret validation against the attacker-supplied `ussync-key`, `ussync-token`, and `ussync-ref` parameters; when `ussync-key` references an unregistered slot, `get_option()` returns `false` for both the secret key and the domain list, causing the AES-256-CBC encryption key to degrade to the fully predictable `md5('')` and the referer allowlist to collapse to an empty-string match, while the AES IV is unconditionally hard-coded as `md5('another-secret')`. This makes it possible for unauthenticated attackers to supply a crafted request encrypting any known or guessable user email address in the `ussync-ref` parameter, causing the handler to call `wp_set_auth_cookie()` for the matched user and granting full authentication as that user — including administrators — with no prior knowledge of site secrets.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-15341 - 사용자 세션 동기화 장치 <= 1.4.0 - 'ussync-key', 'ussync-token' 및 'ussync-ref' 매개변수를 통해 계정 탈취에 대한 인증되지 않은 인증 우회",
+      "summary_ko": "CVE ID:CVE-2026-15341\n  \n게시일 : 2026년 8월 15일 오전 3시 16분 | 22분 전\n  \n설명:WordPress용 사용자 세션 동기화 플러그인은 1.4.0을 포함한 모든 버전에서 계정 탈취로 이어지는 인증 우회에 취약합니다. `init`에 연결되어 모든 요청에 ​​대해 실행되는 `synchronize_session()` 함수는 공격자가 제공한 `ussync-key`, `ussync-token` 및 `ussync-ref` 매개변수에 대해 nonce, 기능 또는 공유 비밀 확인을 수행하지 않습니다. `ussync-key`가 등록되지 않은 슬롯을 참조하면 `get_option()`은 비밀 키와 도메인 목록 모두에 대해 `false`를 반환하여 AES-256-CBC 암호화 키가 완전히 예측 가능한 `md5('')`로 저하되고 리퍼러 허용 목록이 빈 문자열 일치로 축소되는 반면 AES IV는 무조건 `md5('another-secret')`로 하드 코딩됩니다. 이를 통해 인증되지 않은 공격자가 `ussync-ref` 매개변수에서 알려졌거나 추측 가능한 사용자 이메일 주소를 암호화하는 조작된 요청을 제공할 수 있습니다. 그러면 핸들러가 일치하는 사용자에 대해 `wp_set_auth_cookie()`를 호출하고 사이트 비밀에 대한 사전 지식 없이 관리자를 포함하여 해당 사용자에게 전체 인증을 부여하게 됩니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-15341\n2. 26.08.15 오후12:16\n3. The User Session Synchronizer plugin for WordPress",
+      "cve_id": "CVE-2026-15341",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15341",
+      "source": "cvefeed",
+      "published": "2026-08-15T12:16:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "Chromium: CVE-2026-19560 Use after free in Blink",
       "summary": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.",
@@ -2653,21 +2668,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-19594",
       "source": "cvefeed",
       "published": "2026-08-12T14:22:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12233 - Uninitialized mutex in TLS trusted-credential backend causes kernel NULL-deref DoS under contention",
-      "summary": "CVE ID :CVE-2026-12233\n  \nPublished : Aug. 12, 2026, 3:54 a.m. | 1 hour, 9 minutes ago\n  \nDescription :The PSA Protected Storage credential backend (subsys/net/lib/tls_credentials/tls_credentials_trusted.c) declared its credential-store mutex as a plain zero-filled static struct k_mutex credential_lock; and never called k_mutex_init() on it. A statically zero-filled k_mutex has an uninitialized wait queue (its dlist head/tail are NULL instead of the self-referential sentinels that k_mutex_init/K_MUTEX_DEFINE install). The uncontended lock path does not touch the wait queue, so the defect is latent and serialized use behaves correctly.\n\nWhen two execution contexts contend on the lock, k_mutex_lock() pends the blocking thread on the wait queue via z_pend_curr(), which calls sys_dlist_append() on the zeroed list and dereferences a NULL tail pointer (tail->next = node), faulting the kernel. The lock is held during TLS handshake credential loading and by all credential add/get/delete operations, so a deployment performing concurrent TLS handshakes (for example a server handling multiple simultaneous connections from a remote peer) or a credential-management operation concurrent with a handshake can trigger the dereference.\n\nThe impact is a denial of service: a deterministic kernel panic / device reset on the first contention. There is no memory corruption beyond the NULL dereference and no confidentiality or integrity impact; mutual exclusion on the fast path remains correct. Exposure is limited to builds with CONFIG_TLS_CREDENTIALS_BACKEND_PROTECTED_STORAGE enabled (PSA Protected Storage / TF-M platforms); the default volatile RAM backend initializes its lock correctly and is unaffected.\n\nThe fix initializes the mutex statically with K_MUTEX_DEFINE(credential_lock), providing a valid wait queue so the contended path no longer touches a NULL list.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12233\n  \nPublished : Aug. 12, 2026, 3:54 a.m. | 1 hour, 9 minutes ago\n  \nDescription :The PSA Protected Storage credential backend (subsys/net/lib/tls_credentials/tls_credentials_trusted.c) declared its credential-store mutex as a plain zero-filled static struct k_mutex credential_lock; and never called k_mutex_init() on it. A statically zero-filled k_mutex has an uninitialized wait queue (its dlist head/tail are NULL instead of the self-referential sentinels that k_mutex_init/K_MUTEX_DEFINE install). The uncontended lock path does not touch the wait queue, so the defect is latent and serialized use behaves correctly.\n\nWhen two execution contexts contend on the lock, k_mutex_lock() pends the blocking thread on the wait queue via z_pend_curr(), which calls sys_dlist_append() on the zeroed list and dereferences a NULL tail pointer (tail->next = node), faulting the kernel. The lock is held during TLS handshake credential loading and by all credential add/get/delete operations, so a deployment performing concurrent TLS handshakes (for example a server handling multiple simultaneous connections from a remote peer) or a credential-management operation concurrent with a handshake can trigger the dereference.\n\nThe impact is a denial of service: a deterministic kernel panic / device reset on the first contention. There is no memory corruption beyond the NULL dereference and no confidentiality or integrity impact; mutual exclusion on the fast path remains correct. Exposure is limited to builds with CONFIG_TLS_CREDENTIALS_BACKEND_PROTECTED_STORAGE enabled (PSA Protected Storage / TF-M platforms); the default volatile RAM backend initializes its lock correctly and is unaffected.\n\nThe fix initializes the mutex statically with K_MUTEX_DEFINE(credential_lock), providing a valid wait queue so the contended path no longer touches a NULL list.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-12233 - TLS 신뢰할 수 있는 자격 증명 백엔드의 초기화되지 않은 뮤텍스로 인해 경합 중인 커널 NULL-deref DoS 발생",
-      "summary_ko": "CVE ID:CVE-2026-12233\n  \n게시일 : 2026년 8월 12일 오전 3시 54분 | 1시간, 9분 전\n  \n설명:PSA 보호 저장소 자격 증명 백엔드(subsys/net/lib/tls_credentials/tls_credentials_trusted.c)는 자격 증명 저장소 뮤텍스를 0으로 채워진 일반 정적 구조체 k_mutex credential_lock으로 선언했습니다. k_mutex_init()를 호출한 적이 없습니다. 정적으로 0으로 채워진 k_mutex에는 초기화되지 않은 대기 큐가 있습니다(dlist 헤드/테일은 k_mutex_init/K_MUTEX_DEFINE이 설치하는 자체 참조 센티널 대신 NULL입니다). 경합되지 않은 잠금 경로는 대기 대기열에 닿지 않으므로 결함이 잠재되어 있으며 직렬화된 사용이 올바르게 작동합니다.\n\n두 개의 실행 컨텍스트가 잠금에 대해 경쟁할 때 k_mutex_lock()은 z_pend_curr()를 통해 대기 대기열에 차단 스레드를 보류합니다. 이는 0으로 지정된 목록에서 sys_dlist_append()를 호출하고 NULL 꼬리 포인터(tail->next = 노드)를 역참조하여 커널에 오류를 발생시킵니다. 잠금은 TLS 핸드셰이크 자격 증명 로드 중에 모든 자격 증명 추가/가져오기/삭제 작업에 의해 유지되므로 동시 TLS 핸드셰이크를 수행하는 배포(예: 원격 피어의 여러 동시 연결을 처리하는 서버) 또는 핸드셰이크와 동시에 자격 증명 관리 작업이 역참조를 트리거할 수 있습니다.\n\n그 영향은 서비스 거부입니다. 첫 번째 경합에서 결정론적 커널 패닉/장치 재설정이 발생합니다. NULL 역참조를 넘어서는 메모리 손상이 없으며 기밀성이나 무결성에 미치는 영향도 없습니다. 빠른 경로의 상호 배제는 여전히 정확합니다. 노출은 CONFIG_TLS_CREDENTIALS_BACKEND_PROTECTED_STORAGE가 활성화된 빌드로 제한됩니다(PSA 보호 스토리지/TF-M 플랫폼). 기본 휘발성 RAM 백엔드는 잠금을 올바르게 초기화하며 영향을 받지 않습니다.\n\n수정 사항은 K_MUTEX_DEFINE(credential_lock)을 사용하여 뮤텍스를 정적으로 초기화하여 경합 경로가 더 이상 NULL 목록에 닿지 않도록 유효한 대기 대기열을 제공합니다.\n  \n심각도: 5.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12233\n2. 26.08.12 오후12:54\n3. The PSA Protected Storage credential backend (subs",
-      "cve_id": "CVE-2026-12233",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12233",
-      "source": "cvefeed",
-      "published": "2026-08-12T12:54:38+09:00",
       "lang": "en"
     }
   ],
