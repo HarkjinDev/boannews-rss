@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-16T00:33:07.340263+09:00",
+  "fetched_at": "2026-08-16T01:03:23.601645+09:00",
   "security_news": [
     {
       "title": "지오서버 제로데이 공개 직후 공격자 움직였다…수백 건 공격 탐색 포착",
@@ -1824,21 +1824,24 @@
       "source": "naver",
       "published": "2026-08-13T02:46:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Lazarus hackers exploited Windows zero-day to target defense firms",
-      "summary": "North Korean hackers have been exploiting a Windows zero-day vulnerability (CVE-2026-68820) to target defense-sector companies as part of the Operation Dream Job campaign. [...]",
-      "content": "",
-      "title_ko": "라자루스(Lazarus) 해커, 방산업체 표적으로 윈도우 제로데이 악용",
-      "summary_ko": "북한 해커들은 Operation Dream Job 캠페인의 일환으로 Windows 제로데이 취약점(CVE-2026-68820)을 악용하여 국방 부문 기업을 표적으로 삼았습니다. [...]",
-      "summary_3lines": "1. Lazarus 해커, Windows 제로데이를 악용하여 방산업체 표적으로 삼다 북한 해커가",
-      "link": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-exploited-windows-zero-day-to-target-defense-firms/",
-      "source": "bleepingcomputer",
-      "published": "2026-08-13T00:38:08+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-15689 - Dancer2::Plugin::Auth::Extensible versions through 0.713 for Perl allow password reset link poisoning via the request Host header in _default_email_password_reset and _default_welcome_send",
+      "summary": "CVE ID :CVE-2026-15689\n  \nPublished : Aug. 15, 2026, 2:17 p.m. | 1 hour, 38 minutes ago\n  \nDescription :Dancer2::Plugin::Auth::Extensible versions through 0.713 for Perl allow password reset link poisoning via the request Host header in _default_email_password_reset and _default_welcome_send.\n\nBoth default emails emit a link of the form `$base/login/$code`, whose authority comes from the request Host header, or from X-Forwarded-Host under behind_proxy (obtained from Dancer2's request->base function). A POST to /login carrying submit_reset and a username needs no authentication: it stores a fresh reset code against that account and mails the account holder a link to a host of the sender's choosing. The welcome mail takes the same path when the application calls create_user with email_welcome set.\n\nThrough 0.711 the handlers read `request->uri_base` and `request->base` directly; Versions 0.712 and later provide an uri_base configuration key that defaults to the untrusted `request->uri_base` when unset.\n\nThe default configuration with reset_password_handler enabled and the default message text, a recipient who follows the link hands a working reset code to the sender's host, which is enough to take over the account.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-15689\n  \nPublished : Aug. 15, 2026, 2:17 p.m. | 1 hour, 38 minutes ago\n  \nDescription :Dancer2::Plugin::Auth::Extensible versions through 0.713 for Perl allow password reset link poisoning via the request Host header in _default_email_password_reset and _default_welcome_send.\n\nBoth default emails emit a link of the form `$base/login/$code`, whose authority comes from the request Host header, or from X-Forwarded-Host under behind_proxy (obtained from Dancer2's request->base function). A POST to /login carrying submit_reset and a username needs no authentication: it stores a fresh reset code against that account and mails the account holder a link to a host of the sender's choosing. The welcome mail takes the same path when the application calls create_user with email_welcome set.\n\nThrough 0.711 the handlers read `request->uri_base` and `request->base` directly; Versions 0.712 and later provide an uri_base configuration key that defaults to the untrusted `request->uri_base` when unset.\n\nThe default configuration with reset_password_handler enabled and the default message text, a recipient who follows the link hands a working reset code to the sender's host, which is enough to take over the account.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-15689 - Perl용 0.713까지의 Dancer2::Plugin::Auth::확장 가능한 버전에서는 _default_email_password_reset 및 _default_welcome_send의 요청 호스트 헤더를 통해 비밀번호 재설정 링크 중독을 허용합니다.",
+      "summary_ko": "CVE ID:CVE-2026-15689\n  \n게시일 : 2026년 8월 15일 오후 2시 17분 | 1시간 38분 전\n  \n설명 :Dancer2::Plugin::Auth::Perl용 0.713까지의 확장 가능 버전은 _default_email_password_reset 및 _default_welcome_send의 요청 호스트 헤더를 통한 비밀번호 재설정 링크 중독을 허용합니다.\n\n두 기본 이메일 모두 '$base/login/$code' 형식의 링크를 내보냅니다. 이 링크의 권한은 요청 Host 헤더 또는 Behind_proxy 아래의 X-Forwarded-Host(Dancer2의 request->base 함수에서 가져옴)에서 가져옵니다. submit_reset 및 사용자 이름을 전달하는 /login에 대한 POST에는 인증이 필요하지 않습니다. 해당 계정에 대한 새로운 재설정 코드를 저장하고 계정 소유자에게 보낸 사람이 선택한 호스트에 대한 링크를 메일로 보냅니다. 환영 메일은 애플리케이션이 email_welcome이 설정된 create_user를 호출할 때 동일한 경로를 사용합니다.\n\n0.711을 통해 핸들러는 `request->uri_base` 및 `request->base`를 직접 읽습니다. 버전 0.712 이상에서는 설정 해제 시 신뢰할 수 없는 'request->uri_base'로 기본 설정되는 uri_base 구성 키를 제공합니다.\n\nReset_password_handler가 활성화된 기본 구성과 기본 메시지 텍스트에서는 링크를 따라가는 수신자가 작동하는 재설정 코드를 발신자의 호스트에 전달합니다. 이 코드는 계정을 인수하기에 충분합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-15689\n2. 26.08.15 오후11:17\n3. Dancer2::Plugin::Auth::Extensible versions through",
+      "cve_id": "CVE-2026-15689",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15689",
+      "source": "cvefeed",
+      "published": "2026-08-15T23:17:06+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-74577 - net: mpls: initialize rtm_tos in mpls_getroute()",
       "summary": "CVE ID :CVE-2026-74577\n  \nPublished : Aug. 15, 2026, 1:18 p.m. | 54 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet: mpls: initialize rtm_tos in mpls_getroute()\n\nmpls_getroute() builds the RTM_NEWROUTE reply to an RTM_GETROUTE\nrequest by filling a struct rtmsg allocated from an skb whose data\narea is not zeroed (alloc_skb(NLMSG_GOODSIZE, ...)). It sets every\nfield of the header except rtm_tos:\n\n\tr = nlmsg_data(nlh);\n\tr->rtm_family\t = AF_MPLS;\n\tr->rtm_dst_len\t= 20;\n\tr->rtm_src_len\t= 0;\n\tr->rtm_table\t= RT_TABLE_MAIN;\n\tr->rtm_type\t= RTN_UNICAST;\n\tr->rtm_scope\t= RT_SCOPE_UNIVERSE;\n\tr->rtm_protocol = rt->rt_protocol;\n\tr->rtm_flags\t= 0;\n\nstruct rtmsg has no padding, so the one uninitialised byte rtm_tos\n(offset 3) is copied straight to user space on recvmsg(), leaking a\nbyte of uninitialised heap memory. This is in contrast to\nmpls_dump_route(), which fills the very same header and does set\nrtm_tos = 0.\n\nInitialize rtm_tos to 0, matching mpls_dump_route().\n\nReproduced with KMSAN by adding an MPLS route and issuing a\nnon-RTM_F_FIB_MATCH RTM_GETROUTE for its label:\n\n  BUG: KMSAN: kernel-infoleak in _copy_to_iter+0x36c/0x33f0\n   _copy_to_iter+0x36c/0x33f0\n   __skb_datagram_iter+0x196/0x12c0\n   skb_copy_datagram_iter+0x5b/0x210\n   netlink_recvmsg+0x37b/0xef0\n   ...\n  Uninit was created at:\n   __alloc_skb+0x8ca/0x10e0\n   mpls_getroute+0x1280/0x3a40\n   rtnetlink_rcv_msg+0x1138/0x15a0\n   ...\n  Byte 19 of 64 is uninitialized\n\n(byte 19 = nlmsghdr(16) + rtmsg offset 3 = rtm_tos)\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
