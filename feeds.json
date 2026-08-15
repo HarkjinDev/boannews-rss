@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-15T21:32:31.391384+09:00",
+  "fetched_at": "2026-08-15T22:02:36.488550+09:00",
   "security_news": [
+    {
+      "title": "지오서버 제로데이 공개 직후 공격자 움직였다…수백 건 공격 탐색 포착",
+      "summary": "15일 현재 취약점에 CVE 번호가 부여되지 않았으며 공식 보안 패치도 나오지 않았다. 공개 수시간 만에 공격 시작 취약점은 지난 8월 12일 보안 연구자 'q1uf3ng'가 공개했다. 보안업체 와치타워(watchTowr)는 공개 후...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 지오서버 제로데이 공개 직후 공격자 움직였다…수백 건 공격 탐색 포착 15일 현재 취약점에\n2. 공개 수시간 만에 공격 시작 취약점은 지난 8월 12일 보안 연구자 'q1uf3ng'가 공\n3. 보안업체 와치타워(watchTowr)는 공개 후...",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208067",
+      "source": "naver",
+      "published": "2026-08-15T21:36:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "중국 해커 '무스탕 판다', 정부기관 공격에 커널 루트킷 활용",
       "summary": "중국계 해킹그룹으로 알려진 무스탕 판다가 윈도우 커널 영역에서 동작하는 루트킷을 이용해 악성코드와 명령제어 통신 흔적을 숨기는 공격을 벌인 정황이 확인됐다. 카스퍼스키는 최근 무스탕 판다가 사용하는...",
@@ -2389,36 +2401,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-41127",
       "source": "msrc",
       "published": "2026-08-12T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47227 - Admidio module-administrator can delete or reorder categories owned by other modules via dead authorization check in `modules/categories.php`",
-      "summary": "CVE ID :CVE-2026-47227\n  \nPublished : Aug. 12, 2026, 12:58 p.m. | 52 minutes ago\n  \nDescription :Admidio is an open-source user management solution. `modules/categories.php` checks that the supplied `type` parameter (`ANN`, `EVT`, `ROL`, `USF`, …) corresponds to a module the actor administers. The follow-up \"is this specific category editable by me\" check at lines 56-61 is dead code because it compares `$getType` (a category-type code) against mode names (`edit`/`save`/`delete`); the condition is permanently false, so `$category->isEditable()` is never invoked. Prior to version 5.0.10, the `delete`, `sequence`, and `save` switch cases load the category by the supplied UUID and act on it without re-checking that the category belongs to a module the actor administers. A user holding only one module-administrator right can therefore destroy or reorder empty categories belonging to *other* modules — for example, an announcements administrator can delete role categories, profile-field categories, or weblink categories that they have no right to touch. Version 5.0.10 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47227\n  \nPublished : Aug. 12, 2026, 12:58 p.m. | 52 minutes ago\n  \nDescription :Admidio is an open-source user management solution. `modules/categories.php` checks that the supplied `type` parameter (`ANN`, `EVT`, `ROL`, `USF`, …) corresponds to a module the actor administers. The follow-up \"is this specific category editable by me\" check at lines 56-61 is dead code because it compares `$getType` (a category-type code) against mode names (`edit`/`save`/`delete`); the condition is permanently false, so `$category->isEditable()` is never invoked. Prior to version 5.0.10, the `delete`, `sequence`, and `save` switch cases load the category by the supplied UUID and act on it without re-checking that the category belongs to a module the actor administers. A user holding only one module-administrator right can therefore destroy or reorder empty categories belonging to *other* modules — for example, an announcements administrator can delete role categories, profile-field categories, or weblink categories that they have no right to touch. Version 5.0.10 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47227 - Admidio 모듈 관리자는 `modules/categories.php`에서 비활성 인증 확인을 통해 다른 모듈이 소유한 카테고리를 삭제하거나 재정렬할 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-47227\n  \n게시일 : 2026년 8월 12일 오후 12시 58분 | 52분 전\n  \n설명:Admidio는 오픈 소스 사용자 관리 솔루션입니다. `modules/categories.php`는 제공된 `type` 매개변수(`ANN`, `EVT`, `ROL`, `USF`, …)가 행위자가 관리하는 모듈에 해당하는지 확인합니다. 56-61행의 \"이 특정 카테고리는 내가 편집할 수 있습니까?\" 확인은 `$getType`(카테고리 유형 코드)을 모드 이름(`edit`/`save`/`delete`)과 비교하기 때문에 데드 코드입니다. 조건은 영구적으로 false이므로 `$category->isEditable()`은 호출되지 않습니다. 버전 5.0.10 이전에는 '삭제', '순서' 및 '저장' 스위치 케이스가 제공된 UUID로 카테고리를 로드하고 해당 카테고리가 행위자가 관리하는 모듈에 속하는지 다시 확인하지 않고 이에 대해 조치를 취했습니다. 따라서 하나의 모듈 관리자 권한만 보유한 사용자는 *기타* 모듈에 속한 빈 범주를 삭제하거나 재정렬할 수 있습니다. 예를 들어 공지 관리자는 권한이 없는 역할 범주, 프로필 필드 범주 또는 웹링크 범주를 삭제할 수 있습니다. 버전 5.0.10에서는 문제가 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-47227\n2. 26.08.12 오후9:58\n3. Admidio is an open-source user management solution",
-      "cve_id": "CVE-2026-47227",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47227",
-      "source": "cvefeed",
-      "published": "2026-08-12T21:58:29+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53996 - NetBSD hdaudio(4) Driver Privilege Bypass Use-After-Free via HDAUDIO_FGRP_SETCONFIG ioctl",
-      "summary": "CVE ID :CVE-2026-53996\n  \nPublished : Aug. 12, 2026, 12:42 p.m. | 19 minutes ago\n  \nDescription :NetBSD's hdaudio(4) driver in sys/dev/hdaudio/hdaudio.c contains a missing access control vulnerability that allows unprivileged local attackers to invoke the HDAUDIO_FGRP_SETCONFIG ioctl without elevated permissions by exploiting the absence of an access check on /dev/hdaudioN device nodes. Attackers can repeatedly issue HDAUDIO_FGRP_SETCONFIG from one thread while keeping DMA and IRQs live from a second thread to trigger a use-after-free race condition in hdafg_detach() between stream_stop() and stream_disestablish(), where a latched DMA interrupt dereferences a freed callback pointer, resulting in outcomes ranging from audio-subsystem denial of service and kernel panic to potential local kernel privilege escalation.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53996\n  \nPublished : Aug. 12, 2026, 12:42 p.m. | 19 minutes ago\n  \nDescription :NetBSD's hdaudio(4) driver in sys/dev/hdaudio/hdaudio.c contains a missing access control vulnerability that allows unprivileged local attackers to invoke the HDAUDIO_FGRP_SETCONFIG ioctl without elevated permissions by exploiting the absence of an access check on /dev/hdaudioN device nodes. Attackers can repeatedly issue HDAUDIO_FGRP_SETCONFIG from one thread while keeping DMA and IRQs live from a second thread to trigger a use-after-free race condition in hdafg_detach() between stream_stop() and stream_disestablish(), where a latched DMA interrupt dereferences a freed callback pointer, resulting in outcomes ranging from audio-subsystem denial of service and kernel panic to potential local kernel privilege escalation.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53996 - NetBSD hdaudio(4) HDAUDIO_FGRP_SETCONFIG ioctl을 통해 드라이버 권한 우회 Use-After-Free",
-      "summary_ko": "CVE ID:CVE-2026-53996\n  \n게시일 : 2026년 8월 12일 오후 12시 42분 | 19분 전\n  \n설명:sys/dev/hdaudio/hdaudio.c에 있는 NetBSD의 hdaudio(4) 드라이버에는 권한이 없는 로컬 공격자가 /dev/hdaudioN 장치 노드에 대한 액세스 확인 부재를 이용하여 상승된 권한 없이 HDAUDIO_FGRP_SETCONFIG ioctl을 호출할 수 있도록 허용하는 누락된 액세스 제어 취약점이 포함되어 있습니다. 공격자는 두 번째 스레드에서 DMA 및 IRQ를 유지하면서 한 스레드에서 HDAUDIO_FGRP_SETCONFIG를 반복적으로 실행하여 stream_stop()과 stream_disfound() 사이의 hdafg_detach()에서 use-after-free 경쟁 조건을 트리거할 수 있습니다. 여기서 래치된 DMA 인터럽트는 해제된 콜백 포인터를 역참조하여 오디오 하위 시스템 서비스 거부 및 커널 패닉부터 잠재적인 로컬 커널 권한 상승까지 다양한 결과를 초래합니다.\n  \n심각도: 7.3 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53996\n2. 26.08.12 오후9:42\n3. NetBSD's hdaudio(4) driver in sys/dev/hdaudio/hdau",
-      "cve_id": "CVE-2026-53996",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53996",
-      "source": "cvefeed",
-      "published": "2026-08-12T21:42:33+09:00",
       "lang": "en"
     }
   ],
