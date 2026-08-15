@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-15T23:32:40.717936+09:00",
+  "fetched_at": "2026-08-16T00:02:34.435561+09:00",
   "security_news": [
     {
       "title": "지오서버 제로데이 공개 직후 공격자 움직였다…수백 건 공격 탐색 포착",
@@ -1824,30 +1824,6 @@
       "source": "bleepingcomputer",
       "published": "2026-08-13T00:38:08+09:00",
       "lang": "en"
-    },
-    {
-      "title": "SharePoint Vulnerability Exploited Shortly After PoC Release",
-      "summary": "The vulnerability was patched by Microsoft in July and CISA warned that it could end up being exploited in the wild.\nThe post SharePoint Vulnerability Exploited Shortly After PoC Release appeared first on SecurityWeek.",
-      "content": "",
-      "title_ko": "PoC 출시 직후 SharePoint 취약점 악용",
-      "summary_ko": "이 취약점은 지난 7월 마이크로소프트에 의해 패치되었으며 CISA는 이 취약점이 결국 악용될 수 있다고 경고했습니다.\nPoC 릴리스 직후 악용된 SharePoint 취약점 게시물이 SecurityWeek에 처음으로 게재되었습니다.",
-      "summary_3lines": "1. 마이크로소프트 SharePoint 취약점, PoC 공개 직후 악용\n2. 특정 SharePoint 취약점, 실제 공격에서 이용되어\n3. CISA 경고대로 발생, 패치 후에도 주의 필요",
-      "link": "https://www.securityweek.com/sharepoint-vulnerability-exploited-shortly-after-poc-release/",
-      "source": "securityweek",
-      "published": "2026-08-12T23:47:01+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "북한의 '15억 달러' 암호화폐 해킹 수법...바이비트 소장에 공개",
-      "summary": "북한 연계 해킹조직 라자루스가 정상적인 가상화폐 거래로 위장해 바이비트 임원들의 승인을 받아내는... 북한 연계 해킹조직 라자루스 그룹은 가상화폐 거래소 바이비트가 가상자산을 안전하게 보관하는 오프라인 계좌...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 라자루스, 바이비트 임원 속여 15억 달러 암호화폐 탈취 시도\n2. 정상 거래 위장, 오프라인 계좌 접근 권한 획득 공격\n3. 북한 연계 조직, 가상자산 탈취 위해 정교한 수법 사용",
-      "link": "https://www.voakorea.com/a/8185525.html",
-      "source": "naver",
-      "published": "2026-08-12T23:41:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2434,21 +2410,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-13622",
       "source": "cvefeed",
       "published": "2026-08-13T05:46:15+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-73431 - Reusable Account Activation and Recovery Tokens Allow Repeated Account Takeover in vulnerability-lookup",
-      "summary": "CVE ID :CVE-2026-73431\n  \nPublished : Aug. 12, 2026, 2:32 p.m. | 30 minutes ago\n  \nDescription :Vulnerability-Lookup contains an \nauthentication weakness in its account activation and password-recovery \nmechanism. Activation and recovery links were generated using stateless \nsigned tokens containing only the user's login. Although the token \nsignature and age were validated, the application did not track whether a\n token had already been successfully used. As a result, a captured \nactivation or password-recovery link remained valid for the entire \nconfigured TOKEN_VALIDITY_PERIOD, even after the associated password had been changed. \n\n\nAn attacker who obtains a valid \nactivation or recovery token could therefore replay it multiple times \nduring its validity period to set a new password and repeatedly take \ncontrol of the affected account. In addition, tokens were not bound to a\n specific purpose, allowing the same token mechanism to be used across \nactivation and recovery workflows. The patch introduces purpose-bound \ntokens and a random nonce whose SHA-256 digest is stored with the user \naccount. The nonce is invalidated after a successful password change, \nmaking tokens single-use, while issuing a new token invalidates any \npreviously issued token.  The password-setting operation now explicitly consumes the token before committing the account change. \n\n\nSuccessful exploitation requires \nthe attacker to obtain a currently valid activation or recovery link, \nbut does not require knowledge of the victim's existing password or an \nauthenticated session.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-73431\n  \nPublished : Aug. 12, 2026, 2:32 p.m. | 30 minutes ago\n  \nDescription :Vulnerability-Lookup contains an \nauthentication weakness in its account activation and password-recovery \nmechanism. Activation and recovery links were generated using stateless \nsigned tokens containing only the user's login. Although the token \nsignature and age were validated, the application did not track whether a\n token had already been successfully used. As a result, a captured \nactivation or password-recovery link remained valid for the entire \nconfigured TOKEN_VALIDITY_PERIOD, even after the associated password had been changed. \n\n\nAn attacker who obtains a valid \nactivation or recovery token could therefore replay it multiple times \nduring its validity period to set a new password and repeatedly take \ncontrol of the affected account. In addition, tokens were not bound to a\n specific purpose, allowing the same token mechanism to be used across \nactivation and recovery workflows. The patch introduces purpose-bound \ntokens and a random nonce whose SHA-256 digest is stored with the user \naccount. The nonce is invalidated after a successful password change, \nmaking tokens single-use, while issuing a new token invalidates any \npreviously issued token.  The password-setting operation now explicitly consumes the token before committing the account change. \n\n\nSuccessful exploitation requires \nthe attacker to obtain a currently valid activation or recovery link, \nbut does not require knowledge of the victim's existing password or an \nauthenticated session.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-73431 - 재사용 가능한 계정 활성화 및 복구 토큰으로 인해 취약점 조회 시 반복적인 계정 탈취가 허용됩니다.",
-      "summary_ko": "CVE ID:CVE-2026-73431\n  \n게시일 : 2026년 8월 12일 오후 2시 32분 | 30분 전\n  \n설명: 취약점 조회에는 \n계정 활성화 및 비밀번호 복구의 인증 취약점 \n메커니즘. 상태 비저장을 사용하여 활성화 및 복구 링크가 생성되었습니다. \n사용자의 로그인만 포함하는 서명된 토큰. 비록 토큰이지만 \n서명과 나이가 확인되었지만 응용 프로그램은 서명 여부를 추적하지 않았습니다.\n 토큰이 이미 성공적으로 사용되었습니다. 그 결과 포착된 \n활성화 또는 비밀번호 복구 링크는 전체 기간 동안 유효합니다. \n관련 비밀번호가 변경된 후에도 TOKEN_VALIDITY_PERIOD를 구성했습니다. \n\n\n유효한 공격자를 획득한 공격자 \n따라서 활성화 또는 복구 토큰은 여러 번 재생할 수 있습니다. \n유효기간 동안 새 비밀번호를 설정하고 반복적으로 비밀번호를 \n영향을 받은 계정을 제어합니다. 또한 토큰은\n 특정 목적을 통해 동일한 토큰 메커니즘을 사용할 수 있습니다. \n활성화 및 복구 워크플로. 패치에는 목적에 따른 기능이 도입되었습니다. \nSHA-256 다이제스트가 사용자와 함께 저장되는 토큰 및 임의 nonce \n계정. 비밀번호 변경이 성공하면 nonce가 무효화됩니다. \n토큰을 일회용으로 만들고 새 토큰을 발행하면 모든 것이 무효화됩니다. \n이전에 발행된 토큰.  이제 암호 설정 작업에서는 계정 변경을 커밋하기 전에 명시적으로 토큰을 사용합니다. \n\n\n성공적인 악용에는 다음이 필요합니다. \n공격자가 현재 유효한 활성화 또는 복구 링크를 얻기 위해, \n하지만 피해자의 기존 비밀번호나 비밀번호를 알 필요는 없습니다. \n인증된 세션.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-73431\n2. 26.08.12 오후11:32\n3. Vulnerability-Lookup contains an authentication we",
-      "cve_id": "CVE-2026-73431",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73431",
-      "source": "cvefeed",
-      "published": "2026-08-12T23:32:56+09:00",
       "lang": "en"
     }
   ],
