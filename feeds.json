@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-16T07:02:09.115567+09:00",
+  "fetched_at": "2026-08-16T07:32:04.234215+09:00",
   "security_news": [
+    {
+      "title": "정재헌vs박윤영vs홍범식…이통3사, 클라우드 기반 '공공기관 AX' 공략전",
+      "summary": "KT AI 메일보안은 랜섬웨어, 피싱메일 등 이메일을 통한 사이버 위협을 AI 기술로 탐지·차단하는 클라우드 기반 보안 서비스다. 스팸 차단·AI 분석·APT(지능형 지속 공격) 대응 등 3단계 필터링 체계를 통해 악성...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 정재헌vs박윤영vs홍범식…이통3사, 클라우드 기반 '공공기관 AX' 공략전 KT AI 메일\n2. 스팸 차단·AI 분석·APT(지능형 지속 공격) 대응 등 3단계 필터링 체계를 통해 악성.",
+      "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5051296",
+      "source": "naver",
+      "published": "2026-08-16T07:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "북한 해킹 13% 급증…암호화폐 넘어 IT 개발자까지 노렸다",
       "summary": "구직자까지 보안 경계를 높여야 한다는 지적이 나온다. 러시아의 사이버 공격도 크게 늘었다. 러시아 배후... 생성형 AI와 딥페이크가 공격자의 신분을 감추거나 피해자를 속이는 데 활용되면서 기존의 보안 체계만으로...",
@@ -2344,21 +2356,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-50544",
       "source": "cvefeed",
       "published": "2026-08-13T08:18:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-73493 - http4s-blaze-server: Unbounded WebSocket message aggregation",
-      "summary": "CVE ID :CVE-2026-73493\n  \nPublished : Aug. 12, 2026, 10:17 p.m. | 47 minutes ago\n  \nDescription :Http4s (http4s-blaze-server) is a minimal, idiomatic Scala interface for HTTP services. Prior to 0.23.18 and 1.0.0-M42, http4s-blaze-server aggregates fragments of an incoming WebSocket message with no limit on total size or fragment count. A client that completes a WebSocket handshake can send an unterminated fragmented message and drive unbounded heap growth in the server JVM, resulting in denial of service through OutOfMemoryError. Any http4s application serving WebSocket routes over BlazeServerBuilder is affected, no non-default configuration is required, and maxWebSocketBufferSize does not bound the aggregate because it bounds only individual frames. A single connection sending continuation frames that never set FIN forces the server to buffer every fragment until the heap is exhausted, terminating the JVM with OutOfMemoryError on the blaze selector thread. Small fragments amplify the cost through per-frame object overhead, so a modest volume of wire bytes is sufficient. This issue is fixed in versions 0.23.18 and 1.0.0-M42.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-73493\n  \nPublished : Aug. 12, 2026, 10:17 p.m. | 47 minutes ago\n  \nDescription :Http4s (http4s-blaze-server) is a minimal, idiomatic Scala interface for HTTP services. Prior to 0.23.18 and 1.0.0-M42, http4s-blaze-server aggregates fragments of an incoming WebSocket message with no limit on total size or fragment count. A client that completes a WebSocket handshake can send an unterminated fragmented message and drive unbounded heap growth in the server JVM, resulting in denial of service through OutOfMemoryError. Any http4s application serving WebSocket routes over BlazeServerBuilder is affected, no non-default configuration is required, and maxWebSocketBufferSize does not bound the aggregate because it bounds only individual frames. A single connection sending continuation frames that never set FIN forces the server to buffer every fragment until the heap is exhausted, terminating the JVM with OutOfMemoryError on the blaze selector thread. Small fragments amplify the cost through per-frame object overhead, so a modest volume of wire bytes is sufficient. This issue is fixed in versions 0.23.18 and 1.0.0-M42.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-73493 - http4s-blaze-server: 제한되지 않은 WebSocket 메시지 집계",
-      "summary_ko": "CVE ID:CVE-2026-73493\n  \n게시일 : 2026년 8월 12일 오후 10시 17분 | 47분 전\n  \n설명 :Http4s(http4s-blaze-server)는 HTTP 서비스를 위한 최소한의 관용적인 Scala 인터페이스입니다. 0.23.18 및 1.0.0-M42 이전에는 http4s-blaze-server가 전체 크기나 조각 수에 제한 없이 들어오는 WebSocket 메시지의 조각을 집계합니다. WebSocket 핸드셰이크를 완료한 클라이언트는 종료되지 않은 조각난 메시지를 보내고 서버 JVM에서 무제한의 힙 증가를 유도하여 OutOfMemoryError를 통해 서비스 거부가 발생할 수 있습니다. BlazeServerBuilder를 통해 WebSocket 경로를 제공하는 모든 http4s 애플리케이션이 영향을 받고 기본이 아닌 구성이 필요하지 않으며 maxWebSocketBufferSize는 개별 프레임만 바인딩하므로 집계를 바인딩하지 않습니다. FIN을 설정하지 않은 연속 프레임을 전송하는 단일 연결은 힙이 소진될 때까지 서버가 모든 조각을 버퍼링하도록 강제하여 블레이즈 선택기 스레드에서 OutOfMemoryError로 JVM을 종료합니다. 작은 조각은 프레임당 개체 오버헤드를 통해 비용을 증폭시키므로 적당한 양의 와이어 바이트이면 충분합니다. 이 문제는 버전 0.23.18 및 1.0.0-M42에서 해결되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-73493\n2. 26.08.13 오전7:17\n3. Http4s (http4s-blaze-server) is a minimal, idiomat",
-      "cve_id": "CVE-2026-73493",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73493",
-      "source": "cvefeed",
-      "published": "2026-08-13T07:17:16+09:00",
       "lang": "en"
     }
   ],
