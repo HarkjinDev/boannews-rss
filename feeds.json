@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-16T06:02:16.639069+09:00",
+  "fetched_at": "2026-08-16T06:31:14.921149+09:00",
   "security_news": [
+    {
+      "title": "한국 노린 북한 해킹 늘어…AI·딥페이크 악용",
+      "summary": "올해 상반기 북한·중국·러시아 등 국가 배후 해킹 조직의 사이버 공격이 158건으로 전년 하반기보다 7.5... 조직으로 해킹 대상을 넓혔습니다. 이들은 정보 수집뿐만 아니라 시스템 파괴와 운영 주단을 목적으로 한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 상반기 북한 등 국가 배후 해킹 158건 급증\n2. AI, 딥페이크 악용해 정보 수집 및 시스템 파괴\n3. 한국 조직 대상 공격 증가, 운영 중단 목적",
+      "link": "https://n.news.naver.com/mnews/article/422/0000896220?sid=105",
+      "source": "naver",
+      "published": "2026-08-16T06:19:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "지오서버 제로데이 공개 직후 공격자 움직였다…수백 건 공격 탐색 포착",
       "summary": "15일 현재 취약점에 CVE 번호가 부여되지 않았으며 공식 보안 패치도 나오지 않았다. 공개 수시간 만에 공격 시작 취약점은 지난 8월 12일 보안 연구자 'q1uf3ng'가 공개했다. 보안업체 와치타워(watchTowr)는 공개 후...",
@@ -252,6 +264,18 @@
       "source": "naver",
       "published": "2026-08-15T00:08:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Hackers exploit macOS Screen Sharing flaw to deploy Monero miner",
+      "summary": "The Netherlands' National Cyber Security Centre (NCSC) is warning that hackers are actively exploiting a macOS authentication bypass vulnerability after public exploit code emerged. [...]",
+      "content": "",
+      "title_ko": "해커들은 macOS 화면 공유 결함을 악용하여 Monero 채굴기를 배포합니다.",
+      "summary_ko": "네덜란드 국립사이버보안센터(NCSC)는 공개 익스플로잇 코드가 등장한 후 해커들이 macOS 인증 우회 취약점을 적극적으로 악용하고 있다고 경고했습니다. [...]",
+      "summary_3lines": "1. 해커, macOS 인증 우회 취약점 악용\n2. Monero 암호화폐 채굴 악성코드 유포\n3. NCSC, macOS 사용자 즉시 업데이트 권고",
+      "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/",
+      "source": "bleepingcomputer",
+      "published": "2026-08-14T23:59:55+09:00",
+      "lang": "en"
     },
     {
       "title": "NIST, AI가 취약점 관리 방식 바꾼다며 NVD 현대화 나서…10월13일까지 의...",
@@ -2359,21 +2383,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-73493",
       "source": "cvefeed",
       "published": "2026-08-13T07:17:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-73427 - Trix: XSS via JSON deserialization bypass in drag-and-drop (Level0InputController)",
-      "summary": "CVE ID :CVE-2026-73427\n  \nPublished : Aug. 12, 2026, 9:17 p.m. | 15 minutes ago\n  \nDescription :Trix is a what-you-see-is-what-you-get rich text editor for everyday writing. Prior to 2.1.18, Trix is vulnerable to cross-site scripting when a crafted application/x-trix-document JSON payload is dropped into an editor using the fallback Level0InputController, such as an embedded WebView without Input Events Level 2 support. The StringPiece.fromJSON method trusts href attributes from the JSON payload without sanitization, allowing a draggable element containing a javascript: URI to bypass DOMPurify sanitization and inject executable JavaScript into the DOM. Exploitation requires the victim to drag and drop attacker-controlled content, and server-side HTML sanitization can neutralize the payload on save. This issue is fixed in version 2.1.18.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-73427\n  \nPublished : Aug. 12, 2026, 9:17 p.m. | 15 minutes ago\n  \nDescription :Trix is a what-you-see-is-what-you-get rich text editor for everyday writing. Prior to 2.1.18, Trix is vulnerable to cross-site scripting when a crafted application/x-trix-document JSON payload is dropped into an editor using the fallback Level0InputController, such as an embedded WebView without Input Events Level 2 support. The StringPiece.fromJSON method trusts href attributes from the JSON payload without sanitization, allowing a draggable element containing a javascript: URI to bypass DOMPurify sanitization and inject executable JavaScript into the DOM. Exploitation requires the victim to drag and drop attacker-controlled content, and server-side HTML sanitization can neutralize the payload on save. This issue is fixed in version 2.1.18.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-73427 - Trix: 드래그 앤 드롭에서 JSON 역직렬화 우회를 통한 XSS(Level0InputController)",
-      "summary_ko": "CVE ID:CVE-2026-73427\n  \n게시일 : 2026년 8월 12일 오후 9시 17분 | 15분 전\n  \n설명 :Trix는 일상적인 글쓰기를 위한 서식 있는 텍스트 편집기입니다. 2.1.18 이전에 Trix는 입력 이벤트 레벨 2 지원이 없는 내장된 WebView와 같은 대체 Level0InputController를 사용하여 제작된 애플리케이션/x-trix-document JSON 페이로드가 편집기에 드롭될 때 크로스 사이트 스크립팅에 취약했습니다. StringPiece.fromJSON 메서드는 정리 없이 JSON 페이로드의 href 속성을 신뢰하여 javascript: URI가 포함된 드래그 가능한 요소가 DOMPurify 정리를 우회하고 실행 가능한 JavaScript를 DOM에 삽입할 수 있도록 허용합니다. 악용하려면 피해자가 공격자가 제어하는 ​​콘텐츠를 끌어서 놓아야 하며, 서버 측 HTML 삭제 처리를 통해 저장 시 페이로드를 무력화할 수 있습니다. 이 문제는 버전 2.1.18에서 해결되었습니다.\n  \n심각도: 2.1 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-73427\n2. 26.08.13 오전6:17\n3. Trix is a what-you-see-is-what-you-get rich text e",
-      "cve_id": "CVE-2026-73427",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73427",
-      "source": "cvefeed",
-      "published": "2026-08-13T06:17:41+09:00",
       "lang": "en"
     }
   ],
