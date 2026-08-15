@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-16T07:32:04.234215+09:00",
+  "fetched_at": "2026-08-16T08:01:04.228495+09:00",
   "security_news": [
     {
       "title": "정재헌vs박윤영vs홍범식…이통3사, 클라우드 기반 '공공기관 AX' 공략전",
@@ -1788,21 +1788,24 @@
       "source": "naver",
       "published": "2026-08-13T08:28:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "서학개미·코인족 다 낚였네... 테슬라 이름 판 '지갑 싹쓸이' 피싱 공포...",
-      "summary": "정교한 해킹 환경을 갖추게 된 셈이다. 사이버 보안 전문가는 \"단돈 수십만 원에 불과한 피싱 키트가 유포되면서 해킹의 문턱이 대폭 낮아졌다\"며 \"단순히 어설픈 메일이나 문자 수준을 넘어 지갑 잔고를 직접 정밀하게...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 테슬라 이름 판 피싱 키트, 수십만 원에 유포\n2. 지갑 잔고 노린 정교한 공격, 서학개미·코인족 피해\n3. 해킹 문턱 낮아져 대규모 피싱 공포 확산",
-      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=476844",
-      "source": "naver",
-      "published": "2026-08-13T07:42:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-18549 - @fastify/multipart vulnerable to Denial of Service via aborted upload after fileSize limit",
+      "summary": "CVE ID :CVE-2026-18549\n  \nPublished : Aug. 15, 2026, 2:17 p.m. | 7 hours, 38 minutes ago\n  \nDescription :@fastify/multipart is a multipart form-data parser for Fastify. In versions from 5.3.0 up to but not including 10.1.1, when the busboy fileSize limit truncates a file part, the plugin clears its internal current-file reference while the underlying stream is still open. If the client then aborts the connection before sending the terminating boundary, the abort cleanup finds no stream to destroy, so saveRequestFiles() never settles, the request handler hangs, and the temporary file already written to disk is never cleaned up. An unauthenticated client can repeat this to permanently leak temporary files and suspended handler executions, leading to disk and event-loop exhaustion. The issue is fixed in @fastify/multipart 10.1.1. Users should upgrade to 10.1.1.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-18549\n  \nPublished : Aug. 15, 2026, 2:17 p.m. | 7 hours, 38 minutes ago\n  \nDescription :@fastify/multipart is a multipart form-data parser for Fastify. In versions from 5.3.0 up to but not including 10.1.1, when the busboy fileSize limit truncates a file part, the plugin clears its internal current-file reference while the underlying stream is still open. If the client then aborts the connection before sending the terminating boundary, the abort cleanup finds no stream to destroy, so saveRequestFiles() never settles, the request handler hangs, and the temporary file already written to disk is never cleaned up. An unauthenticated client can repeat this to permanently leak temporary files and suspended handler executions, leading to disk and event-loop exhaustion. The issue is fixed in @fastify/multipart 10.1.1. Users should upgrade to 10.1.1.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-18549 - @fastify/multipart는 파일 크기 제한 이후 업로드 중단을 통한 서비스 거부에 취약함",
+      "summary_ko": "CVE ID:CVE-2026-18549\n  \n게시일 : 2026년 8월 15일 오후 2시 17분 | 7시간 38분 전\n  \n설명 :@fastify/multipart는 Fastify용 다중 부분 양식 데이터 구문 분석기입니다. 5.3.0부터 10.1.1까지의 버전에서 버스보이 fileSize 제한으로 인해 파일 부분이 잘릴 때 플러그인은 기본 스트림이 여전히 열려 있는 동안 내부 현재 파일 참조를 지웁니다. 그런 다음 클라이언트가 종료 경계를 보내기 전에 연결을 중단하면 중단 정리는 삭제할 스트림을 찾지 않으므로 saveRequestFiles()는 결코 정착되지 않고 요청 처리기가 중단되며 이미 디스크에 기록된 임시 파일은 정리되지 않습니다. 인증되지 않은 클라이언트는 이를 반복하여 임시 파일과 일시 중단된 핸들러 실행을 영구적으로 유출하여 디스크 및 이벤트 루프 고갈을 초래할 수 있습니다. 이 문제는 @fastify/multipart 10.1.1에서 수정되었습니다. 사용자는 10.1.1로 업그레이드해야 합니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-18549\n2. 26.08.15 오후11:17\n3. @fastify/multipart is a multipart form-data parser",
+      "cve_id": "CVE-2026-18549",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18549",
+      "source": "cvefeed",
+      "published": "2026-08-15T23:17:07+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-15689 - Dancer2::Plugin::Auth::Extensible versions through 0.713 for Perl allow password reset link poisoning via the request Host header in _default_email_password_reset and _default_welcome_send",
       "summary": "CVE ID :CVE-2026-15689\n  \nPublished : Aug. 15, 2026, 2:17 p.m. | 1 hour, 38 minutes ago\n  \nDescription :Dancer2::Plugin::Auth::Extensible versions through 0.713 for Perl allow password reset link poisoning via the request Host header in _default_email_password_reset and _default_welcome_send.\n\nBoth default emails emit a link of the form `$base/login/$code`, whose authority comes from the request Host header, or from X-Forwarded-Host under behind_proxy (obtained from Dancer2's request->base function). A POST to /login carrying submit_reset and a username needs no authentication: it stores a fresh reset code against that account and mails the account holder a link to a host of the sender's choosing. The welcome mail takes the same path when the application calls create_user with email_welcome set.\n\nThrough 0.711 the handlers read `request->uri_base` and `request->base` directly; Versions 0.712 and later provide an uri_base configuration key that defaults to the untrusted `request->uri_base` when unset.\n\nThe default configuration with reset_password_handler enabled and the default message text, a recipient who follows the link hands a working reset code to the sender's host, which is enough to take over the account.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
