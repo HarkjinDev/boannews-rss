@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-15T14:02:20.809009+09:00",
+  "fetched_at": "2026-08-15T14:32:15.027635+09:00",
   "security_news": [
     {
       "title": "서강대 개인정보 18만건 털렸다...'신원 미상' 해외 IP 비정상 접근",
@@ -2088,18 +2088,6 @@
       "source": "naver",
       "published": "2026-08-12T14:34:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "“AI 공격은 AI로 막아야” MS, 자율형 보안 에이전트 ‘Project Perception’ 공개",
-      "summary": "장광운 마이크로소프트 보안전략고문, ISEC 2026에서 MDASH와 Project Perception 소개[보안뉴스 원병철 기자] 단순히 악성 코드를 작성하거나 피싱 이메일을 다듬는 보조 도구(AI-assisted)에 머물던 생성형 AI가 스스로 공격 목표를 설정하고 취약점을 찾아 침투까지 완수하는 자율형 ‘에이전트(Agent)’로 진화했다. 마이크로소프",
-      "content": "",
-      "title_ko": "“AI 공격은 AI로 막아야” MS, 자율형 보안 에이전트 ‘Project Perception’ 공개",
-      "summary_ko": null,
-      "summary_3lines": "1. “AI 공격은 AI로 막아야” MS, 자율형 보안 에이전트 ‘Project Percepti",
-      "link": "http://www.boannews.com/media/view.asp?idx=145126&kind=&sub_kind=",
-      "source": "boannews",
-      "published": "2026-08-12T14:32:00+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -2641,21 +2629,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-19566",
       "source": "cvefeed",
       "published": "2026-08-12T17:39:59+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-19594 - Path Traversal and HTTP Parameter Pollution in Snowflake Python API (snowflake.core) Allow Confused-Deputy Privilege Escalation",
-      "summary": "CVE ID :CVE-2026-19594\n  \nPublished : Aug. 12, 2026, 5:22 a.m. | 31 minutes ago\n  \nDescription :Insufficient input sanitization in Snowflake Python API (`snowflake.core`) versions prior to 1.13.0 allowed confused-deputy privilege escalation through two related weaknesses: path traversal (CWE-22) via unencoded `..` identifier path segments, and HTTP parameter pollution (CWE-141) via unencoded `&`/`#`/`=` characters in query string values. An attacker with access to a downstream application built on snowflake.core could exploit the path traversal by supplying `..` as an object name, causing `snowflake.core` to issue REST requests against a parent resource or exploit the parameter pollution by injecting `&`/`#`/`=` into a free-form name field to override constraints on swap, clone, or rename operations — all executed under the application's privileged session. Successful exploitation requires the attacker to control an identifier or object-name string in an application built on snowflake.core that passes it to `snowflake.core` under a higher-privileged Snowflake session (e.g., an EXECUTE AS OWNER stored procedure, Streamlit app, or Native App). The fix is available in Snowflake Python API version 1.13.0, which also addresses several additional security findings. Users must manually upgrade.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-19594\n  \nPublished : Aug. 12, 2026, 5:22 a.m. | 31 minutes ago\n  \nDescription :Insufficient input sanitization in Snowflake Python API (`snowflake.core`) versions prior to 1.13.0 allowed confused-deputy privilege escalation through two related weaknesses: path traversal (CWE-22) via unencoded `..` identifier path segments, and HTTP parameter pollution (CWE-141) via unencoded `&`/`#`/`=` characters in query string values. An attacker with access to a downstream application built on snowflake.core could exploit the path traversal by supplying `..` as an object name, causing `snowflake.core` to issue REST requests against a parent resource or exploit the parameter pollution by injecting `&`/`#`/`=` into a free-form name field to override constraints on swap, clone, or rename operations — all executed under the application's privileged session. Successful exploitation requires the attacker to control an identifier or object-name string in an application built on snowflake.core that passes it to `snowflake.core` under a higher-privileged Snowflake session (e.g., an EXECUTE AS OWNER stored procedure, Streamlit app, or Native App). The fix is available in Snowflake Python API version 1.13.0, which also addresses several additional security findings. Users must manually upgrade.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-19594 - Snowflake Python API(snowflake.core)의 경로 탐색 및 HTTP 매개변수 오염으로 인해 혼란스러운 대리인 권한 상승이 허용됩니다.",
-      "summary_ko": "CVE ID:CVE-2026-19594\n  \n게시일 : 2026년 8월 12일 오전 5시 22분 | 31분 전\n  \n설명: 1.13.0 이전의 Snowflake Python API(`snowflake.core`) 버전에서 입력 삭제가 충분하지 않아 두 가지 관련 약점, 즉 인코딩되지 않은 `..` 식별자 경로 세그먼트를 통한 경로 탐색(CWE-22)과 쿼리 문자열 값의 인코딩되지 않은 `&`/`#`/`=` 문자를 통한 HTTP 매개변수 오염(CWE-141)을 통해 혼란스러운 대리인 권한 상승이 허용되었습니다. snowflake.core를 기반으로 구축된 다운스트림 애플리케이션에 대한 액세스 권한이 있는 공격자는 '..'을 개체 이름으로 제공하여 경로 탐색을 악용할 수 있으며, 이로 인해 `snowflake.core'는 상위 리소스에 대해 REST 요청을 발행하거나 자유 형식 이름 필드에 `&`/`#`/`=`를 삽입하여 스왑, 복제 또는 이름 변경 작업에 대한 제약 조건을 재정의하여 매개변수 오염을 악용할 수 있습니다. 이 모든 작업은 애플리케이션의 권한 있는 세션에서 실행됩니다. 악용에 성공하려면 공격자가 더 높은 권한의 Snowflake 세션(예: EXECUTE AS OWNER 저장 프로시저, Streamlit 앱 또는 기본 앱)에서 `snowflake.core`에 전달하는 Snowflake.core 기반 애플리케이션에서 식별자 또는 개체 이름 문자열을 제어해야 합니다. 이 수정 사항은 Snowflake Python API 버전 1.13.0에서 제공되며, 이 버전에서는 몇 가지 추가 보안 발견 사항도 해결합니다. 사용자는 수동으로 업그레이드해야 합니다.\n  \n심각도: 8.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-19594\n2. 26.08.12 오후2:22\n3. Insufficient input sanitization in Snowflake Pytho",
-      "cve_id": "CVE-2026-19594",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-19594",
-      "source": "cvefeed",
-      "published": "2026-08-12T14:22:07+09:00",
       "lang": "en"
     }
   ],
