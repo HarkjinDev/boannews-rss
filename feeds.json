@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-16T22:32:10.234858+09:00",
+  "fetched_at": "2026-08-16T23:00:57.587626+09:00",
   "security_news": [
     {
       "title": "프랑스 국세청 해킹으로 67만8437명 세무정보 유출, 두 달 만에 드러났다",
@@ -1636,6 +1636,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-73056 - SiYuan kernel before 3.7.4 Unthrottled Brute-Force via API Token",
+      "summary": "CVE ID :CVE-2026-73056\n  \nPublished : Aug. 16, 2026, 1:14 p.m. | 28 minutes ago\n  \nDescription :SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and neither path is protected by the application's CAPTCHA/lockout mechanism (NeedCaptcha/WrongAuthCount). As a result, an unauthenticated remote attacker can perform unlimited automated guesses of the API token, particularly when a short or weak custom token has been configured, and upon success gains full RoleAdministrator access enabling arbitrary file operations and SQL queries.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-73056\n  \nPublished : Aug. 16, 2026, 1:14 p.m. | 28 minutes ago\n  \nDescription :SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and neither path is protected by the application's CAPTCHA/lockout mechanism (NeedCaptcha/WrongAuthCount). As a result, an unauthenticated remote attacker can perform unlimited automated guesses of the API token, particularly when a short or weak custom token has been configured, and upon success gains full RoleAdministrator access enabling arbitrary file operations and SQL queries.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-73056 - 3.7.4 이전의 SiYuan 커널 API 토큰을 통한 제한되지 않은 무차별 공격",
+      "summary_ko": "CVE ID:CVE-2026-73056\n  \n게시일 : 2026년 8월 16일 오후 1시 14분 | 28분 전\n  \n설명: 3.7.4 이전의 SiYuan 커널 버전에는 CheckAuth() 미들웨어의 과도한 인증 시도 취약점에 대한 부적절한 제한이 포함되어 있습니다. 미들웨어는 인증 헤더(Token/Bearer) 또는 ?token= 쿼리 매개변수를 통해 API 토큰(Conf.Api.Token)을 허용하며 두 경로 모두 애플리케이션의 CAPTCHA/잠금 메커니즘(NeedCaptcha/WrongAuthCount)으로 보호되지 않습니다. 결과적으로 인증되지 않은 원격 공격자는 특히 짧거나 취약한 사용자 지정 토큰이 구성된 경우 API 토큰에 대해 무제한 자동 추측을 수행할 수 있으며, 성공하면 임의 파일 작업 및 SQL 쿼리를 가능하게 하는 전체 RoleAdministrator 액세스 권한을 얻게 됩니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-73056\n2. 26.08.16 오후10:14\n3. SiYuan kernel versions before 3.7.4 contain an imp",
+      "cve_id": "CVE-2026-73056",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73056",
+      "source": "cvefeed",
+      "published": "2026-08-16T22:14:04+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-74578 - crypto: algif_skcipher - force synchronous processing on trees without ctx->state",
       "summary": "CVE ID :CVE-2026-74578\n  \nPublished : Aug. 16, 2026, 9:16 a.m. | 39 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: algif_skcipher - force synchronous processing on trees without ctx->state\n\nThe AIO/async path in skcipher_recvmsg() passes the socket-wide ctx->iv\ndirectly into the skcipher request. After io_submit() the socket lock is\ndropped and the request is processed asynchronously, so a concurrent\nsendmsg(ALG_SET_IV) can overwrite ctx->iv and make the in-flight request\nrun under an attacker-controlled IV. For CTR/stream modes this is\nIV/keystream reuse and lets an unprivileged user recover the plaintext of\na concurrent operation.\n\nSnapshotting ctx->iv into per-request storage for the async path is not\nsufficient. For ciphers with statesize == 0 - which includes cbc and ctr -\nthe MSG_MORE inter-chunk IV chaining is carried solely by the in-place\nreq->iv writeback, which a snapshot redirects into per-request memory that\naf_alg_free_resources() releases on completion, silently producing wrong\noutput. Writing the IV back from the completion callback instead is not\npossible either: that would require lock_sock() there, but the callback can\nrun in softirq/atomic context, so it must not sleep.\n\nMake the operation synchronous instead, which removes both the IV race and\nany writeback race. This is equivalent to the upstream resolution, commit\nfcc77d33a34c (\"net: Remove support for AIO on sockets\"), which removed the\nAIO socket path across net/ entirely and so produces the same end state for\nthis file. This patch deviates from that commit deliberately: rather than\nremoving AIO socket support tree-wide, which would be far too invasive for\nstable, it removes only the AIO branch in crypto/algif_skcipher.c.\nio_submit() now completes synchronously; AF_ALG async is rarely used in\npractice.\n\nThe -EIOCBQUEUED check in skcipher_recvmsg() is now dead but harmless,\nand is left alone to keep the fix minimal.\n\nTested on 6.6.y: attacker IV injection dropped from 2296/200000 to 0/200000\nafter the change; MSG_MORE chunked CTR output bit-identical to single-shot.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-74578\n  \nPublished : Aug. 16, 2026, 9:16 a.m. | 39 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: algif_skcipher - force synchronous processing on trees without ctx->state\n\nThe AIO/async path in skcipher_recvmsg() passes the socket-wide ctx->iv\ndirectly into the skcipher request. After io_submit() the socket lock is\ndropped and the request is processed asynchronously, so a concurrent\nsendmsg(ALG_SET_IV) can overwrite ctx->iv and make the in-flight request\nrun under an attacker-controlled IV. For CTR/stream modes this is\nIV/keystream reuse and lets an unprivileged user recover the plaintext of\na concurrent operation.\n\nSnapshotting ctx->iv into per-request storage for the async path is not\nsufficient. For ciphers with statesize == 0 - which includes cbc and ctr -\nthe MSG_MORE inter-chunk IV chaining is carried solely by the in-place\nreq->iv writeback, which a snapshot redirects into per-request memory that\naf_alg_free_resources() releases on completion, silently producing wrong\noutput. Writing the IV back from the completion callback instead is not\npossible either: that would require lock_sock() there, but the callback can\nrun in softirq/atomic context, so it must not sleep.\n\nMake the operation synchronous instead, which removes both the IV race and\nany writeback race. This is equivalent to the upstream resolution, commit\nfcc77d33a34c (\"net: Remove support for AIO on sockets\"), which removed the\nAIO socket path across net/ entirely and so produces the same end state for\nthis file. This patch deviates from that commit deliberately: rather than\nremoving AIO socket support tree-wide, which would be far too invasive for\nstable, it removes only the AIO branch in crypto/algif_skcipher.c.\nio_submit() now completes synchronously; AF_ALG async is rarely used in\npractice.\n\nThe -EIOCBQUEUED check in skcipher_recvmsg() is now dead but harmless,\nand is left alone to keep the fix minimal.\n\nTested on 6.6.y: attacker IV injection dropped from 2296/200000 to 0/200000\nafter the change; MSG_MORE chunked CTR output bit-identical to single-shot.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2159,36 +2174,6 @@
       "source": "krcert_notice",
       "published": "2026-08-14T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-49162 Microsoft Brokering File System Elevation of Privilege Vulnerability",
-      "summary": "Added acknowledgements. This is an informational change only.",
-      "description": "Added acknowledgements. This is an informational change only.",
-      "title_ko": "CVE-2026-49162 Microsoft 중개 파일 시스템 권한 상승 취약점",
-      "summary_ko": "승인을 추가했습니다. 이는 정보 제공용 변경일 뿐입니다.",
-      "summary_3lines": "1. CVE-2026-49162\n2. MSRC\n3. Added acknowledgements. This is an informational c",
-      "cve_id": "CVE-2026-49162",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49162",
-      "source": "msrc",
-      "published": "2026-08-13T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-44814 Windows DWM Core Library Information Disclosure  Vulnerability",
-      "summary": "Acknowledgement Updated",
-      "description": "Acknowledgement Updated",
-      "title_ko": "CVE-2026-44814 Windows DWM 핵심 라이브러리 정보 공개 취약성",
-      "summary_ko": "승인이 업데이트되었습니다.",
-      "summary_3lines": "1. CVE-2026-44814\n2. MSRC\n3. Acknowledgement Updated",
-      "cve_id": "CVE-2026-44814",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44814",
-      "source": "msrc",
-      "published": "2026-08-13T23:00:00+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
