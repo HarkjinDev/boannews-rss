@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-17T00:00:56.471364+09:00",
+  "fetched_at": "2026-08-17T00:31:13.201639+09:00",
   "security_news": [
+    {
+      "title": "일본 생명보험협회 '보험계약 조회 시스템'서 개인정보 유출",
+      "summary": "생명보험협회는 지난 7월 29일 외부 보안 전문기관의 지적을 통해 이 같은 사실을 확인했다고 밝혔다. 현재 제3자에 의한 정보의 부정 취득이나 부정 이용 여부 등 사실관계를 조사하고 있으며, 발표 시점까지 이번...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 일본 생명보험협회 시스템서 개인정보 유출 확인\n2. 제3자의 부정 취득/이용 여부 조사 중\n3. 보안 전문기관 통해 지난 7월 29일 인지",
+      "link": "https://www.insnews.co.kr/news/articleView.html?idxno=92218",
+      "source": "naver",
+      "published": "2026-08-17T00:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "가상자산 전용보험, 법정 의무 넘어 '기관 신뢰' 좌우",
+      "summary": "가상자산 관련 위험은 사이버보험이나 개인정보배상책임보험으로 보장할 수 있을 것처럼 보이지만 가상자산 전용보험과는 보장 대상이 다르다. 기존 상품이 주로 전산망 침해나 개인정보 유출에 따른 기업의 '사이버...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 가상자산 전용 보험, 기관 신뢰도 좌우\n2. 기존 보험은 사이버 침해/개인정보 유출 보장\n3. 전용 보험은 가상자산 특화 위험 보장",
+      "link": "https://www.insnews.co.kr/news/articleView.html?idxno=92279",
+      "source": "naver",
+      "published": "2026-08-17T00:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "“애꿎은 해커 탓하더니”…공공기관 정보유출 67%는 내부실수",
       "summary": "유출 사고 상당수는 해킹 같은 외부 사이버 공격이 아니라 공공기관 내부 부주의로 발생한 것으로 나타다. 2022년부터 올해까지 약 5년간 개인정보위가 처분을 완료한 공공기관 개인정보 유출 사고 139건 중 업무과실이...",
@@ -1608,18 +1632,6 @@
       "source": "naver",
       "published": "2026-08-14T00:47:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "‘가짜 회사’ 만들어 ‘북한 IT 인력’ 함정 채용…“입사 뒤 회사 시...",
-      "summary": "연구진은 북한 연계 해킹조직 라자루스 산하로 지목된 '페이머스 천리마(Famous Chollima)'의 모집책과 접촉해 스마트계약과 프론트엔드, 백엔드 개발자 등 모두 3명을 실제 회사 직원으로 채용하는 데 성공했으며, 이들이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 라자루스 산하 페이머스 천리마, 가짜 회사로 IT 인력 3명 채용\n2. 스마트계약, 프론트엔드, 백엔드 개발자를 함정 채용\n3. 실제 회사 직원처럼 위장해 추가 공격 시도",
-      "link": "https://www.voakorea.com/a/dprk-it-workers-fake-startup-081326/8185972.html",
-      "source": "naver",
-      "published": "2026-08-14T00:23:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2146,36 +2158,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-19765",
       "source": "cvefeed",
       "published": "2026-08-14T10:18:57+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-73557 - vLLM: Incomplete CVE-2025-62164 remediation can be bypassed by concurrent prompt parts",
-      "summary": "CVE ID :CVE-2026-73557\n  \nPublished : Aug. 13, 2026, 3:20 p.m. | 15 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. From 0.20.2rc0 until 0.26.0, safe_load_prompt_embeds in vllm/renderers/embed_utils.py uses torch.sparse.check_sparse_tensor_invariants, whose process-global save, enable, and restore state can be raced by concurrent prompt_embeds parts submitted to POST /v1/chat/completions through AsyncMultiModalItemTracker.resolve_items, asyncio.gather, and the default executor, allowing an invalid sparse tensor to reach tensor.to_dense despite the CVE-2025-62164 guard when enable_prompt_embeds is enabled. This issue is fixed in version 0.26.0.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-73557\n  \nPublished : Aug. 13, 2026, 3:20 p.m. | 15 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. From 0.20.2rc0 until 0.26.0, safe_load_prompt_embeds in vllm/renderers/embed_utils.py uses torch.sparse.check_sparse_tensor_invariants, whose process-global save, enable, and restore state can be raced by concurrent prompt_embeds parts submitted to POST /v1/chat/completions through AsyncMultiModalItemTracker.resolve_items, asyncio.gather, and the default executor, allowing an invalid sparse tensor to reach tensor.to_dense despite the CVE-2025-62164 guard when enable_prompt_embeds is enabled. This issue is fixed in version 0.26.0.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-73557 - vLLM: 불완전한 CVE-2025-62164 수정은 동시 프롬프트 부분으로 우회될 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-73557\n  \n게시일 : 2026년 8월 13일 오후 3시 20분 | 15분 전\n  \n설명 :vLLM은 대규모 언어 모델을 위한 추론 및 제공 엔진입니다. 0.20.2rc0부터 0.26.0까지 vllm/renderers/embed_utils.py의 safe_load_prompt_embeds는 torch.sparse.check_sparse_tensor_invariants를 사용합니다. 이 프로세스 전역 저장, 활성화 및 복원 상태는 다음을 통해 POST /v1/chat/completions에 제출된 동시 프롬프트_embeds 부분에 의해 경주될 수 있습니다. AsyncMultiModalItemTracker.resolve_items, asyncio.gather 및 기본 실행기로, 활성화 시 CVE-2025-62164 가드에도 불구하고 유효하지 않은 희소 텐서가 tensor.to_dense에 도달할 수 있습니다. 이 문제는 버전 0.26.0에서 해결되었습니다.\n  \n심각도: 6.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-73557\n2. 26.08.14 오전12:20\n3. vLLM is an inference and serving engine for large ",
-      "cve_id": "CVE-2026-73557",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73557",
-      "source": "cvefeed",
-      "published": "2026-08-14T00:20:18+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-73509 - OpenList: Authenticated users can rename files outside their base path via batch rename `src_name` traversal",
-      "summary": "CVE ID :CVE-2026-73509\n  \nPublished : Aug. 13, 2026, 3:20 p.m. | 13 minutes ago\n  \nDescription :OpenList a file list program that supports multiple storage. Prior to 4.2.4, the authenticated /api/fs/batch_rename handler in server/handles/fsbatch.go authorizes only the source directory produced by user.JoinPath(req.SrcDir) and validates renameObject.NewName with checkRelativePath, but does not validate attacker-controlled renameObject.SrcName, supplied as src_name, before concatenating it with the authorized path and passing the result to fs.Rename. A user with rename permission can use traversal segments in src_name to make path normalization select a file outside the authorized directory and configured base path, resulting in cross-user file integrity loss, limited availability impact, and file-existence disclosure through success or error responses. This issue is fixed in version 4.2.4.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-73509\n  \nPublished : Aug. 13, 2026, 3:20 p.m. | 13 minutes ago\n  \nDescription :OpenList a file list program that supports multiple storage. Prior to 4.2.4, the authenticated /api/fs/batch_rename handler in server/handles/fsbatch.go authorizes only the source directory produced by user.JoinPath(req.SrcDir) and validates renameObject.NewName with checkRelativePath, but does not validate attacker-controlled renameObject.SrcName, supplied as src_name, before concatenating it with the authorized path and passing the result to fs.Rename. A user with rename permission can use traversal segments in src_name to make path normalization select a file outside the authorized directory and configured base path, resulting in cross-user file integrity loss, limited availability impact, and file-existence disclosure through success or error responses. This issue is fixed in version 4.2.4.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-73509 - OpenList: 인증된 사용자는 `src_name` 일괄 이름 바꾸기 순회를 통해 기본 경로 외부의 파일 이름을 바꿀 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-73509\n  \n게시일 : 2026년 8월 13일 오후 3시 20분 | 13분 전\n  \n설명 :OpenList는 다중 저장을 지원하는 파일 목록 프로그램입니다. 4.2.4 이전에는 server/handles/fsbatch.go의 인증된 /api/fs/batch_rename 핸들러가 user.JoinPath(req.SrcDir)에 의해 생성된 소스 디렉터리만 승인하고 checkRelativePath를 사용하여 renameObject.NewName의 유효성을 검사하지만, 승인된 경로와 연결하고 결과를 전달하기 전에 src_name으로 제공된 공격자가 제어하는 renameObject.SrcName의 유효성을 검사하지는 않습니다. fs.이름 바꾸기. 이름 바꾸기 권한이 있는 사용자는 src_name의 순회 세그먼트를 사용하여 경로 정규화가 인증된 디렉터리 및 구성된 기본 경로 외부의 파일을 선택하도록 할 수 있으며, 이로 인해 사용자 간 파일 무결성 손실, 가용성 영향 제한, 성공 또는 오류 응답을 통한 파일 존재 공개가 발생합니다. 이 문제는 버전 4.2.4에서 해결되었습니다.\n  \n심각도: 7.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-73509\n2. 26.08.14 오전12:20\n3. OpenList a file list program that supports multipl",
-      "cve_id": "CVE-2026-73509",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73509",
-      "source": "cvefeed",
-      "published": "2026-08-14T00:20:17+09:00",
       "lang": "en"
     }
   ],
