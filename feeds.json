@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-16T14:32:31.754143+09:00",
+  "fetched_at": "2026-08-16T15:02:23.915118+09:00",
   "security_news": [
+    {
+      "title": "연이은 해킹 사태에…개인정보 불안, 통신사 이탈 새 변수로",
+      "summary": "지난해 이동통신사 해킹 사태를 거치며 개인정보 침해 우려가 통신사를 갈아타게 만드는 변수로 새롭게... 지난해 SK텔레콤 해킹으로 고객 정보가 대규모 유출된 데 이어 KT와 LG유플러스에서도 유출 의혹이 불거지면서...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 연이은 해킹 사태에…개인정보 불안, 통신사 이탈 새 변수로 지난해 이동통신사 해킹 사태를 \n2. 지난해 SK텔레콤 해킹으로 고객 정보가 대규모 유출된 데 이어 KT와 LG유플러스에서도 유",
+      "link": "https://n.news.naver.com/mnews/article/023/0003993255?sid=105",
+      "source": "naver",
+      "published": "2026-08-16T14:37:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "상반기 국가 배후 해킹 158건 포착… 북한, 한국 집중 타격",
       "summary": "올해 상반기 북한과 중국, 러시아 등 주요 국가 배후에 둔 해킹 조직들의 사이버 공세가 한층 더 거세진... 보고서에 따르면 이들 3국의 공통 해킹 수법으로는 피싱과 공개 서버 취약점 악용, 프록시 및 클라우드 서비스...",
@@ -1707,6 +1719,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-15002 - Autopay <= 5.0.0 - Unauthenticated Stored Cross-Site Scripting via 'bm_woocommerce_css_editor_content' Parameter",
+      "summary": "CVE ID :CVE-2026-15002\n  \nPublished : Aug. 16, 2026, 5:16 a.m. | 22 minutes ago\n  \nDescription :The Platnosci Online Blue Media (Autopay) plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 5.0.0 via the 'bm_woocommerce_css_editor_content' POST parameter. This is due to the Css_Editor::handle_save() method being wired to the WordPress 'init' hook by Settings_Manager::init_once() with no capability check, no nonce verification, and no sanitization on the input — the raw $_POST value is written to the 'woocommerce_bluemedia_settings' option via update_option(), then later echoed directly inside a",
+      "description": "CVE ID :CVE-2026-15002\n  \nPublished : Aug. 16, 2026, 5:16 a.m. | 22 minutes ago\n  \nDescription :The Platnosci Online Blue Media (Autopay) plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 5.0.0 via the 'bm_woocommerce_css_editor_content' POST parameter. This is due to the Css_Editor::handle_save() method being wired to the WordPress 'init' hook by Settings_Manager::init_once() with no capability check, no nonce verification, and no sanitization on the input — the raw $_POST value is written to the 'woocommerce_bluemedia_settings' option via update_option(), then later echoed directly inside a",
+      "title_ko": "CVE-2026-15002 - 자동 지불 <= 5.0.0 - 'bm_woocommerce_css_editor_content' 매개변수를 통한 인증되지 않은 저장된 교차 사이트 스크립팅",
+      "summary_ko": "CVE ID:CVE-2026-15002\n  \n게시일 : 2026년 8월 16일 오전 5시 16분 | 22분 전\n  \n설명 : WordPress용 Platnosci Online Blue Media(Autopay) 플러그인은 'bm_woocommerce_css_editor_content' POST 매개변수를 통해 5.0.0 이하 버전의 Stored Cross-Site Scripting에 취약합니다. 이는 Css_Editor::handle_save() 메서드가 기능 확인, nonce 확인 및 입력 삭제 없이 Settings_Manager::init_once()에 의해 WordPress 'init' 후크에 연결되었기 때문입니다. 원시 $_POST 값은 update_option()을 통해 'woocommerce_bluemedia_settings' 옵션에 기록된 다음 나중에",
+      "summary_3lines": "1. CVE-2026-15002\n2. 26.08.16 오후2:16\n3. The Platnosci Online Blue Media (Autopay) plugin f",
+      "cve_id": "CVE-2026-15002",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15002",
+      "source": "cvefeed",
+      "published": "2026-08-16T14:16:46+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-74764 - Path Traversal in TAR Archive Extraction Allows Arbitrary File Write in Pandora",
       "summary": "CVE ID :CVE-2026-74764\n  \nPublished : Aug. 15, 2026, 9:39 p.m. | 2 hours, 51 minutes ago\n  \nDescription :Pandora contains a path traversal vulnerability in its TAR archive extraction functionality. When processing a submitted TAR archive, the extractor passed archive member names directly to Python's tarfile.TarFile.extract() without applying an extraction filter.\n\n\nAn attacker able to submit a specially crafted TAR archive containing malicious member paths, such as paths using ../ sequences or absolute paths, could cause extracted files to be written outside the intended extraction directory. This may allow the attacker to overwrite files accessible to the Pandora worker process and could potentially result in application compromise, arbitrary code execution, or denial of service depending on the files targeted and the privileges of the Pandora process.\n\n\nThe vulnerability is corrected by using Python's filter='data' extraction filter, which rejects or sanitizes dangerous TAR members, including paths that escape the destination directory and unsafe link targets. \n\n\nThe weakness corresponds to MITRE's general path traversal category, which includes archive extraction cases where attacker-controlled filenames cause files to be written outside the intended directory.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
