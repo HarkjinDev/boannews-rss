@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-16T15:32:12.683700+09:00",
+  "fetched_at": "2026-08-16T16:01:17.352823+09:00",
   "security_news": [
     {
       "title": "연이은 해킹 사태에…개인정보 불안, 통신사 이탈 새 변수로",
@@ -1668,45 +1668,24 @@
       "source": "naver",
       "published": "2026-08-13T16:55:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "한국환경공단, 인천 공공기관과 정보보호 캠페인",
-      "summary": "사이버보안 및 개인정보보호 수칙을 안내했다.[사진=환경공단] 인공지능(AI)이 일상과 산업 전반으로 빠르게 확산하는 가운데 한국환경공단이 인천지역 공공기관들과 손잡고 국민들의 사이버보안과 개인정보보호 인식...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한국환경공단, 인천 공공기관과 정보보호 캠페인\n2. AI 시대, 사이버보안 및 개인정보보호 수칙 안내\n3. 국민 인식 제고 위한 캠페인 실시",
-      "link": "https://www.discoverynews.kr/news/articleView.html?idxno=1098570",
-      "source": "naver",
-      "published": "2026-08-13T16:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[단독] UFS 기간 軍 고속상황전파체계 3시간 ‘먹통’…“기술적 오류”",
-      "summary": "군은 해킹 등 외부 공격과는 무관한 기술적 오류로 보고 있지만, 북한의 탄도미사일 발사와 한ㆍ미... 군 당국은 해킹 등 외부 공격보다는 시스템 운영 과정에서 발생한 기술적 오류일 가능성에 무게를 두고 있다. 각 군의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. UFS 기간 군 고속상황전파체계 3시간 '먹통'\n2. 북한 미사일 발사 시점, 외부 해킹과 무관한 기술적 오류\n3. 군, 시스템 운영 오류 가능성에 무게 두고 조사 중",
-      "link": "https://n.news.naver.com/mnews/article/025/0003544222?sid=100",
-      "source": "naver",
-      "published": "2026-08-13T15:44:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "라자루스그룹 지갑서 262.2 BTC 이동 관측",
-      "summary": "북한 연계 해킹 조직으로 지목돼 온 라자루스그룹(Lazarus Group) 관련 지갑에서 2시간 전 비트코인(BTC) 262.2개가 새 주소로 옮겨진 것으로 관측됐다. 아이이(Ai Yi) 온체인 애널리스트는 모니터링에서 해당 자금 이동...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 라자루스그룹 지갑서 262.2 BTC 이동 관측\n2. 비트코인 262.2개, 새 주소로 옮겨져\n3. 아이이(Ai Yi) 온체인 분석가가 추적",
-      "link": "https://www.tokenpost.kr/news/breaking/389921",
-      "source": "naver",
-      "published": "2026-08-13T15:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-18385 - Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content <= 4.16.19 - Authenticated (Subscriber+) Arbitrary Shortcode Execution via First Name / Last Name Profile Field",
+      "summary": "CVE ID :CVE-2026-18385\n  \nPublished : Aug. 16, 2026, 5:16 a.m. | 38 minutes ago\n  \nDescription :The The Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content – ProfilePress plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 4.16.19. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for authenticated attackers, with subscriber-level access and above, to execute arbitrary shortcodes. The partial mitigation introduced via strip_shortcodes() on [profile-first-name] and [profile-last-name] can be bypassed through the [profile-display-name format=\"first_last_names\"] render path, the [profile-bio] render path (which re-fetches the raw description meta), and the double-bracket escape sequence [[tag]], all of which allow attacker-controlled shortcode text to reach the outer do_shortcode() call.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-18385\n  \nPublished : Aug. 16, 2026, 5:16 a.m. | 38 minutes ago\n  \nDescription :The The Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content – ProfilePress plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 4.16.19. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for authenticated attackers, with subscriber-level access and above, to execute arbitrary shortcodes. The partial mitigation introduced via strip_shortcodes() on [profile-first-name] and [profile-last-name] can be bypassed through the [profile-display-name format=\"first_last_names\"] render path, the [profile-bio] render path (which re-fetches the raw description meta), and the double-bracket escape sequence [[tag]], all of which allow attacker-controlled shortcode text to reach the outer do_shortcode() call.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-18385 - 유료 멤버십 플러그인, 전자 상거래, 사용자 등록 양식, 로그인 양식, 사용자 프로필 및 콘텐츠 제한 <= 4.16.19 - 이름/성 프로필 필드를 통한 인증된(구독자+) 임의 단축 코드 실행",
+      "summary_ko": "CVE ID:CVE-2026-18385\n  \n게시일 : 2026년 8월 16일 오전 5시 16분 | 38분 전\n  \n설명: 유료 멤버십 플러그인, 전자상거래, 사용자 등록 양식, 로그인 양식, 사용자 프로필 및 콘텐츠 제한 – WordPress용 ProfilePress 플러그인은 4.16.19까지의 모든 버전에서 임의 단축 코드 실행에 취약합니다. 이는 do_shortcode를 실행하기 전에 사용자가 값의 유효성을 제대로 검사하지 않는 작업을 실행할 수 있도록 허용하는 소프트웨어 때문입니다. 이를 통해 가입자 수준 이상의 액세스 권한을 가진 인증된 공격자가 임의의 단축 코드를 실행할 수 있습니다. [profile-first-name] 및 [profile-last-name]에서 Strip_shortcodes()를 통해 도입된 부분 완화는 [profile-display-name format=\"first_last_names\"] 렌더링 경로, [profile-bio] 렌더링 경로(원시 설명 메타를 다시 가져옴) 및 이중 대괄호 이스케이프 시퀀스 [[tag]]를 통해 우회할 수 있습니다. 이 모두는 공격자가 제어하는 ​​단축 코드 텍스트가 외부 do_shortcode() 호출에 도달하도록 허용합니다.\n  \n심각도: 5.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-18385\n2. 26.08.16 오후2:16\n3. The The Paid Membership Plugin, Ecommerce, User Re",
+      "cve_id": "CVE-2026-18385",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18385",
+      "source": "cvefeed",
+      "published": "2026-08-16T14:16:48+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-15002 - Autopay <= 5.0.0 - Unauthenticated Stored Cross-Site Scripting via 'bm_woocommerce_css_editor_content' Parameter",
       "summary": "CVE ID :CVE-2026-15002\n  \nPublished : Aug. 16, 2026, 5:16 a.m. | 22 minutes ago\n  \nDescription :The Platnosci Online Blue Media (Autopay) plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 5.0.0 via the 'bm_woocommerce_css_editor_content' POST parameter. This is due to the Css_Editor::handle_save() method being wired to the WordPress 'init' hook by Settings_Manager::init_once() with no capability check, no nonce verification, and no sanitization on the input — the raw $_POST value is written to the 'woocommerce_bluemedia_settings' option via update_option(), then later echoed directly inside a",
