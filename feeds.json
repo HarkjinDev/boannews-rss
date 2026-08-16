@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-16T09:30:56.043299+09:00",
+  "fetched_at": "2026-08-16T10:01:01.696824+09:00",
   "security_news": [
     {
       "title": "삼프로TV·제주항공, 개인정보에 '몸살'…구멍 뚫린 일상 보안",
@@ -1846,6 +1846,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-15689",
       "source": "cvefeed",
       "published": "2026-08-15T23:17:06+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-74575 - thunderbolt: Prevent XDomain delayed work use-after-free on disconnect",
+      "summary": "CVE ID :CVE-2026-74575\n  \nPublished : Aug. 15, 2026, 1:18 p.m. | 11 hours ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nthunderbolt: Prevent XDomain delayed work use-after-free on disconnect\n\ntb_xdp_handle_request() runs on system_wq and queues\nxd->state_work via queue_delayed_work() in three request handlers:\nPROPERTIES_CHANGED_REQUEST, UUID_REQUEST (via start_handshake),\nand LINK_STATE_CHANGE_REQUEST.  Similarly, update_xdomain() queues\nxd->properties_changed_work when local properties change.\n\nConcurrently, tb_xdomain_remove() calls stop_handshake() which does\ncancel_delayed_work_sync() on both delayed works.  Later,\ntb_xdomain_unregister() calls device_unregister() which eventually\nfrees the xdomain.  Since commit 559c1e1e0134 (\"thunderbolt: Run\ntb_xdp_handle_request() in system workqueue\") moved the request\nhandler off tb->wq, the handler and the remove path are no longer\nserialized.  If queue_delayed_work() executes after\ncancel_delayed_work_sync() but before the xdomain is freed, the\ndelayed work fires on a freed object.\n\nAdd xd->removing that tb_xdomain_remove() sets under xd->lock\nbefore calling stop_handshake().  Each external queue site holds\nthe same lock and checks removing before calling\nqueue_delayed_work().  This provides the mutual exclusion needed:\neither the queue site acquires the lock first and queues work that\nthe subsequent cancel will see, or the remove path acquires the\nlock first and the queue site observes removing == true and skips\nthe queue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-74575\n  \nPublished : Aug. 15, 2026, 1:18 p.m. | 11 hours ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nthunderbolt: Prevent XDomain delayed work use-after-free on disconnect\n\ntb_xdp_handle_request() runs on system_wq and queues\nxd->state_work via queue_delayed_work() in three request handlers:\nPROPERTIES_CHANGED_REQUEST, UUID_REQUEST (via start_handshake),\nand LINK_STATE_CHANGE_REQUEST.  Similarly, update_xdomain() queues\nxd->properties_changed_work when local properties change.\n\nConcurrently, tb_xdomain_remove() calls stop_handshake() which does\ncancel_delayed_work_sync() on both delayed works.  Later,\ntb_xdomain_unregister() calls device_unregister() which eventually\nfrees the xdomain.  Since commit 559c1e1e0134 (\"thunderbolt: Run\ntb_xdp_handle_request() in system workqueue\") moved the request\nhandler off tb->wq, the handler and the remove path are no longer\nserialized.  If queue_delayed_work() executes after\ncancel_delayed_work_sync() but before the xdomain is freed, the\ndelayed work fires on a freed object.\n\nAdd xd->removing that tb_xdomain_remove() sets under xd->lock\nbefore calling stop_handshake().  Each external queue site holds\nthe same lock and checks removing before calling\nqueue_delayed_work().  This provides the mutual exclusion needed:\neither the queue site acquires the lock first and queues work that\nthe subsequent cancel will see, or the remove path acquires the\nlock first and the queue site observes removing == true and skips\nthe queue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-74575 - Thunderbolt: 연결 해제 시 XDomain 지연된 작업 사용 방지",
+      "summary_ko": "CVE ID:CVE-2026-74575\n  \n게시일 : 2026년 8월 15일 오후 1시 18분 | 11시간 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nThunderbolt: 연결 해제 시 XDomain 지연 작업 사용 방지\n\ntb_xdp_handle_request()는 system_wq 및 대기열에서 실행됩니다.\n세 가지 요청 처리기에서 queue_delayed_work()를 통한 xd->state_work:\nPROPERTIES_CHANGED_REQUEST, UUID_REQUEST(start_handshake를 통해),\n및 LINK_STATE_CHANGE_REQUEST.  마찬가지로, update_xdomain() 대기열\nxd->properties_changed_work 로컬 속성이 변경될 때.\n\n동시에 tb_xdomain_remove()는 stop_handshake()를 호출합니다.\n두 지연된 작업 모두에 대해 cancel_delayed_work_sync()입니다.  나중에,\ntb_xdomain_unregister()는 device_unregister()를 호출합니다.\nxdomain을 해제합니다.  커밋 559c1e1e0134 이후(\"thunderbolt: Run\n시스템 작업 대기열의 tb_xdp_handle_request()\")가 요청을 이동했습니다.\nhandler off tb->wq, 핸들러와 제거 경로는 더 이상 없습니다.\n직렬화.  queue_delayed_work()가 이후에 실행되는 경우\ncancel_delayed_work_sync() 그러나 xdomain이 해제되기 전에\n지연된 작업은 해제된 개체에 발생합니다.\n\nxd->lock 아래에 xd->tb_xdomain_remove() 세트를 제거하는 추가\nstop_handshake()를 호출하기 전에.  각 외부 대기열 사이트는\n호출하기 전에 동일한 잠금 및 검사 제거\nqueue_delayed_work().  이는 필요한 상호 배제를 제공합니다.\n대기열 사이트가 먼저 잠금을 획득하고 대기열이 작업을 수행합니다.\n후속 취소가 표시되거나 제거 경로가\n먼저 잠그면 대기열 사이트에서 == true 제거를 관찰하고 건너뜁니다.\n대기열.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-74575\n2. 26.08.15 오후10:18\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-74575",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-74575",
+      "source": "cvefeed",
+      "published": "2026-08-15T22:18:03+09:00",
       "lang": "en"
     },
     {
