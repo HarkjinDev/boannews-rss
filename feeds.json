@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-17T03:00:56.482455+09:00",
+  "fetched_at": "2026-08-17T03:31:08.029153+09:00",
   "security_news": [
+    {
+      "title": "세이프팔, 5월 피싱 신고 두 달 방치 후 3만9798명 주문정보 유출 확인",
+      "summary": "회사는 해당 취약점을 수정하고 추가 보안 조치를 도입했다고 덧붙였다.5월 피싱 신고에서 7월... 회사는 당시 이를 개별 사례로 판단해 대응했으나, 이후 사안을 정식 보안조사로 격상했다. 7월 들어 주문처리...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 세이프팔, 5월 피싱 신고 2달 방치\n2. 39,798명 주문정보 유출 확인\n3. 취약점 수정 및 추가 보안 조치 도입",
+      "link": "https://www.wikitree.co.kr/articles/1152828",
+      "source": "naver",
+      "published": "2026-08-17T03:14:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "“관심 있으면 쪽지 달라” 해킹 여성 사진-정보 띄우며 ‘샘플 장사’",
       "summary": "운영자는 채널 소개 글에 “그들(피해자들)의 해킹 데이터를 보유하고 있다”고 주장했다. 이 채널에 사진과 개인정보가 올라온 한 피해자는 “예전에 클라우드 저장소 전체를 해킹당하고 금전 협박을 받았다”고...",
@@ -1584,21 +1596,24 @@
       "source": "naver",
       "published": "2026-08-14T05:14:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "미 정부, 북한 추정 해커 악용 '윈도우 결함' 발견…연방기관에 긴급 조...",
-      "summary": "미국의 사이버보안업체는 이 결함이 북한 연계 해킹조직 라자루스의 구직 사기 조사 과정에서 발견됐다고... 이와 관련해 체크포인트는 북한 해킹조직 라자루스의 IT 구직 사기 작전인 '드림잡(Dream Job)' 관련 최신 공격을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 미 정부, 북한 추정 해커 악용 '윈도우 결함' 발견…연방기관에 긴급 조...\n2. 미국의 사이버보안업체는 이 결함이 북한 연계 해킹조직 라자루스의 구직 사기 조사 과정에서 \n3. 이와 관련해 체크포인트는 북한 해킹조직 라자루스의 IT 구직 사기 작전인 '드림잡(Drea",
-      "link": "https://www.voakorea.com/a/cisa-windows-vulnerability-north-korean-attack-2026-081326/8186032.html",
-      "source": "naver",
-      "published": "2026-08-14T03:14:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-57104 Azure Storage Explorer Elevation of Privilege Vulnerability",
+      "summary": "Corrected build number for the security update.  This in an informational change only.",
+      "description": "Corrected build number for the security update.  This in an informational change only.",
+      "title_ko": "CVE-2026-57104 Azure Storage Explorer 권한 상승 취약성",
+      "summary_ko": "보안 업데이트의 빌드 번호가 수정되었습니다.  이는 정보 변경에만 해당됩니다.",
+      "summary_3lines": "1. CVE-2026-57104\n2. MSRC\n3. Corrected build number for the security update. Th",
+      "cve_id": "CVE-2026-57104",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57104",
+      "source": "msrc",
+      "published": "2026-08-16T23:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-73056 - SiYuan kernel before 3.7.4 Unthrottled Brute-Force via API Token",
       "summary": "CVE ID :CVE-2026-73056\n  \nPublished : Aug. 16, 2026, 1:14 p.m. | 28 minutes ago\n  \nDescription :SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and neither path is protected by the application's CAPTCHA/lockout mechanism (NeedCaptcha/WrongAuthCount). As a result, an unauthenticated remote attacker can perform unlimited automated guesses of the API token, particularly when a short or weak custom token has been configured, and upon success gains full RoleAdministrator access enabling arbitrary file operations and SQL queries.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
