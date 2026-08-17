@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-18T03:30:58.564600+09:00",
+  "fetched_at": "2026-08-18T04:01:00.992332+09:00",
   "security_news": [
     {
       "title": "Linux Botnet Evooo1Bot Expands Mirai Capabilities Well Beyond DDoS",
@@ -1060,6 +1060,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-12519",
       "source": "cvefeed",
       "published": "2026-08-18T01:18:53+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-9771 - Missing device-pointer validation in flash_copy() syscall allows userspace privilege escalation",
+      "summary": "CVE ID :CVE-2026-9771\n  \nPublished : Aug. 17, 2026, 4:18 p.m. | 48 minutes ago\n  \nDescription :The flash_copy() system call is verified by z_vrfy_flash_copy() in drivers/flash/flash_util.c. On builds with CONFIG_USERSPACE enabled, this handler is the kernel-side trust boundary for a user-mode caller. Prior to the fix it validated only the output buffer (K_SYSCALL_MEMORY_WRITE) and passed the two struct device * arguments, src_dev and dst_dev, directly into the implementation without any object validation — unlike every sibling flash syscall, which guards its device pointer with K_SYSCALL_DRIVER_FLASH.\n\nA user-mode thread fully controls the values of src_dev/dst_dev and the contents of its own address space. The implementation z_impl_flash_copy() dereferences these pointers and calls through their driver-API function tables (e.g. api->get_parameters(dst_dev), flash_read(src_dev, ...), flash_write(dst_dev, ...)). By supplying a pointer to a forged struct device whose api table contains attacker-chosen function pointers, an unprivileged thread can cause the kernel to call arbitrary code in supervisor mode; passing any arbitrary or invalid address otherwise yields a kernel crash or out-of-bounds read.\n\nThe result is a local privilege escalation out of the userspace sandbox (with kernel denial-of-service and information disclosure as lesser outcomes). The fix adds K_SYSCALL_DRIVER_FLASH(src_dev, read) and K_SYSCALL_DRIVER_FLASH(dst_dev, write) to z_vrfy_flash_copy(), which verify each device is a registered flash-driver kernel object the calling thread is permitted to use before any dereference, closing the path completely.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-9771\n  \nPublished : Aug. 17, 2026, 4:18 p.m. | 48 minutes ago\n  \nDescription :The flash_copy() system call is verified by z_vrfy_flash_copy() in drivers/flash/flash_util.c. On builds with CONFIG_USERSPACE enabled, this handler is the kernel-side trust boundary for a user-mode caller. Prior to the fix it validated only the output buffer (K_SYSCALL_MEMORY_WRITE) and passed the two struct device * arguments, src_dev and dst_dev, directly into the implementation without any object validation — unlike every sibling flash syscall, which guards its device pointer with K_SYSCALL_DRIVER_FLASH.\n\nA user-mode thread fully controls the values of src_dev/dst_dev and the contents of its own address space. The implementation z_impl_flash_copy() dereferences these pointers and calls through their driver-API function tables (e.g. api->get_parameters(dst_dev), flash_read(src_dev, ...), flash_write(dst_dev, ...)). By supplying a pointer to a forged struct device whose api table contains attacker-chosen function pointers, an unprivileged thread can cause the kernel to call arbitrary code in supervisor mode; passing any arbitrary or invalid address otherwise yields a kernel crash or out-of-bounds read.\n\nThe result is a local privilege escalation out of the userspace sandbox (with kernel denial-of-service and information disclosure as lesser outcomes). The fix adds K_SYSCALL_DRIVER_FLASH(src_dev, read) and K_SYSCALL_DRIVER_FLASH(dst_dev, write) to z_vrfy_flash_copy(), which verify each device is a registered flash-driver kernel object the calling thread is permitted to use before any dereference, closing the path completely.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-9771 - flash_copy() syscall에 장치 포인터 유효성 검사가 누락되어 사용자 공간 권한 상승이 허용됩니다.",
+      "summary_ko": "CVE ID:CVE-2026-9771\n  \n게시일 : 2026년 8월 17일 오후 4시 18분 | 48분 전\n  \n설명 : flash_copy() 시스템 호출은 drivers/flash/flash_util.c의 z_vrfy_flash_copy()에 의해 확인됩니다. CONFIG_USERSPACE가 활성화된 빌드에서 이 핸들러는 사용자 모드 호출자의 커널 측 신뢰 경계입니다. 수정 이전에는 출력 버퍼(K_SYSCALL_MEMORY_WRITE)만 검증하고 두 개의 구조체 장치 * 인수인 src_dev 및 dst_dev를 객체 검증 없이 구현에 직접 전달했습니다. 이는 K_SYSCALL_DRIVER_FLASH로 장치 포인터를 보호하는 모든 형제 플래시 syscall과는 다릅니다.\n\n사용자 모드 스레드는 src_dev/dst_dev의 값과 자체 주소 공간의 내용을 완전히 제어합니다. 구현 z_impl_flash_copy()는 드라이버 API 함수 테이블(예: api->get_parameters(dst_dev), flash_read(src_dev, ...), flash_write(dst_dev, ...))을 통해 이러한 포인터와 호출을 역참조합니다. API 테이블에 공격자가 선택한 함수 포인터가 포함된 위조된 구조체 장치에 대한 포인터를 제공함으로써 권한이 없는 스레드는 커널이 감독자 모드에서 임의의 코드를 호출하도록 할 수 있습니다. 임의의 주소나 유효하지 않은 주소를 전달하면 커널 충돌이 발생하거나 범위를 벗어난 읽기가 발생합니다.\n\n그 결과 사용자 공간 샌드박스에서 로컬 권한이 상승합니다(커널 서비스 거부 및 정보 공개가 더 적은 결과로 나타남). 수정 사항은 K_SYSCALL_DRIVER_FLASH(src_dev, read) 및 K_SYSCALL_DRIVER_FLASH(dst_dev, write)를 z_vrfy_flash_copy()에 추가하여 각 장치가 역참조 전에 호출 스레드가 사용하도록 허용된 등록된 플래시 드라이버 커널 개체인지 확인하고 경로를 완전히 닫습니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-9771\n2. 26.08.18 오전1:18\n3. The flash_copy() system call is verified by z_vrfy",
+      "cve_id": "CVE-2026-9771",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9771",
+      "source": "cvefeed",
+      "published": "2026-08-18T01:18:52+09:00",
       "lang": "en"
     },
     {
