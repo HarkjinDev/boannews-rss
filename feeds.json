@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-17T22:01:08.183826+09:00",
+  "fetched_at": "2026-08-17T22:32:11.574664+09:00",
   "security_news": [
     {
       "title": "비츠오브골드, 20만명 개인정보 유출 가능성",
@@ -1056,18 +1056,6 @@
       "source": "naver",
       "published": "2026-08-14T23:58:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "즈푸 GLM-5.3, 코딩 50% 향상됐지만 예상 밖 보안 능력에 가중치 공개 2주...",
-      "summary": "특히 사이버보안 분야에서 회사가 예상하지 못한 수준의 공격 체인 추론 능력이 나타나면서, 즈푸는... 예상 밖으로 터진 사이버보안 능력즈푸는 GLM-5.3을 훈련하며 소프트웨어 취약점을 찾는 데이터와 환경을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 즈푸 GLM-5.3, 코딩 50% 향상 및 보안 능력 강화\n2. 예상 밖의 사이버보안 공격 체인 추론 능력 발휘\n3. 소프트웨어 취약점 탐색 데이터로 훈련 강화",
-      "link": "https://www.wikitree.co.kr/articles/1152570",
-      "source": "naver",
-      "published": "2026-08-14T22:28:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1594,21 +1582,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70338",
       "source": "msrc",
       "published": "2026-08-14T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-73673 - Netis NC63 V3.0.0.3327 Unauthenticated Firmware Update with Missing Cryptographic Firmware Authentication",
-      "summary": "CVE ID :CVE-2026-73673\n  \nPublished : Aug. 14, 2026, 1:19 p.m. | 17 minutes ago\n  \nDescription :Netis NC63 router firmware V3.0.0.3327 contains an unauthenticated firmware update vulnerability that allows unauthenticated attackers to submit unsigned firmware images by exploiting a missing authentication enforcement flaw in the Boa web server and netis.cgi CGI dispatcher. Attackers can send a multipart POST request to /cgi-bin/upload_fw.cgi without a valid session cookie, bypassing authentication because Boa grants access to any path containing '.cgi' regardless of cookie validation, and netis.cgi reads but does not enforce the authentication state before invoking the firmware update handler, which accepts images validated only by a forgeable additive checksum and static product strings rather than a cryptographic signature, potentially enabling persistent router compromise.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-73673\n  \nPublished : Aug. 14, 2026, 1:19 p.m. | 17 minutes ago\n  \nDescription :Netis NC63 router firmware V3.0.0.3327 contains an unauthenticated firmware update vulnerability that allows unauthenticated attackers to submit unsigned firmware images by exploiting a missing authentication enforcement flaw in the Boa web server and netis.cgi CGI dispatcher. Attackers can send a multipart POST request to /cgi-bin/upload_fw.cgi without a valid session cookie, bypassing authentication because Boa grants access to any path containing '.cgi' regardless of cookie validation, and netis.cgi reads but does not enforce the authentication state before invoking the firmware update handler, which accepts images validated only by a forgeable additive checksum and static product strings rather than a cryptographic signature, potentially enabling persistent router compromise.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-73673 - Netis NC63 V3.0.0.3327 암호화 펌웨어 인증이 누락되어 인증되지 않은 펌웨어 업데이트",
-      "summary_ko": "CVE ID:CVE-2026-73673\n  \n게시일 : 2026년 8월 14일 오후 1시 19분 | 17분 전\n  \n설명:Netis NC63 라우터 펌웨어 V3.0.0.3327에는 인증되지 않은 공격자가 Boa 웹 서버 및 netis.cgi CGI 디스패처에 누락된 인증 적용 결함을 악용하여 서명되지 않은 펌웨어 이미지를 제출할 수 있게 하는 인증되지 않은 펌웨어 업데이트 취약점이 포함되어 있습니다. 공격자는 유효한 세션 쿠키 없이 멀티파트 POST 요청을 /cgi-bin/upload_fw.cgi에 보낼 수 있습니다. Boa는 쿠키 유효성 검사와 관계없이 '.cgi'가 포함된 모든 경로에 대한 액세스 권한을 부여하고 netis.cgi는 펌웨어 업데이트 핸들러를 호출하기 전에 읽기는 하지만 인증 상태를 적용하지 않습니다. 펌웨어 업데이트 핸들러는 암호화 서명이 아닌 위조 가능한 추가 체크섬과 정적 제품 문자열에 의해서만 검증된 이미지를 허용하여 잠재적으로 지속적인 라우터 손상을 가능하게 합니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-73673\n2. 26.08.14 오후10:19\n3. Netis NC63 router firmware V3.0.0.3327 contains an",
-      "cve_id": "CVE-2026-73673",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73673",
-      "source": "cvefeed",
-      "published": "2026-08-14T22:19:09+09:00",
       "lang": "en"
     }
   ],
