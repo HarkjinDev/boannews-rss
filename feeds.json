@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-18T00:02:16.561982+09:00",
+  "fetched_at": "2026-08-18T00:32:40.556058+09:00",
   "security_news": [
     {
       "title": "커브 창업자 이고로프, 펌프닷펀 \"사기 카지노\" 직격…누적매출은 12억...",
@@ -854,6 +854,18 @@
       "lang": "ko"
     },
     {
+      "title": "Apple macOS Screen Sharing Flaw Exploited on Internet-Exposed Macs to Install Monero Miner",
+      "summary": "A recently patched security flaw in Apple macOS has come under active exploitation in the wild to deploy a cryptocurrency miner, the Netherlands National Cyber Security Centre (NCSC) has warned.\n\nThe vulnerability in question is CVE-2026-65400 (CVSS score: 9.8), a critical authentication issue impacting the Screen Sharing component that could allow an attacker already on the network to",
+      "content": "",
+      "title_ko": "Monero Miner를 설치하기 위해 인터넷에 노출된 Mac에서 악용된 Apple macOS 화면 공유 결함",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. 인터넷에 노출된 Mac에서 Monero Miner를 설치하기 위해 Apple macOS 화\n2. Error 500 (Server Error)!!1500.That’s an error.The",
+      "link": "https://thehackernews.com/2026/08/apple-macos-screen-sharing-flaw.html",
+      "source": "thehackernews",
+      "published": "2026-08-15T16:24:04+09:00",
+      "lang": "en"
+    },
+    {
       "title": "\"말을 너무 잘 들어도 문제\"…'스포츠 강좌 예약' 요청에 AI가 벌인 일",
       "summary": "이후 버드는 AI에게 사이버보안 보고서를 작성하도록 하고 헬스장 운영자에게 예약 시스템의 취약점을... 호주 신호정보·사이버보안 기관인 호주신호정보국(ASD)도 AI 에이전트가 목표를 달성하기 위해 시스템의...",
       "content": "",
@@ -1032,18 +1044,6 @@
       "source": "bleepingcomputer",
       "published": "2026-08-15T03:04:26+09:00",
       "lang": "da"
-    },
-    {
-      "title": "[BIC2026] 북한 배경의 기묘한 아날로그 해킹 공포, '허미트 컴퓨타'",
-      "summary": "이런 문법은 어찌 보면 전통적인 해킹 호러와 크게 차이가 없긴 합니다. 그렇지만 '북한'이라는 독특한 맥락을 더하고 그에 맞춰 투박하고 미니멀하게 구현하면서 무드를 살린 것이 '허미트 컴퓨타'의 차별화된...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 배경, '허미트 컴퓨타' 아날로그 해킹 공포\n2. 투박하고 미니멀한 구현으로 분위기 조성\n3. 전통적 해킹 호러와 차별화된 북한 맥락",
-      "link": "https://m.sports.naver.com/esports/article/442/0000195463",
-      "source": "naver",
-      "published": "2026-08-15T00:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1660,21 +1660,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-47191",
       "source": "cvefeed",
       "published": "2026-08-15T02:18:15+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-19884 - Eclipse Theia Git Extension Arbitrary Command Execution Vulnerability",
-      "summary": "CVE ID :CVE-2026-19884\n  \nPublished : Aug. 14, 2026, 3:32 p.m. | 22 minutes ago\n  \nDescription :In Eclipse Theia versions up to and including 1.69.0, opening a folder starts source control integration without requiring the user to trust the folder first. This affects applications built on Theia that include the git integration, such as the Theia IDE. Both Theia's own `@theia/git` extension and the builtin VS Code `git` extension run git commands such as `git status` as soon as a repository is detected. Since git honors repository-local configuration, a folder containing an attacker-controlled `.git/config` with `core.fsmonitor` (or a comparable hook-like setting) causes the configured command to be executed. The configuration can be delivered by burying a bare repository inside a regular repository (OVE-20210718-0001), so cloning an attacker-supplied repository and opening it in a Theia-based application is sufficient to execute arbitrary commands with the privileges of the user, without any confirmation prompt.\n\n\n\nAs of 1.70.0, plugins that declare `capabilities.untrustedWorkspaces.supported: false`, which includes the builtin git extension, are no longer loaded or activated in an untrusted workspace, and the deprecated `@theia/git` extension has been removed, so no git command is executed against an untrusted folder.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-19884\n  \nPublished : Aug. 14, 2026, 3:32 p.m. | 22 minutes ago\n  \nDescription :In Eclipse Theia versions up to and including 1.69.0, opening a folder starts source control integration without requiring the user to trust the folder first. This affects applications built on Theia that include the git integration, such as the Theia IDE. Both Theia's own `@theia/git` extension and the builtin VS Code `git` extension run git commands such as `git status` as soon as a repository is detected. Since git honors repository-local configuration, a folder containing an attacker-controlled `.git/config` with `core.fsmonitor` (or a comparable hook-like setting) causes the configured command to be executed. The configuration can be delivered by burying a bare repository inside a regular repository (OVE-20210718-0001), so cloning an attacker-supplied repository and opening it in a Theia-based application is sufficient to execute arbitrary commands with the privileges of the user, without any confirmation prompt.\n\n\n\nAs of 1.70.0, plugins that declare `capabilities.untrustedWorkspaces.supported: false`, which includes the builtin git extension, are no longer loaded or activated in an untrusted workspace, and the deprecated `@theia/git` extension has been removed, so no git command is executed against an untrusted folder.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-19884 - Eclipse Theia Git 확장 임의 명령 실행 취약점",
-      "summary_ko": "CVE ID:CVE-2026-19884\n  \n게시일 : 2026년 8월 14일 오후 3시 32분 | 22분 전\n  \n설명: Eclipse Theia 버전 1.69.0 이하에서 폴더를 열면 사용자가 먼저 폴더를 신뢰하지 않고도 소스 제어 통합이 시작됩니다. 이는 Theia IDE와 같은 git 통합을 포함하는 Theia 기반 애플리케이션에 영향을 미칩니다. Theia의 자체 `@theia/git` 확장과 내장 VS Code `git` 확장 모두 저장소가 감지되는 즉시 `git status`와 같은 git 명령을 실행합니다. git은 저장소-로컬 구성을 따르기 때문에 공격자가 제어하는 ​​`.git/config`와 `core.fsmonitor`(또는 이와 유사한 후크형 설정)가 포함된 폴더로 인해 구성된 명령이 실행됩니다. 구성은 일반 저장소(OVE-20210718-0001) 내에 기본 저장소를 묻어 전달될 수 있으므로 공격자가 제공한 저장소를 복제하고 Theia 기반 애플리케이션에서 여는 것만으로도 확인 메시지 없이 사용자 권한으로 임의 명령을 실행하기에 충분합니다.\n\n\n\n1.70.0부터 내장 git 확장을 포함하는 `capability.untrustedWorkspaces.supported: false`를 선언하는 플러그인은 더 이상 신뢰할 수 없는 작업 공간에서 로드되거나 활성화되지 않으며 더 이상 사용되지 않는 `@theia/git` 확장이 제거되었으므로 신뢰할 수 없는 폴더에 대해 git 명령이 실행되지 않습니다.\n  \n심각도: 8.4 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-19884\n2. 26.08.15 오전12:32\n3. In Eclipse Theia versions up to and including 1.69",
-      "cve_id": "CVE-2026-19884",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-19884",
-      "source": "cvefeed",
-      "published": "2026-08-15T00:32:38+09:00",
       "lang": "en"
     }
   ],
