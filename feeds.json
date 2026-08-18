@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-19T03:32:19.438738+09:00",
+  "fetched_at": "2026-08-19T04:02:27.440819+09:00",
   "security_news": [
     {
       "title": "프랑스 공공기관 잇단 해킹에 개인정보 '줄줄'",
@@ -1503,6 +1503,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54730 - authentik: Authentication Flow Bypass via Unguarded challenge_valid() in AuthenticatorEndpointGDTCStage and GoogleChromeStageView",
+      "summary": "CVE ID :CVE-2026-54730\n  \nPublished : Aug. 18, 2026, 5:16 p.m. | 27 minutes ago\n  \nDescription :authentik is an open-source identity provider. Prior to 2026.2.6 and 2026.5.5, the enterprise Google Chrome device-trust stages advance the flow without confirming that the out-of-band device attestation actually ran. Affected enterprise deployments place either a Google Chrome Endpoint stage with mode set to REQUIRED or the deprecated Google Chrome Device Trust Connector stage in an authentication flow. The device attestation occurs in a verification iframe that calls the Google Verified Access API and records the verified device on success, but the vulnerable stages treat the flow as passed as soon as the stage is submitted. An attacker who can reach such a stage, including after primary username and password authentication, can skip the verification iframe and authenticate from a device that was never verified. Where device trust is the only additional factor, that protection is fully bypassed, while other configured factors remain in force. This issue is fixed in versions 2026.2.6 and 2026.5.5.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54730\n  \nPublished : Aug. 18, 2026, 5:16 p.m. | 27 minutes ago\n  \nDescription :authentik is an open-source identity provider. Prior to 2026.2.6 and 2026.5.5, the enterprise Google Chrome device-trust stages advance the flow without confirming that the out-of-band device attestation actually ran. Affected enterprise deployments place either a Google Chrome Endpoint stage with mode set to REQUIRED or the deprecated Google Chrome Device Trust Connector stage in an authentication flow. The device attestation occurs in a verification iframe that calls the Google Verified Access API and records the verified device on success, but the vulnerable stages treat the flow as passed as soon as the stage is submitted. An attacker who can reach such a stage, including after primary username and password authentication, can skip the verification iframe and authenticate from a device that was never verified. Where device trust is the only additional factor, that protection is fully bypassed, while other configured factors remain in force. This issue is fixed in versions 2026.2.6 and 2026.5.5.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54730 - authentik: AuthenticatorEndpointGDTCStage 및 GoogleChromeStageView에서 Unguarded Challenge_valid()를 통한 인증 흐름 우회",
+      "summary_ko": "CVE ID:CVE-2026-54730\n  \n게시일 : 2026년 8월 18일 오후 5시 16분 | 27분 전\n  \n설명 :authentik은 오픈 소스 ID 공급자입니다. 2026.2.6 및 2026.5.5 이전에는 기업 Google Chrome 기기 신뢰 단계에서 대역 외 기기 증명이 실제로 실행되었는지 확인하지 않고 흐름을 진행했습니다. 영향을 받는 기업 배포에서는 모드가 REQUIRED로 설정된 Google Chrome 엔드포인트 단계 또는 더 이상 사용되지 않는 Google Chrome Device Trust Connector 단계를 인증 흐름에 배치합니다. 기기 증명은 Google Verified Access API를 호출하고 확인된 기기의 성공을 기록하는 확인 iframe에서 발생하지만, 취약한 단계에서는 단계가 제출되자마자 흐름을 전달된 것으로 처리합니다. 기본 사용자 이름 및 비밀번호 인증을 포함하여 이러한 단계에 도달할 수 있는 공격자는 확인 iframe을 건너뛰고 확인되지 않은 장치에서 인증할 수 있습니다. 장치 신뢰가 유일한 추가 요소인 경우 해당 보호는 완전히 우회되고 다른 구성된 요소는 그대로 유지됩니다. 이 문제는 버전 2026.2.6 및 2026.5.5에서 해결되었습니다.\n  \n심각도: 8.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54730\n2. 26.08.19 오전2:16\n3. authentik is an open-source identity provider. Pri",
+      "cve_id": "CVE-2026-54730",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54730",
+      "source": "cvefeed",
+      "published": "2026-08-19T02:16:59+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-63337 - RabbitMQ Java client: Unvalidated Class.forName in JSON-RPC ProcedureDescription enables arbitrary class loading",
       "summary": "CVE ID :CVE-2026-63337\n  \nPublished : Aug. 18, 2026, 4:27 p.m. | 41 minutes ago\n  \nDescription :The RabbitMQ Java client library allows Java and JVM-based applications to connect to and interact with RabbitMQ nodes. Prior to 5.33.0, com.rabbitmq.tools.jsonrpc.ProcedureDescription receives a javaReturnType value in an untrusted system.describe response and passes it through JSONUtil.tryFill, setJavaReturnType, and computeReturnTypeAsJavaClass to Class.forName(javaReturnType) with initialization enabled. An attacker able to answer the JsonRpcClient request through a shared broker or network interception can select a class already present in the victim JVM and trigger its static initializer, while JsonRpcClient.java later passes getReturnType output to mapper.parse and may also create type confusion. Successful exploitation can affect confidentiality, integrity, and availability in the client process. This issue is fixed in version 5.33.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
