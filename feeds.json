@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-18T20:01:18.597049+09:00",
+  "fetched_at": "2026-08-18T20:30:54.662254+09:00",
   "security_news": [
     {
       "title": "[단독] ‘외교관 정보유출’ 국립외교원 해킹…‘24시간 보안 관리’ 못...",
@@ -1476,21 +1476,24 @@
       "source": "naver",
       "published": "2026-08-15T20:46:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "양주 폐기물재활용시설 화재…서강대 개인정보 유출",
-      "summary": "서강대학교에서는 외부 해킹 공격으로 학생과 교직원 등 18만 명의 개인정보가 대거 유출됐습니다. 이재호 기자가 보도합니다. 시뻘건 불길과 함께 거센 검은 연기가 하늘 높이 치솟아 오릅니다. 오늘 새벽 5시쯤, 경기...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 서강대 18만 명 개인정보 유출\n2. 외부 해킹으로 학생·교직원 정보 유출\n3. 정보 유출 규모, 구체적 피해 현황 조사",
-      "link": "https://n.news.naver.com/mnews/article/057/0001963905?sid=102",
-      "source": "naver",
-      "published": "2026-08-15T20:03:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-43971 - Link Header Directive Smuggling via Unescaped target/rel/Attribute Keys in cow_link:link/1",
+      "summary": "CVE ID :CVE-2026-43971\n  \nPublished : Aug. 18, 2026, 9:17 a.m. | 1 hour, 51 minutes ago\n  \nDescription :Improper Encoding or Escaping of Output vulnerability in ninenines cowlib allows Link header directive smuggling via unescaped special characters in cow_link:link/1.\n\ncow_link:do_link/1 in cowlib interpolates the target URI, rel value, and attribute keys directly into the serialized Link: header value without escaping or token-grammar validation. A > byte in target prematurely closes the URI slot, allowing an attacker to append additional link entries with attacker-chosen rel directives. A \" or \\ in rel escapes the quoted string and opens new parameters. Any byte — including whitespace, =, and \" — in an attribute key is emitted verbatim. Because browsers act on Link: directives such as rel=\"preconnect\", rel=\"preload\", and rel=\"prerender\", an attacker who can influence these fields in an application that round-trips parsed Link headers through cow_link:link/1 can force victim browsers to make out-of-band connections to attacker-controlled origins.\n\nThis issue affects cowlib: from 2.9.0 onward.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-43971\n  \nPublished : Aug. 18, 2026, 9:17 a.m. | 1 hour, 51 minutes ago\n  \nDescription :Improper Encoding or Escaping of Output vulnerability in ninenines cowlib allows Link header directive smuggling via unescaped special characters in cow_link:link/1.\n\ncow_link:do_link/1 in cowlib interpolates the target URI, rel value, and attribute keys directly into the serialized Link: header value without escaping or token-grammar validation. A > byte in target prematurely closes the URI slot, allowing an attacker to append additional link entries with attacker-chosen rel directives. A \" or \\ in rel escapes the quoted string and opens new parameters. Any byte — including whitespace, =, and \" — in an attribute key is emitted verbatim. Because browsers act on Link: directives such as rel=\"preconnect\", rel=\"preload\", and rel=\"prerender\", an attacker who can influence these fields in an application that round-trips parsed Link headers through cow_link:link/1 can force victim browsers to make out-of-band connections to attacker-controlled origins.\n\nThis issue affects cowlib: from 2.9.0 onward.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-43971 - cow_link:link/1의 이스케이프되지 않은 target/rel/속성 키를 통한 링크 헤더 지시문 밀수",
+      "summary_ko": "CVE ID:CVE-2026-43971\n  \n게시일 : 2026년 8월 18일 오전 9시 17분 | 1시간 51분 전\n  \n설명 : ninenines cowlib의 부적절한 인코딩 또는 출력 이스케이프 취약점으로 인해 cow_link:link/1에서 이스케이프되지 않은 특수 문자를 통한 링크 헤더 지시문 밀수가 허용됩니다.\n\ncowlib의 cow_link:do_link/1은 이스케이프나 토큰 문법 검증 없이 대상 URI, 상대 값 및 속성 키를 직렬화된 Link: 헤더 값에 직접 삽입합니다. 대상의 A > 바이트는 URI 슬롯을 조기에 닫아 공격자가 선택한 rel 지시문을 사용하여 추가 링크 항목을 추가할 수 있도록 합니다. rel의 \" 또는 \\는 인용된 문자열을 이스케이프하고 새 매개변수를 엽니다. 속성 키에 있는 공백, = ​​및 \"를 포함한 모든 바이트는 그대로 방출됩니다. 브라우저는 rel=\"preconnect\", rel=\"preload\" 및 rel=\"prerender\"와 같은 Link: 지시문에 따라 작동하므로, cow_link:link/1을 통해 구문 분석된 링크 헤더를 왕복하는 애플리케이션에서 이러한 필드에 영향을 미칠 수 있는 공격자는 피해자 브라우저가 공격자가 제어하는 ​​원본에 대역 외 연결을 설정하도록 강제할 수 있습니다.\n\n이 문제는 cowlib: 2.9.0부터 영향을 미칩니다.\n  \n심각도: 6.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-43971\n2. 26.08.18 오후6:17\n3. Improper Encoding or Escaping of Output vulnerabil",
+      "cve_id": "CVE-2026-43971",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-43971",
+      "source": "cvefeed",
+      "published": "2026-08-18T18:17:14+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-63178 - Onyx Curator-scope IDOR: any curator can modify membership of arbitrary user groups via unscoped PATCH /manage/admin/user-group/{id} and /add-users leading to cross-group document disclosure",
       "summary": "CVE ID :CVE-2026-63178\n  \nPublished : Aug. 17, 2026, 9:30 p.m. | 25 minutes ago\n  \nDescription :Onyx is an open-source AI platform. Prior to 4.3.0, Onyx Enterprise Edition's PATCH /manage/admin/user-group/{user_group_id} and POST /manage/admin/user-group/{user_group_id}/add-users endpoints in ee/onyx/server/user_group/api.py call update_user_group and add_users_to_user_group in ee/onyx/db/user_group.py without enforcing _validate_curator_can_modify_group, allowing a curator to add accounts to arbitrary groups and obtain document access through get_acl_for_user and the OpenSearch access_control_list filter. This issue is fixed in version 4.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
