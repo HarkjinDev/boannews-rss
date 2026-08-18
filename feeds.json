@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-18T20:30:54.662254+09:00",
+  "fetched_at": "2026-08-18T21:01:00.654962+09:00",
   "security_news": [
     {
       "title": "[단독] ‘외교관 정보유출’ 국립외교원 해킹…‘24시간 보안 관리’ 못...",
@@ -1452,33 +1452,24 @@
       "source": "naver",
       "published": "2026-08-15T21:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "중국 해커 '무스탕 판다', 정부기관 공격에 커널 루트킷 활용",
-      "summary": "중국계 해킹그룹으로 알려진 무스탕 판다가 윈도우 커널 영역에서 동작하는 루트킷을 이용해 악성코드와 명령제어 통신 흔적을 숨기는 공격을 벌인 정황이 확인됐다. 카스퍼스키는 최근 무스탕 판다가 사용하는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중국 해커 '무스탕 판다', 정부기관 공격에 커널 루트킷 활용 중국계 해킹그룹으로 알려진 \n2. 카스퍼스키는 최근 무스탕 판다가 사용하는...",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208065",
-      "source": "naver",
-      "published": "2026-08-15T20:58:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "SAP 커머스 클라우드 치명적 취약점 노린 공격 포착…패치 3일 만에 악용",
-      "summary": "과거 SAP 넷위버의 CVE-2025-31324가 중국 연계 해킹조직과 랜섬웨어 조직 등에 악용된 사례가 있지만, 이들 조직이 이번 공격에 관여했다는 증거는 없다. SAP \"업데이트 후 재빌드·재배포해야\" SAP 커머스 클라우드를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. SAP 커머스 클라우드 치명적 취약점 노린 공격 포착…패치 3일 만에 악용 과거 SAP 넷\n2. SAP \"업데이트 후 재빌드·재배포해야\" SAP 커머스 클라우드를...",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208064",
-      "source": "naver",
-      "published": "2026-08-15T20:46:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-75851 - ArcadeDB before 26.8.1 Authentication Bypass via Async Command",
+      "summary": "CVE ID :CVE-2026-75851\n  \nPublished : Aug. 18, 2026, 11:19 a.m. | 31 minutes ago\n  \nDescription :ArcadeDB server (com.arcadedb:arcadedb-server) in versions 26.7.3 and earlier fails to propagate the authenticated principal to asynchronous command worker threads. When an HTTP command is submitted with awaitResponse:false, it executes on an async worker whose DatabaseContext has no bound user, causing the scripting authorization gate to become a no-op. A user with only read access to a single database can submit an asynchronous JavaScript (language=js) command via the /api/v1/command endpoint to run code with unrestricted host access (e.g., database.getSecurity().createUser) and create a server-wide administrator, escalating to full administrative control. Fixed in 26.8.1.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-75851\n  \nPublished : Aug. 18, 2026, 11:19 a.m. | 31 minutes ago\n  \nDescription :ArcadeDB server (com.arcadedb:arcadedb-server) in versions 26.7.3 and earlier fails to propagate the authenticated principal to asynchronous command worker threads. When an HTTP command is submitted with awaitResponse:false, it executes on an async worker whose DatabaseContext has no bound user, causing the scripting authorization gate to become a no-op. A user with only read access to a single database can submit an asynchronous JavaScript (language=js) command via the /api/v1/command endpoint to run code with unrestricted host access (e.g., database.getSecurity().createUser) and create a server-wide administrator, escalating to full administrative control. Fixed in 26.8.1.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-75851 - 26.8.1 이전의 ArcadeDB 비동기 명령을 통한 인증 우회",
+      "summary_ko": "CVE ID:CVE-2026-75851\n  \n게시일 : 2026년 8월 18일 오전 11시 19분 | 31분 전\n  \n설명: 버전 26.7.3 이하의 ArcadeDB 서버(com.arcadedb:arcadedb-server)는 인증된 주체를 비동기 명령 작업자 스레드에 전파하지 못합니다. waitResponse:false와 함께 HTTP 명령이 제출되면 DatabaseContext에 바인딩된 사용자가 없는 비동기 작업자에서 실행되어 스크립팅 인증 게이트가 작동하지 않게 됩니다. 단일 데이터베이스에 대한 읽기 권한만 있는 사용자는 /api/v1/command 엔드포인트를 통해 비동기 JavaScript(언어=js) 명령을 제출하여 무제한 호스트 액세스(예: Database.getSecurity().createUser)로 코드를 실행하고 서버 전체 관리자를 생성하여 전체 관리 제어 권한으로 확대할 수 있습니다. 26.8.1에서 수정되었습니다.\n  \n심각도: 9.9 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-75851\n2. 26.08.18 오후8:19\n3. ArcadeDB server (com.arcadedb:arcadedb-server) in ",
+      "cve_id": "CVE-2026-75851",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75851",
+      "source": "cvefeed",
+      "published": "2026-08-18T20:19:55+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-43971 - Link Header Directive Smuggling via Unescaped target/rel/Attribute Keys in cow_link:link/1",
       "summary": "CVE ID :CVE-2026-43971\n  \nPublished : Aug. 18, 2026, 9:17 a.m. | 1 hour, 51 minutes ago\n  \nDescription :Improper Encoding or Escaping of Output vulnerability in ninenines cowlib allows Link header directive smuggling via unescaped special characters in cow_link:link/1.\n\ncow_link:do_link/1 in cowlib interpolates the target URI, rel value, and attribute keys directly into the serialized Link: header value without escaping or token-grammar validation. A > byte in target prematurely closes the URI slot, allowing an attacker to append additional link entries with attacker-chosen rel directives. A \" or \\ in rel escapes the quoted string and opens new parameters. Any byte — including whitespace, =, and \" — in an attribute key is emitted verbatim. Because browsers act on Link: directives such as rel=\"preconnect\", rel=\"preload\", and rel=\"prerender\", an attacker who can influence these fields in an application that round-trips parsed Link headers through cow_link:link/1 can force victim browsers to make out-of-band connections to attacker-controlled origins.\n\nThis issue affects cowlib: from 2.9.0 onward.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
