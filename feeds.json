@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-19T06:01:31.125176+09:00",
+  "fetched_at": "2026-08-19T07:02:22.912951+09:00",
   "security_news": [
+    {
+      "title": "Critical GitLab Zero-Click Flaw Poses Mitigation Challenges",
+      "summary": "A lack of technical details could make it hard for organizations running self-managed GitLab versions to detect potential exploitation of CVE-2026-19478.",
+      "content": "",
+      "title_ko": "중요한 GitLab 제로 클릭 결함으로 인해 완화 문제 발생",
+      "summary_ko": "기술적인 세부 사항이 부족하면 자체 관리형 GitLab 버전을 실행하는 조직이 CVE-2026-19478의 잠재적 악용을 탐지하기 어려울 수 있습니다.",
+      "summary_3lines": "1. 심각한 GitLab 제로 클릭 결함으로 인해 완화 과제 발생 기술적 세부 사항이 부족하면 ",
+      "link": "https://www.darkreading.com/application-security/critical-gitlab-zero-click-flaw-mitigation-challenges",
+      "source": "darkreading",
+      "published": "2026-08-19T06:25:58+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "대학에서 유출된 개인정보 300만건 육박…첨단산업 데이터도 ‘위험’",
+      "summary": "이달 초 서강대에서 발생한 해킹으로 개인정보가 대거 유출된 가운데 최근 5년 간 국내 대학의 개인정보 유출에 따른 누적 피해자 수가 300만명에 육박하는 것으로 나타났다. 전문가들은 최근 대학을 타깃으로 한 해킹...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 서강대 해킹으로 300만 건 육박하는 대학 개인정보 유출\n2. 첨단 산업 데이터 유출 위험도 증가 추세\n3. 대학 대상 해킹 증가, 개인정보 보호 강화 필요",
+      "link": "https://n.news.naver.com/mnews/article/011/0004652855?sid=102",
+      "source": "naver",
+      "published": "2026-08-19T06:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[사설] 공공기관 정보유출 급증, 허술한 관리실태 바로잡아야",
       "summary": "고도화된 사이버 공격을 막아낼 정교한 방화벽 구축보다 일선 공직자들의 보안 불감증과 허술한 내부 통제체계가 더 큰 문제임을 보여준다. 개인정보는 한번 유출되면 보이스피싱, 스팸, 명의도용 등 2차 범죄로 이어질...",
@@ -1488,33 +1512,24 @@
       "source": "naver",
       "published": "2026-08-16T07:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "북한 해킹 13% 급증…암호화폐 넘어 IT 개발자까지 노렸다",
-      "summary": "구직자까지 보안 경계를 높여야 한다는 지적이 나온다. 러시아의 사이버 공격도 크게 늘었다. 러시아 배후... 생성형 AI와 딥페이크가 공격자의 신분을 감추거나 피해자를 속이는 데 활용되면서 기존의 보안 체계만으로...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해킹 13% 급증…암호화폐 넘어 IT 개발자까지 노렸다 구직자까지 보안 경계를 높여야\n2. 러시아의 사이버 공격도 크게 늘었다.\n3. 생성형 AI와 딥페이크가 공격자의 신분을 감추거나 피해자를 속이는 데 활용되면서 기존의 보",
-      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=477760",
-      "source": "naver",
-      "published": "2026-08-16T06:38:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "한국 노린 북한 해킹 늘어…AI·딥페이크 악용",
-      "summary": "올해 상반기 북한·중국·러시아 등 국가 배후 해킹 조직의 사이버 공격이 158건으로 전년 하반기보다 7.5... 조직으로 해킹 대상을 넓혔습니다. 이들은 정보 수집뿐만 아니라 시스템 파괴와 운영 주단을 목적으로 한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 상반기 북한 등 국가 배후 해킹 158건 급증\n2. AI, 딥페이크 악용해 정보 수집 및 시스템 파괴\n3. 한국 조직 대상 공격 증가, 운영 중단 목적",
-      "link": "https://n.news.naver.com/mnews/article/422/0000896220?sid=105",
-      "source": "naver",
-      "published": "2026-08-16T06:19:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-62291 - libheif: Heap out of bounds write in libheif uncompressed encoder when writing images with mismatched auxiliary alpha dimensions",
+      "summary": "CVE ID :CVE-2026-62291\n  \nPublished : Aug. 18, 2026, 9:21 p.m. | 38 minutes ago\n  \nDescription :libheif is a HEIF and AVIF file format decoder and encoder. In 1.23.0 and earlier, a crafted image sequence with a 2x2 primary plane and a 256x256 auxiliary alpha plane can cause attacker-controlled heap corruption during a normal decode and re-encode workflow. Track_Visual::decode_next_image_sample() calls transfer_channel_from_image_as() without checking that the auxiliary alpha dimensions match the main frame. The resulting inconsistent image reaches heif_track_decode_next_image() and then heif_context_encode_image(). In unc_encoder::encode(), unc_encoder_component_interleave::encode_tile() sizes its buffer with compute_tile_data_size_bytes() using the primary dimensions but copies each component using its actual plane dimensions. The oversized alpha plane is therefore copied beyond the allocation, causing an out-of-bounds write; the inverse size mismatch can also produce an out-of-bounds read. This issue is fixed in version 1.23.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-62291\n  \nPublished : Aug. 18, 2026, 9:21 p.m. | 38 minutes ago\n  \nDescription :libheif is a HEIF and AVIF file format decoder and encoder. In 1.23.0 and earlier, a crafted image sequence with a 2x2 primary plane and a 256x256 auxiliary alpha plane can cause attacker-controlled heap corruption during a normal decode and re-encode workflow. Track_Visual::decode_next_image_sample() calls transfer_channel_from_image_as() without checking that the auxiliary alpha dimensions match the main frame. The resulting inconsistent image reaches heif_track_decode_next_image() and then heif_context_encode_image(). In unc_encoder::encode(), unc_encoder_component_interleave::encode_tile() sizes its buffer with compute_tile_data_size_bytes() using the primary dimensions but copies each component using its actual plane dimensions. The oversized alpha plane is therefore copied beyond the allocation, causing an out-of-bounds write; the inverse size mismatch can also produce an out-of-bounds read. This issue is fixed in version 1.23.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-62291 - libheif: 보조 알파 크기가 일치하지 않는 이미지를 작성할 때 libheif 비압축 인코더에서 범위를 벗어난 힙 쓰기가 발생합니다.",
+      "summary_ko": "CVE ID:CVE-2026-62291\n  \n게시일 : 2026년 8월 18일 오후 9시 21분 | 38분 전\n  \n설명 :libheif는 HEIF 및 AVIF 파일 형식 디코더 및 인코더입니다. 1.23.0 이하 버전에서는 2x2 기본 평면과 256x256 보조 알파 평면으로 제작된 이미지 시퀀스로 인해 일반적인 디코드 및 재인코딩 작업 흐름 중에 공격자가 제어하는 ​​힙 손상이 발생할 수 있습니다. Track_Visual::decode_next_image_sample()은 보조 알파 크기가 메인 프레임과 일치하는지 확인하지 않고 transfer_channel_from_image_as()를 호출합니다. 결과적으로 일관성이 없는 이미지는 heif_track_decode_next_image()에 도달한 다음 heif_context_encode_image()에 도달합니다. unc_encoder::encode()에서 unc_encoder_comComponent_interleave::encode_tile()은 기본 차원을 사용하여 Compute_tile_data_size_bytes()로 버퍼 크기를 조정하지만 실제 평면 차원을 사용하여 각 구성 요소를 복사합니다. 따라서 크기가 너무 큰 알파 평면은 할당 범위를 벗어나 복사되어 범위를 벗어난 쓰기가 발생합니다. 역 크기 불일치로 인해 범위를 벗어난 읽기가 발생할 수도 있습니다. 이 문제는 버전 1.23.1에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-62291\n2. 26.08.19 오전6:21\n3. libheif is a HEIF and AVIF file format decoder and",
+      "cve_id": "CVE-2026-62291",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62291",
+      "source": "cvefeed",
+      "published": "2026-08-19T06:21:32+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-52736 - ZEBRA: Block suppression via NU5 same-header body poisoning of sent-hash cache",
       "summary": "CVE ID :CVE-2026-52736\n  \nPublished : Aug. 18, 2026, 7:26 p.m. | 17 minutes ago\n  \nDescription :ZEBRA is a Zcash node written entirely in Rust. Prior to 4.5.0, a remote unauthenticated P2P peer can stall a Zebra node by racing an invalid block body against the valid canonical body for the same block header hash. ZIP-244 permits the attacker to mutate coinbase scriptSig authentication data while retaining the transaction identifiers, merkle root, and block header hash, so the poisoned body fails later commitment validation but shares the canonical hash. In zebra-state/src/service.rs, queue_and_commit_to_non_finalized_state recorded the hash in non_finalized_block_write_sent_hashes before contextual validation completed and did not remove it when the write task rejected the body. When the honest body later arrived, the cached hash caused KnownBlock::WriteChannel duplicate handling to suppress it, leaving the node stuck one height behind until restart or reorganization. This issue is fixed in version 4.5.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2128,21 +2143,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-15002",
       "source": "cvefeed",
       "published": "2026-08-16T14:16:46+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-74764 - Path Traversal in TAR Archive Extraction Allows Arbitrary File Write in Pandora",
-      "summary": "CVE ID :CVE-2026-74764\n  \nPublished : Aug. 15, 2026, 9:39 p.m. | 2 hours, 51 minutes ago\n  \nDescription :Pandora contains a path traversal vulnerability in its TAR archive extraction functionality. When processing a submitted TAR archive, the extractor passed archive member names directly to Python's tarfile.TarFile.extract() without applying an extraction filter.\n\n\nAn attacker able to submit a specially crafted TAR archive containing malicious member paths, such as paths using ../ sequences or absolute paths, could cause extracted files to be written outside the intended extraction directory. This may allow the attacker to overwrite files accessible to the Pandora worker process and could potentially result in application compromise, arbitrary code execution, or denial of service depending on the files targeted and the privileges of the Pandora process.\n\n\nThe vulnerability is corrected by using Python's filter='data' extraction filter, which rejects or sanitizes dangerous TAR members, including paths that escape the destination directory and unsafe link targets. \n\n\nThe weakness corresponds to MITRE's general path traversal category, which includes archive extraction cases where attacker-controlled filenames cause files to be written outside the intended directory.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-74764\n  \nPublished : Aug. 15, 2026, 9:39 p.m. | 2 hours, 51 minutes ago\n  \nDescription :Pandora contains a path traversal vulnerability in its TAR archive extraction functionality. When processing a submitted TAR archive, the extractor passed archive member names directly to Python's tarfile.TarFile.extract() without applying an extraction filter.\n\n\nAn attacker able to submit a specially crafted TAR archive containing malicious member paths, such as paths using ../ sequences or absolute paths, could cause extracted files to be written outside the intended extraction directory. This may allow the attacker to overwrite files accessible to the Pandora worker process and could potentially result in application compromise, arbitrary code execution, or denial of service depending on the files targeted and the privileges of the Pandora process.\n\n\nThe vulnerability is corrected by using Python's filter='data' extraction filter, which rejects or sanitizes dangerous TAR members, including paths that escape the destination directory and unsafe link targets. \n\n\nThe weakness corresponds to MITRE's general path traversal category, which includes archive extraction cases where attacker-controlled filenames cause files to be written outside the intended directory.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-74764 - TAR 아카이브 추출의 경로 탐색으로 인해 Pandora에서 임의 파일 쓰기가 허용됨",
-      "summary_ko": "CVE ID:CVE-2026-74764\n  \n게시일 : 2026년 8월 15일 오후 9시 39분 | 2시간 51분 전\n  \n설명 :Pandora에는 TAR 아카이브 추출 기능에 경로 탐색 취약점이 있습니다. 제출된 TAR 아카이브를 처리할 때 추출기는 추출 필터를 적용하지 않고 아카이브 멤버 이름을 Python의 tarfile.TarFile.extract()에 직접 전달했습니다.\n\n\n../ 시퀀스를 사용하는 경로 또는 절대 경로와 같은 악의적인 구성원 경로를 포함하는 특수 제작된 TAR 아카이브를 제출할 수 있는 공격자는 추출된 파일이 의도한 추출 디렉터리 외부에 기록되도록 할 수 있습니다. 이로 인해 공격자가 Pandora 작업자 프로세스에 액세스할 수 있는 파일을 덮어쓸 수 있으며 대상 파일과 Pandora 프로세스의 권한에 따라 잠재적으로 응용 프로그램 손상, 임의 코드 실행 또는 서비스 거부가 발생할 수 있습니다.\n\n\n취약성은 대상 디렉토리를 벗어나는 경로와 안전하지 않은 링크 대상을 포함하여 위험한 TAR 구성원을 거부하거나 삭제하는 Python의 filter='data' 추출 필터를 사용하여 수정됩니다. \n\n\n이 취약점은 공격자가 제어하는 ​​파일 이름으로 인해 파일이 의도한 디렉터리 외부에 기록되는 아카이브 추출 사례를 포함하는 MITRE의 일반 경로 탐색 범주에 해당합니다.\n  \n심각도: 10.0 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-74764\n2. 26.08.16 오전6:39\n3. Pandora contains a path traversal vulnerability in",
-      "cve_id": "CVE-2026-74764",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-74764",
-      "source": "cvefeed",
-      "published": "2026-08-16T06:39:09+09:00",
       "lang": "en"
     }
   ],
