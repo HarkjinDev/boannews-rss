@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-19T04:02:27.440819+09:00",
+  "fetched_at": "2026-08-19T04:32:35.496861+09:00",
   "security_news": [
     {
       "title": "프랑스 공공기관 잇단 해킹에 개인정보 '줄줄'",
@@ -1503,6 +1503,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-75625 - Kraken Agents Peer-to-Peer Download Cache Poisoning via Digest Verification Bypass",
+      "summary": "CVE ID :CVE-2026-75625\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :Kraken agents fail to verify peer-to-peer downloaded blobs against their requested SHA-256 digest before committing to the content-addressable cache, relying only on CRC32 checksums for piece validation. Attackers on the agent-to-agent path or malicious peers can supply substituted content with forged CRC32 corrections that passes per-piece checks, poisoning the cache with attacker-chosen container image layers or manifests that are re-seeded and executed by other hosts.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-75625\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :Kraken agents fail to verify peer-to-peer downloaded blobs against their requested SHA-256 digest before committing to the content-addressable cache, relying only on CRC32 checksums for piece validation. Attackers on the agent-to-agent path or malicious peers can supply substituted content with forged CRC32 corrections that passes per-piece checks, poisoning the cache with attacker-chosen container image layers or manifests that are re-seeded and executed by other hosts.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-75625 - Kraken 에이전트, 다이제스트 확인 우회를 통한 P2P 다운로드 캐시 중독",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-75625\n2. 26.08.19 오전3:19\n3. Kraken agents fail to verify peer-to-peer download",
+      "cve_id": "CVE-2026-75625",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75625",
+      "source": "cvefeed",
+      "published": "2026-08-19T03:19:34+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-73502 - kin-openapi openapi3filter: unauthenticated nil-pointer panic when validating a request against a `content` parameter whose media type has no schema",
+      "summary": "CVE ID :CVE-2026-73502\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.2.0 until 0.144.0, openapi3filter.ValidateRequest can encounter a NULL-pointer-dereference denial of service when an operation declares a content parameter whose application/json media type has no schema. In openapi3filter/req_resp_decoder.go, the default defaultContentParameterDecoder dereferences mt.Schema.Value without checking whether mt.Schema is nil, even though doc.Validate() accepts the document under OpenAPI 3.0.x and 3.1.x. A single unauthenticated request supplying the parameter value can panic request validation, causing an aborted request with log growth in the common synchronous net/http path or a full process crash in integrations without recovery. This issue is fixed in version 0.144.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-73502\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.2.0 until 0.144.0, openapi3filter.ValidateRequest can encounter a NULL-pointer-dereference denial of service when an operation declares a content parameter whose application/json media type has no schema. In openapi3filter/req_resp_decoder.go, the default defaultContentParameterDecoder dereferences mt.Schema.Value without checking whether mt.Schema is nil, even though doc.Validate() accepts the document under OpenAPI 3.0.x and 3.1.x. A single unauthenticated request supplying the parameter value can panic request validation, causing an aborted request with log growth in the common synchronous net/http path or a full process crash in integrations without recovery. This issue is fixed in version 0.144.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-73502 - kin-openapi openapi3filter: 미디어 유형에 스키마가 없는 'content' 매개변수에 대한 요청을 검증할 때 인증되지 않은 nil-pointer 패닉이 발생함",
+      "summary_ko": "CVE ID:CVE-2026-73502\n  \n게시일 : 2026년 8월 18일 오후 6시 19분 | 51분 전\n  \n설명 :kin-openapi는 OpenAPI 파일을 처리하기 위한 Go 프로젝트입니다. 0.2.0부터 0.144.0까지, openapi3filter.ValidateRequest는 작업이 application/json 미디어 유형에 스키마가 없는 콘텐츠 매개 변수를 선언할 때 NULL 포인터 역참조 서비스 거부가 발생할 수 있습니다. openapi3filter/req_resp_decoder.go에서 기본 defaultContentParameterDecoder는 doc.Validate()가 OpenAPI 3.0.x 및 3.1.x에서 문서를 허용하더라도 mt.Schema가 nil인지 확인하지 않고 mt.Schema.Value를 역참조합니다. 매개변수 값을 제공하는 인증되지 않은 단일 요청으로 인해 요청 유효성 검사에 패닉이 발생하여 공통 동기 net/http 경로에서 로그가 증가하면서 요청이 중단되거나 복구 없는 통합에서 전체 프로세스 충돌이 발생할 수 있습니다. 이 문제는 버전 0.144.0에서 해결되었습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-73502\n2. 26.08.19 오전3:19\n3. kin-openapi is a Go project for handling OpenAPI f",
+      "cve_id": "CVE-2026-73502",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73502",
+      "source": "cvefeed",
+      "published": "2026-08-19T03:19:33+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-71551 - Super Productivity: Arbitrary OS Command Execution via IPC EXEC Handler with Persistent Whitelist",
+      "summary": "CVE ID :CVE-2026-71551\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :Super Productivity is an advanced todo list app with integrated timeboxing and time tracking capabilities. Prior to 18.13.0, the EXEC IPC handler in electron/ipc-handlers/exec.ts accepts a command string from the renderer through the IPC.EXEC channel and executes it with child_process.exec(). The electron/preload.ts bridge exposes window.ea.exec() to renderer code, including community plugins executed with new Function(), without requiring nodeExecution permission. A confirmation dialog protects only the first execution, its persistence checkbox is selected by default, and approved commands are stored in the ALLOWED_COMMANDS value in simpleSettings for silent later execution with the desktop account's privileges. This issue is fixed in version 18.13.0.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-71551\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :Super Productivity is an advanced todo list app with integrated timeboxing and time tracking capabilities. Prior to 18.13.0, the EXEC IPC handler in electron/ipc-handlers/exec.ts accepts a command string from the renderer through the IPC.EXEC channel and executes it with child_process.exec(). The electron/preload.ts bridge exposes window.ea.exec() to renderer code, including community plugins executed with new Function(), without requiring nodeExecution permission. A confirmation dialog protects only the first execution, its persistence checkbox is selected by default, and approved commands are stored in the ALLOWED_COMMANDS value in simpleSettings for silent later execution with the desktop account's privileges. This issue is fixed in version 18.13.0.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-71551 - 뛰어난 생산성: 영구 화이트리스트가 포함된 IPC EXEC 핸들러를 통한 임의 OS 명령 실행",
+      "summary_ko": "CVE ID:CVE-2026-71551\n  \n게시일 : 2026년 8월 18일 오후 6시 19분 | 51분 전\n  \n설명:Super Productivity는 타임박싱 및 시간 추적 기능이 통합된 고급 할 일 목록 앱입니다. 18.13.0 이전에는 Electron/ipc-handlers/exec.ts의 EXEC IPC 핸들러가 IPC.EXEC 채널을 통해 렌더러로부터 명령 문자열을 받아들이고 child_process.exec()를 사용하여 실행했습니다. Electron/preload.ts 브리지는 nodeExecution 권한 없이도 new Function()으로 실행되는 커뮤니티 플러그인을 포함하여 window.ea.exec()를 렌더러 코드에 노출합니다. 확인 대화 상자는 첫 번째 실행만 보호하고 지속성 확인란이 기본적으로 선택되어 있으며 승인된 명령은 데스크톱 계정의 권한으로 나중에 자동으로 실행될 수 있도록 simpleSettings의 ALLOWED_COMMANDS 값에 저장됩니다. 이 문제는 버전 18.13.0에서 해결되었습니다.\n  \n심각도: 7.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-71551\n2. 26.08.19 오전3:19\n3. Super Productivity is an advanced todo list app wi",
+      "cve_id": "CVE-2026-71551",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-71551",
+      "source": "cvefeed",
+      "published": "2026-08-19T03:19:32+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54730 - authentik: Authentication Flow Bypass via Unguarded challenge_valid() in AuthenticatorEndpointGDTCStage and GoogleChromeStageView",
       "summary": "CVE ID :CVE-2026-54730\n  \nPublished : Aug. 18, 2026, 5:16 p.m. | 27 minutes ago\n  \nDescription :authentik is an open-source identity provider. Prior to 2026.2.6 and 2026.5.5, the enterprise Google Chrome device-trust stages advance the flow without confirming that the out-of-band device attestation actually ran. Affected enterprise deployments place either a Google Chrome Endpoint stage with mode set to REQUIRED or the deprecated Google Chrome Device Trust Connector stage in an authentication flow. The device attestation occurs in a verification iframe that calls the Google Verified Access API and records the verified device on success, but the vulnerable stages treat the flow as passed as soon as the stage is submitted. An attacker who can reach such a stage, including after primary username and password authentication, can skip the verification iframe and authenticate from a device that was never verified. Where device trust is the only additional factor, that protection is fully bypassed, while other configured factors remain in force. This issue is fixed in versions 2026.2.6 and 2026.5.5.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
