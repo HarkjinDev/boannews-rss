@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-19T22:03:18.117379+09:00",
+  "fetched_at": "2026-08-19T22:32:04.758133+09:00",
   "security_news": [
     {
       "title": "축산물품질평가원, 21일까지 개인정보 유출사고 예방 캠페인",
@@ -1800,30 +1800,6 @@
       "source": "naver",
       "published": "2026-08-16T23:05:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "프랑스 국세청 해킹으로 67만8437명 세무정보 유출, 두 달 만에 드러났다",
-      "summary": "프랑스 재정총국(DGFiP)은 이번 공격이 과거에 겪은 어떤 사이버공격보다 정교했다고 밝혔다. 유출 규모를... 두 달 가까이 침해 사실이 드러나지 않았던 셈이다.이후 파리 검찰청 사이버범죄수사부가 사건을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 프랑스 국세청 해킹으로 67만8437명 세무정보 유출, 두 달 만에 드러났다 프랑스 재정총\n2. 두 달 가까이 침해 사실이 드러나지 않았던 셈이다.이후 파리 검찰청 사이버범죄수사부가 사건",
-      "link": "https://www.wikitree.co.kr/articles/1152809",
-      "source": "naver",
-      "published": "2026-08-16T22:30:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "애플, 맥OS 화면공유 취약점 긴급 패치",
-      "summary": "더해커뉴스는 네덜란드 국가사이버보안센터(NCSC)를 인용해 CVE-2026-65400 취약점의 CVSS 점수가 9.8점이며, 공격자가 유효한 인증정보 없이 인터넷에 노출된 5900번 포트의 맥에 접근할 수 있었다고 전했다. NCSC는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 애플, 맥OS 화면공유 취약점 긴급 패치 더해커뉴스는 네덜란드 국가사이버보안센터(NCSC)",
-      "link": "https://www.tokenpost.kr/news/breaking/391694",
-      "source": "naver",
-      "published": "2026-08-16T22:20:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2530,21 +2506,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57104",
       "source": "msrc",
       "published": "2026-08-16T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-73056 - SiYuan kernel before 3.7.4 Unthrottled Brute-Force via API Token",
-      "summary": "CVE ID :CVE-2026-73056\n  \nPublished : Aug. 16, 2026, 1:14 p.m. | 28 minutes ago\n  \nDescription :SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and neither path is protected by the application's CAPTCHA/lockout mechanism (NeedCaptcha/WrongAuthCount). As a result, an unauthenticated remote attacker can perform unlimited automated guesses of the API token, particularly when a short or weak custom token has been configured, and upon success gains full RoleAdministrator access enabling arbitrary file operations and SQL queries.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-73056\n  \nPublished : Aug. 16, 2026, 1:14 p.m. | 28 minutes ago\n  \nDescription :SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and neither path is protected by the application's CAPTCHA/lockout mechanism (NeedCaptcha/WrongAuthCount). As a result, an unauthenticated remote attacker can perform unlimited automated guesses of the API token, particularly when a short or weak custom token has been configured, and upon success gains full RoleAdministrator access enabling arbitrary file operations and SQL queries.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-73056 - 3.7.4 이전의 SiYuan 커널 API 토큰을 통한 제한되지 않은 무차별 공격",
-      "summary_ko": "CVE ID:CVE-2026-73056\n  \n게시일 : 2026년 8월 16일 오후 1시 14분 | 28분 전\n  \n설명: 3.7.4 이전의 SiYuan 커널 버전에는 CheckAuth() 미들웨어의 과도한 인증 시도 취약점에 대한 부적절한 제한이 포함되어 있습니다. 미들웨어는 인증 헤더(Token/Bearer) 또는 ?token= 쿼리 매개변수를 통해 API 토큰(Conf.Api.Token)을 허용하며 두 경로 모두 애플리케이션의 CAPTCHA/잠금 메커니즘(NeedCaptcha/WrongAuthCount)으로 보호되지 않습니다. 결과적으로 인증되지 않은 원격 공격자는 특히 짧거나 취약한 사용자 지정 토큰이 구성된 경우 API 토큰에 대해 무제한 자동 추측을 수행할 수 있으며, 성공하면 임의 파일 작업 및 SQL 쿼리를 가능하게 하는 전체 RoleAdministrator 액세스 권한을 얻게 됩니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-73056\n2. 26.08.16 오후10:14\n3. SiYuan kernel versions before 3.7.4 contain an imp",
-      "cve_id": "CVE-2026-73056",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73056",
-      "source": "cvefeed",
-      "published": "2026-08-16T22:14:04+09:00",
       "lang": "en"
     }
   ],
