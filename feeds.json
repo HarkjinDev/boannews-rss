@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-20T06:31:08.699995+09:00",
+  "fetched_at": "2026-08-20T07:01:14.575012+09:00",
   "security_news": [
+    {
+      "title": "[Who Is ?] 조좌진 하나투어 대표집행임원",
+      "summary": "앞서 롯데카드는 2024년 9월 사이버침해로 인해 297만 명의 이용자 정보가 유출됐다. 개인정보보호위원회도 2026년 3월12일 별도 심의를 거쳐 롯데카드에 과징금 96억2천만 원과 과태료 480만 원을 부과했다. 롯데카드 사태...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 롯데카드, 297만 명 이용자 정보 유출\n2. 개인정보보호위, 롯데카드에 과징금 96.2억원 부과\n3. 2024년 9월 발생, 2026년 3월 제재 확정",
+      "link": "https://www.businesspost.co.kr/BP?command=article_view&num=444915",
+      "source": "naver",
+      "published": "2026-08-20T07:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "견적서·영수증 위장 피싱…보안프로그램 끄고 PC까지 장악",
       "summary": "프로그램이 해킹 수단으로 악용됐다. 공격자는 미국 기업 직원을 사칭해 거래 영수증을 확인해달라는... 별도의 낯선 해킹 프로그램만 사용하는 것이 아니라 정상적인 프로그램까지 공격 도구로 활용하기 때문에...",
@@ -1728,21 +1740,24 @@
       "source": "naver",
       "published": "2026-08-17T08:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[가전 대전환③] '이이제이'와 '보안'… 中 공세 깰 승부수",
-      "summary": "미국에서는 중국 에코백스의 로봇청소기 '디봇 X2'가 해킹당해 외부인이 카메라를 원격 제어하고 스피커로... 유출과 해킹 위협을 최소화했다. 여기에 청소를 마친 뒤 스테이션 내부로 들어가면 도어가 완전히 닫히는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [가전 대전환③] '이이제이'와 '보안'… 中 공세 깰 승부수 미국에서는 중국 에코백스의 \n2. 유출과 해킹 위협을 최소화했다.\n3. 여기에 청소를 마친 뒤 스테이션 내부로 들어가면 도어가 완전히 닫히는...",
-      "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=726219",
-      "source": "naver",
-      "published": "2026-08-17T07:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-76403 - Improper Certificate Validation through HTTP Event Collector Kerberos Authentication in Splunk Connect for Kafka",
+      "summary": "CVE ID :CVE-2026-76403\n  \nPublished : Aug. 19, 2026, 9:35 p.m. | 21 minutes ago\n  \nDescription :In Splunk Connect for Kafka versions below 2.2.7, an unauthenticated user positioned in the network path could read or alter all relevant data sent from the connector when Kerberos authentication is used with Hypertext Transfer Protocol (HTTP) Event Collector in Splunk Enterprise. The vulnerability is possible because the Kerberos authentication path does not apply the configured certificate validation options when it builds the HTTP client. For more information see Install Splunk Connect for Kafka (https://help.splunk.com/en/data-management/integrate-data-with-add-ons/splunk-connect-for-kafka/2.2/install/install-splunk-connect-for-kafka), Security configurations for Splunk Connect for Kafka (https://help.splunk.com/en/splunk-enterprise/get-data-in/splunk-connect-for-kafka/2.2/configure/security-configurations-for-splunk-connect-for-kafka), and Set up and use HTTP Event Collector with configuration files (https://help.splunk.com/en/splunk-enterprise/get-data-in/get-started-with-getting-data-in/9.4/get-data-with-http-event-collector/set-up-and-use-http-event-collector-with-configuration-files) in the Splunk documentation.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-76403\n  \nPublished : Aug. 19, 2026, 9:35 p.m. | 21 minutes ago\n  \nDescription :In Splunk Connect for Kafka versions below 2.2.7, an unauthenticated user positioned in the network path could read or alter all relevant data sent from the connector when Kerberos authentication is used with Hypertext Transfer Protocol (HTTP) Event Collector in Splunk Enterprise. The vulnerability is possible because the Kerberos authentication path does not apply the configured certificate validation options when it builds the HTTP client. For more information see Install Splunk Connect for Kafka (https://help.splunk.com/en/data-management/integrate-data-with-add-ons/splunk-connect-for-kafka/2.2/install/install-splunk-connect-for-kafka), Security configurations for Splunk Connect for Kafka (https://help.splunk.com/en/splunk-enterprise/get-data-in/splunk-connect-for-kafka/2.2/configure/security-configurations-for-splunk-connect-for-kafka), and Set up and use HTTP Event Collector with configuration files (https://help.splunk.com/en/splunk-enterprise/get-data-in/get-started-with-getting-data-in/9.4/get-data-with-http-event-collector/set-up-and-use-http-event-collector-with-configuration-files) in the Splunk documentation.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-76403 - Kafka용 Splunk Connect에서 HTTP 이벤트 수집기 Kerberos 인증을 통한 부적절한 인증서 유효성 검사",
+      "summary_ko": "CVE ID:CVE-2026-76403\n  \n게시일 : 2026년 8월 19일 오후 9시 35분 | 21분 전\n  \n설명: Splunk Connect for Kafka 버전 2.2.7에서는 Kerberos 인증이 Splunk Enterprise의 HTTP(Hypertext Transfer Protocol) Event Collector와 함께 사용될 때 네트워크 경로에 있는 인증되지 않은 사용자가 커넥터에서 전송된 모든 관련 데이터를 읽거나 변경할 수 있습니다. Kerberos 인증 경로가 HTTP 클라이언트를 구축할 때 구성된 인증서 유효성 검사 옵션을 적용하지 않기 때문에 취약점이 발생할 수 있습니다. 자세한 내용은 Kafka용 Splunk Connect 설치(https://help.splunk.com/en/data-management/integrate-data-with-add-ons/splunk-connect-for-kafka/2.2/install/install-splunk-connect-for-kafka), Splunk Connect for Kafka 보안 구성을 참조하세요. (https://help.splunk.com/en/splunk-enterprise/get-data-in/splunk-connect-for-kafka/2.2/configure/security-configurations-for-splunk-connect-for-kafka) 및 구성 파일과 함께 HTTP Event Collector 설정 및 사용 (https://help.splunk.com/en/splunk-enterprise/get-data-in/get-started-with-getting-data-in/9.4/get-data-with-http-event-collector/set-up-and-use-http-event-collector-with-configuration-files) Splunk 설명서.\n  \n심각도: 7.4 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-76403\n2. 26.08.20 오전6:35\n3. In Splunk Connect for Kafka versions below 2.2.7, ",
+      "cve_id": "CVE-2026-76403",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76403",
+      "source": "cvefeed",
+      "published": "2026-08-20T06:35:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-75596 - Netty: Fragmented ClientHello records trigger quadratic pre-handshake reassembly in default SNI parsing",
       "summary": "CVE ID :CVE-2026-75596\n  \nPublished : Aug. 19, 2026, 8:56 p.m. | 22 minutes ago\n  \nDescription :Netty is an asynchronous, event-driven network application framework. Prior to 4.1.137.Final and 4.2.17.Final, the default io.netty.handler.ssl.SniHandler constructors use the pre-handshake ClientHello aggregation path in handler/src/main/java/io/netty/handler/ssl/SslClientHelloHandler.java at io.netty.handler.ssl.SslClientHelloHandler#decode, where handshakeBuffer.clear() and writeBytes() recopy all previously received body bytes for every additional TLS record. An unauthenticated remote peer can advertise a large ClientHello and deliver its body in thousands of tiny records, causing quadratic CPU work on the event loop before the TLS handshake completes and degrading TLS handling for other clients. This issue is fixed in versions 4.1.137.Final and 4.2.17.Final.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2611,21 +2626,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-19959",
       "source": "cvefeed",
       "published": "2026-08-17T08:16:24+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Wireshark 4.6.8 Released, (Sun, Aug 16th)",
-      "summary": "Wireshark release 4.6.8 fixes 28 vulnerabilities and 25 bugs.\r",
-      "description": "Wireshark release 4.6.8 fixes 28 vulnerabilities and 25 bugs.\r",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Wireshark 릴리스 4.6.8에서는 28개의 취약점과 25개의 버그가 수정되었습니다.",
-      "summary_3lines": "1. Wireshark 4.6.8 Released, (Sun, Aug 16th)\n2. SANS_ISC\n3. Wireshark release 4.6.8 fixes 28 vulnerabilities a",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33248",
-      "source": "sans_isc",
-      "published": "2026-08-17T06:31:48+09:00",
       "lang": "en"
     }
   ],
