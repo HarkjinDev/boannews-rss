@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-19T20:32:40.996101+09:00",
+  "fetched_at": "2026-08-19T21:03:24.638927+09:00",
   "security_news": [
+    {
+      "title": "URL 클릭만으로 대화·메모리 노출 가능성…코파일럿 취약점 3건 확인",
+      "summary": "연구진은 이 방식을 '메타 해킹'이라고 설명했다. 문제의 출발점은 코파일럿 웹 인터페이스의 '?q=' URL 쿼리... 다만 연구진은 이번 문제가 코파일럿 내부 메모리를 직접 해킹한 사례는 아니라고 설명했다. 코파일럿이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 코파일럿 웹 인터페이스 '?q=' URL 쿼리 취약점 3건 발견\n2. URL 클릭 시 대화·메모리 노출 위험 '메타 해킹' 가능성\n3. 코파일럿 내부 메모리 직접 해킹은 아님",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=694137",
+      "source": "naver",
+      "published": "2026-08-19T20:58:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "오픈AI, 최신 모델 ‘아스트라’ 훈련 중단…‘자율 해킹’ 감시 등 안...",
+      "summary": "오픈AI는 아스트라가 자체 평가 결과 ‘중대한’ 사이버 역량을 갖췄을 가능성이 있다고 본다고도 밝혔다. 인간 개입 없이도 시스템 취약점을 찾아내 공격할 수 있다는 의미다. 한편, 청소년 범죄와의 연관성을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI, 최신 모델 ‘아스트라’ 훈련 중단…‘자율 해킹’ 감시 등 안...\n2. 오픈AI는 아스트라가 자체 평가 결과 ‘중대한’ 사이버 역량을 갖췄을 가능성이 있다고 본다\n3. 인간 개입 없이도 시스템 취약점을 찾아내 공격할 수 있다는 의미다.",
+      "link": "https://n.news.naver.com/mnews/article/032/0003465228?sid=105",
+      "source": "naver",
+      "published": "2026-08-19T20:41:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "“순수하고 잘 휩쓸려” 고소영, 장동건 감싸기에 네티즌 ‘싸늘 반응’",
       "summary": "장동건은 지난 2020년 동료 배우 주진모의 휴대전화 해킹 사건 과정에서 두 사람이 과거 주고받은 것으로 알려진 사적인 메시지 일부가 온라인에 유출되며 논란의 중심에 선 바 있다. 당시 공개된 대화에는 여성들과의...",
@@ -1791,6 +1815,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-76166 - Modcluster-core: mod_cluster advertise listener: unauthenticated dos via crafted multicast datagram",
+      "summary": "CVE ID :CVE-2026-76166\n  \nPublished : Aug. 19, 2026, 10:16 a.m. | 52 minutes ago\n  \nDescription :A flaw was found in mod_cluster's AdvertiseListenerImpl (org.jboss.modcluster core module). A single crafted UDP multicast datagram with a valid HTTP status line and a \"Server:\" header but without the \"Date:\", \"Digest:\", and \"Sequence:\" headers triggers a NullPointerException in verifyDigest() that is not caught by the worker thread's exception handler. This causes the advertise listener thread to terminate permanently. The failure is silent (isListening() continues to return true) and persists until the node is restarted. The crash occurs before the AdvertiseSecurityKey comparison, so deployments with a configured security key are still affected.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-76166\n  \nPublished : Aug. 19, 2026, 10:16 a.m. | 52 minutes ago\n  \nDescription :A flaw was found in mod_cluster's AdvertiseListenerImpl (org.jboss.modcluster core module). A single crafted UDP multicast datagram with a valid HTTP status line and a \"Server:\" header but without the \"Date:\", \"Digest:\", and \"Sequence:\" headers triggers a NullPointerException in verifyDigest() that is not caught by the worker thread's exception handler. This causes the advertise listener thread to terminate permanently. The failure is silent (isListening() continues to return true) and persists until the node is restarted. The crash occurs before the AdvertiseSecurityKey comparison, so deployments with a configured security key are still affected.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-76166 - Modcluster-core: mod_cluster 광고 수신기: 조작된 멀티캐스트 데이터그램을 통한 인증되지 않은 dos",
+      "summary_ko": "CVE ID:CVE-2026-76166\n  \n게시일 : 2026년 8월 19일 오전 10시 16분 | 52분 전\n  \n설명: mod_cluster의 AdvertiseListenerImpl(org.jboss.modcluster 코어 모듈)에서 결함이 발견되었습니다. 유효한 HTTP 상태 줄과 \"Server:\" 헤더가 있지만 \"Date:\", \"Digest:\" 및 \"Sequence:\" 헤더가 없는 단일 제작 UDP 멀티캐스트 데이터그램은 작업자 스레드의 예외 처리기에 의해 포착되지 않는 verifyDigest()에서 NullPointerException을 트리거합니다. 이로 인해 광고 리스너 스레드가 영구적으로 종료됩니다. 오류는 자동으로 발생하며(isListening()은 계속해서 true를 반환함) 노드가 다시 시작될 때까지 지속됩니다. AdvertiseSecurityKey 비교 전에 충돌이 발생하므로 구성된 보안 키를 사용한 배포는 여전히 영향을 받습니다.\n  \n심각도: 4.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-76166\n2. 26.08.19 오후7:16\n3. A flaw was found in mod_cluster's AdvertiseListene",
+      "cve_id": "CVE-2026-76166",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76166",
+      "source": "cvefeed",
+      "published": "2026-08-19T19:16:38+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-75589 - Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify",
       "summary": "CVE ID :CVE-2026-75589\n  \nPublished : Aug. 19, 2026, 7:20 a.m. | 42 minutes ago\n  \nDescription :Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify.\n\nEach of the three compares the signature carried in the message against the locally computed one with the eq operator, which returns as soon as the two strings differ. The time taken to reject a signature varies with the length of the matching prefix. RSA-SHA1 is not affected, as it verifies through the RSA key object rather than by comparing strings.\n\nA client that can submit messages and time the replies may recover a valid signature one byte at a time rather than searching the whole signature space. Under PLAINTEXT the value compared against is the signature key itself, so the search recovers consumer_secret and token_secret.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
