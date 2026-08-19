@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-20T06:01:01.587615+09:00",
+  "fetched_at": "2026-08-20T06:31:08.699995+09:00",
   "security_news": [
+    {
+      "title": "견적서·영수증 위장 피싱…보안프로그램 끄고 PC까지 장악",
+      "summary": "프로그램이 해킹 수단으로 악용됐다. 공격자는 미국 기업 직원을 사칭해 거래 영수증을 확인해달라는... 별도의 낯선 해킹 프로그램만 사용하는 것이 아니라 정상적인 프로그램까지 공격 도구로 활용하기 때문에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 미국 기업 직원 사칭, 견적서/영수증 위장 피싱 시도\n2. 정상 보안 프로그램 끄고 악성코드 설치, PC 장악\n3. 다양한 정상 프로그램 악용, 광범위한 피해 우려",
+      "link": "https://n.news.naver.com/mnews/article/421/0009122453?sid=105",
+      "source": "naver",
+      "published": "2026-08-20T06:07:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "래피드7, AI 암호화폐 피싱 작전 공개했다",
       "summary": "사이버보안 기업 래피드7(Rapid7)이 AI를 활용한 암호화폐 피싱 도구와 악성 지갑 앱 유포 정황을 담은 사기 작전 ‘오퍼레이션 아스테릭스(Operation ASTERIX)’를 공개했다. 우블록체인(Wu Blockchain)은 래피드7...",
@@ -1728,21 +1740,24 @@
       "source": "naver",
       "published": "2026-08-17T07:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "박근혜 개인정보까지 털렸다…서강대, 해커공격에 18만건 유출",
-      "summary": "서강대 경영학과에 재학 중인 박 모씨(25)는 “학교 시스템이 해킹될 줄은 몰랐다”며 “다른 사이트에서도 동일한 비밀번호를 사용하고 있어 모두 바꿔야 할 것 같다. 2차 피해로 이어질까 걱정된다”고 말했다. 학교...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 서강대, 해커 공격으로 개인정보 18만건 유출\n2. 박근혜 전 대통령 개인정보 포함, 악성코드 감염 추정\n3. 2차 피해 우려, 비밀번호 변경 권고",
-      "link": "https://n.news.naver.com/mnews/article/009/0005721812?sid=102",
-      "source": "naver",
-      "published": "2026-08-17T06:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-75596 - Netty: Fragmented ClientHello records trigger quadratic pre-handshake reassembly in default SNI parsing",
+      "summary": "CVE ID :CVE-2026-75596\n  \nPublished : Aug. 19, 2026, 8:56 p.m. | 22 minutes ago\n  \nDescription :Netty is an asynchronous, event-driven network application framework. Prior to 4.1.137.Final and 4.2.17.Final, the default io.netty.handler.ssl.SniHandler constructors use the pre-handshake ClientHello aggregation path in handler/src/main/java/io/netty/handler/ssl/SslClientHelloHandler.java at io.netty.handler.ssl.SslClientHelloHandler#decode, where handshakeBuffer.clear() and writeBytes() recopy all previously received body bytes for every additional TLS record. An unauthenticated remote peer can advertise a large ClientHello and deliver its body in thousands of tiny records, causing quadratic CPU work on the event loop before the TLS handshake completes and degrading TLS handling for other clients. This issue is fixed in versions 4.1.137.Final and 4.2.17.Final.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-75596\n  \nPublished : Aug. 19, 2026, 8:56 p.m. | 22 minutes ago\n  \nDescription :Netty is an asynchronous, event-driven network application framework. Prior to 4.1.137.Final and 4.2.17.Final, the default io.netty.handler.ssl.SniHandler constructors use the pre-handshake ClientHello aggregation path in handler/src/main/java/io/netty/handler/ssl/SslClientHelloHandler.java at io.netty.handler.ssl.SslClientHelloHandler#decode, where handshakeBuffer.clear() and writeBytes() recopy all previously received body bytes for every additional TLS record. An unauthenticated remote peer can advertise a large ClientHello and deliver its body in thousands of tiny records, causing quadratic CPU work on the event loop before the TLS handshake completes and degrading TLS handling for other clients. This issue is fixed in versions 4.1.137.Final and 4.2.17.Final.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-75596 - Netty: 조각화된 ClientHello 레코드가 기본 SNI 구문 분석에서 2차 사전 핸드셰이크 재조립을 트리거합니다.",
+      "summary_ko": "CVE ID:CVE-2026-75596\n  \n게시일 : 2026년 8월 19일 오후 8시 56분 | 22분 전\n  \n설명 :Netty는 비동기식 이벤트 중심 네트워크 애플리케이션 프레임워크입니다. 4.1.137.Final 및 4.2.17.Final 이전에는 기본 io.netty.handler.ssl.SniHandler 생성자가 handler/src/main/java/io/netty/handler/ssl/SslClientHelloHandler.java에 있는 사전 핸드셰이크 ClientHello 집계 경로를 사용합니다. io.netty.handler.ssl.SslClientHelloHandler#decode, 여기서 handshakeBuffer.clear() 및 writeBytes()는 모든 추가 TLS 레코드에 대해 이전에 수신된 모든 본문 바이트를 다시 복사합니다. 인증되지 않은 원격 피어는 대규모 ClientHello를 광고하고 해당 본문을 수천 개의 작은 레코드로 전달할 수 있으므로 TLS 핸드셰이크가 완료되기 전에 이벤트 루프에서 2차 CPU 작업이 발생하고 다른 클라이언트에 대한 TLS 처리 성능이 저하됩니다. 이 문제는 버전 4.1.137.Final 및 4.2.17.Final에서 수정되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-75596\n2. 26.08.20 오전5:56\n3. Netty is an asynchronous, event-driven network app",
+      "cve_id": "CVE-2026-75596",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75596",
+      "source": "cvefeed",
+      "published": "2026-08-20T05:56:21+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-18874 - Volsync-addon-controller: volsync-addon-controller: annotation values rendered into yaml via text/template without escaping allows yaml injection into subscription",
       "summary": "CVE ID :CVE-2026-18874\n  \nPublished : Aug. 19, 2026, 5:52 p.m. | 7 minutes ago\n  \nDescription :A flaw was found in volsync-addon-controller. This vulnerability allows an attacker to inject malicious YAML (Yet Another Markup Language) code into the OpenShift Lifecycle Manager (OLM) Subscription resource. This is due to improper escaping of annotation values when they are rendered into YAML. Successful exploitation could lead to unauthorized modification or control over OLM Subscription configurations, potentially impacting software management within the cluster. This issue primarily affects systems where the 'volsync-addon-deploy-type: olm' annotation is explicitly enabled.\n  \nSeverity: 6.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
