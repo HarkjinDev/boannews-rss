@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-20T11:01:04.447159+09:00",
+  "fetched_at": "2026-08-20T11:31:03.729102+09:00",
   "security_news": [
+    {
+      "title": "KT 해킹 사고 로그 삭제·거짓 제출, \"추가 제재해야\"",
+      "summary": "펨토셀 해킹 사태과 관련해 사과하는 발언을 하고 있다./연합 KT가 개인정보 유출과 무단 소액결제 피해가 발생한 펨토셀 해킹 사고로 539억7900만원의 과징금을 받은 데 이어 별도 해킹 사고 조사에서 서버 로그 삭제와...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KT, 펨토셀 해킹 사고 추가 조사에서 로그 삭제 및 거짓 제출\n2. 539억7900만원 과징금 부과와 별개로 추가 제재 필요성 제기\n3. 추가 조사 결과에 따른 KT의 책임 및 후속 조치 주목",
+      "link": "http://www.4th.kr/news/articleView.html?idxno=2116610",
+      "source": "naver",
+      "published": "2026-08-20T11:18:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"직장인 첨부파일 클릭 노린다\"…영수증·견적서 피싱 메일 확산",
       "summary": "압축을 풀면 나오는 실행파일은 취약한 드라이버를 이용해 백신·엔드포인트 보안 제품을 강제 종료시키는 기능을 갖췄다. 이후 정상 프로세스에 정보탈취형 악성코드 '팬텀스틸러(PhantomStealer)'를 주입해 실행한다....",
@@ -1836,33 +1848,24 @@
       "source": "naver",
       "published": "2026-08-17T12:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "구글·애플 인앱결제 제재 막바지…독파모 모티프 '이변'[뉴스잇(IT)쥬]",
-      "summary": "해킹 부담 상당 부분 반영한 KT…AX·클라우드 두 자릿수 성장 KT는 지난해 개인정보 침해사고에 따른 비용 부담을 올해 2분기에 상당 부분 반영하면서도 시장 기대치를 웃도는 영업이익을 기록했다. KT의 올해 2분기...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KT, 개인정보 침해로 2분기 비용 반영\n2. KT, AX·클라우드 두 자릿수 성장 달성\n3. KT, 시장 기대치 웃도는 영업이익 기록",
-      "link": "https://n.news.naver.com/mnews/article/421/0009116864?sid=105",
-      "source": "naver",
-      "published": "2026-08-17T11:18:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "\"앤트로픽 AI 빼라\"던 美국방부 … NSA는 '미토스' 활용 중",
-      "summary": "사이버보안 AI 모델 '미토스'를 활용하고 있는 것으로 나타났다. 민간 AI 기업에 대한 정부의 통제와... AP 통신에 따르면 지난달 미국 정부는 실제 기밀 시스템을 대상으로 한 보안 시험에서 미토스가 취약점을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. NSA, AI 모델 '미토스' 활용 중\n2. 보안 시험서 취약점 노출\n3. 민간 AI 통제 논란 예고",
-      "link": "https://www.newdaily.co.kr/site/data/html/2026/08/17/2026081700035.html",
-      "source": "naver",
-      "published": "2026-08-17T11:04:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "ISC Stormcast For Thursday, August 20th, 2026 https://isc.sans.edu/podcastdetail/10060, (Thu, Aug 20th)",
+      "summary": "",
+      "description": "",
+      "title_ko": "ISC Stormcast 2026년 8월 20일 목요일 https://isc.sans.edu/podcastdetail/10060, (8월 20일 목요일)",
+      "summary_ko": null,
+      "summary_3lines": "1. ISC Stormcast For Thursday, August 20th, 2026 http\n2. SANS_ISC\n3. 설명 없음",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33262",
+      "source": "sans_isc",
+      "published": "2026-08-20T11:00:03+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-76850 - LMDeploy Remote Code Execution via Unsafe Pickle Deserialization in the Disaggregated Serving Peer Connector",
       "summary": "CVE ID :CVE-2026-76850\n  \nPublished : Aug. 19, 2026, 9:41 p.m. | 31 minutes ago\n  \nDescription :LMDeploy deserializes disaggregated-serving peer messages with pickle. The handle_zmq_recv coroutine in lmdeploy/pytorch/disagg/conn/engine_conn.py reads peer-to-peer cache-free requests with recv_pyobj(), which deserializes the received bytes with pickle.loads(), and the isinstance check against DistServeCacheFreeRequest runs only after deserialization has already completed. The peer that supplies those bytes is caller-controlled: p2p_connect passes remote_engine_endpoint_info.zmq_address from the request body to connect() on the ZMQ PULL socket, and the POST /distserve/p2p_initialize and /distserve/p2p_connect endpoints in lmdeploy/serve/openai/api_server.py apply no authentication unless the server is started with api_keys, which defaults to None. A remote attacker can direct an engine to pull from a ZMQ endpoint under their control and execute arbitrary code in the engine process. Deployments that do not enable disaggregated serving are not affected, because the receive loop is only started once the migration backend accepts the connection.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
