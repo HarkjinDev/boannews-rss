@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-21T03:01:24.813843+09:00",
+  "fetched_at": "2026-08-21T03:30:58.317851+09:00",
   "security_news": [
     {
       "title": "[이슈] '게이머 권리' 주장한 GTA6 유출자, 스탑 킬링 게이머는 \"지지 반...",
@@ -2160,18 +2160,6 @@
       "source": "thehackernews",
       "published": "2026-08-18T03:44:17+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads",
-      "summary": "A critical security flaw has been disclosed in Forminator Forms, a WordPress plugin with more than 600,000 active installations, that could be exploited to achieve arbitrary code execution on susceptible sites.\n\nThe vulnerability, tracked as CVE-2026-15748, is rated 9.8 out of 10.0 on the CVSS scoring system. It was discovered and reported by a security researcher who goes by the online alias \"",
-      "content": "",
-      "title_ko": "Forminator WordPress 결함으로 인해 악성 PHP 업로드를 통해 인증되지 않은 RCE가 활성화될 수 있음",
-      "summary_ko": "600,000개 이상의 활성 설치가 있는 WordPress 플러그인인 Forminator Forms에서 심각한 보안 결함이 공개되었습니다. 이 결함은 취약한 사이트에서 임의 코드 실행을 달성하는 데 악용될 수 있습니다.\n\nCVE-2026-15748로 추적되는 이 취약점은 CVSS 점수 시스템에서 10.0점 만점에 9.8점을 받았습니다. '라는 온라인 별명을 사용하는 보안 연구원에 의해 발견되어 보고되었습니다.",
-      "summary_3lines": "1. Forminator 플러그인, 60만+ 설치, RCE 취약점 CVE-2026-15748 발\n2. 악성 PHP 업로드 통한 인증 없는 원격 코드 실행 가능\n3. CVSS 9.8점, 보안 위험 높음, 즉시 업데이트 필요",
-      "link": "https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html",
-      "source": "thehackernews",
-      "published": "2026-08-18T03:22:09+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -3028,36 +3016,6 @@
       "link": "https://isc.sans.edu/diary/rss/33254",
       "source": "sans_isc",
       "published": "2026-08-18T05:26:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45698 - Netatalk has Integer Underflow → Stack Buffer Overflow in deletedir()",
-      "summary": "CVE ID :CVE-2026-45698\n  \nPublished : Aug. 17, 2026, 6:21 p.m. | 46 minutes ago\n  \nDescription :Netatalk is a Free and Open Source file server suite for Unix-like operating systems. In versions 3.1.19 through 4.4.2, a stack-based buffer overflow exists in the deletedir() function of Netatalk's afpd daemon due to an integer underflow in the calculation of the remaining buffer size used for path construction. deletedir() is a utility function called when a file operation crosses a device boundary inside an AFP shared volume, which the standard library's renameat() cannot handle. The function attempts to prevent buffer overflows by tracking available space in a size_t remain variable. However, the arithmetic used to compute remain results in an unsigned integer underflow, causing the variable to become SIZE_MAX. Because of this, the subsequent boundary check always evaluates as safe, allowing an unbounded strcpy() operation to copy attacker-controlled filenames into a nearly full stack buffer. Version 4.4.3 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-45698\n  \nPublished : Aug. 17, 2026, 6:21 p.m. | 46 minutes ago\n  \nDescription :Netatalk is a Free and Open Source file server suite for Unix-like operating systems. In versions 3.1.19 through 4.4.2, a stack-based buffer overflow exists in the deletedir() function of Netatalk's afpd daemon due to an integer underflow in the calculation of the remaining buffer size used for path construction. deletedir() is a utility function called when a file operation crosses a device boundary inside an AFP shared volume, which the standard library's renameat() cannot handle. The function attempts to prevent buffer overflows by tracking available space in a size_t remain variable. However, the arithmetic used to compute remain results in an unsigned integer underflow, causing the variable to become SIZE_MAX. Because of this, the subsequent boundary check always evaluates as safe, allowing an unbounded strcpy() operation to copy attacker-controlled filenames into a nearly full stack buffer. Version 4.4.3 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-45698\n  \n게시일 : 2026년 8월 17일 오후 6시 21분 | 46분 전\n  \n설명 :Netatalk는 Unix 계열 운영 체제를 위한 무료 오픈 소스 파일 서버 제품군입니다. 버전 3.1.19부터 4.4.2까지에서는 경로 구성에 사용되는 나머지 버퍼 크기 계산 시 정수 언더플로로 인해 Netatalk afpd 데몬의 deleteir() 함수에 스택 기반 버퍼 오버플로가 존재합니다. deleteir()는 표준 라이브러리의 renameat()가 처리할 수 없는 AFP 공유 볼륨 내부의 장치 경계를 파일 작업이 교차할 때 호출되는 유틸리티 함수입니다. 이 함수는 size_t 남아 변수에서 사용 가능한 공간을 추적하여 버퍼 오버플로를 방지하려고 시도합니다. 그러나 나머지를 계산하는 데 사용된 연산으로 인해 부호 없는 정수 언더플로가 발생하여 변수가 SIZE_MAX가 됩니다. 이로 인해 후속 경계 검사는 항상 안전한 것으로 평가되어 무제한 strcpy() 작업을 통해 공격자가 제어하는 ​​파일 이름을 거의 전체 스택 버퍼에 복사할 수 있습니다. 버전 4.4.3에서는 문제가 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-45698\n2. 26.08.18 오전3:21\n3. Netatalk is a Free and Open Source file server sui",
-      "cve_id": "CVE-2026-45698",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45698",
-      "source": "cvefeed",
-      "published": "2026-08-18T03:21:19+09:00",
-      "lang": "de"
-    },
-    {
-      "title": "CVE-2026-71980 - Belledonne Communications bcg729 1.1.2 Out-of-Bounds Read via decodeSIDframe()",
-      "summary": "CVE ID :CVE-2026-71980\n  \nPublished : Aug. 17, 2026, 6:18 p.m. | 49 minutes ago\n  \nDescription :Belledonne Communications bcg729 through 1.1.2 contains an out-of-bounds read vulnerability in the decodeSIDframe() function in src/cng.c that allows unauthenticated network-adjacent attackers to trigger a heap read beyond buffer boundaries by sending a zero-length comfort-noise RTP payload. A zero-length payload causes an integer underflow in the uint8_t filter order calculation, which wraps to 255 and is clamped to 10, causing the function to unconditionally read 11 bytes from a zero-byte buffer, resulting in media process termination or silent consumption of adjacent heap memory as reflection coefficients.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-71980\n  \nPublished : Aug. 17, 2026, 6:18 p.m. | 49 minutes ago\n  \nDescription :Belledonne Communications bcg729 through 1.1.2 contains an out-of-bounds read vulnerability in the decodeSIDframe() function in src/cng.c that allows unauthenticated network-adjacent attackers to trigger a heap read beyond buffer boundaries by sending a zero-length comfort-noise RTP payload. A zero-length payload causes an integer underflow in the uint8_t filter order calculation, which wraps to 255 and is clamped to 10, causing the function to unconditionally read 11 bytes from a zero-byte buffer, resulting in media process termination or silent consumption of adjacent heap memory as reflection coefficients.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-71980\n  \n게시일 : 2026년 8월 17일 오후 6시 18분 | 49분 전\n  \n설명:Belledonne Communications bcg729~1.1.2에는 src/cng.c의 decodeSIDframe() 함수에 범위를 벗어난 읽기 취약점이 포함되어 있습니다. 이를 통해 인증되지 않은 네트워크 인접 공격자가 길이가 0인 Comfort-Noise RTP 페이로드를 전송하여 버퍼 경계를 넘어 힙 읽기를 트리거할 수 있습니다. 길이가 0인 페이로드는 uint8_t 필터 차수 계산에서 정수 언더플로를 발생시켜 255로 래핑되고 10으로 고정되어 함수가 무조건 0바이트 버퍼에서 11바이트를 읽게 하여 미디어 프로세스가 종료되거나 인접한 힙 메모리가 반사 계수로 자동 소비됩니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-71980\n2. 26.08.18 오전3:18\n3. Belledonne Communications bcg729 through 1.1.2 con",
-      "cve_id": "CVE-2026-71980",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-71980",
-      "source": "cvefeed",
-      "published": "2026-08-18T03:18:12+09:00",
       "lang": "en"
     }
   ],
