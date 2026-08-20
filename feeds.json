@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-21T03:30:58.317851+09:00",
+  "fetched_at": "2026-08-21T04:01:23.155448+09:00",
   "security_news": [
+    {
+      "title": "ThreatsDay: Gogs 10.0 RCE, n8n Workflow-to-RCE, $10M Reward, GLM-5.3 AI Exploit and More",
+      "summary": "A lot of this week’s trouble starts with something trusted doing exactly what it was allowed to do.\n\nSigned drivers get turned against defenses. Legitimate apps help malware blend in. A weak header check opens a path to code execution. Elsewhere, exposed systems, old bugs, odd hiding tricks, and AI-assisted exploit research keep lowering the effort needed to cause damage.\n\nNothing here needs",
+      "content": "",
+      "title_ko": "ThreatsDay: Gogs 10.0 RCE, n8n RCE로의 워크플로, 천만 달러 보상, GLM-5.3 AI 익스플로잇 등",
+      "summary_ko": "이번 주의 많은 문제는 신뢰할 수 있는 일이 허용된 일을 정확하게 수행하는 데서 시작됩니다.\n\n서명된 운전자는 방어에 반대하게 됩니다. 합법적인 앱은 맬웨어가 혼합되는 데 도움이 됩니다. 약한 헤더 검사는 코드 실행 경로를 열어줍니다. 다른 곳에서는 노출된 시스템, 오래된 버그, 이상한 숨기기 수법, AI 지원 공격 연구로 인해 피해를 입히는 데 필요한 노력이 계속해서 줄어들고 있습니다.\n\n여기에는 아무것도 필요하지 않습니다",
+      "summary_3lines": "1. Gogs 10.0 RCE, n8n 워크플로우 RCE, GLM-5.3 AI 취약점 발생\n2. 신뢰된 드라이버 악용, 기존 버그, AI 이용 공격으로 피해 용이\n3. $10M 보상금 사례, 다수 보안 위협 발생으로 주의 필요",
+      "link": "https://thehackernews.com/2026/08/threatsday-gogs-100-rce-n8n-workflow-to.html",
+      "source": "thehackernews",
+      "published": "2026-08-21T02:23:48+09:00",
+      "lang": "en"
+    },
     {
       "title": "[이슈] '게이머 권리' 주장한 GTA6 유출자, 스탑 킬링 게이머는 \"지지 반...",
       "summary": "지난 18일, 스스로를 사이버릭(CyberLeek)이라고 밝힌 해킹 그룹은 자신들의 사이트에 'GTA6'로 추정되는 영상을 공개해 화제를 모았다. 해당 영상에는 주인공 제이슨이 차량을 타고 돌아다니는 장면을 비롯해 NPC와...",
@@ -2148,21 +2160,39 @@
       "source": "naver",
       "published": "2026-08-18T05:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Snowflake GitHub Actions Flaw Lets Crafted Issues Trigger Command Injection",
-      "summary": "Cybersecurity researchers at Wiz have disclosed a new GitHub Actions workflow injection vulnerability in Snowflake's public snowflakedb/snowflake-connector-net repository that it said could be exploited through a crafted GitHub issue to execute commands in a workflow containing internal Jira credentials.\n\nThe issue was present in .github/workflows/jira_issue.yml, which ran when a",
-      "content": "",
-      "title_ko": "Snowflake GitHub Actions 결함으로 인해 만들어진 문제로 인해 명령 주입이 발생함",
-      "summary_ko": "Wiz의 사이버 보안 연구원들은 Snowflake의 공개 snowflakedb/snowflake-connector-net 저장소에서 새로운 GitHub Actions 워크플로 주입 취약점을 공개했습니다. 이 취약점은 내부 Jira 자격 증명이 포함된 워크플로에서 명령을 실행하기 위해 조작된 GitHub 문제를 통해 악용될 수 있다고 말했습니다.\n\n문제는 .github/workflows/jira_issue.yml에 있었습니다.",
-      "summary_3lines": "1. Snowflake GitHUb Actions 플로의 명령 주입 취약점 발견\n2. 조작된 GitHub 이슈로 내부 Jira 인증 정보 유출 가능\n3. Wiz 연구원, .github/workflows/jira_issue.yml 통해 공격 가능",
-      "link": "https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html",
-      "source": "thehackernews",
-      "published": "2026-08-18T03:44:17+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-72854 - msgpack-c Integer Overflow in msgpack_unpacker_expand_buffer Causes a False-Success Undersized Reservation",
+      "summary": "CVE ID :CVE-2026-72854\n  \nPublished : Aug. 20, 2026, 6:19 p.m. | 27 minutes ago\n  \nDescription :msgpack_unpacker_expand_buffer in src/unpack.c, reached through the public msgpack_unpacker_reserve_buffer API, computes its new buffer size using an unchecked size_t addition of the requested size and the amount already used. The doubling loop guards its own multiplication against overflow, but the addition in the loop condition is unguarded, so a request near SIZE_MAX wraps: the loop condition is already satisfied, the allocation is performed at the small pre-wrap size, and the function returns true. The caller is told the requested capacity was reserved when it was not, so a subsequent write of the requested length overflows the heap buffer. The library's own example/lib_buffer_unpack.c demonstrates the reserve-then-write pattern, and its defensive assert comparing capacity against the request is compiled out under NDEBUG. msgpack-c's own decode entry points do not derive the reservation size from untrusted input, so reaching this requires an integration that passes an attacker-influenced length to the reservation API, such as a length-prefixed streaming transport.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-72854\n  \nPublished : Aug. 20, 2026, 6:19 p.m. | 27 minutes ago\n  \nDescription :msgpack_unpacker_expand_buffer in src/unpack.c, reached through the public msgpack_unpacker_reserve_buffer API, computes its new buffer size using an unchecked size_t addition of the requested size and the amount already used. The doubling loop guards its own multiplication against overflow, but the addition in the loop condition is unguarded, so a request near SIZE_MAX wraps: the loop condition is already satisfied, the allocation is performed at the small pre-wrap size, and the function returns true. The caller is told the requested capacity was reserved when it was not, so a subsequent write of the requested length overflows the heap buffer. The library's own example/lib_buffer_unpack.c demonstrates the reserve-then-write pattern, and its defensive assert comparing capacity against the request is compiled out under NDEBUG. msgpack-c's own decode entry points do not derive the reservation size from untrusted input, so reaching this requires an integration that passes an attacker-influenced length to the reservation API, such as a length-prefixed streaming transport.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-72854 - msgpack_unpacker_expand_buffer의 msgpack-c 정수 오버플로로 인해 잘못된 성공 예약이 발생함",
+      "summary_ko": "CVE ID:CVE-2026-72854\n  \n게시일 : 2026년 8월 20일 오후 6시 19분 | 27분 전\n  \n설명 : 공개 msgpack_unpacker_reserve_buffer API를 통해 도달한 src/unpack.c의 msgpack_unpacker_expand_buffer는 요청된 크기와 이미 사용된 양에 확인되지 않은 size_t 추가를 사용하여 새 버퍼 크기를 계산합니다. 더블링 루프는 오버플로에 대해 자체 곱셈을 보호하지만 루프 조건의 추가는 보호되지 않으므로 SIZE_MAX 근처의 요청이 랩됩니다. 루프 조건이 이미 충족되고 할당이 작은 랩 전 크기로 수행되며 함수는 true를 반환합니다. 호출자에게는 요청된 용량이 예약되어 있지 않은데도 예약되었다는 메시지가 표시되므로 요청된 길이에 대한 후속 쓰기가 힙 버퍼를 오버플로합니다. 라이브러리의 자체 예제/lib_buffer_unpack.c는 예약 후 쓰기 패턴을 보여 주며 요청에 대한 용량을 비교하는 방어 주장은 NDEBUG에서 컴파일됩니다. msgpack-c의 자체 디코드 진입점은 신뢰할 수 없는 입력에서 예약 크기를 파생하지 않으므로 이를 달성하려면 길이 접두사가 붙은 스트리밍 전송과 같이 공격자의 영향을 받은 길이를 예약 API에 전달하는 통합이 필요합니다.\n  \n심각도: 5.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-72854\n2. 26.08.21 오전3:19\n3. msgpack_unpacker_expand_buffer in src/unpack.c, re",
+      "cve_id": "CVE-2026-72854",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-72854",
+      "source": "cvefeed",
+      "published": "2026-08-21T03:19:24+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-63385 - Libevent: HTTP header handling bugs create risk of access control bypass.",
+      "summary": "CVE ID :CVE-2026-63385\n  \nPublished : Aug. 20, 2026, 6:16 p.m. | 30 minutes ago\n  \nDescription :Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, libevent has two HTTP parsing weaknesses in http.c. evhttp_decode_uri_internal decodes percent-encoded %00 bytes into literal NUL characters, which can cause downstream C string operations to truncate a path and bypass validation performed on a different representation. evhttp_header_is_valid_value also accepts obsolete line folding in header values containing carriage return or line feed characters, allowing a proxy and libevent to interpret headers differently and enabling header injection or access control bypass. The CRLF header acceptance is fixed in versions 2.1.13 and 2.2.2-alpha, but the reviewed patches do not clearly remediate the URI NUL-truncation condition.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63385\n  \nPublished : Aug. 20, 2026, 6:16 p.m. | 30 minutes ago\n  \nDescription :Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, libevent has two HTTP parsing weaknesses in http.c. evhttp_decode_uri_internal decodes percent-encoded %00 bytes into literal NUL characters, which can cause downstream C string operations to truncate a path and bypass validation performed on a different representation. evhttp_header_is_valid_value also accepts obsolete line folding in header values containing carriage return or line feed characters, allowing a proxy and libevent to interpret headers differently and enabling header injection or access control bypass. The CRLF header acceptance is fixed in versions 2.1.13 and 2.2.2-alpha, but the reviewed patches do not clearly remediate the URI NUL-truncation condition.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-63385 - Libevent: HTTP 헤더 처리 버그로 인해 액세스 제어 우회 위험이 발생합니다.",
+      "summary_ko": "CVE ID:CVE-2026-63385\n  \n게시일 : 2026년 8월 20일 오후 6시 16분 | 30분 전\n  \n설명 : Libevent는 이벤트 알림 라이브러리입니다. 2.1.13 및 2.2.2-alpha 이전에는 libevent의 http.c에 두 가지 HTTP 구문 분석 약점이 있었습니다. evhttp_decode_uri_internal은 퍼센트 인코딩된 %00바이트를 리터럴 NUL 문자로 디코딩합니다. 이로 인해 다운스트림 C 문자열 작업이 경로를 자르고 다른 표현에서 수행된 유효성 검사를 우회할 수 있습니다. evhttp_header_is_valid_value는 또한 캐리지 리턴 또는 줄 바꿈 문자가 포함된 헤더 값에서 사용되지 않는 줄 접기를 허용하여 프록시와 libevent가 헤더를 다르게 해석하고 헤더 삽입 또는 액세스 제어 우회를 가능하게 합니다. CRLF 헤더 승인은 버전 2.1.13 및 2.2.2-alpha에서 수정되었지만 검토된 패치는 URI NUL 잘림 조건을 명확하게 수정하지 않습니다.\n  \n심각도: 9.2 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-63385\n2. 26.08.21 오전3:16\n3. Libevent is an event notification library. Prior t",
+      "cve_id": "CVE-2026-63385",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63385",
+      "source": "cvefeed",
+      "published": "2026-08-21T03:16:36+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-72847 - broot Terminal Escape Sequence Injection via Unsanitized File and Directory Names in the Tree View",
       "summary": "CVE ID :CVE-2026-72847\n  \nPublished : Aug. 20, 2026, 5:19 p.m. | 32 minutes ago\n  \nDescription :broot renders each file and directory name in its interactive tree view exactly as read from the filesystem. Names are converted with a plain to_string_lossy() call in src/tree_build/builder.rs and in TreeLine::unprune in src/tree/tree_line.rs, and no control-character filtering exists anywhere in the code, even though the doc comment on the TreeLine name field states that some characters may have been stripped. Any local user who can create a file can therefore place an escape sequence in its name and have it written unmodified to the terminal of anyone who browses that directory, between broot's own styling codes. A reported proof of concept used an OSC 52 clipboard-write sequence and captured the raw bytes broot wrote to its pty, confirming the sequence reaches the terminal unstripped. What an injected OSC or CSI sequence can then do depends on the terminal emulator in use. Browsing a directory is broot's primary function and carries no expectation that the content is trusted.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
