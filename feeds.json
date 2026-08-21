@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-22T03:01:13.724750+09:00",
+  "fetched_at": "2026-08-22T03:32:25.323363+09:00",
   "security_news": [
+    {
+      "title": "New SynkLoader malware pushed in Microsoft Teams phishing campaign",
+      "summary": "A previously unknown malware family dubbed SynkLoader is being distributed in Microsoft Teams phishing campaigns to steal credentials via a fake lock screen. [...]",
+      "content": "",
+      "title_ko": "Microsoft Teams 피싱 캠페인에 새로운 SynkLoader 악성 코드가 추가됨",
+      "summary_ko": "SynkLoader라고 불리는 이전에 알려지지 않은 악성 코드군이 가짜 잠금 화면을 통해 자격 증명을 훔치기 위해 Microsoft Teams 피싱 캠페인에 배포되고 있습니다. [...]",
+      "summary_3lines": "1. Microsoft Teams 피싱 캠페인에 등장한 새로운 SynkLoader 악성 코드 S",
+      "link": "https://www.bleepingcomputer.com/news/security/new-synkloader-malware-pushed-in-microsoft-teams-phishing-campaign/",
+      "source": "bleepingcomputer",
+      "published": "2026-08-22T03:01:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "로만 스톰 유죄 유지, 개발자 책임 논쟁 계속",
       "summary": "미국 재무부는 2025년 3월 21일 토네이도 캐시에 대한 경제제재를 해제했지만, 북한 관련 해킹과 자금세탁 우려는 여전히 크다고 밝혔다. 제재 해제는 특정 주소와 서비스에 대한 경제제재 집행 판단이고, 형사사건은...",
@@ -264,6 +276,18 @@
       "source": "naver",
       "published": "2026-08-21T15:10:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Microsoft Patches Severe Entra ID Flaw (CVSS 10.0) Allowing Remote Code Execution",
+      "summary": "Update: The story was updated after publication to note that the vulnerability has not been exploited.\n\nAlthough the security bulletin originally marked the \"Exploited\" field under the Exploitability Assessment table as \"Yes,\" on August 21, 2026, Microsoft corrected the \"Exploited\" status to \"No\" after The Hacker News contacted the company for comment. It also noted, \"this vulnerability was not",
+      "content": "",
+      "title_ko": "Microsoft, 원격 코드 실행을 허용하는 심각한 Entra ID 결함(CVSS 10.0) 패치",
+      "summary_ko": "업데이트: 취약점이 악용되지 않았음을 알리기 위해 기사가 게시된 후 업데이트되었습니다.\n\n보안 게시판에서는 원래 악용 가능성 평가 표 아래의 \"악용됨\" 필드를 \"예\"로 표시했지만, 2026년 8월 21일 Microsoft는 The Hacker News가 의견을 위해 회사에 연락한 후 \"악용됨\" 상태를 \"아니요\"로 수정했습니다. 또한 \"이 취약점은",
+      "summary_3lines": "1. 마이크로소프트, 원격 코드 실행 허용 Entra ID 심각 취약점(CVSS 10.0) 패치\n2. 해당 취약점은 아직 악용되지 않았으며, 패치 전 '악용됨' 상태는 '아니오'로 정정됨\n3. MS는 Entra ID 사용자들에게 즉시 보안 업데이트 적용 권고",
+      "link": "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html",
+      "source": "thehackernews",
+      "published": "2026-08-21T15:06:11+09:00",
+      "lang": "en"
     },
     {
       "title": "생성형 AI 악성코드·적대적 공격 대응… 코레일, 사이버공격·방어 실전...",
@@ -2284,6 +2308,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-62676 - Omnigent Guardrail policy bypass: shell-command parser fails open in policies/builtins/_shell.py",
+      "summary": "CVE ID :CVE-2026-62676\n  \nPublished : Aug. 21, 2026, 5:42 p.m. | 29 minutes ago\n  \nDescription :Omnigent is an open-source AI agent framework and meta-harness for orchestrating coding agents. Prior to 0.3.0, the shared shell-command parser in omnigent/policies/builtins/_shell.py fails to recognize combined interpreter flags, the timeout, nice, setsid, and stdbuf wrappers, command substitutions, and a single background control operator. A gated git push or gh write hidden with these forms produces no parsed operation, causing the github.py write_repos and write_branches allowlist and the working_dir.py workspace confinement policies to abstain and allow the command. An authenticated or prompt-injected agent can therefore push to an unauthorized repository or branch or escape the intended workspace. This issue is fixed in version 0.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-62676\n  \nPublished : Aug. 21, 2026, 5:42 p.m. | 29 minutes ago\n  \nDescription :Omnigent is an open-source AI agent framework and meta-harness for orchestrating coding agents. Prior to 0.3.0, the shared shell-command parser in omnigent/policies/builtins/_shell.py fails to recognize combined interpreter flags, the timeout, nice, setsid, and stdbuf wrappers, command substitutions, and a single background control operator. A gated git push or gh write hidden with these forms produces no parsed operation, causing the github.py write_repos and write_branches allowlist and the working_dir.py workspace confinement policies to abstain and allow the command. An authenticated or prompt-injected agent can therefore push to an unauthorized repository or branch or escape the intended workspace. This issue is fixed in version 0.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-62676 - Omnigent Guardrail 정책 우회: 셸 명령 구문 분석기가policy/builtins/_shell.py에서 열리지 않습니다.",
+      "summary_ko": "CVE ID:CVE-2026-62676\n  \n게시일 : 2026년 8월 21일 오후 5시 42분 | 29분 전\n  \n설명:Omnigent는 코딩 에이전트를 조정하기 위한 오픈 소스 AI 에이전트 프레임워크이자 메타 하네스입니다. 0.3.0 이전에는 omnigent/policies/builtins/_shell.py의 공유 쉘 명령 구문 분석기가 결합된 인터프리터 플래그, 시간 초과, nice, setid 및 stdbuf 래퍼, 명령 대체 및 단일 백그라운드 제어 연산자를 인식하지 못했습니다. 이러한 형식으로 숨겨진 git push 또는 gh write는 구문 분석된 작업을 생성하지 않으므로 github.py write_repos 및 write_branches 허용 목록과 Working_dir.py 작업 공간 제한 정책이 명령을 금지하고 허용하게 됩니다. 따라서 인증되었거나 프롬프트에 삽입된 에이전트는 승인되지 않은 저장소나 지점으로 푸시하거나 의도한 작업 공간에서 벗어날 수 있습니다. 이 문제는 버전 0.3.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-62676\n2. 26.08.22 오전2:42\n3. Omnigent is an open-source AI agent framework and ",
+      "cve_id": "CVE-2026-62676",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62676",
+      "source": "cvefeed",
+      "published": "2026-08-22T02:42:21+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-17252 - Unauthenticated Denial of Service via Composed HTTP Parsing and Stack-Based Out-of-Bounds Write Vulnerability in TL-MR6400 Web Management Interface",
       "summary": "CVE ID :CVE-2026-17252\n  \nPublished : Aug. 21, 2026, 5:16 p.m. | 40 minutes ago\n  \nDescription :A\nstack-based out-of-bounds write vulnerability exists in the login request\nhandling functionality of the administrative web interface of TP-Link TL-MR6400 v7 routers. An unauthenticated adjacent attacker can trigger the vulnerability\nby sending a specially crafted malformed HTTP request. \n\n\n\n\n\nSuccessful\nexploitation may cause the web service process to crash, resulting in a\ndenial-of-service condition and temporary loss of access to the router's web\nmanagement interface.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-17252\n  \nPublished : Aug. 21, 2026, 5:16 p.m. | 40 minutes ago\n  \nDescription :A\nstack-based out-of-bounds write vulnerability exists in the login request\nhandling functionality of the administrative web interface of TP-Link TL-MR6400 v7 routers. An unauthenticated adjacent attacker can trigger the vulnerability\nby sending a specially crafted malformed HTTP request. \n\n\n\n\n\nSuccessful\nexploitation may cause the web service process to crash, resulting in a\ndenial-of-service condition and temporary loss of access to the router's web\nmanagement interface.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3256,51 +3295,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-55166",
       "source": "cvefeed",
       "published": "2026-08-19T04:16:58+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-75625 - Kraken Agents Peer-to-Peer Download Cache Poisoning via Digest Verification Bypass",
-      "summary": "CVE ID :CVE-2026-75625\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :Kraken agents fail to verify peer-to-peer downloaded blobs against their requested SHA-256 digest before committing to the content-addressable cache, relying only on CRC32 checksums for piece validation. Attackers on the agent-to-agent path or malicious peers can supply substituted content with forged CRC32 corrections that passes per-piece checks, poisoning the cache with attacker-chosen container image layers or manifests that are re-seeded and executed by other hosts.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-75625\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :Kraken agents fail to verify peer-to-peer downloaded blobs against their requested SHA-256 digest before committing to the content-addressable cache, relying only on CRC32 checksums for piece validation. Attackers on the agent-to-agent path or malicious peers can supply substituted content with forged CRC32 corrections that passes per-piece checks, poisoning the cache with attacker-chosen container image layers or manifests that are re-seeded and executed by other hosts.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-75625 - Kraken 에이전트, 다이제스트 확인 우회를 통한 P2P 다운로드 캐시 중독",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-75625\n2. 26.08.19 오전3:19\n3. Kraken agents fail to verify peer-to-peer download",
-      "cve_id": "CVE-2026-75625",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75625",
-      "source": "cvefeed",
-      "published": "2026-08-19T03:19:34+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-73502 - kin-openapi openapi3filter: unauthenticated nil-pointer panic when validating a request against a `content` parameter whose media type has no schema",
-      "summary": "CVE ID :CVE-2026-73502\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.2.0 until 0.144.0, openapi3filter.ValidateRequest can encounter a NULL-pointer-dereference denial of service when an operation declares a content parameter whose application/json media type has no schema. In openapi3filter/req_resp_decoder.go, the default defaultContentParameterDecoder dereferences mt.Schema.Value without checking whether mt.Schema is nil, even though doc.Validate() accepts the document under OpenAPI 3.0.x and 3.1.x. A single unauthenticated request supplying the parameter value can panic request validation, causing an aborted request with log growth in the common synchronous net/http path or a full process crash in integrations without recovery. This issue is fixed in version 0.144.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-73502\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.2.0 until 0.144.0, openapi3filter.ValidateRequest can encounter a NULL-pointer-dereference denial of service when an operation declares a content parameter whose application/json media type has no schema. In openapi3filter/req_resp_decoder.go, the default defaultContentParameterDecoder dereferences mt.Schema.Value without checking whether mt.Schema is nil, even though doc.Validate() accepts the document under OpenAPI 3.0.x and 3.1.x. A single unauthenticated request supplying the parameter value can panic request validation, causing an aborted request with log growth in the common synchronous net/http path or a full process crash in integrations without recovery. This issue is fixed in version 0.144.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-73502 - kin-openapi openapi3filter: 미디어 유형에 스키마가 없는 'content' 매개변수에 대한 요청을 검증할 때 인증되지 않은 nil-pointer 패닉이 발생함",
-      "summary_ko": "CVE ID:CVE-2026-73502\n  \n게시일 : 2026년 8월 18일 오후 6시 19분 | 51분 전\n  \n설명 :kin-openapi는 OpenAPI 파일을 처리하기 위한 Go 프로젝트입니다. 0.2.0부터 0.144.0까지, openapi3filter.ValidateRequest는 작업이 application/json 미디어 유형에 스키마가 없는 콘텐츠 매개 변수를 선언할 때 NULL 포인터 역참조 서비스 거부가 발생할 수 있습니다. openapi3filter/req_resp_decoder.go에서 기본 defaultContentParameterDecoder는 doc.Validate()가 OpenAPI 3.0.x 및 3.1.x에서 문서를 허용하더라도 mt.Schema가 nil인지 확인하지 않고 mt.Schema.Value를 역참조합니다. 매개변수 값을 제공하는 인증되지 않은 단일 요청으로 인해 요청 유효성 검사에 패닉이 발생하여 공통 동기 net/http 경로에서 로그가 증가하면서 요청이 중단되거나 복구 없는 통합에서 전체 프로세스 충돌이 발생할 수 있습니다. 이 문제는 버전 0.144.0에서 해결되었습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-73502\n2. 26.08.19 오전3:19\n3. kin-openapi is a Go project for handling OpenAPI f",
-      "cve_id": "CVE-2026-73502",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73502",
-      "source": "cvefeed",
-      "published": "2026-08-19T03:19:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-71551 - Super Productivity: Arbitrary OS Command Execution via IPC EXEC Handler with Persistent Whitelist",
-      "summary": "CVE ID :CVE-2026-71551\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :Super Productivity is an advanced todo list app with integrated timeboxing and time tracking capabilities. Prior to 18.13.0, the EXEC IPC handler in electron/ipc-handlers/exec.ts accepts a command string from the renderer through the IPC.EXEC channel and executes it with child_process.exec(). The electron/preload.ts bridge exposes window.ea.exec() to renderer code, including community plugins executed with new Function(), without requiring nodeExecution permission. A confirmation dialog protects only the first execution, its persistence checkbox is selected by default, and approved commands are stored in the ALLOWED_COMMANDS value in simpleSettings for silent later execution with the desktop account's privileges. This issue is fixed in version 18.13.0.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-71551\n  \nPublished : Aug. 18, 2026, 6:19 p.m. | 51 minutes ago\n  \nDescription :Super Productivity is an advanced todo list app with integrated timeboxing and time tracking capabilities. Prior to 18.13.0, the EXEC IPC handler in electron/ipc-handlers/exec.ts accepts a command string from the renderer through the IPC.EXEC channel and executes it with child_process.exec(). The electron/preload.ts bridge exposes window.ea.exec() to renderer code, including community plugins executed with new Function(), without requiring nodeExecution permission. A confirmation dialog protects only the first execution, its persistence checkbox is selected by default, and approved commands are stored in the ALLOWED_COMMANDS value in simpleSettings for silent later execution with the desktop account's privileges. This issue is fixed in version 18.13.0.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-71551 - 뛰어난 생산성: 영구 화이트리스트가 포함된 IPC EXEC 핸들러를 통한 임의 OS 명령 실행",
-      "summary_ko": "CVE ID:CVE-2026-71551\n  \n게시일 : 2026년 8월 18일 오후 6시 19분 | 51분 전\n  \n설명:Super Productivity는 타임박싱 및 시간 추적 기능이 통합된 고급 할 일 목록 앱입니다. 18.13.0 이전에는 Electron/ipc-handlers/exec.ts의 EXEC IPC 핸들러가 IPC.EXEC 채널을 통해 렌더러로부터 명령 문자열을 받아들이고 child_process.exec()를 사용하여 실행했습니다. Electron/preload.ts 브리지는 nodeExecution 권한 없이도 new Function()으로 실행되는 커뮤니티 플러그인을 포함하여 window.ea.exec()를 렌더러 코드에 노출합니다. 확인 대화 상자는 첫 번째 실행만 보호하고 지속성 확인란이 기본적으로 선택되어 있으며 승인된 명령은 데스크톱 계정의 권한으로 나중에 자동으로 실행될 수 있도록 simpleSettings의 ALLOWED_COMMANDS 값에 저장됩니다. 이 문제는 버전 18.13.0에서 해결되었습니다.\n  \n심각도: 7.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-71551\n2. 26.08.19 오전3:19\n3. Super Productivity is an advanced todo list app wi",
-      "cve_id": "CVE-2026-71551",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-71551",
-      "source": "cvefeed",
-      "published": "2026-08-19T03:19:32+09:00",
       "lang": "en"
     }
   ],
