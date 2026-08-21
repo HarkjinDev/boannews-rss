@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-21T18:01:37.252621+09:00",
+  "fetched_at": "2026-08-21T18:31:16.381330+09:00",
   "security_news": [
+    {
+      "title": "배달앱도 해킹…계좌·주민번호·공동현관 비번 털렸다",
+      "summary": "정보 유출 사고가 끊이지 않는 가운데, 배달 중개 플랫폼 '플라이'에서도 해킹으로 인해 개인정보가 유출돼... [기자] 배달 중개 플랫폼 ‘플라이’에서 고객 정보 해킹 사고가 발생해 경찰이 수사에 착수했습니다. 지난 13...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 배달앱 '플라이' 해킹, 계좌·주민번호 등 유출\n2. 플라이 서버 해킹, 개인정보 1만 5천 건 유출 추정\n3. 경찰 수사 착수, 추가 피해 방지 조치 중",
+      "link": "https://n.news.naver.com/mnews/article/422/0000898141?sid=102",
+      "source": "naver",
+      "published": "2026-08-21T18:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[단독] 서버 해킹 않고 앱으로 정보탈취…구멍난 ‘API 보안’",
       "summary": "웹사이트와 모바일 앱이 서버와 정보를 주고받는 통로인 응용프로그램인터페이스(API)가 개인정보 보안의 사각지대로 떠오르고 있다. 최근 삼프로TV 개인정보 유출 사고에서도 공격자는 서버에 직접 침입하지 않고 정상...",
@@ -2292,21 +2304,24 @@
       "source": "naver",
       "published": "2026-08-18T18:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[단독] 네이버페이, 국내 첫 '양자보안 방벽' 쌓았다",
-      "summary": "금융 정보는 해킹 등으로 한 번 유출되면 그 피해가 막대한 만큼 국내 금융권도 양자컴퓨터 시대에 맞는 ‘암호 대전환’을 서두르고 있다. ◇얼굴인식 결제가 앞당긴 암호 전환 18일 금융권에 따르면 네이버페이는 모든...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 네이버페이, 국내 최초 양자보안 방벽 구축\n2. 얼굴 인식 결제 등 보안 강화 위한 암호 대전환\n3. 양자컴퓨터 시대 대비 금융권 보안 강화",
-      "link": "https://n.news.naver.com/mnews/article/015/0005322096?sid=101",
-      "source": "naver",
-      "published": "2026-08-18T18:14:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-77710 - STIX2 Parser Confusion and Mass Assignment Allow Unauthorized MISP Attribute Metadata Injection in misp-stix library",
+      "summary": "CVE ID :CVE-2026-77710\n  \nPublished : Aug. 21, 2026, 8:54 a.m. | 16 minutes ago\n  \nDescription :A vulnerability in misp-stix could allow a crafted STIX document to influence security-sensitive MISP attribute metadata during import.\n\nThe STIX import logic automatically selected between the internal MISP parser and the external STIX parser based on metadata contained in the STIX document itself. For STIX2, the presence of MISP-specific tool labels could cause a document to be classified as originating from MISP; similarly, STIX1 relied on the document title. These classification indicators are fully controlled by the STIX producer and therefore cannot constitute a trusted indication of the document's origin. The accompanying fix explicitly notes that the parser choice was previously based solely on labels or header titles that any producer could write, and introduces an explicit classification parameter allowing callers to override this detection.\n\nWhen STIX2 content was handled as an internal MISP export, attributes contained in an x-misp-object were converted by copying the complete x_misp_attributes dictionary and passing it directly to misp_object.add_attribute(). Consequently, a crafted STIX bundle could supply fields that were not part of the expected STIX-to-MISP round-trip format, including security-sensitive properties such as distribution, sharing_group_id, tags, or other MISP attribute fields.\n\nAn attacker able to provide a STIX document for import could therefore spoof the markers used to identify MISP-generated content and inject additional attribute properties. This could alter the distribution, sharing restrictions, classification, or semantic metadata of imported attributes, potentially causing information to be shared contrary to the importing organization's policy or influencing downstream processing and automation based on attacker-controlled tags or metadata.\n\nThe vulnerability results from dynamically assigning externally supplied object properties without restricting them to an expected set of attributes, matching CWE-915. MITRE specifically describes this weakness as accepting externally influenced fields without controlling which object attributes may be modified and recommends an allow-list, which is the approach implemented by the patch. The parser-selection issue additionally corresponds to CWE-807, because an untrusted value was used to make a security-relevant trust/classification decision.\n\nThe attack is also consistent with CAPEC-153 (Input Data Manipulation), in which an attacker controls the structure or flags of supplied data so that the target selects a different processing path or interprets the content differently than intended.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-77710\n  \nPublished : Aug. 21, 2026, 8:54 a.m. | 16 minutes ago\n  \nDescription :A vulnerability in misp-stix could allow a crafted STIX document to influence security-sensitive MISP attribute metadata during import.\n\nThe STIX import logic automatically selected between the internal MISP parser and the external STIX parser based on metadata contained in the STIX document itself. For STIX2, the presence of MISP-specific tool labels could cause a document to be classified as originating from MISP; similarly, STIX1 relied on the document title. These classification indicators are fully controlled by the STIX producer and therefore cannot constitute a trusted indication of the document's origin. The accompanying fix explicitly notes that the parser choice was previously based solely on labels or header titles that any producer could write, and introduces an explicit classification parameter allowing callers to override this detection.\n\nWhen STIX2 content was handled as an internal MISP export, attributes contained in an x-misp-object were converted by copying the complete x_misp_attributes dictionary and passing it directly to misp_object.add_attribute(). Consequently, a crafted STIX bundle could supply fields that were not part of the expected STIX-to-MISP round-trip format, including security-sensitive properties such as distribution, sharing_group_id, tags, or other MISP attribute fields.\n\nAn attacker able to provide a STIX document for import could therefore spoof the markers used to identify MISP-generated content and inject additional attribute properties. This could alter the distribution, sharing restrictions, classification, or semantic metadata of imported attributes, potentially causing information to be shared contrary to the importing organization's policy or influencing downstream processing and automation based on attacker-controlled tags or metadata.\n\nThe vulnerability results from dynamically assigning externally supplied object properties without restricting them to an expected set of attributes, matching CWE-915. MITRE specifically describes this weakness as accepting externally influenced fields without controlling which object attributes may be modified and recommends an allow-list, which is the approach implemented by the patch. The parser-selection issue additionally corresponds to CWE-807, because an untrusted value was used to make a security-relevant trust/classification decision.\n\nThe attack is also consistent with CAPEC-153 (Input Data Manipulation), in which an attacker controls the structure or flags of supplied data so that the target selects a different processing path or interprets the content differently than intended.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-77710 - STIX2 파서 혼란 및 대량 할당으로 인해 misp-stix 라이브러리에 무단 MISP 속성 메타데이터 삽입이 허용됩니다.",
+      "summary_ko": "CVE ID:CVE-2026-77710\n  \n게시일 : 2026년 8월 21일 오전 8시 54분 | 16분 전\n  \n설명 :misp-stix의 취약점으로 인해 조작된 STIX 문서를 가져오는 동안 보안에 민감한 MISP 속성 메타데이터에 영향을 미칠 수 있습니다.\n\nSTIX 가져오기 논리는 STIX 문서 자체에 포함된 메타데이터를 기반으로 내부 MISP 구문 분석기와 외부 STIX 구문 분석기 사이에서 자동으로 선택됩니다. STIX2의 경우 MISP 관련 도구 레이블이 있으면 문서가 MISP에서 발생한 것으로 분류될 수 있습니다. 마찬가지로 STIX1은 문서 제목에 의존했습니다. 이러한 분류 표시는 STIX 제작자에 의해 완전히 제어되므로 문서 출처에 대한 신뢰할 수 있는 표시가 될 수 없습니다. 함께 제공되는 수정 사항은 이전에 파서 선택이 모든 생산자가 작성할 수 있는 레이블 또는 헤더 제목에만 기반을 두었음을 명시적으로 언급하고 호출자가 이 감지를 재정의할 수 있도록 명시적인 분류 매개 변수를 도입합니다.\n\nSTIX2 콘텐츠가 내부 MISP 내보내기로 처리될 때 x-misp-object에 포함된 속성은 전체 x_misp_attributes 사전을 복사하고 이를 misp_object.add_attribute()에 직접 전달하여 변환되었습니다. 결과적으로 조작된 STIX 번들은 배포, Sharing_group_id, 태그 또는 기타 MISP 속성 필드와 같은 보안에 민감한 속성을 포함하여 예상되는 STIX-MISP 왕복 형식의 일부가 아닌 필드를 제공할 수 있습니다.\n\n따라서 가져올 STIX 문서를 제공할 수 있는 공격자는 MISP 생성 콘텐츠를 식별하는 데 사용되는 마커를 스푸핑하고 추가 속성 속성을 주입할 수 있습니다. 이는 가져온 속성의 배포, 공유 제한, 분류 또는 의미론적 메타데이터를 변경하여 잠재적으로 가져오는 조직의 정책에 반하여 정보가 공유되도록 하거나 공격자가 제어하는 ​​태그 또는 메타데이터를 기반으로 하는 다운스트림 처리 및 자동화에 영향을 미칠 수 있습니다.\n\n이 취약점은 CWE-915와 일치하는 예상 속성 집합으로 제한하지 않고 외부에서 제공되는 개체 속성을 동적으로 할당함으로써 발생합니다. MITRE는 이 약점을 수정될 수 있는 개체 속성을 제어하지 않고 외부의 영향을 받는 필드를 허용하는 것으로 구체적으로 설명하고 패치에 의해 구현된 접근 방식인 허용 목록을 권장합니다. 파서 선택 문제는 추가로 CWE-807에 해당합니다. 보안 관련 신뢰/분류 결정을 내리는 데 신뢰할 수 없는 값이 사용되었기 때문입니다.\n\n이 공격은 공격자가 제공된 데이터의 구조나 플래그를 제어하여 대상이 의도한 것과 다른 처리 경로를 선택하거나 내용을 다르게 해석하도록 하는 CAPEC-153(입력 데이터 조작)과도 일치합니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-77710\n2. 26.08.21 오후5:54\n3. A vulnerability in misp-stix could allow a crafted",
+      "cve_id": "CVE-2026-77710",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77710",
+      "source": "cvefeed",
+      "published": "2026-08-21T17:54:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-16577 - Dokan < 5.0.14 - Vendor+ Reverse Withdrawal Ledger Manipulation via Client-Supplied Amount",
       "summary": "CVE ID :CVE-2026-16577\n  \nPublished : Aug. 21, 2026, 6 a.m. | 1 hour, 9 minutes ago\n  \nDescription :The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.0.14 does not validate a client-supplied payment amount against the vendor's actual outstanding balance when recording a reverse-withdrawal payment, allowing a vendor to credit their reverse-withdrawal ledger with an arbitrary amount and clear their real commission debt without paying.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3190,21 +3205,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-75851",
       "source": "cvefeed",
       "published": "2026-08-18T20:19:55+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-43971 - Link Header Directive Smuggling via Unescaped target/rel/Attribute Keys in cow_link:link/1",
-      "summary": "CVE ID :CVE-2026-43971\n  \nPublished : Aug. 18, 2026, 9:17 a.m. | 1 hour, 51 minutes ago\n  \nDescription :Improper Encoding or Escaping of Output vulnerability in ninenines cowlib allows Link header directive smuggling via unescaped special characters in cow_link:link/1.\n\ncow_link:do_link/1 in cowlib interpolates the target URI, rel value, and attribute keys directly into the serialized Link: header value without escaping or token-grammar validation. A > byte in target prematurely closes the URI slot, allowing an attacker to append additional link entries with attacker-chosen rel directives. A \" or \\ in rel escapes the quoted string and opens new parameters. Any byte — including whitespace, =, and \" — in an attribute key is emitted verbatim. Because browsers act on Link: directives such as rel=\"preconnect\", rel=\"preload\", and rel=\"prerender\", an attacker who can influence these fields in an application that round-trips parsed Link headers through cow_link:link/1 can force victim browsers to make out-of-band connections to attacker-controlled origins.\n\nThis issue affects cowlib: from 2.9.0 onward.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-43971\n  \nPublished : Aug. 18, 2026, 9:17 a.m. | 1 hour, 51 minutes ago\n  \nDescription :Improper Encoding or Escaping of Output vulnerability in ninenines cowlib allows Link header directive smuggling via unescaped special characters in cow_link:link/1.\n\ncow_link:do_link/1 in cowlib interpolates the target URI, rel value, and attribute keys directly into the serialized Link: header value without escaping or token-grammar validation. A > byte in target prematurely closes the URI slot, allowing an attacker to append additional link entries with attacker-chosen rel directives. A \" or \\ in rel escapes the quoted string and opens new parameters. Any byte — including whitespace, =, and \" — in an attribute key is emitted verbatim. Because browsers act on Link: directives such as rel=\"preconnect\", rel=\"preload\", and rel=\"prerender\", an attacker who can influence these fields in an application that round-trips parsed Link headers through cow_link:link/1 can force victim browsers to make out-of-band connections to attacker-controlled origins.\n\nThis issue affects cowlib: from 2.9.0 onward.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-43971 - cow_link:link/1의 이스케이프되지 않은 target/rel/속성 키를 통한 링크 헤더 지시문 밀수",
-      "summary_ko": "CVE ID:CVE-2026-43971\n  \n게시일 : 2026년 8월 18일 오전 9시 17분 | 1시간 51분 전\n  \n설명 : ninenines cowlib의 부적절한 인코딩 또는 출력 이스케이프 취약점으로 인해 cow_link:link/1에서 이스케이프되지 않은 특수 문자를 통한 링크 헤더 지시문 밀수가 허용됩니다.\n\ncowlib의 cow_link:do_link/1은 이스케이프나 토큰 문법 검증 없이 대상 URI, 상대 값 및 속성 키를 직렬화된 Link: 헤더 값에 직접 삽입합니다. 대상의 A > 바이트는 URI 슬롯을 조기에 닫아 공격자가 선택한 rel 지시문을 사용하여 추가 링크 항목을 추가할 수 있도록 합니다. rel의 \" 또는 \\는 인용된 문자열을 이스케이프하고 새 매개변수를 엽니다. 속성 키에 있는 공백, = ​​및 \"를 포함한 모든 바이트는 그대로 방출됩니다. 브라우저는 rel=\"preconnect\", rel=\"preload\" 및 rel=\"prerender\"와 같은 Link: 지시문에 따라 작동하므로, cow_link:link/1을 통해 구문 분석된 링크 헤더를 왕복하는 애플리케이션에서 이러한 필드에 영향을 미칠 수 있는 공격자는 피해자 브라우저가 공격자가 제어하는 ​​원본에 대역 외 연결을 설정하도록 강제할 수 있습니다.\n\n이 문제는 cowlib: 2.9.0부터 영향을 미칩니다.\n  \n심각도: 6.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-43971\n2. 26.08.18 오후6:17\n3. Improper Encoding or Escaping of Output vulnerabil",
-      "cve_id": "CVE-2026-43971",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-43971",
-      "source": "cvefeed",
-      "published": "2026-08-18T18:17:14+09:00",
       "lang": "en"
     }
   ],
