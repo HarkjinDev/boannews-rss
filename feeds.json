@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-22T07:02:37.712750+09:00",
+  "fetched_at": "2026-08-22T07:31:37.931404+09:00",
   "security_news": [
+    {
+      "title": "깃랩 CVSS 9.4 결함, 패치 공개 하루 만에 실제 공격 허니팟서 포착됐다",
+      "summary": "치명적 보안 결함이 공개 며칠 만에 실제 공격에 악용되고 있다. 문제의 취약점은 CVE-2026-19478로... 보안기업 워치타워(watchTowr)는 취약점이 공개된 지 몇 분 만에 재현에 성공했고, 이후 자사 허니팟(honeypot...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 깃랩 CVE-2026-19478, CVSS 9.4 결함\n2. 패치 공개 하루 만에 워치타워 허니팟 공격 포착\n3. 실제 공격 악용, 즉각적인 패치 적용 필수",
+      "link": "https://www.wikitree.co.kr/articles/1154064",
+      "source": "naver",
+      "published": "2026-08-22T07:22:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "개인정보 털렸는데 \"어떻게 쓰일지 불안\"…피해자 구제는 속수무책",
       "summary": "그는 \"재발하지 않도록 학교가 보안 시스템을 강화해 줬으면 좋겠다\"고 덧붙였다. 또 다른 서강대 졸업생... 전문가는 반복되는 개인정보 유출 사고의 원인으로 외부 공격에 대응할 수 있는 보안 역량과 안전조치 충분하지...",
@@ -3274,51 +3286,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-19942",
       "source": "cvefeed",
       "published": "2026-08-19T14:17:02+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-73974 - linuxfabrik-lib: Arbitrary root file read via live --test argument (lib.lftest) across sudoers-whitelisted plugins (LPE)",
-      "summary": "CVE ID :CVE-2026-73974\n  \nPublished : Aug. 18, 2026, 10:17 p.m. | 1 hour, 36 minutes ago\n  \nDescription :linuxfabrik-lib provides Python modules for database access, caching, shell execution, and API integrations, and Linuxfabrik Monitoring Plugins uses its shared testing helper across check plugins. Prior to linuxfabrik-lib 6.1.0 and Linuxfabrik Monitoring Plugins 7.0.0, lib.lftest.test() treated the first or second element of a --test CSV argument as a filesystem path and returned the file contents as simulated standard output or standard error without path confinement. The hidden but production-accessible --test argument was accepted by sudo-authorized plugins, so an attacker controlling the nagios or icinga account could use check-plugins/deb-updates/deb-updates with its default QUERY=1 to disclose every line of a root-readable file. Approximately 22 other plugins exposed filtered content or a root file existence and readability oracle through the same helper, while check-plugins/network-bonding/network-bonding and check-plugins/openstack-swift-stat/openstack-swift-stat had direct read paths that bypassed the helper. The library fix confines fixture reads to the invoking plugin's unit-test directory and refuses unsafe anchors, and the plugin fix routes the two bypasses through that helper. These issues are fixed in linuxfabrik-lib 6.1.0 and Linuxfabrik Monitoring Plugins 7.0.0.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-73974\n  \nPublished : Aug. 18, 2026, 10:17 p.m. | 1 hour, 36 minutes ago\n  \nDescription :linuxfabrik-lib provides Python modules for database access, caching, shell execution, and API integrations, and Linuxfabrik Monitoring Plugins uses its shared testing helper across check plugins. Prior to linuxfabrik-lib 6.1.0 and Linuxfabrik Monitoring Plugins 7.0.0, lib.lftest.test() treated the first or second element of a --test CSV argument as a filesystem path and returned the file contents as simulated standard output or standard error without path confinement. The hidden but production-accessible --test argument was accepted by sudo-authorized plugins, so an attacker controlling the nagios or icinga account could use check-plugins/deb-updates/deb-updates with its default QUERY=1 to disclose every line of a root-readable file. Approximately 22 other plugins exposed filtered content or a root file existence and readability oracle through the same helper, while check-plugins/network-bonding/network-bonding and check-plugins/openstack-swift-stat/openstack-swift-stat had direct read paths that bypassed the helper. The library fix confines fixture reads to the invoking plugin's unit-test directory and refuses unsafe anchors, and the plugin fix routes the two bypasses through that helper. These issues are fixed in linuxfabrik-lib 6.1.0 and Linuxfabrik Monitoring Plugins 7.0.0.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-73974 - linuxfabrik-lib: sudoers-whitelisted 플러그인(LPE)에서 live --test 인수(lib.lftest)를 통해 읽은 임의 루트 파일",
-      "summary_ko": "CVE ID:CVE-2026-73974\n  \n게시일 : 2026년 8월 18일 오후 10시 17분 | 1시간 36분 전\n  \n설명 :linuxfabrik-lib는 데이터베이스 액세스, 캐싱, 셸 실행 및 API 통합을 위한 Python 모듈을 제공하며 Linuxfabrik 모니터링 플러그인은 검사 플러그인 전체에서 공유 테스트 도우미를 사용합니다. linuxfabrik-lib 6.1.0 및 Linuxfabrik 모니터링 플러그인 7.0.0 이전에는 lib.lftest.test()가 --test CSV 인수의 첫 번째 또는 두 번째 요소를 파일 시스템 경로로 처리하고 파일 내용을 경로 제한 없이 시뮬레이션된 표준 출력 또는 표준 오류로 반환했습니다. 숨겨져 있지만 프로덕션에서 액세스할 수 있는 --test 인수는 sudo 승인 플러그인에서 허용되므로 nagios 또는 icinga 계정을 제어하는 ​​공격자는 기본 QUERY=1과 함께 check-plugins/deb-updates/deb-updates를 사용하여 루트에서 읽을 수 있는 파일의 모든 줄을 공개할 수 있습니다. 약 22개의 다른 플러그인은 동일한 도우미를 통해 필터링된 콘텐츠 또는 루트 파일 존재 및 가독성 Oracle을 노출한 반면, check-plugins/network-bonding/network-bonding 및 check-plugins/openstack-swift-stat/openstack-swift-stat에는 도우미를 우회하는 직접 읽기 경로가 있었습니다. 라이브러리 수정은 픽스처 읽기를 호출하는 플러그인의 단위 테스트 디렉터리로 제한하고 안전하지 않은 앵커를 거부하며, 플러그인 수정은 해당 도우미를 통해 두 우회를 라우팅합니다. 이러한 문제는 linuxfabrik-lib 6.1.0 및 Linuxfabrik Monitoring Plugins 7.0.0에서 해결되었습니다.\n  \n심각도: 5.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-73974\n2. 26.08.19 오전7:17\n3. linuxfabrik-lib provides Python modules for databa",
-      "cve_id": "CVE-2026-73974",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73974",
-      "source": "cvefeed",
-      "published": "2026-08-19T07:17:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-52873 - Streambert: Global CSP Removal in Wyzie Redeem Window Enables Unconstrained XSS in Electron Renderer",
-      "summary": "CVE ID :CVE-2026-52873\n  \nPublished : Aug. 18, 2026, 10:16 p.m. | 2 hours, 55 minutes ago\n  \nDescription :Streambert is a cross-platform Electron Desktop App to stream and download video content. From version 2.5.0 until version 2.6.0, the wyzie-open-redeem IPC handler in index.js creates the partition:wyzie-redeem Electron session and registers an onHeadersReceived hook that removes the Content-Security-Policy header from every response in that session. The redeem window also lacks a setWindowOpenHandler restriction, so script injection in sub.wyzie.io, a loaded third-party resource, or a site reached through navigation executes without CSP constraints and can affect additional windows and persistent session storage. A user must open the Wyzie API key redemption window, and exploitation requires attacker-controlled script content in a loaded page. The resulting renderer script can invoke renderer-exposed application functionality and can be chained with other vulnerabilities to access internal services or sensitive data. This issue is fixed in version 2.6.0.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-52873\n  \nPublished : Aug. 18, 2026, 10:16 p.m. | 2 hours, 55 minutes ago\n  \nDescription :Streambert is a cross-platform Electron Desktop App to stream and download video content. From version 2.5.0 until version 2.6.0, the wyzie-open-redeem IPC handler in index.js creates the partition:wyzie-redeem Electron session and registers an onHeadersReceived hook that removes the Content-Security-Policy header from every response in that session. The redeem window also lacks a setWindowOpenHandler restriction, so script injection in sub.wyzie.io, a loaded third-party resource, or a site reached through navigation executes without CSP constraints and can affect additional windows and persistent session storage. A user must open the Wyzie API key redemption window, and exploitation requires attacker-controlled script content in a loaded page. The resulting renderer script can invoke renderer-exposed application functionality and can be chained with other vulnerabilities to access internal services or sensitive data. This issue is fixed in version 2.6.0.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-52873 - Streambert: Wyzie 상환 창에서 전역 CSP 제거로 인해 전자 렌더러에서 무제한 XSS가 활성화됨",
-      "summary_ko": "CVE ID:CVE-2026-52873\n  \n게시일 : 2026년 8월 18일 오후 10시 16분 | 2시간 55분 전\n  \n설명:Streambert는 비디오 콘텐츠를 스트리밍하고 다운로드하는 크로스 플랫폼 Electron 데스크톱 앱입니다. 버전 2.5.0부터 버전 2.6.0까지 index.js의 wyzie-open-redeem IPC 핸들러는 partition:wyzie-redeem Electron 세션을 생성하고 해당 세션의 모든 응답에서 Content-Security-Policy 헤더를 제거하는 onHeadersReceived 후크를 등록합니다. 또한 교환 창에는 setWindowOpenHandler 제한이 없으므로 로드된 타사 리소스인 sub.wyzie.io 또는 탐색을 통해 도달한 사이트의 스크립트 삽입은 CSP 제약 없이 실행되며 추가 창 및 영구 세션 저장소에 영향을 미칠 수 있습니다. 사용자는 Wyzie API 키 상환 창을 열어야 하며 이를 악용하려면 로드된 페이지에 공격자가 제어하는 ​​스크립트 콘텐츠가 필요합니다. 결과 렌더러 스크립트는 렌더러에 노출된 애플리케이션 기능을 호출할 수 있으며 내부 서비스나 민감한 데이터에 액세스하기 위해 다른 취약점과 연결될 수 있습니다. 이 문제는 버전 2.6.0에서 해결되었습니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-52873\n2. 26.08.19 오전7:16\n3. Streambert is a cross-platform Electron Desktop Ap",
-      "cve_id": "CVE-2026-52873",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-52873",
-      "source": "cvefeed",
-      "published": "2026-08-19T07:16:53+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48796 - CefSharp: `FolderSchemeHandlerFactory` path boundary check can expose files outside the configured root folder",
-      "summary": "CVE ID :CVE-2026-48796\n  \nPublished : Aug. 18, 2026, 10:16 p.m. | 1 hour, 37 minutes ago\n  \nDescription :CefSharp provides .NET bindings for the Chromium Embedded Framework for Windows Forms and Windows Presentation Foundation applications. Prior to version 148.0.90, CefSharp/SchemeHandler/FolderSchemeHandlerFactory.cs used filePath.StartsWith(rootFolder, StringComparison.OrdinalIgnoreCase) to decide whether a decoded and canonicalized request path remained inside rootFolder. That raw prefix test did not enforce a directory boundary, so a request such as ..%2fwww2/secret.txt could escape a configured www directory into a sibling www2 directory whose path shared the same string prefix. Applications that register FolderSchemeHandlerFactory for a custom scheme or an HTTP or HTTPS scheme can therefore serve local files outside the intended root when an attacker can cause the embedded browser to request the crafted URL. The issue affects both Unix-style paths such as /tmp/app/www2 and Windows paths such as C:\\app\\www2, and the fix appends a directory separator to the normalized root before comparison while rejecting null bytes and alternate data stream syntax. This issue is fixed in version 148.0.90.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48796\n  \nPublished : Aug. 18, 2026, 10:16 p.m. | 1 hour, 37 minutes ago\n  \nDescription :CefSharp provides .NET bindings for the Chromium Embedded Framework for Windows Forms and Windows Presentation Foundation applications. Prior to version 148.0.90, CefSharp/SchemeHandler/FolderSchemeHandlerFactory.cs used filePath.StartsWith(rootFolder, StringComparison.OrdinalIgnoreCase) to decide whether a decoded and canonicalized request path remained inside rootFolder. That raw prefix test did not enforce a directory boundary, so a request such as ..%2fwww2/secret.txt could escape a configured www directory into a sibling www2 directory whose path shared the same string prefix. Applications that register FolderSchemeHandlerFactory for a custom scheme or an HTTP or HTTPS scheme can therefore serve local files outside the intended root when an attacker can cause the embedded browser to request the crafted URL. The issue affects both Unix-style paths such as /tmp/app/www2 and Windows paths such as C:\\app\\www2, and the fix appends a directory separator to the normalized root before comparison while rejecting null bytes and alternate data stream syntax. This issue is fixed in version 148.0.90.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-48796\n  \n게시일 : 2026년 8월 18일 오후 10시 16분 | 1시간 37분 전\n  \n설명 :CefSharp는 Windows Forms 및 Windows Presentation Foundation 애플리케이션용 Chromium Embedded Framework에 대한 .NET 바인딩을 제공합니다. 버전 148.0.90 이전에는 CefSharp/SchemeHandler/FolderSchemeHandlerFactory.cs가 filePath.StartsWith(rootFolder, StringComparison.OrdinalIgnoreCase)를 사용하여 디코딩되고 정규화된 요청 경로가 rootFolder 내에 남아 있는지 여부를 결정했습니다. 해당 원시 접두사 테스트는 디렉터리 경계를 적용하지 않았으므로 ..%2fwww2/secret.txt와 같은 요청은 구성된 www 디렉터리를 경로가 동일한 문자열 접두사를 공유하는 형제 www2 디렉터리로 이스케이프할 수 있습니다. 따라서 사용자 지정 체계나 HTTP 또는 HTTPS 체계에 대해 FolderSchemeHandlerFactory를 등록하는 응용 프로그램은 공격자가 내장된 브라우저에서 조작된 URL을 요청하도록 할 수 있는 경우 의도한 루트 외부의 로컬 파일을 제공할 수 있습니다. 이 문제는 /tmp/app/www2와 같은 Unix 스타일 경로와 C:\\app\\www2와 같은 Windows 경로 모두에 영향을 미치며, 수정 사항은 Null 바이트 및 대체 데이터 스트림 구문을 거부하면서 비교하기 전에 정규화된 루트에 디렉터리 구분 기호를 추가합니다. 이 문제는 버전 148.0.90에서 해결되었습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48796\n2. 26.08.19 오전7:16\n3. CefSharp provides .NET bindings for the Chromium E",
-      "cve_id": "CVE-2026-48796",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48796",
-      "source": "cvefeed",
-      "published": "2026-08-19T07:16:52+09:00",
       "lang": "en"
     }
   ],
