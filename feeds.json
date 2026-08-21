@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22T04:31:09.338615+09:00",
+  "fetched_at": "2026-08-22T05:01:08.603236+09:00",
   "security_news": [
     {
       "title": "미국 사이버 보안업체 “대규모 소프트웨어 공급망 공격…북한 연계 정...",
@@ -2319,6 +2319,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54073 - VeraCrypt: Hidden volume quick format weakens plausible deniability",
+      "summary": "CVE ID :CVE-2026-54073\n  \nPublished : Aug. 21, 2026, 7:17 p.m. | 43 minutes ago\n  \nDescription :VeraCrypt provides disk encryption with strong security based on TrueCrypt. From 1.26.6 until 1.26.29, file-hosted hidden volume creation forces quick format and the FormatNoFs function in src/Common/Format.c and FormatFat function in src/Common/Fat.c use WriteFile to place raw zeroed sectors at predictable 128 MiB intervals. These writes bypass the normal EncryptDataUnits formatting path, leaving deterministic plaintext markers in an area expected to resemble random ciphertext. The markers can weaken plausible deniability during forensic inspection, although they do not disclose hidden-volume content or reduce the strength of VeraCrypt encryption. This issue is fixed in version 1.26.29.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54073\n  \nPublished : Aug. 21, 2026, 7:17 p.m. | 43 minutes ago\n  \nDescription :VeraCrypt provides disk encryption with strong security based on TrueCrypt. From 1.26.6 until 1.26.29, file-hosted hidden volume creation forces quick format and the FormatNoFs function in src/Common/Format.c and FormatFat function in src/Common/Fat.c use WriteFile to place raw zeroed sectors at predictable 128 MiB intervals. These writes bypass the normal EncryptDataUnits formatting path, leaving deterministic plaintext markers in an area expected to resemble random ciphertext. The markers can weaken plausible deniability during forensic inspection, although they do not disclose hidden-volume content or reduce the strength of VeraCrypt encryption. This issue is fixed in version 1.26.29.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-54073 - VeraCrypt: 숨겨진 볼륨 빠른 형식으로 인해 그럴듯한 거부성이 약화됩니다.",
+      "summary_ko": "CVE ID:CVE-2026-54073\n  \n게시일 : 2026년 8월 21일 오후 7시 17분 | 43분 전\n  \n설명 :VeraCrypt는 TrueCrypt 기반의 강력한 보안으로 디스크 암호화를 제공합니다. 1.26.6부터 1.26.29까지, 파일 호스팅 숨겨진 볼륨 생성은 빠른 포맷을 강제하고 src/Common/Format.c의 FormatNoFs 기능과 src/Common/Fat.c의 FormatFat 기능은 WriteFile을 사용하여 예측 가능한 128MiB 간격으로 원시 섹터를 배치합니다. 이러한 쓰기는 일반적인 EncryptDataUnits 형식 지정 경로를 우회하여 임의의 암호문과 유사할 것으로 예상되는 영역에 결정론적 일반 텍스트 마커를 남깁니다. 마커는 숨겨진 볼륨 콘텐츠를 공개하거나 VeraCrypt 암호화의 강도를 낮추지는 않지만 포렌식 조사 중에 그럴듯한 거부성을 약화시킬 수 있습니다. 이 문제는 버전 1.26.29에서 수정되었습니다.\n  \n심각도: 4.6 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-54073\n2. 26.08.22 오전4:17\n3. VeraCrypt provides disk encryption with strong sec",
+      "cve_id": "CVE-2026-54073",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54073",
+      "source": "cvefeed",
+      "published": "2026-08-22T04:17:02+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-62676 - Omnigent Guardrail policy bypass: shell-command parser fails open in policies/builtins/_shell.py",
       "summary": "CVE ID :CVE-2026-62676\n  \nPublished : Aug. 21, 2026, 5:42 p.m. | 29 minutes ago\n  \nDescription :Omnigent is an open-source AI agent framework and meta-harness for orchestrating coding agents. Prior to 0.3.0, the shared shell-command parser in omnigent/policies/builtins/_shell.py fails to recognize combined interpreter flags, the timeout, nice, setsid, and stdbuf wrappers, command substitutions, and a single background control operator. A gated git push or gh write hidden with these forms produces no parsed operation, causing the github.py write_repos and write_branches allowlist and the working_dir.py workspace confinement policies to abstain and allow the command. An authenticated or prompt-injected agent can therefore push to an unauthorized repository or branch or escape the intended workspace. This issue is fixed in version 0.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
