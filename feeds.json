@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-08-22T06:31:14.266382+09:00",
+  "fetched_at": "2026-08-22T07:02:37.712750+09:00",
   "security_news": [
+    {
+      "title": "개인정보 털렸는데 \"어떻게 쓰일지 불안\"…피해자 구제는 속수무책",
+      "summary": "그는 \"재발하지 않도록 학교가 보안 시스템을 강화해 줬으면 좋겠다\"고 덧붙였다. 또 다른 서강대 졸업생... 전문가는 반복되는 개인정보 유출 사고의 원인으로 외부 공격에 대응할 수 있는 보안 역량과 안전조치 충분하지...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 개인정보 털렸는데 \"어떻게 쓰일지 불안\"…피해자 구제는 속수무책 그는 \"재발하지 않도록 학\n2. 또 다른 서강대 졸업생...\n3. 전문가는 반복되는 개인정보 유출 사고의 원인으로 외부 공격에 대응할 수 있는 보안 역량과 ",
+      "link": "https://n.news.naver.com/mnews/article/003/0014141489?sid=102",
+      "source": "naver",
+      "published": "2026-08-22T07:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "“골프장 예약해줘”…AI가 해킹으로 남 밀어냈다면 누구 책임?",
+      "summary": "발생한 사이버 사고에 AI가 연관되어 있다고 답했습니다. 문제는 기존의 보험이나 법률 체계가 이런 AI 사고를 전혀 커버해 주지 못한다는 점입니다. 전통적인 사이버 범죄는 '외부 해커의 침입'이나 '악성코드 유포...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. “골프장 예약해줘”…AI가 해킹으로 남 밀어냈다면 누구 책임?\n2. 발생한 사이버 사고에 AI가 연관되어 있다고 답했습니다.\n3. 문제는 기존의 보험이나 법률 체계가 이런 AI 사고를 전혀 커버해 주지 못한다는 점입니다.",
+      "link": "https://n.news.naver.com/mnews/article/056/0012242460?sid=105",
+      "source": "naver",
+      "published": "2026-08-22T07:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[AI세계속으로]\"고객 데이터 안본다\" vs \"30일 보관\"…오픈AI-앤스로픽 엇...",
+      "summary": "일례로 개별적으로는 직원의 정상적인 질문처럼 보이지만, 여러 대화에서 소프트웨어 취약점과 원격 접속, 보안 탐지 회피 방법 등을 묻는다면 장기적인 해킹 시도의 일부일 수 있다. 알레아 하우즈 오픈AI 제품정책...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI, 앤스로픽 고객 데이터 30일 보관 논란\n2. AI 질문 속에 숨겨진 해킹 시도 가능성 제기\n3. 오픈AI, 정책 변경으로 보안 강화 움직임",
+      "link": "https://n.news.naver.com/mnews/article/277/0005805936?sid=105",
+      "source": "naver",
+      "published": "2026-08-22T06:30:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "주요 상급종합병원, 보안체계 취약…예산·인력 부족",
       "summary": "상급종합병원 5곳 중 1곳은 망분리조차 적용하지 않고 방화벽 등 단순 경계 보안에만 의존하고 있어 해킹 및 랜섬웨어 공격 발생 시 환자정보 유출에 무방비로 노출될 위험이 컸다. 실무진 필요성 절감, 경영진은...",
@@ -2295,6 +2331,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-53530 - ratex-parser panics on `\\verb` with a multibyte delimiter (UTF-8 byte-boundary slice)",
+      "summary": "CVE ID :CVE-2026-53530\n  \nPublished : Aug. 21, 2026, 9:31 p.m. | 26 minutes ago\n  \nDescription :RaTeX is a KaTeX-compatible math rendering engine written in Rust. Prior to version 0.1.11, the public parser entrypoint `ratex_parser::parse(&str)` panics on the 9-byte input `\\verbéxé` (i.e. `\\verb` followed by the non-ASCII delimiter `é`). When handling a `\\verb` command, the parser slices the verbatim argument with byte indices (`arg[1..arg.len() - 1]`); if the delimiter character is multibyte UTF-8, index `1` lands inside that character and Rust panics with *“byte index 1 is not a char boundary”*. Because RaTeX’s release profile sets `panic = \"abort\"` (`Cargo.toml:48`), the panic aborts the entire process — not just the current request/thread — making this a hard denial of service for any service that renders untrusted LaTeX. Version 0.1.11 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53530\n  \nPublished : Aug. 21, 2026, 9:31 p.m. | 26 minutes ago\n  \nDescription :RaTeX is a KaTeX-compatible math rendering engine written in Rust. Prior to version 0.1.11, the public parser entrypoint `ratex_parser::parse(&str)` panics on the 9-byte input `\\verbéxé` (i.e. `\\verb` followed by the non-ASCII delimiter `é`). When handling a `\\verb` command, the parser slices the verbatim argument with byte indices (`arg[1..arg.len() - 1]`); if the delimiter character is multibyte UTF-8, index `1` lands inside that character and Rust panics with *“byte index 1 is not a char boundary”*. Because RaTeX’s release profile sets `panic = \"abort\"` (`Cargo.toml:48`), the panic aborts the entire process — not just the current request/thread — making this a hard denial of service for any service that renders untrusted LaTeX. Version 0.1.11 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53530 - 멀티바이트 구분 기호(UTF-8 바이트 경계 슬라이스)가 있는 `\\verb`에서 ratex-parser 패닉이 발생함",
+      "summary_ko": "CVE ID:CVE-2026-53530\n  \n게시일 : 2026년 8월 21일 오후 9시 31분 | 26분 전\n  \n설명 :RaTeX는 Rust로 작성된 KaTeX 호환 수학 렌더링 엔진입니다. 버전 0.1.11 이전에는 공개 파서 진입점 `ratex_parser::parse(&str)`가 9바이트 입력 `\\verbéxé`(예: `\\verb` 다음에 비ASCII 구분 기호 `é`가 오는 경우 패닉이 발생했습니다. `\\동사` 명령을 처리할 때 파서는 바이트 인덱스(`arg[1..arg.len() - 1]`)로 축어적 인수를 분할합니다. 구분 기호 문자가 멀티바이트 UTF-8인 경우 인덱스 '1'은 해당 문자 내부에 들어가고 Rust는 *\"바이트 인덱스 1은 문자 경계가 아닙니다\"*라는 메시지와 함께 패닉 상태가 됩니다. RaTeX의 릴리스 프로필은 `panic = \"abort\"`(`Cargo.toml:48`)를 설정하므로 패닉은 현재 요청/스레드뿐만 아니라 전체 프로세스를 중단하여 신뢰할 수 없는 LaTeX를 렌더링하는 모든 서비스에 대한 서비스 거부를 강제합니다. 버전 0.1.11에서는 문제가 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-53530\n2. 26.08.22 오전6:31\n3. RaTeX is a KaTeX-compatible math rendering engine ",
+      "cve_id": "CVE-2026-53530",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53530",
+      "source": "cvefeed",
+      "published": "2026-08-22T06:31:12+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-76904 - GeoTools has unauthenticated SQL injection in the jsonArrayContains filter function against PostGIS layers",
+      "summary": "CVE ID :CVE-2026-76904\n  \nPublished : Aug. 21, 2026, 9:17 p.m. | 40 minutes ago\n  \nDescription :GeoTools is an open source Java library that provides tools for geospatial data. Starting in version 30.5 and prior to versions 33.6, 34.5, and 33.6, an SQL Injection Vulnerability is present when executing OGC Filters with PostGIS DataStore implementation: `jsonArrayContains` function; Requires PostGIS 12 or greater with a String or JSON field. For PostGIS 12 and greater `jsonArrayContains(, , )` function writes `` into generated SQL without escaping. Patches are available in versions 33.6, 34.5, and 33.6. No known workaround is available. To limit scope of SQL Injection the PostGIS connection pool should be configured with limited rights.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-76904\n  \nPublished : Aug. 21, 2026, 9:17 p.m. | 40 minutes ago\n  \nDescription :GeoTools is an open source Java library that provides tools for geospatial data. Starting in version 30.5 and prior to versions 33.6, 34.5, and 33.6, an SQL Injection Vulnerability is present when executing OGC Filters with PostGIS DataStore implementation: `jsonArrayContains` function; Requires PostGIS 12 or greater with a String or JSON field. For PostGIS 12 and greater `jsonArrayContains(, , )` function writes `` into generated SQL without escaping. Patches are available in versions 33.6, 34.5, and 33.6. No known workaround is available. To limit scope of SQL Injection the PostGIS connection pool should be configured with limited rights.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-76904 - GeoTools의 PostGIS 레이어에 대한 jsonArrayContains 필터 함수에 인증되지 않은 SQL 삽입이 있습니다.",
+      "summary_ko": "CVE ID:CVE-2026-76904\n  \n게시일 : 2026년 8월 21일 오후 9시 17분 | 40분 전\n  \n설명 :GeoTools는 지리공간 데이터용 도구를 제공하는 오픈 소스 Java 라이브러리입니다. 버전 30.5부터 버전 33.6, 34.5, 33.6 이전에는 PostGIS DataStore 구현으로 OGC 필터를 실행할 때 SQL 주입 취약점이 존재합니다. `jsonArrayContains` 함수; 문자열 또는 JSON 필드가 있는 PostGIS 12 이상이 필요합니다. PostGIS 12 이상의 경우 `jsonArrayContains(, , )` 함수는 이스케이프 없이 생성된 SQL에 ``를 씁니다. 패치는 버전 33.6, 34.5 및 33.6에서 사용할 수 있습니다. 알려진 해결 방법은 없습니다. SQL 주입 범위를 제한하려면 PostGIS 연결 풀을 제한된 권한으로 구성해야 합니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-76904\n2. 26.08.22 오전6:17\n3. GeoTools is an open source Java library that provi",
+      "cve_id": "CVE-2026-76904",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76904",
+      "source": "cvefeed",
+      "published": "2026-08-22T06:17:06+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-77354 - kin-openapi: Uncontrolled resource consumption in openapi3filter deepObject query parameter decoding",
       "summary": "CVE ID :CVE-2026-77354\n  \nPublished : Aug. 21, 2026, 8:44 p.m. | 25 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.124.0 until 0.142.0, openapi3filter.sliceMapToSlice in openapi3filter/req_resp_decoder.go converts attacker-controlled sparse indexes from a deepObject query parameter into a dense slice by allocating entries from zero through the largest supplied index, after which buildResObj creates another slice of the same length. This allocation occurs before schema validation, so maxItems does not prevent it. An unauthenticated client can send a small query such as param[items][50000000]=x to an endpoint whose deepObject schema contains an array, forcing multi-gigabyte heap allocation and causing an OOM kill or restart loop. Other request-body encodings and styled parameters that do not produce bracketed integer indexes are not affected. This issue is fixed in version 0.142.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
