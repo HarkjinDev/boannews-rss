@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-21T23:01:12.059364+09:00",
+  "fetched_at": "2026-08-21T23:32:16.526344+09:00",
   "security_news": [
+    {
+      "title": "아폴로 데이터 유출 보도, 금융권 해킹 확산 속 보안 경계",
+      "summary": "금융권 대형사를 겨냥한 해킹 시도가 잇따르는 가운데 기관 보안 문제가 다시 부각됐다. 오데일리는 21일 아폴로가 금융 대기업을 겨냥한 해킹 물결 속에서 데이터 유출이 발생한 사실을 확인했다고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융권 겨냥 해킹 시도 잇따라, 아폴로 데이터 유출 발생\n2. 기관 보안 문제 부각, 금융 대기업 노린 공격 확산\n3. 데이터 유출 사실 확인, 보안 경계 강화 필요",
+      "link": "https://www.tokenpost.kr/news/breaking/395135",
+      "source": "naver",
+      "published": "2026-08-21T23:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "AI 범죄 활용 40% 증가, 가상자산 사기 주도",
       "summary": "해킹 영역에서도 AI 활용 범위가 넓어졌다. TRM 랩스는 해커들이 취약점 분석, 사회공학 공격, 침투... 2026년 상반기 디지털자산 해킹 사건은 201건으로 역대 최고치를 기록했다. 손실의 약 75%는 전체 사건의 4%에서...",
@@ -2256,21 +2268,24 @@
       "source": "naver",
       "published": "2026-08-19T00:46:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"학생 정보가 털린다\"…대학 개인정보 유출, 5년간 278만명",
-      "summary": "서강대 해킹으로 인한 개인정보 유출 논란이 이어지는 가운데 2022년부터 올해 7월까지 대학에서 개인정보 유출 피해를 본 인원이 278만여 명에 달하는 것으로 나타났다. 18일 김민전 국민의힘 의원이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. \"학생 정보가 털린다\"…대학 개인정보 유출, 5년간 278만명 서강대 해킹으로 인한 개인정\n2. 18일 김민전 국민의힘 의원이...",
-      "link": "https://n.news.naver.com/mnews/article/421/0009119919?sid=100",
-      "source": "naver",
-      "published": "2026-08-18T23:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-58547 Windows Universal Plug and Play (UPnP) Device Host Elevation of Privilege Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": "CVE-2026-58547 Windows 범용 플러그 앤 플레이(UPnP) 장치 호스트 권한 상승 취약성",
+      "summary_ko": "승인을 업데이트했습니다. 이는 정보 제공용 변경일 뿐입니다.",
+      "summary_3lines": "1. CVE-2026-58547\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-58547",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58547",
+      "source": "msrc",
+      "published": "2026-08-21T23:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-77776 - Headroom Proxy Treats the Client-Supplied x-headroom-user-id Header as an Authenticated Identity",
       "summary": "CVE ID :CVE-2026-77776\n  \nPublished : Aug. 21, 2026, 11:22 a.m. | 34 minutes ago\n  \nDescription :Headroom's LLM proxy derives the memory owner from the x-headroom-user-id request header. The header is read directly at several points in headroom/proxy/handlers/openai.py, including the chat completion and websocket paths, and nothing binds the value to the caller. A client can therefore name another user's identifier and read or write that user's stored LLM memory. The fix introduces a single resolve_memory_identity seam in headroom/proxy/identity.py that honors the header only for loopback or allowlisted callers and otherwise binds the identity to the proxy-token fingerprint or the operating system user. The pip console script binds 127.0.0.1 by default, but the reference docker-compose.yml ships --host 0.0.0.0 with published ports and no required HEADROOM_PROXY_TOKEN, which the server itself warns about at startup, so a deployment following the shipped compose exposes the affected data-plane routes to the network without authentication.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
