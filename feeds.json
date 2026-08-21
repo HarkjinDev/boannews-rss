@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22T01:01:14.458040+09:00",
+  "fetched_at": "2026-08-22T01:31:00.907956+09:00",
   "security_news": [
     {
       "title": "마이크로소프트 코파일럿, 캐물었더니 스스로 취약점 실토…링크만 열...",
@@ -3259,36 +3259,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-54730",
       "source": "cvefeed",
       "published": "2026-08-19T02:16:59+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-63337 - RabbitMQ Java client: Unvalidated Class.forName in JSON-RPC ProcedureDescription enables arbitrary class loading",
-      "summary": "CVE ID :CVE-2026-63337\n  \nPublished : Aug. 18, 2026, 4:27 p.m. | 41 minutes ago\n  \nDescription :The RabbitMQ Java client library allows Java and JVM-based applications to connect to and interact with RabbitMQ nodes. Prior to 5.33.0, com.rabbitmq.tools.jsonrpc.ProcedureDescription receives a javaReturnType value in an untrusted system.describe response and passes it through JSONUtil.tryFill, setJavaReturnType, and computeReturnTypeAsJavaClass to Class.forName(javaReturnType) with initialization enabled. An attacker able to answer the JsonRpcClient request through a shared broker or network interception can select a class already present in the victim JVM and trigger its static initializer, while JsonRpcClient.java later passes getReturnType output to mapper.parse and may also create type confusion. Successful exploitation can affect confidentiality, integrity, and availability in the client process. This issue is fixed in version 5.33.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-63337\n  \nPublished : Aug. 18, 2026, 4:27 p.m. | 41 minutes ago\n  \nDescription :The RabbitMQ Java client library allows Java and JVM-based applications to connect to and interact with RabbitMQ nodes. Prior to 5.33.0, com.rabbitmq.tools.jsonrpc.ProcedureDescription receives a javaReturnType value in an untrusted system.describe response and passes it through JSONUtil.tryFill, setJavaReturnType, and computeReturnTypeAsJavaClass to Class.forName(javaReturnType) with initialization enabled. An attacker able to answer the JsonRpcClient request through a shared broker or network interception can select a class already present in the victim JVM and trigger its static initializer, while JsonRpcClient.java later passes getReturnType output to mapper.parse and may also create type confusion. Successful exploitation can affect confidentiality, integrity, and availability in the client process. This issue is fixed in version 5.33.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-63337 - RabbitMQ Java 클라이언트: JSON-RPC ProcedureDescription의 검증되지 않은 Class.forName이 임의 클래스 로딩을 가능하게 합니다.",
-      "summary_ko": "CVE ID:CVE-2026-63337\n  \n게시일 : 2026년 8월 18일 오후 4시 27분 | 41분 전\n  \n설명 : RabbitMQ Java 클라이언트 라이브러리를 사용하면 Java 및 JVM 기반 애플리케이션이 RabbitMQ 노드에 연결하고 상호 작용할 수 있습니다. 5.33.0 이전에는 com.rabbitmq.tools.jsonrpc.ProcedureDescription이 신뢰할 수 없는 system.describe 응답에서 javaReturnType 값을 수신하고 JSONUtil.tryFill, setJavaReturnType 및 ComputeReturnTypeAsJavaClass를 통해 초기화가 활성화된 Class.forName(javaReturnType)에 전달합니다. 공유 브로커 또는 네트워크 가로채기를 통해 JsonRpcClient 요청에 응답할 수 있는 공격자는 피해자 JVM에 이미 존재하는 클래스를 선택하고 해당 정적 초기화 프로그램을 트리거할 수 있으며, JsonRpcClient.java는 나중에 getReturnType 출력을 mapper.parse에 전달하고 유형 혼동을 일으킬 수도 있습니다. 성공적인 악용은 클라이언트 프로세스의 기밀성, 무결성 및 가용성에 영향을 미칠 수 있습니다. 이 문제는 버전 5.33.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-63337\n2. 26.08.19 오전1:27\n3. The RabbitMQ Java client library allows Java and J",
-      "cve_id": "CVE-2026-63337",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63337",
-      "source": "cvefeed",
-      "published": "2026-08-19T01:27:09+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-75926 - Hugo 0.162.0 to 0.164.x - Node Permission Model Bypass via Default TailwindCSS Child-Process Grant",
-      "summary": "CVE ID :CVE-2026-75926\n  \nPublished : Aug. 18, 2026, 4:18 p.m. | 50 minutes ago\n  \nDescription :Hugo 0.161.0 placed the Node asset pipelines behind the Node.js permission model so that code running through PostCSS, Babel, or TailwindCSS could not reach the file system outside the project directory. Hugo 0.162.0 added tailwindcss to the AllowChildProcess default in config/security/securityConfig.go, which makes nodePermissionArgs in common/hexec/exec.go append --allow-child-process whenever the tool being launched is named tailwindcss. TailwindCSS loads the site's tailwind.config.js through require at startup, so top-level code in that file executes inside the permitted Node process and can call child_process to spawn a shell. The spawned process is not a Node process and inherits none of the permission flags, so it runs with the full privileges of the account performing the build. Building a site whose theme, module, or starter template supplies the Tailwind configuration therefore yields arbitrary command execution rather than the confined file access the permission model was introduced to enforce. Hugo 0.165.0 removes tailwindcss from the default security.exec.allow list, so the tool is no longer launched under the default configuration.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-75926\n  \nPublished : Aug. 18, 2026, 4:18 p.m. | 50 minutes ago\n  \nDescription :Hugo 0.161.0 placed the Node asset pipelines behind the Node.js permission model so that code running through PostCSS, Babel, or TailwindCSS could not reach the file system outside the project directory. Hugo 0.162.0 added tailwindcss to the AllowChildProcess default in config/security/securityConfig.go, which makes nodePermissionArgs in common/hexec/exec.go append --allow-child-process whenever the tool being launched is named tailwindcss. TailwindCSS loads the site's tailwind.config.js through require at startup, so top-level code in that file executes inside the permitted Node process and can call child_process to spawn a shell. The spawned process is not a Node process and inherits none of the permission flags, so it runs with the full privileges of the account performing the build. Building a site whose theme, module, or starter template supplies the Tailwind configuration therefore yields arbitrary command execution rather than the confined file access the permission model was introduced to enforce. Hugo 0.165.0 removes tailwindcss from the default security.exec.allow list, so the tool is no longer launched under the default configuration.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-75926 - Hugo 0.162.0~0.164.x - 기본 TailwindCSS 하위 프로세스 부여를 통한 노드 권한 모델 우회",
-      "summary_ko": "CVE ID:CVE-2026-75926\n  \n게시일 : 2026년 8월 18일 오후 4시 18분 | 50분 전\n  \n설명:Hugo 0.161.0은 PostCSS, Babel 또는 TailwindCSS를 통해 실행되는 코드가 프로젝트 디렉터리 외부의 파일 시스템에 도달할 수 없도록 Node.js 권한 모델 뒤에 노드 자산 파이프라인을 배치했습니다. Hugo 0.162.0은 config/security/securityConfig.go의 AllowChildProcess 기본값에 tailwindcss를 추가했습니다. 이로 인해 common/hexec/exec.go의 nodePermissionArgs는 실행되는 도구 이름이 tailwindcss일 때마다 --allow-child-process를 추가하게 됩니다. TailwindCSS는 시작 시 require를 통해 사이트의 tailwind.config.js를 로드하므로 해당 파일의 최상위 코드는 허용된 노드 프로세스 내에서 실행되고 child_process를 호출하여 셸을 생성할 수 있습니다. 생성된 프로세스는 노드 프로세스가 아니며 권한 플래그를 상속받지 않으므로 빌드를 수행하는 계정의 모든 권한으로 실행됩니다. 테마, 모듈 또는 시작 템플릿이 Tailwind 구성을 제공하는 사이트를 구축하면 권한 모델이 도입된 제한된 파일 액세스 대신 임의의 명령 실행이 발생합니다. Hugo 0.165.0은 기본 security.exec.allow 목록에서 tailwindcss를 제거하므로 도구는 더 이상 기본 구성에서 실행되지 않습니다.\n  \n심각도: 9.3 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-75926\n2. 26.08.19 오전1:18\n3. Hugo 0.161.0 placed the Node asset pipelines behin",
-      "cve_id": "CVE-2026-75926",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75926",
-      "source": "cvefeed",
-      "published": "2026-08-19T01:18:24+09:00",
       "lang": "en"
     }
   ],
