@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-21T20:01:16.169528+09:00",
+  "fetched_at": "2026-08-21T20:32:27.935180+09:00",
   "security_news": [
+    {
+      "title": "[단독] AI업체 믿고 맡긴 내용증명…검색하니 \"그대로 노출\"",
+      "summary": "전문가들은 최근 늘어나는 AI 기반 개인정보 유출 사고를 막으려면 보안도 함께 강화해야 한다고 조언합니다. [김명주/서울여대 정보보호학과 교수 : 보안에 관한 투자 부분들을 등한시하고, AI 쪽에만 신경을 쓰게 되면...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 기반 서비스로 내용증명 등 민감 정보 유출\n2. AI 학습 데이터에 민감 정보 노출, 그대로 검색 가능\n3. AI 서비스 이용 시 보안 강화 필요성 대두",
+      "link": "https://n.news.naver.com/mnews/article/437/0000507313?sid=102",
+      "source": "naver",
+      "published": "2026-08-21T20:22:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"랜섬웨어 그룹, AI 이용 공격으로 몇 달만에 전 세계 3위 등극\"",
+      "summary": "외부 인프라가 해킹당해 관련 데이터 일부가 노출되었지만, 핵심 인프라는 무사하다고 주장했다./ 체크포인트 2분기 랜섬웨어는 상위 10개 그룹의 활동이 다소 주춤해진 반면, 활동중인 그룹 수는 역대 최고치인 93개로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 이용 랜섬웨어, 몇 달 만에 전 세계 3위 등극\n2. 외부 인프라 해킹, 데이터 일부 노출 주장\n3. 93개 그룹 활동, 역대 최고치 기록",
+      "link": "https://www.datanet.co.kr/news/articleView.html?idxno=213950",
+      "source": "naver",
+      "published": "2026-08-21T20:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "민생개혁, 정부만으로 가능한가…‘공인탐정’도 함께 뛰는 시대 열어야",
       "summary": "해킹·도청·불법 위치추적·개인정보 불법취득을 금지하고 자격요건, 윤리교육, 감독·징계, 책임보험 등 통제장치도 마련해야 한다. 결국 이 법은 이미 존재하는 민간조사 수요를 법과 책임의 테두리 안에 두기 위한...",
@@ -804,6 +828,18 @@
       "source": "naver",
       "published": "2026-08-20T20:12:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "CISA warns of hackers exploiting critical MLflow vulnerability",
+      "summary": "The Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies that threat actors are now exploiting a critical vulnerability in the MLflow open-source AI engineering platform. [...]",
+      "content": "",
+      "title_ko": "CISA, 중요한 MLflow 취약점을 악용하는 해커에 대해 경고",
+      "summary_ko": "CISA(사이버보안 및 인프라 보안국)는 위협 행위자가 현재 MLflow 오픈 소스 AI 엔지니어링 플랫폼의 심각한 취약점을 악용하고 있다고 연방 기관에 경고했습니다. [...]",
+      "summary_3lines": "1. CISA, 중요한 MLflow 취약점을 악용하는 해커에 대해 경고 CISA(사이버보안 및 ",
+      "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/",
+      "source": "bleepingcomputer",
+      "published": "2026-08-20T20:06:14+09:00",
+      "lang": "en"
     },
     {
       "title": "BTS 정국, 군 복무중 ‘84억 주식’ 털릴 뻔했다…中 해킹 총책, 결국",
@@ -3134,21 +3170,6 @@
       "source": "cisa",
       "published": "2026-08-18T21:00:00+09:00",
       "lang": "de"
-    },
-    {
-      "title": "CVE-2026-75851 - ArcadeDB before 26.8.1 Authentication Bypass via Async Command",
-      "summary": "CVE ID :CVE-2026-75851\n  \nPublished : Aug. 18, 2026, 11:19 a.m. | 31 minutes ago\n  \nDescription :ArcadeDB server (com.arcadedb:arcadedb-server) in versions 26.7.3 and earlier fails to propagate the authenticated principal to asynchronous command worker threads. When an HTTP command is submitted with awaitResponse:false, it executes on an async worker whose DatabaseContext has no bound user, causing the scripting authorization gate to become a no-op. A user with only read access to a single database can submit an asynchronous JavaScript (language=js) command via the /api/v1/command endpoint to run code with unrestricted host access (e.g., database.getSecurity().createUser) and create a server-wide administrator, escalating to full administrative control. Fixed in 26.8.1.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-75851\n  \nPublished : Aug. 18, 2026, 11:19 a.m. | 31 minutes ago\n  \nDescription :ArcadeDB server (com.arcadedb:arcadedb-server) in versions 26.7.3 and earlier fails to propagate the authenticated principal to asynchronous command worker threads. When an HTTP command is submitted with awaitResponse:false, it executes on an async worker whose DatabaseContext has no bound user, causing the scripting authorization gate to become a no-op. A user with only read access to a single database can submit an asynchronous JavaScript (language=js) command via the /api/v1/command endpoint to run code with unrestricted host access (e.g., database.getSecurity().createUser) and create a server-wide administrator, escalating to full administrative control. Fixed in 26.8.1.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-75851 - 26.8.1 이전의 ArcadeDB 비동기 명령을 통한 인증 우회",
-      "summary_ko": "CVE ID:CVE-2026-75851\n  \n게시일 : 2026년 8월 18일 오전 11시 19분 | 31분 전\n  \n설명: 버전 26.7.3 이하의 ArcadeDB 서버(com.arcadedb:arcadedb-server)는 인증된 주체를 비동기 명령 작업자 스레드에 전파하지 못합니다. waitResponse:false와 함께 HTTP 명령이 제출되면 DatabaseContext에 바인딩된 사용자가 없는 비동기 작업자에서 실행되어 스크립팅 인증 게이트가 작동하지 않게 됩니다. 단일 데이터베이스에 대한 읽기 권한만 있는 사용자는 /api/v1/command 엔드포인트를 통해 비동기 JavaScript(언어=js) 명령을 제출하여 무제한 호스트 액세스(예: Database.getSecurity().createUser)로 코드를 실행하고 서버 전체 관리자를 생성하여 전체 관리 제어 권한으로 확대할 수 있습니다. 26.8.1에서 수정되었습니다.\n  \n심각도: 9.9 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-75851\n2. 26.08.18 오후8:19\n3. ArcadeDB server (com.arcadedb:arcadedb-server) in ",
-      "cve_id": "CVE-2026-75851",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75851",
-      "source": "cvefeed",
-      "published": "2026-08-18T20:19:55+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
