@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-22T06:01:02.938456+09:00",
+  "fetched_at": "2026-08-22T06:31:14.266382+09:00",
   "security_news": [
+    {
+      "title": "주요 상급종합병원, 보안체계 취약…예산·인력 부족",
+      "summary": "상급종합병원 5곳 중 1곳은 망분리조차 적용하지 않고 방화벽 등 단순 경계 보안에만 의존하고 있어 해킹 및 랜섬웨어 공격 발생 시 환자정보 유출에 무방비로 노출될 위험이 컸다. 실무진 필요성 절감, 경영진은...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 상급종합병원 20%는 망분리 미적용, 경계 보안만 의존\n2. 해킹·랜섬웨어 공격 시 환자정보 유출 무방비 노출 위험\n3. 예산·인력 부족으로 실무진 필요성 절감, 경영진은 미온적",
+      "link": "https://www.dailymedi.com/news/news_view.php?wr_id=939659",
+      "source": "naver",
+      "published": "2026-08-22T06:18:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "미국 사이버 보안업체 “대규모 소프트웨어 공급망 공격…북한 연계 정...",
       "summary": "전 세계적으로 널리 사용되는 소프트웨어 구성요소와 관련한 사이버 공격에서 또다시 북한 연계 해킹조직의 연루 정황이 발견됐습니다. 북한 해킹조직이 과거에 주로 사용해 온 해킹 작전과 일치하는 패턴이 반복적으로...",
@@ -2280,21 +2292,24 @@
       "source": "naver",
       "published": "2026-08-19T08:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Critical GitLab Zero-Click Flaw Poses Mitigation Challenges",
-      "summary": "A lack of technical details could make it hard for organizations running self-managed GitLab versions to detect potential exploitation of CVE-2026-19478.",
-      "content": "",
-      "title_ko": "중요한 GitLab 제로 클릭 결함으로 인해 완화 문제 발생",
-      "summary_ko": "기술적인 세부 사항이 부족하면 자체 관리형 GitLab 버전을 실행하는 조직이 CVE-2026-19478의 잠재적 악용을 탐지하기 어려울 수 있습니다.",
-      "summary_3lines": "1. 심각한 GitLab 제로 클릭 결함으로 인해 완화 과제 발생 기술적 세부 사항이 부족하면 ",
-      "link": "https://www.darkreading.com/application-security/critical-gitlab-zero-click-flaw-mitigation-challenges",
-      "source": "darkreading",
-      "published": "2026-08-19T06:25:58+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-77354 - kin-openapi: Uncontrolled resource consumption in openapi3filter deepObject query parameter decoding",
+      "summary": "CVE ID :CVE-2026-77354\n  \nPublished : Aug. 21, 2026, 8:44 p.m. | 25 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.124.0 until 0.142.0, openapi3filter.sliceMapToSlice in openapi3filter/req_resp_decoder.go converts attacker-controlled sparse indexes from a deepObject query parameter into a dense slice by allocating entries from zero through the largest supplied index, after which buildResObj creates another slice of the same length. This allocation occurs before schema validation, so maxItems does not prevent it. An unauthenticated client can send a small query such as param[items][50000000]=x to an endpoint whose deepObject schema contains an array, forcing multi-gigabyte heap allocation and causing an OOM kill or restart loop. Other request-body encodings and styled parameters that do not produce bracketed integer indexes are not affected. This issue is fixed in version 0.142.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-77354\n  \nPublished : Aug. 21, 2026, 8:44 p.m. | 25 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.124.0 until 0.142.0, openapi3filter.sliceMapToSlice in openapi3filter/req_resp_decoder.go converts attacker-controlled sparse indexes from a deepObject query parameter into a dense slice by allocating entries from zero through the largest supplied index, after which buildResObj creates another slice of the same length. This allocation occurs before schema validation, so maxItems does not prevent it. An unauthenticated client can send a small query such as param[items][50000000]=x to an endpoint whose deepObject schema contains an array, forcing multi-gigabyte heap allocation and causing an OOM kill or restart loop. Other request-body encodings and styled parameters that do not produce bracketed integer indexes are not affected. This issue is fixed in version 0.142.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-77354 - kin-openapi: openapi3filter deepObject 쿼리 매개변수 디코딩에서 제어되지 않은 리소스 소비",
+      "summary_ko": "CVE ID:CVE-2026-77354\n  \n게시일 : 2026년 8월 21일 오후 8시 44분 | 25분 전\n  \n설명 :kin-openapi는 OpenAPI 파일을 처리하기 위한 Go 프로젝트입니다. 0.124.0부터 0.142.0까지, openapi3filter/req_resp_decoder.go의 openapi3filter.sliceMapToSlice는 제공된 가장 큰 인덱스를 통해 0부터 항목을 할당하여 deepObject 쿼리 매개변수의 공격자 제어 희소 인덱스를 밀집 슬라이스로 변환한 후 buildResObj가 동일한 길이의 또 다른 슬라이스를 생성합니다. 이 할당은 스키마 유효성 검사 전에 발생하므로 maxItems는 이를 방지하지 않습니다. 인증되지 않은 클라이언트는 deepObject 스키마에 배열이 포함된 엔드포인트에 param[items][50000000]=x와 같은 작은 쿼리를 보내어 수 기가바이트의 힙을 강제로 할당하고 OOM 종료 또는 재시작 루프를 유발할 수 있습니다. 대괄호로 묶인 정수 인덱스를 생성하지 않는 기타 요청 본문 인코딩 및 스타일 매개변수는 영향을 받지 않습니다. 이 문제는 버전 0.142.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-77354\n2. 26.08.22 오전5:44\n3. kin-openapi is a Go project for handling OpenAPI f",
+      "cve_id": "CVE-2026-77354",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77354",
+      "source": "cvefeed",
+      "published": "2026-08-22T05:44:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54073 - VeraCrypt: Hidden volume quick format weakens plausible deniability",
       "summary": "CVE ID :CVE-2026-54073\n  \nPublished : Aug. 21, 2026, 7:17 p.m. | 43 minutes ago\n  \nDescription :VeraCrypt provides disk encryption with strong security based on TrueCrypt. From 1.26.6 until 1.26.29, file-hosted hidden volume creation forces quick format and the FormatNoFs function in src/Common/Format.c and FormatFat function in src/Common/Fat.c use WriteFile to place raw zeroed sectors at predictable 128 MiB intervals. These writes bypass the normal EncryptDataUnits formatting path, leaving deterministic plaintext markers in an area expected to resemble random ciphertext. The markers can weaken plausible deniability during forensic inspection, although they do not disclose hidden-volume content or reduce the strength of VeraCrypt encryption. This issue is fixed in version 1.26.29.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3238,21 +3253,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-48796",
       "source": "cvefeed",
       "published": "2026-08-19T07:16:52+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-62291 - libheif: Heap out of bounds write in libheif uncompressed encoder when writing images with mismatched auxiliary alpha dimensions",
-      "summary": "CVE ID :CVE-2026-62291\n  \nPublished : Aug. 18, 2026, 9:21 p.m. | 38 minutes ago\n  \nDescription :libheif is a HEIF and AVIF file format decoder and encoder. In 1.23.0 and earlier, a crafted image sequence with a 2x2 primary plane and a 256x256 auxiliary alpha plane can cause attacker-controlled heap corruption during a normal decode and re-encode workflow. Track_Visual::decode_next_image_sample() calls transfer_channel_from_image_as() without checking that the auxiliary alpha dimensions match the main frame. The resulting inconsistent image reaches heif_track_decode_next_image() and then heif_context_encode_image(). In unc_encoder::encode(), unc_encoder_component_interleave::encode_tile() sizes its buffer with compute_tile_data_size_bytes() using the primary dimensions but copies each component using its actual plane dimensions. The oversized alpha plane is therefore copied beyond the allocation, causing an out-of-bounds write; the inverse size mismatch can also produce an out-of-bounds read. This issue is fixed in version 1.23.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-62291\n  \nPublished : Aug. 18, 2026, 9:21 p.m. | 38 minutes ago\n  \nDescription :libheif is a HEIF and AVIF file format decoder and encoder. In 1.23.0 and earlier, a crafted image sequence with a 2x2 primary plane and a 256x256 auxiliary alpha plane can cause attacker-controlled heap corruption during a normal decode and re-encode workflow. Track_Visual::decode_next_image_sample() calls transfer_channel_from_image_as() without checking that the auxiliary alpha dimensions match the main frame. The resulting inconsistent image reaches heif_track_decode_next_image() and then heif_context_encode_image(). In unc_encoder::encode(), unc_encoder_component_interleave::encode_tile() sizes its buffer with compute_tile_data_size_bytes() using the primary dimensions but copies each component using its actual plane dimensions. The oversized alpha plane is therefore copied beyond the allocation, causing an out-of-bounds write; the inverse size mismatch can also produce an out-of-bounds read. This issue is fixed in version 1.23.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-62291 - libheif: 보조 알파 크기가 일치하지 않는 이미지를 작성할 때 libheif 비압축 인코더에서 범위를 벗어난 힙 쓰기가 발생합니다.",
-      "summary_ko": "CVE ID:CVE-2026-62291\n  \n게시일 : 2026년 8월 18일 오후 9시 21분 | 38분 전\n  \n설명 :libheif는 HEIF 및 AVIF 파일 형식 디코더 및 인코더입니다. 1.23.0 이하 버전에서는 2x2 기본 평면과 256x256 보조 알파 평면으로 제작된 이미지 시퀀스로 인해 일반적인 디코드 및 재인코딩 작업 흐름 중에 공격자가 제어하는 ​​힙 손상이 발생할 수 있습니다. Track_Visual::decode_next_image_sample()은 보조 알파 크기가 메인 프레임과 일치하는지 확인하지 않고 transfer_channel_from_image_as()를 호출합니다. 결과적으로 일관성이 없는 이미지는 heif_track_decode_next_image()에 도달한 다음 heif_context_encode_image()에 도달합니다. unc_encoder::encode()에서 unc_encoder_comComponent_interleave::encode_tile()은 기본 차원을 사용하여 Compute_tile_data_size_bytes()로 버퍼 크기를 조정하지만 실제 평면 차원을 사용하여 각 구성 요소를 복사합니다. 따라서 크기가 너무 큰 알파 평면은 할당 범위를 벗어나 복사되어 범위를 벗어난 쓰기가 발생합니다. 역 크기 불일치로 인해 범위를 벗어난 읽기가 발생할 수도 있습니다. 이 문제는 버전 1.23.1에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-62291\n2. 26.08.19 오전6:21\n3. libheif is a HEIF and AVIF file format decoder and",
-      "cve_id": "CVE-2026-62291",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62291",
-      "source": "cvefeed",
-      "published": "2026-08-19T06:21:32+09:00",
       "lang": "en"
     }
   ],
