@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-22T00:31:03.797182+09:00",
+  "fetched_at": "2026-08-22T01:01:14.458040+09:00",
   "security_news": [
+    {
+      "title": "마이크로소프트 코파일럿, 캐물었더니 스스로 취약점 실토…링크만 열...",
+      "summary": "캐물을수록 스스로 드러난 내부 구조Varonis 연구진은 처음부터 코파일럿을 해킹하려 한 게 아니었다.... 연구진은 이 방식을 ‘메타 해킹(meta-hacking)’이라고 불렀다. 코드를 역설계할 필요 없이 AI 자신의 설명을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 마이크로소프트 코파일럿, Varonis 연구진의 '메타 해킹'에 취약점 노출\n2. AI가 스스로 자신의 내부 구조 설명하며 취약점 드러남\n3. 링크 클릭만으로도 취약점 악용 가능성 시사",
+      "link": "https://www.wikitree.co.kr/articles/1154017",
+      "source": "naver",
+      "published": "2026-08-22T00:48:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "아폴로 데이터 유출 보도, 금융권 해킹 확산 속 보안 경계",
       "summary": "금융권 대형사를 겨냥한 해킹 시도가 잇따르는 가운데 기관 보안 문제가 다시 부각됐다. 오데일리는 21일 아폴로가 금융 대기업을 겨냥한 해킹 물결 속에서 데이터 유출이 발생한 사실을 확인했다고...",
@@ -2256,21 +2268,24 @@
       "source": "naver",
       "published": "2026-08-19T01:51:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "북한 원격채용 침투, 면접 검증이 보안선 됐다",
-      "summary": "지갑 해킹뿐 아니라 면접, 온보딩, 장비 배송, 원격접속 권한 부여가 보안의 1차 통제선이 됐다는 평가가... (fbi.gov) FBI의 경고는 해킹을 코드 취약점만의 문제가 아니라 고용 절차의 문제로 본다는 점에서 의미가...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 원격채용 침투, 면접 검증이 보안선 됐다 지갑 해킹뿐 아니라 면접, 온보딩, 장비 배\n2. (fbi.gov) FBI의 경고는 해킹을 코드 취약점만의 문제가 아니라 고용 절차의 문제로",
-      "link": "https://www.tokenpost.kr/news/cryptocurrency/392660",
-      "source": "naver",
-      "published": "2026-08-19T00:46:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-77812 - Cleartext Exposure of DJI Drone Wi-Fi Credentials via BLE",
+      "summary": "CVE ID :CVE-2026-77812\n  \nPublished : Aug. 21, 2026, 3:16 p.m. | 40 minutes ago\n  \nDescription :DJI drones transmit DUML (DJI Universal Markup Language) protocol messages over BLE (Bluetooth Low Energy) without encryption. When a client attempts to connect to the drone over Wi-Fi, or when the drone is switched to QuickTransfer mode, the DJI Fly application exchanges DUML messages with the drone over BLE, including the Wi-Fi credentials. An attacker within BLE range can passively sniff this traffic and recover the credentials in cleartext, including the drone's Wi-Fi PSK, SSID, and trusted identifier UUID. Obtaining these credentials allows the attacker to join the drone's internal Wi-Fi network, interact with network services exposed by the drone, and decrypt Wi-Fi traffic exchanged between the drone and the legitimate user.\n\n* An attacker within BLE range recovers the Wi-Fi SSID and PSK in cleartext, and can then join the drone's network \n* The same capture also exposes the session UUID identifier, which is the only thing the drone uses to tell a trusted client from an unknown one, so the attacker can replay it and skip the physical confirmation of new connected devices.\n* The credentials do not change between sessions unless the operator manually resets the Wi-Fi settings, so one capture stays valid indefinitely\n* The attack is fully passive, with nothing transmitted and no connection made, so neither the operator nor the drone has any indication the session was observed\n* A BLE sniffer and presence during one normal DJI Fly connection are needed\n\nAffected models are DJI Neo until 01.00.0400, DJI Neo 2 until 01.00.0500, DJI Flip until 01.00.1200, DJI Air 3 until 01.00.1600, DJI Air 3S until 01.00.1400, DJI Avata 2 until 01.00.0400, DJI Avata 360 until 01.00.0300, DJI Mavic 3 until 01.00.1400, DJI Mavic 3 Classic until 01.00.0800, DJI Mavic 3 Pro until 01.01.0700, DJI Mavic 4 Pro until 01.00.0500, DJI Mini 2 until 01.07.0200, DJI Mini 3 until 01.00.0500, DJI Mini 3 Pro until 01.00.0900, DJI Mini 4 Pro until 01.00.1100, and DJI Mini 5 Pro until 01.00.0600.\n\nRemediation requires a firmware update from the vendor. There is no user-side mitigation that fully addresses the vulnerability without upgrading.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-77812\n  \nPublished : Aug. 21, 2026, 3:16 p.m. | 40 minutes ago\n  \nDescription :DJI drones transmit DUML (DJI Universal Markup Language) protocol messages over BLE (Bluetooth Low Energy) without encryption. When a client attempts to connect to the drone over Wi-Fi, or when the drone is switched to QuickTransfer mode, the DJI Fly application exchanges DUML messages with the drone over BLE, including the Wi-Fi credentials. An attacker within BLE range can passively sniff this traffic and recover the credentials in cleartext, including the drone's Wi-Fi PSK, SSID, and trusted identifier UUID. Obtaining these credentials allows the attacker to join the drone's internal Wi-Fi network, interact with network services exposed by the drone, and decrypt Wi-Fi traffic exchanged between the drone and the legitimate user.\n\n* An attacker within BLE range recovers the Wi-Fi SSID and PSK in cleartext, and can then join the drone's network \n* The same capture also exposes the session UUID identifier, which is the only thing the drone uses to tell a trusted client from an unknown one, so the attacker can replay it and skip the physical confirmation of new connected devices.\n* The credentials do not change between sessions unless the operator manually resets the Wi-Fi settings, so one capture stays valid indefinitely\n* The attack is fully passive, with nothing transmitted and no connection made, so neither the operator nor the drone has any indication the session was observed\n* A BLE sniffer and presence during one normal DJI Fly connection are needed\n\nAffected models are DJI Neo until 01.00.0400, DJI Neo 2 until 01.00.0500, DJI Flip until 01.00.1200, DJI Air 3 until 01.00.1600, DJI Air 3S until 01.00.1400, DJI Avata 2 until 01.00.0400, DJI Avata 360 until 01.00.0300, DJI Mavic 3 until 01.00.1400, DJI Mavic 3 Classic until 01.00.0800, DJI Mavic 3 Pro until 01.01.0700, DJI Mavic 4 Pro until 01.00.0500, DJI Mini 2 until 01.07.0200, DJI Mini 3 until 01.00.0500, DJI Mini 3 Pro until 01.00.0900, DJI Mini 4 Pro until 01.00.1100, and DJI Mini 5 Pro until 01.00.0600.\n\nRemediation requires a firmware update from the vendor. There is no user-side mitigation that fully addresses the vulnerability without upgrading.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-77812 - BLE를 통한 DJI 드론 Wi-Fi 자격 증명의 일반 텍스트 노출",
+      "summary_ko": "CVE ID:CVE-2026-77812\n  \n게시일 : 2026년 8월 21일 오후 3시 16분 | 40분 전\n  \n설명:DJI 드론은 암호화 없이 BLE(Bluetooth Low Energy)를 통해 DUML(DJI Universal Markup Language) 프로토콜 메시지를 전송합니다. 클라이언트가 Wi-Fi를 통해 드론에 연결을 시도하거나 드론이 QuickTransfer 모드로 전환되면 DJI Fly 애플리케이션은 Wi-Fi 자격 증명을 포함하여 BLE를 통해 드론과 DUML 메시지를 교환합니다. BLE 범위 내의 공격자는 이 트래픽을 수동적으로 스니핑하고 드론의 ​​Wi-Fi PSK, SSID 및 신뢰할 수 있는 식별자 UUID를 포함하여 일반 텍스트로 자격 증명을 복구할 수 있습니다. 이러한 자격 증명을 획득하면 공격자는 드론의 내부 Wi-Fi 네트워크에 접속하고 드론이 노출한 네트워크 서비스와 상호 작용하며 드론과 합법적인 사용자 간에 교환되는 Wi-Fi 트래픽의 암호를 해독할 수 있습니다.\n\n* BLE 범위 내의 공격자는 Wi-Fi SSID 및 PSK를 일반 텍스트로 복구한 후 드론 네트워크에 연결할 수 있습니다. \n* 동일한 캡처는 드론이 신뢰할 수 있는 클라이언트와 알 수 없는 클라이언트를 알려주는 데 사용하는 유일한 세션 UUID 식별자도 노출하므로 공격자는 이를 재생하고 새로 연결된 장치의 물리적 확인을 건너뛸 수 있습니다.\n* 운영자가 Wi-Fi 설정을 수동으로 재설정하지 않는 한 세션 간에 자격 증명이 변경되지 않으므로 한 번의 캡처는 무기한 유효합니다.\n* 공격은 완전히 수동적이며 아무것도 전송되지 않고 연결도 이루어지지 않으므로 운영자나 드론 모두 세션이 관찰되었다는 징후가 없습니다.\n* 일반적인 DJI Fly 연결 중 BLE 스니퍼와 존재 확인이 필요합니다.\n\n영향을 받는 모델은 01.00.0400까지 DJI Neo, 01.00.0500까지 DJI Neo 2, 01.00.1200까지 DJI Flip, 01.00.1600까지 DJI Air 3, 01.00.1400까지 DJI Air 3S, 01.00.1400까지 DJI Avata 2, 01.00.0400까지 DJI Avata입니다. 360은 01.00.0300까지, DJI Mavic 3는 01.00.1400까지, DJI Mavic 3 Classic은 01.00.0800까지, DJI Mavic 3 Pro는 01.01.0700까지, DJI Mavic 4 Pro는 01.00.0500까지, DJI Mini 2는 01.07.0200까지, DJI Mini 3은 01.00.0500까지, DJI Mini 3 Pro는 01.00.0900까지, DJI Mini 4 Pro는 01.00.1100까지, DJI Mini 5 Pro는 01.00.0600까지.\n\n문제를 해결하려면 공급업체의 펌웨어 업데이트가 필요합니다. 업그레이드하지 않고 취약점을 완전히 해결하는 사용자 측 완화 방법은 없습니다.\n  \n심각도: 9.4 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-77812\n2. 26.08.22 오전12:16\n3. DJI drones transmit DUML (DJI Universal Markup Lan",
+      "cve_id": "CVE-2026-77812",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77812",
+      "source": "cvefeed",
+      "published": "2026-08-22T00:16:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-77815 - Infinite Image Browsing Resolves Paths With normpath, Allowing Symlink Escape From Scanned Directories",
       "summary": "CVE ID :CVE-2026-77815\n  \nPublished : Aug. 21, 2026, 3:03 p.m. | 25 minutes ago\n  \nDescription :to_abs_path in scripts/iib/tool.py normalised the requested path with os.path.normpath, which collapses dot segments but does not resolve symbolic links. A symlink placed inside a scanned directory therefore satisfies the containment comparison performed by is_path_trusted in scripts/iib/api.py while pointing outside that directory, and FileResponse follows the link when serving the response, so a link created in an image directory and targeting a file such as /etc/passwd discloses that file. Whether the check applies depends on get_enable_access_control in scripts/iib/tool.py: it returns true when IIB_ACCESS_CONTROL is set to enable, false when set to disable, and otherwise true when the host Stable Diffusion WebUI was started with share, ngrok, listen or server_name, falling back to false. Confinement is therefore active in the network-exposed WebUI deployments that rely on it, while a standalone run with no such option serves every readable file regardless of this flaw. The fix resolves the path with os.path.realpath.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
