@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22T00:01:08.539547+09:00",
+  "fetched_at": "2026-08-22T00:31:03.797182+09:00",
   "security_news": [
     {
       "title": "아폴로 데이터 유출 보도, 금융권 해킹 확산 속 보안 경계",
@@ -2271,6 +2271,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-77815 - Infinite Image Browsing Resolves Paths With normpath, Allowing Symlink Escape From Scanned Directories",
+      "summary": "CVE ID :CVE-2026-77815\n  \nPublished : Aug. 21, 2026, 3:03 p.m. | 25 minutes ago\n  \nDescription :to_abs_path in scripts/iib/tool.py normalised the requested path with os.path.normpath, which collapses dot segments but does not resolve symbolic links. A symlink placed inside a scanned directory therefore satisfies the containment comparison performed by is_path_trusted in scripts/iib/api.py while pointing outside that directory, and FileResponse follows the link when serving the response, so a link created in an image directory and targeting a file such as /etc/passwd discloses that file. Whether the check applies depends on get_enable_access_control in scripts/iib/tool.py: it returns true when IIB_ACCESS_CONTROL is set to enable, false when set to disable, and otherwise true when the host Stable Diffusion WebUI was started with share, ngrok, listen or server_name, falling back to false. Confinement is therefore active in the network-exposed WebUI deployments that rely on it, while a standalone run with no such option serves every readable file regardless of this flaw. The fix resolves the path with os.path.realpath.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-77815\n  \nPublished : Aug. 21, 2026, 3:03 p.m. | 25 minutes ago\n  \nDescription :to_abs_path in scripts/iib/tool.py normalised the requested path with os.path.normpath, which collapses dot segments but does not resolve symbolic links. A symlink placed inside a scanned directory therefore satisfies the containment comparison performed by is_path_trusted in scripts/iib/api.py while pointing outside that directory, and FileResponse follows the link when serving the response, so a link created in an image directory and targeting a file such as /etc/passwd discloses that file. Whether the check applies depends on get_enable_access_control in scripts/iib/tool.py: it returns true when IIB_ACCESS_CONTROL is set to enable, false when set to disable, and otherwise true when the host Stable Diffusion WebUI was started with share, ngrok, listen or server_name, falling back to false. Confinement is therefore active in the network-exposed WebUI deployments that rely on it, while a standalone run with no such option serves every readable file regardless of this flaw. The fix resolves the path with os.path.realpath.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-77815 - 무한 이미지 브라우징이 표준 경로를 사용하여 경로를 확인하여 스캔된 디렉터리에서 Symlink 이스케이프를 허용합니다.",
+      "summary_ko": "CVE ID:CVE-2026-77815\n  \n게시일 : 2026년 8월 21일 오후 3시 3분 | 25분 전\n  \n설명 :scripts/iib/tool.py의 :to_abs_path는 점 세그먼트를 축소하지만 기호 링크를 해결하지 않는 os.path.normpath로 요청된 경로를 정규화했습니다. 따라서 스캔된 디렉터리 내부에 배치된 심볼릭 링크는 해당 디렉터리 외부를 가리키는 동안 scripts/iib/api.py에서 is_path_trusted가 수행한 포함 비교를 충족하고 FileResponse는 응답을 제공할 때 링크를 따르므로 이미지 디렉터리에서 생성되고 /etc/passwd와 같은 파일을 대상으로 하는 링크가 해당 파일을 공개합니다. 검사 적용 여부는 scripts/iib/tool.py의 get_enable_access_control에 따라 다릅니다. IIB_ACCESS_Control이 활성화로 설정된 경우 true를 반환하고, 비활성화로 설정된 경우 false를 반환하며, 그렇지 않으면 호스트 Stable Diffusion WebUI가 share, ngrok, Listen 또는 server_name으로 시작된 경우 true를 반환하고 false로 돌아갑니다. 따라서 제한은 이에 의존하는 네트워크 노출 WebUI 배포에서 활성화되는 반면, 그러한 옵션이 없는 독립 실행형 실행은 이 결함에 관계없이 읽을 수 있는 모든 파일을 제공합니다. 수정 사항은 os.path.realpath를 사용하여 경로를 확인합니다.\n  \n심각도: 8.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-77815\n2. 26.08.22 오전12:03\n3. to_abs_path in scripts/iib/tool.py normalised the ",
+      "cve_id": "CVE-2026-77815",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77815",
+      "source": "cvefeed",
+      "published": "2026-08-22T00:03:09+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-62313 - Incus: Project restriction `restricted.containers.privilege=isolated` bypassable by omitting `security.idmap.isolated`",
+      "summary": "CVE ID :CVE-2026-62313\n  \nPublished : Aug. 21, 2026, 2:44 p.m. | 43 minutes ago\n  \nDescription :Incus is a system container and virtual machine manager. Prior to version 7.3.0, project-level enforcement of `restricted.containers.privilege=isolated` can be trivially bypassed, allowing a user to create a non-isolated (shared host idmap) container in a project that is configured to forbid them. The restriction only rejects an explicitly set `security.idmap.isolated=false` (or empty) and fails to enforce anything when the key is omitted entirely. Because an unset `security.idmap.isolated` defaults to `false` (non-isolation), a user simply leaves the key out and obtains exactly the container state the restriction is meant to forbid. This defeats the tenant-isolation guarantee the restriction exists to provide. Containers in the project share the host uid/gid map instead of receiving unique, non-overlapping ranges, weakening the isolation boundary between co-tenant containers and the host. Version 7.3.0 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-62313\n  \nPublished : Aug. 21, 2026, 2:44 p.m. | 43 minutes ago\n  \nDescription :Incus is a system container and virtual machine manager. Prior to version 7.3.0, project-level enforcement of `restricted.containers.privilege=isolated` can be trivially bypassed, allowing a user to create a non-isolated (shared host idmap) container in a project that is configured to forbid them. The restriction only rejects an explicitly set `security.idmap.isolated=false` (or empty) and fails to enforce anything when the key is omitted entirely. Because an unset `security.idmap.isolated` defaults to `false` (non-isolation), a user simply leaves the key out and obtains exactly the container state the restriction is meant to forbid. This defeats the tenant-isolation guarantee the restriction exists to provide. Containers in the project share the host uid/gid map instead of receiving unique, non-overlapping ranges, weakening the isolation boundary between co-tenant containers and the host. Version 7.3.0 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-62313 - Incus: `security.idmap.isolation`을 생략하여 프로젝트 제한 `restricted.containers.privilege=isolation`을 우회할 수 있음",
+      "summary_ko": "CVE ID:CVE-2026-62313\n  \n게시일 : 2026년 8월 21일 오후 2시 44분 | 43분 전\n  \n설명:Incus는 시스템 컨테이너이자 가상 머신 관리자입니다. 버전 7.3.0 이전에는 `restricted.containers.privilege=isolation`의 프로젝트 수준 적용을 간단하게 우회할 수 있어 사용자가 이를 금지하도록 구성된 프로젝트에서 격리되지 않은(공유 호스트 idmap) 컨테이너를 생성할 수 있었습니다. 이 제한은 명시적으로 설정된 `security.idmap.isolation=false`(또는 비어 있음)만 거부하고 키가 완전히 생략되면 아무 것도 적용하지 않습니다. 설정되지 않은 'security.idmap.isolation'의 기본값은 'false'(비격리)이므로 사용자는 간단히 키를 생략하고 제한이 금지하는 컨테이너 상태를 정확히 얻을 수 있습니다. 이는 제한 사항이 제공하는 세입자 격리 보장을 무효화합니다. 프로젝트의 컨테이너는 고유하고 겹치지 않는 범위를 수신하는 대신 호스트 uid/gid 맵을 공유하여 공동 테넌트 컨테이너와 호스트 간의 격리 경계를 약화시킵니다. 버전 7.3.0에서는 문제가 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-62313\n2. 26.08.21 오후11:44\n3. Incus is a system container and virtual machine ma",
+      "cve_id": "CVE-2026-62313",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62313",
+      "source": "cvefeed",
+      "published": "2026-08-21T23:44:27+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-58547 Windows Universal Plug and Play (UPnP) Device Host Elevation of Privilege Vulnerability",
       "summary": "Updated an acknowledgement. This is an informational change only.",
