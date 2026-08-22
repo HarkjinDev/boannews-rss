@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-23T01:01:01.543627+09:00",
+  "fetched_at": "2026-08-23T01:30:56.854668+09:00",
   "security_news": [
     {
       "title": "평양은 지금 ‘명품 소비’ 중…샤넬·오메가에 70만원 스마트폰까지",
@@ -1824,18 +1824,6 @@
       "source": "naver",
       "published": "2026-08-20T06:07:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "래피드7, AI 암호화폐 피싱 작전 공개했다",
-      "summary": "사이버보안 기업 래피드7(Rapid7)이 AI를 활용한 암호화폐 피싱 도구와 악성 지갑 앱 유포 정황을 담은 사기 작전 ‘오퍼레이션 아스테릭스(Operation ASTERIX)’를 공개했다. 우블록체인(Wu Blockchain)은 래피드7...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 래피드7, AI 활용 암호화폐 피싱 도구 공개\n2. 악성 지갑 앱으로 2,600개 코인 탈취 추정\n3. '오퍼레이션 아스테릭스' 작전, 다수 피해 예상",
-      "link": "https://www.tokenpost.kr/news/breaking/393568",
-      "source": "naver",
-      "published": "2026-08-20T01:12:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2677,36 +2665,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2024-13942",
       "source": "cvefeed",
       "published": "2026-08-20T01:40:18+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-49392 - Wazuh: Local SQL injection in FIM db due to path lookup interpolation in wazuh-syscheckd",
-      "summary": "CVE ID :CVE-2026-49392\n  \nPublished : Aug. 19, 2026, 4:22 p.m. | 55 minutes ago\n  \nDescription :Wazuh is a free and open source platform used for threat prevention, detection, and response. From 4.6.0 until 4.14.6 and 5.0.0-beta3, DB::getFile() and DB::searchFile() in src/syscheckd/src/db/src/file.cpp concatenate a monitored file path into SQLite row filters. On non-Windows systems, FIMDBCreator::encodeString() does not escape the value. A local user who can create a filename in a File Integrity Monitoring directory can inject a UNION SELECT expression when wazuh-syscheckd processes or deletes that path. The confirmed primitive manipulates SELECT result sets consumed by the FIM code; stacked statements and remote code execution were not demonstrated. This issue is fixed in versions 4.14.6 and 5.0.0-beta3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-49392\n  \nPublished : Aug. 19, 2026, 4:22 p.m. | 55 minutes ago\n  \nDescription :Wazuh is a free and open source platform used for threat prevention, detection, and response. From 4.6.0 until 4.14.6 and 5.0.0-beta3, DB::getFile() and DB::searchFile() in src/syscheckd/src/db/src/file.cpp concatenate a monitored file path into SQLite row filters. On non-Windows systems, FIMDBCreator::encodeString() does not escape the value. A local user who can create a filename in a File Integrity Monitoring directory can inject a UNION SELECT expression when wazuh-syscheckd processes or deletes that path. The confirmed primitive manipulates SELECT result sets consumed by the FIM code; stacked statements and remote code execution were not demonstrated. This issue is fixed in versions 4.14.6 and 5.0.0-beta3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-49392 - Wazuh: wazuh-syscheckd의 경로 조회 보간으로 인해 FIM db에 로컬 SQL 주입이 발생함",
-      "summary_ko": "CVE ID:CVE-2026-49392\n  \n게시일 : 2026년 8월 19일 오후 4시 22분 | 55분 전\n  \n설명 :Wazuh는 위협 예방, 탐지 및 대응에 사용되는 무료 오픈 소스 플랫폼입니다. 4.6.0부터 4.14.6 및 5.0.0-beta3까지, src/syscheckd/src/db/src/file.cpp의 DB::getFile() 및 DB::searchFile()은 모니터링되는 파일 경로를 SQLite 행 필터에 연결합니다. Windows가 아닌 시스템에서는 FIMDBCreator::encodeString()이 값을 이스케이프하지 않습니다. 파일 무결성 모니터링 디렉터리에 파일 이름을 생성할 수 있는 로컬 사용자는 wazuh-syscheckd가 해당 경로를 처리하거나 삭제할 때 UNION SELECT 표현식을 삽입할 수 있습니다. 확인된 기본 요소는 FIM 코드에서 사용되는 SELECT 결과 세트를 조작합니다. 스택형 문과 원격 코드 실행은 시연되지 않았습니다. 이 문제는 버전 4.14.6 및 5.0.0-beta3에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-49392\n2. 26.08.20 오전1:22\n3. Wazuh is a free and open source platform used for ",
-      "cve_id": "CVE-2026-49392",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49392",
-      "source": "cvefeed",
-      "published": "2026-08-20T01:22:49+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-20319 - Cisco Secure Workload Software Security Hardening Release August 2026 - Buffer Management Vulnerabilities",
-      "summary": "CVE ID :CVE-2026-20319\n  \nPublished : Aug. 19, 2026, 4:19 p.m. | 58 minutes ago\n  \nDescription :As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Secure Workload engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\n\nThe vulnerabilities tracked by CVE-2026-20319 are related to buffer management issues that are grouped under the Common Weakness Enumeration (CWE) CWE-119.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-20319\n  \nPublished : Aug. 19, 2026, 4:19 p.m. | 58 minutes ago\n  \nDescription :As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Secure Workload engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\n\nThe vulnerabilities tracked by CVE-2026-20319 are related to buffer management issues that are grouped under the Common Weakness Enumeration (CWE) CWE-119.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-20319 - Cisco Secure Workload Software 보안 강화 릴리스 2026년 8월 - 버퍼 관리 취약점",
-      "summary_ko": "CVE ID:CVE-2026-20319\n  \n게시일 : 2026년 8월 19일 오후 4시 19분 | 58분 전\n  \n설명 :사전 예방적인 보안과 제품 품질에 대한 Cisco의 지속적인 노력의 일환으로 Cisco Secure Workload 엔지니어링 팀은 포괄적인 내부 보안 검토를 실시했습니다. 이 검토를 통해 내부적으로 발견된 여러 취약점을 해결하는 소프트웨어 강화 릴리스가 탄생했습니다.\n\nCVE-2026-20319에서 추적한 취약점은 CWE(Common Weakness Enumeration) CWE-119로 분류된 버퍼 관리 문제와 관련이 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-20319\n2. 26.08.20 오전1:19\n3. As part of Cisco's ongoing commitment to proactive",
-      "cve_id": "CVE-2026-20319",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-20319",
-      "source": "cvefeed",
-      "published": "2026-08-20T01:19:44+09:00",
       "lang": "en"
     }
   ],
