@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22T08:32:14.184480+09:00",
+  "fetched_at": "2026-08-22T09:02:22.133772+09:00",
   "security_news": [
     {
       "title": "마이크로소프트 엔트라 ID CVSS 10점 결함 실제 악용 확인, 공격자 정보...",
@@ -2292,33 +2292,54 @@
       "source": "naver",
       "published": "2026-08-19T09:54:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "해킹까지 나선 AI에…오픈AI, 모델 개발 늦추고 보안 강화 [마켓핫]",
-      "summary": "당시 이 에이전트들은 사이버보안 테스트를 진행하던 중 테스트 목표를 달성하기 위해 허깅페이스의... 접속하거나, 사이버 공격을 가한 사례가 최근 잇따라 확인됐다. 앞서 오픈AI는 자사의 가장 강력한 모델에 대한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 해킹까지 나선 AI에…오픈AI, 모델 개발 늦추고 보안 강화 [마켓핫] 당시 이 에이전트들\n2. 접속하거나, 사이버 공격을 가한 사례가 최근 잇따라 확인됐다.\n3. 앞서 오픈AI는 자사의 가장 강력한 모델에 대한...",
-      "link": "https://www.etoday.co.kr/news/view/2615728",
-      "source": "naver",
-      "published": "2026-08-19T08:42:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[2금융 뉴스브리핑] 신복위 채무조정 금융마이데이터 도입 MOU",
-      "summary": "□ 예보 '2026 을지연습' 실시 예금보험공사가 오는 20일까지 전시 금융·사이버와 재난위기 발생에 대비해... 아울러 코스콤(KOSCOM)과의 전산재해 복구훈련와 개인정보 유출 대응훈련을 병행해 복합 사이버공격에 대한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [2금융 뉴스브리핑] 신복위 채무조정 금융마이데이터 도입 MOU □ 예보 '2026 을지연\n2. 아울러 코스콤(KOSCOM)과의 전산재해 복구훈련와 개인정보 유출 대응훈련을 병행해 복합 ",
-      "link": "https://www.asiatime.co.kr/article/20260818500424",
-      "source": "naver",
-      "published": "2026-08-19T08:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-53541 - OliveTin has Unvalidated `ot_`-prefixed Arguments that Bypass Input Filtering",
+      "summary": "CVE ID :CVE-2026-53541\n  \nPublished : Aug. 21, 2026, 10:51 p.m. | 18 minutes ago\n  \nDescription :OliveTin gives access to predefined shell commands from a web interface. The `filterToDefinedArgumentsOnly` function in the executor is intended to discard any arguments not explicitly defined in the action's configuration. However, prior to commit ebffd9f040f791208aee1db2e5a8aecd1e3e603d, a special case allows any argument whose name starts with `ot_` to bypass this filter. While two system arguments (`ot_executionTrackingId` and `ot_username`) are injected by OliveTin and overridden, all other `ot_`-prefixed arguments supplied by the user pass through unmodified. These bypassed arguments are not type-checked — the validation loop only iterates over the action's defined arguments, so `ot_`-prefixed arguments skip all type safety checks entirely; set as environment variables — via `buildEnv()`, with completely unvalidated values, and passed to the executed command; and included in the template context — available as `.Arguments.ot_*` in template rendering. Commit ebffd9f040f791208aee1db2e5a8aecd1e3e603d contains a patch.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53541\n  \nPublished : Aug. 21, 2026, 10:51 p.m. | 18 minutes ago\n  \nDescription :OliveTin gives access to predefined shell commands from a web interface. The `filterToDefinedArgumentsOnly` function in the executor is intended to discard any arguments not explicitly defined in the action's configuration. However, prior to commit ebffd9f040f791208aee1db2e5a8aecd1e3e603d, a special case allows any argument whose name starts with `ot_` to bypass this filter. While two system arguments (`ot_executionTrackingId` and `ot_username`) are injected by OliveTin and overridden, all other `ot_`-prefixed arguments supplied by the user pass through unmodified. These bypassed arguments are not type-checked — the validation loop only iterates over the action's defined arguments, so `ot_`-prefixed arguments skip all type safety checks entirely; set as environment variables — via `buildEnv()`, with completely unvalidated values, and passed to the executed command; and included in the template context — available as `.Arguments.ot_*` in template rendering. Commit ebffd9f040f791208aee1db2e5a8aecd1e3e603d contains a patch.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-53541\n  \n게시일 : 2026년 8월 21일 오후 10시 51분 | 18분 전\n  \n설명 :OliveTin은 웹 인터페이스에서 미리 정의된 쉘 명령에 대한 액세스를 제공합니다. 실행기의 `filterToDefinedArgumentsOnly` 함수는 작업 구성에 명시적으로 정의되지 않은 모든 인수를 삭제하기 위한 것입니다. 그러나 ebffd9f040f791208aee1db2e5a8aecd1e3e603d를 커밋하기 전에 특수한 경우 이름이 `ot_`로 시작하는 모든 인수가 이 필터를 우회하도록 허용합니다. 두 개의 시스템 인수(`ot_executionTrackingId` 및 `ot_username`)가 OliveTin에 의해 주입되고 재정의되는 반면, 사용자가 제공하는 다른 모든 `ot_` 접두사 인수는 수정되지 않은 채로 전달됩니다. 이러한 우회된 인수는 유형 검사되지 않습니다. 유효성 검사 루프는 작업에 정의된 인수에 대해서만 반복하므로 'ot_' 접두사가 붙은 인수는 모든 유형 안전 검사를 완전히 건너뜁니다. 완전히 검증되지 않은 값으로 `buildEnv()`를 통해 환경 변수로 설정되고 실행된 명령에 전달됩니다. 그리고 템플릿 컨텍스트에 포함됩니다 — 템플릿 렌더링에서 `.Arguments.ot_*`로 사용 가능합니다. 커밋 ebffd9f040f791208aee1db2e5a8aecd1e3e603d에는 패치가 포함되어 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-53541\n2. 26.08.22 오전7:51\n3. OliveTin gives access to predefined shell commands",
+      "cve_id": "CVE-2026-53541",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53541",
+      "source": "cvefeed",
+      "published": "2026-08-22T07:51:52+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-48105 - Arc Enterprise cluster FSM applyRegisterFile accepts arbitrary file paths without validation, enabling cluster-wide path-traversal worm primitive",
+      "summary": "CVE ID :CVE-2026-48105\n  \nPublished : Aug. 21, 2026, 10:47 p.m. | 23 minutes ago\n  \nDescription :Arc is an open, SQL-native time-series database for telemetry. Prior to version 26.06.1, Arc Enterprise's Raft FSM (`internal/cluster/raft/fsm.go:applyRegisterFile`) accepts attacker-chosen file paths in manifest-registration proposals without validating them against the configured storage backend. The only check is that the path is non-empty. There is no parent-traversal (`..`) rejection, no allowlist of legitimate prefixes, no scheme restriction (`s3://` vs local), and no length bound. This is fixed in 2026.06.1. Some workarounds are available. Restrict cluster network access to known-trusted peers via strict firewall rules, audit the cluster manifest for unexpected paths (any path not matching the configured storage backend root is suspect), and/or disable cluster mode until the fix is available.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-48105\n  \nPublished : Aug. 21, 2026, 10:47 p.m. | 23 minutes ago\n  \nDescription :Arc is an open, SQL-native time-series database for telemetry. Prior to version 26.06.1, Arc Enterprise's Raft FSM (`internal/cluster/raft/fsm.go:applyRegisterFile`) accepts attacker-chosen file paths in manifest-registration proposals without validating them against the configured storage backend. The only check is that the path is non-empty. There is no parent-traversal (`..`) rejection, no allowlist of legitimate prefixes, no scheme restriction (`s3://` vs local), and no length bound. This is fixed in 2026.06.1. Some workarounds are available. Restrict cluster network access to known-trusted peers via strict firewall rules, audit the cluster manifest for unexpected paths (any path not matching the configured storage backend root is suspect), and/or disable cluster mode until the fix is available.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-48105\n  \n게시일 : 2026년 8월 21일 오후 10시 47분 | 23분 전\n  \n설명:Arc는 원격 측정을 위한 개방형 SQL 기반 시계열 데이터베이스입니다. 버전 26.06.1 이전에는 Arc Enterprise의 Raft FSM(`internal/cluster/raft/fsm.go:applyRegisterFile`)이 구성된 저장소 백엔드에 대해 유효성을 검사하지 않고 매니페스트 등록 제안에서 공격자가 선택한 파일 경로를 허용합니다. 유일한 확인은 경로가 비어 있지 않은지 확인하는 것입니다. 상위 순회(`..`) 거부, 합법적인 접두사 허용 목록, 체계 제한(`s3://` 대 로컬) 및 길이 제한이 없습니다. 2026.06.1에서 수정되었습니다. 몇 가지 해결 방법을 사용할 수 있습니다. 엄격한 방화벽 규칙을 통해 클러스터 네트워크 액세스를 신뢰할 수 있는 피어로 제한하고, 클러스터 매니페스트에서 예기치 않은 경로를 감사하고(구성된 스토리지 백엔드 루트와 일치하지 않는 경로는 의심됨) 수정 사항이 제공될 때까지 클러스터 모드를 비활성화합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-48105\n2. 26.08.22 오전7:47\n3. Arc is an open, SQL-native time-series database fo",
+      "cve_id": "CVE-2026-48105",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48105",
+      "source": "cvefeed",
+      "published": "2026-08-22T07:47:13+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-53499 - FORT-validator Vulnerable to RRDP Shared Snapshot Cache Poisoning",
+      "summary": "CVE ID :CVE-2026-53499\n  \nPublished : Aug. 21, 2026, 10:29 p.m. | 40 minutes ago\n  \nDescription :FORT Validator is a Resource Public Key Infrastructure (RPKI) relying-party validator that produces validated route-origin data. FORT Validator versions through 1.6.7 contain an origin-validation error in their RRDP processing: a delegated CA under the same Trust Anchor Locator (TAL) can reference a victim CA’s public RRDP notification and snapshot URLs, causing FORT’s URL-based download cache to report success after deleting the victim’s local snapshot. Following a routine victim publication, this can silently remove the victim’s VRPs and other signed objects from FORT’s output, potentially enabling route hijacking or loss of reachability. Version 1.6.8 contains a patch that rejects cross-origin RRDP snapshot and delta URLs; as a workaround, administrators can disable HTTP/RRDP with  --http.enabled=false  while keeping rsync enabled, although this can leave data unavailable or stale where rsync is not supported.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53499\n  \nPublished : Aug. 21, 2026, 10:29 p.m. | 40 minutes ago\n  \nDescription :FORT Validator is a Resource Public Key Infrastructure (RPKI) relying-party validator that produces validated route-origin data. FORT Validator versions through 1.6.7 contain an origin-validation error in their RRDP processing: a delegated CA under the same Trust Anchor Locator (TAL) can reference a victim CA’s public RRDP notification and snapshot URLs, causing FORT’s URL-based download cache to report success after deleting the victim’s local snapshot. Following a routine victim publication, this can silently remove the victim’s VRPs and other signed objects from FORT’s output, potentially enabling route hijacking or loss of reachability. Version 1.6.8 contains a patch that rejects cross-origin RRDP snapshot and delta URLs; as a workaround, administrators can disable HTTP/RRDP with  --http.enabled=false  while keeping rsync enabled, although this can leave data unavailable or stale where rsync is not supported.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53499 - RRDP 공유 스냅샷 캐시 중독에 취약한 FORT 유효성 검사기",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-53499\n2. 26.08.22 오전7:29\n3. FORT Validator is a Resource Public Key Infrastruc",
+      "cve_id": "CVE-2026-53499",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53499",
+      "source": "cvefeed",
+      "published": "2026-08-22T07:29:48+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53530 - ratex-parser panics on `\\verb` with a multibyte delimiter (UTF-8 byte-boundary slice)",
       "summary": "CVE ID :CVE-2026-53530\n  \nPublished : Aug. 21, 2026, 9:31 p.m. | 26 minutes ago\n  \nDescription :RaTeX is a KaTeX-compatible math rendering engine written in Rust. Prior to version 0.1.11, the public parser entrypoint `ratex_parser::parse(&str)` panics on the 9-byte input `\\verbéxé` (i.e. `\\verb` followed by the non-ASCII delimiter `é`). When handling a `\\verb` command, the parser slices the verbatim argument with byte indices (`arg[1..arg.len() - 1]`); if the delimiter character is multibyte UTF-8, index `1` lands inside that character and Rust panics with *“byte index 1 is not a char boundary”*. Because RaTeX’s release profile sets `panic = \"abort\"` (`Cargo.toml:48`), the panic aborts the entire process — not just the current request/thread — making this a hard denial of service for any service that renders untrusted LaTeX. Version 0.1.11 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
