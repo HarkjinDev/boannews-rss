@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22T15:32:21.019311+09:00",
+  "fetched_at": "2026-08-22T16:01:23.254084+09:00",
   "security_news": [
     {
       "title": "평양 백화점엔 샤넬·오메가, 시내엔 초고층 아파트…러 밀착 '돈벼락 맞...",
@@ -3061,21 +3061,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-75589",
       "source": "cvefeed",
       "published": "2026-08-19T16:20:44+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-75981 - TranslatePress – Translate Multilingual sites with AI Translation <= 3.2.5 - Unauthenticated Stored Cross-Site Scripting",
-      "summary": "CVE ID :CVE-2026-75981\n  \nPublished : Aug. 19, 2026, 6:37 a.m. | 30 minutes ago\n  \nDescription :The TranslatePress – Translate Multilingual sites with AI Translation plugin for WordPress is vulnerable to unauthenticated Stored Cross-Site Scripting in versions up to and including 3.2.5. The special gettext markers '#!trpst#' and '#!trpen#' are unconditionally rewritten to '<' and '>' by translate_page() in includes/class-translation-render.php (lines 538-539). Because those markers are plain text with no HTML-special characters, an unauthenticated attacker can embed them in a comment; the markers survive wp_kses, and when the post is viewed in a secondary language the substitution turns the attacker's '#!trpst#img ... #!trpen#' into a real  tag. remove_tags_from_output() only strips",
-      "description": "CVE ID :CVE-2026-75981\n  \nPublished : Aug. 19, 2026, 6:37 a.m. | 30 minutes ago\n  \nDescription :The TranslatePress – Translate Multilingual sites with AI Translation plugin for WordPress is vulnerable to unauthenticated Stored Cross-Site Scripting in versions up to and including 3.2.5. The special gettext markers '#!trpst#' and '#!trpen#' are unconditionally rewritten to '<' and '>' by translate_page() in includes/class-translation-render.php (lines 538-539). Because those markers are plain text with no HTML-special characters, an unauthenticated attacker can embed them in a comment; the markers survive wp_kses, and when the post is viewed in a secondary language the substitution turns the attacker's '#!trpst#img ... #!trpen#' into a real  tag. remove_tags_from_output() only strips",
-      "title_ko": "CVE-2026-75981 - TranslatePress – AI 번역 <= 3.2.5로 다국어 사이트 번역 - 인증되지 않은 저장된 교차 사이트 스크립팅",
-      "summary_ko": "CVE ID:CVE-2026-75981\n  \n게시일 : 2026년 8월 19일 오전 6시 37분 | 30분 전\n  \n설명: TranslatePress – WordPress용 AI 번역 플러그인이 포함된 다국어 번역 사이트는 3.2.5 이하 버전에서 인증되지 않은 저장된 교차 사이트 스크립팅에 취약합니다. 특수 gettext 표시자 '#!trpst#' 및 '#!trpen#'은 include/class-translation-render.php(538-539행)의 Translate_page()에 의해 무조건 '<' 및 '>'로 다시 작성됩니다. 해당 마커는 HTML 특수 문자가 없는 일반 텍스트이기 때문에 인증되지 않은 공격자가 이를 주석에 삽입할 수 있습니다. 마커는 wp_kses에 남아 있으며 게시물을 보조 언어로 볼 때 대체는 공격자의 '#!trpst#img ... #!trpen#'을 실제 태그로 바꿉니다. Remove_tags_from_output()만 제거합니다.",
-      "summary_3lines": "1. CVE-2026-75981\n2. 26.08.19 오후3:37\n3. The TranslatePress – Translate Multilingual sites ",
-      "cve_id": "CVE-2026-75981",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75981",
-      "source": "cvefeed",
-      "published": "2026-08-19T15:37:55+09:00",
       "lang": "en"
     }
   ],
