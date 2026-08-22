@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22T16:01:23.254084+09:00",
+  "fetched_at": "2026-08-22T16:31:29.646236+09:00",
   "security_news": [
     {
       "title": "평양 백화점엔 샤넬·오메가, 시내엔 초고층 아파트…러 밀착 '돈벼락 맞...",
@@ -288,6 +288,18 @@
       "source": "naver",
       "published": "2026-08-21T20:10:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Microsoft patches max severity code execution, privilege escalation flaws",
+      "summary": "Microsoft has patched a maximum-severity vulnerability in the Entra ID identity and access management (IAM) platform that has been exploited in attacks. [...]",
+      "content": "",
+      "title_ko": "Microsoft는 최대 심각도 코드 실행, 권한 에스컬레이션 결함을 패치합니다.",
+      "summary_ko": "Microsoft는 공격에 악용된 Entra ID ID 및 액세스 관리(IAM) 플랫폼의 심각도가 가장 높은 취약점을 패치했습니다. [...]",
+      "summary_3lines": "1. 마이크로소프트, 최대 심각도 코드 실행/권한 상승 취약점 패치\n2. 악성코드, IAM 플랫폼 통해 공격 발생\n3. 사용자 접근 권한 탈취 등 피해 예상",
+      "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/",
+      "source": "bleepingcomputer",
+      "published": "2026-08-21T20:04:10+09:00",
+      "lang": "en"
     },
     {
       "title": "민생개혁, 정부만으로 가능한가…‘공인탐정’도 함께 뛰는 시대 열어야",
@@ -2076,30 +2088,6 @@
       "source": "naver",
       "published": "2026-08-19T16:52:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "경기대 강호석/김우진 학생 세계 최고 해킹대회 'DEF CON 34 CTF' 본선 진...",
-      "summary": "경기대학교 컴퓨터공학 전공 학생들이 세계 최고 권위의 사이버보안/해킹대회로 꼽히는 '2026 DEF CON 34 CTF... SW중심대학사업단은 학생들이 국제 해킹/보안대회에서 실전 감각을 쌓고 글로벌 경쟁력을 갖추도록...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 경기대 강호석/김우진 학생, DEF CON 34 CTF 본선 진출\n2. 세계 최고 권위 해킹대회, SW중심대학사업단 지원\n3. 국제 대회 실전 경험 통해 글로벌 경쟁력 강화",
-      "link": "https://www.veritas-a.com/news/articleView.html?idxno=623684",
-      "source": "naver",
-      "published": "2026-08-19T16:28:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "MS표 보안에 AI 심는다…\"취약점 잡는 'MDASH' 탑재 예정\"",
-      "summary": "장 고문은 \"AI 시대 사이버 위협이 진화하면서 해킹 자율화, 대중화가 가속화되고 있고 AI 모델을 활용한 공격도 빠르게 진행되고 있다\"며 \"이 같은 상황을 고려해 보안의 전반적인 전략을 새로 짜야 할 시기\"라고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. MS, AI 활용한 보안 솔루션 'MDASH' 탑재 예정\n2. AI 모델 활용한 사이버 공격 급증에 대응\n3. AI 시대 위한 보안 전략 전면 개편",
-      "link": "https://n.news.naver.com/mnews/article/138/0002238290?sid=105",
-      "source": "naver",
-      "published": "2026-08-19T16:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3046,21 +3034,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-76166",
       "source": "cvefeed",
       "published": "2026-08-19T19:16:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-75589 - Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify",
-      "summary": "CVE ID :CVE-2026-75589\n  \nPublished : Aug. 19, 2026, 7:20 a.m. | 42 minutes ago\n  \nDescription :Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify.\n\nEach of the three compares the signature carried in the message against the locally computed one with the eq operator, which returns as soon as the two strings differ. The time taken to reject a signature varies with the length of the matching prefix. RSA-SHA1 is not affected, as it verifies through the RSA key object rather than by comparing strings.\n\nA client that can submit messages and time the replies may recover a valid signature one byte at a time rather than searching the whole signature space. Under PLAINTEXT the value compared against is the signature key itself, so the search recovers consumer_secret and token_secret.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-75589\n  \nPublished : Aug. 19, 2026, 7:20 a.m. | 42 minutes ago\n  \nDescription :Net::OAuth versions before 0.33 for Perl check HMAC-SHA1, HMAC-SHA256 and PLAINTEXT signatures with a non-constant-time comparison in verify.\n\nEach of the three compares the signature carried in the message against the locally computed one with the eq operator, which returns as soon as the two strings differ. The time taken to reject a signature varies with the length of the matching prefix. RSA-SHA1 is not affected, as it verifies through the RSA key object rather than by comparing strings.\n\nA client that can submit messages and time the replies may recover a valid signature one byte at a time rather than searching the whole signature space. Under PLAINTEXT the value compared against is the signature key itself, so the search recovers consumer_secret and token_secret.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-75589 - Perl의 0.33 이전 Net::OAuth 버전은 비상수 비교를 통해 HMAC-SHA1, HMAC-SHA256 및 PLAINTEXT 서명을 확인합니다.",
-      "summary_ko": "CVE ID:CVE-2026-75589\n  \n게시일 : 2026년 8월 19일 오전 7시 20분 | 42분 전\n  \n설명 :Net::OAuth Perl용 0.33 이전 버전은 비상수 비교를 통해 HMAC-SHA1, HMAC-SHA256 및 PLAINTEXT 서명을 확인합니다.\n\n세 가지 각각은 두 문자열이 달라지자마자 반환되는 eq 연산자를 사용하여 메시지에 포함된 서명을 로컬로 계산된 서명과 비교합니다. 서명을 거부하는 데 걸리는 시간은 일치하는 접두사의 길이에 따라 다릅니다. RSA-SHA1은 문자열을 비교하는 대신 RSA 키 개체를 통해 확인하므로 영향을 받지 않습니다.\n\n메시지를 제출하고 응답 시간을 정할 수 있는 클라이언트는 전체 서명 공간을 검색하는 대신 한 번에 한 바이트씩 유효한 서명을 복구할 수 있습니다. PLAINTEXT에서 비교되는 값은 서명 키 자체이므로 검색에서는 Consumer_secret 및 token_secret을 복구합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-75589\n2. 26.08.19 오후4:20\n3. Net::OAuth versions before 0.33 for Perl check HMA",
-      "cve_id": "CVE-2026-75589",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75589",
-      "source": "cvefeed",
-      "published": "2026-08-19T16:20:44+09:00",
       "lang": "en"
     }
   ],
