@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22T14:32:20.296154+09:00",
+  "fetched_at": "2026-08-22T15:02:17.616794+09:00",
   "security_news": [
     {
       "title": "평양 백화점엔 샤넬·오메가, 시내엔 초고층 아파트…러 밀착 '돈벼락 맞...",
@@ -2100,45 +2100,24 @@
       "source": "naver",
       "published": "2026-08-19T16:08:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'GTA6' 영상 및 일부 콘텐츠 유출 의혹... 유출자 게이머 권익 외쳤지만...",
-      "summary": "다만 과거의 선례에도 그랬듯 GTA6 대규모 해킹 사태에도 용의자로 지목된 해커가 법적 처벌을 받은 적이 있고 이번에는 저작권법 위반 및 영업비밀 침해, 금융 사기 등이 복합적으로 적용될 수 있는 만큼 수사 기관의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 'GTA6' 게임 영상, 콘텐츠 유출 의혹 발생\n2. 유출자는 게이머 권익 주장했으나, 저작권법 위반 등 혐의\n3. 과거 해킹 사례처럼 법적 처벌 가능성, 수사 확대 전망",
-      "link": "https://gamefocus.co.kr/detail.php?number=178352",
-      "source": "naver",
-      "published": "2026-08-19T14:50:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "넷플릭스 통해 공개 앞둔 'GTA 6'…해킹 그룹에 의해 정보 유출",
-      "summary": "GTA 6 [사진=락스타게임즈, 넷플릭스] 넷플릭스를 통해 정보를 공개할 예정이었던 'GTA 6'가 해킹 그룹에 의해 정보가 유출됐다. 사이버리크라는 이름의 해킹 그룹은 'GTA 6'로 보이는 전체 게임 맵과 일부 게임 영상을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 넷플릭스 통해 공개 앞둔 'GTA 6'…해킹 그룹에 의해 정보 유출 GTA 6 [사진=락스\n2. 사이버리크라는 이름의 해킹 그룹은 'GTA 6'로 보이는 전체 게임 맵과 일부 게임 영상을",
-      "link": "https://www.greened.kr/news/articleView.html?idxno=347990",
-      "source": "naver",
-      "published": "2026-08-19T14:48:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "코파일럿 링크 한 번 클릭했더니 이메일·드라이브 정보 샌다…MS 패치 완료",
-      "summary": "마이크로소프트 코파일럿 퍼스널에서 악성 링크 한 번으로 사용자가 연결해 둔 이메일과 클라우드 서비스의 데이터를 빼낼 수 있는 취약점이 발견됐다.바로니스 위협 연구소는 관련 취약점을 ‘코스니치(CoSnitch)’라고 명명했다. 마이크로소프트는 이를 CVE-2026-24301로 등록했으며 CVSS 점수는 8.8점, 위험도는 ‘높음’이다.바로니스는 2025년 12월 마이크로소프트에 취약점을 신고했고, 마이크로소프트는 2026년 8월 18일 수정 조치를 적용했다. 현재까지 실제 공격에 악용된 증거는 확인되지 않았다.링크 열면 악성 프롬프트",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 코파일럿 링크 한 번 클릭했더니 이메일·드라이브 정보 샌다…MS 패치 완료 마이크로소프트 \n2. 마이크로소프트는 이를 CVE-2026-24301로 등록했으며 CVSS 점수는 8.8점, 위\n3. 현재까지 실제 공격에 악용된 증거는 확인되지 않았다.링크 열면 악성 프롬프트",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208115",
-      "source": "dailysecu",
-      "published": "2026-08-19T14:37:59+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-75027 - Themify Builder <= 7.8.0 - Missing Authorization to Unauthenticated Arbitrary Builder Data Modification via 'tb_update_old_data' AJAX Action",
+      "summary": "CVE ID :CVE-2026-75027\n  \nPublished : Aug. 22, 2026, 4:18 a.m. | 1 hour, 39 minutes ago\n  \nDescription :The Themify Builder plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 7.8.0. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to modify the stored Themify Builder styling data (padding and margin properties) of arbitrary posts, including private and draft posts, by supplying an attacker-controlled post ID and JSON styling payload. The nonce required by the handler is automatically emitted to all frontend pages rendered by the builder via wp_localize_script, meaning any unauthenticated visitor can trivially retrieve a valid nonce from page source and satisfy the only access control in place.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-75027\n  \nPublished : Aug. 22, 2026, 4:18 a.m. | 1 hour, 39 minutes ago\n  \nDescription :The Themify Builder plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 7.8.0. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to modify the stored Themify Builder styling data (padding and margin properties) of arbitrary posts, including private and draft posts, by supplying an attacker-controlled post ID and JSON styling payload. The nonce required by the handler is automatically emitted to all frontend pages rendered by the builder via wp_localize_script, meaning any unauthenticated visitor can trivially retrieve a valid nonce from page source and satisfy the only access control in place.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-75027 - Themify Builder <= 7.8.0 - 'tb_update_old_data' AJAX 작업을 통해 인증되지 않은 임의 빌더 데이터 수정에 대한 권한이 누락되었습니다.",
+      "summary_ko": "CVE ID:CVE-2026-75027\n  \n게시일 : 2026년 8월 22일 오전 4시 18분 | 1시간 39분 전\n  \n설명 : WordPress용 Themify Builder 플러그인은 7.8.0까지의 모든 버전에서 인증 우회에 취약합니다. 이는 사용자가 작업을 수행할 권한이 있는지 플러그인이 제대로 확인하지 못하기 때문입니다. 이를 통해 인증되지 않은 공격자가 공격자가 제어하는 ​​게시물 ID 및 JSON 스타일 페이로드를 제공하여 개인 및 초안 게시물을 포함한 임의 게시물의 저장된 Themify Builder 스타일 데이터(패딩 및 여백 속성)를 수정할 수 있습니다. 핸들러에 필요한 nonce는 wp_localize_script를 통해 빌더가 렌더링한 모든 프런트엔드 페이지에 자동으로 내보내집니다. 즉, 인증되지 않은 방문자는 누구나 쉽게 페이지 소스에서 유효한 nonce를 검색하고 유일한 액세스 제어를 충족할 수 있습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-75027\n2. 26.08.22 오후1:18\n3. The Themify Builder plugin for WordPress is vulner",
+      "cve_id": "CVE-2026-75027",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75027",
+      "source": "cvefeed",
+      "published": "2026-08-22T13:18:15+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53541 - OliveTin has Unvalidated `ot_`-prefixed Arguments that Bypass Input Filtering",
       "summary": "CVE ID :CVE-2026-53541\n  \nPublished : Aug. 21, 2026, 10:51 p.m. | 18 minutes ago\n  \nDescription :OliveTin gives access to predefined shell commands from a web interface. The `filterToDefinedArgumentsOnly` function in the executor is intended to discard any arguments not explicitly defined in the action's configuration. However, prior to commit ebffd9f040f791208aee1db2e5a8aecd1e3e603d, a special case allows any argument whose name starts with `ot_` to bypass this filter. While two system arguments (`ot_executionTrackingId` and `ot_username`) are injected by OliveTin and overridden, all other `ot_`-prefixed arguments supplied by the user pass through unmodified. These bypassed arguments are not type-checked — the validation loop only iterates over the action's defined arguments, so `ot_`-prefixed arguments skip all type safety checks entirely; set as environment variables — via `buildEnv()`, with completely unvalidated values, and passed to the executed command; and included in the template context — available as `.Arguments.ot_*` in template rendering. Commit ebffd9f040f791208aee1db2e5a8aecd1e3e603d contains a patch.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
