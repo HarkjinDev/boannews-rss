@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-24T08:02:37.441139+09:00",
+  "fetched_at": "2026-08-24T08:32:39.141728+09:00",
   "security_news": [
+    {
+      "title": "[이혁중 CISO 칼럼] 정보보호 30년을 돌아보며(2): 랜섬웨어, 클라우드,...",
+      "summary": "2015년 뽐뿌 해킹과 랜섬웨어 유포, 그리고 2017년 워너크라이 WannaCry 확산은... 2017년 야피존·유빗 해킹 및 파산, 2018년 빗썸·코인레일 해킹, 2019년 업비트 580억 원...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 2015년 뽐뿌, 2017년 워너크라이 랜섬웨어 확산\n2. 2017년 야피존·유빗, 2018년 빗썸·코인레일 해킹\n3. 2019년 업비트 580억 원 피해 발생",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208153",
+      "source": "naver",
+      "published": "2026-08-24T08:26:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[롯데카드 점검③] 최대주주 위법 경영 곳곳서 드러나",
       "summary": "해킹 위험을 걸러내야 할 내부통제위원회에는 IT·보안 전문가가 단 한 명도 없었다. 또 회사의 미래를 결정할... 정보유출과 해킹 위험이 갈수록 커지는 카드사에서 IT와 정보보안에 대한 전문성을 갖춘 위원이 전무했다는...",
@@ -1191,6 +1203,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-78183 - DBD::Pg version 3.21.0 for Perl has a heap out-of-bounds write in quote_float",
+      "summary": "CVE ID :CVE-2026-78183\n  \nPublished : 2026年8月23日20:16 | 2時間, 50分 ago\n  \nDescription :DBD::Pg version 3.21.0 for Perl has a heap out-of-bounds write in quote_float.\n\nquote_float() allocates the length of the string + 1, which is the size of the bare numeric symbol plus NULL.  But for special literals NaN, Inf, +Inf, -Inf, Infinity, +Infinity, -Infinity it emits the literal surrounded by quotes plus NULL, which is length + 3 bytes. Every recognised literal (case-insensitive) overflows by 2 bytes, a single quote and a NULL.\n\nThis can be reached by the $dbh->quote method, for example\n\n    $dbh->quote( \"Infinity\", DBI::SQL_NUMERIC ).\n\nThis regression was introduced in 3.21.0 by the quote.c rewrite.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-78183\n  \nPublished : 2026年8月23日20:16 | 2時間, 50分 ago\n  \nDescription :DBD::Pg version 3.21.0 for Perl has a heap out-of-bounds write in quote_float.\n\nquote_float() allocates the length of the string + 1, which is the size of the bare numeric symbol plus NULL.  But for special literals NaN, Inf, +Inf, -Inf, Infinity, +Infinity, -Infinity it emits the literal surrounded by quotes plus NULL, which is length + 3 bytes. Every recognised literal (case-insensitive) overflows by 2 bytes, a single quote and a NULL.\n\nThis can be reached by the $dbh->quote method, for example\n\n    $dbh->quote( \"Infinity\", DBI::SQL_NUMERIC ).\n\nThis regression was introduced in 3.21.0 by the quote.c rewrite.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-78183\n2. 26.08.24 오전5:16\n3. DBD::Pg version 3.21.0 for Perl has a heap out-of-",
+      "cve_id": "CVE-2026-78183",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78183",
+      "source": "cvefeed",
+      "published": "2026-08-24T05:16:50+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-19565 - Apache::AppSamurai::Util versions through 1.01 for Perl generate predictable session authentication keys from the clock and process id in CreateSessionAuthKey",
+      "summary": "CVE ID :CVE-2026-19565\n  \nPublished : 2026年8月23日20:16 | 2時間, 50分 ago\n  \nDescription :Apache::AppSamurai::Util versions through 1.01 for Perl generate predictable session authentication keys from the clock and process id in CreateSessionAuthKey.\n\nCreateSessionAuthKey runs five rounds of SHA-256, each over a fresh Time::HiRes reading formatted to six decimal places, the running digest, and the process id. CreateSession calls it with an empty key source on every login, and the optional Keysource directive is the only route to the other branch. The result is 64 hex characters. The microsecond field of the first reading takes one of a million values, the later readings follow it within microseconds, and the process id is drawn from a small range.\n\nThe key is returned to the browser as the session cookie, and is combined with the configured server key to compute the session id and to encrypt the stored session data. An attacker who knows the second in which a session was created and the process id of the worker that created it can enumerate candidate keys and recover the victim's cookie, bypassing authentication for the protected resources. Each candidate has to be tried against the server, which validates the cookie with a key the attacker does not hold.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-19565\n  \nPublished : 2026年8月23日20:16 | 2時間, 50分 ago\n  \nDescription :Apache::AppSamurai::Util versions through 1.01 for Perl generate predictable session authentication keys from the clock and process id in CreateSessionAuthKey.\n\nCreateSessionAuthKey runs five rounds of SHA-256, each over a fresh Time::HiRes reading formatted to six decimal places, the running digest, and the process id. CreateSession calls it with an empty key source on every login, and the optional Keysource directive is the only route to the other branch. The result is 64 hex characters. The microsecond field of the first reading takes one of a million values, the later readings follow it within microseconds, and the process id is drawn from a small range.\n\nThe key is returned to the browser as the session cookie, and is combined with the configured server key to compute the session id and to encrypt the stored session data. An attacker who knows the second in which a session was created and the process id of the worker that created it can enumerate candidate keys and recover the victim's cookie, bypassing authentication for the protected resources. Each candidate has to be tried against the server, which validates the cookie with a key the attacker does not hold.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-19565\n2. 26.08.24 오전5:16\n3. Apache::AppSamurai::Util versions through 1.01 for",
+      "cve_id": "CVE-2026-19565",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-19565",
+      "source": "cvefeed",
+      "published": "2026-08-24T05:16:50+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-8630 - justhtml before 1.12.0 Mutation XSS via Raw Text Elements",
       "summary": "CVE ID :CVE-2026-8630\n  \nPublished : Aug. 23, 2026, 1:34 p.m. | 37 minutes ago\n  \nDescription :justhtml before 1.12.0 (versions <= 1.11.0) contains a mutation cross-site scripting (mXSS) vulnerability in the serialization of raw-text elements such as",
