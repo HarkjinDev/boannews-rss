@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-24T03:02:23.412859+09:00",
+  "fetched_at": "2026-08-24T03:32:13.598798+09:00",
   "security_news": [
     {
       "title": "라이저디지털재팬, 2022년 바이낸스재팬 이후 4년 만에 일본 암호자산 ...",
@@ -1972,36 +1972,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-50192",
       "source": "cvefeed",
       "published": "2026-08-21T06:37:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-72854 - msgpack-c Integer Overflow in msgpack_unpacker_expand_buffer Causes a False-Success Undersized Reservation",
-      "summary": "CVE ID :CVE-2026-72854\n  \nPublished : Aug. 20, 2026, 6:19 p.m. | 27 minutes ago\n  \nDescription :msgpack_unpacker_expand_buffer in src/unpack.c, reached through the public msgpack_unpacker_reserve_buffer API, computes its new buffer size using an unchecked size_t addition of the requested size and the amount already used. The doubling loop guards its own multiplication against overflow, but the addition in the loop condition is unguarded, so a request near SIZE_MAX wraps: the loop condition is already satisfied, the allocation is performed at the small pre-wrap size, and the function returns true. The caller is told the requested capacity was reserved when it was not, so a subsequent write of the requested length overflows the heap buffer. The library's own example/lib_buffer_unpack.c demonstrates the reserve-then-write pattern, and its defensive assert comparing capacity against the request is compiled out under NDEBUG. msgpack-c's own decode entry points do not derive the reservation size from untrusted input, so reaching this requires an integration that passes an attacker-influenced length to the reservation API, such as a length-prefixed streaming transport.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-72854\n  \nPublished : Aug. 20, 2026, 6:19 p.m. | 27 minutes ago\n  \nDescription :msgpack_unpacker_expand_buffer in src/unpack.c, reached through the public msgpack_unpacker_reserve_buffer API, computes its new buffer size using an unchecked size_t addition of the requested size and the amount already used. The doubling loop guards its own multiplication against overflow, but the addition in the loop condition is unguarded, so a request near SIZE_MAX wraps: the loop condition is already satisfied, the allocation is performed at the small pre-wrap size, and the function returns true. The caller is told the requested capacity was reserved when it was not, so a subsequent write of the requested length overflows the heap buffer. The library's own example/lib_buffer_unpack.c demonstrates the reserve-then-write pattern, and its defensive assert comparing capacity against the request is compiled out under NDEBUG. msgpack-c's own decode entry points do not derive the reservation size from untrusted input, so reaching this requires an integration that passes an attacker-influenced length to the reservation API, such as a length-prefixed streaming transport.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-72854 - msgpack_unpacker_expand_buffer의 msgpack-c 정수 오버플로로 인해 잘못된 성공 예약이 발생함",
-      "summary_ko": "CVE ID:CVE-2026-72854\n  \n게시일 : 2026년 8월 20일 오후 6시 19분 | 27분 전\n  \n설명 : 공개 msgpack_unpacker_reserve_buffer API를 통해 도달한 src/unpack.c의 msgpack_unpacker_expand_buffer는 요청된 크기와 이미 사용된 양에 확인되지 않은 size_t 추가를 사용하여 새 버퍼 크기를 계산합니다. 더블링 루프는 오버플로에 대해 자체 곱셈을 보호하지만 루프 조건의 추가는 보호되지 않으므로 SIZE_MAX 근처의 요청이 랩됩니다. 루프 조건이 이미 충족되고 할당이 작은 랩 전 크기로 수행되며 함수는 true를 반환합니다. 호출자에게는 요청된 용량이 예약되어 있지 않은데도 예약되었다는 메시지가 표시되므로 요청된 길이에 대한 후속 쓰기가 힙 버퍼를 오버플로합니다. 라이브러리의 자체 예제/lib_buffer_unpack.c는 예약 후 쓰기 패턴을 보여 주며 요청에 대한 용량을 비교하는 방어 주장은 NDEBUG에서 컴파일됩니다. msgpack-c의 자체 디코드 진입점은 신뢰할 수 없는 입력에서 예약 크기를 파생하지 않으므로 이를 달성하려면 길이 접두사가 붙은 스트리밍 전송과 같이 공격자의 영향을 받은 길이를 예약 API에 전달하는 통합이 필요합니다.\n  \n심각도: 5.8 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-72854\n2. 26.08.21 오전3:19\n3. msgpack_unpacker_expand_buffer in src/unpack.c, re",
-      "cve_id": "CVE-2026-72854",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-72854",
-      "source": "cvefeed",
-      "published": "2026-08-21T03:19:24+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-63385 - Libevent: HTTP header handling bugs create risk of access control bypass.",
-      "summary": "CVE ID :CVE-2026-63385\n  \nPublished : Aug. 20, 2026, 6:16 p.m. | 30 minutes ago\n  \nDescription :Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, libevent has two HTTP parsing weaknesses in http.c. evhttp_decode_uri_internal decodes percent-encoded %00 bytes into literal NUL characters, which can cause downstream C string operations to truncate a path and bypass validation performed on a different representation. evhttp_header_is_valid_value also accepts obsolete line folding in header values containing carriage return or line feed characters, allowing a proxy and libevent to interpret headers differently and enabling header injection or access control bypass. The CRLF header acceptance is fixed in versions 2.1.13 and 2.2.2-alpha, but the reviewed patches do not clearly remediate the URI NUL-truncation condition.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-63385\n  \nPublished : Aug. 20, 2026, 6:16 p.m. | 30 minutes ago\n  \nDescription :Libevent is an event notification library. Prior to 2.1.13 and 2.2.2-alpha, libevent has two HTTP parsing weaknesses in http.c. evhttp_decode_uri_internal decodes percent-encoded %00 bytes into literal NUL characters, which can cause downstream C string operations to truncate a path and bypass validation performed on a different representation. evhttp_header_is_valid_value also accepts obsolete line folding in header values containing carriage return or line feed characters, allowing a proxy and libevent to interpret headers differently and enabling header injection or access control bypass. The CRLF header acceptance is fixed in versions 2.1.13 and 2.2.2-alpha, but the reviewed patches do not clearly remediate the URI NUL-truncation condition.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-63385 - Libevent: HTTP 헤더 처리 버그로 인해 액세스 제어 우회 위험이 발생합니다.",
-      "summary_ko": "CVE ID:CVE-2026-63385\n  \n게시일 : 2026년 8월 20일 오후 6시 16분 | 30분 전\n  \n설명 : Libevent는 이벤트 알림 라이브러리입니다. 2.1.13 및 2.2.2-alpha 이전에는 libevent의 http.c에 두 가지 HTTP 구문 분석 약점이 있었습니다. evhttp_decode_uri_internal은 퍼센트 인코딩된 %00바이트를 리터럴 NUL 문자로 디코딩합니다. 이로 인해 다운스트림 C 문자열 작업이 경로를 자르고 다른 표현에서 수행된 유효성 검사를 우회할 수 있습니다. evhttp_header_is_valid_value는 또한 캐리지 리턴 또는 줄 바꿈 문자가 포함된 헤더 값에서 사용되지 않는 줄 접기를 허용하여 프록시와 libevent가 헤더를 다르게 해석하고 헤더 삽입 또는 액세스 제어 우회를 가능하게 합니다. CRLF 헤더 승인은 버전 2.1.13 및 2.2.2-alpha에서 수정되었지만 검토된 패치는 URI NUL 잘림 조건을 명확하게 수정하지 않습니다.\n  \n심각도: 9.2 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-63385\n2. 26.08.21 오전3:16\n3. Libevent is an event notification library. Prior t",
-      "cve_id": "CVE-2026-63385",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63385",
-      "source": "cvefeed",
-      "published": "2026-08-21T03:16:36+09:00",
       "lang": "en"
     }
   ],
