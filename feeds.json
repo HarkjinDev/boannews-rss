@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-24T18:02:19.524643+09:00",
+  "fetched_at": "2026-08-24T18:32:03.541978+09:00",
   "security_news": [
+    {
+      "title": "맥북에서 돌리는 '무삭제 큐원 3.8' 등장...엔비디아 GPU·클라우드 없이...",
+      "summary": "이 같은 로컬 실행 능력은 사이버보안 분야에서 관심받을 것으로 보인다. 자체적인 강력한 거부 기능이 줄어든 만큼 보안 연구자들이 취약점 분석이나 침투 테스트 등에서 자유롭게 모델을 활용할 가능성이 있기...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 맥북에서 돌리는 '무삭제 큐원 3.8' 등장...엔비디아 GPU·클라우드 없이...\n2. 이 같은 로컬 실행 능력은 사이버보안 분야에서 관심받을 것으로 보인다.\n3. 자체적인 강력한 거부 기능이 줄어든 만큼 보안 연구자들이 취약점 분석이나 침투 테스트 등에",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=214299",
+      "source": "naver",
+      "published": "2026-08-24T18:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "코레일 직원 1만2000명이 '해커' 됐다…철도 사이버보안 실전훈련",
       "summary": "한국철도공사(코레일)는 지난 18일부터 나흘간 임직원을 대상으로 사내 화이트해킹 대회를 진행했다. 참가자는 전체 임직원의 약 40%인 1만2000여 명에 달했다. 대회에는 실제 해킹대회와 보안교육에서 활용되는 CTF(Capture...",
@@ -1966,21 +1978,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-47079",
       "source": "cvefeed",
       "published": "2026-08-21T19:16:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-61400 - Apache CloudStack: Get and Run Diagnostics Command Injection",
-      "summary": "CVE ID :CVE-2026-61400\n  \nPublished : Aug. 21, 2026, 9:16 a.m. | 41 minutes ago\n  \nDescription :Improper Neutralization of Special Elements used in a Command ('Command Injection') vulnerability in Apache CloudStack's run and get diagnostics functionality for the system VMs and virtual routers.\n\nAn authenticated user holding the permissions required to invoke either `getDiagnosticsData` or `runDiagnostics` can achieve arbitrary command execution on the system VM and/or Virtual Router instances, with commands running as root (or as the diagnostics-process user, at minimum). This represents a full compromise of the affected instance and, depending on network segmentation, may provide a foothold for lateral movement within the CloudStack-managed infrastructure, including access to guest network traffic handled by the compromised Virtual Router.\n\n\n\nThe getDiagnosticsData and runDiagnostics APIs are restricted to only Admin role accounts by default.\n\n\nThis issue affects Apache CloudStack: from 4.20.0.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0.\n\nUsers are recommended to upgrade to version 4.20.3.1 or 4.22.1.1 or later, which fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-61400\n  \nPublished : Aug. 21, 2026, 9:16 a.m. | 41 minutes ago\n  \nDescription :Improper Neutralization of Special Elements used in a Command ('Command Injection') vulnerability in Apache CloudStack's run and get diagnostics functionality for the system VMs and virtual routers.\n\nAn authenticated user holding the permissions required to invoke either `getDiagnosticsData` or `runDiagnostics` can achieve arbitrary command execution on the system VM and/or Virtual Router instances, with commands running as root (or as the diagnostics-process user, at minimum). This represents a full compromise of the affected instance and, depending on network segmentation, may provide a foothold for lateral movement within the CloudStack-managed infrastructure, including access to guest network traffic handled by the compromised Virtual Router.\n\n\n\nThe getDiagnosticsData and runDiagnostics APIs are restricted to only Admin role accounts by default.\n\n\nThis issue affects Apache CloudStack: from 4.20.0.0 through 4.20.3.0 and from 4.21.0.0 through 4.22.1.0.\n\nUsers are recommended to upgrade to version 4.20.3.1 or 4.22.1.1 or later, which fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-61400 - Apache CloudStack: 진단 명령 삽입 가져오기 및 실행",
-      "summary_ko": "CVE ID:CVE-2026-61400\n  \n게시일 : 2026년 8월 21일 오전 9시 16분 | 41분 전\n  \n설명: Apache CloudStack의 실행 및 시스템 VM 및 가상 라우터에 대한 진단 기능 가져오기의 명령('명령 주입') 취약점에 사용되는 특수 요소를 부적절하게 무력화합니다.\n\n'getDiagnosticsData' 또는 'runDiagnostics'를 호출하는 데 필요한 권한을 보유한 인증된 사용자는 시스템 VM 및/또는 가상 라우터 인스턴스에서 명령을 루트(또는 최소한 진단 프로세스 사용자)로 실행하여 임의의 명령을 실행할 수 있습니다. 이는 영향을 받는 인스턴스의 전체 손상을 나타내며, 네트워크 세분화에 따라 손상된 가상 라우터가 처리하는 게스트 네트워크 트래픽에 대한 액세스를 포함하여 CloudStack 관리 인프라 내에서 측면 이동을 위한 발판을 제공할 수 있습니다.\n\n\n\ngetDiagnosticsData 및 runDiagnostics API는 기본적으로 관리자 역할 계정으로만 제한됩니다.\n\n\n이 문제는 Apache CloudStack(4.20.0.0~4.20.3.0 및 4.21.0.0~4.22.1.0)에 영향을 미칩니다.\n\n사용자는 문제를 해결하는 버전 4.20.3.1 또는 4.22.1.1 이상으로 업그레이드하는 것이 좋습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-61400\n2. 26.08.21 오후6:16\n3. Improper Neutralization of Special Elements used i",
-      "cve_id": "CVE-2026-61400",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61400",
-      "source": "cvefeed",
-      "published": "2026-08-21T18:16:39+09:00",
       "lang": "en"
     }
   ],
