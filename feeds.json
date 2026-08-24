@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-25T08:02:15.518599+09:00",
+  "fetched_at": "2026-08-25T08:30:59.075999+09:00",
   "security_news": [
+    {
+      "title": "[모닝 리포트] 개인정보 유출에 주목받는 소프트캠프…\"수요는 이제 시...",
+      "summary": "전우빈 밸류파인더 연구원은 \"최근 해킹 사고는 외부 해킹과 내부자 유출이 동시에 부각되고 있어 문서보안(DRM)과 제로트러스트 수요가 지속적으로 증가할 수밖에 없는 환경\"이라며 \"하반기 매출이 집중되는 보안...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 소프트캠프, 문서보안(DRM)·제로트러스트 수요 급증\n2. 외부 해킹 및 내부자 유출 동시 부각\n3. 하반기 매출 집중, 보안 기업 성장 예상",
+      "link": "https://www.newspim.com/news/view/20260825000040",
+      "source": "naver",
+      "published": "2026-08-25T08:17:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "소프트캠프, 개인정보 유출사고 지속에 보안 수요 확대 '수혜'…\"하반기...",
       "summary": "이어 \"외부 해킹과 내부자 유출이 동시에 부각되면서 문서 자체를 암호화하는 DRM과 접속·계정을 상시 검증하는 제로트러스트 수요는 계속 늘어날 수밖에 없는 상황\"이라고 덧붙였다. 아울러 \"9월 시행되는 개정...",
@@ -1260,21 +1272,24 @@
       "source": "naver",
       "published": "2026-08-22T09:16:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "마이크로소프트 엔트라 ID CVSS 10점 결함 실제 악용 확인, 공격자 정보...",
-      "summary": "정체불명의 공격 주체…국가 배후 해킹조직 활동도 계속더 레지스터는 마이크로소프트가 엔트라 ID... 이 결함은 북한과 연계된 해킹조직 라자루스(Lazarus Group)가 “오퍼레이션 드림 잡(Operation Dream Job)...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 마이크로소프트 엔트라 ID CVSS 10점 결함 실제 악용 확인, 공격자 정보...\n2. 정체불명의 공격 주체…국가 배후 해킹조직 활동도 계속더 레지스터는 마이크로소프트가 엔트라 \n3. 이 결함은 북한과 연계된 해킹조직 라자루스(Lazarus Group)가 “오퍼레이션 드림 ",
-      "link": "https://www.wikitree.co.kr/articles/1154068",
-      "source": "naver",
-      "published": "2026-08-22T08:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-53532 - OpenEXR: Unhandled assert abort in HTJ2K decoder via crafted QCD marker (DoS)",
+      "summary": "CVE ID :CVE-2026-53532\n  \nPublished : Aug. 24, 2026, 10:24 p.m. | 48 minutes ago\n  \nDescription :OpenEXR is the reference implementation and specification for the EXR image format, widely used in the motion picture industry. In versions 3.4.0 through 3.4.12, a crafted HTJ2K-compressed EXR file causes an unconditional process abort in any application that calls exr_start_read() on untrusted input, resulting in denial of service. The crash is triggered by a QCD marker whose lower five bits are zero, which OpenEXR passes into the vendored OpenJPH library while constructing the codestream and evaluating its quantization delta parameters. OpenJPH uses an assertion rather than a recoverable error to validate those bits, so any invalid value calls abort() directly and cannot be intercepted by surrounding error handling, a problem compounded by OpenEXR wrapping only its internal HT header parser in error handling while leaving the later codestream read and construction calls unprotected. This issue has been resolved in version 3.4.13.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53532\n  \nPublished : Aug. 24, 2026, 10:24 p.m. | 48 minutes ago\n  \nDescription :OpenEXR is the reference implementation and specification for the EXR image format, widely used in the motion picture industry. In versions 3.4.0 through 3.4.12, a crafted HTJ2K-compressed EXR file causes an unconditional process abort in any application that calls exr_start_read() on untrusted input, resulting in denial of service. The crash is triggered by a QCD marker whose lower five bits are zero, which OpenEXR passes into the vendored OpenJPH library while constructing the codestream and evaluating its quantization delta parameters. OpenJPH uses an assertion rather than a recoverable error to validate those bits, so any invalid value calls abort() directly and cannot be intercepted by surrounding error handling, a problem compounded by OpenEXR wrapping only its internal HT header parser in error handling while leaving the later codestream read and construction calls unprotected. This issue has been resolved in version 3.4.13.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-53532\n2. 26.08.25 오전7:24\n3. OpenEXR is the reference implementation and specif",
+      "cve_id": "CVE-2026-53532",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53532",
+      "source": "cvefeed",
+      "published": "2026-08-25T07:24:02+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-76816 - Netty: MQTT Topic Name and Client ID Validation Bypass",
       "summary": "CVE ID :CVE-2026-76816\n  \nPublished : Aug. 24, 2026, 8:17 p.m. | 54 minutes ago\n  \nDescription :Netty is an asynchronous, event-driven network application framework. Prior to versions 4.1.137.Final and 4.2.17.Final, MqttEncoder does not validate client identifiers, will topics, usernames, and PUBLISH topic names before encoding, allowing prohibited null bytes in MQTT UTF-8 string fields and potentially causing routing, access-control, or identity mismatches in downstream brokers. The vulnerability is exploitable when an application uses Netty's MQTT encoder to construct messages from user-controlled input. This issue is fixed in versions 4.1.137.Final and 4.2.17.Final.\n  \nSeverity: 3.5 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
