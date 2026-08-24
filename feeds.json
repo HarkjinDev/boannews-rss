@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-25T05:31:01.763932+09:00",
+  "fetched_at": "2026-08-25T06:01:04.577372+09:00",
   "security_news": [
+    {
+      "title": "“나도 모르게 계좌가 만들어졌다”…LA 신분도용 확산",
+      "summary": "센티링크 측은 해킹이나 데이터 유출로 확보된 개인정보가 다크웹과 텔레그램 등 온라인 사기 시장에서 거래되고 있으며, 범죄자들이 이를 악용해 금융계좌를 개설하거나 통신 서비스에 가입하고 있다고 설명했다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. LA서 신분도용 확산, 다크웹·텔레그램서 정보 거래\n2. 센티링크, 개인정보로 금융계좌·통신 가입 범죄 적발\n3. 범죄자들, 해킹 정보 악용해 신분 도용 활동 중",
+      "link": "https://www.koreadaily.com/article/20260824134605759",
+      "source": "naver",
+      "published": "2026-08-25T05:46:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[IT리더 열전-보안<종합>] 삼성 vs SK vs KT…'AI' 보안솔루션 고도화 경...",
       "summary": "또한 모의 해킹 등 전문가 그룹 활동을 통해 AI 시스템 안전성을 강화한다. 이를 위해 SK쉴더스의 화이트해커 그룹 EQST(이큐스트)를 중심으로 실제 공격을 가정한 레드팀 서비스를 통해 고객사의 AI 시스템 취약점...",
@@ -1471,6 +1483,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-50661 Windows BitLocker Security Feature Bypass Vulnerability",
+      "summary": "Acknowledgement Updated",
+      "description": "Acknowledgement Updated",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-50661\n2. MSRC\n3. Acknowledgement Updated",
+      "cve_id": "CVE-2026-50661",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50661",
+      "source": "msrc",
+      "published": "2026-08-24T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-47292 Visual Studio Code MSSQL Extension Remote Code Execution Vulnerability",
       "summary": "Affected software updated with new package information.",
       "description": "Affected software updated with new package information.",
@@ -1993,21 +2020,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-76904",
       "source": "cvefeed",
       "published": "2026-08-22T06:17:06+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-77354 - kin-openapi: Uncontrolled resource consumption in openapi3filter deepObject query parameter decoding",
-      "summary": "CVE ID :CVE-2026-77354\n  \nPublished : Aug. 21, 2026, 8:44 p.m. | 25 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.124.0 until 0.142.0, openapi3filter.sliceMapToSlice in openapi3filter/req_resp_decoder.go converts attacker-controlled sparse indexes from a deepObject query parameter into a dense slice by allocating entries from zero through the largest supplied index, after which buildResObj creates another slice of the same length. This allocation occurs before schema validation, so maxItems does not prevent it. An unauthenticated client can send a small query such as param[items][50000000]=x to an endpoint whose deepObject schema contains an array, forcing multi-gigabyte heap allocation and causing an OOM kill or restart loop. Other request-body encodings and styled parameters that do not produce bracketed integer indexes are not affected. This issue is fixed in version 0.142.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-77354\n  \nPublished : Aug. 21, 2026, 8:44 p.m. | 25 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.124.0 until 0.142.0, openapi3filter.sliceMapToSlice in openapi3filter/req_resp_decoder.go converts attacker-controlled sparse indexes from a deepObject query parameter into a dense slice by allocating entries from zero through the largest supplied index, after which buildResObj creates another slice of the same length. This allocation occurs before schema validation, so maxItems does not prevent it. An unauthenticated client can send a small query such as param[items][50000000]=x to an endpoint whose deepObject schema contains an array, forcing multi-gigabyte heap allocation and causing an OOM kill or restart loop. Other request-body encodings and styled parameters that do not produce bracketed integer indexes are not affected. This issue is fixed in version 0.142.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-77354 - kin-openapi: openapi3filter deepObject 쿼리 매개변수 디코딩에서 제어되지 않은 리소스 소비",
-      "summary_ko": "CVE ID:CVE-2026-77354\n  \n게시일 : 2026년 8월 21일 오후 8시 44분 | 25분 전\n  \n설명 :kin-openapi는 OpenAPI 파일을 처리하기 위한 Go 프로젝트입니다. 0.124.0부터 0.142.0까지, openapi3filter/req_resp_decoder.go의 openapi3filter.sliceMapToSlice는 제공된 가장 큰 인덱스를 통해 0부터 항목을 할당하여 deepObject 쿼리 매개변수의 공격자 제어 희소 인덱스를 밀집 슬라이스로 변환한 후 buildResObj가 동일한 길이의 또 다른 슬라이스를 생성합니다. 이 할당은 스키마 유효성 검사 전에 발생하므로 maxItems는 이를 방지하지 않습니다. 인증되지 않은 클라이언트는 deepObject 스키마에 배열이 포함된 엔드포인트에 param[items][50000000]=x와 같은 작은 쿼리를 보내어 수 기가바이트의 힙을 강제로 할당하고 OOM 종료 또는 재시작 루프를 유발할 수 있습니다. 대괄호로 묶인 정수 인덱스를 생성하지 않는 기타 요청 본문 인코딩 및 스타일 매개변수는 영향을 받지 않습니다. 이 문제는 버전 0.142.0에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-77354\n2. 26.08.22 오전5:44\n3. kin-openapi is a Go project for handling OpenAPI f",
-      "cve_id": "CVE-2026-77354",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77354",
-      "source": "cvefeed",
-      "published": "2026-08-22T05:44:47+09:00",
       "lang": "en"
     }
   ],
