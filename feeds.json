@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-24T11:33:14.257573+09:00",
+  "fetched_at": "2026-08-24T12:02:37.757859+09:00",
   "security_news": [
     {
       "title": "티빙 개인정보 유출 제재 임박…1953만명 실체는?",
@@ -1212,18 +1212,6 @@
       "source": "naver",
       "published": "2026-08-21T13:12:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "트럼프, 김정은과 정상회담 원하지만…필요성 못 느끼는 북한",
-      "summary": "사이버 인력을 미국 기업에 원격 근로자로 위장 취업해 임금을 빼돌리거나, 가상화폐 해킹을 통해 자금을 확보하는 방식 등이다. 이런 활동을 통해 수십억 달러 규모의 불법 자금을 조달하며 제재에도 불구하고 정권...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 트럼프, 김정은과 정상회담 원하지만…필요성 못 느끼는 북한 사이버 인력을 미국 기업에 원격\n2. 이런 활동을 통해 수십억 달러 규모의 불법 자금을 조달하며 제재에도 불구하고 정권...",
-      "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260821010007085",
-      "source": "naver",
-      "published": "2026-08-21T11:44:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1945,36 +1933,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-16577",
       "source": "cvefeed",
       "published": "2026-08-21T15:00:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-65645 - Rocket.Chat Insecure DDP Method Schema Validation Information Disclosure",
-      "summary": "CVE ID :CVE-2026-65645\n  \nPublished : Aug. 21, 2026, 2:53 a.m. | 1 hour, 1 minute ago\n  \nDescription :Rocket.Chat in versions before 8.8.0, 8.7.1, 8.6.2, 8.5.3, 8.4.6. 8.3.8, 8.2.8, 8.1.8, and 7.10.15, the Meteor DDP methods getThreadsList and getThreadMessages accept rid / tmid as raw, untyped parameters with no schema validation. A MongoDB operator object (e.g. {\"$gt\": \"4\"}) can be substituted for a string room-id or message-id. The authorization check resolves to a room the attacker already has access to, while the downstream data query fans out across all rooms - disclosing private thread parents and their full reply content to any low-privilege authenticated user.\nThe REST route chat.getThreadsList was patched in v5.0 (HackerOne report #1446767) by adding rid: {type:'string'} AJV validation. The equivalent DDP method was never given the same fix and remains exploitable\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-65645\n  \nPublished : Aug. 21, 2026, 2:53 a.m. | 1 hour, 1 minute ago\n  \nDescription :Rocket.Chat in versions before 8.8.0, 8.7.1, 8.6.2, 8.5.3, 8.4.6. 8.3.8, 8.2.8, 8.1.8, and 7.10.15, the Meteor DDP methods getThreadsList and getThreadMessages accept rid / tmid as raw, untyped parameters with no schema validation. A MongoDB operator object (e.g. {\"$gt\": \"4\"}) can be substituted for a string room-id or message-id. The authorization check resolves to a room the attacker already has access to, while the downstream data query fans out across all rooms - disclosing private thread parents and their full reply content to any low-privilege authenticated user.\nThe REST route chat.getThreadsList was patched in v5.0 (HackerOne report #1446767) by adding rid: {type:'string'} AJV validation. The equivalent DDP method was never given the same fix and remains exploitable\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-65645 - Rocket.Chat 안전하지 않은 DDP 방법 스키마 검증 정보 공개",
-      "summary_ko": "CVE ID:CVE-2026-65645\n  \n게시일 : 2026년 8월 21일 오전 2시 53분 | 1시간, 1분 전\n  \n설명 : 8.8.0, 8.7.1, 8.6.2, 8.5.3, 8.4.6 이전 버전의 Rocket.Chat. 8.3.8, 8.2.8, 8.1.8 및 7.10.15에서 Meteor DDP 메소드 getThreadsList 및 getThreadMessages는 Rid / tmid를 스키마 유효성 검사 없이 형식화되지 않은 원시 매개변수로 허용합니다. MongoDB 연산자 객체(예: {\"$gt\": \"4\"})는 문자열 room-id 또는 message-id로 대체될 수 있습니다. 인증 확인은 공격자가 이미 액세스할 수 있는 공간을 확인하는 반면, 다운스트림 데이터 쿼리는 모든 공간으로 팬아웃되어 비공개 스레드 상위 항목과 해당 응답 내용 전체를 권한이 낮은 인증된 사용자에게 공개합니다.\nREST 경로 chat.getThreadsList는 v5.0(HackerOne 보고서 #1446767)에서rid: {type:'string'} AJV 유효성 검사를 추가하여 패치되었습니다. 동등한 DDP 방법은 동일한 수정이 제공되지 않았으며 여전히 악용 가능합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-65645\n2. 26.08.21 오전11:53\n3. Rocket.Chat in versions before 8.8.0, 8.7.1, 8.6.2",
-      "cve_id": "CVE-2026-65645",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-65645",
-      "source": "cvefeed",
-      "published": "2026-08-21T11:53:43+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Who Got Missed in the MFA Rollout? More Powershell + Graph + Entra scripting!, (Fri, Aug 21st)",
-      "summary": "In every MFA rollout, there will come a time where you think you are closing in on \"done\", and some automation to list what&#;x26;#;39;s left would be handy.  Something quicker than scrolling through the web interface through thousands of accounts ...\r",
-      "description": "In every MFA rollout, there will come a time where you think you are closing in on \"done\", and some automation to list what&#;x26;#;39;s left would be handy.  Something quicker than scrolling through the web interface through thousands of accounts ...\r",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "모든 MFA 롤아웃에는 \"완료\"가 거의 완료되었다고 생각되는 때가 있으며, 남은 항목을 나열하는 일부 자동화가 편리할 것입니다.  수천 개의 계정을 통해 웹 인터페이스를 스크롤하는 것보다 더 빠른 것...",
-      "summary_3lines": "1. Who Got Missed in the MFA Rollout? More Powershell\n2. SANS_ISC\n3. In every MFA rollout, there will come a time where",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33272",
-      "source": "sans_isc",
-      "published": "2026-08-21T11:47:00+09:00",
       "lang": "en"
     }
   ],
