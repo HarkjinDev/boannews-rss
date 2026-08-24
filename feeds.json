@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-25T06:01:04.577372+09:00",
+  "fetched_at": "2026-08-25T06:31:04.183945+09:00",
   "security_news": [
+    {
+      "title": "정보유출 집단소송, 생존 위기 내몰린 중소기업",
+      "summary": "해킹에 취약할 뿐 아니라 사고 수습 역량도 상대적으로 떨어지는 상황에서 막대한 배상 책임을 지기도 버겁기 때문이다. 기업이 상장사일 경우 소액주주도 피해에서 자유롭지 않다. 최근 교육 플랫폼 '패스트캠퍼스'와...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 패스트캠퍼스, 정보유출 집단소송에 생존 위기\n2. 해킹 취약, 사고수습 역량 부족에 막대한 배상 부담\n3. 중소기업, 소액주주 피해까지 발생 가능성",
+      "link": "https://n.news.naver.com/mnews/article/417/0001156242?sid=105",
+      "source": "naver",
+      "published": "2026-08-25T06:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "“나도 모르게 계좌가 만들어졌다”…LA 신분도용 확산",
       "summary": "센티링크 측은 해킹이나 데이터 유출로 확보된 개인정보가 다크웹과 텔레그램 등 온라인 사기 시장에서 거래되고 있으며, 범죄자들이 이를 악용해 금융계좌를 개설하거나 통신 서비스에 가입하고 있다고 설명했다....",
@@ -1260,33 +1272,24 @@
       "source": "naver",
       "published": "2026-08-22T07:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[AI세계속으로]\"고객 데이터 안본다\" vs \"30일 보관\"…오픈AI-앤스로픽 엇...",
-      "summary": "일례로 개별적으로는 직원의 정상적인 질문처럼 보이지만, 여러 대화에서 소프트웨어 취약점과 원격 접속, 보안 탐지 회피 방법 등을 묻는다면 장기적인 해킹 시도의 일부일 수 있다. 알레아 하우즈 오픈AI 제품정책...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 오픈AI, 앤스로픽 고객 데이터 30일 보관 논란\n2. AI 질문 속에 숨겨진 해킹 시도 가능성 제기\n3. 오픈AI, 정책 변경으로 보안 강화 움직임",
-      "link": "https://n.news.naver.com/mnews/article/277/0005805936?sid=105",
-      "source": "naver",
-      "published": "2026-08-22T06:30:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "주요 상급종합병원, 보안체계 취약…예산·인력 부족",
-      "summary": "상급종합병원 5곳 중 1곳은 망분리조차 적용하지 않고 방화벽 등 단순 경계 보안에만 의존하고 있어 해킹 및 랜섬웨어 공격 발생 시 환자정보 유출에 무방비로 노출될 위험이 컸다. 실무진 필요성 절감, 경영진은...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 상급종합병원 20%는 망분리 미적용, 경계 보안만 의존\n2. 해킹·랜섬웨어 공격 시 환자정보 유출 무방비 노출 위험\n3. 예산·인력 부족으로 실무진 필요성 절감, 경영진은 미온적",
-      "link": "https://www.dailymedi.com/news/news_view.php?wr_id=939659",
-      "source": "naver",
-      "published": "2026-08-22T06:18:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-78551 - RansomLook Login Endpoint Allows Timing-Based Username Enumeration and Unthrottled Authentication Attempts",
+      "summary": "CVE ID :CVE-2026-78551\n  \nPublished : Aug. 24, 2026, 7:20 p.m. | 38 minutes ago\n  \nDescription :RansomLook contains multiple weaknesses in its authentication endpoint that allow an unauthenticated remote attacker to enumerate valid usernames, perform unrestricted password-guessing attacks, and potentially exhaust application worker resources.\n\nFor local authentication, the login implementation previously checked whether a submitted username existed before invoking the password hash verification function. Requests containing a nonexistent username therefore returned significantly faster than requests for valid accounts, for which the computationally expensive password verification routine was executed. A remote attacker could measure these response-time differences to determine which usernames correspond to valid RansomLook accounts.\n\nIn addition, the /login endpoint did not restrict the number or frequency of failed authentication attempts. An attacker could consequently perform password brute-force, dictionary, password-spraying, or credential-stuffing attacks against known accounts without server-side throttling. For valid usernames, each authentication attempt also invokes the password key-derivation function, which consumes a significant amount of CPU time. A sufficiently high rate of login attempts could therefore occupy the application's synchronous Gunicorn workers and cause a denial of service affecting the entire application.\n\nThe issue has been addressed by always performing password verification using a randomly generated dummy password hash when the supplied username does not exist, eliminating the username-dependent timing discrepancy. Failed authentication attempts are additionally rate-limited per client IP address using Valkey/Redis, with five failed attempts within five minutes resulting in a one-hour block. The reverse-proxy configuration was also updated so that the application derives the client address from a trusted X-Forwarded-For value that cannot be overridden by a client-supplied header.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-78551\n  \nPublished : Aug. 24, 2026, 7:20 p.m. | 38 minutes ago\n  \nDescription :RansomLook contains multiple weaknesses in its authentication endpoint that allow an unauthenticated remote attacker to enumerate valid usernames, perform unrestricted password-guessing attacks, and potentially exhaust application worker resources.\n\nFor local authentication, the login implementation previously checked whether a submitted username existed before invoking the password hash verification function. Requests containing a nonexistent username therefore returned significantly faster than requests for valid accounts, for which the computationally expensive password verification routine was executed. A remote attacker could measure these response-time differences to determine which usernames correspond to valid RansomLook accounts.\n\nIn addition, the /login endpoint did not restrict the number or frequency of failed authentication attempts. An attacker could consequently perform password brute-force, dictionary, password-spraying, or credential-stuffing attacks against known accounts without server-side throttling. For valid usernames, each authentication attempt also invokes the password key-derivation function, which consumes a significant amount of CPU time. A sufficiently high rate of login attempts could therefore occupy the application's synchronous Gunicorn workers and cause a denial of service affecting the entire application.\n\nThe issue has been addressed by always performing password verification using a randomly generated dummy password hash when the supplied username does not exist, eliminating the username-dependent timing discrepancy. Failed authentication attempts are additionally rate-limited per client IP address using Valkey/Redis, with five failed attempts within five minutes resulting in a one-hour block. The reverse-proxy configuration was also updated so that the application derives the client address from a trusted X-Forwarded-For value that cannot be overridden by a client-supplied header.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-78551\n2. 26.08.25 오전4:20\n3. RansomLook contains multiple weaknesses in its aut",
+      "cve_id": "CVE-2026-78551",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78551",
+      "source": "cvefeed",
+      "published": "2026-08-25T04:20:03+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-76836 - AzuraCast through 0.23.8 Liquidsoap Configuration Write via Profile Edit Serialization Group Bypass",
       "summary": "CVE ID :CVE-2026-76836\n  \nPublished : Aug. 24, 2026, 6:17 p.m. | 50 minutes ago\n  \nDescription :AzuraCast exposes the Liquidsoap custom configuration fields through an endpoint that does not require the permission guarding them. The backend_config property in backend/src/Entity/Station.php is annotated with GROUP_GENERAL, and PUT /api/station/{station_id}/profile/edit in backend/src/Controller/Api/Stations/ProfileEditController.php deserializes with that group while requiring only StationPermissions::Profile. AbstractArrayEntity::fromArray() then assigns every public property with no field-level permission check, so custom_config_top, custom_config, custom_config_pre_playlists, custom_config_pre_live, custom_config_pre_fade and custom_config_bottom are writable through it. ConfigWriter::writeCustomConfigurationSection() emits those values verbatim into the generated Liquidsoap .liq script, where the process.run() and process.exec() built-ins execute operating system commands when the backend restarts, which the built-in sync task triggers automatically once needs_restart is set. The dedicated endpoint for the same data, PUT /api/station/{id}/liquidsoap-config, requires StationPermissions::Broadcasting, so a station manager holding only the profile permission reaches configuration that the intended boundary reserves for broadcasting operators.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2005,21 +2008,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-53530",
       "source": "cvefeed",
       "published": "2026-08-22T06:31:12+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-76904 - GeoTools has unauthenticated SQL injection in the jsonArrayContains filter function against PostGIS layers",
-      "summary": "CVE ID :CVE-2026-76904\n  \nPublished : Aug. 21, 2026, 9:17 p.m. | 40 minutes ago\n  \nDescription :GeoTools is an open source Java library that provides tools for geospatial data. Starting in version 30.5 and prior to versions 33.6, 34.5, and 33.6, an SQL Injection Vulnerability is present when executing OGC Filters with PostGIS DataStore implementation: `jsonArrayContains` function; Requires PostGIS 12 or greater with a String or JSON field. For PostGIS 12 and greater `jsonArrayContains(, , )` function writes `` into generated SQL without escaping. Patches are available in versions 33.6, 34.5, and 33.6. No known workaround is available. To limit scope of SQL Injection the PostGIS connection pool should be configured with limited rights.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-76904\n  \nPublished : Aug. 21, 2026, 9:17 p.m. | 40 minutes ago\n  \nDescription :GeoTools is an open source Java library that provides tools for geospatial data. Starting in version 30.5 and prior to versions 33.6, 34.5, and 33.6, an SQL Injection Vulnerability is present when executing OGC Filters with PostGIS DataStore implementation: `jsonArrayContains` function; Requires PostGIS 12 or greater with a String or JSON field. For PostGIS 12 and greater `jsonArrayContains(, , )` function writes `` into generated SQL without escaping. Patches are available in versions 33.6, 34.5, and 33.6. No known workaround is available. To limit scope of SQL Injection the PostGIS connection pool should be configured with limited rights.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-76904 - GeoTools의 PostGIS 레이어에 대한 jsonArrayContains 필터 함수에 인증되지 않은 SQL 삽입이 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-76904\n  \n게시일 : 2026년 8월 21일 오후 9시 17분 | 40분 전\n  \n설명 :GeoTools는 지리공간 데이터용 도구를 제공하는 오픈 소스 Java 라이브러리입니다. 버전 30.5부터 버전 33.6, 34.5, 33.6 이전에는 PostGIS DataStore 구현으로 OGC 필터를 실행할 때 SQL 주입 취약점이 존재합니다. `jsonArrayContains` 함수; 문자열 또는 JSON 필드가 있는 PostGIS 12 이상이 필요합니다. PostGIS 12 이상의 경우 `jsonArrayContains(, , )` 함수는 이스케이프 없이 생성된 SQL에 ``를 씁니다. 패치는 버전 33.6, 34.5 및 33.6에서 사용할 수 있습니다. 알려진 해결 방법은 없습니다. SQL 주입 범위를 제한하려면 PostGIS 연결 풀을 제한된 권한으로 구성해야 합니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-76904\n2. 26.08.22 오전6:17\n3. GeoTools is an open source Java library that provi",
-      "cve_id": "CVE-2026-76904",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76904",
-      "source": "cvefeed",
-      "published": "2026-08-22T06:17:06+09:00",
       "lang": "en"
     }
   ],
