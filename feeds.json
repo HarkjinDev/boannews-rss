@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-25T00:31:08.046129+09:00",
+  "fetched_at": "2026-08-25T01:01:13.401620+09:00",
   "security_news": [
     {
       "title": "미 보안업체 “북한 위장취업 IT 인력 급여, 제재 대상 군수업체 계좌로...",
@@ -12,6 +12,18 @@
       "source": "naver",
       "published": "2026-08-25T00:15:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Tricky 'SynkLoader' Multitool May Herald Ransomware",
+      "summary": "An advanced, multilingual malware family brings back a trick from yesteryear — screen hijacking — for effective password theft, along with a slew of novel features.",
+      "content": "",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. SynkLoader 멀웨어, 화면 탈취로 비밀번호 탈취 시도\n2. 다양한 언어 지원, 화면 캡처 및 정보 탈취 기능 보유\n3. 랜섬웨어 사전 준비 악성코드, 주의 필요",
+      "link": "https://www.darkreading.com/threat-intelligence/tricky-synkloader-multitool-ransomware",
+      "source": "darkreading",
+      "published": "2026-08-25T00:02:32+09:00",
+      "lang": "en"
     },
     {
       "title": "[이슈+] Term Finance서 13억엔 이상 유출...\"코드가 아니라 표를 뚫렸다...",
@@ -1272,18 +1284,6 @@
       "source": "naver",
       "published": "2026-08-22T01:52:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "마이크로소프트 코파일럿, 캐물었더니 스스로 취약점 실토…링크만 열...",
-      "summary": "캐물을수록 스스로 드러난 내부 구조Varonis 연구진은 처음부터 코파일럿을 해킹하려 한 게 아니었다.... 연구진은 이 방식을 ‘메타 해킹(meta-hacking)’이라고 불렀다. 코드를 역설계할 필요 없이 AI 자신의 설명을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 마이크로소프트 코파일럿, Varonis 연구진의 '메타 해킹'에 취약점 노출\n2. AI가 스스로 자신의 내부 구조 설명하며 취약점 드러남\n3. 링크 클릭만으로도 취약점 악용 가능성 시사",
-      "link": "https://www.wikitree.co.kr/articles/1154017",
-      "source": "naver",
-      "published": "2026-08-22T00:48:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1375,6 +1375,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65787",
       "source": "msrc",
       "published": "2026-08-24T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-78386 - Unauthenticated Disclosure of Scraping Credentials and Bypass Configuration via RansomLook API",
+      "summary": "CVE ID :CVE-2026-78386\n  \nPublished : Aug. 24, 2026, 1:55 p.m. | 22 minutes ago\n  \nDescription :RansomLook exposed sensitive operator-side scraping configuration through multiple unauthenticated API responses. Location records associated with ransomware groups and markets were returned largely verbatim to unauthenticated callers whenever the location itself was not marked as private.\n\n\nThese records could contain internal fields such as header, which may include authentication headers, session cookies, or other credentials used to access monitored websites; init_script, which may contain logic used to bypass CAPTCHA, anti-bot protections, or paywalls; and browser, which discloses details about the scraping environment.\n\n\nAn unauthenticated remote attacker could query the affected API endpoints and obtain these values. Leaked authentication material could potentially be replayed against the monitored service, while disclosure of scraping and bypass logic could allow site operators or other attackers to identify and defeat RansomLook's collection mechanisms.\n\n\nThe patch introduces an explicit allowlist of fields permitted in public location records and strips all operator-side fields before returning data to unauthenticated users.\n\n\nThe accompanying change from  to  appears to be a functional correction allowing legitimate post titles containing / and does not, based on this patch alone, represent the security issue.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-78386\n  \nPublished : Aug. 24, 2026, 1:55 p.m. | 22 minutes ago\n  \nDescription :RansomLook exposed sensitive operator-side scraping configuration through multiple unauthenticated API responses. Location records associated with ransomware groups and markets were returned largely verbatim to unauthenticated callers whenever the location itself was not marked as private.\n\n\nThese records could contain internal fields such as header, which may include authentication headers, session cookies, or other credentials used to access monitored websites; init_script, which may contain logic used to bypass CAPTCHA, anti-bot protections, or paywalls; and browser, which discloses details about the scraping environment.\n\n\nAn unauthenticated remote attacker could query the affected API endpoints and obtain these values. Leaked authentication material could potentially be replayed against the monitored service, while disclosure of scraping and bypass logic could allow site operators or other attackers to identify and defeat RansomLook's collection mechanisms.\n\n\nThe patch introduces an explicit allowlist of fields permitted in public location records and strips all operator-side fields before returning data to unauthenticated users.\n\n\nThe accompanying change from  to  appears to be a functional correction allowing legitimate post titles containing / and does not, based on this patch alone, represent the security issue.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-78386 - RansomLook API를 통한 스크래핑 자격 증명 및 우회 구성의 인증되지 않은 공개",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-78386\n2. 26.08.24 오후10:55\n3. RansomLook exposed sensitive operator-side scrapin",
+      "cve_id": "CVE-2026-78386",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78386",
+      "source": "cvefeed",
+      "published": "2026-08-24T22:55:57+09:00",
       "lang": "en"
     },
     {
