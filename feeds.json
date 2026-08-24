@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-24T23:30:54.787920+09:00",
+  "fetched_at": "2026-08-25T00:01:10.727982+09:00",
   "security_news": [
+    {
+      "title": "[이슈+] Term Finance서 13억엔 이상 유출...\"코드가 아니라 표를 뚫렸다...",
+      "summary": "텀랩스가 해킹 관련해서 발표한 공지 탈중앙화 금융(디파이) 프로토콜을 운영하는 텀랩스(Term Labs)가 거버넌스 기능을 노린 공격을 받았다. 회사는 23일 자사 'Term Finance'의 볼트(자산운용 풀)가 영향을 받았다고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 텀랩스 'Term Finance'서 13억엔 이상 유출\n2. 거버넌스 기능 노린 공격, 자산운용 풀(볼트) 노려\n3. 텀랩스, 피해 확인 후 공지... 추후 조치 예정",
+      "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=357838",
+      "source": "naver",
+      "published": "2026-08-24T23:56:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "WordlistLoader Delivers Amatera via ClickFix, SynkLoader Phishes Windows Passwords",
       "summary": "Cybersecurity researchers have flagged two new malware families called  WordlistLoader and SynkLoader that's used to deliver next-stage payloads and likely sell access to ransomware groups.\n\nAccording to findings from Gen Digital, WordlistLoader is being used to deliver Amatera Stealer (aka ACR Stealer or AcridRain Stealer) via ClearFake campaigns, which employ the ClickFix (aka FakeCaptcha)",
@@ -1264,6 +1276,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-65787 Desktop Window Manager Elevation of Privilege Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-65787\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-65787",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65787",
+      "source": "msrc",
+      "published": "2026-08-24T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-10618 - Hugo 0.93.0 through 0.165.0 Stored Cross-Site Scripting via Unescaped Code-Fence Attribute Values",
       "summary": "CVE ID :CVE-2026-10618\n  \nPublished : Aug. 24, 2026, 10:29 a.m. | 38 minutes ago\n  \nDescription :Hugo's default fenced-code-block renderer writes attribute values taken from the code-fence info string into the rendered HTML without escaping them. New in markup/internal/attributes/attributes.go converts every attribute value from a byte slice to a string as it is stored, deliberately dropping the escaping that used to happen there, and RenderAttributes in the same file escapes only values that are still byte slices, so its escaping branch is never reached and every value is written verbatim. The function's documentation states that it performs HTML escaping of string attributes, which it does not. A quote inside an attribute value in the info string therefore terminates the attribute and allows a further attribute, including an event handler, to be placed on the wrapper element, and the script runs for every visitor who loads the page. This path is reached under the default configuration, with code fences enabled and without goldmark's unsafe setting or any custom render hook. Attribute names beginning with on are filtered when the attributes are parsed, so injection is achieved through the value rather than the name.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-10618\n  \nPublished : Aug. 24, 2026, 10:29 a.m. | 38 minutes ago\n  \nDescription :Hugo's default fenced-code-block renderer writes attribute values taken from the code-fence info string into the rendered HTML without escaping them. New in markup/internal/attributes/attributes.go converts every attribute value from a byte slice to a string as it is stored, deliberately dropping the escaping that used to happen there, and RenderAttributes in the same file escapes only values that are still byte slices, so its escaping branch is never reached and every value is written verbatim. The function's documentation states that it performs HTML escaping of string attributes, which it does not. A quote inside an attribute value in the info string therefore terminates the attribute and allows a further attribute, including an event handler, to be placed on the wrapper element, and the script runs for every visitor who loads the page. This path is reached under the default configuration, with code fences enabled and without goldmark's unsafe setting or any custom render hook. Attribute names beginning with on are filtered when the attributes are parsed, so injection is achieved through the value rather than the name.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -1846,21 +1873,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-77815",
       "source": "cvefeed",
       "published": "2026-08-22T00:03:09+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-62313 - Incus: Project restriction `restricted.containers.privilege=isolated` bypassable by omitting `security.idmap.isolated`",
-      "summary": "CVE ID :CVE-2026-62313\n  \nPublished : Aug. 21, 2026, 2:44 p.m. | 43 minutes ago\n  \nDescription :Incus is a system container and virtual machine manager. Prior to version 7.3.0, project-level enforcement of `restricted.containers.privilege=isolated` can be trivially bypassed, allowing a user to create a non-isolated (shared host idmap) container in a project that is configured to forbid them. The restriction only rejects an explicitly set `security.idmap.isolated=false` (or empty) and fails to enforce anything when the key is omitted entirely. Because an unset `security.idmap.isolated` defaults to `false` (non-isolation), a user simply leaves the key out and obtains exactly the container state the restriction is meant to forbid. This defeats the tenant-isolation guarantee the restriction exists to provide. Containers in the project share the host uid/gid map instead of receiving unique, non-overlapping ranges, weakening the isolation boundary between co-tenant containers and the host. Version 7.3.0 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-62313\n  \nPublished : Aug. 21, 2026, 2:44 p.m. | 43 minutes ago\n  \nDescription :Incus is a system container and virtual machine manager. Prior to version 7.3.0, project-level enforcement of `restricted.containers.privilege=isolated` can be trivially bypassed, allowing a user to create a non-isolated (shared host idmap) container in a project that is configured to forbid them. The restriction only rejects an explicitly set `security.idmap.isolated=false` (or empty) and fails to enforce anything when the key is omitted entirely. Because an unset `security.idmap.isolated` defaults to `false` (non-isolation), a user simply leaves the key out and obtains exactly the container state the restriction is meant to forbid. This defeats the tenant-isolation guarantee the restriction exists to provide. Containers in the project share the host uid/gid map instead of receiving unique, non-overlapping ranges, weakening the isolation boundary between co-tenant containers and the host. Version 7.3.0 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-62313 - Incus: `security.idmap.isolation`을 생략하여 프로젝트 제한 `restricted.containers.privilege=isolation`을 우회할 수 있음",
-      "summary_ko": "CVE ID:CVE-2026-62313\n  \n게시일 : 2026년 8월 21일 오후 2시 44분 | 43분 전\n  \n설명:Incus는 시스템 컨테이너이자 가상 머신 관리자입니다. 버전 7.3.0 이전에는 `restricted.containers.privilege=isolation`의 프로젝트 수준 적용을 간단하게 우회할 수 있어 사용자가 이를 금지하도록 구성된 프로젝트에서 격리되지 않은(공유 호스트 idmap) 컨테이너를 생성할 수 있었습니다. 이 제한은 명시적으로 설정된 `security.idmap.isolation=false`(또는 비어 있음)만 거부하고 키가 완전히 생략되면 아무 것도 적용하지 않습니다. 설정되지 않은 'security.idmap.isolation'의 기본값은 'false'(비격리)이므로 사용자는 간단히 키를 생략하고 제한이 금지하는 컨테이너 상태를 정확히 얻을 수 있습니다. 이는 제한 사항이 제공하는 세입자 격리 보장을 무효화합니다. 프로젝트의 컨테이너는 고유하고 겹치지 않는 범위를 수신하는 대신 호스트 uid/gid 맵을 공유하여 공동 테넌트 컨테이너와 호스트 간의 격리 경계를 약화시킵니다. 버전 7.3.0에서는 문제가 패치되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-62313\n2. 26.08.21 오후11:44\n3. Incus is a system container and virtual machine ma",
-      "cve_id": "CVE-2026-62313",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62313",
-      "source": "cvefeed",
-      "published": "2026-08-21T23:44:27+09:00",
       "lang": "en"
     }
   ],
