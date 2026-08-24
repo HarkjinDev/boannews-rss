@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-25T01:30:51.868176+09:00",
+  "fetched_at": "2026-08-25T02:01:00.628374+09:00",
   "security_news": [
     {
       "title": "미 보안업체 “북한 위장취업 IT 인력 급여, 제재 대상 군수업체 계좌로...",
@@ -1272,21 +1272,24 @@
       "source": "naver",
       "published": "2026-08-22T02:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "사회보장번호 노출, 아폴로 클라우드 침해 확인",
-      "summary": "본지는 앞서 아폴로 데이터 유출 보도와 금융권 해킹 확산 흐름을 전한 바 있다. 이번 내용은 유출 통지와 무단 접근 기간, 노출 가능 정보가 추가로 확인된 사안이다. 대형 운용사는 고객 자금뿐 아니라 신원...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 아폴로 클라우드, 고객 신원 정보 대량 유출 확인\n2. 사회보장번호 등 민감 정보 노출 가능성 확인\n3. 고객에게 유출 사실 통지 및 무단 접근 기간 확인",
-      "link": "https://www.tokenpost.kr/news/cryptocurrency/395280",
-      "source": "naver",
-      "published": "2026-08-22T01:52:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-9728 - TOCTOU race in mbox_send syscall verifier allows userspace to leak kernel memory",
+      "summary": "CVE ID :CVE-2026-9728\n  \nPublished : Aug. 24, 2026, 2:28 p.m. | 43 minutes ago\n  \nDescription :The userspace syscall verifier z_vrfy_mbox_send() in drivers/mbox/mbox_handlers.c validated the nested msg->data/msg->size fields by reading them directly out of live userspace memory, and then forwarded the original, still-mutable userspace struct mbox_msg * pointer to z_impl_mbox_send() and the underlying driver. Between the access check and the driver's use of msg->data, the validated pointer could be replaced, leaving a time-of-check/time-of-use window.\n\nOn a system built with CONFIG_USERSPACE, any unprivileged userspace thread may invoke the mbox_send() system call. A second thread sharing the caller's address space can race to overwrite msg->data with a supervisor (kernel) address after the verifier's bounds check has passed but before the driver dereferences it. The driver then reads from the attacker-chosen address in supervisor context (for example memcpy(&data32, msg->data, msg->size) in the NXP mailbox driver, whose bytes are subsequently emitted to the peer mailbox endpoint).\n\nThe impact is a userspace-to-supervisor access-control bypass: disclosure of kernel memory contents (high confidentiality impact), or, for an invalid/unmapped target address, a faulting kernel read causing denial of service. The fix snapshots the entire struct mbox_msg into a kernel-stack copy with k_usermode_from_copy() and validates and forwards that immutable copy, closing the race.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-9728\n  \nPublished : Aug. 24, 2026, 2:28 p.m. | 43 minutes ago\n  \nDescription :The userspace syscall verifier z_vrfy_mbox_send() in drivers/mbox/mbox_handlers.c validated the nested msg->data/msg->size fields by reading them directly out of live userspace memory, and then forwarded the original, still-mutable userspace struct mbox_msg * pointer to z_impl_mbox_send() and the underlying driver. Between the access check and the driver's use of msg->data, the validated pointer could be replaced, leaving a time-of-check/time-of-use window.\n\nOn a system built with CONFIG_USERSPACE, any unprivileged userspace thread may invoke the mbox_send() system call. A second thread sharing the caller's address space can race to overwrite msg->data with a supervisor (kernel) address after the verifier's bounds check has passed but before the driver dereferences it. The driver then reads from the attacker-chosen address in supervisor context (for example memcpy(&data32, msg->data, msg->size) in the NXP mailbox driver, whose bytes are subsequently emitted to the peer mailbox endpoint).\n\nThe impact is a userspace-to-supervisor access-control bypass: disclosure of kernel memory contents (high confidentiality impact), or, for an invalid/unmapped target address, a faulting kernel read causing denial of service. The fix snapshots the entire struct mbox_msg into a kernel-stack copy with k_usermode_from_copy() and validates and forwards that immutable copy, closing the race.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-9728\n2. 26.08.24 오후11:28\n3. The userspace syscall verifier z_vrfy_mbox_send() ",
+      "cve_id": "CVE-2026-9728",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9728",
+      "source": "cvefeed",
+      "published": "2026-08-24T23:28:46+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-78385 - RansomLook Analysis PDF Generation Allows Server-Side Request Forgery and Arbitrary Local File Access",
       "summary": "CVE ID :CVE-2026-78385\n  \nPublished : Aug. 24, 2026, 2:17 p.m. | 16 minutes ago\n  \nDescription :RansomLook contains insufficient resource validation in the analysis PDF generation functionality. Analysis documents are converted from Markdown to HTML and passed to WeasyPrint for PDF rendering. Prior to the fix, WeasyPrint used its default URL fetcher, allowing resource references contained in an analysis to be resolved without restrictions.\n\nAn authenticated attacker able to create or modify an analysis could embed crafted resource references using schemes such as file:// or http://. When the analysis was subsequently rendered as PDF, WeasyPrint would process these references with the privileges and network access of the RansomLook server.\n\nA malicious file:// reference could cause the renderer to access arbitrary files readable by the RansomLook process, potentially exposing sensitive configuration, credentials, or other local data through rendered resources. Network URLs could cause the server to initiate requests to localhost, internal network services, or external systems, resulting in server-side request forgery (SSRF) and potentially bypassing network-level access restrictions.\n\nThe patch introduces a dedicated WeasyPrint URL fetcher that permits only data: resources, the RansomLook report logo, and files contained within the analysis asset directory. Network resources and filesystem paths outside these explicitly permitted locations are rejected.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -1930,21 +1933,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-74580",
       "source": "cvefeed",
       "published": "2026-08-22T02:16:44+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-74583 - net/sched: cls_route: fix fastmap use-after-free on filter",
-      "summary": "CVE ID :CVE-2026-74583\n  \nPublished : Aug. 21, 2026, 4:31 p.m. | 38 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: cls_route: fix fastmap use-after-free on filter\n\nThe route4 classifier maintains a 16-slot fastmap cache that stores raw\nstruct route4_filter pointers indexed by (id, iif). The reader\n(route4_classify) populates this cache via route4_set_fastmap() for every\nclassified packet that hits a filter. The writer (route4_delete,\nroute4_change) clears the cache via route4_reset_fastmap() before\nRCU-deferred kfree of the filter.\n\nThis creates a UAF race:\n 1. Reader walks the RCU-protected bucket chain, finds filter f\n 2. Writer unlinks f, calls route4_reset_fastmap(), then tcf_queue_work()\n 3. Reader calls route4_set_fastmap() and writes f into the cache\n    *after* the writer's reset, caching a pointer about to be freed\n 4. After the RCU grace period, kfree(f) executes\n 5. Next classified packet on the same (id, iif) tuple hits the stale\n    fastmap entry and reads f->res from freed memory\n\nReproduced with an mdelay(100) accelerator in route4_set_fastmap() and a\nconcurrent add/delete stress test (provided by both zdi and Santosh).\nBoth triggered KASAN slab-use-after-free reports in the route4 fastmap\npaths.\n\nFix:\nIntroduce a per-filter boolean dying flag to suppress stale fastmap\nrepublishing by in-flight readers.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-74583\n  \nPublished : Aug. 21, 2026, 4:31 p.m. | 38 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: cls_route: fix fastmap use-after-free on filter\n\nThe route4 classifier maintains a 16-slot fastmap cache that stores raw\nstruct route4_filter pointers indexed by (id, iif). The reader\n(route4_classify) populates this cache via route4_set_fastmap() for every\nclassified packet that hits a filter. The writer (route4_delete,\nroute4_change) clears the cache via route4_reset_fastmap() before\nRCU-deferred kfree of the filter.\n\nThis creates a UAF race:\n 1. Reader walks the RCU-protected bucket chain, finds filter f\n 2. Writer unlinks f, calls route4_reset_fastmap(), then tcf_queue_work()\n 3. Reader calls route4_set_fastmap() and writes f into the cache\n    *after* the writer's reset, caching a pointer about to be freed\n 4. After the RCU grace period, kfree(f) executes\n 5. Next classified packet on the same (id, iif) tuple hits the stale\n    fastmap entry and reads f->res from freed memory\n\nReproduced with an mdelay(100) accelerator in route4_set_fastmap() and a\nconcurrent add/delete stress test (provided by both zdi and Santosh).\nBoth triggered KASAN slab-use-after-free reports in the route4 fastmap\npaths.\n\nFix:\nIntroduce a per-filter boolean dying flag to suppress stale fastmap\nrepublishing by in-flight readers.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-74583 - net/sched: cls_route: 필터에서 fastmap use-after-free 수정",
-      "summary_ko": "CVE ID:CVE-2026-74583\n  \n게시일 : 2026년 8월 21일 오후 4시 31분 | 38분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nnet/sched: cls_route: 필터에서 fastmap use-after-free 수정\n\nRoute4 분류자는 원시를 저장하는 16슬롯 패스트맵 캐시를 유지합니다.\n(id, iif)로 인덱싱된 struct Route4_filter 포인터. 독자\n(route4_classify)는 모든 경우에 대해 Route4_set_fastmap()을 통해 이 캐시를 채웁니다.\n필터에 부딪히는 분류된 패킷입니다. 작성자(route4_delete,\nRoute4_change)는 이전에 Route4_reset_fastmap()을 통해 캐시를 지웁니다.\n필터의 RCU 지연 kfree입니다.\n\n그러면 UAF 경주가 생성됩니다.\n 1. 리더는 RCU로 보호되는 버킷 체인을 탐색하여 필터 f를 찾습니다.\n 2. 작성자는 f의 링크를 해제하고, Route4_reset_fastmap()을 호출한 다음, tcf_queue_work()를 호출합니다.\n 3. 리더는 Route4_set_fastmap()을 호출하고 f를 캐시에 씁니다.\n    *후에* 작성자가 재설정되고, 곧 해제될 포인터를 캐싱합니다.\n 4. RCU 유예 기간 후에 kfree(f)가 실행됩니다.\n 5. 동일한 (id, iif) 튜플의 다음 분류된 패킷이 오래된 패킷에 도달합니다.\n    fastmap 항목을 입력하고 해제된 메모리에서 f->res를 읽습니다.\n\nRoute4_set_fastmap()의 mdelay(100) 가속기와\n동시 추가/삭제 스트레스 테스트(zdi와 Santosh 모두에서 제공)\n두 가지 모두 Route4 fastmap에서 KASAN slab-use-after-free 보고서를 실행했습니다.\n경로.\n\n수정:\n오래된 패스트맵을 억제하기 위해 필터별 부울 죽어가는 플래그를 도입합니다.\n기내 독자에 의해 재출간됩니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-74583\n2. 26.08.22 오전1:31\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-74583",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-74583",
-      "source": "cvefeed",
-      "published": "2026-08-22T01:31:55+09:00",
       "lang": "en"
     }
   ],
