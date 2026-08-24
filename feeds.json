@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-25T07:31:03.386924+09:00",
+  "fetched_at": "2026-08-25T08:02:15.518599+09:00",
   "security_news": [
+    {
+      "title": "소프트캠프, 개인정보 유출사고 지속에 보안 수요 확대 '수혜'…\"하반기...",
+      "summary": "이어 \"외부 해킹과 내부자 유출이 동시에 부각되면서 문서 자체를 암호화하는 DRM과 접속·계정을 상시 검증하는 제로트러스트 수요는 계속 늘어날 수밖에 없는 상황\"이라고 덧붙였다. 아울러 \"9월 시행되는 개정...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 소프트캠프, 개인정보 유출 사고 지속으로 보안 수요 확대\n2. 외부 해킹 및 내부자 유출 동시 부각, DRM 및 제로트러스트 수요 증가\n3. 9월 개정 시행령 포함, 보안 강화 정책에 따른 수혜 예상",
+      "link": "http://www.newsprime.co.kr/news/article.html?no=744946",
+      "source": "naver",
+      "published": "2026-08-25T07:40:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "고려아연 '보안 치트키' 전격 도입…美 지스케일러 손잡고 랜섬웨어 완...",
+      "summary": "특히 지스케일러 ZIA를 글로벌 사이버보안 기업 크라우드스트라이크(CrowdStrike)의 엔드포인트 탐지·대응(EDR) 및 마이크로소프트 센티넬 등과 연동해, 엔드포인트에서 감지된 위협이 네트워크 진입 단계에서 실시간...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 고려아연 '보안 치트키' 전격 도입…美 지스케일러 손잡고 랜섬웨어 완...\n2. 특히 지스케일러 ZIA를 글로벌 사이버보안 기업 크라우드스트라이크(CrowdStrike)의",
+      "link": "https://www.theguru.co.kr/news/article.html?no=106184",
+      "source": "naver",
+      "published": "2026-08-25T07:32:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "보안기업까지 시총 잣대…사이버안보는 누가 지키나",
       "summary": "북한 연계 국가배후 해킹조직이 AI를 사이버 작전 과정에 활용한 정황도 속속 나온다. 이런 상황에서... 우리나라에서 해킹의 무서움을 알린 사건은 2003년 1.25 인터넷 대란이다. 2003년 1월 25일, 토요일인 이날 오후...",
@@ -1248,18 +1272,6 @@
       "source": "naver",
       "published": "2026-08-22T08:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "케어클라우드 해킹 피해자 34만→376만명, 5개월 만에 10배로 불어났다",
-      "summary": "미국 헬스케어 기술 기업 케어클라우드(CareCloud)가 올해 초 발생한 해킹 사고로 376만여 명의 개인정보가 유출됐다고 확인했다. 전자의무기록(EHR)과 의료 청구·진료관리 서비스를 제공하는 이 회사는 지난 3월 미국...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 케어클라우드, 376만명 개인정보 유출 확인\n2. EHR, 청구·진료관리 서비스 대상 해킹 발생\n3. 5개월 만에 피해자 10배 증가, 34만→376만명",
-      "link": "https://www.wikitree.co.kr/articles/1154065",
-      "source": "naver",
-      "published": "2026-08-22T07:44:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1966,36 +1978,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-75027",
       "source": "cvefeed",
       "published": "2026-08-22T13:18:15+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53541 - OliveTin has Unvalidated `ot_`-prefixed Arguments that Bypass Input Filtering",
-      "summary": "CVE ID :CVE-2026-53541\n  \nPublished : Aug. 21, 2026, 10:51 p.m. | 18 minutes ago\n  \nDescription :OliveTin gives access to predefined shell commands from a web interface. The `filterToDefinedArgumentsOnly` function in the executor is intended to discard any arguments not explicitly defined in the action's configuration. However, prior to commit ebffd9f040f791208aee1db2e5a8aecd1e3e603d, a special case allows any argument whose name starts with `ot_` to bypass this filter. While two system arguments (`ot_executionTrackingId` and `ot_username`) are injected by OliveTin and overridden, all other `ot_`-prefixed arguments supplied by the user pass through unmodified. These bypassed arguments are not type-checked — the validation loop only iterates over the action's defined arguments, so `ot_`-prefixed arguments skip all type safety checks entirely; set as environment variables — via `buildEnv()`, with completely unvalidated values, and passed to the executed command; and included in the template context — available as `.Arguments.ot_*` in template rendering. Commit ebffd9f040f791208aee1db2e5a8aecd1e3e603d contains a patch.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53541\n  \nPublished : Aug. 21, 2026, 10:51 p.m. | 18 minutes ago\n  \nDescription :OliveTin gives access to predefined shell commands from a web interface. The `filterToDefinedArgumentsOnly` function in the executor is intended to discard any arguments not explicitly defined in the action's configuration. However, prior to commit ebffd9f040f791208aee1db2e5a8aecd1e3e603d, a special case allows any argument whose name starts with `ot_` to bypass this filter. While two system arguments (`ot_executionTrackingId` and `ot_username`) are injected by OliveTin and overridden, all other `ot_`-prefixed arguments supplied by the user pass through unmodified. These bypassed arguments are not type-checked — the validation loop only iterates over the action's defined arguments, so `ot_`-prefixed arguments skip all type safety checks entirely; set as environment variables — via `buildEnv()`, with completely unvalidated values, and passed to the executed command; and included in the template context — available as `.Arguments.ot_*` in template rendering. Commit ebffd9f040f791208aee1db2e5a8aecd1e3e603d contains a patch.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-53541\n  \n게시일 : 2026년 8월 21일 오후 10시 51분 | 18분 전\n  \n설명 :OliveTin은 웹 인터페이스에서 미리 정의된 쉘 명령에 대한 액세스를 제공합니다. 실행기의 `filterToDefinedArgumentsOnly` 함수는 작업 구성에 명시적으로 정의되지 않은 모든 인수를 삭제하기 위한 것입니다. 그러나 ebffd9f040f791208aee1db2e5a8aecd1e3e603d를 커밋하기 전에 특수한 경우 이름이 `ot_`로 시작하는 모든 인수가 이 필터를 우회하도록 허용합니다. 두 개의 시스템 인수(`ot_executionTrackingId` 및 `ot_username`)가 OliveTin에 의해 주입되고 재정의되는 반면, 사용자가 제공하는 다른 모든 `ot_` 접두사 인수는 수정되지 않은 채로 전달됩니다. 이러한 우회된 인수는 유형 검사되지 않습니다. 유효성 검사 루프는 작업에 정의된 인수에 대해서만 반복하므로 'ot_' 접두사가 붙은 인수는 모든 유형 안전 검사를 완전히 건너뜁니다. 완전히 검증되지 않은 값으로 `buildEnv()`를 통해 환경 변수로 설정되고 실행된 명령에 전달됩니다. 그리고 템플릿 컨텍스트에 포함됩니다 — 템플릿 렌더링에서 `.Arguments.ot_*`로 사용 가능합니다. 커밋 ebffd9f040f791208aee1db2e5a8aecd1e3e603d에는 패치가 포함되어 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53541\n2. 26.08.22 오전7:51\n3. OliveTin gives access to predefined shell commands",
-      "cve_id": "CVE-2026-53541",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53541",
-      "source": "cvefeed",
-      "published": "2026-08-22T07:51:52+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-48105 - Arc Enterprise cluster FSM applyRegisterFile accepts arbitrary file paths without validation, enabling cluster-wide path-traversal worm primitive",
-      "summary": "CVE ID :CVE-2026-48105\n  \nPublished : Aug. 21, 2026, 10:47 p.m. | 23 minutes ago\n  \nDescription :Arc is an open, SQL-native time-series database for telemetry. Prior to version 26.06.1, Arc Enterprise's Raft FSM (`internal/cluster/raft/fsm.go:applyRegisterFile`) accepts attacker-chosen file paths in manifest-registration proposals without validating them against the configured storage backend. The only check is that the path is non-empty. There is no parent-traversal (`..`) rejection, no allowlist of legitimate prefixes, no scheme restriction (`s3://` vs local), and no length bound. This is fixed in 2026.06.1. Some workarounds are available. Restrict cluster network access to known-trusted peers via strict firewall rules, audit the cluster manifest for unexpected paths (any path not matching the configured storage backend root is suspect), and/or disable cluster mode until the fix is available.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-48105\n  \nPublished : Aug. 21, 2026, 10:47 p.m. | 23 minutes ago\n  \nDescription :Arc is an open, SQL-native time-series database for telemetry. Prior to version 26.06.1, Arc Enterprise's Raft FSM (`internal/cluster/raft/fsm.go:applyRegisterFile`) accepts attacker-chosen file paths in manifest-registration proposals without validating them against the configured storage backend. The only check is that the path is non-empty. There is no parent-traversal (`..`) rejection, no allowlist of legitimate prefixes, no scheme restriction (`s3://` vs local), and no length bound. This is fixed in 2026.06.1. Some workarounds are available. Restrict cluster network access to known-trusted peers via strict firewall rules, audit the cluster manifest for unexpected paths (any path not matching the configured storage backend root is suspect), and/or disable cluster mode until the fix is available.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-48105\n  \n게시일 : 2026년 8월 21일 오후 10시 47분 | 23분 전\n  \n설명:Arc는 원격 측정을 위한 개방형 SQL 기반 시계열 데이터베이스입니다. 버전 26.06.1 이전에는 Arc Enterprise의 Raft FSM(`internal/cluster/raft/fsm.go:applyRegisterFile`)이 구성된 저장소 백엔드에 대해 유효성을 검사하지 않고 매니페스트 등록 제안에서 공격자가 선택한 파일 경로를 허용합니다. 유일한 확인은 경로가 비어 있지 않은지 확인하는 것입니다. 상위 순회(`..`) 거부, 합법적인 접두사 허용 목록, 체계 제한(`s3://` 대 로컬) 및 길이 제한이 없습니다. 2026.06.1에서 수정되었습니다. 몇 가지 해결 방법을 사용할 수 있습니다. 엄격한 방화벽 규칙을 통해 클러스터 네트워크 액세스를 신뢰할 수 있는 피어로 제한하고, 클러스터 매니페스트에서 예기치 않은 경로를 감사하고(구성된 스토리지 백엔드 루트와 일치하지 않는 경로는 의심됨) 수정 사항이 제공될 때까지 클러스터 모드를 비활성화합니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-48105\n2. 26.08.22 오전7:47\n3. Arc is an open, SQL-native time-series database fo",
-      "cve_id": "CVE-2026-48105",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48105",
-      "source": "cvefeed",
-      "published": "2026-08-22T07:47:13+09:00",
       "lang": "en"
     }
   ],
