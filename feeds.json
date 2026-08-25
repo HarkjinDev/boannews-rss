@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-25T11:32:10.978064+09:00",
+  "fetched_at": "2026-08-25T12:02:17.088363+09:00",
   "security_news": [
+    {
+      "title": "李대통령 \"재정 수치에 매몰돼선 안 돼\"…성장·균형발전에 예산 집중",
+      "summary": "◇반도체 기술 유출 경고…\"기술안보 빈틈 없어야\" 이 대통령은 세계 각국이 첨단산업 주도권 확보에 국가 역량을 집중하면서 산업스파이와 해킹 등을 통한 기술 탈취도 이어지고 있다고 지적했다. 최근 외국 기업이 국내...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 이 대통령, 반도체 기술 유출 경고\n2. 첨단 산업 주도권 경쟁 속 기술 탈취 우려\n3. 기술 안보 강화, 빈틈없는 대응 강조",
+      "link": "https://www.ziksir.com/news/articleView.html?idxno=144200",
+      "source": "naver",
+      "published": "2026-08-25T11:44:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "AI 무장한 중국계 해커 'UAT-10147'… 17만 개 서버 겨냥 대규모 사이버...",
+      "summary": "UAT-10147은 침투 정찰, 코드 최적화, 로직 디버깅, 공격 검증 등 해킹 전 과정에 걸쳐 펜테스트GPT(PentestGPT)와 딥오딧(DeepAudit) 같은 AI 도구를 적극 도입했다. 이들은 공개된 웹 취약점을 파고들어 원격코드실행(RCE)...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 중국계 해커 UAT-10147, 17만 개 서버 대상 AI 활용 공격\n2. 펜테스트GPT, 딥오딧 AI 도구로 웹 취약점 통한 RCE 공격\n3. 광범위한 서버 침투 시도, 대규모 피해 우려",
+      "link": "https://www.boannews.com/news/articleView.html?idxno=145407",
+      "source": "naver",
+      "published": "2026-08-25T11:40:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "코트라, 임직원·협력사 참여 산재예방주간 운영...출근길 캠페인도",
       "summary": "3-UP은 안전의식·정보보안·지속가능성을 각각 높인다는 의미를 담았다. 참가자들은 보행 중 스마트폰... 피싱메일 대응 O/X 퀴즈와 개인정보보호 활동을 통해 정보보안 관련 대응 요령도 익혔다. 스몸비(Smombie)는...",
@@ -1320,21 +1344,39 @@
       "source": "naver",
       "published": "2026-08-22T14:11:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "방어벽 뚫는 ‘AI 해커’…中 24시간 내 취약점 악용·北 AI 패키지 오염",
-      "summary": "특히 중국과 북한이 주도하는 해킹 세력을 중심으로 AI를 악용한 공급망 침해와 클라우드 공격이 단시간... 내재화됐다'며 '해킹의 기획부터 실행, 확장 방식을 근본적으로 바꾸면서 기업이 방어해야 할 공격...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 방어벽 뚫는 ‘AI 해커’…中 24시간 내 취약점 악용·北 AI 패키지 오염 특히 중국과 \n2. 내재화됐다'며 '해킹의 기획부터 실행, 확장 방식을 근본적으로 바꾸면서 기업이 방어해야 할",
-      "link": "https://kidd.co.kr/news/247103",
-      "source": "naver",
-      "published": "2026-08-22T11:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-75575 - Rocket.Chat Missing DDP Rate Limit on the sendForgotPasswordEmail Meteor Method",
+      "summary": "CVE ID :CVE-2026-75575\n  \nPublished : Aug. 25, 2026, 2:16 a.m. | 27 minutes ago\n  \nDescription :Rocket.Chat exposes the sendForgotPasswordEmail Meteor method without a DDP rate limit, so an unauthenticated caller may invoke it as often as it likes. The method is reachable over DDP and over the HTTP route POST /api/v1/method.callAnon/sendForgotPasswordEmail, and it triggers a password reset message for any address that matches an account. With no DDPRateLimiter rule registered for it, a caller can drive an unbounded volume of reset mail at a chosen address from the deployment's own mail sender, and can probe addresses at scale: the method answers true for an address with no account and for a successful send, but false when the address belongs to an account that authenticates through an external provider and Accounts_AllowPasswordChangeForOAuthUsers is off, so repeated calls distinguish that class of account. Later versions register a rule permitting ten calls per minute per client address.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-75575\n  \nPublished : Aug. 25, 2026, 2:16 a.m. | 27 minutes ago\n  \nDescription :Rocket.Chat exposes the sendForgotPasswordEmail Meteor method without a DDP rate limit, so an unauthenticated caller may invoke it as often as it likes. The method is reachable over DDP and over the HTTP route POST /api/v1/method.callAnon/sendForgotPasswordEmail, and it triggers a password reset message for any address that matches an account. With no DDPRateLimiter rule registered for it, a caller can drive an unbounded volume of reset mail at a chosen address from the deployment's own mail sender, and can probe addresses at scale: the method answers true for an address with no account and for a successful send, but false when the address belongs to an account that authenticates through an external provider and Accounts_AllowPasswordChangeForOAuthUsers is off, so repeated calls distinguish that class of account. Later versions register a rule permitting ten calls per minute per client address.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-75575\n2. 26.08.25 오전11:16\n3. Rocket.Chat exposes the sendForgotPasswordEmail Me",
+      "cve_id": "CVE-2026-75575",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75575",
+      "source": "cvefeed",
+      "published": "2026-08-25T11:16:51+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-72700 - Grav before 3.9.1 Timing Attack via Non-Constant-Time Token Comparison",
+      "summary": "CVE ID :CVE-2026-72700\n  \nPublished : Aug. 25, 2026, 2:16 a.m. | 27 minutes ago\n  \nDescription :The getgrav/grav-plugin-login Composer plugin before 3.9.1 (used by Grav) compares password reset and account activation tokens using a non-constant-time === string comparison instead of hash_equals() in classes/Controller.php (taskReset()) and login.php (activation handler). Because the token-submission endpoint (taskReset) also lacks rate limiting, an attacker could in principle send repeated token guesses against a known username and use the timing differences to attempt to recover a valid token, though the vendor rates the practical exploitability as low and no end-to-end network exploit has been demonstrated.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-72700\n  \nPublished : Aug. 25, 2026, 2:16 a.m. | 27 minutes ago\n  \nDescription :The getgrav/grav-plugin-login Composer plugin before 3.9.1 (used by Grav) compares password reset and account activation tokens using a non-constant-time === string comparison instead of hash_equals() in classes/Controller.php (taskReset()) and login.php (activation handler). Because the token-submission endpoint (taskReset) also lacks rate limiting, an attacker could in principle send repeated token guesses against a known username and use the timing differences to attempt to recover a valid token, though the vendor rates the practical exploitability as low and no end-to-end network exploit has been demonstrated.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-72700\n2. 26.08.25 오전11:16\n3. The getgrav/grav-plugin-login Composer plugin befo",
+      "cve_id": "CVE-2026-72700",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-72700",
+      "source": "cvefeed",
+      "published": "2026-08-25T11:16:45+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53532 - OpenEXR: Unhandled assert abort in HTJ2K decoder via crafted QCD marker (DoS)",
       "summary": "CVE ID :CVE-2026-53532\n  \nPublished : Aug. 24, 2026, 10:24 p.m. | 48 minutes ago\n  \nDescription :OpenEXR is the reference implementation and specification for the EXR image format, widely used in the motion picture industry. In versions 3.4.0 through 3.4.12, a crafted HTJ2K-compressed EXR file causes an unconditional process abort in any application that calls exr_start_read() on untrusted input, resulting in denial of service. The crash is triggered by a QCD marker whose lower five bits are zero, which OpenEXR passes into the vendored OpenJPH library while constructing the codestream and evaluating its quantization delta parameters. OpenJPH uses an assertion rather than a recoverable error to validate those bits, so any invalid value calls abort() directly and cannot be intercepted by surrounding error handling, a problem compounded by OpenEXR wrapping only its internal HT header parser in error handling while leaving the later codestream read and construction calls unprotected. This issue has been resolved in version 3.4.13.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
