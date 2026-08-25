@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-25T20:02:38.814134+09:00",
+  "fetched_at": "2026-08-25T20:32:21.348813+09:00",
   "security_news": [
+    {
+      "title": "[카드뉴스] \"해킹 안 당했는데 1조원대 과징금?\"… 데이터 '수집 명분' ...",
+      "summary": "외부 해킹이나 유출 사고가 없더라도, 정당한 법적 근거 없이 개인정보를 수집한 행위 자체로 천문학적인 과징금이 부과되는 규제 리스크가 급증하고 있다. 서비스 기획 단계에서 수집 명분(유효한 동의 및 법적 근거)...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 동의 없는 개인정보 수집, 1조원대 과징금 위험\n2. 법적 근거 없는 정보 수집, 규제 리스크 급증\n3. 서비스 기획 시 명확한 동의 및 근거 확보 필요",
+      "link": "https://www.boannews.com/news/articleView.html?idxno=145210",
+      "source": "naver",
+      "published": "2026-08-25T20:20:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "영국 소형 발전설비 4일 중단, 이란 연계 해킹 보도",
       "summary": "영국의 소형 발전 설비 1곳이 7월 사이버 공격으로 4일간 가동을 멈췄다. 영국 정부는 전력망 전체에는... 영국 국가사이버보안센터(NCSC)는 3월 2일 공지에서 중동 분쟁 이후 영국 조직들이 보안 태세를 점검해야 한다고...",
@@ -1719,6 +1731,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-49845 - Apache Hive: SQL Injection vulnerability in HiveMetaStore partition-name direct-SQL paths",
+      "summary": "CVE ID :CVE-2026-49845\n  \nPublished : Aug. 25, 2026, 10:13 a.m. | 58 minutes ago\n  \nDescription :SQL injection in Hive Metastore direct SQL partition-name resolution in Apache Hive before 4.2.1 on all platforms allows authenticated users with access to Hive Metastore APIs to read, modify, or affect unintended partition metadata (including statistics updates, truncation targets, and file-metadata cache operations) via crafted partition names in metastore RPC requests when direct SQL is enabled (the default). Users are recommended to upgrade to version 4.2.1, which fixes this issue.\n\nDetails about the issue:\nSeveral Hive Metastore RPCs resolve partitions by full partition name (PART_NAME) through direct-SQL helpers. In those paths, client-supplied partition names are embedded into SQL using string concatenation (DirectSqlUpdatePart.quoteString() → '...') instead of bind parameters. A partition name containing a single quote (and crafted SQL) can alter the generated WHERE clause so that lookups intended for one partition match additional rows. That can affect reads, stats updates, truncate targets, metadata-cache targets, and related operations when metastore.try.direct.sql is enabled (default: true). An authenticated or network-trusted caller with the ability to invoke Hive Metastore partition-name APIs against a target table (directly or via Hive/other clients), when direct SQL is enabled can perform this attack. Also, the impact is mainly within table & partition targeting (read/update/truncate/drop/cache the wrong partitions in a table they can reference), not arbitrary cross-database access via this bug alone.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-49845\n  \nPublished : Aug. 25, 2026, 10:13 a.m. | 58 minutes ago\n  \nDescription :SQL injection in Hive Metastore direct SQL partition-name resolution in Apache Hive before 4.2.1 on all platforms allows authenticated users with access to Hive Metastore APIs to read, modify, or affect unintended partition metadata (including statistics updates, truncation targets, and file-metadata cache operations) via crafted partition names in metastore RPC requests when direct SQL is enabled (the default). Users are recommended to upgrade to version 4.2.1, which fixes this issue.\n\nDetails about the issue:\nSeveral Hive Metastore RPCs resolve partitions by full partition name (PART_NAME) through direct-SQL helpers. In those paths, client-supplied partition names are embedded into SQL using string concatenation (DirectSqlUpdatePart.quoteString() → '...') instead of bind parameters. A partition name containing a single quote (and crafted SQL) can alter the generated WHERE clause so that lookups intended for one partition match additional rows. That can affect reads, stats updates, truncate targets, metadata-cache targets, and related operations when metastore.try.direct.sql is enabled (default: true). An authenticated or network-trusted caller with the ability to invoke Hive Metastore partition-name APIs against a target table (directly or via Hive/other clients), when direct SQL is enabled can perform this attack. Also, the impact is mainly within table & partition targeting (read/update/truncate/drop/cache the wrong partitions in a table they can reference), not arbitrary cross-database access via this bug alone.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-49845\n2. 26.08.25 오후7:13\n3. SQL injection in Hive Metastore direct SQL partiti",
+      "cve_id": "CVE-2026-49845",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-49845",
+      "source": "cvefeed",
+      "published": "2026-08-25T19:13:49+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-77142 - Broken Access Control in extension \"Industry Directory\" (yellowpages2)",
       "summary": "CVE ID :CVE-2026-77142\n  \nPublished : Aug. 25, 2026, 9:17 a.m. | 42 minutes ago\n  \nDescription :The frontend company self-service editing feature relies on a template-level visibility flag to hide the edit form for company records a visitor does not own, but the corresponding write operation does not repeat this ownership check on the server side. As a result, a visitor who knows the identifier of a company record from the public directory can submit a modified update request for that record directly and overwrite its data, without the application ever confirming that the visitor owns it.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
