@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-26T06:01:04.407353+09:00",
+  "fetched_at": "2026-08-26T06:32:25.003466+09:00",
   "security_news": [
+    {
+      "title": "버그바운티 커지자 쌓이는 '취약점 지도'...정보관리도 과제",
+      "summary": "기업 내부에서 미처 발견하지 못한 보안 허점을 외부 전문가를 활용해 선제적으로 찾아낼 수 있다는 장점이 있다.■화이트 해커가 찾아낸 취약점 보고서, '해킹 실행 설명서' 될수도문제는 취약점을 찾아내는 과정에서...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 기업, 버그바운티 통해 취약점 지도 구축\n2. 화이트해커 보고서, 해킹 실행 설명서로 악용 우려\n3. 취약점 정보 관리 중요성 대두, 체계적 관리 필요",
+      "link": "https://news.mtn.co.kr/news-detail/2026082515393326975",
+      "source": "naver",
+      "published": "2026-08-26T06:08:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "'해킹 홍역' 통신3사, 정보보호 '경영의제'로 올렸다…CPO 강화",
+      "summary": "마련하고 개인정보 침해 예방·대응 등을 담당. ■ CISO(Chief Information Security Officer·정보보호최고책임자) 기업의 정보보호 정책과 전략을 총괄하고 해킹·침해사고 등 사이버 보안 위험을 관리하는 최고책임자.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 통신3사, 해킹 사건 후 CPO 강화\n2. 개인정보 침해 예방·대응 위한 관리 강화\n3. 정보보호, 경영의제 상 사이버 보안 위험 관리",
+      "link": "https://n.news.naver.com/mnews/article/421/0009132478?sid=105",
+      "source": "naver",
+      "published": "2026-08-26T06:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[전문가 기고] 쿠팡 개인정보 유출 사태, 더 이상 '기업 실수'로 넘겨선...",
       "summary": "com 구교훈 한국국제물류사협회장 [사진=아주경제DB] 3370만명에 달하는 국민 개인정보가 유출된 쿠팡 해킹... 쿠팡은 이번 사건을 단순한 해킹 사고가 아니라 기업의 존립을 좌우할 수 있는 신뢰의 위기로 받아들여야 한다....",
@@ -1897,6 +1921,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-45019",
       "source": "cvefeed",
       "published": "2026-08-26T05:16:55+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-55663 - mediasoup: SCTP state cookie lacks cryptographic authentication, enabling unauthorized association establishment (RFC 9260 violation)",
+      "summary": "CVE ID :CVE-2026-55663\n  \nPublished : Aug. 25, 2026, 7:16 p.m. | 1 hour, 10 minutes ago\n  \nDescription :mediasoup is a WebRTC video conferencing system. From version 3.20.0 until 3.20.6 for the npm package and from 0.22.0 until 0.22.5 for the Rust crate, mediasoup's built-in SCTP stack authenticates state cookies using only the hardcoded msworker and 0xAD81 magic values instead of a per-instance secret and HMAC, contrary to RFC 9260 Section 5.1.3. The cookie structure and validation in worker/include/RTC/SCTP/association/StateCookie.hpp and worker/src/RTC/SCTP/association/StateCookie.cpp allow an on-path attacker targeting PlainTransport or PipeTransport with SCTP enabled and without DTLS protection to forge a COOKIE-ECHO whose packet verification tag matches the attacker-controlled localVerificationTag. The forged cookie passes StateCookie::IsMediasoupStateCookie() and Association::HandleReceivedCookieEchoChunk(), establishes an unauthorized SCTP association, and permits DataChannel message injection as a trusted peer. WebRtcTransport is not affected because its SCTP runs inside DTLS. This issue is fixed in npm version 3.20.6 and Rust crate version 0.22.5.\n  \nSeverity: 5.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55663\n  \nPublished : Aug. 25, 2026, 7:16 p.m. | 1 hour, 10 minutes ago\n  \nDescription :mediasoup is a WebRTC video conferencing system. From version 3.20.0 until 3.20.6 for the npm package and from 0.22.0 until 0.22.5 for the Rust crate, mediasoup's built-in SCTP stack authenticates state cookies using only the hardcoded msworker and 0xAD81 magic values instead of a per-instance secret and HMAC, contrary to RFC 9260 Section 5.1.3. The cookie structure and validation in worker/include/RTC/SCTP/association/StateCookie.hpp and worker/src/RTC/SCTP/association/StateCookie.cpp allow an on-path attacker targeting PlainTransport or PipeTransport with SCTP enabled and without DTLS protection to forge a COOKIE-ECHO whose packet verification tag matches the attacker-controlled localVerificationTag. The forged cookie passes StateCookie::IsMediasoupStateCookie() and Association::HandleReceivedCookieEchoChunk(), establishes an unauthorized SCTP association, and permits DataChannel message injection as a trusted peer. WebRtcTransport is not affected because its SCTP runs inside DTLS. This issue is fixed in npm version 3.20.6 and Rust crate version 0.22.5.\n  \nSeverity: 5.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-55663\n2. 26.08.26 오전4:16\n3. mediasoup is a WebRTC video conferencing system. F",
+      "cve_id": "CVE-2026-55663",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55663",
+      "source": "cvefeed",
+      "published": "2026-08-26T04:16:51+09:00",
       "lang": "en"
     },
     {
