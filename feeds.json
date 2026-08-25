@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-26T07:31:01.033977+09:00",
+  "fetched_at": "2026-08-26T08:01:03.207434+09:00",
   "security_news": [
     {
       "title": "67만원 목표가 유지한 현대차, 로봇 공급망 평가",
@@ -1851,6 +1851,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-80182 - OpenStack Keystone Improper Authorization of Delegated Tokens",
+      "summary": "CVE ID :CVE-2026-80182\n  \nPublished : Aug. 25, 2026, 10:17 p.m. | 29 minutes ago\n  \nDescription :In OpenStack Keystone before 29.0.3, tokens obtained via OAuth1 access token, application credential, or trust-scoped authentication could create new long-lived credentials or authorize new delegations that persist independently of, and outlive, the credential used to obtain them. The delegation restrictions that block these operations did not consistently apply to all delegated token types, allowing an OAuth1-scoped token, for example, to create application credentials or authorize OAuth1 request tokens despite those operations being restricted for other delegated token types. All Keystone deployments that permit delegated authentication through OAuth1 access tokens, application credentials, or trusts are affected.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-80182\n  \nPublished : Aug. 25, 2026, 10:17 p.m. | 29 minutes ago\n  \nDescription :In OpenStack Keystone before 29.0.3, tokens obtained via OAuth1 access token, application credential, or trust-scoped authentication could create new long-lived credentials or authorize new delegations that persist independently of, and outlive, the credential used to obtain them. The delegation restrictions that block these operations did not consistently apply to all delegated token types, allowing an OAuth1-scoped token, for example, to create application credentials or authorize OAuth1 request tokens despite those operations being restricted for other delegated token types. All Keystone deployments that permit delegated authentication through OAuth1 access tokens, application credentials, or trusts are affected.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-80182 - 위임된 토큰에 대한 OpenStack Keystone의 부적절한 인증",
+      "summary_ko": "CVE ID:CVE-2026-80182\n  \n게시일 : 2026년 8월 25일 오후 10시 17분 | 29분 전\n  \n설명: 29.0.3 이전의 OpenStack Keystone에서는 OAuth1 액세스 토큰, 애플리케이션 자격 증명 또는 신뢰 범위 인증을 통해 얻은 토큰이 새로운 장기 자격 증명을 생성하거나 이를 획득하는 데 사용된 자격 증명과 독립적으로 유지되고 오래 지속되는 새 위임을 승인할 수 있었습니다. 이러한 작업을 차단하는 위임 제한 사항은 위임된 모든 토큰 유형에 일관되게 적용되지 않았습니다. 예를 들어 OAuth1 범위 토큰은 다른 위임된 토큰 유형에 대해 해당 작업이 제한되어 있음에도 불구하고 애플리케이션 자격 증명을 생성하거나 OAuth1 요청 토큰을 승인할 수 있습니다. OAuth1 액세스 토큰, 애플리케이션 자격 증명 또는 신뢰를 통해 위임된 인증을 허용하는 모든 Keystone 배포가 영향을 받습니다.\n  \n심각도: 7.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-80182\n2. 26.08.26 오전7:17\n3. In OpenStack Keystone before 29.0.3, tokens obtain",
+      "cve_id": "CVE-2026-80182",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80182",
+      "source": "cvefeed",
+      "published": "2026-08-26T07:17:07+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-77680 - Libsoup3: libsoup: quadratic cpu denial of service in http range coalescing after cve-2025-32907 fix",
       "summary": "CVE ID :CVE-2026-77680\n  \nPublished : Aug. 25, 2026, 8:36 p.m. | 36 minutes ago\n  \nDescription :An algorithmic complexity flaw exists in libsoup's HTTP Range header processing that persists after the CVE-2025-32907 fix.\n\nCVE-2025-32907 addressed memory amplification when a client repeated the same range many times in a single Range header. Commit 9bb92f7a corrected merge correctness in soup_message_headers_get_ranges_internal() in libsoup/soup-message-headers.c, but the coalescing loop still removes merged ranges using g_array_remove_index() for each coalesced element. Because GArray is contiguous, each mid-array removal performs an O(N) memmove. When many identical satisfiable ranges are supplied (for example bytes=0-0 repeated thousands of times), the loop performs O(N²) work coalescing them into a single range.\n\nThe vulnerable path is reachable server-side from handle_partial_get() in libsoup/server/http1/soup-server-message-io-http1.c when a SoupServer handler returns HTTP 200 with a non-empty body. No authentication is required. The number of ranges is bounded only by the maximum request header size (~100 KiB), allowing roughly 25,000 ranges per request. Reporter measurements on libsoup HEAD containing the CVE-2025-32907 fix show ~90 ms single-core CPU per such request at the wire maximum, blocking the server's event loop for that duration.\n\nThis is a CPU exhaustion / availability issue only. No memory corruption or information disclosure occurs.\n\nAffected: libsoup versions containing the CVE-2025-32907 fix but not merge request !550.\nFixed upstream: MR !550 merged 2026-08-20, replacing per-element removal with O(N) in-place compaction and rejecting Range headers requesting more than 200 ranges.\nUpstream report: https://gitlab.gnome.org/GNOME/libsoup/-/issues/538\nRelated: CVE-2025-32907\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
