@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-26T00:02:12.846303+09:00",
+  "fetched_at": "2026-08-26T00:32:28.740238+09:00",
   "security_news": [
+    {
+      "title": "102억원 가로챈 보이스피싱 조직, 한·중 공조에 덜미",
+      "summary": "범행은 카드배송기사와 카드사 보안팀, 경찰·금융감독원 직원, 검사 등으로 역할을 세분화해 이뤄졌다. \"발급받지 않은 카드가 배송됐다\"며 접근한 뒤 개인정보 유출 확인을 명목으로 악성 앱을 설치하게 하고 \"계좌가...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 102억원 가로챈 보이스피싱 조직, 한·중 공조에 덜미 범행은 카드배송기사와 카드사 보안팀\n2. \"발급받지 않은 카드가 배송됐다\"며 접근한 뒤 개인정보 유출 확인을 명목으로 악성 앱을 설",
+      "link": "https://n.news.naver.com/mnews/article/654/0000197010?sid=102",
+      "source": "naver",
+      "published": "2026-08-26T00:08:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Marimo Notebook Flaw Could Run MCP Commands Before Cells Execute in Edit Mode",
       "summary": "Marimo has addressed a high-severity security flaw in its notebook software that allowed an attacker to execute an attacker-supplied Model Context Protocol (MCP) command in a specially crafted notebook, according to VulnCheck's CVE Numbering Authority (CNA) record.\n\nThe CNA record says the command can run as a local subprocess when the notebook is opened in edit mode.\n\nThe vulnerability, tracked",
@@ -1779,6 +1791,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-55536 - Browser Server WebSocket origin validation bypass via unanchored regex (patch bypass of CVE-2026-40289 / GHSA-8x8f-54wf-vv92)",
+      "summary": "CVE ID :CVE-2026-55536\n  \nPublished : Aug. 25, 2026, 3:21 p.m. | 9 minutes ago\n  \nDescription :PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, Browser Server _handle_connection() checks Chrome extension origins with re.match() and the unanchored expression chrome-extension://[a-z0-9]{32}. Extra trailing characters pass before websocket.accept(), allowing start_session commands and unauthorized browser automation. This issue is fixed in version 4.6.58.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55536\n  \nPublished : Aug. 25, 2026, 3:21 p.m. | 9 minutes ago\n  \nDescription :PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, Browser Server _handle_connection() checks Chrome extension origins with re.match() and the unanchored expression chrome-extension://[a-z0-9]{32}. Extra trailing characters pass before websocket.accept(), allowing start_session commands and unauthorized browser automation. This issue is fixed in version 4.6.58.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-55536\n2. 26.08.26 오전12:21\n3. PraisonAI is a multi-agent teams system. Prior to ",
+      "cve_id": "CVE-2026-55536",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55536",
+      "source": "cvefeed",
+      "published": "2026-08-26T00:21:53+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Obfuscating IP Addresses as Hostnames, (Tue, Aug 25th)",
+      "summary": "It is pretty obvious that hostnames can replace IP addresses. Pretty much any software accepting an IP address will also accept a hostname as an argument. Last week, I wrote about scans for the cloud metadata service listening at 169.254.169.254. These scans attempted to exploit Server Side Request Forgery (SSRF) vulnerability. One way to prevent these types of exploits is to filter requests that contain the string \"169.254.169.254\" or to add this IP to a blocklist of URLs that should not be accessed.\r",
+      "description": "It is pretty obvious that hostnames can replace IP addresses. Pretty much any software accepting an IP address will also accept a hostname as an argument. Last week, I wrote about scans for the cloud metadata service listening at 169.254.169.254. These scans attempted to exploit Server Side Request Forgery (SSRF) vulnerability. One way to prevent these types of exploits is to filter requests that contain the string \"169.254.169.254\" or to add this IP to a blocklist of URLs that should not be accessed.\r",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. Obfuscating IP Addresses as Hostnames, (Tue, Aug 2\n2. SANS_ISC\n3. It is pretty obvious that hostnames can replace IP",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33280",
+      "source": "sans_isc",
+      "published": "2026-08-26T00:03:33+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-75803 - AEAD Forgeries with Empty Ciphertext When Using EVP_Cipher()",
       "summary": "CVE ID :CVE-2026-75803\n  \nPublished : Aug. 25, 2026, 1:19 p.m. | 40 minutes ago\n  \nDescription :Issue summary: ChaCha20-Poly1305 and AES-OCB decryption with an empty\nciphertext can report success without verifying the supplied authentication\ntag when the operation is finalized by calling the EVP_Cipher() function.\n\nImpact summary: Applications calling EVP_Cipher() on an empty ciphertext and\nexpecting the call to check the AEAD tag may accept forged messages.\n\nCWE: CWE-354 (Improper Validation of Integrity Check Value)\n\nDescription: The EVP_Cipher() API call for AEAD ciphers behaves like a one\nshot encryption and decryption call. It also verifies the AEAD tag after the\ndecryption operation. However for AES-OCB and ChaCha20-Poly1305 ciphers\nit skipped the AEAD tag verification when an empty ciphertext was passed to\nthe function. The callers of this function might believe that a successful\nreturn indicates a valid AEAD tag for these ciphers, even when that has not\ntruly been validated in this case.\n\nFIPS impact: no\nThe FIPS modules in 4.0, 3.6, 3.5, 3.4, and 3.0 are not affected by this CVE\nas the affected algorithms are not FIPS approved and thus not implemented\nin the FIPS module.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
