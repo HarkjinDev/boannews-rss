@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-25T21:02:13.855622+09:00",
+  "fetched_at": "2026-08-25T21:32:14.632812+09:00",
   "security_news": [
+    {
+      "title": "Hackers breached over 270 Zimbra servers in ongoing attacks",
+      "summary": "Threat actors have already compromised over 270 Zimbra instances in remote code execution attacks targeting a high-severity Zimbra Collaboration Suite (ZCS) vulnerability. [...]",
+      "content": "",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. Error 500 (Server Error)!!1500.That’s an error.The",
+      "link": "https://www.bleepingcomputer.com/news/security/hackers-breached-over-270-zimbra-servers-in-ongoing-attacks/",
+      "source": "bleepingcomputer",
+      "published": "2026-08-25T21:04:02+09:00",
+      "lang": "en"
+    },
     {
       "title": "[카드뉴스] \"해킹 안 당했는데 1조원대 과징금?\"… 데이터 '수집 명분' ...",
       "summary": "외부 해킹이나 유출 사고가 없더라도, 정당한 법적 근거 없이 개인정보를 수집한 행위 자체로 천문학적인 과징금이 부과되는 규제 리스크가 급증하고 있다. 서비스 기획 단계에서 수집 명분(유효한 동의 및 법적 근거)...",
@@ -2539,21 +2551,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-75870",
       "source": "cvefeed",
       "published": "2026-08-22T23:16:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-62381 - luci-lib-px5g 2040-bit Certificate Signing Heap Buffer Overflow",
-      "summary": "CVE ID :CVE-2026-62381\n  \nPublished : Aug. 22, 2026, 12:26 p.m. | 24 minutes ago\n  \nDescription :luci-lib-px5g (LuCI) contains a heap-based buffer overflow in the native ASN.1 encoding routine asn1_add_obj (x509write.c) when signing a certificate with a 2040-bit RSA key. For a 255-byte signature, the BIT STRING allocation is computed from the DER length encoding of 255 bytes, but the payload written after prepending the unused-bits byte is 256 bytes, requiring one additional DER length octet. As a result the allocation is 259 bytes while the tag, length, unused-bits byte, and signature require 260 bytes, and the final memcpy writes one byte beyond the heap buffer. The overflow is reachable through the exported Lua interface via create_selfsigned(); whether it is remotely exploitable depends on the embedding application. The vulnerable code is present on the openwrt-18.06 through openwrt-25.12 release branches and is absent from master, where the luci-lib-px5g package has been removed rather than patched.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-62381\n  \nPublished : Aug. 22, 2026, 12:26 p.m. | 24 minutes ago\n  \nDescription :luci-lib-px5g (LuCI) contains a heap-based buffer overflow in the native ASN.1 encoding routine asn1_add_obj (x509write.c) when signing a certificate with a 2040-bit RSA key. For a 255-byte signature, the BIT STRING allocation is computed from the DER length encoding of 255 bytes, but the payload written after prepending the unused-bits byte is 256 bytes, requiring one additional DER length octet. As a result the allocation is 259 bytes while the tag, length, unused-bits byte, and signature require 260 bytes, and the final memcpy writes one byte beyond the heap buffer. The overflow is reachable through the exported Lua interface via create_selfsigned(); whether it is remotely exploitable depends on the embedding application. The vulnerable code is present on the openwrt-18.06 through openwrt-25.12 release branches and is absent from master, where the luci-lib-px5g package has been removed rather than patched.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-62381 - luci-lib-px5g 2040비트 인증서 서명 힙 버퍼 오버플로",
-      "summary_ko": "CVE ID:CVE-2026-62381\n  \n게시일 : 2026년 8월 22일 오후 12시 26분 | 24분 전\n  \n설명 :luci-lib-px5g(LuCI)는 2040비트 RSA 키로 인증서에 서명할 때 기본 ASN.1 인코딩 루틴 asn1_add_obj(x509write.c)에 힙 기반 버퍼 오버플로를 포함합니다. 255바이트 서명의 경우 BIT STRING 할당은 255바이트의 DER 길이 인코딩에서 계산되지만 사용되지 않은 비트 바이트 앞에 추가된 후에 기록된 페이로드는 256바이트이므로 하나의 추가 DER 길이 옥텟이 필요합니다. 결과적으로 할당은 259바이트이고 태그, 길이, 사용되지 않은 비트 바이트 및 서명에는 260바이트가 필요하며 최종 memcpy는 힙 버퍼를 넘어 1바이트를 씁니다. create_selfsigned()를 통해 내보낸 Lua 인터페이스를 통해 오버플로에 도달할 수 있습니다. 원격으로 악용할 수 있는지 여부는 임베딩 애플리케이션에 따라 다릅니다. 취약한 코드는 openwrt-25.12 릴리스 분기를 통해 openwrt-18.06에 존재하며 마스터에는 없습니다. 여기서 luci-lib-px5g 패키지는 패치되지 않고 제거되었습니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-62381\n2. 26.08.22 오후9:26\n3. luci-lib-px5g (LuCI) contains a heap-based buffer ",
-      "cve_id": "CVE-2026-62381",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62381",
-      "source": "cvefeed",
-      "published": "2026-08-22T21:26:44+09:00",
       "lang": "en"
     }
   ],
