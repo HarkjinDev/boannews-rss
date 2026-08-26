@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-08-26T08:31:03.843510+09:00",
+  "fetched_at": "2026-08-26T09:03:23.388781+09:00",
   "security_news": [
+    {
+      "title": "시큐리티허브-HSPACE, 데프콘 콘테스트 운영…AI·보안 기술 교류",
+      "summary": "데프콘(DEF CON)은 미국 라스베이거스에서 열리는 사이버보안 행사로, 전 세계 보안 연구자와 해커들이 참여해 기술과 연구 결과를 공유한다. 국제 해킹방어대회 CTF(Capture The Flag)를 비롯해 인공지능(AI), 자동차...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 시큐리티허브-HSPACE, 데프콘 콘테스트 운영…AI·보안 기술 교류 데프콘(DEF CON\n2. 국제 해킹방어대회 CTF(Capture The Flag)를 비롯해 인공지능(AI), 자동차",
+      "link": "https://n.news.naver.com/mnews/article/138/0002238976?sid=105",
+      "source": "naver",
+      "published": "2026-08-26T09:01:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "금융보안원, GA 보안역량 높일 '보험사-GA 정보보안 협의체' 발족",
+      "summary": "금융보안원은 사원사로 가입한 GA에 보안관제와 침해사고 예방·대응, 취약점 분석·평가, 모의해킹 등의 서비스를 제공한다. 박상원 금융보안원 원장은 \"해킹뿐 아니라 내부통제 미흡으로 인한 정보 유출 등 제3자의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융보안원, GA 보안 강화 위해 '보험사-GA 정보보안 협의체' 발족\n2. GA 대상 보안관제, 침해사고 예방/대응, 취약점 분석 등 서비스 제공\n3. 내부통제 미흡 정보 유출 등 제3자 위협으로부터 보험사 정보 보호",
+      "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=272080",
+      "source": "naver",
+      "published": "2026-08-26T08:58:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "'사이버보안 특화 AI 모델' 공모 마감…K-미토스 본격 신호탄",
+      "summary": "및 해킹 등 위협으로부터 안전하게 보호할 수 있는 국내 전략적 방어 체계를 마련할 때\"라고 말했다. 이어 \"국내 보안 환경을 정확히 반영하고 국민 경제 파급력을 고려한 독자 모델 개발로 지속 가능한 보안 생태계를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국내 AI 공모 마감, K-미토스 본격 신호탄\n2. 해킹 등 위협 방어, 독자 모델 개발\n3. 지속 가능한 보안 생태계 조성",
+      "link": "https://n.news.naver.com/mnews/article/138/0002238969?sid=105",
+      "source": "naver",
+      "published": "2026-08-26T08:52:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "67만원 목표가 유지한 현대차, 로봇 공급망 평가",
       "summary": "FCC는 이들 장치가 공급망 취약점과 사이버보안 위험을 만들 수 있다고 판단했다. 본지는 앞서 FCC 조치가 중국산 AI 하드웨어와 연결 장비를 국가안보 관점에서 다루는 신호로 읽힌다고 전했다. 이번 조치는 신규 승인...",
@@ -1864,6 +1900,36 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-80182",
       "source": "cvefeed",
       "published": "2026-08-26T07:17:07+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-63403 - Faktory: Unrecovered panic in command handlers allows full-server denial of service",
+      "summary": "CVE ID :CVE-2026-63403\n  \nPublished : Aug. 25, 2026, 10:04 p.m. | 13 minutes ago\n  \nDescription :Faktory is a language-agnostic background job server. In versions prior to 1.10.0, the server is vulnerable to an unauthenticated denial of service in which a single malformed command crashes the entire process. Its wire protocol is line-based, and several command handlers slice or index the received line at a fixed offset, such as cmd[5:] for PUSH or qs[0] for QUEUE, without checking that a payload is present. Sending a bare verb with no payload, for example PUSH, ACK, FAIL, BEAT, PUSHB, or QUEUE, triggers a Go slice or index out-of-range panic. Because the codebase has no recover() anywhere in the command-dispatch path, an unrecovered panic in a handler goroutine terminates the whole Go process rather than just that connection, instantly disconnecting every other client, worker, and in-flight job. The attack requires only a connection to the command port and completion of the trivial handshake, with no credentials when no password is configured, and can be repeated to keep the service down indefinitely. This issue is fixed in version 1.10.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63403\n  \nPublished : Aug. 25, 2026, 10:04 p.m. | 13 minutes ago\n  \nDescription :Faktory is a language-agnostic background job server. In versions prior to 1.10.0, the server is vulnerable to an unauthenticated denial of service in which a single malformed command crashes the entire process. Its wire protocol is line-based, and several command handlers slice or index the received line at a fixed offset, such as cmd[5:] for PUSH or qs[0] for QUEUE, without checking that a payload is present. Sending a bare verb with no payload, for example PUSH, ACK, FAIL, BEAT, PUSHB, or QUEUE, triggers a Go slice or index out-of-range panic. Because the codebase has no recover() anywhere in the command-dispatch path, an unrecovered panic in a handler goroutine terminates the whole Go process rather than just that connection, instantly disconnecting every other client, worker, and in-flight job. The attack requires only a connection to the command port and completion of the trivial handshake, with no credentials when no password is configured, and can be repeated to keep the service down indefinitely. This issue is fixed in version 1.10.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-63403 - Faktory: 명령 처리기에서 복구되지 않은 패닉으로 인해 전체 서버 서비스 거부가 허용됩니다.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-63403\n2. 26.08.26 오전7:04\n3. Faktory is a language-agnostic background job serv",
+      "cve_id": "CVE-2026-63403",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63403",
+      "source": "cvefeed",
+      "published": "2026-08-26T07:04:48+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-62862 - TypeBot: Account takeover via brute-forceable 6-digit magic-link code",
+      "summary": "CVE ID :CVE-2026-62862\n  \nPublished : Aug. 25, 2026, 9:43 p.m. | 35 minutes ago\n  \nDescription :Typebot is an open-source chatbot builder. In self-hosted versions up to and including 3.17.1, the default passwordless email magic-link authentication is vulnerable to login-code brute forcing that leads to account takeover. The email provider overrides NextAuth's default cryptographically secure token with a 6-digit code generated using Math.random(), reducing the keyspace to 900,000 with a 10-minute expiry, and the code itself is the raw value placed in the magic link. The verification callback enforces no attempt limit, lockout, or CSRF protection, and an incorrect guess does not consume the real code because the adapter returns null on a not-found token, so a valid code survives unlimited guessing within its lifetime. The only rate limiter applies to the code-sending path and is keyed on the client-controlled X-Forwarded-For header, allowing an attacker to request many concurrent live codes for one victim and further raise the odds of a matching guess. As a result, an anonymous attacker who knows a victim's email address can brute-force the callback and obtain an authenticated session as that user with no victim interaction, gaining full access to the victim's bots, results, and connected integration credentials. Deployments configured for OAuth or SSO only, with no email provider, are not affected. This issue is fixed in version 3.18.0\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-62862\n  \nPublished : Aug. 25, 2026, 9:43 p.m. | 35 minutes ago\n  \nDescription :Typebot is an open-source chatbot builder. In self-hosted versions up to and including 3.17.1, the default passwordless email magic-link authentication is vulnerable to login-code brute forcing that leads to account takeover. The email provider overrides NextAuth's default cryptographically secure token with a 6-digit code generated using Math.random(), reducing the keyspace to 900,000 with a 10-minute expiry, and the code itself is the raw value placed in the magic link. The verification callback enforces no attempt limit, lockout, or CSRF protection, and an incorrect guess does not consume the real code because the adapter returns null on a not-found token, so a valid code survives unlimited guessing within its lifetime. The only rate limiter applies to the code-sending path and is keyed on the client-controlled X-Forwarded-For header, allowing an attacker to request many concurrent live codes for one victim and further raise the odds of a matching guess. As a result, an anonymous attacker who knows a victim's email address can brute-force the callback and obtain an authenticated session as that user with no victim interaction, gaining full access to the victim's bots, results, and connected integration credentials. Deployments configured for OAuth or SSO only, with no email provider, are not affected. This issue is fixed in version 3.18.0\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-62862 - TypeBot: 무차별 공격이 가능한 6자리 매직 링크 코드를 통한 계정 탈취",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-62862\n2. 26.08.26 오전6:43\n3. Typebot is an open-source chatbot builder. In self",
+      "cve_id": "CVE-2026-62862",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62862",
+      "source": "cvefeed",
+      "published": "2026-08-26T06:43:21+09:00",
       "lang": "en"
     },
     {
