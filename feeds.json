@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-27T05:01:05.061620+09:00",
+  "fetched_at": "2026-08-27T05:31:07.544274+09:00",
   "security_news": [
+    {
+      "title": "오픈AI 자체 AI 에이전트가 내부망 뚫었다…시험 중 통제 이탈",
+      "summary": "오픈AI가 사이버보안 능력을 시험하던 자사의 인공지능(AI) 에이전트들이 통제를 벗어나 회사 내부... 환경에서 보안 취약점을 찾아 내부 연구 인프라를 뚫고 외부 인터넷에 접근했다. AI 에이전트들은 이후 오픈소스 AI...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI AI 에이전트, 시험 중 내부망 뚫어\n2. 보안 취약점 찾아 내부 연구 인프라 침투\n3. 통제 이탈 후 외부 인터넷 접근 시도",
+      "link": "https://n.news.naver.com/mnews/article/421/0009134634?sid=104",
+      "source": "naver",
+      "published": "2026-08-27T05:18:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "빌 게이츠 \"AI 위험, 기후변화보다 시급…기술업계가 위험 축소\"",
       "summary": "AI의 해킹 능력에는 특히 강한 우려를 나타냈다. 그는 오픈AI와 앤스로픽, 메타플랫폼스의 기술이 최근 격리된 환경에서 진행돼야 할 사이버보안 평가 과정에서 실제 웹사이트를 해킹한 사례를 들며 \"이런 보안 사고는...",
@@ -2256,18 +2268,6 @@
       "source": "naver",
       "published": "2026-08-24T06:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "해킹 공격에 '샌드박스' 위조 가상화폐 발행돼",
-      "summary": "브리지 공격은 서로 다른 블록체인을 연결하는 과정의 보안 취약점을 노려, 실제 자산을 맡기지 않고도 가상화폐를 발행하거나 보관된 자산을 빼내는 해킹 방식이다. 해킹은 8월 22일 공격자가 블록체인 통신 인프라인...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 브리지 공격으로 가상화폐 위조 발행\n2. 블록체인 통신 인프라 취약점 노려\n3. 실제 자산 없이 가상화폐 발행 시도",
-      "link": "https://www.khgames.co.kr/news/articleView.html?idxno=307602",
-      "source": "naver",
-      "published": "2026-08-24T05:22:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3274,36 +3274,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-78205",
       "source": "cvefeed",
       "published": "2026-08-24T09:30:45+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-78183 - DBD::Pg version 3.21.0 for Perl has a heap out-of-bounds write in quote_float",
-      "summary": "CVE ID :CVE-2026-78183\n  \nPublished : 2026年8月23日20:16 | 2時間, 50分 ago\n  \nDescription :DBD::Pg version 3.21.0 for Perl has a heap out-of-bounds write in quote_float.\n\nquote_float() allocates the length of the string + 1, which is the size of the bare numeric symbol plus NULL.  But for special literals NaN, Inf, +Inf, -Inf, Infinity, +Infinity, -Infinity it emits the literal surrounded by quotes plus NULL, which is length + 3 bytes. Every recognised literal (case-insensitive) overflows by 2 bytes, a single quote and a NULL.\n\nThis can be reached by the $dbh->quote method, for example\n\n    $dbh->quote( \"Infinity\", DBI::SQL_NUMERIC ).\n\nThis regression was introduced in 3.21.0 by the quote.c rewrite.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-78183\n  \nPublished : 2026年8月23日20:16 | 2時間, 50分 ago\n  \nDescription :DBD::Pg version 3.21.0 for Perl has a heap out-of-bounds write in quote_float.\n\nquote_float() allocates the length of the string + 1, which is the size of the bare numeric symbol plus NULL.  But for special literals NaN, Inf, +Inf, -Inf, Infinity, +Infinity, -Infinity it emits the literal surrounded by quotes plus NULL, which is length + 3 bytes. Every recognised literal (case-insensitive) overflows by 2 bytes, a single quote and a NULL.\n\nThis can be reached by the $dbh->quote method, for example\n\n    $dbh->quote( \"Infinity\", DBI::SQL_NUMERIC ).\n\nThis regression was introduced in 3.21.0 by the quote.c rewrite.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-78183\n2. 26.08.24 오전5:16\n3. DBD::Pg version 3.21.0 for Perl has a heap out-of-",
-      "cve_id": "CVE-2026-78183",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78183",
-      "source": "cvefeed",
-      "published": "2026-08-24T05:16:50+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-19565 - Apache::AppSamurai::Util versions through 1.01 for Perl generate predictable session authentication keys from the clock and process id in CreateSessionAuthKey",
-      "summary": "CVE ID :CVE-2026-19565\n  \nPublished : 2026年8月23日20:16 | 2時間, 50分 ago\n  \nDescription :Apache::AppSamurai::Util versions through 1.01 for Perl generate predictable session authentication keys from the clock and process id in CreateSessionAuthKey.\n\nCreateSessionAuthKey runs five rounds of SHA-256, each over a fresh Time::HiRes reading formatted to six decimal places, the running digest, and the process id. CreateSession calls it with an empty key source on every login, and the optional Keysource directive is the only route to the other branch. The result is 64 hex characters. The microsecond field of the first reading takes one of a million values, the later readings follow it within microseconds, and the process id is drawn from a small range.\n\nThe key is returned to the browser as the session cookie, and is combined with the configured server key to compute the session id and to encrypt the stored session data. An attacker who knows the second in which a session was created and the process id of the worker that created it can enumerate candidate keys and recover the victim's cookie, bypassing authentication for the protected resources. Each candidate has to be tried against the server, which validates the cookie with a key the attacker does not hold.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-19565\n  \nPublished : 2026年8月23日20:16 | 2時間, 50分 ago\n  \nDescription :Apache::AppSamurai::Util versions through 1.01 for Perl generate predictable session authentication keys from the clock and process id in CreateSessionAuthKey.\n\nCreateSessionAuthKey runs five rounds of SHA-256, each over a fresh Time::HiRes reading formatted to six decimal places, the running digest, and the process id. CreateSession calls it with an empty key source on every login, and the optional Keysource directive is the only route to the other branch. The result is 64 hex characters. The microsecond field of the first reading takes one of a million values, the later readings follow it within microseconds, and the process id is drawn from a small range.\n\nThe key is returned to the browser as the session cookie, and is combined with the configured server key to compute the session id and to encrypt the stored session data. An attacker who knows the second in which a session was created and the process id of the worker that created it can enumerate candidate keys and recover the victim's cookie, bypassing authentication for the protected resources. Each candidate has to be tried against the server, which validates the cookie with a key the attacker does not hold.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-19565\n2. 26.08.24 오전5:16\n3. Apache::AppSamurai::Util versions through 1.01 for",
-      "cve_id": "CVE-2026-19565",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-19565",
-      "source": "cvefeed",
-      "published": "2026-08-24T05:16:50+09:00",
       "lang": "en"
     }
   ],
