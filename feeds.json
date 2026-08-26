@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-26T09:03:23.388781+09:00",
+  "fetched_at": "2026-08-26T09:30:52.148285+09:00",
   "security_news": [
     {
       "title": "시큐리티허브-HSPACE, 데프콘 콘테스트 운영…AI·보안 기술 교류",
@@ -1887,6 +1887,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-80185 - Bluez: sdp-xml: bluez 5.86: unprivileged-local and adjacent-le-peer leads to arbitrary code execution as root",
+      "summary": "CVE ID :CVE-2026-80185\n  \nPublished : Aug. 25, 2026, 10:17 p.m. | 55 minutes ago\n  \nDescription :BlueZ sdp-xml.c type confusion via RegisterProfile(ServiceRecord) can crash bluetoothd (local DoS): a crafted nested ServiceRecord can corrupt the SDP XML parser stack so scalar union data is treated as a sequence pointer, allowing a local caller to crash bluetoothd.\n  \nSeverity: 5.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-80185\n  \nPublished : Aug. 25, 2026, 10:17 p.m. | 55 minutes ago\n  \nDescription :BlueZ sdp-xml.c type confusion via RegisterProfile(ServiceRecord) can crash bluetoothd (local DoS): a crafted nested ServiceRecord can corrupt the SDP XML parser stack so scalar union data is treated as a sequence pointer, allowing a local caller to crash bluetoothd.\n  \nSeverity: 5.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-80185\n2. 26.08.26 오전7:17\n3. BlueZ sdp-xml.c type confusion via RegisterProfile",
+      "cve_id": "CVE-2026-80185",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80185",
+      "source": "cvefeed",
+      "published": "2026-08-26T07:17:07+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-80182 - OpenStack Keystone Improper Authorization of Delegated Tokens",
       "summary": "CVE ID :CVE-2026-80182\n  \nPublished : Aug. 25, 2026, 10:17 p.m. | 29 minutes ago\n  \nDescription :In OpenStack Keystone before 29.0.3, tokens obtained via OAuth1 access token, application credential, or trust-scoped authentication could create new long-lived credentials or authorize new delegations that persist independently of, and outlive, the credential used to obtain them. The delegation restrictions that block these operations did not consistently apply to all delegated token types, allowing an OAuth1-scoped token, for example, to create application credentials or authorize OAuth1 request tokens despite those operations being restricted for other delegated token types. All Keystone deployments that permit delegated authentication through OAuth1 access tokens, application credentials, or trusts are affected.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
