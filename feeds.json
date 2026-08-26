@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-26T22:00:59.093578+09:00",
+  "fetched_at": "2026-08-26T22:32:04.104255+09:00",
   "security_news": [
+    {
+      "title": "'오프리쉬 AI' 정말 위험하기만 할까?",
+      "summary": "사이버보안 연구에서도 비슷한 문제가 발생한다. 침투 테스트나 악성코드 분석, 취약점 연구에서는 상용 AI가... 보안 분야에서는 공격과 방어가 상당 부분 같은 기술 지식을 공유한다. 악성코드의 구조를 알아야 이를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI, 악성코드 분석 등 보안 연구 활용\n2. AI, 공격 방식 학습으로 오용 가능성\n3. AI 악용, 새로운 보안 위협 대두",
+      "link": "https://www.cnbnews.com/news/articleView.html?idxno=1013015",
+      "source": "naver",
+      "published": "2026-08-26T22:16:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "“폭탄 설치” 전국 법원 40여곳에 협박 메일…실물은 확인 안 돼",
       "summary": "가라사와 다카히로는 실제 일본에서 활동하는 변호사로 2012년 극우 성향 온라인 커뮤니티에 개인정보가 유출돼 괴롭힘을 당하던 고등학생 사건을 맡았는데 이후 사이버 테러 표적이 됐다고 한다. 일본에서도 한국처럼...",
@@ -2268,21 +2280,24 @@
       "source": "naver",
       "published": "2026-08-24T00:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "ZachXBT, 영국·캐나다·인도 등 7개국 이용자 접근을 새 지원사이트서 ...",
-      "summary": "온체인 수사매체 WuBlockchain의 최초 보도를 시작으로 여러 매체가 이 소식을 전했다.반복된 협조 실패가 결정 배경ZachXBT는 그동안 지갑 탈취, 피싱, 거래소 해킹 피해자들의 자금 추적을 돕는 사실상 공공 조사 역할을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. ZachXBT, 7개국 이용자 지원 중단 결정\n2. 협조 실패 거듭, 지갑 탈취 등 추적 활동 영향\n3. WuBlockchain 등 언론 보도로 사건 알려짐",
-      "link": "https://www.wikitree.co.kr/articles/1154330",
-      "source": "naver",
-      "published": "2026-08-23T22:30:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-79619 - OpenZFS: user-namespace capability check allows unprivileged local authorization bypass",
+      "summary": "CVE ID :CVE-2026-79619\n  \nPublished : Aug. 26, 2026, 12:50 p.m. | 23 minutes ago\n  \nDescription :On Linux, several OpenZFS ioctl authorization checks accept a capability held only within a user-created, unprivileged namespace as equivalent to real host privilege, allowing an unprivileged local user to perform operations that should require root. Affected operations include pool-administrative operations (eg create, import, destroy), pool event log access (zpool events) and fault injection (zinject). Exploiting the problem requires only that the local user is permitted to open /dev/zfs (governed by local device permissions) and that the kernel permits unprivileged user namespace creation. No prior access to the target pool or its underlying devices is needed.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-79619\n  \nPublished : Aug. 26, 2026, 12:50 p.m. | 23 minutes ago\n  \nDescription :On Linux, several OpenZFS ioctl authorization checks accept a capability held only within a user-created, unprivileged namespace as equivalent to real host privilege, allowing an unprivileged local user to perform operations that should require root. Affected operations include pool-administrative operations (eg create, import, destroy), pool event log access (zpool events) and fault injection (zinject). Exploiting the problem requires only that the local user is permitted to open /dev/zfs (governed by local device permissions) and that the kernel permits unprivileged user namespace creation. No prior access to the target pool or its underlying devices is needed.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-79619\n2. 26.08.26 오후9:50\n3. On Linux, several OpenZFS ioctl authorization chec",
+      "cve_id": "CVE-2026-79619",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-79619",
+      "source": "cvefeed",
+      "published": "2026-08-26T21:50:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-80206 - NLTK 3.10.2 Regular Expression Denial of Service via tgrep",
       "summary": "CVE ID :CVE-2026-80206\n  \nPublished : Aug. 26, 2026, 10:28 a.m. | 44 minutes ago\n  \nDescription :NLTK before 3.10.3 contains a regular expression denial of service (ReDoS) vulnerability in the tgrep module. The _tgrep_node_action function compiles user-supplied regular expressions embedded in /regex/ pattern nodes and executes them via re.search against tree node labels without any validation or timeout. An attacker who controls the tgrep pattern (e.g., via tgrep_positions() or tgrep_compile() exposed to external input) can supply a pattern that triggers catastrophic backtracking, causing indefinite CPU saturation that blocks the Python process.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
