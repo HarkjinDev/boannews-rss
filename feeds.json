@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-26T21:01:08.466819+09:00",
+  "fetched_at": "2026-08-26T21:31:05.698405+09:00",
   "security_news": [
+    {
+      "title": "“폭탄 설치” 전국 법원 40여곳에 협박 메일…실물은 확인 안 돼",
+      "summary": "가라사와 다카히로는 실제 일본에서 활동하는 변호사로 2012년 극우 성향 온라인 커뮤니티에 개인정보가 유출돼 괴롭힘을 당하던 고등학생 사건을 맡았는데 이후 사이버 테러 표적이 됐다고 한다. 일본에서도 한국처럼...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 일본 법원 40여 곳에 \"폭탄 설치\" 협박 메일 발송\n2. 변호사 가라사와 다카히로 표적, 사이버 테러 발생\n3. 실제 폭발물은 확인되지 않아, 사건 조사 중",
+      "link": "https://n.news.naver.com/mnews/article/032/0003466698?sid=102",
+      "source": "naver",
+      "published": "2026-08-26T21:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "KISA 배승권 센터장 \"AI 시대 사이버공격, 기법보다 속도가 달라졌다…...",
       "summary": "유형별로는 서버 해킹이 54%로 가장 큰 비중을 차지했고 기타·디도스가 30.2%, 랜섬웨어가 12.3%였다. 인터넷에 노출된 서비스와 서버가 여전히 주요 공격 접점이라는 의미다. 배 센터장은 \"새로운 공격 기술이 등장했다고...",
@@ -2268,21 +2280,24 @@
       "source": "naver",
       "published": "2026-08-23T22:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "NASA 우주선 오픈소스 소프트웨어에 치명적 취약점…로그인 없이 장비 명령 실행",
-      "summary": "미국 항공우주국(NASA) 제트추진연구소(JPL)가 공개한 우주 임무용 오픈소스 소프트웨어에서 인증 없이 우주선이나 탑재 장비에 명령을 전달할 수 있는 치명적인 보안 취약점이 발견됐다.문제가 확인된 소프트웨어는 암모스 인스트루먼트 툴킷(AIT)의 웹 관리 화면인 AIT-GUI다. 취약점은 GHSA-p9r8-2q67-fp86으로 관리되고 있으며 위험도는 CVSS 기준 9.4점으로 평가됐다. 현재 별도의 CVE 번호는 부여되지 않았다.깃허브 보안 권고는 2026년 8월 13일 공개됐으며, 취약점을 발견한 연구팀은 8월 18일 상세 분석",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. NASA JPL 우주선 오픈소스 AIT-GUI에 CVSS 9.4점 취약점 발견\n2. GHSA-p9r8-2q67-fp86, 로그인 없이 우주 장비에 명령 실행 가능\n3. 2026년 8월 13일 깃허브 보안 권고 공개",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208156",
-      "source": "dailysecu",
-      "published": "2026-08-23T21:24:20+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-80206 - NLTK 3.10.2 Regular Expression Denial of Service via tgrep",
+      "summary": "CVE ID :CVE-2026-80206\n  \nPublished : Aug. 26, 2026, 10:28 a.m. | 44 minutes ago\n  \nDescription :NLTK before 3.10.3 contains a regular expression denial of service (ReDoS) vulnerability in the tgrep module. The _tgrep_node_action function compiles user-supplied regular expressions embedded in /regex/ pattern nodes and executes them via re.search against tree node labels without any validation or timeout. An attacker who controls the tgrep pattern (e.g., via tgrep_positions() or tgrep_compile() exposed to external input) can supply a pattern that triggers catastrophic backtracking, causing indefinite CPU saturation that blocks the Python process.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-80206\n  \nPublished : Aug. 26, 2026, 10:28 a.m. | 44 minutes ago\n  \nDescription :NLTK before 3.10.3 contains a regular expression denial of service (ReDoS) vulnerability in the tgrep module. The _tgrep_node_action function compiles user-supplied regular expressions embedded in /regex/ pattern nodes and executes them via re.search against tree node labels without any validation or timeout. An attacker who controls the tgrep pattern (e.g., via tgrep_positions() or tgrep_compile() exposed to external input) can supply a pattern that triggers catastrophic backtracking, causing indefinite CPU saturation that blocks the Python process.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-80206\n2. 26.08.26 오후7:28\n3. NLTK before 3.10.3 contains a regular expression d",
+      "cve_id": "CVE-2026-80206",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80206",
+      "source": "cvefeed",
+      "published": "2026-08-26T19:28:15+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-19718 - BlogVault, MalCare and WP Remote 5.16 - 6.62 - Unauthenticated Site Takeover via Connection Key Recovery",
       "summary": "CVE ID :CVE-2026-19718\n  \nPublished : Aug. 26, 2026, 6 a.m. | 1 hour, 12 minutes ago\n  \nDescription :The BlogVault Backup & Staging WordPress plugin before 6.65, MalCare WordPress Security Plugin  WordPress plugin before 6.65, The WP Remote WordPress Plugin WordPress plugin before 6.65 do not prevent unauthenticated users from obtaining data derived from the secret that binds a site to its remote management service, and generate that secret with a weak pseudo-random number generator, allowing attackers to recover it and gain administrative access to the site.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
