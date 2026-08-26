@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-27T03:31:01.014364+09:00",
+  "fetched_at": "2026-08-27T04:01:10.020944+09:00",
   "security_news": [
+    {
+      "title": "빌 게이츠 \"AI 위험, 기후변화보다 시급…기술업계가 위험 축소\"",
+      "summary": "AI의 해킹 능력에는 특히 강한 우려를 나타냈다. 그는 오픈AI와 앤스로픽, 메타플랫폼스의 기술이 최근 격리된 환경에서 진행돼야 할 사이버보안 평가 과정에서 실제 웹사이트를 해킹한 사례를 들며 \"이런 보안 사고는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 빌 게이츠, AI 해킹 능력에 기후변화보다 시급한 우려\n2. 오픈AI, 앤스로픽, 메타플랫폼스 AI, 격리 평가 중 실제 웹 해킹\n3. 기술 업계, AI 위험 축소 및 보안 강화 필요성 대두",
+      "link": "https://www.newspim.com/news/view/20260827000019",
+      "source": "naver",
+      "published": "2026-08-27T03:36:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Nimbus Manticore Expands Toolset With TWOSTROKE-Like Backdoor and SSH Tunneler",
       "summary": "Cybersecurity researchers have discovered additional infrastructure and previously undocumented malware associated with Nimbus Manticore, an Iranian state-sponsored hacking group affiliated with the Islamic Revolutionary Guard Corps (IRGC).\n\nGroup-IB, in a new analysis published today, described the cyber espionage actor as among the most active Iranian APT groups in 2026. Nimbus Manticore (aka",
@@ -2271,6 +2283,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-32639 - Winter: Broken access control in `Cms\\Controllers\\Index` allows cross-template actions and unauthorized asset uploads",
+      "summary": "CVE ID :CVE-2026-32639\n  \nPublished : Aug. 26, 2026, 6:16 p.m. | 38 minutes ago\n  \nDescription :Winter CMS is a content management system built on the Laravel PHP framework. In versions up to and including 1.2.12, the CMS section's Theme Editor AJAX handlers did not enforce per-template-type permission checks, allowing a backend user with any single CMS permission to act on template types outside their authorized scope. The CMS controller gated access to the section as a whole using OR-logic across its five permissions, but individual handlers such as onSave(), onDelete(), and onDeleteTemplates() did not verify that the user held the specific permission for the requested template type, so a user with only cms.manage_pages could craft AJAX requests to delete layouts, modify partials, or read content files. Separately, the AssetList widget was registered for any user who passed the controller gate regardless of the cms.manage_assets permission, and its onUpload() handler omitted the theme-validation call present on the other mutating handlers, permitting unauthorized file uploads into the active theme's asset directory. Exploitation requires an authenticated backend account holding at least one of the CMS Theme Editor permissions. This issue is fixed in version 1.2.13.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-32639\n  \nPublished : Aug. 26, 2026, 6:16 p.m. | 38 minutes ago\n  \nDescription :Winter CMS is a content management system built on the Laravel PHP framework. In versions up to and including 1.2.12, the CMS section's Theme Editor AJAX handlers did not enforce per-template-type permission checks, allowing a backend user with any single CMS permission to act on template types outside their authorized scope. The CMS controller gated access to the section as a whole using OR-logic across its five permissions, but individual handlers such as onSave(), onDelete(), and onDeleteTemplates() did not verify that the user held the specific permission for the requested template type, so a user with only cms.manage_pages could craft AJAX requests to delete layouts, modify partials, or read content files. Separately, the AssetList widget was registered for any user who passed the controller gate regardless of the cms.manage_assets permission, and its onUpload() handler omitted the theme-validation call present on the other mutating handlers, permitting unauthorized file uploads into the active theme's asset directory. Exploitation requires an authenticated backend account holding at least one of the CMS Theme Editor permissions. This issue is fixed in version 1.2.13.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-32639\n2. 26.08.27 오전3:16\n3. Winter CMS is a content management system built on",
+      "cve_id": "CVE-2026-32639",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-32639",
+      "source": "cvefeed",
+      "published": "2026-08-27T03:16:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54569 - SENAITE.CORE: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') and Missing Authorization in senaite.core",
       "summary": "CVE ID :CVE-2026-54569\n  \nPublished : Aug. 26, 2026, 4:16 p.m. | 31 minutes ago\n  \nDescription :SENAITE.CORE is the core framework for the SENAITE laboratory information management system. From 2.0.0 to 2.6.0, the SENAITE.CORE JSON API permits unauthenticated remote code execution through a two-request chain involving missing authorization and unsafe evaluation. The state-changing routes in src/bika/lims/jsonapi/update.py, including update, update_many, remove, doActionFor, doActionFor_many, and getusers, do not enforce the senaite.core: Access JSON API permission before resolving attacker-selected objects. In src/bika/lims/jsonapi/init.py, set_fields_from_request passes raw request values for RecordsField and RecordField instances to eval() before field mutator write-permission checks execute. An anonymous attacker can discover the bika_setup object identifier through @@uuid, send a value such as RejectionReasons to /@@API/update, and execute arbitrary Python in the Zope worker before a later mutation failure rolls back ZODB changes. The same unsafe evaluation pattern is present in src/senaite/core/browser/fields/record.py and src/senaite/core/browser/fields/records.py. Successful exploitation can expose or modify laboratory data, files, and accounts and can disrupt the service.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
