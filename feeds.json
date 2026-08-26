@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-26T14:01:12.345403+09:00",
+  "fetched_at": "2026-08-26T14:31:11.588993+09:00",
   "security_news": [
+    {
+      "title": "국정원 前 3차장 \"선거망 외부 침투·조작 가능했다\"... 尹 재판서 증언",
+      "summary": "백 전 차장은 악성 이메일을 통한 해킹의 위험성도 강조했다. 그는 \"2020년부터 2022년까지 3년간 북한의 공격으로 발생한 피해 사고의 74%가 해킹 메일 공격이었다\"며 \"단 하나의 해킹 메일이라도 내부망 침투와 장악으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국정원 前 3차장, 尹 재판서 선거망 외부 침투 가능성 증언\n2. 20~22년, 북한발 해킹 메일 피해 74% 발생, 내부망 장악 위협\n3. 단 하나의 악성 메일로도 내부망 침투 및 조작 가능성 시사",
+      "link": "https://www.thepublic.kr/news/articleView.html?idxno=316285",
+      "source": "naver",
+      "published": "2026-08-26T14:12:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"AI 해킹·정보유출 고리 차단\"…금보원, 보험사-GA '보안 공동선' 구축",
+      "summary": "금융보안원이 보험상품 판매의 핵심 거점으로 떠오른 법인보험대리점(GA)을 고리로 한 사이버 해킹과... 금융보안원 사원사로 가입한 GA에는 24시간 보안관제, 침해사고 예방·대응, 시스템 취약점 분석·평가, 모의해킹...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금보원, GA 해킹·정보유출 막으려 보안 공동선 구축\n2. GA 대상 24시간 보안관제, 침해사고 예방·대응 강화\n3. 보험사-GA 협력으로 AI 해킹 및 정보유출 고리 차단",
+      "link": "http://www.globalepic.co.kr/view.php?ud=2026082613580638907cc35ccc5c_29",
+      "source": "naver",
+      "published": "2026-08-26T14:08:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[기획] LG유플러스, 서버 OS 재설치‧페기로 유출 경위 '미궁'",
       "summary": "개인정보위는 지난해 8월 미국 해킹·보안 전문지 '프랙(Phrack)'을 통해 LG유플러스 임직원 및 협력사 직원... 지난 24일 대규모 해킹사고 청문회에 KT 황태선 실장이 출석했다. / 남기두 기자 KT는 감염 서버에 대한 로그를...",
@@ -2067,6 +2091,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-58092 - Unauthorized credential switching",
+      "summary": "CVE ID :CVE-2026-58092\n  \nPublished : Aug. 26, 2026, 4:46 a.m. | 21 minutes ago\n  \nDescription :In FreeBSD 15.0, the kernel structure used to represent user credentials changed: previously the primary group ID was stored in the first element of the array containing the list of supplementary group IDs, whereas now the primary group ID is stored in a dedicated field.  This change was largely internal to the kernel and not user-visible.\n\nOne function, group_is_primary(), was not properly updated as a part of this transition.  This function is used by mac_do to determine the primary group ID of the credential after applying a transition rule, used when the rule target does not explicitly specify a group.\n\nAs a result, with certain mac_do rules, it is possible for a credential switch to incorrectly set the primary group ID to the ID stored in the first element of the original credential's supplementary group array.\n\nIf the list of supplementary groups is empty, this value will be 0, corresponding to the \"wheel\" group.  For example, a rule such as \"uid=1001>uid=1002\" can be abused to set the primary group ID to 0 even if the process did not originally belong to group 0.\n\n\n\nCertain mac_do rules can be abused to set a process' group ID to 0.  Note however, that the rule must apply to the caller in order for the bug to be triggered, e.g., given the ruleset \"uid=1001>uid=1002\", the user must have user ID 1001 in order to trigger the bug.\n\nFurther, logged-in users will in general have a non-empty supplementary group list, in which case the bug can at worst be used to set the credential's first supplementary group ID as its primary group ID.  Processes must explicitly remove themselves from all supplementary groups, using the privileged setgroups(2) system call, in order to exploit the bug to set 0 as the primary group ID.\n\nSince membership in group 0 is often used to enable controlled privilege escalation, the bug might be further exploitable to obtain root privileges, depending on the system configuration.  For instance, a ruleset such as the following could be exploited by a process running as user 1001 and with an empty supplementary group list: \"uid=1001>uid=1002;gid=0>uid=0\".\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-58092\n  \nPublished : Aug. 26, 2026, 4:46 a.m. | 21 minutes ago\n  \nDescription :In FreeBSD 15.0, the kernel structure used to represent user credentials changed: previously the primary group ID was stored in the first element of the array containing the list of supplementary group IDs, whereas now the primary group ID is stored in a dedicated field.  This change was largely internal to the kernel and not user-visible.\n\nOne function, group_is_primary(), was not properly updated as a part of this transition.  This function is used by mac_do to determine the primary group ID of the credential after applying a transition rule, used when the rule target does not explicitly specify a group.\n\nAs a result, with certain mac_do rules, it is possible for a credential switch to incorrectly set the primary group ID to the ID stored in the first element of the original credential's supplementary group array.\n\nIf the list of supplementary groups is empty, this value will be 0, corresponding to the \"wheel\" group.  For example, a rule such as \"uid=1001>uid=1002\" can be abused to set the primary group ID to 0 even if the process did not originally belong to group 0.\n\n\n\nCertain mac_do rules can be abused to set a process' group ID to 0.  Note however, that the rule must apply to the caller in order for the bug to be triggered, e.g., given the ruleset \"uid=1001>uid=1002\", the user must have user ID 1001 in order to trigger the bug.\n\nFurther, logged-in users will in general have a non-empty supplementary group list, in which case the bug can at worst be used to set the credential's first supplementary group ID as its primary group ID.  Processes must explicitly remove themselves from all supplementary groups, using the privileged setgroups(2) system call, in order to exploit the bug to set 0 as the primary group ID.\n\nSince membership in group 0 is often used to enable controlled privilege escalation, the bug might be further exploitable to obtain root privileges, depending on the system configuration.  For instance, a ruleset such as the following could be exploited by a process running as user 1001 and with an empty supplementary group list: \"uid=1001>uid=1002;gid=0>uid=0\".\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-58092\n2. 26.08.26 오후1:46\n3. In FreeBSD 15.0, the kernel structure used to repr",
+      "cve_id": "CVE-2026-58092",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-58092",
+      "source": "cvefeed",
+      "published": "2026-08-26T13:46:17+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-80192 - better-auth SSO before 1.6.27 Domain Ownership Authentication Bypass",
       "summary": "CVE ID :CVE-2026-80192\n  \nPublished : Aug. 25, 2026, 11:19 p.m. | 1 hour, 12 minutes ago\n  \nDescription :@better-auth/sso before 1.6.27 (and before 1.4.8 in the 1.4.x line and before 1.7.0-rc.5 in the 1.7 prerelease line) contains two domain-ownership flaws. When domain verification is disabled, automatic organization assignment accepts unverified provider domains, allowing an authenticated organization owner/administrator to register an SSO provider for an arbitrary domain and have users with matching email domains added to the attacker's organization with default member permissions. When domain verification is enabled, a race condition between the verify-domain and update-provider endpoints can apply completed DNS proof to a different domain; combined with implicit account linking, this can link an attacker-controlled identity provider to an existing user account. Exploitation requires the SSO plugin (and, for the org-assignment path, the organization plugin) with the relevant configuration enabled.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
