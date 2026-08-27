@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-28T00:30:59.062708+09:00",
+  "fetched_at": "2026-08-28T01:02:17.841535+09:00",
   "security_news": [
+    {
+      "title": "비밀 게시판 찾아 자체 팀 만들고 AI 700개가 허깅페이스 집단 해킹",
+      "summary": "보고서에 따르면, 사건은 사이버 보안 성능 평가 시험을 진행하면서 시작됐다. AI가 소프트웨어의 취약점을 찾아 정답에 해당하는 문자열을 가져오는 방식의 시험이다. 오픈AI는 AI의 해킹 능력을 측정하기 위해...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 비밀 게시판 찾아 자체 팀 만들고 AI 700개가 허깅페이스 집단 해킹 보고서에 따르면, \n2. AI가 소프트웨어의 취약점을 찾아 정답에 해당하는 문자열을 가져오는 방식의 시험이다.\n3. 오픈AI는 AI의 해킹 능력을 측정하기 위해...",
+      "link": "https://n.news.naver.com/mnews/article/023/0003995325?sid=105",
+      "source": "naver",
+      "published": "2026-08-28T00:35:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Amazon Kiro Prompt Injection Can Exfiltrate Sensitive Data Through Kiro Powers",
       "summary": "Cybersecurity researchers have disclosed details of a vulnerability in Amazon Kiro, an artificial intelligence (AI)-powered, agentic integrated development environment (IDE), that could facilitate data exfiltration via prompt injection and Kiro Powers.\n\nThe security flaw, which does not have a CVE identifier, works against Kiro IDE 0.7.45 on Windows, according to Mindguard. The latest version of",
@@ -3256,21 +3268,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-60093",
       "source": "cvefeed",
       "published": "2026-08-25T01:11:23+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-13343 - Uninitialised stack memory disclosure in the MIDI 2.0 UMP Stream responder",
-      "summary": "CVE ID :CVE-2026-13343\n  \nPublished : Aug. 24, 2026, 3:43 p.m. | 35 minutes ago\n  \nDescription :The UMP Stream responder library in lib/midi2/ump_stream_responder.c builds reply packets in a 16-byte struct midi_ump (uint32_t data[4]). The builders make_endpoint_info() and make_function_block_info() populate only the first two words (res.data[0] and res.data[1]) and, before this fix, declared their result as an uninitialised local (struct midi_ump res;). The remaining two words (res.data[2], res.data[3]) retain stale stack contents.\n\nEndpoint Info and Function Block Info notifications are UMP Stream messages (UMP_MT_UMP_STREAM), which are 4 words long, so the full 16-byte packet — including the two uninitialised words — is transmitted verbatim by cfg->send(). The responder is driven by attacker-supplied UMP Stream Endpoint-Discovery / Function-Block-Discovery requests via ump_stream_respond(). In the in-tree Network MIDI 2.0 server (subsys/net/lib/midi2/netmidi2.c) these requests arrive as UDP datagrams and, with the default no-authentication endpoint, a remote peer can establish a session and trigger the responses; the same library also serves USB MIDI 2.0 hosts.\n\nEach discovery request causes the device to disclose 8 bytes of its own uninitialised stack memory to the peer, and the request is freely repeatable. This is a confidentiality-only information leak (root cause is use of an uninitialised variable, CWE-457/CWE-908); the leaked words could include residual data or pointer values. There is no memory-corruption, integrity, or availability impact.\n\nThe fix zero-initialises both result structs (struct midi_ump res = {0};), so the trailing words are cleared before transmission. These are the only two responder builders that left trailing words unset (send_string() already zeroes its buffer), so the leak is fully closed.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-13343\n  \nPublished : Aug. 24, 2026, 3:43 p.m. | 35 minutes ago\n  \nDescription :The UMP Stream responder library in lib/midi2/ump_stream_responder.c builds reply packets in a 16-byte struct midi_ump (uint32_t data[4]). The builders make_endpoint_info() and make_function_block_info() populate only the first two words (res.data[0] and res.data[1]) and, before this fix, declared their result as an uninitialised local (struct midi_ump res;). The remaining two words (res.data[2], res.data[3]) retain stale stack contents.\n\nEndpoint Info and Function Block Info notifications are UMP Stream messages (UMP_MT_UMP_STREAM), which are 4 words long, so the full 16-byte packet — including the two uninitialised words — is transmitted verbatim by cfg->send(). The responder is driven by attacker-supplied UMP Stream Endpoint-Discovery / Function-Block-Discovery requests via ump_stream_respond(). In the in-tree Network MIDI 2.0 server (subsys/net/lib/midi2/netmidi2.c) these requests arrive as UDP datagrams and, with the default no-authentication endpoint, a remote peer can establish a session and trigger the responses; the same library also serves USB MIDI 2.0 hosts.\n\nEach discovery request causes the device to disclose 8 bytes of its own uninitialised stack memory to the peer, and the request is freely repeatable. This is a confidentiality-only information leak (root cause is use of an uninitialised variable, CWE-457/CWE-908); the leaked words could include residual data or pointer values. There is no memory-corruption, integrity, or availability impact.\n\nThe fix zero-initialises both result structs (struct midi_ump res = {0};), so the trailing words are cleared before transmission. These are the only two responder builders that left trailing words unset (send_string() already zeroes its buffer), so the leak is fully closed.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-13343\n2. 26.08.25 오전12:43\n3. The UMP Stream responder library in lib/midi2/ump_",
-      "cve_id": "CVE-2026-13343",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-13343",
-      "source": "cvefeed",
-      "published": "2026-08-25T00:43:36+09:00",
       "lang": "en"
     }
   ],
