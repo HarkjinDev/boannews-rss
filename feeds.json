@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-27T09:32:25.566835+09:00",
+  "fetched_at": "2026-08-27T10:02:10.711638+09:00",
   "security_news": [
+    {
+      "title": "롯데카드 이어 우리·신한카드도 정보유출 제재받나",
+      "summary": "27일 세이프타임즈 취재를 종합하면 롯데카드는 대규모 해킹으로 297만명의 고객 정보가 유출된 사고와... 회사는 당시 외부 해킹이 아닌 내부 영업 과정에서 발생한 사고라고 설명했다. 신한카드는 롯데카드와 사고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 롯데카드 이어 우리·신한카드도 정보유출 제재받나 27일 세이프타임즈 취재를 종합하면 롯데카\n2. 회사는 당시 외부 해킹이 아닌 내부 영업 과정에서 발생한 사고라고 설명했다.\n3. 신한카드는 롯데카드와 사고...",
+      "link": "https://www.safetimes.co.kr/news/articleView.html?idxno=245154",
+      "source": "naver",
+      "published": "2026-08-27T09:48:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "SKT, 업스테이지 등과 손잡고 국가대표급 사이버보안 AI 모델 만든다",
       "summary": "라온시큐어는 국가 모바일 신분증 구축에 참여했고 글로벌 인증 표준화 기구 FIDO 얼라이언스의 임원사로도 활동하는 AI보안·인증 플랫폼 기업이며, 국제 해킹방어대회 수상 경력이 있는 화이트 해커 조직도 운영하고...",
@@ -2136,33 +2148,24 @@
       "source": "naver",
       "published": "2026-08-24T10:14:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"혁신보다 시가총액\"…AI 시대에도 숫자로 기업을 평가할 것인가",
-      "summary": "생명인 사이버 위협 분야에 지속적인 파장을 일으킬 수 있다\"고 지적했다. 기업 실적보다 투자심리·대형주... 정보보호 제품은 새로운 사이버 위협이 등장하기 전에 기술을 개발해야 한다. 제로데이 취약점과 랜섬웨어...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. \"혁신보다 시가총액\"…AI 시대에도 숫자로 기업을 평가할 것인가 생명인 사이버 위협 분야에\n2. 기업 실적보다 투자심리·대형주...\n3. 정보보호 제품은 새로운 사이버 위협이 등장하기 전에 기술을 개발해야 한다.",
-      "link": "https://www.itdaily.kr/news/articleView.html?idxno=241148",
-      "source": "naver",
-      "published": "2026-08-24T09:50:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "LG유플러스, 국내 통신사 첫 글로벌 버그바운티 가동",
-      "summary": "정보보호책임자(CISO)와 개인정보보호책임자(CPO) 조직을 최고경영자 직속으로 강화하고 외부 전문가를 활용한 취약점 점검과 모의해킹도 확대했다. 이번 글로벌 버그바운티 도입은 이 같은 보안 강화 기조를 해외...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. LG유플러스, 글로벌 버그바운티 국내 통신사 최초 운영\n2. 최고경영자 직속 CISO/CPO 조직 강화, 외부 전문가 점검 확대\n3. 보안 강화 기조 일환, 해외 전문가 취약점 점검 활용",
-      "link": "http://www.4th.kr/news/articleView.html?idxno=2116743",
-      "source": "naver",
-      "published": "2026-08-24T09:36:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-80158 - Ansible-collection-community-general: community.general: ipa_getkeytab does not set no_log on the bind_pw parameter, disclosing the ipa bind password in logs and process listings",
+      "summary": "CVE ID :CVE-2026-80158\n  \nPublished : Aug. 26, 2026, 11:17 p.m. | 1 hour, 26 minutes ago\n  \nDescription :A flaw was found in the ipa_getkeytab module of the community.general\nAnsible collection. The module's bind_pw parameter, used to supply the LDAP simple-bind password when retrieving a Kerberos keytab, is not declared with no_log, unlike the sibling password parameter in the same module. As a consequence, the supplied IPA/LDAP bind password is recorded in cleartext in the managed host's system journal/syslog (the module's \"Invoked with\" record), is included in the module's return values and verbose (-v) output, and is displayed in Automation Controller / AWX job output. The password is additionally passed on the command line to the ipa-getkeytab helper (as --bindpw ), exposing it in the process list to local users while the command runs. An attacker able to read these logs, job output, or the process table can obtain the directory bind credential, potentially compromising the accounts and objects that credential can access.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-80158\n  \nPublished : Aug. 26, 2026, 11:17 p.m. | 1 hour, 26 minutes ago\n  \nDescription :A flaw was found in the ipa_getkeytab module of the community.general\nAnsible collection. The module's bind_pw parameter, used to supply the LDAP simple-bind password when retrieving a Kerberos keytab, is not declared with no_log, unlike the sibling password parameter in the same module. As a consequence, the supplied IPA/LDAP bind password is recorded in cleartext in the managed host's system journal/syslog (the module's \"Invoked with\" record), is included in the module's return values and verbose (-v) output, and is displayed in Automation Controller / AWX job output. The password is additionally passed on the command line to the ipa-getkeytab helper (as --bindpw ), exposing it in the process list to local users while the command runs. An attacker able to read these logs, job output, or the process table can obtain the directory bind credential, potentially compromising the accounts and objects that credential can access.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-80158\n2. 26.08.27 오전8:17\n3. A flaw was found in the ipa_getkeytab module of th",
+      "cve_id": "CVE-2026-80158",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80158",
+      "source": "cvefeed",
+      "published": "2026-08-27T08:17:20+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-32639 - Winter: Broken access control in `Cms\\Controllers\\Index` allows cross-template actions and unauthorized asset uploads",
       "summary": "CVE ID :CVE-2026-32639\n  \nPublished : Aug. 26, 2026, 6:16 p.m. | 38 minutes ago\n  \nDescription :Winter CMS is a content management system built on the Laravel PHP framework. In versions up to and including 1.2.12, the CMS section's Theme Editor AJAX handlers did not enforce per-template-type permission checks, allowing a backend user with any single CMS permission to act on template types outside their authorized scope. The CMS controller gated access to the section as a whole using OR-logic across its five permissions, but individual handlers such as onSave(), onDelete(), and onDeleteTemplates() did not verify that the user held the specific permission for the requested template type, so a user with only cms.manage_pages could craft AJAX requests to delete layouts, modify partials, or read content files. Separately, the AssetList widget was registered for any user who passed the controller gate regardless of the cms.manage_assets permission, and its onUpload() handler omitted the theme-validation call present on the other mutating handlers, permitting unauthorized file uploads into the active theme's asset directory. Exploitation requires an authenticated backend account holding at least one of the CMS Theme Editor permissions. This issue is fixed in version 1.2.13.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3166,20 +3169,6 @@
       "link": "https://n.news.naver.com/mnews/article/079/0004181440?sid=103",
       "source": "naver_rep",
       "published": "2026-08-24T10:12:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "개인정보위, 공공부문 전담 인력 확충·과징금 개편 이끈 우수 직원 포...",
-      "summary": "또한 행정안전부·재정경제부 등 관계부처 및 개별 기관과의 협의를 통해 중앙행정기관의 개인정보보호... 마지막 수상자인 전창민 사무관(조사총괄과)은 개인정보 침해사고에 대한 실질적 피해 예방과 엄정한 제재 원칙을...",
-      "description": "또한 행정안전부·재정경제부 등 관계부처 및 개별 기관과의 협의를 통해 중앙행정기관의 개인정보보호... 마지막 수상자인 전창민 사무관(조사총괄과)은 개인정보 침해사고에 대한 실질적 피해 예방과 엄정한 제재 원칙을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 개인정보위, 공공부문 전담 인력 확충·과징금 개편 이끈 우수 직원 포...\n2. 또한 행정안전부·재정경제부 등 관계부처 및 개별 기관과의 협의를 통해 중앙행정기관의 개인정\n3. 마지막 수상자인 전창민 사무관(조사총괄과)은 개인정보 침해사고에 대한 실질적 피해 예방과 ",
-      "keyword_matched": "재정경제부",
-      "link": "https://n.news.naver.com/mnews/article/018/0006356871?sid=105",
-      "source": "naver_rep",
-      "published": "2026-08-24T10:02:00+09:00",
       "lang": "ko"
     }
   ]
