@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-28T00:01:15.918283+09:00",
+  "fetched_at": "2026-08-28T00:30:59.062708+09:00",
   "security_news": [
     {
       "title": "Amazon Kiro Prompt Injection Can Exfiltrate Sensitive Data Through Kiro Powers",
@@ -2400,30 +2400,6 @@
       "source": "naver",
       "published": "2026-08-25T02:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "미 보안업체 “북한 위장취업 IT 인력 급여, 제재 대상 군수업체 계좌로...",
-      "summary": "미국 사이버보안업체 디텍스(DTEX) 위협분석팀은 21일 북한 위장취업 IT 인력들이 해외 기업에서 받은 급여의... 하일먼 CEO는 이런 자금 흐름 때문에 북한 위장취업 IT 인력 문제를 단순한 채용 실수나 보안 문제로 봐서는 안...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 IT 인력, 해외 급여를 제재 대상 군수업체 계좌로 송금\n2. 디텍스, 급여 송금 통해 북한의 금융 제재 회피 확인\n3. 북한 IT 인력, 단순 채용 실수가 아닌 자금 세탁에 활용",
-      "link": "https://www.voakorea.com/a/dtex-dprk-it-worker-money-trail-082426/8189792.html",
-      "source": "naver",
-      "published": "2026-08-25T00:15:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Tricky 'SynkLoader' Multitool May Herald Ransomware",
-      "summary": "An advanced, multilingual malware family brings back a trick from yesteryear — screen hijacking — for effective password theft, along with a slew of novel features.",
-      "content": "",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. SynkLoader 멀웨어, 화면 탈취로 비밀번호 탈취 시도\n2. 다양한 언어 지원, 화면 캡처 및 정보 탈취 기능 보유\n3. 랜섬웨어 사전 준비 악성코드, 주의 필요",
-      "link": "https://www.darkreading.com/threat-intelligence/tricky-synkloader-multitool-ransomware",
-      "source": "darkreading",
-      "published": "2026-08-25T00:02:32+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -3295,21 +3271,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-13343",
       "source": "cvefeed",
       "published": "2026-08-25T00:43:36+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-19874 - Konami's Metal Gear Online 3 contains a heap-based buffer overflow",
-      "summary": "CVE ID :CVE-2026-19874\n  \nPublished : Aug. 24, 2026, 3:16 p.m. | 1 hour, 2 minutes ago\n  \nDescription :A heap-based buffer overflow vulnerability exists in Konami's Metal Gear Online 3, originating from improper validation of lobby data fields related to kicked players. The affected function processes a list of kicked player identifiers using the lobby data key \"kick_num\" to determine the number of entries, and individual kicked player IDs supplied via keys in the format \"kicked_id_%i\". The function does not validate that \"kick_num\" falls within the expected bounds. The game design limits matches to a maximum of 16 players, and the corresponding buffer for storing kicked player IDs is sized accordingly. If \"kick_num\" exceeds this limit, the function continues writing the provided player IDs past the end of the intended buffer and into adjacent memory regions. These adjacent regions contain Steam callback handler structures responsible for processing lobby data updates, lobby messages, and other related events. By supplying an oversized \"kick_num\" value and appropriate \"kicked_id_%i\" fields, an attacker can overwrite fields within the callback handler structures, including function pointers and callback argument values. Successful exploitation may enable control-flow hijacking, potentially allowing arbitrary code execution within the game process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-19874\n  \nPublished : Aug. 24, 2026, 3:16 p.m. | 1 hour, 2 minutes ago\n  \nDescription :A heap-based buffer overflow vulnerability exists in Konami's Metal Gear Online 3, originating from improper validation of lobby data fields related to kicked players. The affected function processes a list of kicked player identifiers using the lobby data key \"kick_num\" to determine the number of entries, and individual kicked player IDs supplied via keys in the format \"kicked_id_%i\". The function does not validate that \"kick_num\" falls within the expected bounds. The game design limits matches to a maximum of 16 players, and the corresponding buffer for storing kicked player IDs is sized accordingly. If \"kick_num\" exceeds this limit, the function continues writing the provided player IDs past the end of the intended buffer and into adjacent memory regions. These adjacent regions contain Steam callback handler structures responsible for processing lobby data updates, lobby messages, and other related events. By supplying an oversized \"kick_num\" value and appropriate \"kicked_id_%i\" fields, an attacker can overwrite fields within the callback handler structures, including function pointers and callback argument values. Successful exploitation may enable control-flow hijacking, potentially allowing arbitrary code execution within the game process.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-19874\n2. 26.08.25 오전12:16\n3. A heap-based buffer overflow vulnerability exists ",
-      "cve_id": "CVE-2026-19874",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-19874",
-      "source": "cvefeed",
-      "published": "2026-08-25T00:16:37+09:00",
       "lang": "en"
     }
   ],
