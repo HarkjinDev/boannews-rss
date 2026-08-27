@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-28T03:01:00.381164+09:00",
+  "fetched_at": "2026-08-28T03:32:11.286865+09:00",
   "security_news": [
     {
       "title": "모토로라, 안드로이드17 50종 넘는 폰에 순차 배포…스택 위젯·테마 아...",
@@ -12,6 +12,18 @@
       "source": "naver",
       "published": "2026-08-28T02:26:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Agentic AI Risks, CVE Program Concerns Permeate Black Hat USA 2026",
+      "summary": "This installment of the Reporters' Notebook video series discusses the topics that dominated the cybersecurity conference, such as AI's effects on vulnerability reporting and security research.",
+      "content": "",
+      "title_ko": "Agentic AI 위험, CVE 프로그램 우려 사항이 Black Hat USA 2026에 침투",
+      "summary_ko": "Reporters' Notebook 비디오 시리즈의 이번 편에서는 취약성 보고 및 보안 연구에 대한 AI의 영향과 같이 사이버 보안 컨퍼런스를 장악한 주제에 대해 논의합니다.",
+      "summary_3lines": "1. Agentic AI 위험, CVE 프로그램 우려가 Black Hat USA 2026에 스며",
+      "link": "https://www.darkreading.com/cybersecurity-operations/agentic-ai-risks-cve-program-concerns-black-hat-usa-2026",
+      "source": "darkreading",
+      "published": "2026-08-28T02:25:09+09:00",
+      "lang": "en"
     },
     {
       "title": "미 보안업체 “북한 위장취업, IT 넘어 ‘의료·영업’ 분야로 확대”…...",
@@ -3214,51 +3226,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-78551",
       "source": "cvefeed",
       "published": "2026-08-25T04:20:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-76836 - AzuraCast through 0.23.8 Liquidsoap Configuration Write via Profile Edit Serialization Group Bypass",
-      "summary": "CVE ID :CVE-2026-76836\n  \nPublished : Aug. 24, 2026, 6:17 p.m. | 50 minutes ago\n  \nDescription :AzuraCast exposes the Liquidsoap custom configuration fields through an endpoint that does not require the permission guarding them. The backend_config property in backend/src/Entity/Station.php is annotated with GROUP_GENERAL, and PUT /api/station/{station_id}/profile/edit in backend/src/Controller/Api/Stations/ProfileEditController.php deserializes with that group while requiring only StationPermissions::Profile. AbstractArrayEntity::fromArray() then assigns every public property with no field-level permission check, so custom_config_top, custom_config, custom_config_pre_playlists, custom_config_pre_live, custom_config_pre_fade and custom_config_bottom are writable through it. ConfigWriter::writeCustomConfigurationSection() emits those values verbatim into the generated Liquidsoap .liq script, where the process.run() and process.exec() built-ins execute operating system commands when the backend restarts, which the built-in sync task triggers automatically once needs_restart is set. The dedicated endpoint for the same data, PUT /api/station/{id}/liquidsoap-config, requires StationPermissions::Broadcasting, so a station manager holding only the profile permission reaches configuration that the intended boundary reserves for broadcasting operators.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-76836\n  \nPublished : Aug. 24, 2026, 6:17 p.m. | 50 minutes ago\n  \nDescription :AzuraCast exposes the Liquidsoap custom configuration fields through an endpoint that does not require the permission guarding them. The backend_config property in backend/src/Entity/Station.php is annotated with GROUP_GENERAL, and PUT /api/station/{station_id}/profile/edit in backend/src/Controller/Api/Stations/ProfileEditController.php deserializes with that group while requiring only StationPermissions::Profile. AbstractArrayEntity::fromArray() then assigns every public property with no field-level permission check, so custom_config_top, custom_config, custom_config_pre_playlists, custom_config_pre_live, custom_config_pre_fade and custom_config_bottom are writable through it. ConfigWriter::writeCustomConfigurationSection() emits those values verbatim into the generated Liquidsoap .liq script, where the process.run() and process.exec() built-ins execute operating system commands when the backend restarts, which the built-in sync task triggers automatically once needs_restart is set. The dedicated endpoint for the same data, PUT /api/station/{id}/liquidsoap-config, requires StationPermissions::Broadcasting, so a station manager holding only the profile permission reaches configuration that the intended boundary reserves for broadcasting operators.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-76836\n2. 26.08.25 오전3:17\n3. AzuraCast exposes the Liquidsoap custom configurat",
-      "cve_id": "CVE-2026-76836",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76836",
-      "source": "cvefeed",
-      "published": "2026-08-25T03:17:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-76835 - OAuth2 Proxy 7.15.2 through 7.15.4 Authentication Bypass via X-Forwarded-Uri Under the Default Trusted Proxy Set",
-      "summary": "CVE ID :CVE-2026-76835\n  \nPublished : Aug. 24, 2026, 6:17 p.m. | 50 minutes ago\n  \nDescription :OAuth2 Proxy honours a client-supplied X-Forwarded-Uri header when deciding whether a request may skip authentication, because the guard added for CVE-2026-40575 is inert in the default reverse-proxy configuration. GetRequestURI in pkg/requests/util/util.go prefers that header over the real request URI whenever CanTrustForwardedHeaders returns true, and isAllowedPath in oauthproxy.go matches the skip_auth_routes and skip_auth_regex allow list against the resulting path. CanTrustForwardedHeaders in pkg/apis/middleware/scope.go grants that trust when the caller's address is in the trusted proxy set, and buildTrustedProxyNetSet falls back to defaultTrustedProxyIPs, which is 0.0.0.0/0 and ::/0, whenever reverse proxy mode is enabled without trusted_proxy_ip configured. Every client is therefore treated as a trusted proxy. An unauthenticated attacker can request a protected upstream path while setting X-Forwarded-Uri to a value matching an allow-listed route, so the skip-auth decision is made against the spoofed value while the upstream receives the protected path unchanged.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-76835\n  \nPublished : Aug. 24, 2026, 6:17 p.m. | 50 minutes ago\n  \nDescription :OAuth2 Proxy honours a client-supplied X-Forwarded-Uri header when deciding whether a request may skip authentication, because the guard added for CVE-2026-40575 is inert in the default reverse-proxy configuration. GetRequestURI in pkg/requests/util/util.go prefers that header over the real request URI whenever CanTrustForwardedHeaders returns true, and isAllowedPath in oauthproxy.go matches the skip_auth_routes and skip_auth_regex allow list against the resulting path. CanTrustForwardedHeaders in pkg/apis/middleware/scope.go grants that trust when the caller's address is in the trusted proxy set, and buildTrustedProxyNetSet falls back to defaultTrustedProxyIPs, which is 0.0.0.0/0 and ::/0, whenever reverse proxy mode is enabled without trusted_proxy_ip configured. Every client is therefore treated as a trusted proxy. An unauthenticated attacker can request a protected upstream path while setting X-Forwarded-Uri to a value matching an allow-listed route, so the skip-auth decision is made against the spoofed value while the upstream receives the protected path unchanged.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-76835\n2. 26.08.25 오전3:17\n3. OAuth2 Proxy honours a client-supplied X-Forwarded",
-      "cve_id": "CVE-2026-76835",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76835",
-      "source": "cvefeed",
-      "published": "2026-08-25T03:17:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-76072 - Continue CLI through 1.5.47 Incomplete Destructive Command Denylist in Headless and Auto Mode",
-      "summary": "CVE ID :CVE-2026-76072\n  \nPublished : Aug. 24, 2026, 6:17 p.m. | 50 minutes ago\n  \nDescription :The Continue CLI applies an incomplete denylist as its only barrier to destructive shell commands when running unattended. In headless mode and auto mode the default policy in extensions/cli/src/permissions/defaultPolicies.ts grants the Bash tool the allow permission, and permissionChecker.ts hard-blocks a command only when the terminal-security evaluator returns a disabled verdict, so isCriticalCommand in packages/terminal-security/src/evaluateTerminalCommandSecurity.ts is the sole control. Its dangerous-path test matches only /, /*, ~, ~/*, /usr, /etc, /bin and /sbin and their prefixes, so a recursive forced removal of /home, /root, /var, /opt or /srv is not disabled. The command line is parsed with shell-quote, which reduces $HOME to an empty token, so rm -rf $HOME also fails the dangerous-path test while the shell re-expands the variable when the command is spawned. find with -delete is rated high risk rather than disabled, and shred, wipefs, truncate and pkexec are not handled. Because the agent autonomously reads content it does not control, including fetched web pages, repository files and issue text, an indirect prompt injection in that content can cause an unattended run to destroy the invoking user's data.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-76072\n  \nPublished : Aug. 24, 2026, 6:17 p.m. | 50 minutes ago\n  \nDescription :The Continue CLI applies an incomplete denylist as its only barrier to destructive shell commands when running unattended. In headless mode and auto mode the default policy in extensions/cli/src/permissions/defaultPolicies.ts grants the Bash tool the allow permission, and permissionChecker.ts hard-blocks a command only when the terminal-security evaluator returns a disabled verdict, so isCriticalCommand in packages/terminal-security/src/evaluateTerminalCommandSecurity.ts is the sole control. Its dangerous-path test matches only /, /*, ~, ~/*, /usr, /etc, /bin and /sbin and their prefixes, so a recursive forced removal of /home, /root, /var, /opt or /srv is not disabled. The command line is parsed with shell-quote, which reduces $HOME to an empty token, so rm -rf $HOME also fails the dangerous-path test while the shell re-expands the variable when the command is spawned. find with -delete is rated high risk rather than disabled, and shred, wipefs, truncate and pkexec are not handled. Because the agent autonomously reads content it does not control, including fetched web pages, repository files and issue text, an indirect prompt injection in that content can cause an unattended run to destroy the invoking user's data.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-76072\n2. 26.08.25 오전3:17\n3. The Continue CLI applies an incomplete denylist as",
-      "cve_id": "CVE-2026-76072",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76072",
-      "source": "cvefeed",
-      "published": "2026-08-25T03:17:21+09:00",
       "lang": "en"
     }
   ],
