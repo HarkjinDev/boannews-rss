@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-27T23:01:02.705028+09:00",
+  "fetched_at": "2026-08-27T23:30:57.942078+09:00",
   "security_news": [
     {
       "title": "보안기업 9곳, SK텔레콤 보안 AI 컨소시엄 합류",
@@ -2428,6 +2428,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-69550 Windows App for Mac Information Disclosure Vulnerability",
+      "summary": "Updated CWE value.  This is an informational change only.",
+      "description": "Updated CWE value.  This is an informational change only.",
+      "title_ko": "CVE-2026-69550 Mac용 Windows 앱 정보 공개 취약점",
+      "summary_ko": "CWE 값이 업데이트되었습니다.  이는 정보 제공용 변경일 뿐입니다.",
+      "summary_3lines": "1. CVE-2026-69550\n2. MSRC\n3. Updated CWE value. This is an informational change",
+      "cve_id": "CVE-2026-69550",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69550",
+      "source": "msrc",
+      "published": "2026-08-27T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-74233 - Zbtlink MQWrt infosrvd Command Injection",
       "summary": "CVE ID :CVE-2026-74233\n  \nPublished : Aug. 27, 2026, 10:40 a.m. | 2 hours, 21 minutes ago\n  \nDescription :Zbtlink WE1326, WE357, WE5926, WE5926-WD, WE826-Q, WE826-T2, WE826-WD, WG108, and WG3526 firmware 19.1101, Zbtlink WE2426-C firmware 19.1112, Zbtlink WE5926-EC_QP firmware 20.0516, Zbtlink WF3526-P firmware 19.051, CTN720-W1, LF-1541, and MT7620N firmware 19.1101, and WRC1 firmware 20.0622 contain an unauthenticated command injection in the infosrvd service (UDP/9992). A remote unauthenticated attacker can send a crafted UDP packet to execute arbitrary commands as root. The service's authentication uses a hardcoded salt and an all-zero wildcard MAC bypass, rendering it ineffective.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-74233\n  \nPublished : Aug. 27, 2026, 10:40 a.m. | 2 hours, 21 minutes ago\n  \nDescription :Zbtlink WE1326, WE357, WE5926, WE5926-WD, WE826-Q, WE826-T2, WE826-WD, WG108, and WG3526 firmware 19.1101, Zbtlink WE2426-C firmware 19.1112, Zbtlink WE5926-EC_QP firmware 20.0516, Zbtlink WF3526-P firmware 19.051, CTN720-W1, LF-1541, and MT7620N firmware 19.1101, and WRC1 firmware 20.0622 contain an unauthenticated command injection in the infosrvd service (UDP/9992). A remote unauthenticated attacker can send a crafted UDP packet to execute arbitrary commands as root. The service's authentication uses a hardcoded salt and an all-zero wildcard MAC bypass, rendering it ineffective.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2908,6 +2923,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-70337 Microsoft PowerShell Remote Code Execution Vulnerability",
+      "summary": "Acknowledgement Updated",
+      "description": "Acknowledgement Updated",
+      "title_ko": "CVE-2026-70337 Microsoft PowerShell 원격 코드 실행 취약점",
+      "summary_ko": "승인이 업데이트되었습니다.",
+      "summary_3lines": "1. CVE-2026-70337\n2. MSRC\n3. Acknowledgement Updated",
+      "cve_id": "CVE-2026-70337",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70337",
+      "source": "msrc",
+      "published": "2026-08-25T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-75803 - AEAD Forgeries with Empty Ciphertext When Using EVP_Cipher()",
       "summary": "CVE ID :CVE-2026-75803\n  \nPublished : Aug. 25, 2026, 1:19 p.m. | 40 minutes ago\n  \nDescription :Issue summary: ChaCha20-Poly1305 and AES-OCB decryption with an empty\nciphertext can report success without verifying the supplied authentication\ntag when the operation is finalized by calling the EVP_Cipher() function.\n\nImpact summary: Applications calling EVP_Cipher() on an empty ciphertext and\nexpecting the call to check the AEAD tag may accept forged messages.\n\nCWE: CWE-354 (Improper Validation of Integrity Check Value)\n\nDescription: The EVP_Cipher() API call for AEAD ciphers behaves like a one\nshot encryption and decryption call. It also verifies the AEAD tag after the\ndecryption operation. However for AES-OCB and ChaCha20-Poly1305 ciphers\nit skipped the AEAD tag verification when an empty ciphertext was passed to\nthe function. The callers of this function might believe that a successful\nreturn indicates a valid AEAD tag for these ciphers, even when that has not\ntruly been validated in this case.\n\nFIPS impact: no\nThe FIPS modules in 4.0, 3.6, 3.5, 3.4, and 3.0 are not affected by this CVE\nas the affected algorithms are not FIPS approved and thus not implemented\nin the FIPS module.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-75803\n  \nPublished : Aug. 25, 2026, 1:19 p.m. | 40 minutes ago\n  \nDescription :Issue summary: ChaCha20-Poly1305 and AES-OCB decryption with an empty\nciphertext can report success without verifying the supplied authentication\ntag when the operation is finalized by calling the EVP_Cipher() function.\n\nImpact summary: Applications calling EVP_Cipher() on an empty ciphertext and\nexpecting the call to check the AEAD tag may accept forged messages.\n\nCWE: CWE-354 (Improper Validation of Integrity Check Value)\n\nDescription: The EVP_Cipher() API call for AEAD ciphers behaves like a one\nshot encryption and decryption call. It also verifies the AEAD tag after the\ndecryption operation. However for AES-OCB and ChaCha20-Poly1305 ciphers\nit skipped the AEAD tag verification when an empty ciphertext was passed to\nthe function. The callers of this function might believe that a successful\nreturn indicates a valid AEAD tag for these ciphers, even when that has not\ntruly been validated in this case.\n\nFIPS impact: no\nThe FIPS modules in 4.0, 3.6, 3.5, 3.4, and 3.0 are not affected by this CVE\nas the affected algorithms are not FIPS approved and thus not implemented\nin the FIPS module.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3280,81 +3310,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-19874",
       "source": "cvefeed",
       "published": "2026-08-25T00:16:37+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-9728 - TOCTOU race in mbox_send syscall verifier allows userspace to leak kernel memory",
-      "summary": "CVE ID :CVE-2026-9728\n  \nPublished : Aug. 24, 2026, 2:28 p.m. | 43 minutes ago\n  \nDescription :The userspace syscall verifier z_vrfy_mbox_send() in drivers/mbox/mbox_handlers.c validated the nested msg->data/msg->size fields by reading them directly out of live userspace memory, and then forwarded the original, still-mutable userspace struct mbox_msg * pointer to z_impl_mbox_send() and the underlying driver. Between the access check and the driver's use of msg->data, the validated pointer could be replaced, leaving a time-of-check/time-of-use window.\n\nOn a system built with CONFIG_USERSPACE, any unprivileged userspace thread may invoke the mbox_send() system call. A second thread sharing the caller's address space can race to overwrite msg->data with a supervisor (kernel) address after the verifier's bounds check has passed but before the driver dereferences it. The driver then reads from the attacker-chosen address in supervisor context (for example memcpy(&data32, msg->data, msg->size) in the NXP mailbox driver, whose bytes are subsequently emitted to the peer mailbox endpoint).\n\nThe impact is a userspace-to-supervisor access-control bypass: disclosure of kernel memory contents (high confidentiality impact), or, for an invalid/unmapped target address, a faulting kernel read causing denial of service. The fix snapshots the entire struct mbox_msg into a kernel-stack copy with k_usermode_from_copy() and validates and forwards that immutable copy, closing the race.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-9728\n  \nPublished : Aug. 24, 2026, 2:28 p.m. | 43 minutes ago\n  \nDescription :The userspace syscall verifier z_vrfy_mbox_send() in drivers/mbox/mbox_handlers.c validated the nested msg->data/msg->size fields by reading them directly out of live userspace memory, and then forwarded the original, still-mutable userspace struct mbox_msg * pointer to z_impl_mbox_send() and the underlying driver. Between the access check and the driver's use of msg->data, the validated pointer could be replaced, leaving a time-of-check/time-of-use window.\n\nOn a system built with CONFIG_USERSPACE, any unprivileged userspace thread may invoke the mbox_send() system call. A second thread sharing the caller's address space can race to overwrite msg->data with a supervisor (kernel) address after the verifier's bounds check has passed but before the driver dereferences it. The driver then reads from the attacker-chosen address in supervisor context (for example memcpy(&data32, msg->data, msg->size) in the NXP mailbox driver, whose bytes are subsequently emitted to the peer mailbox endpoint).\n\nThe impact is a userspace-to-supervisor access-control bypass: disclosure of kernel memory contents (high confidentiality impact), or, for an invalid/unmapped target address, a faulting kernel read causing denial of service. The fix snapshots the entire struct mbox_msg into a kernel-stack copy with k_usermode_from_copy() and validates and forwards that immutable copy, closing the race.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-9728\n2. 26.08.24 오후11:28\n3. The userspace syscall verifier z_vrfy_mbox_send() ",
-      "cve_id": "CVE-2026-9728",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-9728",
-      "source": "cvefeed",
-      "published": "2026-08-24T23:28:46+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-78385 - RansomLook Analysis PDF Generation Allows Server-Side Request Forgery and Arbitrary Local File Access",
-      "summary": "CVE ID :CVE-2026-78385\n  \nPublished : Aug. 24, 2026, 2:17 p.m. | 16 minutes ago\n  \nDescription :RansomLook contains insufficient resource validation in the analysis PDF generation functionality. Analysis documents are converted from Markdown to HTML and passed to WeasyPrint for PDF rendering. Prior to the fix, WeasyPrint used its default URL fetcher, allowing resource references contained in an analysis to be resolved without restrictions.\n\nAn authenticated attacker able to create or modify an analysis could embed crafted resource references using schemes such as file:// or http://. When the analysis was subsequently rendered as PDF, WeasyPrint would process these references with the privileges and network access of the RansomLook server.\n\nA malicious file:// reference could cause the renderer to access arbitrary files readable by the RansomLook process, potentially exposing sensitive configuration, credentials, or other local data through rendered resources. Network URLs could cause the server to initiate requests to localhost, internal network services, or external systems, resulting in server-side request forgery (SSRF) and potentially bypassing network-level access restrictions.\n\nThe patch introduces a dedicated WeasyPrint URL fetcher that permits only data: resources, the RansomLook report logo, and files contained within the analysis asset directory. Network resources and filesystem paths outside these explicitly permitted locations are rejected.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-78385\n  \nPublished : Aug. 24, 2026, 2:17 p.m. | 16 minutes ago\n  \nDescription :RansomLook contains insufficient resource validation in the analysis PDF generation functionality. Analysis documents are converted from Markdown to HTML and passed to WeasyPrint for PDF rendering. Prior to the fix, WeasyPrint used its default URL fetcher, allowing resource references contained in an analysis to be resolved without restrictions.\n\nAn authenticated attacker able to create or modify an analysis could embed crafted resource references using schemes such as file:// or http://. When the analysis was subsequently rendered as PDF, WeasyPrint would process these references with the privileges and network access of the RansomLook server.\n\nA malicious file:// reference could cause the renderer to access arbitrary files readable by the RansomLook process, potentially exposing sensitive configuration, credentials, or other local data through rendered resources. Network URLs could cause the server to initiate requests to localhost, internal network services, or external systems, resulting in server-side request forgery (SSRF) and potentially bypassing network-level access restrictions.\n\nThe patch introduces a dedicated WeasyPrint URL fetcher that permits only data: resources, the RansomLook report logo, and files contained within the analysis asset directory. Network resources and filesystem paths outside these explicitly permitted locations are rejected.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-78385\n2. 26.08.24 오후11:17\n3. RansomLook contains insufficient resource validati",
-      "cve_id": "CVE-2026-78385",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78385",
-      "source": "cvefeed",
-      "published": "2026-08-24T23:17:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-78378 - Redis Glob Pattern Injection Allows Unauthorized Enumeration of Private Ransomlook Data",
-      "summary": "CVE ID :CVE-2026-78378\n  \nPublished : Aug. 24, 2026, 2:17 p.m. | 16 minutes ago\n  \nDescription :Ransomlook contains a Redis glob pattern injection vulnerability caused by insufficient neutralization of user-controlled input before it is incorporated into Redis SCAN MATCH patterns.\n\n\nThe /api/health/ endpoint attempted to resolve the supplied name to a known group or market, but when resolution failed it fell back to using the attacker-controlled value directly in a Redis key pattern. An unauthenticated attacker could therefore supply Redis glob metacharacters such as *, ?, [ or ] to broaden the SCAN operation beyond the intended group. For example, requesting /api/health/* could enumerate health information, mirror slugs, and uptime series belonging to all groups and markets, including entities marked as private.\n\n\nSimilar unsafe interpolation was present in /api/crypto/chain/ and in the delete_manual_torrent() function. The latter represents a potentially destructive sink because a crafted infohash containing glob metacharacters could cause the scan to match torrent-health keys belonging to other torrents if attacker-controlled input can reach that function.\n\n\nThe patch removes the unsafe fallback from the health endpoint and introduces glob escaping for user-controlled values before they are incorporated into Redis SCAN MATCH expressions.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-78378\n  \nPublished : Aug. 24, 2026, 2:17 p.m. | 16 minutes ago\n  \nDescription :Ransomlook contains a Redis glob pattern injection vulnerability caused by insufficient neutralization of user-controlled input before it is incorporated into Redis SCAN MATCH patterns.\n\n\nThe /api/health/ endpoint attempted to resolve the supplied name to a known group or market, but when resolution failed it fell back to using the attacker-controlled value directly in a Redis key pattern. An unauthenticated attacker could therefore supply Redis glob metacharacters such as *, ?, [ or ] to broaden the SCAN operation beyond the intended group. For example, requesting /api/health/* could enumerate health information, mirror slugs, and uptime series belonging to all groups and markets, including entities marked as private.\n\n\nSimilar unsafe interpolation was present in /api/crypto/chain/ and in the delete_manual_torrent() function. The latter represents a potentially destructive sink because a crafted infohash containing glob metacharacters could cause the scan to match torrent-health keys belonging to other torrents if attacker-controlled input can reach that function.\n\n\nThe patch removes the unsafe fallback from the health endpoint and introduces glob escaping for user-controlled values before they are incorporated into Redis SCAN MATCH expressions.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-78378\n2. 26.08.24 오후11:17\n3. Ransomlook contains a Redis glob pattern injection",
-      "cve_id": "CVE-2026-78378",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78378",
-      "source": "cvefeed",
-      "published": "2026-08-24T23:17:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-76848 - TypeORM 0.2.21 through 1.1.0 SQL Injection via SelectQueryBuilder.distinctOn",
-      "summary": "CVE ID :CVE-2026-76848\n  \nPublished : Aug. 24, 2026, 2:17 p.m. | 16 minutes ago\n  \nDescription :TypeORM's SelectQueryBuilder.distinctOn accepts an array of strings and stores it on the expression map without validation. For PostgreSQL-family drivers, createSelectDistinctExpression in src/query-builder/SelectQueryBuilder.ts joins that array and interpolates the result into the generated statement as SELECT DISTINCT ON (values), with no escaping, quoting, identifier validation or allowlist, and without routing the values through replacePropertyNames or the driver's escape helper. Because the interpolation point is a parenthesized SQL expression list rather than an identifier-only position, a supplied element may carry arbitrary expressions, including correlated subqueries. An application that forwards a client-controlled value into distinctOn, for instance to let a caller choose a deduplication column, allows that client to read data anywhere the application's database role can reach through boolean or time-based inference, independently of the entity being queried. validateOrderByCondition, the allowlist check guarding the orderBy family in the same class, is not applied to this path.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-76848\n  \nPublished : Aug. 24, 2026, 2:17 p.m. | 16 minutes ago\n  \nDescription :TypeORM's SelectQueryBuilder.distinctOn accepts an array of strings and stores it on the expression map without validation. For PostgreSQL-family drivers, createSelectDistinctExpression in src/query-builder/SelectQueryBuilder.ts joins that array and interpolates the result into the generated statement as SELECT DISTINCT ON (values), with no escaping, quoting, identifier validation or allowlist, and without routing the values through replacePropertyNames or the driver's escape helper. Because the interpolation point is a parenthesized SQL expression list rather than an identifier-only position, a supplied element may carry arbitrary expressions, including correlated subqueries. An application that forwards a client-controlled value into distinctOn, for instance to let a caller choose a deduplication column, allows that client to read data anywhere the application's database role can reach through boolean or time-based inference, independently of the entity being queried. validateOrderByCondition, the allowlist check guarding the orderBy family in the same class, is not applied to this path.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-76848\n2. 26.08.24 오후11:17\n3. TypeORM's SelectQueryBuilder.distinctOn accepts an",
-      "cve_id": "CVE-2026-76848",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76848",
-      "source": "cvefeed",
-      "published": "2026-08-24T23:17:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-76844 - webpack-dev-middleware Path Traversal via Offset Slice on a Non-Slash-Terminated publicPath",
-      "summary": "CVE ID :CVE-2026-76844\n  \nPublished : Aug. 24, 2026, 2:17 p.m. | 16 minutes ago\n  \nDescription :webpack-dev-middleware resolves a request to a local file in getFilenameFromUrl by testing the request pathname against a traversal guard and then slicing it at a fixed character offset. The guard, UP_PATH_REGEXP applied to path.normalize(`./${pathname}`), only matches \"..\" that stands as a whole path segment, while the containment test is the string comparison pathname.startsWith(publicPathPathname) and the file path is built as path.join(outputPath, pathname.slice(publicPathPathname.length)). When the configured publicPath has no trailing slash, a request such as GET /assets../.env against publicPath /assets yields the pathname /assets../.env, whose only dot-dot sits inside the segment \"assets..\" and so passes the guard, but the offset slice cuts within that segment and hands \"../.env\" to path.join, resolving one directory above outputPath. Reading a file from that path requires the middleware to be backed by the physical filesystem, which happens when writeToDisk is true or a custom outputFileSystem is supplied, since the default memfs volume holds only build output. Traversal depth is limited to a single directory because a separately delimited dot-dot segment is collapsed during URL parsing before the guard runs. The default publicPath value of \"auto\" resolves to \"/\" and is not affected. This is an incomplete fix for CVE-2024-29180: the guard and offset slice were introduced by that fix and are present in every release from 5.3.4, 6.1.2 and 7.1.0 onward.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-76844\n  \nPublished : Aug. 24, 2026, 2:17 p.m. | 16 minutes ago\n  \nDescription :webpack-dev-middleware resolves a request to a local file in getFilenameFromUrl by testing the request pathname against a traversal guard and then slicing it at a fixed character offset. The guard, UP_PATH_REGEXP applied to path.normalize(`./${pathname}`), only matches \"..\" that stands as a whole path segment, while the containment test is the string comparison pathname.startsWith(publicPathPathname) and the file path is built as path.join(outputPath, pathname.slice(publicPathPathname.length)). When the configured publicPath has no trailing slash, a request such as GET /assets../.env against publicPath /assets yields the pathname /assets../.env, whose only dot-dot sits inside the segment \"assets..\" and so passes the guard, but the offset slice cuts within that segment and hands \"../.env\" to path.join, resolving one directory above outputPath. Reading a file from that path requires the middleware to be backed by the physical filesystem, which happens when writeToDisk is true or a custom outputFileSystem is supplied, since the default memfs volume holds only build output. Traversal depth is limited to a single directory because a separately delimited dot-dot segment is collapsed during URL parsing before the guard runs. The default publicPath value of \"auto\" resolves to \"/\" and is not affected. This is an incomplete fix for CVE-2024-29180: the guard and offset slice were introduced by that fix and are present in every release from 5.3.4, 6.1.2 and 7.1.0 onward.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-76844\n2. 26.08.24 오후11:17\n3. webpack-dev-middleware resolves a request to a loc",
-      "cve_id": "CVE-2026-76844",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76844",
-      "source": "cvefeed",
-      "published": "2026-08-24T23:17:02+09:00",
       "lang": "en"
     }
   ],
