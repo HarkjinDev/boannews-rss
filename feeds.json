@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-27T18:01:16.147850+09:00",
+  "fetched_at": "2026-08-27T18:31:12.373798+09:00",
   "security_news": [
+    {
+      "title": "[단독] 에어리퀴드코리아, 랜섬웨어 피해 정황…반도체 가스 공급망 영...",
+      "summary": "27일 보안업계에 따르면 랜섬웨어 조직 세이프페이(Safepay)는 최근 다크웹 유출 사이트에 에어리퀴드코리아를 피해 기업으로 등록했다. 세이프페이는 2024년부터 활동이 관찰된 랜섬웨어 조직으로 기업 내부에 침투해...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 랜섬웨어 조직 세이프페이가 에어리퀴드코리아를 피해 기업으로 등록\n2. 다크웹 유출 사이트에 에어리퀴드코리아 피해 사실 공개\n3. 반도체 가스 공급망 관련 피해 정황 감지",
+      "link": "https://www.ngetnews.com/news/articleView.html?idxno=552791",
+      "source": "naver",
+      "published": "2026-08-27T18:20:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[더나은미래 경제브리핑] 한국은행, 기준금리 3%로 인상...엔비디아 13분...",
+      "summary": "이번 전수 조사는 지난해 발생한 롯데카드 대규모 해킹 사건이 계기가 됐다. 당시 롯데카드는 약 45만 명에 달하는 고객의 주민등록번호가 외부로 유출되는 보안 사고를 냈다. 개인정보위 조사 결과, 롯데카드는 법적...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 롯데카드 45만 고객 개인정보 유출 사고 발생\n2. 주민등록번호 등 민감 정보 외부 유출 확인\n3. 개인정보위, 롯데카드 법적 조사 착수",
+      "link": "https://futurechosun.com/?p=158887",
+      "source": "naver",
+      "published": "2026-08-27T18:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "빌 게이츠 “AI, 선 넘고 있다”",
       "summary": "그는 “내가 아는 가장 뛰어난 사이버보안 전문가들은 앞으로 몇 년을 두려워하고 있다”고 전했다. 공격자가 방어자보다 더 빠르게 새로운 역량을 얻고 있고, 범죄자가 AI 모델을 취약점 공격에 쓸 수 있다. 게이츠는...",
@@ -2352,18 +2376,6 @@
       "source": "securityweek",
       "published": "2026-08-24T19:00:00+09:00",
       "lang": "en"
-    },
-    {
-      "title": "맥북에서 돌리는 '무삭제 큐원 3.8' 등장...엔비디아 GPU·클라우드 없이...",
-      "summary": "이 같은 로컬 실행 능력은 사이버보안 분야에서 관심받을 것으로 보인다. 자체적인 강력한 거부 기능이 줄어든 만큼 보안 연구자들이 취약점 분석이나 침투 테스트 등에서 자유롭게 모델을 활용할 가능성이 있기...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 맥북에서 돌리는 '무삭제 큐원 3.8' 등장...엔비디아 GPU·클라우드 없이...\n2. 이 같은 로컬 실행 능력은 사이버보안 분야에서 관심받을 것으로 보인다.\n3. 자체적인 강력한 거부 기능이 줄어든 만큼 보안 연구자들이 취약점 분석이나 침투 테스트 등에",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=214299",
-      "source": "naver",
-      "published": "2026-08-24T18:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3340,21 +3352,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-76172",
       "source": "cvefeed",
       "published": "2026-08-24T19:07:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-66897 - Instance template path traversal allows arbitrary host file write as root",
-      "summary": "CVE ID :CVE-2026-66897\n  \nPublished : Aug. 24, 2026, 9:08 a.m. | 1 hour, 8 minutes ago\n  \nDescription :A path traversal vulnerability in LXD's instance template processing allows an attacker with container edit permissions, or any user launching a crafted image, to overwrite arbitrary files on the host system as root. When processing target template paths specified in metadata.yaml, LXD validates the path against a confined os.Root directory handle but subsequently opens and creates the file using os.Create with an unconfined string path. This discrepancy between path resolution checks and file creation allows an attacker to escape directory confinement, overwrite root-owned host files, and achieve host root code execution.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-66897\n  \nPublished : Aug. 24, 2026, 9:08 a.m. | 1 hour, 8 minutes ago\n  \nDescription :A path traversal vulnerability in LXD's instance template processing allows an attacker with container edit permissions, or any user launching a crafted image, to overwrite arbitrary files on the host system as root. When processing target template paths specified in metadata.yaml, LXD validates the path against a confined os.Root directory handle but subsequently opens and creates the file using os.Create with an unconfined string path. This discrepancy between path resolution checks and file creation allows an attacker to escape directory confinement, overwrite root-owned host files, and achieve host root code execution.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-66897 - 인스턴스 템플릿 경로 탐색을 통해 임의의 호스트 파일을 루트로 쓸 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-66897\n  \n게시일 : 2026년 8월 24일 오전 9시 8분 | 1시간 8분 전\n  \n설명:LXD 인스턴스 템플릿 처리의 경로 탐색 취약점으로 인해 컨테이너 편집 권한이 있는 공격자 또는 조작된 이미지를 실행하는 모든 사용자가 호스트 시스템의 임의 파일을 루트로 덮어쓸 수 있습니다. 메타데이터.yaml에 지정된 대상 템플릿 경로를 처리할 때 LXD는 제한된 os.Root 디렉터리 핸들에 대해 경로의 유효성을 검사하지만 이후에 제한되지 않은 문자열 경로로 os.Create를 사용하여 파일을 열고 생성합니다. 경로 확인 검사와 파일 생성 간의 이러한 불일치로 인해 공격자는 디렉터리 제한을 탈출하고 루트 소유 호스트 파일을 덮어쓰며 호스트 루트 코드 실행을 달성할 수 있습니다.\n  \n심각도: 9.9 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-66897\n2. 26.08.24 오후6:08\n3. A path traversal vulnerability in LXD's instance t",
-      "cve_id": "CVE-2026-66897",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-66897",
-      "source": "cvefeed",
-      "published": "2026-08-24T18:08:04+09:00",
       "lang": "en"
     }
   ],
