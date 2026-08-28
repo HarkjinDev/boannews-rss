@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-29T05:31:04.912730+09:00",
+  "fetched_at": "2026-08-29T06:01:20.177150+09:00",
   "security_news": [
+    {
+      "title": "Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable",
+      "summary": "Cosmos Labs has warned that a critical balance-handling flaw in the shared Cosmos EVM module was exploited to drain funds from six blockchains between August 20 and August 25, 2026.\n\nThe vulnerability, designated GHSA-7g4w-cg88-2cq2, is rated Critical by Cosmos Labs and was published without a CVE identifier, a weakness classification, or a CVSS score.\n\nAffected versions are < 0.6.2 and >=",
+      "content": "",
+      "title_ko": "Cosmos Labs가 이를 실행하는 모든 블록체인이 취약하다는 것을 알게 된 후 Cosmos EVM 결함이 악용되었습니다.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. 코스모스 EVM 균형 처리 취약점, 6개 블록체인서 악용\n2. 코스모스 랩스 2026년 8월 20~25일 GHSA-7g4w-cg88-2cq2 악용\n3. 영향받은 버전 = 0.6.2. CVE 번호 미발급",
+      "link": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html",
+      "source": "thehackernews",
+      "published": "2026-08-29T05:38:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "법원, 공정위 쿠팡 조사 제동",
       "summary": "이후 지금까지 사전통지 없이 현장조사를 해왔다고 밝혔다. 쿠팡에 대한 조사는 2025년 11월 3,370만개 계정의 개인정보가 해킹을 통해 유출된 것을 계기로 본격화됐다. 양측의 공방은 9월 2일 심문기일에서 이어질 예정이다.",
@@ -2328,21 +2340,24 @@
       "source": "naver",
       "published": "2026-08-26T06:08:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'해킹 홍역' 통신3사, 정보보호 '경영의제'로 올렸다…CPO 강화",
-      "summary": "마련하고 개인정보 침해 예방·대응 등을 담당. ■ CISO(Chief Information Security Officer·정보보호최고책임자) 기업의 정보보호 정책과 전략을 총괄하고 해킹·침해사고 등 사이버 보안 위험을 관리하는 최고책임자.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 통신3사, 해킹 사건 후 CPO 강화\n2. 개인정보 침해 예방·대응 위한 관리 강화\n3. 정보보호, 경영의제 상 사이버 보안 위험 관리",
-      "link": "https://n.news.naver.com/mnews/article/421/0009132478?sid=105",
-      "source": "naver",
-      "published": "2026-08-26T06:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-55220 - Pimcore Hotspotimage getDataFromResource() unrestricted Serialize::unserialize over object-store column",
+      "summary": "CVE ID :CVE-2026-55220\n  \nPublished : Aug. 28, 2026, 7:12 p.m. | 36 minutes ago\n  \nDescription :Pimcore is an Open Source Data & Experience Management Platform. Prior to 11.5.19, 12.3.10, and 2026.1.6, Pimcore\\Model\\DataObject\\ClassDefinition\\Data\\Hotspotimage::getDataFromResource() in models/DataObject/ClassDefinition/Data/Hotspotimage.php passes the field __hotspots object-store column to Pimcore\\Tool\\Serialize::unserialize() without an allowed-classes restriction after JSON decoding fails. An attacker with a separate capability to write crafted PHP serialized bytes into that column can instantiate available classes and trigger magic methods when an affected DataObject is loaded, which can produce arbitrary file writes or code execution through bundled gadget chains. The related ImageGallery, Block, and Video callers use the same fallback pattern, but the identified June fix changes the Hotspotimage caller only. This issue is fixed for Hotspotimage in versions 11.5.19, 12.3.10, and 2026.1.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55220\n  \nPublished : Aug. 28, 2026, 7:12 p.m. | 36 minutes ago\n  \nDescription :Pimcore is an Open Source Data & Experience Management Platform. Prior to 11.5.19, 12.3.10, and 2026.1.6, Pimcore\\Model\\DataObject\\ClassDefinition\\Data\\Hotspotimage::getDataFromResource() in models/DataObject/ClassDefinition/Data/Hotspotimage.php passes the field __hotspots object-store column to Pimcore\\Tool\\Serialize::unserialize() without an allowed-classes restriction after JSON decoding fails. An attacker with a separate capability to write crafted PHP serialized bytes into that column can instantiate available classes and trigger magic methods when an affected DataObject is loaded, which can produce arbitrary file writes or code execution through bundled gadget chains. The related ImageGallery, Block, and Video callers use the same fallback pattern, but the identified June fix changes the Hotspotimage caller only. This issue is fixed for Hotspotimage in versions 11.5.19, 12.3.10, and 2026.1.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-55220\n2. 26.08.29 오전4:12\n3. Pimcore is an Open Source Data & Experience Manage",
+      "cve_id": "CVE-2026-55220",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55220",
+      "source": "cvefeed",
+      "published": "2026-08-29T04:12:43+09:00",
+      "lang": "ro"
+    },
     {
       "title": "CVE-2026-82078 - PaperCut MF/NG: Unsafe Dynamic Class Loading in Database Connector",
       "summary": "CVE ID :CVE-2026-82078\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an attacker can manipulate system configuration parameters, this enables the execution of arbitrary Java bytecode residing on the application classpath under the security context of the PaperCut server process.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2986,36 +3001,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-62862",
       "source": "cvefeed",
       "published": "2026-08-26T06:43:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-77680 - Libsoup3: libsoup: quadratic cpu denial of service in http range coalescing after cve-2025-32907 fix",
-      "summary": "CVE ID :CVE-2026-77680\n  \nPublished : Aug. 25, 2026, 8:36 p.m. | 36 minutes ago\n  \nDescription :An algorithmic complexity flaw exists in libsoup's HTTP Range header processing that persists after the CVE-2025-32907 fix.\n\nCVE-2025-32907 addressed memory amplification when a client repeated the same range many times in a single Range header. Commit 9bb92f7a corrected merge correctness in soup_message_headers_get_ranges_internal() in libsoup/soup-message-headers.c, but the coalescing loop still removes merged ranges using g_array_remove_index() for each coalesced element. Because GArray is contiguous, each mid-array removal performs an O(N) memmove. When many identical satisfiable ranges are supplied (for example bytes=0-0 repeated thousands of times), the loop performs O(N²) work coalescing them into a single range.\n\nThe vulnerable path is reachable server-side from handle_partial_get() in libsoup/server/http1/soup-server-message-io-http1.c when a SoupServer handler returns HTTP 200 with a non-empty body. No authentication is required. The number of ranges is bounded only by the maximum request header size (~100 KiB), allowing roughly 25,000 ranges per request. Reporter measurements on libsoup HEAD containing the CVE-2025-32907 fix show ~90 ms single-core CPU per such request at the wire maximum, blocking the server's event loop for that duration.\n\nThis is a CPU exhaustion / availability issue only. No memory corruption or information disclosure occurs.\n\nAffected: libsoup versions containing the CVE-2025-32907 fix but not merge request !550.\nFixed upstream: MR !550 merged 2026-08-20, replacing per-element removal with O(N) in-place compaction and rejecting Range headers requesting more than 200 ranges.\nUpstream report: https://gitlab.gnome.org/GNOME/libsoup/-/issues/538\nRelated: CVE-2025-32907\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-77680\n  \nPublished : Aug. 25, 2026, 8:36 p.m. | 36 minutes ago\n  \nDescription :An algorithmic complexity flaw exists in libsoup's HTTP Range header processing that persists after the CVE-2025-32907 fix.\n\nCVE-2025-32907 addressed memory amplification when a client repeated the same range many times in a single Range header. Commit 9bb92f7a corrected merge correctness in soup_message_headers_get_ranges_internal() in libsoup/soup-message-headers.c, but the coalescing loop still removes merged ranges using g_array_remove_index() for each coalesced element. Because GArray is contiguous, each mid-array removal performs an O(N) memmove. When many identical satisfiable ranges are supplied (for example bytes=0-0 repeated thousands of times), the loop performs O(N²) work coalescing them into a single range.\n\nThe vulnerable path is reachable server-side from handle_partial_get() in libsoup/server/http1/soup-server-message-io-http1.c when a SoupServer handler returns HTTP 200 with a non-empty body. No authentication is required. The number of ranges is bounded only by the maximum request header size (~100 KiB), allowing roughly 25,000 ranges per request. Reporter measurements on libsoup HEAD containing the CVE-2025-32907 fix show ~90 ms single-core CPU per such request at the wire maximum, blocking the server's event loop for that duration.\n\nThis is a CPU exhaustion / availability issue only. No memory corruption or information disclosure occurs.\n\nAffected: libsoup versions containing the CVE-2025-32907 fix but not merge request !550.\nFixed upstream: MR !550 merged 2026-08-20, replacing per-element removal with O(N) in-place compaction and rejecting Range headers requesting more than 200 ranges.\nUpstream report: https://gitlab.gnome.org/GNOME/libsoup/-/issues/538\nRelated: CVE-2025-32907\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-77680\n2. 26.08.26 오전5:36\n3. An algorithmic complexity flaw exists in libsoup's",
-      "cve_id": "CVE-2026-77680",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77680",
-      "source": "cvefeed",
-      "published": "2026-08-26T05:36:45+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55588 - ORAS CLI: Cyclic Referrer Graph Can Cause Unbounded Recursion and Resource Consumption",
-      "summary": "CVE ID :CVE-2026-55588\n  \nPublished : Aug. 25, 2026, 8:32 p.m. | 14 minutes ago\n  \nDescription :ORAS (OCI Registry As Storage) is a CLI and library for managing artifacts in OCI registries. In ORAS CLI versions up to and including 1.3.2, the recursive referrer traversal does not track visited descriptors, so a malicious OCI registry that returns a cyclic referrer graph causes unbounded recursion and memory growth. This affects oras discover, whose recursive traversal is enabled by default because the --depth option defaults to 0 (unlimited), as well as the recursive referrer counting used by the oras backup and oras restore workflows. A cyclic graph can be as simple as A referring to B and B referring back to A. A malicious registry can use this to cause a client-side denial of service, exhausting CPU and memory and hanging automation or CI/CD pipelines that run ORAS against untrusted registry metadata. The vulnerability does not extend to code execution, artifact substitution, or integrity bypass. This issue has been fixed in version 1.3.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55588\n  \nPublished : Aug. 25, 2026, 8:32 p.m. | 14 minutes ago\n  \nDescription :ORAS (OCI Registry As Storage) is a CLI and library for managing artifacts in OCI registries. In ORAS CLI versions up to and including 1.3.2, the recursive referrer traversal does not track visited descriptors, so a malicious OCI registry that returns a cyclic referrer graph causes unbounded recursion and memory growth. This affects oras discover, whose recursive traversal is enabled by default because the --depth option defaults to 0 (unlimited), as well as the recursive referrer counting used by the oras backup and oras restore workflows. A cyclic graph can be as simple as A referring to B and B referring back to A. A malicious registry can use this to cause a client-side denial of service, exhausting CPU and memory and hanging automation or CI/CD pipelines that run ORAS against untrusted registry metadata. The vulnerability does not extend to code execution, artifact substitution, or integrity bypass. This issue has been fixed in version 1.3.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-55588\n2. 26.08.26 오전5:32\n3. ORAS (OCI Registry As Storage) is a CLI and librar",
-      "cve_id": "CVE-2026-55588",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55588",
-      "source": "cvefeed",
-      "published": "2026-08-26T05:32:18+09:00",
       "lang": "en"
     }
   ],
