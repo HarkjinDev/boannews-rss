@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-29T01:01:15.660838+09:00",
+  "fetched_at": "2026-08-29T01:31:08.208771+09:00",
   "security_news": [
+    {
+      "title": "미 대형 로펌 “북한 위장취업 적발 뒤에도 법적 위험…급여 지급·해고...",
+      "summary": "제재 준수와 임금 지급, 차별금지, 개인정보 보호 의무가 서로 충돌할 수 있다며 법무와 인사, 보안 부서의... 사이버보안뿐 아니라 제재와 고용, 개인정보 보호 등 복합적인 법적 위험을 초래하고 있다고 경고했습니다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한, 대형 로펌 위장 취업 후에도 법적 위험 초래\n2. 제재 준수-임금 지급 등 복합적 위험 야기\n3. 법무, 인사, 보안 부서 협력으로 대응 촉구",
+      "link": "https://www.voakorea.com/a/holland-knight-dprk-worker-legal-risk-082826/8191518.html",
+      "source": "naver",
+      "published": "2026-08-29T00:37:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "In Other News: Log4j RCE Scare, Minimus Shutdown, Iranian Hacker Sanctions",
       "summary": "Noteworthy stories that might have slipped under the radar: Manchester Airports Group cyberattack, Carhartt breach data was partly fake, U.S. Bank responds to ransomware gang’s claims.\nThe post In Other News: Log4j RCE Scare, Minimus Shutdown, Iranian Hacker Sanctions appeared first on SecurityWeek.",
@@ -3028,21 +3040,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-55663",
       "source": "cvefeed",
       "published": "2026-08-26T04:16:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-79785 - X-AnyLabeling before 4.0.0-beta.9 Improper Certificate Validation in Model Downloads",
-      "summary": "CVE ID :CVE-2026-79785\n  \nPublished : Aug. 25, 2026, 4:17 p.m. | 50 minutes ago\n  \nDescription :X-AnyLabeling's model downloader disabled TLS certificate verification. download_with_retry in anylabeling/services/auto_labeling/model.py built a context with ssl._create_unverified_context() and passed it to urllib.request.urlopen, so neither the certificate chain nor the hostname was checked on any model download, and models are fetched over HTTPS from the project's release host. Any party positioned to intercept that connection could therefore answer it with content of their own choosing. The response is written to a .part file and moved into place with os.replace, and the only post-download check, safe_check_model, validates the file's format rather than its provenance: no hash or signature is compared against an expected value. For an ONNX target the substituted file passes onnx.checker.check_model and is then used for inference, so the attacker chooses the model that produces the application's annotations. For a .pth or .pt target, which the shipped SAM2 video, YOLOE, UPN and open_vision configurations use, the check worker calls torch.load without weights_only, so a substituted file is unpickled and executes code of the attacker's choosing on PyTorch releases predating the weights_only default.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-79785\n  \nPublished : Aug. 25, 2026, 4:17 p.m. | 50 minutes ago\n  \nDescription :X-AnyLabeling's model downloader disabled TLS certificate verification. download_with_retry in anylabeling/services/auto_labeling/model.py built a context with ssl._create_unverified_context() and passed it to urllib.request.urlopen, so neither the certificate chain nor the hostname was checked on any model download, and models are fetched over HTTPS from the project's release host. Any party positioned to intercept that connection could therefore answer it with content of their own choosing. The response is written to a .part file and moved into place with os.replace, and the only post-download check, safe_check_model, validates the file's format rather than its provenance: no hash or signature is compared against an expected value. For an ONNX target the substituted file passes onnx.checker.check_model and is then used for inference, so the attacker chooses the model that produces the application's annotations. For a .pth or .pt target, which the shipped SAM2 video, YOLOE, UPN and open_vision configurations use, the check worker calls torch.load without weights_only, so a substituted file is unpickled and executes code of the attacker's choosing on PyTorch releases predating the weights_only default.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-79785\n2. 26.08.26 오전1:17\n3. X-AnyLabeling's model downloader disabled TLS cert",
-      "cve_id": "CVE-2026-79785",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-79785",
-      "source": "cvefeed",
-      "published": "2026-08-26T01:17:30+09:00",
       "lang": "en"
     }
   ],
