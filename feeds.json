@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-29T00:01:02.210972+09:00",
+  "fetched_at": "2026-08-29T00:31:00.754016+09:00",
   "security_news": [
     {
       "title": "라자루스 추정 주소서 비트코인 244개 이동 관측",
@@ -2340,21 +2340,24 @@
       "source": "naver",
       "published": "2026-08-26T01:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "102억원 가로챈 보이스피싱 조직, 한·중 공조에 덜미",
-      "summary": "범행은 카드배송기사와 카드사 보안팀, 경찰·금융감독원 직원, 검사 등으로 역할을 세분화해 이뤄졌다. \"발급받지 않은 카드가 배송됐다\"며 접근한 뒤 개인정보 유출 확인을 명목으로 악성 앱을 설치하게 하고 \"계좌가...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 102억원 가로챈 보이스피싱 조직, 한·중 공조에 덜미 범행은 카드배송기사와 카드사 보안팀\n2. \"발급받지 않은 카드가 배송됐다\"며 접근한 뒤 개인정보 유출 확인을 명목으로 악성 앱을 설",
-      "link": "https://n.news.naver.com/mnews/article/654/0000197010?sid=102",
-      "source": "naver",
-      "published": "2026-08-26T00:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82241 - Budibase backend-core SSRF via incomplete default blacklist",
+      "summary": "CVE ID :CVE-2026-82241\n  \nPublished : Aug. 28, 2026, 12:16 p.m. | 2 hours, 54 minutes ago\n  \nDescription :Budibase backend-core (@budibase/backend-core, as used by @budibase/server) omits the shared address space range 100.64.0.0/10 from its default SSRF blacklist (DEFAULT_BLACKLIST) used by REST datasource query previews. When the default blacklist is active (i.e., a self-hosted deployment has not defined BLACKLIST_IPS), an authenticated user with the Builder permission can submit a REST datasource query preview request to POST /api/queries/preview targeting a reachable HTTP(S) service in the 100.64.0.0/10 range, causing the server to send a request to that target and return its response through the preview flow. Per the advisory, no released fix was identified at the time of publication; remediation is to add 100.64.0.0/10 to DEFAULT_BLACKLIST.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82241\n  \nPublished : Aug. 28, 2026, 12:16 p.m. | 2 hours, 54 minutes ago\n  \nDescription :Budibase backend-core (@budibase/backend-core, as used by @budibase/server) omits the shared address space range 100.64.0.0/10 from its default SSRF blacklist (DEFAULT_BLACKLIST) used by REST datasource query previews. When the default blacklist is active (i.e., a self-hosted deployment has not defined BLACKLIST_IPS), an authenticated user with the Builder permission can submit a REST datasource query preview request to POST /api/queries/preview targeting a reachable HTTP(S) service in the 100.64.0.0/10 range, causing the server to send a request to that target and return its response through the preview flow. Per the advisory, no released fix was identified at the time of publication; remediation is to add 100.64.0.0/10 to DEFAULT_BLACKLIST.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-82241 - 불완전한 기본 블랙리스트를 통한 Budibase 백엔드 코어 SSRF",
+      "summary_ko": "CVE ID:CVE-2026-82241\n  \n게시일 : 2026년 8월 28일 오후 12시 16분 | 2시간 54분 전\n  \n설명 :Budibase backend-core(@budibase/backend-core, @budibase/server에서 사용됨)는 REST 데이터 소스 쿼리 미리 보기에서 사용하는 기본 SSRF 블랙리스트(DEFAULT_BLACKLIST)에서 공유 주소 공간 범위 100.64.0.0/10을 생략합니다. 기본 블랙리스트가 활성화된 경우(즉, 자체 호스팅 배포가 BLACKLIST_IPS를 정의하지 않은 경우) Builder 권한이 있는 인증된 사용자는 100.64.0.0/10 범위의 도달 가능한 HTTP(S) 서비스를 대상으로 하는 REST 데이터 소스 쿼리 미리 보기 요청을 POST /api/queries/preview에 제출할 수 있습니다. 그러면 서버가 해당 대상에 요청을 보내고 미리 보기 흐름을 통해 응답을 반환하게 됩니다. 권고에 따르면 게시 당시에는 릴리스된 수정 사항이 확인되지 않았습니다. 해결 방법은 DEFAULT_BLACKLIST에 100.64.0.0/10을 추가하는 것입니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-82241\n2. 26.08.28 오후9:16\n3. Budibase backend-core (@budibase/backend-core, as ",
+      "cve_id": "CVE-2026-82241",
+      "cvss": "0.0",
+      "severity": "Low",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82241",
+      "source": "cvefeed",
+      "published": "2026-08-28T21:16:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-80722 - wifi: mac80211: validate individual TWT params before driver setup",
       "summary": "CVE ID :CVE-2026-80722\n  \nPublished : Aug. 28, 2026, 8:16 a.m. | 32 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: mac80211: validate individual TWT params before driver setup\n\nieee80211_process_rx_twt_action() only partially validates a received\nS1G TWT setup frame before queueing it.\n\nAn individual agreement can therefore reach ieee80211_s1g_rx_twt_setup()\nwith twt->length too short for the full struct ieee80211_twt_params.\n\nThe individual path passes twt to drv_add_twt_setup(). Both the tracepoint\nand the driver callback consume the complete parameters block, not merely\nreq_type. Do not pass a short individual agreement to the driver.\nBroadcast agreements remain unchanged because they are rejected locally\nafter accessing only req_type.\n\n[edit commit message to not overclaim lack of validation nor\n understate driver impact]\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3028,36 +3031,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-79785",
       "source": "cvefeed",
       "published": "2026-08-26T01:17:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55536 - Browser Server WebSocket origin validation bypass via unanchored regex (patch bypass of CVE-2026-40289 / GHSA-8x8f-54wf-vv92)",
-      "summary": "CVE ID :CVE-2026-55536\n  \nPublished : Aug. 25, 2026, 3:21 p.m. | 9 minutes ago\n  \nDescription :PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, Browser Server _handle_connection() checks Chrome extension origins with re.match() and the unanchored expression chrome-extension://[a-z0-9]{32}. Extra trailing characters pass before websocket.accept(), allowing start_session commands and unauthorized browser automation. This issue is fixed in version 4.6.58.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55536\n  \nPublished : Aug. 25, 2026, 3:21 p.m. | 9 minutes ago\n  \nDescription :PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, Browser Server _handle_connection() checks Chrome extension origins with re.match() and the unanchored expression chrome-extension://[a-z0-9]{32}. Extra trailing characters pass before websocket.accept(), allowing start_session commands and unauthorized browser automation. This issue is fixed in version 4.6.58.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-55536\n2. 26.08.26 오전12:21\n3. PraisonAI is a multi-agent teams system. Prior to ",
-      "cve_id": "CVE-2026-55536",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55536",
-      "source": "cvefeed",
-      "published": "2026-08-26T00:21:53+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Obfuscating IP Addresses as Hostnames, (Tue, Aug 25th)",
-      "summary": "It is pretty obvious that hostnames can replace IP addresses. Pretty much any software accepting an IP address will also accept a hostname as an argument. Last week, I wrote about scans for the cloud metadata service listening at 169.254.169.254. These scans attempted to exploit Server Side Request Forgery (SSRF) vulnerability. One way to prevent these types of exploits is to filter requests that contain the string \"169.254.169.254\" or to add this IP to a blocklist of URLs that should not be accessed.\r",
-      "description": "It is pretty obvious that hostnames can replace IP addresses. Pretty much any software accepting an IP address will also accept a hostname as an argument. Last week, I wrote about scans for the cloud metadata service listening at 169.254.169.254. These scans attempted to exploit Server Side Request Forgery (SSRF) vulnerability. One way to prevent these types of exploits is to filter requests that contain the string \"169.254.169.254\" or to add this IP to a blocklist of URLs that should not be accessed.\r",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. Obfuscating IP Addresses as Hostnames, (Tue, Aug 2\n2. SANS_ISC\n3. It is pretty obvious that hostnames can replace IP",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33280",
-      "source": "sans_isc",
-      "published": "2026-08-26T00:03:33+09:00",
       "lang": "en"
     }
   ],
