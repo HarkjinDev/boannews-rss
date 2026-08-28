@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-29T02:01:02.112600+09:00",
+  "fetched_at": "2026-08-29T02:30:56.137147+09:00",
   "security_news": [
     {
       "title": "미 대형 로펌 “북한 위장취업 적발 뒤에도 법적 위험…급여 지급·해고...",
@@ -2355,6 +2355,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82078 - PaperCut MF/NG: Unsafe Dynamic Class Loading in Database Connector",
+      "summary": "CVE ID :CVE-2026-82078\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an attacker can manipulate system configuration parameters, this enables the execution of arbitrary Java bytecode residing on the application classpath under the security context of the PaperCut server process.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82078\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an attacker can manipulate system configuration parameters, this enables the execution of arbitrary Java bytecode residing on the application classpath under the security context of the PaperCut server process.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-82078\n2. 26.08.29 오전1:18\n3. An unsafe dynamic class loading vulnerability exis",
+      "cve_id": "CVE-2026-82078",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82078",
+      "source": "cvefeed",
+      "published": "2026-08-29T01:18:31+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-75758 - Unbounded recursion between Inspect.List charlist rendering and List.to_string/1 error path in Elixir",
+      "summary": "CVE ID :CVE-2026-75758\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :Uncontrolled Recursion vulnerability in the Elixir standard library allows an attacker who controls a list passed to inspect/1, List.to_string/1, or List.to_charlist/1 to exhaust a BEAM node's memory.\n\nInspect.List's charlist branch in lib/elixir/lib/inspect.ex classifies a list as a charlist using List.ascii_printable?/2, which examines only the first :printable_limit (4096 by default) elements, and then calls IO.chardata_to_string/1 on the whole term. A list whose printable prefix exceeds that limit but which contains a later element that is not a code point (an atom, an out-of-range integer, or an improper tail) is therefore mis-classified, and the conversion raises ArgumentError. That conversion runs inside List.to_string/1, whose rescue clause builds its message by interpolating inspect(list), which re-enters the same branch and raises again. The nested inspection is an argument to raise, so the recursion is not in tail position and every level is retained: the process stack grows monotonically while each cycle re-walks the list, until the process is killed by max_heap_size or, by default, the node runs out of memory. List.to_charlist/1 has the same rescue shape.\n\nBelow the printable limit the inner inspect/1 sees the invalid element within its counter and renders the list in ordinary bracket form, so a single ArgumentError is raised and no recursion occurs.\n\nThis issue affects elixir: from 1.15.0-rc.0 before 1.18.5, from 1.19.0-rc.0 before 1.19.6, and from 1.20.0-rc.0 before 1.20.4.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-75758\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :Uncontrolled Recursion vulnerability in the Elixir standard library allows an attacker who controls a list passed to inspect/1, List.to_string/1, or List.to_charlist/1 to exhaust a BEAM node's memory.\n\nInspect.List's charlist branch in lib/elixir/lib/inspect.ex classifies a list as a charlist using List.ascii_printable?/2, which examines only the first :printable_limit (4096 by default) elements, and then calls IO.chardata_to_string/1 on the whole term. A list whose printable prefix exceeds that limit but which contains a later element that is not a code point (an atom, an out-of-range integer, or an improper tail) is therefore mis-classified, and the conversion raises ArgumentError. That conversion runs inside List.to_string/1, whose rescue clause builds its message by interpolating inspect(list), which re-enters the same branch and raises again. The nested inspection is an argument to raise, so the recursion is not in tail position and every level is retained: the process stack grows monotonically while each cycle re-walks the list, until the process is killed by max_heap_size or, by default, the node runs out of memory. List.to_charlist/1 has the same rescue shape.\n\nBelow the printable limit the inner inspect/1 sees the invalid element within its counter and renders the list in ordinary bracket form, so a single ArgumentError is raised and no recursion occurs.\n\nThis issue affects elixir: from 1.15.0-rc.0 before 1.18.5, from 1.19.0-rc.0 before 1.19.6, and from 1.20.0-rc.0 before 1.20.4.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-75758\n2. 26.08.29 오전1:18\n3. Uncontrolled Recursion vulnerability in the Elixir",
+      "cve_id": "CVE-2026-75758",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75758",
+      "source": "cvefeed",
+      "published": "2026-08-29T01:18:25+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-82241 - Budibase backend-core SSRF via incomplete default blacklist",
       "summary": "CVE ID :CVE-2026-82241\n  \nPublished : Aug. 28, 2026, 12:16 p.m. | 2 hours, 54 minutes ago\n  \nDescription :Budibase backend-core (@budibase/backend-core, as used by @budibase/server) omits the shared address space range 100.64.0.0/10 from its default SSRF blacklist (DEFAULT_BLACKLIST) used by REST datasource query previews. When the default blacklist is active (i.e., a self-hosted deployment has not defined BLACKLIST_IPS), an authenticated user with the Builder permission can submit a REST datasource query preview request to POST /api/queries/preview targeting a reachable HTTP(S) service in the 100.64.0.0/10 range, causing the server to send a request to that target and return its response through the preview flow. Per the advisory, no released fix was identified at the time of publication; remediation is to add 100.64.0.0/10 to DEFAULT_BLACKLIST.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
