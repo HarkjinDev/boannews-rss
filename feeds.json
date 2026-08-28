@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-29T08:02:13.784417+09:00",
+  "fetched_at": "2026-08-29T08:32:10.338986+09:00",
   "security_news": [
+    {
+      "title": "뉴트럴 준비금 일부 묶여 2700만달러 유동자산",
+      "summary": "뉴트럴은 이번 사안이 스마트컨트랙트 취약점이나 해킹, 코드 결함에 따른 것은 아니라고 설명한 것으로 전해졌다. 우블록체인은 뉴트럴이 이용자에게 조기 상환을 열 계획이라고 전했다. 상환 개방 시점과 실제 상환...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 뉴트럴 준비금 2700만달러 유동자산 묶여\n2. 스마트컨트랙트 취약점, 해킹, 코드 결함은 아님\n3. 이용자에 조기 상환 계획, 상세 내용은 미정",
+      "link": "https://www.tokenpost.kr/news/breaking/400136",
+      "source": "naver",
+      "published": "2026-08-29T08:06:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "“공급망 노린 사이버 공격...‘제로트러스트’가 해법”",
       "summary": "개인정보 유출의 원인으로 관리 부주의, 해킹 등이 지목되는 가운데 일부 사고는 북한 등 외부의 개입... 진행돼 해킹 조직의 주요 표적이 되고 있다”고 진단했다. 기업에 대해서는 “대기업은 사이버보안에 상당한...",
@@ -2344,6 +2356,51 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-55860 - MariaDB Connector/R2DBC: Cleartext password disclosure to a man-in-the-middle server (clear-text auth plugins not gated on a secure transport)",
+      "summary": "CVE ID :CVE-2026-55860\n  \nPublished : Aug. 28, 2026, 10:50 p.m. | 21 minutes ago\n  \nDescription :MariaDB Connector/R2DBC is a non-blocking MariaDB and MySQL client implemented in Java. Prior to 1.4.1, org.mariadb:r2dbc-mariadb does not gate clear-text password authentication plugins on transport encryption because the AuthenticationPlugin interface has no capability for a plugin to require a secure connection. A hostile or man-in-the-middle MariaDB server can send an AuthSwitchRequest naming mysql_clear_password or dialog (PAM) over a plain-TCP unencrypted connection, and AuthenticationFlow permits ClearPasswordPluginFlow or PamPluginFlow to return the user's password as cleartext bytes on the wire. The disclosed credentials can subsequently be used to authenticate directly to the database server. This issue is fixed in version 1.4.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55860\n  \nPublished : Aug. 28, 2026, 10:50 p.m. | 21 minutes ago\n  \nDescription :MariaDB Connector/R2DBC is a non-blocking MariaDB and MySQL client implemented in Java. Prior to 1.4.1, org.mariadb:r2dbc-mariadb does not gate clear-text password authentication plugins on transport encryption because the AuthenticationPlugin interface has no capability for a plugin to require a secure connection. A hostile or man-in-the-middle MariaDB server can send an AuthSwitchRequest naming mysql_clear_password or dialog (PAM) over a plain-TCP unencrypted connection, and AuthenticationFlow permits ClearPasswordPluginFlow or PamPluginFlow to return the user's password as cleartext bytes on the wire. The disclosed credentials can subsequently be used to authenticate directly to the database server. This issue is fixed in version 1.4.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-55860\n2. 26.08.29 오전7:50\n3. MariaDB Connector/R2DBC is a non-blocking MariaDB ",
+      "cve_id": "CVE-2026-55860",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55860",
+      "source": "cvefeed",
+      "published": "2026-08-29T07:50:30+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-55784 - free5GC AUSF authentication contexts can be overwritten by concurrent requests for the same SUPI",
+      "summary": "CVE ID :CVE-2026-55784\n  \nPublished : Aug. 28, 2026, 10:23 p.m. | 47 minutes ago\n  \nDescription :free5GC is an open-source implementation of the 5G core network. In version 1.4.4 and earlier, the AUSF component stores per-subscriber authentication state in a global sync.Map named AUSFContext.UePool in internal/context/context.go, keyed only by SUPI. Every request handled by internal/sbi/processor/ue_authentication.go creates an AusfUeContext, and AddAusfUeContextToPool executes ausfContext.UePool.Store(ausfUeContext.Supi, ausfUeContext), unconditionally replacing the active context for that SUPI. An attacker with access to the AUSF SBI/N12 interface can send concurrent POST /nausf-auth/v1/ue-authentications requests for the same target SUPI, causing all attempts to share one logical authentication context URL while K_aut, XRES, and EapID are repeatedly overwritten. A valid EAP-AKA' response for an earlier challenge is then checked against the latest context, causing AT_MAC verification to fail and denying authentication to the selected subscriber while the request flood continues. No fixed version is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55784\n  \nPublished : Aug. 28, 2026, 10:23 p.m. | 47 minutes ago\n  \nDescription :free5GC is an open-source implementation of the 5G core network. In version 1.4.4 and earlier, the AUSF component stores per-subscriber authentication state in a global sync.Map named AUSFContext.UePool in internal/context/context.go, keyed only by SUPI. Every request handled by internal/sbi/processor/ue_authentication.go creates an AusfUeContext, and AddAusfUeContextToPool executes ausfContext.UePool.Store(ausfUeContext.Supi, ausfUeContext), unconditionally replacing the active context for that SUPI. An attacker with access to the AUSF SBI/N12 interface can send concurrent POST /nausf-auth/v1/ue-authentications requests for the same target SUPI, causing all attempts to share one logical authentication context URL while K_aut, XRES, and EapID are repeatedly overwritten. A valid EAP-AKA' response for an earlier challenge is then checked against the latest context, causing AT_MAC verification to fail and denying authentication to the selected subscriber while the request flood continues. No fixed version is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-55784\n2. 26.08.29 오전7:23\n3. free5GC is an open-source implementation of the 5G",
+      "cve_id": "CVE-2026-55784",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55784",
+      "source": "cvefeed",
+      "published": "2026-08-29T07:23:41+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-81517 - MongoDB Connector for BI Improper Error Handling of Log Write Failures May Cause Loss of SQL Service",
+      "summary": "CVE ID :CVE-2026-81517\n  \nPublished : Aug. 28, 2026, 10:16 p.m. | 54 minutes ago\n  \nDescription :An unauthenticated party able to reach the port of a MongoDB Connector for BI (mongosqld) instance may generate enough routine connection log activity to exhaust the storage backing the configured log path. When a log write or log rotation operation subsequently fails, the resulting error is not handled and the shared mongosqld process ends, ending service for all connected SQL clients. The process continues to end on startup until an operator restores available storage, and the diagnostic message explaining the condition is not recorded.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-81517\n  \nPublished : Aug. 28, 2026, 10:16 p.m. | 54 minutes ago\n  \nDescription :An unauthenticated party able to reach the port of a MongoDB Connector for BI (mongosqld) instance may generate enough routine connection log activity to exhaust the storage backing the configured log path. When a log write or log rotation operation subsequently fails, the resulting error is not handled and the shared mongosqld process ends, ending service for all connected SQL clients. The process continues to end on startup until an operator restores available storage, and the diagnostic message explaining the condition is not recorded.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-81517\n2. 26.08.29 오전7:16\n3. An unauthenticated party able to reach the port of",
+      "cve_id": "CVE-2026-81517",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81517",
+      "source": "cvefeed",
+      "published": "2026-08-29T07:16:54+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-55220 - Pimcore Hotspotimage getDataFromResource() unrestricted Serialize::unserialize over object-store column",
       "summary": "CVE ID :CVE-2026-55220\n  \nPublished : Aug. 28, 2026, 7:12 p.m. | 36 minutes ago\n  \nDescription :Pimcore is an Open Source Data & Experience Management Platform. Prior to 11.5.19, 12.3.10, and 2026.1.6, Pimcore\\Model\\DataObject\\ClassDefinition\\Data\\Hotspotimage::getDataFromResource() in models/DataObject/ClassDefinition/Data/Hotspotimage.php passes the field __hotspots object-store column to Pimcore\\Tool\\Serialize::unserialize() without an allowed-classes restriction after JSON decoding fails. An attacker with a separate capability to write crafted PHP serialized bytes into that column can instantiate available classes and trigger magic methods when an affected DataObject is loaded, which can produce arbitrary file writes or code execution through bundled gadget chains. The related ImageGallery, Block, and Video callers use the same fallback pattern, but the identified June fix changes the Hotspotimage caller only. This issue is fixed for Hotspotimage in versions 11.5.19, 12.3.10, and 2026.1.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-55220\n  \nPublished : Aug. 28, 2026, 7:12 p.m. | 36 minutes ago\n  \nDescription :Pimcore is an Open Source Data & Experience Management Platform. Prior to 11.5.19, 12.3.10, and 2026.1.6, Pimcore\\Model\\DataObject\\ClassDefinition\\Data\\Hotspotimage::getDataFromResource() in models/DataObject/ClassDefinition/Data/Hotspotimage.php passes the field __hotspots object-store column to Pimcore\\Tool\\Serialize::unserialize() without an allowed-classes restriction after JSON decoding fails. An attacker with a separate capability to write crafted PHP serialized bytes into that column can instantiate available classes and trigger magic methods when an affected DataObject is loaded, which can produce arbitrary file writes or code execution through bundled gadget chains. The related ImageGallery, Block, and Video callers use the same fallback pattern, but the identified June fix changes the Hotspotimage caller only. This issue is fixed for Hotspotimage in versions 11.5.19, 12.3.10, and 2026.1.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2926,21 +2983,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-58092",
       "source": "cvefeed",
       "published": "2026-08-26T13:46:17+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-80192 - better-auth SSO before 1.6.27 Domain Ownership Authentication Bypass",
-      "summary": "CVE ID :CVE-2026-80192\n  \nPublished : Aug. 25, 2026, 11:19 p.m. | 1 hour, 12 minutes ago\n  \nDescription :@better-auth/sso before 1.6.27 (and before 1.4.8 in the 1.4.x line and before 1.7.0-rc.5 in the 1.7 prerelease line) contains two domain-ownership flaws. When domain verification is disabled, automatic organization assignment accepts unverified provider domains, allowing an authenticated organization owner/administrator to register an SSO provider for an arbitrary domain and have users with matching email domains added to the attacker's organization with default member permissions. When domain verification is enabled, a race condition between the verify-domain and update-provider endpoints can apply completed DNS proof to a different domain; combined with implicit account linking, this can link an attacker-controlled identity provider to an existing user account. Exploitation requires the SSO plugin (and, for the org-assignment path, the organization plugin) with the relevant configuration enabled.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-80192\n  \nPublished : Aug. 25, 2026, 11:19 p.m. | 1 hour, 12 minutes ago\n  \nDescription :@better-auth/sso before 1.6.27 (and before 1.4.8 in the 1.4.x line and before 1.7.0-rc.5 in the 1.7 prerelease line) contains two domain-ownership flaws. When domain verification is disabled, automatic organization assignment accepts unverified provider domains, allowing an authenticated organization owner/administrator to register an SSO provider for an arbitrary domain and have users with matching email domains added to the attacker's organization with default member permissions. When domain verification is enabled, a race condition between the verify-domain and update-provider endpoints can apply completed DNS proof to a different domain; combined with implicit account linking, this can link an attacker-controlled identity provider to an existing user account. Exploitation requires the SSO plugin (and, for the org-assignment path, the organization plugin) with the relevant configuration enabled.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-80192\n2. 26.08.26 오전8:19\n3. @better-auth/sso before 1.6.27 (and before 1.4.8 i",
-      "cve_id": "CVE-2026-80192",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80192",
-      "source": "cvefeed",
-      "published": "2026-08-26T08:19:00+09:00",
       "lang": "en"
     }
   ],
