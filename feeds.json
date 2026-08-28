@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-28T17:01:19.977453+09:00",
+  "fetched_at": "2026-08-28T17:31:12.332403+09:00",
   "security_news": [
+    {
+      "title": "[이구동성] 뭔가 자꾸 새는 GTA 6",
+      "summary": "이번 유출 사태는 자칭 ‘사이버리크(Cyberleek)’라는 해킹 단체가 주도한 것으로 드러났는데요, 이들은 \"디스크판을 출시해라\"며 게이머의 권리를 방패삼았지만 실상은 자체 발행한 밈 코인을 홍보하려는 주 목적이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. GTA 6, '사이버리크' 해킹 단체가 유출 주도\n2. 밈 코인 홍보 위해 GTA 6 정보 유출\n3. 게임 출시 방식 요구하며 악성 행위",
+      "link": "https://n.news.naver.com/mnews/article/356/0000085430?sid=004",
+      "source": "naver",
+      "published": "2026-08-28T17:11:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[데일리픽] XRP 외면하는 블랙록?…스마트폰·PC 얼마나 더 오르나",
+      "summary": "이들은 공개서한에서 AI가 정교한 해킹 기술의 비용과 진입장벽을 낮추면서 병원과 상수도, 발전소 등 핵심 인프라의 위험이 커지고 있다고 경고했다. 서명 기업들은 조직 내부 보안 기준 강화와 취약점 개선, AI...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI, 핵심 인프라 해킹 비용 낮춰 병원·발전소 위험 증대\n2. AI 악용한 정교한 해킹 기술, 내부 보안 기준 강화 요구\n3. 조직 보안 강화 및 취약점 개선, AI 활용 공격 대비",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=696388",
+      "source": "naver",
+      "published": "2026-08-28T17:06:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[2026 스토리지 제품&솔루션 리포트] 구석에 쌓아둔 데이터의 반란, 스토...",
       "summary": "스토리지를 운용하며 가장 불안하게 느끼는 지점을 묻는 질문에는 '랜섬웨어·악성코드 등 사이버 공격... 실제로 사이버 공격자들의 표적이 기업의 중앙 데이터 저장소와 백업망으로 점차 확대되고 있다. 과거의...",
@@ -2472,18 +2496,6 @@
       "source": "thehackernews",
       "published": "2026-08-25T17:34:07+09:00",
       "lang": "en"
-    },
-    {
-      "title": "중국 해커들이 푹 빠진 'AI'...도대체 뭐길래",
-      "summary": "대만 사이버보안 연구기관 팀T5는 24일(현지시간) 공개한 ‘2025 아시아·태평양 지역 지능형 지속 위협(APT) 동향 보고서’에서 중국 해킹 조직들이 딥시크를 비롯한 오픈소스 AI 모델을 해킹에 활발히 사용하고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중국 해커, 딥시크 등 오픈소스 AI 모델 해킹 악용\n2. APT 동향 보고서, AI 악용한 공격 증가 전망\n3. 대만 팀T5, 2025 아태 APT 보고서 발표",
-      "link": "https://n.news.naver.com/mnews/article/050/0000110106?sid=101",
-      "source": "naver",
-      "published": "2026-08-25T17:15:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3220,36 +3232,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-77142",
       "source": "cvefeed",
       "published": "2026-08-25T18:17:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-66882 - Reflected XSS in AshAuthentication confirmation and magic link interaction forms",
-      "summary": "CVE ID :CVE-2026-66882\n  \nPublished : Aug. 25, 2026, 8:18 a.m. | 49 minutes ago\n  \nDescription :Improper Neutralization of Input During Web Page Generation (XSS) vulnerability in team-alembic AshAuthentication allows reflected cross-site scripting via the confirmation and magic link interaction forms.\n\nWhen a strategy is configured with require_interaction? set to true, AshAuthentication serves an intermediate HTML page asking the user to confirm the action by submitting a form. Both such pages embed a request parameter directly into a hidden input's value attribute without HTML escaping: lib/ash_authentication/add_ons/confirmation/confirmation_form.html.eex interpolates the confirm parameter, and lib/ash_authentication/strategies/magic_link/sign_in_form.html.eex interpolates the magic link token parameter. These templates are compiled with EEx.function_from_file/3 using plain <%= %> expressions, which perform no escaping, so the parameter is reflected verbatim.\n\nNeither accept handler validates the value before rendering it. AshAuthentication.AddOn.Confirmation.Plug.accept/2 only checks that a confirm key is present, and AshAuthentication.Strategy.MagicLink.Plug.accept/2 reads the parameter directly, so no token signature is verified at this stage and arbitrary attacker-supplied text reaches the template. An unauthenticated attacker can therefore craft a URL whose parameter terminates the attribute and injects markup, for example a quote followed by a",
-      "description": "CVE ID :CVE-2026-66882\n  \nPublished : Aug. 25, 2026, 8:18 a.m. | 49 minutes ago\n  \nDescription :Improper Neutralization of Input During Web Page Generation (XSS) vulnerability in team-alembic AshAuthentication allows reflected cross-site scripting via the confirmation and magic link interaction forms.\n\nWhen a strategy is configured with require_interaction? set to true, AshAuthentication serves an intermediate HTML page asking the user to confirm the action by submitting a form. Both such pages embed a request parameter directly into a hidden input's value attribute without HTML escaping: lib/ash_authentication/add_ons/confirmation/confirmation_form.html.eex interpolates the confirm parameter, and lib/ash_authentication/strategies/magic_link/sign_in_form.html.eex interpolates the magic link token parameter. These templates are compiled with EEx.function_from_file/3 using plain <%= %> expressions, which perform no escaping, so the parameter is reflected verbatim.\n\nNeither accept handler validates the value before rendering it. AshAuthentication.AddOn.Confirmation.Plug.accept/2 only checks that a confirm key is present, and AshAuthentication.Strategy.MagicLink.Plug.accept/2 reads the parameter directly, so no token signature is verified at this stage and arbitrary attacker-supplied text reaches the template. An unauthenticated attacker can therefore craft a URL whose parameter terminates the attribute and injects markup, for example a quote followed by a",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-66882\n2. 26.08.25 오후5:18\n3. Improper Neutralization of Input During Web Page G",
-      "cve_id": "CVE-2026-66882",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-66882",
-      "source": "cvefeed",
-      "published": "2026-08-25T17:18:10+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-65633 - Purpose-limited JWT accepted as full bearer authentication in AshAuthentication",
-      "summary": "CVE ID :CVE-2026-65633\n  \nPublished : Aug. 25, 2026, 8:18 a.m. | 49 minutes ago\n  \nDescription :Improper Authentication vulnerability in team-alembic AshAuthentication allows purpose-limited JWTs to be replayed as full bearer API credentials when a resource uses stateless bearer-token verification.\n\nThe bearer-token authentication helper AshAuthentication.Plug.Helpers.retrieve_from_bearer/3 verifies an Authorization: Bearer JWT's signature and rejects tokens containing an act claim, but performs no check that the token's purpose claim equals user at the bearer boundary. When the resource is configured with require_token_presence_for_authentication?: false (the DSL default), the follow-on validate_token/3 helper returns {:ok, nil} without consulting the token resource, so no downstream check on purpose takes place either. As a result, any valid, non-expired JWT the library itself issued for a narrow, single-purpose flow (most notably the purpose: sign_in token that WebAuthn always emits during sign-in, and that the Password strategy emits when sign-in tokens are enabled) is accepted directly as a general-purpose bearer credential and resolves to a full current_user assignment.\n\nThis bypasses the library's intended token-exchange contract, in which the sign_in token is meant to be presented exactly once to a preparation that validates the purpose claim and immediately revokes the token. The first use of a still-valid sign-in token presented directly in the Authorization header succeeds because the stateless bearer path never scopes it to purpose == \"user\".\n\nAn attacker who obtains a not-yet-exchanged sign-in token for a target subject (for example via log or referrer leakage, an intercepted magic-link delivery channel, or a partially compromised intermediary) can present it as a bearer token and be authenticated as that subject, fully bypassing the intended one-time-use and revocation semantics. Exploitation additionally requires that the host application wire up retrieve_from_bearer/3 on a reachable route and uses either WebAuthn (sign-in tokens are always issued) or the Password strategy with sign_in_tokens_enabled?: true. Resources configured with require_token_presence_for_authentication?: true (including applications scaffolded by the Igniter installer since v4.5.0) and the session-based path (authenticate_resource_from_session/4) enforce purpose == \"user\" against the stored token record and are not affected.\n\nThis issue affects ash_authentication: from 3.10.5 before 4.14.2 and from 5.0.0-rc.0 before 5.0.0-rc.13.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-65633\n  \nPublished : Aug. 25, 2026, 8:18 a.m. | 49 minutes ago\n  \nDescription :Improper Authentication vulnerability in team-alembic AshAuthentication allows purpose-limited JWTs to be replayed as full bearer API credentials when a resource uses stateless bearer-token verification.\n\nThe bearer-token authentication helper AshAuthentication.Plug.Helpers.retrieve_from_bearer/3 verifies an Authorization: Bearer JWT's signature and rejects tokens containing an act claim, but performs no check that the token's purpose claim equals user at the bearer boundary. When the resource is configured with require_token_presence_for_authentication?: false (the DSL default), the follow-on validate_token/3 helper returns {:ok, nil} without consulting the token resource, so no downstream check on purpose takes place either. As a result, any valid, non-expired JWT the library itself issued for a narrow, single-purpose flow (most notably the purpose: sign_in token that WebAuthn always emits during sign-in, and that the Password strategy emits when sign-in tokens are enabled) is accepted directly as a general-purpose bearer credential and resolves to a full current_user assignment.\n\nThis bypasses the library's intended token-exchange contract, in which the sign_in token is meant to be presented exactly once to a preparation that validates the purpose claim and immediately revokes the token. The first use of a still-valid sign-in token presented directly in the Authorization header succeeds because the stateless bearer path never scopes it to purpose == \"user\".\n\nAn attacker who obtains a not-yet-exchanged sign-in token for a target subject (for example via log or referrer leakage, an intercepted magic-link delivery channel, or a partially compromised intermediary) can present it as a bearer token and be authenticated as that subject, fully bypassing the intended one-time-use and revocation semantics. Exploitation additionally requires that the host application wire up retrieve_from_bearer/3 on a reachable route and uses either WebAuthn (sign-in tokens are always issued) or the Password strategy with sign_in_tokens_enabled?: true. Resources configured with require_token_presence_for_authentication?: true (including applications scaffolded by the Igniter installer since v4.5.0) and the session-based path (authenticate_resource_from_session/4) enforce purpose == \"user\" against the stored token record and are not affected.\n\nThis issue affects ash_authentication: from 3.10.5 before 4.14.2 and from 5.0.0-rc.0 before 5.0.0-rc.13.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-65633\n2. 26.08.25 오후5:18\n3. Improper Authentication vulnerability in team-alem",
-      "cve_id": "CVE-2026-65633",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-65633",
-      "source": "cvefeed",
-      "published": "2026-08-25T17:18:09+09:00",
       "lang": "en"
     }
   ],
