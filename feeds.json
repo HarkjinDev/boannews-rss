@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-29T05:01:02.848220+09:00",
+  "fetched_at": "2026-08-29T05:31:04.912730+09:00",
   "security_news": [
+    {
+      "title": "법원, 공정위 쿠팡 조사 제동",
+      "summary": "이후 지금까지 사전통지 없이 현장조사를 해왔다고 밝혔다. 쿠팡에 대한 조사는 2025년 11월 3,370만개 계정의 개인정보가 해킹을 통해 유출된 것을 계기로 본격화됐다. 양측의 공방은 9월 2일 심문기일에서 이어질 예정이다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 쿠팡, 3,370만 계정 정보 유출 후 공정위 조사\n2. 공정위, 사전통지 없이 현장조사 실시\n3. 9월 2일 법원 심문기일서 공방 이어질 듯",
+      "link": "https://www.lawtimes.co.kr/news/articleView.html?idxno=225538",
+      "source": "naver",
+      "published": "2026-08-29T05:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "코어 라이트닝, 노드 운영자에 긴급 업그레이드 권고",
       "summary": "비트코인 라이트닝 네트워크 구현체 코어 라이트닝(Core Lightning)이 보안 취약점 대응을 위해 노드 운영자에게 긴급 업그레이드를 권고했다. 코어 라이트닝은 최근 인공지능(AI)이 생성한 다수의 CVE 보고서를 검토한...",
@@ -2328,18 +2340,6 @@
       "source": "naver",
       "published": "2026-08-26T06:01:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[전문가 기고] 쿠팡 개인정보 유출 사태, 더 이상 '기업 실수'로 넘겨선...",
-      "summary": "com 구교훈 한국국제물류사협회장 [사진=아주경제DB] 3370만명에 달하는 국민 개인정보가 유출된 쿠팡 해킹... 쿠팡은 이번 사건을 단순한 해킹 사고가 아니라 기업의 존립을 좌우할 수 있는 신뢰의 위기로 받아들여야 한다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 쿠팡, 3370만 명 개인정보 유출 발생\n2. 해킹으로 인한 정보 유출, 기업 신뢰 위기 초래\n3. 단순 해킹 넘어 존립 좌우할 사안으로 인식 필요",
-      "link": "https://www.ajunews.com/view/20260824234455639",
-      "source": "naver",
-      "published": "2026-08-26T05:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3016,51 +3016,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-55588",
       "source": "cvefeed",
       "published": "2026-08-26T05:32:18+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-80104 - DB-GPT 0.8.0 Path Traversal Arbitrary File Write via Skill Upload Filename",
-      "summary": "CVE ID :CVE-2026-80104\n  \nPublished : Aug. 25, 2026, 8:18 p.m. | 28 minutes ago\n  \nDescription :DB-GPT builds the destination path for an uploaded skill from the multipart filename without constraining it to the upload directory. skill_upload in packages/dbgpt-app/src/dbgpt_app/openapi/api_v1/agentic_data_api.py takes file.filename as given and writes the request body to upload_dir / filename. A path composed with that operator discards the left operand when the right one is absolute and follows parent references otherwise, so a filename such as ../../../tmp/x or /tmp/x resolves outside the intended directory; nothing canonicalises the result, checks that it remains under the upload root, or prevents a .py suffix. The route's only dependency is get_user_from_headers in dbgpt_serve/utils/auth.py, which returns a request carrying the admin role whether or not a user_id header is supplied, so the endpoint is reachable without credentials. A remote attacker holding no account can therefore write attacker-controlled bytes to any path the server process can write, place a new Python module inside the application package or replace one the application already imports, and obtain code execution in the server process when that module is next imported.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-80104\n  \nPublished : Aug. 25, 2026, 8:18 p.m. | 28 minutes ago\n  \nDescription :DB-GPT builds the destination path for an uploaded skill from the multipart filename without constraining it to the upload directory. skill_upload in packages/dbgpt-app/src/dbgpt_app/openapi/api_v1/agentic_data_api.py takes file.filename as given and writes the request body to upload_dir / filename. A path composed with that operator discards the left operand when the right one is absolute and follows parent references otherwise, so a filename such as ../../../tmp/x or /tmp/x resolves outside the intended directory; nothing canonicalises the result, checks that it remains under the upload root, or prevents a .py suffix. The route's only dependency is get_user_from_headers in dbgpt_serve/utils/auth.py, which returns a request carrying the admin role whether or not a user_id header is supplied, so the endpoint is reachable without credentials. A remote attacker holding no account can therefore write attacker-controlled bytes to any path the server process can write, place a new Python module inside the application package or replace one the application already imports, and obtain code execution in the server process when that module is next imported.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-80104\n2. 26.08.26 오전5:18\n3. DB-GPT builds the destination path for an uploaded",
-      "cve_id": "CVE-2026-80104",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80104",
-      "source": "cvefeed",
-      "published": "2026-08-26T05:18:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55099 - icalendar: Algorithmic Complexity in Equality",
-      "summary": "CVE ID :CVE-2026-55099\n  \nPublished : Aug. 25, 2026, 8:16 p.m. | 29 minutes ago\n  \nDescription :icalendar is an RFC 5545 compatible parser and generator of iCalendar files for Python. From 7.1.0 until 7.1.3, the Component equality method in src/icalendar/cal/component.py compares nested subcomponents with two membership loops, and each membership test invokes the same method on child components, causing O(2^n) work relative to nesting depth. Component.from_ical accepts arbitrarily nested BEGIN:VEVENT blocks without a depth limit, so an attacker can submit a sub-kilobyte .ics file containing equal nested subtrees and trigger the cost when an application performs equality, inequality, membership, deduplication, test-assertion, round-trip, or normalization comparisons. Parsing alone does not trigger the issue, and comparisons that differ early short-circuit, but a few hundred bytes can pin a CPU core for minutes or indefinitely, causing denial of service in calendar sync or import endpoints, invite processing, and other comparison paths. This issue is fixed in version 7.1.3.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55099\n  \nPublished : Aug. 25, 2026, 8:16 p.m. | 29 minutes ago\n  \nDescription :icalendar is an RFC 5545 compatible parser and generator of iCalendar files for Python. From 7.1.0 until 7.1.3, the Component equality method in src/icalendar/cal/component.py compares nested subcomponents with two membership loops, and each membership test invokes the same method on child components, causing O(2^n) work relative to nesting depth. Component.from_ical accepts arbitrarily nested BEGIN:VEVENT blocks without a depth limit, so an attacker can submit a sub-kilobyte .ics file containing equal nested subtrees and trigger the cost when an application performs equality, inequality, membership, deduplication, test-assertion, round-trip, or normalization comparisons. Parsing alone does not trigger the issue, and comparisons that differ early short-circuit, but a few hundred bytes can pin a CPU core for minutes or indefinitely, causing denial of service in calendar sync or import endpoints, invite processing, and other comparison paths. This issue is fixed in version 7.1.3.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-55099\n2. 26.08.26 오전5:16\n3. icalendar is an RFC 5545 compatible parser and gen",
-      "cve_id": "CVE-2026-55099",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55099",
-      "source": "cvefeed",
-      "published": "2026-08-26T05:16:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45019 - Chainlit: SSRF via MCP SSE and streamable-http transports allows unauthenticated internal network access",
-      "summary": "CVE ID :CVE-2026-45019\n  \nPublished : Aug. 25, 2026, 8:16 p.m. | 29 minutes ago\n  \nDescription :Chainlit is a Python framework for building production-ready conversational AI applications. From 2.4.0rc0 until 2.12.0, Chainlit deployments with features.mcp.enabled set to true in .chainlit/config.toml expose the POST /mcp endpoint without requiring authentication. For sse and streamable-http transports, ConnectSseMCPRequest and ConnectStreamableHttpMCPRequest in backend/chainlit/types.py accept a user-controlled url and optional headers dictionary without scheme validation, private-address filtering, or an allowlist. The connect_mcp handler in backend/chainlit/server.py passes these values to sse_client() or streamablehttp_client(), allowing the Chainlit server to make blind outbound requests to arbitrary internal or external services, including cloud metadata endpoints, with attacker-controlled Authorization and Cookie headers. The SSE URL sink has existed since 2.4.0rc0, while attacker-controlled header forwarding and streamable-http support were added in 2.6.4. The response is consumed internally and not returned, but the attacker can issue state-changing authenticated requests, discover internal services, scan ports, and probe metadata endpoints. This issue is fixed in version 2.12.0.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-45019\n  \nPublished : Aug. 25, 2026, 8:16 p.m. | 29 minutes ago\n  \nDescription :Chainlit is a Python framework for building production-ready conversational AI applications. From 2.4.0rc0 until 2.12.0, Chainlit deployments with features.mcp.enabled set to true in .chainlit/config.toml expose the POST /mcp endpoint without requiring authentication. For sse and streamable-http transports, ConnectSseMCPRequest and ConnectStreamableHttpMCPRequest in backend/chainlit/types.py accept a user-controlled url and optional headers dictionary without scheme validation, private-address filtering, or an allowlist. The connect_mcp handler in backend/chainlit/server.py passes these values to sse_client() or streamablehttp_client(), allowing the Chainlit server to make blind outbound requests to arbitrary internal or external services, including cloud metadata endpoints, with attacker-controlled Authorization and Cookie headers. The SSE URL sink has existed since 2.4.0rc0, while attacker-controlled header forwarding and streamable-http support were added in 2.6.4. The response is consumed internally and not returned, but the attacker can issue state-changing authenticated requests, discover internal services, scan ports, and probe metadata endpoints. This issue is fixed in version 2.12.0.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-45019\n2. 26.08.26 오전5:16\n3. Chainlit is a Python framework for building produc",
-      "cve_id": "CVE-2026-45019",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45019",
-      "source": "cvefeed",
-      "published": "2026-08-26T05:16:55+09:00",
       "lang": "en"
     }
   ],
