@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-29T06:31:01.759728+09:00",
+  "fetched_at": "2026-08-29T07:01:06.916962+09:00",
   "security_news": [
     {
       "title": "Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable",
@@ -2974,21 +2974,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-63403",
       "source": "cvefeed",
       "published": "2026-08-26T07:04:48+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-62862 - TypeBot: Account takeover via brute-forceable 6-digit magic-link code",
-      "summary": "CVE ID :CVE-2026-62862\n  \nPublished : Aug. 25, 2026, 9:43 p.m. | 35 minutes ago\n  \nDescription :Typebot is an open-source chatbot builder. In self-hosted versions up to and including 3.17.1, the default passwordless email magic-link authentication is vulnerable to login-code brute forcing that leads to account takeover. The email provider overrides NextAuth's default cryptographically secure token with a 6-digit code generated using Math.random(), reducing the keyspace to 900,000 with a 10-minute expiry, and the code itself is the raw value placed in the magic link. The verification callback enforces no attempt limit, lockout, or CSRF protection, and an incorrect guess does not consume the real code because the adapter returns null on a not-found token, so a valid code survives unlimited guessing within its lifetime. The only rate limiter applies to the code-sending path and is keyed on the client-controlled X-Forwarded-For header, allowing an attacker to request many concurrent live codes for one victim and further raise the odds of a matching guess. As a result, an anonymous attacker who knows a victim's email address can brute-force the callback and obtain an authenticated session as that user with no victim interaction, gaining full access to the victim's bots, results, and connected integration credentials. Deployments configured for OAuth or SSO only, with no email provider, are not affected. This issue is fixed in version 3.18.0\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-62862\n  \nPublished : Aug. 25, 2026, 9:43 p.m. | 35 minutes ago\n  \nDescription :Typebot is an open-source chatbot builder. In self-hosted versions up to and including 3.17.1, the default passwordless email magic-link authentication is vulnerable to login-code brute forcing that leads to account takeover. The email provider overrides NextAuth's default cryptographically secure token with a 6-digit code generated using Math.random(), reducing the keyspace to 900,000 with a 10-minute expiry, and the code itself is the raw value placed in the magic link. The verification callback enforces no attempt limit, lockout, or CSRF protection, and an incorrect guess does not consume the real code because the adapter returns null on a not-found token, so a valid code survives unlimited guessing within its lifetime. The only rate limiter applies to the code-sending path and is keyed on the client-controlled X-Forwarded-For header, allowing an attacker to request many concurrent live codes for one victim and further raise the odds of a matching guess. As a result, an anonymous attacker who knows a victim's email address can brute-force the callback and obtain an authenticated session as that user with no victim interaction, gaining full access to the victim's bots, results, and connected integration credentials. Deployments configured for OAuth or SSO only, with no email provider, are not affected. This issue is fixed in version 3.18.0\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-62862 - TypeBot: 무차별 공격이 가능한 6자리 매직 링크 코드를 통한 계정 탈취",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-62862\n2. 26.08.26 오전6:43\n3. Typebot is an open-source chatbot builder. In self",
-      "cve_id": "CVE-2026-62862",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62862",
-      "source": "cvefeed",
-      "published": "2026-08-26T06:43:21+09:00",
       "lang": "en"
     }
   ],
