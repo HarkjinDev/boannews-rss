@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-28T11:32:16.969079+09:00",
+  "fetched_at": "2026-08-28T12:01:05.402546+09:00",
   "security_news": [
     {
       "title": "[단독] 통일교 신도 128만명 개인정보 유출?... 샘플 데이터에 실존 주소",
@@ -2544,45 +2544,24 @@
       "source": "naver",
       "published": "2026-08-25T12:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "해킹 잇따르자…정부부처 개인정보 전담인력 1.1명→2.1명",
-      "summary": "공공기관을 겨냥한 해킹과 개인정보 유출 사고가 이어지자 기관마다 한 명 안팎에 불과했던 담당 인력을 보강하기로 했다. 개인정보보호위원회와 행정안전부는 25일 국무회의에서 '개인정보 보호 전담인력 확보를 위한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 해킹 잇따르자…정부부처 개인정보 전담인력 1.1명→2.1명 공공기관을 겨냥한 해킹과 개인정\n2. 개인정보보호위원회와 행정안전부는 25일 국무회의에서 '개인정보 보호 전담인력 확보를 위한.",
-      "link": "https://n.news.naver.com/mnews/article/008/0005404325?sid=105",
-      "source": "naver",
-      "published": "2026-08-25T12:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "李대통령 \"재정 수치에 매몰돼선 안 돼\"…성장·균형발전에 예산 집중",
-      "summary": "◇반도체 기술 유출 경고…\"기술안보 빈틈 없어야\" 이 대통령은 세계 각국이 첨단산업 주도권 확보에 국가 역량을 집중하면서 산업스파이와 해킹 등을 통한 기술 탈취도 이어지고 있다고 지적했다. 최근 외국 기업이 국내...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 이 대통령, 반도체 기술 유출 경고\n2. 첨단 산업 주도권 경쟁 속 기술 탈취 우려\n3. 기술 안보 강화, 빈틈없는 대응 강조",
-      "link": "https://www.ziksir.com/news/articleView.html?idxno=144200",
-      "source": "naver",
-      "published": "2026-08-25T11:44:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "AI 무장한 중국계 해커 'UAT-10147'… 17만 개 서버 겨냥 대규모 사이버...",
-      "summary": "UAT-10147은 침투 정찰, 코드 최적화, 로직 디버깅, 공격 검증 등 해킹 전 과정에 걸쳐 펜테스트GPT(PentestGPT)와 딥오딧(DeepAudit) 같은 AI 도구를 적극 도입했다. 이들은 공개된 웹 취약점을 파고들어 원격코드실행(RCE)...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중국계 해커 UAT-10147, 17만 개 서버 대상 AI 활용 공격\n2. 펜테스트GPT, 딥오딧 AI 도구로 웹 취약점 통한 RCE 공격\n3. 광범위한 서버 침투 시도, 대규모 피해 우려",
-      "link": "https://www.boannews.com/news/articleView.html?idxno=145407",
-      "source": "naver",
-      "published": "2026-08-25T11:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-78617 - WatchGuard Dimension Web UI Authentication Brute-Force Due to Missing Rate Limiting",
+      "summary": "CVE ID :CVE-2026-78617\n  \nPublished : Aug. 28, 2026, 2:16 a.m. | 31 minutes ago\n  \nDescription :WatchGuard Dimension's web login endpoint does not enforce effective rate-limiting or account lockout by default allowing a remote attacker to perform automated password guessing against user accounts. If the account lockout setting is enabled, brute-force attempts are blocked after a defined number of failed attempts, but this setting is not enabled by default.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-78617\n  \nPublished : Aug. 28, 2026, 2:16 a.m. | 31 minutes ago\n  \nDescription :WatchGuard Dimension's web login endpoint does not enforce effective rate-limiting or account lockout by default allowing a remote attacker to perform automated password guessing against user accounts. If the account lockout setting is enabled, brute-force attempts are blocked after a defined number of failed attempts, but this setting is not enabled by default.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-78617 - 누락된 속도 제한으로 인한 WatchGuard Dimension 웹 UI 인증 무차별 공격",
+      "summary_ko": "CVE ID:CVE-2026-78617\n  \n게시일 : 2026년 8월 28일 오전 2시 16분 | 31분 전\n  \n설명:WatchGuard Dimension의 웹 로그인 엔드포인트는 기본적으로 효과적인 속도 제한이나 계정 잠금을 시행하지 않으므로 원격 공격자가 사용자 계정에 대해 자동화된 비밀번호 추측을 수행할 수 있습니다. 계정 잠금 설정이 활성화된 경우 정의된 횟수만큼 실패하면 무차별 공격 시도가 차단되지만 이 설정은 기본적으로 활성화되어 있지 않습니다.\n  \n심각도: 6.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-78617\n2. 26.08.28 오전11:16\n3. WatchGuard Dimension's web login endpoint does not",
+      "cve_id": "CVE-2026-78617",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78617",
+      "source": "cvefeed",
+      "published": "2026-08-28T11:16:24+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-81836 - RooCodeInc Roo-Code OAuth Callback oauth.ts cleartext transmission",
       "summary": "CVE ID :CVE-2026-81836\n  \nPublished : Aug. 28, 2026, 12:18 a.m. | 52 minutes ago\n  \nDescription :A vulnerability was detected in RooCodeInc Roo-Code up to 3.51.1. This vulnerability affects unknown code of the file src/integrations/claude-code/oauth.ts of the component OAuth Callback. The manipulation results in cleartext transmission of sensitive information. The attack may be performed from remote. A high complexity level is associated with this attack. It is stated that the exploitability is difficult. The exploit is now public and may be used. Multiple isses were reported to the vendor beforehand. They explain, that \"they all apply to Roo Code, a project we no longer support - the repository was archived a while ago, and we don't encourage anyone to use it.\" This vulnerability only affects products that are no longer supported by the maintainer.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
