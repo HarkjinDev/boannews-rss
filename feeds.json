@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-30T08:01:06.928857+09:00",
+  "fetched_at": "2026-08-30T08:31:15.979909+09:00",
   "security_news": [
     {
       "title": "[인터뷰] 김태수 마이크로소프트 부사장 “AI 발전할수록 방어자가 우위...",
@@ -2407,21 +2407,6 @@
       "link": "https://isc.sans.edu/diary/rss/33286",
       "source": "sans_isc",
       "published": "2026-08-27T11:00:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-80158 - Ansible-collection-community-general: community.general: ipa_getkeytab does not set no_log on the bind_pw parameter, disclosing the ipa bind password in logs and process listings",
-      "summary": "CVE ID :CVE-2026-80158\n  \nPublished : Aug. 26, 2026, 11:17 p.m. | 1 hour, 26 minutes ago\n  \nDescription :A flaw was found in the ipa_getkeytab module of the community.general\nAnsible collection. The module's bind_pw parameter, used to supply the LDAP simple-bind password when retrieving a Kerberos keytab, is not declared with no_log, unlike the sibling password parameter in the same module. As a consequence, the supplied IPA/LDAP bind password is recorded in cleartext in the managed host's system journal/syslog (the module's \"Invoked with\" record), is included in the module's return values and verbose (-v) output, and is displayed in Automation Controller / AWX job output. The password is additionally passed on the command line to the ipa-getkeytab helper (as --bindpw ), exposing it in the process list to local users while the command runs. An attacker able to read these logs, job output, or the process table can obtain the directory bind credential, potentially compromising the accounts and objects that credential can access.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-80158\n  \nPublished : Aug. 26, 2026, 11:17 p.m. | 1 hour, 26 minutes ago\n  \nDescription :A flaw was found in the ipa_getkeytab module of the community.general\nAnsible collection. The module's bind_pw parameter, used to supply the LDAP simple-bind password when retrieving a Kerberos keytab, is not declared with no_log, unlike the sibling password parameter in the same module. As a consequence, the supplied IPA/LDAP bind password is recorded in cleartext in the managed host's system journal/syslog (the module's \"Invoked with\" record), is included in the module's return values and verbose (-v) output, and is displayed in Automation Controller / AWX job output. The password is additionally passed on the command line to the ipa-getkeytab helper (as --bindpw ), exposing it in the process list to local users while the command runs. An attacker able to read these logs, job output, or the process table can obtain the directory bind credential, potentially compromising the accounts and objects that credential can access.\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-80158\n2. 26.08.27 오전8:17\n3. A flaw was found in the ipa_getkeytab module of th",
-      "cve_id": "CVE-2026-80158",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80158",
-      "source": "cvefeed",
-      "published": "2026-08-27T08:17:20+09:00",
       "lang": "en"
     }
   ],
