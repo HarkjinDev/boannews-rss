@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-30T05:01:14.041215+09:00",
+  "fetched_at": "2026-08-30T05:30:55.122681+09:00",
   "security_news": [
     {
       "title": "[정지상의 'METRIC'] 유출 규모로는 통제를 고를 수 없다",
@@ -1920,21 +1920,24 @@
       "source": "naver",
       "published": "2026-08-27T05:58:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "오픈AI 자체 AI 에이전트가 내부망 뚫었다…시험 중 통제 이탈",
-      "summary": "오픈AI가 사이버보안 능력을 시험하던 자사의 인공지능(AI) 에이전트들이 통제를 벗어나 회사 내부... 환경에서 보안 취약점을 찾아 내부 연구 인프라를 뚫고 외부 인터넷에 접근했다. AI 에이전트들은 이후 오픈소스 AI...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 오픈AI AI 에이전트, 시험 중 내부망 뚫어\n2. 보안 취약점 찾아 내부 연구 인프라 침투\n3. 통제 이탈 후 외부 인터넷 접근 시도",
-      "link": "https://n.news.naver.com/mnews/article/421/0009134634?sid=104",
-      "source": "naver",
-      "published": "2026-08-27T05:18:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-15369 - Custom User Registration Fields for WooCommerce <= 2.2.3 - Unauthenticated Privilege Escalation via 'afreg_select_user_role' Parameter in Store API Checkout",
+      "summary": "CVE ID :CVE-2026-15369\n  \nPublished : Aug. 29, 2026, 7:26 p.m. | 47 minutes ago\n  \nDescription :The Custom User Registration Fields for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.2.3. This is due to the plugin accepting an attacker-controlled afreg_select_user_role value from the unauthenticated WooCommerce Store API /wc/store/v1/checkout request in the af_reg_checkout_data_to_order_meta_data_block() function, persisting it in order meta, and then passing it directly to WP_User::add_role() in the af_reg_custom_order_processing_function() function (hooked to woocommerce_thankyou) without validating against the plugin's admin-configured allowed role list. This makes it possible for unauthenticated attackers to elevate their privileges to Administrator by creating an account during checkout with a modified JSON body specifying administrator (or any other role slug) as the desired role. Note: The exploit requires the \"User Role Selection\" setting to be enabled.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-15369\n  \nPublished : Aug. 29, 2026, 7:26 p.m. | 47 minutes ago\n  \nDescription :The Custom User Registration Fields for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.2.3. This is due to the plugin accepting an attacker-controlled afreg_select_user_role value from the unauthenticated WooCommerce Store API /wc/store/v1/checkout request in the af_reg_checkout_data_to_order_meta_data_block() function, persisting it in order meta, and then passing it directly to WP_User::add_role() in the af_reg_custom_order_processing_function() function (hooked to woocommerce_thankyou) without validating against the plugin's admin-configured allowed role list. This makes it possible for unauthenticated attackers to elevate their privileges to Administrator by creating an account during checkout with a modified JSON body specifying administrator (or any other role slug) as the desired role. Note: The exploit requires the \"User Role Selection\" setting to be enabled.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-15369\n2. 26.08.30 오전4:26\n3. The Custom User Registration Fields for WooCommerc",
+      "cve_id": "CVE-2026-15369",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15369",
+      "source": "cvefeed",
+      "published": "2026-08-30T04:26:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-80725 - net: gro: properly validate BIG TCP aggregation criteria",
       "summary": "CVE ID :CVE-2026-80725\n  \nPublished : Aug. 29, 2026, 6:39 a.m. | 35 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet: gro: properly validate BIG TCP aggregation criteria\n\nWhen GRO attempts to aggregate packets beyond GRO_LEGACY_MAX_SIZE (64KB),\nBIG TCP should only be permitted for plain IPv4 TCP and plain IPv6 TCP\n(with sufficient MAC header room to insert the temporary HBH jumbo header).\n\nHowever, commit b1a78b9b9886 (\"net: add support for ipv4 big tcp\")\nloosened the check in skb_gro_receive(), leading to several issues:\n\n1. skb_gro_receive() checked skb_headroom(p) instead of the actual space\n   before the MAC header (p->mac_header). Because skb_headroom(p) includes\n   mac_len, crafted frames (e.g. injected via AF_PACKET) can pass the check\n   with p->mac_header < 8 bytes. When ipv6_gro_complete() inserts the\n   temporary HBH jumbo header, the memmove() starts before skb->head,\n   causing an out-of-bounds write and wrapping skb->mac_header.\n2. It allowed non-IP protocols such as software VLAN (ETH_P_8021Q /\n   ETH_P_8021AD) to aggregate beyond 64KB because\n   p->protocol != ETH_P_IPV6 was true.\n3. It checked p->encapsulation instead of NAPI_GRO_CB(skb)->encap_mark,\n   allowing encapsulated flows (e.g. SIT / IPv6-in-IPv4) to aggregate\n   beyond 64KB.\n\nFix skb_gro_receive() to strictly enforce:\n- NAPI_GRO_CB(skb)->proto == IPPROTO_TCP\n- Not encapsulated (!NAPI_GRO_CB(skb)->encap_mark && !p->encapsulation)\n- Protocol must be either ETH_P_IP or ETH_P_IPV6\n- If ETH_P_IPV6, p->mac_header must be at least\n  sizeof(struct hop_jumbo_hdr)\n\nReturning -E2BIG from skb_gro_receive() ensures that packets which cannot\nbecome BIG TCP are cleanly flushed at <= 64KB and delivered intact without\ndropping.\n\nThis issue does not exist in mainline (7.0+) because the subsystem was\nrewritten in commit 81be30c1f5f2 (\"net/ipv6: Drop HBH for BIG TCP on RX\nside\"), making this fix relevant only for older stable branches like\n6.18.y.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
