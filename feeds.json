@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-30T23:31:02.070473+09:00",
+  "fetched_at": "2026-08-31T00:01:12.188847+09:00",
   "security_news": [
+    {
+      "title": "[단독] 현대차 튀르키예, 개인정보 유출 사고…\"임직원 등 최대 422명\"",
+      "summary": "신원 미상의 사이버 공격자들에게 보안 취약점이 노출·악용돼 데이터 유출 사고가 일어났다는 의미다. 현대차 튀르키예법인 측은 침해 사실을 이달 1일 인지했다. 데이터 처리자인 튀르키예 업체에 문의한 결과, 이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 현대차 튀르키예, 최대 422명 임직원 정보 유출\n2. 사이버 공격자가 보안 취약점 악용, 데이터 유출\n3. 튀르키예 데이터 처리 업체 통해 침해 사실 인지",
+      "link": "https://www.kpinews.kr/newsView/1065624033451550",
+      "source": "naver",
+      "published": "2026-08-30T23:49:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"공공AX 확산, 공통 보안기준 없으면 위험\"",
       "summary": "사이버보안을 생각하면 흔히 해킹을 막는 기술과 규제를 떠올린다는 그는 \"그러나 AI 시대의 사이버보안은 더 이상 사고를 예방하기 위한 방어정책에 머물지 않는다. 대한민국이 AI를 소비하는 나라를 넘어 세계에 지능을...",
@@ -1227,6 +1239,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82649 - SiYuan before 3.8.1 Local Privilege Escalation via Uncontrolled Search Path",
+      "summary": "CVE ID :CVE-2026-82649\n  \nPublished : Aug. 30, 2026, 2:33 p.m. | 17 minutes ago\n  \nDescription :SiYuan Windows installer before version 3.8.1 (affected versions >= 2.0.14) contains an uncontrolled search path element vulnerability in its NSIS installer, which invokes system executables such as TASKKILL by name rather than by absolute path. Because NSIS nsExec::Exec resolves these calls using a search path that includes the installer's own launch directory ahead of System32, an attacker who plants a malicious executable (e.g., a renamed TASKKILL.exe) in that directory can have it executed when the installer runs. These calls occur in electron-builder's preInit hook before the license page is displayed, and with an all-users (elevated) install the planted binary executes with an elevated token, resulting in local privilege escalation.\n  \nSeverity: 7.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82649\n  \nPublished : Aug. 30, 2026, 2:33 p.m. | 17 minutes ago\n  \nDescription :SiYuan Windows installer before version 3.8.1 (affected versions >= 2.0.14) contains an uncontrolled search path element vulnerability in its NSIS installer, which invokes system executables such as TASKKILL by name rather than by absolute path. Because NSIS nsExec::Exec resolves these calls using a search path that includes the installer's own launch directory ahead of System32, an attacker who plants a malicious executable (e.g., a renamed TASKKILL.exe) in that directory can have it executed when the installer runs. These calls occur in electron-builder's preInit hook before the license page is displayed, and with an all-users (elevated) install the planted binary executes with an elevated token, resulting in local privilege escalation.\n  \nSeverity: 7.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-82649\n  \n게시일 : 2026년 8월 30일 오후 2시 33분 | 17분 전\n  \n설명 : 버전 3.8.1 이전의 SiYuan Windows 설치 프로그램(영향을 받는 버전 >= 2.0.14)에는 절대 경로가 아닌 이름으로 TASKKILL과 같은 시스템 실행 파일을 호출하는 NSIS 설치 프로그램에 제어되지 않는 검색 경로 요소 취약점이 포함되어 있습니다. NSIS nsExec::Exec는 System32보다 먼저 설치 프로그램의 자체 시작 디렉터리를 포함하는 검색 경로를 사용하여 이러한 호출을 해결하기 때문에 해당 디렉터리에 악성 실행 파일(예: 이름이 바뀐 TASKKILL.exe)을 심는 공격자가 설치 프로그램이 실행될 때 해당 실행 파일을 실행할 수 있습니다. 이러한 호출은 라이센스 페이지가 표시되기 전에 electronic-builder의 preInit 후크에서 발생하며 모든 사용자(상승된) 설치를 통해 설치된 바이너리는 상승된 토큰으로 실행되어 로컬 권한 상승이 발생합니다.\n  \n심각도: 7.0 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-82649\n2. 26.08.30 오후11:33\n3. SiYuan Windows installer before version 3.8.1 (aff",
+      "cve_id": "CVE-2026-82649",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82649",
+      "source": "cvefeed",
+      "published": "2026-08-30T23:33:31+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-82645 - AVideo Unauthenticated Stream Credential Disclosure via Forgeable Token",
+      "summary": "CVE ID :CVE-2026-82645\n  \nPublished : Aug. 30, 2026, 2:33 p.m. | 17 minutes ago\n  \nDescription :AVideo (current commit e01e41ecc and earlier) exposes stream credentials through the plugin/Live/view/Live_restreams/getLiveKey.json.php endpoint. Supplying a 'token' request parameter waives both the Live::canRestream() access gate and the restream ownership check, causing the endpoint to return any restream's stream_key and stream_url (credentials for external platforms such as YouTube, Facebook, and Twitch) without authentication. The token is merely encryptString() of an integer id with no user binding, expiry, or authentication tag. Because encryption uses AES-256-CBC with a deterministic IV and no MAC, and because intval() accepts any string beginning with a digit, an unauthenticated attacker can forge valid tokens using the public encryption oracle in view/url2Embed.json.php, disclosing arbitrary users' stream credentials.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82645\n  \nPublished : Aug. 30, 2026, 2:33 p.m. | 17 minutes ago\n  \nDescription :AVideo (current commit e01e41ecc and earlier) exposes stream credentials through the plugin/Live/view/Live_restreams/getLiveKey.json.php endpoint. Supplying a 'token' request parameter waives both the Live::canRestream() access gate and the restream ownership check, causing the endpoint to return any restream's stream_key and stream_url (credentials for external platforms such as YouTube, Facebook, and Twitch) without authentication. The token is merely encryptString() of an integer id with no user binding, expiry, or authentication tag. Because encryption uses AES-256-CBC with a deterministic IV and no MAC, and because intval() accepts any string beginning with a digit, an unauthenticated attacker can forge valid tokens using the public encryption oracle in view/url2Embed.json.php, disclosing arbitrary users' stream credentials.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-82645\n2. 26.08.30 오후11:33\n3. AVideo (current commit e01e41ecc and earlier) expo",
+      "cve_id": "CVE-2026-82645",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82645",
+      "source": "cvefeed",
+      "published": "2026-08-30T23:33:28+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-82642 - Readest: unsanitized iframe srcdoc attribute in the EPUB sanitizer can lead to arbitrary code execution",
       "summary": "CVE ID :CVE-2026-82642\n  \nPublished : Aug. 30, 2026, 1:44 p.m. | 16 minutes ago\n  \nDescription :Readest is an open-source e-book reader built on Tauri. In versions prior to 0.11.16, EPUB chapter HTML is sanitized with DOMPurify using a configuration that forbade only the",
