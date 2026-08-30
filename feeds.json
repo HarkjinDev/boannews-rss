@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-31T02:01:02.455460+09:00",
+  "fetched_at": "2026-08-31T02:31:09.186747+09:00",
   "security_news": [
     {
       "title": "유니트리 G1 휴머노이드 로봇서 원격 해킹 취약점…주변 로봇으로 공격...",
@@ -686,6 +686,18 @@
       "lang": "en"
     },
     {
+      "title": "PaperCut Zero-Day Exploited in Attacks, Affecting All NG and MF Versions",
+      "summary": "PaperCut has alerted customers that bad actors are actively exploiting a vulnerability impacting all versions of its PaperCut NG and PaperCut MF print management software in zero-day attacks.\n\nThe company has released an emergency patch for v25 and v26 to address the issue. It said it's \"aware of confirmed customer incidents and is treating this matter with the highest priority.\" An",
+      "content": "",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. PaperCut NG/MF 취약점, 제로데이 공격에 악용\n2. 모든 버전 영향, 긴급 패치 배포 완료\n3. 실제 고객 침해 사고 확인, 최우선 처리",
+      "link": "https://thehackernews.com/2026/08/papercut-zero-day-exploited-in-attacks.html",
+      "source": "thehackernews",
+      "published": "2026-08-28T17:25:36+09:00",
+      "lang": "en"
+    },
+    {
       "title": "[이구동성] 뭔가 자꾸 새는 GTA 6",
       "summary": "이번 유출 사태는 자칭 ‘사이버리크(Cyberleek)’라는 해킹 단체가 주도한 것으로 드러났는데요, 이들은 \"디스크판을 출시해라\"며 게이머의 권리를 방패삼았지만 실상은 자체 발행한 밈 코인을 홍보하려는 주 목적이...",
       "content": "",
@@ -1187,30 +1199,6 @@
       "link": "https://thehackernews.com/2026/08/openai-says-reward-hacking-drove-ai.html",
       "source": "thehackernews",
       "published": "2026-08-28T03:36:19+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "모토로라, 안드로이드17 50종 넘는 폰에 순차 배포…스택 위젯·테마 아...",
-      "summary": "안드로이드 시스템을 최신 버전으로 올리면 위젯이나 알림 기능 외에도 악성코드·피싱·데이터 유출 같은 위협에 대응하는 보안 강화, 최신 버전을 요구하는 신규 앱과의 호환성, 성능·배터리 효율 개선, 버그 수정...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 모토로라, 안드로이드17 50종 넘는 폰에 순차 배포…스택 위젯·테마 아...\n2. 안드로이드 시스템을 최신 버전으로 올리면 위젯이나 알림 기능 외에도 악성코드·피싱·데이터 ",
-      "link": "https://www.wikitree.co.kr/articles/1155507",
-      "source": "naver",
-      "published": "2026-08-28T02:26:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Agentic AI Risks, CVE Program Concerns Permeate Black Hat USA 2026",
-      "summary": "This installment of the Reporters' Notebook video series discusses the topics that dominated the cybersecurity conference, such as AI's effects on vulnerability reporting and security research.",
-      "content": "",
-      "title_ko": "Agentic AI 위험, CVE 프로그램 우려 사항이 Black Hat USA 2026에 침투",
-      "summary_ko": "Reporters' Notebook 비디오 시리즈의 이번 편에서는 취약성 보고 및 보안 연구에 대한 AI의 영향과 같이 사이버 보안 컨퍼런스를 장악한 주제에 대해 논의합니다.",
-      "summary_3lines": "1. Agentic AI 위험, CVE 프로그램 우려가 Black Hat USA 2026에 스며",
-      "link": "https://www.darkreading.com/cybersecurity-operations/agentic-ai-risks-cve-program-concerns-black-hat-usa-2026",
-      "source": "darkreading",
-      "published": "2026-08-28T02:25:09+09:00",
       "lang": "en"
     }
   ],
@@ -1753,36 +1741,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-81527",
       "source": "cvefeed",
       "published": "2026-08-28T05:18:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-81827 - Flowintel Login Email Validation Bypass Allows Log Injection via Crafted Email Input",
-      "summary": "CVE ID :CVE-2026-81827\n  \nPublished : Aug. 27, 2026, 5:21 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Affected versions of Flowintel incorrectly attempted to validate login email addresses by calling Email(email). That does not perform WTForms field validation; it merely constructs a validator object.\n\n\nConsequently, malformed attacker-controlled email input could continue through the login process and be written to security-relevant logs. The vulnerable code inserted the supplied email into both a warning log and the custom audit logger. Since CR/LF characters were not escaped, an unauthenticated attacker could potentially inject additional physical log lines or forge misleading log entries.\n\nThe patch corrects the validation call to Email()(form, form.email), changes the standard logging call to parameterized logging, and introduces _sanitize_log_fragment() so carriage returns and line feeds are encoded instead of creating new records.\n\nVersion impacted >=3.3.0\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-81827\n  \nPublished : Aug. 27, 2026, 5:21 p.m. | 1 hour, 27 minutes ago\n  \nDescription :Affected versions of Flowintel incorrectly attempted to validate login email addresses by calling Email(email). That does not perform WTForms field validation; it merely constructs a validator object.\n\n\nConsequently, malformed attacker-controlled email input could continue through the login process and be written to security-relevant logs. The vulnerable code inserted the supplied email into both a warning log and the custom audit logger. Since CR/LF characters were not escaped, an unauthenticated attacker could potentially inject additional physical log lines or forge misleading log entries.\n\nThe patch corrects the validation call to Email()(form, form.email), changes the standard logging call to parameterized logging, and introduces _sanitize_log_fragment() so carriage returns and line feeds are encoded instead of creating new records.\n\nVersion impacted >=3.3.0\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-81827 - Flowintel 로그인 이메일 검증 우회로 인해 조작된 이메일 입력을 통한 로그 삽입 허용",
-      "summary_ko": "CVE ID:CVE-2026-81827\n  \n게시일 : 2026년 8월 27일 오후 5시 21분 | 1시간 27분 전\n  \n설명 : 영향을 받는 Flowintel 버전은 이메일(email)을 호출하여 로그인 이메일 주소의 유효성을 검사하려고 잘못 시도했습니다. 이는 WTForms 필드 유효성 검사를 수행하지 않습니다. 단지 유효성 검사기 개체를 구성할 뿐입니다.\n\n\n결과적으로 공격자가 제어하는 ​​잘못된 이메일 입력은 로그인 프로세스를 통해 계속되고 보안 관련 로그에 기록될 수 있습니다. 취약한 코드는 제공된 이메일을 경고 로그와 사용자 정의 감사 로거 모두에 삽입했습니다. CR/LF 문자는 이스케이프되지 않았으므로 인증되지 않은 공격자가 잠재적으로 추가 물리적 로그 줄을 삽입하거나 오해의 소지가 있는 로그 항목을 위조할 수 있습니다.\n\n패치는 Email()(form, form.email)에 대한 유효성 검사 호출을 수정하고 표준 로깅 호출을 매개변수화된 로깅으로 변경하며 _sanitize_log_fragment()를 도입하여 새 레코드를 생성하는 대신 캐리지 리턴 및 라인 피드가 인코딩되도록 합니다.\n\n영향을 받는 버전 >=3.3.0\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-81827\n2. 26.08.28 오전2:21\n3. Affected versions of Flowintel incorrectly attempt",
-      "cve_id": "CVE-2026-81827",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81827",
-      "source": "cvefeed",
-      "published": "2026-08-28T02:21:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-81735 - UI-TARS-desktop @agent-infra MCP Servers Bind Every Interface Without Authentication, Exposing Arbitrary Command Execution",
-      "summary": "CVE ID :CVE-2026-81735\n  \nPublished : Aug. 27, 2026, 5:21 p.m. | 1 hour, 28 minutes ago\n  \nDescription :startServer.ts in the mcp-http-server package of UI-TARS-desktop defaulted its listen address to '::' when no host was given, so startSseAndStreamableHttpMcpServer bound the Streamable HTTP and SSE MCP transports to every interface, and its authentication middleware was optional: middlewares are applied only when a caller supplies them. The @agent-infra/mcp-server-commands and @agent-infra/mcp-server-filesystem entry points call startSseAndStreamableHttpMcpServer with a host and port alone and pass no middleware, so neither server required a credential. The commands server exposes a run_command tool that hands its caller-supplied command string to promisify(child_process.exec), so any unauthenticated client able to reach the port could run arbitrary commands as the user running the server, and the filesystem server exposed its file read and write tools on the same terms. The listen default became 127.0.0.1 in commit c2ad42e3eb9b27830db41a3e6f51ca7179d9b168; the package version stayed at 1.2.4 across that change, so the boundary is the commit rather than a release.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-81735\n  \nPublished : Aug. 27, 2026, 5:21 p.m. | 1 hour, 28 minutes ago\n  \nDescription :startServer.ts in the mcp-http-server package of UI-TARS-desktop defaulted its listen address to '::' when no host was given, so startSseAndStreamableHttpMcpServer bound the Streamable HTTP and SSE MCP transports to every interface, and its authentication middleware was optional: middlewares are applied only when a caller supplies them. The @agent-infra/mcp-server-commands and @agent-infra/mcp-server-filesystem entry points call startSseAndStreamableHttpMcpServer with a host and port alone and pass no middleware, so neither server required a credential. The commands server exposes a run_command tool that hands its caller-supplied command string to promisify(child_process.exec), so any unauthenticated client able to reach the port could run arbitrary commands as the user running the server, and the filesystem server exposed its file read and write tools on the same terms. The listen default became 127.0.0.1 in commit c2ad42e3eb9b27830db41a3e6f51ca7179d9b168; the package version stayed at 1.2.4 across that change, so the boundary is the commit rather than a release.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-81735 - UI-TARS-desktop @agent-infra MCP 서버가 인증 없이 모든 인터페이스를 바인딩하여 임의 명령 실행을 노출함",
-      "summary_ko": "CVE ID:CVE-2026-81735\n  \n게시일 : 2026년 8월 27일 오후 5시 21분 | 1시간 28분 전\n  \n설명 : UI-TARS-desktop의 mcp-http-server 패키지에 있는 startServer.ts는 호스트가 제공되지 않을 때 수신 주소를 '::'으로 기본 설정했기 때문에 startSseAndStreamableHttpMcpServer는 Streamable HTTP 및 SSE MCP 전송을 모든 인터페이스에 바인딩했으며 해당 인증 미들웨어는 선택 사항이었습니다. 미들웨어는 호출자가 이를 제공할 때만 적용됩니다. @agent-infra/mcp-server-commands 및 @agent-infra/mcp-server-filesystem 진입점은 호스트와 포트만으로 startSseAndStreamableHttpMcpServer를 호출하고 미들웨어를 전달하지 않으므로 두 서버 모두 자격 증명이 필요하지 않습니다. 명령 서버는 호출자 제공 명령 문자열을 promisify(child_process.exec)에 전달하는 run_command 도구를 노출하므로 포트에 도달할 수 있는 인증되지 않은 클라이언트는 서버를 실행하는 사용자가 임의 명령을 실행할 수 있으며 파일 시스템 서버는 동일한 용어로 파일 읽기 및 쓰기 도구를 노출합니다. 수신 대기 기본값은 커밋 c2ad42e3eb9b27830db41a3e6f51ca7179d9b168에서 127.0.0.1이 되었습니다. 패키지 버전은 해당 변경 사항 전반에 걸쳐 1.2.4로 유지되었으므로 경계는 릴리스가 아닌 커밋입니다.\n  \n심각도: 10.0 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-81735\n2. 26.08.28 오전2:21\n3. startServer.ts in the mcp-http-server package of U",
-      "cve_id": "CVE-2026-81735",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81735",
-      "source": "cvefeed",
-      "published": "2026-08-28T02:21:03+09:00",
       "lang": "en"
     }
   ],
