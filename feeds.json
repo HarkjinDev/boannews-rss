@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-31T05:01:09.292055+09:00",
+  "fetched_at": "2026-08-31T05:30:58.455705+09:00",
   "security_news": [
     {
       "title": "독서 구독서비스 기관 구매 이대로 괜찮나… 대안은 ‘구독형 전자도서...",
@@ -1188,18 +1188,6 @@
       "source": "naver",
       "published": "2026-08-28T05:48:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[기고]AI시대, 지역 정보보호 역량이 국가 경쟁력을 좌우한다",
-      "summary": "2022년 3월 도요타의 협력업체가 해킹을 당하면서 일본 내 공장 가동이 중단되는 피해를 겪었고 올해 6월 애플 역시 협력업체가 랜섬웨어 공격을 받아 제품 설계 도면으로 추정되는 자료가 외부에 공개됐다. 국내에서도...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [기고]AI시대, 지역 정보보호 역량이 국가 경쟁력을 좌우한다 2022년 3월 도요타의 협",
-      "link": "https://n.news.naver.com/mnews/article/018/0006359374?sid=110",
-      "source": "naver",
-      "published": "2026-08-28T05:03:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1696,66 +1684,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-81836",
       "source": "cvefeed",
       "published": "2026-08-28T09:18:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-81731 - Frappe 15.11.0 through 16.32.0 Stored XSS via Workspace Link Description",
-      "summary": "CVE ID :CVE-2026-81731\n  \nPublished : Aug. 27, 2026, 8:18 p.m. | 28 minutes ago\n  \nDescription :Frappe 15.11.0 through 16.32.0 stores and renders the workspace card description without XSS filtering. The description field of the Workspace Link doctype is declared with \"ignore_xss_filter\": 1 in frappe/desk/doctype/workspace_link/workspace_link.json, and _sanitize_content() in frappe/model/base_document.py skips any field carrying that flag, so the value is stored exactly as submitted. frappe.desk.desktop.get_desktop_page returns it unchanged, and LinksWidget.set_body() in frappe/public/js/frappe/widgets/links_widget.js interpolates it into a Bootstrap popover created with html: true, by way of the __() translation helper, which performs no HTML escaping. A user holding the Workspace Manager role can therefore place arbitrary markup in a public workspace's card description and have it execute in the session of any desk user who opens that workspace and hovers the description, including higher-privileged users, allowing session token theft and authenticated requests as the victim. The flag is removed on the development branch but remains present in the shipped 15.x and 16.x release lines, so no released version carries the fix.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-81731\n  \nPublished : Aug. 27, 2026, 8:18 p.m. | 28 minutes ago\n  \nDescription :Frappe 15.11.0 through 16.32.0 stores and renders the workspace card description without XSS filtering. The description field of the Workspace Link doctype is declared with \"ignore_xss_filter\": 1 in frappe/desk/doctype/workspace_link/workspace_link.json, and _sanitize_content() in frappe/model/base_document.py skips any field carrying that flag, so the value is stored exactly as submitted. frappe.desk.desktop.get_desktop_page returns it unchanged, and LinksWidget.set_body() in frappe/public/js/frappe/widgets/links_widget.js interpolates it into a Bootstrap popover created with html: true, by way of the __() translation helper, which performs no HTML escaping. A user holding the Workspace Manager role can therefore place arbitrary markup in a public workspace's card description and have it execute in the session of any desk user who opens that workspace and hovers the description, including higher-privileged users, allowing session token theft and authenticated requests as the victim. The flag is removed on the development branch but remains present in the shipped 15.x and 16.x release lines, so no released version carries the fix.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-81731 - Frappe 15.11.0~16.32.0 작업 공간 링크를 통해 저장된 XSS 설명",
-      "summary_ko": "CVE ID:CVE-2026-81731\n  \n게시일 : 2026년 8월 27일 오후 8시 18분 | 28분 전\n  \n설명:Frappe 15.11.0~16.32.0은 XSS 필터링 없이 작업 공간 카드 설명을 저장하고 렌더링합니다. Workspace Link doctype의 설명 필드는 frappe/desk/doctype/workspace_link/workspace_link.json에서 \"ignore_xss_filter\": 1로 선언되고 frappe/model/base_document.py의 _sanitize_content()는 해당 플래그가 포함된 모든 필드를 건너뛰므로 값은 제출된 대로 정확하게 저장됩니다. frappe.desk.desktop.get_desktop_page는 이를 변경하지 않고 반환하고, frappe/public/js/frappe/widgets/links_widget.js의 LinksWidget.set_body()는 이를 HTML 이스케이프를 수행하지 않는 __() 번역 도우미를 통해 html: true로 생성된 부트스트랩 팝오버로 보간합니다. 따라서 작업 공간 관리자 역할을 보유한 사용자는 공용 작업 공간의 카드 설명에 임의의 마크업을 배치하고 더 높은 권한을 가진 사용자를 포함하여 해당 작업 공간을 열고 설명을 가리킨 모든 데스크 사용자의 세션에서 실행되도록 하여 세션 토큰 도용 및 인증된 요청을 피해자로 허용할 수 있습니다. 플래그는 개발 브랜치에서 제거되었지만 출시된 15.x 및 16.x 릴리스 라인에는 그대로 남아 있으므로 릴리스된 버전에는 수정 사항이 포함되지 않습니다.\n  \n심각도: 5.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-81731\n2. 26.08.28 오전5:18\n3. Frappe 15.11.0 through 16.32.0 stores and renders ",
-      "cve_id": "CVE-2026-81731",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81731",
-      "source": "cvefeed",
-      "published": "2026-08-28T05:18:55+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-81729 - Dolibarr before 23.0.4 Incorrect Authorization on REST API Document Deletion",
-      "summary": "CVE ID :CVE-2026-81729\n  \nPublished : Aug. 27, 2026, 8:18 p.m. | 28 minutes ago\n  \nDescription :Dolibarr before 23.0.4 authorizes REST API document deletion against the wrong permission. Documents::delete() in htdocs/api/class/api_documents.class.php calls dol_check_secure_access_document() with the mode argument 'read' when handling DELETE /api/index.php/documents, while the sibling builddoc() path passes 'write', the correct mode for an operation that modifies stored data. An authenticated API user who holds only a read permission for a document-bearing module, for example societe:lire or facture:lire, and no create, write, delete or admin permission, therefore passes the check and can permanently delete that module's documents: third-party files, invoices, orders, proposals, project files and generated PDFs, with no recovery path. The call site is htdocs/api/class/api_documents.class.php:1276 in 23.0.3 and passes 'write' from 23.0.4 onward.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-81729\n  \nPublished : Aug. 27, 2026, 8:18 p.m. | 28 minutes ago\n  \nDescription :Dolibarr before 23.0.4 authorizes REST API document deletion against the wrong permission. Documents::delete() in htdocs/api/class/api_documents.class.php calls dol_check_secure_access_document() with the mode argument 'read' when handling DELETE /api/index.php/documents, while the sibling builddoc() path passes 'write', the correct mode for an operation that modifies stored data. An authenticated API user who holds only a read permission for a document-bearing module, for example societe:lire or facture:lire, and no create, write, delete or admin permission, therefore passes the check and can permanently delete that module's documents: third-party files, invoices, orders, proposals, project files and generated PDFs, with no recovery path. The call site is htdocs/api/class/api_documents.class.php:1276 in 23.0.3 and passes 'write' from 23.0.4 onward.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-81729 - 23.0.4 이전의 Dolibarr REST API 문서 삭제 시 잘못된 인증",
-      "summary_ko": "CVE ID:CVE-2026-81729\n  \n게시일 : 2026년 8월 27일 오후 8시 18분 | 28분 전\n  \n설명 : 23.0.4 이전의 Dolibarr는 잘못된 권한에 대해 REST API 문서 삭제를 승인합니다. htdocs/api/class/api_documents.class.php의 Documents::delete()는 DELETE /api/index.php/documents를 처리할 때 모드 인수 'read'를 사용하여 dol_check_secure_access_document()를 호출하는 반면, 형제 builddoc() 경로는 저장된 데이터를 수정하는 작업에 대한 올바른 모드인 'write'를 전달합니다. 문서 포함 모듈(예: societe:lire 또는facture:lire)에 대한 읽기 권한만 보유하고 생성, 쓰기, 삭제 또는 관리 권한이 없는 인증된 API 사용자는 검사를 통과하고 해당 모듈의 문서(제3자 파일, 송장, 주문, 제안, 프로젝트 파일 및 생성된 PDF)를 복구 경로 없이 영구적으로 삭제할 수 있습니다. 호출 사이트는 23.0.3의 htdocs/api/class/api_documents.class.php:1276이고 23.0.4부터 'write'를 전달합니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-81729\n2. 26.08.28 오전5:18\n3. Dolibarr before 23.0.4 authorizes REST API documen",
-      "cve_id": "CVE-2026-81729",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81729",
-      "source": "cvefeed",
-      "published": "2026-08-28T05:18:55+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-81728 - Dolibarr before 24.0.0 SQL Injection via the CSV and XLSX Import Update Keys",
-      "summary": "CVE ID :CVE-2026-81728\n  \nPublished : Aug. 27, 2026, 8:18 p.m. | 28 minutes ago\n  \nDescription :Dolibarr before 24.0.0 contains a SQL injection in its CSV and XLSX import wizard. The wizard reads its update keys with GETPOST('updatekeys', 'array') in htdocs/imports/import.php, which applies only the generic alphanohtml filter: that strips HTML but leaves SQL keywords, comment markers, parentheses, spaces and quotes intact. import_insert() in htdocs/core/modules/import/import_csv.modules.php then iterates the submitted values and builds a filter with $where[] = $key.' = '.$data[$key], having first applied preg_replace('/^.*\\./i', '', $key), an alias strip that does nothing to a value containing no dot. The assembled string is executed through $this->db->query(). The injected SELECT resolves the row id that the import then assigns to $lastinsertid, which becomes the WHERE target of a subsequent UPDATE, so a UNION SELECT returning an attacker-chosen integer both exfiltrates arbitrary table content and redirects which row the import overwrites; for category link tables the raw filter array is spliced into that UPDATE directly. The interface offers a fixed list of legitimate column codes but the server never checks the submitted values against it. A user holding the import permission can exploit this. Release 23.0.4 does not carry the fix; the allow-list test was added in 24.0.0.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-81728\n  \nPublished : Aug. 27, 2026, 8:18 p.m. | 28 minutes ago\n  \nDescription :Dolibarr before 24.0.0 contains a SQL injection in its CSV and XLSX import wizard. The wizard reads its update keys with GETPOST('updatekeys', 'array') in htdocs/imports/import.php, which applies only the generic alphanohtml filter: that strips HTML but leaves SQL keywords, comment markers, parentheses, spaces and quotes intact. import_insert() in htdocs/core/modules/import/import_csv.modules.php then iterates the submitted values and builds a filter with $where[] = $key.' = '.$data[$key], having first applied preg_replace('/^.*\\./i', '', $key), an alias strip that does nothing to a value containing no dot. The assembled string is executed through $this->db->query(). The injected SELECT resolves the row id that the import then assigns to $lastinsertid, which becomes the WHERE target of a subsequent UPDATE, so a UNION SELECT returning an attacker-chosen integer both exfiltrates arbitrary table content and redirects which row the import overwrites; for category link tables the raw filter array is spliced into that UPDATE directly. The interface offers a fixed list of legitimate column codes but the server never checks the submitted values against it. A user holding the import permission can exploit this. Release 23.0.4 does not carry the fix; the allow-list test was added in 24.0.0.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-81728 - 24.0.0 이전의 Dolibarr CSV 및 XLSX 가져오기 업데이트 키를 통한 SQL 주입",
-      "summary_ko": "CVE ID:CVE-2026-81728\n  \n게시일 : 2026년 8월 27일 오후 8시 18분 | 28분 전\n  \n설명: 24.0.0 이전의 Dolibarr에는 CSV 및 XLSX 가져오기 마법사에 SQL 주입이 포함되어 있습니다. 마법사는 htdocs/imports/import.php에서 GETPOST('updatekeys', 'array')를 사용하여 업데이트 키를 읽습니다. 이 필터는 HTML을 제거하지만 SQL 키워드, 주석 표시, 괄호, 공백 및 따옴표는 그대로 유지하는 일반 alphanohtml 필터만 적용합니다. htdocs/core/modules/import/import_csv.modules.php의 import_insert()는 제출된 값을 반복하고 $where[] = $key를 사용하여 필터를 구축합니다.' = '.$data[$key], 점이 없는 값에 대해 아무 작업도 수행하지 않는 별칭 스트립인 preg_replace('/^.*\\./i', '', $key)를 처음 적용했습니다. 조립된 문자열은 $this->db->query()를 통해 실행됩니다. 주입된 SELECT는 가져오기가 후속 UPDATE의 WHERE 대상이 되는 $lastinsertid에 할당하는 행 ID를 확인하므로 공격자가 선택한 정수를 반환하는 UNION SELECT는 임의의 테이블 콘텐츠를 추출하고 가져오기가 덮어쓰는 행을 리디렉션합니다. 카테고리 링크 테이블의 경우 원시 필터 배열이 해당 UPDATE에 직접 연결됩니다. 인터페이스는 적법한 열 코드의 고정 목록을 제공하지만 서버는 제출된 값을 이에 대해 확인하지 않습니다. 가져오기 권한을 보유한 사용자는 이를 악용할 수 있습니다. 릴리스 23.0.4에는 수정 사항이 포함되어 있지 않습니다. 허용 목록 테스트가 24.0.0에 추가되었습니다.\n  \n심각도: 8.6 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-81728\n2. 26.08.28 오전5:18\n3. Dolibarr before 24.0.0 contains a SQL injection in",
-      "cve_id": "CVE-2026-81728",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81728",
-      "source": "cvefeed",
-      "published": "2026-08-28T05:18:55+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-81527 - NoSQL injection via unquoted constant GroupBy keys in LINQ pipeline translation",
-      "summary": "CVE ID :CVE-2026-81527\n  \nPublished : Aug. 27, 2026, 8:18 p.m. | 55 minutes ago\n  \nDescription :A NoSQL/expression injection weakness exists in the LINQ-to-aggregation query translation layer of the MongoDB C# Driver, in both aggregation expression and query filter translation. When application-supplied values are embedded in certain query constructs, special elements contained within those values are not properly escaped before the resulting query is transmitted to the database, so portions of the value may be interpreted by the database as query logic rather than as data. A user able to supply values that an application incorporates into an affected query may thereby cause unintended data to be returned or query results to be altered.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-81527\n  \nPublished : Aug. 27, 2026, 8:18 p.m. | 55 minutes ago\n  \nDescription :A NoSQL/expression injection weakness exists in the LINQ-to-aggregation query translation layer of the MongoDB C# Driver, in both aggregation expression and query filter translation. When application-supplied values are embedded in certain query constructs, special elements contained within those values are not properly escaped before the resulting query is transmitted to the database, so portions of the value may be interpreted by the database as query logic rather than as data. A user able to supply values that an application incorporates into an affected query may thereby cause unintended data to be returned or query results to be altered.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-81527 - LINQ 파이프라인 변환에서 인용되지 않은 상수 GroupBy 키를 통한 NoSQL 주입",
-      "summary_ko": "CVE ID:CVE-2026-81527\n  \n게시일 : 2026년 8월 27일 오후 8시 18분 | 55분 전\n  \n설명 : MongoDB C# 드라이버의 LINQ-집계 쿼리 변환 계층에 집계 표현식과 쿼리 필터 변환 모두에서 NoSQL/표현식 주입 취약점이 존재합니다. 애플리케이션 제공 값이 특정 쿼리 구성에 포함된 경우 결과 쿼리가 데이터베이스로 전송되기 전에 해당 값에 포함된 특수 요소가 제대로 이스케이프되지 않으므로 값의 일부가 데이터베이스에서 데이터가 아닌 쿼리 논리로 해석될 수 있습니다. 응용 프로그램이 영향을 받는 쿼리에 통합하는 값을 제공할 수 있는 사용자는 의도하지 않은 데이터가 반환되거나 쿼리 결과가 변경될 수 있습니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-81527\n2. 26.08.28 오전5:18\n3. A NoSQL/expression injection weakness exists in th",
-      "cve_id": "CVE-2026-81527",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81527",
-      "source": "cvefeed",
-      "published": "2026-08-28T05:18:51+09:00",
       "lang": "en"
     }
   ],
