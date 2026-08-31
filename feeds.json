@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-01T01:01:13.692344+09:00",
+  "fetched_at": "2026-09-01T01:31:09.098876+09:00",
   "security_news": [
     {
       "title": "베를린 행정망 해킹…랜섬웨어 조직 '리시다' \"5.79TB 탈취\" 주장, 당국...",
@@ -1913,51 +1913,6 @@
       "source": "cvefeed",
       "published": "2026-08-29T04:12:43+09:00",
       "lang": "ro"
-    },
-    {
-      "title": "CVE-2026-82078 - PaperCut MF/NG: Unsafe Dynamic Class Loading in Database Connector",
-      "summary": "CVE ID :CVE-2026-82078\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an attacker can manipulate system configuration parameters, this enables the execution of arbitrary Java bytecode residing on the application classpath under the security context of the PaperCut server process.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82078\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an attacker can manipulate system configuration parameters, this enables the execution of arbitrary Java bytecode residing on the application classpath under the security context of the PaperCut server process.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-82078\n2. 26.08.29 오전1:18\n3. An unsafe dynamic class loading vulnerability exis",
-      "cve_id": "CVE-2026-82078",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82078",
-      "source": "cvefeed",
-      "published": "2026-08-29T01:18:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-81020 - wolfEngine reuses the AES-GCM nonce on every TLS 1.2 / DTLS 1.2 record",
-      "summary": "CVE ID :CVE-2026-81020\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 56 minutes ago\n  \nDescription :wolfEngine before 1.4.1 generates the 8-byte explicit AES-GCM nonce once when the TLS write key is set and never increments it per record. As a result every TLS 1.2 and DTLS 1.2 AES-GCM record within a connection is encrypted under an identical key and nonce pair. Reusing a GCM key and nonce discloses the keystream (the XOR of two ciphertexts equals the XOR of their plaintexts, so one known record recovers the others) and leaks the GHASH authentication key, enabling authentication tag forgery. AES-CCM, TLS 1.3, and non-TLS use of the cipher are not affected.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-81020\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 56 minutes ago\n  \nDescription :wolfEngine before 1.4.1 generates the 8-byte explicit AES-GCM nonce once when the TLS write key is set and never increments it per record. As a result every TLS 1.2 and DTLS 1.2 AES-GCM record within a connection is encrypted under an identical key and nonce pair. Reusing a GCM key and nonce discloses the keystream (the XOR of two ciphertexts equals the XOR of their plaintexts, so one known record recovers the others) and leaks the GHASH authentication key, enabling authentication tag forgery. AES-CCM, TLS 1.3, and non-TLS use of the cipher are not affected.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-81020\n2. 26.08.29 오전1:18\n3. wolfEngine before 1.4.1 generates the 8-byte expli",
-      "cve_id": "CVE-2026-81020",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81020",
-      "source": "cvefeed",
-      "published": "2026-08-29T01:18:28+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-75758 - Unbounded recursion between Inspect.List charlist rendering and List.to_string/1 error path in Elixir",
-      "summary": "CVE ID :CVE-2026-75758\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :Uncontrolled Recursion vulnerability in the Elixir standard library allows an attacker who controls a list passed to inspect/1, List.to_string/1, or List.to_charlist/1 to exhaust a BEAM node's memory.\n\nInspect.List's charlist branch in lib/elixir/lib/inspect.ex classifies a list as a charlist using List.ascii_printable?/2, which examines only the first :printable_limit (4096 by default) elements, and then calls IO.chardata_to_string/1 on the whole term. A list whose printable prefix exceeds that limit but which contains a later element that is not a code point (an atom, an out-of-range integer, or an improper tail) is therefore mis-classified, and the conversion raises ArgumentError. That conversion runs inside List.to_string/1, whose rescue clause builds its message by interpolating inspect(list), which re-enters the same branch and raises again. The nested inspection is an argument to raise, so the recursion is not in tail position and every level is retained: the process stack grows monotonically while each cycle re-walks the list, until the process is killed by max_heap_size or, by default, the node runs out of memory. List.to_charlist/1 has the same rescue shape.\n\nBelow the printable limit the inner inspect/1 sees the invalid element within its counter and renders the list in ordinary bracket form, so a single ArgumentError is raised and no recursion occurs.\n\nThis issue affects elixir: from 1.15.0-rc.0 before 1.18.5, from 1.19.0-rc.0 before 1.19.6, and from 1.20.0-rc.0 before 1.20.4.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-75758\n  \nPublished : Aug. 28, 2026, 4:18 p.m. | 1 hour, 11 minutes ago\n  \nDescription :Uncontrolled Recursion vulnerability in the Elixir standard library allows an attacker who controls a list passed to inspect/1, List.to_string/1, or List.to_charlist/1 to exhaust a BEAM node's memory.\n\nInspect.List's charlist branch in lib/elixir/lib/inspect.ex classifies a list as a charlist using List.ascii_printable?/2, which examines only the first :printable_limit (4096 by default) elements, and then calls IO.chardata_to_string/1 on the whole term. A list whose printable prefix exceeds that limit but which contains a later element that is not a code point (an atom, an out-of-range integer, or an improper tail) is therefore mis-classified, and the conversion raises ArgumentError. That conversion runs inside List.to_string/1, whose rescue clause builds its message by interpolating inspect(list), which re-enters the same branch and raises again. The nested inspection is an argument to raise, so the recursion is not in tail position and every level is retained: the process stack grows monotonically while each cycle re-walks the list, until the process is killed by max_heap_size or, by default, the node runs out of memory. List.to_charlist/1 has the same rescue shape.\n\nBelow the printable limit the inner inspect/1 sees the invalid element within its counter and renders the list in ordinary bracket form, so a single ArgumentError is raised and no recursion occurs.\n\nThis issue affects elixir: from 1.15.0-rc.0 before 1.18.5, from 1.19.0-rc.0 before 1.19.6, and from 1.20.0-rc.0 before 1.20.4.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-75758\n2. 26.08.29 오전1:18\n3. Uncontrolled Recursion vulnerability in the Elixir",
-      "cve_id": "CVE-2026-75758",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75758",
-      "source": "cvefeed",
-      "published": "2026-08-29T01:18:25+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
