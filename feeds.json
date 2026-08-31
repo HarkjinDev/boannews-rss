@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-01T07:01:20.322220+09:00",
+  "fetched_at": "2026-09-01T07:31:13.890630+09:00",
   "security_news": [
+    {
+      "title": "[기자수첩] 유출된 건 개인정보만이 아니다",
+      "summary": "하지만 '해킹 수법이 고도화됐다'는 말이 기업의 면죄부가 될 수는 없다. 소비자에게 중요한 것은 결국 '내 정보가 빠져나갔다'는 사실이다. \"심려를 끼쳐 죄송하다\", \"재발 방지에 최선을 다하겠다\"는 문장은 이제 너무...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. (주요 사건/공격 대상 + 구체적 수치나 고유명사)\n2. (공격 방식/유출 내용 + 구체적 사실)\n3. (영향 범위/조치 사항 + 구체적 사실)",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1722396",
+      "source": "naver",
+      "published": "2026-09-01T07:26:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "쿠팡부터 29CM까지…유통업계 개인정보 유출 왜 반복되나",
+      "summary": "지난 6월에는 CU편의점 택배 서비스를 운영하는 BGF네트웍스가 해킹 공격을 받았다. 아이디와 비밀번호를... 점도 해킹이 끊이지 않는 이유 중 하나\"라고 설명했다. 아울러 유통업계의 상대적으로 취약한 보안 수준도 위험...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CU편의점 BGF네트웍스, 해킹 공격으로 개인정보 유출\n2. 아이디, 비밀번호 등 민감 정보 노출, 반복되는 해킹\n3. 유통업계 취약한 보안 수준, 개인정보 유출 위험",
+      "link": "https://n.news.naver.com/mnews/article/119/0003127521?sid=101",
+      "source": "naver",
+      "published": "2026-09-01T07:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "가입자보다 많은 티빙 개인정보 유출…1953만명 미스터리 풀릴까",
       "summary": "알려진 유출 규모만 1900만명이 넘는 가운데 실제 피해 규모와 자세한 해킹 과정 등이 밝혀질 예정이다. 특히... ◆가입자보다 많은 해킹 규모…탈퇴·휴면·제휴 계정 관리 쟁점 사고 초기 정부가 파악한 유출 규모는 약...",
@@ -1356,18 +1380,6 @@
       "source": "naver",
       "published": "2026-08-29T08:06:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "“공급망 노린 사이버 공격...‘제로트러스트’가 해법”",
-      "summary": "개인정보 유출의 원인으로 관리 부주의, 해킹 등이 지목되는 가운데 일부 사고는 북한 등 외부의 개입... 진행돼 해킹 조직의 주요 표적이 되고 있다”고 진단했다. 기업에 대해서는 “대기업은 사이버보안에 상당한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 등 외부 개입으로 인한 개인정보 유출 사고 빈번\n2. 해킹 조직, 기업의 관리 부주의 틈타 공격 감행\n3. 제로트러스트 도입으로 사이버 공격 대비 강화",
-      "link": "https://n.news.naver.com/mnews/article/011/0004656368?sid=102",
-      "source": "naver",
-      "published": "2026-08-29T07:31:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2014,51 +2026,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-55860",
       "source": "cvefeed",
       "published": "2026-08-29T07:50:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55784 - free5GC AUSF authentication contexts can be overwritten by concurrent requests for the same SUPI",
-      "summary": "CVE ID :CVE-2026-55784\n  \nPublished : Aug. 28, 2026, 10:23 p.m. | 47 minutes ago\n  \nDescription :free5GC is an open-source implementation of the 5G core network. In version 1.4.4 and earlier, the AUSF component stores per-subscriber authentication state in a global sync.Map named AUSFContext.UePool in internal/context/context.go, keyed only by SUPI. Every request handled by internal/sbi/processor/ue_authentication.go creates an AusfUeContext, and AddAusfUeContextToPool executes ausfContext.UePool.Store(ausfUeContext.Supi, ausfUeContext), unconditionally replacing the active context for that SUPI. An attacker with access to the AUSF SBI/N12 interface can send concurrent POST /nausf-auth/v1/ue-authentications requests for the same target SUPI, causing all attempts to share one logical authentication context URL while K_aut, XRES, and EapID are repeatedly overwritten. A valid EAP-AKA' response for an earlier challenge is then checked against the latest context, causing AT_MAC verification to fail and denying authentication to the selected subscriber while the request flood continues. No fixed version is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55784\n  \nPublished : Aug. 28, 2026, 10:23 p.m. | 47 minutes ago\n  \nDescription :free5GC is an open-source implementation of the 5G core network. In version 1.4.4 and earlier, the AUSF component stores per-subscriber authentication state in a global sync.Map named AUSFContext.UePool in internal/context/context.go, keyed only by SUPI. Every request handled by internal/sbi/processor/ue_authentication.go creates an AusfUeContext, and AddAusfUeContextToPool executes ausfContext.UePool.Store(ausfUeContext.Supi, ausfUeContext), unconditionally replacing the active context for that SUPI. An attacker with access to the AUSF SBI/N12 interface can send concurrent POST /nausf-auth/v1/ue-authentications requests for the same target SUPI, causing all attempts to share one logical authentication context URL while K_aut, XRES, and EapID are repeatedly overwritten. A valid EAP-AKA' response for an earlier challenge is then checked against the latest context, causing AT_MAC verification to fail and denying authentication to the selected subscriber while the request flood continues. No fixed version is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-55784\n2. 26.08.29 오전7:23\n3. free5GC is an open-source implementation of the 5G",
-      "cve_id": "CVE-2026-55784",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55784",
-      "source": "cvefeed",
-      "published": "2026-08-29T07:23:41+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82018 - IGEL OS 12 / 11 Secure Boot Bypass via Unsigned igel.conf File",
-      "summary": "CVE ID :CVE-2026-82018\n  \nPublished : Aug. 28, 2026, 10:16 p.m. | 7 hours, 45 minutes ago\n  \nDescription :IGEL OS 12 before 12.9.0, 12.8.3 LTS and IGEL OS 11 before 11.11.150 contain a secure boot bypass vulnerability in the GRUB boot stage that allows physically present attackers to gain unauthorized root access by placing an unsigned empty file named igel.conf on a partition. Attackers can exploit GRUB's fail-open signature verification behavior to drop into an interactive GRUB prompt, then boot the device's own kernel with additional command-line arguments to obtain a root shell with the disk unlocked while leaving TPM PCR values unaltered.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82018\n  \nPublished : Aug. 28, 2026, 10:16 p.m. | 7 hours, 45 minutes ago\n  \nDescription :IGEL OS 12 before 12.9.0, 12.8.3 LTS and IGEL OS 11 before 11.11.150 contain a secure boot bypass vulnerability in the GRUB boot stage that allows physically present attackers to gain unauthorized root access by placing an unsigned empty file named igel.conf on a partition. Attackers can exploit GRUB's fail-open signature verification behavior to drop into an interactive GRUB prompt, then boot the device's own kernel with additional command-line arguments to obtain a root shell with the disk unlocked while leaving TPM PCR values unaltered.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-82018\n2. 26.08.29 오전7:16\n3. IGEL OS 12 before 12.9.0, 12.8.3 LTS and IGEL OS 1",
-      "cve_id": "CVE-2026-82018",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82018",
-      "source": "cvefeed",
-      "published": "2026-08-29T07:16:55+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-81517 - MongoDB Connector for BI Improper Error Handling of Log Write Failures May Cause Loss of SQL Service",
-      "summary": "CVE ID :CVE-2026-81517\n  \nPublished : Aug. 28, 2026, 10:16 p.m. | 54 minutes ago\n  \nDescription :An unauthenticated party able to reach the port of a MongoDB Connector for BI (mongosqld) instance may generate enough routine connection log activity to exhaust the storage backing the configured log path. When a log write or log rotation operation subsequently fails, the resulting error is not handled and the shared mongosqld process ends, ending service for all connected SQL clients. The process continues to end on startup until an operator restores available storage, and the diagnostic message explaining the condition is not recorded.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-81517\n  \nPublished : Aug. 28, 2026, 10:16 p.m. | 54 minutes ago\n  \nDescription :An unauthenticated party able to reach the port of a MongoDB Connector for BI (mongosqld) instance may generate enough routine connection log activity to exhaust the storage backing the configured log path. When a log write or log rotation operation subsequently fails, the resulting error is not handled and the shared mongosqld process ends, ending service for all connected SQL clients. The process continues to end on startup until an operator restores available storage, and the diagnostic message explaining the condition is not recorded.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-81517\n2. 26.08.29 오전7:16\n3. An unauthenticated party able to reach the port of",
-      "cve_id": "CVE-2026-81517",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81517",
-      "source": "cvefeed",
-      "published": "2026-08-29T07:16:54+09:00",
       "lang": "en"
     }
   ],
