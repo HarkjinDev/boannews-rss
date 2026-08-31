@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-01T08:01:00.578322+09:00",
+  "fetched_at": "2026-09-01T08:31:04.091717+09:00",
   "security_news": [
+    {
+      "title": "과천도시공사, 임직원 정보보호 교육 실시",
+      "summary": "교육에서는 ▲개인정보 수집·이용·파기 등 처리 절차 및 단계별 핵심 준수사항 ▲영상정보처리기기(CCTV)의 안전한 운영 및 관리 방안 ▲개인정보 유출 사고 발생 시 단계별 대응 절차 ▲최신 사이버 위협 동향 및...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 과천도시공사, 임직원 대상 정보보호 교육 실시\n2. 개인정보 처리 절차, CCTV 관리, 유출 사고 대응 등 교육\n3. 최신 사이버 위협 동향 파악 및 대응 능력 강화",
+      "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2465091",
+      "source": "naver",
+      "published": "2026-09-01T08:20:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[기자수첩] 유출된 건 개인정보만이 아니다",
       "summary": "하지만 '해킹 수법이 고도화됐다'는 말이 기업의 면죄부가 될 수는 없다. 소비자에게 중요한 것은 결국 '내 정보가 빠져나갔다'는 사실이다. \"심려를 끼쳐 죄송하다\", \"재발 방지에 최선을 다하겠다\"는 문장은 이제 너무...",
@@ -1368,18 +1380,6 @@
       "source": "naver",
       "published": "2026-08-29T09:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "뉴트럴 준비금 일부 묶여 2700만달러 유동자산",
-      "summary": "뉴트럴은 이번 사안이 스마트컨트랙트 취약점이나 해킹, 코드 결함에 따른 것은 아니라고 설명한 것으로 전해졌다. 우블록체인은 뉴트럴이 이용자에게 조기 상환을 열 계획이라고 전했다. 상환 개방 시점과 실제 상환...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 뉴트럴 준비금 2700만달러 유동자산 묶여\n2. 스마트컨트랙트 취약점, 해킹, 코드 결함은 아님\n3. 이용자에 조기 상환 계획, 상세 내용은 미정",
-      "link": "https://www.tokenpost.kr/news/breaking/400136",
-      "source": "naver",
-      "published": "2026-08-29T08:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1996,21 +1996,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-41012",
       "source": "cvefeed",
       "published": "2026-08-29T11:15:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55848 - mapfish-print: XXE on MapFish Print allows reading arbitrary files of certain types",
-      "summary": "CVE ID :CVE-2026-55848\n  \nPublished : Aug. 28, 2026, 11:17 p.m. | 31 minutes ago\n  \nDescription :mapfish-print is a component of MapFish for printing templated cartographic maps. Prior to 3.28.30, 3.30.32, 3.31.24, 3.33.16, and 4.0.5, MapFish Print accepts an attacker-controlled GML layer url in requests to the /api/print3/print endpoint and fetches XML parsed by core/src/main/java/org/mapfish/print/map/geotools/GmlLayer.java without disabling external entities and external DTDs. A remote XML document and DTD can expand a local file entity, and the resulting content can be exposed through the GML parsing and error path. This allows unauthenticated attackers to read files such as operating-system account data, Kubernetes service-account tokens, and certificates. Replacing the file entity target with an internal HTTP endpoint also permits server-side request forgery. This issue is fixed in versions 3.28.30, 3.30.32, 3.31.24, 3.33.16, and 4.0.5.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55848\n  \nPublished : Aug. 28, 2026, 11:17 p.m. | 31 minutes ago\n  \nDescription :mapfish-print is a component of MapFish for printing templated cartographic maps. Prior to 3.28.30, 3.30.32, 3.31.24, 3.33.16, and 4.0.5, MapFish Print accepts an attacker-controlled GML layer url in requests to the /api/print3/print endpoint and fetches XML parsed by core/src/main/java/org/mapfish/print/map/geotools/GmlLayer.java without disabling external entities and external DTDs. A remote XML document and DTD can expand a local file entity, and the resulting content can be exposed through the GML parsing and error path. This allows unauthenticated attackers to read files such as operating-system account data, Kubernetes service-account tokens, and certificates. Replacing the file entity target with an internal HTTP endpoint also permits server-side request forgery. This issue is fixed in versions 3.28.30, 3.30.32, 3.31.24, 3.33.16, and 4.0.5.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-55848\n2. 26.08.29 오전8:17\n3. mapfish-print is a component of MapFish for printi",
-      "cve_id": "CVE-2026-55848",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55848",
-      "source": "cvefeed",
-      "published": "2026-08-29T08:17:08+09:00",
       "lang": "en"
     }
   ],
