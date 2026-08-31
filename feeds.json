@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-01T05:01:03.887790+09:00",
+  "fetched_at": "2026-09-01T05:30:57.301151+09:00",
   "security_news": [
     {
       "title": "베를린 행정망 해킹…랜섬웨어 조직 '리시다' \"5.79TB 탈취\" 주장, 당국...",
@@ -1320,21 +1320,24 @@
       "source": "thehackernews",
       "published": "2026-08-29T05:38:47+09:00",
       "lang": "en"
-    },
-    {
-      "title": "법원, 공정위 쿠팡 조사 제동",
-      "summary": "이후 지금까지 사전통지 없이 현장조사를 해왔다고 밝혔다. 쿠팡에 대한 조사는 2025년 11월 3,370만개 계정의 개인정보가 해킹을 통해 유출된 것을 계기로 본격화됐다. 양측의 공방은 9월 2일 심문기일에서 이어질 예정이다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 쿠팡, 3,370만 계정 정보 유출 후 공정위 조사\n2. 공정위, 사전통지 없이 현장조사 실시\n3. 9월 2일 법원 심문기일서 공방 이어질 듯",
-      "link": "https://www.lawtimes.co.kr/news/articleView.html?idxno=225538",
-      "source": "naver",
-      "published": "2026-08-29T05:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "The Coding-Agent Trap: When a \"Free\" LLM Endpoint Is the Adversary, (Mon, Aug 31st)",
+      "summary": "One of my internet-exposed inference honeypots was discovered, relabeled with sought-after model names, and incorporated into infrastructure apparently used to provide \"free\" LLM backends. It then received a real coding-agent session &#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x94; history, filesystem output, working paths, and the agent&#;x26;#;39;s local tool manifest. The honeypot did not request or cause any tool execution; what the request exposed is what a malicious operator in that position could do.\r",
+      "description": "One of my internet-exposed inference honeypots was discovered, relabeled with sought-after model names, and incorporated into infrastructure apparently used to provide \"free\" LLM backends. It then received a real coding-agent session &#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x94; history, filesystem output, working paths, and the agent&#;x26;#;39;s local tool manifest. The honeypot did not request or cause any tool execution; what the request exposed is what a malicious operator in that position could do.\r",
+      "title_ko": "코딩 에이전트 함정: \"무료\" LLM 엔드포인트가 적인 경우(8월 31일 월요일)",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. The Coding-Agent Trap: When a \"Free\" LLM Endpoint \n2. SANS_ISC\n3. One of my internet-exposed inference honeypots was",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33298",
+      "source": "sans_isc",
+      "published": "2026-09-01T05:00:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-14368 - Off-by-one out-of-bounds NUL write in Zephyr LwM2M JSON string parser",
       "summary": "CVE ID :CVE-2026-14368\n  \nPublished : Aug. 31, 2026, 6:45 p.m. | 31 minutes ago\n  \nDescription :The LwM2M JSON content formatter's get_string() in subsys/net/lib/lwm2m/lwm2m_rw_json.c copies a parsed JSON string into a caller-supplied buffer and NUL-terminates it. The length guard used if (string_length > buflen), which accepts a string whose length is exactly buflen. After memcpy() fills the whole buffer, buf[string_length] = '\\0' then writes one byte past the end of the buffer (CWE-787).\n\nThe string value and its length are taken directly from the incoming CoAP payload during a LwM2M WRITE: do_write_op_json() parses the payload obtained from coap_packet_get_payload(), and get_string() is invoked from lwm2m_write_handler() (engine_get_string() in subsys/net/lib/lwm2m/lwm2m_message_handling.c) for a LWM2M_RES_TYPE_STRING resource. The destination buf/buflen is either the resource instance's fixed data buffer (res_inst->data_ptr/max_data_len) or the engine validation buffer (msg->ctx->validate_buf). A LwM2M server (the client's DTLS peer) can therefore write a string resource with a value whose length equals the target buffer size and force a one-byte overflow.\n\nThe overflow is a single out-of-bounds write of the constant byte 0x00 immediately past the resource or validation buffer, corrupting the adjacent byte in memory. It is not an information leak and the written value is fixed, so it is not a direct code-execution primitive, but it can corrupt adjacent state (an adjacent resource value, a length/flag field, or a struct field) and cause data corruption or a crash. Triggering the write is deterministic; the resulting impact depends on memory layout.\n\nThe fix changes the guard to string_length >= buflen, rejecting the exact-length case and aligning the JSON formatter with the other content formatters (lwm2m_rw_plain_text.c, lwm2m_rw_oma_tlv.c, lwm2m_rw_senml_json.c, lwm2m_rw_cbor.c, lwm2m_rw_senml_cbor.c), which already used the correct boundary check.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -1424,6 +1427,21 @@
       "source": "cvefeed",
       "published": "2026-08-31T23:17:23+09:00",
       "lang": "en"
+    },
+    {
+      "title": "CVE-2026-59134 Remote Desktop Client Remote Code Execution Vulnerability",
+      "summary": "Acknowledgement Updated",
+      "description": "Acknowledgement Updated",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-59134\n2. MSRC\n3. Acknowledgement Updated",
+      "cve_id": "CVE-2026-59134",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59134",
+      "source": "msrc",
+      "published": "2026-08-31T23:00:00+09:00",
+      "lang": "ro"
     },
     {
       "title": "CVE-2026-71378 - Apache Wicket: Cross-Site Request Forgery (CSRF) protection bypass in ResourceIsolationRequestCycleListener",
