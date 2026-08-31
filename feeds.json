@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-01T00:01:11.842494+09:00",
+  "fetched_at": "2026-09-01T00:32:13.948470+09:00",
   "security_news": [
+    {
+      "title": "베를린 행정망 해킹…랜섬웨어 조직 '리시다' \"5.79TB 탈취\" 주장, 당국...",
+      "summary": "독일 베를린 정부 행정망에서 발생한 사이버공격으로 실제 데이터가 외부로 유출된 사실이 확인됐다. 랜섬웨어 조직 리시다(Rhysida)는 공격 배후를 자처하며 5.79TB 규모의 데이터를 확보했다고 주장했지만, 베를린 당국은...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 베를린 행정망, 랜섬웨어 '리시다' 5.79TB 탈취 주장\n2. 실제 데이터 유출 확인, 리시다는 배후 자처\n3. 베를린 당국, 유출 사실 인정했으나 주장 수치와는 다를 수 있음",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208287",
+      "source": "naver",
+      "published": "2026-09-01T00:04:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "북한 해커도 노리는 기업망 ‘관문’…“뚫리면 내부 시스템까지 위험...",
+      "summary": "북한 해킹 조직 라자루스의 소프트웨어 개발 서버 취약점 악용 사례를 제시하며 기업 핵심 시스템의 침해 위험을 경고했습니다. 보고서에 따르면 라자루스와 러시아 연계 해킹 조직 APT29는 소프트웨어 개발 도구인...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 해커도 노리는 기업망 ‘관문’…“뚫리면 내부 시스템까지 위험...\n2. 북한 해킹 조직 라자루스의 소프트웨어 개발 서버 취약점 악용 사례를 제시하며 기업 핵심 시\n3. 보고서에 따르면 라자루스와 러시아 연계 해킹 조직 APT29는 소프트웨어 개발 도구인...",
+      "link": "https://www.voakorea.com/a/risk-of-dprk-hackers-penetrating-corporate-networks-083126/8192440.html",
+      "source": "naver",
+      "published": "2026-09-01T00:04:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Nightmare Eclipse Drops ‘HardBreacher’ Kaspersky Product Exploit",
       "summary": "Kaspersky told SecurityWeek that it patched the vulnerability affecting its Endpoint Security product.\nThe post Nightmare Eclipse Drops ‘HardBreacher’ Kaspersky Product Exploit appeared first on SecurityWeek.",
@@ -1372,6 +1396,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-78075 - Joomla Extension - joomshaper.com - Broken Object-Level Authorization in Blog Image Deletion in Helix Ultimate < 2.2.10",
+      "summary": "CVE ID :CVE-2026-78075\n  \nPublished : Aug. 31, 2026, 2:17 p.m. | 55 minutes ago\n  \nDescription :Joomla Extension - joomshaper.com - Broken Object-Level Authorization in Blog Image Deletion in Helix Ultimate < 2.2.10 - `Blog::remove_image()` checked whether the user was authorized to edit the article ID passed in the request, but did not verify whether the specified image path (src) belonged to that article. On Joomla 3 builds where physical file deletion was triggered, an author could supply their own article ID alongside an arbitrary file path under the `/images/` directory to delete arbitrary files.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-78075\n  \nPublished : Aug. 31, 2026, 2:17 p.m. | 55 minutes ago\n  \nDescription :Joomla Extension - joomshaper.com - Broken Object-Level Authorization in Blog Image Deletion in Helix Ultimate < 2.2.10 - `Blog::remove_image()` checked whether the user was authorized to edit the article ID passed in the request, but did not verify whether the specified image path (src) belonged to that article. On Joomla 3 builds where physical file deletion was triggered, an author could supply their own article ID alongside an arbitrary file path under the `/images/` directory to delete arbitrary files.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-78075\n2. 26.08.31 오후11:17\n3. Joomla Extension - joomshaper.com - Broken Object-",
+      "cve_id": "CVE-2026-78075",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78075",
+      "source": "cvefeed",
+      "published": "2026-08-31T23:17:23+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-71378 - Apache Wicket: Cross-Site Request Forgery (CSRF) protection bypass in ResourceIsolationRequestCycleListener",
       "summary": "CVE ID :CVE-2026-71378\n  \nPublished : Aug. 31, 2026, 12:17 p.m. | 31 minutes ago\n  \nDescription :ResourceIsolationRequestCycleListener protects a Wicket application against cross-site request forgery by rejecting requests that a resource isolation policy judges to come from another origin. Its default policy, FetchMetadataResourceIsolationPolicy, was derived from a reference implementation written to guard static resources, and it inherited two allowances that are unsafe when the thing being guarded is an action on a page:\n  *  Every \"simple top-level navigation\" was allowed. Any GET request carrying Sec-Fetch-Mode: navigate whose Sec-Fetch-Dest was neither object nor embed was allowed, whatever Sec-Fetch-Site said — including cross-site. Wicket invokes component listeners (Link.onClick(), form submits, behaviour callbacks) through ordinary GET navigations, so a page under an attacker's control could navigate the victim's browser to a listener URL and have that listener run inside the victim's authenticated session. Browsers send SameSite=Lax cookies — the effective default when no SameSite attribute is set — on cross-site top-level GET navigations, so the victim's session cookie accompanied the request.\n  *  Sec-Fetch-Site: same-site was allowed unconditionally. That value means the same registrable domain and scheme but a different origin — another subdomain or another port. Any sibling origin could therefore invoke any listener by any method, POST form submits included, and cookies are always sent on same-site requests regardless of SameSite. A hostile sibling origin obtained through a subdomain takeover, through delegated user content, or through an XSS elsewhere on the site could act as the authenticated user.\nUsers are recommended to upgrade to version 9.24.0 or 10.11.0, which fix the issue.\nAffected versions\n\n  *  Apache Wicket 9.1.0 through 9.23.0\n  *  Apache Wicket 10.0.0 through 10.10.0\n\n\n\nNot affected\n\nAny release older than 9.1.0:\n  *  Apache Wicket 8.x (8.0.0 through 8.17.0). The resource isolation classes do not exist in the 8.x line, which offers only the Origin/Referer-based CsrfPreventionRequestCycleListener. No 8.x release requires a fix.\n  *  Apache Wicket 9.0.0. ResourceIsolationRequestCycleListener and FetchMetadataResourceIsolationPolicy were introduced by WICKET-6786 and first shipped in 9.1.0 (released 2020-10-07).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-71378\n  \nPublished : Aug. 31, 2026, 12:17 p.m. | 31 minutes ago\n  \nDescription :ResourceIsolationRequestCycleListener protects a Wicket application against cross-site request forgery by rejecting requests that a resource isolation policy judges to come from another origin. Its default policy, FetchMetadataResourceIsolationPolicy, was derived from a reference implementation written to guard static resources, and it inherited two allowances that are unsafe when the thing being guarded is an action on a page:\n  *  Every \"simple top-level navigation\" was allowed. Any GET request carrying Sec-Fetch-Mode: navigate whose Sec-Fetch-Dest was neither object nor embed was allowed, whatever Sec-Fetch-Site said — including cross-site. Wicket invokes component listeners (Link.onClick(), form submits, behaviour callbacks) through ordinary GET navigations, so a page under an attacker's control could navigate the victim's browser to a listener URL and have that listener run inside the victim's authenticated session. Browsers send SameSite=Lax cookies — the effective default when no SameSite attribute is set — on cross-site top-level GET navigations, so the victim's session cookie accompanied the request.\n  *  Sec-Fetch-Site: same-site was allowed unconditionally. That value means the same registrable domain and scheme but a different origin — another subdomain or another port. Any sibling origin could therefore invoke any listener by any method, POST form submits included, and cookies are always sent on same-site requests regardless of SameSite. A hostile sibling origin obtained through a subdomain takeover, through delegated user content, or through an XSS elsewhere on the site could act as the authenticated user.\nUsers are recommended to upgrade to version 9.24.0 or 10.11.0, which fix the issue.\nAffected versions\n\n  *  Apache Wicket 9.1.0 through 9.23.0\n  *  Apache Wicket 10.0.0 through 10.10.0\n\n\n\nNot affected\n\nAny release older than 9.1.0:\n  *  Apache Wicket 8.x (8.0.0 through 8.17.0). The resource isolation classes do not exist in the 8.x line, which offers only the Origin/Referer-based CsrfPreventionRequestCycleListener. No 8.x release requires a fix.\n  *  Apache Wicket 9.0.0. ResourceIsolationRequestCycleListener and FetchMetadataResourceIsolationPolicy were introduced by WICKET-6786 and first shipped in 9.1.0 (released 2020-10-07).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -1384,6 +1423,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-71378",
       "source": "cvefeed",
       "published": "2026-08-31T21:17:56+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+      "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.  \n\nCVE-2026-81578 PaperCut NG/MF Missing Authentication for Critical Function Vulnerability \nCVE-2026-82078 PaperCut NG/MF Unsafe Reflection Vulnerability \n\n\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. \n\n\nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. \n\n\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria. \n\n\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "description": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.  \n\nCVE-2026-81578 PaperCut NG/MF Missing Authentication for Critical Function Vulnerability \nCVE-2026-82078 PaperCut NG/MF Unsafe Reflection Vulnerability \n\n\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. \n\n\nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. \n\n\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria. \n\n\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-81578\n2. CISA\n3. CISA has added two new vulnerabilities to its Know",
+      "cve_id": "CVE-2026-81578",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+      "source": "cisa",
+      "published": "2026-08-31T21:00:00+09:00",
       "lang": "en"
     },
     {
