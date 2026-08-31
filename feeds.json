@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-08-31T12:32:22.858370+09:00",
+  "fetched_at": "2026-08-31T13:01:13.137421+09:00",
   "security_news": [
+    {
+      "title": "AI가 취약점 탐색...KB국민은행 도입 이어 KISA 모의해킹에도 등장",
+      "summary": "참가 대학생들은 KISA와 KCA가 운영하는 개인정보처리시스템을 대상으로 실제 공격 상황을 가정해 모의해킹을 진행했다. 생성형 AI를 이용해 보안 취약점을 발굴하고 영향도를 분석했다. 기관 보안 담당자는 참가자가...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KISA, 생성형 AI로 개인정보처리시스템 모의해킹\n2. AI, 보안 취약점 탐색·영향도 분석 성공\n3. KB국민은행도 AI 도입, 보안 강화 추세",
+      "link": "https://www.techm.kr/news/articleView.html?idxno=154779",
+      "source": "naver",
+      "published": "2026-08-31T12:40:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "히말라야 대참사에 ‘허위정보 홍수’…중국 11명 처벌",
       "summary": "중국 공안 사이버보안부는 31일 재난 관련 허위 정보를 유출한 이들에게 최소 5일에서 최대 10일의 구금과 최대 1000위안(약 20만원)의 벌금이 부과되는 처벌을 내렸다고 밝혔다. 처벌받은 이들 가운데 한 온라인 플랫폼...",
@@ -1227,6 +1239,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-81853 - AshAdmin composite primary key decoding accepts arbitrary fields, enabling a secret-attribute oracle",
+      "summary": "CVE ID :CVE-2026-81853\n  \nPublished : Aug. 31, 2026, 2:31 a.m. | 44 minutes ago\n  \nDescription :Authorization Bypass Through User-Controlled Key vulnerability in ash-project ash_admin turns a record-lookup URL into an equality oracle over sensitive attributes.\n\nAshAdmin.Helpers.decode_primary_key/2 decodes the composite-primary-key form (Base64 plus ETF) and returns the decoded map verbatim as the lookup filter, without checking that its keys are the resource's primary-key fields. The deserialization guards bound size, block new atoms and funs, and reject nested expressions, but none restricts which fields come back, and :safe still allows any already-interned attribute name. An attacker can therefore encode %{api_token: \"guess\"} and have it spliced into the lookup filter, brute-forcing a sensitive attribute value (API token, reset token) one equality guess at a time; Map.to_list/1 also accepts structs, yielding a bogus __struct__ key. The fix rejects any decoded key that is not a real primary-key field.\n\nThis issue affects ash_admin: from 0.1.0 before 1.3.1.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-81853\n  \nPublished : Aug. 31, 2026, 2:31 a.m. | 44 minutes ago\n  \nDescription :Authorization Bypass Through User-Controlled Key vulnerability in ash-project ash_admin turns a record-lookup URL into an equality oracle over sensitive attributes.\n\nAshAdmin.Helpers.decode_primary_key/2 decodes the composite-primary-key form (Base64 plus ETF) and returns the decoded map verbatim as the lookup filter, without checking that its keys are the resource's primary-key fields. The deserialization guards bound size, block new atoms and funs, and reject nested expressions, but none restricts which fields come back, and :safe still allows any already-interned attribute name. An attacker can therefore encode %{api_token: \"guess\"} and have it spliced into the lookup filter, brute-forcing a sensitive attribute value (API token, reset token) one equality guess at a time; Map.to_list/1 also accepts structs, yielding a bogus __struct__ key. The fix rejects any decoded key that is not a real primary-key field.\n\nThis issue affects ash_admin: from 0.1.0 before 1.3.1.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-81853 - AshAdmin 복합 기본 키 디코딩은 임의 필드를 허용하여 비밀 속성 Oracle을 활성화합니다.",
+      "summary_ko": "CVE ID:CVE-2026-81853\n  \n게시일 : 2026년 8월 31일 오전 2시 31분 | 44분 전\n  \n설명: ash-project ash_admin의 사용자 제어 키를 통한 인증 우회 취약점은 레코드 조회 URL을 민감한 속성에 대한 동등 오라클로 전환합니다.\n\nAshAdmin.Helpers.decode_primary_key/2는 복합 기본 키 형식(Base64 + ETF)을 디코딩하고 해당 키가 리소스의 기본 키 필드인지 확인하지 않고 디코딩된 맵을 조회 필터로 그대로 반환합니다. 역직렬화는 경계 크기를 보호하고, 새로운 원자와 재미를 차단하고, 중첩된 표현식을 거부하지만, 어떤 필드가 다시 나오는지 제한하지 않으며 :safe는 여전히 이미 삽입된 속성 이름을 허용합니다. 따라서 공격자는 %{api_token: \"guess\"}를 인코딩하고 이를 조회 필터에 연결하여 민감한 속성 값(API 토큰, 재설정 토큰)을 한 번에 하나씩 동일성 추측에 무차별 대입 공격을 가할 수 있습니다. Map.to_list/1은 또한 구조체를 허용하여 가짜 __struct__ 키를 생성합니다. 수정 사항은 실제 기본 키 필드가 아닌 모든 디코딩된 키를 거부합니다.\n\n이 문제는 ash_admin(0.1.0부터 1.3.1까지)에 영향을 미칩니다.\n  \n심각도: 2.3 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-81853\n2. 26.08.31 오전11:31\n3. Authorization Bypass Through User-Controlled Key v",
+      "cve_id": "CVE-2026-81853",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81853",
+      "source": "cvefeed",
+      "published": "2026-08-31T11:31:29+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-81852 - AshAdmin ships a hardcoded CSP nonce, allowing nonce-based CSP bypass",
       "summary": "CVE ID :CVE-2026-81852\n  \nPublished : Aug. 31, 2026, 2:29 a.m. | 20 minutes ago\n  \nDescription :Use of Insufficiently Random Values vulnerability in ash-project ash_admin ships a hardcoded, publicly known CSP nonce, defeating nonce-based Content-Security-Policy protection.\n\nWhen mounted without :csp_nonce_assign_key, AshAdmin.Router.ash_admin/2 defaulted the img, style, and script nonces to the literal constant ash_admin-Ed55GFnX, which AshAdmin.Layouts wrote verbatim into the nonce attribute of its inline",
