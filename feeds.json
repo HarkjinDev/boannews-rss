@@ -1,6 +1,54 @@
 {
-  "fetched_at": "2026-09-01T06:01:18.747550+09:00",
+  "fetched_at": "2026-09-01T06:32:34.510255+09:00",
   "security_news": [
+    {
+      "title": "\"가짜 기록 만들자\" AI 1200개 모여 수군수군…허깅페이스 해킹 전말",
+      "summary": "허깅페이스 해킹 사건은 오픈AI가 사이버 보안 평가 도구인 '익스플로잇짐(ExploitGym)'을 통해 GPT-5.6 Sol 등... 에이전트들은 오픈AI 내부망에도 침투해 보안 모니터링 도구 센서 정보를 포함한 956개의 비밀 정보와 클라우드...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. \"가짜 기록 만들자\" AI 1200개 모여 수군수군…허깅페이스 해킹 전말 허깅페이스 해킹 \n2. 에이전트들은 오픈AI 내부망에도 침투해 보안 모니터링 도구 센서 정보를 포함한 956개의 ",
+      "link": "https://n.news.naver.com/mnews/article/008/0005407428?sid=104",
+      "source": "naver",
+      "published": "2026-09-01T06:20:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "하이퍼리퀴드, 북한 해커 관측 뒤 미국행 논의",
+      "summary": "당시 해킹 발생은 추정 단계라고 설명하면서도, 검증자 구조와 브리지 보안에 대한 우려가 제기됐다고 보도했다. 더블록(The Block)은 트럼프 대통령이 2026년 8월 20일(한국시간) 백악관 회의에서 마이클 셀리그...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 하이퍼리퀴드, 북한 해커 관측 후 미국행 논의\n2. 검증자 구조, 브리지 보안 우려 제기\n3. 트럼프, 2026년 8월 백악관 회의 언급",
+      "link": "https://www.tokenpost.kr/news/breaking/401350",
+      "source": "naver",
+      "published": "2026-09-01T06:10:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"소개팅 한 번 하려다…\" 키·학력·소득까지 털렸다",
+      "summary": "듀오 직원의 업무용 PC가 해킹되면서 아이디와 비밀번호(암호화), 이름, 생년월일, 주민등록번호(암호화), 연락처, 주소뿐 아니라 키·몸무게, 종교, 혼인경력, 학교명, 직장명 등 상세 정보가 빠져나갔다. 개인정보위는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 듀오 직원 PC 해킹으로 100만 건 개인정보 유출\n2. 이름, 주민번호, 키, 학력 등 상세 개인정보 탈취\n3. 개인정보위, 듀오에 대한 조사 착수",
+      "link": "https://n.news.naver.com/mnews/article/003/0014159938?sid=105",
+      "source": "naver",
+      "published": "2026-09-01T06:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "140억 상생보험 푼다…7개 지자체서 신용·기후 등 무료보험",
+      "summary": "충북에서는 소상공인의 피싱·해킹·스미싱·파밍과 휴대전화 분실에 따른 부당결제 등 사이버범죄 피해를 보장하는 사이버보험을 선보인다. 피싱 등으로 금전적 피해가 발생하면 피해액의 80%를 최대 300만 원까지...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 140억 상생보험 푼다…7개 지자체서 신용·기후 등 무료보험 충북에서는 소상공인의 피싱·해\n2. 피싱 등으로 금전적 피해가 발생하면 피해액의 80%를 최대 300만 원까지...",
+      "link": "https://n.news.naver.com/mnews/article/421/0009142644?sid=101",
+      "source": "naver",
+      "published": "2026-09-01T06:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "보험업계, 소상공인에 '무료 상생보험' 푼다…7개 지역 '140억' 규모",
       "summary": "사망이나 중대질병 발생 시 대출을 대신 갚아주는 신용생명보험부터 휴업손해·화재·사이버범죄·폭염... 충북은 피싱·해킹·스미싱 등 사이버범죄 피해금액의 80%를 최대 300만원까지 보상한다. 인터넷 직거래나 쇼핑몰...",
@@ -1323,6 +1371,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-81892 - EasyAdmin custom-action dispatcher bypasses access_control on other routes",
+      "summary": "CVE ID :CVE-2026-81892\n  \nPublished : Aug. 31, 2026, 8:38 p.m. | 12 minutes ago\n  \nDescription :EasyAdmin is a fast and modern admin generator for Symfony applications. From 4.0.0 until 4.29.16 and 5.5.1, EasyAdmin serves all backend requests through a single dashboard route and, for custom actions (Action::linkToRoute() and MenuItem::linkToRoute()), swaps the executed controller based on the routeName query parameter on the kernel.controller event. The swap happens after Symfony's security firewall has already evaluated access_control against the original dashboard URL, and the routeName value was not validated. As a result, a path-based access_control rule protecting the target route was never evaluated, so a low-privilege backend user who can reach a single EasyAdmin URL and knows a target route's name can execute that route's controller, bypassing the path-based rule. Only path-based protections are bypassed. Routes whose controller enforces its own authorization with #[IsGranted] or denyAccessUnlessGranted() remain protected because those checks are recomputed against the swapped-in controller. This issue is fixed in versions 4.29.16 and 5.5.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-81892\n  \nPublished : Aug. 31, 2026, 8:38 p.m. | 12 minutes ago\n  \nDescription :EasyAdmin is a fast and modern admin generator for Symfony applications. From 4.0.0 until 4.29.16 and 5.5.1, EasyAdmin serves all backend requests through a single dashboard route and, for custom actions (Action::linkToRoute() and MenuItem::linkToRoute()), swaps the executed controller based on the routeName query parameter on the kernel.controller event. The swap happens after Symfony's security firewall has already evaluated access_control against the original dashboard URL, and the routeName value was not validated. As a result, a path-based access_control rule protecting the target route was never evaluated, so a low-privilege backend user who can reach a single EasyAdmin URL and knows a target route's name can execute that route's controller, bypassing the path-based rule. Only path-based protections are bypassed. Routes whose controller enforces its own authorization with #[IsGranted] or denyAccessUnlessGranted() remain protected because those checks are recomputed against the swapped-in controller. This issue is fixed in versions 4.29.16 and 5.5.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-81892 - EasyAdmin 사용자 정의 작업 디스패처가 다른 경로의 access_control을 우회합니다.",
+      "summary_ko": "CVE ID:CVE-2026-81892\n  \n게시일 : 2026년 8월 31일 오후 8시 38분 | 12분 전\n  \n설명 :EasyAdmin은 Symfony 애플리케이션을 위한 빠르고 현대적인 관리 생성기입니다. 4.0.0부터 4.29.16 및 5.5.1까지 EasyAdmin은 단일 대시보드 경로를 통해 모든 백엔드 요청을 처리하고 사용자 정의 작업(Action::linkToRoute() 및 MenuItem::linkToRoute())의 경우 kernel.controller 이벤트의 RouteName 쿼리 매개변수를 기반으로 실행된 컨트롤러를 교체합니다. 교환은 Symfony의 보안 방화벽이 원래 대시보드 URL에 대해 access_control을 이미 평가한 후에 발생하며, RouteName 값은 검증되지 않았습니다. 결과적으로 대상 경로를 보호하는 경로 기반 access_control 규칙은 평가되지 않았으므로 단일 EasyAdmin URL에 도달할 수 있고 대상 경로의 이름을 알고 있는 낮은 권한의 백엔드 사용자는 경로 기반 규칙을 우회하여 해당 경로의 컨트롤러를 실행할 수 있습니다. 경로 기반 보호만 우회됩니다. 컨트롤러가 #[IsGranted] 또는 거부AccessUnlessGranted()를 사용하여 자체 인증을 시행하는 경로는 교체된 컨트롤러에 대해 해당 검사가 다시 계산되므로 보호된 상태로 유지됩니다. 이 문제는 버전 4.29.16 및 5.5.1에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-81892\n2. 26.09.01 오전5:38\n3. EasyAdmin is a fast and modern admin generator for",
+      "cve_id": "CVE-2026-81892",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81892",
+      "source": "cvefeed",
+      "published": "2026-09-01T05:38:06+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-52730 - Xibo CMS Missing Authorization in Module::settingsForm due to PHP operator precedence",
       "summary": "CVE ID :CVE-2026-52730\n  \nPublished : Aug. 31, 2026, 8:17 p.m. | 14 minutes ago\n  \nDescription :Xibo is an open source digital signage platform with a web content management system and Windows display player software. Prior to 4.4.3, missing Authorization in Module::settingsForm allows to view (not change) super admin-restricted module settings and leak the full module entity. Exploitation of the vulnerability is possible on behalf of an authorized user who has access to the Module View feature, which are not granted to non-admins as standard. Users should upgrade to version 4.4.3 which fixes this issue. Upgrading to a fixed version is necessary to remediate. Users unable to upgrade should revoke such privileges from users they do not trust.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
