@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-01T07:31:13.890630+09:00",
+  "fetched_at": "2026-09-01T08:01:00.578322+09:00",
   "security_news": [
     {
       "title": "[기자수첩] 유출된 건 개인정보만이 아니다",
@@ -2011,21 +2011,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-55848",
       "source": "cvefeed",
       "published": "2026-08-29T08:17:08+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55860 - MariaDB Connector/R2DBC: Cleartext password disclosure to a man-in-the-middle server (clear-text auth plugins not gated on a secure transport)",
-      "summary": "CVE ID :CVE-2026-55860\n  \nPublished : Aug. 28, 2026, 10:50 p.m. | 21 minutes ago\n  \nDescription :MariaDB Connector/R2DBC is a non-blocking MariaDB and MySQL client implemented in Java. Prior to 1.4.1, org.mariadb:r2dbc-mariadb does not gate clear-text password authentication plugins on transport encryption because the AuthenticationPlugin interface has no capability for a plugin to require a secure connection. A hostile or man-in-the-middle MariaDB server can send an AuthSwitchRequest naming mysql_clear_password or dialog (PAM) over a plain-TCP unencrypted connection, and AuthenticationFlow permits ClearPasswordPluginFlow or PamPluginFlow to return the user's password as cleartext bytes on the wire. The disclosed credentials can subsequently be used to authenticate directly to the database server. This issue is fixed in version 1.4.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55860\n  \nPublished : Aug. 28, 2026, 10:50 p.m. | 21 minutes ago\n  \nDescription :MariaDB Connector/R2DBC is a non-blocking MariaDB and MySQL client implemented in Java. Prior to 1.4.1, org.mariadb:r2dbc-mariadb does not gate clear-text password authentication plugins on transport encryption because the AuthenticationPlugin interface has no capability for a plugin to require a secure connection. A hostile or man-in-the-middle MariaDB server can send an AuthSwitchRequest naming mysql_clear_password or dialog (PAM) over a plain-TCP unencrypted connection, and AuthenticationFlow permits ClearPasswordPluginFlow or PamPluginFlow to return the user's password as cleartext bytes on the wire. The disclosed credentials can subsequently be used to authenticate directly to the database server. This issue is fixed in version 1.4.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-55860\n2. 26.08.29 오전7:50\n3. MariaDB Connector/R2DBC is a non-blocking MariaDB ",
-      "cve_id": "CVE-2026-55860",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55860",
-      "source": "cvefeed",
-      "published": "2026-08-29T07:50:30+09:00",
       "lang": "en"
     }
   ],
