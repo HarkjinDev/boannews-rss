@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-08-31T21:01:15.182043+09:00",
+  "fetched_at": "2026-08-31T21:32:20.507895+09:00",
   "security_news": [
+    {
+      "title": "바이낸스 선물 5종 상장, 모어마켓 해킹 관측",
+      "summary": "바이낸스가 미국 상장 주식과 연동된 USDT 기반 무기한 선물 5종을 상장했다. 모어마켓에서는 약 930만 달러(약 128억원) 규모의 랩드플로우(WFLOW) 유출 정황이 관측됐다. 바이낸스(Binance)는 공지에서 28일...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 바이낸스, 미국 주식 연동 USDT 선물 5종 상장\n2. 모어마켓, 약 930만 달러 WFLOW 유출 관측\n3. 바이낸스, 28일 상장 관련 공지 발표",
+      "link": "https://www.tokenpost.kr/news/breaking/401213",
+      "source": "naver",
+      "published": "2026-08-31T21:14:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "ValleyRAT Backdoor Hides in Signed Adware That Users Add to Antivirus Exclusions",
+      "summary": "The threat actor known as Silver Fox has been observed distributing the ValleyRAT backdoor disguised as a signed Chinese adware application, running the malware under a trusted process to slip past users who add such software to their antivirus exclusions.\n\nRussian cybersecurity vendor Kaspersky said the attackers built the disguise around QN Wallpaper, a genuine Chinese desktop-wallpaper tool",
+      "content": "",
+      "title_ko": "ValleyRAT 백도어는 사용자가 바이러스 백신 제외 항목에 추가하는 서명된 애드웨어에 숨어 있습니다.",
+      "summary_ko": "Silver Fox로 알려진 위협 행위자는 서명된 중국 애드웨어 애플리케이션으로 위장하여 ValleyRAT 백도어를 배포하고 신뢰할 수 있는 프로세스에서 악성 코드를 실행하여 해당 소프트웨어를 바이러스 백신 제외 항목에 추가하는 사용자를 통과시키는 것으로 관찰되었습니다.\n\n러시아 사이버 보안 공급업체인 Kaspersky는 공격자들이 진짜 중국 데스크톱 배경화면 도구인 QN Wallpaper를 중심으로 변장을 구축했다고 밝혔습니다.",
+      "summary_3lines": "1. Error 500 (Server Error)!!1500.That’s an error.The\n2. Error 500 (Server Error)!!1500.That’s an error.The",
+      "link": "https://thehackernews.com/2026/08/valleyrat-backdoor-hides-in-signed.html",
+      "source": "thehackernews",
+      "published": "2026-08-31T21:14:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "인천시, 커넥티드카 사이버보안 인증 거점 만든다",
       "summary": "차량 특성상 해킹이나 악성코드 유입 등 사이버 위협에 노출될 가능성도 큰 탓에 사이버보안이 핵심 기술로 부상하고 있다. 해외에서는 이미 사이버보안 규제가 마련된 상태다. 유엔 유럽경제위원회(UNECE)가 제정한 'UN...",
@@ -1822,21 +1846,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78891",
       "source": "msrc",
       "published": "2026-08-28T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82241 - Budibase backend-core SSRF via incomplete default blacklist",
-      "summary": "CVE ID :CVE-2026-82241\n  \nPublished : Aug. 28, 2026, 12:16 p.m. | 2 hours, 54 minutes ago\n  \nDescription :Budibase backend-core (@budibase/backend-core, as used by @budibase/server) omits the shared address space range 100.64.0.0/10 from its default SSRF blacklist (DEFAULT_BLACKLIST) used by REST datasource query previews. When the default blacklist is active (i.e., a self-hosted deployment has not defined BLACKLIST_IPS), an authenticated user with the Builder permission can submit a REST datasource query preview request to POST /api/queries/preview targeting a reachable HTTP(S) service in the 100.64.0.0/10 range, causing the server to send a request to that target and return its response through the preview flow. Per the advisory, no released fix was identified at the time of publication; remediation is to add 100.64.0.0/10 to DEFAULT_BLACKLIST.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82241\n  \nPublished : Aug. 28, 2026, 12:16 p.m. | 2 hours, 54 minutes ago\n  \nDescription :Budibase backend-core (@budibase/backend-core, as used by @budibase/server) omits the shared address space range 100.64.0.0/10 from its default SSRF blacklist (DEFAULT_BLACKLIST) used by REST datasource query previews. When the default blacklist is active (i.e., a self-hosted deployment has not defined BLACKLIST_IPS), an authenticated user with the Builder permission can submit a REST datasource query preview request to POST /api/queries/preview targeting a reachable HTTP(S) service in the 100.64.0.0/10 range, causing the server to send a request to that target and return its response through the preview flow. Per the advisory, no released fix was identified at the time of publication; remediation is to add 100.64.0.0/10 to DEFAULT_BLACKLIST.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-82241 - 불완전한 기본 블랙리스트를 통한 Budibase 백엔드 코어 SSRF",
-      "summary_ko": "CVE ID:CVE-2026-82241\n  \n게시일 : 2026년 8월 28일 오후 12시 16분 | 2시간 54분 전\n  \n설명 :Budibase backend-core(@budibase/backend-core, @budibase/server에서 사용됨)는 REST 데이터 소스 쿼리 미리 보기에서 사용하는 기본 SSRF 블랙리스트(DEFAULT_BLACKLIST)에서 공유 주소 공간 범위 100.64.0.0/10을 생략합니다. 기본 블랙리스트가 활성화된 경우(즉, 자체 호스팅 배포가 BLACKLIST_IPS를 정의하지 않은 경우) Builder 권한이 있는 인증된 사용자는 100.64.0.0/10 범위의 도달 가능한 HTTP(S) 서비스를 대상으로 하는 REST 데이터 소스 쿼리 미리 보기 요청을 POST /api/queries/preview에 제출할 수 있습니다. 그러면 서버가 해당 대상에 요청을 보내고 미리 보기 흐름을 통해 응답을 반환하게 됩니다. 권고에 따르면 게시 당시에는 릴리스된 수정 사항이 확인되지 않았습니다. 해결 방법은 DEFAULT_BLACKLIST에 100.64.0.0/10을 추가하는 것입니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-82241\n2. 26.08.28 오후9:16\n3. Budibase backend-core (@budibase/backend-core, as ",
-      "cve_id": "CVE-2026-82241",
-      "cvss": "0.0",
-      "severity": "Low",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82241",
-      "source": "cvefeed",
-      "published": "2026-08-28T21:16:34+09:00",
       "lang": "en"
     }
   ],
