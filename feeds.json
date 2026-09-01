@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-02T02:32:14.870491+09:00",
+  "fetched_at": "2026-09-02T03:02:17.065230+09:00",
   "security_news": [
+    {
+      "title": "Critical Langflow flaw exploited to steal OpenAI and AWS keys",
+      "summary": "Threat actors are exploiting an unauthenticated remote code execution vulnerability (CVE-2026-0768) in Langflow, an open-source framework for building AI applications, to steal credentials, tokens, and keys. [...]",
+      "content": "",
+      "title_ko": "OpenAI 및 AWS 키를 훔치는 데 악용되는 심각한 Langflow 결함",
+      "summary_ko": "위협 행위자는 AI 애플리케이션 구축을 위한 오픈 소스 프레임워크인 Langflow의 인증되지 않은 원격 코드 실행 취약점(CVE-2026-0768)을 악용하여 자격 증명, 토큰 및 키를 훔치고 있습니다. [...]",
+      "summary_3lines": "1. Langflow 취약점(CVE-2026-0768) 악용\n2. OpenAI, AWS API 키 등 탈취\n3. 무단 원격 코드 실행, 심각한 보안 위협",
+      "link": "https://www.bleepingcomputer.com/news/security/critical-langflow-flaw-exploited-to-steal-openai-and-aws-keys/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-02T02:54:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "[VOA 인터뷰] 마이클 반하트 DTEX 조사관 “북한 해커, AI와 결합해 더 정...",
       "summary": "최근 북한 해킹 조직 김수키가 생성형 AI를 피싱 이메일 제작에 사용하는 수준을 넘어, 독자적인 대규모... 기자) 지난 8월 초 김수키 같은 북한 해킹 조직들이 사이버 작전에 생성형 AI와 대규모 언어모델을 활용하고...",
@@ -2019,6 +2031,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-84267 - Gvfs: sftp: uninitialized heap disclosure in read_string()",
+      "summary": "CVE ID :CVE-2026-84267\n  \nPublished : Sept. 1, 2026, 4:17 p.m. | 55 minutes ago\n  \nDescription :A flaw was found in the SFTP backend in gvfs. When mounting a share, a malicious SFTP server can cause read_string() to allocate a buffer with a certain length but the function does not verify that the buffer is completely filled, leaving the remainder of the buffer containing uninitialized heap contents. If the server sends a short FXP_HANDLE reply, these uninitialized bytes are taken as the file handle. The client will then echo these uninitialized bytes back to the server on all subsequent requests using that handle. With a length of 128 bytes, this issue allows the malicious server to deterministically read uninitialized heap memory from the gvfsd-sftp process, leaking its heap base and the load address of the libgio library, resulting in a deterministic defeat of Address Space Layout Randomization (ASLR).\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84267\n  \nPublished : Sept. 1, 2026, 4:17 p.m. | 55 minutes ago\n  \nDescription :A flaw was found in the SFTP backend in gvfs. When mounting a share, a malicious SFTP server can cause read_string() to allocate a buffer with a certain length but the function does not verify that the buffer is completely filled, leaving the remainder of the buffer containing uninitialized heap contents. If the server sends a short FXP_HANDLE reply, these uninitialized bytes are taken as the file handle. The client will then echo these uninitialized bytes back to the server on all subsequent requests using that handle. With a length of 128 bytes, this issue allows the malicious server to deterministically read uninitialized heap memory from the gvfsd-sftp process, leaking its heap base and the load address of the libgio library, resulting in a deterministic defeat of Address Space Layout Randomization (ASLR).\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-84267 - Gvfs: sftp: read_string()에서 초기화되지 않은 힙 공개",
+      "summary_ko": "CVE ID:CVE-2026-84267\n  \n게시일 : 2026년 9월 1일 오후 4시 17분 | 55분 전\n  \n설명 : gvfs의 SFTP 백엔드에서 결함이 발견되었습니다. 공유를 탑재할 때 악의적인 SFTP 서버는 read_string()이 특정 길이의 버퍼를 할당하도록 할 수 있지만 함수는 버퍼가 완전히 채워졌는지 확인하지 않고 나머지 버퍼에는 초기화되지 않은 힙 콘텐츠가 포함되어 있는지 확인하지 않습니다. 서버가 짧은 FXP_HANDLE 응답을 보내면 초기화되지 않은 바이트가 파일 핸들로 사용됩니다. 그런 다음 클라이언트는 해당 핸들을 사용하는 모든 후속 요청에서 초기화되지 않은 바이트를 서버에 다시 표시합니다. 길이가 128바이트인 이 문제를 통해 악성 서버는 gvfsd-sftp 프로세스에서 초기화되지 않은 힙 메모리를 결정적으로 읽을 수 있으며, 힙 기반과 libgio 라이브러리의 로드 주소가 유출되어 ASLR(주소 공간 레이아웃 무작위화)이 결정적으로 패배하게 됩니다.\n  \n심각도: 4.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-84267\n2. 26.09.02 오전1:17\n3. A flaw was found in the SFTP backend in gvfs. When",
+      "cve_id": "CVE-2026-84267",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84267",
+      "source": "cvefeed",
+      "published": "2026-09-02T01:17:37+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53682 - Pki-core: dogtag-pki: unauthenticated dogtag ca rest api exposes security domain hosts",
       "summary": "CVE ID :CVE-2026-53682\n  \nPublished : Sept. 1, 2026, 12:37 p.m. | 38 minutes ago\n  \nDescription :An unauthenticated client can query the Security Domain hosts inventory via GET /ca/rest/securityDomain/hosts and receive a structured response enumerating internal PKI/CA hosts and roles (security domain topology and participating subsystems), without requiring a principal, client certificate, or session.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
