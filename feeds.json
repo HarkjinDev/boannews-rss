@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-01T08:31:04.091717+09:00",
+  "fetched_at": "2026-09-01T09:01:54.643766+09:00",
   "security_news": [
+    {
+      "title": "北 해커들, 비트코인 400억 이동시켰다 [크립토브리핑]",
+      "summary": "1일 블록체인 분석업체 아캄에 따르면 미국 해외자산통제국(OFAC)의 제재 대상인 북한 해킹조직 라자루스... 당시 하이퍼리퀴드 측은 해킹이나 사용자 자금 손실은 없었다고 주장했다. 한편 하이퍼리퀴드는 미국...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 해킹조직 라자루스, 비트코인 400억원 이동\n2. 하이퍼리퀴드 측, 해킹/자금 손실 없었다 주장\n3. OFAC 제재 대상, 미국 기반 기업 관련 혐의",
+      "link": "https://n.news.naver.com/mnews/article/014/0005569042?sid=105",
+      "source": "naver",
+      "published": "2026-09-01T08:57:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "에버스핀, 윤성욱 CTO가 말하는 '기술 초격차'",
+      "summary": "중심으로 해킹·피싱·명의도용·금융사기 대응까지 기술 영역을 확장하고 있다\"고 말했다. 윤 CTO는... AI-MTD와 AI-Whitelist를 양대 핵심 기술축으로 웹·모바일 해킹방지와 악성앱 탐지, 금융사기 예방 및 금융권...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 에버스핀, 윤성욱 CTO 기술 초격차로 금융사기 대응 확대\n2. AI-MTD, AI-Whitelist 기술로 웹/모바일 해킹, 악성앱 탐지\n3. 금융권 사기 예방 및 명의도용 차단 기술 개발 주력",
+      "link": "http://www.ikld.kr/news/articleView.html?idxno=339840",
+      "source": "naver",
+      "published": "2026-09-01T08:50:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "과천도시공사, 임직원 정보보호 교육 실시",
       "summary": "교육에서는 ▲개인정보 수집·이용·파기 등 처리 절차 및 단계별 핵심 준수사항 ▲영상정보처리기기(CCTV)의 안전한 운영 및 관리 방안 ▲개인정보 유출 사고 발생 시 단계별 대응 절차 ▲최신 사이버 위협 동향 및...",
@@ -1383,6 +1407,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82393 - pnpm: A tarball dependency's manifest `name` escapes node_modules → arbitrary file write/overwrite on install",
+      "summary": "CVE ID :CVE-2026-82393\n  \nPublished : Aug. 31, 2026, 10:17 p.m. | 32 minutes ago\n  \nDescription :pnpm is a package manager. Prior to 10.34.5 and 11.11.0, pnpm accepts a scoped path traversal in a tarball dependency's package.json manifest name because pnpm11/resolving/npm-resolver/src/pickPackage.ts rejects slash characters only for unscoped names. During pnpm install, the unvalidated name reaches raw path joins in pnpm11/installing/deps-resolver/src/resolvePeers.ts, pnpm11/installing/deps-resolver/src/index.ts, and pnpm11/deps/graph-builder/src/lockfileToDepGraph.ts, causing package extraction outside node_modules and allowing attacker-controlled files to overwrite arbitrary filesystem paths even when --ignore-scripts is used. The overwrite can replace shell startup files, Git hooks, or installed package code and lead to code execution. This issue is fixed in versions 10.34.5, and 11.11.0.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82393\n  \nPublished : Aug. 31, 2026, 10:17 p.m. | 32 minutes ago\n  \nDescription :pnpm is a package manager. Prior to 10.34.5 and 11.11.0, pnpm accepts a scoped path traversal in a tarball dependency's package.json manifest name because pnpm11/resolving/npm-resolver/src/pickPackage.ts rejects slash characters only for unscoped names. During pnpm install, the unvalidated name reaches raw path joins in pnpm11/installing/deps-resolver/src/resolvePeers.ts, pnpm11/installing/deps-resolver/src/index.ts, and pnpm11/deps/graph-builder/src/lockfileToDepGraph.ts, causing package extraction outside node_modules and allowing attacker-controlled files to overwrite arbitrary filesystem paths even when --ignore-scripts is used. The overwrite can replace shell startup files, Git hooks, or installed package code and lead to code execution. This issue is fixed in versions 10.34.5, and 11.11.0.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-82393 - pnpm: tarball 종속성 매니페스트 `name`이 node_modules를 이스케이프합니다. → 설치 시 임의 파일 쓰기/덮어쓰기",
+      "summary_ko": "CVE ID:CVE-2026-82393\n  \n게시일 : 2026년 8월 31일 오후 10시 17분 | 32분 전\n  \n설명 :pnpm은 패키지 관리자입니다. 10.34.5 및 11.11.0 이전에는 pnpm11/resolving/npm-resolver/src/pickPackage.ts가 범위가 지정되지 않은 이름에 대해서만 슬래시 문자를 거부하기 때문에 pnpm은 tarball 종속성의 package.json 매니페스트 이름에서 범위가 지정된 경로 탐색을 허용합니다. pnpm 설치 중에 검증되지 않은 이름이 pnpm11/installing/deps-resolver/src/resolvePeers.ts, pnpm11/installing/deps-resolver/src/index.ts 및 pnpm11/deps/graph-builder/src/lockfileToDepGraph.ts의 원시 경로 조인에 도달하여 node_modules 외부에서 패키지 추출이 발생하고 공격자가 제어하는 파일이 --ignore-scripts가 사용되는 경우에도 임의의 파일 시스템 경로를 덮어씁니다. 덮어쓰기는 셸 시작 파일, Git 후크 또는 설치된 패키지 코드를 대체하고 코드 실행으로 이어질 수 있습니다. 이 문제는 버전 10.34.5 및 11.11.0에서 해결되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-82393\n2. 26.09.01 오전7:17\n3. pnpm is a package manager. Prior to 10.34.5 and 11",
+      "cve_id": "CVE-2026-82393",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82393",
+      "source": "cvefeed",
+      "published": "2026-09-01T07:17:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-81892 - EasyAdmin custom-action dispatcher bypasses access_control on other routes",
       "summary": "CVE ID :CVE-2026-81892\n  \nPublished : Aug. 31, 2026, 8:38 p.m. | 12 minutes ago\n  \nDescription :EasyAdmin is a fast and modern admin generator for Symfony applications. From 4.0.0 until 4.29.16 and 5.5.1, EasyAdmin serves all backend requests through a single dashboard route and, for custom actions (Action::linkToRoute() and MenuItem::linkToRoute()), swaps the executed controller based on the routeName query parameter on the kernel.controller event. The swap happens after Symfony's security firewall has already evaluated access_control against the original dashboard URL, and the routeName value was not validated. As a result, a path-based access_control rule protecting the target route was never evaluated, so a low-privilege backend user who can reach a single EasyAdmin URL and knows a target route's name can execute that route's controller, bypassing the path-based rule. Only path-based protections are bypassed. Routes whose controller enforces its own authorization with #[IsGranted] or denyAccessUnlessGranted() remain protected because those checks are recomputed against the swapped-in controller. This issue is fixed in versions 4.29.16 and 5.5.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
