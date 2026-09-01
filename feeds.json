@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-01T22:30:58.751251+09:00",
+  "fetched_at": "2026-09-01T23:01:09.083308+09:00",
   "security_news": [
     {
       "title": "Ransomware Gang Claims Nutex Health Data Breach",
@@ -2020,6 +2020,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-53682 - Pki-core: dogtag-pki: unauthenticated dogtag ca rest api exposes security domain hosts",
+      "summary": "CVE ID :CVE-2026-53682\n  \nPublished : Sept. 1, 2026, 12:37 p.m. | 38 minutes ago\n  \nDescription :An unauthenticated client can query the Security Domain hosts inventory via GET /ca/rest/securityDomain/hosts and receive a structured response enumerating internal PKI/CA hosts and roles (security domain topology and participating subsystems), without requiring a principal, client certificate, or session.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53682\n  \nPublished : Sept. 1, 2026, 12:37 p.m. | 38 minutes ago\n  \nDescription :An unauthenticated client can query the Security Domain hosts inventory via GET /ca/rest/securityDomain/hosts and receive a structured response enumerating internal PKI/CA hosts and roles (security domain topology and participating subsystems), without requiring a principal, client certificate, or session.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-53682\n2. 26.09.01 오후9:37\n3. An unauthenticated client can query the Security D",
+      "cve_id": "CVE-2026-53682",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53682",
+      "source": "cvefeed",
+      "published": "2026-09-01T21:37:50+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-59681 - yast2-auth-client: OS command injection via unsanitized Organizational Unit / dnsHostName in AD join",
       "summary": "CVE ID :CVE-2026-59681\n  \nPublished : Sept. 1, 2026, 10:17 a.m. | 33 minutes ago\n  \nDescription :A OS command injection vulnerability in yast2-auth-client allows an attacker who controls Active Directory configuration values to execute arbitrary commands as root on the configured host.\n Auth::AuthConf in src/lib/auth/authconf.rb assembles the Samba net ads join, net ads lookup -S and net ads testjoin invocations by interpolating configuration values into a single command string and passing that string to Open3.popen2 / Open3.capture2, which causes Ruby to run it through /bin/sh. The Organizational Unit (ou), dnshostname, AD user name and AD domain name values are neither validated nor shell-quoted.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-59681\n  \nPublished : Sept. 1, 2026, 10:17 a.m. | 33 minutes ago\n  \nDescription :A OS command injection vulnerability in yast2-auth-client allows an attacker who controls Active Directory configuration values to execute arbitrary commands as root on the configured host.\n Auth::AuthConf in src/lib/auth/authconf.rb assembles the Samba net ads join, net ads lookup -S and net ads testjoin invocations by interpolating configuration values into a single command string and passing that string to Open3.popen2 / Open3.capture2, which causes Ruby to run it through /bin/sh. The Organizational Unit (ou), dnshostname, AD user name and AD domain name values are neither validated nor shell-quoted.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2092,6 +2107,51 @@
       "link": "https://isc.sans.edu/diary/rss/33300",
       "source": "sans_isc",
       "published": "2026-09-01T09:33:21+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[webapps] Payload CMS 3.72.0 - Blind SQL Injection",
+      "summary": "Payload CMS 3.72.0 - Blind SQL Injection",
+      "description": "Payload CMS 3.72.0 - Blind SQL Injection",
+      "title_ko": "[webapps] 페이로드 CMS 3.72.0 - 블라인드 SQL 주입",
+      "summary_ko": "페이로드 CMS 3.72.0 - 블라인드 SQL 주입",
+      "summary_3lines": "1. [webapps] Payload CMS 3.72.0 - Blind SQL Injection\n2. EXPLOITDB\n3. Payload CMS 3.72.0 - Blind SQL Injection",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52671",
+      "source": "exploitdb",
+      "published": "2026-09-01T09:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[webapps] Bludit CMS - Stored XSS",
+      "summary": "Bludit CMS - Stored XSS",
+      "description": "Bludit CMS - Stored XSS",
+      "title_ko": "[웹앱] Bludit CMS - 저장된 XSS",
+      "summary_ko": "Bludit CMS - 저장된 XSS",
+      "summary_3lines": "1. [webapps] Bludit CMS - Stored XSS\n2. EXPLOITDB\n3. Bludit CMS - Stored XSS",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52670",
+      "source": "exploitdb",
+      "published": "2026-09-01T09:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[webapps] miniOrange  5.4.3 - Unauthenticated Auth Bypass",
+      "summary": "miniOrange  5.4.3 - Unauthenticated Auth Bypass",
+      "description": "miniOrange  5.4.3 - Unauthenticated Auth Bypass",
+      "title_ko": "[webapps] miniOrange 5.4.3 - 인증되지 않은 인증 우회",
+      "summary_ko": "miniOrange 5.4.3 - 인증되지 않은 인증 우회",
+      "summary_3lines": "1. [webapps] miniOrange 5.4.3 - Unauthenticated Auth \n2. EXPLOITDB\n3. miniOrange 5.4.3 - Unauthenticated Auth Bypass",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52668",
+      "source": "exploitdb",
+      "published": "2026-09-01T09:00:00+09:00",
       "lang": "en"
     },
     {
@@ -2692,21 +2752,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-15369",
       "source": "cvefeed",
       "published": "2026-08-30T04:26:34+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-68821 Windows Package Manager Elevation of Privilege Vulnerability",
-      "summary": "Changes made to the security updates links and information.  This is an informational change only.",
-      "description": "Changes made to the security updates links and information.  This is an informational change only.",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-68821\n2. MSRC\n3. Changes made to the security updates links and inf",
-      "cve_id": "CVE-2026-68821",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68821",
-      "source": "msrc",
-      "published": "2026-08-29T23:00:00+09:00",
       "lang": "en"
     }
   ],
