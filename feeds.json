@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-01T19:30:56.411391+09:00",
+  "fetched_at": "2026-09-01T20:01:28.686778+09:00",
   "security_news": [
+    {
+      "title": "Ransomware Gang Claims Nutex Health Data Breach",
+      "summary": "The company has notified the SEC that hackers accessed patient, employee, provider, business, and financial information.\nThe post Ransomware Gang Claims Nutex Health Data Breach appeared first on SecurityWeek.",
+      "content": "",
+      "title_ko": "랜섬웨어 집단, Nutex Health 데이터 침해 주장",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. 랜섬웨어 그룹, Nutex Health 데이터 침해 주장\n2. 환자, 직원, 공급업체 등 정보 접근 및 유출\n3. SEC에 통보, 광범위한 정보 유출 예상",
+      "link": "https://www.securityweek.com/ransomware-gang-claims-nutex-health-data-breach/",
+      "source": "securityweek",
+      "published": "2026-09-01T19:47:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "Critical JFrog Artifactory Vulnerability Reportedly Exploited in the Wild",
       "summary": "Exploitation of the authentication bypass vulnerability CVE-2026-82329 started just days after its public disclosure.\nThe post Critical JFrog Artifactory Vulnerability Reportedly Exploited in the Wild appeared first on SecurityWeek.",
@@ -2040,21 +2052,24 @@
       "source": "naver",
       "published": "2026-08-29T20:14:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'분단의 원흉'인가, 이승만 '정읍선언'을 다시 읽다",
-      "summary": "1만8000원 지난해부터 대규모 개인정보 유출 및 사이버 공격사고가 잇따른다. 앤트로픽의 '클로드 미토스'와 같은 초고성능 인공지능(AI) 모델도 등장했다. 이제 보안은 기술 업무가 아닌 기업 생존을 위한 CEO의 핵심 경영...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 1만8000원 작년 개인정보 유출 사고 잇따라\n2. 앤트로픽 '클로드 미토스' AI 모델 등장\n3. CEO 핵심 경영으로 보안 중요성 부각",
-      "link": "https://n.news.naver.com/mnews/article/053/0000061084?sid=103",
-      "source": "naver",
-      "published": "2026-08-29T20:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-59681 - yast2-auth-client: OS command injection via unsanitized Organizational Unit / dnsHostName in AD join",
+      "summary": "CVE ID :CVE-2026-59681\n  \nPublished : Sept. 1, 2026, 10:17 a.m. | 33 minutes ago\n  \nDescription :A OS command injection vulnerability in yast2-auth-client allows an attacker who controls Active Directory configuration values to execute arbitrary commands as root on the configured host.\n Auth::AuthConf in src/lib/auth/authconf.rb assembles the Samba net ads join, net ads lookup -S and net ads testjoin invocations by interpolating configuration values into a single command string and passing that string to Open3.popen2 / Open3.capture2, which causes Ruby to run it through /bin/sh. The Organizational Unit (ou), dnshostname, AD user name and AD domain name values are neither validated nor shell-quoted.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59681\n  \nPublished : Sept. 1, 2026, 10:17 a.m. | 33 minutes ago\n  \nDescription :A OS command injection vulnerability in yast2-auth-client allows an attacker who controls Active Directory configuration values to execute arbitrary commands as root on the configured host.\n Auth::AuthConf in src/lib/auth/authconf.rb assembles the Samba net ads join, net ads lookup -S and net ads testjoin invocations by interpolating configuration values into a single command string and passing that string to Open3.popen2 / Open3.capture2, which causes Ruby to run it through /bin/sh. The Organizational Unit (ou), dnshostname, AD user name and AD domain name values are neither validated nor shell-quoted.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-59681 - yast2-auth-client: AD 조인에서 정리되지 않은 조직 단위/dnsHostName을 통한 OS 명령 주입",
+      "summary_ko": "CVE ID:CVE-2026-59681\n  \n게시일 : 2026년 9월 1일 오전 10시 17분 | 33분 전\n  \n설명: yast2-auth-client의 OS 명령 주입 취약점으로 인해 Active Directory 구성 값을 제어하는 공격자가 구성된 호스트에서 루트로 임의의 명령을 실행할 수 있습니다.\n src/lib/auth/authconf.rb의 Auth::AuthConf는 구성 값을 단일 명령 문자열에 삽입하고 해당 문자열을 Open3.popen2 / Open3.capture2에 전달하여 Ruby가 /bin/sh를 통해 실행하도록 함으로써 Samba net Ads Join, Net Ads Lookup -S 및 Net Ads Testjoin 호출을 어셈블합니다. 조직 단위(ou), dnshostname, AD 사용자 이름 및 AD 도메인 이름 값은 검증되지도 않고 셸 인용되지도 않습니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-59681\n2. 26.09.01 오후7:17\n3. A OS command injection vulnerability in yast2-auth",
+      "cve_id": "CVE-2026-59681",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59681",
+      "source": "cvefeed",
+      "published": "2026-09-01T19:17:13+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-75980 - BetterDocs <= 4.8.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Heading 'id' Attribute in Post Content",
       "summary": "CVE ID :CVE-2026-75980\n  \nPublished : Sept. 1, 2026, 6:16 a.m. | 59 minutes ago\n  \nDescription :The BetterDocs – AI Documentation, Knowledge Base, Docs, Wikis, FAQ with Chatbot plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Heading 'id' Attribute in Post Content in all versions up to, and including, 4.8.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit survives wp_kses_post because entity-encoded quotes in a heading id attribute are treated as a single legitimate attribute value at save time; the dangerous payload only materialises after process_content_for_toc() calls html_entity_decode() on the stored content and the broken id is extracted by a lazy regex before being echoed unescaped into the Table of Contents output.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
