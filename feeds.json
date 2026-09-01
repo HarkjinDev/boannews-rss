@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-02T06:32:34.705189+09:00",
+  "fetched_at": "2026-09-02T07:02:25.452841+09:00",
   "security_news": [
+    {
+      "title": "[미국 특징주] 오픈AI \"아스트라, '위험(Critical)' 사이버보안 역량 기준...",
+      "summary": "사이버보안 역량 기준 가운데 가장 높은 수준인 '위험(Critical)' 기준을 넘어선 첫 모델이라고 밝혔다. 오픈AI는 1일(현지시간) 아스트라가 이전에 알려지지 않았던 보안 취약점을 찾아내고, 각 단계에서 사람의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI, '위험(Critical)' 기준 넘어선 첫 보안 역량 모델 '아스트라' 공개\n2. 아스트라는 알려지지 않은 보안 취약점 탐지, 사람 개입 없이 방어\n3. 사이버보안 업계 최초 '위험' 등급 획득, 높은 보안 수준 입증",
+      "link": "https://www.newspim.com/news/view/20260902000053",
+      "source": "naver",
+      "published": "2026-09-02T06:53:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"주식 오픈API, 인터넷뱅킹 수준 보안 갖춰야\" [투자테크 혁신 ④]",
+      "summary": "자동매매를 위해 이런 정보를 개인 코드 안에 넣어두는 경우가 있는데 PC가 해킹되거나 악성코드에 감염되면 인증정보도 함께 노출될 수 있다. 만약 주문·잔고조회 코드와 인증정보가 유출되면 제3자가 마치 정상...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 주식 오픈API, 인터넷뱅킹 수준 보안 필수.\n2. PC 해킹 시 자동매매 코드 인증정보 노출.\n3. 제3자 악용으로 금융 사고 위험.",
+      "link": "https://it.chosun.com/news/articleView.html?idxno=2023092168985",
+      "source": "naver",
+      "published": "2026-09-02T06:30:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "오픈AI, 신형 AI 모델 '아스트라' 곧 출시...고급 사이버보안 기능은 접...",
       "summary": "오픈AI는 앞서 허깅페이스 해킹 사건 당시 테스트 절차 일환으로 제품용 안전장치를 꺼둔 상태였다고 인정하고 안전장치가 켜져 있었다면 사건을 막을 수 있었을 것으로 판단한다고 밝혔다. 이후 오픈AI는 유해한 사이버...",
@@ -2055,6 +2079,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-84375 - js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+      "summary": "CVE ID :CVE-2026-84375\n  \nPublished : Sept. 1, 2026, 9:43 p.m. | 2 minutes ago\n  \nDescription :js-yaml is a JavaScript YAML parser and dumper. From 3.0.0 until 3.15.2 and 4.3.2, maxTotalMergeKeys in lib/js-yaml/loader.js and lib/loader.js does not count empty mapping sources while processing the merge key <<. An attacker can alias a large sequence of empty mappings into many merge targets, causing O(N * K) processing while totalMergeKeys remains unchanged and the configured resource limit is never reached. A relatively small YAML document can therefore cause prolonged CPU consumption in applications that parse untrusted YAML, and merge processing is enabled by default on these release lines. This issue is fixed in versions 3.15.2 and 4.3.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84375\n  \nPublished : Sept. 1, 2026, 9:43 p.m. | 2 minutes ago\n  \nDescription :js-yaml is a JavaScript YAML parser and dumper. From 3.0.0 until 3.15.2 and 4.3.2, maxTotalMergeKeys in lib/js-yaml/loader.js and lib/loader.js does not count empty mapping sources while processing the merge key <<. An attacker can alias a large sequence of empty mappings into many merge targets, causing O(N * K) processing while totalMergeKeys remains unchanged and the configured resource limit is never reached. A relatively small YAML document can therefore cause prolonged CPU consumption in applications that parse untrusted YAML, and merge processing is enabled by default on these release lines. This issue is fixed in versions 3.15.2 and 4.3.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-84375\n2. 26.09.02 오전6:43\n3. js-yaml is a JavaScript YAML parser and dumper. Fr",
+      "cve_id": "CVE-2026-84375",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84375",
+      "source": "cvefeed",
+      "published": "2026-09-02T06:43:13+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-84372 - Predis: Redis command injection and denial of service via CRLF smuggling in pipelined commands on aggregate connections",
+      "summary": "CVE ID :CVE-2026-84372\n  \nPublished : Sept. 1, 2026, 9:20 p.m. | 24 minutes ago\n  \nDescription :Predis is a flexible and feature-complete Redis and Valkey client for PHP. From version 3.0.0-RC1 until version 3.3.0, pipeline handling on aggregate cluster and replication connections reparses an already serialized RESP buffer in AbstractAggregateConnection::write() by splitting it with explode(\"\\r\\n\") instead of honoring RESP length prefixes. Attacker-controlled keys or values containing CRLF sequences can therefore be interpreted by Command::deserializeCommand() as additional commands. On cluster connections, ClusterStrategy::getFakeKey() can route injected keyless commands using the literal fake key value \"key\", permitting operations such as shard-wide cache deletion, targeted data modification, data reads, or node disruption. On replication connections, malformed reparsing can throw an uncaught exception and repeatedly terminate affected requests. Only pipeline() reaches this vulnerable path; transaction() and MULTI are not affected. This issue is fixed in version 3.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84372\n  \nPublished : Sept. 1, 2026, 9:20 p.m. | 24 minutes ago\n  \nDescription :Predis is a flexible and feature-complete Redis and Valkey client for PHP. From version 3.0.0-RC1 until version 3.3.0, pipeline handling on aggregate cluster and replication connections reparses an already serialized RESP buffer in AbstractAggregateConnection::write() by splitting it with explode(\"\\r\\n\") instead of honoring RESP length prefixes. Attacker-controlled keys or values containing CRLF sequences can therefore be interpreted by Command::deserializeCommand() as additional commands. On cluster connections, ClusterStrategy::getFakeKey() can route injected keyless commands using the literal fake key value \"key\", permitting operations such as shard-wide cache deletion, targeted data modification, data reads, or node disruption. On replication connections, malformed reparsing can throw an uncaught exception and repeatedly terminate affected requests. Only pipeline() reaches this vulnerable path; transaction() and MULTI are not affected. This issue is fixed in version 3.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-84372\n2. 26.09.02 오전6:20\n3. Predis is a flexible and feature-complete Redis an",
+      "cve_id": "CVE-2026-84372",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84372",
+      "source": "cvefeed",
+      "published": "2026-09-02T06:20:57+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-84365 - Hono: Incomplete fix for CVE-2026-39408: `toSSG()` still writes files outside the output directory",
+      "summary": "CVE ID :CVE-2026-84365\n  \nPublished : Sept. 1, 2026, 9:18 p.m. | 26 minutes ago\n  \nDescription :Hono is a Web application framework that provides support for any JavaScript runtime. From 4.12.12 until 4.13.5, the fix released for CVE-2026-39408 does not cover every traversal sequence, and toSSG() can still write files outside the configured output directory when a route parameter contains consecutive parent-directory segments. Static site generation builds each output path from the route path and values supplied through ssgParams, then verifies that the result stays inside the output directory using the same normalization routine that built the path. That routine does not fully collapse runs of consecutive parent-directory segments, allowing a path that the check accepts to resolve outside the output directory, and the check also treats output directories that differ in how they are rooted as equivalent. This arises when an application generates a static site from route parameter values it does not fully control, such as slugs from a CMS, API, or user submission. An untrusted ssgParams value can create or overwrite files elsewhere in the build environment and alter generated artifacts or deployment output. The vulnerability affects build-time static site generation only; request-time routing and applications with entirely developer-controlled ssgParams values are not affected. This issue is fixed in version 4.13.5.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84365\n  \nPublished : Sept. 1, 2026, 9:18 p.m. | 26 minutes ago\n  \nDescription :Hono is a Web application framework that provides support for any JavaScript runtime. From 4.12.12 until 4.13.5, the fix released for CVE-2026-39408 does not cover every traversal sequence, and toSSG() can still write files outside the configured output directory when a route parameter contains consecutive parent-directory segments. Static site generation builds each output path from the route path and values supplied through ssgParams, then verifies that the result stays inside the output directory using the same normalization routine that built the path. That routine does not fully collapse runs of consecutive parent-directory segments, allowing a path that the check accepts to resolve outside the output directory, and the check also treats output directories that differ in how they are rooted as equivalent. This arises when an application generates a static site from route parameter values it does not fully control, such as slugs from a CMS, API, or user submission. An untrusted ssgParams value can create or overwrite files elsewhere in the build environment and alter generated artifacts or deployment output. The vulnerability affects build-time static site generation only; request-time routing and applications with entirely developer-controlled ssgParams values are not affected. This issue is fixed in version 4.13.5.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-84365\n2. 26.09.02 오전6:18\n3. Hono is a Web application framework that provides ",
+      "cve_id": "CVE-2026-84365",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84365",
+      "source": "cvefeed",
+      "published": "2026-09-02T06:18:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-84308 - phpseclib — non-constant-time X25519 scalar multiplication permits full private-key recovery",
       "summary": "CVE ID :CVE-2026-84308\n  \nPublished : Sept. 1, 2026, 7:28 p.m. | 16 minutes ago\n  \nDescription :phpseclib is a PHP secure communications library. Prior to 3.0.57 and 4.0.1, pure-PHP X25519 scalar multiplication in phpseclib/Math/PrimeField/Integer.php performs data-dependent conditional modular reductions in add() and subtract(). During the Montgomery ladder in phpseclib/Crypt/EC/BaseCurves/Montgomery.php, the reduction behavior of each step depends on the secret scalar prefix, creating per-step timing and libgmp call-count observations that can reveal a reused 251-bit clamped private scalar. The phpseclib/Crypt/EC/Formats/Keys/MontgomeryPrivate.php derivation path invokes the pure-PHP multiplication without a native-engine check, while phpseclib/Crypt/EC/Formats/Keys/PKCS8.php reaches it when ext-sodium is unavailable. Exploitation requires a reused or long-lived X25519 private key, knowledge of the corresponding public key, execution of the pure-PHP path, and a local observer capable of resolving individual ladder steps or libgmp entry-point calls. Ephemeral X25519 keys, including phpseclib's normal SSH exchange path, are not affected. Recovery of the scalar permanently compromises operations that reuse that key. This issue is fixed in versions 3.0.57 and 4.0.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
