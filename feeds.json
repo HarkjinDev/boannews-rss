@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-03T01:31:08.396697+09:00",
+  "fetched_at": "2026-09-03T02:01:15.779320+09:00",
   "security_news": [
     {
       "title": "Hackers exploit critical JFrog Artifactory flaw to forge admin tokens",
@@ -2571,6 +2571,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-78408 - util-linux nsenter Cgroup Privilege Escalation",
+      "summary": "CVE ID :CVE-2026-78408\n  \nPublished : Sept. 2, 2026, 3:35 p.m. | 22 minutes ago\n  \nDescription :The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.\n  \nSeverity: 7.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-78408\n  \nPublished : Sept. 2, 2026, 3:35 p.m. | 22 minutes ago\n  \nDescription :The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.\n  \nSeverity: 7.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-78408\n2. 26.09.03 오전12:35\n3. The nsenter --join-cgroup option opens the target ",
+      "cve_id": "CVE-2026-78408",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78408",
+      "source": "cvefeed",
+      "published": "2026-09-03T00:35:44+09:00",
+      "lang": "fr"
+    },
     {
       "title": "CVE-2026-82955 - Eclipse aeriOS KrakenD JWT Validation Security Bypass",
       "summary": "CVE ID :CVE-2026-82955\n  \nPublished : Sept. 2, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :In the current development version of Eclipse aeriOS, which has not yet had an official release, the KrakenD instance included in the API Gateway component had the disable_jwk_security parameter hard-coded to true, with no option to override it through the Helm chart configuration. This setting disables TLS certificate verification when KrakenD retrieves the JSON Web Key Set (JWKS) used to validate bearer tokens, potentially allowing an attacker with the ability to intercept this communication to provide a malicious JWKS and compromise token validation.\n\n\n\n\nThe issue has been addressed by making the parameter configurable through the boolean Helm value krakend.config.disableJwkSecurity and setting its default value to false, ensuring that TLS certificate verification is enabled by default.\n  \nSeverity: 9.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
