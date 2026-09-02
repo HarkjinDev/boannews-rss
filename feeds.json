@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-03T04:01:15.196497+09:00",
+  "fetched_at": "2026-09-03T04:31:05.146002+09:00",
   "security_news": [
     {
       "title": "Hackers exploit critical JFrog Artifactory flaw to forge admin tokens",
@@ -2544,21 +2544,39 @@
       "source": "naver",
       "published": "2026-08-31T06:44:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "독서 구독서비스 기관 구매 이대로 괜찮나… 대안은 ‘구독형 전자도서...",
-      "summary": "잇따른 해킹·개인정보 유출 사고… 기관 구성원 정보 노출 위험 보안 및 개인정보 보호 규정이 엄격한... 실제로 밀리의서재는 지난 2019년과 2022년 두 차례 해킹 공격으로 회원 개인정보가 유출되는 사고가 발생해...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 밀리의서재, 2019년·2022년 두 차례 해킹\n2. 회원 개인정보 유출 사고 발생, 정보 노출 위험\n3. 독서 구독 서비스 보안 강화 및 대안 모색",
-      "link": "https://n.news.naver.com/mnews/article/020/0003744414?sid=101",
-      "source": "naver",
-      "published": "2026-08-31T04:31:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-84377 - LiteLLM Credential Exposure and Server-Side Request Forgery Vulnerability",
+      "summary": "CVE ID :CVE-2026-84377\n  \nPublished : Sept. 2, 2026, 6:21 p.m. | 52 minutes ago\n  \nDescription :LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to versions 1.88.6 and 1.96.2, any authenticated LiteLLM proxy user could redirect an outbound provider call to a destination the user controls and cause the proxy to send its configured provider credentials to that destination. Request validation in litellm/proxy/auth/auth_utils.py, litellm/proxy/common_request_processing.py, litellm/proxy/health_endpoints/_health_endpoints.py, litellm/proxy/image_endpoints/endpoints.py, and litellm/proxy/litellm_pre_call_utils.py used incomplete checks that did not cover every sensitive parameter or inspect equivalent values across nested request fields, path values, and bracket-notation form data. Routing and credential parameters including api_base, base_url, model_list, fallbacks, and litellm_credential_name could therefore be applied without clearing the operator's stored key, exposing upstream provider credentials and other configured secrets and permitting server-side requests to internal services reachable by the proxy. This issue is fixed in versions 1.88.6 and 1.96.2.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84377\n  \nPublished : Sept. 2, 2026, 6:21 p.m. | 52 minutes ago\n  \nDescription :LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to versions 1.88.6 and 1.96.2, any authenticated LiteLLM proxy user could redirect an outbound provider call to a destination the user controls and cause the proxy to send its configured provider credentials to that destination. Request validation in litellm/proxy/auth/auth_utils.py, litellm/proxy/common_request_processing.py, litellm/proxy/health_endpoints/_health_endpoints.py, litellm/proxy/image_endpoints/endpoints.py, and litellm/proxy/litellm_pre_call_utils.py used incomplete checks that did not cover every sensitive parameter or inspect equivalent values across nested request fields, path values, and bracket-notation form data. Routing and credential parameters including api_base, base_url, model_list, fallbacks, and litellm_credential_name could therefore be applied without clearing the operator's stored key, exposing upstream provider credentials and other configured secrets and permitting server-side requests to internal services reachable by the proxy. This issue is fixed in versions 1.88.6 and 1.96.2.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-84377 - LiteLLM 자격 증명 노출 및 서버 측 요청 위조 취약점",
+      "summary_ko": "CVE ID:CVE-2026-84377\n  \n게시일 : 2026년 9월 2일 오후 6시 21분 | 52분 전\n  \n설명 :LiteLLM은 OpenAI(또는 기본) 형식으로 LLM API를 호출하는 프록시 서버(AI 게이트웨이)입니다. 버전 1.88.6 및 1.96.2 이전에는 인증된 LiteLLM 프록시 사용자가 아웃바운드 공급자 호출을 사용자가 제어하는 ​​대상으로 리디렉션하고 프록시가 구성된 공급자 자격 증명을 해당 대상으로 보내도록 할 수 있었습니다. litellm/proxy/auth/auth_utils.py, litellm/proxy/common_request_processing.py, litellm/proxy/health_endpoints/_health_endpoints.py, litellm/proxy/image_endpoints/endpoints.py 및 litellm/proxy/litellm_pre_call_utils.py의 요청 검증에서는 모든 민감한 매개변수를 다루지 않거나 전체에서 동등한 값을 검사하지 않는 불완전한 검사를 사용했습니다. 중첩된 요청 필드, 경로 값 및 대괄호 표기 형식 데이터. 따라서 api_base, base_url, model_list, fallbacks 및 litellm_credential_name을 포함한 라우팅 및 자격 증명 매개 변수는 운영자의 저장된 키를 지우지 않고 적용할 수 있으며, 업스트림 공급자 자격 증명 및 기타 구성된 비밀을 노출하고 프록시가 연결할 수 있는 내부 서비스에 대한 서버 측 요청을 허용합니다. 이 문제는 버전 1.88.6 및 1.96.2에서 해결되었습니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-84377\n2. 26.09.03 오전3:21\n3. LiteLLM is a proxy server (AI Gateway) to call LLM",
+      "cve_id": "CVE-2026-84377",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84377",
+      "source": "cvefeed",
+      "published": "2026-09-03T03:21:28+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-55221 - Boruta Sensitive Information Disclosure in Logs",
+      "summary": "CVE ID :CVE-2026-55221\n  \nPublished : Sept. 2, 2026, 6:20 p.m. | 53 minutes ago\n  \nDescription :Boruta is a standalone authorization server that aims to implement OAuth 2.0 and Openid Connect up to decentralized identity specifications. Prior to version 0.10.0, Boruta logged sensitive OAuth and OpenID Connect values in business event logs. Logged values could include access tokens, refresh tokens, authorization codes, agent tokens, direct-post codes, ID tokens, VP tokens, and tokens submitted to introspection or revocation endpoints. An attacker with access to Boruta logs, log aggregation systems, or the administration log viewer could recover these credentials and use them until expiration or revocation. This issue has been patched in version 0.10.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55221\n  \nPublished : Sept. 2, 2026, 6:20 p.m. | 53 minutes ago\n  \nDescription :Boruta is a standalone authorization server that aims to implement OAuth 2.0 and Openid Connect up to decentralized identity specifications. Prior to version 0.10.0, Boruta logged sensitive OAuth and OpenID Connect values in business event logs. Logged values could include access tokens, refresh tokens, authorization codes, agent tokens, direct-post codes, ID tokens, VP tokens, and tokens submitted to introspection or revocation endpoints. An attacker with access to Boruta logs, log aggregation systems, or the administration log viewer could recover these credentials and use them until expiration or revocation. This issue has been patched in version 0.10.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-55221 - 로그의 Boruta 민감한 정보 공개",
+      "summary_ko": "CVE ID:CVE-2026-55221\n  \n게시일 : 2026년 9월 2일 오후 6시 20분 | 53분 전\n  \n설명 :Boruta는 OAuth 2.0 및 Openid Connect를 분산 ID 사양까지 구현하는 것을 목표로 하는 독립형 인증 서버입니다. 버전 0.10.0 이전에는 Boruta가 비즈니스 이벤트 로그에 민감한 OAuth 및 OpenID Connect 값을 기록했습니다. 기록된 값에는 액세스 토큰, 새로 고침 토큰, 인증 코드, 에이전트 토큰, 직접 게시 코드, ID 토큰, VP 토큰 및 검사 또는 취소 끝점에 제출된 토큰이 포함될 수 있습니다. Boruta 로그, 로그 집계 시스템 또는 관리 로그 뷰어에 액세스할 수 있는 공격자는 이러한 자격 증명을 복구하여 만료 또는 취소될 때까지 사용할 수 있습니다. 이 문제는 버전 0.10.0에서 패치되었습니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-55221\n2. 26.09.03 오전3:20\n3. Boruta is a standalone authorization server that a",
+      "cve_id": "CVE-2026-55221",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55221",
+      "source": "cvefeed",
+      "published": "2026-09-03T03:20:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-78408 - util-linux nsenter Cgroup Privilege Escalation",
       "summary": "CVE ID :CVE-2026-78408\n  \nPublished : Sept. 2, 2026, 3:35 p.m. | 22 minutes ago\n  \nDescription :The nsenter --join-cgroup option opens the target cgroup.procs file as root and leaves that file descriptor open across later namespace and credential changes and across execve(). Because the kernel checks later cgroup migrations using the credentials from the original open, a program run in an attacker-controlled target can inherit root's ability to move host processes between cgroups. After a privileged operator uses --join-cgroup against that target, an unprivileged user can migrate and terminate unrelated root processes.\n  \nSeverity: 7.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
