@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-03T00:31:10.342540+09:00",
+  "fetched_at": "2026-09-03T01:01:50.281331+09:00",
   "security_news": [
+    {
+      "title": "Hackers exploit critical JFrog Artifactory flaw to forge admin tokens",
+      "summary": "A critical authentication bypass vulnerability (CVE-2026-82329) in JFrog Artifactory is being exploited in attacks to create tokens that provide administrative access. [...]",
+      "content": "",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "JFrog Artifactory의 심각한 인증 우회 취약점(CVE-2026-82329)이 관리 액세스를 제공하는 토큰을 생성하는 공격에 악용되고 있습니다. [...]",
+      "summary_3lines": "1. JFrog Artifactory, CVE-2026-82329 취약점 노출\n2. 공격자는 이를 이용해 관리자 토큰 위조\n3. 인증 우회 통한 무단 관리자 접근 가능",
+      "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-jfrog-artifactory-flaw-to-forge-admin-tokens/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-03T00:47:08+09:00",
+      "lang": "en"
+    },
     {
       "title": "23년 활동한 봇넷 사티, 감염기기 1만5000대와 완전 단절…훔친 암호화...",
       "summary": "크로우드스트라이크는 “피해자가 비트코인이나 이더리움 주소를 복사해 결제하면 자금이 다른 곳으로 전달된다”고 설명했다.이는 거래소 해킹이나 스마트컨트랙트 취약점을 노린 공격과는 다르다. 블록체인...",
@@ -2559,6 +2571,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82955 - Eclipse aeriOS KrakenD JWT Validation Security Bypass",
+      "summary": "CVE ID :CVE-2026-82955\n  \nPublished : Sept. 2, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :In the current development version of Eclipse aeriOS, which has not yet had an official release, the KrakenD instance included in the API Gateway component had the disable_jwk_security parameter hard-coded to true, with no option to override it through the Helm chart configuration. This setting disables TLS certificate verification when KrakenD retrieves the JSON Web Key Set (JWKS) used to validate bearer tokens, potentially allowing an attacker with the ability to intercept this communication to provide a malicious JWKS and compromise token validation.\n\n\n\n\nThe issue has been addressed by making the parameter configurable through the boolean Helm value krakend.config.disableJwkSecurity and setting its default value to false, ensuring that TLS certificate verification is enabled by default.\n  \nSeverity: 9.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82955\n  \nPublished : Sept. 2, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :In the current development version of Eclipse aeriOS, which has not yet had an official release, the KrakenD instance included in the API Gateway component had the disable_jwk_security parameter hard-coded to true, with no option to override it through the Helm chart configuration. This setting disables TLS certificate verification when KrakenD retrieves the JSON Web Key Set (JWKS) used to validate bearer tokens, potentially allowing an attacker with the ability to intercept this communication to provide a malicious JWKS and compromise token validation.\n\n\n\n\nThe issue has been addressed by making the parameter configurable through the boolean Helm value krakend.config.disableJwkSecurity and setting its default value to false, ensuring that TLS certificate verification is enabled by default.\n  \nSeverity: 9.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-82955\n2. 26.09.03 오전12:17\n3. In the current development version of Eclipse aeri",
+      "cve_id": "CVE-2026-82955",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82955",
+      "source": "cvefeed",
+      "published": "2026-09-03T00:17:44+09:00",
+      "lang": "en"
+    },
     {
       "title": "Communicating Under Pressure: Best Practices for Service Providers",
       "summary": "Developed by CISA, the Federal Bureau of Investigation, and international partners, this guidance describes how organizations can plan and execute clear, timely, accurate, and audience-appropriate communications during IT and operational technology (OT) outages. Whether caused by cyber threat actors, human error, equipment failure, or natural hazards, service outages can create disruption and societal panic even without speculation from end users and the public as added factors. Outages at one organization may cascade across interconnected systems, increasing uncertainty and alarm. The guidance emphasizes clarity, accountability, and transparency as core principles and details key elements of effective crisis messaging to inform affected stakeholders and the public while aligning with legal requirements, operational security, law enforcement, and containment efforts. \nCISA’s CI Fortify initiative provides information and resources that help critical infrastructure organizations prepare to isolate and recover vital OT systems during a major cyber incident or crisis. Changes in service availability, whether from outages or isolation as a defensive strategy, require transparent and ongoing communication to help end users minimize operational impact, limit speculation, and preserve trust. For emergency planning purposes, critical infrastructure owners and operators should assume that telecommunications services may be disrupted or otherwise unreliable, making it crucial for organizations to have crisis communications plans in place that integrate backup communication methods and understand the type of communication they should expect from their service providers.",
