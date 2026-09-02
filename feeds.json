@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-03T03:01:13.230318+09:00",
+  "fetched_at": "2026-09-03T03:31:29.413707+09:00",
   "security_news": [
     {
       "title": "Hackers exploit critical JFrog Artifactory flaw to forge admin tokens",
@@ -2556,18 +2556,6 @@
       "source": "naver",
       "published": "2026-08-31T04:31:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "서비스나우 AI 에이전트 플랫폼, 인증 없이 뚫리는 CVSS 만점 취약점 3건...",
-      "summary": "이 중 3건은 보안 취약점 위험도를 나타내는 CVSS(Common Vulnerability Scoring System) 점수 만점인 10.0을... 스타트업포춘(startupfortune.com)의 보도에 따르면 보안팀은 ServiceNow 인스턴스 자체만 볼 게 아니라, 플랫폼이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": "이 중 3건은 보안 취약점 위험도를 나타내는 CVSS(Common Vulnerability Scoring System) 점수 만점인 10.0을... 스타트업포춘(startupfortune.com)의 보도에 따르면 보안팀은 ServiceNow 인스턴스 자체만 볼 게 아니라, 플랫폼이...",
-      "summary_3lines": "1. ServiceNow AI 에이전트 플랫폼, CVSS 10.0 만점 취약점 3건 발견.\n2. 인증 없이 플랫폼 뚫릴 수 있는 심각한 보안 허점 노출.\n3. 스타트업포춘, ServiceNow 인스턴스 자체 외 플랫폼도 점검 촉구.",
-      "link": "https://www.wikitree.co.kr/articles/1156069",
-      "source": "naver",
-      "published": "2026-08-31T03:22:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3304,21 +3292,6 @@
       "link": "https://www.exploit-db.com/exploits/52659",
       "source": "exploitdb",
       "published": "2026-08-31T09:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82367 - Re-entrant synchronous publish in AshGraphql subscription batcher delivers one subscriber's records to another's topic",
-      "summary": "CVE ID :CVE-2026-82367\n  \nPublished : Aug. 30, 2026, 6:17 p.m. | 58 minutes ago\n  \nDescription :Exposure of Data Element to Wrong Session vulnerability in ash-project ash_graphql can deliver one subscription's resolved records to a different subscriber's topic.\n\nAshGraphql.Subscription.Batcher.do_send/5 reads the resolved batch from the process dictionary via Process.get(:batch_resolved) and then unconditionally deletes it. That is sound only inside a task the library owns. On the :backpressure_sync and :noproc fallbacks do_send/5 runs inline in the publishing caller's process, so if a resolver inside an outer do_send/5 triggers another synchronous Ash notification, the inner call finds the outer run's value still under :batch_resolved, adopts it as its own result, and publishes it to the inner topic, a different subscription document with a different actor and tenant. It then deletes the key, so the outer run publishes nothing. The key is not namespaced by run, so records cannot be told apart. The fix saves, clears, and restores :batch_resolved around each run.\n\nThis issue affects ash_graphql: from 1.4.0 before 1.11.0.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82367\n  \nPublished : Aug. 30, 2026, 6:17 p.m. | 58 minutes ago\n  \nDescription :Exposure of Data Element to Wrong Session vulnerability in ash-project ash_graphql can deliver one subscription's resolved records to a different subscriber's topic.\n\nAshGraphql.Subscription.Batcher.do_send/5 reads the resolved batch from the process dictionary via Process.get(:batch_resolved) and then unconditionally deletes it. That is sound only inside a task the library owns. On the :backpressure_sync and :noproc fallbacks do_send/5 runs inline in the publishing caller's process, so if a resolver inside an outer do_send/5 triggers another synchronous Ash notification, the inner call finds the outer run's value still under :batch_resolved, adopts it as its own result, and publishes it to the inner topic, a different subscription document with a different actor and tenant. It then deletes the key, so the outer run publishes nothing. The key is not namespaced by run, so records cannot be told apart. The fix saves, clears, and restores :batch_resolved around each run.\n\nThis issue affects ash_graphql: from 1.4.0 before 1.11.0.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-82367 - AshGraphql 구독 배치 처리기의 재진입 동기 게시가 한 구독자의 레코드를 다른 구독자의 주제로 전달합니다.",
-      "summary_ko": "CVE ID:CVE-2026-82367\n  \n게시일 : 2026년 8월 30일 오후 6시 17분 | 58분 전\n  \n설명: ash-project ash_graphql의 잘못된 세션 취약성에 데이터 요소 노출 하나의 구독에서 해결된 레코드를 다른 구독자의 주제로 전달할 수 있습니다.\n\nAshGraphql.Subscription.Batcher.do_send/5는 Process.get(:batch_resolved)을 통해 프로세스 사전에서 해결된 배치를 읽은 다음 무조건 삭제합니다. 그것은 라이브러리가 소유한 태스크 내부에서만 들리는 소리입니다. :backpression_sync 및 :noproc 폴백에서 do_send/5는 게시 호출자의 프로세스에서 인라인으로 실행되므로 외부 do_send/5 내부의 확인자가 또 다른 동기식 Ash 알림을 트리거하는 경우 내부 호출은 여전히 ​​:batch_resolved 아래에 있는 외부 실행 값을 찾아 자체 결과로 채택하고 이를 다른 행위자와 테넌트가 있는 다른 구독 문서인 내부 주제에 게시합니다. 그런 다음 키를 삭제하므로 외부 실행에서는 아무것도 게시하지 않습니다. 키는 실행에 의해 네임스페이스가 지정되지 않으므로 레코드를 구분할 수 없습니다. 수정 사항은 각 실행 시 :batch_resolved를 저장, 지우기 및 복원합니다.\n\n이 문제는 ash_graphql: 1.4.0부터 1.11.0까지 영향을 미칩니다.\n  \n심각도: 2.3 | 낮음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-82367\n2. 26.08.31 오전3:17\n3. Exposure of Data Element to Wrong Session vulnerab",
-      "cve_id": "CVE-2026-82367",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82367",
-      "source": "cvefeed",
-      "published": "2026-08-31T03:17:13+09:00",
       "lang": "en"
     }
   ],
