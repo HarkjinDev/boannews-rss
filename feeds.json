@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-03T22:32:09.515890+09:00",
+  "fetched_at": "2026-09-03T23:02:42.036118+09:00",
   "security_news": [
     {
       "title": "금융위, 2차 망분리 규제 완화 … 사고 책임 해결됐나",
@@ -3118,6 +3118,21 @@
       "lang": "en"
     },
     {
+      "title": "[webapps] Metabase 0.61.0  - Authenticated Remote Code Execution",
+      "summary": "Metabase 0.61.0  - Authenticated Remote Code Execution",
+      "description": "Metabase 0.61.0  - Authenticated Remote Code Execution",
+      "title_ko": "[webapps] 메타베이스 0.61.0 - 인증된 원격 코드 실행",
+      "summary_ko": "메타베이스 0.61.0 - 인증된 원격 코드 실행",
+      "summary_3lines": "1. [webapps] Metabase 0.61.0 - Authenticated Remote C\n2. EXPLOITDB\n3. Metabase 0.61.0 - Authenticated Remote Code Execut",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52680",
+      "source": "exploitdb",
+      "published": "2026-09-03T09:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-84377 - LiteLLM Credential Exposure and Server-Side Request Forgery Vulnerability",
       "summary": "CVE ID :CVE-2026-84377\n  \nPublished : Sept. 2, 2026, 6:21 p.m. | 52 minutes ago\n  \nDescription :LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to versions 1.88.6 and 1.96.2, any authenticated LiteLLM proxy user could redirect an outbound provider call to a destination the user controls and cause the proxy to send its configured provider credentials to that destination. Request validation in litellm/proxy/auth/auth_utils.py, litellm/proxy/common_request_processing.py, litellm/proxy/health_endpoints/_health_endpoints.py, litellm/proxy/image_endpoints/endpoints.py, and litellm/proxy/litellm_pre_call_utils.py used incomplete checks that did not cover every sensitive parameter or inspect equivalent values across nested request fields, path values, and bracket-notation form data. Routing and credential parameters including api_base, base_url, model_list, fallbacks, and litellm_credential_name could therefore be applied without clearing the operator's stored key, exposing upstream provider credentials and other configured secrets and permitting server-side requests to internal services reachable by the proxy. This issue is fixed in versions 1.88.6 and 1.96.2.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-84377\n  \nPublished : Sept. 2, 2026, 6:21 p.m. | 52 minutes ago\n  \nDescription :LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to versions 1.88.6 and 1.96.2, any authenticated LiteLLM proxy user could redirect an outbound provider call to a destination the user controls and cause the proxy to send its configured provider credentials to that destination. Request validation in litellm/proxy/auth/auth_utils.py, litellm/proxy/common_request_processing.py, litellm/proxy/health_endpoints/_health_endpoints.py, litellm/proxy/image_endpoints/endpoints.py, and litellm/proxy/litellm_pre_call_utils.py used incomplete checks that did not cover every sensitive parameter or inspect equivalent values across nested request fields, path values, and bracket-notation form data. Routing and credential parameters including api_base, base_url, model_list, fallbacks, and litellm_credential_name could therefore be applied without clearing the operator's stored key, exposing upstream provider credentials and other configured secrets and permitting server-side requests to internal services reachable by the proxy. This issue is fixed in versions 1.88.6 and 1.96.2.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3746,21 +3761,6 @@
       "source": "cvefeed",
       "published": "2026-08-31T23:17:23+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59134 Remote Desktop Client Remote Code Execution Vulnerability",
-      "summary": "Acknowledgement Updated",
-      "description": "Acknowledgement Updated",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-59134\n2. MSRC\n3. Acknowledgement Updated",
-      "cve_id": "CVE-2026-59134",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59134",
-      "source": "msrc",
-      "published": "2026-08-31T23:00:00+09:00",
-      "lang": "ro"
     }
   ],
   "reputation": []
