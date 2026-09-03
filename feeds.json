@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-03T12:32:21.720316+09:00",
+  "fetched_at": "2026-09-03T13:02:21.880417+09:00",
   "security_news": [
     {
       "title": "팔로알토 CEO “1조 달러 규모 기존 사이버보안, AI 공격 못 막아”",
@@ -2496,33 +2496,24 @@
       "source": "naver",
       "published": "2026-08-31T13:24:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "KISA-한국방송통신전파진흥원, 생성형 AI 활용한 실전형 모의해킹 대회 개최",
-      "summary": "한국인터넷진흥원(KISA)은 국가정보원 지부, 한국방송통신전파진흥원(KCA)과 함께 2026년 8월 31일 전남광주통합특별시 한국방송통신전파진흥원 본원에서 인공지능(AI) 프라이버시 챌린지 경진대회를 개최했다.이번 대회는 KISA와 KCA가 운영하는 실제 개인정보처리시스템을 대상으로 모의해킹을 진행해 보안 취약점을 점검하고, 지역 대학생에게 생성형 AI를 활용한 실전형 사이버보안 경험을 제공하기 위해 마련됐다. 국정원 지부와 양 기관이 기획부터 환경 구축, 운영까지 공동으로 참여했다.대회에는 전남광주통합특별시 소재 대학교 학생들이",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KISA-한국방송통신전파진흥원, 생성형 AI 활용한 실전형 모의해킹 대회 개최 한국인터넷진\n2. 국정원 지부와 양 기관이 기획부터 환경 구축, 운영까지 공동으로 참여했다.대회에는 전남광주",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208270",
-      "source": "dailysecu",
-      "published": "2026-08-31T13:02:01+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "AI가 취약점 탐색...KB국민은행 도입 이어 KISA 모의해킹에도 등장",
-      "summary": "참가 대학생들은 KISA와 KCA가 운영하는 개인정보처리시스템을 대상으로 실제 공격 상황을 가정해 모의해킹을 진행했다. 생성형 AI를 이용해 보안 취약점을 발굴하고 영향도를 분석했다. 기관 보안 담당자는 참가자가...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KISA, 생성형 AI로 개인정보처리시스템 모의해킹\n2. AI, 보안 취약점 탐색·영향도 분석 성공\n3. KB국민은행도 AI 도입, 보안 강화 추세",
-      "link": "https://www.techm.kr/news/articleView.html?idxno=154779",
-      "source": "naver",
-      "published": "2026-08-31T12:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-85030 - HKUDS AI-Trader Business Logic Error",
+      "summary": "CVE ID :CVE-2026-85030\n  \nPublished : Sept. 3, 2026, 2:20 a.m. | 1 hour, 34 minutes ago\n  \nDescription :A vulnerability has been found in HKUDS AI-Trader up to d03ff6c056b32ced735adf7c19ed8175adb1c8df. The affected element is an unknown function of the file service/server/routes_agent.py of the component selfRegister API Endpoint. Such manipulation of the argument initial_balance leads to business logic errors. The attack may be launched remotely. This attack is characterized by high complexity. The exploitability is described as difficult. The exploit has been disclosed to the public and may be used. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. profit_percent_for_display() divides by INITIAL_CAPITAL + deposited, and challenge scoring's return_pct also normalises against the attacker-inflated starting_cash. So an inflated initial_balance does not yield artificial percent returns - it inflates the absolute cash/equity column only, which is a cosmetic/leaderboard-gaming concern in a simulated game.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-85030\n  \nPublished : Sept. 3, 2026, 2:20 a.m. | 1 hour, 34 minutes ago\n  \nDescription :A vulnerability has been found in HKUDS AI-Trader up to d03ff6c056b32ced735adf7c19ed8175adb1c8df. The affected element is an unknown function of the file service/server/routes_agent.py of the component selfRegister API Endpoint. Such manipulation of the argument initial_balance leads to business logic errors. The attack may be launched remotely. This attack is characterized by high complexity. The exploitability is described as difficult. The exploit has been disclosed to the public and may be used. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. profit_percent_for_display() divides by INITIAL_CAPITAL + deposited, and challenge scoring's return_pct also normalises against the attacker-inflated starting_cash. So an inflated initial_balance does not yield artificial percent returns - it inflates the absolute cash/equity column only, which is a cosmetic/leaderboard-gaming concern in a simulated game.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-85030 - HKUDS AI-Trader 비즈니스 로직 오류",
+      "summary_ko": "CVE ID:CVE-2026-85030\n  \n게시일 : 2026년 9월 3일 오전 2시 20분 | 1시간 34분 전\n  \n설명 : HKUDS AI-Trader에서 최대 d03ff6c056b32ced735adf7c19ed8175adb1c8df까지 취약점이 발견되었습니다. 영향을 받는 요소는 selfRegister API 엔드포인트 구성 요소의 service/server/routes_agent.py 파일에 있는 알 수 없는 기능입니다. 이러한initial_balance 인수 조작은 비즈니스 로직 오류를 발생시킵니다. 공격은 원격으로 시작될 수 있습니다. 이 공격은 매우 복잡하다는 특징이 있습니다. 악용 가능성은 어려운 것으로 설명됩니다. 해당 익스플로잇은 대중에게 공개되었으며 사용될 수 있습니다. 이 제품은 롤링 릴리스 기반으로 작동하므로 지속적인 제공이 보장됩니다. 따라서 영향을 받거나 업데이트된 릴리스에 대한 버전 세부 정보가 없습니다. profit_percent_for_display()는 INITIAL_CAPITAL + 예치금으로 나누고, 챌린지 점수의 return_pct도 공격자가 부풀린 start_cash에 대해 정규화합니다. 따라서 부풀려진 초기 잔액은 인위적인 백분율 수익을 산출하지 않습니다. 이는 시뮬레이션된 게임에서 외관상/순위표 게임 문제인 절대 현금/자본 열만 부풀립니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-85030\n2. 26.09.03 오전11:20\n3. A vulnerability has been found in HKUDS AI-Trader ",
+      "cve_id": "CVE-2026-85030",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85030",
+      "source": "cvefeed",
+      "published": "2026-09-03T11:20:42+09:00",
+      "lang": "de"
+    },
     {
       "title": "Honeypot-Omaha and batch.py [Guest Diary], (Wed, Sep 2nd)",
       "summary": "[This is a Guest Diary by Frank Igbokwe, an ISC intern as part of the SANS.edu BACS program]\r",
