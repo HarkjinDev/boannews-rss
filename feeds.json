@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-04T00:02:34.902314+09:00",
+  "fetched_at": "2026-09-04T00:32:18.440023+09:00",
   "security_news": [
     {
       "title": "남다 LiveKey, 개인정보 유출·보이스피싱 시대 '상황 기반 인증' 해법 제...",
@@ -2940,33 +2940,24 @@
       "source": "naver",
       "published": "2026-09-01T06:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "베를린 행정망 해킹…랜섬웨어 조직 '리시다' \"5.79TB 탈취\" 주장, 당국...",
-      "summary": "독일 베를린 정부 행정망에서 발생한 사이버공격으로 실제 데이터가 외부로 유출된 사실이 확인됐다. 랜섬웨어 조직 리시다(Rhysida)는 공격 배후를 자처하며 5.79TB 규모의 데이터를 확보했다고 주장했지만, 베를린 당국은...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 베를린 행정망, 랜섬웨어 '리시다' 5.79TB 탈취 주장\n2. 실제 데이터 유출 확인, 리시다는 배후 자처\n3. 베를린 당국, 유출 사실 인정했으나 주장 수치와는 다를 수 있음",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208287",
-      "source": "naver",
-      "published": "2026-09-01T00:04:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "북한 해커도 노리는 기업망 ‘관문’…“뚫리면 내부 시스템까지 위험...",
-      "summary": "북한 해킹 조직 라자루스의 소프트웨어 개발 서버 취약점 악용 사례를 제시하며 기업 핵심 시스템의 침해 위험을 경고했습니다. 보고서에 따르면 라자루스와 러시아 연계 해킹 조직 APT29는 소프트웨어 개발 도구인...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해커도 노리는 기업망 ‘관문’…“뚫리면 내부 시스템까지 위험...\n2. 북한 해킹 조직 라자루스의 소프트웨어 개발 서버 취약점 악용 사례를 제시하며 기업 핵심 시\n3. 보고서에 따르면 라자루스와 러시아 연계 해킹 조직 APT29는 소프트웨어 개발 도구인...",
-      "link": "https://www.voakorea.com/a/risk-of-dprk-hackers-penetrating-corporate-networks-083126/8192440.html",
-      "source": "naver",
-      "published": "2026-09-01T00:04:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-85230 - MISP Dashboard Button Widget Allows Persistent JavaScript URL Injection",
+      "summary": "CVE ID :CVE-2026-85230\n  \nPublished : Sept. 3, 2026, 2:48 p.m. | 25 minutes ago\n  \nDescription :A persistent unsafe URL injection vulnerability exists in the MISP dashboard ButtonWidget configuration. Dashboard widget URLs were validated only when the widget was rendered and were not validated when the configuration was saved. As a result, an authenticated user able to modify dashboard widget settings could persist arbitrary URL values, including URLs using the javascript: scheme, through either of the dashboard settings persistence paths.\n\nA malicious javascript: URL stored in a dashboard button could potentially result in client-side script execution in the MISP security context if the value reached a rendering or navigation path without the existing runtime validation. Such execution could allow an attacker to perform actions with the privileges of the affected user or access information available to their MISP session.\n\nThe practical exploitability of this issue is reduced by the fact that MISP already applied URL validation at render time, which neutralized known malicious values before they were presented to the user. The vulnerability therefore represents a persistence-layer validation gap and a defense-in-depth weakness rather than evidence of a direct bypass of the existing rendering protection.\n\nThe patch introduces a canonical url schema type and validates dashboard widget configuration before it is persisted through either settings save mechanism. ButtonWidget URLs must now be strings resolving to an absolute path on the current MISP instance or a full URL with the same origin. Values using javascript:, external origins, malformed URL forms, and non-string values are rejected at save time.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-85230\n  \nPublished : Sept. 3, 2026, 2:48 p.m. | 25 minutes ago\n  \nDescription :A persistent unsafe URL injection vulnerability exists in the MISP dashboard ButtonWidget configuration. Dashboard widget URLs were validated only when the widget was rendered and were not validated when the configuration was saved. As a result, an authenticated user able to modify dashboard widget settings could persist arbitrary URL values, including URLs using the javascript: scheme, through either of the dashboard settings persistence paths.\n\nA malicious javascript: URL stored in a dashboard button could potentially result in client-side script execution in the MISP security context if the value reached a rendering or navigation path without the existing runtime validation. Such execution could allow an attacker to perform actions with the privileges of the affected user or access information available to their MISP session.\n\nThe practical exploitability of this issue is reduced by the fact that MISP already applied URL validation at render time, which neutralized known malicious values before they were presented to the user. The vulnerability therefore represents a persistence-layer validation gap and a defense-in-depth weakness rather than evidence of a direct bypass of the existing rendering protection.\n\nThe patch introduces a canonical url schema type and validates dashboard widget configuration before it is persisted through either settings save mechanism. ButtonWidget URLs must now be strings resolving to an absolute path on the current MISP instance or a full URL with the same origin. Values using javascript:, external origins, malformed URL forms, and non-string values are rejected at save time.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-85230 - MISP 대시보드 버튼 위젯으로 지속적인 JavaScript URL 삽입이 허용됨",
+      "summary_ko": "CVE ID:CVE-2026-85230\n  \n게시일 : 2026년 9월 3일 오후 2시 48분 | 25분 전\n  \n설명: MISP 대시보드 ButtonWidget 구성에 지속적이고 안전하지 않은 URL 주입 취약점이 존재합니다. 대시보드 위젯 URL은 위젯이 렌더링될 때만 검증되었으며 구성이 저장될 때는 검증되지 않았습니다. 결과적으로 대시보드 위젯 설정을 수정할 수 있는 인증된 사용자는 대시보드 설정 지속 경로 중 하나를 통해 javascript: 구성표를 사용하는 URL을 포함하여 임의의 URL 값을 유지할 수 있습니다.\n\n대시보드 버튼에 저장된 악성 javascript: URL은 값이 기존 런타임 유효성 검사 없이 렌더링 또는 탐색 경로에 도달하는 경우 잠재적으로 MISP 보안 컨텍스트에서 클라이언트측 스크립트가 실행될 수 있습니다. 이러한 실행을 통해 공격자는 영향을 받은 사용자의 권한으로 작업을 수행하거나 MISP 세션에서 사용할 수 있는 정보에 액세스할 수 있습니다.\n\n이 문제의 실질적인 악용 가능성은 MISP가 이미 렌더링 시 URL 유효성 검사를 적용하여 알려진 악성 값이 사용자에게 표시되기 전에 무력화되었다는 사실로 인해 감소됩니다. 따라서 이 취약점은 기존 렌더링 보호를 직접 우회했다는 증거라기보다는 지속성 계층 유효성 검사 격차와 심층 방어 약점을 나타냅니다.\n\n패치는 정식 URL 스키마 유형을 도입하고 대시보드 위젯 구성이 설정 저장 메커니즘을 통해 지속되기 전에 유효성을 검사합니다. 이제 ButtonWidget URL은 현재 MISP 인스턴스의 절대 경로 또는 동일한 출처의 전체 URL로 확인되는 문자열이어야 합니다. javascript:를 사용하는 값, 외부 출처, 잘못된 URL 형식 및 문자열이 아닌 값은 저장 시 거부됩니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-85230\n2. 26.09.03 오후11:48\n3. A persistent unsafe URL injection vulnerability ex",
+      "cve_id": "CVE-2026-85230",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85230",
+      "source": "cvefeed",
+      "published": "2026-09-03T23:48:41+09:00",
+      "lang": "en"
+    },
     {
       "title": "Preparing for the Post-Quantum Era: A Call to Action",
       "summary": "CISA and the Group of Seven (G7) Cyber Security Working Group released Preparing for the Post-Quantum Era: A Call to Action highlighting the urgent need for organizations and governments to begin transitioning to post-quantum cryptography (PQC) to protect sensitive data, authentication systems, and critical assets from emerging quantum computing threats.  \nThe G7 Cyber Security Working Group’s call to action outlines five priorities for a successful transition to PQC:\n\nRaising awareness of quantum risks and the importance of PQC;\nDeveloping national strategies that support PQC adoption and integration;\nAdvancing research and development for quantum-safe technologies;\nFostering public-private partnerships to share expertise and resources; and\nIntegrating PQC into cybersecurity requirements and procurement processes. \n\n\n\n\nPlease share your thoughts!\n\nWe welcome your feedback.\n\nCISA PRODUCT SURVEY",
@@ -3745,21 +3736,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-14366",
       "source": "cvefeed",
       "published": "2026-09-01T01:47:48+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-78422 - zbus_polkit: polkit authorization bypass via PID reuse due to incorrect D-Bus type for the subject UID",
-      "summary": "CVE ID :CVE-2026-78422\n  \nPublished : Aug. 31, 2026, 3:17 p.m. | 55 minutes ago\n  \nDescription :Subject::new_for_owner() in the zbus_polkit crate encodes the uid entry of a unix-process polkit subject as an unsigned 32-bit integer (D-Bus type u), whereas the org.freedesktop.PolicyKit1.Authority interface specifies a signed 32-bit integer (D-Bus type i). Because of this type mismatch, polkit silently discards the caller-supplied UID and instead determines the subject's owner itself by looking up the PID in /proc, a lookup that is inherently subject to a time-of-check/time-of-use race.\n\nConsequently, an application that passes a UID obtained from a trustworthy source — for example SO_PEERCRED Unix socket peer credentials — in order to defend against PID reuse receives no protection, and the supplied UID has no effect on the authorization decision. A local unprivileged attacker who can cause an authorized process to terminate and then win the race to have their own process assigned the same PID can be authorized under the identity of the terminated process, bypassing the polkit authorization check and performing actions the attacker is not entitled to.\n\nThis issue affects zbus_polkit before 5.1.0.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-78422\n  \nPublished : Aug. 31, 2026, 3:17 p.m. | 55 minutes ago\n  \nDescription :Subject::new_for_owner() in the zbus_polkit crate encodes the uid entry of a unix-process polkit subject as an unsigned 32-bit integer (D-Bus type u), whereas the org.freedesktop.PolicyKit1.Authority interface specifies a signed 32-bit integer (D-Bus type i). Because of this type mismatch, polkit silently discards the caller-supplied UID and instead determines the subject's owner itself by looking up the PID in /proc, a lookup that is inherently subject to a time-of-check/time-of-use race.\n\nConsequently, an application that passes a UID obtained from a trustworthy source — for example SO_PEERCRED Unix socket peer credentials — in order to defend against PID reuse receives no protection, and the supplied UID has no effect on the authorization decision. A local unprivileged attacker who can cause an authorized process to terminate and then win the race to have their own process assigned the same PID can be authorized under the identity of the terminated process, bypassing the polkit authorization check and performing actions the attacker is not entitled to.\n\nThis issue affects zbus_polkit before 5.1.0.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-78422 - zbus_polkit: 주체 UID에 대한 잘못된 D-Bus 유형으로 인해 PID 재사용을 통한 polkit 인증 우회",
-      "summary_ko": "CVE ID:CVE-2026-78422\n  \n게시일 : 2026년 8월 31일 오후 3시 17분 | 55분 전\n  \n설명:Zbus_polkit 크레이트의 :Subject::new_for_owner()는 unix-process polkit 주제의 uid 항목을 부호 없는 32비트 정수(D-Bus 유형 u)로 인코딩하는 반면, org.freedesktop.PolicyKit1.Authority 인터페이스는 부호 있는 32비트 정수(D-Bus 유형 i)를 지정합니다. 이러한 유형 불일치로 인해 polkit은 호출자가 제공한 UID를 자동으로 삭제하고 대신 본질적으로 검사 시간/사용 시간 경쟁의 대상이 되는 조회인 /proc에서 PID를 조회하여 주체 소유자 자체를 결정합니다.\n\n결과적으로 PID 재사용을 방지하기 위해 신뢰할 수 있는 소스(예: SO_PEERCRED Unix 소켓 피어 자격 증명)에서 얻은 UID를 전달하는 애플리케이션은 보호를 받지 못하며 제공된 UID는 인증 결정에 영향을 미치지 않습니다. 승인된 프로세스를 종료시키고 동일한 PID가 할당된 자신의 프로세스를 갖기 위한 경쟁에서 승리할 수 있는 권한 없는 로컬 공격자는 종료된 프로세스의 ID로 승인될 수 있으며, 폴킷 승인 확인을 우회하고 공격자가 권한이 없는 작업을 수행할 수 있습니다.\n\n이 문제는 5.1.0 이전의 zbus_polkit에 영향을 미칩니다.\n  \n심각도: 7.3 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-78422\n2. 26.09.01 오전12:17\n3. Subject::new_for_owner() in the zbus_polkit crate ",
-      "cve_id": "CVE-2026-78422",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78422",
-      "source": "cvefeed",
-      "published": "2026-09-01T00:17:58+09:00",
       "lang": "en"
     }
   ],
