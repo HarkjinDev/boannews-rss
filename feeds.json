@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-04T03:02:26.188345+09:00",
+  "fetched_at": "2026-09-04T03:32:17.333819+09:00",
   "security_news": [
     {
       "title": "Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root",
@@ -3703,36 +3703,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-14368",
       "source": "cvefeed",
       "published": "2026-09-01T03:45:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-79750 - MCPHub authenticated horizontal IDOR: any non-admin user executes tools on other users' MCP servers (cross-tenant file read + SSRF)",
-      "summary": "CVE ID :CVE-2026-79750\n  \nPublished : Aug. 31, 2026, 6:17 p.m. | 33 minutes ago\n  \nDescription :MCPHub is a unified hub for centrally managing and dynamically orchestrating multiple MCP servers/APIs into separate endpoints with flexible routing strategies. Prior to version 1.0.30, MCPHub scopes non-admin users to servers they own (list views and config edits enforce ownership), but the tool-execution API does not. Any authenticated non-admin user can invoke tools on MCP servers owned by other users — servers they cannot even see in GET /api/servers. Because connected MCP servers carry real capability (filesystem, HTTP fetch, cloud APIs with the owner's keys), this is cross-tenant compromise: demonstrated arbitrary host file read (/etc/passwd, another user's secrets) and SSRF. This issue has been patched in version 1.0.30.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-79750\n  \nPublished : Aug. 31, 2026, 6:17 p.m. | 33 minutes ago\n  \nDescription :MCPHub is a unified hub for centrally managing and dynamically orchestrating multiple MCP servers/APIs into separate endpoints with flexible routing strategies. Prior to version 1.0.30, MCPHub scopes non-admin users to servers they own (list views and config edits enforce ownership), but the tool-execution API does not. Any authenticated non-admin user can invoke tools on MCP servers owned by other users — servers they cannot even see in GET /api/servers. Because connected MCP servers carry real capability (filesystem, HTTP fetch, cloud APIs with the owner's keys), this is cross-tenant compromise: demonstrated arbitrary host file read (/etc/passwd, another user's secrets) and SSRF. This issue has been patched in version 1.0.30.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-79750 - MCPHub 인증 수평 IDOR: 관리자가 아닌 모든 사용자가 다른 사용자의 MCP 서버에서 도구를 실행합니다(교차 테넌트 파일 읽기 + SSRF).",
-      "summary_ko": "CVE ID:CVE-2026-79750\n  \n게시일 : 2026년 8월 31일 오후 6시 17분 | 33분 전\n  \n설명 :MCPHub는 유연한 라우팅 전략을 통해 여러 MCP 서버/API를 중앙에서 관리하고 동적으로 조정하여 별도의 엔드포인트로 만들기 위한 통합 허브입니다. 버전 1.0.30 이전에는 MCPHub에서 관리자가 아닌 사용자의 범위를 자신이 소유한 서버로 지정했지만(목록 보기 및 구성 편집 시 소유권 적용) 도구 실행 API는 그렇지 않습니다. 관리자가 아닌 인증된 사용자는 다른 사용자가 소유한 MCP 서버(GET /api/servers에서도 볼 수 없는 서버)에서 도구를 호출할 수 있습니다. 연결된 MCP 서버는 실제 기능(파일 시스템, HTTP 가져오기, 소유자 키가 있는 클라우드 API)을 전달하므로 이는 테넌트 간 손상입니다. 즉, 임의 호스트 파일 읽기(/etc/passwd, 다른 사용자의 비밀) 및 SSRF를 보여줍니다. 이 문제는 버전 1.0.30에서 패치되었습니다.\n  \n심각도: 7.7 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-79750\n2. 26.09.01 오전3:17\n3. MCPHub is a unified hub for centrally managing and",
-      "cve_id": "CVE-2026-79750",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-79750",
-      "source": "cvefeed",
-      "published": "2026-09-01T03:17:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-19953 - URI versions before 5.36 for Perl encode non-NFC host names to non-standard punycode labels via missing normalization in nameprep",
-      "summary": "CVE ID :CVE-2026-19953\n  \nPublished : Aug. 31, 2026, 6:17 p.m. | 33 minutes ago\n  \nDescription :URI versions before 5.36 for Perl encode non-NFC host names to non-standard punycode labels via missing normalization in nameprep.\n\nnameprep lowercases each host label but performs no Unicode normalization. IDNA requires a label to be normalized to Form C before it is encoded (RFC 5891), so a label that is not already in NFC is encoded to a different A-label than its normalized form. A label built from the precomposed Devanagari sequence U+0958 U+093E encodes to xn--72b5c without normalization but to xn--11b2fg after NFC normalization, and xn--72b5c does not round-trip back to the original label.\n\nAny caller that reads host() from a URI built from untrusted input and uses it for a security decision (an allow or deny list, an SSRF filter, deduplication, a cache key) sees the non-standard label, while a client that fetches the same URL resolves the NFC form, so the check and the fetch can disagree about the host.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-19953\n  \nPublished : Aug. 31, 2026, 6:17 p.m. | 33 minutes ago\n  \nDescription :URI versions before 5.36 for Perl encode non-NFC host names to non-standard punycode labels via missing normalization in nameprep.\n\nnameprep lowercases each host label but performs no Unicode normalization. IDNA requires a label to be normalized to Form C before it is encoded (RFC 5891), so a label that is not already in NFC is encoded to a different A-label than its normalized form. A label built from the precomposed Devanagari sequence U+0958 U+093E encodes to xn--72b5c without normalization but to xn--11b2fg after NFC normalization, and xn--72b5c does not round-trip back to the original label.\n\nAny caller that reads host() from a URI built from untrusted input and uses it for a security decision (an allow or deny list, an SSRF filter, deduplication, a cache key) sees the non-standard label, while a client that fetches the same URL resolves the NFC form, so the check and the fetch can disagree about the host.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-19953 - Perl의 5.36 이전 URI 버전은 nameprep의 정규화가 누락되어 비NFC 호스트 이름을 비표준 퓨니코드 레이블로 인코딩합니다.",
-      "summary_ko": "CVE ID:CVE-2026-19953\n  \n게시일 : 2026년 8월 31일 오후 6시 17분 | 33분 전\n  \n설명 : Perl용 5.36 이전의 URI 버전은 nameprep의 정규화가 누락되어 NFC가 아닌 호스트 이름을 비표준 퓨니코드 레이블로 인코딩합니다.\n\nnameprep은 각 호스트 레이블을 소문자로 나타내지만 유니코드 정규화는 수행하지 않습니다. IDNA에서는 레이블을 인코딩하기 전에 형식 C로 정규화해야 하므로(RFC 5891) 아직 NFC에 없는 레이블은 정규화된 형식과 다른 A 레이블로 인코딩됩니다. 사전 구성된 데바나가리 시퀀스 U+0958 U+093E에서 구축된 레이블은 정규화 없이 xn--72b5c로 인코딩되지만 NFC 정규화 후에는 xn--11b2fg로 인코딩되며 xn--72b5c는 원래 레이블로 다시 왕복되지 않습니다.\n\n신뢰할 수 없는 입력에서 작성된 URI에서 호스트()를 읽고 이를 보안 결정(허용 또는 거부 목록, SSRF 필터, 중복 제거, 캐시 키)에 사용하는 모든 호출자는 비표준 레이블을 보는 반면, 동일한 URL을 가져오는 클라이언트는 NFC 양식을 확인하므로 검사와 가져오기가 호스트에 대해 동의하지 않을 수 있습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-19953\n2. 26.09.01 오전3:17\n3. URI versions before 5.36 for Perl encode non-NFC h",
-      "cve_id": "CVE-2026-19953",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-19953",
-      "source": "cvefeed",
-      "published": "2026-09-01T03:17:14+09:00",
       "lang": "en"
     }
   ],
