@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-04T07:02:49.263530+09:00",
+  "fetched_at": "2026-09-04T07:32:27.219866+09:00",
   "security_news": [
+    {
+      "title": "9월 4일 굿모닝 MBN 주요뉴스",
+      "summary": "▶ 티빙 계정 3900만 개 유출…탈퇴 회원도 털렸다 티빙에서 해킹으로 유출된 계정이 3900만 개가 넘는 것으로 확인됐습니다. 탈퇴한 회원의 정보까지 모두 다 털렸습니다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 티빙 계정 3900만 개 유출\n2. 해킹으로 탈퇴 회원 정보까지 유출\n3. 3900만 명 이상 개인 정보 노출",
+      "link": "https://n.news.naver.com/mnews/article/057/0001967214?sid=102",
+      "source": "naver",
+      "published": "2026-09-04T07:09:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[천지일보 이슈종합] 네팔 홍수·공공기관 통합 이전·김승원 논란·티빙...",
+      "summary": "티빙은 3일 서울 중구 코리아나호텔에서 사이버 침해사고 관련 공식 설명회를 개최해 해킹·피싱 안심보험과 현금성 포인트 등을 골자로 한 보상 패키지를 발표하는 한편 향후 5년간 보안 투자를 4배로 확대하고 제로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [천지일보 이슈종합] 네팔 홍수·공공기관 통합 이전·김승원 논란·티빙...\n2. 티빙은 3일 서울 중구 코리아나호텔에서 사이버 침해사고 관련 공식 설명회를 개최해 해킹·피",
+      "link": "https://www.newscj.com/news/articleView.html?idxno=3430024",
+      "source": "naver",
+      "published": "2026-09-04T07:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "금융권, '망분리' 장벽 낮추고 AI 경쟁 본격화…제2금융권도 가세",
       "summary": "망분리는 금융회사 내부 업무망과 외부 인터넷망을 분리해 해킹과 정보유출을 차단하는 제도로 2013년 본격... 외부 AI와 금융회사 시스템의 접점이 늘어날수록 고객정보 유출과 해킹 등 새로운 위험도 커질 수 있다....",
@@ -2964,18 +2988,6 @@
       "source": "naver",
       "published": "2026-09-01T08:20:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[기자수첩] 유출된 건 개인정보만이 아니다",
-      "summary": "하지만 '해킹 수법이 고도화됐다'는 말이 기업의 면죄부가 될 수는 없다. 소비자에게 중요한 것은 결국 '내 정보가 빠져나갔다'는 사실이다. \"심려를 끼쳐 죄송하다\", \"재발 방지에 최선을 다하겠다\"는 문장은 이제 너무...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. (주요 사건/공격 대상 + 구체적 수치나 고유명사)\n2. (공격 방식/유출 내용 + 구체적 사실)\n3. (영향 범위/조치 사항 + 구체적 사실)",
-      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1722396",
-      "source": "naver",
-      "published": "2026-09-01T07:26:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3667,36 +3679,6 @@
       "link": "https://www.exploit-db.com/exploits/52668",
       "source": "exploitdb",
       "published": "2026-09-01T09:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82397 - Tornado: Urlencoded body parsing omits max_num_fields, so one request can stall the event loop",
-      "summary": "CVE ID :CVE-2026-82397\n  \nPublished : Aug. 31, 2026, 10:17 p.m. | 1 hour, 57 minutes ago\n  \nDescription :Tornado is a Python web framework and asynchronous networking library. Prior to 6.5.8, Tornado parses application/x-www-form-urlencoded request bodies with urllib.parse.parse_qs in tornado/escape.py without passing max_num_fields. RequestHandler._execute in tornado/web.py parses the body before handler dispatch through HTTPServerRequest._parse_body and parse_body_arguments in tornado/httputil.py, so an unauthenticated request body containing millions of separator-delimited fields can synchronously stall the single-threaded event loop and delay every connection. The body is bounded only by max_buffer_size, which defaults to 104857600 bytes. This issue is fixed in version 6.5.8.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82397\n  \nPublished : Aug. 31, 2026, 10:17 p.m. | 1 hour, 57 minutes ago\n  \nDescription :Tornado is a Python web framework and asynchronous networking library. Prior to 6.5.8, Tornado parses application/x-www-form-urlencoded request bodies with urllib.parse.parse_qs in tornado/escape.py without passing max_num_fields. RequestHandler._execute in tornado/web.py parses the body before handler dispatch through HTTPServerRequest._parse_body and parse_body_arguments in tornado/httputil.py, so an unauthenticated request body containing millions of separator-delimited fields can synchronously stall the single-threaded event loop and delay every connection. The body is bounded only by max_buffer_size, which defaults to 104857600 bytes. This issue is fixed in version 6.5.8.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-82397 - Tornado: Urlencoded 본문 구문 분석에서 max_num_fields가 생략되어 한 번의 요청으로 이벤트 루프가 중단될 수 있습니다.",
-      "summary_ko": "CVE ID:CVE-2026-82397\n  \n게시일 : 2026년 8월 31일 오후 10시 17분 | 1시간 57분 전\n  \n설명 : Tornado는 Python 웹 프레임워크이자 비동기 네트워킹 라이브러리입니다. 6.5.8 이전에 Tornado는 max_num_fields를 전달하지 않고 tornado/escape.py의 urllib.parse.parse_qs를 사용하여 application/x-www-form-urlencoded 요청 본문을 구문 분석합니다. tornado/web.py의 RequestHandler._execute는 tornado/httputil.py의 HTTPServerRequest._parse_body 및parse_body_arguments를 통해 핸들러 디스패치 전에 본문을 구문 분석하므로 구분 기호로 구분된 수백만 개의 필드를 포함하는 인증되지 않은 요청 본문은 단일 스레드 이벤트 루프를 동기적으로 지연시키고 모든 연결을 지연시킬 수 있습니다. 본문은 max_buffer_size로만 제한되며 기본값은 104857600바이트입니다. 이 문제는 버전 6.5.8에서 해결되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-82397\n2. 26.09.01 오전7:17\n3. Tornado is a Python web framework and asynchronous",
-      "cve_id": "CVE-2026-82397",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82397",
-      "source": "cvefeed",
-      "published": "2026-09-01T07:17:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82393 - pnpm: A tarball dependency's manifest `name` escapes node_modules → arbitrary file write/overwrite on install",
-      "summary": "CVE ID :CVE-2026-82393\n  \nPublished : Aug. 31, 2026, 10:17 p.m. | 32 minutes ago\n  \nDescription :pnpm is a package manager. Prior to 10.34.5 and 11.11.0, pnpm accepts a scoped path traversal in a tarball dependency's package.json manifest name because pnpm11/resolving/npm-resolver/src/pickPackage.ts rejects slash characters only for unscoped names. During pnpm install, the unvalidated name reaches raw path joins in pnpm11/installing/deps-resolver/src/resolvePeers.ts, pnpm11/installing/deps-resolver/src/index.ts, and pnpm11/deps/graph-builder/src/lockfileToDepGraph.ts, causing package extraction outside node_modules and allowing attacker-controlled files to overwrite arbitrary filesystem paths even when --ignore-scripts is used. The overwrite can replace shell startup files, Git hooks, or installed package code and lead to code execution. This issue is fixed in versions 10.34.5, and 11.11.0.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82393\n  \nPublished : Aug. 31, 2026, 10:17 p.m. | 32 minutes ago\n  \nDescription :pnpm is a package manager. Prior to 10.34.5 and 11.11.0, pnpm accepts a scoped path traversal in a tarball dependency's package.json manifest name because pnpm11/resolving/npm-resolver/src/pickPackage.ts rejects slash characters only for unscoped names. During pnpm install, the unvalidated name reaches raw path joins in pnpm11/installing/deps-resolver/src/resolvePeers.ts, pnpm11/installing/deps-resolver/src/index.ts, and pnpm11/deps/graph-builder/src/lockfileToDepGraph.ts, causing package extraction outside node_modules and allowing attacker-controlled files to overwrite arbitrary filesystem paths even when --ignore-scripts is used. The overwrite can replace shell startup files, Git hooks, or installed package code and lead to code execution. This issue is fixed in versions 10.34.5, and 11.11.0.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-82393 - pnpm: tarball 종속성 매니페스트 `name`이 node_modules를 이스케이프합니다. → 설치 시 임의 파일 쓰기/덮어쓰기",
-      "summary_ko": "CVE ID:CVE-2026-82393\n  \n게시일 : 2026년 8월 31일 오후 10시 17분 | 32분 전\n  \n설명 :pnpm은 패키지 관리자입니다. 10.34.5 및 11.11.0 이전에는 pnpm11/resolving/npm-resolver/src/pickPackage.ts가 범위가 지정되지 않은 이름에 대해서만 슬래시 문자를 거부하기 때문에 pnpm은 tarball 종속성의 package.json 매니페스트 이름에서 범위가 지정된 경로 탐색을 허용합니다. pnpm 설치 중에 검증되지 않은 이름이 pnpm11/installing/deps-resolver/src/resolvePeers.ts, pnpm11/installing/deps-resolver/src/index.ts 및 pnpm11/deps/graph-builder/src/lockfileToDepGraph.ts의 원시 경로 조인에 도달하여 node_modules 외부에서 패키지 추출이 발생하고 공격자가 제어하는 파일이 --ignore-scripts가 사용되는 경우에도 임의의 파일 시스템 경로를 덮어씁니다. 덮어쓰기는 셸 시작 파일, Git 후크 또는 설치된 패키지 코드를 대체하고 코드 실행으로 이어질 수 있습니다. 이 문제는 버전 10.34.5 및 11.11.0에서 해결되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-82393\n2. 26.09.01 오전7:17\n3. pnpm is a package manager. Prior to 10.34.5 and 11",
-      "cve_id": "CVE-2026-82393",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82393",
-      "source": "cvefeed",
-      "published": "2026-09-01T07:17:22+09:00",
       "lang": "en"
     }
   ],
