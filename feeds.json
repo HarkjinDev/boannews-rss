@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-04T03:32:17.333819+09:00",
+  "fetched_at": "2026-09-04T04:03:32.684980+09:00",
   "security_news": [
+    {
+      "title": "[오늘의 경제뉴스] AI 해킹 시대, 금융사 보안은 '병목'…취약점 찾고도...",
+      "summary": "금융회사들이 조직 병목 해소에 어려움을 겪고 있는 사이 AI의 해킹 위험은 점점 높아지고 있다. 지난 4월... 결국 FCA의 경고는 AI 해킹 등 외부 공격 위험이 커지는 상황에서 금융회사들이 보안 대응 조직의 재정비에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융사, AI 해킹 대비 조직 정비에 어려움 겪어\n2. AI 기술 악용 시 금융 시스템 취약점 노출 우려\n3. FCA, 금융사 보안 조직 재정비 경고",
+      "link": "https://www.newsverse.kr/news/articleView.html?idxno=11360",
+      "source": "naver",
+      "published": "2026-09-04T03:32:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root",
       "summary": "Cisco has released patches to address a critical security flaw affecting 10 Silicon One-based Nexus 9000 switches that could allow an unauthenticated, remote attacker to execute code as root, alongside an IOS XR hardening release bundling 7 umbrella CVEs, 2 of which are rated 9.8, with no workaround for any IOS XR version.\n\nThe Nexus vulnerability, tracked as CVE-2026-20212 (CVSS score: 9.8), is",
@@ -3688,21 +3700,6 @@
       "link": "https://isc.sans.edu/diary/rss/33298",
       "source": "sans_isc",
       "published": "2026-09-01T05:00:34+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-14368 - Off-by-one out-of-bounds NUL write in Zephyr LwM2M JSON string parser",
-      "summary": "CVE ID :CVE-2026-14368\n  \nPublished : Aug. 31, 2026, 6:45 p.m. | 31 minutes ago\n  \nDescription :The LwM2M JSON content formatter's get_string() in subsys/net/lib/lwm2m/lwm2m_rw_json.c copies a parsed JSON string into a caller-supplied buffer and NUL-terminates it. The length guard used if (string_length > buflen), which accepts a string whose length is exactly buflen. After memcpy() fills the whole buffer, buf[string_length] = '\\0' then writes one byte past the end of the buffer (CWE-787).\n\nThe string value and its length are taken directly from the incoming CoAP payload during a LwM2M WRITE: do_write_op_json() parses the payload obtained from coap_packet_get_payload(), and get_string() is invoked from lwm2m_write_handler() (engine_get_string() in subsys/net/lib/lwm2m/lwm2m_message_handling.c) for a LWM2M_RES_TYPE_STRING resource. The destination buf/buflen is either the resource instance's fixed data buffer (res_inst->data_ptr/max_data_len) or the engine validation buffer (msg->ctx->validate_buf). A LwM2M server (the client's DTLS peer) can therefore write a string resource with a value whose length equals the target buffer size and force a one-byte overflow.\n\nThe overflow is a single out-of-bounds write of the constant byte 0x00 immediately past the resource or validation buffer, corrupting the adjacent byte in memory. It is not an information leak and the written value is fixed, so it is not a direct code-execution primitive, but it can corrupt adjacent state (an adjacent resource value, a length/flag field, or a struct field) and cause data corruption or a crash. Triggering the write is deterministic; the resulting impact depends on memory layout.\n\nThe fix changes the guard to string_length >= buflen, rejecting the exact-length case and aligning the JSON formatter with the other content formatters (lwm2m_rw_plain_text.c, lwm2m_rw_oma_tlv.c, lwm2m_rw_senml_json.c, lwm2m_rw_cbor.c, lwm2m_rw_senml_cbor.c), which already used the correct boundary check.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-14368\n  \nPublished : Aug. 31, 2026, 6:45 p.m. | 31 minutes ago\n  \nDescription :The LwM2M JSON content formatter's get_string() in subsys/net/lib/lwm2m/lwm2m_rw_json.c copies a parsed JSON string into a caller-supplied buffer and NUL-terminates it. The length guard used if (string_length > buflen), which accepts a string whose length is exactly buflen. After memcpy() fills the whole buffer, buf[string_length] = '\\0' then writes one byte past the end of the buffer (CWE-787).\n\nThe string value and its length are taken directly from the incoming CoAP payload during a LwM2M WRITE: do_write_op_json() parses the payload obtained from coap_packet_get_payload(), and get_string() is invoked from lwm2m_write_handler() (engine_get_string() in subsys/net/lib/lwm2m/lwm2m_message_handling.c) for a LWM2M_RES_TYPE_STRING resource. The destination buf/buflen is either the resource instance's fixed data buffer (res_inst->data_ptr/max_data_len) or the engine validation buffer (msg->ctx->validate_buf). A LwM2M server (the client's DTLS peer) can therefore write a string resource with a value whose length equals the target buffer size and force a one-byte overflow.\n\nThe overflow is a single out-of-bounds write of the constant byte 0x00 immediately past the resource or validation buffer, corrupting the adjacent byte in memory. It is not an information leak and the written value is fixed, so it is not a direct code-execution primitive, but it can corrupt adjacent state (an adjacent resource value, a length/flag field, or a struct field) and cause data corruption or a crash. Triggering the write is deterministic; the resulting impact depends on memory layout.\n\nThe fix changes the guard to string_length >= buflen, rejecting the exact-length case and aligning the JSON formatter with the other content formatters (lwm2m_rw_plain_text.c, lwm2m_rw_oma_tlv.c, lwm2m_rw_senml_json.c, lwm2m_rw_cbor.c, lwm2m_rw_senml_cbor.c), which already used the correct boundary check.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-14368 - Zephyr LwM2M JSON 문자열 구문 분석기에서 Off-by-one out-of-bound NUL 쓰기",
-      "summary_ko": "CVE ID:CVE-2026-14368\n  \n게시일 : 2026년 8월 31일 오후 6시 45분 | 31분 전\n  \n설명: subsys/net/lib/lwm2m/lwm2m_rw_json.c에 있는 LwM2M JSON 콘텐츠 포맷터의 get_string()은 구문 분석된 JSON 문자열을 호출자 제공 버퍼에 복사하고 NUL로 종료합니다. 길이가 정확히 buflen인 문자열을 허용하는 if(string_length > buflen)에 사용되는 길이 가드입니다. memcpy()가 전체 버퍼를 채운 후 buf[string_length] = '\\0'은 버퍼 끝을 지나 1바이트를 씁니다(CWE-787).\n\n문자열 값과 해당 길이는 LwM2M WRITE 중에 수신 CoAP 페이로드에서 직접 가져옵니다. do_write_op_json()은 coap_packet_get_payload()에서 얻은 페이로드를 구문 분석하고 get_string()은 lwm2m_write_handler()(subsys/net/lib/lwm2m/lwm2m_message_handling.c의engine_get_string())에서 호출됩니다. LWM2M_RES_TYPE_STRING 리소스. 대상 buf/buflen은 리소스 인스턴스의 고정 데이터 버퍼(res_inst->data_ptr/max_data_len) 또는 엔진 유효성 검사 버퍼(msg->ctx->validate_buf)입니다. 따라서 LwM2M 서버(클라이언트의 DTLS 피어)는 길이가 대상 버퍼 크기와 동일한 값으로 문자열 리소스를 작성하고 1바이트 오버플로를 강제할 수 있습니다.\n\n오버플로는 리소스 또는 유효성 검사 버퍼를 바로 지나 상수 바이트 0x00의 범위를 벗어난 단일 쓰기로, 메모리의 인접한 바이트를 손상시킵니다. 정보 유출이 아니며 쓰여진 값이 고정되어 있어 직접적인 코드 실행 프리미티브는 아니지만 인접 상태(인접 리소스 값, 길이/플래그 필드 또는 구조체 필드)를 손상시켜 데이터 손상이나 충돌을 일으킬 수 있습니다. 쓰기 트리거는 결정적입니다. 결과적인 영향은 메모리 레이아웃에 따라 달라집니다.\n\n수정 사항은 가드를 string_length >= buflen으로 변경하여 정확한 길이 대소문자를 거부하고 JSON 포맷터를 다른 콘텐츠 포맷터(lwm2m_rw_plain_text.c, lwm2m_rw_oma_tlv.c, lwm2m_rw_senml_json.c, lwm2m_rw_cbor.c, lwm2m_rw_senml_cbor.c)와 정렬합니다. 이미 올바른 경계 검사를 사용했습니다.\n  \n심각도: 5.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-14368\n2. 26.09.01 오전3:45\n3. The LwM2M JSON content formatter's get_string() in",
-      "cve_id": "CVE-2026-14368",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-14368",
-      "source": "cvefeed",
-      "published": "2026-09-01T03:45:07+09:00",
       "lang": "en"
     }
   ],
