@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-05T04:01:11.927749+09:00",
+  "fetched_at": "2026-09-05T04:31:04.866553+09:00",
   "security_news": [
     {
       "title": "[오늘의 채널A]외화벌이 北 IT 노동자 실태 조명",
@@ -3036,21 +3036,39 @@
       "source": "darkreading",
       "published": "2026-09-02T05:48:52+09:00",
       "lang": "en"
-    },
-    {
-      "title": "앤스로픽, 클로드 페이블 5.1 공개…\"가격 25% 인하\"",
-      "summary": "사이버보안 영역에서는 무해한 요청을 차단하는 비율이 이전보다 60% 줄었다. 페이블 5.1로 소프트웨어 취약점을 찾는 작업이 가능해졌기 때문이다. 다만 취약점을 공격하는 코드를 만들거나 침투 테스트를 하는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 앤트로픽, 클로드 페이블 5.1 공개\n2. 무해 요청 차단율 60% 감소, 취약점 탐색 가능\n3. 악성 코드 생성 및 침투 테스트 가능",
-      "link": "https://www.newspim.com/news/view/20260902000047",
-      "source": "naver",
-      "published": "2026-09-02T04:23:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-85769 - Libtpms: libtpms: heap out-of-bounds read in tpm2 state unmarshalling via unchecked block_skip_read() blocksize",
+      "summary": "CVE ID :CVE-2026-85769\n  \nPublished : Sept. 4, 2026, 6:18 p.m. | 24 minutes ago\n  \nDescription :A flaw was found in libtpms, a library that provides software TPM 2.0 emulation. When restoring TPM 2.0 state (for example during a virtual machine's power-on or state/migration restore), a malformed state blob can supply an oversized skip-block length that is not validated against the remaining size of the input buffer. This can drive an internal size counter negative, which bypasses a subsequent bounds check due to an unsafe signed-to-unsigned conversion, causing the parser to read memory outside the bounds of the heap buffer holding the state data. Successful exploitation can crash the process hosting libtpms (such as swtpm), resulting in a denial of service of the emulated TPM device and the virtual machine that depends on it. No data corruption or information disclosure was confirmed.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-85769\n  \nPublished : Sept. 4, 2026, 6:18 p.m. | 24 minutes ago\n  \nDescription :A flaw was found in libtpms, a library that provides software TPM 2.0 emulation. When restoring TPM 2.0 state (for example during a virtual machine's power-on or state/migration restore), a malformed state blob can supply an oversized skip-block length that is not validated against the remaining size of the input buffer. This can drive an internal size counter negative, which bypasses a subsequent bounds check due to an unsafe signed-to-unsigned conversion, causing the parser to read memory outside the bounds of the heap buffer holding the state data. Successful exploitation can crash the process hosting libtpms (such as swtpm), resulting in a denial of service of the emulated TPM device and the virtual machine that depends on it. No data corruption or information disclosure was confirmed.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-85769 - Libtpms: libtpms: tpm2 상태에서 범위를 벗어난 힙 읽기가 확인되지 않은 block_skip_read() 블록 크기를 통해 언마샬링됨",
+      "summary_ko": "CVE ID:CVE-2026-85769\n  \n게시일 : 2026년 9월 4일 오후 6시 18분 | 24분 전\n  \n설명 : 소프트웨어 TPM 2.0 에뮬레이션을 제공하는 라이브러리인 libtpms에서 결함이 발견되었습니다. TPM 2.0 상태를 복원할 때(예: 가상 머신의 전원 켜기 또는 상태/마이그레이션 복원 중) 잘못된 상태 Blob은 입력 버퍼의 나머지 크기에 대해 유효성이 검사되지 않는 과도한 건너뛰기 블록 길이를 제공할 수 있습니다. 이로 인해 내부 크기 카운터가 부정화되어 안전하지 않은 부호-비부호 변환으로 인해 후속 경계 검사를 우회하여 파서가 상태 데이터를 보유하는 힙 버퍼 경계 외부의 메모리를 읽게 될 수 있습니다. 악용에 성공하면 libtpms(예: swtpm)를 호스팅하는 프로세스가 중단되어 에뮬레이트된 TPM 장치 및 이에 의존하는 가상 머신의 서비스가 거부될 수 있습니다. 데이터 손상이나 정보 유출은 확인되지 않았습니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-85769\n2. 26.09.05 오전3:18\n3. A flaw was found in libtpms, a library that provid",
+      "cve_id": "CVE-2026-85769",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85769",
+      "source": "cvefeed",
+      "published": "2026-09-05T03:18:07+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-80899 - erofs: remove fscache backend entirely",
+      "summary": "CVE ID :CVE-2026-80899\n  \nPublished : Sept. 4, 2026, 6:17 p.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nerofs: remove fscache backend entirely\n\nEROFS over fscache was introduced to provide image lazy pulling\nfunctionality. After the feature landed, the fscache subsystem made\nnetfs a new hard dependency, which is unexpected for a local filesystem\nand has an kernel-defined caching hierarchy which could be inflexible\ncompared to the fanotify pre-content hooks. Therefore, this feature has\nbeen deprecated for almost two years.\n\nAs EROFS file-backed mounts and fanotify pre-content hooks both upstream\nfor a while and already providing equivalent functionality (erofs-utils\nhas supported fanotify pre-content hooks), let's remove the fscache\nbackend now.\n\nThe main application of this feature is Nydus [1], and they plan to move\nto use fanotify pre-content hooks in the near future too.\n\nI hope this patch can be merged into Linux 7.2, which is also motivated\nby newly found implementation issues [2][3] that are not worth\ninvestigating given the deprecation and limited development resources.\nThe associated fscache/cachefiles cleanup patch will follow separately\nthrough the vfs tree (netfs) later: it seems fine since the codebase is\nisolated by CONFIG_CACHEFILES_ONDEMAND.\n\n[1] https://github.com/dragonflyoss/nydus/blob/v2.1.0/docs/nydus-fscache.md\n[2] https://github.com/dragonflyoss/nydus/pull/1824\n[3] https://lore.kernel.org/r/20260619135800.1594811-1-michael.bommarito@gmail.com\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-80899\n  \nPublished : Sept. 4, 2026, 6:17 p.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nerofs: remove fscache backend entirely\n\nEROFS over fscache was introduced to provide image lazy pulling\nfunctionality. After the feature landed, the fscache subsystem made\nnetfs a new hard dependency, which is unexpected for a local filesystem\nand has an kernel-defined caching hierarchy which could be inflexible\ncompared to the fanotify pre-content hooks. Therefore, this feature has\nbeen deprecated for almost two years.\n\nAs EROFS file-backed mounts and fanotify pre-content hooks both upstream\nfor a while and already providing equivalent functionality (erofs-utils\nhas supported fanotify pre-content hooks), let's remove the fscache\nbackend now.\n\nThe main application of this feature is Nydus [1], and they plan to move\nto use fanotify pre-content hooks in the near future too.\n\nI hope this patch can be merged into Linux 7.2, which is also motivated\nby newly found implementation issues [2][3] that are not worth\ninvestigating given the deprecation and limited development resources.\nThe associated fscache/cachefiles cleanup patch will follow separately\nthrough the vfs tree (netfs) later: it seems fine since the codebase is\nisolated by CONFIG_CACHEFILES_ONDEMAND.\n\n[1] https://github.com/dragonflyoss/nydus/blob/v2.1.0/docs/nydus-fscache.md\n[2] https://github.com/dragonflyoss/nydus/pull/1824\n[3] https://lore.kernel.org/r/20260619135800.1594811-1-michael.bommarito@gmail.com\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-80899\n2. 26.09.05 오전3:17\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-80899",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80899",
+      "source": "cvefeed",
+      "published": "2026-09-05T03:17:58+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-80886 - serial: msm: Disable DMA for kernel console UART",
       "summary": "CVE ID :CVE-2026-80886\n  \nPublished : Sept. 4, 2026, 4:49 p.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nserial: msm: Disable DMA for kernel console UART\n\nAt the moment, concurrent writes from userspace and the kernel to the\nconsole can trigger a race condition that results in an infinite loop of\nthe same messages printed over and over again. This is most likely to\nhappen during system startup or shutdown when the init system starts/stops\na large number of system services that interact with various kernel code.\n\nWhen userspace writes to the TTY device, the driver initiates an\nasynchronous DMA transfer and releases the port lock. At the same moment,\nthe kernel printk path might grab the port lock and re-configure the UART\ncontroller for PIO, without waiting for the DMA operation to complete. It\nseems like this collision results in zero progress being reported for the\nDMA engine, so the same text is printed to the console over and over again.\n\nFor the kernel console, we want a reliable output path that will be\nfunctional even during crashes etc. So rather than implementing complex\ncode to synchronize the kernel console write routines with the userspace\nDMA write routines, simply disable DMA for the console UART instance.\n\nSimilar checks exist in many other serial drivers, e.g. 8250_port.c,\nimx.c, sh-sci.c etc.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3889,21 +3907,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-84365",
       "source": "cvefeed",
       "published": "2026-09-02T06:18:47+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-84308 - phpseclib — non-constant-time X25519 scalar multiplication permits full private-key recovery",
-      "summary": "CVE ID :CVE-2026-84308\n  \nPublished : Sept. 1, 2026, 7:28 p.m. | 16 minutes ago\n  \nDescription :phpseclib is a PHP secure communications library. Prior to 3.0.57 and 4.0.1, pure-PHP X25519 scalar multiplication in phpseclib/Math/PrimeField/Integer.php performs data-dependent conditional modular reductions in add() and subtract(). During the Montgomery ladder in phpseclib/Crypt/EC/BaseCurves/Montgomery.php, the reduction behavior of each step depends on the secret scalar prefix, creating per-step timing and libgmp call-count observations that can reveal a reused 251-bit clamped private scalar. The phpseclib/Crypt/EC/Formats/Keys/MontgomeryPrivate.php derivation path invokes the pure-PHP multiplication without a native-engine check, while phpseclib/Crypt/EC/Formats/Keys/PKCS8.php reaches it when ext-sodium is unavailable. Exploitation requires a reused or long-lived X25519 private key, knowledge of the corresponding public key, execution of the pure-PHP path, and a local observer capable of resolving individual ladder steps or libgmp entry-point calls. Ephemeral X25519 keys, including phpseclib's normal SSH exchange path, are not affected. Recovery of the scalar permanently compromises operations that reuse that key. This issue is fixed in versions 3.0.57 and 4.0.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-84308\n  \nPublished : Sept. 1, 2026, 7:28 p.m. | 16 minutes ago\n  \nDescription :phpseclib is a PHP secure communications library. Prior to 3.0.57 and 4.0.1, pure-PHP X25519 scalar multiplication in phpseclib/Math/PrimeField/Integer.php performs data-dependent conditional modular reductions in add() and subtract(). During the Montgomery ladder in phpseclib/Crypt/EC/BaseCurves/Montgomery.php, the reduction behavior of each step depends on the secret scalar prefix, creating per-step timing and libgmp call-count observations that can reveal a reused 251-bit clamped private scalar. The phpseclib/Crypt/EC/Formats/Keys/MontgomeryPrivate.php derivation path invokes the pure-PHP multiplication without a native-engine check, while phpseclib/Crypt/EC/Formats/Keys/PKCS8.php reaches it when ext-sodium is unavailable. Exploitation requires a reused or long-lived X25519 private key, knowledge of the corresponding public key, execution of the pure-PHP path, and a local observer capable of resolving individual ladder steps or libgmp entry-point calls. Ephemeral X25519 keys, including phpseclib's normal SSH exchange path, are not affected. Recovery of the scalar permanently compromises operations that reuse that key. This issue is fixed in versions 3.0.57 and 4.0.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-84308 - phpseclib — 비상수 X25519 스칼라 곱셈을 통해 전체 개인 키 복구가 가능합니다.",
-      "summary_ko": "CVE ID:CVE-2026-84308\n  \n게시일 : 2026년 9월 1일 오후 7시 28분 | 16분 전\n  \n설명 :phpseclib는 PHP 보안 통신 라이브러리입니다. 3.0.57 및 4.0.1 이전에는 phpseclib/Math/PrimeField/Integer.php의 순수 PHP X25519 스칼라 곱셈이 add() 및 subtract()에서 데이터 종속 조건부 모듈러 축소를 수행했습니다. phpseclib/Crypt/EC/BaseCurves/Montgomery.php의 Montgomery 래더 동안 각 단계의 축소 동작은 비밀 스칼라 접두사에 따라 달라지며, 재사용된 251비트 고정 개인 스칼라를 표시할 수 있는 단계별 타이밍 및 libgmp 호출 횟수 관찰을 생성합니다. phpseclib/Crypt/EC/Formats/Keys/MontgomeryPrivate.php 파생 경로는 기본 엔진 확인 없이 순수 PHP 곱셈을 호출하는 반면 phpseclib/Crypt/EC/Formats/Keys/PKCS8.php는 ext-sodium을 사용할 수 없을 때 이에 도달합니다. 악용하려면 재사용되거나 수명이 긴 X25519 개인 키, 해당 공개 키에 대한 지식, 순수 PHP 경로 실행, 개별 래더 단계 또는 libgmp 진입점 호출을 해결할 수 있는 로컬 관찰자가 필요합니다. phpseclib의 일반 SSH 교환 경로를 포함한 임시 X25519 키는 영향을 받지 않습니다. 스칼라를 복구하면 해당 키를 재사용하는 작업이 영구적으로 손상됩니다. 이 문제는 버전 3.0.57 및 4.0.1에서 해결되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-84308\n2. 26.09.02 오전4:28\n3. phpseclib is a PHP secure communications library. ",
-      "cve_id": "CVE-2026-84308",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84308",
-      "source": "cvefeed",
-      "published": "2026-09-02T04:28:09+09:00",
       "lang": "en"
     }
   ],
