@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-04T19:01:50.834660+09:00",
+  "fetched_at": "2026-09-04T19:31:31.506358+09:00",
   "security_news": [
+    {
+      "title": "\"AI가 스스로 해킹 무기 만든다\"… OpenAI 충격 공개에 전 세계 공포",
+      "summary": "제로데이 취약점은 개발자조차 인지하지 못한 보안 허점으로, 사이버 해킹 공격에 악용될 경우 치명적인 피해를 초래할 수 있는 위험 요소다. 시장에서는 AI가 인간 해커의 개입 없이 스스로 해킹 공격 무기를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. OpenAI, AI가 제로데이 취약점 공격 무기 개발 가능성 시사\n2. AI, 인간 개입 없이 악성코드 생성 가능성 제기\n3. AI 해킹 무기 개발 시 파급력 매우 클 것으로 예상",
+      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484068",
+      "source": "naver",
+      "published": "2026-09-04T19:22:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "영양군, 전 직원 정보보안 교육…사이버 위협 대응 역량 높인다",
+      "summary": "사이버보안 위협이 갈수록 정교해지는 상황에서 공직자의 보안 의식을 강화하고 개인정보 보호 실천을... 최근 고도화되는 사이버보안 위협에 대응하기 위한 보안 수칙도 주요 교육 내용으로 다뤄졌다. 업무 현장에서...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 영양군, 전 직원 대상 정보보안 교육 실시\n2. 고도화된 사이버 위협 대응 역량 강화 집중\n3. 개인정보 보호 실천 및 보안 수칙 교육",
+      "link": "http://www.metroseoul.co.kr/article/20260904500194",
+      "source": "naver",
+      "published": "2026-09-04T19:14:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[더나은미래 경제브리핑] 코스피·코스닥 시총 상폐기준 강화 6개월 유예...",
       "summary": "오픈AI에 따르면 GPT-6 아스트라는 컴퓨터 사용과 웹 브라우징, 소프트웨어 개발, 과학, 사이버보안, 전문... 사이버보안 역량을 갖춘 것으로 평가됐다. 적절한 접근 권한 등만 주어지면 인간 개입 없이 보안 취약점을...",
@@ -3604,21 +3628,6 @@
       "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-01",
       "source": "cisa",
       "published": "2026-09-01T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59681 - yast2-auth-client: OS command injection via unsanitized Organizational Unit / dnsHostName in AD join",
-      "summary": "CVE ID :CVE-2026-59681\n  \nPublished : Sept. 1, 2026, 10:17 a.m. | 33 minutes ago\n  \nDescription :A OS command injection vulnerability in yast2-auth-client allows an attacker who controls Active Directory configuration values to execute arbitrary commands as root on the configured host.\n Auth::AuthConf in src/lib/auth/authconf.rb assembles the Samba net ads join, net ads lookup -S and net ads testjoin invocations by interpolating configuration values into a single command string and passing that string to Open3.popen2 / Open3.capture2, which causes Ruby to run it through /bin/sh. The Organizational Unit (ou), dnshostname, AD user name and AD domain name values are neither validated nor shell-quoted.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59681\n  \nPublished : Sept. 1, 2026, 10:17 a.m. | 33 minutes ago\n  \nDescription :A OS command injection vulnerability in yast2-auth-client allows an attacker who controls Active Directory configuration values to execute arbitrary commands as root on the configured host.\n Auth::AuthConf in src/lib/auth/authconf.rb assembles the Samba net ads join, net ads lookup -S and net ads testjoin invocations by interpolating configuration values into a single command string and passing that string to Open3.popen2 / Open3.capture2, which causes Ruby to run it through /bin/sh. The Organizational Unit (ou), dnshostname, AD user name and AD domain name values are neither validated nor shell-quoted.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-59681 - yast2-auth-client: AD 조인에서 정리되지 않은 조직 단위/dnsHostName을 통한 OS 명령 주입",
-      "summary_ko": "CVE ID:CVE-2026-59681\n  \n게시일 : 2026년 9월 1일 오전 10시 17분 | 33분 전\n  \n설명: yast2-auth-client의 OS 명령 주입 취약점으로 인해 Active Directory 구성 값을 제어하는 공격자가 구성된 호스트에서 루트로 임의의 명령을 실행할 수 있습니다.\n src/lib/auth/authconf.rb의 Auth::AuthConf는 구성 값을 단일 명령 문자열에 삽입하고 해당 문자열을 Open3.popen2 / Open3.capture2에 전달하여 Ruby가 /bin/sh를 통해 실행하도록 함으로써 Samba net Ads Join, Net Ads Lookup -S 및 Net Ads Testjoin 호출을 어셈블합니다. 조직 단위(ou), dnshostname, AD 사용자 이름 및 AD 도메인 이름 값은 검증되지도 않고 셸 인용되지도 않습니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-59681\n2. 26.09.01 오후7:17\n3. A OS command injection vulnerability in yast2-auth",
-      "cve_id": "CVE-2026-59681",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59681",
-      "source": "cvefeed",
-      "published": "2026-09-01T19:17:13+09:00",
       "lang": "en"
     }
   ],
