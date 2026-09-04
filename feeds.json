@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-04T22:02:34.527994+09:00",
+  "fetched_at": "2026-09-04T22:32:24.302482+09:00",
   "security_news": [
+    {
+      "title": "New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges",
+      "summary": "An anonymous security researcher who uses the \"Nightmare Eclipse\" handle released a CrowdStrike Falcon zero-day exploit named \"FalconFlank\" that lets attackers escalate privileges on up-to-date Windows systems. [...]",
+      "content": "",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "\"Nightmare Eclipse\" 핸들을 사용하는 익명의 보안 연구원이 공격자가 최신 Windows 시스템에서 권한을 상승시킬 수 있는 \"FalconFlank\"라는 CrowdStrike Falcon 제로데이 익스플로잇을 공개했습니다. [...]",
+      "summary_3lines": "1. 새로운 CrowdStrike 'FalconFlank' 제로데이는 시스템 권한을 부여합니다.",
+      "link": "https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-04T22:22:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "아이폰 지갑 겨냥 다크소드 취약점 연쇄 공격 포착",
       "summary": "슬로우미스트(SlowMist) 보안팀은 4일 분석에서 악성 페이지 event[.]polarnode[.]vip가 스크립트를 불러온 뒤 숨겨진 iframe을 통해 다크소드(DarkSword) 6개 CVE 취약점 연쇄 공격을 재사용했다고 밝혔다. 이 공격에는...",
@@ -2991,6 +3003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82309 - Robots::Validate versions from 0.3.2 before 0.3.11 for Perl allow unbounded outbound DNS queries per validation via a forward-confirmation loop that does not bound the names it queries",
+      "summary": "CVE ID :CVE-2026-82309\n  \nPublished : Sept. 4, 2026, 12:21 p.m. | 53 minutes ago\n  \nDescription :Robots::Validate versions from 0.3.2 before 0.3.11 for Perl allow unbounded outbound DNS queries per validation via a forward-confirmation loop that does not bound the names it queries.\n\n_check_dns issues one PTR query for the client address, keeps the returned names matching the rule's domain, and issues a forward query for each until one resolves back to that address. Nothing bounds that list, and a client controls the reverse zone for its own address, so it chooses how many names the PTR answer holds. Net::DNS refetches a truncated answer over TCP by default, so the 512-byte UDP payload does not cap it either.\n\nAny client whose User-Agent matches a rule with a domain reaches _check_dns. Each forward name is distinct and client-chosen, so every query misses the local cache and is resolved against the authoritative servers for that domain. The queries are synchronous, so the caller is held until all of them answer or time out.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82309\n  \nPublished : Sept. 4, 2026, 12:21 p.m. | 53 minutes ago\n  \nDescription :Robots::Validate versions from 0.3.2 before 0.3.11 for Perl allow unbounded outbound DNS queries per validation via a forward-confirmation loop that does not bound the names it queries.\n\n_check_dns issues one PTR query for the client address, keeps the returned names matching the rule's domain, and issues a forward query for each until one resolves back to that address. Nothing bounds that list, and a client controls the reverse zone for its own address, so it chooses how many names the PTR answer holds. Net::DNS refetches a truncated answer over TCP by default, so the 512-byte UDP payload does not cap it either.\n\nAny client whose User-Agent matches a rule with a domain reaches _check_dns. Each forward name is distinct and client-chosen, so every query misses the local cache and is resolved against the authoritative servers for that domain. The queries are synchronous, so the caller is held until all of them answer or time out.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-82309\n  \n게시일 : 2026년 9월 4일 오후 12시 21분 | 53분 전\n  \n설명 :Robots::Perl용 0.3.2 이전 0.3.11 버전의 유효성 검사는 쿼리하는 이름을 바인딩하지 않는 전달 확인 루프를 통해 유효성 검사마다 무제한 아웃바운드 DNS 쿼리를 허용합니다.\n\n_check_dns는 클라이언트 주소에 대해 하나의 PTR 쿼리를 발행하고, 반환된 이름이 규칙의 도메인과 일치하도록 유지하며, 해당 주소로 다시 확인될 때까지 각각에 대해 전달 쿼리를 발행합니다. 목록에 제한을 두는 것은 없으며 클라이언트는 자신의 주소에 대한 역방향 영역을 제어하므로 PTR 응답이 보유하는 이름 수를 선택합니다. Net::DNS는 기본적으로 TCP를 통해 잘린 답변을 다시 가져오므로 512바이트 UDP 페이로드도 이를 제한하지 않습니다.\n\nUser-Agent가 도메인의 규칙과 일치하는 모든 클라이언트는 _check_dns에 도달합니다. 각 전달 이름은 고유하고 클라이언트가 선택하므로 모든 쿼리는 로컬 캐시를 놓치고 해당 도메인의 권한 있는 서버에 대해 확인됩니다. 쿼리는 동기식이므로 모든 쿼리가 응답하거나 시간 초과될 때까지 호출자가 보류됩니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-82309\n2. 26.09.04 오후9:21\n3. Robots::Validate versions from 0.3.2 before 0.3.11",
+      "cve_id": "CVE-2026-82309",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82309",
+      "source": "cvefeed",
+      "published": "2026-09-04T21:21:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-84469 - fastify vulnerable to request validation bypass via skipped boolean false schemas",
       "summary": "CVE ID :CVE-2026-84469\n  \nPublished : Sept. 4, 2026, 9:59 a.m. | 18 minutes ago\n  \nDescription :fastify versions before 5.12.2 decide whether to compile a request schema based on JavaScript truthiness, but JSON Schema Draft 7 defines the boolean false as a valid schema that rejects every instance. When an application assigns false to a route's body, querystring, params, or headers schema to deny all input, fastify treats it as a missing schema, compiles no validator, and runs the route handler on any request. An unauthenticated remote client can therefore reach a handler that a valid deny-all schema was intended to make unreachable, a complete validation bypass that can lead to unauthorized state changes or execution of disabled operations. Users should upgrade to fastify 5.12.2 or later.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
