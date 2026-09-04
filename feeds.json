@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-04T18:01:34.353447+09:00",
+  "fetched_at": "2026-09-04T18:31:26.397485+09:00",
   "security_news": [
+    {
+      "title": "AI가 취약점 너무 빨리 찾아 문제?… 금융사 대응 '병목' 경고",
+      "summary": "최근 앤트로픽과 오픈AI의 최신 AI 모델이 시험 과정에서 외부 조직을 해킹하는 사례가 알려지면서 우려도 커지고 있다. AI 시스템 모니터링업체 레이즈AI의 닉 카이리노스 책임자는 FT에 \"금융서비스에서 AI 시스템이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI가 시험 중 외부 조직 해킹, 금융사 대응에 병목 발생 우려\n2. 앤트로픽, 오픈AI 최신 AI 모델이 해킹 사례 일으켜\n3. 레이즈AI, 금융사 AI 시스템 모니터링 강화 필요성 제기",
+      "link": "https://it.chosun.com/news/articleView.html?idxno=2023092169545",
+      "source": "naver",
+      "published": "2026-09-04T18:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[단독] “미토스 허용해 달라” 韓 요청에도 美 백악관 ‘묵묵부답’…...",
       "summary": "미토스는 인공지능(AI)이 보안 취약점을 찾아 스스로 해킹까지 할 수 있는 수준으로 진화한 모델이다. 미국 정부가 미토스 접근권 제한에 대한 뚜렷한 입장을 내놓지 않으면서 인공지능(AI) 발 사이버 위협에 대한 우려가...",
@@ -2916,33 +2928,24 @@
       "source": "naver",
       "published": "2026-09-01T18:56:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[강남視角] AI윤리와 '공짜 점심'",
-      "summary": "최근 개인정보와 기업데이터 유출은 사이버 사고다. AI 알고리즘을 활용한 차별적인 채용이나 금융투자 실패는 기업 평판을 훼손한다. AI 에이전트가 잘못된 권한을 행사하면 서비스나 기업시스템 자체를 멈춰 세운다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 알고리즘, 채용/금융 투자서 차별 유발\n2. AI 에이전트, 잘못된 권한으로 시스템 마비\n3. 개인정보, 기업데이터 유출 등 사이버 사고 발생",
-      "link": "https://n.news.naver.com/mnews/article/014/0005569590?sid=110",
-      "source": "naver",
-      "published": "2026-09-01T18:24:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "혹시 내 차도 해킹?… 안드로이드 인포테인먼트 노리는 악성코드 발견",
-      "summary": "▲ <출처=도펀> 자동차 인포테인먼트 시스템이 PC와 스마트폰에 이어 사이버 공격의 새로운 표적이 되고 있다. 안드로이드 기반 헤드유닛을 감염시켜 시스템을 장악하고 추가 악성코드까지 설치할 수 있는 공격 사례가...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 안드로이드 인포테인먼트 노리는 악성코드 발견\n2. 시스템 장악, 추가 악성코드 설치 가능\n3. 차량 정보 탈취 및 제어권 위험",
-      "link": "https://thedrive.co.kr/news/newsview.php?ncode=1065603509727177",
-      "source": "naver",
-      "published": "2026-09-01T18:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-85525 - Improper OCSP response validation in Snowflake drivers",
+      "summary": "CVE ID :CVE-2026-85525\n  \nPublished : Sept. 4, 2026, 8:22 a.m. | 19 minutes ago\n  \nDescription :Improper OCSP response validation in the Snowflake Python, Go, JDBC, and Node.js drivers allowed a revoked TLS certificate to be accepted as valid, because OCSP responses were not reliably bound to the certificate being validated and definitive verification failures were treated as transient. A man-in-the-middle attacker holding a revoked certificate and its private key for a Snowflake or stage hostname could cause the driver to establish a TLS session to the attacker-controlled endpoint anyway, allowing the attacker to read and modify data transmitted within that connection. Successful exploitation requires that on-path position and the corresponding private key, and impact is limited to data carried within the intercepted connection. The fix is available in the patched versions listed above. Users must manually upgrade.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-85525\n  \nPublished : Sept. 4, 2026, 8:22 a.m. | 19 minutes ago\n  \nDescription :Improper OCSP response validation in the Snowflake Python, Go, JDBC, and Node.js drivers allowed a revoked TLS certificate to be accepted as valid, because OCSP responses were not reliably bound to the certificate being validated and definitive verification failures were treated as transient. A man-in-the-middle attacker holding a revoked certificate and its private key for a Snowflake or stage hostname could cause the driver to establish a TLS session to the attacker-controlled endpoint anyway, allowing the attacker to read and modify data transmitted within that connection. Successful exploitation requires that on-path position and the corresponding private key, and impact is limited to data carried within the intercepted connection. The fix is available in the patched versions listed above. Users must manually upgrade.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-85525 - Snowflake 드라이버의 부적절한 OCSP 응답 검증",
+      "summary_ko": "CVE ID:CVE-2026-85525\n  \n게시일 : 2026년 9월 4일 오전 8시 22분 | 19분 전\n  \n설명: Snowflake Python, Go, JDBC 및 Node.js 드라이버의 부적절한 OCSP 응답 검증으로 인해 해지된 TLS 인증서가 유효한 것으로 허용되었습니다. OCSP 응답이 검증 중인 인증서에 안정적으로 바인딩되지 않았고 최종 검증 실패가 일시적인 것으로 처리되었기 때문입니다. 취소된 인증서와 Snowflake 또는 스테이지 호스트 이름에 대한 개인 키를 보유한 중간자 공격자는 어쨌든 드라이버가 공격자가 제어하는 ​​엔드포인트에 대한 TLS 세션을 설정하도록 하여 공격자가 해당 연결 내에서 전송된 데이터를 읽고 수정할 수 있도록 할 수 있습니다. 악용에 성공하려면 경로상의 위치와 해당 개인 키가 필요하며, 영향은 가로채는 연결 내에서 전달되는 데이터로 제한됩니다. 수정 사항은 위에 나열된 패치 버전에서 사용할 수 있습니다. 사용자는 수동으로 업그레이드해야 합니다.\n  \n심각도: 7.4 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-85525\n2. 26.09.04 오후5:22\n3. Improper OCSP response validation in the Snowflake",
+      "cve_id": "CVE-2026-85525",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85525",
+      "source": "cvefeed",
+      "published": "2026-09-04T17:22:43+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-75754 - ASUS Control Center Authentication Bypass, SSRF, and Hard-coded Credentials Vulnerability",
       "summary": "CVE ID :CVE-2026-75754\n  \nPublished : Sept. 4, 2026, 2:08 a.m. | 1 hour, 5 minutes ago\n  \nDescription :Missing Authentication for Critical Function, Server-Side Request Forgery (SSRF), and Use of Hard-coded Credentials in ASUS Control Center allow an unauthorized user to obtain the encryption key via an HTTP request, causing a local service to enable SSH on port 2222. The attacker can then log in with the hardcode credentials to obtain a root shell, enabling direct reading, writing, and deletion of data on ASUS Control Center, as well as remote control of all servers, PCs, and workstations within the company.\nRefer to the 'Security Update for ASUS Control Center' section on the ASUS Security Advisory for more information.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
