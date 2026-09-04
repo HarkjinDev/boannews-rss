@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-05T00:34:06.513682+09:00",
+  "fetched_at": "2026-09-05T01:01:34.171843+09:00",
   "security_news": [
     {
       "title": "Critical Citrix NetScaler auth bypass now leveraged in attacks",
@@ -3039,6 +3039,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-85692 - Nightingale 9.1.1 SSRF Guard Bypass via IPv6 Encoding",
+      "summary": "CVE ID :CVE-2026-85692\n  \nPublished : Sept. 4, 2026, 2:32 p.m. | 41 minutes ago\n  \nDescription :Nightingale (n9e), as of commit 8362cbe (main branch, confirmed 2026-08-27), contains a server-side request forgery vulnerability in the isPublicIP function in aiagent/tools/http.go, the SSRF guard for the http_fetch AI-agent tool. The function only unwraps standard IPv4-mapped (::ffff:a.b.c.d) IPv6 addresses before checking them against the forbidden-range list, and does not classify 6to4 (2002::/16), NAT64 (64:ff9b::/96, 64:ff9b:1::/48), or deprecated site-local (fec0::/10) addresses. On a dual-stack or NAT64-enabled host, an attacker able to supply a URL to the http_fetch tool can bypass the guard by encoding a forbidden IPv4 address (such as the cloud instance-metadata endpoint 169.254.169.254) in one of these IPv6 forms to reach internal or metadata services.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-85692\n  \nPublished : Sept. 4, 2026, 2:32 p.m. | 41 minutes ago\n  \nDescription :Nightingale (n9e), as of commit 8362cbe (main branch, confirmed 2026-08-27), contains a server-side request forgery vulnerability in the isPublicIP function in aiagent/tools/http.go, the SSRF guard for the http_fetch AI-agent tool. The function only unwraps standard IPv4-mapped (::ffff:a.b.c.d) IPv6 addresses before checking them against the forbidden-range list, and does not classify 6to4 (2002::/16), NAT64 (64:ff9b::/96, 64:ff9b:1::/48), or deprecated site-local (fec0::/10) addresses. On a dual-stack or NAT64-enabled host, an attacker able to supply a URL to the http_fetch tool can bypass the guard by encoding a forbidden IPv4 address (such as the cloud instance-metadata endpoint 169.254.169.254) in one of these IPv6 forms to reach internal or metadata services.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-85692 - 나이팅게일 9.1.1 IPv6 인코딩을 통한 SSRF 가드 우회",
+      "summary_ko": "CVE ID:CVE-2026-85692\n  \n게시일 : 2026년 9월 4일 오후 2시 32분 | 41분 전\n  \n설명: 커밋 8362cbe(메인 브랜치, 2026-08-27에 확인됨) 현재 Nightingale(n9e)에는 http_fetch AI 에이전트 도구용 SSRF 가드인 aiagent/tools/http.go의 isPublicIP 함수에 서버 측 요청 위조 취약점이 포함되어 있습니다. 이 함수는 표준 IPv4 매핑(::ffff:a.b.c.d) IPv6 주소를 금지 범위 목록과 비교하기 전에 래핑 해제만 하며, 6to4(2002::/16), NAT64(64:ff9b::/96, 64:ff9b:1::/48) 또는 더 이상 사용되지 않는 사이트 로컬(fec0::/10) 주소는 분류하지 않습니다. 듀얼 스택 또는 NAT64 지원 호스트에서 http_fetch 도구에 URL을 제공할 수 있는 공격자는 내부 또는 메타데이터 서비스에 도달하기 위해 이러한 IPv6 형식 중 하나로 금지된 IPv4 주소(예: 클라우드 인스턴스 메타데이터 엔드포인트 169.254.169.254)를 인코딩하여 가드를 우회할 수 있습니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-85692\n2. 26.09.04 오후11:32\n3. Nightingale (n9e), as of commit 8362cbe (main bran",
+      "cve_id": "CVE-2026-85692",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85692",
+      "source": "cvefeed",
+      "published": "2026-09-04T23:32:36+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-82309 - Robots::Validate versions from 0.3.2 before 0.3.11 for Perl allow unbounded outbound DNS queries per validation via a forward-confirmation loop that does not bound the names it queries",
       "summary": "CVE ID :CVE-2026-82309\n  \nPublished : Sept. 4, 2026, 12:21 p.m. | 53 minutes ago\n  \nDescription :Robots::Validate versions from 0.3.2 before 0.3.11 for Perl allow unbounded outbound DNS queries per validation via a forward-confirmation loop that does not bound the names it queries.\n\n_check_dns issues one PTR query for the client address, keeps the returned names matching the rule's domain, and issues a forward query for each until one resolves back to that address. Nothing bounds that list, and a client controls the reverse zone for its own address, so it chooses how many names the PTR answer holds. Net::DNS refetches a truncated answer over TCP by default, so the 512-byte UDP payload does not cap it either.\n\nAny client whose User-Agent matches a rule with a domain reaches _check_dns. Each forward name is distinct and client-chosen, so every query misses the local cache and is resolved against the authoritative servers for that domain. The queries are synchronous, so the caller is held until all of them answer or time out.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
