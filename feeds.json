@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-05T08:01:12.933616+09:00",
+  "fetched_at": "2026-09-05T08:31:00.413235+09:00",
   "security_news": [
     {
       "title": "개인정보 유출 가능성 발견…기업은 언제 알려야 할까 [수사와 재판]",
@@ -2976,21 +2976,24 @@
       "source": "naver",
       "published": "2026-09-02T08:32:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "美 의료업계 '해킹… 또 해킹'…맥케슨·에스토 헬스 대규모 정보 유출",
-      "summary": "1일(현지시각) 외신에 따르면, 미국 대형 의료 유통업체 맥케슨(McKesson)은 해킹에 따른 데이터 유출을... █ 샤이니헌터스, 2억8400만건 맥케슨 기록 확보 주장 데이터 갈취 전문 해킹그룹 샤이니헌터스(ShinyHunters)는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 맥케슨, 2억8400만 건 의료 기록 유출 주장\n2. 샤이니헌터스, 맥케슨 데이터 갈취 주장\n3. 美 의료업계, 해킹으로 인한 대규모 정보 유출",
-      "link": "https://www.news2day.co.kr/article/20260902500013",
-      "source": "naver",
-      "published": "2026-09-02T08:24:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2022-26961 - Italtel NetMatch-S Stored Cross-Site Scripting",
+      "summary": "CVE ID :CVE-2022-26961\n  \nPublished : Sept. 4, 2026, 9:17 p.m. | 21 minutes ago\n  \nDescription :Italtel NetMatch-S 5.0.0-20200703 allows Multiple Stored XSS under NP_IBCF-NATUP-01/NMSCI-WebGui/backup_restore.jsp and NP_IBCF-MIBER-03/NMSCI-WebGui/storage.jsp via the name parameter. A malicious user leveraging this vulnerability could inject arbitrary JavaScript. The malicious payload will then be triggered every time an authenticated user browses the page containing it.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2022-26961\n  \nPublished : Sept. 4, 2026, 9:17 p.m. | 21 minutes ago\n  \nDescription :Italtel NetMatch-S 5.0.0-20200703 allows Multiple Stored XSS under NP_IBCF-NATUP-01/NMSCI-WebGui/backup_restore.jsp and NP_IBCF-MIBER-03/NMSCI-WebGui/storage.jsp via the name parameter. A malicious user leveraging this vulnerability could inject arbitrary JavaScript. The malicious payload will then be triggered every time an authenticated user browses the page containing it.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2022-26961 - Italtel NetMatch-S 저장 사이트 간 스크립팅",
+      "summary_ko": "CVE ID:CVE-2022-26961\n  \n게시일 : 2026년 9월 4일 오후 9시 17분 | 21분 전\n  \n설명:Italtel NetMatch-S 5.0.0-20200703은 name 매개변수를 통해 NP_IBCF-NATUP-01/NMSCI-WebGui/backup_restore.jsp 및 NP_IBCF-MIBER-03/NMSCI-WebGui/storage.jsp에서 다중 저장된 XSS를 허용합니다. 이 취약점을 악용하는 악의적인 사용자는 임의의 JavaScript를 주입할 수 있습니다. 그러면 인증된 사용자가 악성 페이로드가 포함된 페이지를 탐색할 때마다 악성 페이로드가 실행됩니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2022-26961\n2. 26.09.05 오전6:17\n3. Italtel NetMatch-S 5.0.0-20200703 allows Multiple ",
+      "cve_id": "CVE-2022-26961",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2022-26961",
+      "source": "cvefeed",
+      "published": "2026-09-05T06:17:19+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53602 - nebula-mesh - Host revocation is not durable: blocked/offboarded hosts can regain a valid certificate",
       "summary": "CVE ID :CVE-2026-53602\n  \nPublished : Sept. 4, 2026, 8:17 p.m. | 25 minutes ago\n  \nDescription :nebula-mesh is a self-hosted control plane for Slack Nebula mesh VPN. Prior to version 0.3.7, two related authorization gaps let a host that should no longer be trusted obtain a fresh, valid Nebula certificate, because nebula-mgmt does not re-evaluate revocation/authorization state at certificate issuance time — only at poll time. Firstly, the blocklist is not enforced at sign / re-enroll time. internal/api/enroll.go:128 calls caMgr.Sign(...) without consulting the blocklist. The blocklist is only checked in the poll path (internal/api/updates.go:57, fingerprintInBlocklist). The blocklist is keyed by certificate fingerprint (internal/store/sqlite.go), so a re-enrollment produces a new fingerprint that is not in the blocklist. Secondly, renewal does not re-validate operator / CA status. Auto-renewal at poll time (internal/api/updates.go:285-319, signHostCert) reads host.Name, host.Groups, host.NebulaIPs from the DB and re-signs without checking whether the owning operator is still active or the CA still valid. DisableOperator (internal/store/sqlite_operators.go) revokes sessions and API keys but does not retire the operator's CAs, and pki/signer.go checks only CA cert time-expiry, not operator/CA status. This issue has been patched in version 0.3.7.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
