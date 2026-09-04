@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-04T20:03:27.350972+09:00",
+  "fetched_at": "2026-09-04T20:31:13.695631+09:00",
   "security_news": [
     {
       "title": "트레저 고객 정보 유출 6만7000명 규모로 커졌다",
@@ -2955,6 +2955,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-84469 - fastify vulnerable to request validation bypass via skipped boolean false schemas",
+      "summary": "CVE ID :CVE-2026-84469\n  \nPublished : Sept. 4, 2026, 9:59 a.m. | 18 minutes ago\n  \nDescription :fastify versions before 5.12.2 decide whether to compile a request schema based on JavaScript truthiness, but JSON Schema Draft 7 defines the boolean false as a valid schema that rejects every instance. When an application assigns false to a route's body, querystring, params, or headers schema to deny all input, fastify treats it as a missing schema, compiles no validator, and runs the route handler on any request. An unauthenticated remote client can therefore reach a handler that a valid deny-all schema was intended to make unreachable, a complete validation bypass that can lead to unauthorized state changes or execution of disabled operations. Users should upgrade to fastify 5.12.2 or later.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84469\n  \nPublished : Sept. 4, 2026, 9:59 a.m. | 18 minutes ago\n  \nDescription :fastify versions before 5.12.2 decide whether to compile a request schema based on JavaScript truthiness, but JSON Schema Draft 7 defines the boolean false as a valid schema that rejects every instance. When an application assigns false to a route's body, querystring, params, or headers schema to deny all input, fastify treats it as a missing schema, compiles no validator, and runs the route handler on any request. An unauthenticated remote client can therefore reach a handler that a valid deny-all schema was intended to make unreachable, a complete validation bypass that can lead to unauthorized state changes or execution of disabled operations. Users should upgrade to fastify 5.12.2 or later.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-84469\n  \n게시일 : 2026년 9월 4일 오전 9시 59분 | 18분 전\n  \n설명 :fastify 5.12.2 이전 버전에서는 JavaScript 진실성을 기반으로 요청 스키마를 컴파일할지 여부를 결정하지만 JSON Schema Draft 7에서는 부울 false를 모든 인스턴스를 거부하는 유효한 스키마로 정의합니다. 애플리케이션이 모든 입력을 거부하기 위해 경로의 본문, 쿼리 문자열, 매개변수 또는 헤더 스키마에 false를 할당하면 fastify는 이를 누락된 스키마로 처리하고 유효성 검사기를 컴파일하지 않으며 모든 요청에 ​​대해 경로 핸들러를 실행합니다. 따라서 인증되지 않은 원격 클라이언트는 유효한 모두 거부 스키마가 도달할 수 없게 하려는 핸들러에 도달할 수 있으며, 이는 무단 상태 변경 또는 비활성화된 작업 실행으로 이어질 수 있는 완전한 유효성 검사 우회입니다. 사용자는 fastify 5.12.2 이상으로 업그레이드해야 합니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-84469\n2. 26.09.04 오후6:59\n3. fastify versions before 5.12.2 decide whether to c",
+      "cve_id": "CVE-2026-84469",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84469",
+      "source": "cvefeed",
+      "published": "2026-09-04T18:59:36+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-85546 - MISP Sharing Group Quick-Edit Actions Allow CSRF via State-Changing GET Requests",
+      "summary": "CVE ID :CVE-2026-85546\n  \nPublished : Sept. 4, 2026, 9:27 a.m. | 50 minutes ago\n  \nDescription :MISP contains a cross-site request forgery (CSRF) vulnerability in the sharing group quick-edit functionality. The addOrg, removeOrg, addServer, and removeServer actions share the __initialiseSGQuickEdit() helper, where the HTTP method validation intended to restrict these operations to POST requests was commented out.\n\nAs a result, these state-changing actions could be invoked using GET requests. An attacker could craft a URL targeting one of the affected actions and cause an authenticated MISP user with sufficient privileges to request it, for example through a malicious link or embedded web resource.\n\nSuccessful exploitation could modify the membership of a MISP sharing group without the victim intentionally performing the operation. Depending on the action performed, an attacker could add or remove organisations or servers from a sharing group, potentially granting unintended access to information distributed through that sharing group or disrupting legitimate information sharing.\n\nThe patch restores HTTP method enforcement centrally in __initialiseSGQuickEdit() by calling allowMethod(['post']), ensuring that all four affected quick-edit operations require POST requests and are therefore subject to the application's normal protections for state-changing requests.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-85546\n  \nPublished : Sept. 4, 2026, 9:27 a.m. | 50 minutes ago\n  \nDescription :MISP contains a cross-site request forgery (CSRF) vulnerability in the sharing group quick-edit functionality. The addOrg, removeOrg, addServer, and removeServer actions share the __initialiseSGQuickEdit() helper, where the HTTP method validation intended to restrict these operations to POST requests was commented out.\n\nAs a result, these state-changing actions could be invoked using GET requests. An attacker could craft a URL targeting one of the affected actions and cause an authenticated MISP user with sufficient privileges to request it, for example through a malicious link or embedded web resource.\n\nSuccessful exploitation could modify the membership of a MISP sharing group without the victim intentionally performing the operation. Depending on the action performed, an attacker could add or remove organisations or servers from a sharing group, potentially granting unintended access to information distributed through that sharing group or disrupting legitimate information sharing.\n\nThe patch restores HTTP method enforcement centrally in __initialiseSGQuickEdit() by calling allowMethod(['post']), ensuring that all four affected quick-edit operations require POST requests and are therefore subject to the application's normal protections for state-changing requests.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-85546\n2. 26.09.04 오후6:27\n3. MISP contains a cross-site request forgery (CSRF) ",
+      "cve_id": "CVE-2026-85546",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85546",
+      "source": "cvefeed",
+      "published": "2026-09-04T18:27:36+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-85525 - Improper OCSP response validation in Snowflake drivers",
       "summary": "CVE ID :CVE-2026-85525\n  \nPublished : Sept. 4, 2026, 8:22 a.m. | 19 minutes ago\n  \nDescription :Improper OCSP response validation in the Snowflake Python, Go, JDBC, and Node.js drivers allowed a revoked TLS certificate to be accepted as valid, because OCSP responses were not reliably bound to the certificate being validated and definitive verification failures were treated as transient. A man-in-the-middle attacker holding a revoked certificate and its private key for a Snowflake or stage hostname could cause the driver to establish a TLS session to the attacker-controlled endpoint anyway, allowing the attacker to read and modify data transmitted within that connection. Successful exploitation requires that on-path position and the corresponding private key, and impact is limited to data carried within the intercepted connection. The fix is available in the patched versions listed above. Users must manually upgrade.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
