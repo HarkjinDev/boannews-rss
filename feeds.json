@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-05T10:01:06.954739+09:00",
+  "fetched_at": "2026-09-05T10:31:01.586598+09:00",
   "security_news": [
     {
       "title": "美·中, 첫 공식 'AI 안전' 대화 나선다",
@@ -2928,21 +2928,39 @@
       "source": "naver",
       "published": "2026-09-02T10:54:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "하나카드, 나라사랑카드 신규 고객에 AI 구독료 캐시백",
-      "summary": "AI스마트팩 가입자는 국내에서 발생한 스미싱과 파밍, 메모리 해킹 등 피싱·해킹 금융사기 피해를 최대 1000만원까지 보장받을 수 있다. 보장 대상에는 본인과 배우자, 부모, 자녀가 포함된다. 하나카드 관계자는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 하나카드, 나라사랑카드 신규 고객에 AI 구독료 캐시백 AI스마트팩 가입자는 국내에서 발생\n2. 보장 대상에는 본인과 배우자, 부모, 자녀가 포함된다.\n3. 하나카드 관계자는...",
-      "link": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065574752242095",
-      "source": "naver",
-      "published": "2026-09-02T10:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "numbat - AI agent observability, (Fri, Sep 4th)",
+      "summary": "â€‹â€‹â€‹â€‹â€‹â€‹â€‹\r",
+      "description": "â€‹â€‹â€‹â€‹â€‹â€‹â€‹\r",
+      "title_ko": "numbat - AI 에이전트 관측성, (9월 4일 금요일)",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. numbat - AI agent observability, (Fri, Sep 4th)\n2. SANS_ISC\n3. â€‹â€‹â€‹â€‹â€‹â€‹â€‹",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33312",
+      "source": "sans_isc",
+      "published": "2026-09-05T10:13:36+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-52774 - Reflected XSS via Unescaped `id` Parameter in Bazar Widget HTML Attributes in YesWiki",
+      "summary": "CVE ID :CVE-2026-52774\n  \nPublished : Sept. 5, 2026, 12:17 a.m. | 57 minutes ago\n  \nDescription :YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki's Bazar widget handler reflects the id GET parameter into HTML attributes using strip_tags() only. Because strip_tags() does not escape double quotes, an attacker can break out of the attribute value, inject an event handler such as onmouseover, and execute arbitrary JavaScript in the victim's browser. This issue is reachable without authentication. During validation, the vulnerable widget route returned the injected HTML for both /HomePage/widget?id=... and /NoSuchPage/widget?id=..., which shows that no login, no page ownership, no edit rights, and not even a valid page tag were required. The only routing prerequisite observed was that the Bazar extension is enabled and the request includes an id parameter. This issue has been patched in version 4.6.6.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-52774\n  \nPublished : Sept. 5, 2026, 12:17 a.m. | 57 minutes ago\n  \nDescription :YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki's Bazar widget handler reflects the id GET parameter into HTML attributes using strip_tags() only. Because strip_tags() does not escape double quotes, an attacker can break out of the attribute value, inject an event handler such as onmouseover, and execute arbitrary JavaScript in the victim's browser. This issue is reachable without authentication. During validation, the vulnerable widget route returned the injected HTML for both /HomePage/widget?id=... and /NoSuchPage/widget?id=..., which shows that no login, no page ownership, no edit rights, and not even a valid page tag were required. The only routing prerequisite observed was that the Bazar extension is enabled and the request includes an id parameter. This issue has been patched in version 4.6.6.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-52774\n2. 26.09.05 오전9:17\n3. YesWiki is a wiki system written in PHP. Prior to ",
+      "cve_id": "CVE-2026-52774",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-52774",
+      "source": "cvefeed",
+      "published": "2026-09-05T09:17:20+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2022-26961 - Italtel NetMatch-S Stored Cross-Site Scripting",
       "summary": "CVE ID :CVE-2022-26961\n  \nPublished : Sept. 4, 2026, 9:17 p.m. | 21 minutes ago\n  \nDescription :Italtel NetMatch-S 5.0.0-20200703 allows Multiple Stored XSS under NP_IBCF-NATUP-01/NMSCI-WebGui/backup_restore.jsp and NP_IBCF-MIBER-03/NMSCI-WebGui/storage.jsp via the name parameter. A malicious user leveraging this vulnerability could inject arbitrary JavaScript. The malicious payload will then be triggered every time an authenticated user browses the page containing it.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
