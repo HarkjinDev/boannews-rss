@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-06T23:32:16.719902+09:00",
+  "fetched_at": "2026-09-07T00:02:59.544205+09:00",
   "security_news": [
     {
       "title": "하이브 위버스, 계정 42만2584건 정보 유출",
@@ -1560,18 +1560,6 @@
       "source": "thehackernews",
       "published": "2026-09-04T00:52:07+09:00",
       "lang": "en"
-    },
-    {
-      "title": "남다 LiveKey, 개인정보 유출·보이스피싱 시대 '상황 기반 인증' 해법 제...",
-      "summary": "이번 사고는 첨단 해킹기술보다 접속키와 권한, 암호화키, 로그 등 기본 보안자산 관리가 얼마나 중요한지를 보여줬다는 평가다. 특히 유출된 이름과 전화번호, 이메일 등 개인정보는 보이스피싱이나 계정 탈취 등 2차...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 남다 LiveKey, 기본 보안자산 관리 소홀로 개인정보 유출\n2. 접속키, 권한, 암호화키 등 유출로 보이스피싱 악용 우려\n3. 개인정보 유출로 인한 2차 피해 확산 가능성 제기",
-      "link": "https://www.gukjenews.com/news/articleView.html?idxno=3684327",
-      "source": "naver",
-      "published": "2026-09-03T23:42:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2113,21 +2101,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-82023",
       "source": "cvefeed",
       "published": "2026-09-04T03:17:24+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-85230 - MISP Dashboard Button Widget Allows Persistent JavaScript URL Injection",
-      "summary": "CVE ID :CVE-2026-85230\n  \nPublished : Sept. 3, 2026, 2:48 p.m. | 25 minutes ago\n  \nDescription :A persistent unsafe URL injection vulnerability exists in the MISP dashboard ButtonWidget configuration. Dashboard widget URLs were validated only when the widget was rendered and were not validated when the configuration was saved. As a result, an authenticated user able to modify dashboard widget settings could persist arbitrary URL values, including URLs using the javascript: scheme, through either of the dashboard settings persistence paths.\n\nA malicious javascript: URL stored in a dashboard button could potentially result in client-side script execution in the MISP security context if the value reached a rendering or navigation path without the existing runtime validation. Such execution could allow an attacker to perform actions with the privileges of the affected user or access information available to their MISP session.\n\nThe practical exploitability of this issue is reduced by the fact that MISP already applied URL validation at render time, which neutralized known malicious values before they were presented to the user. The vulnerability therefore represents a persistence-layer validation gap and a defense-in-depth weakness rather than evidence of a direct bypass of the existing rendering protection.\n\nThe patch introduces a canonical url schema type and validates dashboard widget configuration before it is persisted through either settings save mechanism. ButtonWidget URLs must now be strings resolving to an absolute path on the current MISP instance or a full URL with the same origin. Values using javascript:, external origins, malformed URL forms, and non-string values are rejected at save time.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-85230\n  \nPublished : Sept. 3, 2026, 2:48 p.m. | 25 minutes ago\n  \nDescription :A persistent unsafe URL injection vulnerability exists in the MISP dashboard ButtonWidget configuration. Dashboard widget URLs were validated only when the widget was rendered and were not validated when the configuration was saved. As a result, an authenticated user able to modify dashboard widget settings could persist arbitrary URL values, including URLs using the javascript: scheme, through either of the dashboard settings persistence paths.\n\nA malicious javascript: URL stored in a dashboard button could potentially result in client-side script execution in the MISP security context if the value reached a rendering or navigation path without the existing runtime validation. Such execution could allow an attacker to perform actions with the privileges of the affected user or access information available to their MISP session.\n\nThe practical exploitability of this issue is reduced by the fact that MISP already applied URL validation at render time, which neutralized known malicious values before they were presented to the user. The vulnerability therefore represents a persistence-layer validation gap and a defense-in-depth weakness rather than evidence of a direct bypass of the existing rendering protection.\n\nThe patch introduces a canonical url schema type and validates dashboard widget configuration before it is persisted through either settings save mechanism. ButtonWidget URLs must now be strings resolving to an absolute path on the current MISP instance or a full URL with the same origin. Values using javascript:, external origins, malformed URL forms, and non-string values are rejected at save time.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-85230 - MISP 대시보드 버튼 위젯으로 지속적인 JavaScript URL 삽입이 허용됨",
-      "summary_ko": "CVE ID:CVE-2026-85230\n  \n게시일 : 2026년 9월 3일 오후 2시 48분 | 25분 전\n  \n설명: MISP 대시보드 ButtonWidget 구성에 지속적이고 안전하지 않은 URL 주입 취약점이 존재합니다. 대시보드 위젯 URL은 위젯이 렌더링될 때만 검증되었으며 구성이 저장될 때는 검증되지 않았습니다. 결과적으로 대시보드 위젯 설정을 수정할 수 있는 인증된 사용자는 대시보드 설정 지속 경로 중 하나를 통해 javascript: 구성표를 사용하는 URL을 포함하여 임의의 URL 값을 유지할 수 있습니다.\n\n대시보드 버튼에 저장된 악성 javascript: URL은 값이 기존 런타임 유효성 검사 없이 렌더링 또는 탐색 경로에 도달하는 경우 잠재적으로 MISP 보안 컨텍스트에서 클라이언트측 스크립트가 실행될 수 있습니다. 이러한 실행을 통해 공격자는 영향을 받은 사용자의 권한으로 작업을 수행하거나 MISP 세션에서 사용할 수 있는 정보에 액세스할 수 있습니다.\n\n이 문제의 실질적인 악용 가능성은 MISP가 이미 렌더링 시 URL 유효성 검사를 적용하여 알려진 악성 값이 사용자에게 표시되기 전에 무력화되었다는 사실로 인해 감소됩니다. 따라서 이 취약점은 기존 렌더링 보호를 직접 우회했다는 증거라기보다는 지속성 계층 유효성 검사 격차와 심층 방어 약점을 나타냅니다.\n\n패치는 정식 URL 스키마 유형을 도입하고 대시보드 위젯 구성이 설정 저장 메커니즘을 통해 지속되기 전에 유효성을 검사합니다. 이제 ButtonWidget URL은 현재 MISP 인스턴스의 절대 경로 또는 동일한 출처의 전체 URL로 확인되는 문자열이어야 합니다. javascript:를 사용하는 값, 외부 출처, 잘못된 URL 형식 및 문자열이 아닌 값은 저장 시 거부됩니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-85230\n2. 26.09.03 오후11:48\n3. A persistent unsafe URL injection vulnerability ex",
-      "cve_id": "CVE-2026-85230",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85230",
-      "source": "cvefeed",
-      "published": "2026-09-03T23:48:41+09:00",
       "lang": "en"
     }
   ],
