@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-07T00:02:59.544205+09:00",
+  "fetched_at": "2026-09-07T00:32:16.574146+09:00",
   "security_news": [
     {
       "title": "하이브 위버스, 계정 42만2584건 정보 유출",
@@ -1563,6 +1563,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-86283 - MISP UiBeta Collection View Bypasses Event ACL, Exposing Unauthorized Event Data",
+      "summary": "CVE ID :CVE-2026-86283\n  \nPublished : Sept. 6, 2026, 2:15 p.m. | 25 minutes ago\n  \nDescription :MISP's UiBeta theme collection view (app/View/Themed/UiBeta/Collections/view.ctp) performed a secondary query of member events by UUID without applying the caller's access control list (ACL). The CollectionsController::view() action correctly resolved collection element UUIDs through Event::fetchSimpleEvents($user, ...), which enforces per-user event ACL. However, the view template independently re-queried the same UUIDs using only an Event.uuid IN (...) condition, omitting the createEventConditions() authorization filter. Because collection element UUIDs are stored without server-side authorization against the referenced event (CollectionElementsController::add() accepts whatever UUID the collection owner posts), an authenticated user with view access to a collection could retrieve full details of events they are not permitted to read. The exposed data included event identifiers, info, dates, timestamps, creator organization, all event tags, and galaxy clusters (the latter attached via a cluster-scoped rather than event-scoped ACL check). This constitutes an authorization bypass at the presentation layer, allowing horizontal privilege escalation across event boundaries within the MISP instance.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-86283\n  \nPublished : Sept. 6, 2026, 2:15 p.m. | 25 minutes ago\n  \nDescription :MISP's UiBeta theme collection view (app/View/Themed/UiBeta/Collections/view.ctp) performed a secondary query of member events by UUID without applying the caller's access control list (ACL). The CollectionsController::view() action correctly resolved collection element UUIDs through Event::fetchSimpleEvents($user, ...), which enforces per-user event ACL. However, the view template independently re-queried the same UUIDs using only an Event.uuid IN (...) condition, omitting the createEventConditions() authorization filter. Because collection element UUIDs are stored without server-side authorization against the referenced event (CollectionElementsController::add() accepts whatever UUID the collection owner posts), an authenticated user with view access to a collection could retrieve full details of events they are not permitted to read. The exposed data included event identifiers, info, dates, timestamps, creator organization, all event tags, and galaxy clusters (the latter attached via a cluster-scoped rather than event-scoped ACL check). This constitutes an authorization bypass at the presentation layer, allowing horizontal privilege escalation across event boundaries within the MISP instance.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-86283 - MISP UiBeta 컬렉션 보기가 이벤트 ACL을 우회하여 무단 이벤트 데이터를 노출함",
+      "summary_ko": "CVE ID:CVE-2026-86283\n  \n게시일 : 2026년 9월 6일 오후 2시 15분 | 25분 전\n  \n설명:MISP의 UiBeta 테마 컬렉션 보기(app/View/Themed/UiBeta/Collections/view.ctp)는 호출자의 액세스 제어 목록(ACL)을 적용하지 않고 UUID를 통해 구성원 이벤트에 대한 2차 쿼리를 수행했습니다. CollectionsController::view() 작업은 사용자별 이벤트 ACL을 적용하는 Event::fetchSimpleEvents($user, ...)를 통해 컬렉션 요소 UUID를 올바르게 확인했습니다. 그러나 뷰 템플릿은 createEventConditions() 인증 필터를 생략하고 Event.uuid IN (...) 조건만 사용하여 동일한 UUID를 독립적으로 다시 쿼리했습니다. 컬렉션 요소 UUID는 참조된 이벤트에 대해 서버측 인증 없이 저장되기 때문에(CollectionElementsController::add()는 컬렉션 소유자가 게시한 모든 UUID를 허용함) 컬렉션에 대한 보기 액세스 권한이 있는 인증된 사용자는 읽을 수 없는 이벤트의 전체 세부 정보를 검색할 수 있습니다. 노출된 데이터에는 이벤트 식별자, 정보, 날짜, 타임스탬프, 생성자 조직, 모든 이벤트 태그 및 갤럭시 클러스터(후자는 이벤트 범위 ACL 검사가 아닌 클러스터 범위 ACL 검사를 통해 연결됨)가 포함되었습니다. 이는 프레젠테이션 계층에서 권한 부여 우회를 구성하여 MISP 인스턴스 내의 이벤트 경계를 넘어 수평적 권한 상승을 허용합니다.\n  \n심각도: 7.1 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-86283\n2. 26.09.06 오후11:15\n3. MISP's UiBeta theme collection view (app/View/Them",
+      "cve_id": "CVE-2026-86283",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86283",
+      "source": "cvefeed",
+      "published": "2026-09-06T23:15:06+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-86213 - Mstfakts College-Management-System Search university.php mysqli_query sql injection",
       "summary": "CVE ID :CVE-2026-86213\n  \nPublished : Sept. 6, 2026, 1:17 p.m. | 46 minutes ago\n  \nDescription :A vulnerability was found in Mstfakts College-Management-System. This issue affects the function mysqli_query of the file Front-end/university.php of the component Search Handler. The manipulation of the argument book_name/book_author results in sql injection. The attack may be performed from remote. The exploit has been made public and could be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
