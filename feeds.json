@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-06T20:02:31.446511+09:00",
+  "fetched_at": "2026-09-06T20:32:31.585474+09:00",
   "security_news": [
     {
       "title": "모의해킹 경고도 묵살 … 티빙 4000만 계정 유출은 '人災' [사설]",
@@ -312,6 +312,18 @@
       "source": "naver",
       "published": "2026-09-05T23:30:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Elementor Pro WordPress Plugin Vulnerability Exploited to Hack Sites",
+      "summary": "Tracked as CVE-2026-32475 (CVSS score of 9.8), the bug described as an arbitrary file upload issue in the function that handles form submissions.\nThe post Elementor Pro WordPress Plugin Vulnerability Exploited to Hack Sites appeared first on SecurityWeek.",
+      "content": "",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. Error 500 (Server Error)!!1500.That’s an error.The\n2. Error 500 (Server Error)!!1500.That’s an error.The",
+      "link": "https://www.securityweek.com/elementor-pro-wordpress-plugin-vulnerability-exploited-to-hack-sites/",
+      "source": "securityweek",
+      "published": "2026-09-05T22:00:28+09:00",
+      "lang": "en"
     },
     {
       "title": "고마이닝 연계 추정 지갑 600개서 38억원 피해",
@@ -1596,18 +1608,6 @@
       "source": "naver",
       "published": "2026-09-03T20:51:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'스쳐 간' 계정도 유출…티빙, 알려진 것보다 더 심각하게 털렸다",
-      "summary": "티빙 해킹 규모가 알려진 것보다 심각합니다. 현재 가입자뿐 아니라, 비활성 계정, 탈퇴계정까지 유출돼... [기자] 지난 5월 해킹 공격으로 티빙 서버에서 유출된 계정은 3954만개. 사람들이 쓰고 있는 계정 2206만개 뿐...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 티빙, 5월 해킹으로 3954만개 계정 유출\n2. 활성 2206만개 외 비활성, 탈퇴 계정까지 포함\n3. 알려진 것보다 심각한 규모의 계정 정보 유출",
-      "link": "https://n.news.naver.com/mnews/article/437/0000509394?sid=101",
-      "source": "naver",
-      "published": "2026-09-03T20:11:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2194,21 +2194,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-77999",
       "source": "cvefeed",
       "published": "2026-09-03T20:58:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-85175 - SiYuan before v3.8.2 TLS Private Key Disclosure via getFile",
-      "summary": "CVE ID :CVE-2026-85175\n  \nPublished : Sept. 3, 2026, 11:22 a.m. | 1 hour ago\n  \nDescription :SiYuan versions <= 3.8.1 (fixed in v3.8.2) contain an incomplete blocklist in the IsForbiddenAbsPath() function (kernel/util/path_guard.go), which only blocks conf/conf.json by exact match and does not restrict the TLS private key (conf/key.pem) or CA private key (conf/ca.key) stored in the same conf/ directory. Because the getFile handler skips the blocklist for RoleAdministrator and all authenticated users receive RoleAdministrator in v3.8.1, any user (or any client on a default no-auth-code instance) can retrieve these private keys via POST /api/file/getFile. On deployments with TLS enabled, this allows decryption of captured HTTPS traffic (key.pem) and forging of certificates trusted by clients that imported SiYuan's CA (ca.key).\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-85175\n  \nPublished : Sept. 3, 2026, 11:22 a.m. | 1 hour ago\n  \nDescription :SiYuan versions <= 3.8.1 (fixed in v3.8.2) contain an incomplete blocklist in the IsForbiddenAbsPath() function (kernel/util/path_guard.go), which only blocks conf/conf.json by exact match and does not restrict the TLS private key (conf/key.pem) or CA private key (conf/ca.key) stored in the same conf/ directory. Because the getFile handler skips the blocklist for RoleAdministrator and all authenticated users receive RoleAdministrator in v3.8.1, any user (or any client on a default no-auth-code instance) can retrieve these private keys via POST /api/file/getFile. On deployments with TLS enabled, this allows decryption of captured HTTPS traffic (key.pem) and forging of certificates trusted by clients that imported SiYuan's CA (ca.key).\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-85175\n2. 26.09.03 오후8:22\n3. SiYuan versions <= 3.8.1 (fixed in v3.8.2) contain",
-      "cve_id": "CVE-2026-85175",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85175",
-      "source": "cvefeed",
-      "published": "2026-09-03T20:22:22+09:00",
       "lang": "en"
     }
   ],
