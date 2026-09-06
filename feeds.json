@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-07T03:31:00.368693+09:00",
+  "fetched_at": "2026-09-07T04:01:04.756549+09:00",
   "security_news": [
     {
       "title": "XRP 지갑 4011개 피해, 전 리플 개발자 공방",
@@ -1620,21 +1620,39 @@
       "source": "darkreading",
       "published": "2026-09-04T04:42:39+09:00",
       "lang": "en"
-    },
-    {
-      "title": "[오늘의 경제뉴스] AI 해킹 시대, 금융사 보안은 '병목'…취약점 찾고도...",
-      "summary": "금융회사들이 조직 병목 해소에 어려움을 겪고 있는 사이 AI의 해킹 위험은 점점 높아지고 있다. 지난 4월... 결국 FCA의 경고는 AI 해킹 등 외부 공격 위험이 커지는 상황에서 금융회사들이 보안 대응 조직의 재정비에...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융사, AI 해킹 대비 조직 정비에 어려움 겪어\n2. AI 기술 악용 시 금융 시스템 취약점 노출 우려\n3. FCA, 금융사 보안 조직 재정비 경고",
-      "link": "https://www.newsverse.kr/news/articleView.html?idxno=11360",
-      "source": "naver",
-      "published": "2026-09-04T03:32:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-86219 - Authen::SASL::Perl::DIGEST_MD5 versions before 2.2100 for Perl accept replayed authentication responses via unverified nonce in server_step",
+      "summary": "CVE ID :CVE-2026-86219\n  \nPublished : Sept. 6, 2026, 6:17 p.m. | 31 minutes ago\n  \nDescription :Authen::SASL::Perl::DIGEST_MD5 versions before 2.2100 for Perl accept replayed authentication responses via unverified nonce in server_step.\n\nserver_start generates a fresh nonce and sends it in the challenge, and nothing later compares that value against the nonce the client returns. server_step derives the expected digest from the client's own parameters, so a response verifies whenever its digest matches the nonce it carries. The count table it also checks is keyed on the client-supplied nonce and starts empty in each new server object, so a captured first response, carrying `nc=00000001`, passes that too. RFC 2831 defines the nonce in the response as the value the server sent in the preceding challenge.\n\nAn attacker who observes one successful `qop=auth` exchange can replay the captured response against a later session for the same service, host, realm and user, and authenticate as that user without knowing the password.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-86219\n  \nPublished : Sept. 6, 2026, 6:17 p.m. | 31 minutes ago\n  \nDescription :Authen::SASL::Perl::DIGEST_MD5 versions before 2.2100 for Perl accept replayed authentication responses via unverified nonce in server_step.\n\nserver_start generates a fresh nonce and sends it in the challenge, and nothing later compares that value against the nonce the client returns. server_step derives the expected digest from the client's own parameters, so a response verifies whenever its digest matches the nonce it carries. The count table it also checks is keyed on the client-supplied nonce and starts empty in each new server object, so a captured first response, carrying `nc=00000001`, passes that too. RFC 2831 defines the nonce in the response as the value the server sent in the preceding challenge.\n\nAn attacker who observes one successful `qop=auth` exchange can replay the captured response against a later session for the same service, host, realm and user, and authenticate as that user without knowing the password.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-86219\n2. 26.09.07 오전3:17\n3. Authen::SASL::Perl::DIGEST_MD5 versions before 2.2",
+      "cve_id": "CVE-2026-86219",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86219",
+      "source": "cvefeed",
+      "published": "2026-09-07T03:17:23+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-82209 - domain-scoped PSL domain cookie",
+      "summary": "CVE ID :CVE-2026-82209\n  \nPublished : Sept. 6, 2026, 6:17 p.m. | 31 minutes ago\n  \nDescription :When libpsl support is enabled, libcurl fails to enforce the Public Suffix\nList boundary check when processing a `Set-Cookie` header where the `Domain`\nattribute explicitly matches an origin host that is itself a public suffix\n(e.g., `Domain=co.uk` set by `co.uk`).\n\nInstead of coercing it into a strict host-only cookie, libcurl saves the\ncookie with wildcard domain scope (`.co.uk`). Consequently, the cookie is\ninappropriately included in subsequent outbound requests or HTTP redirects to\narbitrary sibling subdomains under the same public suffix (e.g.,\n`attacker.co.uk`).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82209\n  \nPublished : Sept. 6, 2026, 6:17 p.m. | 31 minutes ago\n  \nDescription :When libpsl support is enabled, libcurl fails to enforce the Public Suffix\nList boundary check when processing a `Set-Cookie` header where the `Domain`\nattribute explicitly matches an origin host that is itself a public suffix\n(e.g., `Domain=co.uk` set by `co.uk`).\n\nInstead of coercing it into a strict host-only cookie, libcurl saves the\ncookie with wildcard domain scope (`.co.uk`). Consequently, the cookie is\ninappropriately included in subsequent outbound requests or HTTP redirects to\narbitrary sibling subdomains under the same public suffix (e.g.,\n`attacker.co.uk`).\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-82209\n2. 26.09.07 오전3:17\n3. When libpsl support is enabled, libcurl fails to e",
+      "cve_id": "CVE-2026-82209",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82209",
+      "source": "cvefeed",
+      "published": "2026-09-07T03:17:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-82750 - Unbounded EIP-7702 authorization list in mpp Tempo fee-payer sponsorship inflates gas cost and sponsors account delegation",
       "summary": "CVE ID :CVE-2026-82750\n  \nPublished : Sept. 6, 2026, 4:08 p.m. | 46 minutes ago\n  \nDescription :Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to inflate the fee-payer's gas cost per sponsored payment by a large multiplier and to have the sponsor pay for EIP-7702 account delegations of the client's choosing.\n\nWhen the server sponsors Tempo payments, MPP.Methods.Tempo.FeePayerPolicy.measure/3 in lib/mpp/methods/tempo/fee_payer_policy.ex bounds the gas fields, the fee budget, the validity window and the access list of the client-signed 0x76 envelope, but never reads its aa_authorization_list field. Every signed delegation in that list is charged as intrinsic gas before the payment call runs, so a client attaching delegations from throwaway authority keys makes the sponsor pay for them within the default gas_limit ceiling. At the reporter's default of seven entries the sponsored cost rises from about 46,575 gas to about 1,884,087 gas. Because each entry is applied as a persistent set-code delegation, a client can also upgrade its own accounts to delegated code at the sponsor's expense.\n\nThis issue affects mpp: from 0.2.0 before 0.16.1.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
