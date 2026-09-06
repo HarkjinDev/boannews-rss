@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-07T03:01:05.987895+09:00",
+  "fetched_at": "2026-09-07T03:31:00.368693+09:00",
   "security_news": [
     {
       "title": "XRP 지갑 4011개 피해, 전 리플 개발자 공방",
@@ -2173,36 +2173,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-85062",
       "source": "cvefeed",
       "published": "2026-09-04T06:17:23+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-85012 - OS command injection in the Amazon CodeCatalyst blueprints SDK",
-      "summary": "CVE ID :CVE-2026-85012\n  \nPublished : Sept. 3, 2026, 6:17 p.m. | 29 minutes ago\n  \nDescription :Improper neutralization of special elements used in an OS command (CWE-78) in the blueprint resynthesis framework in Amazon Web Services codecatalyst-blueprints before 0.3.156 might allow a user with permission to commit to a repository in the project to execute arbitrary commands in the blueprint resynthesis environment via shell metacharacters in the owner field of a [local] merge strategy entry in a crafted .ownership-file.\n\n\n\nVersion 0.3.156 removes shell interpretation of the owner field, running the command directly rather than through a shell, and rejects values outside an allowlisted command form. This eliminates shell metacharacter command injection. To remediate this issue, users should upgrade to version 0.3.156 or later.\n\n\n\nNo action is required for use of the Amazon CodeCatalyst service. Resynthesis runs in an isolated per-project environment with scoped credentials, and the service applies server-side validation there that rejects [local] merge strategy commands outside a restricted allowlisted form, including for blueprint versions published before 0.3.156.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-85012\n  \nPublished : Sept. 3, 2026, 6:17 p.m. | 29 minutes ago\n  \nDescription :Improper neutralization of special elements used in an OS command (CWE-78) in the blueprint resynthesis framework in Amazon Web Services codecatalyst-blueprints before 0.3.156 might allow a user with permission to commit to a repository in the project to execute arbitrary commands in the blueprint resynthesis environment via shell metacharacters in the owner field of a [local] merge strategy entry in a crafted .ownership-file.\n\n\n\nVersion 0.3.156 removes shell interpretation of the owner field, running the command directly rather than through a shell, and rejects values outside an allowlisted command form. This eliminates shell metacharacter command injection. To remediate this issue, users should upgrade to version 0.3.156 or later.\n\n\n\nNo action is required for use of the Amazon CodeCatalyst service. Resynthesis runs in an isolated per-project environment with scoped credentials, and the service applies server-side validation there that rejects [local] merge strategy commands outside a restricted allowlisted form, including for blueprint versions published before 0.3.156.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-85012\n2. 26.09.04 오전3:17\n3. Improper neutralization of special elements used i",
-      "cve_id": "CVE-2026-85012",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85012",
-      "source": "cvefeed",
-      "published": "2026-09-04T03:17:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82023 - LearnPress WordPress Plugin < 4.4.6 Broken Object-Level Authorization via Quiz Answer Insert",
-      "summary": "CVE ID :CVE-2026-82023\n  \nPublished : Sept. 3, 2026, 6:17 p.m. | 56 minutes ago\n  \nDescription :LearnPress WordPress Plugin before 4.4.6 contains a broken object-level authorization vulnerability that allows authenticated attackers with the Instructor role to add answers to quiz questions owned by other instructors by exploiting a missing ownership check on the question answer insert path. Attackers can supply arbitrary question identifiers during answer insertion, bypassing instructor-boundary restrictions to persistently modify quiz content across courses they do not own.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82023\n  \nPublished : Sept. 3, 2026, 6:17 p.m. | 56 minutes ago\n  \nDescription :LearnPress WordPress Plugin before 4.4.6 contains a broken object-level authorization vulnerability that allows authenticated attackers with the Instructor role to add answers to quiz questions owned by other instructors by exploiting a missing ownership check on the question answer insert path. Attackers can supply arbitrary question identifiers during answer insertion, bypassing instructor-boundary restrictions to persistently modify quiz content across courses they do not own.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-82023 - LearnPress WordPress 플러그인 < 4.4.6 퀴즈 답변 삽입을 통한 깨진 개체 수준 인증",
-      "summary_ko": "CVE ID:CVE-2026-82023\n  \n게시일 : 2026년 9월 3일 오후 6시 17분 | 56분 전\n  \n설명: 4.4.6 이전의 LearnPress WordPress 플러그인에는 강사 역할을 가진 인증된 공격자가 질문 답변 삽입 경로에서 누락된 소유권 확인을 이용하여 다른 강사가 소유한 퀴즈 질문에 답변을 추가할 수 있는 손상된 개체 수준 인증 취약점이 포함되어 있습니다. 공격자는 답변 삽입 중에 임의의 질문 식별자를 제공하여 강사 경계 제한을 우회하여 자신이 소유하지 않은 코스 전체에서 퀴즈 콘텐츠를 지속적으로 수정할 수 있습니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-82023\n2. 26.09.04 오전3:17\n3. LearnPress WordPress Plugin before 4.4.6 contains ",
-      "cve_id": "CVE-2026-82023",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82023",
-      "source": "cvefeed",
-      "published": "2026-09-04T03:17:24+09:00",
       "lang": "en"
     }
   ],
