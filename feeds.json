@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-06T22:33:34.329281+09:00",
+  "fetched_at": "2026-09-06T23:03:30.576908+09:00",
   "security_news": [
     {
       "title": "하이브 위버스, 계정 42만2584건 정보 유출",
@@ -1588,6 +1588,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-86213 - Mstfakts College-Management-System Search university.php mysqli_query sql injection",
+      "summary": "CVE ID :CVE-2026-86213\n  \nPublished : Sept. 6, 2026, 1:17 p.m. | 46 minutes ago\n  \nDescription :A vulnerability was found in Mstfakts College-Management-System. This issue affects the function mysqli_query of the file Front-end/university.php of the component Search Handler. The manipulation of the argument book_name/book_author results in sql injection. The attack may be performed from remote. The exploit has been made public and could be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-86213\n  \nPublished : Sept. 6, 2026, 1:17 p.m. | 46 minutes ago\n  \nDescription :A vulnerability was found in Mstfakts College-Management-System. This issue affects the function mysqli_query of the file Front-end/university.php of the component Search Handler. The manipulation of the argument book_name/book_author results in sql injection. The attack may be performed from remote. The exploit has been made public and could be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-86213 - Mstfakts College-Management-System 검색 University.php mysqli_query SQL 삽입",
+      "summary_ko": "CVE ID:CVE-2026-86213\n  \n게시일 : 2026년 9월 6일 오후 1시 17분 | 46분 전\n  \n설명: Mstfakts College-Management-System에서 취약점이 발견되었습니다. 이 문제는 검색 핸들러 구성요소의 Front-end/university.php 파일에 있는 mysqli_query 함수에 영향을 미칩니다. book_name/book_author 인수를 조작하면 SQL 삽입이 발생합니다. 공격은 원격에서 수행될 수 있습니다. 이 익스플로잇은 공개되었으며 사용될 수 있습니다. 이 제품은 지속적인 전달을 위해 롤링 릴리스 시스템을 활용하므로 영향을 받거나 업데이트된 릴리스에 대한 버전 정보는 공개되지 않습니다. 해당 프로젝트는 이슈 리포트를 통해 조기에 문제를 통보 받았으나 아직까지 답변을 하지 않았습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-86213\n2. 26.09.06 오후10:17\n3. A vulnerability was found in Mstfakts College-Mana",
+      "cve_id": "CVE-2026-86213",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86213",
+      "source": "cvefeed",
+      "published": "2026-09-06T22:17:10+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-86242 - Unauthenticated RCE via Custom Plugin HTTP Path on Dynamically Linked Builds",
       "summary": "CVE ID :CVE-2026-86242\n  \nPublished : Sept. 6, 2026, 11:20 a.m. | 19 minutes ago\n  \nDescription :Bifrost HTTP transport before 2.0.0 accepts an enabled custom plugin whose path is an HTTP URL through unauthenticated POST /api/plugins when management authentication is disabled (the default, governance.auth_config.is_enabled=false). The shared-object loader treats an http-prefixed path as a download URL, writes the body to a temporary .so, and passes it to Go's plugin.Open. After a successful open, optional Init runs immediately with the supplied config as the Bifrost process user. On documented dynamically linked builds (DYNAMIC=1 / no static-link flags), which the vendor requires for custom Go plugins, plugin.Open is expected to succeed and this is unauthenticated remote code execution. On the published statically linked Docker image, plugin.Open fails with Dynamic loading not supported, so that build class is only server-side request forgery. Attack complexity is High because the attacker cannot force RCE on the default static image and a loadable plugin must match the host Go version, OS, architecture, and linkage. The 1.6.x HTTP transport line through 1.6.11 does not contain the fix.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-86242\n  \nPublished : Sept. 6, 2026, 11:20 a.m. | 19 minutes ago\n  \nDescription :Bifrost HTTP transport before 2.0.0 accepts an enabled custom plugin whose path is an HTTP URL through unauthenticated POST /api/plugins when management authentication is disabled (the default, governance.auth_config.is_enabled=false). The shared-object loader treats an http-prefixed path as a download URL, writes the body to a temporary .so, and passes it to Go's plugin.Open. After a successful open, optional Init runs immediately with the supplied config as the Bifrost process user. On documented dynamically linked builds (DYNAMIC=1 / no static-link flags), which the vendor requires for custom Go plugins, plugin.Open is expected to succeed and this is unauthenticated remote code execution. On the published statically linked Docker image, plugin.Open fails with Dynamic loading not supported, so that build class is only server-side request forgery. Attack complexity is High because the attacker cannot force RCE on the default static image and a loadable plugin must match the host Go version, OS, architecture, and linkage. The 1.6.x HTTP transport line through 1.6.11 does not contain the fix.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2110,36 +2125,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-85230",
       "source": "cvefeed",
       "published": "2026-09-03T23:48:41+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-62815 Microsoft QUIC Remote Code Execution Vulnerability",
-      "summary": "Updated an acknowledgement. This is an informational change only.",
-      "description": "Updated an acknowledgement. This is an informational change only.",
-      "title_ko": "CVE-2026-62815 Microsoft QUIC 원격 코드 실행 취약점",
-      "summary_ko": "승인을 업데이트했습니다. 이는 정보 제공용 변경일 뿐입니다.",
-      "summary_3lines": "1. CVE-2026-62815\n2. MSRC\n3. Updated an acknowledgement. This is an information",
-      "cve_id": "CVE-2026-62815",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62815",
-      "source": "msrc",
-      "published": "2026-09-03T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-70352 Azure AI Language Elevation of Privilege Vulnerability",
-      "summary": "Missing authentication for critical function in Azure AI Language allows an unauthorized attacker to elevate privileges over a network.",
-      "description": "Missing authentication for critical function in Azure AI Language allows an unauthorized attacker to elevate privileges over a network.",
-      "title_ko": "CVE-2026-70352 Azure AI 언어 권한 상승 취약성",
-      "summary_ko": "Azure AI 언어의 중요한 기능에 대한 인증이 누락되어 무단 공격자가 네트워크를 통해 권한을 상승시킬 수 있습니다.",
-      "summary_3lines": "1. CVE-2026-70352\n2. MSRC\n3. Missing authentication for critical function in Az",
-      "cve_id": "CVE-2026-70352",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70352",
-      "source": "msrc",
-      "published": "2026-09-03T23:00:00+09:00",
       "lang": "en"
     }
   ],
