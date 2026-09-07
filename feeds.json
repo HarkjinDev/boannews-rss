@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-08T03:01:05.191043+09:00",
+  "fetched_at": "2026-09-08T03:32:19.772230+09:00",
   "security_news": [
+    {
+      "title": "말론 램, 3300억원 비트코인 훔친 혐의로 유죄 인정…리코법 최초 적용...",
+      "summary": "한 명은 구글 직원을 자처하며 계정이 해킹당했다고 경고했고, 다른 한 명은 가상자산 거래소 제미나이(Gemini) 직원을 사칭해 지갑에 악성코드가 감지됐다고 속였다. 피해자는 결국 구글 드라이브 접근 권한과...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 3300억 원 비트코인 훔친 말론 램, 리코법으로 유죄 인정\n2. 구글 직원·제미나이 직원 사칭, 가상자산 지갑 악성코드 감염 유도\n3. 피해자 구글 드라이브 접근 권한 탈취, 추가 피해 예상",
+      "link": "https://www.wikitree.co.kr/articles/1157914",
+      "source": "naver",
+      "published": "2026-09-08T03:16:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "PEEP Turns Chrome and Edge Into Post-Compromise Backdoors for Host Command Execution",
+      "summary": "Cybersecurity researchers have disclosed details of a complex Chromium-based post-exploitation toolkit called PEEP that masquerades as a bookmarks extension for the web browser.\n\n\"Requiring prior administrative or code execution access, its installer injects the extension directly into Chrome/Edge profiles, bypassing Web Store checks and user prompts by forging Chromium's own Secure Preferences",
+      "content": "",
+      "title_ko": "PEEP는 Chrome과 Edge를 호스트 명령 실행을 위한 침해 후 백도어로 전환합니다.",
+      "summary_ko": "사이버 보안 연구원들은 웹 브라우저의 북마크 확장으로 가장하는 PEEP라는 복잡한 Chromium 기반 악용 후 툴킷의 세부 정보를 공개했습니다.\n\n\"사전 관리 또는 코드 실행 액세스가 필요한 설치 프로그램은 Chromium의 자체 보안 기본 설정을 위조하여 웹 스토어 확인 및 사용자 프롬프트를 우회하여 Chrome/Edge 프로필에 확장 프로그램을 직접 삽입합니다.",
+      "summary_3lines": "1. PEEP는 Chrome과 Edge를 호스트 명령 실행을 위한 침해 후 백도어로 전환합니다.\n2. \"사전 관리 또는 코드 실행 액세스가 필요한 설치 프로그램은 Chromium의 자체 보안 ",
+      "link": "https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html",
+      "source": "thehackernews",
+      "published": "2026-09-08T03:12:09+09:00",
+      "lang": "en"
+    },
     {
       "title": "Magento StyleSmuggler zero-day exploited to deploy Linux backdoor",
       "summary": "A zero-day vulnerability dubbed \"StyleSmuggler\" affecting all versions of Magento and Adobe Commerce is being exploited in attacks to deploy a backdoor. [...]",
@@ -1972,36 +1996,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-53602",
       "source": "cvefeed",
       "published": "2026-09-05T05:17:23+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-85769 - Libtpms: libtpms: heap out-of-bounds read in tpm2 state unmarshalling via unchecked block_skip_read() blocksize",
-      "summary": "CVE ID :CVE-2026-85769\n  \nPublished : Sept. 4, 2026, 6:18 p.m. | 24 minutes ago\n  \nDescription :A flaw was found in libtpms, a library that provides software TPM 2.0 emulation. When restoring TPM 2.0 state (for example during a virtual machine's power-on or state/migration restore), a malformed state blob can supply an oversized skip-block length that is not validated against the remaining size of the input buffer. This can drive an internal size counter negative, which bypasses a subsequent bounds check due to an unsafe signed-to-unsigned conversion, causing the parser to read memory outside the bounds of the heap buffer holding the state data. Successful exploitation can crash the process hosting libtpms (such as swtpm), resulting in a denial of service of the emulated TPM device and the virtual machine that depends on it. No data corruption or information disclosure was confirmed.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-85769\n  \nPublished : Sept. 4, 2026, 6:18 p.m. | 24 minutes ago\n  \nDescription :A flaw was found in libtpms, a library that provides software TPM 2.0 emulation. When restoring TPM 2.0 state (for example during a virtual machine's power-on or state/migration restore), a malformed state blob can supply an oversized skip-block length that is not validated against the remaining size of the input buffer. This can drive an internal size counter negative, which bypasses a subsequent bounds check due to an unsafe signed-to-unsigned conversion, causing the parser to read memory outside the bounds of the heap buffer holding the state data. Successful exploitation can crash the process hosting libtpms (such as swtpm), resulting in a denial of service of the emulated TPM device and the virtual machine that depends on it. No data corruption or information disclosure was confirmed.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-85769 - Libtpms: libtpms: tpm2 상태에서 범위를 벗어난 힙 읽기가 확인되지 않은 block_skip_read() 블록 크기를 통해 언마샬링됨",
-      "summary_ko": "CVE ID:CVE-2026-85769\n  \n게시일 : 2026년 9월 4일 오후 6시 18분 | 24분 전\n  \n설명 : 소프트웨어 TPM 2.0 에뮬레이션을 제공하는 라이브러리인 libtpms에서 결함이 발견되었습니다. TPM 2.0 상태를 복원할 때(예: 가상 머신의 전원 켜기 또는 상태/마이그레이션 복원 중) 잘못된 상태 Blob은 입력 버퍼의 나머지 크기에 대해 유효성이 검사되지 않는 과도한 건너뛰기 블록 길이를 제공할 수 있습니다. 이로 인해 내부 크기 카운터가 부정화되어 안전하지 않은 부호-비부호 변환으로 인해 후속 경계 검사를 우회하여 파서가 상태 데이터를 보유하는 힙 버퍼 경계 외부의 메모리를 읽게 될 수 있습니다. 악용에 성공하면 libtpms(예: swtpm)를 호스팅하는 프로세스가 중단되어 에뮬레이트된 TPM 장치 및 이에 의존하는 가상 머신의 서비스가 거부될 수 있습니다. 데이터 손상이나 정보 유출은 확인되지 않았습니다.\n  \n심각도: 6.5 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-85769\n2. 26.09.05 오전3:18\n3. A flaw was found in libtpms, a library that provid",
-      "cve_id": "CVE-2026-85769",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85769",
-      "source": "cvefeed",
-      "published": "2026-09-05T03:18:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-80899 - erofs: remove fscache backend entirely",
-      "summary": "CVE ID :CVE-2026-80899\n  \nPublished : Sept. 4, 2026, 6:17 p.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nerofs: remove fscache backend entirely\n\nEROFS over fscache was introduced to provide image lazy pulling\nfunctionality. After the feature landed, the fscache subsystem made\nnetfs a new hard dependency, which is unexpected for a local filesystem\nand has an kernel-defined caching hierarchy which could be inflexible\ncompared to the fanotify pre-content hooks. Therefore, this feature has\nbeen deprecated for almost two years.\n\nAs EROFS file-backed mounts and fanotify pre-content hooks both upstream\nfor a while and already providing equivalent functionality (erofs-utils\nhas supported fanotify pre-content hooks), let's remove the fscache\nbackend now.\n\nThe main application of this feature is Nydus [1], and they plan to move\nto use fanotify pre-content hooks in the near future too.\n\nI hope this patch can be merged into Linux 7.2, which is also motivated\nby newly found implementation issues [2][3] that are not worth\ninvestigating given the deprecation and limited development resources.\nThe associated fscache/cachefiles cleanup patch will follow separately\nthrough the vfs tree (netfs) later: it seems fine since the codebase is\nisolated by CONFIG_CACHEFILES_ONDEMAND.\n\n[1] https://github.com/dragonflyoss/nydus/blob/v2.1.0/docs/nydus-fscache.md\n[2] https://github.com/dragonflyoss/nydus/pull/1824\n[3] https://lore.kernel.org/r/20260619135800.1594811-1-michael.bommarito@gmail.com\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-80899\n  \nPublished : Sept. 4, 2026, 6:17 p.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nerofs: remove fscache backend entirely\n\nEROFS over fscache was introduced to provide image lazy pulling\nfunctionality. After the feature landed, the fscache subsystem made\nnetfs a new hard dependency, which is unexpected for a local filesystem\nand has an kernel-defined caching hierarchy which could be inflexible\ncompared to the fanotify pre-content hooks. Therefore, this feature has\nbeen deprecated for almost two years.\n\nAs EROFS file-backed mounts and fanotify pre-content hooks both upstream\nfor a while and already providing equivalent functionality (erofs-utils\nhas supported fanotify pre-content hooks), let's remove the fscache\nbackend now.\n\nThe main application of this feature is Nydus [1], and they plan to move\nto use fanotify pre-content hooks in the near future too.\n\nI hope this patch can be merged into Linux 7.2, which is also motivated\nby newly found implementation issues [2][3] that are not worth\ninvestigating given the deprecation and limited development resources.\nThe associated fscache/cachefiles cleanup patch will follow separately\nthrough the vfs tree (netfs) later: it seems fine since the codebase is\nisolated by CONFIG_CACHEFILES_ONDEMAND.\n\n[1] https://github.com/dragonflyoss/nydus/blob/v2.1.0/docs/nydus-fscache.md\n[2] https://github.com/dragonflyoss/nydus/pull/1824\n[3] https://lore.kernel.org/r/20260619135800.1594811-1-michael.bommarito@gmail.com\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-80899\n2. 26.09.05 오전3:17\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-80899",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80899",
-      "source": "cvefeed",
-      "published": "2026-09-05T03:17:58+09:00",
       "lang": "en"
     }
   ],
