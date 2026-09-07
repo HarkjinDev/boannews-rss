@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-08T01:31:21.464951+09:00",
+  "fetched_at": "2026-09-08T02:01:14.621885+09:00",
   "security_news": [
+    {
+      "title": "Magento StyleSmuggler zero-day exploited to deploy Linux backdoor",
+      "summary": "A zero-day vulnerability dubbed \"StyleSmuggler\" affecting all versions of Magento and Adobe Commerce is being exploited in attacks to deploy a backdoor. [...]",
+      "content": "",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. Magento StyleSmuggler 제로데이 취약점 악용\n2. 모든 Magento, Adobe Commerce 버전 대상 백도어 배포\n3. 공격자, StyleSmuggler 통한 시스템 장악 시도",
+      "link": "https://www.bleepingcomputer.com/news/security/magento-stylesmuggler-zero-day-exploited-to-deploy-linux-backdoor/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-08T01:50:29+09:00",
+      "lang": "en"
+    },
     {
       "title": "[이혁중 CISO 칼럼] AI와 클라우드 시대, 보안 신입에게 필요한 것은 결...",
       "summary": "신입 보안 인재에게 가장 먼저 필요한 것은 화려한 해킹 기술이 아니라 컴퓨팅 기본기다. 네트워크가... 취약점 진단과 모의 해킹을 원한다면 웹 보안 원리와 보고서 작성 능력이 필요하다. 클라우드 보안을 원한다면...",
@@ -1644,18 +1656,6 @@
       "source": "naver",
       "published": "2026-09-05T04:26:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[오늘의 채널A]외화벌이 北 IT 노동자 실태 조명",
-      "summary": "중국에서 근무 중인 현직 북한 IT 노동자의 인터뷰를 통해 혹독한 상납 구조와 감시 실태를 공개한다. 가짜 신분과 인공지능(AI)까지 동원한 북한 해커부대의 치밀하고 고도화된 해킹 수법도 집중 조명한다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [오늘의 채널A]외화벌이 北 IT 노동자 실태 조명 중국에서 근무 중인 현직 북한 IT 노\n2. 가짜 신분과 인공지능(AI)까지 동원한 북한 해커부대의 치밀하고 고도화된 해킹 수법도 집중",
-      "link": "https://m.entertain.naver.com/article/020/0003745923",
-      "source": "naver",
-      "published": "2026-09-05T01:42:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2002,66 +2002,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-80899",
       "source": "cvefeed",
       "published": "2026-09-05T03:17:58+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-80886 - serial: msm: Disable DMA for kernel console UART",
-      "summary": "CVE ID :CVE-2026-80886\n  \nPublished : Sept. 4, 2026, 4:49 p.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nserial: msm: Disable DMA for kernel console UART\n\nAt the moment, concurrent writes from userspace and the kernel to the\nconsole can trigger a race condition that results in an infinite loop of\nthe same messages printed over and over again. This is most likely to\nhappen during system startup or shutdown when the init system starts/stops\na large number of system services that interact with various kernel code.\n\nWhen userspace writes to the TTY device, the driver initiates an\nasynchronous DMA transfer and releases the port lock. At the same moment,\nthe kernel printk path might grab the port lock and re-configure the UART\ncontroller for PIO, without waiting for the DMA operation to complete. It\nseems like this collision results in zero progress being reported for the\nDMA engine, so the same text is printed to the console over and over again.\n\nFor the kernel console, we want a reliable output path that will be\nfunctional even during crashes etc. So rather than implementing complex\ncode to synchronize the kernel console write routines with the userspace\nDMA write routines, simply disable DMA for the console UART instance.\n\nSimilar checks exist in many other serial drivers, e.g. 8250_port.c,\nimx.c, sh-sci.c etc.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-80886\n  \nPublished : Sept. 4, 2026, 4:49 p.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nserial: msm: Disable DMA for kernel console UART\n\nAt the moment, concurrent writes from userspace and the kernel to the\nconsole can trigger a race condition that results in an infinite loop of\nthe same messages printed over and over again. This is most likely to\nhappen during system startup or shutdown when the init system starts/stops\na large number of system services that interact with various kernel code.\n\nWhen userspace writes to the TTY device, the driver initiates an\nasynchronous DMA transfer and releases the port lock. At the same moment,\nthe kernel printk path might grab the port lock and re-configure the UART\ncontroller for PIO, without waiting for the DMA operation to complete. It\nseems like this collision results in zero progress being reported for the\nDMA engine, so the same text is printed to the console over and over again.\n\nFor the kernel console, we want a reliable output path that will be\nfunctional even during crashes etc. So rather than implementing complex\ncode to synchronize the kernel console write routines with the userspace\nDMA write routines, simply disable DMA for the console UART instance.\n\nSimilar checks exist in many other serial drivers, e.g. 8250_port.c,\nimx.c, sh-sci.c etc.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-80886 - 직렬: msm: 커널 콘솔 UART에 대해 DMA 비활성화",
-      "summary_ko": "CVE ID:CVE-2026-80886\n  \n게시일 : 2026년 9월 4일 오후 4시 49분 | 24분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nserial: msm: 커널 콘솔 UART에 대해 DMA를 비활성화합니다.\n\n현재는 사용자 공간과 커널에서 동시에 쓰기가 수행됩니다.\n콘솔은 무한 루프를 발생시키는 경쟁 조건을 유발할 수 있습니다.\n같은 메시지가 계속해서 인쇄되었습니다. 이는 다음과 같은 가능성이 가장 높습니다.\n초기화 시스템이 시작/중지될 때 시스템 시작 또는 종료 중에 발생합니다.\n다양한 커널 코드와 상호 작용하는 수많은 시스템 서비스.\n\n사용자 공간이 TTY 장치에 쓸 때 드라이버는\n비동기 DMA 전송을 수행하고 포트 잠금을 해제합니다. 동시에,\n커널 printk 경로가 포트 잠금을 잡고 UART를 재구성할 수 있습니다.\nDMA 작업이 완료될 때까지 기다리지 않고 PIO용 컨트롤러를 사용합니다. 그것\n이 충돌로 인해 보고된 진행 상황이 0인 것 같습니다.\nDMA 엔진이므로 동일한 텍스트가 콘솔에 계속해서 인쇄됩니다.\n\n커널 콘솔의 경우, 우리는 신뢰할 수 있는 출력 경로를 원합니다.\n충돌 등의 상황에서도 작동합니다. 따라서 복잡한 구현보다는\n커널 콘솔 쓰기 루틴을 사용자 공간과 동기화하는 코드\nDMA 쓰기 루틴은 콘솔 UART 인스턴스에 대해 DMA를 비활성화하기만 하면 됩니다.\n\n다른 많은 직렬 드라이버에도 비슷한 검사가 있습니다. 8250_port.c,\nimx.c, sh-sci.c 등\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-80886\n2. 26.09.05 오전1:49\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-80886",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80886",
-      "source": "cvefeed",
-      "published": "2026-09-05T01:49:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-80880 - IB/mlx5: Properly support implicit ODP rereg_mr",
-      "summary": "CVE ID :CVE-2026-80880\n  \nPublished : Sept. 4, 2026, 4:49 p.m. | 25 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nIB/mlx5: Properly support implicit ODP rereg_mr\n\nDue to all the child mkeys in the implicit ODP configuration we cannot\nchange anything in place for the parent mkey. Instead the whole thing\nneeds to be rebuilt if any change is requested. If the user does not\nspecify a translation then force the implicit values which will then fall\nthrough the logic into mlx5_ib_reg_user_mr() to allocate a completely new\nMR.\n\nSince implicit children were also touching the mr->pd, this removes\nanother case where the access was racy.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-80880\n  \nPublished : Sept. 4, 2026, 4:49 p.m. | 25 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nIB/mlx5: Properly support implicit ODP rereg_mr\n\nDue to all the child mkeys in the implicit ODP configuration we cannot\nchange anything in place for the parent mkey. Instead the whole thing\nneeds to be rebuilt if any change is requested. If the user does not\nspecify a translation then force the implicit values which will then fall\nthrough the logic into mlx5_ib_reg_user_mr() to allocate a completely new\nMR.\n\nSince implicit children were also touching the mr->pd, this removes\nanother case where the access was racy.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-80880 - IB/mlx5: 암시적 ODP rereg_mr을 올바르게 지원합니다.",
-      "summary_ko": "CVE ID:CVE-2026-80880\n  \n게시일 : 2026년 9월 4일 오후 4시 49분 | 25분 전\n  \n설명:Linux 커널에서 다음 취약점이 해결되었습니다.\n\nIB/mlx5: 암시적 ODP rereg_mr을 올바르게 지원합니다.\n\n암시적 ODP 구성의 모든 하위 mkey로 인해 우리는\n상위 mkey의 모든 항목을 변경합니다. 대신에 전부\n변경이 요청되면 다시 작성해야 합니다. 사용자가 그렇지 않은 경우\n번역을 지정한 다음 암시적 값을 강제로 적용하면 해당 값이 떨어집니다.\nmlx5_ib_reg_user_mr()에 대한 논리를 통해 완전히 새로운 할당\n씨.\n\n암시적 하위 항목도 mr->pd를 만졌으므로 이는 제거됩니다.\n액세스가 선정적인 또 다른 경우입니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-80880\n2. 26.09.05 오전1:49\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-80880",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80880",
-      "source": "cvefeed",
-      "published": "2026-09-05T01:49:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-80879 - ocfs2: fix circular locking dependency in ocfs2_dio_end_io_write",
-      "summary": "CVE ID :CVE-2026-80879\n  \nPublished : Sept. 4, 2026, 4:49 p.m. | 25 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nocfs2: fix circular locking dependency in ocfs2_dio_end_io_write\n\nA circular locking dependency involves INODE_ALLOC_SYSTEM_INODE,\nEXTENT_ALLOC_SYSTEM_INODE, and ORPHAN_DIR_SYSTEM_INODE.\n\n1. ocfs2_mknod() acquires INODE_ALLOC then EXTENT_ALLOC.\n\n2. ocfs2_dio_end_io_write() acquires EXTENT_ALLOC for unwritten\n   extents, then ORPHAN_DIR via ocfs2_del_inode_from_orphan() while still\n   holding EXTENT_ALLOC.\n\n3. ocfs2_wipe_inode() acquires ORPHAN_DIR then INODE_ALLOC via\n   ocfs2_remove_inode.\n\nBreak the cycle in ocfs2_dio_end_io_write() by freeing the allocation\ncontexts (releasing EXTENT_ALLOC) before acquiring ORPHAN_DIR.\n\nWARNING: possible circular locking dependency detected\n------------------------------------------------------\nis trying to acquire lock:\nffff8881e78b33a0\n(&ocfs2_sysfile_lock_key[INODE_ALLOC_SYSTEM_INODE]){+.+.}-{4:4}, at:\nocfs2_evict_inode+0x1539/0x43b0 fs/ocfs2/inode.c:1299\n\nbut task is already holding lock:\nffff8881e78b4fa0\n(&ocfs2_sysfile_lock_key[ORPHAN_DIR_SYSTEM_INODE]){+.+.}-{4:4}, at:\nocfs2_evict_inode+0xe97/0x43b0 fs/ocfs2/inode.c:1299\n\nthe existing dependency chain (in reverse order) is:\n\n-> #2 (&ocfs2_sysfile_lock_key[ORPHAN_DIR_SYSTEM_INODE]){+.+.}-{4:4}:\n       inode_lock include/linux/fs.h:1029 [inline]\n       ocfs2_del_inode_from_orphan+0x12e/0x7a0 fs/ocfs2/namei.c:2728\n       ocfs2_dio_end_io+0xf9c/0x1370 fs/ocfs2/aops.c:2418\n       dio_complete+0x25b/0x790 fs/direct-io.c:281\n\n-> #1 (&ocfs2_sysfile_lock_key[EXTENT_ALLOC_SYSTEM_INODE]){+.+.}-{4:4}:\n       inode_lock include/linux/fs.h:1029 [inline]\n       ocfs2_reserve_suballoc_bits+0x16d/0x4840 fs/ocfs2/suballoc.c:882\n       ocfs2_reserve_new_metadata_blocks+0x415/0x9a0\n       fs/ocfs2/suballoc.c:1078\n       ocfs2_mknod+0x10f3/0x2260 fs/ocfs2/namei.c:351\n\n-> #0 (&ocfs2_sysfile_lock_key[INODE_ALLOC_SYSTEM_INODE]){+.+.}-{4:4}:\n       __lock_acquire+0x15a5/0x2cf0 kernel/locking/lockdep.c:5237\n       lock_acquire+0x106/0x350 kernel/locking/lockdep.c:5868\n       down_write+0x96/0x200 kernel/locking/rwsem.c:1625\n       inode_lock include/linux/fs.h:1029 [inline]\n       ocfs2_remove_inode fs/ocfs2/inode.c:733 [inline]\n       ocfs2_wipe_inode fs/ocfs2/inode.c:896 [inline]\n       ocfs2_delete_inode fs/ocfs2/inode.c:1157 [inline]\n       ocfs2_evict_inode+0x1539/0x43b0 fs/ocfs2/inode.c:1299\n\nChain exists of:\n  &ocfs2_sysfile_lock_key[INODE_ALLOC_SYSTEM_INODE] -->\n  &ocfs2_sysfile_lock_key[EXTENT_ALLOC_SYSTEM_INODE] -->\n  &ocfs2_sysfile_lock_key[ORPHAN_DIR_SYSTEM_INODE]\n\n Possible unsafe locking scenario:\n\n       CPU0                    CPU1\n       ----                    ----\n  lock(&ocfs2_sysfile_lock_key[ORPHAN_DIR_SYSTEM_INODE]);\n                               lock(&ocfs2_sysfile_lock_key[EXTENT_ALLOC_SYSTEM_INODE]);\n                               lock(&ocfs2_sysfile_lock_key[ORPHAN_DIR_SYSTEM_INODE]);\n  lock(&ocfs2_sysfile_lock_key[INODE_ALLOC_SYSTEM_INODE]);\n\n *** DEADLOCK ***\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-80879\n  \nPublished : Sept. 4, 2026, 4:49 p.m. | 25 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nocfs2: fix circular locking dependency in ocfs2_dio_end_io_write\n\nA circular locking dependency involves INODE_ALLOC_SYSTEM_INODE,\nEXTENT_ALLOC_SYSTEM_INODE, and ORPHAN_DIR_SYSTEM_INODE.\n\n1. ocfs2_mknod() acquires INODE_ALLOC then EXTENT_ALLOC.\n\n2. ocfs2_dio_end_io_write() acquires EXTENT_ALLOC for unwritten\n   extents, then ORPHAN_DIR via ocfs2_del_inode_from_orphan() while still\n   holding EXTENT_ALLOC.\n\n3. ocfs2_wipe_inode() acquires ORPHAN_DIR then INODE_ALLOC via\n   ocfs2_remove_inode.\n\nBreak the cycle in ocfs2_dio_end_io_write() by freeing the allocation\ncontexts (releasing EXTENT_ALLOC) before acquiring ORPHAN_DIR.\n\nWARNING: possible circular locking dependency detected\n------------------------------------------------------\nis trying to acquire lock:\nffff8881e78b33a0\n(&ocfs2_sysfile_lock_key[INODE_ALLOC_SYSTEM_INODE]){+.+.}-{4:4}, at:\nocfs2_evict_inode+0x1539/0x43b0 fs/ocfs2/inode.c:1299\n\nbut task is already holding lock:\nffff8881e78b4fa0\n(&ocfs2_sysfile_lock_key[ORPHAN_DIR_SYSTEM_INODE]){+.+.}-{4:4}, at:\nocfs2_evict_inode+0xe97/0x43b0 fs/ocfs2/inode.c:1299\n\nthe existing dependency chain (in reverse order) is:\n\n-> #2 (&ocfs2_sysfile_lock_key[ORPHAN_DIR_SYSTEM_INODE]){+.+.}-{4:4}:\n       inode_lock include/linux/fs.h:1029 [inline]\n       ocfs2_del_inode_from_orphan+0x12e/0x7a0 fs/ocfs2/namei.c:2728\n       ocfs2_dio_end_io+0xf9c/0x1370 fs/ocfs2/aops.c:2418\n       dio_complete+0x25b/0x790 fs/direct-io.c:281\n\n-> #1 (&ocfs2_sysfile_lock_key[EXTENT_ALLOC_SYSTEM_INODE]){+.+.}-{4:4}:\n       inode_lock include/linux/fs.h:1029 [inline]\n       ocfs2_reserve_suballoc_bits+0x16d/0x4840 fs/ocfs2/suballoc.c:882\n       ocfs2_reserve_new_metadata_blocks+0x415/0x9a0\n       fs/ocfs2/suballoc.c:1078\n       ocfs2_mknod+0x10f3/0x2260 fs/ocfs2/namei.c:351\n\n-> #0 (&ocfs2_sysfile_lock_key[INODE_ALLOC_SYSTEM_INODE]){+.+.}-{4:4}:\n       __lock_acquire+0x15a5/0x2cf0 kernel/locking/lockdep.c:5237\n       lock_acquire+0x106/0x350 kernel/locking/lockdep.c:5868\n       down_write+0x96/0x200 kernel/locking/rwsem.c:1625\n       inode_lock include/linux/fs.h:1029 [inline]\n       ocfs2_remove_inode fs/ocfs2/inode.c:733 [inline]\n       ocfs2_wipe_inode fs/ocfs2/inode.c:896 [inline]\n       ocfs2_delete_inode fs/ocfs2/inode.c:1157 [inline]\n       ocfs2_evict_inode+0x1539/0x43b0 fs/ocfs2/inode.c:1299\n\nChain exists of:\n  &ocfs2_sysfile_lock_key[INODE_ALLOC_SYSTEM_INODE] -->\n  &ocfs2_sysfile_lock_key[EXTENT_ALLOC_SYSTEM_INODE] -->\n  &ocfs2_sysfile_lock_key[ORPHAN_DIR_SYSTEM_INODE]\n\n Possible unsafe locking scenario:\n\n       CPU0                    CPU1\n       ----                    ----\n  lock(&ocfs2_sysfile_lock_key[ORPHAN_DIR_SYSTEM_INODE]);\n                               lock(&ocfs2_sysfile_lock_key[EXTENT_ALLOC_SYSTEM_INODE]);\n                               lock(&ocfs2_sysfile_lock_key[ORPHAN_DIR_SYSTEM_INODE]);\n  lock(&ocfs2_sysfile_lock_key[INODE_ALLOC_SYSTEM_INODE]);\n\n *** DEADLOCK ***\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-80879 - ocfs2: ocfs2_dio_end_io_write의 순환 잠금 종속성 수정",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-80879\n2. 26.09.05 오전1:49\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-80879",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80879",
-      "source": "cvefeed",
-      "published": "2026-09-05T01:49:02+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-80876 - ring-buffer: Fix event length with forced 8-byte alignment",
-      "summary": "CVE ID :CVE-2026-80876\n  \nPublished : Sept. 4, 2026, 4:48 p.m. | 25 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nring-buffer: Fix event length with forced 8-byte alignment\n\nWhen RB_FORCE_8BYTE_ALIGNMENT is true, rb_calculate_event_length()\nreserves the space of event->array[0] for placing the data length and\nrb_update_event() stores the data length in event->array[0]\naccordingly. As a result the whole event length will add extra 4 bytes\nfor sizeof(event.array[0]) unconditionally.\n\nBut ring_buffer_event_length() only subtracts the\nsizeof(event->array[0]) for events larger than RB_MAX_SMALL_DATA +\nsizeof(event->array[0]). As a result, small events on architectures\nwith RB_FORCE_8BYTE_ALIGNMENT=true report a data length that is 4\nbytes larger than expected.\n\nTo fix it, add the RB_FORCE_8BYTE_ALIGNMENT as a condition to subtract\nthe size of that length field whenever RB_FORCE_8BYTE_ALIGNMENT is\ntrue.\n\nThis issue is observed in a riscv64 kernel with\nCONFIG_HAVE_64BIT_ALIGNED_ACCESS set to y, when we run ftrace selftest\ntrace_marker_raw.tc, we get the weird log: for cases where the id is\n1..100, the number of data field is 8*N, but once id exceeds 100, the\nnumber of data field becomes 8*N+4:\n # 1 buf: 58 00 00 00 80 5e d1 63 (number of data field is 8*1)\n ...\n # a buf: 58 ...                  (number of data field is 8*2)\n ...\n # 64 buf: 58 ...                 (number of data field is 8*13)\n # 65 buf: 58 ...                 (number of data field is 8*13+4)\n\nAfter applying this change, the number of data field keeps being 8*N+4\nconsistently.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-80876\n  \nPublished : Sept. 4, 2026, 4:48 p.m. | 25 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nring-buffer: Fix event length with forced 8-byte alignment\n\nWhen RB_FORCE_8BYTE_ALIGNMENT is true, rb_calculate_event_length()\nreserves the space of event->array[0] for placing the data length and\nrb_update_event() stores the data length in event->array[0]\naccordingly. As a result the whole event length will add extra 4 bytes\nfor sizeof(event.array[0]) unconditionally.\n\nBut ring_buffer_event_length() only subtracts the\nsizeof(event->array[0]) for events larger than RB_MAX_SMALL_DATA +\nsizeof(event->array[0]). As a result, small events on architectures\nwith RB_FORCE_8BYTE_ALIGNMENT=true report a data length that is 4\nbytes larger than expected.\n\nTo fix it, add the RB_FORCE_8BYTE_ALIGNMENT as a condition to subtract\nthe size of that length field whenever RB_FORCE_8BYTE_ALIGNMENT is\ntrue.\n\nThis issue is observed in a riscv64 kernel with\nCONFIG_HAVE_64BIT_ALIGNED_ACCESS set to y, when we run ftrace selftest\ntrace_marker_raw.tc, we get the weird log: for cases where the id is\n1..100, the number of data field is 8*N, but once id exceeds 100, the\nnumber of data field becomes 8*N+4:\n # 1 buf: 58 00 00 00 80 5e d1 63 (number of data field is 8*1)\n ...\n # a buf: 58 ...                  (number of data field is 8*2)\n ...\n # 64 buf: 58 ...                 (number of data field is 8*13)\n # 65 buf: 58 ...                 (number of data field is 8*13+4)\n\nAfter applying this change, the number of data field keeps being 8*N+4\nconsistently.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-80876 - 링 버퍼: 강제 8바이트 정렬로 이벤트 길이 수정",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-80876\n2. 26.09.05 오전1:48\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-80876",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80876",
-      "source": "cvefeed",
-      "published": "2026-09-05T01:48:50+09:00",
       "lang": "en"
     }
   ],
