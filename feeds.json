@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-08T07:32:54.977398+09:00",
+  "fetched_at": "2026-09-08T08:01:07.356476+09:00",
   "security_news": [
     {
       "title": "GPT 6 아스트라 공개 GPT 5.6 Sol과 뭐가 달라졌나",
@@ -1731,6 +1731,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82754 - ash_authentication_oauth2_server aliases every protocol endpoint under /.well-known, bypassing path-scoped controls",
+      "summary": "CVE ID :CVE-2026-82754\n  \nPublished : Sept. 7, 2026, 10:23 p.m. | 23 minutes ago\n  \nDescription :Improper Protection of Alternate Path vulnerability in ash-project ash_authentication_oauth2_server exposes the state-changing OAuth endpoints under an unintended URL prefix, bypassing controls scoped to the canonical prefix.\n\noauth2_server_protocol_routes/1 in AshAuthentication.Phoenix.Oauth2Server.Router forwards the same ProtocolRouter at both the /oauth prefix and the /.well-known prefix. Phoenix forward strips the matched prefix before dispatch, so the full route table answers under both mounts, and POST /register, POST /token, and POST /revoke are reachable as /.well-known/register, /.well-known/token, and /.well-known/revoke. Edge controls such as WAF rules, rate limits, or authentication exemptions written against the /oauth paths, or that allow-list /.well-known as unauthenticated, do not apply to the alias.\n\nThis issue affects ash_authentication_oauth2_server: from 0.1.0 before 0.3.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82754\n  \nPublished : Sept. 7, 2026, 10:23 p.m. | 23 minutes ago\n  \nDescription :Improper Protection of Alternate Path vulnerability in ash-project ash_authentication_oauth2_server exposes the state-changing OAuth endpoints under an unintended URL prefix, bypassing controls scoped to the canonical prefix.\n\noauth2_server_protocol_routes/1 in AshAuthentication.Phoenix.Oauth2Server.Router forwards the same ProtocolRouter at both the /oauth prefix and the /.well-known prefix. Phoenix forward strips the matched prefix before dispatch, so the full route table answers under both mounts, and POST /register, POST /token, and POST /revoke are reachable as /.well-known/register, /.well-known/token, and /.well-known/revoke. Edge controls such as WAF rules, rate limits, or authentication exemptions written against the /oauth paths, or that allow-list /.well-known as unauthenticated, do not apply to the alias.\n\nThis issue affects ash_authentication_oauth2_server: from 0.1.0 before 0.3.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-82754 - ash_authentication_oauth2_server는 경로 범위 제어를 우회하여 /.well-known 아래의 모든 프로토콜 엔드포인트에 별칭을 지정합니다.",
+      "summary_ko": "CVE ID:CVE-2026-82754\n  \n게시일 : 2026년 9월 7일 오후 10시 23분 | 23분 전\n  \n설명: ash-project ash_authentication_oauth2_server의 대체 경로에 대한 부적절한 보호 취약성은 의도하지 않은 URL 접두사 아래에 상태 변경 OAuth 끝점을 노출하여 표준 접두사로 범위가 지정된 컨트롤을 우회합니다.\n\nAshAuthentication.Phoenix.Oauth2Server.Router의 oauth2_server_protocol_routes/1은 /oauth 접두사와 /.well-known 접두사 모두에서 동일한 ProtocolRouter를 전달합니다. Phoenix 포워드는 디스패치 전에 일치하는 접두사를 제거하므로 전체 라우팅 테이블은 두 마운트 모두에서 응답하고 POST /register, POST /token 및 POST /revoke는 /.well-known/register, /.well-known/token 및 /.well-known/revoke로 연결할 수 있습니다. /oauth 경로에 대해 작성된 WAF 규칙, 비율 제한 또는 인증 면제와 같은 엣지 제어 또는 인증되지 않은 것으로 알려진 허용 목록 /.well은 별칭에 적용되지 않습니다.\n\n이 문제는 ash_authentication_oauth2_server(0.1.0부터 0.3.1까지)에 영향을 미칩니다.\n  \n심각도: 6.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-82754\n2. 26.09.08 오전7:23\n3. Improper Protection of Alternate Path vulnerabilit",
+      "cve_id": "CVE-2026-82754",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82754",
+      "source": "cvefeed",
+      "published": "2026-09-08T07:23:56+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-86452 - MISP Unauthenticated Mail Endpoints Allow Unbounded Storage Consumption and Request Flooding",
       "summary": "CVE ID :CVE-2026-86452\n  \nPublished : Sept. 7, 2026, 2:16 p.m. | 38 minutes ago\n  \nDescription :Affected versions of MISP permit unauthenticated or weakly constrained request paths to perform persistent work without adequate input bounds or rate limiting.\n\n\nThe users/forgot password-reset endpoint accepted an attacker-controlled email value without first imposing a reasonable length bound or validating its format. That value was then used to create an audit log entry and queue a password-reset job, causing the supplied value to be persisted more than once per request. The commit explicitly states that an unbounded unauthenticated request field was stored twice per call with no throttle.\n\n\nThe fix adds:\n\n\n\n  *  \na maximum email input length of 1024 bytes;\n\n\n  *  \nemail-format validation before persistent work;\n\n\n  *  \na per-source pre-authentication request budget;\n\n\n  *  \nHTTP 429 responses when that budget is exceeded;\n\n\n  *  \na 15-minute cooldown for API-access request emails;\n\n\n  *  \nPOST-only handling and CSRF protection for the API-access request endpoint.\n\n\n\n\n\nThe new flood filter is specifically intended to limit persistent storage costs from anonymous requests such as password resets, registrations, and failed REST authentication attempts.\n\nVersion affected: ≤2.5.45\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
