@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-08T09:33:31.364656+09:00",
+  "fetched_at": "2026-09-08T10:02:21.498527+09:00",
   "security_news": [
+    {
+      "title": "삼성SDS 기업 AI전환 넘어 피지컬AI 확장",
+      "summary": "공장 설비가 외부 네트워크와 연결되는 과정에서 해킹으로 인한 라인 셧다운이나 국가 핵심 기술 유출 위험이 커질 수 있기 때문이다. 외부 클라우드 접속을 거치지 않고 현장 설비 내부에서 연산 처리를 완결하는 엣지...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 삼성SDS 기업 AI전환 넘어 피지컬AI 확장 공장 설비가 외부 네트워크와 연결되는 과정에\n2. 외부 클라우드 접속을 거치지 않고 현장 설비 내부에서 연산 처리를 완결하는 엣지...",
+      "link": "https://www.gokorea.kr/news/articleView.html?idxno=877515",
+      "source": "naver",
+      "published": "2026-09-08T09:42:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "‘집단소송제’에 소상공인·제계 “과잉 규제에 생존 위협” 반발",
+      "summary": "연합뉴스 8일 법조계와 재계에 따르면 전날 대한변호사협회는 약 3954만개 계정의 개인정보가 유출된 티빙 해킹 사고에 대해 징벌적 손해배상제와 집단소송제, 디스커버리(증거개시) 제도 도입을 촉구했다. 변협은 성명서를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. ‘집단소송제’에 소상공인·제계 “과잉 규제에 생존 위협” 반발 연합뉴스 8일 법조계와 재계\n2. 변협은 성명서를...",
+      "link": "https://n.news.naver.com/mnews/article/022/0004157247?sid=101",
+      "source": "naver",
+      "published": "2026-09-08T09:41:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "골프장 개인정보 유출사고 잇따라 관리 부실·외주 보안 맹점 드러나",
       "summary": "사고 경위는 해킹을 통한 외부 침입부터 외주 유지보수업체의 과실까지 다채로운 양상을 보이고 있다. 진천... 골프장 측은 저장 데이터의 완전 암호화, 웹방화벽 설치, 주기적 모의 해킹 실시 등 기술적 보안 조치를 대폭...",
@@ -1839,6 +1863,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82710 - Terminal escape sequence injection in mix usage_rules.search_docs via package documentation metadata",
+      "summary": "CVE ID :CVE-2026-82710\n  \nPublished : Sept. 8, 2026, 12:23 a.m. | 26 minutes ago\n  \nDescription :Improper Neutralization of Escape, Meta, or Control Sequences vulnerability in ash-project usage_rules allows a malicious package publisher to inject terminal control sequences into the output of mix usage_rules.search_docs.\n\nmix usage_rules.search_docs searches Hex documentation through search.hexdocs.pm, which indexes the documentation of every published package, and prints the matching results (title, package, type, doc reference, and highlighted snippets) to the terminal. The formatter in Mix.Tasks.UsageRules.SearchDocs interpolated those publisher-controlled fields verbatim, neutralizing no terminal control characters; the only transform it applied adds escape sequences rather than removing them. A malicious package can embed ANSI terminal escape sequences (cursor movement, line erase, carriage returns, OSC 52 clipboard writes) in its indexed documentation, so when a developer runs a search that surfaces those docs the sequences reach the terminal unchanged — forging the displayed hexdocs URL or a suggested command, hiding text, or writing to the clipboard. No authentication or privileged position is required; only publishing a package.\n\nThis issue affects usage_rules: from 0.1.18 before 1.2.8.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82710\n  \nPublished : Sept. 8, 2026, 12:23 a.m. | 26 minutes ago\n  \nDescription :Improper Neutralization of Escape, Meta, or Control Sequences vulnerability in ash-project usage_rules allows a malicious package publisher to inject terminal control sequences into the output of mix usage_rules.search_docs.\n\nmix usage_rules.search_docs searches Hex documentation through search.hexdocs.pm, which indexes the documentation of every published package, and prints the matching results (title, package, type, doc reference, and highlighted snippets) to the terminal. The formatter in Mix.Tasks.UsageRules.SearchDocs interpolated those publisher-controlled fields verbatim, neutralizing no terminal control characters; the only transform it applied adds escape sequences rather than removing them. A malicious package can embed ANSI terminal escape sequences (cursor movement, line erase, carriage returns, OSC 52 clipboard writes) in its indexed documentation, so when a developer runs a search that surfaces those docs the sequences reach the terminal unchanged — forging the displayed hexdocs URL or a suggested command, hiding text, or writing to the clipboard. No authentication or privileged position is required; only publishing a package.\n\nThis issue affects usage_rules: from 0.1.18 before 1.2.8.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-82710\n2. 26.09.08 오전9:23\n3. Improper Neutralization of Escape, Meta, or Contro",
+      "cve_id": "CVE-2026-82710",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82710",
+      "source": "cvefeed",
+      "published": "2026-09-08T09:23:36+09:00",
+      "lang": "ca"
+    },
+    {
+      "title": "CVE-2026-76969 - Credential disclosure in multitenant applications using SAP Cloud Application Programming Model (CAP)",
+      "summary": "CVE ID :CVE-2026-76969\n  \nPublished : Sept. 8, 2026, 12:12 a.m. | 37 minutes ago\n  \nDescription :@sap/cds-mtxs NPM library does not perform sufficient checks on certain functionality used in multitenant CAP applications with extensibility enabled. An unauthenticated attacker could send specially crafted requests to obtain sensitive credentials and abuse them to replace or delete tenant data. Successful exploitation can result in a high impact on availability and integrity of the application. There may also be partial impact to the confidentiality of business data.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-76969\n  \nPublished : Sept. 8, 2026, 12:12 a.m. | 37 minutes ago\n  \nDescription :@sap/cds-mtxs NPM library does not perform sufficient checks on certain functionality used in multitenant CAP applications with extensibility enabled. An unauthenticated attacker could send specially crafted requests to obtain sensitive credentials and abuse them to replace or delete tenant data. Successful exploitation can result in a high impact on availability and integrity of the application. There may also be partial impact to the confidentiality of business data.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-76969\n2. 26.09.08 오전9:12\n3. @sap/cds-mtxs NPM library does not perform suffici",
+      "cve_id": "CVE-2026-76969",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76969",
+      "source": "cvefeed",
+      "published": "2026-09-08T09:12:55+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-82754 - ash_authentication_oauth2_server aliases every protocol endpoint under /.well-known, bypassing path-scoped controls",
       "summary": "CVE ID :CVE-2026-82754\n  \nPublished : Sept. 7, 2026, 10:23 p.m. | 23 minutes ago\n  \nDescription :Improper Protection of Alternate Path vulnerability in ash-project ash_authentication_oauth2_server exposes the state-changing OAuth endpoints under an unintended URL prefix, bypassing controls scoped to the canonical prefix.\n\noauth2_server_protocol_routes/1 in AshAuthentication.Phoenix.Oauth2Server.Router forwards the same ProtocolRouter at both the /oauth prefix and the /.well-known prefix. Phoenix forward strips the matched prefix before dispatch, so the full route table answers under both mounts, and POST /register, POST /token, and POST /revoke are reachable as /.well-known/register, /.well-known/token, and /.well-known/revoke. Edge controls such as WAF rules, rate limits, or authentication exemptions written against the /oauth paths, or that allow-list /.well-known as unauthenticated, do not apply to the alias.\n\nThis issue affects ash_authentication_oauth2_server: from 0.1.0 before 0.3.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
