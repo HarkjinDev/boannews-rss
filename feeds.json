@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-08T15:02:14.671851+09:00",
+  "fetched_at": "2026-09-08T15:31:16.884231+09:00",
   "security_news": [
+    {
+      "title": "국가AI전략위, AI행동계획 고도화…범부처 대형사업 조정 강화",
+      "summary": "위원회는 고도화한 사이버 해킹 등에 대응하기 위해 분야별·부처별 보안 제도 연계도 추진한다.  ISMS, N2SF, CSAP 간 연계와 국제적 상호운용성이 확보된 K-AI 사이버보안 프레임워크 마련이 골자다. 마지막으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국가AI전략위, AI 해킹 대응 계획 고도화\n2. ISMS, N2SF, CSAP 연계 등 보안 제도 통합\n3. K-AI 사이버보안 프레임워크 마련 추진",
+      "link": "https://www.ajunews.com/view/20260908142317696",
+      "source": "naver",
+      "published": "2026-09-08T15:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "국가AI전략위 출범 1년…'AI 3대 강국' 실행력 높인다",
+      "summary": "◆AI 보안·지역·입법까지 대전환 기반 강화 보안특별위원회는 실제 해킹이 발생하는 운영망 등을 대상으로 화이트해커가 취약점을 상시 발굴·신고하고 기관이 이를 조치하는 '보안취약점 상시 신고조치제 도입...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 3대 강국 위해 보안특별위, '상시 신고조치제' 도입\n2. 화이트해커, 운영망 등 상시 점검으로 취약점 발굴·신고\n3. AI 보안 강화로 실행력 제고 및 대전환 기반 마련",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1723368",
+      "source": "naver",
+      "published": "2026-09-08T15:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "EU ‘CRA’ 취약점·보안사고 보고 의무, 11일부터 시행",
       "summary": "유럽연합(EU)의 사이버복원력법(Cyber Resilience Act·CRA)에 따른 취약점 및 보안사고 보고 의무가 오는 9월... 보고는 유럽연합 사이버보안청(ENISA)의 단일보고플랫폼(SRP)을 통해 이뤄진다. CRA의 제품 보안 관련 주요 의무는...",
@@ -2136,18 +2160,6 @@
       "source": "naver",
       "published": "2026-09-05T15:33:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "종이돈 이어 비트코인도 종말?… 양자 해킹에 뚫리는 이더리움의 섬뜩한...",
-      "summary": "최대의 보안 비상이 걸렸다. 4일(현지시간) 미국 사이버보안·인프라보안국(CISA)과 G7 사이버보안 워킹그룹은 공동 발표를 통해 초고속 연산 능력을 갖춘 양자 컴퓨터가 실성화될 경우 현재의 금융 및 암호화 시스템이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 종이돈 이어 비트코인도 종말?… 양자 해킹에 뚫리는 이더리움의 섬뜩한...\n2. 최대의 보안 비상이 걸렸다.\n3. 4일(현지시간) 미국 사이버보안·인프라보안국(CISA)과 G7 사이버보안 워킹그룹은 공동 ",
-      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484140",
-      "source": "naver",
-      "published": "2026-09-05T15:12:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2449,21 +2461,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-81543",
       "source": "cvefeed",
       "published": "2026-09-05T16:38:15+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-83627 - Hummingbird – Speed Optimization, Caching, Minify, Compress & CDN <= 3.21.0 - Unauthenticated Remote Code Execution via Cookie Name in Page Cache Debug Log",
-      "summary": "CVE ID :CVE-2026-83627\n  \nPublished : Sept. 5, 2026, 6:17 a.m. | 27 minutes ago\n  \nDescription :The Hummingbird – Speed Optimization, Caching, Minify, Compress & CDN plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 3.21.0 via the log_msg() function in core/modules/class-page-cache.php. The page-cache debug log is written to wp-content/wphb-logs/page-caching-log.php, a directly web-accessible PHP file that is supposed to be protected by a leading '' header. That header is guarded by class_exists( 'Filesystem' ), which can never match because class_exists() resolves string arguments in the global namespace while the class is Hummingbird\\Core\\Filesystem; when the log is created during a front-end request the header is therefore omitted entirely. get_cookies() then writes the raw name of any cookie matching the wphb_cache_ prefix into that file without sanitization. This makes it possible for unauthenticated attackers to write arbitrary PHP into the log file with a single anonymous request and execute it by requesting the file directly, resulting in full remote code execution. Exploitation requires the site administrator to have enabled Page Caching with the Debug Log option (non-default), and the log file to be created during a front-end request — a state reached by the plugin's own 'Clear logs' action, any cache flush, or unattended via the plugin's daily log-rotation cron, which can strip the protective header from an existing log file.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-83627\n  \nPublished : Sept. 5, 2026, 6:17 a.m. | 27 minutes ago\n  \nDescription :The Hummingbird – Speed Optimization, Caching, Minify, Compress & CDN plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 3.21.0 via the log_msg() function in core/modules/class-page-cache.php. The page-cache debug log is written to wp-content/wphb-logs/page-caching-log.php, a directly web-accessible PHP file that is supposed to be protected by a leading '' header. That header is guarded by class_exists( 'Filesystem' ), which can never match because class_exists() resolves string arguments in the global namespace while the class is Hummingbird\\Core\\Filesystem; when the log is created during a front-end request the header is therefore omitted entirely. get_cookies() then writes the raw name of any cookie matching the wphb_cache_ prefix into that file without sanitization. This makes it possible for unauthenticated attackers to write arbitrary PHP into the log file with a single anonymous request and execute it by requesting the file directly, resulting in full remote code execution. Exploitation requires the site administrator to have enabled Page Caching with the Debug Log option (non-default), and the log file to be created during a front-end request — a state reached by the plugin's own 'Clear logs' action, any cache flush, or unattended via the plugin's daily log-rotation cron, which can strip the protective header from an existing log file.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-83627 - Hummingbird – 속도 최적화, 캐싱, 축소, 압축 및 CDN <= 3.21.0 - 페이지 캐시 디버그 로그의 쿠키 이름을 통한 인증되지 않은 원격 코드 실행",
-      "summary_ko": "CVE ID:CVE-2026-83627\n  \n게시일 : 2026년 9월 5일 오전 6시 17분 | 27분 전\n  \n설명: WordPress용 Hummingbird – 속도 최적화, 캐싱, 축소, 압축 및 CDN 플러그인은 core/modules/class-page-cache.php의 log_msg() 함수를 통해 3.21.0까지의 모든 버전에서 원격 코드 실행에 취약합니다. 페이지 캐시 디버그 로그는 웹에서 직접 액세스할 수 있는 PHP 파일인 wp-content/wphb-logs/page-caching-log.php에 기록되며 선행 '' 헤더로 보호되어야 합니다. 해당 헤더는 class_exists( 'Filesystem' )에 의해 보호됩니다. 클래스가 Hummingbird\\Core\\Filesystem인 동안 class_exists()는 전역 네임스페이스에서 문자열 인수를 확인하기 때문에 일치할 수 없습니다. 따라서 프런트 엔드 요청 중에 로그가 생성되면 헤더가 완전히 생략됩니다. 그런 다음 get_cookies()는 wphb_cache_ 접두사와 일치하는 모든 쿠키의 원시 이름을 삭제 없이 해당 파일에 기록합니다. 이를 통해 인증되지 않은 공격자가 단일 익명 요청으로 임의의 PHP를 로그 파일에 작성하고 파일을 직접 요청하여 실행함으로써 전체 원격 코드가 실행될 수 있습니다. 악용하려면 사이트 관리자가 디버그 로그 옵션(기본값 아님)을 사용하여 페이지 캐싱을 활성화해야 하며 프런트 엔드 요청 중에 로그 파일이 생성되어야 합니다. 이 상태는 플러그인 자체의 '로그 지우기' 작업, 캐시 플러시 또는 기존 로그 파일에서 보호 헤더를 제거할 수 있는 플러그인의 일일 로그 회전 크론을 통한 무인 상태에 도달합니다.\n  \n심각도: 9.8 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-83627\n2. 26.09.05 오후3:17\n3. The Hummingbird – Speed Optimization, Caching, Min",
-      "cve_id": "CVE-2026-83627",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-83627",
-      "source": "cvefeed",
-      "published": "2026-09-05T15:17:10+09:00",
       "lang": "en"
     }
   ],
