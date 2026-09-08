@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-09T06:02:58.627491+09:00",
+  "fetched_at": "2026-09-09T06:31:31.778802+09:00",
   "security_news": [
+    {
+      "title": "삼성SDS “이젠 AI 성과 경쟁”… 보안·로봇까지 영역 넓힌다",
+      "summary": "기업용 생성형 AI와 클라우드 중심의 AI 전환(AX) 사업을 사이버보안과 제조 현장까지 확장하며 사업영역을... 데이브레이크는 오픈AI의 최상위 AI 모델을 사이버 보안에 적용해 취약점 발견부터 공격 가능성 검증, 위험...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 삼성SDS, AI 사업 영역을 사이버보안, 로봇까지 확장\n2. '데이브레이크'로 오픈AI 최상위 모델 활용, 보안 취약점 검증\n3. AX 사업 확장 통해 AI 기반 보안 솔루션 제공",
+      "link": "https://n.news.naver.com/mnews/article/022/0004157537?sid=101",
+      "source": "naver",
+      "published": "2026-09-09T06:03:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "'3954만 계정유출' 티빙 집단소송 확산 조짐…참여자 15만명 육박",
       "summary": "2024년 모의해킹에서 개발·운영환경 접속키를 소스코드에 그대로 저장하는 '하드코딩' 취약점을 발견하고도... 5000원 상당의 포인트 제공과 해킹·피싱 안심보험, 프리미엄급 시청 환경 업그레이드 등이 골자다. 법무법인...",
@@ -2496,21 +2508,24 @@
       "source": "naver",
       "published": "2026-09-06T06:46:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "티빙, 대규모 개인정보 유출이 남긴 과제",
-      "summary": "추후 보안체계 강화 방안을 내놓으면서 사후 수습에 나섰다. 대규모 개인정보 유출 이후 회사가 해결해야 할 과제들도 남아있다. 이번에 발표한 고객 보상안과 정보보안 투자 등으로 인한 재무적인 타격도 불가피할...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 티빙, 대규모 개인정보 유출이 남긴 과제 추후 보안체계 강화 방안을 내놓으면서 사후 수습에\n2. 대규모 개인정보 유출 이후 회사가 해결해야 할 과제들도 남아있다.\n3. 이번에 발표한 고객 보상안과 정보보안 투자 등으로 인한 재무적인 타격도 불가피할...",
-      "link": "https://www.goodkyung.com/news/articleView.html?idxno=291022",
-      "source": "naver",
-      "published": "2026-09-06T06:30:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-84197 - Eclipse Ditto JavaScript Client Improper Certificate Validation Vulnerability",
+      "summary": "CVE ID :CVE-2026-84197\n  \nPublished : Sept. 8, 2026, 8:01 p.m. | 25 minutes ago\n  \nDescription :In Eclipse Ditto's Node.js JavaScript client, all released versions of @eclipse-ditto/ditto-javascript-client-node from 2.0.0 to 3.9.0 and of its predecessor package @eclipse-ditto/ditto-javascript-client-node_1.0 from 1.0.0 to 2.1.0, the WebSocket transport hard-codes rejectUnauthorized: false when creating the underlying ws WebSocket. Certificate chain and hostname validation are therefore disabled for every wss:// connection, and no builder option, constructor argument or environment variable lets an application turn validation back on. An attacker in a position to intercept the connection can present an arbitrary certificate, complete the TLS handshake, read the credentials that the configured authentication provider sends in the Authorization header of the WebSocket upgrade request, and read, alter or inject Ditto Protocol messages for the lifetime of the connection. The Java client, the browser/DOM JavaScript client and the HTTP transport of the Node.js client are not affected.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84197\n  \nPublished : Sept. 8, 2026, 8:01 p.m. | 25 minutes ago\n  \nDescription :In Eclipse Ditto's Node.js JavaScript client, all released versions of @eclipse-ditto/ditto-javascript-client-node from 2.0.0 to 3.9.0 and of its predecessor package @eclipse-ditto/ditto-javascript-client-node_1.0 from 1.0.0 to 2.1.0, the WebSocket transport hard-codes rejectUnauthorized: false when creating the underlying ws WebSocket. Certificate chain and hostname validation are therefore disabled for every wss:// connection, and no builder option, constructor argument or environment variable lets an application turn validation back on. An attacker in a position to intercept the connection can present an arbitrary certificate, complete the TLS handshake, read the credentials that the configured authentication provider sends in the Authorization header of the WebSocket upgrade request, and read, alter or inject Ditto Protocol messages for the lifetime of the connection. The Java client, the browser/DOM JavaScript client and the HTTP transport of the Node.js client are not affected.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-84197 - Eclipse Ditto JavaScript 클라이언트 부적절한 인증서 유효성 검사 취약점",
+      "summary_ko": "CVE ID:CVE-2026-84197\n  \n게시일 : 2026년 9월 8일 오후 8시 01분 | 25분 전\n  \n설명:Eclipse Ditto의 Node.js JavaScript 클라이언트에서 @eclipse-ditto/ditto-javascript-client-node의 모든 릴리스된 버전(2.0.0에서 3.9.0) 및 이전 패키지 @eclipse-ditto/ditto-javascript-client-node_1.0(1.0.0에서 2.1.0)에서 WebSocket 전송 하드 코드인 acceptUnauthorized: false를 생성할 때 기본 ws WebSocket. 따라서 모든 wss:// 연결에 대해 인증서 체인 및 호스트 이름 유효성 검사가 비활성화되며 빌더 옵션, 생성자 인수 또는 환경 변수로 인해 애플리케이션이 유효성 검사를 다시 설정할 수 없습니다. 연결을 가로챌 수 있는 위치에 있는 공격자는 임의의 인증서를 제시하고, TLS 핸드셰이크를 완료하고, 구성된 인증 공급자가 WebSocket 업그레이드 요청의 Authorization 헤더에서 보내는 자격 증명을 읽고, 연결 수명 동안 Ditto 프로토콜 메시지를 읽거나 변경하거나 삽입할 수 있습니다. Java 클라이언트, 브라우저/DOM JavaScript 클라이언트 및 Node.js 클라이언트의 HTTP 전송은 영향을 받지 않습니다.\n  \n심각도: 9.2 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-84197\n2. 26.09.09 오전5:01\n3. In Eclipse Ditto's Node.js JavaScript client, all ",
+      "cve_id": "CVE-2026-84197",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84197",
+      "source": "cvefeed",
+      "published": "2026-09-09T05:01:22+09:00",
+      "lang": "it"
+    },
     {
       "title": "CVE-2026-86733 - Snipe-IT before 8.7.0 Remote Code Execution via Backup Restore",
       "summary": "CVE ID :CVE-2026-86733\n  \nPublished : Sept. 8, 2026, 4:18 p.m. | 31 minutes ago\n  \nDescription :Snipe-IT before 8.7.0 streams the SQL entry from an uploaded backup archive directly into the MySQL/MariaDB command-line client (`mysql`) without the --binary-mode flag, so the client interprets lines beginning with backslash commands such as `\\!` as local shell commands. An authenticated superadministrator who uploads a crafted ZIP backup (POST /admin/backups/upload) and triggers a restore (POST /admin/backups/restore/{filename}) without the optional `clean` sanitizer parameter — which is not applied by default because DB_SANITIZE_BY_DEFAULT is false — can execute arbitrary OS commands as the web application's operating-system user, exposing application secrets (including database credentials and APP_KEY) and allowing modification of application-writable files and data. Version 8.7.0 adds the --binary-mode flag to the client invocation.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
