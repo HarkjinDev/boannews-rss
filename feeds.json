@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-09T02:01:11.579193+09:00",
+  "fetched_at": "2026-09-09T02:31:38.449691+09:00",
   "security_news": [
     {
       "title": "코인코너, 영국 고객용 비트코인 볼트 출시…로이즈 보험으로 전액 보장",
@@ -2494,6 +2494,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-56101 - OpenBSD ieee80211_crypto_tkip.c TKIP MIC Countermeasure Logic Inversion DoS",
+      "summary": "CVE ID :CVE-2026-56101\n  \nPublished : Sept. 8, 2026, 4 p.m. | 25 minutes ago\n  \nDescription :OpenBSD before commit 1ee99df contains an inverted comparison vulnerability in the ieee80211_michael_mic_failure() function within sys/net80211/ieee80211_crypto_tkip.c that allows unauthenticated attackers within RF range to trigger denial of service by sending two malformed TKIP frames separated by more than 60 seconds. Attackers can exploit the reversed TKIP MIC failure countermeasure window check to deauthenticate all associated TKIP stations and block reassociation for up to 90 seconds, while within-window MIC failures that should engage countermeasures are silently discarded, leaving key-recovery attempts undetected.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56101\n  \nPublished : Sept. 8, 2026, 4 p.m. | 25 minutes ago\n  \nDescription :OpenBSD before commit 1ee99df contains an inverted comparison vulnerability in the ieee80211_michael_mic_failure() function within sys/net80211/ieee80211_crypto_tkip.c that allows unauthenticated attackers within RF range to trigger denial of service by sending two malformed TKIP frames separated by more than 60 seconds. Attackers can exploit the reversed TKIP MIC failure countermeasure window check to deauthenticate all associated TKIP stations and block reassociation for up to 90 seconds, while within-window MIC failures that should engage countermeasures are silently discarded, leaving key-recovery attempts undetected.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-56101 - OpenBSD ieee80211_crypto_tkip.c TKIP MIC 대책 논리 반전 DoS",
+      "summary_ko": "CVE ID:CVE-2026-56101\n  \n게재일 : 2026년 9월 8일 오후 4시 | 25분 전\n  \n설명: 커밋 1ee99df 이전의 OpenBSD에는 sys/net80211/ieee80211_crypto_tkip.c 내의 ieee80211_michael_mic_failure() 함수에 역비교 취약점이 포함되어 있습니다. 이 취약점은 RF 범위 내의 인증되지 않은 공격자가 60초 이상 간격을 두고 분리된 두 개의 잘못된 TKIP 프레임을 보내 서비스 거부를 유발할 수 있도록 허용합니다. 공격자는 역방향 TKIP MIC 오류 대책 창 검사를 악용하여 연결된 모든 TKIP 스테이션의 인증을 해제하고 최대 90초 동안 재연결을 차단할 수 있습니다. 반면, 대책을 적용해야 하는 창 내 MIC 오류는 자동으로 삭제되어 키 복구 시도가 감지되지 않습니다.\n  \n심각도: 6.0 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-56101\n2. 26.09.09 오전1:00\n3. OpenBSD before commit 1ee99df contains an inverted",
+      "cve_id": "CVE-2026-56101",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56101",
+      "source": "cvefeed",
+      "published": "2026-09-09T01:00:30+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-12387 - Mali GPU Kernel Driver allows access to already freed memory",
       "summary": "CVE ID :CVE-2026-12387\n  \nPublished : Sept. 8, 2026, 2:22 p.m. | 28 minutes ago\n  \nDescription :Use After Free vulnerability in Arm Ltd Bifrost GPU Kernel Driver, Arm Ltd Valhall GPU Kernel Driver, Arm Ltd Arm 5th Gen GPU Architecture Kernel Driver allows a local non-privileged user process to perform valid GPU memory processing operations to access already freed memory.\n\n\n\nThis issue affects Bifrost GPU Kernel Driver: from r41p0 through r49p5, from r50p0 through r51p0, from r54p1 through r54p2; Valhall GPU Kernel Driver: from r41p0 through r49p5, from r50p0 through r54p3, r55p0; Arm 5th Gen GPU Architecture Kernel Driver: from r41p0 through r49p5, from r50p0 through r54p3, r55p0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-12387\n  \nPublished : Sept. 8, 2026, 2:22 p.m. | 28 minutes ago\n  \nDescription :Use After Free vulnerability in Arm Ltd Bifrost GPU Kernel Driver, Arm Ltd Valhall GPU Kernel Driver, Arm Ltd Arm 5th Gen GPU Architecture Kernel Driver allows a local non-privileged user process to perform valid GPU memory processing operations to access already freed memory.\n\n\n\nThis issue affects Bifrost GPU Kernel Driver: from r41p0 through r49p5, from r50p0 through r51p0, from r54p1 through r54p2; Valhall GPU Kernel Driver: from r41p0 through r49p5, from r50p0 through r54p3, r55p0; Arm 5th Gen GPU Architecture Kernel Driver: from r41p0 through r49p5, from r50p0 through r54p3, r55p0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2506,6 +2521,81 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-12387",
       "source": "cvefeed",
       "published": "2026-09-08T23:22:15+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-62718 Windows DHCP Server Information Disclosure Vulnerability",
+      "summary": "Updated software table to remove clients versions because this vulnerability only impacts Windows Servers. This is an informational change only.",
+      "description": "Updated software table to remove clients versions because this vulnerability only impacts Windows Servers. This is an informational change only.",
+      "title_ko": "CVE-2026-62718 Windows DHCP 서버 정보 공개 취약점",
+      "summary_ko": "이 취약점은 Windows Server에만 영향을 미치므로 클라이언트 버전을 제거하도록 소프트웨어 표를 업데이트했습니다. 이는 정보 제공용 변경일 뿐입니다.",
+      "summary_3lines": "1. CVE-2026-62718\n2. MSRC\n3. Updated software table to remove clients versions ",
+      "cve_id": "CVE-2026-62718",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62718",
+      "source": "msrc",
+      "published": "2026-09-08T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-69549 Virtual Hard Disk (VHD) Miniport Driver Elevation of Privilege Vulernability",
+      "summary": "Out-of-bounds read in Virtual Hard Disk (VHD) Miniport Driver allows an authorized attacker to elevate privileges locally.",
+      "description": "Out-of-bounds read in Virtual Hard Disk (VHD) Miniport Driver allows an authorized attacker to elevate privileges locally.",
+      "title_ko": "CVE-2026-69549 VHD(가상 하드 디스크) 미니포트 드라이버 권한 상승 취약점",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-69549\n2. MSRC\n3. Out-of-bounds read in Virtual Hard Disk (VHD) Mini",
+      "cve_id": "CVE-2026-69549",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69549",
+      "source": "msrc",
+      "published": "2026-09-08T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-70334 Visual Studio Code Security Feature Bypass Vulnerability",
+      "summary": "Incomplete list of disallowed inputs in Visual Studio Code allows an unauthorized attacker to bypass a security feature locally.",
+      "description": "Incomplete list of disallowed inputs in Visual Studio Code allows an unauthorized attacker to bypass a security feature locally.",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-70334\n2. MSRC\n3. Incomplete list of disallowed inputs in Visual Stu",
+      "cve_id": "CVE-2026-70334",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70334",
+      "source": "msrc",
+      "published": "2026-09-08T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Chromium: CVE-2026-84323 Missing authorization in FileSystem",
+      "summary": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
+      "description": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-84323\n2. MSRC\n3. This CVE was assigned by Chrome. Microsoft Edge (C",
+      "cve_id": "CVE-2026-84323",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-84323",
+      "source": "msrc",
+      "published": "2026-09-08T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "ADV990001 Latest Servicing Stack Updates",
+      "summary": "Advisory updated to announce new versions of Servicing Stack Updates are available.  Please see the FAQ for details.",
+      "description": "Advisory updated to announce new versions of Servicing Stack Updates are available.  Please see the FAQ for details.",
+      "title_ko": "ADV990001 최신 서비스 스택 업데이트",
+      "summary_ko": "서비스 스택 업데이트의 새 버전을 알리기 위해 권고가 업데이트되었습니다.  자세한 내용은 FAQ를 참조하세요.",
+      "summary_3lines": "1. ADV990001 Latest Servicing Stack Updates\n2. MSRC\n3. Advisory updated to announce new versions of Servi",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/ADV990001",
+      "source": "msrc",
+      "published": "2026-09-08T23:00:00+09:00",
       "lang": "en"
     },
     {
@@ -2821,21 +2911,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-86242",
       "source": "cvefeed",
       "published": "2026-09-06T20:20:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82752 - Ash string length constraints count graphemes, so a combining-mark string of any size passes max_length",
-      "summary": "CVE ID :CVE-2026-82752\n  \nPublished : Sept. 5, 2026, 5:16 p.m. | 1 hour, 12 minutes ago\n  \nDescription :Improper Validation of Specified Quantity in Input vulnerability in ash-project ash allows an attacker to store a value of arbitrary size in an attribute whose length constraint should bound it.\n\nAsh measures string length with Elixir's String.length/1, which counts Unicode graphemes, in the max_length and min_length constraints of Ash.Type.String (apply_constraints/2 in lib/ash/type/string.ex), in Ash.Resource.Validation.StringLength, and in the string_length expression function. A grapheme carries an unbounded number of combining marks, so a base character followed by a million combining acute accents is one grapheme and megabytes of data, and satisfies max_length: 2. Where the data layer imposes no independent limit (ETS, Mnesia, or a Postgres text column) the whole value is persisted, so an attacker can write an entire request body into an attribute declared with a small maximum and grow storage without bound.\n\nThe counting unit also disagrees with the storage layer, which counts codepoints rather than graphemes, so a value accepted by the constraint can still be rejected or truncated by the column. A Postgres varchar(n) column bounds the value itself and is not exposed.\n\nThis issue affects ash: from 0.10.0 before 3.33.0.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82752\n  \nPublished : Sept. 5, 2026, 5:16 p.m. | 1 hour, 12 minutes ago\n  \nDescription :Improper Validation of Specified Quantity in Input vulnerability in ash-project ash allows an attacker to store a value of arbitrary size in an attribute whose length constraint should bound it.\n\nAsh measures string length with Elixir's String.length/1, which counts Unicode graphemes, in the max_length and min_length constraints of Ash.Type.String (apply_constraints/2 in lib/ash/type/string.ex), in Ash.Resource.Validation.StringLength, and in the string_length expression function. A grapheme carries an unbounded number of combining marks, so a base character followed by a million combining acute accents is one grapheme and megabytes of data, and satisfies max_length: 2. Where the data layer imposes no independent limit (ETS, Mnesia, or a Postgres text column) the whole value is persisted, so an attacker can write an entire request body into an attribute declared with a small maximum and grow storage without bound.\n\nThe counting unit also disagrees with the storage layer, which counts codepoints rather than graphemes, so a value accepted by the constraint can still be rejected or truncated by the column. A Postgres varchar(n) column bounds the value itself and is not exposed.\n\nThis issue affects ash: from 0.10.0 before 3.33.0.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-82752\n2. 26.09.06 오전2:16\n3. Improper Validation of Specified Quantity in Input",
-      "cve_id": "CVE-2026-82752",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82752",
-      "source": "cvefeed",
-      "published": "2026-09-06T02:16:16+09:00",
       "lang": "en"
     }
   ],
