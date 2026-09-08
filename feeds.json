@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-09T01:32:33.963113+09:00",
+  "fetched_at": "2026-09-09T02:01:11.579193+09:00",
   "security_news": [
     {
       "title": "코인코너, 영국 고객용 비트코인 볼트 출시…로이즈 보험으로 전액 보장",
@@ -2460,21 +2460,39 @@
       "source": "naver",
       "published": "2026-09-06T05:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Credentials",
-      "summary": "JetBrains is urging Cadence users to revoke and rotate all credentials following a security incident last month in which unidentified threat actors exploited a recently disclosed critical vulnerability in TeamCity to breach its own environment.\n\n\"Cadence users should immediately revoke or rotate all credentials and secrets that may have been used to run their Cadence executions,\" JetBrains said.",
-      "content": "",
-      "title_ko": "공격자들은 패치되지 않은 TeamCity를 통해 JetBrains Cadence를 위반하여 AWS 자격 증명을 추출했습니다.",
-      "summary_ko": "JetBrains는 지난 달 미확인 위협 행위자가 TeamCity에서 최근 공개된 심각한 취약점을 악용하여 자체 환경을 침해한 보안 사고 이후 Cadence 사용자에게 모든 자격 증명을 취소하고 교체할 것을 촉구했습니다.\n\nJetBrains는 \"Cadence 사용자는 Cadence 실행을 실행하는 데 사용되었을 수 있는 모든 자격 증명과 비밀을 즉시 취소하거나 교체해야 합니다\"라고 말했습니다.",
-      "summary_3lines": "1. JetBrains TeamCity 취약점, AWS 크리덴셜 탈취 공격 발생\n2. 공격자는 패치되지 않은 TeamCity 서버를 통해 Cadence 환경 침입\n3. Cadence 사용자에게 즉시 크리덴셜 및 시크릿 교체 권고",
-      "link": "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html",
-      "source": "thehackernews",
-      "published": "2026-09-06T01:52:33+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-86733 - Snipe-IT before 8.7.0 Remote Code Execution via Backup Restore",
+      "summary": "CVE ID :CVE-2026-86733\n  \nPublished : Sept. 8, 2026, 4:18 p.m. | 31 minutes ago\n  \nDescription :Snipe-IT before 8.7.0 streams the SQL entry from an uploaded backup archive directly into the MySQL/MariaDB command-line client (`mysql`) without the --binary-mode flag, so the client interprets lines beginning with backslash commands such as `\\!` as local shell commands. An authenticated superadministrator who uploads a crafted ZIP backup (POST /admin/backups/upload) and triggers a restore (POST /admin/backups/restore/{filename}) without the optional `clean` sanitizer parameter — which is not applied by default because DB_SANITIZE_BY_DEFAULT is false — can execute arbitrary OS commands as the web application's operating-system user, exposing application secrets (including database credentials and APP_KEY) and allowing modification of application-writable files and data. Version 8.7.0 adds the --binary-mode flag to the client invocation.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-86733\n  \nPublished : Sept. 8, 2026, 4:18 p.m. | 31 minutes ago\n  \nDescription :Snipe-IT before 8.7.0 streams the SQL entry from an uploaded backup archive directly into the MySQL/MariaDB command-line client (`mysql`) without the --binary-mode flag, so the client interprets lines beginning with backslash commands such as `\\!` as local shell commands. An authenticated superadministrator who uploads a crafted ZIP backup (POST /admin/backups/upload) and triggers a restore (POST /admin/backups/restore/{filename}) without the optional `clean` sanitizer parameter — which is not applied by default because DB_SANITIZE_BY_DEFAULT is false — can execute arbitrary OS commands as the web application's operating-system user, exposing application secrets (including database credentials and APP_KEY) and allowing modification of application-writable files and data. Version 8.7.0 adds the --binary-mode flag to the client invocation.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-86733\n2. 26.09.09 오전1:18\n3. Snipe-IT before 8.7.0 streams the SQL entry from a",
+      "cve_id": "CVE-2026-86733",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86733",
+      "source": "cvefeed",
+      "published": "2026-09-09T01:18:35+09:00",
+      "lang": "ro"
+    },
+    {
+      "title": "CVE-2026-86729 - WWBN AVideo Unrestricted Authentication Attempts via get_api_preauthorize",
+      "summary": "CVE ID :CVE-2026-86729\n  \nPublished : Sept. 8, 2026, 4:18 p.m. | 31 minutes ago\n  \nDescription :WWBN AVideo through commit e01e41ecc (no patched version available) exposes get_api_preauthorize in plugin/API/API.php as a second, undocumented login path. Unlike get_api_signIn, which enforces a rate limit of 10 attempts per 5 minutes via checkRateLimit(), get_api_preauthorize performs the same credential check with no throttling for any client, allowing unlimited remote password guessing against arbitrary accounts, including admin. The endpoint also acts as a credential oracle: it returns the message \"Invalid credentials\" for both correct and incorrect passwords, while the users_id field in the response body discloses the authenticated identity (users_id:1 on success, users_id:0 on failure), and a correct password establishes a session cookie that remains usable for authenticated API requests. Together these issues permit unauthenticated brute-force account takeover.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-86729\n  \nPublished : Sept. 8, 2026, 4:18 p.m. | 31 minutes ago\n  \nDescription :WWBN AVideo through commit e01e41ecc (no patched version available) exposes get_api_preauthorize in plugin/API/API.php as a second, undocumented login path. Unlike get_api_signIn, which enforces a rate limit of 10 attempts per 5 minutes via checkRateLimit(), get_api_preauthorize performs the same credential check with no throttling for any client, allowing unlimited remote password guessing against arbitrary accounts, including admin. The endpoint also acts as a credential oracle: it returns the message \"Invalid credentials\" for both correct and incorrect passwords, while the users_id field in the response body discloses the authenticated identity (users_id:1 on success, users_id:0 on failure), and a correct password establishes a session cookie that remains usable for authenticated API requests. Together these issues permit unauthenticated brute-force account takeover.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-86729\n2. 26.09.09 오전1:18\n3. WWBN AVideo through commit e01e41ecc (no patched v",
+      "cve_id": "CVE-2026-86729",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86729",
+      "source": "cvefeed",
+      "published": "2026-09-09T01:18:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-12387 - Mali GPU Kernel Driver allows access to already freed memory",
       "summary": "CVE ID :CVE-2026-12387\n  \nPublished : Sept. 8, 2026, 2:22 p.m. | 28 minutes ago\n  \nDescription :Use After Free vulnerability in Arm Ltd Bifrost GPU Kernel Driver, Arm Ltd Valhall GPU Kernel Driver, Arm Ltd Arm 5th Gen GPU Architecture Kernel Driver allows a local non-privileged user process to perform valid GPU memory processing operations to access already freed memory.\n\n\n\nThis issue affects Bifrost GPU Kernel Driver: from r41p0 through r49p5, from r50p0 through r51p0, from r54p1 through r54p2; Valhall GPU Kernel Driver: from r41p0 through r49p5, from r50p0 through r54p3, r55p0; Arm 5th Gen GPU Architecture Kernel Driver: from r41p0 through r49p5, from r50p0 through r54p3, r55p0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
