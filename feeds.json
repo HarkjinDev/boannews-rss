@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-10T02:03:09.104287+09:00",
+  "fetched_at": "2026-09-10T02:33:04.673028+09:00",
   "security_news": [
+    {
+      "title": "구글 \"북한 해킹 조직, 인공지능으로 암호화폐 절취 자동화\"",
+      "summary": "북한 해킹 조직들이 생성형 인공지능(AI)를 이용해 암호화폐를 훔치고 있다는 분석이 나왔습니다. 미국 정보기술 기업 구글은 북한 연계 조직들이 표적 정찰부터 신분 위장, 악성 프로그램 제작까지 해킹 작업 전...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 해킹 조직, AI로 암호화폐 절취 자동화\n2. AI로 표적 정찰, 신분 위장, 악성코드 제작\n3. 구글, 북한 해킹 그룹 활동 보고",
+      "link": "https://www.voakorea.com/a/dprk-ai-cryptocurrency-090926/8196075.html",
+      "source": "naver",
+      "published": "2026-09-10T01:25:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "공인인증 위해 설치했는데… 해킹 통로로 악용",
       "summary": "오히려 해킹 경로로 악용되고 있는 것으로 나타났다. 보안을 위해 설치한 프로그램이 공격자의 ‘문’이 된... 안랩은 지난 3월 북한 해킹 조직 라자루스가 애니사인의 원격 코드 실행 취약점을 이용한 공격을 벌인...",
@@ -3300,21 +3312,24 @@
       "source": "naver",
       "published": "2026-09-07T05:01:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "XRP 지갑 4011개 피해, 전 리플 개발자 공방",
-      "summary": "유투데이는 엑스알피헬스케어 측이 해킹 사실을 확인하고 거래 추적과 자산 동결·회수를 위해 관계 당국과 협력하고 있다고 전했다. 다만 이번 사안이 XRP 레저 자체 취약점에서 비롯됐는지, 특정 지갑...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. XRP 지갑 4011개에서 226만 XRP 도난\n2. 전 리플 개발자 3인의 악성코드로 공격 추정\n3. 엑스알피헬스케어, 당국과 공조해 동결·회수 중",
-      "link": "https://www.tokenpost.kr/news/breaking/403447",
-      "source": "naver",
-      "published": "2026-09-07T02:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-80925 - vlan: fix skb_under_panic and races when toggling HW VLAN offload",
+      "summary": "CVE ID :CVE-2026-80925\n  \nPublished : Sept. 9, 2026, 4:19 p.m. | 31 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvlan: fix skb_under_panic and races when toggling HW VLAN offload\n\nToggling hardware VLAN TX offload (NETIF_F_HW_VLAN_CTAG_TX or\nNETIF_F_HW_VLAN_STAG_TX) on a lower device invokes vlan_transfer_features(),\nwhich dynamically changed vlandev->hard_header_len.\n\nThis causes two issues:\n1. Lockless TX paths (e.g. packet_snd in af_packet.c, ip6_finish_output2)\n   read dev->hard_header_len without holding RTNL lock. Mutating\n   hard_header_len dynamically under RTNL creates a data race where upper\n   layers reserve insufficient headroom based on a stale hard_header_len,\n   resulting in skb_under_panic when vlan_dev_hard_header() is called.\n2. In addition, vlan_transfer_features() updated hard_header_len without\n   updating header_ops, causing a mismatch between allocated headroom\n   and header creation.\n\nAlways setting dev->hard_header_len = real_dev->hard_header_len and\ndev->needed_headroom = real_dev->needed_headroom + VLAN_HLEN unconditionally\nensures:\n- dev->hard_header_len remains 100% static and immutable at real_dev->hard_header_len,\n  eliminating all dynamic runtime updates and data races on hard_header_len.\n- Upper layers allocating skbs via LL_RESERVED_SPACE() will always reserve\n  sufficient headroom for software VLAN tag insertion (real_dev->hard_header_len +\n  real_dev->needed_headroom + VLAN_HLEN).\n- vlandev inherits real_dev->needed_tailroom so underlying trailer/padding/ICV\n  requirements are honored.\n- AF_PACKET SOCK_RAW network header offsets remain correctly aligned at\n  real_dev->hard_header_len.\n- vlan_header_ops is used unconditionally.\n\nNote to stable teams: Make sure to backport these commits:\n\ne16e960d55a4 (\"ipvlan: inherit needed_headroom and needed_tailroom from phy_dev\")\ncef51860becd (\"macvlan: inherit needed_headroom and needed_tailroom from lowerdev\")\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-80925\n  \nPublished : Sept. 9, 2026, 4:19 p.m. | 31 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvlan: fix skb_under_panic and races when toggling HW VLAN offload\n\nToggling hardware VLAN TX offload (NETIF_F_HW_VLAN_CTAG_TX or\nNETIF_F_HW_VLAN_STAG_TX) on a lower device invokes vlan_transfer_features(),\nwhich dynamically changed vlandev->hard_header_len.\n\nThis causes two issues:\n1. Lockless TX paths (e.g. packet_snd in af_packet.c, ip6_finish_output2)\n   read dev->hard_header_len without holding RTNL lock. Mutating\n   hard_header_len dynamically under RTNL creates a data race where upper\n   layers reserve insufficient headroom based on a stale hard_header_len,\n   resulting in skb_under_panic when vlan_dev_hard_header() is called.\n2. In addition, vlan_transfer_features() updated hard_header_len without\n   updating header_ops, causing a mismatch between allocated headroom\n   and header creation.\n\nAlways setting dev->hard_header_len = real_dev->hard_header_len and\ndev->needed_headroom = real_dev->needed_headroom + VLAN_HLEN unconditionally\nensures:\n- dev->hard_header_len remains 100% static and immutable at real_dev->hard_header_len,\n  eliminating all dynamic runtime updates and data races on hard_header_len.\n- Upper layers allocating skbs via LL_RESERVED_SPACE() will always reserve\n  sufficient headroom for software VLAN tag insertion (real_dev->hard_header_len +\n  real_dev->needed_headroom + VLAN_HLEN).\n- vlandev inherits real_dev->needed_tailroom so underlying trailer/padding/ICV\n  requirements are honored.\n- AF_PACKET SOCK_RAW network header offsets remain correctly aligned at\n  real_dev->hard_header_len.\n- vlan_header_ops is used unconditionally.\n\nNote to stable teams: Make sure to backport these commits:\n\ne16e960d55a4 (\"ipvlan: inherit needed_headroom and needed_tailroom from phy_dev\")\ncef51860becd (\"macvlan: inherit needed_headroom and needed_tailroom from lowerdev\")\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-80925\n2. 26.09.10 오전1:19\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-80925",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80925",
+      "source": "cvefeed",
+      "published": "2026-09-10T01:19:44+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-87823 - zstd-jni 1.1.1 through 1.5.7-13 Out-of-Bounds Read via Direct ByteBuffer Frame-Size Methods",
       "summary": "CVE ID :CVE-2026-87823\n  \nPublished : Sept. 9, 2026, 2:32 p.m. | 18 minutes ago\n  \nDescription :zstd-jni before 1.5.7-14 performs 32-bit signed bounds checks on three direct-ByteBuffer frame-size native methods, allowing out-of-bounds memory reads via negative or overflowing offsets. Attackers can supply negative offset values near Integer.MIN_VALUE to read unmapped memory, causing JVM termination or extracting arbitrary frame size data from unintended memory locations.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
