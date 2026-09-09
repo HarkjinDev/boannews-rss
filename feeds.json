@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-09-09T09:32:41.194710+09:00",
+  "fetched_at": "2026-09-09T10:03:01.690412+09:00",
   "security_news": [
+    {
+      "title": "랜섬웨어 해킹조직도 경쟁 심화…공급망·AI로 공격 고도화",
+      "summary": "1분기 랜섬웨어 공격 2천393건…전 분기보다 4.5% 증가 범죄 지하 생태계 신뢰 붕괴로 세력 재편…공급망 공격도 확산 올해 들어 랜섬웨어 해킹조직 간 경쟁이 한층 치열해지면서 기존 대형 조직 중심의 범죄 생태계가...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 랜섬웨어 해킹조직도 경쟁 심화…공급망·AI로 공격 고도화 1분기 랜섬웨어 공격 2천393건",
+      "link": "https://n.news.naver.com/mnews/article/001/0016298942?sid=105",
+      "source": "naver",
+      "published": "2026-09-09T09:47:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "보안 때문에 중국산 뺐다더니…194억 경찰 보디캠에 中장비 납품 의혹",
+      "summary": "경찰은 영상 유출이나 해킹, 위·변조 가능성을 차단하기 위해 지난해 입찰 공고 당시 중국산 단말기를 납품 대상에서 제외한다는 조건을 명시했다. 촬영 영상이 국가정보자원관리원으로 직접 전송되는 구조인 만큼...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 보안 때문에 중국산 뺐다더니…194억 경찰 보디캠에 中장비 납품 의혹 경찰은 영상 유출이나\n2. 촬영 영상이 국가정보자원관리원으로 직접 전송되는 구조인 만큼...",
+      "link": "https://n.news.naver.com/mnews/article/025/0003550108?sid=102",
+      "source": "naver",
+      "published": "2026-09-09T09:43:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"성형 상담 사진까지 털렸는데\"...강남언니 보상은 '5만 포인트'",
+      "summary": "국내 유출 고객에게는 1인당 5만원 상당의 강남언니 포인트를 지급하고, 개인정보 유출에 따른 해킹·피싱... 보상안은 ▲강남언니 포인트 제공 ▲피싱·해킹, 금융 사기 보상 보험 제공 등이다. 힐링페이퍼 관계자는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. \"성형 상담 사진까지 털렸는데\"...강남언니 보상은 '5만 포인트' 국내 유출 고객에게는 \n2. 보상안은 ▲강남언니 포인트 제공 ▲피싱·해킹, 금융 사기 보상 보험 제공 등이다.\n3. 힐링페이퍼 관계자는...",
+      "link": "https://www.techm.kr/news/articleView.html?idxno=155032",
+      "source": "naver",
+      "published": "2026-09-09T09:42:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "안부확인부터 보이스피싱 상담까지, 카카오톡 활용 공공서비스 30선",
       "summary": "심층적으로 분석했다\"며 \"심사 과정에서 서비스 활용이 단순 알림을 넘어 인증·결제·상담 등으로 확장되고, 공공혁신의 영역도 행정 효율화에서 사이버보안·재난 대응·복지 등으로 넓어지고 있음을 확인했다\"고 말했다.",
@@ -2499,6 +2535,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-53939 - OpenIDC/cjose uses all-zero Content Encryption Key for AES-CBC-HMAC JWE encryption",
+      "summary": "CVE ID :CVE-2026-53939\n  \nPublished : Sept. 9, 2026, 12:17 a.m. | 33 minutes ago\n  \nDescription :OpenIDC/cjose is a C library implementing the Javascript Object Signing and Encryption (JOSE). In versions 0.6.1 through 0.6.2.5, when cjose encrypts a JWE using an AES-CBC-HMAC content-encryption algorithm (`A128CBC-HS256`, `A192CBC-HS384`, or `A256CBC-HS512`) together with any key-management algorithm that generates a fresh content-encryption key (CEK), the CEK is all zero bytes instead of being randomly generated. The resulting JWE is therefore encrypted and authenticated under a fixed, publicly known key, so anyone who obtains the JWE can recover the plaintext and forge or modify the content. This is fixed in version 0.6.2.6 by `_cjose_jwe_set_cek_aes_cbc()` generating the CEK from `RAND_bytes`. A regression test asserts that the `encrypted_key` differs across two encryptions for each AES-CBC-HMAC variant. Until upgrading, for data encrypted with cjose, three options are available. Use an AES-GCM `enc` (`A128GCM` / `A192GCM` / `A256GCM`) instead of an AES-CBC-HMAC `enc`,  use `alg=dir` with a caller-supplied CEK, or avoid using cjose for JWE encryption with the affected algorithm pair. These are mitigations for new ciphertexts only; data already encrypted under the zero key remains compromised and should be re-encrypted (and any secrets it contained rotated).\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53939\n  \nPublished : Sept. 9, 2026, 12:17 a.m. | 33 minutes ago\n  \nDescription :OpenIDC/cjose is a C library implementing the Javascript Object Signing and Encryption (JOSE). In versions 0.6.1 through 0.6.2.5, when cjose encrypts a JWE using an AES-CBC-HMAC content-encryption algorithm (`A128CBC-HS256`, `A192CBC-HS384`, or `A256CBC-HS512`) together with any key-management algorithm that generates a fresh content-encryption key (CEK), the CEK is all zero bytes instead of being randomly generated. The resulting JWE is therefore encrypted and authenticated under a fixed, publicly known key, so anyone who obtains the JWE can recover the plaintext and forge or modify the content. This is fixed in version 0.6.2.6 by `_cjose_jwe_set_cek_aes_cbc()` generating the CEK from `RAND_bytes`. A regression test asserts that the `encrypted_key` differs across two encryptions for each AES-CBC-HMAC variant. Until upgrading, for data encrypted with cjose, three options are available. Use an AES-GCM `enc` (`A128GCM` / `A192GCM` / `A256GCM`) instead of an AES-CBC-HMAC `enc`,  use `alg=dir` with a caller-supplied CEK, or avoid using cjose for JWE encryption with the affected algorithm pair. These are mitigations for new ciphertexts only; data already encrypted under the zero key remains compromised and should be re-encrypted (and any secrets it contained rotated).\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-53939\n2. 26.09.09 오전9:17\n3. OpenIDC/cjose is a C library implementing the Java",
+      "cve_id": "CVE-2026-53939",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53939",
+      "source": "cvefeed",
+      "published": "2026-09-09T09:17:31+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-53937 - MCP Kotlin SDK's unbounded line buffer in StdioServerTransport/StdioClientTransport leads to memory exhaustion (DoS)",
+      "summary": "CVE ID :CVE-2026-53937\n  \nPublished : Sept. 9, 2026, 12:17 a.m. | 33 minutes ago\n  \nDescription :MCP Kotlin SDK is the Kotlin Multiplatform software development kit for the Model Context Protocol. In versions 0.7.0 through 0.12.0, `ReadBuffer.append` in `kotlin-sdk-core/src/commonMain/kotlin/io/modelcontextprotocol/kotlin/sdk/shared/ReadBuffer.kt` writes every chunk of bytes received from the stdio transport into a `kotlinx.io.Buffer` with no size cap. Frames are extracted from that buffer only when a `\\n` (0x0a) byte is observed. A peer that streams bytes without ever sending a newline causes the internal buffer to grow indefinitely until the JVM (or the surrounding host process) is OOM-killed. The leak is amplified by `StdioServerTransport` and `StdioClientTransport`, which both queue raw chunks through a `kotlinx.coroutines.channels.Channel(Channel.UNLIMITED)` and then call `readBuffer.append(chunk)` without backpressure or size guard. This is a remote-pre-auth denial of service whenever an SDK stdio server's stdin is fed by an untrusted or attacker-controlled producer (for example: a host program that exec's the MCP server as a subprocess and pipes through bytes received from a network peer, or a sidecar wrapper that proxies bytes from an HTTP endpoint to the stdio transport). Version 0.13.0 fixes the issue.\n  \nSeverity: 6.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53937\n  \nPublished : Sept. 9, 2026, 12:17 a.m. | 33 minutes ago\n  \nDescription :MCP Kotlin SDK is the Kotlin Multiplatform software development kit for the Model Context Protocol. In versions 0.7.0 through 0.12.0, `ReadBuffer.append` in `kotlin-sdk-core/src/commonMain/kotlin/io/modelcontextprotocol/kotlin/sdk/shared/ReadBuffer.kt` writes every chunk of bytes received from the stdio transport into a `kotlinx.io.Buffer` with no size cap. Frames are extracted from that buffer only when a `\\n` (0x0a) byte is observed. A peer that streams bytes without ever sending a newline causes the internal buffer to grow indefinitely until the JVM (or the surrounding host process) is OOM-killed. The leak is amplified by `StdioServerTransport` and `StdioClientTransport`, which both queue raw chunks through a `kotlinx.coroutines.channels.Channel(Channel.UNLIMITED)` and then call `readBuffer.append(chunk)` without backpressure or size guard. This is a remote-pre-auth denial of service whenever an SDK stdio server's stdin is fed by an untrusted or attacker-controlled producer (for example: a host program that exec's the MCP server as a subprocess and pipes through bytes received from a network peer, or a sidecar wrapper that proxies bytes from an HTTP endpoint to the stdio transport). Version 0.13.0 fixes the issue.\n  \nSeverity: 6.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-53937 - StdioServerTransport/StdioClientTransport에 있는 MCP Kotlin SDK의 무제한 라인 버퍼로 인해 DoS(메모리 소진)가 발생합니다.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-53937\n2. 26.09.09 오전9:17\n3. MCP Kotlin SDK is the Kotlin Multiplatform softwar",
+      "cve_id": "CVE-2026-53937",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53937",
+      "source": "cvefeed",
+      "published": "2026-09-09T09:17:31+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-47680 - Source controller: Improper path handling allows traversal",
+      "summary": "CVE ID :CVE-2026-47680\n  \nPublished : Sept. 8, 2026, 11:17 p.m. | 1 hour, 33 minutes ago\n  \nDescription :The source-controller is a Kubernetes operator, specialised in artifacts acquisition from external sources such as Git, OCI, Helm repositories and S3-compatible buckets. In versions 0.0.17 through 1.8.4, an actor with the ability to influence the contents of a bucket referenced by a `Bucket` resource can cause source-controller to write fetched object data to paths outside the per-reconciliation working directory. The corruption surface is bounded by source-controller's own and downstream Flux controllers' digest verification: source-controller verifies stored artifact digests during reconciliation and rebuilds on divergence; consumers (kustomize-controller, helm-controller) verify the digest of fetched artifacts and reject mismatches. These checks prevent a manipulated artifact from reaching the cluster, but an attacker can still write files anywhere the source-controller pod has permission to write. Separately, a user with permission to create or update `GitRepository` resources can cause source-controller to test for the existence of paths outside the cloned repository. Because the result is exposed via the resource's status, this allows limited enumeration of file paths on the controller pod. This surface exists only on source-controller v1.6.0 and later, where the sparse-checkout feature was introduced. This vulnerability was fixed in source-controller v1.8.5. There is no in-product workaround. Users should upgrade to a patched version. As a defense-in-depth measure for the GitRepository sparse-checkout surface, a `ValidatingAdmissionPolicy` (or a third-party policy engine such as Kyverno or OPA Gatekeeper) can be deployed to reject `GitRepository` resources whose `.spec.sparseCheckout` entries contain `..` or absolute path segments.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-47680\n  \nPublished : Sept. 8, 2026, 11:17 p.m. | 1 hour, 33 minutes ago\n  \nDescription :The source-controller is a Kubernetes operator, specialised in artifacts acquisition from external sources such as Git, OCI, Helm repositories and S3-compatible buckets. In versions 0.0.17 through 1.8.4, an actor with the ability to influence the contents of a bucket referenced by a `Bucket` resource can cause source-controller to write fetched object data to paths outside the per-reconciliation working directory. The corruption surface is bounded by source-controller's own and downstream Flux controllers' digest verification: source-controller verifies stored artifact digests during reconciliation and rebuilds on divergence; consumers (kustomize-controller, helm-controller) verify the digest of fetched artifacts and reject mismatches. These checks prevent a manipulated artifact from reaching the cluster, but an attacker can still write files anywhere the source-controller pod has permission to write. Separately, a user with permission to create or update `GitRepository` resources can cause source-controller to test for the existence of paths outside the cloned repository. Because the result is exposed via the resource's status, this allows limited enumeration of file paths on the controller pod. This surface exists only on source-controller v1.6.0 and later, where the sparse-checkout feature was introduced. This vulnerability was fixed in source-controller v1.8.5. There is no in-product workaround. Users should upgrade to a patched version. As a defense-in-depth measure for the GitRepository sparse-checkout surface, a `ValidatingAdmissionPolicy` (or a third-party policy engine such as Kyverno or OPA Gatekeeper) can be deployed to reject `GitRepository` resources whose `.spec.sparseCheckout` entries contain `..` or absolute path segments.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-47680 - 소스 컨트롤러: 부적절한 경로 처리로 인해 순회가 허용됩니다.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-47680\n2. 26.09.09 오전8:17\n3. The source-controller is a Kubernetes operator, sp",
+      "cve_id": "CVE-2026-47680",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47680",
+      "source": "cvefeed",
+      "published": "2026-09-09T08:17:24+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53638 - Sylius: Channel-based payment method restriction bypass on shop account orders API endpoint",
       "summary": "CVE ID :CVE-2026-53638\n  \nPublished : Sept. 8, 2026, 10:25 p.m. | 26 minutes ago\n  \nDescription :Sylius is an Open Source eCommerce Framework on Symfony. Starting in version 2.0.0 and prior to version 2.0.18, 2.1.15, and 2.2.6, an authorization bypass vulnerability exists in the shop account API. The `PATCH /api/v2/shop/account/orders/{tokenValue}/payments/{paymentId}` endpoint, used by an authenticated shop customer to change the payment method of an order that has been placed but not yet paid (state `STATE_NEW`), does not validate that the chosen payment method is enabled for the order's channel. The equivalent checkout endpoint (`PATCH /api/v2/shop/orders/{tokenValue}/payments/{paymentId}`) correctly rejects out-of-channel payment methods with `HTTP 422`; the account endpoint silently accepts them and returns `HTTP 200`. An authenticated customer can therefore assign any globally enabled payment method to their own placed order, including methods that the store operator has explicitly excluded from that channel. The issue is fixed in versions: 2.0.18, 2.1.15, 2.2.6 and above. As a workaround, decorate the `Sylius\\Bundle\\ApiBundle\\Changer\\PaymentMethodChangerInterface` service in the application.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
