@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T04:34:06.117581+09:00",
+  "fetched_at": "2026-09-10T05:03:50.145895+09:00",
   "security_news": [
     {
       "title": "무기는 잘 만드는데… 美 방산시장의 보이지 않는 관문",
@@ -3324,21 +3324,24 @@
       "source": "naver",
       "published": "2026-09-07T05:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[시론] 공급망 보안과 국정원 체질 개선",
-      "summary": "취약점 정보, 펌웨어, 코드서명, 빌드 환경과 같은 사이버보안 정보다. SBOM이 주로 다루는 영역이기도 하다.... 동시에 사이버보안이자 공급망 보안의 문제다. 결국 공급망 보안은 소프트웨어와 하드웨어, 그리고 사람에...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. SBOM이 사이버보안 및 공급망 보안 다룸\n2. 펌웨어, 빌드 환경 등 정보 취약점 존재\n3. 소프트웨어, 하드웨어, 사람 전반 영향",
-      "link": "https://n.news.naver.com/mnews/article/092/0002436393?sid=110",
-      "source": "naver",
-      "published": "2026-09-07T05:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54694 - NationalSecurityAgency/skills-service has Stored XSS via User Registration Enabling Admin Account Takeover",
+      "summary": "CVE ID :CVE-2026-54694\n  \nPublished : Sept. 9, 2026, 7:17 p.m. | 23 minutes ago\n  \nDescription :SkillTree is a micro-learning gamification platform. Prior to version 4.4.2, two independent code flaws combine into a single exploitable attack chain, with three distinct exploitation paths of escalating impact. `StringHighlighter.js` builds an HTML string by interpolating raw `value` substrings directly into a template literal with no HTML entity encoding. `HighlightedValue.vue` renders that string — and all unfiltered plain values — via Vue's `v-html` directive, which sets `innerHTML`. Separately, the account registration endpoint accepts `firstName`, `lastName`, and `nickname` fields and stores them without any HTML sanitization. An attacker self-registers with `firstName = \"\"` (28 characters — within the 30-character field limit) and visits any quiz. The next time an administrator opens the Quiz Runs page the payload executes in their browser. Three attack paths exist with escalating impact. The first is basic cross-site scripting. Any self-contained payload fitting the 30-character limit (e.g. ``, which is 28 chars) fires automatically when the admin navigates to the runs page through normal use. Arbitrary code execution in the admin's browser is confirmed with zero extra steps. The second is remote script loading via `import()`. Using the split-field technique (`lastName = \"\"`), the attacker loads a full JavaScript file from their server. The file has no size limit and can perform any admin action — delete all projects, create backdoor accounts, dump user data, install a keylogger. No phishing required. The only constraint is that the URL must fit in 11 characters (`//nsas.cc/p`). The third is full cross-site request forgery token theft. Using `eval(name)`, the attacker pre-sets `window.name` to a data-theft payload by sending the admin one redirect link first. The session cookie is `HttpOnly` and cannot be read via `document.cookie`; however, the XSRF token is readable and the attacker leverages same-origin execution to call admin APIs from inside the victim's browser, relaying the responses to an external server. No admin interaction beyond routine use is required. Version 4.4.2 contains a patch.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54694\n  \nPublished : Sept. 9, 2026, 7:17 p.m. | 23 minutes ago\n  \nDescription :SkillTree is a micro-learning gamification platform. Prior to version 4.4.2, two independent code flaws combine into a single exploitable attack chain, with three distinct exploitation paths of escalating impact. `StringHighlighter.js` builds an HTML string by interpolating raw `value` substrings directly into a template literal with no HTML entity encoding. `HighlightedValue.vue` renders that string — and all unfiltered plain values — via Vue's `v-html` directive, which sets `innerHTML`. Separately, the account registration endpoint accepts `firstName`, `lastName`, and `nickname` fields and stores them without any HTML sanitization. An attacker self-registers with `firstName = \"\"` (28 characters — within the 30-character field limit) and visits any quiz. The next time an administrator opens the Quiz Runs page the payload executes in their browser. Three attack paths exist with escalating impact. The first is basic cross-site scripting. Any self-contained payload fitting the 30-character limit (e.g. ``, which is 28 chars) fires automatically when the admin navigates to the runs page through normal use. Arbitrary code execution in the admin's browser is confirmed with zero extra steps. The second is remote script loading via `import()`. Using the split-field technique (`lastName = \"\"`), the attacker loads a full JavaScript file from their server. The file has no size limit and can perform any admin action — delete all projects, create backdoor accounts, dump user data, install a keylogger. No phishing required. The only constraint is that the URL must fit in 11 characters (`//nsas.cc/p`). The third is full cross-site request forgery token theft. Using `eval(name)`, the attacker pre-sets `window.name` to a data-theft payload by sending the admin one redirect link first. The session cookie is `HttpOnly` and cannot be read via `document.cookie`; however, the XSRF token is readable and the attacker leverages same-origin execution to call admin APIs from inside the victim's browser, relaying the responses to an external server. No admin interaction beyond routine use is required. Version 4.4.2 contains a patch.\n  \nSeverity: 9.6 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-54694\n2. 26.09.10 오전4:17\n3. SkillTree is a micro-learning gamification platfor",
+      "cve_id": "CVE-2026-54694",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54694",
+      "source": "cvefeed",
+      "published": "2026-09-10T04:17:28+09:00",
+      "lang": "en"
+    },
     {
       "title": "Scans for Proxmox Servers, (Wed, Sep 9th)",
       "summary": "About a week ago, Proxmox published an advisory revealing a vulnerability in older versions of Proxmox VE, its flagship Virtual Environment product. The vulnerability only affects version 7, which has not been supported for a couple of years now.\r",
