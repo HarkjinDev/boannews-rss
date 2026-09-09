@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T02:33:04.673028+09:00",
+  "fetched_at": "2026-09-10T03:02:10.536300+09:00",
   "security_news": [
     {
       "title": "구글 \"북한 해킹 조직, 인공지능으로 암호화폐 절취 자동화\"",
@@ -3315,6 +3315,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "Scans for Proxmox Servers, (Wed, Sep 9th)",
+      "summary": "About a week ago, Proxmox published an advisory revealing a vulnerability in older versions of Proxmox VE, its flagship Virtual Environment product. The vulnerability only affects version 7, which has not been supported for a couple of years now.\r",
+      "description": "About a week ago, Proxmox published an advisory revealing a vulnerability in older versions of Proxmox VE, its flagship Virtual Environment product. The vulnerability only affects version 7, which has not been supported for a couple of years now.\r",
+      "title_ko": "Proxmox 서버 검색(9월 9일 수요일)",
+      "summary_ko": "약 일주일 전, Proxmox는 주력 가상 환경 제품인 Proxmox VE의 이전 버전에 있는 취약점을 공개하는 권고를 발표했습니다. 이 취약점은 현재 몇 년 동안 지원되지 않은 버전 7에만 영향을 미칩니다.",
+      "summary_3lines": "1. Scans for Proxmox Servers, (Wed, Sep 9th)\n2. SANS_ISC\n3. About a week ago, Proxmox published an advisory re",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33324",
+      "source": "sans_isc",
+      "published": "2026-09-10T02:46:24+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-80925 - vlan: fix skb_under_panic and races when toggling HW VLAN offload",
       "summary": "CVE ID :CVE-2026-80925\n  \nPublished : Sept. 9, 2026, 4:19 p.m. | 31 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvlan: fix skb_under_panic and races when toggling HW VLAN offload\n\nToggling hardware VLAN TX offload (NETIF_F_HW_VLAN_CTAG_TX or\nNETIF_F_HW_VLAN_STAG_TX) on a lower device invokes vlan_transfer_features(),\nwhich dynamically changed vlandev->hard_header_len.\n\nThis causes two issues:\n1. Lockless TX paths (e.g. packet_snd in af_packet.c, ip6_finish_output2)\n   read dev->hard_header_len without holding RTNL lock. Mutating\n   hard_header_len dynamically under RTNL creates a data race where upper\n   layers reserve insufficient headroom based on a stale hard_header_len,\n   resulting in skb_under_panic when vlan_dev_hard_header() is called.\n2. In addition, vlan_transfer_features() updated hard_header_len without\n   updating header_ops, causing a mismatch between allocated headroom\n   and header creation.\n\nAlways setting dev->hard_header_len = real_dev->hard_header_len and\ndev->needed_headroom = real_dev->needed_headroom + VLAN_HLEN unconditionally\nensures:\n- dev->hard_header_len remains 100% static and immutable at real_dev->hard_header_len,\n  eliminating all dynamic runtime updates and data races on hard_header_len.\n- Upper layers allocating skbs via LL_RESERVED_SPACE() will always reserve\n  sufficient headroom for software VLAN tag insertion (real_dev->hard_header_len +\n  real_dev->needed_headroom + VLAN_HLEN).\n- vlandev inherits real_dev->needed_tailroom so underlying trailer/padding/ICV\n  requirements are honored.\n- AF_PACKET SOCK_RAW network header offsets remain correctly aligned at\n  real_dev->hard_header_len.\n- vlan_header_ops is used unconditionally.\n\nNote to stable teams: Make sure to backport these commits:\n\ne16e960d55a4 (\"ipvlan: inherit needed_headroom and needed_tailroom from phy_dev\")\ncef51860becd (\"macvlan: inherit needed_headroom and needed_tailroom from lowerdev\")\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
