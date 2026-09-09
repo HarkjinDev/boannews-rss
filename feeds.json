@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-09T22:01:58.228601+09:00",
+  "fetched_at": "2026-09-09T22:31:33.562855+09:00",
   "security_news": [
     {
       "title": "Webinar: Learn How to Answer “Are We Exposed?” Faster After a New CVE",
@@ -3312,21 +3312,24 @@
       "source": "dailysecu",
       "published": "2026-09-07T00:46:37+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "하이브 위버스, 계정 42만2584건 정보 유출",
-      "summary": "위버스컴퍼니는 9월 3일 KISA로부터 외부 제보자가 위버스 서비스의 보안 취약점을 제보했다는 연락을 받고... 배포 과정의 통제와 보안 모니터링도 강화한다. 양주일 위버스컴퍼니 대표는 \"개인정보에 불법 접근한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 하이브 위버스, 42만2584개 계정 정보 유출\n2. 외부 제보로 보안 취약점 발견, 개인정보 불법 접근\n3. KISA 통해 통보, 보안 모니터링 강화 예정",
-      "link": "https://it.chosun.com/news/articleView.html?idxno=2023092169577",
-      "source": "naver",
-      "published": "2026-09-06T22:22:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-87827 - KGUARD DVR unauthenticated remote command execution vulnerability",
+      "summary": "CVE ID :CVE-2026-87827\n  \nPublished : Sept. 9, 2026, 11:17 a.m. | 23 minutes ago\n  \nDescription :Certain KGUARD DVR devices running vulnerable firmware expose a system command execution service on all network interfaces without requiring authentication. A remote unauthenticated attacker with network access to the affected service can execute arbitrary system commands on the device, potentially resulting in complete compromise of the DVR.\n\nThe vulnerability is known to have been exploited in the wild by the Mirai_ptea (Rimasuta) and Mirai_aurora botnets for malware propagation and subsequent DDoS activity. The vulnerability was reported to affect firmware dating from 2016, while firmware released after 2017 appears to mitigate the issue by restricting the affected service to the localhost interface (127.0.0.1) instead of exposing it on all interfaces (0.0.0.0).\n\nThe affected-device list reported by Netlab includes many D1004NR, D1008NR, D1016NR, D1104, D1104NR, D1108NR, D1116NR, D1132NR, D2116NR, D97xx, D98xx, and D99xx variants and several associated hardware revisions\n\n\nThe exploit is included in some version of rapperbot and exploited in 2026. This assignment has been made to document the active exploitation and lack of documentation from the vendor.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-87827\n  \nPublished : Sept. 9, 2026, 11:17 a.m. | 23 minutes ago\n  \nDescription :Certain KGUARD DVR devices running vulnerable firmware expose a system command execution service on all network interfaces without requiring authentication. A remote unauthenticated attacker with network access to the affected service can execute arbitrary system commands on the device, potentially resulting in complete compromise of the DVR.\n\nThe vulnerability is known to have been exploited in the wild by the Mirai_ptea (Rimasuta) and Mirai_aurora botnets for malware propagation and subsequent DDoS activity. The vulnerability was reported to affect firmware dating from 2016, while firmware released after 2017 appears to mitigate the issue by restricting the affected service to the localhost interface (127.0.0.1) instead of exposing it on all interfaces (0.0.0.0).\n\nThe affected-device list reported by Netlab includes many D1004NR, D1008NR, D1016NR, D1104, D1104NR, D1108NR, D1116NR, D1132NR, D2116NR, D97xx, D98xx, and D99xx variants and several associated hardware revisions\n\n\nThe exploit is included in some version of rapperbot and exploited in 2026. This assignment has been made to document the active exploitation and lack of documentation from the vendor.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-87827\n2. 26.09.09 오후8:17\n3. Certain KGUARD DVR devices running vulnerable firm",
+      "cve_id": "CVE-2026-87827",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-87827",
+      "source": "cvefeed",
+      "published": "2026-09-09T20:17:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53939 - OpenIDC/cjose uses all-zero Content Encryption Key for AES-CBC-HMAC JWE encryption",
       "summary": "CVE ID :CVE-2026-53939\n  \nPublished : Sept. 9, 2026, 12:17 a.m. | 33 minutes ago\n  \nDescription :OpenIDC/cjose is a C library implementing the Javascript Object Signing and Encryption (JOSE). In versions 0.6.1 through 0.6.2.5, when cjose encrypts a JWE using an AES-CBC-HMAC content-encryption algorithm (`A128CBC-HS256`, `A192CBC-HS384`, or `A256CBC-HS512`) together with any key-management algorithm that generates a fresh content-encryption key (CEK), the CEK is all zero bytes instead of being randomly generated. The resulting JWE is therefore encrypted and authenticated under a fixed, publicly known key, so anyone who obtains the JWE can recover the plaintext and forge or modify the content. This is fixed in version 0.6.2.6 by `_cjose_jwe_set_cek_aes_cbc()` generating the CEK from `RAND_bytes`. A regression test asserts that the `encrypted_key` differs across two encryptions for each AES-CBC-HMAC variant. Until upgrading, for data encrypted with cjose, three options are available. Use an AES-GCM `enc` (`A128GCM` / `A192GCM` / `A256GCM`) instead of an AES-CBC-HMAC `enc`,  use `alg=dir` with a caller-supplied CEK, or avoid using cjose for JWE encryption with the affected algorithm pair. These are mitigations for new ciphertexts only; data already encrypted under the zero key remains compromised and should be re-encrypted (and any secrets it contained rotated).\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3925,21 +3928,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-86283",
       "source": "cvefeed",
       "published": "2026-09-06T23:15:06+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-86213 - Mstfakts College-Management-System Search university.php mysqli_query sql injection",
-      "summary": "CVE ID :CVE-2026-86213\n  \nPublished : Sept. 6, 2026, 1:17 p.m. | 46 minutes ago\n  \nDescription :A vulnerability was found in Mstfakts College-Management-System. This issue affects the function mysqli_query of the file Front-end/university.php of the component Search Handler. The manipulation of the argument book_name/book_author results in sql injection. The attack may be performed from remote. The exploit has been made public and could be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-86213\n  \nPublished : Sept. 6, 2026, 1:17 p.m. | 46 minutes ago\n  \nDescription :A vulnerability was found in Mstfakts College-Management-System. This issue affects the function mysqli_query of the file Front-end/university.php of the component Search Handler. The manipulation of the argument book_name/book_author results in sql injection. The attack may be performed from remote. The exploit has been made public and could be used. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-86213 - Mstfakts College-Management-System 검색 University.php mysqli_query SQL 삽입",
-      "summary_ko": "CVE ID:CVE-2026-86213\n  \n게시일 : 2026년 9월 6일 오후 1시 17분 | 46분 전\n  \n설명: Mstfakts College-Management-System에서 취약점이 발견되었습니다. 이 문제는 검색 핸들러 구성요소의 Front-end/university.php 파일에 있는 mysqli_query 함수에 영향을 미칩니다. book_name/book_author 인수를 조작하면 SQL 삽입이 발생합니다. 공격은 원격에서 수행될 수 있습니다. 이 익스플로잇은 공개되었으며 사용될 수 있습니다. 이 제품은 지속적인 전달을 위해 롤링 릴리스 시스템을 활용하므로 영향을 받거나 업데이트된 릴리스에 대한 버전 정보는 공개되지 않습니다. 해당 프로젝트는 이슈 리포트를 통해 조기에 문제를 통보 받았으나 아직까지 답변을 하지 않았습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-86213\n2. 26.09.06 오후10:17\n3. A vulnerability was found in Mstfakts College-Mana",
-      "cve_id": "CVE-2026-86213",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86213",
-      "source": "cvefeed",
-      "published": "2026-09-06T22:17:10+09:00",
       "lang": "en"
     }
   ],
