@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T01:02:03.280574+09:00",
+  "fetched_at": "2026-09-10T01:31:29.473522+09:00",
   "security_news": [
     {
       "title": "공인인증 위해 설치했는데… 해킹 통로로 악용",
@@ -3312,33 +3312,24 @@
       "source": "naver",
       "published": "2026-09-07T02:06:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "블록체인에 악성코드 숨겼다…해킹된 웹사이트 5,400곳서 클릭픽스 유포",
-      "summary": "전 세계 5,400개 이상의 해킹된 웹사이트가 블록체인에 저장된 악성 스크립트를 이용해 방문자에게... 사이트가 처음 어떤 방법으로 해킹됐는지는 아직 확인되지 않았다. 블록체인에서 공격 코드 받아 실행 공격자는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 5,400개 웹사이트, 블록체인 악성 스크립트 이용\n2. 클릭픽스 악성코드, 블록체인 통해 유포\n3. 웹사이트 방문자 대상 감염 시도",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208348",
-      "source": "naver",
-      "published": "2026-09-07T01:16:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "크롬 사용자 긴급 업데이트 권고…올해 여섯 번째 제로데이 공격 확인",
-      "summary": "구글이 크롬에서 실제 사이버공격에 악용되고 있는 제로데이 취약점을 확인하고 긴급 보안... 이번 업데이트에는 CVE-2026-85046을 포함해 모두 12건의 보안 취약점 수정이 포함됐다. 윈도와 맥OS용 크롬은 152.0....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 크롬 사용자 긴급 업데이트 권고…올해 여섯 번째 제로데이 공격 확인 구글이 크롬에서 실제 \n2. 이번 업데이트에는 CVE-2026-85046을 포함해 모두 12건의 보안 취약점 수정이 포\n3. 윈도와 맥OS용 크롬은 152.0....",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208347",
-      "source": "naver",
-      "published": "2026-09-07T01:04:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-87823 - zstd-jni 1.1.1 through 1.5.7-13 Out-of-Bounds Read via Direct ByteBuffer Frame-Size Methods",
+      "summary": "CVE ID :CVE-2026-87823\n  \nPublished : Sept. 9, 2026, 2:32 p.m. | 18 minutes ago\n  \nDescription :zstd-jni before 1.5.7-14 performs 32-bit signed bounds checks on three direct-ByteBuffer frame-size native methods, allowing out-of-bounds memory reads via negative or overflowing offsets. Attackers can supply negative offset values near Integer.MIN_VALUE to read unmapped memory, causing JVM termination or extracting arbitrary frame size data from unintended memory locations.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-87823\n  \nPublished : Sept. 9, 2026, 2:32 p.m. | 18 minutes ago\n  \nDescription :zstd-jni before 1.5.7-14 performs 32-bit signed bounds checks on three direct-ByteBuffer frame-size native methods, allowing out-of-bounds memory reads via negative or overflowing offsets. Attackers can supply negative offset values near Integer.MIN_VALUE to read unmapped memory, causing JVM termination or extracting arbitrary frame size data from unintended memory locations.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-87823 - zstd-jni 1.1.1 ~ 1.5.7-13 직접 ByteBuffer 프레임 크기 방법을 통한 범위를 벗어난 읽기",
+      "summary_ko": "CVE ID:CVE-2026-87823\n  \n게시일 : 2026년 9월 9일 오후 2시 32분 | 18분 전\n  \n설명 :1.5.7-14 이전의 zstd-jni는 3개의 직접 ByteBuffer 프레임 크기 기본 메서드에 대해 32비트 부호 있는 경계 검사를 수행하여 음수 또는 오버플로 오프셋을 통해 범위를 벗어난 메모리 읽기를 허용합니다. 공격자는 매핑되지 않은 메모리를 읽기 위해 Integer.MIN_VALUE 근처에 음수 오프셋 값을 제공하여 JVM을 종료하거나 의도하지 않은 메모리 위치에서 임의의 프레임 크기 데이터를 추출할 수 있습니다.\n  \n심각도: 8.8 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-87823\n2. 26.09.09 오후11:32\n3. zstd-jni before 1.5.7-14 performs 32-bit signed bo",
+      "cve_id": "CVE-2026-87823",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-87823",
+      "source": "cvefeed",
+      "published": "2026-09-09T23:32:43+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-87827 - KGUARD DVR unauthenticated remote command execution vulnerability",
       "summary": "CVE ID :CVE-2026-87827\n  \nPublished : Sept. 9, 2026, 11:17 a.m. | 23 minutes ago\n  \nDescription :Certain KGUARD DVR devices running vulnerable firmware expose a system command execution service on all network interfaces without requiring authentication. A remote unauthenticated attacker with network access to the affected service can execute arbitrary system commands on the device, potentially resulting in complete compromise of the DVR.\n\nThe vulnerability is known to have been exploited in the wild by the Mirai_ptea (Rimasuta) and Mirai_aurora botnets for malware propagation and subsequent DDoS activity. The vulnerability was reported to affect firmware dating from 2016, while firmware released after 2017 appears to mitigate the issue by restricting the affected service to the localhost interface (127.0.0.1) instead of exposing it on all interfaces (0.0.0.0).\n\nThe affected-device list reported by Netlab includes many D1004NR, D1008NR, D1016NR, D1104, D1104NR, D1108NR, D1116NR, D1132NR, D2116NR, D97xx, D98xx, and D99xx variants and several associated hardware revisions\n\n\nThe exploit is included in some version of rapperbot and exploited in 2026. This assignment has been made to document the active exploitation and lack of documentation from the vendor.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3922,21 +3913,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-82209",
       "source": "cvefeed",
       "published": "2026-09-07T03:17:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82750 - Unbounded EIP-7702 authorization list in mpp Tempo fee-payer sponsorship inflates gas cost and sponsors account delegation",
-      "summary": "CVE ID :CVE-2026-82750\n  \nPublished : Sept. 6, 2026, 4:08 p.m. | 46 minutes ago\n  \nDescription :Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to inflate the fee-payer's gas cost per sponsored payment by a large multiplier and to have the sponsor pay for EIP-7702 account delegations of the client's choosing.\n\nWhen the server sponsors Tempo payments, MPP.Methods.Tempo.FeePayerPolicy.measure/3 in lib/mpp/methods/tempo/fee_payer_policy.ex bounds the gas fields, the fee budget, the validity window and the access list of the client-signed 0x76 envelope, but never reads its aa_authorization_list field. Every signed delegation in that list is charged as intrinsic gas before the payment call runs, so a client attaching delegations from throwaway authority keys makes the sponsor pay for them within the default gas_limit ceiling. At the reporter's default of seven entries the sponsored cost rises from about 46,575 gas to about 1,884,087 gas. Because each entry is applied as a persistent set-code delegation, a client can also upgrade its own accounts to delegated code at the sponsor's expense.\n\nThis issue affects mpp: from 0.2.0 before 0.16.1.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82750\n  \nPublished : Sept. 6, 2026, 4:08 p.m. | 46 minutes ago\n  \nDescription :Improper Validation of Specified Quantity in Input in ZenHive mpp allows an unauthenticated remote client to inflate the fee-payer's gas cost per sponsored payment by a large multiplier and to have the sponsor pay for EIP-7702 account delegations of the client's choosing.\n\nWhen the server sponsors Tempo payments, MPP.Methods.Tempo.FeePayerPolicy.measure/3 in lib/mpp/methods/tempo/fee_payer_policy.ex bounds the gas fields, the fee budget, the validity window and the access list of the client-signed 0x76 envelope, but never reads its aa_authorization_list field. Every signed delegation in that list is charged as intrinsic gas before the payment call runs, so a client attaching delegations from throwaway authority keys makes the sponsor pay for them within the default gas_limit ceiling. At the reporter's default of seven entries the sponsored cost rises from about 46,575 gas to about 1,884,087 gas. Because each entry is applied as a persistent set-code delegation, a client can also upgrade its own accounts to delegated code at the sponsor's expense.\n\nThis issue affects mpp: from 0.2.0 before 0.16.1.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-82750\n  \n게시일 : 2026년 9월 6일 오후 4시 08분 | 46분 전\n  \n설명:ZenHive mpp의 입력에서 지정된 수량의 부적절한 검증으로 인해 인증되지 않은 원격 클라이언트가 후원 결제당 수수료 납부자의 가스 비용을 큰 승수로 부풀리고 스폰서가 클라이언트가 선택한 EIP-7702 계정 위임에 대해 비용을 지불하도록 할 수 있습니다.\n\n서버가 Tempo 결제를 후원할 때 lib/mpp/methods/tempo/fee_payer_policy.ex의 MPP.Methods.Tempo.FeePayerPolicy.measure/3은 가스 필드, 수수료 예산, 유효성 창 및 클라이언트 서명 0x76 봉투의 액세스 목록을 제한하지만 aa_authorization_list 필드는 읽지 않습니다. 해당 목록에 있는 모든 서명된 위임은 지불 호출이 실행되기 전에 고유 가스로 요금이 청구되므로 일회용 권한 키에서 위임을 연결하는 클라이언트는 스폰서가 기본 gas_limit 한도 내에서 비용을 지불하도록 합니다. 보고자의 7개 항목 불이행으로 인해 후원 비용은 약 46,575가스에서 약 1,884,087가스로 증가합니다. 각 항목은 영구 세트 코드 위임으로 적용되므로 클라이언트는 후원자의 비용으로 자신의 계정을 위임된 코드로 업그레이드할 수도 있습니다.\n\n이 문제는 0.2.0부터 0.16.1 이전의 mpp에 영향을 미칩니다.\n  \n심각도: 8.3 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-82750\n2. 26.09.07 오전1:08\n3. Improper Validation of Specified Quantity in Input",
-      "cve_id": "CVE-2026-82750",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82750",
-      "source": "cvefeed",
-      "published": "2026-09-07T01:08:41+09:00",
       "lang": "en"
     }
   ],
