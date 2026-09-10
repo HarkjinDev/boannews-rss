@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-11T00:33:06.424875+09:00",
+  "fetched_at": "2026-09-11T01:02:21.490172+09:00",
   "security_news": [
+    {
+      "title": "Cisco FMC flaws exploited by ransomware gang, state-sponsored hackers",
+      "summary": "Cisco Talos says two recently patched Secure Firewall Management Center (FMC) vulnerabilities have been exploited by three separate threat clusters linked to ransomware and state-sponsored attacks. [...]",
+      "content": "",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. 시스코 FMC 2개 취약점, 랜섬웨어/국가 지원 해커에 악용\n2. 시스코 탈로스, 3개 위협 그룹이 CVE-2023-20197 등 악용\n3. 랜섬웨어, 국가 지원 공격 확산 우려 커져",
+      "link": "https://www.bleepingcomputer.com/news/security/cisco-fmc-flaws-exploited-by-ransomware-gang-state-sponsored-hackers/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-11T00:43:58+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Nightmare-Eclipse Strikes Again with 'ShieldCrash' Windows Exploit",
+      "summary": "The disgruntled researcher continued their vendetta against Microsoft by publishing yet another zero-day exploit for Windows Defender.",
+      "content": "",
+      "title_ko": "Nightmare-Eclipse가 'ShieldCrash' Windows 공격으로 다시 공격",
+      "summary_ko": "불만을 품은 연구원은 Windows Defender에 대한 또 다른 제로데이 익스플로잇을 공개함으로써 Microsoft에 대한 복수를 계속했습니다.",
+      "summary_3lines": "1. Nightmare-Eclipse, 윈도우 디펜더 대상 제로데이 익스플로잇 공개\n2. 'ShieldCrash'로 명명된 익스플로잇, 마이크로소프트 겨냥\n3. 윈도우 방어 체계 무력화 가능한 위험성 내포",
+      "link": "https://www.darkreading.com/vulnerabilities-threats/nightmare-eclipse-strikes-again-shieldcrash-windows-exploit",
+      "source": "darkreading",
+      "published": "2026-09-11T00:29:12+09:00",
+      "lang": "en"
+    },
     {
       "title": "사토시 정체? 실수로 버린 8000 BTC…역대급 암호화폐 미스터리 10선",
       "summary": "비트코인 창시자 사토시 나카모토의 정체부터 대형 거래소 해킹, 사라진 비트코인, 도주 중인 사기범까지... 이더리움에서는 2016년 더 다오(The DAO) 해킹이 대표적이다. 공격자는 스마트계약 취약점을 이용해 360만ETH...",
@@ -3207,6 +3231,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-88011 - Traefik: ForwardAuth identity spoofing via dot-form header alias",
+      "summary": "CVE ID :CVE-2026-88011\n  \nPublished : Sept. 10, 2026, 3:31 p.m. | 26 minutes ago\n  \nDescription :Traefik is an open source HTTP reverse proxy and load balancer. Prior to 2.11.56, and from 3.0.0 until 3.7.12, a client-supplied dot-form header such as X.Authenticated.User survives ForwardAuth replacement and underscoreHeadersStrategy because Go treats it as distinct from X-Authenticated-User while normalization-prone CGI, WSGI, PHP, and NGINX backends collapse both names. A backend can consequently consume the client value instead of the identity Traefik asserted, allowing identity spoofing for any header managed by Traefik. The aliasHeadersStrategy protection is disabled by default and must be configured as delete or reject. The mitigation is available in 2.11.56 and 3.7.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-88011\n  \nPublished : Sept. 10, 2026, 3:31 p.m. | 26 minutes ago\n  \nDescription :Traefik is an open source HTTP reverse proxy and load balancer. Prior to 2.11.56, and from 3.0.0 until 3.7.12, a client-supplied dot-form header such as X.Authenticated.User survives ForwardAuth replacement and underscoreHeadersStrategy because Go treats it as distinct from X-Authenticated-User while normalization-prone CGI, WSGI, PHP, and NGINX backends collapse both names. A backend can consequently consume the client value instead of the identity Traefik asserted, allowing identity spoofing for any header managed by Traefik. The aliasHeadersStrategy protection is disabled by default and must be configured as delete or reject. The mitigation is available in 2.11.56 and 3.7.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-88011 - Traefik: 도트 형식 헤더 별칭을 통한 ForwardAuth ID 스푸핑",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-88011\n2. 26.09.11 오전12:31\n3. Traefik is an open source HTTP reverse proxy and l",
+      "cve_id": "CVE-2026-88011",
+      "cvss": "0.0",
+      "severity": "Low",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88011",
+      "source": "cvefeed",
+      "published": "2026-09-11T00:31:55+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-88790 - proma-ai Proma File Preview Service file-preview-service.ts resolveTargetPath path traversal",
       "summary": "CVE ID :CVE-2026-88790\n  \nPublished : Sept. 10, 2026, 2 p.m. | 19 minutes ago\n  \nDescription :A security vulnerability has been detected in proma-ai Proma up to 0.19.37. Affected is the function resolveTargetPath of the file apps/electron/src/main/lib/file-preview-service.ts of the component File Preview Service. Such manipulation of the argument file_path leads to path traversal. Local access is required to approach this attack. The exploit has been disclosed publicly and may be used. Upgrading to version 0.19.52 is able to address this issue. The name of the patch is b7bf78ab74b1552c92fc98c7db9a8a8d92c631df. It is suggested to upgrade the affected component. The PoC's candidateBasePaths parameter name does not match the current IPC API (0.19.52 uses FileAccessOptions with internal getPreviewCandidateBasePaths()). The reporter likely targeted 0.16.3 where the IPC handler accepted raw string[] base paths. The core vulnerability - basename-collision fallback - is independent of the parameter name and is confirmed in source.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
