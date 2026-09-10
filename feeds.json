@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-11T01:32:31.801604+09:00",
+  "fetched_at": "2026-09-11T02:01:52.906229+09:00",
   "security_news": [
     {
       "title": "Cisco FMC flaws exploited by ransomware gang, state-sponsored hackers",
@@ -3216,21 +3216,39 @@
       "source": "thehackernews",
       "published": "2026-09-08T03:12:09+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Magento StyleSmuggler zero-day exploited to deploy Linux backdoor",
-      "summary": "A zero-day vulnerability dubbed \"StyleSmuggler\" affecting all versions of Magento and Adobe Commerce is being exploited in attacks to deploy a backdoor. [...]",
-      "content": "",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. Magento StyleSmuggler 제로데이 취약점 악용\n2. 모든 Magento, Adobe Commerce 버전 대상 백도어 배포\n3. 공격자, StyleSmuggler 통한 시스템 장악 시도",
-      "link": "https://www.bleepingcomputer.com/news/security/magento-stylesmuggler-zero-day-exploited-to-deploy-linux-backdoor/",
-      "source": "bleepingcomputer",
-      "published": "2026-09-08T01:50:29+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-88015 - rclone local: crafted Range request against a translated symlink panics (DoS)",
+      "summary": "CVE ID :CVE-2026-88015\n  \nPublished : Sept. 10, 2026, 4:18 p.m. | 25 minutes ago\n  \nDescription :rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.75.1, backend/local with --links or links=true exposes symlink targets as .rclonelink objects, and fs.RangeOption.Decode can pass an unchecked positive Range start through Object.Open and openTranslatedLink. The function slices the target string as linkdst[offset:], so a Range start larger than the target length causes a deterministic slice-bounds panic when lib/http/serve exposes the object through HTTP or WebDAV. Go net/http normally recovers the panic per connection, causing request-level denial of service rather than terminating the entire process. This issue is fixed in version 1.75.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-88015\n  \nPublished : Sept. 10, 2026, 4:18 p.m. | 25 minutes ago\n  \nDescription :rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.75.1, backend/local with --links or links=true exposes symlink targets as .rclonelink objects, and fs.RangeOption.Decode can pass an unchecked positive Range start through Object.Open and openTranslatedLink. The function slices the target string as linkdst[offset:], so a Range start larger than the target length causes a deterministic slice-bounds panic when lib/http/serve exposes the object through HTTP or WebDAV. Go net/http normally recovers the panic per connection, causing request-level denial of service rather than terminating the entire process. This issue is fixed in version 1.75.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-88015\n2. 26.09.11 오전1:18\n3. rclone is a command-line program to sync files and",
+      "cve_id": "CVE-2026-88015",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88015",
+      "source": "cvefeed",
+      "published": "2026-09-11T01:18:08+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-88047 - Tesseract: ReadNormProtos stack buffer overflow",
+      "summary": "CVE ID :CVE-2026-88047\n  \nPublished : Sept. 10, 2026, 4:18 p.m. | 26 minutes ago\n  \nDescription :Tesseract is an open source OCR engine. In version 5.5.3 and earlier, Classify::ReadNormProtos in src/classify/normmatch.cpp parses the NORMPROTO component of a .traineddata file and uses std::istream::operator>>(char*) to extract a whitespace-delimited token into a fixed 61-byte stack buffer without setting a stream width. The 100-byte line buffer can carry a token of up to 99 characters, so a token longer than 60 characters writes up to 39 attacker-controlled bytes past the buffer during TessBaseAPI::Init of the legacy engine, causing stack corruption, denial of service, and potentially control-flow hijacking on affected standard-library implementations. Builds using Apple's libc++ C++20 bounded array overload are incidentally protected, while typical libstdc++ builds remain affected. No fixed release is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-88047\n  \nPublished : Sept. 10, 2026, 4:18 p.m. | 26 minutes ago\n  \nDescription :Tesseract is an open source OCR engine. In version 5.5.3 and earlier, Classify::ReadNormProtos in src/classify/normmatch.cpp parses the NORMPROTO component of a .traineddata file and uses std::istream::operator>>(char*) to extract a whitespace-delimited token into a fixed 61-byte stack buffer without setting a stream width. The 100-byte line buffer can carry a token of up to 99 characters, so a token longer than 60 characters writes up to 39 attacker-controlled bytes past the buffer during TessBaseAPI::Init of the legacy engine, causing stack corruption, denial of service, and potentially control-flow hijacking on affected standard-library implementations. Builds using Apple's libc++ C++20 bounded array overload are incidentally protected, while typical libstdc++ builds remain affected. No fixed release is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-88047\n2. 26.09.11 오전1:18\n3. Tesseract is an open source OCR engine. In version",
+      "cve_id": "CVE-2026-88047",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88047",
+      "source": "cvefeed",
+      "published": "2026-09-11T01:18:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-88011 - Traefik: ForwardAuth identity spoofing via dot-form header alias",
       "summary": "CVE ID :CVE-2026-88011\n  \nPublished : Sept. 10, 2026, 3:31 p.m. | 26 minutes ago\n  \nDescription :Traefik is an open source HTTP reverse proxy and load balancer. Prior to 2.11.56, and from 3.0.0 until 3.7.12, a client-supplied dot-form header such as X.Authenticated.User survives ForwardAuth replacement and underscoreHeadersStrategy because Go treats it as distinct from X-Authenticated-User while normalization-prone CGI, WSGI, PHP, and NGINX backends collapse both names. A backend can consequently consume the client value instead of the identity Traefik asserted, allowing identity spoofing for any header managed by Traefik. The aliasHeadersStrategy protection is disabled by default and must be configured as delete or reject. The mitigation is available in 2.11.56 and 3.7.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
