@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-10T23:31:43.843029+09:00",
+  "fetched_at": "2026-09-11T00:01:59.712007+09:00",
   "security_news": [
     {
       "title": "New 'BlueMoon' kit exploited Windows and Chrome zero-day flaws",
@@ -3192,33 +3192,54 @@
       "source": "bleepingcomputer",
       "published": "2026-09-08T01:50:29+09:00",
       "lang": "en"
-    },
-    {
-      "title": "[이혁중 CISO 칼럼] AI와 클라우드 시대, 보안 신입에게 필요한 것은 결...",
-      "summary": "신입 보안 인재에게 가장 먼저 필요한 것은 화려한 해킹 기술이 아니라 컴퓨팅 기본기다. 네트워크가... 취약점 진단과 모의 해킹을 원한다면 웹 보안 원리와 보고서 작성 능력이 필요하다. 클라우드 보안을 원한다면...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI/클라우드 시대, 신입 보안 인재에겐 해킹 기술보다 컴퓨팅 기본기 필요.\n2. 웹 보안 원리, 보고서 작성 능력, 클라우드 보안 지식 학습 권장.\n3. 화려한 기술보다 근본적인 이해력과 문제 해결 능력 강조.",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208363",
-      "source": "naver",
-      "published": "2026-09-07T23:52:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[김승주 교수 칼럼] AI가 해킹을 대중화하는 시대, 애플이 시간의 비대...",
-      "summary": "사이버보안은 원래부터 공격자에게 유리한 싸움이다. 공격자는 수많은 코드 가운데 단 하나의 취약점만... 프로그램에 여러 입력값을 넣어 예상대로 동작하는지 확인하고, 보안 취약점이 없는지도 분석한다. 하지만...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [김승주 교수 칼럼] AI가 해킹을 대중화하는 시대, 애플이 시간의 비대...\n2. 사이버보안은 원래부터 공격자에게 유리한 싸움이다.\n3. 공격자는 수많은 코드 가운데 단 하나의 취약점만...",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208362",
-      "source": "naver",
-      "published": "2026-09-07T23:48:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-88790 - proma-ai Proma File Preview Service file-preview-service.ts resolveTargetPath path traversal",
+      "summary": "CVE ID :CVE-2026-88790\n  \nPublished : Sept. 10, 2026, 2 p.m. | 19 minutes ago\n  \nDescription :A security vulnerability has been detected in proma-ai Proma up to 0.19.37. Affected is the function resolveTargetPath of the file apps/electron/src/main/lib/file-preview-service.ts of the component File Preview Service. Such manipulation of the argument file_path leads to path traversal. Local access is required to approach this attack. The exploit has been disclosed publicly and may be used. Upgrading to version 0.19.52 is able to address this issue. The name of the patch is b7bf78ab74b1552c92fc98c7db9a8a8d92c631df. It is suggested to upgrade the affected component. The PoC's candidateBasePaths parameter name does not match the current IPC API (0.19.52 uses FileAccessOptions with internal getPreviewCandidateBasePaths()). The reporter likely targeted 0.16.3 where the IPC handler accepted raw string[] base paths. The core vulnerability - basename-collision fallback - is independent of the parameter name and is confirmed in source.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-88790\n  \nPublished : Sept. 10, 2026, 2 p.m. | 19 minutes ago\n  \nDescription :A security vulnerability has been detected in proma-ai Proma up to 0.19.37. Affected is the function resolveTargetPath of the file apps/electron/src/main/lib/file-preview-service.ts of the component File Preview Service. Such manipulation of the argument file_path leads to path traversal. Local access is required to approach this attack. The exploit has been disclosed publicly and may be used. Upgrading to version 0.19.52 is able to address this issue. The name of the patch is b7bf78ab74b1552c92fc98c7db9a8a8d92c631df. It is suggested to upgrade the affected component. The PoC's candidateBasePaths parameter name does not match the current IPC API (0.19.52 uses FileAccessOptions with internal getPreviewCandidateBasePaths()). The reporter likely targeted 0.16.3 where the IPC handler accepted raw string[] base paths. The core vulnerability - basename-collision fallback - is independent of the parameter name and is confirmed in source.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-88790 - proma-ai Proma 파일 미리보기 서비스 file-preview-service.ts 해결TargetPath 경로 탐색",
+      "summary_ko": "CVE ID:CVE-2026-88790\n  \n게재일 : 2026년 9월 10일 오후 2시 | 19분 전\n  \n설명 : proma-ai Proma 0.19.37까지 보안 취약점이 발견되었습니다. 영향을 받는 것은 구성 요소 파일 미리 보기 서비스의 apps/electron/src/main/lib/file-preview-service.ts 파일의solveTargetPath 함수입니다. file_path 인수를 조작하면 경로 탐색이 발생합니다. 이 공격에 접근하려면 로컬 액세스가 필요합니다. 해당 익스플로잇은 공개적으로 공개되었으며 사용될 수 있습니다. 버전 0.19.52로 업그레이드하면 이 문제를 해결할 수 있습니다. 패치 이름은 b7bf78ab74b1552c92fc98c7db9a8a8d92c631df입니다. 영향을 받는 구성 요소를 업그레이드하는 것이 좋습니다. PoC의 CandidateBasePaths 매개변수 이름이 현재 IPC API(0.19.52는 내부 getPreviewCandidateBasePaths()와 함께 FileAccessOptions를 사용함)와 일치하지 않습니다. 기자는 IPC 처리기가 원시 문자열[] 기본 경로를 허용하는 0.16.3을 목표로 삼았을 가능성이 높습니다. 핵심 취약점인 basename-collision fallback은 매개변수 이름과 무관하며 소스에서 확인되었습니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-88790\n2. 26.09.10 오후11:00\n3. A security vulnerability has been detected in prom",
+      "cve_id": "CVE-2026-88790",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88790",
+      "source": "cvefeed",
+      "published": "2026-09-10T23:00:19+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-88921 - MISP: Unescaped HTML Injection in PDF Report Element Rendering",
+      "summary": "CVE ID :CVE-2026-88921\n  \nPublished : Sept. 10, 2026, 1:41 p.m. | 38 minutes ago\n  \nDescription :MISP contains an HTML injection vulnerability in the MISPElementHTMLFormatterTool component, which is responsible for rendering MISP element references (attributes, objects, and tags) into inline HTML during PDF report export via the convert_markdown_to_pdf module. The attribute(), objectAttribute(), object(), and tag() methods interpolated user-controlled fields (attribute type, attribute value, object name, object relation, tag name, tag colour, and tag text colour) directly into HTML templates without applying HTML entity encoding. An authenticated user with the ability to create or modify MISP attributes, objects, or tags could embed arbitrary HTML markup in these fields. When a report containing such elements was exported to PDF, the unescaped content was rendered as live HTML rather than inert text, potentially injecting script tags, breaking the document structure, or altering the visual content of the exported report. Additionally, the attribute() method contained a template with hardcoded sample values (\"domain-ip\" and \"google.com\") instead of format placeholders, meaning every plain attribute reference in a PDF displayed the sample text rather than the actual indicator value, constituting a data-integrity defect in the exported document. The vulnerability requires an authenticated actor with write access to MISP elements and a subsequent PDF export of a report referencing those elements. The security impact is primarily to the integrity of the exported document and, depending on the HTML-to-PDF rendering engine, potential execution of injected markup during the conversion step.\n\nVersion affected: ≤2.5.45\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-88921\n  \nPublished : Sept. 10, 2026, 1:41 p.m. | 38 minutes ago\n  \nDescription :MISP contains an HTML injection vulnerability in the MISPElementHTMLFormatterTool component, which is responsible for rendering MISP element references (attributes, objects, and tags) into inline HTML during PDF report export via the convert_markdown_to_pdf module. The attribute(), objectAttribute(), object(), and tag() methods interpolated user-controlled fields (attribute type, attribute value, object name, object relation, tag name, tag colour, and tag text colour) directly into HTML templates without applying HTML entity encoding. An authenticated user with the ability to create or modify MISP attributes, objects, or tags could embed arbitrary HTML markup in these fields. When a report containing such elements was exported to PDF, the unescaped content was rendered as live HTML rather than inert text, potentially injecting script tags, breaking the document structure, or altering the visual content of the exported report. Additionally, the attribute() method contained a template with hardcoded sample values (\"domain-ip\" and \"google.com\") instead of format placeholders, meaning every plain attribute reference in a PDF displayed the sample text rather than the actual indicator value, constituting a data-integrity defect in the exported document. The vulnerability requires an authenticated actor with write access to MISP elements and a subsequent PDF export of a report referencing those elements. The security impact is primarily to the integrity of the exported document and, depending on the HTML-to-PDF rendering engine, potential execution of injected markup during the conversion step.\n\nVersion affected: ≤2.5.45\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-88921 - MISP: PDF 보고서 요소 렌더링에서 이스케이프되지 않은 HTML 삽입",
+      "summary_ko": "CVE ID:CVE-2026-88921\n  \n게시일 : 2026년 9월 10일 오후 1시 41분 | 38분 전\n  \n설명 :MISP에는 MISPElementHTMLFormatterTool 구성 요소에 HTML 삽입 취약점이 포함되어 있습니다. 이 구성 요소는 Convert_markdown_to_pdf 모듈을 통해 PDF 보고서를 내보내는 동안 MISP 요소 참조(속성, 개체 및 태그)를 인라인 HTML로 렌더링하는 역할을 합니다. attribute(), objectAttribute(), object() 및 tag() 메서드는 HTML 엔터티 인코딩을 적용하지 않고 사용자 제어 필드(속성 유형, 속성 값, 개체 이름, 개체 관계, 태그 이름, 태그 색상 및 태그 텍스트 색상)를 HTML 템플릿에 직접 삽입했습니다. MISP 속성, 개체 또는 태그를 생성하거나 수정할 수 있는 인증된 사용자는 이러한 필드에 임의의 HTML 마크업을 포함할 수 있습니다. 이러한 요소가 포함된 보고서를 PDF로 내보낼 때 이스케이프되지 않은 콘텐츠는 비활성 텍스트가 아닌 라이브 HTML로 렌더링되어 잠재적으로 스크립트 태그를 삽입하거나 문서 구조를 손상시키거나 내보낸 보고서의 시각적 콘텐츠를 변경했습니다. 또한 attribute() 메소드에는 형식 자리 표시자 대신 하드코딩된 샘플 값(\"domain-ip\" 및 \"google.com\")이 포함된 템플릿이 포함되어 있습니다. 즉, PDF의 모든 일반 속성 참조는 실제 표시기 값이 아닌 샘플 텍스트를 표시하여 내보낸 문서에서 데이터 무결성 결함을 구성합니다. 취약점을 이용하려면 MISP 요소에 대한 쓰기 권한이 있는 인증된 행위자와 해당 요소를 참조하는 보고서의 후속 PDF 내보내기가 필요합니다. 보안 영향은 주로 내보낸 문서의 무결성과 HTML-PDF 렌더링 엔진에 따라 변환 단계 중에 삽입된 마크업의 잠재적 실행에 있습니다.\n\n영향을 받는 버전: 2.5.45 이하\n  \n심각도: 5.1 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-88921\n2. 26.09.10 오후10:41\n3. MISP contains an HTML injection vulnerability in t",
+      "cve_id": "CVE-2026-88921",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88921",
+      "source": "cvefeed",
+      "published": "2026-09-10T22:41:51+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-88892 - OpenPanel SSRF via Unguarded Importer File URL Fetch",
+      "summary": "CVE ID :CVE-2026-88892\n  \nPublished : Sept. 10, 2026, 1:05 p.m. | 1 hour, 14 minutes ago\n  \nDescription :OpenPanel is an analytics platform. In all versions (no patched release available at time of publication), the data importer fetches a caller-supplied URL with plain fetch instead of the project's existing SSRF guard (apps/api/src/utils/safe-fetch.ts). In packages/importer/src/providers/umami.ts, parseRemoteFile calls fetch() on config.fileUrl, which is validated only by z.string().url(), so values such as http://127.0.0.1:9911/ or http://169.254.169.254/latest/meta-data/ are accepted; the shared createFileImportConfig factory gives the plausible provider the same field. An authenticated organization member — including a default 'member' with no project_access rows, for whom the intended access-level check is skipped because getProjectAccess returns boolean true rather than a level object — can therefore make the server connect to any address reachable from it. The resulting HTTP status and status text are persisted as Import.errorMessage and returned by import.get to the same user, providing a scanning oracle for internal hosts, ports and paths; if an internal response parses as Umami CSV, its rows are ingested as events and become readable in the attacker's analytics views.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-88892\n  \nPublished : Sept. 10, 2026, 1:05 p.m. | 1 hour, 14 minutes ago\n  \nDescription :OpenPanel is an analytics platform. In all versions (no patched release available at time of publication), the data importer fetches a caller-supplied URL with plain fetch instead of the project's existing SSRF guard (apps/api/src/utils/safe-fetch.ts). In packages/importer/src/providers/umami.ts, parseRemoteFile calls fetch() on config.fileUrl, which is validated only by z.string().url(), so values such as http://127.0.0.1:9911/ or http://169.254.169.254/latest/meta-data/ are accepted; the shared createFileImportConfig factory gives the plausible provider the same field. An authenticated organization member — including a default 'member' with no project_access rows, for whom the intended access-level check is skipped because getProjectAccess returns boolean true rather than a level object — can therefore make the server connect to any address reachable from it. The resulting HTTP status and status text are persisted as Import.errorMessage and returned by import.get to the same user, providing a scanning oracle for internal hosts, ports and paths; if an internal response parses as Umami CSV, its rows are ingested as events and become readable in the attacker's analytics views.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-88892 - 보호되지 않은 임포터 파일 URL 가져오기를 통한 OpenPanel SSRF",
+      "summary_ko": "CVE ID:CVE-2026-88892\n  \n게시일 : 2026년 9월 10일 오후 1시 5분 | 1시간, 14분 전\n  \n설명:OpenPanel은 분석 플랫폼입니다. 모든 버전(게시 시점에 사용 가능한 패치 릴리스 없음)에서 데이터 가져오기 도구는 프로젝트의 기존 SSRF 가드(apps/api/src/utils/safe-fetch.ts) 대신 일반 가져오기를 사용하여 호출자가 제공한 URL을 가져옵니다. packages/importer/src/providers/umami.ts에서 parsRemoteFile은 z.string().url()에 의해서만 유효성이 검사되는 config.fileUrl에 대해 fetch()를 호출하므로 http://127.0.0.1:9911/ 또는 http://169.254.169.254/latest/meta-data/와 같은 값이 허용됩니다. 공유 createFileImportConfig 팩토리는 그럴듯한 공급자에게 동일한 필드를 제공합니다. 따라서 인증된 조직 구성원(project_access 행이 없는 기본 '구성원' 포함)은 getProjectAccess가 수준 개체가 아닌 부울 true를 반환하기 때문에 의도된 액세스 수준 확인을 건너뛰는 경우 서버가 도달 가능한 모든 주소에 연결되도록 할 수 있습니다. 결과 HTTP 상태 및 상태 텍스트는 Import.errorMessage로 유지되고 import.get에 의해 동일한 사용자에게 반환되어 내부 호스트, 포트 및 경로에 대한 스캐닝 오라클을 제공합니다. 내부 응답이 Umami CSV로 구문 분석되면 해당 행이 이벤트로 수집되어 공격자의 분석 보기에서 읽을 수 있게 됩니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-88892\n2. 26.09.10 오후10:05\n3. OpenPanel is an analytics platform. In all version",
+      "cve_id": "CVE-2026-88892",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88892",
+      "source": "cvefeed",
+      "published": "2026-09-10T22:05:40+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-78083 - Joomla Extension - joomshaper.com - Missing CSRF Token Verification in Property Booking and Agent Contact Endpoints in SP Property < 4.1.4",
       "summary": "CVE ID :CVE-2026-78083\n  \nPublished : Sept. 10, 2026, 10:17 a.m. | 33 minutes ago\n  \nDescription :Joomla Extension - joomshaper.com - Missing CSRF Token Verification in Property Booking and Agent Contact Endpoints in SP Property < 4.1.4 - The visitor booking (properties.booking) and agent contact form submission (agents.sendmail) endpoints processed POST requests without verifying Joomla session anti-CSRF tokens.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
