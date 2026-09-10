@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-10T23:02:21.177246+09:00",
+  "fetched_at": "2026-09-10T23:31:43.843029+09:00",
   "security_news": [
+    {
+      "title": "New 'BlueMoon' kit exploited Windows and Chrome zero-day flaws",
+      "summary": "Multiple cyber-espionage groups deployed an exploit kit dubbed \"BlueMoon\" that leveraged zero-day vulnerabilities in Microsoft Windows and Google Chrome. [...]",
+      "content": "",
+      "title_ko": "새로운 'BlueMoon' 키트, 윈도우와 크롬 제로데이 취약점 악용",
+      "summary_ko": "여러 사이버 스파이 그룹이 Microsoft Windows 및 Google Chrome의 제로데이 취약점을 활용하는 \"BlueMoon\"이라는 익스플로잇 킷을 배포했습니다. [...]",
+      "summary_3lines": "1. 'BlueMoon' 킷, 윈도우·크롬 제로데이 취약점 악용\n2. 사이버 첩보 그룹, 윈도우/크롬 제로데이 악용\n3. 다수 그룹, 'BlueMoon' 킷 통해 공격 수행",
+      "link": "https://www.bleepingcomputer.com/news/security/new-bluemoon-kit-exploited-windows-and-chrome-zero-day-flaws/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-10T23:11:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "리퀴드 해킹 4천BTC 중 598BTC 미반환…전액 반환 촉구",
       "summary": "리퀴드 네트워크에서 빠져나간 약 4천 BTC 가운데 3천400 BTC가 반환됐지만 약 598 BTC는 아직 돌아오지 않았다. 오데일리는 삼손 모우의 발언을 인용해 공격자들이 자신들을 백 hat 해커라고 주장하며 취약점 수정 뒤...",
@@ -3925,21 +3937,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-82754",
       "source": "cvefeed",
       "published": "2026-09-08T07:23:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-86452 - MISP Unauthenticated Mail Endpoints Allow Unbounded Storage Consumption and Request Flooding",
-      "summary": "CVE ID :CVE-2026-86452\n  \nPublished : Sept. 7, 2026, 2:16 p.m. | 38 minutes ago\n  \nDescription :Affected versions of MISP permit unauthenticated or weakly constrained request paths to perform persistent work without adequate input bounds or rate limiting.\n\n\nThe users/forgot password-reset endpoint accepted an attacker-controlled email value without first imposing a reasonable length bound or validating its format. That value was then used to create an audit log entry and queue a password-reset job, causing the supplied value to be persisted more than once per request. The commit explicitly states that an unbounded unauthenticated request field was stored twice per call with no throttle.\n\n\nThe fix adds:\n\n\n\n  *  \na maximum email input length of 1024 bytes;\n\n\n  *  \nemail-format validation before persistent work;\n\n\n  *  \na per-source pre-authentication request budget;\n\n\n  *  \nHTTP 429 responses when that budget is exceeded;\n\n\n  *  \na 15-minute cooldown for API-access request emails;\n\n\n  *  \nPOST-only handling and CSRF protection for the API-access request endpoint.\n\n\n\n\n\nThe new flood filter is specifically intended to limit persistent storage costs from anonymous requests such as password resets, registrations, and failed REST authentication attempts.\n\nVersion affected: ≤2.5.45\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-86452\n  \nPublished : Sept. 7, 2026, 2:16 p.m. | 38 minutes ago\n  \nDescription :Affected versions of MISP permit unauthenticated or weakly constrained request paths to perform persistent work without adequate input bounds or rate limiting.\n\n\nThe users/forgot password-reset endpoint accepted an attacker-controlled email value without first imposing a reasonable length bound or validating its format. That value was then used to create an audit log entry and queue a password-reset job, causing the supplied value to be persisted more than once per request. The commit explicitly states that an unbounded unauthenticated request field was stored twice per call with no throttle.\n\n\nThe fix adds:\n\n\n\n  *  \na maximum email input length of 1024 bytes;\n\n\n  *  \nemail-format validation before persistent work;\n\n\n  *  \na per-source pre-authentication request budget;\n\n\n  *  \nHTTP 429 responses when that budget is exceeded;\n\n\n  *  \na 15-minute cooldown for API-access request emails;\n\n\n  *  \nPOST-only handling and CSRF protection for the API-access request endpoint.\n\n\n\n\n\nThe new flood filter is specifically intended to limit persistent storage costs from anonymous requests such as password resets, registrations, and failed REST authentication attempts.\n\nVersion affected: ≤2.5.45\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-86452\n2. 26.09.07 오후11:16\n3. Affected versions of MISP permit unauthenticated o",
-      "cve_id": "CVE-2026-86452",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86452",
-      "source": "cvefeed",
-      "published": "2026-09-07T23:16:56+09:00",
       "lang": "en"
     }
   ],
