@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-11T23:02:22.239469+09:00",
+  "fetched_at": "2026-09-11T23:33:24.920719+09:00",
   "security_news": [
+    {
+      "title": "오늘부터 CPO 역할 커진다...기업 내 관련 직제 '겸직' 속 보안 독립성 ...",
+      "summary": "CISO가 해킹과 침해사고 대응 등 정보보호 전반을 책임진다면 CPO는 개인정보의 수집·이용부터 보관·파기까지 전 과정을 총괄한다. 개정법이 CPO에게 인력과 예산 확보, 경영진 보고 역할을 명확히 한 것도 직함보다...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CPO, 개인정보 총괄 역할 강화\n2. 경영진 보고, 예산 확보 권한 확대\n3. 기업 보안 독립성 향상 기대",
+      "link": "https://news.mtn.co.kr/news-detail/2026091115070134053",
+      "source": "naver",
+      "published": "2026-09-11T23:30:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "농협중앙회, 정보보호 강화…“신뢰받는 농협 만들 것",
       "summary": "아울러 단순한 사후 대응을 넘어 개인정보 유출과 정보보안 사고를 사전에 예방하는 조직문화를 정착시켜 국민과 고객에게 더욱 신뢰받는 농협을 만들어 나간다는 방침이다. 이동규 한국금융신문 기자",
@@ -3156,21 +3168,24 @@
       "source": "naver",
       "published": "2026-09-08T23:49:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "‘강남언니’ 정보 유출 [횡설수설/우경임]",
-      "summary": "문제는 API 공격이 고난도 해킹이 아니어서 기본만 지키면 막을 수 있는 사고라는 점이다. ▷민감한 개인 정보들은 대상을 특정해 정교하게 사기를 치는 데 악용되기 쉽다. 강남언니는 병원을 사칭한 할인 혜택 링크를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 문제는 API 공격이 고난도 해킹이 아니어서 기본만 지키면 막을 수 있는 사고라는 점이다.\n2. ▷민감한 개인 정보들은 대상을 특정해 정교하게 사기를 치는 데 악용되기 쉽다.\n3. 강남언니는 병원을 사칭한 할인 혜택 링크를...",
-      "link": "https://n.news.naver.com/mnews/article/020/0003746630?sid=110",
-      "source": "naver",
-      "published": "2026-09-08T23:19:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Chromium: CVE-2025-1920 Type Confusion in V8",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2025-1920\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2025-1920",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1920",
+      "source": "msrc",
+      "published": "2026-09-11T17:44:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-6642 - Media Library Assistant <= 3.35 - Authenticated (Author+) Stored Cross-Site Scripting via Bulk Edit Preset Export/Import",
       "summary": "CVE ID :CVE-2026-6642\n  \nPublished : Sept. 11, 2026, 8:16 a.m. | 2 hours, 50 minutes ago\n  \nDescription :The Media Library Assistant plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the bulk edit preset export/import mechanism in versions up to and including 3.35. This is due to insufficient output escaping on preset field values when they are rendered in HTML attribute contexts in the mla_generate_bulk_edit_form_fieldsets() function and mla-bulk-edit-fieldsets.tpl template. While wp_kses() filtering is applied during preset export for users without unfiltered_html capability, this does not prevent attribute injection attacks since the malicious payload consists of quotes and HTML attributes rather than HTML tags. When preset values are retrieved and rendered, they are directly assigned to template variables without esc_attr() escaping and then inserted into input element value attributes via simple string replacement. This makes it possible for authenticated attackers, with Author-level access and above (upload_files capability), to inject arbitrary web scripts that execute when an administrator imports the poisoned preset and the targeted input field receives focus.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3682,6 +3697,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-69508 Windows MIDI Service Module Elevation of Privileges Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-69508\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-69508",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69508",
+      "source": "msrc",
+      "published": "2026-09-09T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-87827 - KGUARD DVR unauthenticated remote command execution vulnerability",
       "summary": "CVE ID :CVE-2026-87827\n  \nPublished : Sept. 9, 2026, 11:17 a.m. | 23 minutes ago\n  \nDescription :Certain KGUARD DVR devices running vulnerable firmware expose a system command execution service on all network interfaces without requiring authentication. A remote unauthenticated attacker with network access to the affected service can execute arbitrary system commands on the device, potentially resulting in complete compromise of the DVR.\n\nThe vulnerability is known to have been exploited in the wild by the Mirai_ptea (Rimasuta) and Mirai_aurora botnets for malware propagation and subsequent DDoS activity. The vulnerability was reported to affect firmware dating from 2016, while firmware released after 2017 appears to mitigate the issue by restricting the affected service to the localhost interface (127.0.0.1) instead of exposing it on all interfaces (0.0.0.0).\n\nThe affected-device list reported by Netlab includes many D1004NR, D1008NR, D1016NR, D1104, D1104NR, D1108NR, D1116NR, D1132NR, D2116NR, D97xx, D98xx, and D99xx variants and several associated hardware revisions\n\n\nThe exploit is included in some version of rapperbot and exploited in 2026. This assignment has been made to document the active exploitation and lack of documentation from the vendor.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-87827\n  \nPublished : Sept. 9, 2026, 11:17 a.m. | 23 minutes ago\n  \nDescription :Certain KGUARD DVR devices running vulnerable firmware expose a system command execution service on all network interfaces without requiring authentication. A remote unauthenticated attacker with network access to the affected service can execute arbitrary system commands on the device, potentially resulting in complete compromise of the DVR.\n\nThe vulnerability is known to have been exploited in the wild by the Mirai_ptea (Rimasuta) and Mirai_aurora botnets for malware propagation and subsequent DDoS activity. The vulnerability was reported to affect firmware dating from 2016, while firmware released after 2017 appears to mitigate the issue by restricting the affected service to the localhost interface (127.0.0.1) instead of exposing it on all interfaces (0.0.0.0).\n\nThe affected-device list reported by Netlab includes many D1004NR, D1008NR, D1016NR, D1104, D1104NR, D1108NR, D1116NR, D1132NR, D2116NR, D97xx, D98xx, and D99xx variants and several associated hardware revisions\n\n\nThe exploit is included in some version of rapperbot and exploited in 2026. This assignment has been made to document the active exploitation and lack of documentation from the vendor.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3905,21 +3935,6 @@
       "source": "krcert_notice",
       "published": "2026-09-09T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-12387 - Mali GPU Kernel Driver allows access to already freed memory",
-      "summary": "CVE ID :CVE-2026-12387\n  \nPublished : Sept. 8, 2026, 2:22 p.m. | 28 minutes ago\n  \nDescription :Use After Free vulnerability in Arm Ltd Bifrost GPU Kernel Driver, Arm Ltd Valhall GPU Kernel Driver, Arm Ltd Arm 5th Gen GPU Architecture Kernel Driver allows a local non-privileged user process to perform valid GPU memory processing operations to access already freed memory.\n\n\n\nThis issue affects Bifrost GPU Kernel Driver: from r41p0 through r49p5, from r50p0 through r51p0, from r54p1 through r54p2; Valhall GPU Kernel Driver: from r41p0 through r49p5, from r50p0 through r54p3, r55p0; Arm 5th Gen GPU Architecture Kernel Driver: from r41p0 through r49p5, from r50p0 through r54p3, r55p0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12387\n  \nPublished : Sept. 8, 2026, 2:22 p.m. | 28 minutes ago\n  \nDescription :Use After Free vulnerability in Arm Ltd Bifrost GPU Kernel Driver, Arm Ltd Valhall GPU Kernel Driver, Arm Ltd Arm 5th Gen GPU Architecture Kernel Driver allows a local non-privileged user process to perform valid GPU memory processing operations to access already freed memory.\n\n\n\nThis issue affects Bifrost GPU Kernel Driver: from r41p0 through r49p5, from r50p0 through r51p0, from r54p1 through r54p2; Valhall GPU Kernel Driver: from r41p0 through r49p5, from r50p0 through r54p3, r55p0; Arm 5th Gen GPU Architecture Kernel Driver: from r41p0 through r49p5, from r50p0 through r54p3, r55p0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-12387\n  \n게시일 : 2026년 9월 8일 오후 2시 22분 | 28분 전\n  \n설명: Arm Ltd Bifrost GPU 커널 드라이버, Arm Ltd Valhall GPU 커널 드라이버, Arm Ltd Arm 5세대 GPU 아키텍처 커널 드라이버의 After Free 취약점을 사용하면 권한이 없는 로컬 사용자 프로세스가 유효한 GPU 메모리 처리 작업을 수행하여 이미 해제된 메모리에 액세스할 수 있습니다.\n\n\n\n이 문제는 Bifrost GPU 커널 드라이버에 영향을 미칩니다: r41p0~r49p5, r50p0~r51p0, r54p1~r54p2; Valhall GPU 커널 드라이버: r41p0~r49p5, r50p0~r54p3, r55p0; Arm 5세대 GPU 아키텍처 커널 드라이버: r41p0~r49p5, r50p0~r54p3, r55p0.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-12387\n2. 26.09.08 오후11:22\n3. Use After Free vulnerability in Arm Ltd Bifrost GP",
-      "cve_id": "CVE-2026-12387",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12387",
-      "source": "cvefeed",
-      "published": "2026-09-08T23:22:15+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
