@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-12T05:01:11.551478+09:00",
+  "fetched_at": "2026-09-12T05:31:09.111774+09:00",
   "security_news": [
     {
       "title": "GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure",
@@ -3084,30 +3084,6 @@
       "source": "naver",
       "published": "2026-09-09T05:50:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "The EU CRA's Real Question: What Shipped, and When Did You Know?",
-      "summary": "The EU Cyber Resilience Act's vulnerability reporting requirements take effect September 11, giving software vendors as little as 24 hours to report actively exploited flaws. ActiveState explains why knowing exactly what shipped and when vulnerabilities were discovered will be critical to meeting the new requirements. [...]",
-      "content": "",
-      "title_ko": "EU CRA의 실제 질문: 무엇이 배송되었으며 언제 알았습니까?",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. EU CRA, 9월 11일부터 취약점 보고 의무 발효\n2. 공급업체, 24시간 내 '적극 악용' 결함 보고해야\n3. '무엇이 언제 출시되었는지' 파악이 핵심",
-      "link": "https://www.bleepingcomputer.com/news/security/the-eu-cras-real-question-what-shipped-and-when-did-you-know/",
-      "source": "bleepingcomputer",
-      "published": "2026-09-09T05:24:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "시술·상담 내역까지 샌 '강남언니'…이용자 불안감 호소",
-      "summary": "하이브 자회사 위버스컴퍼니가 운영하는 위버스에서도 최근 계정 42만여 건이 유출됐고, 지난 5월 발생한 티빙 해킹 사고로 4천만 개에 달하는 개인정보가 유출된 것으로 조사됐습니다. 반복되는 유출 사고에 이용자...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 미용 플랫폼 '강남언니' 시술·상담 내역 유출로 이용자 불안\n2. 위버스 42만 계정, 티빙 4천만 건 개인정보 유출 사고 발생\n3. 반복되는 개인정보 유출에 대한 이용자 불안감 고조",
-      "link": "https://n.news.naver.com/mnews/article/422/0000904198?sid=102",
-      "source": "naver",
-      "published": "2026-09-09T05:22:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3920,21 +3896,6 @@
       "source": "cvefeed",
       "published": "2026-09-09T06:29:38+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-84197 - Eclipse Ditto JavaScript Client Improper Certificate Validation Vulnerability",
-      "summary": "CVE ID :CVE-2026-84197\n  \nPublished : Sept. 8, 2026, 8:01 p.m. | 25 minutes ago\n  \nDescription :In Eclipse Ditto's Node.js JavaScript client, all released versions of @eclipse-ditto/ditto-javascript-client-node from 2.0.0 to 3.9.0 and of its predecessor package @eclipse-ditto/ditto-javascript-client-node_1.0 from 1.0.0 to 2.1.0, the WebSocket transport hard-codes rejectUnauthorized: false when creating the underlying ws WebSocket. Certificate chain and hostname validation are therefore disabled for every wss:// connection, and no builder option, constructor argument or environment variable lets an application turn validation back on. An attacker in a position to intercept the connection can present an arbitrary certificate, complete the TLS handshake, read the credentials that the configured authentication provider sends in the Authorization header of the WebSocket upgrade request, and read, alter or inject Ditto Protocol messages for the lifetime of the connection. The Java client, the browser/DOM JavaScript client and the HTTP transport of the Node.js client are not affected.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-84197\n  \nPublished : Sept. 8, 2026, 8:01 p.m. | 25 minutes ago\n  \nDescription :In Eclipse Ditto's Node.js JavaScript client, all released versions of @eclipse-ditto/ditto-javascript-client-node from 2.0.0 to 3.9.0 and of its predecessor package @eclipse-ditto/ditto-javascript-client-node_1.0 from 1.0.0 to 2.1.0, the WebSocket transport hard-codes rejectUnauthorized: false when creating the underlying ws WebSocket. Certificate chain and hostname validation are therefore disabled for every wss:// connection, and no builder option, constructor argument or environment variable lets an application turn validation back on. An attacker in a position to intercept the connection can present an arbitrary certificate, complete the TLS handshake, read the credentials that the configured authentication provider sends in the Authorization header of the WebSocket upgrade request, and read, alter or inject Ditto Protocol messages for the lifetime of the connection. The Java client, the browser/DOM JavaScript client and the HTTP transport of the Node.js client are not affected.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-84197 - Eclipse Ditto JavaScript 클라이언트 부적절한 인증서 유효성 검사 취약점",
-      "summary_ko": "CVE ID:CVE-2026-84197\n  \n게시일 : 2026년 9월 8일 오후 8시 01분 | 25분 전\n  \n설명:Eclipse Ditto의 Node.js JavaScript 클라이언트에서 @eclipse-ditto/ditto-javascript-client-node의 모든 릴리스된 버전(2.0.0에서 3.9.0) 및 이전 패키지 @eclipse-ditto/ditto-javascript-client-node_1.0(1.0.0에서 2.1.0)에서 WebSocket 전송 하드 코드인 acceptUnauthorized: false를 생성할 때 기본 ws WebSocket. 따라서 모든 wss:// 연결에 대해 인증서 체인 및 호스트 이름 유효성 검사가 비활성화되며 빌더 옵션, 생성자 인수 또는 환경 변수로 인해 애플리케이션이 유효성 검사를 다시 설정할 수 없습니다. 연결을 가로챌 수 있는 위치에 있는 공격자는 임의의 인증서를 제시하고, TLS 핸드셰이크를 완료하고, 구성된 인증 공급자가 WebSocket 업그레이드 요청의 Authorization 헤더에서 보내는 자격 증명을 읽고, 연결 수명 동안 Ditto 프로토콜 메시지를 읽거나 변경하거나 삽입할 수 있습니다. Java 클라이언트, 브라우저/DOM JavaScript 클라이언트 및 Node.js 클라이언트의 HTTP 전송은 영향을 받지 않습니다.\n  \n심각도: 9.2 | 심각\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-84197\n2. 26.09.09 오전5:01\n3. In Eclipse Ditto's Node.js JavaScript client, all ",
-      "cve_id": "CVE-2026-84197",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84197",
-      "source": "cvefeed",
-      "published": "2026-09-09T05:01:22+09:00",
-      "lang": "it"
     }
   ],
   "reputation": []
