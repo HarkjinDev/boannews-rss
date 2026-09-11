@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-12T01:32:26.751019+09:00",
+  "fetched_at": "2026-09-12T02:01:16.541541+09:00",
   "security_news": [
     {
       "title": "Artifactory flaws chained in attacks deploying backdoor malware",
@@ -3124,6 +3124,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-68497 - jackson-databind: unbounded numeric parse in Duration and XMLGregorianCalendar deserialization allows CPU denial of service",
+      "summary": "CVE ID :CVE-2026-68497\n  \nPublished : Sept. 11, 2026, 4:17 p.m. | 34 minutes ago\n  \nDescription :jackson-databind binds a JSON string to a javax.xml.datatype.Duration or javax.xml.datatype.XMLGregorianCalendar field by passing the raw string verbatim to DatatypeFactory.newDuration(value) or newXMLGregorianCalendar(value) in CoreXMLDeserializers.Std._deserialize. These deserializers are registered by default with no opt-in, so a plain ObjectMapper or JsonMapper with no polymorphic typing and no special configuration reaches this path. The XML Schema lexical grammar permits numeric components of arbitrary length, which the JDK materializes through the native BigInteger(String) and BigDecimal(String) constructors, both quadratic in digit count. Because the digits sit inside a JSON string token rather than a JSON number token, jackson-core's StreamReadConstraints.maxNumberLength guard never applies; jackson's own NumberDeserializers call validateIntegerLength or validateFPLength before parsing a stringified number, but the XML datatype deserializer omits that pre-check. An unauthenticated attacker can therefore submit a single request of a few megabytes, such as a Duration value consisting of the letter P followed by several million digits and the letter Y, and force tens of seconds to several minutes of single-threaded CPU work; a handful of concurrent requests can saturate a server's worker threads. This affects com.fasterxml.jackson.core:jackson-databind from 2.0.0 before 2.18.10, from 2.19.0 before 2.21.6, and from 2.22.0 before 2.22.2, and tools.jackson.core:jackson-databind from 3.0.0 before 3.1.6 and from 3.2.0 before 3.2.2. Users should upgrade to 2.18.10, 2.21.6, 2.22.2, 3.1.6, or 3.2.2.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-68497\n  \nPublished : Sept. 11, 2026, 4:17 p.m. | 34 minutes ago\n  \nDescription :jackson-databind binds a JSON string to a javax.xml.datatype.Duration or javax.xml.datatype.XMLGregorianCalendar field by passing the raw string verbatim to DatatypeFactory.newDuration(value) or newXMLGregorianCalendar(value) in CoreXMLDeserializers.Std._deserialize. These deserializers are registered by default with no opt-in, so a plain ObjectMapper or JsonMapper with no polymorphic typing and no special configuration reaches this path. The XML Schema lexical grammar permits numeric components of arbitrary length, which the JDK materializes through the native BigInteger(String) and BigDecimal(String) constructors, both quadratic in digit count. Because the digits sit inside a JSON string token rather than a JSON number token, jackson-core's StreamReadConstraints.maxNumberLength guard never applies; jackson's own NumberDeserializers call validateIntegerLength or validateFPLength before parsing a stringified number, but the XML datatype deserializer omits that pre-check. An unauthenticated attacker can therefore submit a single request of a few megabytes, such as a Duration value consisting of the letter P followed by several million digits and the letter Y, and force tens of seconds to several minutes of single-threaded CPU work; a handful of concurrent requests can saturate a server's worker threads. This affects com.fasterxml.jackson.core:jackson-databind from 2.0.0 before 2.18.10, from 2.19.0 before 2.21.6, and from 2.22.0 before 2.22.2, and tools.jackson.core:jackson-databind from 3.0.0 before 3.1.6 and from 3.2.0 before 3.2.2. Users should upgrade to 2.18.10, 2.21.6, 2.22.2, 3.1.6, or 3.2.2.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-68497\n2. 26.09.12 오전1:17\n3. jackson-databind binds a JSON string to a javax.xm",
+      "cve_id": "CVE-2026-68497",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68497",
+      "source": "cvefeed",
+      "published": "2026-09-12T01:17:39+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-15439 - GamiPress <= 7.9.7 - Authenticated (Subscriber+) SQL Injection",
       "summary": "CVE ID :CVE-2026-15439\n  \nPublished : Sept. 11, 2026, 3:27 p.m. | 2 minutes ago\n  \nDescription :The GamiPress plugin for WordPress is vulnerable to authenticated (Subscriber+) SQL Injection via the 'q' parameter of the wpForo integration AJAX selector (action gamipress_wpforo_get_posts) in versions up to, and including, 7.9.7. The value is passed only through $wpdb->esc_like() and interpolated directly into a single-quoted LIKE clause with no %s placeholder. Because esc_like() runs after WordPress core magic quotes, it doubles the injected backslash (\\' -> \\\\'), which MySQL reads as one literal backslash followed by a live closing quote, allowing the attacker to break out of the string and inject boolean-based SQL. The wpForo plugin only needs to be active to register the callback; no wpForo vulnerability is used. Requires a Subscriber account, which can read the gamipress_admin nonce (exposed on every admin page, e.g. /wp-admin/profile.php). Note: the researcher's Simple:Press vectors (PoC 2 & 3) do not reproduce in current code, which uses $wpdb->prepare() with %s placeholders; only the wpForo selector is confirmed.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-15439\n  \nPublished : Sept. 11, 2026, 3:27 p.m. | 2 minutes ago\n  \nDescription :The GamiPress plugin for WordPress is vulnerable to authenticated (Subscriber+) SQL Injection via the 'q' parameter of the wpForo integration AJAX selector (action gamipress_wpforo_get_posts) in versions up to, and including, 7.9.7. The value is passed only through $wpdb->esc_like() and interpolated directly into a single-quoted LIKE clause with no %s placeholder. Because esc_like() runs after WordPress core magic quotes, it doubles the injected backslash (\\' -> \\\\'), which MySQL reads as one literal backslash followed by a live closing quote, allowing the attacker to break out of the string and inject boolean-based SQL. The wpForo plugin only needs to be active to register the callback; no wpForo vulnerability is used. Requires a Subscriber account, which can read the gamipress_admin nonce (exposed on every admin page, e.g. /wp-admin/profile.php). Note: the researcher's Simple:Press vectors (PoC 2 & 3) do not reproduce in current code, which uses $wpdb->prepare() with %s placeholders; only the wpForo selector is confirmed.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3166,6 +3181,21 @@
       "link": "https://isc.sans.edu/diary/rss/33332",
       "source": "sans_isc",
       "published": "2026-09-11T23:40:32+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-70334 Visual Studio Code Security Feature Bypass Vulnerability",
+      "summary": "Acknowledgement Updated",
+      "description": "Acknowledgement Updated",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-70334\n2. MSRC\n3. Acknowledgement Updated",
+      "cve_id": "CVE-2026-70334",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70334",
+      "source": "msrc",
+      "published": "2026-09-11T23:00:00+09:00",
       "lang": "en"
     },
     {
