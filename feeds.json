@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-12T01:02:33.279270+09:00",
+  "fetched_at": "2026-09-12T01:32:26.751019+09:00",
   "security_news": [
+    {
+      "title": "Artifactory flaws chained in attacks deploying backdoor malware",
+      "summary": "Threat actors are exploiting critical and high-severity vulnerabilities in JFrog Artifactory to bypass authentication, gain administrative privileges, and deploy a Rust backdoor on vulnerable self-hosted servers. [...]",
+      "content": "",
+      "title_ko": "백도어 악성 코드를 배포하는 공격에 연결된 아티팩트 결함",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. Error 500 (Server Error)!!1500.That’s an error.The",
+      "link": "https://www.bleepingcomputer.com/news/security/artifactory-flaws-chained-in-attacks-deploying-backdoor-malware/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-12T01:29:44+09:00",
+      "lang": "en"
+    },
     {
       "title": "中 AI기업들, 가짜 계정으로 클로드 빼돌렸다… \"증류 정황 포착\"",
       "summary": "중국 창사(長沙) 지역 소재로 추정되는 중국어권 해킹 조직이 클로드를 취약점 공격 도구 제작에 활용한 사례도 공개됐다. 현지 대학 학부생 2명으로 구성된 이 조직은 클로드를 여러 하위 작업으로 쪼개 정찰과 침투 이후...",
@@ -3108,30 +3120,6 @@
       "source": "naver",
       "published": "2026-09-09T02:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "코인코너, 영국 고객용 비트코인 볼트 출시…로이즈 보험으로 전액 보장",
-      "summary": "거래소나 보관업체가 개인키를 단독으로 쥐고 있으면 내부자 유출이나 해킹이 발생했을 때 자산이 한꺼번에 빠져나갈 수 있다. 두 기관이 키를 나눠 갖고 서로의 동의 없이는 자금 이동이 불가능하도록 설계하면...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 코인코너, 영국 고객용 비트코인 볼트 출시\n2. 로이즈 보험으로 100% 자산 보장\n3. 내부자 유출/해킹 시 안전하게 자산 보호",
-      "link": "https://www.tokenpost.kr/news/cryptocurrency/404573",
-      "source": "naver",
-      "published": "2026-09-09T01:26:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "켈프다오 브릿지 해킹, rsETH 3927억원 유출",
-      "summary": "켈프다오(KelpDAO) 브릿지에서 단일 검증자 방식의 취약점이 악용돼 rsETH 2억9200만 달러(약 3,927억원) 상당이 유출됐다고 크립토브리핑이 보도했다. 크립토브리핑은 이번 공격이 브릿지의 자산 검증 절차가 하나의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 켈프다오 브릿지, 3,927억원 규모 rsETH 유출\n2. 단일 검증자 취약점 악용, 2.92억 달러 자산 탈취\n3. 크립토브리핑, 공격 분석 및 자산 유출 보도",
-      "link": "https://www.tokenpost.kr/news/breaking/404572",
-      "source": "naver",
-      "published": "2026-09-09T01:24:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3869,36 +3857,6 @@
       "source": "cvefeed",
       "published": "2026-09-09T05:01:22+09:00",
       "lang": "it"
-    },
-    {
-      "title": "CVE-2026-86733 - Snipe-IT before 8.7.0 Remote Code Execution via Backup Restore",
-      "summary": "CVE ID :CVE-2026-86733\n  \nPublished : Sept. 8, 2026, 4:18 p.m. | 31 minutes ago\n  \nDescription :Snipe-IT before 8.7.0 streams the SQL entry from an uploaded backup archive directly into the MySQL/MariaDB command-line client (`mysql`) without the --binary-mode flag, so the client interprets lines beginning with backslash commands such as `\\!` as local shell commands. An authenticated superadministrator who uploads a crafted ZIP backup (POST /admin/backups/upload) and triggers a restore (POST /admin/backups/restore/{filename}) without the optional `clean` sanitizer parameter — which is not applied by default because DB_SANITIZE_BY_DEFAULT is false — can execute arbitrary OS commands as the web application's operating-system user, exposing application secrets (including database credentials and APP_KEY) and allowing modification of application-writable files and data. Version 8.7.0 adds the --binary-mode flag to the client invocation.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-86733\n  \nPublished : Sept. 8, 2026, 4:18 p.m. | 31 minutes ago\n  \nDescription :Snipe-IT before 8.7.0 streams the SQL entry from an uploaded backup archive directly into the MySQL/MariaDB command-line client (`mysql`) without the --binary-mode flag, so the client interprets lines beginning with backslash commands such as `\\!` as local shell commands. An authenticated superadministrator who uploads a crafted ZIP backup (POST /admin/backups/upload) and triggers a restore (POST /admin/backups/restore/{filename}) without the optional `clean` sanitizer parameter — which is not applied by default because DB_SANITIZE_BY_DEFAULT is false — can execute arbitrary OS commands as the web application's operating-system user, exposing application secrets (including database credentials and APP_KEY) and allowing modification of application-writable files and data. Version 8.7.0 adds the --binary-mode flag to the client invocation.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-86733\n2. 26.09.09 오전1:18\n3. Snipe-IT before 8.7.0 streams the SQL entry from a",
-      "cve_id": "CVE-2026-86733",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86733",
-      "source": "cvefeed",
-      "published": "2026-09-09T01:18:35+09:00",
-      "lang": "ro"
-    },
-    {
-      "title": "CVE-2026-86729 - WWBN AVideo Unrestricted Authentication Attempts via get_api_preauthorize",
-      "summary": "CVE ID :CVE-2026-86729\n  \nPublished : Sept. 8, 2026, 4:18 p.m. | 31 minutes ago\n  \nDescription :WWBN AVideo through commit e01e41ecc (no patched version available) exposes get_api_preauthorize in plugin/API/API.php as a second, undocumented login path. Unlike get_api_signIn, which enforces a rate limit of 10 attempts per 5 minutes via checkRateLimit(), get_api_preauthorize performs the same credential check with no throttling for any client, allowing unlimited remote password guessing against arbitrary accounts, including admin. The endpoint also acts as a credential oracle: it returns the message \"Invalid credentials\" for both correct and incorrect passwords, while the users_id field in the response body discloses the authenticated identity (users_id:1 on success, users_id:0 on failure), and a correct password establishes a session cookie that remains usable for authenticated API requests. Together these issues permit unauthenticated brute-force account takeover.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-86729\n  \nPublished : Sept. 8, 2026, 4:18 p.m. | 31 minutes ago\n  \nDescription :WWBN AVideo through commit e01e41ecc (no patched version available) exposes get_api_preauthorize in plugin/API/API.php as a second, undocumented login path. Unlike get_api_signIn, which enforces a rate limit of 10 attempts per 5 minutes via checkRateLimit(), get_api_preauthorize performs the same credential check with no throttling for any client, allowing unlimited remote password guessing against arbitrary accounts, including admin. The endpoint also acts as a credential oracle: it returns the message \"Invalid credentials\" for both correct and incorrect passwords, while the users_id field in the response body discloses the authenticated identity (users_id:1 on success, users_id:0 on failure), and a correct password establishes a session cookie that remains usable for authenticated API requests. Together these issues permit unauthenticated brute-force account takeover.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-86729\n2. 26.09.09 오전1:18\n3. WWBN AVideo through commit e01e41ecc (no patched v",
-      "cve_id": "CVE-2026-86729",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86729",
-      "source": "cvefeed",
-      "published": "2026-09-09T01:18:34+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
