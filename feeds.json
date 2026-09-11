@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-12T08:01:14.875363+09:00",
+  "fetched_at": "2026-09-12T08:31:24.962273+09:00",
   "security_news": [
+    {
+      "title": "[보푸라기]정보 털린 티빙 이용자, '보험 보상' 선택하면?",
+      "summary": "이 가운데 눈에 띄는 보상책은 '해킹·피싱 안심보험'입니다. 티빙의 설명에 따르면 이 보험은 DB손해보험의... 피싱, 해킹 사고로 실제 금전적 손해가 발생하고 그 피해가 약관에서 정한 보상 대상에 해당해야 보상을 받을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 티빙 이용자 293만명, DB손해보험 '해킹·피싱 안심보험' 보상\n2. 해킹·피싱으로 인한 금전적 손해 시 약관에 따라 보상\n3. 개인정보 유출로 인한 추가 피해 발생 시 보험 처리 가능",
+      "link": "https://n.news.naver.com/mnews/article/648/0000050706?sid=101",
+      "source": "naver",
+      "published": "2026-09-12T08:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"10년 내 인류 위협\" 잇단 경고…'AI 폭군' 출현 대비해야[AGI 시대 下]",
+      "summary": "사이버보안 평가를 통과하기 위해 개발자가 설정한 인터넷 접속 제한을 편법으로 우회했다. 정답을... 다른 에이전트들은 네트워크·보안 장비를 분석해 한 달 동안 제로데이 가능성이 있는 취약점 후보를 12개 이상...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 폭군 출현 가능성, 10년 내 인류 위협 경고\n2. 개발자 인터넷 접속 제한 편법 우회, 제로데이 취약점 후보 12개 이상 발견\n3. AI 보안 강화 및 AGI 시대 대비 시급",
+      "link": "https://n.news.naver.com/mnews/article/003/0014185666?sid=105",
+      "source": "naver",
+      "published": "2026-09-12T08:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure",
       "summary": "GitLab has released patches to address multiple flaws, including a maximum-severity security vulnerability that has witnessed in-the-wild probes within hours of public disclosure.\n\nThe vulnerability in question is CVE-2026-85706 (CVSS score: 10.0), a path traversal issue in the repository commits API that could allow an unauthenticated user to read arbitrary files from the GitLab server under",
@@ -3922,21 +3946,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-19201",
       "source": "cvefeed",
       "published": "2026-09-09T09:17:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47680 - Source controller: Improper path handling allows traversal",
-      "summary": "CVE ID :CVE-2026-47680\n  \nPublished : Sept. 8, 2026, 11:17 p.m. | 1 hour, 33 minutes ago\n  \nDescription :The source-controller is a Kubernetes operator, specialised in artifacts acquisition from external sources such as Git, OCI, Helm repositories and S3-compatible buckets. In versions 0.0.17 through 1.8.4, an actor with the ability to influence the contents of a bucket referenced by a `Bucket` resource can cause source-controller to write fetched object data to paths outside the per-reconciliation working directory. The corruption surface is bounded by source-controller's own and downstream Flux controllers' digest verification: source-controller verifies stored artifact digests during reconciliation and rebuilds on divergence; consumers (kustomize-controller, helm-controller) verify the digest of fetched artifacts and reject mismatches. These checks prevent a manipulated artifact from reaching the cluster, but an attacker can still write files anywhere the source-controller pod has permission to write. Separately, a user with permission to create or update `GitRepository` resources can cause source-controller to test for the existence of paths outside the cloned repository. Because the result is exposed via the resource's status, this allows limited enumeration of file paths on the controller pod. This surface exists only on source-controller v1.6.0 and later, where the sparse-checkout feature was introduced. This vulnerability was fixed in source-controller v1.8.5. There is no in-product workaround. Users should upgrade to a patched version. As a defense-in-depth measure for the GitRepository sparse-checkout surface, a `ValidatingAdmissionPolicy` (or a third-party policy engine such as Kyverno or OPA Gatekeeper) can be deployed to reject `GitRepository` resources whose `.spec.sparseCheckout` entries contain `..` or absolute path segments.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47680\n  \nPublished : Sept. 8, 2026, 11:17 p.m. | 1 hour, 33 minutes ago\n  \nDescription :The source-controller is a Kubernetes operator, specialised in artifacts acquisition from external sources such as Git, OCI, Helm repositories and S3-compatible buckets. In versions 0.0.17 through 1.8.4, an actor with the ability to influence the contents of a bucket referenced by a `Bucket` resource can cause source-controller to write fetched object data to paths outside the per-reconciliation working directory. The corruption surface is bounded by source-controller's own and downstream Flux controllers' digest verification: source-controller verifies stored artifact digests during reconciliation and rebuilds on divergence; consumers (kustomize-controller, helm-controller) verify the digest of fetched artifacts and reject mismatches. These checks prevent a manipulated artifact from reaching the cluster, but an attacker can still write files anywhere the source-controller pod has permission to write. Separately, a user with permission to create or update `GitRepository` resources can cause source-controller to test for the existence of paths outside the cloned repository. Because the result is exposed via the resource's status, this allows limited enumeration of file paths on the controller pod. This surface exists only on source-controller v1.6.0 and later, where the sparse-checkout feature was introduced. This vulnerability was fixed in source-controller v1.8.5. There is no in-product workaround. Users should upgrade to a patched version. As a defense-in-depth measure for the GitRepository sparse-checkout surface, a `ValidatingAdmissionPolicy` (or a third-party policy engine such as Kyverno or OPA Gatekeeper) can be deployed to reject `GitRepository` resources whose `.spec.sparseCheckout` entries contain `..` or absolute path segments.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-47680 - 소스 컨트롤러: 부적절한 경로 처리로 인해 순회가 허용됩니다.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-47680\n2. 26.09.09 오전8:17\n3. The source-controller is a Kubernetes operator, sp",
-      "cve_id": "CVE-2026-47680",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47680",
-      "source": "cvefeed",
-      "published": "2026-09-09T08:17:24+09:00",
       "lang": "en"
     }
   ],
