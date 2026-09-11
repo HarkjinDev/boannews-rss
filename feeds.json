@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-12T03:01:20.843537+09:00",
+  "fetched_at": "2026-09-12T03:31:16.205660+09:00",
   "security_news": [
     {
       "title": "GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure",
@@ -3108,21 +3108,24 @@
       "source": "securityweek",
       "published": "2026-09-09T03:37:17+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Microsoft September 2026 Patch Tuesday fixes 966 flaws, 2 zero-days",
-      "summary": "Today is Microsoft's September 2026 Patch Tuesday, with security updates released for a record-breaking 966 flaws, including two actively exploited zero-day vulnerabilities. [...]",
-      "content": "",
-      "title_ko": "Microsoft 2026년 9월 패치 화요일, 966개의 결함, 2개의 제로데이 수정",
-      "summary_ko": "오늘은 Microsoft의 2026년 9월 패치 화요일입니다. 이 업데이트는 활발히 악용되는 제로데이 취약점 2개를 포함하여 기록적인 966개 결함에 대한 보안 업데이트가 출시되었습니다. [...]",
-      "summary_3lines": "1. MS, 9월 2026 패치로 966개 취약점 수정\n2. 제로데이 2개 포함, 현재 악용 중\n3. 역대 최다 기록, 모든 사용자에게 즉시 적용 권고",
-      "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/",
-      "source": "bleepingcomputer",
-      "published": "2026-09-09T03:18:05+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54047 - Laci Synchroni Backend Vulnerable to Account Takeover / User Impersonation via Client-Side Configuration Manipulation",
+      "summary": "CVE ID :CVE-2026-54047\n  \nPublished : Sept. 11, 2026, 5:17 p.m. | 25 minutes ago\n  \nDescription :Laci Synchroni is a decentralized mod and appearance sync server and plugin for Dalamud. Versions of the backend prior to 1.2.3 have an improper authentication vulnerability in the application's OAuth2 login flow. The application relies on client-side state by trusting the `UID` field inside the `Authentications` object of a user's local `config.json` file. By manually editing this local file on their PC prior to logging in, a user can supply an arbitrary UID. Because the server fails to validate that the authenticated OAuth2 identity matches the requested UID, an attacker can fully impersonate any target user and perform actions on their behalf. This issue has been resolved in version 1.2.3. The patch modifies `AuthorizeOauthAsync` inside the `SecretKeyAuthenticatorService` to strictly bind the lookup of the requested User ID (`requestedUid`) to the record of the successfully authenticated identity (`primaryUid`). The server will no longer load or return session tokens for a requested UID unless it matches the verified, authenticated database record. No known workarounds are available.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54047\n  \nPublished : Sept. 11, 2026, 5:17 p.m. | 25 minutes ago\n  \nDescription :Laci Synchroni is a decentralized mod and appearance sync server and plugin for Dalamud. Versions of the backend prior to 1.2.3 have an improper authentication vulnerability in the application's OAuth2 login flow. The application relies on client-side state by trusting the `UID` field inside the `Authentications` object of a user's local `config.json` file. By manually editing this local file on their PC prior to logging in, a user can supply an arbitrary UID. Because the server fails to validate that the authenticated OAuth2 identity matches the requested UID, an attacker can fully impersonate any target user and perform actions on their behalf. This issue has been resolved in version 1.2.3. The patch modifies `AuthorizeOauthAsync` inside the `SecretKeyAuthenticatorService` to strictly bind the lookup of the requested User ID (`requestedUid`) to the record of the successfully authenticated identity (`primaryUid`). The server will no longer load or return session tokens for a requested UID unless it matches the verified, authenticated database record. No known workarounds are available.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-54047\n2. 26.09.12 오전2:17\n3. Laci Synchroni is a decentralized mod and appearan",
+      "cve_id": "CVE-2026-54047",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54047",
+      "source": "cvefeed",
+      "published": "2026-09-12T02:17:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-68497 - jackson-databind: unbounded numeric parse in Duration and XMLGregorianCalendar deserialization allows CPU denial of service",
       "summary": "CVE ID :CVE-2026-68497\n  \nPublished : Sept. 11, 2026, 4:17 p.m. | 34 minutes ago\n  \nDescription :jackson-databind binds a JSON string to a javax.xml.datatype.Duration or javax.xml.datatype.XMLGregorianCalendar field by passing the raw string verbatim to DatatypeFactory.newDuration(value) or newXMLGregorianCalendar(value) in CoreXMLDeserializers.Std._deserialize. These deserializers are registered by default with no opt-in, so a plain ObjectMapper or JsonMapper with no polymorphic typing and no special configuration reaches this path. The XML Schema lexical grammar permits numeric components of arbitrary length, which the JDK materializes through the native BigInteger(String) and BigDecimal(String) constructors, both quadratic in digit count. Because the digits sit inside a JSON string token rather than a JSON number token, jackson-core's StreamReadConstraints.maxNumberLength guard never applies; jackson's own NumberDeserializers call validateIntegerLength or validateFPLength before parsing a stringified number, but the XML datatype deserializer omits that pre-check. An unauthenticated attacker can therefore submit a single request of a few megabytes, such as a Duration value consisting of the letter P followed by several million digits and the letter Y, and force tens of seconds to several minutes of single-threaded CPU work; a handful of concurrent requests can saturate a server's worker threads. This affects com.fasterxml.jackson.core:jackson-databind from 2.0.0 before 2.18.10, from 2.19.0 before 2.21.6, and from 2.22.0 before 2.22.2, and tools.jackson.core:jackson-databind from 3.0.0 before 3.1.6 and from 3.2.0 before 3.2.2. Users should upgrade to 2.18.10, 2.21.6, 2.22.2, 3.1.6, or 3.2.2.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
