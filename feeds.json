@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-11T21:32:58.789875+09:00",
+  "fetched_at": "2026-09-11T22:03:12.932753+09:00",
   "security_news": [
+    {
+      "title": "598.5 BTC 남은 리퀴드 해킹…선제적 버그바운티 제안",
+      "summary": "해킹 이후 반환 협상보다 사전에 보상 기준을 정한 버그바운티 프로그램이 필요하다는 주장이 나왔다. 에밀리 니콜(Emily Nicolle) 블룸버그 디지털 금융 기자는 크립토 브리핑에 게재한 분석에서 취약점 신고 절차와...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 리퀴드 글로벌, 598.5 BTC 상당 자산 해킹 피해\n2. 취약점 신고 절차 등 사전 버그바운티 필요성 제기\n3. 블룸버그 디지털 금융 기자, 협상보다 예방책 강조",
+      "link": "https://www.tokenpost.kr/news/blockchain/406526",
+      "source": "naver",
+      "published": "2026-09-11T21:48:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "고금리에도 소비 4% 점프...BofA CEO \"미국 경제, 절대 안 꺾인다\"",
+      "summary": "사이버보안에서는 AI가 공격과 방어 양쪽의 속도를 모두 끌어올리고 있다고 진단했다. 뱅크오브아메리카는 3,000명 넘는 인력을 사이버보안 업무에 투입하고 있다. AI는 취약점을 빠르게 찾아낼 수 있지만 같은 기술을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. BofA CEO, 고금리에도 소비 4% 증가 분석\n2. AI, 사이버 공격 및 방어 속도 모두 증가\n3. BofA, 3천명 이상 인력 사이버보안 투입",
+      "link": "http://coinreaders.com/257823",
+      "source": "naver",
+      "published": "2026-09-11T21:32:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "李 “인구 정책 패러다임 전면 전환 필요한 시점”",
       "summary": "이어 “해당 기업은 보안의 취약점을 사전에 확인하고도 필요한 조치를 하지 않았다고 한다”고 지적했다.... 전체의 보안 역량과 인식을 높여야 할 때”라고 강조했다. 이어 “개인정보 보호를 소홀히 해 얻는 이익보다...",
@@ -3147,6 +3171,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-6642 - Media Library Assistant <= 3.35 - Authenticated (Author+) Stored Cross-Site Scripting via Bulk Edit Preset Export/Import",
+      "summary": "CVE ID :CVE-2026-6642\n  \nPublished : Sept. 11, 2026, 8:16 a.m. | 2 hours, 50 minutes ago\n  \nDescription :The Media Library Assistant plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the bulk edit preset export/import mechanism in versions up to and including 3.35. This is due to insufficient output escaping on preset field values when they are rendered in HTML attribute contexts in the mla_generate_bulk_edit_form_fieldsets() function and mla-bulk-edit-fieldsets.tpl template. While wp_kses() filtering is applied during preset export for users without unfiltered_html capability, this does not prevent attribute injection attacks since the malicious payload consists of quotes and HTML attributes rather than HTML tags. When preset values are retrieved and rendered, they are directly assigned to template variables without esc_attr() escaping and then inserted into input element value attributes via simple string replacement. This makes it possible for authenticated attackers, with Author-level access and above (upload_files capability), to inject arbitrary web scripts that execute when an administrator imports the poisoned preset and the targeted input field receives focus.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-6642\n  \nPublished : Sept. 11, 2026, 8:16 a.m. | 2 hours, 50 minutes ago\n  \nDescription :The Media Library Assistant plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the bulk edit preset export/import mechanism in versions up to and including 3.35. This is due to insufficient output escaping on preset field values when they are rendered in HTML attribute contexts in the mla_generate_bulk_edit_form_fieldsets() function and mla-bulk-edit-fieldsets.tpl template. While wp_kses() filtering is applied during preset export for users without unfiltered_html capability, this does not prevent attribute injection attacks since the malicious payload consists of quotes and HTML attributes rather than HTML tags. When preset values are retrieved and rendered, they are directly assigned to template variables without esc_attr() escaping and then inserted into input element value attributes via simple string replacement. This makes it possible for authenticated attackers, with Author-level access and above (upload_files capability), to inject arbitrary web scripts that execute when an administrator imports the poisoned preset and the targeted input field receives focus.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "CVE-2026-6642 - Media Library Assistant <= 3.35 - 대량 편집 사전 설정 내보내기/가져오기를 통해 인증된(저자+) 저장된 교차 사이트 스크립팅",
+      "summary_ko": "CVE ID:CVE-2026-6642\n  \n게시일 : 2026년 9월 11일 오전 8시 16분 | 2시간 50분 전\n  \n설명:WordPress용 Media Library Assistant 플러그인은 3.35 이하 버전에서 대량 편집 사전 설정 내보내기/가져오기 메커니즘을 통한 저장된 교차 사이트 스크립팅에 취약합니다. 이는 mla_generate_bulk_edit_form_fieldsets() 함수 및 mla-bulk-edit-fieldsets.tpl 템플릿의 HTML 속성 컨텍스트에서 렌더링될 때 미리 설정된 필드 값에 대한 출력 이스케이프가 충분하지 않기 때문입니다. wp_kses() 필터링은 unfiltered_html 기능이 없는 사용자에 대한 사전 설정 내보내기 중에 적용되지만 악성 페이로드는 HTML 태그가 아닌 따옴표와 HTML 속성으로 구성되므로 속성 주입 공격을 방지할 수 없습니다. 사전 설정된 값이 검색되고 렌더링되면 esc_attr() 이스케이프 없이 템플릿 변수에 직접 할당된 다음 간단한 문자열 대체를 통해 입력 요소 값 속성에 삽입됩니다. 이를 통해 작성자 수준 이상의 액세스 권한(upload_files 기능)을 가진 인증된 공격자가 관리자가 감염된 사전 설정을 가져오고 대상 입력 필드가 포커스를 받을 때 실행되는 임의의 웹 스크립트를 삽입할 수 있습니다.\n  \n심각도: 6.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-6642\n2. 26.09.11 오후5:16\n3. The Media Library Assistant plugin for WordPress i",
+      "cve_id": "CVE-2026-6642",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6642",
+      "source": "cvefeed",
+      "published": "2026-09-11T17:16:48+09:00",
+      "lang": "en"
+    },
     {
       "title": "ISC Stormcast For Friday, September 11th, 2026 https://isc.sans.edu/podcastdetail/10090, (Fri, Sep 11th)",
       "summary": "",
