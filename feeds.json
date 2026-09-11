@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-12T07:31:06.937219+09:00",
+  "fetched_at": "2026-09-12T08:01:14.875363+09:00",
   "security_news": [
     {
       "title": "GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure",
@@ -3036,18 +3036,6 @@
       "source": "naver",
       "published": "2026-09-09T08:50:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "해킹 당하기 전에 먼저 뚫어본다…은행권 '화이트해커' 모시기",
-      "summary": "해킹을 당한 뒤 대응하는 것이 아니라, 화이트해커에게 직접 자사 시스템을 공격하도록 해 취약점을 미리 찾아내는 방식인데요. 인공지능을 활용한 해킹 위협까지 커지면서 금융권의 이른바 '공격형 보안' 경쟁도...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융권, AI 해킹 위협 대비 '공격형 보안' 경쟁\n2. 화이트해커, 시스템 사전 공격해 취약점 발견\n3. 선제적 대응으로 보안 강화 및 피해 예방",
-      "link": "https://news.ifm.kr/news/articleView.html?idxno=478909",
-      "source": "naver",
-      "published": "2026-09-09T08:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3064,6 +3052,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-76023",
       "source": "msrc",
       "published": "2026-09-12T10:02:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-54248 - Doco-CD has an OCI Trust Policy Bypass via Artifact-Contained Configuration",
+      "summary": "CVE ID :CVE-2026-54248\n  \nPublished : Sept. 11, 2026, 9:24 p.m. | 34 minutes ago\n  \nDescription :Doco-CD is a GitOps continuous delivery tool that automatically deploys and updates Docker Compose projects/services and Swarm stacks. Prior to version 0.90.1, a trust-boundary flaw in OCI artifact verification allowed artifact-provided deployment config to influence the policy used to verify that same artifact. When global OCI signature verification was enabled via `OCI_TRUST_POLICY` (`enabled: true`), an attacker with write access to the configured OCI tag could publish an unsigned or improperly signed artifact containing `.doco-cd.yml` with `oci.verify: false`. This could cause signature verification to be bypassed and untrusted deployment content to be applied. This primarily impacts users deploying from OCI artifacts where deployment config is read from artifact contents (for example, poll/webhook flows without trusted inline deployment overrides). The issue is fixed by enforcing a strict trust boundary and no-downgrade behavior. First, artifact-contained `.doco-cd.yml` is treated as untrusted for OCI trust-policy override decisions. Second, if global `OCI_TRUST_POLICY.enabled` is `true`, per-deployment `oci.verify: false` cannot disable verification. Some workarounds are available. Do not source deployment config from untrusted OCI artifact contents. Use trusted inline `POLL_CONFIG.deployments` and avoid relying on artifact-contained trust-policy overrides. Restrict write/push permissions for OCI repositories/tags used by doco-cd. Prefer immutable digest pinning and protected release/tag workflows. Monitor for unexpected artifact digest changes and failed/suspicious verification events.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54248\n  \nPublished : Sept. 11, 2026, 9:24 p.m. | 34 minutes ago\n  \nDescription :Doco-CD is a GitOps continuous delivery tool that automatically deploys and updates Docker Compose projects/services and Swarm stacks. Prior to version 0.90.1, a trust-boundary flaw in OCI artifact verification allowed artifact-provided deployment config to influence the policy used to verify that same artifact. When global OCI signature verification was enabled via `OCI_TRUST_POLICY` (`enabled: true`), an attacker with write access to the configured OCI tag could publish an unsigned or improperly signed artifact containing `.doco-cd.yml` with `oci.verify: false`. This could cause signature verification to be bypassed and untrusted deployment content to be applied. This primarily impacts users deploying from OCI artifacts where deployment config is read from artifact contents (for example, poll/webhook flows without trusted inline deployment overrides). The issue is fixed by enforcing a strict trust boundary and no-downgrade behavior. First, artifact-contained `.doco-cd.yml` is treated as untrusted for OCI trust-policy override decisions. Second, if global `OCI_TRUST_POLICY.enabled` is `true`, per-deployment `oci.verify: false` cannot disable verification. Some workarounds are available. Do not source deployment config from untrusted OCI artifact contents. Use trusted inline `POLL_CONFIG.deployments` and avoid relying on artifact-contained trust-policy overrides. Restrict write/push permissions for OCI repositories/tags used by doco-cd. Prefer immutable digest pinning and protected release/tag workflows. Monitor for unexpected artifact digest changes and failed/suspicious verification events.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-54248\n2. 26.09.12 오전6:24\n3. Doco-CD is a GitOps continuous delivery tool that ",
+      "cve_id": "CVE-2026-54248",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54248",
+      "source": "cvefeed",
+      "published": "2026-09-12T06:24:26+09:00",
       "lang": "en"
     },
     {
