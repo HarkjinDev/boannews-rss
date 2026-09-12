@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-12T09:01:15.342171+09:00",
+  "fetched_at": "2026-09-12T09:31:17.049256+09:00",
   "security_news": [
+    {
+      "title": "\"AI가 해킹 지휘\"…앤트로픽, 사이버공격 악용 사례 공개[글로벌AI브리핑...",
+      "summary": "앤트로픽 보고서에 따르면 한 공격 조직은 AI 에이전트가 보안 제품에 악성코드가 탐지됐다는 사실을 확인한 뒤, 코드를 자동으로 수정·재구축해 탐지를 피하도록 했다는 것이다. 피싱에 사용할 도메인을 조사하고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 에이전트, 보안 제품 탐지 회피 코드 자동 재구축\n2. 앤트로픽, AI 악용 사이버공격 사례 보고서 공개\n3. 피싱 도메인 조사 등 AI 악용 공격 조직 활동 보고",
+      "link": "https://n.news.naver.com/mnews/article/014/0005574719?sid=105",
+      "source": "naver",
+      "published": "2026-09-12T09:21:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[보푸라기]정보 털린 티빙 이용자, '보험 보상' 선택하면?",
       "summary": "이 가운데 눈에 띄는 보상책은 '해킹·피싱 안심보험'입니다. 티빙의 설명에 따르면 이 보험은 DB손해보험의... 피싱, 해킹 사고로 실제 금전적 손해가 발생하고 그 피해가 약관에서 정한 보상 대상에 해당해야 보상을 받을...",
@@ -3012,30 +3024,6 @@
       "source": "naver",
       "published": "2026-09-09T09:42:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "안부확인부터 보이스피싱 상담까지, 카카오톡 활용 공공서비스 30선",
-      "summary": "심층적으로 분석했다\"며 \"심사 과정에서 서비스 활용이 단순 알림을 넘어 인증·결제·상담 등으로 확장되고, 공공혁신의 영역도 행정 효율화에서 사이버보안·재난 대응·복지 등으로 넓어지고 있음을 확인했다\"고 말했다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 안부확인부터 보이스피싱 상담까지, 카카오톡 활용 공공서비스 30선 심층적으로 분석했다\"며 ",
-      "link": "https://platum.kr/archives/294219",
-      "source": "naver",
-      "published": "2026-09-09T09:30:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "쏟아지는 API 자동화 공격, 진짜 '미토스' 쇼크는 지금부터?",
-      "summary": "정부를 해킹한 사건까지 발생했다\"며 \"AI 해커가 외부에 노출된 각종 AI 인프라를 표적으로 공격해 인프라 키를 유출시키면서 전체적인 해킹 비용이 갈수록 줄어들고 있는 상황\"이라고 진단했다. 이어 \"이번 일련의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 쏟아지는 API 자동화 공격, 진짜 '미토스' 쇼크는 지금부터?\n2. 정부를 해킹한 사건까지 발생했다\"며 \"AI 해커가 외부에 노출된 각종 AI 인프라를 표적으\n3. 이어 \"이번 일련의...",
-      "link": "https://www.boannews.com/news/articleView.html?idxno=145732",
-      "source": "naver",
-      "published": "2026-09-09T09:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3877,51 +3865,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-87827",
       "source": "cvefeed",
       "published": "2026-09-09T20:17:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53939 - OpenIDC/cjose uses all-zero Content Encryption Key for AES-CBC-HMAC JWE encryption",
-      "summary": "CVE ID :CVE-2026-53939\n  \nPublished : Sept. 9, 2026, 12:17 a.m. | 33 minutes ago\n  \nDescription :OpenIDC/cjose is a C library implementing the Javascript Object Signing and Encryption (JOSE). In versions 0.6.1 through 0.6.2.5, when cjose encrypts a JWE using an AES-CBC-HMAC content-encryption algorithm (`A128CBC-HS256`, `A192CBC-HS384`, or `A256CBC-HS512`) together with any key-management algorithm that generates a fresh content-encryption key (CEK), the CEK is all zero bytes instead of being randomly generated. The resulting JWE is therefore encrypted and authenticated under a fixed, publicly known key, so anyone who obtains the JWE can recover the plaintext and forge or modify the content. This is fixed in version 0.6.2.6 by `_cjose_jwe_set_cek_aes_cbc()` generating the CEK from `RAND_bytes`. A regression test asserts that the `encrypted_key` differs across two encryptions for each AES-CBC-HMAC variant. Until upgrading, for data encrypted with cjose, three options are available. Use an AES-GCM `enc` (`A128GCM` / `A192GCM` / `A256GCM`) instead of an AES-CBC-HMAC `enc`,  use `alg=dir` with a caller-supplied CEK, or avoid using cjose for JWE encryption with the affected algorithm pair. These are mitigations for new ciphertexts only; data already encrypted under the zero key remains compromised and should be re-encrypted (and any secrets it contained rotated).\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53939\n  \nPublished : Sept. 9, 2026, 12:17 a.m. | 33 minutes ago\n  \nDescription :OpenIDC/cjose is a C library implementing the Javascript Object Signing and Encryption (JOSE). In versions 0.6.1 through 0.6.2.5, when cjose encrypts a JWE using an AES-CBC-HMAC content-encryption algorithm (`A128CBC-HS256`, `A192CBC-HS384`, or `A256CBC-HS512`) together with any key-management algorithm that generates a fresh content-encryption key (CEK), the CEK is all zero bytes instead of being randomly generated. The resulting JWE is therefore encrypted and authenticated under a fixed, publicly known key, so anyone who obtains the JWE can recover the plaintext and forge or modify the content. This is fixed in version 0.6.2.6 by `_cjose_jwe_set_cek_aes_cbc()` generating the CEK from `RAND_bytes`. A regression test asserts that the `encrypted_key` differs across two encryptions for each AES-CBC-HMAC variant. Until upgrading, for data encrypted with cjose, three options are available. Use an AES-GCM `enc` (`A128GCM` / `A192GCM` / `A256GCM`) instead of an AES-CBC-HMAC `enc`,  use `alg=dir` with a caller-supplied CEK, or avoid using cjose for JWE encryption with the affected algorithm pair. These are mitigations for new ciphertexts only; data already encrypted under the zero key remains compromised and should be re-encrypted (and any secrets it contained rotated).\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-53939\n2. 26.09.09 오전9:17\n3. OpenIDC/cjose is a C library implementing the Java",
-      "cve_id": "CVE-2026-53939",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53939",
-      "source": "cvefeed",
-      "published": "2026-09-09T09:17:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53937 - MCP Kotlin SDK's unbounded line buffer in StdioServerTransport/StdioClientTransport leads to memory exhaustion (DoS)",
-      "summary": "CVE ID :CVE-2026-53937\n  \nPublished : Sept. 9, 2026, 12:17 a.m. | 33 minutes ago\n  \nDescription :MCP Kotlin SDK is the Kotlin Multiplatform software development kit for the Model Context Protocol. In versions 0.7.0 through 0.12.0, `ReadBuffer.append` in `kotlin-sdk-core/src/commonMain/kotlin/io/modelcontextprotocol/kotlin/sdk/shared/ReadBuffer.kt` writes every chunk of bytes received from the stdio transport into a `kotlinx.io.Buffer` with no size cap. Frames are extracted from that buffer only when a `\\n` (0x0a) byte is observed. A peer that streams bytes without ever sending a newline causes the internal buffer to grow indefinitely until the JVM (or the surrounding host process) is OOM-killed. The leak is amplified by `StdioServerTransport` and `StdioClientTransport`, which both queue raw chunks through a `kotlinx.coroutines.channels.Channel(Channel.UNLIMITED)` and then call `readBuffer.append(chunk)` without backpressure or size guard. This is a remote-pre-auth denial of service whenever an SDK stdio server's stdin is fed by an untrusted or attacker-controlled producer (for example: a host program that exec's the MCP server as a subprocess and pipes through bytes received from a network peer, or a sidecar wrapper that proxies bytes from an HTTP endpoint to the stdio transport). Version 0.13.0 fixes the issue.\n  \nSeverity: 6.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53937\n  \nPublished : Sept. 9, 2026, 12:17 a.m. | 33 minutes ago\n  \nDescription :MCP Kotlin SDK is the Kotlin Multiplatform software development kit for the Model Context Protocol. In versions 0.7.0 through 0.12.0, `ReadBuffer.append` in `kotlin-sdk-core/src/commonMain/kotlin/io/modelcontextprotocol/kotlin/sdk/shared/ReadBuffer.kt` writes every chunk of bytes received from the stdio transport into a `kotlinx.io.Buffer` with no size cap. Frames are extracted from that buffer only when a `\\n` (0x0a) byte is observed. A peer that streams bytes without ever sending a newline causes the internal buffer to grow indefinitely until the JVM (or the surrounding host process) is OOM-killed. The leak is amplified by `StdioServerTransport` and `StdioClientTransport`, which both queue raw chunks through a `kotlinx.coroutines.channels.Channel(Channel.UNLIMITED)` and then call `readBuffer.append(chunk)` without backpressure or size guard. This is a remote-pre-auth denial of service whenever an SDK stdio server's stdin is fed by an untrusted or attacker-controlled producer (for example: a host program that exec's the MCP server as a subprocess and pipes through bytes received from a network peer, or a sidecar wrapper that proxies bytes from an HTTP endpoint to the stdio transport). Version 0.13.0 fixes the issue.\n  \nSeverity: 6.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53937 - StdioServerTransport/StdioClientTransport에 있는 MCP Kotlin SDK의 무제한 라인 버퍼로 인해 DoS(메모리 소진)가 발생합니다.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-53937\n2. 26.09.09 오전9:17\n3. MCP Kotlin SDK is the Kotlin Multiplatform softwar",
-      "cve_id": "CVE-2026-53937",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53937",
-      "source": "cvefeed",
-      "published": "2026-09-09T09:17:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-19201 - Denial of Service via Unbounded Recursion in go-attestation Windows SIPA Parser",
-      "summary": "CVE ID :CVE-2026-19201\n  \nPublished : 9 de Setembro de 2026 às 00:17 | 34 minutos ago\n  \nDescription :An uncontrolled recursion vulnerability in the Windows SIPA event log parser of Google go-attestation versions up to and including 0.6.1 allows an attacker to cause a denial of service (DoS). The (*WinEvents).readELAMAggregation function recurses for every nested elamAggregation sub-event without enforcing a maximum recursion depth limit, while the size guard is bypassed on recursive execution paths. By submitting a crafted Windows event log containing deeply nested elamAggregation headers, an attacker can exhaust the goroutine call stack, triggering an unrecoverable fatal runtime error (stack overflow) that immediately crashes the verifier application.\n  \nSeverity: 6.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-19201\n  \nPublished : 9 de Setembro de 2026 às 00:17 | 34 minutos ago\n  \nDescription :An uncontrolled recursion vulnerability in the Windows SIPA event log parser of Google go-attestation versions up to and including 0.6.1 allows an attacker to cause a denial of service (DoS). The (*WinEvents).readELAMAggregation function recurses for every nested elamAggregation sub-event without enforcing a maximum recursion depth limit, while the size guard is bypassed on recursive execution paths. By submitting a crafted Windows event log containing deeply nested elamAggregation headers, an attacker can exhaust the goroutine call stack, triggering an unrecoverable fatal runtime error (stack overflow) that immediately crashes the verifier application.\n  \nSeverity: 6.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-19201 - go-attestation Windows SIPA 구문 분석기의 무제한 재귀를 통한 서비스 거부",
-      "summary_ko": "CVE ID:CVE-2026-19201\n  \n게시 날짜: 2026년 2월 9일 오전 0시 17분 | 34분 전\n  \n설명: Google go-attestation 버전 0.6.1 이하의 Windows SIPA 이벤트 로그 파서에 있는 제어되지 않은 재귀 취약점으로 인해 공격자가 서비스 거부(DoS)를 일으킬 수 있습니다. (*WinEvents).readELAMAggregation 함수는 최대 재귀 깊이 제한을 적용하지 않고 모든 중첩된 elamAggregation 하위 이벤트에 대해 반복되는 반면, 크기 가드는 재귀 실행 경로에서 우회됩니다. 깊게 중첩된 elamAggregation 헤더가 포함된 조작된 Windows 이벤트 로그를 제출함으로써 공격자는 goroutine 호출 스택을 소진하여 확인자 애플리케이션을 즉시 중단시키는 복구 불가능한 치명적인 런타임 오류(스택 오버플로)를 트리거할 수 있습니다.\n  \n심각도: 6.6 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-19201\n2. 26.09.09 오전9:17\n3. An uncontrolled recursion vulnerability in the Win",
-      "cve_id": "CVE-2026-19201",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-19201",
-      "source": "cvefeed",
-      "published": "2026-09-09T09:17:30+09:00",
       "lang": "en"
     }
   ],
