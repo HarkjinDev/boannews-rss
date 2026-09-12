@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-13T06:11:35.348714+09:00",
+  "fetched_at": "2026-09-13T06:31:30.566806+09:00",
   "security_news": [
+    {
+      "title": "AI 시대 개인정보 어디까지 털리나…OTT·미용까지 뚫렸다",
+      "summary": "지난해 롯데카드에서는 온라인 결제 서버가 해킹돼 297만명의 개인정보가 유출됐고, 쿠팡에서도 대규모... 다만 토스페이먼츠는 자사 내부 시스템이 직접 해킹당한 것은 아니며 가맹점 측에서 관리하던 외부 결제 연동...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 롯데카드 297만 명 정보, 온라인 결제 서버 해킹으로 유출.\n2. 쿠팡, 토스페이먼츠 가맹점 정보 유출 가능성 제기.\n3. AI 시대 개인정보 유출, OTT·미용 서비스까지 확대.",
+      "link": "https://n.news.naver.com/mnews/article/001/0016306256?sid=102",
+      "source": "naver",
+      "published": "2026-09-13T06:23:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"주문 안했는데 내이름으로 수입\"…통관부호 도용의심 2년새 4.4배",
       "summary": "신속히 변경하는 등의 조치가 중요하다\"고 말했다. 이어 \"해킹으로부터 완전히 자유로울 수 없는 시대인 만큼 개인 스스로 자신의 개인정보를 지킬 수 있도록 개인정보 리터러시를 높이는 것도 필요하다\"고 강조했다.",
@@ -2869,21 +2881,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-88002",
       "source": "cvefeed",
       "published": "2026-09-10T07:18:49+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53956 - Rattler vulnerable to package cache path traversal via conda package build string",
-      "summary": "CVE ID :CVE-2026-53956\n  \nPublished : Sept. 9, 2026, 9:17 p.m. | 24 minutes ago\n  \nDescription :Rattler is a library that provides common functionality used within the conda ecosystem. `rattler_cache` prior to version 0.9.0 and `py-rattler` prior to version 0.24.0 were vulnerable to package-cache path traversal when handling package metadata from conda channels. During cache materialization, the `ratter_cache` code used the package record `build` string as part of a cache key that was joined into a filesystem path. A malicious or untrusted channel could publish repodata with path separators or traversal components in that field, causing package contents to be written outside the configured package cache directory. The issue requires use of a malicious or otherwise untrusted conda channel. Curated channels that validate package metadata are not expected to allow malformed build strings of this form. Users should upgrade to `rattler_cache` version 0.9.0 or `py-rattler` version 0.24.0 and avoid untrusted conda channels.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53956\n  \nPublished : Sept. 9, 2026, 9:17 p.m. | 24 minutes ago\n  \nDescription :Rattler is a library that provides common functionality used within the conda ecosystem. `rattler_cache` prior to version 0.9.0 and `py-rattler` prior to version 0.24.0 were vulnerable to package-cache path traversal when handling package metadata from conda channels. During cache materialization, the `ratter_cache` code used the package record `build` string as part of a cache key that was joined into a filesystem path. A malicious or untrusted channel could publish repodata with path separators or traversal components in that field, causing package contents to be written outside the configured package cache directory. The issue requires use of a malicious or otherwise untrusted conda channel. Curated channels that validate package metadata are not expected to allow malformed build strings of this form. Users should upgrade to `rattler_cache` version 0.9.0 or `py-rattler` version 0.24.0 and avoid untrusted conda channels.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-53956 - Rattler는 conda 패키지 빌드 문자열을 통한 패키지 캐시 경로 탐색에 취약합니다.",
-      "summary_ko": "CVE ID:CVE-2026-53956\n  \n게시일 : 2026년 9월 9일 오후 9시 17분 | 24분 전\n  \n설명 : Rattler는 Conda 생태계 내에서 사용되는 공통 기능을 제공하는 라이브러리입니다. 버전 0.9.0 이전의 `rattler_cache`와 버전 0.24.0 이전의 `py-rattler`는 conda 채널에서 패키지 메타데이터를 처리할 때 패키지 캐시 경로 탐색에 취약했습니다. 캐시 구체화 중에 'ratter_cache' 코드는 파일 시스템 경로에 결합된 캐시 키의 일부로 패키지 레코드 'build' 문자열을 사용했습니다. 악의적이거나 신뢰할 수 없는 채널은 해당 필드에 경로 구분 기호 또는 순회 구성 요소가 포함된 저장소 데이터를 게시할 수 있으며 이로 인해 패키지 콘텐츠가 구성된 패키지 캐시 디렉터리 외부에 기록될 수 있습니다. 이 문제는 악의적이거나 신뢰할 수 없는 conda 채널을 사용해야 합니다. 패키지 메타데이터의 유효성을 검사하는 선별된 채널에서는 이 형식의 잘못된 빌드 문자열을 허용하지 않을 것으로 예상됩니다. 사용자는 `rattler_cache` 버전 0.9.0 또는 `py-rattler` 버전 0.24.0으로 업그레이드하고 신뢰할 수 없는 conda 채널을 피해야 합니다.\n  \n심각도: 5.4 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-53956\n2. 26.09.10 오전6:17\n3. Rattler is a library that provides common function",
-      "cve_id": "CVE-2026-53956",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53956",
-      "source": "cvefeed",
-      "published": "2026-09-10T06:17:03+09:00",
       "lang": "en"
     }
   ],
