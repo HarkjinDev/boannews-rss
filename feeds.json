@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-13T01:01:24.817764+09:00",
+  "fetched_at": "2026-09-13T01:31:08.412326+09:00",
   "security_news": [
     {
       "title": "스테이블코인 1달러가 흔들릴 때…디페그는 왜 발생하나",
@@ -2172,18 +2172,6 @@
       "source": "naver",
       "published": "2026-09-10T03:20:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "구글 \"북한 해킹 조직, 인공지능으로 암호화폐 절취 자동화\"",
-      "summary": "북한 해킹 조직들이 생성형 인공지능(AI)를 이용해 암호화폐를 훔치고 있다는 분석이 나왔습니다. 미국 정보기술 기업 구글은 북한 연계 조직들이 표적 정찰부터 신분 위장, 악성 프로그램 제작까지 해킹 작업 전...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해킹 조직, AI로 암호화폐 절취 자동화\n2. AI로 표적 정찰, 신분 위장, 악성코드 제작\n3. 구글, 북한 해킹 그룹 활동 보고",
-      "link": "https://www.voakorea.com/a/dprk-ai-cryptocurrency-090926/8196075.html",
-      "source": "naver",
-      "published": "2026-09-10T01:25:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2966,36 +2954,6 @@
       "source": "cvefeed",
       "published": "2026-09-10T02:17:47+09:00",
       "lang": "ro"
-    },
-    {
-      "title": "CVE-2026-80925 - vlan: fix skb_under_panic and races when toggling HW VLAN offload",
-      "summary": "CVE ID :CVE-2026-80925\n  \nPublished : Sept. 9, 2026, 4:19 p.m. | 31 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvlan: fix skb_under_panic and races when toggling HW VLAN offload\n\nToggling hardware VLAN TX offload (NETIF_F_HW_VLAN_CTAG_TX or\nNETIF_F_HW_VLAN_STAG_TX) on a lower device invokes vlan_transfer_features(),\nwhich dynamically changed vlandev->hard_header_len.\n\nThis causes two issues:\n1. Lockless TX paths (e.g. packet_snd in af_packet.c, ip6_finish_output2)\n   read dev->hard_header_len without holding RTNL lock. Mutating\n   hard_header_len dynamically under RTNL creates a data race where upper\n   layers reserve insufficient headroom based on a stale hard_header_len,\n   resulting in skb_under_panic when vlan_dev_hard_header() is called.\n2. In addition, vlan_transfer_features() updated hard_header_len without\n   updating header_ops, causing a mismatch between allocated headroom\n   and header creation.\n\nAlways setting dev->hard_header_len = real_dev->hard_header_len and\ndev->needed_headroom = real_dev->needed_headroom + VLAN_HLEN unconditionally\nensures:\n- dev->hard_header_len remains 100% static and immutable at real_dev->hard_header_len,\n  eliminating all dynamic runtime updates and data races on hard_header_len.\n- Upper layers allocating skbs via LL_RESERVED_SPACE() will always reserve\n  sufficient headroom for software VLAN tag insertion (real_dev->hard_header_len +\n  real_dev->needed_headroom + VLAN_HLEN).\n- vlandev inherits real_dev->needed_tailroom so underlying trailer/padding/ICV\n  requirements are honored.\n- AF_PACKET SOCK_RAW network header offsets remain correctly aligned at\n  real_dev->hard_header_len.\n- vlan_header_ops is used unconditionally.\n\nNote to stable teams: Make sure to backport these commits:\n\ne16e960d55a4 (\"ipvlan: inherit needed_headroom and needed_tailroom from phy_dev\")\ncef51860becd (\"macvlan: inherit needed_headroom and needed_tailroom from lowerdev\")\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-80925\n  \nPublished : Sept. 9, 2026, 4:19 p.m. | 31 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvlan: fix skb_under_panic and races when toggling HW VLAN offload\n\nToggling hardware VLAN TX offload (NETIF_F_HW_VLAN_CTAG_TX or\nNETIF_F_HW_VLAN_STAG_TX) on a lower device invokes vlan_transfer_features(),\nwhich dynamically changed vlandev->hard_header_len.\n\nThis causes two issues:\n1. Lockless TX paths (e.g. packet_snd in af_packet.c, ip6_finish_output2)\n   read dev->hard_header_len without holding RTNL lock. Mutating\n   hard_header_len dynamically under RTNL creates a data race where upper\n   layers reserve insufficient headroom based on a stale hard_header_len,\n   resulting in skb_under_panic when vlan_dev_hard_header() is called.\n2. In addition, vlan_transfer_features() updated hard_header_len without\n   updating header_ops, causing a mismatch between allocated headroom\n   and header creation.\n\nAlways setting dev->hard_header_len = real_dev->hard_header_len and\ndev->needed_headroom = real_dev->needed_headroom + VLAN_HLEN unconditionally\nensures:\n- dev->hard_header_len remains 100% static and immutable at real_dev->hard_header_len,\n  eliminating all dynamic runtime updates and data races on hard_header_len.\n- Upper layers allocating skbs via LL_RESERVED_SPACE() will always reserve\n  sufficient headroom for software VLAN tag insertion (real_dev->hard_header_len +\n  real_dev->needed_headroom + VLAN_HLEN).\n- vlandev inherits real_dev->needed_tailroom so underlying trailer/padding/ICV\n  requirements are honored.\n- AF_PACKET SOCK_RAW network header offsets remain correctly aligned at\n  real_dev->hard_header_len.\n- vlan_header_ops is used unconditionally.\n\nNote to stable teams: Make sure to backport these commits:\n\ne16e960d55a4 (\"ipvlan: inherit needed_headroom and needed_tailroom from phy_dev\")\ncef51860becd (\"macvlan: inherit needed_headroom and needed_tailroom from lowerdev\")\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-80925\n2. 26.09.10 오전1:19\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-80925",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80925",
-      "source": "cvefeed",
-      "published": "2026-09-10T01:19:44+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-22591 - Fast DDS DDSSQLFilter Recursive Parser Stack Exhaustion (Remote DoS)",
-      "summary": "CVE ID :CVE-2026-22591\n  \nPublished : Sept. 9, 2026, 4:17 p.m. | 18 minutes ago\n  \nDescription :eprosima Fast DDS is a C++ implementation of the DDS (Data Distribution Service) standard of the OMG (Object Management Group). Prior to versions 2.6.12, 2.14.6, 3.2.4, and 3.4.3, Fast DDS’s implementation of SQL‑based content filtering (DDSSQLFilter) allows any participant in a DDS domain to remotely crash other Fast DDS participants by sending a single crafted SEDP `DATA` submessage whose `PID_CONTENT_FILTER_PROPERTY.filterExpression` contains a deeply nested filter expression. Versions 2.6.12, 2.14.6, 3.2.4, and 3.4.3 fix the issue.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-22591\n  \nPublished : Sept. 9, 2026, 4:17 p.m. | 18 minutes ago\n  \nDescription :eprosima Fast DDS is a C++ implementation of the DDS (Data Distribution Service) standard of the OMG (Object Management Group). Prior to versions 2.6.12, 2.14.6, 3.2.4, and 3.4.3, Fast DDS’s implementation of SQL‑based content filtering (DDSSQLFilter) allows any participant in a DDS domain to remotely crash other Fast DDS participants by sending a single crafted SEDP `DATA` submessage whose `PID_CONTENT_FILTER_PROPERTY.filterExpression` contains a deeply nested filter expression. Versions 2.6.12, 2.14.6, 3.2.4, and 3.4.3 fix the issue.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-22591 - 빠른 DDS DDSSQLFilter 재귀 파서 스택 소진(원격 DoS)",
-      "summary_ko": "CVE ID:CVE-2026-22591\n  \n게시일 : 2026년 9월 9일 오후 4시 17분 | 18분 전\n  \n설명 :eprosima Fast DDS는 OMG(Object Management Group)의 DDS(Data Distribution Service) 표준을 C++로 구현한 것입니다. 버전 2.6.12, 2.14.6, 3.2.4 및 3.4.3 이전에는 Fast DDS의 SQL 기반 콘텐츠 필터링(DDSSQLFilter) 구현을 통해 DDS 도메인의 모든 참가자가 깊게 중첩된 필터 표현식이 포함된 `PID_CONTENT_FILTER_PROPERTY.filterExpression`이 포함된 단일 제작 SEDP `DATA` 하위 메시지를 전송하여 DDS 도메인의 모든 참가자가 원격으로 다른 Fast DDS 참가자를 충돌시킬 수 있습니다. 버전 2.6.12, 2.14.6, 3.2.4 및 3.4.3에서는 문제가 해결되었습니다.\n  \n심각도: 7.5 | 높음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-22591\n2. 26.09.10 오전1:17\n3. eprosima Fast DDS is a C++ implementation of the D",
-      "cve_id": "CVE-2026-22591",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-22591",
-      "source": "cvefeed",
-      "published": "2026-09-10T01:17:02+09:00",
-      "lang": "de"
     }
   ],
   "reputation": []
