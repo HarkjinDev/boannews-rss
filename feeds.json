@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-12T21:32:36.711173+09:00",
+  "fetched_at": "2026-09-12T22:02:51.511028+09:00",
   "security_news": [
+    {
+      "title": "스테이블코인 1달러가 흔들릴 때…디페그는 왜 발생하나",
+      "summary": "탈중앙화금융(DeFi)에서 활용되는 스테이블코인은 스마트컨트랙트 취약점이나 해킹, 담보 관리 시스템의 오류 등에 노출될 수 있다. 외부 가격을 블록체인에 전달하는 오라클에서 잘못된 데이터가 입력될 경우 담보 가치...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 스테이블코인 1달러가 흔들릴 때…디페그는 왜 발생하나 탈중앙화금융(DeFi)에서 활용되는 \n2. 외부 가격을 블록체인에 전달하는 오라클에서 잘못된 데이터가 입력될 경우 담보 가치...",
+      "link": "https://www.cbci.co.kr/news/articleView.html?idxno=606300",
+      "source": "naver",
+      "published": "2026-09-12T21:48:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "BlueMoon Exploit Kit Chains Recent Chrome, Windows Zero-Days",
       "summary": "Multiple espionage-motivated threat actors have adopted BlueMoon in opportunistic, rushed deployments.\nThe post BlueMoon Exploit Kit Chains Recent Chrome, Windows Zero-Days appeared first on SecurityWeek.",
@@ -2235,6 +2247,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-90554 - vLLM before 0.28.0 Denial of Service via audio extraction",
+      "summary": "CVE ID :CVE-2026-90554\n  \nPublished : Sept. 12, 2026, 12:08 p.m. | 43 minutes ago\n  \nDescription :vLLM versions >=0.10.2 and <0.28.0 do not apply any audio decode-size or duration limit when extracting audio from video input for NanoNemotronVL models. In nano_nemotron_vl.py, _extract_audio_from_videos calls load_audio_pyav(BytesIO(video_bytes)) without the max_duration_s or max_decode_bytes parameters, so neither VLLM_MAX_AUDIO_DECODE_DURATION_S nor VLLM_MAX_AUDIO_DECODE_BYTES is enforced (unlike the direct audio upload path in AudioMediaIO). When a NanoNemotronVL model is served with use_audio_in_video=True, an attacker who supplies a small, highly compressed video as multimodal input can force the server to allocate gigabytes of memory during audio decoding, resulting in a denial of service. Fixed in vLLM 0.28.0.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-90554\n  \nPublished : Sept. 12, 2026, 12:08 p.m. | 43 minutes ago\n  \nDescription :vLLM versions >=0.10.2 and <0.28.0 do not apply any audio decode-size or duration limit when extracting audio from video input for NanoNemotronVL models. In nano_nemotron_vl.py, _extract_audio_from_videos calls load_audio_pyav(BytesIO(video_bytes)) without the max_duration_s or max_decode_bytes parameters, so neither VLLM_MAX_AUDIO_DECODE_DURATION_S nor VLLM_MAX_AUDIO_DECODE_BYTES is enforced (unlike the direct audio upload path in AudioMediaIO). When a NanoNemotronVL model is served with use_audio_in_video=True, an attacker who supplies a small, highly compressed video as multimodal input can force the server to allocate gigabytes of memory during audio decoding, resulting in a denial of service. Fixed in vLLM 0.28.0.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "CVE ID:CVE-2026-90554\n  \n게시일 : 2026년 9월 12일 오후 12시 8분 | 43분 전\n  \n설명 :vLLM 버전 >=0.10.2 및 <0.28.0은 NanoNemotronVL 모델의 비디오 입력에서 오디오를 추출할 때 오디오 디코드 크기 또는 기간 제한을 적용하지 않습니다. nano_nemotron_vl.py에서 _extract_audio_from_videos는 max_duration_s 또는 max_decode_bytes 매개변수 없이 load_audio_pyav(BytesIO(video_bytes))를 호출하므로 VLLM_MAX_AUDIO_DECODE_DURATION_S 또는 VLLM_MAX_AUDIO_DECODE_BYTES가 적용되지 않습니다(AudioMediaIO의 직접 오디오 업로드 경로와 달리). NanoNemotronVL 모델이 use_audio_in_video=True로 제공되는 경우, 압축률이 높은 작은 비디오를 멀티모달 입력으로 제공하는 공격자는 오디오 디코딩 중에 서버가 기가바이트의 메모리를 할당하도록 강제하여 서비스 거부를 초래할 수 있습니다. vLLM 0.28.0에서 수정되었습니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
+      "summary_3lines": "1. CVE-2026-90554\n2. 26.09.12 오후9:08\n3. vLLM versions >=0.10.2 and <0.28.0 do not apply an",
+      "cve_id": "CVE-2026-90554",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-90554",
+      "source": "cvefeed",
+      "published": "2026-09-12T21:08:57+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-90534 - Flowise before 3.1.4 Cross-Workspace Credential IDOR via node-load-method",
+      "summary": "CVE ID :CVE-2026-90534\n  \nPublished : Sept. 12, 2026, 12:08 p.m. | 44 minutes ago\n  \nDescription :Flowise is a low-code platform for building LLM applications. In versions up to and including 3.1.3, the POST /api/v1/node-load-method/:name endpoint is mounted without any route-level permission check and invokes component loadMethods with an attacker-controlled nodeName, loadMethod, inputs, and credential value. The selected credential is resolved by raw Credential.id via getCredentialData() and decrypted without verifying Credential.workspaceId against the caller's active or shared workspace, unlike other credential read paths which are workspace-scoped. As a result, an authenticated low-privilege user (or workspace API key) in one workspace can supply a credential ID owned by another workspace and cause Flowise to act as a confused deputy, performing third-party provider calls with the victim workspace's credential and returning provider metadata to the attacker. Statically identified affected load methods include Google Drive listFiles, Google Sheets listSpreadsheets, and AWS DynamoDB KV Storage listTables. The raw credential secret itself is not returned to the attacker. This issue is fixed in version 3.1.4.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-90534\n  \nPublished : Sept. 12, 2026, 12:08 p.m. | 44 minutes ago\n  \nDescription :Flowise is a low-code platform for building LLM applications. In versions up to and including 3.1.3, the POST /api/v1/node-load-method/:name endpoint is mounted without any route-level permission check and invokes component loadMethods with an attacker-controlled nodeName, loadMethod, inputs, and credential value. The selected credential is resolved by raw Credential.id via getCredentialData() and decrypted without verifying Credential.workspaceId against the caller's active or shared workspace, unlike other credential read paths which are workspace-scoped. As a result, an authenticated low-privilege user (or workspace API key) in one workspace can supply a credential ID owned by another workspace and cause Flowise to act as a confused deputy, performing third-party provider calls with the victim workspace's credential and returning provider metadata to the attacker. Statically identified affected load methods include Google Drive listFiles, Google Sheets listSpreadsheets, and AWS DynamoDB KV Storage listTables. The raw credential secret itself is not returned to the attacker. This issue is fixed in version 3.1.4.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+      "summary_3lines": "1. CVE-2026-90534\n2. 26.09.12 오후9:08\n3. Flowise is a low-code platform for building LLM ap",
+      "cve_id": "CVE-2026-90534",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-90534",
+      "source": "cvefeed",
+      "published": "2026-09-12T21:08:43+09:00",
+      "lang": "en"
+    },
     {
       "title": "Chromium CVE-2026-76023:  Improper resource control in Linux Toolkit Theming",
       "summary": "This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
