@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-13T22:01:14.969970+09:00",
+  "fetched_at": "2026-09-13T22:31:00.227332+09:00",
   "security_news": [
     {
       "title": "\"김정은 돼지XX해봐\"에 막힌 北 개발자들...신종수법 도모",
@@ -2335,21 +2335,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-88921",
       "source": "cvefeed",
       "published": "2026-09-10T22:41:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-88892 - OpenPanel SSRF via Unguarded Importer File URL Fetch",
-      "summary": "CVE ID :CVE-2026-88892\n  \nPublished : Sept. 10, 2026, 1:05 p.m. | 1 hour, 14 minutes ago\n  \nDescription :OpenPanel is an analytics platform. In all versions (no patched release available at time of publication), the data importer fetches a caller-supplied URL with plain fetch instead of the project's existing SSRF guard (apps/api/src/utils/safe-fetch.ts). In packages/importer/src/providers/umami.ts, parseRemoteFile calls fetch() on config.fileUrl, which is validated only by z.string().url(), so values such as http://127.0.0.1:9911/ or http://169.254.169.254/latest/meta-data/ are accepted; the shared createFileImportConfig factory gives the plausible provider the same field. An authenticated organization member — including a default 'member' with no project_access rows, for whom the intended access-level check is skipped because getProjectAccess returns boolean true rather than a level object — can therefore make the server connect to any address reachable from it. The resulting HTTP status and status text are persisted as Import.errorMessage and returned by import.get to the same user, providing a scanning oracle for internal hosts, ports and paths; if an internal response parses as Umami CSV, its rows are ingested as events and become readable in the attacker's analytics views.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-88892\n  \nPublished : Sept. 10, 2026, 1:05 p.m. | 1 hour, 14 minutes ago\n  \nDescription :OpenPanel is an analytics platform. In all versions (no patched release available at time of publication), the data importer fetches a caller-supplied URL with plain fetch instead of the project's existing SSRF guard (apps/api/src/utils/safe-fetch.ts). In packages/importer/src/providers/umami.ts, parseRemoteFile calls fetch() on config.fileUrl, which is validated only by z.string().url(), so values such as http://127.0.0.1:9911/ or http://169.254.169.254/latest/meta-data/ are accepted; the shared createFileImportConfig factory gives the plausible provider the same field. An authenticated organization member — including a default 'member' with no project_access rows, for whom the intended access-level check is skipped because getProjectAccess returns boolean true rather than a level object — can therefore make the server connect to any address reachable from it. The resulting HTTP status and status text are persisted as Import.errorMessage and returned by import.get to the same user, providing a scanning oracle for internal hosts, ports and paths; if an internal response parses as Umami CSV, its rows are ingested as events and become readable in the attacker's analytics views.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-88892 - 보호되지 않은 임포터 파일 URL 가져오기를 통한 OpenPanel SSRF",
-      "summary_ko": "CVE ID:CVE-2026-88892\n  \n게시일 : 2026년 9월 10일 오후 1시 5분 | 1시간, 14분 전\n  \n설명:OpenPanel은 분석 플랫폼입니다. 모든 버전(게시 시점에 사용 가능한 패치 릴리스 없음)에서 데이터 가져오기 도구는 프로젝트의 기존 SSRF 가드(apps/api/src/utils/safe-fetch.ts) 대신 일반 가져오기를 사용하여 호출자가 제공한 URL을 가져옵니다. packages/importer/src/providers/umami.ts에서 parsRemoteFile은 z.string().url()에 의해서만 유효성이 검사되는 config.fileUrl에 대해 fetch()를 호출하므로 http://127.0.0.1:9911/ 또는 http://169.254.169.254/latest/meta-data/와 같은 값이 허용됩니다. 공유 createFileImportConfig 팩토리는 그럴듯한 공급자에게 동일한 필드를 제공합니다. 따라서 인증된 조직 구성원(project_access 행이 없는 기본 '구성원' 포함)은 getProjectAccess가 수준 개체가 아닌 부울 true를 반환하기 때문에 의도된 액세스 수준 확인을 건너뛰는 경우 서버가 도달 가능한 모든 주소에 연결되도록 할 수 있습니다. 결과 HTTP 상태 및 상태 텍스트는 Import.errorMessage로 유지되고 import.get에 의해 동일한 사용자에게 반환되어 내부 호스트, 포트 및 경로에 대한 스캐닝 오라클을 제공합니다. 내부 응답이 Umami CSV로 구문 분석되면 해당 행이 이벤트로 수집되어 공격자의 분석 보기에서 읽을 수 있게 됩니다.\n  \n심각도: 5.3 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-88892\n2. 26.09.10 오후10:05\n3. OpenPanel is an analytics platform. In all version",
-      "cve_id": "CVE-2026-88892",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88892",
-      "source": "cvefeed",
-      "published": "2026-09-10T22:05:40+09:00",
       "lang": "en"
     }
   ],
