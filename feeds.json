@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-14T05:01:06.607569+09:00",
+  "fetched_at": "2026-09-14T05:31:06.196430+09:00",
   "security_news": [
     {
       "title": "윈도우11 KB5124008 설치 후 USB 오디오 먹통…수정 패치는 아직 없다",
@@ -1740,18 +1740,6 @@
       "source": "naver",
       "published": "2026-09-11T06:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "결제대행업체 해킹에 뚫리는데… 내 카드 정보 털렸는지도 ‘깜깜’",
-      "summary": "2014년 가맹점 판매정보관리(POS) 단말기가 해킹됐고, 2020년에도 현금자동입출금기(ATM)와 POS 단말기에서 대규모 카드정보 유출이 확인됐다. 금융권 관계자는 “카드사 보안을 강화해도 PG사나 가맹점 등 외부 결제망이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 결제대행업체 해킹에 뚫리는데… 내 카드 정보 털렸는지도 ‘깜깜’ 2014년 가맹점 판매정보\n2. 금융권 관계자는 “카드사 보안을 강화해도 PG사나 가맹점 등 외부 결제망이...",
-      "link": "https://n.news.naver.com/mnews/article/081/0003679185?sid=101",
-      "source": "naver",
-      "published": "2026-09-11T05:05:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2218,21 +2206,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-81210",
       "source": "cvefeed",
       "published": "2026-09-11T07:17:01+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-84432 - Concrete CMS 9 through  9.5.2 is vulnerable to CSRFin the Boards custom slot dialog controller",
-      "summary": "CVE ID :CVE-2026-84432\n  \nPublished : Sept. 10, 2026, 8:17 p.m. | 34 minutes ago\n  \nDescription :Concrete CMS 9 through  9.5.2 did not validate an anti-CSRF token in the Boards custom slot dialog controller (concrete/controllers/dialog/board/custom_slot.php) saveTemplate() action. The action created a board_slot_proxy Block and dispatched an AddCustomSlotToBoardCommand against a board instance while gating only on the per-resource canEditBoardContents() permission, so a crafted cross-site request could cause a user holding board-edit permission with an active session to write attacker-chosen slot and template data to a board under their own authority. The state-changing database write completed before any downstream rendering, so the forged request succeeded even when the HTTP response returned a non-200 status. The Concrete CMS security team gave this vulnerability a CVSS v4.0 score of 5.3 with vector CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Winston Crooker for reporting.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-84432\n  \nPublished : Sept. 10, 2026, 8:17 p.m. | 34 minutes ago\n  \nDescription :Concrete CMS 9 through  9.5.2 did not validate an anti-CSRF token in the Boards custom slot dialog controller (concrete/controllers/dialog/board/custom_slot.php) saveTemplate() action. The action created a board_slot_proxy Block and dispatched an AddCustomSlotToBoardCommand against a board instance while gating only on the per-resource canEditBoardContents() permission, so a crafted cross-site request could cause a user holding board-edit permission with an active session to write attacker-chosen slot and template data to a board under their own authority. The state-changing database write completed before any downstream rendering, so the forged request succeeded even when the HTTP response returned a non-200 status. The Concrete CMS security team gave this vulnerability a CVSS v4.0 score of 5.3 with vector CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Winston Crooker for reporting.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "CVE-2026-84432 - 콘크리트 CMS 9~9.5.2는 보드 사용자 정의 슬롯 대화 상자 컨트롤러의 CSRF에 취약합니다.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-84432\n2. 26.09.11 오전5:17\n3. Concrete CMS 9 through 9.5.2 did not validate an a",
-      "cve_id": "CVE-2026-84432",
-      "cvss": "4.0",
-      "severity": "Medium",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84432",
-      "source": "cvefeed",
-      "published": "2026-09-11T05:17:28+09:00",
       "lang": "en"
     }
   ],
