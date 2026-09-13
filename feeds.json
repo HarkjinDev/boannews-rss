@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-13T17:01:39.195626+09:00",
+  "fetched_at": "2026-09-13T17:31:02.534160+09:00",
   "security_news": [
     {
       "title": "美 규제에도…현대차 BD 출신 설립 美 로봇업체, 중국산 몸체 추진",
@@ -1884,18 +1884,6 @@
       "source": "naver",
       "published": "2026-09-10T17:32:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "SK쉴더스 \"공개 취약점 노리는 랜섬웨어 증가... AI 악용 사례도 등장\"",
-      "summary": "특히 취약점 진단과 모의해킹은 공격자가 악용할 수 있는 경로를 선제적으로 확인하고 제거하는 데 효과적인 수단으로 꼽힌다. SK쉴더스는 화이트해커 그룹 EQST(이큐스트)를 중심으로 모의해킹과 취약점 진단을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. SK쉴더스, 공개 취약점 노린 랜섬웨어 증가\n2. AI 악용 사례도 등장, 모의해킹으로 경로 차단\n3. EQST, 취약점 진단·모의해킹으로 공격 선제 대응",
-      "link": "http://www.thebigdata.co.kr/view.php?ud=2026091017225891453233fa3143_23",
-      "source": "naver",
-      "published": "2026-09-10T17:24:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2527,21 +2515,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-78083",
       "source": "cvefeed",
       "published": "2026-09-10T19:17:32+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-44950 - fs_read_glyphs() heap buffer overflow via cumulative glyph data overflow in libXfont2",
-      "summary": "CVE ID :CVE-2026-44950\n  \nPublished : Sept. 10, 2026, 8:19 a.m. | 36 minutes ago\n  \nDescription :fs_read_glyphs() in the libXfont2 font-server client (src/fc/fserve.c) copies each glyph's bitmap into a single buffer. Existing checks validates only that the source slice (position, length) lies within the source bitmap buffer. It does not check whether the running destination cursor has exceeded the allocation.\n\nA malicious font server can send overlapping source offsets -- for example 1000 glyphs each referencing {position:0, length:64} with nbytes=64. Each individual source range passes the existing validation, but the cumulative writes total 64000 bytes into a 64-byte destination buffer. This is a heap buffer overflow with attacker-controlled content.\n  \nSeverity: 9.5 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-44950\n  \nPublished : Sept. 10, 2026, 8:19 a.m. | 36 minutes ago\n  \nDescription :fs_read_glyphs() in the libXfont2 font-server client (src/fc/fserve.c) copies each glyph's bitmap into a single buffer. Existing checks validates only that the source slice (position, length) lies within the source bitmap buffer. It does not check whether the running destination cursor has exceeded the allocation.\n\nA malicious font server can send overlapping source offsets -- for example 1000 glyphs each referencing {position:0, length:64} with nbytes=64. Each individual source range passes the existing validation, but the cumulative writes total 64000 bytes into a 64-byte destination buffer. This is a heap buffer overflow with attacker-controlled content.\n  \nSeverity: 9.5 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-44950\n2. 26.09.10 오후5:19\n3. fs_read_glyphs() in the libXfont2 font-server clie",
-      "cve_id": "CVE-2026-44950",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-44950",
-      "source": "cvefeed",
-      "published": "2026-09-10T17:19:55+09:00",
       "lang": "en"
     }
   ],
