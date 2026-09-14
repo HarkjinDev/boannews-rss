@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-15T04:01:17.437604+09:00",
+  "fetched_at": "2026-09-15T04:31:07.983664+09:00",
   "security_news": [
     {
       "title": "Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries",
@@ -1792,6 +1792,81 @@
       "link": "https://isc.sans.edu/diary/rss/33336",
       "source": "sans_isc",
       "published": "2026-09-15T03:33:44+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-86836 - Eclipse Ankaios Workload Control Interface Improper Path Validation and Impersonation Vulnerability",
+      "summary": "CVE ID :CVE-2026-86836\n  \nPublished : Sept. 14, 2026, 6:20 p.m. | 33 minutes ago\n  \nDescription :In Eclipse Ankaios versions 0.1.0 through 1.0.2, the agent creates workload files and Control Interface named pipes (FIFOs) under a predictable path derived from the agent name and a hash of the workload's runtime configuration. If a directory or FIFO already exists at that path when the agent (re)starts, the agent reuses it based only on an existence and/or file-type check, without validating its owner or permissions. A local, unprivileged user with write access to the same base directory (by default under `$TMPDIR/ankaios`, e.g. shared `/tmp`) can pre-create this path hierarchy, including the two Control Interface FIFOs, before the agent starts. The agent then treats the attacker-owned FIFOs as the legitimate Control Interface for the targeted workload. The attacker can complete the Control Interface handshake and issue requests using that workload's configured `controlInterfaceAccess` permissions, allowing impersonation of the workload and, depending on its configured permissions, unauthorized reading and/or modification of the cluster's desired state.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-86836\n  \nPublished : Sept. 14, 2026, 6:20 p.m. | 33 minutes ago\n  \nDescription :In Eclipse Ankaios versions 0.1.0 through 1.0.2, the agent creates workload files and Control Interface named pipes (FIFOs) under a predictable path derived from the agent name and a hash of the workload's runtime configuration. If a directory or FIFO already exists at that path when the agent (re)starts, the agent reuses it based only on an existence and/or file-type check, without validating its owner or permissions. A local, unprivileged user with write access to the same base directory (by default under `$TMPDIR/ankaios`, e.g. shared `/tmp`) can pre-create this path hierarchy, including the two Control Interface FIFOs, before the agent starts. The agent then treats the attacker-owned FIFOs as the legitimate Control Interface for the targeted workload. The attacker can complete the Control Interface handshake and issue requests using that workload's configured `controlInterfaceAccess` permissions, allowing impersonation of the workload and, depending on its configured permissions, unauthorized reading and/or modification of the cluster's desired state.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-86836\n2. 26.09.15 오전3:20\n3. In Eclipse Ankaios versions 0.1.0 through 1.0.2, t",
+      "cve_id": "CVE-2026-86836",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86836",
+      "source": "cvefeed",
+      "published": "2026-09-15T03:20:20+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-73494 - blaze: Multiple HTTP/1.1 request-smuggling primitives in blaze's Java wire parser",
+      "summary": "CVE ID :CVE-2026-73494\n  \nPublished : Sept. 14, 2026, 6:19 p.m. | 34 minutes ago\n  \nDescription :blaze is a Scala library for building asynchronous pipelines, with a focus on network IO. Prior to 0.23.18 and from 1.0.0-M1 until 1.0.0-M42, five HTTP/1.1 conformance laxities in the hand-written Java parser under http/src/main/java/org/http4s/blaze/http/parser/ can cause blaze to derive a different request boundary than a stricter fronting intermediary. A default BlazeServerBuilder accepts invalid or valueless header field names that violate tchar syntax, obsolete folded field lines (obs-fold), unsupported Transfer-Encoding values, duplicate Content-Length fields, and requests containing both Transfer-Encoding and Content-Length. If a lenient or legacy proxy forwards the malformed bytes but interprets them differently, the disagreement can permit front-end authorization bypass, response-queue poisoning on pooled backend connections, or cache poisoning. Exploitation requires a pair of disagreeing parsers; no non-default blaze configuration is required. The affected checks are enforced in BodyAndHeaderParser and Http1ServerParser. This issue is fixed in versions 0.23.18 and 1.0.0-M42.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-73494\n  \nPublished : Sept. 14, 2026, 6:19 p.m. | 34 minutes ago\n  \nDescription :blaze is a Scala library for building asynchronous pipelines, with a focus on network IO. Prior to 0.23.18 and from 1.0.0-M1 until 1.0.0-M42, five HTTP/1.1 conformance laxities in the hand-written Java parser under http/src/main/java/org/http4s/blaze/http/parser/ can cause blaze to derive a different request boundary than a stricter fronting intermediary. A default BlazeServerBuilder accepts invalid or valueless header field names that violate tchar syntax, obsolete folded field lines (obs-fold), unsupported Transfer-Encoding values, duplicate Content-Length fields, and requests containing both Transfer-Encoding and Content-Length. If a lenient or legacy proxy forwards the malformed bytes but interprets them differently, the disagreement can permit front-end authorization bypass, response-queue poisoning on pooled backend connections, or cache poisoning. Exploitation requires a pair of disagreeing parsers; no non-default blaze configuration is required. The affected checks are enforced in BodyAndHeaderParser and Http1ServerParser. This issue is fixed in versions 0.23.18 and 1.0.0-M42.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-73494\n2. 26.09.15 오전3:19\n3. blaze is a Scala library for building asynchronous",
+      "cve_id": "CVE-2026-73494",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73494",
+      "source": "cvefeed",
+      "published": "2026-09-15T03:19:58+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-70658 - pay-rails/pay: non-constant-time HMAC comparison in Paddle Billing webhook signature verifier",
+      "summary": "CVE ID :CVE-2026-70658\n  \nPublished : Sept. 14, 2026, 6:19 p.m. | 34 minutes ago\n  \nDescription :Pay is a payments engine for Ruby on Rails 6.0 and higher. Prior to 11.6.2, Pay::Webhooks::PaddleBillingController#valid_signature? in app/controllers/pay/webhooks/paddle_billing_controller.rb compares the computed 64-character SHA-256 HMAC with the attacker-controlled h1 token from the Paddle-Signature header using Ruby String#==. An unauthenticated remote attacker who can repeatedly submit requests to /pay/webhooks/paddle_billing and obtain sufficiently precise timing measurements can infer matching digest prefixes and recover a valid signature. A forged accepted webhook is enqueued through Pay::Webhooks::ProcessJob and can cause a host application to update billing state, provision paid features, record refunds, or trigger customer notifications. This issue is fixed in version 11.6.2.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-70658\n  \nPublished : Sept. 14, 2026, 6:19 p.m. | 34 minutes ago\n  \nDescription :Pay is a payments engine for Ruby on Rails 6.0 and higher. Prior to 11.6.2, Pay::Webhooks::PaddleBillingController#valid_signature? in app/controllers/pay/webhooks/paddle_billing_controller.rb compares the computed 64-character SHA-256 HMAC with the attacker-controlled h1 token from the Paddle-Signature header using Ruby String#==. An unauthenticated remote attacker who can repeatedly submit requests to /pay/webhooks/paddle_billing and obtain sufficiently precise timing measurements can infer matching digest prefixes and recover a valid signature. A forged accepted webhook is enqueued through Pay::Webhooks::ProcessJob and can cause a host application to update billing state, provision paid features, record refunds, or trigger customer notifications. This issue is fixed in version 11.6.2.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-70658\n2. 26.09.15 오전3:19\n3. Pay is a payments engine for Ruby on Rails 6.0 and",
+      "cve_id": "CVE-2026-70658",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-70658",
+      "source": "cvefeed",
+      "published": "2026-09-15T03:19:45+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-57583 - OpenZeppelin Contracts Wizard: Line terminators in info.securityContact / info.license can inject lines into generated source",
+      "summary": "CVE ID :CVE-2026-57583\n  \nPublished : Sept. 14, 2026, 6:17 p.m. | 36 minutes ago\n  \nDescription :OpenZeppelin Contracts Wizard is a web application to interactively build a contract out of components from OpenZeppelin Contracts. Prior to @openzeppelin/wizard 0.10.11, @openzeppelin/wizard-cairo 3.0.1, @openzeppelin/wizard-stellar 0.6.2, and @openzeppelin/wizard-stylus 0.3.1, the setInfo code path prints info.securityContact and info.license verbatim into single-line comments in generated Solidity, Cairo, Stellar/Soroban, and Stylus source. A line terminator ends the comment and causes following input to be emitted as source declarations. Exploitation requires an integration to populate these fields from untrusted input and a user to consume the generated source; normal self-service web, AI assistant, CLI, and self-hosted API use does not cross that trust boundary, shared links cannot set the fields, and no code executes on a Wizard service. This issue affects generated-source integrity only and is fixed in versions 0.10.11, 3.0.1, 0.6.2, and 0.3.1 of the respective packages.\n  \nSeverity: 3.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-57583\n  \nPublished : Sept. 14, 2026, 6:17 p.m. | 36 minutes ago\n  \nDescription :OpenZeppelin Contracts Wizard is a web application to interactively build a contract out of components from OpenZeppelin Contracts. Prior to @openzeppelin/wizard 0.10.11, @openzeppelin/wizard-cairo 3.0.1, @openzeppelin/wizard-stellar 0.6.2, and @openzeppelin/wizard-stylus 0.3.1, the setInfo code path prints info.securityContact and info.license verbatim into single-line comments in generated Solidity, Cairo, Stellar/Soroban, and Stylus source. A line terminator ends the comment and causes following input to be emitted as source declarations. Exploitation requires an integration to populate these fields from untrusted input and a user to consume the generated source; normal self-service web, AI assistant, CLI, and self-hosted API use does not cross that trust boundary, shared links cannot set the fields, and no code executes on a Wizard service. This issue affects generated-source integrity only and is fixed in versions 0.10.11, 3.0.1, 0.6.2, and 0.3.1 of the respective packages.\n  \nSeverity: 3.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-57583\n2. 26.09.15 오전3:17\n3. OpenZeppelin Contracts Wizard is a web application",
+      "cve_id": "CVE-2026-57583",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57583",
+      "source": "cvefeed",
+      "published": "2026-09-15T03:17:58+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-57570 - backpack/crud: HasMany/MorphMany relation fields allow cross-tenant record re-parenting (IDOR) via attachManyRelation",
+      "summary": "CVE ID :CVE-2026-57570\n  \nPublished : Sept. 14, 2026, 6:17 p.m. | 36 minutes ago\n  \nDescription :backpack/crud provides Create, Read, Update & Delete (CRUD) functions for Backpack, a collection of Laravel packages that help users build custom administration panels. From 6.0.0 until 6.8.15 and 7.0.47, HasMany and MorphMany handling through attachManyRelation during CRUD create and update operations accepts submitted child primary keys without consistently restricting updates to records belonging to the current parent or permitted by the developer-defined relation scope. An authenticated low-privilege administrator who can edit a parent form exposing an affected multiple-relation field can cause unrelated child records to be reassigned, detached, nulled, or deleted across ownership or tenant boundaries. Exploitation requires related records that should not be attachable or removable by that administrator and the absence of additional application-level authorization around submitted relation values. This issue is distinct from earlier direct main-entity CRUD scoping fixes because it affects secondary models modified by relationship-saving logic. This issue is fixed in versions 6.8.15 and 7.0.47.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-57570\n  \nPublished : Sept. 14, 2026, 6:17 p.m. | 36 minutes ago\n  \nDescription :backpack/crud provides Create, Read, Update & Delete (CRUD) functions for Backpack, a collection of Laravel packages that help users build custom administration panels. From 6.0.0 until 6.8.15 and 7.0.47, HasMany and MorphMany handling through attachManyRelation during CRUD create and update operations accepts submitted child primary keys without consistently restricting updates to records belonging to the current parent or permitted by the developer-defined relation scope. An authenticated low-privilege administrator who can edit a parent form exposing an affected multiple-relation field can cause unrelated child records to be reassigned, detached, nulled, or deleted across ownership or tenant boundaries. Exploitation requires related records that should not be attachable or removable by that administrator and the absence of additional application-level authorization around submitted relation values. This issue is distinct from earlier direct main-entity CRUD scoping fixes because it affects secondary models modified by relationship-saving logic. This issue is fixed in versions 6.8.15 and 7.0.47.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-57570\n2. 26.09.15 오전3:17\n3. backpack/crud provides Create, Read, Update & Dele",
+      "cve_id": "CVE-2026-57570",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57570",
+      "source": "cvefeed",
+      "published": "2026-09-15T03:17:57+09:00",
       "lang": "en"
     },
     {
