@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-09-14T09:01:25.323889+09:00",
+  "fetched_at": "2026-09-14T09:32:39.897755+09:00",
   "security_news": [
+    {
+      "title": "인천공항공사, '개인정보보호의 날' 맞이 사내 캠페인",
+      "summary": "인천국제공항공사가 다가오는 개인정보보호의 날을 맞아 임직원의 보안 의식을 높이고 일상 속 실천 문화를... 업무 중 발생할 수 있는 보안 취약점을 점검하고 놓치기 쉬운 실천 수칙을 안내해 안전한 관리 환경을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 인천공항공사, '개인정보보호의 날' 맞이 사내 캠페인 인천국제공항공사가 다가오는 개인정보보\n2. 업무 중 발생할 수 있는 보안 취약점을 점검하고 놓치기 쉬운 실천 수칙을 안내해 안전한 관",
+      "link": "https://n.news.naver.com/mnews/article/277/0005815737?sid=101",
+      "source": "naver",
+      "published": "2026-09-14T09:16:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "파수AI, 생성형 AI 열풍 속 핵심 데이터 유출 방지 강자 떠올랐다",
+      "summary": "최근 기업들의 디지털 전환 가속화와 클라우드 도입 확대, 생성형 AI 활용 증대에 따라 데이터 유출 및 해킹 리스크가 급격히 커지면서 보안 솔루션 도입이 필수가 됐다. 정부의 국가 사이버 안보 강화 정책과 보안 규제...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 생성형 AI 시대, 파수AI 데이터 유출 방지 솔루션 각광\n2. 클라우드·AI 활용 증가, 기업 데이터 유출·해킹 리스크↑\n3. 정부 규제 강화, 보안 솔루션 도입 필수 추세",
+      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=486634",
+      "source": "naver",
+      "published": "2026-09-14T09:14:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[미리보는 국감] 작년에는 '쿠팡' 올해는 '티빙', 사실상 전 국민 개인정...",
+      "summary": "모의해킹에서 확인한 보안 취약점을 방치한 사이 보유 계정 3954만개가 사실상 모두 털렸다. 첫 공격 경보를... 사고 원인은 고도화된 해킹 기술보다 기본적인 내부 통제 실패에 가까웠다. 공격자는 개발자 한 명의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [미리보는 국감] 작년에는 '쿠팡' 올해는 '티빙', 사실상 전 국민 개인정... 모의해킹\n2. 첫 공격 경보를... 사고 원인은 고도화된 해킹 기술보다 기본적인 내부 통제 실패에 가까웠\n3. 공격자는 개발자 한 명의...",
+      "link": "http://www.srtimes.kr/news/articleView.html?idxno=212021",
+      "source": "naver",
+      "published": "2026-09-14T09:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[이혁중 CISO 칼럼]  IoT/OT 이게 뭐길래?",
       "summary": "통상의 사이버 공격이 주로 데이터 유출, 웹사이트 장애, 업무 시스템 마비에... 사이버보안은 이제 가상공간의 정보보호를 넘어 물리적 세계의 안전과 직결되는 문제가...",
@@ -1707,6 +1743,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-15892 - Heap memory leak in mcumgr settings-management handlers on access-hook rejection leads to denial of service",
+      "summary": "CVE ID :CVE-2026-15892\n  \nPublished : Sept. 13, 2026, 10:46 p.m. | 38 minutes ago\n  \nDescription :The mcumgr SMP settings-management group handlers settings_mgmt_read(), settings_mgmt_write(), and settings_mgmt_delete() in subsys/mgmt/mcumgr/grp/settings_mgmt/src/settings_mgmt.c allocate a key_name buffer (and, for read, a data buffer) via k_malloc() when CONFIG_MCUMGR_GRP_SETTINGS_BUFFER_TYPE_HEAP is enabled, relying on the end: label to k_free() them. When CONFIG_MCUMGR_GRP_SETTINGS_ACCESS_HOOK is also enabled and the application access hook rejects a request by returning status MGMT_CB_ERROR_RC, the handler executed return ret_rc; directly, bypassing end: and leaking the heap allocation on every rejected request.\n\nThe settings handlers are reachable over the unauthenticated SMP transport (Bluetooth LE, UART, or UDP, depending on product configuration). The access hook is the mechanism applications use to deny unauthorized settings access, and MGMT_CB_ERROR_RC is a common rejection style, so an attacker who can send settings read/write/delete commands that the hook rejects triggers a heap leak on each attempt.\n\nBecause the leaked memory is never reclaimed until reboot, a sustained stream of rejected requests monotonically exhausts the kernel heap until k_malloc() fails, denying mcumgr service and impacting any other heap consumer on the device — a denial of service. The impact is availability-only; there is no memory corruption or information disclosure. Only configurations that select the heap buffer type, enable the access hook, and register a hook that returns MGMT_CB_ERROR_RC are affected (the default stack buffer type cannot leak).\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-15892\n  \nPublished : Sept. 13, 2026, 10:46 p.m. | 38 minutes ago\n  \nDescription :The mcumgr SMP settings-management group handlers settings_mgmt_read(), settings_mgmt_write(), and settings_mgmt_delete() in subsys/mgmt/mcumgr/grp/settings_mgmt/src/settings_mgmt.c allocate a key_name buffer (and, for read, a data buffer) via k_malloc() when CONFIG_MCUMGR_GRP_SETTINGS_BUFFER_TYPE_HEAP is enabled, relying on the end: label to k_free() them. When CONFIG_MCUMGR_GRP_SETTINGS_ACCESS_HOOK is also enabled and the application access hook rejects a request by returning status MGMT_CB_ERROR_RC, the handler executed return ret_rc; directly, bypassing end: and leaking the heap allocation on every rejected request.\n\nThe settings handlers are reachable over the unauthenticated SMP transport (Bluetooth LE, UART, or UDP, depending on product configuration). The access hook is the mechanism applications use to deny unauthorized settings access, and MGMT_CB_ERROR_RC is a common rejection style, so an attacker who can send settings read/write/delete commands that the hook rejects triggers a heap leak on each attempt.\n\nBecause the leaked memory is never reclaimed until reboot, a sustained stream of rejected requests monotonically exhausts the kernel heap until k_malloc() fails, denying mcumgr service and impacting any other heap consumer on the device — a denial of service. The impact is availability-only; there is no memory corruption or information disclosure. Only configurations that select the heap buffer type, enable the access hook, and register a hook that returns MGMT_CB_ERROR_RC are affected (the default stack buffer type cannot leak).\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-15892\n2. 26.09.14 오전7:46\n3. The mcumgr SMP settings-management group handlers ",
+      "cve_id": "CVE-2026-15892",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15892",
+      "source": "cvefeed",
+      "published": "2026-09-14T07:46:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-37008 - CrewAI Sandbox Bypass via Python Runtime Manipulation",
       "summary": "CVE ID :CVE-2026-37008\n  \nPublished : Sept. 13, 2026, 9:17 p.m. | 1 hour, 36 minutes ago\n  \nDescription :CrewAI before fb2323b offers a Python blocklist approach that operates at the wrong level of abstraction, a different vulnerability than CVE-2026-2275. Import-time blocking of module names does not address the availability of Python's complete object graph. For example, calling ctypes.CDLL(None) loads the C library without relying in any import statements. In other words, a within-process sandbox cannot merely account for the import system and instead must account for the complete runtime of the Python interpreter.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
