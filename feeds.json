@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-14T22:31:14.658348+09:00",
+  "fetched_at": "2026-09-14T23:02:31.571581+09:00",
   "security_news": [
+    {
+      "title": "챗GPT 뿌리 만든 AI 석학 경고...\"AI, 역대 가장 강력한 사이버 무기\"",
+      "summary": "인공지능(AI)이 단순히 해킹을 돕는 도구를 넘어 스스로 보안 취약점을 찾아 공격하는 '사이버 무기'로... AI가 인간의 지시에 따라 해킹을 보조하는 수준을 넘어 여러 AI 에이전트가 서로 소통하며 자율적으로 움직일...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI, 인간 지시 넘어 자율적 해킹 수행 가능\n2. AI 에이전트 간 소통으로 취약점 탐색 및 공격\n3. AI 기반 사이버 공격, 역대 가장 강력한 무기",
+      "link": "https://www.newspim.com/news/view/20260914001155",
+      "source": "naver",
+      "published": "2026-09-14T22:50:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "특파모 탈락한 KISIA, 네이버 컨소 합류 '재도전'",
+      "summary": "/제공=뉴시스한국정보보호산업협회(KISIA)가 정부의 사이버보안 특화 인공지능(AI) 파운데이션 모델... 협회 회원사 340여곳이 보유한 사이버 위협 정보와 취약점 분석·진단 정보, 보안 전문지식 등을 모델 개발에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 특파모 탈락한 KISIA, 네이버 컨소 합류 '재도전' /제공=뉴시스한국정보보호산업협회(K\n2. 협회 회원사 340여곳이 보유한 사이버 위협 정보와 취약점 분석·진단 정보, 보안 전문지식",
+      "link": "https://news.mtn.co.kr/news-detail/2026091417503847592",
+      "source": "naver",
+      "published": "2026-09-14T22:44:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "레볼루트 해커들, 1만 비트코인 몸값 요구",
       "summary": "영국의 핀테크 공룡 레볼루트(Revolut)가 정교한 정부 기관 사칭 해킹에 넘어가 고객 정보를 유출당한 가운데... 이번 대규모 해킹 사태는 암호화폐 지갑 제조사부터 비디오 게임 개발사에 이르기까지 기업 대상 사이버...",
@@ -1708,6 +1732,36 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-90938 - LangBot through 0.4.17 Unauthenticated Plugin Registration via WebSocket",
+      "summary": "CVE ID :CVE-2026-90938\n  \nPublished : Sept. 14, 2026, 1:19 p.m. | 24 minutes ago\n  \nDescription :LangBot's plugin runtime (pip package langbot_plugin) through 0.4.17 starts a debug WebSocket server on 0.0.0.0:5401 (/plugin/ws) whose authentication is gated on plugin_debug_key, which defaults to an empty string and is never set by the upstream repository, Docker image, or docker-compose (which additionally publishes port 5401 to the host); the key check is therefore skipped entirely. Any remote attacker able to reach the port can register an arbitrary \"debug plugin\" without credentials. Because events are broadcast to all initialized plugins without filtering, the attacker's plugin receives the full context of every IM message event (including private chats, message chains, and user/sender IDs in plaintext) and can inject forged replies, send messages as any configured bot, enumerate bot UUIDs, invoke configured LLM models, read knowledge-base contents, and register malicious tools that feed every user's LLM pipeline. Registering with \"prod_mode\": true causes later legitimate installations of a plugin with the same author/name to be rejected, resulting in persistent denial of service. No patched version was available at the time of publication.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-90938\n  \nPublished : Sept. 14, 2026, 1:19 p.m. | 24 minutes ago\n  \nDescription :LangBot's plugin runtime (pip package langbot_plugin) through 0.4.17 starts a debug WebSocket server on 0.0.0.0:5401 (/plugin/ws) whose authentication is gated on plugin_debug_key, which defaults to an empty string and is never set by the upstream repository, Docker image, or docker-compose (which additionally publishes port 5401 to the host); the key check is therefore skipped entirely. Any remote attacker able to reach the port can register an arbitrary \"debug plugin\" without credentials. Because events are broadcast to all initialized plugins without filtering, the attacker's plugin receives the full context of every IM message event (including private chats, message chains, and user/sender IDs in plaintext) and can inject forged replies, send messages as any configured bot, enumerate bot UUIDs, invoke configured LLM models, read knowledge-base contents, and register malicious tools that feed every user's LLM pipeline. Registering with \"prod_mode\": true causes later legitimate installations of a plugin with the same author/name to be rejected, resulting in persistent denial of service. No patched version was available at the time of publication.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-90938\n2. 26.09.14 오후10:19\n3. LangBot's plugin runtime (pip package langbot_plug",
+      "cve_id": "CVE-2026-90938",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-90938",
+      "source": "cvefeed",
+      "published": "2026-09-14T22:19:32+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-90929 - File Browser 2.5.0 Directory Deletion via Upload Failure Cleanup",
+      "summary": "CVE ID :CVE-2026-90929\n  \nPublished : Sept. 14, 2026, 1:19 p.m. | 24 minutes ago\n  \nDescription :File Browser versions >= 2.5.0 and <= 2.63.23 contain an incorrect authorization flaw in the direct-upload endpoint (resourcePostHandler in http/resource.go). Unlike the TUS upload handler, the direct-upload handler does not reject a target that is an existing directory; a POST with ?override=true aimed at a directory fails inside writeFile (a directory cannot be opened for writing) and the failure-cleanup path then calls Fs.RemoveAll on the request path, recursively deleting the entire tree. This cleanup is gated by neither the Perm.Delete permission nor the checkDescendants rule walk applied by the delete and patch handlers, so an authenticated non-administrator holding only the default Create and Modify permissions can delete directories they are not authorized to delete, including rule-denied files within them. Deletion remains confined to the user's scope because ScopedFs.RemoveAll still enforces the scope guard. The faulty cleanup was introduced in v2.5.0; no patched version is available.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-90929\n  \nPublished : Sept. 14, 2026, 1:19 p.m. | 24 minutes ago\n  \nDescription :File Browser versions >= 2.5.0 and <= 2.63.23 contain an incorrect authorization flaw in the direct-upload endpoint (resourcePostHandler in http/resource.go). Unlike the TUS upload handler, the direct-upload handler does not reject a target that is an existing directory; a POST with ?override=true aimed at a directory fails inside writeFile (a directory cannot be opened for writing) and the failure-cleanup path then calls Fs.RemoveAll on the request path, recursively deleting the entire tree. This cleanup is gated by neither the Perm.Delete permission nor the checkDescendants rule walk applied by the delete and patch handlers, so an authenticated non-administrator holding only the default Create and Modify permissions can delete directories they are not authorized to delete, including rule-denied files within them. Deletion remains confined to the user's scope because ScopedFs.RemoveAll still enforces the scope guard. The faulty cleanup was introduced in v2.5.0; no patched version is available.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-90929\n2. 26.09.14 오후10:19\n3. File Browser versions >= 2.5.0 and <= 2.63.23 cont",
+      "cve_id": "CVE-2026-90929",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-90929",
+      "source": "cvefeed",
+      "published": "2026-09-14T22:19:31+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-81564 - Joomla Extension - joomshaper.com - Missing Directory Confinement in Media Rename Allowing Arbitrary File Rename in SP Page Builder (Free and Pro) 4.0.0 - 6.9.0",
       "summary": "CVE ID :CVE-2026-81564\n  \nPublished : Sept. 14, 2026, 10:58 a.m. | 28 minutes ago\n  \nDescription :Joomla Extension - joomshaper.com - Missing Directory Confinement in Media Rename Allowing Arbitrary File Rename in SP Page Builder (Free and Pro) 4.0.0 - 6.9.0 - The media rename task applied neither of the directory boundary checks used by the folder operations in the same controller, and its validation guard required only that either a media record exist for the supplied identifier or that the supplied path be present in #__spmedia, rather than both. The identifier and the path were consequently never checked against one another, so any valid media identifier could be paired with an unrelated filesystem path, and the STR input filter left traversal sequences intact. An attacker could rename files elsewhere in the installation, including renaming configuration.php to take the site offline.\n  \nSeverity: 7.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-81564\n  \nPublished : Sept. 14, 2026, 10:58 a.m. | 28 minutes ago\n  \nDescription :Joomla Extension - joomshaper.com - Missing Directory Confinement in Media Rename Allowing Arbitrary File Rename in SP Page Builder (Free and Pro) 4.0.0 - 6.9.0 - The media rename task applied neither of the directory boundary checks used by the folder operations in the same controller, and its validation guard required only that either a media record exist for the supplied identifier or that the supplied path be present in #__spmedia, rather than both. The identifier and the path were consequently never checked against one another, so any valid media identifier could be paired with an unrelated filesystem path, and the STR input filter left traversal sequences intact. An attacker could rename files elsewhere in the installation, including renaming configuration.php to take the site offline.\n  \nSeverity: 7.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2245,51 +2299,6 @@
       "link": "https://isc.sans.edu/diary/rss/33332",
       "source": "sans_isc",
       "published": "2026-09-11T23:40:32+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-69468 Windows Volume Manager Extension Driver Elevation of Privilege Vulnerability",
-      "summary": "Updated an acknowledgement. This is an informational change only.",
-      "description": "Updated an acknowledgement. This is an informational change only.",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-69468\n2. MSRC\n3. Updated an acknowledgement. This is an information",
-      "cve_id": "CVE-2026-69468",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69468",
-      "source": "msrc",
-      "published": "2026-09-11T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-77490 Microsoft Edge (Chromium-based) Spoofing Vulnerability",
-      "summary": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to perform spoofing over a network.",
-      "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to perform spoofing over a network.",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-77490\n2. MSRC\n3. Improper neutralization of input during web page g",
-      "cve_id": "CVE-2026-77490",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77490",
-      "source": "msrc",
-      "published": "2026-09-11T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-70334 Visual Studio Code Security Feature Bypass Vulnerability",
-      "summary": "Acknowledgement Updated",
-      "description": "Acknowledgement Updated",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-70334\n2. MSRC\n3. Acknowledgement Updated",
-      "cve_id": "CVE-2026-70334",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70334",
-      "source": "msrc",
-      "published": "2026-09-11T23:00:00+09:00",
       "lang": "en"
     }
   ],
