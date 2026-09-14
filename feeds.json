@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-15T07:01:16.253701+09:00",
+  "fetched_at": "2026-09-15T07:31:03.028969+09:00",
   "security_news": [
     {
       "title": "해킹하는 AI vs 막아내는 AI…차세대 보안 ‘창과 방패’ 경쟁",
@@ -1887,6 +1887,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-76081 - ZITADEL: Improper Role Revocation on Granted Projects during Multiple Role Deletions",
+      "summary": "CVE ID :CVE-2026-76081\n  \nPublished : Sept. 14, 2026, 9:30 p.m. | 30 minutes ago\n  \nDescription :ZITADEL is an open source identity management platform. Prior to version 4.16.0, a bug in how ZITADEL updates permissions when multiple project roles are deleted at the same time can cause some user permissions to be missed. This issue specifically affects User Grants on Granted Projects (projects shared between different organizations), potentially allowing users to keep access rights that were supposed to be completely removed. This issue has been fully resolved in version 4.16.0. There are no configuration workarounds. Upgrading to a patched version is the only way to trigger the automatic cleanup migration. Those who cannot upgrade immediately should manually review user permissions specifically for Granted Projects where multiple roles were recently deleted.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-76081\n  \nPublished : Sept. 14, 2026, 9:30 p.m. | 30 minutes ago\n  \nDescription :ZITADEL is an open source identity management platform. Prior to version 4.16.0, a bug in how ZITADEL updates permissions when multiple project roles are deleted at the same time can cause some user permissions to be missed. This issue specifically affects User Grants on Granted Projects (projects shared between different organizations), potentially allowing users to keep access rights that were supposed to be completely removed. This issue has been fully resolved in version 4.16.0. There are no configuration workarounds. Upgrading to a patched version is the only way to trigger the automatic cleanup migration. Those who cannot upgrade immediately should manually review user permissions specifically for Granted Projects where multiple roles were recently deleted.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-76081\n2. 26.09.15 오전6:30\n3. ZITADEL is an open source identity management plat",
+      "cve_id": "CVE-2026-76081",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76081",
+      "source": "cvefeed",
+      "published": "2026-09-15T06:30:47+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-18117 - Concrete CMS 9.0.0 to 9.5.2 is vulnerable to Stored XSS in Custom Page Alias Name",
+      "summary": "CVE ID :CVE-2026-18117\n  \nPublished : Sept. 14, 2026, 9:27 p.m. | 33 minutes ago\n  \nDescription :Concrete CMS 9.0.0 through 9.5.3 is vulnerable to stored XSS via the custom page alias name (customAliasName) because the Edit Alias dialog applied only trim() to the submitted value and performed no input neutralization. An authenticated user holding canWrite (editor) permission on a page could store a malicious alias name that was later rendered unescaped in the administrative Sitemap panel, where it executed automatically in any administrator or editor session that opened the panel, allowing an editor to escalate to administrator through the victim's active session. The Concrete CMS security team gave this vulnerability a CVSS v4.0 score of 7.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:P/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N. Thanks Nguyen Manh Thuan for reporting.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-18117\n  \nPublished : Sept. 14, 2026, 9:27 p.m. | 33 minutes ago\n  \nDescription :Concrete CMS 9.0.0 through 9.5.3 is vulnerable to stored XSS via the custom page alias name (customAliasName) because the Edit Alias dialog applied only trim() to the submitted value and performed no input neutralization. An authenticated user holding canWrite (editor) permission on a page could store a malicious alias name that was later rendered unescaped in the administrative Sitemap panel, where it executed automatically in any administrator or editor session that opened the panel, allowing an editor to escalate to administrator through the victim's active session. The Concrete CMS security team gave this vulnerability a CVSS v4.0 score of 7.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:P/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N. Thanks Nguyen Manh Thuan for reporting.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-18117\n2. 26.09.15 오전6:27\n3. Concrete CMS 9.0.0 through 9.5.3 is vulnerable to ",
+      "cve_id": "CVE-2026-18117",
+      "cvss": "4.0",
+      "severity": "Medium",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18117",
+      "source": "cvefeed",
+      "published": "2026-09-15T06:27:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-90896 - Missing authentication in Ecommerce Template checkout session endpoint allows unauthenticated disclosure of buyer PII",
       "summary": "CVE ID :CVE-2026-90896\n  \nPublished : Sept. 14, 2026, 8:58 p.m. | 30 minutes ago\n  \nDescription :Missing Authentication for Critical Function (CWE-306) in the checkout session lookup handler (src/app/api/stripe/checkout_sessions/route.ts), exposed at GET /api/stripe/checkout_sessions, in MarcosCamara01 Ecommerce Template before commit 91e273c allows a remote, unauthenticated attacker holding a valid Stripe Checkout Session id (cs_...) to retrieve the full session object, including the buyer's name, email, phone, billing address, amount paid and internal userId, because the GET handler calls stripe.checkout.sessions.retrieve() and returns the result without checking for an authenticated session or session ownership. Sibling endpoints such as POST /api/stripe/payment already enforced authentication via auth.api.getSession(); this endpoint had no access control whatsoever. The session_id is exposed in the buyer's own browser URL after payment (success_url = /result?session_id={CHECKOUT_SESSION_ID}), so it leaks through Referer headers, analytics tools, server access logs and shared-machine browser history, resulting in disclosure of the buyer's personal data to an unauthenticated actor.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
