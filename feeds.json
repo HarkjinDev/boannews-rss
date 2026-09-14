@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-14T21:02:47.744823+09:00",
+  "fetched_at": "2026-09-14T21:31:24.092106+09:00",
   "security_news": [
+    {
+      "title": "고금리에도 버틸 종목은 바로 ‘그것’",
+      "summary": "AI를 활용한 해킹 공격까지 늘면서 기업 입장에서는 보안 투자를 줄이기도 어렵다. AI 투자 확대 → 사이버보안 수요로 이어지는 구조다. 주가에서도 이런 흐름이 확인된다. 팔로알토네트웍스, 크라우드스트라이크...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 해킹 급증에 보안 투자 증가\n2. AI 투자 확대로 사이버보안 수요 견인\n3. 팔로알토네트웍스, 크라우드스트라이크 등 긍정적",
+      "link": "https://n.news.naver.com/mnews/article/024/0000108210?sid=101",
+      "source": "naver",
+      "published": "2026-09-14T21:01:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "AI Changed the Exposure Problem. Validation Needs to Change With It.",
+      "summary": "There's a lot of noise around AI and cybersecurity right now. What’s actually important is far simpler, if often lost in the hubbub. Vulnerability discovery is getting faster and happening at a much greater scale, while defenders still have to work out which findings actually deserve their action.\n\nIn the first half of 2026, a whopping 35,853 CVEs were published, roughly 49% more than in the",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 2026년 상반기 35,853개 CVE 공개, 전년 대비 49% 증가\n2. AI로 취약점 발견 속도/규모 증가, 방어자는 우선순위 결정 어려움\n3. 늘어나는 취약점 규모에 맞춰 검증 방식 변화 필요",
+      "link": "https://thehackernews.com/2026/09/ai-changed-exposure-problem-validation.html",
+      "source": "thehackernews",
+      "published": "2026-09-14T20:58:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "[미리보는 이데일리 신문] AI·현장 둘 다 능숙한 네오블루칼라 키워야",
       "summary": "사이버보안 -퇴사자 계정·암호키 방치가 해킹경로…보안투자 아닌 기본기 놓쳐 뚫렸다 -“관리 담당자 없는 서버부터 확인해야” △정치 -사수 나선 與, 낙마 벼르는 野…김승원 입에 쏠린 눈 -20대·진보층 이탈 본격화...",
@@ -1695,6 +1719,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-81564 - Joomla Extension - joomshaper.com - Missing Directory Confinement in Media Rename Allowing Arbitrary File Rename in SP Page Builder (Free and Pro) 4.0.0 - 6.9.0",
+      "summary": "CVE ID :CVE-2026-81564\n  \nPublished : Sept. 14, 2026, 10:58 a.m. | 28 minutes ago\n  \nDescription :Joomla Extension - joomshaper.com - Missing Directory Confinement in Media Rename Allowing Arbitrary File Rename in SP Page Builder (Free and Pro) 4.0.0 - 6.9.0 - The media rename task applied neither of the directory boundary checks used by the folder operations in the same controller, and its validation guard required only that either a media record exist for the supplied identifier or that the supplied path be present in #__spmedia, rather than both. The identifier and the path were consequently never checked against one another, so any valid media identifier could be paired with an unrelated filesystem path, and the STR input filter left traversal sequences intact. An attacker could rename files elsewhere in the installation, including renaming configuration.php to take the site offline.\n  \nSeverity: 7.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-81564\n  \nPublished : Sept. 14, 2026, 10:58 a.m. | 28 minutes ago\n  \nDescription :Joomla Extension - joomshaper.com - Missing Directory Confinement in Media Rename Allowing Arbitrary File Rename in SP Page Builder (Free and Pro) 4.0.0 - 6.9.0 - The media rename task applied neither of the directory boundary checks used by the folder operations in the same controller, and its validation guard required only that either a media record exist for the supplied identifier or that the supplied path be present in #__spmedia, rather than both. The identifier and the path were consequently never checked against one another, so any valid media identifier could be paired with an unrelated filesystem path, and the STR input filter left traversal sequences intact. An attacker could rename files elsewhere in the installation, including renaming configuration.php to take the site offline.\n  \nSeverity: 7.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-81564\n2. 26.09.14 오후7:58\n3. Joomla Extension - joomshaper.com - Missing Direct",
+      "cve_id": "CVE-2026-81564",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81564",
+      "source": "cvefeed",
+      "published": "2026-09-14T19:58:51+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-90894 - Parallels Desktop local privilege escalation via appliance extract argument injection",
       "summary": "CVE ID :CVE-2026-90894\n  \nPublished : Sept. 14, 2026, 9:52 a.m. | 8 minutes ago\n  \nDescription :Parallels Desktop runs prl_disp_service as root. Local clients reach it on the world-writable socket /var/run/prl_disp_service.socket. PrlSrv_LoginLocal accepts peer credentials. No Parallels signature. No admin group.\n\n\n\nAfter login, PrlSrv_InstallAppliance lets you pick the appliance folder (sVmParentPath). The daemon unpacks with one string, tar -xf \"%1\" -C \"%2\", then Qt QProcess::splitCommand chops that string into words. A quote in the folder name closes early. The leftover text becomes extra tar flags. macOS tar --use-compress-program= runs the named program as root.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
