@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-15T02:02:17.085314+09:00",
+  "fetched_at": "2026-09-15T02:31:14.794775+09:00",
   "security_news": [
+    {
+      "title": "Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries",
+      "summary": "A Chinese threat actor tracked as Red Heron has been attributed to the rapid exploitation of a recently disclosed security vulnerability in Gitea to compromise internet-facing instances as part of a multi-national campaign.\n\n\"Red Heron scanned 1,386 Gitea instances across seven countries and maintained a separate dataset of 477 Taiwan-based systems,\" Acronis Threat Research Unit (TRU) said in an",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 레드 헤론, Gitea RCE 취약점 악용\n2. 13개 조직 대상으로 캠페인 감행\n3. 7개국 1,386개 Gitea 인스턴스 스캔",
+      "link": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html",
+      "source": "thehackernews",
+      "published": "2026-09-15T01:56:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "한매에스티, KCSCON 2026서 체인가드 공개…오픈소스 취약점 사전 차단 ...",
       "summary": "(대한민국 사이버보안 컨퍼런스)'​에 참가해 글로벌 소프트웨어 공급망 보안기업 체인가드(Chainguard)의... 한매에스티는 이러한 기능을 기반으로 미국 FedRAMP를 비롯해 유럽 NIS2, EU 사이버복원력법(CRA) 등 강화되는...",
@@ -1828,6 +1840,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-85921 Windows Secure Kernel Mode Elevation of Privilege Vulnerability",
+      "summary": "Double free in Windows Secure Kernel Mode allows an authorized attacker to elevate privileges locally.",
+      "description": "Double free in Windows Secure Kernel Mode allows an authorized attacker to elevate privileges locally.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-85921\n2. MSRC\n3. Double free in Windows Secure Kernel Mode allows a",
+      "cve_id": "CVE-2026-85921",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85921",
+      "source": "msrc",
+      "published": "2026-09-14T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-90938 - LangBot through 0.4.17 Unauthenticated Plugin Registration via WebSocket",
       "summary": "CVE ID :CVE-2026-90938\n  \nPublished : Sept. 14, 2026, 1:19 p.m. | 24 minutes ago\n  \nDescription :LangBot's plugin runtime (pip package langbot_plugin) through 0.4.17 starts a debug WebSocket server on 0.0.0.0:5401 (/plugin/ws) whose authentication is gated on plugin_debug_key, which defaults to an empty string and is never set by the upstream repository, Docker image, or docker-compose (which additionally publishes port 5401 to the host); the key check is therefore skipped entirely. Any remote attacker able to reach the port can register an arbitrary \"debug plugin\" without credentials. Because events are broadcast to all initialized plugins without filtering, the attacker's plugin receives the full context of every IM message event (including private chats, message chains, and user/sender IDs in plaintext) and can inject forged replies, send messages as any configured bot, enumerate bot UUIDs, invoke configured LLM models, read knowledge-base contents, and register malicious tools that feed every user's LLM pipeline. Registering with \"prod_mode\": true causes later legitimate installations of a plugin with the same author/name to be rejected, resulting in persistent denial of service. No patched version was available at the time of publication.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-90938\n  \nPublished : Sept. 14, 2026, 1:19 p.m. | 24 minutes ago\n  \nDescription :LangBot's plugin runtime (pip package langbot_plugin) through 0.4.17 starts a debug WebSocket server on 0.0.0.0:5401 (/plugin/ws) whose authentication is gated on plugin_debug_key, which defaults to an empty string and is never set by the upstream repository, Docker image, or docker-compose (which additionally publishes port 5401 to the host); the key check is therefore skipped entirely. Any remote attacker able to reach the port can register an arbitrary \"debug plugin\" without credentials. Because events are broadcast to all initialized plugins without filtering, the attacker's plugin receives the full context of every IM message event (including private chats, message chains, and user/sender IDs in plaintext) and can inject forged replies, send messages as any configured bot, enumerate bot UUIDs, invoke configured LLM models, read knowledge-base contents, and register malicious tools that feed every user's LLM pipeline. Registering with \"prod_mode\": true causes later legitimate installations of a plugin with the same author/name to be rejected, resulting in persistent denial of service. No patched version was available at the time of publication.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2320,21 +2347,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-82535",
       "source": "cvefeed",
       "published": "2026-09-12T03:16:59+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54047 - Laci Synchroni Backend Vulnerable to Account Takeover / User Impersonation via Client-Side Configuration Manipulation",
-      "summary": "CVE ID :CVE-2026-54047\n  \nPublished : Sept. 11, 2026, 5:17 p.m. | 25 minutes ago\n  \nDescription :Laci Synchroni is a decentralized mod and appearance sync server and plugin for Dalamud. Versions of the backend prior to 1.2.3 have an improper authentication vulnerability in the application's OAuth2 login flow. The application relies on client-side state by trusting the `UID` field inside the `Authentications` object of a user's local `config.json` file. By manually editing this local file on their PC prior to logging in, a user can supply an arbitrary UID. Because the server fails to validate that the authenticated OAuth2 identity matches the requested UID, an attacker can fully impersonate any target user and perform actions on their behalf. This issue has been resolved in version 1.2.3. The patch modifies `AuthorizeOauthAsync` inside the `SecretKeyAuthenticatorService` to strictly bind the lookup of the requested User ID (`requestedUid`) to the record of the successfully authenticated identity (`primaryUid`). The server will no longer load or return session tokens for a requested UID unless it matches the verified, authenticated database record. No known workarounds are available.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54047\n  \nPublished : Sept. 11, 2026, 5:17 p.m. | 25 minutes ago\n  \nDescription :Laci Synchroni is a decentralized mod and appearance sync server and plugin for Dalamud. Versions of the backend prior to 1.2.3 have an improper authentication vulnerability in the application's OAuth2 login flow. The application relies on client-side state by trusting the `UID` field inside the `Authentications` object of a user's local `config.json` file. By manually editing this local file on their PC prior to logging in, a user can supply an arbitrary UID. Because the server fails to validate that the authenticated OAuth2 identity matches the requested UID, an attacker can fully impersonate any target user and perform actions on their behalf. This issue has been resolved in version 1.2.3. The patch modifies `AuthorizeOauthAsync` inside the `SecretKeyAuthenticatorService` to strictly bind the lookup of the requested User ID (`requestedUid`) to the record of the successfully authenticated identity (`primaryUid`). The server will no longer load or return session tokens for a requested UID unless it matches the verified, authenticated database record. No known workarounds are available.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-54047\n2. 26.09.12 오전2:17\n3. Laci Synchroni is a decentralized mod and appearan",
-      "cve_id": "CVE-2026-54047",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54047",
-      "source": "cvefeed",
-      "published": "2026-09-12T02:17:10+09:00",
       "lang": "en"
     }
   ],
