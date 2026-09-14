@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-15T00:03:26.062387+09:00",
+  "fetched_at": "2026-09-15T00:32:21.142632+09:00",
   "security_news": [
+    {
+      "title": "엘세븐시큐리티, 이미지 속 개인정보까지 잡는다…AI OCR 기반 차단·마스킹 기술 공개",
+      "summary": "기업과 공공기관이 보유한 개인정보가 문서와 이미지, PDF, 스캔 파일 등 다양한 형태로 쌓이면서 기존 텍스트 기반 개인정보 탐지만으로는 유출 위험을 충분히 관리하기 어려워지고 있다.특히 신분증이나 신청서, 증명서 등을 이미지로 저장하거나 문서 안에 이미지 형태로 삽입할 경우 일반적인 문자열 검색 방식으로는 주민등록번호나 연락처 등 개인정보를 찾아내지 못할 가능성이 있다.AI·OCR 기반 개인정보보호 전문기업 엘세븐시큐리티는 이러한 개인정보보호 사각지대를 줄이기 위해 자체 개발한 OCR 기술을 활용한 이미지 개인정보 탐지·차단 및",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 엘세븐시큐리티, 이미지 속 개인정보까지 잡는다…AI OCR 기반 차단·마스킹 기술 공개 기",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208458",
+      "source": "dailysecu",
+      "published": "2026-09-15T00:21:11+09:00",
+      "lang": "ko"
+    },
     {
       "title": "에스에스알, SolidStep·MetiEye·CODE-RAY 앞세워 전방위 취약점 관리 강...",
       "summary": "에스에스알은 지난 9월 8일 서울 세종대학교 컨벤션센터에서 열린 '2026 대한민국 사이버 보안 컨퍼런스... 후원한 사이버보안 컨퍼런스·전시회​로, 에스에스알은 행사장에서 △SolidStep CCE △SolidStep CVE △MetiEye...",
@@ -1780,6 +1792,36 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-57130 - PraisonAI: IMAP Command Injection via Unsanitized Email Search Parameters",
+      "summary": "CVE ID :CVE-2026-57130\n  \nPublished : Sept. 14, 2026, 2:28 p.m. | 1 hour ago\n  \nDescription :PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.59, src/praisonai-agents/praisonaiagents/tools/email_tools.py interpolates LLM-controlled from_addr, subject, and query values directly into quoted IMAP SEARCH criteria. Embedded quote, backslash, newline, or null characters can escape the intended criterion and alter IMAP operations when search_emails, reply_email, or archive_email is exposed to an agent with configured email credentials, allowing mailbox data access, modification, deletion, or connection disruption. This issue is fixed in praisonaiagents 1.6.59.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-57130\n  \nPublished : Sept. 14, 2026, 2:28 p.m. | 1 hour ago\n  \nDescription :PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.59, src/praisonai-agents/praisonaiagents/tools/email_tools.py interpolates LLM-controlled from_addr, subject, and query values directly into quoted IMAP SEARCH criteria. Embedded quote, backslash, newline, or null characters can escape the intended criterion and alter IMAP operations when search_emails, reply_email, or archive_email is exposed to an agent with configured email credentials, allowing mailbox data access, modification, deletion, or connection disruption. This issue is fixed in praisonaiagents 1.6.59.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-57130\n2. 26.09.14 오후11:28\n3. PraisonAI is a multi-agent teams system. Prior to ",
+      "cve_id": "CVE-2026-57130",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57130",
+      "source": "cvefeed",
+      "published": "2026-09-14T23:28:09+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-82427 - Apache Storm Nimbus: Path Traversal as the Supervisor User via Unsanitised Blobstore Map Local Name",
+      "summary": "CVE ID :CVE-2026-82427\n  \nPublished : Sept. 14, 2026, 2:19 p.m. | 1 hour, 8 minutes ago\n  \nDescription :Description\n\nA topology's `topology.blobstore.map` lets the submitter choose a local name for each blob that the\nsupervisor localises. That name was used to build a path under the topology's working directory without\nnormalisation, in both `AsyncLocalizer` and `Container.createBlobstoreLinks`, and the symlink helper\nforce-deletes whatever already exists at the target before creating the link.\n\nA submitter could therefore use `../` segments to direct that delete-and-symlink operation at an arbitrary\npath, as the supervisor user, on every node the topology is scheduled onto. The consequences include\nrecursive deletion of supervisor-owned content and planting a symlink that causes a subsequent worker\nlaunch to execute attacker-chosen code as another tenant's operating-system user, which defeats the\nisolation that `supervisor.run.worker.as.user` is intended to provide.\n\nMitigation\n\nUpgrade to 3.1.0, where the resolved target must lie inside the expected root at both call sites.\n\nUsers who cannot upgrade immediately should restrict topology submission to trusted principals, and may\nreject submissions whose `topology.blobstore.map` entries contain path separators or `..` segments before\nthey reach Nimbus.\n\nCredit\n\nThe ASF -- found using Claude agents to study the security of open-source projects, validated and reported by Apache Storm.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82427\n  \nPublished : Sept. 14, 2026, 2:19 p.m. | 1 hour, 8 minutes ago\n  \nDescription :Description\n\nA topology's `topology.blobstore.map` lets the submitter choose a local name for each blob that the\nsupervisor localises. That name was used to build a path under the topology's working directory without\nnormalisation, in both `AsyncLocalizer` and `Container.createBlobstoreLinks`, and the symlink helper\nforce-deletes whatever already exists at the target before creating the link.\n\nA submitter could therefore use `../` segments to direct that delete-and-symlink operation at an arbitrary\npath, as the supervisor user, on every node the topology is scheduled onto. The consequences include\nrecursive deletion of supervisor-owned content and planting a symlink that causes a subsequent worker\nlaunch to execute attacker-chosen code as another tenant's operating-system user, which defeats the\nisolation that `supervisor.run.worker.as.user` is intended to provide.\n\nMitigation\n\nUpgrade to 3.1.0, where the resolved target must lie inside the expected root at both call sites.\n\nUsers who cannot upgrade immediately should restrict topology submission to trusted principals, and may\nreject submissions whose `topology.blobstore.map` entries contain path separators or `..` segments before\nthey reach Nimbus.\n\nCredit\n\nThe ASF -- found using Claude agents to study the security of open-source projects, validated and reported by Apache Storm.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-82427\n2. 26.09.14 오후11:19\n3. Description A topology's `topology.blobstore.map` ",
+      "cve_id": "CVE-2026-82427",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82427",
+      "source": "cvefeed",
+      "published": "2026-09-14T23:19:16+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-90938 - LangBot through 0.4.17 Unauthenticated Plugin Registration via WebSocket",
       "summary": "CVE ID :CVE-2026-90938\n  \nPublished : Sept. 14, 2026, 1:19 p.m. | 24 minutes ago\n  \nDescription :LangBot's plugin runtime (pip package langbot_plugin) through 0.4.17 starts a debug WebSocket server on 0.0.0.0:5401 (/plugin/ws) whose authentication is gated on plugin_debug_key, which defaults to an empty string and is never set by the upstream repository, Docker image, or docker-compose (which additionally publishes port 5401 to the host); the key check is therefore skipped entirely. Any remote attacker able to reach the port can register an arbitrary \"debug plugin\" without credentials. Because events are broadcast to all initialized plugins without filtering, the attacker's plugin receives the full context of every IM message event (including private chats, message chains, and user/sender IDs in plaintext) and can inject forged replies, send messages as any configured bot, enumerate bot UUIDs, invoke configured LLM models, read knowledge-base contents, and register malicious tools that feed every user's LLM pipeline. Registering with \"prod_mode\": true causes later legitimate installations of a plugin with the same author/name to be rejected, resulting in persistent denial of service. No patched version was available at the time of publication.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-90938\n  \nPublished : Sept. 14, 2026, 1:19 p.m. | 24 minutes ago\n  \nDescription :LangBot's plugin runtime (pip package langbot_plugin) through 0.4.17 starts a debug WebSocket server on 0.0.0.0:5401 (/plugin/ws) whose authentication is gated on plugin_debug_key, which defaults to an empty string and is never set by the upstream repository, Docker image, or docker-compose (which additionally publishes port 5401 to the host); the key check is therefore skipped entirely. Any remote attacker able to reach the port can register an arbitrary \"debug plugin\" without credentials. Because events are broadcast to all initialized plugins without filtering, the attacker's plugin receives the full context of every IM message event (including private chats, message chains, and user/sender IDs in plaintext) and can inject forged replies, send messages as any configured bot, enumerate bot UUIDs, invoke configured LLM models, read knowledge-base contents, and register malicious tools that feed every user's LLM pipeline. Registering with \"prod_mode\": true causes later legitimate installations of a plugin with the same author/name to be rejected, resulting in persistent denial of service. No patched version was available at the time of publication.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2302,36 +2344,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-68497",
       "source": "cvefeed",
       "published": "2026-09-12T01:17:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-15439 - GamiPress <= 7.9.7 - Authenticated (Subscriber+) SQL Injection",
-      "summary": "CVE ID :CVE-2026-15439\n  \nPublished : Sept. 11, 2026, 3:27 p.m. | 2 minutes ago\n  \nDescription :The GamiPress plugin for WordPress is vulnerable to authenticated (Subscriber+) SQL Injection via the 'q' parameter of the wpForo integration AJAX selector (action gamipress_wpforo_get_posts) in versions up to, and including, 7.9.7. The value is passed only through $wpdb->esc_like() and interpolated directly into a single-quoted LIKE clause with no %s placeholder. Because esc_like() runs after WordPress core magic quotes, it doubles the injected backslash (\\' -> \\\\'), which MySQL reads as one literal backslash followed by a live closing quote, allowing the attacker to break out of the string and inject boolean-based SQL. The wpForo plugin only needs to be active to register the callback; no wpForo vulnerability is used. Requires a Subscriber account, which can read the gamipress_admin nonce (exposed on every admin page, e.g. /wp-admin/profile.php). Note: the researcher's Simple:Press vectors (PoC 2 & 3) do not reproduce in current code, which uses $wpdb->prepare() with %s placeholders; only the wpForo selector is confirmed.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-15439\n  \nPublished : Sept. 11, 2026, 3:27 p.m. | 2 minutes ago\n  \nDescription :The GamiPress plugin for WordPress is vulnerable to authenticated (Subscriber+) SQL Injection via the 'q' parameter of the wpForo integration AJAX selector (action gamipress_wpforo_get_posts) in versions up to, and including, 7.9.7. The value is passed only through $wpdb->esc_like() and interpolated directly into a single-quoted LIKE clause with no %s placeholder. Because esc_like() runs after WordPress core magic quotes, it doubles the injected backslash (\\' -> \\\\'), which MySQL reads as one literal backslash followed by a live closing quote, allowing the attacker to break out of the string and inject boolean-based SQL. The wpForo plugin only needs to be active to register the callback; no wpForo vulnerability is used. Requires a Subscriber account, which can read the gamipress_admin nonce (exposed on every admin page, e.g. /wp-admin/profile.php). Note: the researcher's Simple:Press vectors (PoC 2 & 3) do not reproduce in current code, which uses $wpdb->prepare() with %s placeholders; only the wpForo selector is confirmed.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-15439\n  \n게시일 : 2026년 9월 11일 오후 3시 27분 | 2분 전\n  \n설명: WordPress용 GamiPress 플러그인은 7.9.7 이하 버전에서 wpForo 통합 AJAX 선택기(gamipress_wpforo_get_posts 작업)의 'q' 매개변수를 통한 인증된(구독자+) SQL 주입에 취약합니다. 값은 $wpdb->esc_like()를 통해서만 전달되며 %s 자리 표시자 없이 작은따옴표로 묶인 LIKE 절에 직접 삽입됩니다. esc_like()는 WordPress 핵심 마법 인용문 다음에 실행되기 때문에 삽입된 백슬래시(\\' -> \\\\')를 두 배로 늘립니다. MySQL은 백슬래시 하나와 그 뒤에 실시간 닫는 따옴표로 읽혀 공격자가 문자열에서 벗어나 부울 기반 SQL을 삽입할 수 있습니다. 콜백을 등록하려면 wpForo 플러그인만 활성화하면 됩니다. wpForo 취약점은 사용되지 않습니다. gamipress_admin nonce(모든 관리 페이지에 노출됨, 예: /wp-admin/profile.php)를 읽을 수 있는 구독자 계정이 필요합니다. 참고: 연구원의 Simple:Press 벡터(PoC 2 & 3)는 %s 자리 표시자와 함께 $wpdb->prepare()를 사용하는 현재 코드에서 재현되지 않습니다. wpForo 선택기만 확인됩니다.\n  \n심각도: 0.0 | 해당 없음\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-15439\n2. 26.09.12 오전12:27\n3. The GamiPress plugin for WordPress is vulnerable t",
-      "cve_id": "CVE-2026-15439",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15439",
-      "source": "cvefeed",
-      "published": "2026-09-12T00:27:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-38058 - ST Engineering iDirect iQ-Series Terminals Exposure of Sensitive System Information to an Unauthorized Control Sphere",
-      "summary": "CVE ID :CVE-2026-38058\n  \nPublished : Sept. 11, 2026, 3:17 p.m. | 13 minutes ago\n  \nDescription :The endpoint on the iDirect iQ200 VSAT terminal returns the complete device configuration as JSON, including the SECURITY section which contains MD5-crypt password hashes for the root SSH and web administration accounts. Any user with valid web credentials can extract these hashes and crack them offline using commodity hardware.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-38058\n  \nPublished : Sept. 11, 2026, 3:17 p.m. | 13 minutes ago\n  \nDescription :The endpoint on the iDirect iQ200 VSAT terminal returns the complete device configuration as JSON, including the SECURITY section which contains MD5-crypt password hashes for the root SSH and web administration accounts. Any user with valid web credentials can extract these hashes and crack them offline using commodity hardware.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-38058\n2. 26.09.12 오전12:17\n3. The endpoint on the iDirect iQ200 VSAT terminal re",
-      "cve_id": "CVE-2026-38058",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-38058",
-      "source": "cvefeed",
-      "published": "2026-09-12T00:17:01+09:00",
       "lang": "en"
     }
   ],
