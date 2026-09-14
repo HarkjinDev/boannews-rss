@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-15T03:31:03.777169+09:00",
+  "fetched_at": "2026-09-15T04:01:17.437604+09:00",
   "security_news": [
     {
       "title": "Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries",
@@ -1779,6 +1779,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "Apple Updates Everything, (Mon, Sep 14th)",
+      "summary": "Today, Apple released its annual update across all its operating systems. With that, Apple not only released new features but also patched 261 different vulnerabilities. This is the most vulnerabilities Apple has ever patched, but the increase is not as significant as other vendors&#;x26;#;39; \"post-AI\" patch releases. \r",
+      "description": "Today, Apple released its annual update across all its operating systems. With that, Apple not only released new features but also patched 261 different vulnerabilities. This is the most vulnerabilities Apple has ever patched, but the increase is not as significant as other vendors&#;x26;#;39; \"post-AI\" patch releases. \r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Apple Updates Everything, (Mon, Sep 14th)\n2. SANS_ISC\n3. Today, Apple released its annual update across all",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33336",
+      "source": "sans_isc",
+      "published": "2026-09-15T03:33:44+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-55866 - SpiceDBChecks involving relations with caveats can result in unconditional permission when conditional permission is expected",
       "summary": "CVE ID :CVE-2026-55866\n  \nPublished : Sept. 14, 2026, 5:23 p.m. | 8 minutes ago\n  \nDescription :SpiceDB is an open source database system for creating and managing security-critical application permissions. From 1.34.0 until 1.54.0, SpiceDB can return PERMISSIONSHIP_HAS_PERMISSION instead of PERMISSIONSHIP_CONDITIONAL_PERMISSION or PERMISSIONSHIP_NO_PERMISSION because checkRequestToKey() and checkRequestToKeyWithCanonical() in internal/dispatch/keys/computed.go omit CheckHints when constructing dispatch Check cache keys. The incorrect result requires a permission combining relations with intersection or exclusion, a subject reachable through caveated and non-caveated branches, LookupResources with a context parameter running concurrently with CheckPermission or CheckBulkPermissions for the same resource and subject, and an enabled dispatch result cache. Under these conditions, a result computed for one hint set can poison the cache entry used by a semantically different authorization check, allowing permission without satisfying the caveat. This issue is fixed in version 1.54.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
