@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-16T04:31:24.822727+09:00",
+  "fetched_at": "2026-09-16T05:01:35.741806+09:00",
   "security_news": [
     {
       "title": "Black Hat USA 2026 | The 'Breaking' News: The OpenAI–Hugging Face Incident",
@@ -2772,21 +2772,24 @@
       "source": "naver",
       "published": "2026-09-13T06:08:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[만나보니] 아르헨 정보청장 \"AI 공격 몇초면 충분…한국과 공조해야\"",
-      "summary": "아르헨티나 국내에서는 공공의료시스템과 국립인구등록처(RENAPER) 등 국가 보유 데이터베이스를 겨냥한 해킹이 반복되고 있으며, 생성형 AI를 악용한 정교한 피싱 사기도 느는 추세다. 이에 아르헨티나 정부는 지난해 말...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 아르헨티나, RENAPER 등 국가 DB 해킹 반복\n2. 생성형 AI 이용 정교한 피싱 사기 급증\n3. 한국과 AI 악성코드 공조 필요성 강조",
-      "link": "https://n.news.naver.com/mnews/article/001/0016306189?sid=105",
-      "source": "naver",
-      "published": "2026-09-13T05:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82191 - Joomla Extension - j2commerce.com - Unescaped request data reflected into PayPal notify redirect in J2Store 1.0.0-3.3.2, 4.0.0-4.0.22, 4.1.0-4.1.7",
+      "summary": "CVE ID :CVE-2026-82191\n  \nPublished : Sept. 15, 2026, 7:17 p.m. | 26 minutes ago\n  \nDescription :Joomla Extension - j2commerce.com - Unescaped request data reflected into PayPal notify redirect in J2Store 1.0.0-3.3.2, 4.0.0-4.0.22, 4.1.0-4.1.7 - A crafted link to the paypal notify endpoint, if followed by a victim's browser (or an automated system that fetches it), causes the resulting redirect to `com_j2store`'s checkout controller to carry attacker-chosen query parameters instead of only the intended `view=checkout&task=confirmPayment&orderpayment_type=...&paction=process` set — parameter injection/smuggling into that follow-up request. This requires a victim to load the crafted link (`UI:R`/`UI:P`); it does not by itself grant an unauthenticated attacker anything they could not already obtain by requesting the target `com_j2store` URL directly with their own parameters.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82191\n  \nPublished : Sept. 15, 2026, 7:17 p.m. | 26 minutes ago\n  \nDescription :Joomla Extension - j2commerce.com - Unescaped request data reflected into PayPal notify redirect in J2Store 1.0.0-3.3.2, 4.0.0-4.0.22, 4.1.0-4.1.7 - A crafted link to the paypal notify endpoint, if followed by a victim's browser (or an automated system that fetches it), causes the resulting redirect to `com_j2store`'s checkout controller to carry attacker-chosen query parameters instead of only the intended `view=checkout&task=confirmPayment&orderpayment_type=...&paction=process` set — parameter injection/smuggling into that follow-up request. This requires a victim to load the crafted link (`UI:R`/`UI:P`); it does not by itself grant an unauthenticated attacker anything they could not already obtain by requesting the target `com_j2store` URL directly with their own parameters.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-82191\n2. 26.09.16 오전4:17\n3. Joomla Extension - j2commerce.com - Unescaped requ",
+      "cve_id": "CVE-2026-82191",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82191",
+      "source": "cvefeed",
+      "published": "2026-09-16T04:17:42+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-56831 - Shopper: Negative discount values accepted and propagated through order calculation pipeline",
       "summary": "CVE ID :CVE-2026-56831\n  \nPublished : Sept. 15, 2026, 6:17 p.m. | 21 minutes ago\n  \nDescription :Shopper is a Headless e-commerce Admin Panel. Prior to 2.9.0, the /cpanel/discounts administrative interface accepts negative fixed_amount discount values, persists them in sh_discounts, and passes them through vendor/shopper/cart/src/Discounts/DiscountCalculator.php and vendor/shopper/cart/src/Pipelines/Calculate.php without enforcing a positive-value invariant. Because the calculation subtracts discountTotal from the subtotal, a negative discount increases the resulting order total instead of reducing it. Malformed discount records can therefore cause incorrect pricing and financial data integrity failures, although the advisory does not establish a customer-facing exploitation path. This issue is fixed in version 2.9.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
