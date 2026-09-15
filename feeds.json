@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-15T19:31:16.151869+09:00",
+  "fetched_at": "2026-09-15T20:02:53.570405+09:00",
   "security_news": [
+    {
+      "title": "영진전문대 조정민 졸업생, 일본 J:COM 취업 성공 노하우 전수...'일본어...",
+      "summary": "조 씨는 현재 SOC(보안관제센터)에서 근무하며 DDoS 공격, 랜섬웨어 등 사이버 위협을 탐지·분석하고... 이어 현재 업무 경험을 바탕으로 보안 분야의 전문성을 높여 일본에서 손꼽히는 보안 애널리스트로 성장하겠다는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 영진전문대 조정민 졸업생, 일본 J:COM 취업 성공 노하우 전수...'일본어...\n2. 조 씨는 현재 SOC(보안관제센터)에서 근무하며 DDoS 공격, 랜섬웨어 등 사이버 위협을\n3. 이어 현재 업무 경험을 바탕으로 보안 분야의 전문성을 높여 일본에서 손꼽히는 보안 애널리스",
+      "link": "https://www.gukjenews.com/news/articleView.html?idxno=3696272",
+      "source": "naver",
+      "published": "2026-09-15T19:32:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "101개 보안 요건 통과... 삼성전자서비스, 국가공인 ISMS-P 인증 취득",
       "summary": "사이버 침해 위협과 개인정보 유출 사고가 잇따르는 가운데 가전 사후관리 거점의 전산 보안 수준이 국가... 공인 심사 기관이 전산망과 데이터 보호 체계 전반을 정밀 실사하고, 한국인터넷진흥원과 금융보안원이 최종...",
@@ -2679,6 +2691,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-52824 - Kimai: Default APP_SECRET in Docker Image Enables Cookie Forgery and Account Takeover",
+      "summary": "CVE ID :CVE-2026-52824\n  \nPublished : Sept. 15, 2026, 10:40 a.m. | 5 minutes ago\n  \nDescription :Kimai is an open-source time tracking application. Prior to 2.58.0, the official Docker image sets APP_SECRET to the public value change_this_to_something_unique in Dockerfile, and .docker/entrypoint.sh neither replaces nor rejects that value before Symfony uses it as kernel.secret. An unauthenticated attacker who reaches a deployment that did not override APP_SECRET, knows a username, correctly guesses the account ID associated with that username, and targets an account without active two-factor authentication can forge HMAC-protected authentication artifacts, including KIMAI_REMEMBER cookies and login links, to access the account without its password. The updated entrypoint generates and persists a random secret when no safe operator-provided value exists. This issue is fixed in version 2.58.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-52824\n  \nPublished : Sept. 15, 2026, 10:40 a.m. | 5 minutes ago\n  \nDescription :Kimai is an open-source time tracking application. Prior to 2.58.0, the official Docker image sets APP_SECRET to the public value change_this_to_something_unique in Dockerfile, and .docker/entrypoint.sh neither replaces nor rejects that value before Symfony uses it as kernel.secret. An unauthenticated attacker who reaches a deployment that did not override APP_SECRET, knows a username, correctly guesses the account ID associated with that username, and targets an account without active two-factor authentication can forge HMAC-protected authentication artifacts, including KIMAI_REMEMBER cookies and login links, to access the account without its password. The updated entrypoint generates and persists a random secret when no safe operator-provided value exists. This issue is fixed in version 2.58.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-52824\n2. 26.09.15 오후7:40\n3. Kimai is an open-source time tracking application.",
+      "cve_id": "CVE-2026-52824",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-52824",
+      "source": "cvefeed",
+      "published": "2026-09-15T19:40:28+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2025-13166 - Username Enumeration via SMS OTP Flow in WSO2 Identity Server Allows User Account Discovery",
       "summary": "CVE ID :CVE-2025-13166\n  \nPublished : Sept. 15, 2026, 9:53 a.m. | 7 minutes ago\n  \nDescription :The SMS OTP flow fails to adequately handle error messages, allowing an attacker to infer the existence of registered user accounts based on the responses received during the OTP initiation process.\n\nThis weakness can be exploited by an attacker to discover valid usernames within the system. The impact is amplified for accounts that have not configured a mobile number, as the enumeration is specifically tied to this condition. The discovery of these usernames can facilitate subsequent brute force attacks, social engineering attempts, and information leakage, potentially leading to reputational damage, loss of customer trust, and regulatory non-compliance.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
