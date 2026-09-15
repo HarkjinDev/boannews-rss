@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-15T19:01:40.572217+09:00",
+  "fetched_at": "2026-09-15T19:31:16.151869+09:00",
   "security_news": [
+    {
+      "title": "101개 보안 요건 통과... 삼성전자서비스, 국가공인 ISMS-P 인증 취득",
+      "summary": "사이버 침해 위협과 개인정보 유출 사고가 잇따르는 가운데 가전 사후관리 거점의 전산 보안 수준이 국가... 공인 심사 기관이 전산망과 데이터 보호 체계 전반을 정밀 실사하고, 한국인터넷진흥원과 금융보안원이 최종...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 삼성전자서비스, 101개 보안 요건 통과 ISMS-P 인증 취득\n2. 국가공인 심사 통해 전산망·데이터 보호 체계 실사 완료\n3. 개인정보 유출 사고 방지 및 보안 수준 강화 기대",
+      "link": "http://www.ttlnews.com/news/articleView.html?idxno=3143482",
+      "source": "naver",
+      "published": "2026-09-15T19:16:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "영업 재개 하루 앞둔 롯데카드, 창사 첫 382억 중간배당…MBK ‘자금 회...",
       "summary": "앞서 롯데카드는 지난해 발생한 해킹 사고에 따른 고객 정보 유출 여파로 금융위원회로부터 7월 31일부터 이날까지 1.5개월간의 업무정지 처분을 받았다. 롯데카드 관계자는 “지난해 경영실적 하락으로 2025년 결산...",
@@ -2667,6 +2679,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2025-13166 - Username Enumeration via SMS OTP Flow in WSO2 Identity Server Allows User Account Discovery",
+      "summary": "CVE ID :CVE-2025-13166\n  \nPublished : Sept. 15, 2026, 9:53 a.m. | 7 minutes ago\n  \nDescription :The SMS OTP flow fails to adequately handle error messages, allowing an attacker to infer the existence of registered user accounts based on the responses received during the OTP initiation process.\n\nThis weakness can be exploited by an attacker to discover valid usernames within the system. The impact is amplified for accounts that have not configured a mobile number, as the enumeration is specifically tied to this condition. The discovery of these usernames can facilitate subsequent brute force attacks, social engineering attempts, and information leakage, potentially leading to reputational damage, loss of customer trust, and regulatory non-compliance.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2025-13166\n  \nPublished : Sept. 15, 2026, 9:53 a.m. | 7 minutes ago\n  \nDescription :The SMS OTP flow fails to adequately handle error messages, allowing an attacker to infer the existence of registered user accounts based on the responses received during the OTP initiation process.\n\nThis weakness can be exploited by an attacker to discover valid usernames within the system. The impact is amplified for accounts that have not configured a mobile number, as the enumeration is specifically tied to this condition. The discovery of these usernames can facilitate subsequent brute force attacks, social engineering attempts, and information leakage, potentially leading to reputational damage, loss of customer trust, and regulatory non-compliance.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2025-13166\n2. 26.09.15 오후6:53\n3. The SMS OTP flow fails to adequately handle error ",
+      "cve_id": "CVE-2025-13166",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2025-13166",
+      "source": "cvefeed",
+      "published": "2026-09-15T18:53:54+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-59341 - Sealed Secrets: decryption oracle via Go template injection in unauthenticated controller endpoints",
+      "summary": "CVE ID :CVE-2026-59341\n  \nPublished : Sept. 15, 2026, 9:16 a.m. | 44 minutes ago\n  \nDescription :A security vulnerability exists in the Sealed Secrets controller's unauthenticated POST endpoints. By submitting a modified payload containing custom Go template logic in spec.template.data, an attacker with internal network access can abuse the handler as a decryption oracle to recover the full plaintext of any sealed secret.\n\n\n\nThe POST /v1/verify and /v1/rotate handlers call Unseal() to decrypt target secrets, then render any Go templates found in spec.template.data.* using the decrypted payload as the evaluation context (pkg/apis/sealedsecrets/v1alpha1/sealedsecret_expansion.go). Errors encountered during template execution are directly reflected in the resulting HTTP response status codes.\n\n\n\nMissing AEAD label binding: the spec.template.data field is omitted from the AEAD authenticated-data label binding ciphertext to metadata. As a result, an attacker can copy a target's valid metadata and encryptedData verbatim, satisfying AEAD decryption and label validation, while freely replacing spec.template.data with arbitrary template logic.\n\n\n\nSide-channel oracle: template execution errors map directly to HTTP response codes. HTTP 200 (OK) indicates template execution succeeded; HTTP 409 (Conflict) indicates template execution failed (e.g. via {{ fail \"...\" }}).\n\n\n\nBy injecting conditional statements such as {{ if eq (substr 0 1 .password) \"S\" }}ok{{ else }}{{ fail \"x\" }}{{ end }}, an attacker receives an HTTP 200 status when a character guess is correct and an HTTP 409 when it is incorrect. This differential response leaks one character-equality bit per request, allowing full secret extraction over successive queries.\n\n\n\nAttack vector & prerequisites: unauthenticated; requires network access to the controller's internal service port (:8080). Although this service is not exposed to the public internet by default, it is accessible to any pod within the Kubernetes cluster or via a kubectl port-forward connection.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59341\n  \nPublished : Sept. 15, 2026, 9:16 a.m. | 44 minutes ago\n  \nDescription :A security vulnerability exists in the Sealed Secrets controller's unauthenticated POST endpoints. By submitting a modified payload containing custom Go template logic in spec.template.data, an attacker with internal network access can abuse the handler as a decryption oracle to recover the full plaintext of any sealed secret.\n\n\n\nThe POST /v1/verify and /v1/rotate handlers call Unseal() to decrypt target secrets, then render any Go templates found in spec.template.data.* using the decrypted payload as the evaluation context (pkg/apis/sealedsecrets/v1alpha1/sealedsecret_expansion.go). Errors encountered during template execution are directly reflected in the resulting HTTP response status codes.\n\n\n\nMissing AEAD label binding: the spec.template.data field is omitted from the AEAD authenticated-data label binding ciphertext to metadata. As a result, an attacker can copy a target's valid metadata and encryptedData verbatim, satisfying AEAD decryption and label validation, while freely replacing spec.template.data with arbitrary template logic.\n\n\n\nSide-channel oracle: template execution errors map directly to HTTP response codes. HTTP 200 (OK) indicates template execution succeeded; HTTP 409 (Conflict) indicates template execution failed (e.g. via {{ fail \"...\" }}).\n\n\n\nBy injecting conditional statements such as {{ if eq (substr 0 1 .password) \"S\" }}ok{{ else }}{{ fail \"x\" }}{{ end }}, an attacker receives an HTTP 200 status when a character guess is correct and an HTTP 409 when it is incorrect. This differential response leaks one character-equality bit per request, allowing full secret extraction over successive queries.\n\n\n\nAttack vector & prerequisites: unauthenticated; requires network access to the controller's internal service port (:8080). Although this service is not exposed to the public internet by default, it is accessible to any pod within the Kubernetes cluster or via a kubectl port-forward connection.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-59341\n2. 26.09.15 오후6:16\n3. A security vulnerability exists in the Sealed Secr",
+      "cve_id": "CVE-2026-59341",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59341",
+      "source": "cvefeed",
+      "published": "2026-09-15T18:16:59+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-75092 - Leapp-repository: leapp-upgrade-el9toel10: leapp-upgrade-el9toel10: scan_mysql runs mysqld --validate-config as root and can load mysql-writable plugins",
       "summary": "CVE ID :CVE-2026-75092\n  \nPublished : Sept. 15, 2026, 8:23 a.m. | 25 minutes ago\n  \nDescription :A privilege escalation flaw was found in the scan_mysql actor of leapp-upgrade-el9toel10 (provided by leapp-repository). During RHEL 9 to RHEL 10 upgrades, the actor runs:\nmysqld --validate-config --log-error-verbosity=2 directly as root in the Leapp actor context, bypassing the packaged MySQL systemd unit that normally starts the daemon as User=mysql.\n\nA process compromised as the mysql OS identity can write a version-2 persisted configuration (mysqld-auto.cnf) and a malicious shared object into /var/lib/mysql (a directory owned by mysql). That persisted map can set plugin_dir to /var/lib/mysql and early_plugin_load (or related loader options such as plugin_load / plugin_load_add) so MySQL loads the attacker-controlled object during configuration validation. Plugin loading can reach dlopen() before MySQL’s runtime-user check and before plugin-symbol validation.\n\nWhen an administrator subsequently runs the documented Leapp preupgrade or upgrade workflow, attacker-controlled code can execute as UID 0 with a full capability set in an unconfined SELinux domain (unconfined_t). The attack does not require write access to the default system plugin path under /usr; redirecting plugin_dir via mysql-owned persisted state is sufficient. Ordinary SQL privileges alone (including highly privileged SQL accounts) are not a sufficient startpoint — OS-level execution as the mysql service identity is required, plus later administrator invocation of Leapp.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
