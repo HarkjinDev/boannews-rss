@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-15T17:31:41.244321+09:00",
+  "fetched_at": "2026-09-15T18:01:42.495207+09:00",
   "security_news": [
+    {
+      "title": "\"독점 정보 유출 막아라\"...엔비디아·팔란티어, 첨단 AI 모델 도입 축소",
+      "summary": "방산·사이버보안 분야 고객을 보유한 부즈 앨런 해밀턴도 직원들이 독점적인 사이버보안 업무에 앤트로픽의 상용 모델 사용을 금지한 것으로 전해졌다. 오픈AI도 사용자 데이터 활용 방식을 놓고 유사한 논란에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 엔비디아·팔란티어, 첨단 AI 모델 도입 축소\n2. 부즈 앨런 해밀턴, 앤트로픽 모델 사용 금지\n3. 독점 정보 유출 방지 위해 AI 사용 제한",
+      "link": "https://www.aitimes.com/news/articleView.html?idxno=215294",
+      "source": "naver",
+      "published": "2026-09-15T17:44:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "OTA 타고 번지는 악성코드…국토부·현대차, 車 해킹 대응 점검",
+      "summary": "이에 맞춰 정부와 현대자동차는 부품업체에서 시작된 해킹이 무선 업데이트(OTA)를 거쳐 차량까지 번지는 상황을 가정해 대응 능력 점검에 나섰다. 국토교통부는 현대차 판교 첨단차플랫폼(AVP)본부에서...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국토부·현대차, OTA 통해 차까지 번지는 악성코드 대응 점검\n2. 부품업체 발 해킹, OTA 거쳐 현대차 판교 AVP본부 악성코드 시나리오\n3. 차량 해킹 대응 능력 점검, 정부-현대차 공동 대응",
+      "link": "https://www.m-i.kr/news/articleView.html?idxno=1414383",
+      "source": "naver",
+      "published": "2026-09-15T17:40:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[가상화폐 소식] 디지털엑스·두나무·빗썸, 금융사기 예방·금융교육 나...",
       "summary": "디지털엑스, 신한은행과 신종 피싱 대응 세미나…AML·FDS 참여 두나무, 서울시와 청년 금융골든벨…빗썸, AI 악성코드 예방 캠페인 가상자산 업계가 금융사기 대응과 금융교육, 이용자 보안 관련 활동을 이어가고 있다....",
@@ -2595,6 +2619,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-75092 - Leapp-repository: leapp-upgrade-el9toel10: leapp-upgrade-el9toel10: scan_mysql runs mysqld --validate-config as root and can load mysql-writable plugins",
+      "summary": "CVE ID :CVE-2026-75092\n  \nPublished : Sept. 15, 2026, 8:23 a.m. | 25 minutes ago\n  \nDescription :A privilege escalation flaw was found in the scan_mysql actor of leapp-upgrade-el9toel10 (provided by leapp-repository). During RHEL 9 to RHEL 10 upgrades, the actor runs:\nmysqld --validate-config --log-error-verbosity=2 directly as root in the Leapp actor context, bypassing the packaged MySQL systemd unit that normally starts the daemon as User=mysql.\n\nA process compromised as the mysql OS identity can write a version-2 persisted configuration (mysqld-auto.cnf) and a malicious shared object into /var/lib/mysql (a directory owned by mysql). That persisted map can set plugin_dir to /var/lib/mysql and early_plugin_load (or related loader options such as plugin_load / plugin_load_add) so MySQL loads the attacker-controlled object during configuration validation. Plugin loading can reach dlopen() before MySQL’s runtime-user check and before plugin-symbol validation.\n\nWhen an administrator subsequently runs the documented Leapp preupgrade or upgrade workflow, attacker-controlled code can execute as UID 0 with a full capability set in an unconfined SELinux domain (unconfined_t). The attack does not require write access to the default system plugin path under /usr; redirecting plugin_dir via mysql-owned persisted state is sufficient. Ordinary SQL privileges alone (including highly privileged SQL accounts) are not a sufficient startpoint — OS-level execution as the mysql service identity is required, plus later administrator invocation of Leapp.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-75092\n  \nPublished : Sept. 15, 2026, 8:23 a.m. | 25 minutes ago\n  \nDescription :A privilege escalation flaw was found in the scan_mysql actor of leapp-upgrade-el9toel10 (provided by leapp-repository). During RHEL 9 to RHEL 10 upgrades, the actor runs:\nmysqld --validate-config --log-error-verbosity=2 directly as root in the Leapp actor context, bypassing the packaged MySQL systemd unit that normally starts the daemon as User=mysql.\n\nA process compromised as the mysql OS identity can write a version-2 persisted configuration (mysqld-auto.cnf) and a malicious shared object into /var/lib/mysql (a directory owned by mysql). That persisted map can set plugin_dir to /var/lib/mysql and early_plugin_load (or related loader options such as plugin_load / plugin_load_add) so MySQL loads the attacker-controlled object during configuration validation. Plugin loading can reach dlopen() before MySQL’s runtime-user check and before plugin-symbol validation.\n\nWhen an administrator subsequently runs the documented Leapp preupgrade or upgrade workflow, attacker-controlled code can execute as UID 0 with a full capability set in an unconfined SELinux domain (unconfined_t). The attack does not require write access to the default system plugin path under /usr; redirecting plugin_dir via mysql-owned persisted state is sufficient. Ordinary SQL privileges alone (including highly privileged SQL accounts) are not a sufficient startpoint — OS-level execution as the mysql service identity is required, plus later administrator invocation of Leapp.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-75092\n2. 26.09.15 오후5:23\n3. A privilege escalation flaw was found in the scan_",
+      "cve_id": "CVE-2026-75092",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75092",
+      "source": "cvefeed",
+      "published": "2026-09-15T17:23:12+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-91819 - MISP: HTTP Method Override Bypasses CSRF and Form Validation in BetterSecurityComponent",
+      "summary": "CVE ID :CVE-2026-91819\n  \nPublished : Sept. 15, 2026, 8:17 a.m. | 31 minutes ago\n  \nDescription :Affected versions of MISP rely on CakePHP request-method override processing in a way that can disable CSRF and form-security validation.\n\nCakePHP honors a _method field or X-HTTP-Method-Override header by rewriting the effective request method. For override values outside the normal write verbs POST, PUT, PATCH, and DELETE, CakePHP also clears the parsed request body. MISP’s security component then determines whether to perform _validatePost() and _validateCsrf() based on whether request data remains. With a value such as:\n\n\n_method=GET\n\nthe body becomes empty before those checks run, so both protections are skipped. A cross-site form containing only that override can therefore reach actions whose parameters are taken from the URL rather than the request body\n\nVersion affected: ≤2.5.45\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-91819\n  \nPublished : Sept. 15, 2026, 8:17 a.m. | 31 minutes ago\n  \nDescription :Affected versions of MISP rely on CakePHP request-method override processing in a way that can disable CSRF and form-security validation.\n\nCakePHP honors a _method field or X-HTTP-Method-Override header by rewriting the effective request method. For override values outside the normal write verbs POST, PUT, PATCH, and DELETE, CakePHP also clears the parsed request body. MISP’s security component then determines whether to perform _validatePost() and _validateCsrf() based on whether request data remains. With a value such as:\n\n\n_method=GET\n\nthe body becomes empty before those checks run, so both protections are skipped. A cross-site form containing only that override can therefore reach actions whose parameters are taken from the URL rather than the request body\n\nVersion affected: ≤2.5.45\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-91819\n2. 26.09.15 오후5:17\n3. Affected versions of MISP rely on CakePHP request-",
+      "cve_id": "CVE-2026-91819",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-91819",
+      "source": "cvefeed",
+      "published": "2026-09-15T17:17:07+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-90711 - proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet",
       "summary": "CVE ID :CVE-2026-90711\n  \nPublished : Sept. 15, 2026, 6:19 a.m. | 34 minutes ago\n  \nDescription :proxy-addr is a Node.js module that determines a request's client address behind trusted reverse proxies, and it backs Express req.ip and req.ips. In versions 1.1.0 through 2.0.7, a trust subnet written in IPv4-mapped IPv6 notation with an IPv4-sized prefix, such as ::ffff:10.0.0.0/8 instead of the correct ::ffff:10.0.0.0/104, is accepted without error but trusts every IPv4 address on the internet rather than the block it names. Because the socket peer then becomes trusted at hop 0, any unauthenticated client can supply an arbitrary X-Forwarded-For header and control the address the application reads, which defeats IP-based access control, rate limiting, geolocation, and audit logging. This is a fail-open regression introduced in version 1.1.0. The issue is fixed in proxy-addr 2.0.8, and users should upgrade to 2.0.8 or later. As a workaround, ensure any IPv4-mapped IPv6 trust subnet uses a prefix length of at least 97, or express the range in plain IPv4 notation.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
