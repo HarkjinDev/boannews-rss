@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-16T04:01:24.148580+09:00",
+  "fetched_at": "2026-09-16T04:31:24.822727+09:00",
   "security_news": [
+    {
+      "title": "Black Hat USA 2026 | The 'Breaking' News: The OpenAI–Hugging Face Incident",
+      "summary": "The 'Breaking' News: The OpenAI–Hugging Face Incident - A Technical Reconstruction and Its Implications for AI\nAt this Black Hat USA 2026 talk, OpenAI security engineers and researchers will reconstruct the OpenAI-Hugging Face incident and examine its implications for AI security, cyber resilience, and alignment. Throughout the session, they will share insights that address key topics raised by the Black Hat Review Board, including model safeguards, evaluation and containment practices, defensive use cases for AI, and the broader implications of increasingly autonomous systems for the cybersecurity community.\nThe session will trace the models' attack path, including how frontier models are sandboxed during evaluations, how the models exploited a zero-day vulnerability to gain internet access, and how they identified and leveraged a remote code execution path on Hugging Face infrastructure. Drawing on the joint investigation, the speakers will explain how the activity was detected, contained, and investigated. They will also discuss the changes OpenAI is making to strengthen evaluation environments, containment controls, and monitoring capabilities, as well as the role AI systems played in supporting the investigation and response.\nIn addition to the technical reconstruction of the incident, the session will address broader questions relevant to the security community, including lessons for improving AI system security, defensive applications of AI in incident response, and approaches to mitigating emerging risks associated with increasingly capable models.\nThe discussion will also examine alignment challenges associated with long-running agents, including reward hacking, shifts in model behavior and persona over extended trajectories, and information sharing across multi-agent systems. Finally, the speakers will explore what this incident suggests about emerging AI cyber capabilities and how organizations can use AI to strengthen prevention, detection, investigation, and response efforts.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. OpenAI-Hugging Face, 제로데이 취약점 악용\n2. 모델, 인터넷 접근 후 Hugging Face RCE 경로 발견\n3. OpenAI, AI 평가 및 격리 환경 강화 중",
+      "link": "https://www.darkreading.com/vulnerabilities-threats/bhusa26huggingfacetalk",
+      "source": "darkreading",
+      "published": "2026-09-16T04:27:19+09:00",
+      "lang": "en"
+    },
     {
       "title": "'22만명 유출' 강남언니, 5만 포인트·최대 1000만원 보상",
       "summary": "힐링페이퍼는 지난 10일 공지를 통해 \"미약하게나마 한국 개인정보 유출 고객에게 1인당 5만원 포인트 지급할 것\"이라며 \"개인정보 유출로 인한 해킹·피싱 등 1인당 최대 1000만원의 금융사기 피해 보상 보험을 포함한...",
@@ -2772,21 +2784,24 @@
       "source": "naver",
       "published": "2026-09-13T05:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "AI ‘멸망 공포’ 美 일상 파고들었다…식탁·교회·기업까지",
-      "summary": "사이버보안기업 퀘스트소프트웨어의 라케시 샤 제품담당 부사장도 “앤스로픽 연구자들의 경고와 허깅페이스 해킹 사건 이후 고객들의 태도가 달라졌다”고 말했다. 과거에는 자신들이 공격 대상이 되지 않거나...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 앤스로픽, 허깅페이스 해킹 이후 AI 보안 경고.\n2. 퀘스트소프트웨어, AI 멸망 공포 확산 언급.\n3. AI, 식탁·교회·기업 등 일상 파고들어.",
-      "link": "https://www.g-enews.com/view.php?ud=2026091220081098419a1f309431_1",
-      "source": "naver",
-      "published": "2026-09-13T04:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-56831 - Shopper: Negative discount values accepted and propagated through order calculation pipeline",
+      "summary": "CVE ID :CVE-2026-56831\n  \nPublished : Sept. 15, 2026, 6:17 p.m. | 21 minutes ago\n  \nDescription :Shopper is a Headless e-commerce Admin Panel. Prior to 2.9.0, the /cpanel/discounts administrative interface accepts negative fixed_amount discount values, persists them in sh_discounts, and passes them through vendor/shopper/cart/src/Discounts/DiscountCalculator.php and vendor/shopper/cart/src/Pipelines/Calculate.php without enforcing a positive-value invariant. Because the calculation subtracts discountTotal from the subtotal, a negative discount increases the resulting order total instead of reducing it. Malformed discount records can therefore cause incorrect pricing and financial data integrity failures, although the advisory does not establish a customer-facing exploitation path. This issue is fixed in version 2.9.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-56831\n  \nPublished : Sept. 15, 2026, 6:17 p.m. | 21 minutes ago\n  \nDescription :Shopper is a Headless e-commerce Admin Panel. Prior to 2.9.0, the /cpanel/discounts administrative interface accepts negative fixed_amount discount values, persists them in sh_discounts, and passes them through vendor/shopper/cart/src/Discounts/DiscountCalculator.php and vendor/shopper/cart/src/Pipelines/Calculate.php without enforcing a positive-value invariant. Because the calculation subtracts discountTotal from the subtotal, a negative discount increases the resulting order total instead of reducing it. Malformed discount records can therefore cause incorrect pricing and financial data integrity failures, although the advisory does not establish a customer-facing exploitation path. This issue is fixed in version 2.9.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-56831\n2. 26.09.16 오전3:17\n3. Shopper is a Headless e-commerce Admin Panel. Prio",
+      "cve_id": "CVE-2026-56831",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56831",
+      "source": "cvefeed",
+      "published": "2026-09-16T03:17:25+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-59160 - Yeger: Unauthenticated Network-Exposed Turborepo Task Execution via /api/run",
       "summary": "CVE ID :CVE-2026-59160\n  \nPublished : Sept. 15, 2026, 5:17 p.m. | 19 minutes ago\n  \nDescription :Yeger is a monorepo for npm packages maintained under the yeger scope. Prior to 2.8.9, the turbo-graph package starts its embedded Next.js server from packages/turbo-graph/src/index.ts on all interfaces, including 0.0.0.0:29312 by default, while the GET handler for /api/run in packages/turbo-graph-ui/app/api/run/route.ts has no authentication, authorization, CSRF protection, or task allowlist. The handler accepts the tasks, filter, and force query parameters, and buildResponseFromArgs passes attacker-selected task names to spawn() as Turbo CLI arguments. An adjacent-network attacker can execute any task defined in the victim repository's turbo.json with the privileges of the developer OS user, potentially exposing secrets, modifying files or infrastructure, or causing destructive availability effects. The use of an argument array prevents traditional shell metacharacter injection but does not prevent unauthorized execution of defined tasks. This issue is fixed in version 2.8.9.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
