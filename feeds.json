@@ -1,6 +1,54 @@
 {
-  "fetched_at": "2026-09-15T21:02:36.359484+09:00",
+  "fetched_at": "2026-09-15T21:32:42.642929+09:00",
   "security_news": [
+    {
+      "title": "롯데카드 영업재개 하루 전…중간배당 챙긴 MBK",
+      "summary": "금융위원회는 앞서 지난 7월 31일 제14차 정례회의를 열고 지난해 해킹으로 297만명의 고객 신용정보를 유출한 롯데카드에 업무정지 1.5개월, 과징금 50억원 등 제재를 부과했다. 영업정지 제재는 15일까지 적용되며...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 롯데카드, 297만 명 고객 정보 유출로 과징금 50억 부과\n2. MBK, 롯데카드 영업정지 1.5개월 전 중간배당 챙겨\n3. 롯데카드, 8월 15일까지 영업정지 후 업무 재개 예정",
+      "link": "https://news.mtn.co.kr/news-detail/2026091521134148463",
+      "source": "naver",
+      "published": "2026-09-15T21:24:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "앤스로픽 \"러시아, 클로드 AI로 자폭드론·해킹봇·허위정보 제작\"",
+      "summary": "미국 AI 기업 앤스로픽이 자사 AI 모델 '클로드'를 이용해 자율 살상 드론과 해킹 봇, 허위정보 시스템을... 한편 러시아 정부의 지원을 받는 또 다른 해킹 그룹 'GTG-20006'은 클로드를 활용해 악성코드 개발 및 배포...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 러시아, 앤스로픽 AI '클로드'로 자폭드론 등 제작\n2. GTG-20006, 클로드 이용 악성코드 개발 및 배포\n3. AI 악용, 군사·정보 분야 위협 증대",
+      "link": "https://n.news.naver.com/mnews/article/088/0001028708?sid=104",
+      "source": "naver",
+      "published": "2026-09-15T21:12:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "코히어 CEO \"AI 모델, 역대 최강 사이버 무기될 수도\"",
+      "summary": "모델이 보안 취약점을 대규모로 찾아 악용할 수 있는 '지금까지 가장 강력한 사이버 무기'로 부상하고 있다고 경고했다. 14일(현지시간) CNBC에 따르면  고메즈는 \"AI 모델이 사이버보안 경계를 새로운 단계로 밀어...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 코히어 CEO \"AI 모델, 역대 최강 사이버 무기될 수도\" 모델이 보안 취약점을 대규모로\n2. 14일(현지시간) CNBC에 따르면 고메즈는 \"AI 모델이 사이버보안 경계를 새로운 단계로",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=700836",
+      "source": "naver",
+      "published": "2026-09-15T21:08:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "Human Attacker Exploits Marimo RCE, Reaches SSH Bastion in Eight Seconds",
+      "summary": "With artificial intelligence (AI) shrinking the window between vulnerability discovery and exploitation and lowering the barrier to entry for bad actors, new findings from Sysdig show that skilled human operators can move just as swiftly after gaining initial access.\n\nIn one instance highlighted by the cloud security company, the threat actor pivoted from a vulnerable Marimo notebook to an SSH",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Human Attacker Exploits Marimo RCE, Reaches SSH Ba\n2. In one instance highlighted by the cloud security ",
+      "link": "https://thehackernews.com/2026/09/human-attacker-exploits-marimo-rce.html",
+      "source": "thehackernews",
+      "published": "2026-09-15T20:52:28+09:00",
+      "lang": "en"
+    },
     {
       "title": "240,000 Hit by Data Breach at Japan’s Digital Agency",
       "summary": "Hackers exploited a vulnerability in a VPN product to steal the personal information of roughly 240,000 people.\nThe post 240,000 Hit by Data Breach at Japan’s Digital Agency appeared first on SecurityWeek.",
@@ -2704,6 +2752,36 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-92002 - MISP: Authentication failure logging suppressed during Redis unavailability",
+      "summary": "CVE ID :CVE-2026-92002\n  \nPublished : Sept. 15, 2026, 11:24 a.m. | 19 minutes ago\n  \nDescription :Affected versions of MISP use Redis to throttle repeated authentication-failure log entries. The intent is to avoid excessive duplicate logs while still recording failed authentication activity.\n\n\nHowever, User->setupRedis() returns false when Redis cannot be reached. The vulnerable _shouldLog() logic only returned true when a Redis instance existed and no throttle key was present. Therefore, when Redis was unavailable, the function did not allow the log write at all, effectively silencing authentication-failure logging for the duration of the outage.\n\nVersion affected: ≤2.5.45\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-92002\n  \nPublished : Sept. 15, 2026, 11:24 a.m. | 19 minutes ago\n  \nDescription :Affected versions of MISP use Redis to throttle repeated authentication-failure log entries. The intent is to avoid excessive duplicate logs while still recording failed authentication activity.\n\n\nHowever, User->setupRedis() returns false when Redis cannot be reached. The vulnerable _shouldLog() logic only returned true when a Redis instance existed and no throttle key was present. Therefore, when Redis was unavailable, the function did not allow the log write at all, effectively silencing authentication-failure logging for the duration of the outage.\n\nVersion affected: ≤2.5.45\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-92002\n2. 26.09.15 오후8:24\n3. Affected versions of MISP use Redis to throttle re",
+      "cve_id": "CVE-2026-92002",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92002",
+      "source": "cvefeed",
+      "published": "2026-09-15T20:24:21+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-80489 - EUC_JISX0213 decoding may hang on crafted input",
+      "summary": "CVE ID :CVE-2026-80489\n  \nPublished : Sept. 15, 2026, 11:17 a.m. | 27 minutes ago\n  \nDescription :Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding, for example with iconv, in the GNU C Library version 2.3 to 2.44 may result in the converter making no progress, causing the calling application to hang.\n\nSome EUC_JISX0213 sequences decode to two code points.  If the output buffer has room for only the first one, the converter stores the second in the conversion state and returns E2BIG, but it never clears that pending character after emitting it on the next call.  The converter then keeps emitting the pending character without consuming further input, so an application that retries the conversion loops forever. The input must be attacker controlled and the application must convert it with an output buffer small enough to split the two code points. Only the EUC_JISX0213 character set is affected, which is not commonly used.  The related defect in SHIFT_JISX0213 converter is tracked separately as CVE-2026-77117.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-80489\n  \nPublished : Sept. 15, 2026, 11:17 a.m. | 27 minutes ago\n  \nDescription :Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding, for example with iconv, in the GNU C Library version 2.3 to 2.44 may result in the converter making no progress, causing the calling application to hang.\n\nSome EUC_JISX0213 sequences decode to two code points.  If the output buffer has room for only the first one, the converter stores the second in the conversion state and returns E2BIG, but it never clears that pending character after emitting it on the next call.  The converter then keeps emitting the pending character without consuming further input, so an application that retries the conversion loops forever. The input must be attacker controlled and the application must convert it with an output buffer small enough to split the two code points. Only the EUC_JISX0213 character set is affected, which is not commonly used.  The related defect in SHIFT_JISX0213 converter is tracked separately as CVE-2026-77117.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-80489\n2. 26.09.15 오후8:17\n3. Converting crafted EUC_JISX0213 input to UCS-4 or ",
+      "cve_id": "CVE-2026-80489",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80489",
+      "source": "cvefeed",
+      "published": "2026-09-15T20:17:12+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-52824 - Kimai: Default APP_SECRET in Docker Image Enables Cookie Forgery and Account Takeover",
       "summary": "CVE ID :CVE-2026-52824\n  \nPublished : Sept. 15, 2026, 10:40 a.m. | 5 minutes ago\n  \nDescription :Kimai is an open-source time tracking application. Prior to 2.58.0, the official Docker image sets APP_SECRET to the public value change_this_to_something_unique in Dockerfile, and .docker/entrypoint.sh neither replaces nor rejects that value before Symfony uses it as kernel.secret. An unauthenticated attacker who reaches a deployment that did not override APP_SECRET, knows a username, correctly guesses the account ID associated with that username, and targets an account without active two-factor authentication can forge HMAC-protected authentication artifacts, including KIMAI_REMEMBER cookies and login links, to access the account without its password. The updated entrypoint generates and persists a random secret when no safe operator-provided value exists. This issue is fixed in version 2.58.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-52824\n  \nPublished : Sept. 15, 2026, 10:40 a.m. | 5 minutes ago\n  \nDescription :Kimai is an open-source time tracking application. Prior to 2.58.0, the official Docker image sets APP_SECRET to the public value change_this_to_something_unique in Dockerfile, and .docker/entrypoint.sh neither replaces nor rejects that value before Symfony uses it as kernel.secret. An unauthenticated attacker who reaches a deployment that did not override APP_SECRET, knows a username, correctly guesses the account ID associated with that username, and targets an account without active two-factor authentication can forge HMAC-protected authentication artifacts, including KIMAI_REMEMBER cookies and login links, to access the account without its password. The updated entrypoint generates and persists a random secret when no safe operator-provided value exists. This issue is fixed in version 2.58.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3481,36 +3559,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-90651",
       "source": "cvefeed",
       "published": "2026-09-13T09:17:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-90554 - vLLM before 0.28.0 Denial of Service via audio extraction",
-      "summary": "CVE ID :CVE-2026-90554\n  \nPublished : Sept. 12, 2026, 12:08 p.m. | 43 minutes ago\n  \nDescription :vLLM versions >=0.10.2 and <0.28.0 do not apply any audio decode-size or duration limit when extracting audio from video input for NanoNemotronVL models. In nano_nemotron_vl.py, _extract_audio_from_videos calls load_audio_pyav(BytesIO(video_bytes)) without the max_duration_s or max_decode_bytes parameters, so neither VLLM_MAX_AUDIO_DECODE_DURATION_S nor VLLM_MAX_AUDIO_DECODE_BYTES is enforced (unlike the direct audio upload path in AudioMediaIO). When a NanoNemotronVL model is served with use_audio_in_video=True, an attacker who supplies a small, highly compressed video as multimodal input can force the server to allocate gigabytes of memory during audio decoding, resulting in a denial of service. Fixed in vLLM 0.28.0.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-90554\n  \nPublished : Sept. 12, 2026, 12:08 p.m. | 43 minutes ago\n  \nDescription :vLLM versions >=0.10.2 and <0.28.0 do not apply any audio decode-size or duration limit when extracting audio from video input for NanoNemotronVL models. In nano_nemotron_vl.py, _extract_audio_from_videos calls load_audio_pyav(BytesIO(video_bytes)) without the max_duration_s or max_decode_bytes parameters, so neither VLLM_MAX_AUDIO_DECODE_DURATION_S nor VLLM_MAX_AUDIO_DECODE_BYTES is enforced (unlike the direct audio upload path in AudioMediaIO). When a NanoNemotronVL model is served with use_audio_in_video=True, an attacker who supplies a small, highly compressed video as multimodal input can force the server to allocate gigabytes of memory during audio decoding, resulting in a denial of service. Fixed in vLLM 0.28.0.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "CVE ID:CVE-2026-90554\n  \n게시일 : 2026년 9월 12일 오후 12시 8분 | 43분 전\n  \n설명 :vLLM 버전 >=0.10.2 및 <0.28.0은 NanoNemotronVL 모델의 비디오 입력에서 오디오를 추출할 때 오디오 디코드 크기 또는 기간 제한을 적용하지 않습니다. nano_nemotron_vl.py에서 _extract_audio_from_videos는 max_duration_s 또는 max_decode_bytes 매개변수 없이 load_audio_pyav(BytesIO(video_bytes))를 호출하므로 VLLM_MAX_AUDIO_DECODE_DURATION_S 또는 VLLM_MAX_AUDIO_DECODE_BYTES가 적용되지 않습니다(AudioMediaIO의 직접 오디오 업로드 경로와 달리). NanoNemotronVL 모델이 use_audio_in_video=True로 제공되는 경우, 압축률이 높은 작은 비디오를 멀티모달 입력으로 제공하는 공격자는 오디오 디코딩 중에 서버가 기가바이트의 메모리를 할당하도록 강제하여 서비스 거부를 초래할 수 있습니다. vLLM 0.28.0에서 수정되었습니다.\n  \n심각도: 6.9 | 중간\n  \n  CVSS 세부 정보, 영향을 받는 제품, 타임라인 등과 같은 자세한 내용을 보려면 링크를 방문하세요.",
-      "summary_3lines": "1. CVE-2026-90554\n2. 26.09.12 오후9:08\n3. vLLM versions >=0.10.2 and <0.28.0 do not apply an",
-      "cve_id": "CVE-2026-90554",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-90554",
-      "source": "cvefeed",
-      "published": "2026-09-12T21:08:57+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-90534 - Flowise before 3.1.4 Cross-Workspace Credential IDOR via node-load-method",
-      "summary": "CVE ID :CVE-2026-90534\n  \nPublished : Sept. 12, 2026, 12:08 p.m. | 44 minutes ago\n  \nDescription :Flowise is a low-code platform for building LLM applications. In versions up to and including 3.1.3, the POST /api/v1/node-load-method/:name endpoint is mounted without any route-level permission check and invokes component loadMethods with an attacker-controlled nodeName, loadMethod, inputs, and credential value. The selected credential is resolved by raw Credential.id via getCredentialData() and decrypted without verifying Credential.workspaceId against the caller's active or shared workspace, unlike other credential read paths which are workspace-scoped. As a result, an authenticated low-privilege user (or workspace API key) in one workspace can supply a credential ID owned by another workspace and cause Flowise to act as a confused deputy, performing third-party provider calls with the victim workspace's credential and returning provider metadata to the attacker. Statically identified affected load methods include Google Drive listFiles, Google Sheets listSpreadsheets, and AWS DynamoDB KV Storage listTables. The raw credential secret itself is not returned to the attacker. This issue is fixed in version 3.1.4.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-90534\n  \nPublished : Sept. 12, 2026, 12:08 p.m. | 44 minutes ago\n  \nDescription :Flowise is a low-code platform for building LLM applications. In versions up to and including 3.1.3, the POST /api/v1/node-load-method/:name endpoint is mounted without any route-level permission check and invokes component loadMethods with an attacker-controlled nodeName, loadMethod, inputs, and credential value. The selected credential is resolved by raw Credential.id via getCredentialData() and decrypted without verifying Credential.workspaceId against the caller's active or shared workspace, unlike other credential read paths which are workspace-scoped. As a result, an authenticated low-privilege user (or workspace API key) in one workspace can supply a credential ID owned by another workspace and cause Flowise to act as a confused deputy, performing third-party provider calls with the victim workspace's credential and returning provider metadata to the attacker. Statically identified affected load methods include Google Drive listFiles, Google Sheets listSpreadsheets, and AWS DynamoDB KV Storage listTables. The raw credential secret itself is not returned to the attacker. This issue is fixed in version 3.1.4.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_ko": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
-      "summary_3lines": "1. CVE-2026-90534\n2. 26.09.12 오후9:08\n3. Flowise is a low-code platform for building LLM ap",
-      "cve_id": "CVE-2026-90534",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-90534",
-      "source": "cvefeed",
-      "published": "2026-09-12T21:08:43+09:00",
       "lang": "en"
     }
   ],
