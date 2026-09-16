@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-17T03:01:27.068486+09:00",
+  "fetched_at": "2026-09-17T03:31:18.363309+09:00",
   "security_news": [
     {
       "title": "북한 연계 해킹조직, 한국대사관·네이버 사칭 도메인 잇따라 등록",
@@ -3384,21 +3384,24 @@
       "source": "naver",
       "published": "2026-09-14T06:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "윈도우11 KB5124008 설치 후 USB 오디오 먹통…수정 패치는 아직 없다",
-      "summary": "미 사이버보안·인프라보안국(CISA)은 이 제로데이들을 알려진 악용 취약점 목록에 올리고 연방 기관에 9월 22일까지 패치를 적용하라고 명령한 바 있다.방대한 규모의 패치가 한꺼번에 배포되면서 USB 오디오...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 윈도우11 KB5124008 설치 후 USB 오디오 오류 발생\n2. CISA, 제로데이 취약점 악용 악성코드 주의보 발령\n3. 9월 22일까지 패치 적용 권고, USB 오디오 기능 복구 미정",
-      "link": "https://www.wikitree.co.kr/articles/1159247",
-      "source": "naver",
-      "published": "2026-09-14T03:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-69147 - vLLM: Request-selected PyNvVideoCodec GPU decode bypasses static VRAM reservation",
+      "summary": "CVE ID :CVE-2026-69147\n  \nPublished : Sept. 16, 2026, 5:49 p.m. | 11 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. Prior to 0.28.0, request bodies for Chat Completions and Responses can set media_io_kwargs.video.video_backend to pynvvideocodec, and MediaConnector.fetch_video forwards that choice to VideoMediaIO even when startup configuration selected a software decoder. The engine's _reserve_mm_ipc_gpu_memory logic budgets decoder memory only from static configuration, so the request-selected VIDEO_LOADER_REGISTRY backend can create a CUDA context, decoder surfaces, and decoded-frame allocations that were not removed from the engine's KV-cache budget. An attacker able to submit video requests to a video-capable GPU deployment with PyNvVideoCodec installed can exhaust shared GPU memory, causing request failures, worker crashes, or denial of service. The first release containing the fix is version 0.28.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-69147\n  \nPublished : Sept. 16, 2026, 5:49 p.m. | 11 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. Prior to 0.28.0, request bodies for Chat Completions and Responses can set media_io_kwargs.video.video_backend to pynvvideocodec, and MediaConnector.fetch_video forwards that choice to VideoMediaIO even when startup configuration selected a software decoder. The engine's _reserve_mm_ipc_gpu_memory logic budgets decoder memory only from static configuration, so the request-selected VIDEO_LOADER_REGISTRY backend can create a CUDA context, decoder surfaces, and decoded-frame allocations that were not removed from the engine's KV-cache budget. An attacker able to submit video requests to a video-capable GPU deployment with PyNvVideoCodec installed can exhaust shared GPU memory, causing request failures, worker crashes, or denial of service. The first release containing the fix is version 0.28.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-69147\n2. 26.09.17 오전2:49\n3. vLLM is an inference and serving engine for large ",
+      "cve_id": "CVE-2026-69147",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-69147",
+      "source": "cvefeed",
+      "published": "2026-09-17T02:49:20+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-85732 - oras-go: Blind SSRF via unvalidated Link header URL in pagination allows internal network probing",
       "summary": "CVE ID :CVE-2026-85732\n  \nPublished : Sept. 16, 2026, 4:22 p.m. | 33 minutes ago\n  \nDescription :oras-go is a Go library for managing OCI artifacts. Prior to 2.6.2, the parseLink function in registry/remote/utils.go accepts an absolute URL from a registry-controlled Link response header without validating its scheme, host, or port. Tags, Referrers, and Repositories pagination operations then issue a GET request to the attacker-selected URL from the victim's network, allowing blind server-side request forgery against internal services. The response body is not returned to the attacker, but timing and error differences can reveal service reachability, and credentials may be attached when the credential store has an entry for the target host. Exploitation requires a victim to perform a pagination-based listing operation against a malicious registry. The maintainer identifies this report as a duplicate of GHSA-3hr5-mjrr-hfjh and states that remediation is consolidated in that earlier advisory. The consolidated issue is fixed in version 2.6.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
