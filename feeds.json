@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-17T07:32:18.854921+09:00",
+  "fetched_at": "2026-09-17T08:01:22.895541+09:00",
   "security_news": [
     {
       "title": "[기자수첩] 2500억 AI 띄우기 전 '전 국민 지킬 보안'부터",
@@ -4636,21 +4636,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-15891",
       "source": "cvefeed",
       "published": "2026-09-14T08:16:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-15892 - Heap memory leak in mcumgr settings-management handlers on access-hook rejection leads to denial of service",
-      "summary": "CVE ID :CVE-2026-15892\n  \nPublished : Sept. 13, 2026, 10:46 p.m. | 38 minutes ago\n  \nDescription :The mcumgr SMP settings-management group handlers settings_mgmt_read(), settings_mgmt_write(), and settings_mgmt_delete() in subsys/mgmt/mcumgr/grp/settings_mgmt/src/settings_mgmt.c allocate a key_name buffer (and, for read, a data buffer) via k_malloc() when CONFIG_MCUMGR_GRP_SETTINGS_BUFFER_TYPE_HEAP is enabled, relying on the end: label to k_free() them. When CONFIG_MCUMGR_GRP_SETTINGS_ACCESS_HOOK is also enabled and the application access hook rejects a request by returning status MGMT_CB_ERROR_RC, the handler executed return ret_rc; directly, bypassing end: and leaking the heap allocation on every rejected request.\n\nThe settings handlers are reachable over the unauthenticated SMP transport (Bluetooth LE, UART, or UDP, depending on product configuration). The access hook is the mechanism applications use to deny unauthorized settings access, and MGMT_CB_ERROR_RC is a common rejection style, so an attacker who can send settings read/write/delete commands that the hook rejects triggers a heap leak on each attempt.\n\nBecause the leaked memory is never reclaimed until reboot, a sustained stream of rejected requests monotonically exhausts the kernel heap until k_malloc() fails, denying mcumgr service and impacting any other heap consumer on the device — a denial of service. The impact is availability-only; there is no memory corruption or information disclosure. Only configurations that select the heap buffer type, enable the access hook, and register a hook that returns MGMT_CB_ERROR_RC are affected (the default stack buffer type cannot leak).\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-15892\n  \nPublished : Sept. 13, 2026, 10:46 p.m. | 38 minutes ago\n  \nDescription :The mcumgr SMP settings-management group handlers settings_mgmt_read(), settings_mgmt_write(), and settings_mgmt_delete() in subsys/mgmt/mcumgr/grp/settings_mgmt/src/settings_mgmt.c allocate a key_name buffer (and, for read, a data buffer) via k_malloc() when CONFIG_MCUMGR_GRP_SETTINGS_BUFFER_TYPE_HEAP is enabled, relying on the end: label to k_free() them. When CONFIG_MCUMGR_GRP_SETTINGS_ACCESS_HOOK is also enabled and the application access hook rejects a request by returning status MGMT_CB_ERROR_RC, the handler executed return ret_rc; directly, bypassing end: and leaking the heap allocation on every rejected request.\n\nThe settings handlers are reachable over the unauthenticated SMP transport (Bluetooth LE, UART, or UDP, depending on product configuration). The access hook is the mechanism applications use to deny unauthorized settings access, and MGMT_CB_ERROR_RC is a common rejection style, so an attacker who can send settings read/write/delete commands that the hook rejects triggers a heap leak on each attempt.\n\nBecause the leaked memory is never reclaimed until reboot, a sustained stream of rejected requests monotonically exhausts the kernel heap until k_malloc() fails, denying mcumgr service and impacting any other heap consumer on the device — a denial of service. The impact is availability-only; there is no memory corruption or information disclosure. Only configurations that select the heap buffer type, enable the access hook, and register a hook that returns MGMT_CB_ERROR_RC are affected (the default stack buffer type cannot leak).\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-15892\n2. 26.09.14 오전7:46\n3. The mcumgr SMP settings-management group handlers ",
-      "cve_id": "CVE-2026-15892",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15892",
-      "source": "cvefeed",
-      "published": "2026-09-14T07:46:16+09:00",
       "lang": "en"
     }
   ],
