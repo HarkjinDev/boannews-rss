@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-17T08:01:22.895541+09:00",
+  "fetched_at": "2026-09-17T08:31:12.597879+09:00",
   "security_news": [
     {
       "title": "[기자수첩] 2500억 AI 띄우기 전 '전 국민 지킬 보안'부터",
@@ -3396,30 +3396,6 @@
       "source": "naver",
       "published": "2026-09-14T08:50:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "중국 연계 해커, 'Sogou 입력기' 취약점 실제 악용…클릭 한 번에 백도어...",
-      "summary": "중국 연계 해킹그룹이 중국에서 널리 사용되는 윈도우용 중국어 입력기 'Sogou Input Method'의 취약점을 실제 공격에 악용한 것으로 확인됐다. 공격그룹 UNC3569는 Sogou Input Method의 원격코드실행 취약점인 CVE-2026...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중국 연계 해커, 'Sogou 입력기' 취약점 실제 악용…클릭 한 번에 백도어...\n2. 중국 연계 해킹그룹이 중국에서 널리 사용되는 윈도우용 중국어 입력기 'Sogou Input\n3. 공격그룹 UNC3569는 Sogou Input Method의 원격코드실행 취약점인 CVE-",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208433",
-      "source": "naver",
-      "published": "2026-09-14T08:26:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "AI 금융 '새 게이트키퍼' 경고한 토스···자기검증 시험대",
-      "summary": "토스페이먼츠는 자사 시스템에 대한 해킹이나 취약점 공격은 아니며 카드 비밀번호·유효기간·CVC는 노출 정보에 포함되지 않았다고 설명했다. 금감원은 현장점검을 검사로 전환했다. 각...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 금융 '새 게이트키퍼' 경고한 토스···자기검증 시험대 토스페이먼츠는 자사 시스템에 \n2. 금감원은 현장점검을 검사로 전환했다.",
-      "link": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=708976",
-      "source": "naver",
-      "published": "2026-09-14T08:20:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4621,21 +4597,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2025-68624",
       "source": "cvefeed",
       "published": "2026-09-14T09:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-15891 - NULL pointer dereference in Zephyr MQTT-SN client when removing a non-responsive gateway",
-      "summary": "CVE ID :CVE-2026-15891\n  \nPublished : Sept. 13, 2026, 11:16 p.m. | 27 minutes ago\n  \nDescription :The MQTT-SN client keepalive handler process_ping() in subsys/net/lib/mqtt_sn/mqtt_sn.c removes the gateway record after PINGREQ retries are exhausted. It invoked SYS_SLIST_PEEK_HEAD_CONTAINER(&client->gateways, gw, next) but discarded the result. That macro is a pure expression that does not assign to gw, so gw retained its NULL initializer regardless of the list contents.\n\nThe code then dereferences the NULL gw (gw->gw_id) and passes it to mqtt_sn_gw_destroy(), reaching k_mem_slab_free(&gateways, NULL). With CONFIG_MEM_SLAB_POINTER_VALIDATE enabled this triggers k_panic(); in the default configuration it performs a write through the NULL pointer ((char )mem = slab->free_list;) and corrupts the slab free list. The outcome is a crash/kernel panic or, on targets where address 0 is writable, silent memory-allocator corruption.\n\nThe vulnerable branch runs whenever the connected MQTT-SN gateway fails to answer keepalive PINGREQs for the configured number of retries. This condition is controlled by the remote peer: a malicious or compromised gateway, or an on-path/adjacent attacker that advertises itself as a gateway and then stops responding (or blackholes the real gateway's PINGRESPs), forces the client into the defect. MQTT-SN runs over UDP and no authentication is required.\n\nThe impact is a remotely triggerable denial of service (availability) of the affected MQTT-SN client; there is no attacker-controlled data written. The sibling remover process_advertise() uses SYS_SLIST_FOR_EACH_CONTAINER_SAFE and is not affected. The fix assigns the macro's return value to gw.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-15891\n  \nPublished : Sept. 13, 2026, 11:16 p.m. | 27 minutes ago\n  \nDescription :The MQTT-SN client keepalive handler process_ping() in subsys/net/lib/mqtt_sn/mqtt_sn.c removes the gateway record after PINGREQ retries are exhausted. It invoked SYS_SLIST_PEEK_HEAD_CONTAINER(&client->gateways, gw, next) but discarded the result. That macro is a pure expression that does not assign to gw, so gw retained its NULL initializer regardless of the list contents.\n\nThe code then dereferences the NULL gw (gw->gw_id) and passes it to mqtt_sn_gw_destroy(), reaching k_mem_slab_free(&gateways, NULL). With CONFIG_MEM_SLAB_POINTER_VALIDATE enabled this triggers k_panic(); in the default configuration it performs a write through the NULL pointer ((char )mem = slab->free_list;) and corrupts the slab free list. The outcome is a crash/kernel panic or, on targets where address 0 is writable, silent memory-allocator corruption.\n\nThe vulnerable branch runs whenever the connected MQTT-SN gateway fails to answer keepalive PINGREQs for the configured number of retries. This condition is controlled by the remote peer: a malicious or compromised gateway, or an on-path/adjacent attacker that advertises itself as a gateway and then stops responding (or blackholes the real gateway's PINGRESPs), forces the client into the defect. MQTT-SN runs over UDP and no authentication is required.\n\nThe impact is a remotely triggerable denial of service (availability) of the affected MQTT-SN client; there is no attacker-controlled data written. The sibling remover process_advertise() uses SYS_SLIST_FOR_EACH_CONTAINER_SAFE and is not affected. The fix assigns the macro's return value to gw.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-15891\n2. 26.09.14 오전8:16\n3. The MQTT-SN client keepalive handler process_ping(",
-      "cve_id": "CVE-2026-15891",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15891",
-      "source": "cvefeed",
-      "published": "2026-09-14T08:16:27+09:00",
       "lang": "en"
     }
   ],
