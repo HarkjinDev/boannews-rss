@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-18T05:31:24.833206+09:00",
+  "fetched_at": "2026-09-18T06:01:28.908692+09:00",
   "security_news": [
     {
       "title": "인간 몰래 해킹한다… AI 고도화에 ‘스카이넷 현실화’ 경고음",
@@ -3300,18 +3300,6 @@
       "source": "naver",
       "published": "2026-09-15T06:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "반도체 다음 정보보호… 기업들, 대학서 보안 인재 직접 키운다",
-      "summary": "지난해 대형 개인정보 유출 사태가 연이어 터지면서 산업계 내 보안의 중요성이 커진 데 따른 변화다. 15일... 중앙대는 내년도 산업보안학과 신입생을 모집하며 채용조건 전형을 새로 만들었다. 해당 전형으로 입학한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 반도체 다음 정보보호… 기업들, 대학서 보안 인재 직접 키운다 지난해 대형 개인정보 유출 \n2. 중앙대는 내년도 산업보안학과 신입생을 모집하며 채용조건 전형을 새로 만들었다.\n3. 해당 전형으로 입학한...",
-      "link": "https://n.news.naver.com/mnews/article/011/0004661820?sid=105",
-      "source": "naver",
-      "published": "2026-09-15T06:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4393,21 +4381,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-18117",
       "source": "cvefeed",
       "published": "2026-09-15T06:27:57+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-90896 - Missing authentication in Ecommerce Template checkout session endpoint allows unauthenticated disclosure of buyer PII",
-      "summary": "CVE ID :CVE-2026-90896\n  \nPublished : Sept. 14, 2026, 8:58 p.m. | 30 minutes ago\n  \nDescription :Missing Authentication for Critical Function (CWE-306) in the checkout session lookup handler (src/app/api/stripe/checkout_sessions/route.ts), exposed at GET /api/stripe/checkout_sessions, in MarcosCamara01 Ecommerce Template before commit 91e273c allows a remote, unauthenticated attacker holding a valid Stripe Checkout Session id (cs_...) to retrieve the full session object, including the buyer's name, email, phone, billing address, amount paid and internal userId, because the GET handler calls stripe.checkout.sessions.retrieve() and returns the result without checking for an authenticated session or session ownership. Sibling endpoints such as POST /api/stripe/payment already enforced authentication via auth.api.getSession(); this endpoint had no access control whatsoever. The session_id is exposed in the buyer's own browser URL after payment (success_url = /result?session_id={CHECKOUT_SESSION_ID}), so it leaks through Referer headers, analytics tools, server access logs and shared-machine browser history, resulting in disclosure of the buyer's personal data to an unauthenticated actor.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-90896\n  \nPublished : Sept. 14, 2026, 8:58 p.m. | 30 minutes ago\n  \nDescription :Missing Authentication for Critical Function (CWE-306) in the checkout session lookup handler (src/app/api/stripe/checkout_sessions/route.ts), exposed at GET /api/stripe/checkout_sessions, in MarcosCamara01 Ecommerce Template before commit 91e273c allows a remote, unauthenticated attacker holding a valid Stripe Checkout Session id (cs_...) to retrieve the full session object, including the buyer's name, email, phone, billing address, amount paid and internal userId, because the GET handler calls stripe.checkout.sessions.retrieve() and returns the result without checking for an authenticated session or session ownership. Sibling endpoints such as POST /api/stripe/payment already enforced authentication via auth.api.getSession(); this endpoint had no access control whatsoever. The session_id is exposed in the buyer's own browser URL after payment (success_url = /result?session_id={CHECKOUT_SESSION_ID}), so it leaks through Referer headers, analytics tools, server access logs and shared-machine browser history, resulting in disclosure of the buyer's personal data to an unauthenticated actor.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-90896\n2. 26.09.15 오전5:58\n3. Missing Authentication for Critical Function (CWE-",
-      "cve_id": "CVE-2026-90896",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-90896",
-      "source": "cvefeed",
-      "published": "2026-09-15T05:58:39+09:00",
       "lang": "en"
     }
   ],
