@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-18T04:02:08.070574+09:00",
+  "fetched_at": "2026-09-18T04:31:19.542561+09:00",
   "security_news": [
     {
       "title": "인간 몰래 해킹한다… AI 고도화에 ‘스카이넷 현실화’ 경고음",
@@ -4351,36 +4351,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-90896",
       "source": "cvefeed",
       "published": "2026-09-15T05:58:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-89021 - MikroTik RouterOS Path Traversal via Container OCI/tar Image Extraction",
-      "summary": "CVE ID :CVE-2026-89021\n  \nPublished : Sept. 14, 2026, 7:17 p.m. | 14 minutes ago\n  \nDescription :MikroTik RouterOS before 7.24.2 contains a path traversal vulnerability in the container package OCI/tar image extraction that allows attackers to write files outside the container root by supplying a crafted container image with symlinks pointing to arbitrary paths. Attackers can exploit unsanitized tar member path extraction during container import via /container/add to achieve root-privileged file creation, directory creation, file deletion via overlayfs whiteout, and hardlink creation on the persistent data partition without ever starting the container. The 7.23.x long-term branch does not contain this fix; the container binaries in container-7.23.3.npk and container-7.23.4.npk are byte-identical, and there is no fixed long-term release at the time of publication.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-89021\n  \nPublished : Sept. 14, 2026, 7:17 p.m. | 14 minutes ago\n  \nDescription :MikroTik RouterOS before 7.24.2 contains a path traversal vulnerability in the container package OCI/tar image extraction that allows attackers to write files outside the container root by supplying a crafted container image with symlinks pointing to arbitrary paths. Attackers can exploit unsanitized tar member path extraction during container import via /container/add to achieve root-privileged file creation, directory creation, file deletion via overlayfs whiteout, and hardlink creation on the persistent data partition without ever starting the container. The 7.23.x long-term branch does not contain this fix; the container binaries in container-7.23.3.npk and container-7.23.4.npk are byte-identical, and there is no fixed long-term release at the time of publication.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-89021\n2. 26.09.15 오전4:17\n3. MikroTik RouterOS before 7.24.2 contains a path tr",
-      "cve_id": "CVE-2026-89021",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-89021",
-      "source": "cvefeed",
-      "published": "2026-09-15T04:17:54+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59178 - ESPHome Device Builder: Renamed auth env vars silently disable dashboard authentication on upgrade",
-      "summary": "CVE ID :CVE-2026-59178\n  \nPublished : Sept. 14, 2026, 7:17 p.m. | 14 minutes ago\n  \nDescription :ESPHome Device Builder Dashboard is a dashboard for the ESPHome home management software. Prior to version 1.0.12, the dashboard reads its authentication credentials from `$ESPHOME_USERNAME` and `$ESPHOME_PASSWORD`. Earlier versions, and the legacy `esphome` dashboard, read the bare `$USERNAME` and `$PASSWORD` instead. When the env vars were renamed the bare names were dropped with no fallback, so an operator who had protected their dashboard with `USERNAME` / `PASSWORD` (as the older getting started guide documented) loses authentication on upgrade and the dashboard starts open to anyone who can reach its port. The issue is fixed in 1.0.12. The bare `$USERNAME` / `$PASSWORD` are accepted again as a deprecated fallback so previously protected instances stay protected across the upgrade without operator intervention, with a loud deprecation warning at startup directing operators to rename them to `$ESPHOME_USERNAME` / `$ESPHOME_PASSWORD`. The fallback is gated on `$PASSWORD` being set and is only adopted as a pair, so the OS provided `$USERNAME` is never read on its own and the original collision footgun stays closed. A lone bare `$PASSWORD` with no username still fails loud as a credential mismatch rather than starting unauthenticated. This restores compatibility rather than failing closed on the legacy names, because the priority is that an instance which was protected before the upgrade stays protected without the operator having to act; the deprecation warning plus a future removal handles the migration. Operators should migrate to the `$ESPHOME_*` names. The esphome container delivers the fix in the 2026.6.2 release, which bumps its pinned `esphome-device-builder` version to 1.0.12. Without upgrading, restore authentication immediately by setting the new env vars to the same values, on any affected version. Alternatively, do not expose the dashboard port to untrusted networks, and check the startup logs for the `WITHOUT AUTHENTICATION` banner to confirm whether a given instance is currently open.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59178\n  \nPublished : Sept. 14, 2026, 7:17 p.m. | 14 minutes ago\n  \nDescription :ESPHome Device Builder Dashboard is a dashboard for the ESPHome home management software. Prior to version 1.0.12, the dashboard reads its authentication credentials from `$ESPHOME_USERNAME` and `$ESPHOME_PASSWORD`. Earlier versions, and the legacy `esphome` dashboard, read the bare `$USERNAME` and `$PASSWORD` instead. When the env vars were renamed the bare names were dropped with no fallback, so an operator who had protected their dashboard with `USERNAME` / `PASSWORD` (as the older getting started guide documented) loses authentication on upgrade and the dashboard starts open to anyone who can reach its port. The issue is fixed in 1.0.12. The bare `$USERNAME` / `$PASSWORD` are accepted again as a deprecated fallback so previously protected instances stay protected across the upgrade without operator intervention, with a loud deprecation warning at startup directing operators to rename them to `$ESPHOME_USERNAME` / `$ESPHOME_PASSWORD`. The fallback is gated on `$PASSWORD` being set and is only adopted as a pair, so the OS provided `$USERNAME` is never read on its own and the original collision footgun stays closed. A lone bare `$PASSWORD` with no username still fails loud as a credential mismatch rather than starting unauthenticated. This restores compatibility rather than failing closed on the legacy names, because the priority is that an instance which was protected before the upgrade stays protected without the operator having to act; the deprecation warning plus a future removal handles the migration. Operators should migrate to the `$ESPHOME_*` names. The esphome container delivers the fix in the 2026.6.2 release, which bumps its pinned `esphome-device-builder` version to 1.0.12. Without upgrading, restore authentication immediately by setting the new env vars to the same values, on any affected version. Alternatively, do not expose the dashboard port to untrusted networks, and check the startup logs for the `WITHOUT AUTHENTICATION` banner to confirm whether a given instance is currently open.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-59178\n2. 26.09.15 오전4:17\n3. ESPHome Device Builder Dashboard is a dashboard fo",
-      "cve_id": "CVE-2026-59178",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59178",
-      "source": "cvefeed",
-      "published": "2026-09-15T04:17:37+09:00",
       "lang": "en"
     }
   ],
