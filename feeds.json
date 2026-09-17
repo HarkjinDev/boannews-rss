@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-18T00:32:33.807928+09:00",
+  "fetched_at": "2026-09-18T01:01:22.889171+09:00",
   "security_news": [
     {
       "title": "인간 몰래 해킹한다… AI 고도화에 ‘스카이넷 현실화’ 경고음",
@@ -4450,36 +4450,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-84445",
       "source": "cvefeed",
       "published": "2026-09-15T02:17:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53708 - ContextForge: DNS TOCTOU race condition causes SSRF protection bypass (`/admin/gateways/test`)",
-      "summary": "CVE ID :CVE-2026-53708\n  \nPublished : Sept. 14, 2026, 3:56 p.m. | 3 minutes ago\n  \nDescription :ContextForge is an AI gateway, registry, and proxy that provides centralized discovery, guardrails, and management for MCP, A2A, and REST or gRPC APIs. Prior to 1.0.3, the /admin/gateways/test call site in mcpgateway/admin.py calls validate_gateway_test_url() in mcpgateway/common/validators.py to resolve and reject private, loopback, link-local, and cloud-metadata addresses, but ResilientHttpClient later resolves the original hostname again without binding the validated address. When MCPGATEWAY_ADMIN_API_ENABLED is enabled, an attacker with a database-backed role containing explicit gateways.read permission can use DNS rebinding to return a public address during validation and a private or metadata address during connection, bypassing ssrf_blocked_networks and ssrf_dns_fail_closed because those controls apply only to the validation-time result. The endpoint's allow_admin_bypass=False setting means a bootstrap-only virtual platform-admin identity without a database role is not sufficient. Successful exploitation can reach internal services and cloud metadata, expose cloud credentials, access internal APIs, or probe internal network ports. This issue is fixed in version 1.0.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53708\n  \nPublished : Sept. 14, 2026, 3:56 p.m. | 3 minutes ago\n  \nDescription :ContextForge is an AI gateway, registry, and proxy that provides centralized discovery, guardrails, and management for MCP, A2A, and REST or gRPC APIs. Prior to 1.0.3, the /admin/gateways/test call site in mcpgateway/admin.py calls validate_gateway_test_url() in mcpgateway/common/validators.py to resolve and reject private, loopback, link-local, and cloud-metadata addresses, but ResilientHttpClient later resolves the original hostname again without binding the validated address. When MCPGATEWAY_ADMIN_API_ENABLED is enabled, an attacker with a database-backed role containing explicit gateways.read permission can use DNS rebinding to return a public address during validation and a private or metadata address during connection, bypassing ssrf_blocked_networks and ssrf_dns_fail_closed because those controls apply only to the validation-time result. The endpoint's allow_admin_bypass=False setting means a bootstrap-only virtual platform-admin identity without a database role is not sufficient. Successful exploitation can reach internal services and cloud metadata, expose cloud credentials, access internal APIs, or probe internal network ports. This issue is fixed in version 1.0.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-53708\n2. 26.09.15 오전12:56\n3. ContextForge is an AI gateway, registry, and proxy",
-      "cve_id": "CVE-2026-53708",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53708",
-      "source": "cvefeed",
-      "published": "2026-09-15T00:56:53+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47701 - OpenTelemetry Operator: ServiceMonitor bearerTokenFile reads arbitrary local file and sends contents as bearer auth",
-      "summary": "CVE ID :CVE-2026-47701\n  \nPublished : Sept. 14, 2026, 3:32 p.m. | 27 minutes ago\n  \nDescription :The OpenTelemetry Operator is a Kubernetes Operator for the OpenTelemetry Collector. Prior to 0.152.0, cmd/otel-allocator TargetAllocator instances with targetAllocator.prometheusCR.enabled set to true preserve a selected ServiceMonitor endpoint's bearerTokenFile value as HTTPClientConfig.Authorization.CredentialsFile. A tenant who can create or update a ServiceMonitor matched by serviceMonitorSelector and serviceMonitorNamespaceSelector can point bearerTokenFile at a file in the Collector pod, including /var/run/secrets/kubernetes.io/serviceaccount/token, and direct scraping to a tenant-controlled endpoint. The Collector reads that file at scrape time and sends its contents as bearer authorization on every scrape interval. Exploitation also requires the Collector service-account token or another sensitive file to be mounted and the Collector to reach the chosen target. The DenyFSAccessThroughSMs control was absent, allowing disclosure of the Collector's service-account JWT or other mounted files, and resulting Kubernetes API impact is limited by the Collector service account's permissions. This issue is fixed in version 0.152.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47701\n  \nPublished : Sept. 14, 2026, 3:32 p.m. | 27 minutes ago\n  \nDescription :The OpenTelemetry Operator is a Kubernetes Operator for the OpenTelemetry Collector. Prior to 0.152.0, cmd/otel-allocator TargetAllocator instances with targetAllocator.prometheusCR.enabled set to true preserve a selected ServiceMonitor endpoint's bearerTokenFile value as HTTPClientConfig.Authorization.CredentialsFile. A tenant who can create or update a ServiceMonitor matched by serviceMonitorSelector and serviceMonitorNamespaceSelector can point bearerTokenFile at a file in the Collector pod, including /var/run/secrets/kubernetes.io/serviceaccount/token, and direct scraping to a tenant-controlled endpoint. The Collector reads that file at scrape time and sends its contents as bearer authorization on every scrape interval. Exploitation also requires the Collector service-account token or another sensitive file to be mounted and the Collector to reach the chosen target. The DenyFSAccessThroughSMs control was absent, allowing disclosure of the Collector's service-account JWT or other mounted files, and resulting Kubernetes API impact is limited by the Collector service account's permissions. This issue is fixed in version 0.152.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-47701\n2. 26.09.15 오전12:32\n3. The OpenTelemetry Operator is a Kubernetes Operato",
-      "cve_id": "CVE-2026-47701",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47701",
-      "source": "cvefeed",
-      "published": "2026-09-15T00:32:56+09:00",
       "lang": "en"
     }
   ],
