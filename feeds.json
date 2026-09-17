@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-17T23:31:11.555687+09:00",
+  "fetched_at": "2026-09-18T00:01:34.073585+09:00",
   "security_news": [
+    {
+      "title": "따릉이 462만명 정보 털렸는데…서울시설공단 책임자 ‘무징계’",
+      "summary": "따릉이 개인정보를 해킹한 혐의를 받는 10대 피의자들은 이미 지난 2월 검찰에 송치됐다. 반면 경찰과... 그러나 해킹 행위자의 형사 책임과 개인정보를 보유·관리한 공공기관의 관리 책임은 별개다. 누가 개인정보...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 따릉이 462만 명 개인정보 유출, 10대 피의자 검찰 송치\n2. 서울시설공단 책임자는 징계 없이 개인정보 관리 소홀\n3. 수사 중인 공공기관 관리 책임, 추가 조사 예정",
+      "link": "https://wemakenews.co.kr/news/view.php?no=26336",
+      "source": "naver",
+      "published": "2026-09-17T23:52:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "AI 안전 격리 강조한 술레이만, 앤트로픽 비판",
       "summary": "오픈AI는 내부 사이버보안 평가에서 모델들이 인터넷 격리 통제를 우회하고 허깅페이스 시스템 일부를 침해했다고 8월 26일 공식 보고서에서 밝혔다. 오픈AI는 모델들이 여러 취약점과 탈취한 인증정보를 연결해...",
@@ -3372,21 +3384,39 @@
       "source": "dailysecu",
       "published": "2026-09-15T00:21:11+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "에스에스알, SolidStep·MetiEye·CODE-RAY 앞세워 전방위 취약점 관리 강...",
-      "summary": "에스에스알은 지난 9월 8일 서울 세종대학교 컨벤션센터에서 열린 '2026 대한민국 사이버 보안 컨퍼런스... 후원한 사이버보안 컨퍼런스·전시회​로, 에스에스알은 행사장에서 △SolidStep CCE △SolidStep CVE △MetiEye...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 에스에스알, SolidStep·MetiEye·CODE-RAY 앞세워 전방위 취약점 관리 강\n2. 에스에스알은 지난 9월 8일 서울 세종대학교 컨벤션센터에서 열린 '2026 대한민국 사이버\n3. 후원한 사이버보안 컨퍼런스·전시회​로, 에스에스알은 행사장에서 △SolidStep CCE ",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208455",
-      "source": "naver",
-      "published": "2026-09-14T23:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "LausivLoader analysis, or how to pass data between malware stages, (Thu, Sep 17th)",
+      "summary": "At the end of August, a malspam message was caught in the quarantine of a mail gateway operated by one of my customers. The message was not especially remarkable â€“ it asked the recipient to review some attached requirements and provide a price quotation for a fiber optic system and appeared to impersonate an employee of a legitimate company.\r",
+      "description": "At the end of August, a malspam message was caught in the quarantine of a mail gateway operated by one of my customers. The message was not especially remarkable â€“ it asked the recipient to review some attached requirements and provide a price quotation for a fiber optic system and appeared to impersonate an employee of a legitimate company.\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. LausivLoader analysis, or how to pass data between\n2. SANS_ISC\n3. At the end of August, a malspam message was caught",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33348",
+      "source": "sans_isc",
+      "published": "2026-09-17T23:54:34+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-92962 - vm2 before 3.11.4 Defense Invariant Violation via setup-sandbox.js",
+      "summary": "CVE ID :CVE-2026-92962\n  \nPublished : Sept. 17, 2026, 2:18 p.m. | 28 minutes ago\n  \nDescription :vm2 is a sandbox for running untrusted JavaScript. In vm2 versions up to and including 3.11.3, the defaultSandboxPrepareStackTrace function in lib/setup-sandbox.js builds its output array using prototype-walking index assignment (lines[lines.length] = value) rather than a prototype-bypassing define-property primitive. Because this bridge-internal array is allocated in the sandbox realm, code inside the sandbox can install an accessor on Array.prototype for the relevant index; the accessor is then invoked whenever the sandbox reads error.stack (or otherwise triggers Error.prepareStackTrace), allowing sandbox code to observe and intercept each stack-trace line written by the bridge. The same pattern is used in the error-handling (catch) branch. The values written are formatted strings only, so the practical impact is limited to an information side channel and a violation of vm2's bridge-container defense invariant rather than a sandbox escape; the vendor rates the issue Low. The issue is fixed in vm2 3.11.4, which installs each entry as an own data property via Reflect.defineProperty.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-92962\n  \nPublished : Sept. 17, 2026, 2:18 p.m. | 28 minutes ago\n  \nDescription :vm2 is a sandbox for running untrusted JavaScript. In vm2 versions up to and including 3.11.3, the defaultSandboxPrepareStackTrace function in lib/setup-sandbox.js builds its output array using prototype-walking index assignment (lines[lines.length] = value) rather than a prototype-bypassing define-property primitive. Because this bridge-internal array is allocated in the sandbox realm, code inside the sandbox can install an accessor on Array.prototype for the relevant index; the accessor is then invoked whenever the sandbox reads error.stack (or otherwise triggers Error.prepareStackTrace), allowing sandbox code to observe and intercept each stack-trace line written by the bridge. The same pattern is used in the error-handling (catch) branch. The values written are formatted strings only, so the practical impact is limited to an information side channel and a violation of vm2's bridge-container defense invariant rather than a sandbox escape; the vendor rates the issue Low. The issue is fixed in vm2 3.11.4, which installs each entry as an own data property via Reflect.defineProperty.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-92962\n2. 26.09.17 오후11:18\n3. vm2 is a sandbox for running untrusted JavaScript.",
+      "cve_id": "CVE-2026-92962",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92962",
+      "source": "cvefeed",
+      "published": "2026-09-17T23:18:02+09:00",
+      "lang": "da"
+    },
     {
       "title": "CVE-2026-92917 - Grav 2.0.0-rc.1 through 2.0.21 Configuration Disclosure via print_r",
       "summary": "CVE ID :CVE-2026-92917\n  \nPublished : Sept. 17, 2026, 12:18 p.m. | 31 minutes ago\n  \nDescription :Grav is a flat-file CMS. In versions 2.0.0-rc.1 through 2.0.21, the Twig content sandbox fails to restrict the dump and serialize filters (print_r, vardump, json_encode, yaml_encode, string): GravExtension::assertSandboxDumpSafe() determines sandbox state by calling SandboxExtension::isSandboxed() without a Source argument, which reports only the global sandbox flag that Grav never enables, so the guard added in GHSA-mc5q-6hpj-rp7j never executes. As a result, an authenticated user with page-edit rights can render {{ config|print_r }} in page content with Twig processing enabled and dump Grav's entire merged configuration — print_r reflects the real Config object held in a private property of the SandboxConfig facade, bypassing its path redaction — exposing plugin secrets such as SMTP credentials, API tokens, webhook secrets and cache backend passwords. Grav 1.7 is not affected because it ships no Twig content sandbox. The issue is fixed in 2.0.22, where the affected filters are registered with Twig's needs_is_sandboxed flag.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4451,21 +4481,6 @@
       "source": "cvefeed",
       "published": "2026-09-15T00:32:56+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Gitea 제품 보안 업데이트 권고",
-      "summary": "1. Gitea 프로젝트는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고\n3. 최근 해당 취약점으로 공격 및 피해가 발생하고 있어 이용자들의 주의를 요함",
-      "description": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Gitea 프로젝트는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고\n3. 최근 해당 취약점으로 공격 및 피해가 발생하고 있어 이용자들의 주의를 요함",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72188",
-      "source": "krcert_notice",
-      "published": "2026-09-15T00:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "reputation": []
