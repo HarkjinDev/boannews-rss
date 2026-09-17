@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-18T06:33:45.802562+09:00",
+  "fetched_at": "2026-09-18T07:02:39.350018+09:00",
   "security_news": [
+    {
+      "title": "개인정보 유출 한 번에 수백만명 소송?…‘옵트아웃·소급적용’ 유통업...",
+      "summary": "지난달 무신사가 운영하는 29CM에서 고객 개인정보 약 16만건이 유출됐으며, 지난 6월에는 CU 편의점 택배 서비스를 운영하는 BGF네트웍스가 해킹 공격을 받아 고객 개인정보가 유출됐다. 올해 초 교원그룹도 랜섬웨어...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 개인정보 유출 한 번에 수백만명 소송?…‘옵트아웃·소급적용’ 유통업...\n2. 지난달 무신사가 운영하는 29CM에서 고객 개인정보 약 16만건이 유출됐으며, 지난 6월에\n3. 올해 초 교원그룹도 랜섬웨어...",
+      "link": "https://n.news.naver.com/mnews/article/119/0003134073?sid=101",
+      "source": "naver",
+      "published": "2026-09-18T06:38:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "정부만 좋은 '해킹 과징금 10%' 피해자는 '빈손'",
       "summary": "특히 해킹 피해 기업이 고객에게 인색한 보상안을 내놓으면서 정부가 피해자 보상 제도를 근본적으로... 정부는 지난해부터 대규모 해킹 사고가 잇따르자 기업의 개인정보 보호 책임을 강화하기 위해 과징금 상한을...",
@@ -3291,6 +3303,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54597 - ITFlow: Authenticated Time-Based Blind SQL Injection in ITFlow via expires Parameter",
+      "summary": "CVE ID :CVE-2026-54597\n  \nPublished : Sept. 17, 2026, 8:34 p.m. | 14 minutes ago\n  \nDescription :ITFlow provides an IT documentation, ticketing and accounting system for small managed service providers. Prior to version 26.07, an authenticated user with module_support write permission and access to a credential record can perform time-based blind SQL injection through the expires parameter of the share_generate_link handler in agent/ajax.php. sanitizeInput applies string-context escaping, but expires is inserted unquoted into the item_expire_at MySQL INTERVAL expression, allowing a crafted expression and interval unit to execute conditional database queries whose results are inferred from response delays. This can expose password hashes, SMTP credentials, API keys, encrypted vault data, and database metadata and support administrative takeover after credential cracking. This issue is fixed in version 26.07.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54597\n  \nPublished : Sept. 17, 2026, 8:34 p.m. | 14 minutes ago\n  \nDescription :ITFlow provides an IT documentation, ticketing and accounting system for small managed service providers. Prior to version 26.07, an authenticated user with module_support write permission and access to a credential record can perform time-based blind SQL injection through the expires parameter of the share_generate_link handler in agent/ajax.php. sanitizeInput applies string-context escaping, but expires is inserted unquoted into the item_expire_at MySQL INTERVAL expression, allowing a crafted expression and interval unit to execute conditional database queries whose results are inferred from response delays. This can expose password hashes, SMTP credentials, API keys, encrypted vault data, and database metadata and support administrative takeover after credential cracking. This issue is fixed in version 26.07.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-54597\n2. 26.09.18 오전5:34\n3. ITFlow provides an IT documentation, ticketing and",
+      "cve_id": "CVE-2026-54597",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54597",
+      "source": "cvefeed",
+      "published": "2026-09-18T05:34:22+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-68523 - Fulgur: Unbounded page slicing from attacker-controlled CSS height causes denial of service",
+      "summary": "CVE ID :CVE-2026-68523\n  \nPublished : Sept. 17, 2026, 8:23 p.m. | 25 minutes ago\n  \nDescription :`fulgur` converts untrusted HTML/CSS into PDF, commonly on a server that processes input supplied by many tenants. In versions prior to 0.19.0, a body-direct child whose CSS-resolved height greatly exceeds the page height was sliced into one fragment per page with no upper bound. This is fixed in 0.19.0. A `MAX_PAGES` cap bounds the slice loop — halting it even\nfor a `+inf` height — and non-finite layout heights are sanitized so they can no longer drive the loop. As a workaround, validate or constrain untrusted CSS (in particular `height` / `vh` on body-level elements) before passing HTML to fulgur.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-68523\n  \nPublished : Sept. 17, 2026, 8:23 p.m. | 25 minutes ago\n  \nDescription :`fulgur` converts untrusted HTML/CSS into PDF, commonly on a server that processes input supplied by many tenants. In versions prior to 0.19.0, a body-direct child whose CSS-resolved height greatly exceeds the page height was sliced into one fragment per page with no upper bound. This is fixed in 0.19.0. A `MAX_PAGES` cap bounds the slice loop — halting it even\nfor a `+inf` height — and non-finite layout heights are sanitized so they can no longer drive the loop. As a workaround, validate or constrain untrusted CSS (in particular `height` / `vh` on body-level elements) before passing HTML to fulgur.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-68523\n2. 26.09.18 오전5:23\n3. `fulgur` converts untrusted HTML/CSS into PDF, com",
+      "cve_id": "CVE-2026-68523",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68523",
+      "source": "cvefeed",
+      "published": "2026-09-18T05:23:23+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54239 - FaustWP  — Authentication Bypass via Initialization Vector Modification in Token Envelope",
       "summary": "CVE ID :CVE-2026-54239\n  \nPublished : Sept. 17, 2026, 7:16 p.m. | 20 minutes ago\n  \nDescription :Faust.js is a headless WordPress toolkit. Prior to 1.8.11, the FaustWP WordPress plugin authenticates only the ciphertext in its token envelope and excludes the 16-byte initialization vector from the HMAC in WPE\\FaustWP\\Auth\\encrypt() and WPE\\FaustWP\\Auth\\decrypt() in plugins/faustwp/includes/auth/functions.php. A logged-in non-administrator who obtains an authorization code from GET /generate can modify the unauthenticated initialization vector so that CBC decryption changes the token type and user identifier while the HMAC remains valid. This can produce an access token for an Administrator and permit full WordPress REST API access, administrator-account creation, plugin installation, and arbitrary code execution. This issue is fixed in repository version 1.8.11.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
