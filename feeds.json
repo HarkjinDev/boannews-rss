@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-18T07:32:37.328173+09:00",
+  "fetched_at": "2026-09-18T08:01:23.046613+09:00",
   "security_news": [
     {
       "title": "27세 AI 연구원이 회사를 떠난 이유…\"우리가 통제 못할 수도 있다\"",
@@ -3300,21 +3300,24 @@
       "source": "naver",
       "published": "2026-09-15T08:05:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "MS \"AI가 인간의 종료 명령 거부해선 안 돼\"… 행동강령 초안 공개",
-      "summary": "다만 합법적이고 승인된 방어적 사이버 보안 활동은 지원할 수 있도록 했다. 보안 교육과 취약점 발견, 악성코드 분석, 방어 목적의 개념증명(PoC) 코드 개발과 시험 등이 이에 해당한다. 공격 원리를 이해하고 방어하는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. MS, AI 종료 명령 거부 금지 행동강령 초안 공개\n2. AI는 합법적 사이버 보안 활동은 지원 가능\n3. 취약점 발견, 악성코드 분석 등 방어 목적엔 허용",
-      "link": "https://www.news2day.co.kr/article/20260915500019",
-      "source": "naver",
-      "published": "2026-09-15T07:36:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54634 - Hamlib: rigctld `send_raw` Stack Out-of-Bounds Write and Uninitialized Memory Disclosure",
+      "summary": "CVE ID :CVE-2026-54634\n  \nPublished : Sept. 17, 2026, 10:17 p.m. | 32 minutes ago\n  \nDescription :Hamlib is a ham radio control library for radios, rotators, and amplifiers. Prior to 4.7.2, the unauthenticated rigctld send_raw command on TCP port 4532 reaches rigctl_send_raw() in tests/rigctl_parse.c, which writes a NUL byte at buf[buf_len + 1] outside its 200-byte stack buffer, and rig_send_raw() in src/rig.c, which copies reply_len - 1 bytes instead of the actual nbytes received. A remote client can send the CR terminator with a short payload to trigger both flaws in one command under the default no-password configuration. The out-of-bounds write can crash the daemon or corrupt adjacent stack memory, while the oversized copy can return up to 198 bytes of uninitialized stack data to the client. This issue is fixed in version 4.7.2.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54634\n  \nPublished : Sept. 17, 2026, 10:17 p.m. | 32 minutes ago\n  \nDescription :Hamlib is a ham radio control library for radios, rotators, and amplifiers. Prior to 4.7.2, the unauthenticated rigctld send_raw command on TCP port 4532 reaches rigctl_send_raw() in tests/rigctl_parse.c, which writes a NUL byte at buf[buf_len + 1] outside its 200-byte stack buffer, and rig_send_raw() in src/rig.c, which copies reply_len - 1 bytes instead of the actual nbytes received. A remote client can send the CR terminator with a short payload to trigger both flaws in one command under the default no-password configuration. The out-of-bounds write can crash the daemon or corrupt adjacent stack memory, while the oversized copy can return up to 198 bytes of uninitialized stack data to the client. This issue is fixed in version 4.7.2.\n  \nSeverity: 7.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-54634\n2. 26.09.18 오전7:17\n3. Hamlib is a ham radio control library for radios, ",
+      "cve_id": "CVE-2026-54634",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54634",
+      "source": "cvefeed",
+      "published": "2026-09-18T07:17:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54597 - ITFlow: Authenticated Time-Based Blind SQL Injection in ITFlow via expires Parameter",
       "summary": "CVE ID :CVE-2026-54597\n  \nPublished : Sept. 17, 2026, 8:34 p.m. | 14 minutes ago\n  \nDescription :ITFlow provides an IT documentation, ticketing and accounting system for small managed service providers. Prior to version 26.07, an authenticated user with module_support write permission and access to a credential record can perform time-based blind SQL injection through the expires parameter of the share_generate_link handler in agent/ajax.php. sanitizeInput applies string-context escaping, but expires is inserted unquoted into the item_expire_at MySQL INTERVAL expression, allowing a crafted expression and interval unit to execute conditional database queries whose results are inferred from response delays. This can expose password hashes, SMTP credentials, API keys, encrypted vault data, and database metadata and support administrative takeover after credential cracking. This issue is fixed in version 26.07.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
