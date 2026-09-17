@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-18T03:31:17.918855+09:00",
+  "fetched_at": "2026-09-18T04:02:08.070574+09:00",
   "security_news": [
     {
       "title": "인간 몰래 해킹한다… AI 고도화에 ‘스카이넷 현실화’ 경고음",
@@ -3364,6 +3364,66 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-54253 - TS3 Manager: Reflected XSS via /api/download port parameter steals operator session",
+      "summary": "CVE ID :CVE-2026-54253\n  \nPublished : Sept. 17, 2026, 6:37 p.m. | 20 minutes ago\n  \nDescription :TS3 Manager is modern web interface for maintaining Teamspeak3 servers. Prior to 2.2.6, the /api/download handler in packages/server/routes/api.js passes the attacker-controlled port query parameter to socket.connect(port, host) and returns the resulting error.message through res.status(400).send(error.message) as text/html without a Content Security Policy. When a logged-in operator follows a crafted top-level link, the reflected value executes in the manager origin. The token cookie set in packages/ui/src/store/modules/query.js lacks HttpOnly, Secure, and an explicit SameSite attribute, allowing the script to read the token and call the autofillform event in packages/server/socket.js. autofillform returns the decoded JWT, including the cleartext ServerQuery password, enabling operator-session hijacking and control of the managed TeamSpeak server when the operator uses administrative ServerQuery credentials. A valid operator session and user interaction are required. This issue is fixed in 2.2.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54253\n  \nPublished : Sept. 17, 2026, 6:37 p.m. | 20 minutes ago\n  \nDescription :TS3 Manager is modern web interface for maintaining Teamspeak3 servers. Prior to 2.2.6, the /api/download handler in packages/server/routes/api.js passes the attacker-controlled port query parameter to socket.connect(port, host) and returns the resulting error.message through res.status(400).send(error.message) as text/html without a Content Security Policy. When a logged-in operator follows a crafted top-level link, the reflected value executes in the manager origin. The token cookie set in packages/ui/src/store/modules/query.js lacks HttpOnly, Secure, and an explicit SameSite attribute, allowing the script to read the token and call the autofillform event in packages/server/socket.js. autofillform returns the decoded JWT, including the cleartext ServerQuery password, enabling operator-session hijacking and control of the managed TeamSpeak server when the operator uses administrative ServerQuery credentials. A valid operator session and user interaction are required. This issue is fixed in 2.2.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-54253\n2. 26.09.18 오전3:37\n3. TS3 Manager is modern web interface for maintainin",
+      "cve_id": "CVE-2026-54253",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54253",
+      "source": "cvefeed",
+      "published": "2026-09-18T03:37:38+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-54617 - GravitLauncher: Unauthenticated path traversal in LaunchServer FileServerHandler",
+      "summary": "CVE ID :CVE-2026-54617\n  \nPublished : Sept. 17, 2026, 6:34 p.m. | 23 minutes ago\n  \nDescription :GravitLauncher is an open-source Minecraft launcher based on sashok724's v3. Prior to 5.7.12, an unauthenticated remote actor can send a raw HTTP request target without a leading slash to the default LaunchServer file server on port 9274. FileServerHandler.channelRead0 in components/launchserver/src/main/java/pro/gravit/launchserver/socket/handlers/fileserver/FileServerHandler.java strips the first request-target character and resolves the remaining path against updatesDir without re-normalizing and verifying containment. This leaves parent-directory components in a no-leading-slash request and allows reading any file accessible to the LaunchServer process, including .keys/ecdsa_id, .keys/legacySalt, and LaunchServer.json. Disclosure of those files can expose signing keys, refresh-token material, and database credentials, enabling forged administrative access tokens and full authentication bypass. A normalizing L7 proxy may block the primary request form, but direct exposure and L4/TCP proxies remain affected, and netty.fileServerEnabled is enabled by default. This issue is fixed in 5.7.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54617\n  \nPublished : Sept. 17, 2026, 6:34 p.m. | 23 minutes ago\n  \nDescription :GravitLauncher is an open-source Minecraft launcher based on sashok724's v3. Prior to 5.7.12, an unauthenticated remote actor can send a raw HTTP request target without a leading slash to the default LaunchServer file server on port 9274. FileServerHandler.channelRead0 in components/launchserver/src/main/java/pro/gravit/launchserver/socket/handlers/fileserver/FileServerHandler.java strips the first request-target character and resolves the remaining path against updatesDir without re-normalizing and verifying containment. This leaves parent-directory components in a no-leading-slash request and allows reading any file accessible to the LaunchServer process, including .keys/ecdsa_id, .keys/legacySalt, and LaunchServer.json. Disclosure of those files can expose signing keys, refresh-token material, and database credentials, enabling forged administrative access tokens and full authentication bypass. A normalizing L7 proxy may block the primary request form, but direct exposure and L4/TCP proxies remain affected, and netty.fileServerEnabled is enabled by default. This issue is fixed in 5.7.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-54617\n2. 26.09.18 오전3:34\n3. GravitLauncher is an open-source Minecraft launche",
+      "cve_id": "CVE-2026-54617",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54617",
+      "source": "cvefeed",
+      "published": "2026-09-18T03:34:40+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-52727 - lxc-ci: Pacman keyring stored in archlinux image with a private key",
+      "summary": "CVE ID :CVE-2026-52727\n  \nPublished : Sept. 17, 2026, 6:21 p.m. | 36 minutes ago\n  \nDescription :lxc-ci contains continuous integration and image-build scripts for LXC. Prior to the 2026-05-28 Arch Linux image publication, images built from images/archlinux.yaml retain the same pacman local-signing private key in /etc/pacman.d/gnupg and redistribute it to every container or virtual machine created from that image. An attacker who controls an HTTP package mirror or can intercept mirror traffic can use the shared pacman signing private key to sign modified packages that affected clients accept as trusted. Installing those packages permits arbitrary code execution as root on the client system. This issue is fixed in Arch Linux images published on or after 2026-05-28.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-52727\n  \nPublished : Sept. 17, 2026, 6:21 p.m. | 36 minutes ago\n  \nDescription :lxc-ci contains continuous integration and image-build scripts for LXC. Prior to the 2026-05-28 Arch Linux image publication, images built from images/archlinux.yaml retain the same pacman local-signing private key in /etc/pacman.d/gnupg and redistribute it to every container or virtual machine created from that image. An attacker who controls an HTTP package mirror or can intercept mirror traffic can use the shared pacman signing private key to sign modified packages that affected clients accept as trusted. Installing those packages permits arbitrary code execution as root on the client system. This issue is fixed in Arch Linux images published on or after 2026-05-28.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-52727\n2. 26.09.18 오전3:21\n3. lxc-ci contains continuous integration and image-b",
+      "cve_id": "CVE-2026-52727",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-52727",
+      "source": "cvefeed",
+      "published": "2026-09-18T03:21:21+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-54551 - WireGuard Portal: Authenticated WebSocket /api/v0/ws broadcasts all peers' and interfaces' traffic stats to every user (missing per-user authorization)",
+      "summary": "CVE ID :CVE-2026-54551\n  \nPublished : Sept. 17, 2026, 6:16 p.m. | 41 minutes ago\n  \nDescription :WireGuard Portal, or wg-portal, is a web-based configuration portal for WireGuard server management. From 2.2.0 until 2.3.0, the authenticated GET /api/v0/ws statistics WebSocket in internal/app/api/v0/handlers/endpoint_websocket.go subscribes to TopicPeerStatsUpdated and TopicInterfaceStatsUpdated and forwards every TrafficDelta event without per-user authorization in handleWebsocket(). A low-privilege user can enumerate peer public keys through EntityId and monitor BytesReceived and BytesTransmitted values for peers belonging to other users. The same connection exposes interface_stats and interface names that the REST API limits to administrators. Tunnel content, AllowedIPs, and user identities remain authorization-gated. This issue is fixed in version 2.3.0.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54551\n  \nPublished : Sept. 17, 2026, 6:16 p.m. | 41 minutes ago\n  \nDescription :WireGuard Portal, or wg-portal, is a web-based configuration portal for WireGuard server management. From 2.2.0 until 2.3.0, the authenticated GET /api/v0/ws statistics WebSocket in internal/app/api/v0/handlers/endpoint_websocket.go subscribes to TopicPeerStatsUpdated and TopicInterfaceStatsUpdated and forwards every TrafficDelta event without per-user authorization in handleWebsocket(). A low-privilege user can enumerate peer public keys through EntityId and monitor BytesReceived and BytesTransmitted values for peers belonging to other users. The same connection exposes interface_stats and interface names that the REST API limits to administrators. Tunnel content, AllowedIPs, and user identities remain authorization-gated. This issue is fixed in version 2.3.0.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-54551\n2. 26.09.18 오전3:16\n3. WireGuard Portal, or wg-portal, is a web-based con",
+      "cve_id": "CVE-2026-54551",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54551",
+      "source": "cvefeed",
+      "published": "2026-09-18T03:16:46+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-69197 - Umbraco: Delivery API leaks protected (Public Access) content through Content Picker / Multi-Node Tree Picker expansion",
       "summary": "CVE ID :CVE-2026-69197\n  \nPublished : Sept. 17, 2026, 3:44 p.m. | 18 minutes ago\n  \nDescription :Umbraco is an ASP.NET CMS. Prior to 13.15.1, 17.5.3, and 18.0.2, the Content Delivery API applies member and Public Access checks to the directly requested node but not to referenced nodes serialized through Content Picker or Multi-Node Tree Picker properties, including pickers nested in Block List, Block Grid, or Rich Text Editor blocks. When DeliveryApi:PublicAccess is enabled, an anonymous caller can retrieve a protected node's name, route, and id through an unprotected referencing node and use ?expand to retrieve full property values. When the Delivery API is instead gated by the organization-wide API key, a key holder can still bypass per-node Public Access through the same expansion path. The same RequestContextOutputExpansionStrategyV2 and ElementOnlyOutputExpansionStrategy path also bypasses allowed or disallowed content-type alias restrictions for referenced content. Direct requests for the protected node still return 401, and no integrity or availability impact is established. This issue is fixed in versions 13.15.1, 17.5.3, and 18.0.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-69197\n  \nPublished : Sept. 17, 2026, 3:44 p.m. | 18 minutes ago\n  \nDescription :Umbraco is an ASP.NET CMS. Prior to 13.15.1, 17.5.3, and 18.0.2, the Content Delivery API applies member and Public Access checks to the directly requested node but not to referenced nodes serialized through Content Picker or Multi-Node Tree Picker properties, including pickers nested in Block List, Block Grid, or Rich Text Editor blocks. When DeliveryApi:PublicAccess is enabled, an anonymous caller can retrieve a protected node's name, route, and id through an unprotected referencing node and use ?expand to retrieve full property values. When the Delivery API is instead gated by the organization-wide API key, a key holder can still bypass per-node Public Access through the same expansion path. The same RequestContextOutputExpansionStrategyV2 and ElementOnlyOutputExpansionStrategy path also bypasses allowed or disallowed content-type alias restrictions for referenced content. Direct requests for the protected node still return 401, and no integrity or availability impact is established. This issue is fixed in versions 13.15.1, 17.5.3, and 18.0.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4321,36 +4381,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-59178",
       "source": "cvefeed",
       "published": "2026-09-15T04:17:37+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-15893 - Zephyr IPv6 Neighbor Discovery zero reachable time from crafted Router Advertisement causes assertion/DoS",
-      "summary": "CVE ID :CVE-2026-15893\n  \nPublished : Sept. 14, 2026, 6:49 p.m. | 39 minutes ago\n  \nDescription :net_if_ipv6_calc_reachable_time() in subsys/net/ip/net_if.c derives a randomized ND reachable time from ipv6->base_reachable_time as min_reachable + sys_rand32_get() % (max_reachable - min_reachable), where min_reachable = base/2 and max_reachable = 3*base/2 using integer division. When base_reachable_time is 1, both min_reachable and the modulus collapse so the function returns 0, and net_if_ipv6_set_reachable_time() stores that 0 into ipv6->reachable_time.\n\nThe base_reachable_time is attacker-controlled: handle_ra_input() in subsys/net/ip/ipv6_nbr.c accepts the Reachable Time field of an incoming Router Advertisement whenever it is nonzero and <= MAX_REACHABLE_TIME, so a single unauthenticated, link-local RA carrying a Reachable Time of 1 drives the computed reachable time to 0. Router Advertisements are unauthenticated by default and require only adjacency to the target link.\n\nWhen a neighbor is subsequently confirmed reachable, net_ipv6_nbr_set_reachable_timer() reads the value and executes NET_ASSERT(time, \"Zero reachable timeout!\"). On builds with CONFIG_ASSERT enabled this triggers a fatal kernel assertion — a remote denial of service; on builds without assertions the reachable timer is armed with K_MSEC(0) and fires immediately, forcing reachable neighbors into perpetual re-solicitation (STALE), degrading Neighbor Discovery. The impact is limited to availability; there is no memory-safety, confidentiality, or integrity consequence.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-15893\n  \nPublished : Sept. 14, 2026, 6:49 p.m. | 39 minutes ago\n  \nDescription :net_if_ipv6_calc_reachable_time() in subsys/net/ip/net_if.c derives a randomized ND reachable time from ipv6->base_reachable_time as min_reachable + sys_rand32_get() % (max_reachable - min_reachable), where min_reachable = base/2 and max_reachable = 3*base/2 using integer division. When base_reachable_time is 1, both min_reachable and the modulus collapse so the function returns 0, and net_if_ipv6_set_reachable_time() stores that 0 into ipv6->reachable_time.\n\nThe base_reachable_time is attacker-controlled: handle_ra_input() in subsys/net/ip/ipv6_nbr.c accepts the Reachable Time field of an incoming Router Advertisement whenever it is nonzero and <= MAX_REACHABLE_TIME, so a single unauthenticated, link-local RA carrying a Reachable Time of 1 drives the computed reachable time to 0. Router Advertisements are unauthenticated by default and require only adjacency to the target link.\n\nWhen a neighbor is subsequently confirmed reachable, net_ipv6_nbr_set_reachable_timer() reads the value and executes NET_ASSERT(time, \"Zero reachable timeout!\"). On builds with CONFIG_ASSERT enabled this triggers a fatal kernel assertion — a remote denial of service; on builds without assertions the reachable timer is armed with K_MSEC(0) and fires immediately, forcing reachable neighbors into perpetual re-solicitation (STALE), degrading Neighbor Discovery. The impact is limited to availability; there is no memory-safety, confidentiality, or integrity consequence.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-15893\n2. 26.09.15 오전3:49\n3. net_if_ipv6_calc_reachable_time() in subsys/net/ip",
-      "cve_id": "CVE-2026-15893",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15893",
-      "source": "cvefeed",
-      "published": "2026-09-15T03:49:55+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Apple Updates Everything, (Mon, Sep 14th)",
-      "summary": "Today, Apple released its annual update across all its operating systems. With that, Apple not only released new features but also patched 261 different vulnerabilities. This is the most vulnerabilities Apple has ever patched, but the increase is not as significant as other vendors&#;x26;#;39; \"post-AI\" patch releases. \r",
-      "description": "Today, Apple released its annual update across all its operating systems. With that, Apple not only released new features but also patched 261 different vulnerabilities. This is the most vulnerabilities Apple has ever patched, but the increase is not as significant as other vendors&#;x26;#;39; \"post-AI\" patch releases. \r",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Apple Updates Everything, (Mon, Sep 14th)\n2. SANS_ISC\n3. Today, Apple released its annual update across all",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33336",
-      "source": "sans_isc",
-      "published": "2026-09-15T03:33:44+09:00",
       "lang": "en"
     }
   ],
