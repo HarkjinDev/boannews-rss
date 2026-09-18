@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-18T20:01:30.463649+09:00",
+  "fetched_at": "2026-09-18T20:31:17.573932+09:00",
   "security_news": [
+    {
+      "title": "中 해커, AI 무장하고 블록체인망 기습 침투...\"삭제·차단 불가능\"",
+      "summary": "국가 배후 해킹 조직들이 블록체인의 위변조 불가능한 특성을 악용해 명령제어(C2) 인프라를 빠르게... 특히 2026년 2분기 기준 신규 온체인 악성 활동의 3분의 2가 국가 연계 해킹 조직의 소행으로 확인됐다. 북한과 이란...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 무장한 中 해커, 블록체인망 노린다.\n2. 국가 배후 해커, 2026년 2분기 2/3 악성 활동 주도.\n3. 삭제·차단 불가한 블록체인 위변조 악용.",
+      "link": "http://coinreaders.com/259077",
+      "source": "naver",
+      "published": "2026-09-18T20:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"北 해킹조직, 149억원 암호화폐 탈취\"…다국적 수사망에 덜미",
       "summary": "북한 연계 해킹 조직이 채용 면접을 가장해 전 세계 IT 기업과 개발자들로부터 암호화폐 17억 엔(약 149억... 이들의 불법 외화벌이는 단순 해킹에 그치지 않았다. 북한 IT 노동자들은 미국과 일본 등 현지 조력자를...",
@@ -4060,36 +4072,6 @@
       "link": "https://www.cisa.gov/resources-tools/resources/protecting-tokens-and-assertions-forgery-theft-and-misuse-implementation-recommendations-agencies",
       "source": "cisa",
       "published": "2026-09-15T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-92002 - MISP: Authentication failure logging suppressed during Redis unavailability",
-      "summary": "CVE ID :CVE-2026-92002\n  \nPublished : Sept. 15, 2026, 11:24 a.m. | 19 minutes ago\n  \nDescription :Affected versions of MISP use Redis to throttle repeated authentication-failure log entries. The intent is to avoid excessive duplicate logs while still recording failed authentication activity.\n\n\nHowever, User->setupRedis() returns false when Redis cannot be reached. The vulnerable _shouldLog() logic only returned true when a Redis instance existed and no throttle key was present. Therefore, when Redis was unavailable, the function did not allow the log write at all, effectively silencing authentication-failure logging for the duration of the outage.\n\nVersion affected: ≤2.5.45\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-92002\n  \nPublished : Sept. 15, 2026, 11:24 a.m. | 19 minutes ago\n  \nDescription :Affected versions of MISP use Redis to throttle repeated authentication-failure log entries. The intent is to avoid excessive duplicate logs while still recording failed authentication activity.\n\n\nHowever, User->setupRedis() returns false when Redis cannot be reached. The vulnerable _shouldLog() logic only returned true when a Redis instance existed and no throttle key was present. Therefore, when Redis was unavailable, the function did not allow the log write at all, effectively silencing authentication-failure logging for the duration of the outage.\n\nVersion affected: ≤2.5.45\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-92002\n2. 26.09.15 오후8:24\n3. Affected versions of MISP use Redis to throttle re",
-      "cve_id": "CVE-2026-92002",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92002",
-      "source": "cvefeed",
-      "published": "2026-09-15T20:24:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-80489 - EUC_JISX0213 decoding may hang on crafted input",
-      "summary": "CVE ID :CVE-2026-80489\n  \nPublished : Sept. 15, 2026, 11:17 a.m. | 27 minutes ago\n  \nDescription :Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding, for example with iconv, in the GNU C Library version 2.3 to 2.44 may result in the converter making no progress, causing the calling application to hang.\n\nSome EUC_JISX0213 sequences decode to two code points.  If the output buffer has room for only the first one, the converter stores the second in the conversion state and returns E2BIG, but it never clears that pending character after emitting it on the next call.  The converter then keeps emitting the pending character without consuming further input, so an application that retries the conversion loops forever. The input must be attacker controlled and the application must convert it with an output buffer small enough to split the two code points. Only the EUC_JISX0213 character set is affected, which is not commonly used.  The related defect in SHIFT_JISX0213 converter is tracked separately as CVE-2026-77117.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-80489\n  \nPublished : Sept. 15, 2026, 11:17 a.m. | 27 minutes ago\n  \nDescription :Converting crafted EUC_JISX0213 input to UCS-4 or the internal wide character encoding, for example with iconv, in the GNU C Library version 2.3 to 2.44 may result in the converter making no progress, causing the calling application to hang.\n\nSome EUC_JISX0213 sequences decode to two code points.  If the output buffer has room for only the first one, the converter stores the second in the conversion state and returns E2BIG, but it never clears that pending character after emitting it on the next call.  The converter then keeps emitting the pending character without consuming further input, so an application that retries the conversion loops forever. The input must be attacker controlled and the application must convert it with an output buffer small enough to split the two code points. Only the EUC_JISX0213 character set is affected, which is not commonly used.  The related defect in SHIFT_JISX0213 converter is tracked separately as CVE-2026-77117.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-80489\n2. 26.09.15 오후8:17\n3. Converting crafted EUC_JISX0213 input to UCS-4 or ",
-      "cve_id": "CVE-2026-80489",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80489",
-      "source": "cvefeed",
-      "published": "2026-09-15T20:17:12+09:00",
       "lang": "en"
     }
   ],
