@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-18T21:31:10.772750+09:00",
+  "fetched_at": "2026-09-18T22:01:34.440692+09:00",
   "security_news": [
     {
       "title": "中 해커, AI 무장하고 블록체인망 기습 침투...\"삭제·차단 불가능\"",
@@ -2979,6 +2979,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-93575 - Netty: netty-codec-mqtt: io.netty/netty-codec-mqtt: netty: resource exhaustion in mqttdecoder",
+      "summary": "CVE ID :CVE-2026-93575\n  \nPublished : Sept. 18, 2026, 11:17 a.m. | 1 hour, 41 minutes ago\n  \nDescription :### Summary\nNetty's fix for CVE-2026-44248 is incomplete. The decoder checks if the MQTT packet's `Remaining Length` exceeds `maxBytesInMessage`, but fails to validate the `Properties Length` against the `Remaining Length`. An attacker can bypass the size limit by sending a small `Remaining Length` but an enormous `Properties Length`. This forces Netty to buffer and parse millions of properties, allowing an unauthenticated remote attacker to trigger excessive memory and CPU consumption, leading to OutOfMemoryError.\n\n### Details\nIn `io.netty.handler.codec.mqtt.MqttDecoder`, the `decodeProperties()` helper method reads `totalPropertiesLength` and attempts to parse that many bytes. If the buffer lacks the full length, a `Signal` is thrown. The `catch` block inside `decode()` only enforces `maxBytesInMessage` against `bytesRemainingBeforeVariableHeader` (the packet's `Remaining Length`).\n\nBy sending a `CONNECT` packet with a small `Remaining Length` but a huge `Properties Length`, the size check passes. `ReplayingDecoder` then buffers data from the network until the huge `Properties Length` is reached, parsing millions of `UserProperty` objects and exhausting CPU and memory.\n\n#\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-93575\n  \nPublished : Sept. 18, 2026, 11:17 a.m. | 1 hour, 41 minutes ago\n  \nDescription :### Summary\nNetty's fix for CVE-2026-44248 is incomplete. The decoder checks if the MQTT packet's `Remaining Length` exceeds `maxBytesInMessage`, but fails to validate the `Properties Length` against the `Remaining Length`. An attacker can bypass the size limit by sending a small `Remaining Length` but an enormous `Properties Length`. This forces Netty to buffer and parse millions of properties, allowing an unauthenticated remote attacker to trigger excessive memory and CPU consumption, leading to OutOfMemoryError.\n\n### Details\nIn `io.netty.handler.codec.mqtt.MqttDecoder`, the `decodeProperties()` helper method reads `totalPropertiesLength` and attempts to parse that many bytes. If the buffer lacks the full length, a `Signal` is thrown. The `catch` block inside `decode()` only enforces `maxBytesInMessage` against `bytesRemainingBeforeVariableHeader` (the packet's `Remaining Length`).\n\nBy sending a `CONNECT` packet with a small `Remaining Length` but a huge `Properties Length`, the size check passes. `ReplayingDecoder` then buffers data from the network until the huge `Properties Length` is reached, parsing millions of `UserProperty` objects and exhausting CPU and memory.\n\n#\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-93575\n2. 26.09.18 오후8:17\n3. ### Summary Netty's fix for CVE-2026-44248 is inco",
+      "cve_id": "CVE-2026-93575",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93575",
+      "source": "cvefeed",
+      "published": "2026-09-18T20:17:22+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-81627 - Qemu-kvm: vapic writable rom alias can escape the option-rom window and expose locked smram",
+      "summary": "CVE ID :CVE-2026-81627\n  \nPublished : Sept. 18, 2026, 11:17 a.m. | 1 hour, 41 minutes ago\n  \nDescription :A flaw was found in QEMU. The VAPIC setup hypercall in hw/i386/vapic.c does not validate that the writable RAM alias remains within the option ROM window. A privileged guest user on a Q35/KVM machine can position this alias over locked SMRAM, bypassing chipset D_LCK protection and injecting code into System Management Mode memory.\n  \nSeverity: 6.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-81627\n  \nPublished : Sept. 18, 2026, 11:17 a.m. | 1 hour, 41 minutes ago\n  \nDescription :A flaw was found in QEMU. The VAPIC setup hypercall in hw/i386/vapic.c does not validate that the writable RAM alias remains within the option ROM window. A privileged guest user on a Q35/KVM machine can position this alias over locked SMRAM, bypassing chipset D_LCK protection and injecting code into System Management Mode memory.\n  \nSeverity: 6.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-81627\n2. 26.09.18 오후8:17\n3. A flaw was found in QEMU. The VAPIC setup hypercal",
+      "cve_id": "CVE-2026-81627",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81627",
+      "source": "cvefeed",
+      "published": "2026-09-18T20:17:18+09:00",
+      "lang": "en"
+    },
     {
       "title": "Chromium: CVE-2026-0899 Out of bounds memory access in V8",
       "summary": "Information published.",
