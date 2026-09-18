@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-18T23:31:23.486715+09:00",
+  "fetched_at": "2026-09-19T00:02:38.334192+09:00",
   "security_news": [
     {
       "title": "In Other News: Ransomware Developer Sentenced, Plugin4Shell AI Attack, Critical SAP Flaw",
@@ -2968,6 +2968,51 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-16515 - ICMPv6 error messages sent for multicast-destined packets and non-unique source addresses enable network amplification in Zephyr's IPv6 stack",
+      "summary": "CVE ID :CVE-2026-16515\n  \nPublished : Sept. 18, 2026, 2:30 p.m. | 29 minutes ago\n  \nDescription :net_icmpv6_send_error() in subsys/net/ip/icmpv6.c implemented only one of the three RFC 4443 section 2.4 suppression rules (do not answer an ICMPv6 error with an ICMPv6 error). It did not check whether the triggering packet's source address identifies a single node (rule e.6) or whether the packet was sent to a multicast destination (rule e.3, whose only exceptions are Packet Too Big and Parameter Problem Code 2). Of the five call sites, only the port-unreachable path in subsys/net/ip/connection.c carried an equivalent guard of its own; the extension-header, unknown-next-header and fragmentation paths in subsys/net/ip/ipv6.c and subsys/net/ip/ipv6_fragment.c had none.\n\nAn unauthenticated attacker with access to the same link can exploit this in two ways. Sending a single IPv6 packet to the link-local all-nodes group ff02::1 carrying an unrecognized next-header value, with the source address spoofed to a chosen victim, causes every Zephyr node on the link to emit an ICMPv6 Parameter Problem message to that victim — a reflector with an amplification factor equal to the number of nodes. Alternatively, sending a unicast packet whose source address is a multicast address causes the node to transmit its ICMPv6 error to that multicast address, turning one unicast packet into a link-flooded multicast frame. Packets addressed to ff02::1 are accepted unconditionally by ipv6_input(), and no check rejects a multicast source address, so no special configuration is required.\n\nThe impact is degraded availability of the shared link and of the reflection victim, together with the ability for the attacker to hide its own address behind the responding nodes. The effect is amplified on constrained mesh links such as 802.15.4/Thread, where link-local multicast is flooded hop by hop. There is no memory-safety consequence: the error packet itself is well formed, it is simply emitted in cases where the protocol forbids it.\n\nThe fix adds both suppression checks at the single choke point in net_icmpv6_send_error(), before any reply packet is allocated, preserving the RFC-mandated exceptions for NET_ICMPV6_PACKET_TOO_BIG and Parameter Problem Code 2. Note that the IPv4 counterpart net_icmpv4_send_error() in subsys/net/ip/icmpv4.c still checks only for a broadcast destination and retains an equivalent gap for multicast destinations and non-unique sources.\n  \nSeverity: 4.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-16515\n  \nPublished : Sept. 18, 2026, 2:30 p.m. | 29 minutes ago\n  \nDescription :net_icmpv6_send_error() in subsys/net/ip/icmpv6.c implemented only one of the three RFC 4443 section 2.4 suppression rules (do not answer an ICMPv6 error with an ICMPv6 error). It did not check whether the triggering packet's source address identifies a single node (rule e.6) or whether the packet was sent to a multicast destination (rule e.3, whose only exceptions are Packet Too Big and Parameter Problem Code 2). Of the five call sites, only the port-unreachable path in subsys/net/ip/connection.c carried an equivalent guard of its own; the extension-header, unknown-next-header and fragmentation paths in subsys/net/ip/ipv6.c and subsys/net/ip/ipv6_fragment.c had none.\n\nAn unauthenticated attacker with access to the same link can exploit this in two ways. Sending a single IPv6 packet to the link-local all-nodes group ff02::1 carrying an unrecognized next-header value, with the source address spoofed to a chosen victim, causes every Zephyr node on the link to emit an ICMPv6 Parameter Problem message to that victim — a reflector with an amplification factor equal to the number of nodes. Alternatively, sending a unicast packet whose source address is a multicast address causes the node to transmit its ICMPv6 error to that multicast address, turning one unicast packet into a link-flooded multicast frame. Packets addressed to ff02::1 are accepted unconditionally by ipv6_input(), and no check rejects a multicast source address, so no special configuration is required.\n\nThe impact is degraded availability of the shared link and of the reflection victim, together with the ability for the attacker to hide its own address behind the responding nodes. The effect is amplified on constrained mesh links such as 802.15.4/Thread, where link-local multicast is flooded hop by hop. There is no memory-safety consequence: the error packet itself is well formed, it is simply emitted in cases where the protocol forbids it.\n\nThe fix adds both suppression checks at the single choke point in net_icmpv6_send_error(), before any reply packet is allocated, preserving the RFC-mandated exceptions for NET_ICMPV6_PACKET_TOO_BIG and Parameter Problem Code 2. Note that the IPv4 counterpart net_icmpv4_send_error() in subsys/net/ip/icmpv4.c still checks only for a broadcast destination and retains an equivalent gap for multicast destinations and non-unique sources.\n  \nSeverity: 4.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-16515\n2. 26.09.18 오후11:30\n3. net_icmpv6_send_error() in subsys/net/ip/icmpv6.c ",
+      "cve_id": "CVE-2026-16515",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-16515",
+      "source": "cvefeed",
+      "published": "2026-09-18T23:30:13+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-16514 - Out-of-bounds read in gPTP Announce path-trace validation via unvalidated stepsRemoved",
+      "summary": "CVE ID :CVE-2026-16514\n  \nPublished : Sept. 18, 2026, 2:30 p.m. | 29 minutes ago\n  \nDescription :gptp_mi_qualify_announce() in subsys/net/l2/ethernet/gptp/gptp_mi.c walks the Path Trace TLV of a received IEEE 802.1AS Announce message, comparing each clock identity against the local one. The loop bound was taken solely from the attacker-controlled wire field announce->steps_removed (accepted up to 254), never from announce->tlv.len, which is the field that states how many identities the TLV actually carries. Because path_sequence is the flexible member of the wire TLV (struct gptp_path_trace_tlv) and GPTP_ANNOUNCE() yields a raw pointer into the received packet buffer, the memcmp() inside the loop can address memory well past the end of the received frame.\n\nThe stack's only length validation, GPTP_ANNOUNCE_CHECK_LEN(), requires the received gPTP payload to be exactly 68 + tlv.len bytes — so it does not constrain the loop, it guarantees the data is absent. An unauthenticated attacker on the same Ethernet segment can send a single Announce frame declaring tlv.len = 0 with steps_removed = 254; the frame passes the length check and reception path (net_gptp_recv() → gptp_handle_msg() → gptp_mi_qualify_announce()), which performs no authentication, and the loop then reads 255 entries of 8 bytes each — about 2 KB — beyond the end of the network buffer.\n\nThe impact is an out-of-bounds read. The bytes read are only used as a memcmp() operand and are never returned to the attacker, so there is no meaningful information disclosure; the practical risk is that the overread crosses a network buffer pool boundary into unmapped or MPU-protected memory and faults the networking RX thread, causing a denial of service. Exposure is limited to builds that enable the opt-in, experimental CONFIG_NET_GPTP (TSN/AVB deployments) and to attackers with layer-2 adjacency, since gPTP frames are sent to a link-local multicast address and are not routed.\n\nThe fix computes the true entry count as tlv.len / GPTP_CLOCK_ID_LEN and rejects the announce when steps_removed + 1 exceeds it, so the loop can no longer run past the data the packet-length check proved present.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-16514\n  \nPublished : Sept. 18, 2026, 2:30 p.m. | 29 minutes ago\n  \nDescription :gptp_mi_qualify_announce() in subsys/net/l2/ethernet/gptp/gptp_mi.c walks the Path Trace TLV of a received IEEE 802.1AS Announce message, comparing each clock identity against the local one. The loop bound was taken solely from the attacker-controlled wire field announce->steps_removed (accepted up to 254), never from announce->tlv.len, which is the field that states how many identities the TLV actually carries. Because path_sequence is the flexible member of the wire TLV (struct gptp_path_trace_tlv) and GPTP_ANNOUNCE() yields a raw pointer into the received packet buffer, the memcmp() inside the loop can address memory well past the end of the received frame.\n\nThe stack's only length validation, GPTP_ANNOUNCE_CHECK_LEN(), requires the received gPTP payload to be exactly 68 + tlv.len bytes — so it does not constrain the loop, it guarantees the data is absent. An unauthenticated attacker on the same Ethernet segment can send a single Announce frame declaring tlv.len = 0 with steps_removed = 254; the frame passes the length check and reception path (net_gptp_recv() → gptp_handle_msg() → gptp_mi_qualify_announce()), which performs no authentication, and the loop then reads 255 entries of 8 bytes each — about 2 KB — beyond the end of the network buffer.\n\nThe impact is an out-of-bounds read. The bytes read are only used as a memcmp() operand and are never returned to the attacker, so there is no meaningful information disclosure; the practical risk is that the overread crosses a network buffer pool boundary into unmapped or MPU-protected memory and faults the networking RX thread, causing a denial of service. Exposure is limited to builds that enable the opt-in, experimental CONFIG_NET_GPTP (TSN/AVB deployments) and to attackers with layer-2 adjacency, since gPTP frames are sent to a link-local multicast address and are not routed.\n\nThe fix computes the true entry count as tlv.len / GPTP_CLOCK_ID_LEN and rejects the announce when steps_removed + 1 exceeds it, so the loop can no longer run past the data the packet-length check proved present.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-16514\n2. 26.09.18 오후11:30\n3. gptp_mi_qualify_announce() in subsys/net/l2/ethern",
+      "cve_id": "CVE-2026-16514",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-16514",
+      "source": "cvefeed",
+      "published": "2026-09-18T23:30:11+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-93659 - Concrete CMS Community Store before 2.7.8 Stored XSS",
+      "summary": "CVE ID :CVE-2026-93659\n  \nPublished : Sept. 18, 2026, 2:23 p.m. | 36 minutes ago\n  \nDescription :Concrete CMS Community Store before 2.7.8 renders customer-supplied order fields without HTML escaping in checkout and admin views. Unauthenticated attackers can store script payloads in billing name, email, or phone fields that execute in authenticated manager sessions to create rogue accounts or exfiltrate data.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-93659\n  \nPublished : Sept. 18, 2026, 2:23 p.m. | 36 minutes ago\n  \nDescription :Concrete CMS Community Store before 2.7.8 renders customer-supplied order fields without HTML escaping in checkout and admin views. Unauthenticated attackers can store script payloads in billing name, email, or phone fields that execute in authenticated manager sessions to create rogue accounts or exfiltrate data.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-93659\n2. 26.09.18 오후11:23\n3. Concrete CMS Community Store before 2.7.8 renders ",
+      "cve_id": "CVE-2026-93659",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93659",
+      "source": "cvefeed",
+      "published": "2026-09-18T23:23:21+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-93575 - Netty: netty-codec-mqtt: io.netty/netty-codec-mqtt: netty: resource exhaustion in mqttdecoder",
       "summary": "CVE ID :CVE-2026-93575\n  \nPublished : Sept. 18, 2026, 11:17 a.m. | 1 hour, 41 minutes ago\n  \nDescription :### Summary\nNetty's fix for CVE-2026-44248 is incomplete. The decoder checks if the MQTT packet's `Remaining Length` exceeds `maxBytesInMessage`, but fails to validate the `Properties Length` against the `Remaining Length`. An attacker can bypass the size limit by sending a small `Remaining Length` but an enormous `Properties Length`. This forces Netty to buffer and parse millions of properties, allowing an unauthenticated remote attacker to trigger excessive memory and CPU consumption, leading to OutOfMemoryError.\n\n### Details\nIn `io.netty.handler.codec.mqtt.MqttDecoder`, the `decodeProperties()` helper method reads `totalPropertiesLength` and attempts to parse that many bytes. If the buffer lacks the full length, a `Signal` is thrown. The `catch` block inside `decode()` only enforces `maxBytesInMessage` against `bytesRemainingBeforeVariableHeader` (the packet's `Remaining Length`).\n\nBy sending a `CONNECT` packet with a small `Remaining Length` but a huge `Properties Length`, the size check passes. `ReplayingDecoder` then buffers data from the network until the huge `Properties Length` is reached, parsing millions of `UserProperty` objects and exhausting CPU and memory.\n\n#\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-93575\n  \nPublished : Sept. 18, 2026, 11:17 a.m. | 1 hour, 41 minutes ago\n  \nDescription :### Summary\nNetty's fix for CVE-2026-44248 is incomplete. The decoder checks if the MQTT packet's `Remaining Length` exceeds `maxBytesInMessage`, but fails to validate the `Properties Length` against the `Remaining Length`. An attacker can bypass the size limit by sending a small `Remaining Length` but an enormous `Properties Length`. This forces Netty to buffer and parse millions of properties, allowing an unauthenticated remote attacker to trigger excessive memory and CPU consumption, leading to OutOfMemoryError.\n\n### Details\nIn `io.netty.handler.codec.mqtt.MqttDecoder`, the `decodeProperties()` helper method reads `totalPropertiesLength` and attempts to parse that many bytes. If the buffer lacks the full length, a `Signal` is thrown. The `catch` block inside `decode()` only enforces `maxBytesInMessage` against `bytesRemainingBeforeVariableHeader` (the packet's `Remaining Length`).\n\nBy sending a `CONNECT` packet with a small `Remaining Length` but a huge `Properties Length`, the size check passes. `ReplayingDecoder` then buffers data from the network until the huge `Properties Length` is reached, parsing millions of `UserProperty` objects and exhausting CPU and memory.\n\n#\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4001,22 +4046,22 @@
       "source": "sans_isc",
       "published": "2026-09-16T00:23:45+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55650 - Outerbase Studio: Stored XSS in Text Widget Leads to Authentication Token Exposure",
-      "summary": "CVE ID :CVE-2026-55650\n  \nPublished : Sept. 15, 2026, 2:36 p.m. | 15 minutes ago\n  \nDescription :Outerbase Studio is a lightweight browser-based database GUI supporting PostgreSQL, MySQL, and SQLite. In version 0.10.2 and earlier, TextComponent in src/components/chart/index.tsx renders unsanitized Text Widget content through dangerouslySetInnerHTML, allowing injected markup with script-capable event handlers to execute when the widget is displayed. Outerbase Cloud and its backend services were discontinued in 2025, and the current architecture uses local browser dashboard storage, so the impact is limited to local self-XSS. Authentication token theft, account takeover, and backend database access are not applicable to the current architecture. No fixed release is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55650\n  \nPublished : Sept. 15, 2026, 2:36 p.m. | 15 minutes ago\n  \nDescription :Outerbase Studio is a lightweight browser-based database GUI supporting PostgreSQL, MySQL, and SQLite. In version 0.10.2 and earlier, TextComponent in src/components/chart/index.tsx renders unsanitized Text Widget content through dangerouslySetInnerHTML, allowing injected markup with script-capable event handlers to execute when the widget is displayed. Outerbase Cloud and its backend services were discontinued in 2025, and the current architecture uses local browser dashboard storage, so the impact is limited to local self-XSS. Authentication token theft, account takeover, and backend database access are not applicable to the current architecture. No fixed release is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-55650\n2. 26.09.15 오후11:36\n3. Outerbase Studio is a lightweight browser-based da",
-      "cve_id": "CVE-2026-55650",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55650",
-      "source": "cvefeed",
-      "published": "2026-09-15T23:36:37+09:00",
-      "lang": "en"
     }
   ],
-  "reputation": []
+  "reputation": [
+    {
+      "title": "한국재정정보원, 국제 사이버훈련서 재정망 방어역량 공유",
+      "summary": "한국재정정보원은 국가 핵심 재정정보망을 운영하며 축적한 보안관제와 침해사고 대응 경험을 기반으로 공식 후원기관에 참여했다. 현장에 파견된 전문인력 4명은 다국적 연합 방어팀 기술지원과 실시간 위협분석...",
+      "description": "한국재정정보원은 국가 핵심 재정정보망을 운영하며 축적한 보안관제와 침해사고 대응 경험을 기반으로 공식 후원기관에 참여했다. 현장에 파견된 전문인력 4명은 다국적 연합 방어팀 기술지원과 실시간 위협분석...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 한국재정정보원, 국제 사이버훈련서 재정망 방어역량 공유 한국재정정보원은 국가 핵심 재정정보\n2. 현장에 파견된 전문인력 4명은 다국적 연합 방어팀 기술지원과 실시간 위협분석...",
+      "keyword_matched": "한국재정정보원",
+      "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=208746",
+      "source": "naver_rep",
+      "published": "2026-09-18T23:40:00+09:00",
+      "lang": "ko"
+    }
+  ]
 }
