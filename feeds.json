@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-19T04:01:14.591889+09:00",
+  "fetched_at": "2026-09-19T04:31:09.615615+09:00",
   "security_news": [
     {
       "title": "취약점 악용으로 130만달러 유출…블록체인 거래 확정 10일 중단",
@@ -2976,21 +2976,24 @@
       "source": "naver",
       "published": "2026-09-16T06:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Black Hat USA 2026 | The 'Breaking' News: The OpenAI–Hugging Face Incident",
-      "summary": "The 'Breaking' News: The OpenAI–Hugging Face Incident - A Technical Reconstruction and Its Implications for AI\nAt this Black Hat USA 2026 talk, OpenAI security engineers and researchers will reconstruct the OpenAI-Hugging Face incident and examine its implications for AI security, cyber resilience, and alignment. Throughout the session, they will share insights that address key topics raised by the Black Hat Review Board, including model safeguards, evaluation and containment practices, defensive use cases for AI, and the broader implications of increasingly autonomous systems for the cybersecurity community.\nThe session will trace the models' attack path, including how frontier models are sandboxed during evaluations, how the models exploited a zero-day vulnerability to gain internet access, and how they identified and leveraged a remote code execution path on Hugging Face infrastructure. Drawing on the joint investigation, the speakers will explain how the activity was detected, contained, and investigated. They will also discuss the changes OpenAI is making to strengthen evaluation environments, containment controls, and monitoring capabilities, as well as the role AI systems played in supporting the investigation and response.\nIn addition to the technical reconstruction of the incident, the session will address broader questions relevant to the security community, including lessons for improving AI system security, defensive applications of AI in incident response, and approaches to mitigating emerging risks associated with increasingly capable models.\nThe discussion will also examine alignment challenges associated with long-running agents, including reward hacking, shifts in model behavior and persona over extended trajectories, and information sharing across multi-agent systems. Finally, the speakers will explore what this incident suggests about emerging AI cyber capabilities and how organizations can use AI to strengthen prevention, detection, investigation, and response efforts.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. OpenAI-Hugging Face, 제로데이 취약점 악용\n2. 모델, 인터넷 접근 후 Hugging Face RCE 경로 발견\n3. OpenAI, AI 평가 및 격리 환경 강화 중",
-      "link": "https://www.darkreading.com/vulnerabilities-threats/bhusa26huggingfacetalk",
-      "source": "darkreading",
-      "published": "2026-09-16T04:27:19+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-84975 - PJSIP: TLS server identity (hostname) verification bypass via embedded NUL in certificate SubjectAltName (OpenSSL and GnuTLS backends)",
+      "summary": "CVE ID :CVE-2026-84975\n  \nPublished : Sept. 18, 2026, 6:17 p.m. | 39 minutes ago\n  \nDescription :PJSIP is a free and open source multimedia communication library written in C. In 2.17 and earlier, the OpenSSL and GnuTLS backends in pjlib/src/pj/ssl_sock_ossl.c and pjlib/src/pj/ssl_sock_gtls.c copy DNS SubjectAltName values with string functions that recalculate their length and truncate an embedded NUL byte. With server verification enabled through --tls-verify-server for the PJSIP TLS/SIPS transport, a certificate containing a DNS SubjectAltName formed from the target hostname prefix followed by an embedded NUL and an attacker-controlled suffix can therefore be accepted for the prefix hostname. An attacker who possesses such a certificate from a trusted issuer and can intercept the connection can impersonate the target server, complete the SIP session, and receive REGISTER credentials. The mbedTLS backend is not affected because it preserves the explicit string length. No fixed version is available as of this review.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84975\n  \nPublished : Sept. 18, 2026, 6:17 p.m. | 39 minutes ago\n  \nDescription :PJSIP is a free and open source multimedia communication library written in C. In 2.17 and earlier, the OpenSSL and GnuTLS backends in pjlib/src/pj/ssl_sock_ossl.c and pjlib/src/pj/ssl_sock_gtls.c copy DNS SubjectAltName values with string functions that recalculate their length and truncate an embedded NUL byte. With server verification enabled through --tls-verify-server for the PJSIP TLS/SIPS transport, a certificate containing a DNS SubjectAltName formed from the target hostname prefix followed by an embedded NUL and an attacker-controlled suffix can therefore be accepted for the prefix hostname. An attacker who possesses such a certificate from a trusted issuer and can intercept the connection can impersonate the target server, complete the SIP session, and receive REGISTER credentials. The mbedTLS backend is not affected because it preserves the explicit string length. No fixed version is available as of this review.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-84975\n2. 26.09.19 오전3:17\n3. PJSIP is a free and open source multimedia communi",
+      "cve_id": "CVE-2026-84975",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84975",
+      "source": "cvefeed",
+      "published": "2026-09-19T03:17:17+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-61833 - zot: Bearer authentication maps DELETE to push scope, allowing unauthorized deletion",
       "summary": "CVE ID :CVE-2026-61833\n  \nPublished : 18 de Setembro de 2026 às 16:55 | 4 minutos ago\n  \nDescription :zot is a container image and artifact registry based on the Open Container Initiative Distribution Specification. Prior to 2.1.18, the bearer authentication handler in pkg/api/authn.go maps every HTTP method other than GET and HEAD to the push action, so DELETE requests are not checked for the distinct delete permission. Bearer-authenticated requests also bypass the fine-grained DistSpecAuthzHandler path in pkg/api/authz.go, while DeleteManifest and DeleteBlob perform no independent delete-permission check. A remote attacker with a bearer token limited to pull and push actions can therefore delete manifests and blobs within the token's repository scope, making images unavailable and allowing repository history to be altered despite the token lacking delete authorization. This issue is fixed in version 2.1.18.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4069,21 +4072,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-73460",
       "source": "cvefeed",
       "published": "2026-09-16T08:20:43+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82191 - Joomla Extension - j2commerce.com - Unescaped request data reflected into PayPal notify redirect in J2Store 1.0.0-3.3.2, 4.0.0-4.0.22, 4.1.0-4.1.7",
-      "summary": "CVE ID :CVE-2026-82191\n  \nPublished : Sept. 15, 2026, 7:17 p.m. | 26 minutes ago\n  \nDescription :Joomla Extension - j2commerce.com - Unescaped request data reflected into PayPal notify redirect in J2Store 1.0.0-3.3.2, 4.0.0-4.0.22, 4.1.0-4.1.7 - A crafted link to the paypal notify endpoint, if followed by a victim's browser (or an automated system that fetches it), causes the resulting redirect to `com_j2store`'s checkout controller to carry attacker-chosen query parameters instead of only the intended `view=checkout&task=confirmPayment&orderpayment_type=...&paction=process` set — parameter injection/smuggling into that follow-up request. This requires a victim to load the crafted link (`UI:R`/`UI:P`); it does not by itself grant an unauthenticated attacker anything they could not already obtain by requesting the target `com_j2store` URL directly with their own parameters.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82191\n  \nPublished : Sept. 15, 2026, 7:17 p.m. | 26 minutes ago\n  \nDescription :Joomla Extension - j2commerce.com - Unescaped request data reflected into PayPal notify redirect in J2Store 1.0.0-3.3.2, 4.0.0-4.0.22, 4.1.0-4.1.7 - A crafted link to the paypal notify endpoint, if followed by a victim's browser (or an automated system that fetches it), causes the resulting redirect to `com_j2store`'s checkout controller to carry attacker-chosen query parameters instead of only the intended `view=checkout&task=confirmPayment&orderpayment_type=...&paction=process` set — parameter injection/smuggling into that follow-up request. This requires a victim to load the crafted link (`UI:R`/`UI:P`); it does not by itself grant an unauthenticated attacker anything they could not already obtain by requesting the target `com_j2store` URL directly with their own parameters.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-82191\n2. 26.09.16 오전4:17\n3. Joomla Extension - j2commerce.com - Unescaped requ",
-      "cve_id": "CVE-2026-82191",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82191",
-      "source": "cvefeed",
-      "published": "2026-09-16T04:17:42+09:00",
       "lang": "en"
     }
   ],
