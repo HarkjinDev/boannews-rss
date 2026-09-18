@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-19T03:01:19.608882+09:00",
+  "fetched_at": "2026-09-19T03:31:08.417790+09:00",
   "security_news": [
     {
       "title": "취약점 악용으로 130만달러 유출…블록체인 거래 확정 10일 중단",
@@ -4084,21 +4084,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-82191",
       "source": "cvefeed",
       "published": "2026-09-16T04:17:42+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-56831 - Shopper: Negative discount values accepted and propagated through order calculation pipeline",
-      "summary": "CVE ID :CVE-2026-56831\n  \nPublished : Sept. 15, 2026, 6:17 p.m. | 21 minutes ago\n  \nDescription :Shopper is a Headless e-commerce Admin Panel. Prior to 2.9.0, the /cpanel/discounts administrative interface accepts negative fixed_amount discount values, persists them in sh_discounts, and passes them through vendor/shopper/cart/src/Discounts/DiscountCalculator.php and vendor/shopper/cart/src/Pipelines/Calculate.php without enforcing a positive-value invariant. Because the calculation subtracts discountTotal from the subtotal, a negative discount increases the resulting order total instead of reducing it. Malformed discount records can therefore cause incorrect pricing and financial data integrity failures, although the advisory does not establish a customer-facing exploitation path. This issue is fixed in version 2.9.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-56831\n  \nPublished : Sept. 15, 2026, 6:17 p.m. | 21 minutes ago\n  \nDescription :Shopper is a Headless e-commerce Admin Panel. Prior to 2.9.0, the /cpanel/discounts administrative interface accepts negative fixed_amount discount values, persists them in sh_discounts, and passes them through vendor/shopper/cart/src/Discounts/DiscountCalculator.php and vendor/shopper/cart/src/Pipelines/Calculate.php without enforcing a positive-value invariant. Because the calculation subtracts discountTotal from the subtotal, a negative discount increases the resulting order total instead of reducing it. Malformed discount records can therefore cause incorrect pricing and financial data integrity failures, although the advisory does not establish a customer-facing exploitation path. This issue is fixed in version 2.9.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-56831\n2. 26.09.16 오전3:17\n3. Shopper is a Headless e-commerce Admin Panel. Prio",
-      "cve_id": "CVE-2026-56831",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-56831",
-      "source": "cvefeed",
-      "published": "2026-09-16T03:17:25+09:00",
       "lang": "en"
     }
   ],
