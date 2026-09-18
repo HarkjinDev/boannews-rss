@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-19T02:01:24.024543+09:00",
+  "fetched_at": "2026-09-19T02:31:27.211015+09:00",
   "security_news": [
     {
       "title": "Gyazo server flaw exploited to steal 23.6 million user records",
@@ -2980,6 +2980,66 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-61833 - zot: Bearer authentication maps DELETE to push scope, allowing unauthorized deletion",
+      "summary": "CVE ID :CVE-2026-61833\n  \nPublished : 18 de Setembro de 2026 às 16:55 | 4 minutos ago\n  \nDescription :zot is a container image and artifact registry based on the Open Container Initiative Distribution Specification. Prior to 2.1.18, the bearer authentication handler in pkg/api/authn.go maps every HTTP method other than GET and HEAD to the push action, so DELETE requests are not checked for the distinct delete permission. Bearer-authenticated requests also bypass the fine-grained DistSpecAuthzHandler path in pkg/api/authz.go, while DeleteManifest and DeleteBlob perform no independent delete-permission check. A remote attacker with a bearer token limited to pull and push actions can therefore delete manifests and blobs within the token's repository scope, making images unavailable and allowing repository history to be altered despite the token lacking delete authorization. This issue is fixed in version 2.1.18.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-61833\n  \nPublished : 18 de Setembro de 2026 às 16:55 | 4 minutos ago\n  \nDescription :zot is a container image and artifact registry based on the Open Container Initiative Distribution Specification. Prior to 2.1.18, the bearer authentication handler in pkg/api/authn.go maps every HTTP method other than GET and HEAD to the push action, so DELETE requests are not checked for the distinct delete permission. Bearer-authenticated requests also bypass the fine-grained DistSpecAuthzHandler path in pkg/api/authz.go, while DeleteManifest and DeleteBlob perform no independent delete-permission check. A remote attacker with a bearer token limited to pull and push actions can therefore delete manifests and blobs within the token's repository scope, making images unavailable and allowing repository history to be altered despite the token lacking delete authorization. This issue is fixed in version 2.1.18.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-61833\n2. 26.09.19 오전1:55\n3. zot is a container image and artifact registry bas",
+      "cve_id": "CVE-2026-61833",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61833",
+      "source": "cvefeed",
+      "published": "2026-09-19T01:55:22+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-77610 - Semantic MediaWiki has a query debug output XSS (`DebugFormatter`)",
+      "summary": "CVE ID :CVE-2026-77610\n  \nPublished : 18 de Setembro de 2026 às 16:55 | 5 minutos ago\n  \nDescription :Semantic MediaWiki is a free, open-source extension to MediaWiki that lets users store and query data within the wiki's pages. Prior to version 7.2.0, query debug output (`format=debug`, or the `debug` request parameter on `Special:Ask`) is assembled by `SMW\\Query\\DebugFormatter` and emitted as raw HTML. Several of its sinks apply no output-context encoding, so attacker-controlled query input is reflected into the page without escaping. On `Special:Ask` the resulting string is concatenated into the page and sent through `OutputPage::addHTML`, never through the MediaWiki parser or Sanitizer. No special user right is required; an anonymous request suffices. This is a reflected XSS: the payload is taken from the request and echoed in the same response. Exploitation requires the query condition to target a text/blob-typed property (whose value is re-serialized verbatim); the predefined `_txt` properties (`Text`, etc.) that ship on every install satisfy this, so no attacker-created content is needed. Version 7.2.0 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-77610\n  \nPublished : 18 de Setembro de 2026 às 16:55 | 5 minutos ago\n  \nDescription :Semantic MediaWiki is a free, open-source extension to MediaWiki that lets users store and query data within the wiki's pages. Prior to version 7.2.0, query debug output (`format=debug`, or the `debug` request parameter on `Special:Ask`) is assembled by `SMW\\Query\\DebugFormatter` and emitted as raw HTML. Several of its sinks apply no output-context encoding, so attacker-controlled query input is reflected into the page without escaping. On `Special:Ask` the resulting string is concatenated into the page and sent through `OutputPage::addHTML`, never through the MediaWiki parser or Sanitizer. No special user right is required; an anonymous request suffices. This is a reflected XSS: the payload is taken from the request and echoed in the same response. Exploitation requires the query condition to target a text/blob-typed property (whose value is re-serialized verbatim); the predefined `_txt` properties (`Text`, etc.) that ship on every install satisfy this, so no attacker-created content is needed. Version 7.2.0 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-77610\n2. 26.09.19 오전1:55\n3. Semantic MediaWiki is a free, open-source extensio",
+      "cve_id": "CVE-2026-77610",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77610",
+      "source": "cvefeed",
+      "published": "2026-09-19T01:55:01+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-63406 - AnyCable: Telemetry Subsystem Contains Hardcoded Authentication Token and Transmits CLI Arguments Including Secrets",
+      "summary": "CVE ID :CVE-2026-63406\n  \nPublished : 18 de Setembro de 2026 às 16:51 | 8 minutos ago\n  \nDescription :AnyCable is a realtime server for reliable two-way communication that supports any backend. Prior to 1.6.15, the telemetry subsystem in telemetry/config.go enables tracking with a hardcoded public authToken, while clusterFingerprint in telemetry/telemetry.go reads the full configuration file and raw os.Args returned by anycableCLIArgs, including values supplied through --secret, --jwt_secret, and --http_rpc_secret. These inputs are passed to generateDigest, where sha256.New produces the hexadecimal fingerprint that is sent as telemetry. The available source therefore does not show raw credentials leaving the process or establish the advisory's claimed confidentiality loss, although the stable fingerprint is derived from secret-bearing configuration and the default telemetry client uses publicly known authentication material. This issue is fixed in version 1.6.15.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63406\n  \nPublished : 18 de Setembro de 2026 às 16:51 | 8 minutos ago\n  \nDescription :AnyCable is a realtime server for reliable two-way communication that supports any backend. Prior to 1.6.15, the telemetry subsystem in telemetry/config.go enables tracking with a hardcoded public authToken, while clusterFingerprint in telemetry/telemetry.go reads the full configuration file and raw os.Args returned by anycableCLIArgs, including values supplied through --secret, --jwt_secret, and --http_rpc_secret. These inputs are passed to generateDigest, where sha256.New produces the hexadecimal fingerprint that is sent as telemetry. The available source therefore does not show raw credentials leaving the process or establish the advisory's claimed confidentiality loss, although the stable fingerprint is derived from secret-bearing configuration and the default telemetry client uses publicly known authentication material. This issue is fixed in version 1.6.15.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-63406\n2. 26.09.19 오전1:51\n3. AnyCable is a realtime server for reliable two-way",
+      "cve_id": "CVE-2026-63406",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63406",
+      "source": "cvefeed",
+      "published": "2026-09-19T01:51:54+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-77339 - Process Compose: Browser DNS rebinding lets websites control local process-compose MCP tools",
+      "summary": "CVE ID :CVE-2026-77339\n  \nPublished : 18 de Setembro de 2026 às 16:37 | 22 minutos ago\n  \nDescription :Process Compose is a scheduler and orchestrator for non-containerized applications. Prior to 1.120.0, the MCP SSE listener in src/mcp/server.go accepts browser-origin requests to /sse and the returned message endpoint without validating the Host header, validating the Origin header, or authenticating the caller. When MCP SSE is enabled, a malicious website can use DNS rebinding to reach the loopback listener and issue MCP requests. If expose_control_tools is enabled, the attacker can enumerate process state, read or search logs, truncate logs, and start, stop, restart, or scale local processes; configured user-defined tools can expose additional commands and output. The Gin REST API token middleware does not protect this separately started MCP listener. This issue is fixed in version 1.120.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-77339\n  \nPublished : 18 de Setembro de 2026 às 16:37 | 22 minutos ago\n  \nDescription :Process Compose is a scheduler and orchestrator for non-containerized applications. Prior to 1.120.0, the MCP SSE listener in src/mcp/server.go accepts browser-origin requests to /sse and the returned message endpoint without validating the Host header, validating the Origin header, or authenticating the caller. When MCP SSE is enabled, a malicious website can use DNS rebinding to reach the loopback listener and issue MCP requests. If expose_control_tools is enabled, the attacker can enumerate process state, read or search logs, truncate logs, and start, stop, restart, or scale local processes; configured user-defined tools can expose additional commands and output. The Gin REST API token middleware does not protect this separately started MCP listener. This issue is fixed in version 1.120.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-77339\n2. 26.09.19 오전1:37\n3. Process Compose is a scheduler and orchestrator fo",
+      "cve_id": "CVE-2026-77339",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77339",
+      "source": "cvefeed",
+      "published": "2026-09-19T01:37:19+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-84446 - libheif: Sequence decode timing-table initialization allows non-terminating loops and unbounded memory, bypassing max_sequence_frames",
       "summary": "CVE ID :CVE-2026-84446\n  \nPublished : Sept. 18, 2026, 3:54 p.m. | 8 minutes ago\n  \nDescription :libheif is a HEIF and AVIF file format decoder and encoder. Prior to 1.23.2, crafted HEIF sequence timing and edit-list data can make Track::init_sample_timing_table() compute a logical m_num_output_samples value that exceeds the uint32_t counters used by Track_Visual::decode_next_image_sample() and Track::get_next_sample_raw_data(). The resulting comparison can never reach the oversized output count, causing non-terminating decode or raw-sample loops and bypassing max_sequence_frames. The same sequence path repeatedly calls Box_stts::get_sample_duration() and allocates Chunk::m_sample_ranges and Track::m_presentation_timeline outside MemoryHandle accounting, allowing severe CPU and memory exhaustion from a small file. This issue is fixed in version 1.23.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-84446\n  \nPublished : Sept. 18, 2026, 3:54 p.m. | 8 minutes ago\n  \nDescription :libheif is a HEIF and AVIF file format decoder and encoder. Prior to 1.23.2, crafted HEIF sequence timing and edit-list data can make Track::init_sample_timing_table() compute a logical m_num_output_samples value that exceeds the uint32_t counters used by Track_Visual::decode_next_image_sample() and Track::get_next_sample_raw_data(). The resulting comparison can never reach the oversized output count, causing non-terminating decode or raw-sample loops and bypassing max_sequence_frames. The same sequence path repeatedly calls Box_stts::get_sample_duration() and allocates Chunk::m_sample_ranges and Track::m_presentation_timeline outside MemoryHandle accounting, allowing severe CPU and memory exhaustion from a small file. This issue is fixed in version 1.23.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4027,21 +4087,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-56831",
       "source": "cvefeed",
       "published": "2026-09-16T03:17:25+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59160 - Yeger: Unauthenticated Network-Exposed Turborepo Task Execution via /api/run",
-      "summary": "CVE ID :CVE-2026-59160\n  \nPublished : Sept. 15, 2026, 5:17 p.m. | 19 minutes ago\n  \nDescription :Yeger is a monorepo for npm packages maintained under the yeger scope. Prior to 2.8.9, the turbo-graph package starts its embedded Next.js server from packages/turbo-graph/src/index.ts on all interfaces, including 0.0.0.0:29312 by default, while the GET handler for /api/run in packages/turbo-graph-ui/app/api/run/route.ts has no authentication, authorization, CSRF protection, or task allowlist. The handler accepts the tasks, filter, and force query parameters, and buildResponseFromArgs passes attacker-selected task names to spawn() as Turbo CLI arguments. An adjacent-network attacker can execute any task defined in the victim repository's turbo.json with the privileges of the developer OS user, potentially exposing secrets, modifying files or infrastructure, or causing destructive availability effects. The use of an argument array prevents traditional shell metacharacter injection but does not prevent unauthorized execution of defined tasks. This issue is fixed in version 2.8.9.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59160\n  \nPublished : Sept. 15, 2026, 5:17 p.m. | 19 minutes ago\n  \nDescription :Yeger is a monorepo for npm packages maintained under the yeger scope. Prior to 2.8.9, the turbo-graph package starts its embedded Next.js server from packages/turbo-graph/src/index.ts on all interfaces, including 0.0.0.0:29312 by default, while the GET handler for /api/run in packages/turbo-graph-ui/app/api/run/route.ts has no authentication, authorization, CSRF protection, or task allowlist. The handler accepts the tasks, filter, and force query parameters, and buildResponseFromArgs passes attacker-selected task names to spawn() as Turbo CLI arguments. An adjacent-network attacker can execute any task defined in the victim repository's turbo.json with the privileges of the developer OS user, potentially exposing secrets, modifying files or infrastructure, or causing destructive availability effects. The use of an argument array prevents traditional shell metacharacter injection but does not prevent unauthorized execution of defined tasks. This issue is fixed in version 2.8.9.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-59160\n2. 26.09.16 오전2:17\n3. Yeger is a monorepo for npm packages maintained un",
-      "cve_id": "CVE-2026-59160",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59160",
-      "source": "cvefeed",
-      "published": "2026-09-16T02:17:23+09:00",
       "lang": "en"
     }
   ],
