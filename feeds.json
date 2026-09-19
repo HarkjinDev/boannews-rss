@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-19T17:01:28.854934+09:00",
+  "fetched_at": "2026-09-19T17:31:15.491546+09:00",
   "security_news": [
     {
       "title": "포모픽 iOS 1.1~1.2 악성코드 확인…프라이빗키 유출 위험",
@@ -2328,30 +2328,6 @@
       "source": "naver",
       "published": "2026-09-16T17:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'영업제재 종료일' MBK 측 229억 배당…롯데카드 '적절성 논란'",
-      "summary": "해킹에 따른 정보유출 사고로 금융사가 업무정지 처분을 받은 첫 사례다. 업무정지는 기존 회원의 카드 이용까지 막는 전면 영업정지가 아니라 8월 1일부터 이달 15일까지 신규 회원을 대상으로 한 카드 발급 업무를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. MBK, 229억 배당, 롯데카드 제재 논란\n2. 해킹 정보 유출로 금융사 첫 업무정지\n3. 8/1~15일 신규 회원 카드 발급 제한",
-      "link": "https://www.apnews.kr/news/articleView.html?idxno=3051314",
-      "source": "naver",
-      "published": "2026-09-16T17:22:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[퇴근길머니] 영업정지 풀린 롯데카드…주담대 변동금리 멈칫",
-      "summary": "지난해 롯데카드에서 해킹으로 고객 297만 명의 신용정보가 유출되는 사고가 있었죠. 그래서... 해킹 사고로 당시 조좌진 대표가 물러나고 그 뒤를 이어서 취임한 정상호 대표의 리더십이 본격적으로 시험대에 올랐다고도...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 롯데카드, 297만 명 고객 정보 해킹 유출 사고 발생\n2. 조좌진 대표 사임, 정상호 대표 체제 본격 시험대\n3. 영업정지 후 재개, 주담대 변동금리 변동 주시",
-      "link": "https://n.news.naver.com/mnews/article/422/0000906813?sid=101",
-      "source": "naver",
-      "published": "2026-09-16T17:21:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3433,51 +3409,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-85501",
       "source": "cvefeed",
       "published": "2026-09-16T17:32:25+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-77860 - 'serve-expired' can bypass Unbound 'wait-limit'",
-      "summary": "CVE ID :CVE-2026-77860\n  \nPublished : Sept. 16, 2026, 8:29 a.m. | 27 minutes ago\n  \nDescription :In NLnetLabs Unbound 1.20.0 up to and including 1.26.0, a vulnerability on the 'serve-expired' code path can cause a double decrement on the 'wait-limit' counter per client IP essentially bypassing one of the counter measures that was introduced for DNSBomb (CVE-2024-33655). A malicious actor can exploit this by controlling an authoritative zone with short TTL, so cached entries expire quickly. Each 'slow' query, one the attacker's authoritative never answers, is followed by one query for an expired cached name, which is answered immediately via the 'serve-expired' path and decrements the counter twice. This second query was named 'pump'. By alternating slow queries and pumps, the attacker keeps the per-client counter at or below the configured 'wait-limit' indefinitely, and can hold an arbitrary number of pending queries from a single source IP, up to the global mesh quota (num-queries-per-thread); eventually bypassing one of the counter measures introduced for DNSBomb (CVE-2024-33655). This vulnerability is present on the 'serve-expired' code path.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-77860\n  \nPublished : Sept. 16, 2026, 8:29 a.m. | 27 minutes ago\n  \nDescription :In NLnetLabs Unbound 1.20.0 up to and including 1.26.0, a vulnerability on the 'serve-expired' code path can cause a double decrement on the 'wait-limit' counter per client IP essentially bypassing one of the counter measures that was introduced for DNSBomb (CVE-2024-33655). A malicious actor can exploit this by controlling an authoritative zone with short TTL, so cached entries expire quickly. Each 'slow' query, one the attacker's authoritative never answers, is followed by one query for an expired cached name, which is answered immediately via the 'serve-expired' path and decrements the counter twice. This second query was named 'pump'. By alternating slow queries and pumps, the attacker keeps the per-client counter at or below the configured 'wait-limit' indefinitely, and can hold an arbitrary number of pending queries from a single source IP, up to the global mesh quota (num-queries-per-thread); eventually bypassing one of the counter measures introduced for DNSBomb (CVE-2024-33655). This vulnerability is present on the 'serve-expired' code path.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-77860\n2. 26.09.16 오후5:29\n3. In NLnetLabs Unbound 1.20.0 up to and including 1.",
-      "cve_id": "CVE-2026-77860",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77860",
-      "source": "cvefeed",
-      "published": "2026-09-16T17:29:23+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-86338 - Ash field policies do not filter-nil forbidden calculations and aggregates, enabling an information-disclosure oracle",
-      "summary": "CVE ID :CVE-2026-86338\n  \nPublished : Sept. 16, 2026, 8:28 a.m. | 27 minutes ago\n  \nDescription :Ash field_policies are documented to protect against filter-based information disclosure: when a field the actor may not see is referenced in a filter, it is replaced with an expression that evaluates to nil, so a filter cannot be used as a yes/no oracle to read a value the actor cannot see.\n\nThis nilling was applied to attributes but not to calculations or aggregates. A user-supplied filter reference to a calculation or aggregate carries an Ash.Query.Calculation / Ash.Query.Aggregate struct, which the authorizer's reference replacement did not match (it only matched the Ash.Resource.* structs), so the filter ran against the real value.\n\nAs a result, an actor whose field policies forbid a calculation or aggregate can still filter by it (for example filter(secret_calc == \"x\") or filter(comment_count == n)) and learn the value from whether rows match — an oracle that recovers field-policy-protected values one probe at a time. Filtering is commonly exposed to lower-privileged actors (for example via AshGraphql or AshJsonApi filter arguments), which is exactly the surface field policies are meant to protect.\n\nThe fix routes filter references to calculations and aggregates through the same field-policy nilling as attributes.\n\nThis issue affects ash: from 2.11.0-rc.0 before 3.33.4.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-86338\n  \nPublished : Sept. 16, 2026, 8:28 a.m. | 27 minutes ago\n  \nDescription :Ash field_policies are documented to protect against filter-based information disclosure: when a field the actor may not see is referenced in a filter, it is replaced with an expression that evaluates to nil, so a filter cannot be used as a yes/no oracle to read a value the actor cannot see.\n\nThis nilling was applied to attributes but not to calculations or aggregates. A user-supplied filter reference to a calculation or aggregate carries an Ash.Query.Calculation / Ash.Query.Aggregate struct, which the authorizer's reference replacement did not match (it only matched the Ash.Resource.* structs), so the filter ran against the real value.\n\nAs a result, an actor whose field policies forbid a calculation or aggregate can still filter by it (for example filter(secret_calc == \"x\") or filter(comment_count == n)) and learn the value from whether rows match — an oracle that recovers field-policy-protected values one probe at a time. Filtering is commonly exposed to lower-privileged actors (for example via AshGraphql or AshJsonApi filter arguments), which is exactly the surface field policies are meant to protect.\n\nThe fix routes filter references to calculations and aggregates through the same field-policy nilling as attributes.\n\nThis issue affects ash: from 2.11.0-rc.0 before 3.33.4.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-86338\n2. 26.09.16 오후5:28\n3. Ash field_policies are documented to protect again",
-      "cve_id": "CVE-2026-86338",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86338",
-      "source": "cvefeed",
-      "published": "2026-09-16T17:28:44+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-88255 - mpp Tempo keys its pre-broadcast dedup reserve on the caller-supplied transaction encoding, so a re-encoded signed transaction reserves a second slot",
-      "summary": "CVE ID :CVE-2026-88255\n  \nPublished : Sept. 16, 2026, 8:24 a.m. | 31 minutes ago\n  \nDescription :Improper Validation of Unsafe Equivalence in Input in ZenHive mpp allows an unauthenticated remote client to pass the Tempo duplicate-submission gate twice with one signed transaction.\n\nMPP.Methods.Tempo reserves the pre-broadcast dedup slot on the caller-supplied hex in reserve_hash_atomic/2, keyed through store_key/1 on tx.raw rather than on a canonical form of the transaction. The deserializer stores the caller's hex verbatim and accepts both recovery-id encodings, so one signed transaction submitted once with v=27 and once with v=0 yields two distinct reserve keys, and both pass the reserve and reach the broadcast path. The plug-level credential replay store is deliberately carved out for tempo in lib/mpp/replay.ex, leaving this reserve as the only gate, and the post-broadcast mark writes the canonical hash key that the raw-keyed reserve never reads.\n\nWhat the duplicate submission yields depends on the node: a nonce-reuse rejection fails closed, while a node that answers with the canonical hash for an already-known transaction returns a second valid Payment-Receipt for a single on-chain payment.\n\nThis issue affects mpp: from 0.2.0 before 0.16.2.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-88255\n  \nPublished : Sept. 16, 2026, 8:24 a.m. | 31 minutes ago\n  \nDescription :Improper Validation of Unsafe Equivalence in Input in ZenHive mpp allows an unauthenticated remote client to pass the Tempo duplicate-submission gate twice with one signed transaction.\n\nMPP.Methods.Tempo reserves the pre-broadcast dedup slot on the caller-supplied hex in reserve_hash_atomic/2, keyed through store_key/1 on tx.raw rather than on a canonical form of the transaction. The deserializer stores the caller's hex verbatim and accepts both recovery-id encodings, so one signed transaction submitted once with v=27 and once with v=0 yields two distinct reserve keys, and both pass the reserve and reach the broadcast path. The plug-level credential replay store is deliberately carved out for tempo in lib/mpp/replay.ex, leaving this reserve as the only gate, and the post-broadcast mark writes the canonical hash key that the raw-keyed reserve never reads.\n\nWhat the duplicate submission yields depends on the node: a nonce-reuse rejection fails closed, while a node that answers with the canonical hash for an already-known transaction returns a second valid Payment-Receipt for a single on-chain payment.\n\nThis issue affects mpp: from 0.2.0 before 0.16.2.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-88255\n2. 26.09.16 오후5:24\n3. Improper Validation of Unsafe Equivalence in Input",
-      "cve_id": "CVE-2026-88255",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88255",
-      "source": "cvefeed",
-      "published": "2026-09-16T17:24:40+09:00",
       "lang": "en"
     }
   ],
