@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-20T00:33:03.591309+09:00",
+  "fetched_at": "2026-09-20T01:04:00.302432+09:00",
   "security_news": [
     {
       "title": "악성코드 지시문 블록체인 저장, 1년 새 420% 증가",
@@ -2124,30 +2124,6 @@
       "source": "naver",
       "published": "2026-09-17T01:08:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Attackers Exploit Issabel Framework Flaw Enabling Unauthenticated OS Command Execution",
-      "summary": "A critical security flaw in Issabel Framework, a web-based framework for the open-source unified communications PBX software, has come under active exploitation.\n\nThe vulnerability in question is CVE-2026-89026 (CVSS v3.1 score: 9.8/CVSS v4.0 score: 9.3), which can allow an unauthenticated remote attacker to execute arbitrary operating system (OS) commands by taking advantage of a hard-coded",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Issabel 프레임워크, CVE-2026-89026 취약점 악용\n2. 인증 없는 원격 공격자, OS 명령어 임의 실행 가능\n3. CVSS 9.8점, 심각한 보안 위협 발생",
-      "link": "https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html",
-      "source": "thehackernews",
-      "published": "2026-09-17T00:50:59+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "호프먼 “AI 혜택, 의료·교육·법률에서 보여줘야”",
-      "summary": "호프먼은 AI가 사이버보안의 취약점을 찾고 백신 개발을 앞당기는 데 쓰일 수 있다고 봤다. 동시에 AI의 위험을 과도하게 단정하는 쪽과 효용을 무조건 확신하는 쪽 모두에 거리를 뒀다. 그는 AI 논의가 일자리 감소와...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 호프먼 “AI 혜택, 의료·교육·법률에서 보여줘야” 호프먼은 AI가 사이버보안의 취약점을 \n2. 동시에 AI의 위험을 과도하게 단정하는 쪽과 효용을 무조건 확신하는 쪽 모두에 거리를 뒀다\n3. 그는 AI 논의가 일자리 감소와...",
-      "link": "https://www.tokenpost.kr/news/ai/409140",
-      "source": "naver",
-      "published": "2026-09-17T00:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3094,21 +3070,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-68904",
       "source": "cvefeed",
       "published": "2026-09-17T01:18:28+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-61593 - djust has Cross-Site Request Forgery on the Server-Sent-Events transport: a cross-origin page can drive a victim-authenticated SSE session",
-      "summary": "CVE ID :CVE-2026-61593\n  \nPublished : Sept. 16, 2026, 3:46 p.m. | 15 minutes ago\n  \nDescription :djust provides Phoenix LiveView-style reactive server-side rendering for Django with Rust-powered performance. Prior to version 1.0.7, the SSE client→server POST endpoints are `@csrf_exempt` and the SSE GET stream endpoint had no Origin check, so a cross-origin page could drive a victim-cookie-authenticated SSE session: force the victim's browser to GET the stream URL (which creates and mounts a LiveView as the victim) and POST to the message endpoint with `credentials: include` to fire state-changing event handlers as the victim. The URL `session_id` is client-chosen (validated only for UUID *format*), so it is not a CSRF token, and a JSON body sent as `text/plain` is a CORS simple request with no preflight. The issue is fixed in 1.0.7. All three SSE endpoints validate the request `Origin` against `ALLOWED_HOSTS` (mirroring the WebSocket CSWSH defense) and reject cross-origin requests with 403; the POST endpoints additionally require `Content-Type: application/json` (415 otherwise), closing the `text/plain` simple-request bypass. As a workaround, disable the SSE transport, or front it with a proxy that enforces an Origin allowlist.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-61593\n  \nPublished : Sept. 16, 2026, 3:46 p.m. | 15 minutes ago\n  \nDescription :djust provides Phoenix LiveView-style reactive server-side rendering for Django with Rust-powered performance. Prior to version 1.0.7, the SSE client→server POST endpoints are `@csrf_exempt` and the SSE GET stream endpoint had no Origin check, so a cross-origin page could drive a victim-cookie-authenticated SSE session: force the victim's browser to GET the stream URL (which creates and mounts a LiveView as the victim) and POST to the message endpoint with `credentials: include` to fire state-changing event handlers as the victim. The URL `session_id` is client-chosen (validated only for UUID *format*), so it is not a CSRF token, and a JSON body sent as `text/plain` is a CORS simple request with no preflight. The issue is fixed in 1.0.7. All three SSE endpoints validate the request `Origin` against `ALLOWED_HOSTS` (mirroring the WebSocket CSWSH defense) and reject cross-origin requests with 403; the POST endpoints additionally require `Content-Type: application/json` (415 otherwise), closing the `text/plain` simple-request bypass. As a workaround, disable the SSE transport, or front it with a proxy that enforces an Origin allowlist.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-61593\n2. 26.09.17 오전12:46\n3. djust provides Phoenix LiveView-style reactive ser",
-      "cve_id": "CVE-2026-61593",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61593",
-      "source": "cvefeed",
-      "published": "2026-09-17T00:46:53+09:00",
       "lang": "en"
     }
   ],
