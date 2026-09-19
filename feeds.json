@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-20T04:02:53.475286+09:00",
+  "fetched_at": "2026-09-20T04:33:06.294279+09:00",
   "security_news": [
     {
       "title": "허깅페이스 침해 뒤 브록먼 “AI 방어 활용해야”",
@@ -2124,21 +2124,24 @@
       "source": "naver",
       "published": "2026-09-17T04:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "디지털 안전 지켜 정보보안 리더십↑",
-      "summary": "국가 사이버안보 강화와 산업 발전에 기여한 공로를 인정받은 결과다. 이 같은 정보보안 역량 강화의... △국가정보원 주관 사이버보안 실태평가 3년 연속 최고 등급 달성 △개인정보보호위원회 주관 개인정보 보호...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국가정보원 사이버보안 평가 3년 연속 최고 등급\n2. 개인정보보호 우수 사례 다수 발굴 및 개선\n3. 디지털 안전 강화 노력 통해 정보보안 리더십 확보",
-      "link": "https://n.news.naver.com/mnews/article/020/0003748721?sid=101",
-      "source": "naver",
-      "published": "2026-09-17T04:31:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82672 - Unvalidated chunk-size line tail in Mint HTTP/1 client enables response smuggling against strict intermediaries on pooled connections",
+      "summary": "CVE ID :CVE-2026-82672\n  \nPublished : Sept. 19, 2026, 5:16 p.m. | 29 minutes ago\n  \nDescription :Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') vulnerability in elixir-mint mint allows a malicious HTTP/1 server to desynchronize a strict intermediary and the Mint client on a pooled connection, enabling response-queue poisoning against subsequent requests that share the connection.\n\nMint.HTTP1.Parse.chunk_size/1 in lib/mint/http1/parse.ex stops at the first non-hexadecimal byte of a chunked response's chunk-size line and returns the remainder unexamined. Mint.HTTP1.decode_body/5 in lib/mint/http1.ex then discards every byte up to the CRLF with Parse.ignore_until_crlf/1, so the accepted grammar is a run of hex digits followed by arbitrary bytes, where RFC 9112 permits only a ;-introduced chunk extension. Lines such as 5ZZZZZ and 5 9 are accepted as chunk size 5, and 0ZZZZ is accepted as the terminating chunk that ends the message body. An RFC-strict intermediary rejects such a line while Mint accepts it, so the two disagree on chunk boundaries and on where the response ends.\n\nThis issue affects mint: from 0.1.0 before 1.10.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82672\n  \nPublished : Sept. 19, 2026, 5:16 p.m. | 29 minutes ago\n  \nDescription :Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') vulnerability in elixir-mint mint allows a malicious HTTP/1 server to desynchronize a strict intermediary and the Mint client on a pooled connection, enabling response-queue poisoning against subsequent requests that share the connection.\n\nMint.HTTP1.Parse.chunk_size/1 in lib/mint/http1/parse.ex stops at the first non-hexadecimal byte of a chunked response's chunk-size line and returns the remainder unexamined. Mint.HTTP1.decode_body/5 in lib/mint/http1.ex then discards every byte up to the CRLF with Parse.ignore_until_crlf/1, so the accepted grammar is a run of hex digits followed by arbitrary bytes, where RFC 9112 permits only a ;-introduced chunk extension. Lines such as 5ZZZZZ and 5 9 are accepted as chunk size 5, and 0ZZZZ is accepted as the terminating chunk that ends the message body. An RFC-strict intermediary rejects such a line while Mint accepts it, so the two disagree on chunk boundaries and on where the response ends.\n\nThis issue affects mint: from 0.1.0 before 1.10.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-82672\n2. 26.09.20 오전2:16\n3. Inconsistent Interpretation of HTTP Requests ('HTT",
+      "cve_id": "CVE-2026-82672",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82672",
+      "source": "cvefeed",
+      "published": "2026-09-20T02:16:35+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-94000 - Keycloak-services: keycloak-services: delegated admin with manage-users can escalate to realm-admin via group membership",
       "summary": "CVE ID :CVE-2026-94000\n  \nPublished : 19 de Setembro de 2026 às 14:09 | 1 hora ago\n  \nDescription :A flaw was found in the Admin REST API of Keycloak, an open-source identity and access management solution. The issue occurs in the group-membership endpoints where the system fails to check if a group grants administrative privileges before allowing a user to be added. This allows a delegated administrator with limited permissions to add themselves to a high-privilege group, potentially gaining full control over the entire realm.\n  \nSeverity: 6.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
