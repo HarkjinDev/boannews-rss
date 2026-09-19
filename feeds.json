@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-20T01:04:00.302432+09:00",
+  "fetched_at": "2026-09-20T01:33:55.362236+09:00",
   "security_news": [
     {
       "title": "악성코드 지시문 블록체인 저장, 1년 새 420% 증가",
@@ -2112,18 +2112,6 @@
       "source": "naver",
       "published": "2026-09-17T04:31:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "북한 연계 해킹조직, 한국대사관·네이버 사칭 도메인 잇따라 등록",
-      "summary": "북한 정부 연계 해킹 조직 탈륨이 주미 한국대사관과 한국 최대 포털 네이버, 주요 국제 싱크탱크... 북한 해킹 조직 탈륨이 주미 한국대사관과 주요 외교·안보 싱크탱크, 한국의 대형 포털 사이트를 모방한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 연계 탈륨, 한국대사관·네이버 사칭 도메인 다수 등록\n2. 외교·안보 싱크탱크 등 사칭, 피싱 등 악성 공격 시도\n3. 국내외 다수 기관 대상, 주의 및 보안 강화 필요",
-      "link": "https://www.voakorea.com/a/north-korean-hackers-s-korean-embassy-091626/8200672.html",
-      "source": "naver",
-      "published": "2026-09-17T01:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3040,36 +3028,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-69147",
       "source": "cvefeed",
       "published": "2026-09-17T02:49:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-85732 - oras-go: Blind SSRF via unvalidated Link header URL in pagination allows internal network probing",
-      "summary": "CVE ID :CVE-2026-85732\n  \nPublished : Sept. 16, 2026, 4:22 p.m. | 33 minutes ago\n  \nDescription :oras-go is a Go library for managing OCI artifacts. Prior to 2.6.2, the parseLink function in registry/remote/utils.go accepts an absolute URL from a registry-controlled Link response header without validating its scheme, host, or port. Tags, Referrers, and Repositories pagination operations then issue a GET request to the attacker-selected URL from the victim's network, allowing blind server-side request forgery against internal services. The response body is not returned to the attacker, but timing and error differences can reveal service reachability, and credentials may be attached when the credential store has an entry for the target host. Exploitation requires a victim to perform a pagination-based listing operation against a malicious registry. The maintainer identifies this report as a duplicate of GHSA-3hr5-mjrr-hfjh and states that remediation is consolidated in that earlier advisory. The consolidated issue is fixed in version 2.6.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-85732\n  \nPublished : Sept. 16, 2026, 4:22 p.m. | 33 minutes ago\n  \nDescription :oras-go is a Go library for managing OCI artifacts. Prior to 2.6.2, the parseLink function in registry/remote/utils.go accepts an absolute URL from a registry-controlled Link response header without validating its scheme, host, or port. Tags, Referrers, and Repositories pagination operations then issue a GET request to the attacker-selected URL from the victim's network, allowing blind server-side request forgery against internal services. The response body is not returned to the attacker, but timing and error differences can reveal service reachability, and credentials may be attached when the credential store has an entry for the target host. Exploitation requires a victim to perform a pagination-based listing operation against a malicious registry. The maintainer identifies this report as a duplicate of GHSA-3hr5-mjrr-hfjh and states that remediation is consolidated in that earlier advisory. The consolidated issue is fixed in version 2.6.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-85732\n2. 26.09.17 오전1:22\n3. oras-go is a Go library for managing OCI artifacts",
-      "cve_id": "CVE-2026-85732",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85732",
-      "source": "cvefeed",
-      "published": "2026-09-17T01:22:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-68904 - node-opcua: TCP Socket Leak (FIN-WAIT-2) via keepalive reconnection cycle - Resource Exhaustion",
-      "summary": "CVE ID :CVE-2026-68904\n  \nPublished : Sept. 16, 2026, 4:18 p.m. | 36 minutes ago\n  \nDescription :node-opcua is an OPC UA implementation for TypeScript and Node.js. From 2.0.0 until 2.170.0, node-opcua clients using the default keepSessionAlive setting can enter a repeated reconnection cycle when an OPC UA server's clock skew causes BadInvalidTimestamp responses. ClientSessionKeepAliveManager._ping_server treated the server-originated ServiceFault as a network outage and forced a transport reconnect, while ClientTCP_transport._on_ACK_response used socket.end() after failed HEL/ACK negotiation and could leave the connection in FIN-WAIT-2 when the peer did not close. Repetition at the keepAliveInterval accumulates file descriptors and memory until the client process or container can be terminated by resource exhaustion. This issue is fixed in version 2.170.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-68904\n  \nPublished : Sept. 16, 2026, 4:18 p.m. | 36 minutes ago\n  \nDescription :node-opcua is an OPC UA implementation for TypeScript and Node.js. From 2.0.0 until 2.170.0, node-opcua clients using the default keepSessionAlive setting can enter a repeated reconnection cycle when an OPC UA server's clock skew causes BadInvalidTimestamp responses. ClientSessionKeepAliveManager._ping_server treated the server-originated ServiceFault as a network outage and forced a transport reconnect, while ClientTCP_transport._on_ACK_response used socket.end() after failed HEL/ACK negotiation and could leave the connection in FIN-WAIT-2 when the peer did not close. Repetition at the keepAliveInterval accumulates file descriptors and memory until the client process or container can be terminated by resource exhaustion. This issue is fixed in version 2.170.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-68904\n2. 26.09.17 오전1:18\n3. node-opcua is an OPC UA implementation for TypeScr",
-      "cve_id": "CVE-2026-68904",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68904",
-      "source": "cvefeed",
-      "published": "2026-09-17T01:18:28+09:00",
       "lang": "en"
     }
   ],
