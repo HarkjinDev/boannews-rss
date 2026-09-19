@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-19T21:01:26.540182+09:00",
+  "fetched_at": "2026-09-19T21:31:20.507115+09:00",
   "security_news": [
+    {
+      "title": "체크포인트 보안관리 서버 치명적 RCE…인증 없이 루트 권한 코드 실행 가능",
+      "summary": "기업의 방화벽 정책과 관리자 접근, 보안로그를 중앙에서 관리하는 체크포인트 보안관리 서버에서 인증 없이 원격코드실행(RCE)이 가능한 치명적 취약점이 공개돼 신속한 패치가 요구된다.체크포인트는 9월 16일 보안관리 서버(Security Management Server)와 로그 서버(Log Server)에 영향을 미치는 CVE-2026-91843을 공개하고 긴급 보안 업데이트를 권고했다. 취약점의 CVSS 점수는 9.8로 평가됐다.CVE-2026-91843은 사용자 인증이 완료되기 전 로그인 처리 과정에서 발생하는 스택 기반 버퍼 오",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 체크포인트 보안관리 서버 RCE 취약점 CVE-2026-91843 공개\n2. 인증 없이 루트 권한으로 코드 실행 가능, CVSS 9.8점\n3. 긴급 보안 업데이트 및 패치 권고",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208551",
+      "source": "dailysecu",
+      "published": "2026-09-19T21:07:57+09:00",
+      "lang": "ko"
+    },
     {
       "title": "젠슨황이 점 찍은 ‘이것’…AI 개발 늦춘다는데 15% 뛰었다 [투자360]",
       "summary": "인공지능(AI) 속도 조절론이 부상한 가운데 사이버보안주가 가파르게 상승했다. 에이전트 AI 확산과 해킹 고도화로 기업의 보안 지출이 구조적으로 늘어날 것이란 전망이 주가를 끌어올렸다. 한국거래소에 따르면...",
@@ -2196,21 +2208,39 @@
       "source": "dailysecu",
       "published": "2026-09-16T22:12:06+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "바이비트, 경찰청 ISCR서 감사장 수상 보도 나와",
-      "summary": "경찰청은 인터폴·유로폴·FBI 등과 해킹·랜섬웨어 사건 공동 대응 방안도 논의했다고 밝혔다. ISCR은... 바이비트는 과거 북한 연계 해킹으로 탈취된 자산을 추적하기 위해 미국 법원에서 신속 증거개시를 허용받은 바...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 바이비트, ISCR서 감사장 수상\n2. 북한 연계 해킹 자산 추적 협력\n3. 인터폴·유로폴·FBI와 공동 대응 논의",
-      "link": "https://www.tokenpost.kr/news/policy/409010",
-      "source": "naver",
-      "published": "2026-09-16T21:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-93987 - rclone serve docker Path Traversal via Volume Name",
+      "summary": "CVE ID :CVE-2026-93987\n  \nPublished : Sept. 19, 2026, 11:53 a.m. | 10 minutes ago\n  \nDescription :rclone versions 1.56.0 through 1.75.0 contain a path traversal vulnerability in the `rclone serve docker` volume plugin. newVolume() in cmd/serve/docker/volume.go computes a volume's mountpoint as filepath.Join(drv.root, name) from the attacker-supplied `name` field of a Docker VolumeDriver.Create request without verifying that the result stays within drv.root (default /var/lib/docker-volumes/rclone), and checkMountpoint() then creates that directory with file.MkdirAll before mounting. A volume name containing enough `..` components (e.g. \"../../../../../../etc\") therefore resolves outside the base directory, allowing anyone able to submit a VolumeDriver.Create request to the plugin socket — normally the Docker daemon, or a workload that can request named volumes in a multi-tenant orchestration setup — to make the privileged rclone plugin process create a directory and mount a remote filesystem specified in the same request at an arbitrary host path, shadowing or disrupting system directories. The advisory notes Volume.restoreState() had the same missing validation when reloading persisted volume state. Fixed in 1.75.1.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-93987\n  \nPublished : Sept. 19, 2026, 11:53 a.m. | 10 minutes ago\n  \nDescription :rclone versions 1.56.0 through 1.75.0 contain a path traversal vulnerability in the `rclone serve docker` volume plugin. newVolume() in cmd/serve/docker/volume.go computes a volume's mountpoint as filepath.Join(drv.root, name) from the attacker-supplied `name` field of a Docker VolumeDriver.Create request without verifying that the result stays within drv.root (default /var/lib/docker-volumes/rclone), and checkMountpoint() then creates that directory with file.MkdirAll before mounting. A volume name containing enough `..` components (e.g. \"../../../../../../etc\") therefore resolves outside the base directory, allowing anyone able to submit a VolumeDriver.Create request to the plugin socket — normally the Docker daemon, or a workload that can request named volumes in a multi-tenant orchestration setup — to make the privileged rclone plugin process create a directory and mount a remote filesystem specified in the same request at an arbitrary host path, shadowing or disrupting system directories. The advisory notes Volume.restoreState() had the same missing validation when reloading persisted volume state. Fixed in 1.75.1.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-93987\n2. 26.09.19 오후8:53\n3. rclone versions 1.56.0 through 1.75.0 contain a pa",
+      "cve_id": "CVE-2026-93987",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93987",
+      "source": "cvefeed",
+      "published": "2026-09-19T20:53:38+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-78030 - DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM",
+      "summary": "CVE ID :CVE-2026-78030\n  \nPublished : Sept. 19, 2026, 11:16 a.m. | 47 minutes ago\n  \nDescription :DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM.\n\nDBD::DBM passes the dbm_type and dbm_mldbm connect attributes to require without checking that the value names a module. require treats a path-shaped string as a literal filename and does not consult @INC, so the attribute chooses the file that Perl loads and runs.\n\nThe MLDBM::Serializer:: prefix that DBD::DBM prepends to dbm_mldbm is not a boundary: only the :: separators are rewritten to /, so a value containing / traverses out of the serializer directory. The value is also assigned to $MLDBM::Serializer, which MLDBM requires the same way when it ties the table.\n\nA caller that lets an untrusted party influence either attribute, for example through a DSN fragment or a parameter that selects a storage backend, runs the file-scope code of whatever module the value names.\n\nFor example,\n\n    my $dsn = \"dbi:DBM:f_dir=/var/db;dbm_type=../../Untrusted.pm\"\n    my $dbh = DBI->connect( $dsn );\n\nNote that DBD::Gofer forwards connect attributes to the server side, and DBI::ProxyServer checks only that a DSN starts with a driver prefix.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-78030\n  \nPublished : Sept. 19, 2026, 11:16 a.m. | 47 minutes ago\n  \nDescription :DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM.\n\nDBD::DBM passes the dbm_type and dbm_mldbm connect attributes to require without checking that the value names a module. require treats a path-shaped string as a literal filename and does not consult @INC, so the attribute chooses the file that Perl loads and runs.\n\nThe MLDBM::Serializer:: prefix that DBD::DBM prepends to dbm_mldbm is not a boundary: only the :: separators are rewritten to /, so a value containing / traverses out of the serializer directory. The value is also assigned to $MLDBM::Serializer, which MLDBM requires the same way when it ties the table.\n\nA caller that lets an untrusted party influence either attribute, for example through a DSN fragment or a parameter that selects a storage backend, runs the file-scope code of whatever module the value names.\n\nFor example,\n\n    my $dsn = \"dbi:DBM:f_dir=/var/db;dbm_type=../../Untrusted.pm\"\n    my $dbh = DBI->connect( $dsn );\n\nNote that DBD::Gofer forwards connect attributes to the server side, and DBI::ProxyServer checks only that a DSN starts with a driver prefix.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-78030\n2. 26.09.19 오후8:16\n3. DBI versions before 1.653 for Perl load arbitrary ",
+      "cve_id": "CVE-2026-78030",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78030",
+      "source": "cvefeed",
+      "published": "2026-09-19T20:16:37+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-89274 - WP Recipe Maker <= 10.8.1 - Unauthenticated Arbitrary Shortcode Execution via Recipe Comment Content",
       "summary": "CVE ID :CVE-2026-89274\n  \nPublished : Sept. 19, 2026, 3:17 a.m. | 28 minutes ago\n  \nDescription :The WP Recipe Maker plugin for WordPress is vulnerable to Arbitrary Shortcode Execution in all versions up to, and including, 10.8.1. The vulnerability exists because `WPRM_Metadata::sanitize_metadata()` recursively calls `do_shortcode()` on every scalar field of the recipe's structured metadata array — including the `reviewBody` field, which is populated verbatim from the `comment_content` of approved `wprm-comment-rating` comments — without sanitizing or stripping shortcode tokens before execution; the subsequent `wp_strip_all_tags()` and `strip_shortcodes()` calls operate only on the output string after execution has already fully occurred, providing no protection against server-side shortcode invocation. This makes it possible for unauthenticated attackers to execute arbitrary registered WordPress shortcodes server-side on every recipe page render, causing shortcode output — such as attachment captions, private post fields, or other data exposed by installed shortcodes — to be embedded in the page's JSON-LD `reviewBody` metadata and disclosed to all visitors who load the recipe page. Successful exploitation requires the attacker's rated comment to pass the site's comment approval threshold, either via auto-approval or moderator action, before the injected shortcode begins executing on page loads.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2389,6 +2419,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-93659",
       "source": "cvefeed",
       "published": "2026-09-18T23:23:21+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\nCVE-2025-39682 Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability\n\nThis type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.\nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria.\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "description": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\nCVE-2025-39682 Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability\n\nThis type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.\nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria.\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2025-39682\n2. CISA\n3. CISA has added one new vulnerability to its Known ",
+      "cve_id": "CVE-2025-39682",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "source": "cisa",
+      "published": "2026-09-18T21:00:00+09:00",
       "lang": "en"
     },
     {
