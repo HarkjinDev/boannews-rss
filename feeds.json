@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-19T17:31:15.491546+09:00",
+  "fetched_at": "2026-09-19T18:01:18.601553+09:00",
   "security_news": [
     {
       "title": "포모픽 iOS 1.1~1.2 악성코드 확인…프라이빗키 유출 위험",
@@ -2280,54 +2280,6 @@
       "source": "naver",
       "published": "2026-09-16T18:11:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "“미·중 전략 경쟁 속 비대칭적 실용외교 필요”…서울국제포럼 창립 ...",
-      "summary": "이신화 고려대 교수는 “북한은 중ㆍ러 밀착으로 대미 관계 개선 없이도 버틸 수 있는 국제적 공간을 넓히고 있다”며 “핵ㆍ군사 위협과 사이버 해킹뿐 아니라 제재 위반과 불법 활동까지 중ㆍ러 중심의 협력 질서...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 서울국제포럼 창립, 비대칭 외교 전략 논의\n2. 북한, 중·러 협력으로 대미 관계 개선 없이 핵 위협\n3. 제재 위반, 불법 활동 등 중·러 중심 협력 질서 확대",
-      "link": "https://n.news.naver.com/mnews/article/025/0003551851?sid=100",
-      "source": "naver",
-      "published": "2026-09-16T17:51:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "차의과학대 AI정보의학연구소, '헬스 데이터 가치 평가 모델' ISO 제안 통...",
-      "summary": "뿐만 아니라 랜섬웨어와 같은 사이버보안 위협이 발생했을 경우 의료데이터 피해 규모에 대한 객관적인 가치를 증명해 복구 및 보상 체계 마련을 위한 의사결정 수단으로 활용할 수 있다. 더불어 활용 목적에 적합한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 차의과학대 AI연구소, 헬스 데이터 가치 평가 모델 ISO 제안\n2. 랜섬웨어 등 사이버 위협 시 의료 데이터 피해 규모 증명\n3. 복구·보상 위한 의사결정 수단으로 활용 가능",
-      "link": "https://www.rapportian.com/news/articleView.html?idxno=240441",
-      "source": "naver",
-      "published": "2026-09-16T17:50:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Enterprises Warned of Attacks Exploiting WSO2 Vulnerability",
-      "summary": "The vulnerability, tracked as CVE-2026-5430, can be exploited to gain access to valuable enterprise data.\nThe post Enterprises Warned of Attacks Exploiting WSO2 Vulnerability appeared first on SecurityWeek.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. WSO2 취약점 CVE-2026-5430으로 기업 데이터 접근 노려\n2. 공격자는 이 취약점을 이용해 기업의 중요 데이터에 접근 가능\n3. 기업들은 WSO2 취약점을 악용한 공격에 대한 경고",
-      "link": "https://www.securityweek.com/enterprises-warned-of-attacks-exploiting-wso2-vulnerability/",
-      "source": "securityweek",
-      "published": "2026-09-16T17:39:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "전북도 사이버공격 매년 반복…올해도 338건",
-      "summary": "타 광역자치단체나 중앙부처에서도 사이버 공격으로 인한 개인정보 유출 등 해킹 사고가 발생했던 만큼... 이 기간 중 전북에서는 해킹 등 사이버 공격으로 인한 피해 발생 사례가 없었으나, 전국적으로는 2022년부터...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 전북도, 작년 338건 사이버 공격 발생\n2. 개인정보 유출 등 전국 해킹 사고 2022년부터 발생\n3. 피해 사례는 없었으나 주의 요망",
-      "link": "http://www.jeollailbo.com/news/articleView.html?idxno=811354",
-      "source": "naver",
-      "published": "2026-09-16T17:36:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3379,36 +3331,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-90030",
       "source": "cvefeed",
       "published": "2026-09-16T19:33:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-89775 - KVM: arm64: Handle negative S1 walk levels in VNCR TLB size evaluation",
-      "summary": "CVE ID :CVE-2026-89775\n  \nPublished : Sept. 16, 2026, 8:39 a.m. | 17 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: arm64: Handle negative S1 walk levels in VNCR TLB size evaluation\n\nComputing the effects of a TLB invalidation involves looking at\nthe size of the mapping cached by the TLB. For S1 mappings such as\nVNCR, this is deducted from the combination of the base granule size\nand the mapping level.\n\nHowever, this implies that the S1 MMU is *on*. When the MMU is off,\nwe indicate this with the level being set to a \"creative\" value of\n-127 (S1_MMU_DISABLED).\n\nThis ends-up being misinterpreted by pgshift_level_to_ttl() as it\ndoesn't handle negative levels at all (the level is immediately cast\nto a u8 and only the bottom two bits considered), leading to an\ninvalidation size of 0. Not helpful.\n\nTidy-up pgshift_level_to_ttl() to handle these negative levels, and\nttl_to_size() to always return SZ_1G when no valid TTL is present.\nThis allows the removal of open-coded checks for similar situations.\n\nNote that the check for a negative value not explicitely checking for\nS1_MMU_DISABLED is deliberate, so that actual negative levels introduced\nwith LVA2 and D128 can take the same path if we ever support them.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-89775\n  \nPublished : Sept. 16, 2026, 8:39 a.m. | 17 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: arm64: Handle negative S1 walk levels in VNCR TLB size evaluation\n\nComputing the effects of a TLB invalidation involves looking at\nthe size of the mapping cached by the TLB. For S1 mappings such as\nVNCR, this is deducted from the combination of the base granule size\nand the mapping level.\n\nHowever, this implies that the S1 MMU is *on*. When the MMU is off,\nwe indicate this with the level being set to a \"creative\" value of\n-127 (S1_MMU_DISABLED).\n\nThis ends-up being misinterpreted by pgshift_level_to_ttl() as it\ndoesn't handle negative levels at all (the level is immediately cast\nto a u8 and only the bottom two bits considered), leading to an\ninvalidation size of 0. Not helpful.\n\nTidy-up pgshift_level_to_ttl() to handle these negative levels, and\nttl_to_size() to always return SZ_1G when no valid TTL is present.\nThis allows the removal of open-coded checks for similar situations.\n\nNote that the check for a negative value not explicitely checking for\nS1_MMU_DISABLED is deliberate, so that actual negative levels introduced\nwith LVA2 and D128 can take the same path if we ever support them.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-89775\n2. 26.09.16 오후5:39\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-89775",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-89775",
-      "source": "cvefeed",
-      "published": "2026-09-16T17:39:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-85501 - Retrap: Novel Vulnerabilities to launch Algorithmic Complexity Attacks on DNSSEC",
-      "summary": "CVE ID :CVE-2026-85501\n  \nPublished : Sept. 16, 2026, 8:32 a.m. | 24 minutes ago\n  \nDescription :Novel vulnerabilities to launch algorithmic complexity attacks on DNSSEC have been researched under the term 'ReTrap'. These result in degradation of service when malicious zones are used to serve the algorithmic complexity vulnerabilities. NLnet Labs Unbound up to and including 1.26.0 is vulnerable to some of them. TagTrap, where  the triple(Zone, Algo, KeyTag) matching mechanism introduces a significant attack vector when resolvers handle malicious responses containing numerous mismatched DNSKEY, RRSIG, and DS record. DelegationTrap, where constructing the chain-of-trust requires iterative validation of DNSKEY and DS records from the root zone downward. For deeply nested domains, this results in significant computational overhead. NsecTrap, where  responses with excessive invalid NSEC records compel the resolver to validate each one. AdditionalTrap, where Unbound by default would try to DNSSEC validate the ADDITIONAL section as well. This can be exploited to waste validation resources by malicious users.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-85501\n  \nPublished : Sept. 16, 2026, 8:32 a.m. | 24 minutes ago\n  \nDescription :Novel vulnerabilities to launch algorithmic complexity attacks on DNSSEC have been researched under the term 'ReTrap'. These result in degradation of service when malicious zones are used to serve the algorithmic complexity vulnerabilities. NLnet Labs Unbound up to and including 1.26.0 is vulnerable to some of them. TagTrap, where  the triple(Zone, Algo, KeyTag) matching mechanism introduces a significant attack vector when resolvers handle malicious responses containing numerous mismatched DNSKEY, RRSIG, and DS record. DelegationTrap, where constructing the chain-of-trust requires iterative validation of DNSKEY and DS records from the root zone downward. For deeply nested domains, this results in significant computational overhead. NsecTrap, where  responses with excessive invalid NSEC records compel the resolver to validate each one. AdditionalTrap, where Unbound by default would try to DNSSEC validate the ADDITIONAL section as well. This can be exploited to waste validation resources by malicious users.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-85501\n2. 26.09.16 오후5:32\n3. Novel vulnerabilities to launch algorithmic comple",
-      "cve_id": "CVE-2026-85501",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85501",
-      "source": "cvefeed",
-      "published": "2026-09-16T17:32:25+09:00",
       "lang": "en"
     }
   ],
