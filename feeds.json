@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-20T07:03:07.609447+09:00",
+  "fetched_at": "2026-09-20T07:32:53.426167+09:00",
   "security_news": [
+    {
+      "title": "신분 위조해 외화 챙긴 北 IT 노동자, 글로벌 수사망에 '긴장'",
+      "summary": "한국지역정보개발원과 카카오게임즈가 시스템 취약점을 노린 외부 해킹 공격을 받으면서 선제적인 보안 점검 필요성이 다시 도마에 올랐다. ◆ 북한 IT 노동자 외화벌이 제동 보안 전문 매체 더레코드는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 IT 노동자, 신분 위조해 외화 벌이 제동\n2. 한국지역정보개발원, 카카오게임즈 취약점 노린 공격\n3. 글로벌 수사망, 선제적 보안 점검 촉구",
+      "link": "https://n.news.naver.com/mnews/article/138/0002242078?sid=105",
+      "source": "naver",
+      "published": "2026-09-20T07:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "허깅페이스 침해 뒤 브록먼 “AI 방어 활용해야”",
       "summary": "브록먼은 8월 17일 공개한 글에서 오픈AI와 허깅페이스 사이의 보안 사고를 “사이버보안의 분수령”이라고 표현했다. AI 모델이 실제 공격의 일부를 자동화할 수준에 이르렀지만, 같은 기술로 취약점을 찾아내고...",
@@ -2008,6 +2020,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-93954 - grimmory-tools grimmory Settings API Endpoint AppSettingController.java AppSettingController.getAppSettings authorization",
+      "summary": "CVE ID :CVE-2026-93954\n  \nPublished : Sept. 19, 2026, 10:16 p.m. | 13 minutes ago\n  \nDescription :A security vulnerability has been detected in grimmory-tools grimmory up to 3.3.3/3.4.1. Affected is the function AppSettingController.getAppSettings of the file backend/src/main/java/org/booklore/controller/AppSettingController.java of the component Settings API Endpoint. Such manipulation leads to incorrect authorization. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The name of the patch is 2b66ca6df8110f6b512e030b54c16b9fbe318f17. Applying a patch is advised to resolve this issue. PR #2558, merged as 53abc8b, moved the OIDC secret into a dedicated setting, but did not by itself restrict GET /api/v1/settings.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-93954\n  \nPublished : Sept. 19, 2026, 10:16 p.m. | 13 minutes ago\n  \nDescription :A security vulnerability has been detected in grimmory-tools grimmory up to 3.3.3/3.4.1. Affected is the function AppSettingController.getAppSettings of the file backend/src/main/java/org/booklore/controller/AppSettingController.java of the component Settings API Endpoint. Such manipulation leads to incorrect authorization. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The name of the patch is 2b66ca6df8110f6b512e030b54c16b9fbe318f17. Applying a patch is advised to resolve this issue. PR #2558, merged as 53abc8b, moved the OIDC secret into a dedicated setting, but did not by itself restrict GET /api/v1/settings.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-93954\n2. 26.09.20 오전7:16\n3. A security vulnerability has been detected in grim",
+      "cve_id": "CVE-2026-93954",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93954",
+      "source": "cvefeed",
+      "published": "2026-09-20T07:16:28+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-82672 - Unvalidated chunk-size line tail in Mint HTTP/1 client enables response smuggling against strict intermediaries on pooled connections",
       "summary": "CVE ID :CVE-2026-82672\n  \nPublished : Sept. 19, 2026, 5:16 p.m. | 29 minutes ago\n  \nDescription :Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') vulnerability in elixir-mint mint allows a malicious HTTP/1 server to desynchronize a strict intermediary and the Mint client on a pooled connection, enabling response-queue poisoning against subsequent requests that share the connection.\n\nMint.HTTP1.Parse.chunk_size/1 in lib/mint/http1/parse.ex stops at the first non-hexadecimal byte of a chunked response's chunk-size line and returns the remainder unexamined. Mint.HTTP1.decode_body/5 in lib/mint/http1.ex then discards every byte up to the CRLF with Parse.ignore_until_crlf/1, so the accepted grammar is a run of hex digits followed by arbitrary bytes, where RFC 9112 permits only a ;-introduced chunk extension. Lines such as 5ZZZZZ and 5 9 are accepted as chunk size 5, and 0ZZZZ is accepted as the terminating chunk that ends the message body. An RFC-strict intermediary rejects such a line while Mint accepts it, so the two disagree on chunk boundaries and on where the response ends.\n\nThis issue affects mint: from 0.1.0 before 1.10.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-82672\n  \nPublished : Sept. 19, 2026, 5:16 p.m. | 29 minutes ago\n  \nDescription :Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') vulnerability in elixir-mint mint allows a malicious HTTP/1 server to desynchronize a strict intermediary and the Mint client on a pooled connection, enabling response-queue poisoning against subsequent requests that share the connection.\n\nMint.HTTP1.Parse.chunk_size/1 in lib/mint/http1/parse.ex stops at the first non-hexadecimal byte of a chunked response's chunk-size line and returns the remainder unexamined. Mint.HTTP1.decode_body/5 in lib/mint/http1.ex then discards every byte up to the CRLF with Parse.ignore_until_crlf/1, so the accepted grammar is a run of hex digits followed by arbitrary bytes, where RFC 9112 permits only a ;-introduced chunk extension. Lines such as 5ZZZZZ and 5 9 are accepted as chunk size 5, and 0ZZZZ is accepted as the terminating chunk that ends the message body. An RFC-strict intermediary rejects such a line while Mint accepts it, so the two disagree on chunk boundaries and on where the response ends.\n\nThis issue affects mint: from 0.1.0 before 1.10.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2815,21 +2842,6 @@
       "link": "https://isc.sans.edu/diary/rss/33346",
       "source": "sans_isc",
       "published": "2026-09-17T11:00:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-92582 - AVideo through 29.0 Broken Access Control via videoAddNew.json.php CSRF Bypass",
-      "summary": "CVE ID :CVE-2026-92582\n  \nPublished : 16 de Setembro de 2026 às 22:18 | 1 hora, 23 minutos ago\n  \nDescription :AVideo (WWBN/AVideo) through 29.0 (commit e01e41ecc) is vulnerable to cross-site request forgery. objects/videoAddNew.json.php disables AVideo's automatic CSRF guard ($global['skipAutoCSRFCheck']) and the untrusted-request check ($global['bypassSameDomainCheck']) merely because 'user' and 'pass' parameters are present in the request; the values are never validated and are read from $_REQUEST, so an attacker can supply them in the query string of a cross-site request. Because User::loginFromRequestIfNotLogged() returns immediately when a session already exists, a victim who is authenticated by cookie satisfies the check while the attacker-supplied credentials are discarded. An attacker who lures an authenticated user with upload rights to visit a crafted page can therefore submit cross-origin requests that modify video records — including ownership transfer (setUsers_id), deletion of user-group access restrictions, can_download, can_share, only_for_paid, video_password, rating, status, creation date, and view count. For a victim with administrator or Permissions::canAdminVideos() rights, any video on the site can be altered, including removing group restrictions from private content. No patched version was available at the time of the advisory.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-92582\n  \nPublished : 16 de Setembro de 2026 às 22:18 | 1 hora, 23 minutos ago\n  \nDescription :AVideo (WWBN/AVideo) through 29.0 (commit e01e41ecc) is vulnerable to cross-site request forgery. objects/videoAddNew.json.php disables AVideo's automatic CSRF guard ($global['skipAutoCSRFCheck']) and the untrusted-request check ($global['bypassSameDomainCheck']) merely because 'user' and 'pass' parameters are present in the request; the values are never validated and are read from $_REQUEST, so an attacker can supply them in the query string of a cross-site request. Because User::loginFromRequestIfNotLogged() returns immediately when a session already exists, a victim who is authenticated by cookie satisfies the check while the attacker-supplied credentials are discarded. An attacker who lures an authenticated user with upload rights to visit a crafted page can therefore submit cross-origin requests that modify video records — including ownership transfer (setUsers_id), deletion of user-group access restrictions, can_download, can_share, only_for_paid, video_password, rating, status, creation date, and view count. For a victim with administrator or Permissions::canAdminVideos() rights, any video on the site can be altered, including removing group restrictions from private content. No patched version was available at the time of the advisory.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-92582\n2. 26.09.17 오전7:18\n3. AVideo (WWBN/AVideo) through 29.0 (commit e01e41ec",
-      "cve_id": "CVE-2026-92582",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92582",
-      "source": "cvefeed",
-      "published": "2026-09-17T07:18:28+09:00",
       "lang": "en"
     }
   ],
