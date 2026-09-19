@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-19T12:31:06.592522+09:00",
+  "fetched_at": "2026-09-19T13:01:25.794467+09:00",
   "security_news": [
     {
       "title": "양자암호부터 배터리 여권까지…아이씨티케이 보안칩 영토 넓힌다",
@@ -2715,6 +2715,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-89274 - WP Recipe Maker <= 10.8.1 - Unauthenticated Arbitrary Shortcode Execution via Recipe Comment Content",
+      "summary": "CVE ID :CVE-2026-89274\n  \nPublished : Sept. 19, 2026, 3:17 a.m. | 28 minutes ago\n  \nDescription :The WP Recipe Maker plugin for WordPress is vulnerable to Arbitrary Shortcode Execution in all versions up to, and including, 10.8.1. The vulnerability exists because `WPRM_Metadata::sanitize_metadata()` recursively calls `do_shortcode()` on every scalar field of the recipe's structured metadata array — including the `reviewBody` field, which is populated verbatim from the `comment_content` of approved `wprm-comment-rating` comments — without sanitizing or stripping shortcode tokens before execution; the subsequent `wp_strip_all_tags()` and `strip_shortcodes()` calls operate only on the output string after execution has already fully occurred, providing no protection against server-side shortcode invocation. This makes it possible for unauthenticated attackers to execute arbitrary registered WordPress shortcodes server-side on every recipe page render, causing shortcode output — such as attachment captions, private post fields, or other data exposed by installed shortcodes — to be embedded in the page's JSON-LD `reviewBody` metadata and disclosed to all visitors who load the recipe page. Successful exploitation requires the attacker's rated comment to pass the site's comment approval threshold, either via auto-approval or moderator action, before the injected shortcode begins executing on page loads.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-89274\n  \nPublished : Sept. 19, 2026, 3:17 a.m. | 28 minutes ago\n  \nDescription :The WP Recipe Maker plugin for WordPress is vulnerable to Arbitrary Shortcode Execution in all versions up to, and including, 10.8.1. The vulnerability exists because `WPRM_Metadata::sanitize_metadata()` recursively calls `do_shortcode()` on every scalar field of the recipe's structured metadata array — including the `reviewBody` field, which is populated verbatim from the `comment_content` of approved `wprm-comment-rating` comments — without sanitizing or stripping shortcode tokens before execution; the subsequent `wp_strip_all_tags()` and `strip_shortcodes()` calls operate only on the output string after execution has already fully occurred, providing no protection against server-side shortcode invocation. This makes it possible for unauthenticated attackers to execute arbitrary registered WordPress shortcodes server-side on every recipe page render, causing shortcode output — such as attachment captions, private post fields, or other data exposed by installed shortcodes — to be embedded in the page's JSON-LD `reviewBody` metadata and disclosed to all visitors who load the recipe page. Successful exploitation requires the attacker's rated comment to pass the site's comment approval threshold, either via auto-approval or moderator action, before the injected shortcode begins executing on page loads.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-89274\n2. 26.09.19 오후12:17\n3. The WP Recipe Maker plugin for WordPress is vulner",
+      "cve_id": "CVE-2026-89274",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-89274",
+      "source": "cvefeed",
+      "published": "2026-09-19T12:17:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-63452 - Suricata http1: repeated brotli compression bombs can cause excessive CPU consumption",
       "summary": "CVE ID :CVE-2026-63452\n  \nPublished : Sept. 18, 2026, 9:17 p.m. | 1 hour, 44 minutes ago\n  \nDescription :Suricata is a network Intrusion Detection System, Intrusion Prevention System and Network Security Monitoring engine. From 8.0.0 until 8.0.6, the HTTP/1 parser limits decompression work per transaction but does not limit how many small brotli compression bombs a single flow can submit. With response-body-decompress-layer-limit enabled, repeated compressed responses make the decompression paths in rust/htp perform expensive work for every transaction, degrading packet processing and potentially causing loss of monitoring visibility or denial of service. This issue is fixed in version 8.0.6.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
