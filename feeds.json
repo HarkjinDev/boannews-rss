@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-20T00:03:00.588809+09:00",
+  "fetched_at": "2026-09-20T00:33:03.591309+09:00",
   "security_news": [
+    {
+      "title": "악성코드 지시문 블록체인 저장, 1년 새 420% 증가",
+      "summary": "블록체인 자체가 해킹된 것이 아니라 삭제와 압류가 어려운 온체인 데이터층이 악성코드 통신 인프라로 악용됐다. 체이널리시스는 17일 이 수법을 '블록체인 데드드롭(Blockchain Dead Drops·BDD)'이라고 명명했다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 악성코드 지시문 블록체인 저장, 1년 새 420% 증가 블록체인 자체가 해킹된 것이 아니라\n2. 체이널리시스는 17일 이 수법을 '블록체인 데드드롭(Blockchain Dead Drops",
+      "link": "https://www.tokenpost.kr/news/blockchain/410856",
+      "source": "naver",
+      "published": "2026-09-20T00:24:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "블록체인에 악성코드 심는 北 해커들… BDD 주의보 [코인 브리핑]",
       "summary": "블록체인에 악성코드를 심어 해킹하는 신종 범죄가 확산하고 있는 것으로 나타났다. 블록체인 안에 악성코드가 숨어들어 서버나 도메인을 차단하는 기존 보안 방식으로 해킹 공격을 막을 수 없는 어려움이 나타나고...",
@@ -2136,21 +2148,39 @@
       "source": "naver",
       "published": "2026-09-17T00:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Three Threat Groups Target Russian Enterprises With Backdoors, Ransomware, and Wipers",
-      "summary": "Enterprises in Russia have emerged as the target of three threat activity clusters tracked as NightEagle, Hacking Cat, and Toy Ghouls, according to multiple reports from Kaspersky.\n\nThe cybersecurity vendor said it has identified attacks mounted by NightEagle (aka APT-Q-95), a threat actor known to be active since at least 2023, that involve new techniques for persistence and lateral movement.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Three Threat Groups Target Russian Enterprises Wit\n2. The cybersecurity vendor said it has identified at",
-      "link": "https://thehackernews.com/2026/09/three-threat-groups-target-russian.html",
-      "source": "thehackernews",
-      "published": "2026-09-17T00:27:49+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-94000 - Keycloak-services: keycloak-services: delegated admin with manage-users can escalate to realm-admin via group membership",
+      "summary": "CVE ID :CVE-2026-94000\n  \nPublished : 19 de Setembro de 2026 às 14:09 | 1 hora ago\n  \nDescription :A flaw was found in the Admin REST API of Keycloak, an open-source identity and access management solution. The issue occurs in the group-membership endpoints where the system fails to check if a group grants administrative privileges before allowing a user to be added. This allows a delegated administrator with limited permissions to add themselves to a high-privilege group, potentially gaining full control over the entire realm.\n  \nSeverity: 6.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-94000\n  \nPublished : 19 de Setembro de 2026 às 14:09 | 1 hora ago\n  \nDescription :A flaw was found in the Admin REST API of Keycloak, an open-source identity and access management solution. The issue occurs in the group-membership endpoints where the system fails to check if a group grants administrative privileges before allowing a user to be added. This allows a delegated administrator with limited permissions to add themselves to a high-privilege group, potentially gaining full control over the entire realm.\n  \nSeverity: 6.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-94000\n2. 26.09.19 오후11:09\n3. A flaw was found in the Admin REST API of Keycloak",
+      "cve_id": "CVE-2026-94000",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-94000",
+      "source": "cvefeed",
+      "published": "2026-09-19T23:09:17+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-93982 - OpenPanel MCP Authentication Token in Query Parameter Logged Plaintext",
+      "summary": "CVE ID :CVE-2026-93982\n  \nPublished : 19 de Setembro de 2026 às 12:16 | 2 horas, 53 minutos ago\n  \nDescription :OpenPanel through commit bad75bdd writes Model Context Protocol authentication tokens from URL query parameters to plaintext application logs without redaction. Attackers with access to application stdout or centralized logging systems can capture base64-encoded credentials to replay MCP requests and access project analytics.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-93982\n  \nPublished : 19 de Setembro de 2026 às 12:16 | 2 horas, 53 minutos ago\n  \nDescription :OpenPanel through commit bad75bdd writes Model Context Protocol authentication tokens from URL query parameters to plaintext application logs without redaction. Attackers with access to application stdout or centralized logging systems can capture base64-encoded credentials to replay MCP requests and access project analytics.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-93982\n2. 26.09.19 오후9:16\n3. OpenPanel through commit bad75bdd writes Model Con",
+      "cve_id": "CVE-2026-93982",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93982",
+      "source": "cvefeed",
+      "published": "2026-09-19T21:16:41+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-93987 - rclone serve docker Path Traversal via Volume Name",
       "summary": "CVE ID :CVE-2026-93987\n  \nPublished : Sept. 19, 2026, 11:53 a.m. | 10 minutes ago\n  \nDescription :rclone versions 1.56.0 through 1.75.0 contain a path traversal vulnerability in the `rclone serve docker` volume plugin. newVolume() in cmd/serve/docker/volume.go computes a volume's mountpoint as filepath.Join(drv.root, name) from the attacker-supplied `name` field of a Docker VolumeDriver.Create request without verifying that the result stays within drv.root (default /var/lib/docker-volumes/rclone), and checkMountpoint() then creates that directory with file.MkdirAll before mounting. A volume name containing enough `..` components (e.g. \"../../../../../../etc\") therefore resolves outside the base directory, allowing anyone able to submit a VolumeDriver.Create request to the plugin socket — normally the Docker daemon, or a workload that can request named volumes in a multi-tenant orchestration setup — to make the privileged rclone plugin process create a directory and mount a remote filesystem specified in the same request at an arbitrary host path, shadowing or disrupting system directories. The advisory notes Volume.restoreState() had the same missing validation when reloading persisted volume state. Fixed in 1.75.1.\n  \nSeverity: 4.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
