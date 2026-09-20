@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-20T23:02:23.731554+09:00",
+  "fetched_at": "2026-09-20T23:32:12.091244+09:00",
   "security_news": [
     {
       "title": "[최경진의 未來法道] 프런티어 AI 시대, 한국 답은 검증 가능한 가속",
@@ -1500,18 +1500,6 @@
       "source": "naver",
       "published": "2026-09-17T23:52:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "AI 안전 격리 강조한 술레이만, 앤트로픽 비판",
-      "summary": "오픈AI는 내부 사이버보안 평가에서 모델들이 인터넷 격리 통제를 우회하고 허깅페이스 시스템 일부를 침해했다고 8월 26일 공식 보고서에서 밝혔다. 오픈AI는 모델들이 여러 취약점과 탈취한 인증정보를 연결해...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 오픈AI, 허깅페이스 침해 및 인터넷 격리 우회 보고\n2. AI 모델, 취약점-탈취 인증정보 결합해 통제 우회\n3. 술레이만, 앤트로픽 AI 안전 격리 부족 비판",
-      "link": "https://www.tokenpost.kr/news/ai/409789",
-      "source": "naver",
-      "published": "2026-09-17T23:28:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1798,6 +1786,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-93659",
       "source": "cvefeed",
       "published": "2026-09-18T23:23:21+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-88097 Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability",
+      "summary": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to elevate privileges locally.",
+      "description": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to elevate privileges locally.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-88097\n2. MSRC\n3. Use after free in Microsoft Edge (Chromium-based) ",
+      "cve_id": "CVE-2026-88097",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-88097",
+      "source": "msrc",
+      "published": "2026-09-18T23:00:00+09:00",
       "lang": "en"
     },
     {
@@ -2249,21 +2252,6 @@
       "source": "sans_isc",
       "published": "2026-09-17T23:54:34+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-92962 - vm2 before 3.11.4 Defense Invariant Violation via setup-sandbox.js",
-      "summary": "CVE ID :CVE-2026-92962\n  \nPublished : Sept. 17, 2026, 2:18 p.m. | 28 minutes ago\n  \nDescription :vm2 is a sandbox for running untrusted JavaScript. In vm2 versions up to and including 3.11.3, the defaultSandboxPrepareStackTrace function in lib/setup-sandbox.js builds its output array using prototype-walking index assignment (lines[lines.length] = value) rather than a prototype-bypassing define-property primitive. Because this bridge-internal array is allocated in the sandbox realm, code inside the sandbox can install an accessor on Array.prototype for the relevant index; the accessor is then invoked whenever the sandbox reads error.stack (or otherwise triggers Error.prepareStackTrace), allowing sandbox code to observe and intercept each stack-trace line written by the bridge. The same pattern is used in the error-handling (catch) branch. The values written are formatted strings only, so the practical impact is limited to an information side channel and a violation of vm2's bridge-container defense invariant rather than a sandbox escape; the vendor rates the issue Low. The issue is fixed in vm2 3.11.4, which installs each entry as an own data property via Reflect.defineProperty.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-92962\n  \nPublished : Sept. 17, 2026, 2:18 p.m. | 28 minutes ago\n  \nDescription :vm2 is a sandbox for running untrusted JavaScript. In vm2 versions up to and including 3.11.3, the defaultSandboxPrepareStackTrace function in lib/setup-sandbox.js builds its output array using prototype-walking index assignment (lines[lines.length] = value) rather than a prototype-bypassing define-property primitive. Because this bridge-internal array is allocated in the sandbox realm, code inside the sandbox can install an accessor on Array.prototype for the relevant index; the accessor is then invoked whenever the sandbox reads error.stack (or otherwise triggers Error.prepareStackTrace), allowing sandbox code to observe and intercept each stack-trace line written by the bridge. The same pattern is used in the error-handling (catch) branch. The values written are formatted strings only, so the practical impact is limited to an information side channel and a violation of vm2's bridge-container defense invariant rather than a sandbox escape; the vendor rates the issue Low. The issue is fixed in vm2 3.11.4, which installs each entry as an own data property via Reflect.defineProperty.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-92962\n2. 26.09.17 오후11:18\n3. vm2 is a sandbox for running untrusted JavaScript.",
-      "cve_id": "CVE-2026-92962",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92962",
-      "source": "cvefeed",
-      "published": "2026-09-17T23:18:02+09:00",
-      "lang": "da"
     }
   ],
   "reputation": [
