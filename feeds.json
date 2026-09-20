@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-20T22:01:23.263051+09:00",
+  "fetched_at": "2026-09-20T22:31:04.833335+09:00",
   "security_news": [
     {
       "title": "CISA, 실제 악용 중인 리눅스 커널 취약점 3종 긴급 경고",
@@ -1503,6 +1503,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-92252 - Incorrect Default Permissions in WatchDog Anti-Virus Installation Directory",
+      "summary": "CVE ID :CVE-2026-92252\n  \nPublished : Sept. 20, 2026, 12:16 p.m. | 1 hour, 5 minutes ago\n  \nDescription :Incorrect default permissions in the installation directory of WatchDog Anti-Virus on Windows allow local, low-privileged users to modify, replace, or delete antivirus binaries and configuration files, because the installer grants the Users group Full Control over C:\\Program Files (x86)\\Watchdog Anti-Virus. This may disable antivirus protection or enable privileged code execution if modified binaries are loaded by an elevated WatchDog process.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-92252\n  \nPublished : Sept. 20, 2026, 12:16 p.m. | 1 hour, 5 minutes ago\n  \nDescription :Incorrect default permissions in the installation directory of WatchDog Anti-Virus on Windows allow local, low-privileged users to modify, replace, or delete antivirus binaries and configuration files, because the installer grants the Users group Full Control over C:\\Program Files (x86)\\Watchdog Anti-Virus. This may disable antivirus protection or enable privileged code execution if modified binaries are loaded by an elevated WatchDog process.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-92252\n2. 26.09.20 오후9:16\n3. Incorrect default permissions in the installation ",
+      "cve_id": "CVE-2026-92252",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92252",
+      "source": "cvefeed",
+      "published": "2026-09-20T21:16:45+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-93954 - grimmory-tools grimmory Settings API Endpoint AppSettingController.java AppSettingController.getAppSettings authorization",
       "summary": "CVE ID :CVE-2026-93954\n  \nPublished : Sept. 19, 2026, 10:16 p.m. | 13 minutes ago\n  \nDescription :A security vulnerability has been detected in grimmory-tools grimmory up to 3.3.3/3.4.1. Affected is the function AppSettingController.getAppSettings of the file backend/src/main/java/org/booklore/controller/AppSettingController.java of the component Settings API Endpoint. Such manipulation leads to incorrect authorization. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The name of the patch is 2b66ca6df8110f6b512e030b54c16b9fbe318f17. Applying a patch is advised to resolve this issue. PR #2558, merged as 53abc8b, moved the OIDC secret into a dedicated setting, but did not by itself restrict GET /api/v1/settings.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
