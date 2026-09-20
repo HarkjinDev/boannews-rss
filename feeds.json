@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-21T03:01:20.353767+09:00",
+  "fetched_at": "2026-09-21T03:31:16.922743+09:00",
   "security_news": [
     {
       "title": "[패트롤] 인천시-인천시의회-인천시교육청-인천테크노파크",
@@ -2035,36 +2035,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-54617",
       "source": "cvefeed",
       "published": "2026-09-18T03:34:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-52727 - lxc-ci: Pacman keyring stored in archlinux image with a private key",
-      "summary": "CVE ID :CVE-2026-52727\n  \nPublished : Sept. 17, 2026, 6:21 p.m. | 36 minutes ago\n  \nDescription :lxc-ci contains continuous integration and image-build scripts for LXC. Prior to the 2026-05-28 Arch Linux image publication, images built from images/archlinux.yaml retain the same pacman local-signing private key in /etc/pacman.d/gnupg and redistribute it to every container or virtual machine created from that image. An attacker who controls an HTTP package mirror or can intercept mirror traffic can use the shared pacman signing private key to sign modified packages that affected clients accept as trusted. Installing those packages permits arbitrary code execution as root on the client system. This issue is fixed in Arch Linux images published on or after 2026-05-28.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-52727\n  \nPublished : Sept. 17, 2026, 6:21 p.m. | 36 minutes ago\n  \nDescription :lxc-ci contains continuous integration and image-build scripts for LXC. Prior to the 2026-05-28 Arch Linux image publication, images built from images/archlinux.yaml retain the same pacman local-signing private key in /etc/pacman.d/gnupg and redistribute it to every container or virtual machine created from that image. An attacker who controls an HTTP package mirror or can intercept mirror traffic can use the shared pacman signing private key to sign modified packages that affected clients accept as trusted. Installing those packages permits arbitrary code execution as root on the client system. This issue is fixed in Arch Linux images published on or after 2026-05-28.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-52727\n2. 26.09.18 오전3:21\n3. lxc-ci contains continuous integration and image-b",
-      "cve_id": "CVE-2026-52727",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-52727",
-      "source": "cvefeed",
-      "published": "2026-09-18T03:21:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54551 - WireGuard Portal: Authenticated WebSocket /api/v0/ws broadcasts all peers' and interfaces' traffic stats to every user (missing per-user authorization)",
-      "summary": "CVE ID :CVE-2026-54551\n  \nPublished : Sept. 17, 2026, 6:16 p.m. | 41 minutes ago\n  \nDescription :WireGuard Portal, or wg-portal, is a web-based configuration portal for WireGuard server management. From 2.2.0 until 2.3.0, the authenticated GET /api/v0/ws statistics WebSocket in internal/app/api/v0/handlers/endpoint_websocket.go subscribes to TopicPeerStatsUpdated and TopicInterfaceStatsUpdated and forwards every TrafficDelta event without per-user authorization in handleWebsocket(). A low-privilege user can enumerate peer public keys through EntityId and monitor BytesReceived and BytesTransmitted values for peers belonging to other users. The same connection exposes interface_stats and interface names that the REST API limits to administrators. Tunnel content, AllowedIPs, and user identities remain authorization-gated. This issue is fixed in version 2.3.0.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54551\n  \nPublished : Sept. 17, 2026, 6:16 p.m. | 41 minutes ago\n  \nDescription :WireGuard Portal, or wg-portal, is a web-based configuration portal for WireGuard server management. From 2.2.0 until 2.3.0, the authenticated GET /api/v0/ws statistics WebSocket in internal/app/api/v0/handlers/endpoint_websocket.go subscribes to TopicPeerStatsUpdated and TopicInterfaceStatsUpdated and forwards every TrafficDelta event without per-user authorization in handleWebsocket(). A low-privilege user can enumerate peer public keys through EntityId and monitor BytesReceived and BytesTransmitted values for peers belonging to other users. The same connection exposes interface_stats and interface names that the REST API limits to administrators. Tunnel content, AllowedIPs, and user identities remain authorization-gated. This issue is fixed in version 2.3.0.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-54551\n2. 26.09.18 오전3:16\n3. WireGuard Portal, or wg-portal, is a web-based con",
-      "cve_id": "CVE-2026-54551",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54551",
-      "source": "cvefeed",
-      "published": "2026-09-18T03:16:46+09:00",
       "lang": "en"
     }
   ],
