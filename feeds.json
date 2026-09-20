@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-21T04:01:13.918278+09:00",
+  "fetched_at": "2026-09-21T04:31:01.818866+09:00",
   "security_news": [
     {
       "title": "[패트롤] 인천시-인천시의회-인천시교육청-인천테크노파크",
@@ -1990,21 +1990,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-68523",
       "source": "cvefeed",
       "published": "2026-09-18T05:23:23+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54239 - FaustWP  — Authentication Bypass via Initialization Vector Modification in Token Envelope",
-      "summary": "CVE ID :CVE-2026-54239\n  \nPublished : Sept. 17, 2026, 7:16 p.m. | 20 minutes ago\n  \nDescription :Faust.js is a headless WordPress toolkit. Prior to 1.8.11, the FaustWP WordPress plugin authenticates only the ciphertext in its token envelope and excludes the 16-byte initialization vector from the HMAC in WPE\\FaustWP\\Auth\\encrypt() and WPE\\FaustWP\\Auth\\decrypt() in plugins/faustwp/includes/auth/functions.php. A logged-in non-administrator who obtains an authorization code from GET /generate can modify the unauthenticated initialization vector so that CBC decryption changes the token type and user identifier while the HMAC remains valid. This can produce an access token for an Administrator and permit full WordPress REST API access, administrator-account creation, plugin installation, and arbitrary code execution. This issue is fixed in repository version 1.8.11.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54239\n  \nPublished : Sept. 17, 2026, 7:16 p.m. | 20 minutes ago\n  \nDescription :Faust.js is a headless WordPress toolkit. Prior to 1.8.11, the FaustWP WordPress plugin authenticates only the ciphertext in its token envelope and excludes the 16-byte initialization vector from the HMAC in WPE\\FaustWP\\Auth\\encrypt() and WPE\\FaustWP\\Auth\\decrypt() in plugins/faustwp/includes/auth/functions.php. A logged-in non-administrator who obtains an authorization code from GET /generate can modify the unauthenticated initialization vector so that CBC decryption changes the token type and user identifier while the HMAC remains valid. This can produce an access token for an Administrator and permit full WordPress REST API access, administrator-account creation, plugin installation, and arbitrary code execution. This issue is fixed in repository version 1.8.11.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-54239\n2. 26.09.18 오전4:16\n3. Faust.js is a headless WordPress toolkit. Prior to",
-      "cve_id": "CVE-2026-54239",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54239",
-      "source": "cvefeed",
-      "published": "2026-09-18T04:16:50+09:00",
       "lang": "en"
     }
   ],
