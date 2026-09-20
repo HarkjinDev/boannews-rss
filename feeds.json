@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-20T21:01:18.404268+09:00",
+  "fetched_at": "2026-09-20T21:31:24.007412+09:00",
   "security_news": [
     {
       "title": "[기획] '자사 포인트' 중심 보상 논란…과징금은 국고로, 피해구제는 별...",
@@ -299,6 +299,18 @@
       "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang/",
       "source": "bleepingcomputer",
       "published": "2026-09-19T22:48:32+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Can You Prove a New CVE Is Exploitable Before Attackers Do? Learn How in This Webinar",
+      "summary": "A new CVE drops. Your scanner finds it. The severity score looks ugly.\n\nBut that still does not answer the question that matters: Can it actually be exploited in your environment?\n\nMythos-class AI is compressing the time between disclosure and working exploitation, while many security programs still validate risk on weekly or quarterly cycles. The dangerous gap is no longer just technical. It is",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 새로운 CVE 발견 시, 공격자보다 먼저 악용 가능성 증명 필요\n2. Mythos AI, 취약점 공개 후 악용까지 시간 단축\n3. 보안 프로그램은 주기적 검증, 기술적 간극 심화",
+      "link": "https://thehackernews.com/2026/09/can-you-prove-new-cve-is-exploitable.html",
+      "source": "thehackernews",
+      "published": "2026-09-19T22:28:48+09:00",
       "lang": "en"
     },
     {
@@ -1500,18 +1512,6 @@
       "source": "naver",
       "published": "2026-09-17T21:38:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Ransomware Attacks on Manufacturers Surge as Supply Chain Risk Grows",
-      "summary": "Research shows attacks on manufacturers rose 40% in early 2026, as ransomware groups increasingly exploit the supply-chain disruption caused by operational shutdowns.\nThe post Ransomware Attacks on Manufacturers Surge as Supply Chain Risk Grows appeared first on SecurityWeek.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 2026년 초 제조업체 랜섬웨어 공격 40% 증가\n2. 운영 중단으로 공급망 위험 악용\n3. 공격 그룹, 공급망 취약점 집중 공략",
-      "link": "https://www.securityweek.com/ransomware-attacks-on-manufacturers-surge-as-supply-chain-risk-grows/",
-      "source": "securityweek",
-      "published": "2026-09-17T21:29:53+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -2278,36 +2278,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56176",
       "source": "msrc",
       "published": "2026-09-17T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-92917 - Grav 2.0.0-rc.1 through 2.0.21 Configuration Disclosure via print_r",
-      "summary": "CVE ID :CVE-2026-92917\n  \nPublished : Sept. 17, 2026, 12:18 p.m. | 31 minutes ago\n  \nDescription :Grav is a flat-file CMS. In versions 2.0.0-rc.1 through 2.0.21, the Twig content sandbox fails to restrict the dump and serialize filters (print_r, vardump, json_encode, yaml_encode, string): GravExtension::assertSandboxDumpSafe() determines sandbox state by calling SandboxExtension::isSandboxed() without a Source argument, which reports only the global sandbox flag that Grav never enables, so the guard added in GHSA-mc5q-6hpj-rp7j never executes. As a result, an authenticated user with page-edit rights can render {{ config|print_r }} in page content with Twig processing enabled and dump Grav's entire merged configuration — print_r reflects the real Config object held in a private property of the SandboxConfig facade, bypassing its path redaction — exposing plugin secrets such as SMTP credentials, API tokens, webhook secrets and cache backend passwords. Grav 1.7 is not affected because it ships no Twig content sandbox. The issue is fixed in 2.0.22, where the affected filters are registered with Twig's needs_is_sandboxed flag.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-92917\n  \nPublished : Sept. 17, 2026, 12:18 p.m. | 31 minutes ago\n  \nDescription :Grav is a flat-file CMS. In versions 2.0.0-rc.1 through 2.0.21, the Twig content sandbox fails to restrict the dump and serialize filters (print_r, vardump, json_encode, yaml_encode, string): GravExtension::assertSandboxDumpSafe() determines sandbox state by calling SandboxExtension::isSandboxed() without a Source argument, which reports only the global sandbox flag that Grav never enables, so the guard added in GHSA-mc5q-6hpj-rp7j never executes. As a result, an authenticated user with page-edit rights can render {{ config|print_r }} in page content with Twig processing enabled and dump Grav's entire merged configuration — print_r reflects the real Config object held in a private property of the SandboxConfig facade, bypassing its path redaction — exposing plugin secrets such as SMTP credentials, API tokens, webhook secrets and cache backend passwords. Grav 1.7 is not affected because it ships no Twig content sandbox. The issue is fixed in 2.0.22, where the affected filters are registered with Twig's needs_is_sandboxed flag.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-92917\n2. 26.09.17 오후9:18\n3. Grav is a flat-file CMS. In versions 2.0.0-rc.1 th",
-      "cve_id": "CVE-2026-92917",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92917",
-      "source": "cvefeed",
-      "published": "2026-09-17T21:18:30+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-92913 - AVideo Weak PRNG Activation Code Authentication Bypass",
-      "summary": "CVE ID :CVE-2026-92913\n  \nPublished : Sept. 17, 2026, 12:18 p.m. | 25 minutes ago\n  \nDescription :AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 uses a cryptographically weak pseudo-random number generator when creating account activation / login pairing codes. getRandomCode() in objects/functions.php derives the code entirely from uniqid() (sprintf('%08x%05x', seconds, microseconds)) with a single non-CSPRNG rand() character used only as padding, reducing the code space to roughly 36 x 10^6 (~2^25) values for a known generation second. Because plugin/API/set.json.php?APIName=login_code can be called without authentication, it also serves as an oracle for the server's exact microtime. An unauthenticated remote attacker who guesses a valid, unexpired code (codes expire after 10 minutes) can redeem it at plugin/API/get.json.php?APIName=login_code to obtain the target account's email address and a User::getUserHash(users_id, '+1 year') value, a credential accepted in place of the account password for one year, resulting in account takeover. No patched version is available.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-92913\n  \nPublished : Sept. 17, 2026, 12:18 p.m. | 25 minutes ago\n  \nDescription :AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 uses a cryptographically weak pseudo-random number generator when creating account activation / login pairing codes. getRandomCode() in objects/functions.php derives the code entirely from uniqid() (sprintf('%08x%05x', seconds, microseconds)) with a single non-CSPRNG rand() character used only as padding, reducing the code space to roughly 36 x 10^6 (~2^25) values for a known generation second. Because plugin/API/set.json.php?APIName=login_code can be called without authentication, it also serves as an oracle for the server's exact microtime. An unauthenticated remote attacker who guesses a valid, unexpired code (codes expire after 10 minutes) can redeem it at plugin/API/get.json.php?APIName=login_code to obtain the target account's email address and a User::getUserHash(users_id, '+1 year') value, a credential accepted in place of the account password for one year, resulting in account takeover. No patched version is available.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-92913\n2. 26.09.17 오후9:18\n3. AVideo through commit c3edcc274c389816d434acadac07",
-      "cve_id": "CVE-2026-92913",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92913",
-      "source": "cvefeed",
-      "published": "2026-09-17T21:18:30+09:00",
       "lang": "en"
     }
   ],
