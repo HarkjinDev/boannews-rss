@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-21T03:31:16.922743+09:00",
+  "fetched_at": "2026-09-21T04:01:13.918278+09:00",
   "security_news": [
     {
       "title": "[패트롤] 인천시-인천시의회-인천시교육청-인천테크노파크",
@@ -2005,36 +2005,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-54239",
       "source": "cvefeed",
       "published": "2026-09-18T04:16:50+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54253 - TS3 Manager: Reflected XSS via /api/download port parameter steals operator session",
-      "summary": "CVE ID :CVE-2026-54253\n  \nPublished : Sept. 17, 2026, 6:37 p.m. | 20 minutes ago\n  \nDescription :TS3 Manager is modern web interface for maintaining Teamspeak3 servers. Prior to 2.2.6, the /api/download handler in packages/server/routes/api.js passes the attacker-controlled port query parameter to socket.connect(port, host) and returns the resulting error.message through res.status(400).send(error.message) as text/html without a Content Security Policy. When a logged-in operator follows a crafted top-level link, the reflected value executes in the manager origin. The token cookie set in packages/ui/src/store/modules/query.js lacks HttpOnly, Secure, and an explicit SameSite attribute, allowing the script to read the token and call the autofillform event in packages/server/socket.js. autofillform returns the decoded JWT, including the cleartext ServerQuery password, enabling operator-session hijacking and control of the managed TeamSpeak server when the operator uses administrative ServerQuery credentials. A valid operator session and user interaction are required. This issue is fixed in 2.2.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54253\n  \nPublished : Sept. 17, 2026, 6:37 p.m. | 20 minutes ago\n  \nDescription :TS3 Manager is modern web interface for maintaining Teamspeak3 servers. Prior to 2.2.6, the /api/download handler in packages/server/routes/api.js passes the attacker-controlled port query parameter to socket.connect(port, host) and returns the resulting error.message through res.status(400).send(error.message) as text/html without a Content Security Policy. When a logged-in operator follows a crafted top-level link, the reflected value executes in the manager origin. The token cookie set in packages/ui/src/store/modules/query.js lacks HttpOnly, Secure, and an explicit SameSite attribute, allowing the script to read the token and call the autofillform event in packages/server/socket.js. autofillform returns the decoded JWT, including the cleartext ServerQuery password, enabling operator-session hijacking and control of the managed TeamSpeak server when the operator uses administrative ServerQuery credentials. A valid operator session and user interaction are required. This issue is fixed in 2.2.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-54253\n2. 26.09.18 오전3:37\n3. TS3 Manager is modern web interface for maintainin",
-      "cve_id": "CVE-2026-54253",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54253",
-      "source": "cvefeed",
-      "published": "2026-09-18T03:37:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54617 - GravitLauncher: Unauthenticated path traversal in LaunchServer FileServerHandler",
-      "summary": "CVE ID :CVE-2026-54617\n  \nPublished : Sept. 17, 2026, 6:34 p.m. | 23 minutes ago\n  \nDescription :GravitLauncher is an open-source Minecraft launcher based on sashok724's v3. Prior to 5.7.12, an unauthenticated remote actor can send a raw HTTP request target without a leading slash to the default LaunchServer file server on port 9274. FileServerHandler.channelRead0 in components/launchserver/src/main/java/pro/gravit/launchserver/socket/handlers/fileserver/FileServerHandler.java strips the first request-target character and resolves the remaining path against updatesDir without re-normalizing and verifying containment. This leaves parent-directory components in a no-leading-slash request and allows reading any file accessible to the LaunchServer process, including .keys/ecdsa_id, .keys/legacySalt, and LaunchServer.json. Disclosure of those files can expose signing keys, refresh-token material, and database credentials, enabling forged administrative access tokens and full authentication bypass. A normalizing L7 proxy may block the primary request form, but direct exposure and L4/TCP proxies remain affected, and netty.fileServerEnabled is enabled by default. This issue is fixed in 5.7.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54617\n  \nPublished : Sept. 17, 2026, 6:34 p.m. | 23 minutes ago\n  \nDescription :GravitLauncher is an open-source Minecraft launcher based on sashok724's v3. Prior to 5.7.12, an unauthenticated remote actor can send a raw HTTP request target without a leading slash to the default LaunchServer file server on port 9274. FileServerHandler.channelRead0 in components/launchserver/src/main/java/pro/gravit/launchserver/socket/handlers/fileserver/FileServerHandler.java strips the first request-target character and resolves the remaining path against updatesDir without re-normalizing and verifying containment. This leaves parent-directory components in a no-leading-slash request and allows reading any file accessible to the LaunchServer process, including .keys/ecdsa_id, .keys/legacySalt, and LaunchServer.json. Disclosure of those files can expose signing keys, refresh-token material, and database credentials, enabling forged administrative access tokens and full authentication bypass. A normalizing L7 proxy may block the primary request form, but direct exposure and L4/TCP proxies remain affected, and netty.fileServerEnabled is enabled by default. This issue is fixed in 5.7.12.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-54617\n2. 26.09.18 오전3:34\n3. GravitLauncher is an open-source Minecraft launche",
-      "cve_id": "CVE-2026-54617",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54617",
-      "source": "cvefeed",
-      "published": "2026-09-18T03:34:40+09:00",
       "lang": "en"
     }
   ],
