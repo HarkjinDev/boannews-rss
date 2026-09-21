@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-22T00:32:30.128052+09:00",
+  "fetched_at": "2026-09-22T01:01:30.771689+09:00",
   "security_news": [
     {
       "title": "추석 지나면 국정감사…강원 의원들 “AI·도로·농어촌 현안 챙긴다”",
@@ -1584,21 +1584,54 @@
       "source": "naver",
       "published": "2026-09-19T02:56:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Gyazo server flaw exploited to steal 23.6 million user records",
-      "summary": "The Gyazo image-sharing platform has confirmed it suffered a data breach after hackers exploited a server vulnerability that allowed them to steal 23.6 million user records. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Gyazo 서버 취약점 통해 23.6백만 건 사용자 정보 유출\n2. 해커, 서버 취약점 악용해 대규모 사용자 기록 탈취\n3. Gyazo, 데이터 유출 사고 확인 및 조사 착수",
-      "link": "https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/",
-      "source": "bleepingcomputer",
-      "published": "2026-09-19T01:00:38+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-86473 - Apache Airflow: Logout ignores a presented Authorization bearer token, leaving it revocable only by expiry",
+      "summary": "CVE ID :CVE-2026-86473\n  \nPublished : Sept. 21, 2026, 2:33 p.m. | 24 minutes ago\n  \nDescription :Apache Airflow: the Core API logout endpoint revokes only a session token presented as the _token cookie. When a client logs out presenting its credential as an Authorization bearer header instead, the endpoint returns its normal logout response but revokes nothing, so the token remains valid until it expires. An attacker who already holds a copy of that token keeps the victim's access after the victim has logged out and believes the session ended; the default token lifetime is 24 hours and is configurable.\n\nAffects API clients that authenticate with a bearer token rather than the browser session cookie. The attacker must already possess a copy of a valid token; obtaining one is outside the scope of this issue, and no privileges beyond the victim's own are gained.\n\nUsers of apache-airflow are recommended to upgrade to apache-airflow version 3.3.2 or later, which fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-86473\n  \nPublished : Sept. 21, 2026, 2:33 p.m. | 24 minutes ago\n  \nDescription :Apache Airflow: the Core API logout endpoint revokes only a session token presented as the _token cookie. When a client logs out presenting its credential as an Authorization bearer header instead, the endpoint returns its normal logout response but revokes nothing, so the token remains valid until it expires. An attacker who already holds a copy of that token keeps the victim's access after the victim has logged out and believes the session ended; the default token lifetime is 24 hours and is configurable.\n\nAffects API clients that authenticate with a bearer token rather than the browser session cookie. The attacker must already possess a copy of a valid token; obtaining one is outside the scope of this issue, and no privileges beyond the victim's own are gained.\n\nUsers of apache-airflow are recommended to upgrade to apache-airflow version 3.3.2 or later, which fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-86473\n2. 26.09.21 오후11:33\n3. Apache Airflow: the Core API logout endpoint revok",
+      "cve_id": "CVE-2026-86473",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86473",
+      "source": "cvefeed",
+      "published": "2026-09-21T23:33:26+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-93339 - Ditty < 3.1.70 Stored XSS via Layout Tag Wrapper Attribute",
+      "summary": "CVE ID :CVE-2026-93339\n  \nPublished : Sept. 21, 2026, 2:29 p.m. | 28 minutes ago\n  \nDescription :Metaphor Creations Ditty (ditty-news-ticker) before 3.1.70 contains a stored cross-site scripting vulnerability that allows authenticated users with Author-level privileges or higher to inject arbitrary HTML elements by supplying malicious wrapper attribute values in layout tags. The ditty_layout_render_tag_wrapper() function inserts caller-supplied wrapper attribute values directly as HTML element names without allowlist validation, bypassing wp_kses_post() sanitization because KSES runs at save time before layout tag attributes are resolved at render time, causing the payload to execute in the browser of any visitor viewing posts or pages embedding the affected Ditty item.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-93339\n  \nPublished : Sept. 21, 2026, 2:29 p.m. | 28 minutes ago\n  \nDescription :Metaphor Creations Ditty (ditty-news-ticker) before 3.1.70 contains a stored cross-site scripting vulnerability that allows authenticated users with Author-level privileges or higher to inject arbitrary HTML elements by supplying malicious wrapper attribute values in layout tags. The ditty_layout_render_tag_wrapper() function inserts caller-supplied wrapper attribute values directly as HTML element names without allowlist validation, bypassing wp_kses_post() sanitization because KSES runs at save time before layout tag attributes are resolved at render time, causing the payload to execute in the browser of any visitor viewing posts or pages embedding the affected Ditty item.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-93339\n2. 26.09.21 오후11:29\n3. Metaphor Creations Ditty (ditty-news-ticker) befor",
+      "cve_id": "CVE-2026-93339",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93339",
+      "source": "cvefeed",
+      "published": "2026-09-21T23:29:21+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-61629 - nginx ignition has  ParseAcceptLanguage `_` separator bypass that enables ~75x CPU amplification via Accept-Language header in i18nMiddleware",
+      "summary": "CVE ID :CVE-2026-61629\n  \nPublished : Sept. 21, 2026, 2:22 p.m. | 35 minutes ago\n  \nDescription :nginx ignition is a user interface for the nginx web server. In versions 2.29.0 through 2.40.0, the gin i18n middleware in nginx-ignition's API server runs in front of every HTTP request and calls `golang.org/x/text/language.ParseAcceptLanguage` on the raw `Accept-Language` header without imposing any size or shape filter. The underlying parser has quadratic-time behaviour on long lists of malformed language tags. The CVE-2022-32149 guard that golang.org/x/text added in v0.3.8 caps the number of `-` characters in the input at 1000, but it does not cap `_` characters even though the parser's internal scanner aliases `_` to `-` before parsing. A single unauthenticated GET request with an `Accept-Language` header built out of `_` separators burns about 2.4 seconds of server CPU on the host running nginx-ignition; ten concurrent attackers saturate a ten-core box for the duration of the attack while consuming ~10 MiB/s of upstream bandwidth. Version 2.40.1 fixes this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-61629\n  \nPublished : Sept. 21, 2026, 2:22 p.m. | 35 minutes ago\n  \nDescription :nginx ignition is a user interface for the nginx web server. In versions 2.29.0 through 2.40.0, the gin i18n middleware in nginx-ignition's API server runs in front of every HTTP request and calls `golang.org/x/text/language.ParseAcceptLanguage` on the raw `Accept-Language` header without imposing any size or shape filter. The underlying parser has quadratic-time behaviour on long lists of malformed language tags. The CVE-2022-32149 guard that golang.org/x/text added in v0.3.8 caps the number of `-` characters in the input at 1000, but it does not cap `_` characters even though the parser's internal scanner aliases `_` to `-` before parsing. A single unauthenticated GET request with an `Accept-Language` header built out of `_` separators burns about 2.4 seconds of server CPU on the host running nginx-ignition; ten concurrent attackers saturate a ten-core box for the duration of the attack while consuming ~10 MiB/s of upstream bandwidth. Version 2.40.1 fixes this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-61629\n2. 26.09.21 오후11:22\n3. nginx ignition is a user interface for the nginx w",
+      "cve_id": "CVE-2026-61629",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61629",
+      "source": "cvefeed",
+      "published": "2026-09-21T23:22:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-68825 Windows Bind Filter Driver Elevation of Privilege Vulnerability",
       "summary": "Updated an acknowledgement. This is an informational change only.",
@@ -2032,21 +2065,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-77339",
       "source": "cvefeed",
       "published": "2026-09-19T01:37:19+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-84446 - libheif: Sequence decode timing-table initialization allows non-terminating loops and unbounded memory, bypassing max_sequence_frames",
-      "summary": "CVE ID :CVE-2026-84446\n  \nPublished : Sept. 18, 2026, 3:54 p.m. | 8 minutes ago\n  \nDescription :libheif is a HEIF and AVIF file format decoder and encoder. Prior to 1.23.2, crafted HEIF sequence timing and edit-list data can make Track::init_sample_timing_table() compute a logical m_num_output_samples value that exceeds the uint32_t counters used by Track_Visual::decode_next_image_sample() and Track::get_next_sample_raw_data(). The resulting comparison can never reach the oversized output count, causing non-terminating decode or raw-sample loops and bypassing max_sequence_frames. The same sequence path repeatedly calls Box_stts::get_sample_duration() and allocates Chunk::m_sample_ranges and Track::m_presentation_timeline outside MemoryHandle accounting, allowing severe CPU and memory exhaustion from a small file. This issue is fixed in version 1.23.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-84446\n  \nPublished : Sept. 18, 2026, 3:54 p.m. | 8 minutes ago\n  \nDescription :libheif is a HEIF and AVIF file format decoder and encoder. Prior to 1.23.2, crafted HEIF sequence timing and edit-list data can make Track::init_sample_timing_table() compute a logical m_num_output_samples value that exceeds the uint32_t counters used by Track_Visual::decode_next_image_sample() and Track::get_next_sample_raw_data(). The resulting comparison can never reach the oversized output count, causing non-terminating decode or raw-sample loops and bypassing max_sequence_frames. The same sequence path repeatedly calls Box_stts::get_sample_duration() and allocates Chunk::m_sample_ranges and Track::m_presentation_timeline outside MemoryHandle accounting, allowing severe CPU and memory exhaustion from a small file. This issue is fixed in version 1.23.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-84446\n2. 26.09.19 오전12:54\n3. libheif is a HEIF and AVIF file format decoder and",
-      "cve_id": "CVE-2026-84446",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84446",
-      "source": "cvefeed",
-      "published": "2026-09-19T00:54:48+09:00",
       "lang": "en"
     }
   ],
