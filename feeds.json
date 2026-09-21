@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-22T07:31:14.525315+09:00",
+  "fetched_at": "2026-09-22T08:01:12.226506+09:00",
   "security_news": [
     {
       "title": "[Who Is ?] 정재헌 SK텔레콤 대표이사 사장",
@@ -1647,6 +1647,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-61652 - Zapros: Streaming decoders ignored the requested chunk size, allowing a single compressed response chunk to allocate unbounded memory (decompression bomb)",
+      "summary": "CVE ID :CVE-2026-61652\n  \nPublished : Sept. 21, 2026, 10:16 p.m. | 15 minutes ago\n  \nDescription :Zapros, a Python HTTP client, prior to version 0.14.0 is vulnerable to denial of service via memory exhaustion. The issue affects all callers who streamed compressed responses relying on the chunk size — explicit (`iter_bytes(chunk_size=...)`) or the default — to bound memory. The decoder ignored that bound, so a chunk could be far larger than requested and a single compressed response could overflow memory. Version 0.14.0 contains a patch. Some workarounds are available. Read the still-compressed body with `Response.iter_raw()` / `Response.async_iter_raw()`, which bypass the built-in decoders, and decompress it yourself with an explicit output-size bound (e.g. `zlib`'s `max_length`), aborting once a configured limit is exceeded. Where feasible, send `Accept-Encoding: identity` to disable response compression so bodies are not decompressed client-side. Avoid decoding response bodies from untrusted servers.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-61652\n  \nPublished : Sept. 21, 2026, 10:16 p.m. | 15 minutes ago\n  \nDescription :Zapros, a Python HTTP client, prior to version 0.14.0 is vulnerable to denial of service via memory exhaustion. The issue affects all callers who streamed compressed responses relying on the chunk size — explicit (`iter_bytes(chunk_size=...)`) or the default — to bound memory. The decoder ignored that bound, so a chunk could be far larger than requested and a single compressed response could overflow memory. Version 0.14.0 contains a patch. Some workarounds are available. Read the still-compressed body with `Response.iter_raw()` / `Response.async_iter_raw()`, which bypass the built-in decoders, and decompress it yourself with an explicit output-size bound (e.g. `zlib`'s `max_length`), aborting once a configured limit is exceeded. Where feasible, send `Accept-Encoding: identity` to disable response compression so bodies are not decompressed client-side. Avoid decoding response bodies from untrusted servers.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-61652\n2. 26.09.22 오전7:16\n3. Zapros, a Python HTTP client, prior to version 0.1",
+      "cve_id": "CVE-2026-61652",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61652",
+      "source": "cvefeed",
+      "published": "2026-09-22T07:16:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-73552 - Envoy: HTTP RBAC safe_regex can fail open on RFC-valid obs-text header values",
       "summary": "CVE ID :CVE-2026-73552\n  \nPublished : Sept. 21, 2026, 7:37 p.m. | 9 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.36.10, 1.37.6, 1.38.4, and 1.39.1, Envoy HTTP RBAC accepts RFC-valid opaque header bytes but evaluates safe_regex values with RE2's UTF-8 subject semantics. A downstream client can preserve a prohibited marker and add an unrelated obs-text octet, causing RE2::FullMatch to return false and a negative RBAC policy to treat the invalid subject as an ordinary no-match. A byte-oriented route matcher can still observe the marker, allowing the request to reach a route intended to be denied. The relevant scope boundary is that plain positive ALLOW regexes normally fail closed, and exact, prefix, suffix, and contains matchers are not shown to have this subject-domain failure. This issue is fixed in versions 1.36.10, 1.37.6, 1.38.4, and 1.39.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
