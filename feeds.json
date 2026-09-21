@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-22T04:01:11.477823+09:00",
+  "fetched_at": "2026-09-22T04:31:14.743391+09:00",
   "security_news": [
+    {
+      "title": "개인키 지켰는데도 리퀴드서 4000 BTC 증발…소프트웨어 결함이 승인 인...",
+      "summary": "그대로 뒀다는 의혹이 제기된 사건 직후 나왔다. 국제 수사당국도 앞서 북한과 연계된 해킹조직이 채용 위장 등의 수법으로 악성코드를 심어 암호화폐 지갑의 개인키와 시드 문구를 빼돌린 사례를 확인한 바 있다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 리퀴드 거래소서 4,000 BTC 증발, 소프트웨어 결함 의혹\n2. 개인키 유출 없이도 결함 통해 암호화폐 탈취\n3. 북한 해킹조직, 채용 위장 악성코드로 개인키 탈취",
+      "link": "https://www.wikitree.co.kr/articles/1161180",
+      "source": "naver",
+      "published": "2026-09-22T04:14:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "WordPress Click2Shell flaw lets hackers execute PHP on the server",
       "summary": "Technical details and a proof-of-concept exploit have been published for a new WordPress cross-site request forgery (CSRF) vulnerability dubbed 'Click2Shell' that affects the platform's Core component. [...]",
@@ -1596,21 +1608,24 @@
       "source": "naver",
       "published": "2026-09-19T05:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Cisco Zero-Day Highlights API Endpoint Authentication Issues",
-      "summary": "The authentication bypass flaw CVE-2026-76460 impacts Cisco's Identity Services Engine (ISE) and received a maximum 10 out of 10 CVSS score.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 시스코 ISE, CVE-2026-76460 제로데이 취약점 발견\n2. API 엔드포인트 인증 우회 공격으로 10점 만점 CVSS 점수\n3. 인증 정보 유출 가능성, 즉각적 패치 권고",
-      "link": "https://www.darkreading.com/vulnerabilities-threats/cisco-zero-day-api-endpoint-authentication-issues",
-      "source": "darkreading",
-      "published": "2026-09-19T04:26:47+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-17052 - Missing user-pointer validation in tgpio_pin_read_ts_ec syscall handler allows arbitrary supervisor-memory write from userspace",
+      "summary": "CVE ID :CVE-2026-17052\n  \nPublished : Sept. 21, 2026, 6:35 p.m. | 22 minutes ago\n  \nDescription :The Time-aware GPIO syscall verification handler z_vrfy_tgpio_pin_read_ts_ec() in drivers/timeaware_gpio/timeaware_gpio_handlers.c validated only the port device object and passed the caller-supplied timestamp and event_count output pointers to the driver without a K_SYSCALL_MEMORY_WRITE() check. The other handlers in the same file (z_vrfy_tgpio_port_get_time(), z_vrfy_tgpio_port_get_cycles_per_second()) already performed that check, so the omission left one syscall unguarded.\n\ntgpio_pin_read_ts_ec() is declared __syscall, so with CONFIG_USERSPACE=y an unprivileged user-mode thread that has been granted access to the TGPIO device object can invoke it with arbitrary pointer values. tgpio_intel_read_ts_ec() in drivers/timeaware_gpio/timeaware_gpio_intel.c bounds-checks only the pin index and then unconditionally performs timestamp = ... and event_count = ..., executing two 8-byte stores in supervisor mode at addresses chosen by the user-mode caller.\n\nThe result is a write-what-where primitive that crosses the userspace/kernel boundary: the target address is fully attacker-chosen and the stored values are the hardware time-capture and event-counter register contents. Corrupting kernel data structures this way can escalate the calling thread to supervisor privilege or crash the system; the device-object permission required is a narrow capability that is not intended to confer any kernel-memory access. The fix adds the two missing K_SYSCALL_MEMORY_WRITE() validations before the driver call.\n\nExposure is narrow in practice. Only builds with CONFIG_USERSPACE=y and CONFIG_TIMEAWARE_GPIO=y compile the affected file, and from v3.6.0 onward the file additionally referenced a relocated header (syscall_handler.h>) and removed Z_SYSCALL_* macros, so such a configuration failed to build until those were repaired after v4.4.0. Downstream trees that locally corrected that breakage, and v3.5.0 builds where it did not exist, are the exposed population.\n  >\n  Severity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-17052\n  \nPublished : Sept. 21, 2026, 6:35 p.m. | 22 minutes ago\n  \nDescription :The Time-aware GPIO syscall verification handler z_vrfy_tgpio_pin_read_ts_ec() in drivers/timeaware_gpio/timeaware_gpio_handlers.c validated only the port device object and passed the caller-supplied timestamp and event_count output pointers to the driver without a K_SYSCALL_MEMORY_WRITE() check. The other handlers in the same file (z_vrfy_tgpio_port_get_time(), z_vrfy_tgpio_port_get_cycles_per_second()) already performed that check, so the omission left one syscall unguarded.\n\ntgpio_pin_read_ts_ec() is declared __syscall, so with CONFIG_USERSPACE=y an unprivileged user-mode thread that has been granted access to the TGPIO device object can invoke it with arbitrary pointer values. tgpio_intel_read_ts_ec() in drivers/timeaware_gpio/timeaware_gpio_intel.c bounds-checks only the pin index and then unconditionally performs timestamp = ... and event_count = ..., executing two 8-byte stores in supervisor mode at addresses chosen by the user-mode caller.\n\nThe result is a write-what-where primitive that crosses the userspace/kernel boundary: the target address is fully attacker-chosen and the stored values are the hardware time-capture and event-counter register contents. Corrupting kernel data structures this way can escalate the calling thread to supervisor privilege or crash the system; the device-object permission required is a narrow capability that is not intended to confer any kernel-memory access. The fix adds the two missing K_SYSCALL_MEMORY_WRITE() validations before the driver call.\n\nExposure is narrow in practice. Only builds with CONFIG_USERSPACE=y and CONFIG_TIMEAWARE_GPIO=y compile the affected file, and from v3.6.0 onward the file additionally referenced a relocated header (syscall_handler.h>) and removed Z_SYSCALL_* macros, so such a configuration failed to build until those were repaired after v4.4.0. Downstream trees that locally corrected that breakage, and v3.5.0 builds where it did not exist, are the exposed population.\n  >\n  Severity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-17052\n2. 26.09.22 오전3:35\n3. The Time-aware GPIO syscall verification handler z",
+      "cve_id": "CVE-2026-17052",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-17052",
+      "source": "cvefeed",
+      "published": "2026-09-22T03:35:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-76898 - draw.io: Unauthenticated SSRF via IPv6 ULA blocklist bypass in /embed2.js",
       "summary": "CVE ID :CVE-2026-76898\n  \nPublished : Sept. 21, 2026, 4:31 p.m. | 26 minutes ago\n  \nDescription :draw.io is a configurable diagramming and whiteboarding application. Prior to version 30.3.8, src/main/java/com/mxgraph/online/Utils.java checks IPv6 Unique Local Addresses in Utils.sanitizeUrl() by comparing the text prefixes fc00:: and fd00::, but the JDK returns the expanded address form, so the fc00::/7 range, including the AWS metadata range fd00:ec2::/32, is not blocked. An unauthenticated request to /embed2.js?fetch= can therefore make src/main/java/com/mxgraph/online/EmbedServlet2.java fetch an IPv6 ULA internal resource and reflect the response to the requester. Utils.validatedAddress() uses the same private-address check for the separate ProxyServlet path, which requires ENABLE_DRAWIO_PROXY=1. The primary /embed2.js path requires no proxy feature flag or DNS rebinding, and it can disclose cloud metadata credentials or data from other IPv6-reachable internal services. This issue is fixed in version 30.3.8.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
