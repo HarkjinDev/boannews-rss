@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-22T03:01:46.164137+09:00",
+  "fetched_at": "2026-09-22T03:32:19.354046+09:00",
   "security_news": [
+    {
+      "title": "WordPress Click2Shell flaw lets hackers execute PHP on the server",
+      "summary": "Technical details and a proof-of-concept exploit have been published for a new WordPress cross-site request forgery (CSRF) vulnerability dubbed 'Click2Shell' that affects the platform's Core component. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 워드프레스 핵심 기능의 CSRF 취약점 'Click2Shell' 공개\n2. 공격자가 원격에서 PHP 코드 실행 가능\n3. 해당 취약점 악용 시 서버 침해 우려",
+      "link": "https://www.bleepingcomputer.com/news/security/wordpress-click2shell-flaw-lets-hackers-execute-php-on-the-server/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-22T03:23:11+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "북한, 가짜 취업면접으로 3만대 해킹",
+      "summary": "북한 해킹 조직이 가짜 취업 면접을 미끼로 전 세계 정보기술(IT) 종사자들의 컴퓨터를 해킹해 암호화폐를 빼돌린 것으로 드러났다. 연방수사국(FBI)은 18일 북한 해킹 조직 ‘워터플럼(WaterPlum)’이 지난해 12월부터...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한, 가짜 취업면접으로 3만대 해킹 북한 해킹 조직이 가짜 취업 면접을 미끼로 전 세계 \n2. 연방수사국(FBI)은 18일 북한 해킹 조직 ‘워터플럼(WaterPlum)’이 지난해 12",
+      "link": "https://www.koreadaily.com/article/20260921105813803",
+      "source": "naver",
+      "published": "2026-09-22T03:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "암호화폐 덮친 AI 해킹...\"인간이 5년간 못 본 코드 털어 1억 달러 챙겼...",
       "summary": "치명적 보안 취약점을 연이어 찾아내고 있다. 기술 발전이 방대한 오픈소스 코드를 저비용으로 정밀 분석할 수 있는 환경을 열어주면서 보안 감사와 해킹 공격 간의 속도 경쟁이 가열되는 양상이다. 9월 20일...",
@@ -2065,21 +2089,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-85271",
       "source": "cvefeed",
       "published": "2026-09-19T05:38:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-84975 - PJSIP: TLS server identity (hostname) verification bypass via embedded NUL in certificate SubjectAltName (OpenSSL and GnuTLS backends)",
-      "summary": "CVE ID :CVE-2026-84975\n  \nPublished : Sept. 18, 2026, 6:17 p.m. | 39 minutes ago\n  \nDescription :PJSIP is a free and open source multimedia communication library written in C. In 2.17 and earlier, the OpenSSL and GnuTLS backends in pjlib/src/pj/ssl_sock_ossl.c and pjlib/src/pj/ssl_sock_gtls.c copy DNS SubjectAltName values with string functions that recalculate their length and truncate an embedded NUL byte. With server verification enabled through --tls-verify-server for the PJSIP TLS/SIPS transport, a certificate containing a DNS SubjectAltName formed from the target hostname prefix followed by an embedded NUL and an attacker-controlled suffix can therefore be accepted for the prefix hostname. An attacker who possesses such a certificate from a trusted issuer and can intercept the connection can impersonate the target server, complete the SIP session, and receive REGISTER credentials. The mbedTLS backend is not affected because it preserves the explicit string length. No fixed version is available as of this review.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-84975\n  \nPublished : Sept. 18, 2026, 6:17 p.m. | 39 minutes ago\n  \nDescription :PJSIP is a free and open source multimedia communication library written in C. In 2.17 and earlier, the OpenSSL and GnuTLS backends in pjlib/src/pj/ssl_sock_ossl.c and pjlib/src/pj/ssl_sock_gtls.c copy DNS SubjectAltName values with string functions that recalculate their length and truncate an embedded NUL byte. With server verification enabled through --tls-verify-server for the PJSIP TLS/SIPS transport, a certificate containing a DNS SubjectAltName formed from the target hostname prefix followed by an embedded NUL and an attacker-controlled suffix can therefore be accepted for the prefix hostname. An attacker who possesses such a certificate from a trusted issuer and can intercept the connection can impersonate the target server, complete the SIP session, and receive REGISTER credentials. The mbedTLS backend is not affected because it preserves the explicit string length. No fixed version is available as of this review.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-84975\n2. 26.09.19 오전3:17\n3. PJSIP is a free and open source multimedia communi",
-      "cve_id": "CVE-2026-84975",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84975",
-      "source": "cvefeed",
-      "published": "2026-09-19T03:17:17+09:00",
       "lang": "en"
     }
   ],
