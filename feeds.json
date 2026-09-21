@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-21T23:32:10.674523+09:00",
+  "fetched_at": "2026-09-22T00:02:41.744729+09:00",
   "security_news": [
+    {
+      "title": "[김대호 진단] 반도체 열전 (55) 허깅페이스...인공지능 AI의 반란",
+      "summary": "공격의 주체는 러시아나 북한의 국가 배후 해커 조직도, 악명 높은 사이버 범죄 집단도 아니었다. 바로... AI들의 탈옥과 비밀 모의 사건의 발단은 오픈AI가 2026년 5월부터 차세대 모델의 사이버 보안 방어 및 취약점...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [김대호 진단] 반도체 열전 (55) 허깅페이스...인공지능 AI의 반란 공격의 주체는 러\n2. AI들의 탈옥과 비밀 모의 사건의 발단은 오픈AI가 2026년 5월부터 차세대 모델의 사이",
+      "link": "https://www.g-enews.com/view.php?ud=202609200650375567906806b77b_1",
+      "source": "naver",
+      "published": "2026-09-22T00:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "베선트 “허깅페이스 침해, 오픈AI 경영진 책임”",
+      "summary": "사건은 오픈AI가 사이버보안 평가 프로그램 ‘ExploitGym’을 진행하던 7월 발생했다. 오픈AI는 8월 26일 조사... 허깅페이스는 7월 16일 관련 보안 활동을 공개했고, 오픈AI는 7월 21일 자사 모델의 관여 사실을 발표했다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 베선트 “허깅페이스 침해, 오픈AI 경영진 책임” 사건은 오픈AI가 사이버보안 평가 프로그\n2. 오픈AI는 8월 26일 조사...\n3. 허깅페이스는 7월 16일 관련 보안 활동을 공개했고, 오픈AI는 7월 21일 자사 모델의 ",
+      "link": "https://www.tokenpost.kr/news/ai/411701",
+      "source": "naver",
+      "published": "2026-09-21T23:36:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "같은 쿠팡 유출인데…한국 과징금, 대만의 35배 ‘형평성 논란’",
       "summary": "대만 정부는 이를 개인정보 도난이나 변경, 손상, 손실 및 유출을 막기 위한 적절한 보안조치를 취하도록... 쿠팡Inc는 지난 2월 보안업체 맨디언트의 포렌식 결과를 공개하며 전 직원이 접근한 약 20만개 계정 가운데 실제...",
@@ -1564,6 +1588,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-68825 Windows Bind Filter Driver Elevation of Privilege Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-68825\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-68825",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68825",
+      "source": "msrc",
+      "published": "2026-09-21T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-94379 - MISP: HTTP Method Bypass of Login Security Controls (Bruteforce Protection and Email OTP)",
       "summary": "CVE ID :CVE-2026-94379\n  \nPublished : Sept. 21, 2026, 12:35 p.m. | 22 minutes ago\n  \nDescription :The login() function in MISP's UsersController.php contained insufficient HTTP method validation for several security-critical code paths. The original code used an allowlist approach, checking only for specific HTTP methods (POST and PUT) before enforcing bruteforce protection, email one-time-password (OTP) verification, and login-failure logging. Because the checks were not exhaustive, an unauthenticated attacker could issue login requests using other HTTP methods and bypass all three security controls simultaneously. Specifically: \n\n - the bruteforce blocklisting check and attempt counter were skipped, allowing unlimited credential-guessing attempts without being rate-limited or blocked\n -  the email OTP two-factor authentication step was skipped, defeating the second factor of authentication\n - login-failure events were neither logged nor counted, removing the audit trail and the mechanism that would normally trigger a blocklist entry.\n\n\n\n\nThe security impact is the effective disabling of brute-force protection and multi-factor authentication for any attacker who can craft an HTTP request with a non-POST/PUT method to the login endpoint, potentially leading to credential compromise and unauthorized access to the MISP instance.\n\n\n\n\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-94379\n  \nPublished : Sept. 21, 2026, 12:35 p.m. | 22 minutes ago\n  \nDescription :The login() function in MISP's UsersController.php contained insufficient HTTP method validation for several security-critical code paths. The original code used an allowlist approach, checking only for specific HTTP methods (POST and PUT) before enforcing bruteforce protection, email one-time-password (OTP) verification, and login-failure logging. Because the checks were not exhaustive, an unauthenticated attacker could issue login requests using other HTTP methods and bypass all three security controls simultaneously. Specifically: \n\n - the bruteforce blocklisting check and attempt counter were skipped, allowing unlimited credential-guessing attempts without being rate-limited or blocked\n -  the email OTP two-factor authentication step was skipped, defeating the second factor of authentication\n - login-failure events were neither logged nor counted, removing the audit trail and the mechanism that would normally trigger a blocklist entry.\n\n\n\n\nThe security impact is the effective disabling of brute-force protection and multi-factor authentication for any attacker who can craft an HTTP request with a non-POST/PUT method to the login endpoint, potentially leading to credential compromise and unauthorized access to the MISP instance.\n\n\n\n\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2012,20 +2051,6 @@
       "link": "http://www.efnews.co.kr/news/articleView.html?idxno=132555",
       "source": "naver_rep",
       "published": "2026-09-19T19:24:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "한국재정정보원, 국제 사이버훈련서 재정망 방어역량 공유",
-      "summary": "한국재정정보원은 국가 핵심 재정정보망을 운영하며 축적한 보안관제와 침해사고 대응 경험을 기반으로 공식 후원기관에 참여했다. 현장에 파견된 전문인력 4명은 다국적 연합 방어팀 기술지원과 실시간 위협분석...",
-      "description": "한국재정정보원은 국가 핵심 재정정보망을 운영하며 축적한 보안관제와 침해사고 대응 경험을 기반으로 공식 후원기관에 참여했다. 현장에 파견된 전문인력 4명은 다국적 연합 방어팀 기술지원과 실시간 위협분석...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한국재정정보원, 국제 사이버훈련서 재정망 방어역량 공유 한국재정정보원은 국가 핵심 재정정보\n2. 현장에 파견된 전문인력 4명은 다국적 연합 방어팀 기술지원과 실시간 위협분석...",
-      "keyword_matched": "한국재정정보원",
-      "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=208746",
-      "source": "naver_rep",
-      "published": "2026-09-18T23:40:00+09:00",
       "lang": "ko"
     }
   ]
