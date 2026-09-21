@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-22T04:31:14.743391+09:00",
+  "fetched_at": "2026-09-22T05:01:23.327476+09:00",
   "security_news": [
+    {
+      "title": "메타 뮤즈, 출시 전 실제 웹사이트 취약점 악용",
+      "summary": "메타의 AI 모델 뮤즈 스파크 1.1이 사이버보안 평가 중 실제 웹사이트의 보안 취약점을 악용해 일부 정보를 열람하고 데이터베이스를 변경했다. 메타는 14일 보안 평가업체 이레귤러(Irregular)가 폐쇄형 테스트 환경을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 메타 AI 뮤즈 스파크 1.1, 보안 평가 중 웹사이트 취약점 악용\n2. DB 변경 및 정보 열람, 실제 사이트 보안 허점 노출\n3. 이레귤러, 메타 뮤즈 1.1의 실제 웹사이트 공격 행위 발견",
+      "link": "https://www.tokenpost.kr/news/breaking/411834",
+      "source": "naver",
+      "published": "2026-09-22T04:36:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "개인키 지켰는데도 리퀴드서 4000 BTC 증발…소프트웨어 결함이 승인 인...",
       "summary": "그대로 뒀다는 의혹이 제기된 사건 직후 나왔다. 국제 수사당국도 앞서 북한과 연계된 해킹조직이 채용 위장 등의 수법으로 악성코드를 심어 암호화폐 지갑의 개인키와 시드 문구를 빼돌린 사례를 확인한 바 있다.",
@@ -1612,6 +1624,36 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-73552 - Envoy: HTTP RBAC safe_regex can fail open on RFC-valid obs-text header values",
+      "summary": "CVE ID :CVE-2026-73552\n  \nPublished : Sept. 21, 2026, 7:37 p.m. | 9 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.36.10, 1.37.6, 1.38.4, and 1.39.1, Envoy HTTP RBAC accepts RFC-valid opaque header bytes but evaluates safe_regex values with RE2's UTF-8 subject semantics. A downstream client can preserve a prohibited marker and add an unrelated obs-text octet, causing RE2::FullMatch to return false and a negative RBAC policy to treat the invalid subject as an ordinary no-match. A byte-oriented route matcher can still observe the marker, allowing the request to reach a route intended to be denied. The relevant scope boundary is that plain positive ALLOW regexes normally fail closed, and exact, prefix, suffix, and contains matchers are not shown to have this subject-domain failure. This issue is fixed in versions 1.36.10, 1.37.6, 1.38.4, and 1.39.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-73552\n  \nPublished : Sept. 21, 2026, 7:37 p.m. | 9 minutes ago\n  \nDescription :Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.36.10, 1.37.6, 1.38.4, and 1.39.1, Envoy HTTP RBAC accepts RFC-valid opaque header bytes but evaluates safe_regex values with RE2's UTF-8 subject semantics. A downstream client can preserve a prohibited marker and add an unrelated obs-text octet, causing RE2::FullMatch to return false and a negative RBAC policy to treat the invalid subject as an ordinary no-match. A byte-oriented route matcher can still observe the marker, allowing the request to reach a route intended to be denied. The relevant scope boundary is that plain positive ALLOW regexes normally fail closed, and exact, prefix, suffix, and contains matchers are not shown to have this subject-domain failure. This issue is fixed in versions 1.36.10, 1.37.6, 1.38.4, and 1.39.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-73552\n2. 26.09.22 오전4:37\n3. Envoy is an open source edge and service proxy des",
+      "cve_id": "CVE-2026-73552",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73552",
+      "source": "cvefeed",
+      "published": "2026-09-22T04:37:20+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-91165 - Warpgate: Markup injection in SSO form_post return page via unencoded redirect/error values",
+      "summary": "CVE ID :CVE-2026-91165\n  \nPublished : Sept. 21, 2026, 7:17 p.m. | 29 minutes ago\n  \nDescription :Warpgate is an open source SSH, HTTPS and MySQL bastion host for Linux. Prior to 0.27.6, the response_mode=form_post SSO return path in warpgate-protocol-http/src/api/sso_provider_list.rs uses serde_json::to_string inside ReturnToSsoPostResponse without neutralizing a script-closing sequence. The vulnerable value can enter the script block through the attacker-controlled next redirect parameter stored by warpgate-protocol-http/src/api/sso_provider_detail.rs or through IdP-derived error messages that make_redirect_url concatenates without URL encoding. The IdP-derived path is reachable when the attacker controls a configured identity provider, or when the attacker controls the email or username claim on an attacker-controlled account and the configured identity provider permits the required unvalidated claim format. A victim must complete the form_post SSO flow for the injected markup to be rendered. The Warpgate Content-Security-Policy blocks injected JavaScript and event handlers, so the demonstrated impact is content spoofing, a false login form, or a meta refresh rather than script execution. This issue is fixed in version 0.27.6.\n  \nSeverity: 2.4 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-91165\n  \nPublished : Sept. 21, 2026, 7:17 p.m. | 29 minutes ago\n  \nDescription :Warpgate is an open source SSH, HTTPS and MySQL bastion host for Linux. Prior to 0.27.6, the response_mode=form_post SSO return path in warpgate-protocol-http/src/api/sso_provider_list.rs uses serde_json::to_string inside ReturnToSsoPostResponse without neutralizing a script-closing sequence. The vulnerable value can enter the script block through the attacker-controlled next redirect parameter stored by warpgate-protocol-http/src/api/sso_provider_detail.rs or through IdP-derived error messages that make_redirect_url concatenates without URL encoding. The IdP-derived path is reachable when the attacker controls a configured identity provider, or when the attacker controls the email or username claim on an attacker-controlled account and the configured identity provider permits the required unvalidated claim format. A victim must complete the form_post SSO flow for the injected markup to be rendered. The Warpgate Content-Security-Policy blocks injected JavaScript and event handlers, so the demonstrated impact is content spoofing, a false login form, or a meta refresh rather than script execution. This issue is fixed in version 0.27.6.\n  \nSeverity: 2.4 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-91165\n2. 26.09.22 오전4:17\n3. Warpgate is an open source SSH, HTTPS and MySQL ba",
+      "cve_id": "CVE-2026-91165",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-91165",
+      "source": "cvefeed",
+      "published": "2026-09-22T04:17:15+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-17052 - Missing user-pointer validation in tgpio_pin_read_ts_ec syscall handler allows arbitrary supervisor-memory write from userspace",
       "summary": "CVE ID :CVE-2026-17052\n  \nPublished : Sept. 21, 2026, 6:35 p.m. | 22 minutes ago\n  \nDescription :The Time-aware GPIO syscall verification handler z_vrfy_tgpio_pin_read_ts_ec() in drivers/timeaware_gpio/timeaware_gpio_handlers.c validated only the port device object and passed the caller-supplied timestamp and event_count output pointers to the driver without a K_SYSCALL_MEMORY_WRITE() check. The other handlers in the same file (z_vrfy_tgpio_port_get_time(), z_vrfy_tgpio_port_get_cycles_per_second()) already performed that check, so the omission left one syscall unguarded.\n\ntgpio_pin_read_ts_ec() is declared __syscall, so with CONFIG_USERSPACE=y an unprivileged user-mode thread that has been granted access to the TGPIO device object can invoke it with arbitrary pointer values. tgpio_intel_read_ts_ec() in drivers/timeaware_gpio/timeaware_gpio_intel.c bounds-checks only the pin index and then unconditionally performs timestamp = ... and event_count = ..., executing two 8-byte stores in supervisor mode at addresses chosen by the user-mode caller.\n\nThe result is a write-what-where primitive that crosses the userspace/kernel boundary: the target address is fully attacker-chosen and the stored values are the hardware time-capture and event-counter register contents. Corrupting kernel data structures this way can escalate the calling thread to supervisor privilege or crash the system; the device-object permission required is a narrow capability that is not intended to confer any kernel-memory access. The fix adds the two missing K_SYSCALL_MEMORY_WRITE() validations before the driver call.\n\nExposure is narrow in practice. Only builds with CONFIG_USERSPACE=y and CONFIG_TIMEAWARE_GPIO=y compile the affected file, and from v3.6.0 onward the file additionally referenced a relocated header (syscall_handler.h>) and removed Z_SYSCALL_* macros, so such a configuration failed to build until those were repaired after v4.4.0. Downstream trees that locally corrected that breakage, and v3.5.0 builds where it did not exist, are the exposed population.\n  >\n  Severity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-17052\n  \nPublished : Sept. 21, 2026, 6:35 p.m. | 22 minutes ago\n  \nDescription :The Time-aware GPIO syscall verification handler z_vrfy_tgpio_pin_read_ts_ec() in drivers/timeaware_gpio/timeaware_gpio_handlers.c validated only the port device object and passed the caller-supplied timestamp and event_count output pointers to the driver without a K_SYSCALL_MEMORY_WRITE() check. The other handlers in the same file (z_vrfy_tgpio_port_get_time(), z_vrfy_tgpio_port_get_cycles_per_second()) already performed that check, so the omission left one syscall unguarded.\n\ntgpio_pin_read_ts_ec() is declared __syscall, so with CONFIG_USERSPACE=y an unprivileged user-mode thread that has been granted access to the TGPIO device object can invoke it with arbitrary pointer values. tgpio_intel_read_ts_ec() in drivers/timeaware_gpio/timeaware_gpio_intel.c bounds-checks only the pin index and then unconditionally performs timestamp = ... and event_count = ..., executing two 8-byte stores in supervisor mode at addresses chosen by the user-mode caller.\n\nThe result is a write-what-where primitive that crosses the userspace/kernel boundary: the target address is fully attacker-chosen and the stored values are the hardware time-capture and event-counter register contents. Corrupting kernel data structures this way can escalate the calling thread to supervisor privilege or crash the system; the device-object permission required is a narrow capability that is not intended to confer any kernel-memory access. The fix adds the two missing K_SYSCALL_MEMORY_WRITE() validations before the driver call.\n\nExposure is narrow in practice. Only builds with CONFIG_USERSPACE=y and CONFIG_TIMEAWARE_GPIO=y compile the affected file, and from v3.6.0 onward the file additionally referenced a relocated header (syscall_handler.h>) and removed Z_SYSCALL_* macros, so such a configuration failed to build until those were repaired after v4.4.0. Downstream trees that locally corrected that breakage, and v3.5.0 builds where it did not exist, are the exposed population.\n  >\n  Severity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -1819,6 +1861,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-65654",
       "source": "cvefeed",
       "published": "2026-09-21T21:17:16+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\nCVE-2026-7273 Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability\n\nThis type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise. \nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. \nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria. \nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "description": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\nCVE-2026-7273 Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability\n\nThis type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise. \nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. \nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria. \nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-7273\n2. CISA\n3. CISA has added one new vulnerability to its Known ",
+      "cve_id": "CVE-2026-7273",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/news-events/alerts/2026/09/21/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "source": "cisa",
+      "published": "2026-09-21T21:00:00+09:00",
       "lang": "en"
     },
     {
