@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-22T05:31:02.280848+09:00",
+  "fetched_at": "2026-09-22T06:01:31.322303+09:00",
   "security_news": [
+    {
+      "title": "오픈AI, \"자기개선형 AI, 국제 공통 안전기준 필요\"…미 정부에 협력 주...",
+      "summary": "올여름 오픈AI가 내부 테스트 중이던 AI 에이전트 집단이 인터넷에 접근해 AI 플랫폼 허깅페이스(Hugging Face)를 해킹하는 사건이 발생하면서 첨단 AI 모델의 사이버보안 위험에 대한 업계 우려가 커졌다. 지난주에는 한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI AI 에이전트, 허깅페이스 해킹 시도\n2. 자체 학습 AI의 인터넷 접근, 통제 실패\n3. 국제 안전기준 마련 논의 촉구",
+      "link": "https://n.news.naver.com/mnews/article/138/0002242288?sid=105",
+      "source": "naver",
+      "published": "2026-09-22T05:50:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "해커 먹잇감 된 학원…해킹 '사각지대' 이유는",
+      "summary": "대형 입시·어학학원을 중심으로 개인정보 유출 사고가 잇따르면서 학원가의 정보보안 체계에 대한 불안감이 커지고 있다. 학원은 학생과 학부모의 개인정보를 다량 보유하고 있는 데 비해 전문적인 보안 인력과 인프라를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 해커 먹잇감 된 학원…해킹 '사각지대' 이유는 대형 입시·어학학원을 중심으로 개인정보 유출\n2. 학원은 학생과 학부모의 개인정보를 다량 보유하고 있는 데 비해 전문적인 보안 인력과 인프라",
+      "link": "https://n.news.naver.com/mnews/article/421/0009184800?sid=102",
+      "source": "naver",
+      "published": "2026-09-22T05:30:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "메타 뮤즈, 출시 전 실제 웹사이트 취약점 악용",
       "summary": "메타의 AI 모델 뮤즈 스파크 1.1이 사이버보안 평가 중 실제 웹사이트의 보안 취약점을 악용해 일부 정보를 열람하고 데이터베이스를 변경했다. 메타는 14일 보안 평가업체 이레귤러(Irregular)가 폐쇄형 테스트 환경을...",
@@ -2134,21 +2158,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-63452",
       "source": "cvefeed",
       "published": "2026-09-19T06:17:04+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-85271 - Open edX Platform: Stored CSS Injection in Email Digest Notifications via Unsanitized Thread Title (incomplete patch of CVE-2026-42857)",
-      "summary": "CVE ID :CVE-2026-85271\n  \nPublished : Sept. 18, 2026, 8:38 p.m. | 17 minutes ago\n  \nDescription :Open edX Platform enables the authoring and delivery of online learning at any scale. From Redwood until Ulmo and Verawood.1, the add_additional_attributes_to_notifications function in openedx/core/djangoapps/notifications/email/utils.py assigns notification content without sanitizing discussion-title values produced by get_notification_content in openedx/core/djangoapps/notifications/base_notification.py. An enrolled student can place CSS-capable markup in the post_title value supplied by lms/djangoapps/discussion/rest_api/discussions_notifications.py. Digest and batched-email rendering then passes that value through openedx/core/djangoapps/notifications/templates/notifications/digest_content.html as safe HTML, allowing email-open tracking and content spoofing or phishing when another learner opens a CSS-rendering client. The immediate-email path is not affected because it strips title markup and renders a separately sanitized body. This issue is fixed in Ulmo and Verawood.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-85271\n  \nPublished : Sept. 18, 2026, 8:38 p.m. | 17 minutes ago\n  \nDescription :Open edX Platform enables the authoring and delivery of online learning at any scale. From Redwood until Ulmo and Verawood.1, the add_additional_attributes_to_notifications function in openedx/core/djangoapps/notifications/email/utils.py assigns notification content without sanitizing discussion-title values produced by get_notification_content in openedx/core/djangoapps/notifications/base_notification.py. An enrolled student can place CSS-capable markup in the post_title value supplied by lms/djangoapps/discussion/rest_api/discussions_notifications.py. Digest and batched-email rendering then passes that value through openedx/core/djangoapps/notifications/templates/notifications/digest_content.html as safe HTML, allowing email-open tracking and content spoofing or phishing when another learner opens a CSS-rendering client. The immediate-email path is not affected because it strips title markup and renders a separately sanitized body. This issue is fixed in Ulmo and Verawood.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-85271\n2. 26.09.19 오전5:38\n3. Open edX Platform enables the authoring and delive",
-      "cve_id": "CVE-2026-85271",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85271",
-      "source": "cvefeed",
-      "published": "2026-09-19T05:38:40+09:00",
       "lang": "en"
     }
   ],
