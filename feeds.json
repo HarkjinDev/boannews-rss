@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-22T02:01:16.273287+09:00",
+  "fetched_at": "2026-09-22T02:31:09.911946+09:00",
   "security_news": [
     {
       "title": "암호화폐 덮친 AI 해킹...\"인간이 5년간 못 본 코드 털어 1억 달러 챙겼...",
@@ -1642,6 +1642,36 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-61674",
       "source": "cvefeed",
       "published": "2026-09-22T01:10:15+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-94301 - Apache MINA: CVE-2026-47065 resolveProxyClass fix missing from 2.0.X and 2.1.X branches (2.0.30 / 2.1.14) ZDRES-232",
+      "summary": "CVE ID :CVE-2026-94301\n  \nPublished : Sept. 21, 2026, 3:17 p.m. | 29 minutes ago\n  \nDescription :The fix for CVE-2026-47065/ZDRES-232 (\"resolveProxyClass Not Overridden - acceptMatchers Filter Bypass via java.lang.reflect.Proxy\"), released on 2026-06-02 and announced as \"Fully addressed\" in MINA 2.2.8, 2.1.13 and 2.0.29, was committed to the\n 2.2.X branch only. The 2.0.X and 2.1.X maintenance branches never received the resolveProxyClass() override, so the 2.0.29 and 2.1.13 artifacts listed as fixed -- and every later release on those lines, up to and including the current 2.0.30 and 2.1.14 -- remain vulnerable to the exact allow-list bypass that CVE-2026-47065 was meant to close.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-94301\n  \nPublished : Sept. 21, 2026, 3:17 p.m. | 29 minutes ago\n  \nDescription :The fix for CVE-2026-47065/ZDRES-232 (\"resolveProxyClass Not Overridden - acceptMatchers Filter Bypass via java.lang.reflect.Proxy\"), released on 2026-06-02 and announced as \"Fully addressed\" in MINA 2.2.8, 2.1.13 and 2.0.29, was committed to the\n 2.2.X branch only. The 2.0.X and 2.1.X maintenance branches never received the resolveProxyClass() override, so the 2.0.29 and 2.1.13 artifacts listed as fixed -- and every later release on those lines, up to and including the current 2.0.30 and 2.1.14 -- remain vulnerable to the exact allow-list bypass that CVE-2026-47065 was meant to close.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-94301\n2. 26.09.22 오전12:17\n3. The fix for CVE-2026-47065/ZDRES-232 (\"resolveProx",
+      "cve_id": "CVE-2026-94301",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-94301",
+      "source": "cvefeed",
+      "published": "2026-09-22T00:17:38+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-80110 - Pki-core: dogtag pki v2 rest acl filter's reverse-lexicographic tie-break lets a ca agent invoke the admin-only raw profile creation endpoint",
+      "summary": "CVE ID :CVE-2026-80110\n  \nPublished : Sept. 21, 2026, 3:17 p.m. | 29 minutes ago\n  \nDescription :A flaw was found in pki-core. The v2 REST ACL filter selects a tie-breaking permission for colliding literal and wildcard ACL keys using lexicographic string comparison rather than specificity, causing a wildcard-mapped permission to override a more specific literal-mapped permission when both match. In the CA's profile-management REST API this allows a request to POST /v2/profiles/raw -- intended to require Administrator-level profiles.create permission -- to instead be authorized under the lower-privileged profiles.approve permission held by the default Certificate Manager Agents group. The highest threat from this vulnerability is to confidentiality and integrity of the certificate authority's issuance policy.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-80110\n  \nPublished : Sept. 21, 2026, 3:17 p.m. | 29 minutes ago\n  \nDescription :A flaw was found in pki-core. The v2 REST ACL filter selects a tie-breaking permission for colliding literal and wildcard ACL keys using lexicographic string comparison rather than specificity, causing a wildcard-mapped permission to override a more specific literal-mapped permission when both match. In the CA's profile-management REST API this allows a request to POST /v2/profiles/raw -- intended to require Administrator-level profiles.create permission -- to instead be authorized under the lower-privileged profiles.approve permission held by the default Certificate Manager Agents group. The highest threat from this vulnerability is to confidentiality and integrity of the certificate authority's issuance policy.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-80110\n2. 26.09.22 오전12:17\n3. A flaw was found in pki-core. The v2 REST ACL filt",
+      "cve_id": "CVE-2026-80110",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80110",
+      "source": "cvefeed",
+      "published": "2026-09-22T00:17:32+09:00",
       "lang": "en"
     },
     {
