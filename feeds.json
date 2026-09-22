@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-22T20:02:20.174623+09:00",
+  "fetched_at": "2026-09-22T20:30:54.492013+09:00",
   "security_news": [
     {
       "title": "[단독] 룩핀 개인정보 유출 데이터, 다크웹서 판매 정황…해커 \"270만 고...",
@@ -2436,18 +2436,6 @@
       "source": "dailysecu",
       "published": "2026-09-19T21:07:57+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "젠슨황이 점 찍은 ‘이것’…AI 개발 늦춘다는데 15% 뛰었다 [투자360]",
-      "summary": "인공지능(AI) 속도 조절론이 부상한 가운데 사이버보안주가 가파르게 상승했다. 에이전트 AI 확산과 해킹 고도화로 기업의 보안 지출이 구조적으로 늘어날 것이란 전망이 주가를 끌어올렸다. 한국거래소에 따르면...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 보안주, 젠슨황 투자에도 15% 급등\n2. 에이전트 AI 확산, 해킹 고도화로 보안 지출 증가\n3. 기업 보안 투자 확대 전망, 사이버보안주 상승세",
-      "link": "https://n.news.naver.com/mnews/article/016/0002699725?sid=101",
-      "source": "naver",
-      "published": "2026-09-19T20:30:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3004,21 +2992,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-93987",
       "source": "cvefeed",
       "published": "2026-09-19T20:53:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-78030 - DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM",
-      "summary": "CVE ID :CVE-2026-78030\n  \nPublished : Sept. 19, 2026, 11:16 a.m. | 47 minutes ago\n  \nDescription :DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM.\n\nDBD::DBM passes the dbm_type and dbm_mldbm connect attributes to require without checking that the value names a module. require treats a path-shaped string as a literal filename and does not consult @INC, so the attribute chooses the file that Perl loads and runs.\n\nThe MLDBM::Serializer:: prefix that DBD::DBM prepends to dbm_mldbm is not a boundary: only the :: separators are rewritten to /, so a value containing / traverses out of the serializer directory. The value is also assigned to $MLDBM::Serializer, which MLDBM requires the same way when it ties the table.\n\nA caller that lets an untrusted party influence either attribute, for example through a DSN fragment or a parameter that selects a storage backend, runs the file-scope code of whatever module the value names.\n\nFor example,\n\n    my $dsn = \"dbi:DBM:f_dir=/var/db;dbm_type=../../Untrusted.pm\"\n    my $dbh = DBI->connect( $dsn );\n\nNote that DBD::Gofer forwards connect attributes to the server side, and DBI::ProxyServer checks only that a DSN starts with a driver prefix.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-78030\n  \nPublished : Sept. 19, 2026, 11:16 a.m. | 47 minutes ago\n  \nDescription :DBI versions before 1.653 for Perl load arbitrary modules via unvalidated dbm_type and dbm_mldbm attributes in DBD::DBM.\n\nDBD::DBM passes the dbm_type and dbm_mldbm connect attributes to require without checking that the value names a module. require treats a path-shaped string as a literal filename and does not consult @INC, so the attribute chooses the file that Perl loads and runs.\n\nThe MLDBM::Serializer:: prefix that DBD::DBM prepends to dbm_mldbm is not a boundary: only the :: separators are rewritten to /, so a value containing / traverses out of the serializer directory. The value is also assigned to $MLDBM::Serializer, which MLDBM requires the same way when it ties the table.\n\nA caller that lets an untrusted party influence either attribute, for example through a DSN fragment or a parameter that selects a storage backend, runs the file-scope code of whatever module the value names.\n\nFor example,\n\n    my $dsn = \"dbi:DBM:f_dir=/var/db;dbm_type=../../Untrusted.pm\"\n    my $dbh = DBI->connect( $dsn );\n\nNote that DBD::Gofer forwards connect attributes to the server side, and DBI::ProxyServer checks only that a DSN starts with a driver prefix.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-78030\n2. 26.09.19 오후8:16\n3. DBI versions before 1.653 for Perl load arbitrary ",
-      "cve_id": "CVE-2026-78030",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78030",
-      "source": "cvefeed",
-      "published": "2026-09-19T20:16:37+09:00",
       "lang": "en"
     }
   ],
