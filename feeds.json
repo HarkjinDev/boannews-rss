@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-22T22:32:55.914673+09:00",
+  "fetched_at": "2026-09-22T23:02:34.329455+09:00",
   "security_news": [
     {
       "title": "오픈AI, 생산 엔지니어 25% 보안 업무로 재배치",
@@ -2484,33 +2484,24 @@
       "source": "naver",
       "published": "2026-09-19T23:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "北·이란 해커, 420% 온체인 사이버 테러...\"사토시 지갑까지 악용\"",
-      "summary": "북한과 이란 등 국가 배후 해커 조직들이 공개 블록체인에 악성코드 명령을 숨기는 수법을 대폭 늘리면서 온체인 보안 위협이 급격히 고조됐다. 9월 18일(현지시간) 암호화폐 전문 매체 코인텔레그래프에 따르면...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 北·이란 해커, 420% 온체인 사이버 테러...\"사토시 지갑까지 악용\" 북한과 이란 등 \n2. 9월 18일(현지시간) 암호화폐 전문 매체 코인텔레그래프에 따르면...",
-      "link": "http://coinreaders.com/259211",
-      "source": "naver",
-      "published": "2026-09-19T23:02:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "ShinyHunters hacks Clop leak site, threatens to extort ransomware gang",
-      "summary": "The ShinyHunters extortion gang breached the Clop (aka Cl0p) ransomware operation's data leak site, defacing the Tor site and allegedly stealing server data and the private keys for its onion service. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. ShinyHunters, Clop 랜섬웨어 운영단 데이터 유출 사이트 해킹\n2. Tor 사이트 변조, 서버 데이터 및 onion 서비스 개인키 탈취 주장\n3. Clop 운영단 데이터 유출 위협, 몸값 요구 시도",
-      "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang/",
-      "source": "bleepingcomputer",
-      "published": "2026-09-19T22:48:32+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-95667 - MISP Installer Log and FIFO Created World-Readable, Exposing Sensitive Credentials",
+      "summary": "CVE ID :CVE-2026-95667\n  \nPublished : Sept. 22, 2026, 1:11 p.m. | 37 minutes ago\n  \nDescription :The MISP installer scripts (for Debian 12, Debian 13, Ubuntu 24.04, and RHEL 9.4) create a log file at /var/log/misp_install.log and a named pipe (FIFO) at /var/log/misp_install.log.pipe to capture all installer output. The log captures highly sensitive data including the generated admin password, database passwords, GPG passphrase, and supervisor password. However, the log file was created by the tee command under the system default umask, resulting in world-readable permissions (typically 0644). Similarly, the FIFO was created with mkfifo without an explicit mode, also inheriting the default umask and remaining world-readable during the window before it was unlinked. \n\nAny local unprivileged user on the system could read the log file or the FIFO to obtain these credentials. \n\nAdditionally, the log file was not removed before creation, meaning a pre-existing symlink in /var/log could have been used to redirect the write to an arbitrary location.\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-95667\n  \nPublished : Sept. 22, 2026, 1:11 p.m. | 37 minutes ago\n  \nDescription :The MISP installer scripts (for Debian 12, Debian 13, Ubuntu 24.04, and RHEL 9.4) create a log file at /var/log/misp_install.log and a named pipe (FIFO) at /var/log/misp_install.log.pipe to capture all installer output. The log captures highly sensitive data including the generated admin password, database passwords, GPG passphrase, and supervisor password. However, the log file was created by the tee command under the system default umask, resulting in world-readable permissions (typically 0644). Similarly, the FIFO was created with mkfifo without an explicit mode, also inheriting the default umask and remaining world-readable during the window before it was unlinked. \n\nAny local unprivileged user on the system could read the log file or the FIFO to obtain these credentials. \n\nAdditionally, the log file was not removed before creation, meaning a pre-existing symlink in /var/log could have been used to redirect the write to an arbitrary location.\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-95667\n2. 26.09.22 오후10:11\n3. The MISP installer scripts (for Debian 12, Debian ",
+      "cve_id": "CVE-2026-95667",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95667",
+      "source": "cvefeed",
+      "published": "2026-09-22T22:11:44+09:00",
+      "lang": "en"
+    },
     {
       "title": "LausivLoader analysis, or how to pass data between malware stages, (Thu, Sep 17th)",
       "summary": "At the end of August, a malspam message was caught in the quarantine of a mail gateway operated by one of my customers. The message was not especially remarkable â€“ it asked the recipient to review some attached requirements and provide a price quotation for a fiber optic system and appeared to impersonate an employee of a legitimate company.\r",
