@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-22T19:01:18.940740+09:00",
+  "fetched_at": "2026-09-22T19:31:15.188736+09:00",
   "security_news": [
+    {
+      "title": "New Windows Defender zero-day blocks Microsoft antivirus updates",
+      "summary": "Over the weekend, security researcher Abdelhamid Naceri (also known as Nightmare Eclipse) released another Microsoft Defender zero-day exploit that blocks antivirus updates. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. MS Defender 제로데이, Naceri가 공개\n2. Antivirus 업데이트 차단하는 공격 방식\n3. Windows Defender 보안 취약점 노출",
+      "link": "https://www.bleepingcomputer.com/news/security/new-windows-defender-zero-day-blocks-microsoft-antivirus-updates/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-22T18:55:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "\"피드 보며 비트코인(BTC) 산다\"...일론 머스크, X에 주식·코인 거래 탑...",
       "summary": "계정 해킹이나 피싱 공격이 실제 자산 탈취로 직결될 위험이 커진 만큼 강력한 계정 보안 체계가 필수적이다. 미국 증권거래위원회(SEC) 등 금융 규제 당국의 감시망 속에서 이용자 보호 규정을 어떻게 준수할지도 주요...",
@@ -2428,6 +2440,36 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-90882 - Reflected arbitrary origins with credentials, allowing cross-origin reads of authenticated user data",
+      "summary": "CVE ID :CVE-2026-90882\n  \nPublished : Sept. 22, 2026, 9:27 a.m. | 20 minutes ago\n  \nDescription :The open-vsx.org deployment returned Access-Control-Allow-Origin reflecting the requesting origin together with Access-Control-Allow-Credentials: true on the authenticated /user/ endpoints. A page on any origin could therefore issue credentialed requests to the service in a logged-in user's browser and read the responses.\n\n\n\nThis exposed /user (login name, avatar, homepage, tokens URL), /user/tokens, /user/namespaces, /user/extensions, /user/search/{name} and /user/namespace/{name}/members, and — because /user/csrf was readable the same way — allowed the CSRF protection on write endpoints to be defeated. Chaining the two, an attacker page could call /user/token/create and exfiltrate a personal access token carrying publish and delete rights over the victim's namespaces.\n\n\n\nThe headers were emitted by the CDN/edge layer, not by the application: the Open VSX software sets allowCredentials(true) in exactly one place, against a single exact origin derived from ovsx.webui.url, and defines no CORS mapping on /user/ beyond it. No configuration of the software produces origin reflection with credentials.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-90882\n  \nPublished : Sept. 22, 2026, 9:27 a.m. | 20 minutes ago\n  \nDescription :The open-vsx.org deployment returned Access-Control-Allow-Origin reflecting the requesting origin together with Access-Control-Allow-Credentials: true on the authenticated /user/ endpoints. A page on any origin could therefore issue credentialed requests to the service in a logged-in user's browser and read the responses.\n\n\n\nThis exposed /user (login name, avatar, homepage, tokens URL), /user/tokens, /user/namespaces, /user/extensions, /user/search/{name} and /user/namespace/{name}/members, and — because /user/csrf was readable the same way — allowed the CSRF protection on write endpoints to be defeated. Chaining the two, an attacker page could call /user/token/create and exfiltrate a personal access token carrying publish and delete rights over the victim's namespaces.\n\n\n\nThe headers were emitted by the CDN/edge layer, not by the application: the Open VSX software sets allowCredentials(true) in exactly one place, against a single exact origin derived from ovsx.webui.url, and defines no CORS mapping on /user/ beyond it. No configuration of the software produces origin reflection with credentials.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-90882\n2. 26.09.22 오후6:27\n3. The open-vsx.org deployment returned Access-Contro",
+      "cve_id": "CVE-2026-90882",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-90882",
+      "source": "cvefeed",
+      "published": "2026-09-22T18:27:34+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-89422 - TLS 1.3 client skips server authentication when ServerHello carries an unsolicited pre_shared_key extension",
+      "summary": "CVE ID :CVE-2026-89422\n  \nPublished : Sept. 22, 2026, 9:17 a.m. | 30 minutes ago\n  \nDescription :Key Exchange without Entity Authentication vulnerability in Erlang/OTP ssl allows a peer that answers a TLS 1.3 client connection to impersonate the intended server. A pre_shared_key extension in the ServerHello that the client never offered causes the client to complete the handshake without validating the server's certificate, so ssl:connect returns {ok, Socket} against a peer holding no certificate, no private key and no prior session.\n\ntls_client_connection_1_3:handle_server_hello/2 passes the received extension to tls_gen_connection_1_3:handle_resumption/2, which sets resumption = true on its mere presence without checking that the client offered a PSK. tls_handshake_1_3:get_pre_shared_key/4 meanwhile falls back to the all-zero \"no PSK\" value and keys the handshake with the ordinary non-PSK schedule, so the attacker's own ephemeral key suffices. The resumption flag then routes maybe_resumption/1 straight to wait_finished, skipping the certificate-handling states, so certificate path validation, verify_fun, hostname verification, partial_chain, CRL checking and OCSP stapling are all bypassed. The default client configuration is affected; clients restricted to TLS 1.2 are not.\n\nThis issue affects OTP from OTP 22.2 before OTP 27.3.4.18, OTP 28.5.0.7, and OTP 29.1.1, corresponding to ssl from 9.5 before 11.2.12.13, 11.6.0.6, and 11.7.7.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-89422\n  \nPublished : Sept. 22, 2026, 9:17 a.m. | 30 minutes ago\n  \nDescription :Key Exchange without Entity Authentication vulnerability in Erlang/OTP ssl allows a peer that answers a TLS 1.3 client connection to impersonate the intended server. A pre_shared_key extension in the ServerHello that the client never offered causes the client to complete the handshake without validating the server's certificate, so ssl:connect returns {ok, Socket} against a peer holding no certificate, no private key and no prior session.\n\ntls_client_connection_1_3:handle_server_hello/2 passes the received extension to tls_gen_connection_1_3:handle_resumption/2, which sets resumption = true on its mere presence without checking that the client offered a PSK. tls_handshake_1_3:get_pre_shared_key/4 meanwhile falls back to the all-zero \"no PSK\" value and keys the handshake with the ordinary non-PSK schedule, so the attacker's own ephemeral key suffices. The resumption flag then routes maybe_resumption/1 straight to wait_finished, skipping the certificate-handling states, so certificate path validation, verify_fun, hostname verification, partial_chain, CRL checking and OCSP stapling are all bypassed. The default client configuration is affected; clients restricted to TLS 1.2 are not.\n\nThis issue affects OTP from OTP 22.2 before OTP 27.3.4.18, OTP 28.5.0.7, and OTP 29.1.1, corresponding to ssl from 9.5 before 11.2.12.13, 11.6.0.6, and 11.7.7.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-89422\n2. 26.09.22 오후6:17\n3. Key Exchange without Entity Authentication vulnera",
+      "cve_id": "CVE-2026-89422",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-89422",
+      "source": "cvefeed",
+      "published": "2026-09-22T18:17:05+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-87081 - Net::IDN::UTS46 versions before 2.590 for Perl allow CPU exhaustion via quadratic punycode encoding of an overlong label before the length check in to_ascii",
       "summary": "CVE ID :CVE-2026-87081\n  \nPublished : Sept. 22, 2026, 7:25 a.m. | 22 minutes ago\n  \nDescription :Net::IDN::UTS46 versions before 2.590 for Perl allow CPU exhaustion via quadratic punycode encoding of an overlong label before the length check in to_ascii.\n\nto_ascii punycode encodes each label and only then applies the 63-byte DNS limit. encode_punycode in both backends follows the sample implementation in RFC 3492, whose outer loop runs once per distinct non-ASCII code point and scans the whole input each round, so a label of distinct non-ASCII characters costs the square of its length before the limit rejects it. Every ASCII conversion in the distribution, including domain_to_ascii and email_to_ascii, goes through to_ascii.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-87081\n  \nPublished : Sept. 22, 2026, 7:25 a.m. | 22 minutes ago\n  \nDescription :Net::IDN::UTS46 versions before 2.590 for Perl allow CPU exhaustion via quadratic punycode encoding of an overlong label before the length check in to_ascii.\n\nto_ascii punycode encodes each label and only then applies the 63-byte DNS limit. encode_punycode in both backends follows the sample implementation in RFC 3492, whose outer loop runs once per distinct non-ASCII code point and scans the whole input each round, so a label of distinct non-ASCII characters costs the square of its length before the limit rejects it. Every ASCII conversion in the distribution, including domain_to_ascii and email_to_ascii, goes through to_ascii.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2968,20 +3010,5 @@
       "lang": "en"
     }
   ],
-  "reputation": [
-    {
-      "title": "한국재정정보원, 국제 사이버훈련 'APEX 2026' 참여…글로벌 공조 지원",
-      "summary": "한국재정정보원은 이번 훈련에 침해대응·보안관제 분야 전문인력 4명을 현장에 파견해 다국적 연합... 분석, 침해사고 대응 훈련 등을 지원했다고 19일 밝혔다. APEX 2026은 국제 사이버안보 행사인 '사이버 서밋 코리아...",
-      "description": "한국재정정보원은 이번 훈련에 침해대응·보안관제 분야 전문인력 4명을 현장에 파견해 다국적 연합... 분석, 침해사고 대응 훈련 등을 지원했다고 19일 밝혔다. APEX 2026은 국제 사이버안보 행사인 '사이버 서밋 코리아...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한국재정정보원, 국제 사이버 훈련 'APEX 2026' 참여\n2. 침해대응·보안관제 전문인력 4명 파견, 다국적 연합 훈련 지원\n3. 분석 및 침해사고 대응 훈련 지원으로 글로벌 공조 강화",
-      "keyword_matched": "한국재정정보원",
-      "link": "http://www.efnews.co.kr/news/articleView.html?idxno=132555",
-      "source": "naver_rep",
-      "published": "2026-09-19T19:24:00+09:00",
-      "lang": "ko"
-    }
-  ]
+  "reputation": []
 }
