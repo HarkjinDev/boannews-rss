@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-22T23:32:20.230004+09:00",
+  "fetched_at": "2026-09-23T00:02:19.692548+09:00",
   "security_news": [
     {
       "title": "오픈AI, 생산 엔지니어 25% 보안 업무로 재배치",
@@ -2472,21 +2472,24 @@
       "source": "naver",
       "published": "2026-09-20T00:24:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "블록체인에 악성코드 심는 北 해커들… BDD 주의보 [코인 브리핑]",
-      "summary": "블록체인에 악성코드를 심어 해킹하는 신종 범죄가 확산하고 있는 것으로 나타났다. 블록체인 안에 악성코드가 숨어들어 서버나 도메인을 차단하는 기존 보안 방식으로 해킹 공격을 막을 수 없는 어려움이 나타나고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 블록체인에 악성코드 심는 北 해커들… BDD 주의보 [코인 브리핑] 로 나타났다.\n2. 블록체인 안에 악성코드가 숨어들어 서버나 도메인을 차단하는 기존 보안 방식으로 해킹 공격을",
-      "link": "https://n.news.naver.com/mnews/article/022/0004160369?sid=101",
-      "source": "naver",
-      "published": "2026-09-19T23:36:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "The Truth about GET and HTTP Standards, (Tue, Sep 22nd)",
+      "summary": "On Friday, Xavier talked about the newly introduced HTTP Query method. This new method was introduced to allow \"GET\" requests that include a body. The main reason for this was that GET requests typically do not contain a body. But what if they do?\r",
+      "description": "On Friday, Xavier talked about the newly introduced HTTP Query method. This new method was introduced to allow \"GET\" requests that include a body. The main reason for this was that GET requests typically do not contain a body. But what if they do?\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. The Truth about GET and HTTP Standards, (Tue, Sep \n2. SANS_ISC\n3. On Friday, Xavier talked about the newly introduce",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33358",
+      "source": "sans_isc",
+      "published": "2026-09-22T23:48:38+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-95667 - MISP Installer Log and FIFO Created World-Readable, Exposing Sensitive Credentials",
       "summary": "CVE ID :CVE-2026-95667\n  \nPublished : Sept. 22, 2026, 1:11 p.m. | 37 minutes ago\n  \nDescription :The MISP installer scripts (for Debian 12, Debian 13, Ubuntu 24.04, and RHEL 9.4) create a log file at /var/log/misp_install.log and a named pipe (FIFO) at /var/log/misp_install.log.pipe to capture all installer output. The log captures highly sensitive data including the generated admin password, database passwords, GPG passphrase, and supervisor password. However, the log file was created by the tee command under the system default umask, resulting in world-readable permissions (typically 0644). Similarly, the FIFO was created with mkfifo without an explicit mode, also inheriting the default umask and remaining world-readable during the window before it was unlinked. \n\nAny local unprivileged user on the system could read the log file or the FIFO to obtain these credentials. \n\nAdditionally, the log file was not removed before creation, meaning a pre-existing symlink in /var/log could have been used to redirect the write to an arbitrary location.\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
