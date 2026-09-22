@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-23T01:02:41.247679+09:00",
+  "fetched_at": "2026-09-23T01:32:15.309336+09:00",
   "security_news": [
     {
       "title": "VA, 데이터센터 규제 행정명령",
@@ -2487,6 +2487,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-95654 - Databasement before 1.7.14 Authorization Bypass via Stale Invitation Token",
+      "summary": "CVE ID :CVE-2026-95654\n  \nPublished : Sept. 22, 2026, 3:24 p.m. | 15 minutes ago\n  \nDescription :Databasement before 1.7.14 validates invitation tokens only when the acceptance page loads, caching the authorization decision without re-checking token validity during acceptance. Attackers with a leaked or forwarded invitation link can load the page while pending, then accept the invitation after the legitimate user has already accepted it to overwrite the account password and gain authenticated access to managed database credentials and secrets.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-95654\n  \nPublished : Sept. 22, 2026, 3:24 p.m. | 15 minutes ago\n  \nDescription :Databasement before 1.7.14 validates invitation tokens only when the acceptance page loads, caching the authorization decision without re-checking token validity during acceptance. Attackers with a leaked or forwarded invitation link can load the page while pending, then accept the invitation after the legitimate user has already accepted it to overwrite the account password and gain authenticated access to managed database credentials and secrets.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-95654\n2. 26.09.23 오전12:24\n3. Databasement before 1.7.14 validates invitation to",
+      "cve_id": "CVE-2026-95654",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95654",
+      "source": "cvefeed",
+      "published": "2026-09-23T00:24:12+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-80155 - Lantronix Autonomous Out-of-Band Devices Unauthenticated Authentication Bypass via snprintf Path Truncation",
+      "summary": "CVE ID :CVE-2026-80155\n  \nPublished : Sept. 22, 2026, 3:22 p.m. | 17 minutes ago\n  \nDescription :Lantronix SLC8000 before firmware v9.7.0.5, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain an authentication bypass vulnerability in the web management portal upload endpoint that allows unauthenticated attackers to read sensitive configuration files and upload files to arbitrary filesystem locations, leading to remote code execution. The web configuration server constructs the session cookie file path using snprintf with a fixed-size buffer; by supplying a cookie value of a specific length an attacker causes the path to truncate at the required delimiter and leverages path traversal to redirect authentication validation to an arbitrary on-disk file such as the local user database, bypassing all session checks. Attackers can use this vulnerability to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-connected devices.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-80155\n  \nPublished : Sept. 22, 2026, 3:22 p.m. | 17 minutes ago\n  \nDescription :Lantronix SLC8000 before firmware v9.7.0.5, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain an authentication bypass vulnerability in the web management portal upload endpoint that allows unauthenticated attackers to read sensitive configuration files and upload files to arbitrary filesystem locations, leading to remote code execution. The web configuration server constructs the session cookie file path using snprintf with a fixed-size buffer; by supplying a cookie value of a specific length an attacker causes the path to truncate at the required delimiter and leverages path traversal to redirect authentication validation to an arbitrary on-disk file such as the local user database, bypassing all session checks. Attackers can use this vulnerability to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-connected devices.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-80155\n2. 26.09.23 오전12:22\n3. Lantronix SLC8000 before firmware v9.7.0.5, EMG850",
+      "cve_id": "CVE-2026-80155",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-80155",
+      "source": "cvefeed",
+      "published": "2026-09-23T00:22:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "The Truth about GET and HTTP Standards, (Tue, Sep 22nd)",
       "summary": "On Friday, Xavier talked about the newly introduced HTTP Query method. This new method was introduced to allow \"GET\" requests that include a body. The main reason for this was that GET requests typically do not contain a body. But what if they do?\r",
