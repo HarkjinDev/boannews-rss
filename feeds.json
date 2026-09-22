@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-23T04:01:26.181878+09:00",
+  "fetched_at": "2026-09-23T04:33:34.557650+09:00",
   "security_news": [
+    {
+      "title": "ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach",
+      "summary": "The ShinyHunters extortion gang claims it breached FBI systems using a new Oracle PeopleSoft zero-day vulnerability, gaining access to internal services and stealing sensitive data on employees and job applicants. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. ShinyHunters claims FBI hack, data theft in People",
+      "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-23T04:13:29+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Check Point Warns of Management Server Zero-Day Exploited in Targeted Attacks",
+      "summary": "Attackers exploited a previously unknown flaw in Check Point's Security Management Server in a handful of targeted attacks on July 23, the company said.\n\nThe flaw, CVE-2026-93616, allows an attacker who can access the server's web service to run scripts on it without logging in. Check Point released a fix on September 22 for the server that controls firewall policies for the Check Point",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Check Point Management Server 제로데이 취약점(CVE-2026-93\n2. 로그인 없이 스크립트 실행 가능한 무단 접근 공격\n3. 9월 22일 보안 업데이트 배포, 방화벽 정책 제어 기능 복구",
+      "link": "https://thehackernews.com/2026/09/check-point-warns-of-management-server.html",
+      "source": "thehackernews",
+      "published": "2026-09-23T03:29:39+09:00",
+      "lang": "en"
+    },
     {
       "title": "Critical Bifrost AI Gateway Flaw Lets Attackers Run Commands Without Credentials",
       "summary": "A critical vulnerability in Bifrost, an open-source AI gateway that routes requests to more than 20 LLM providers, allows an unauthenticated attacker to run arbitrary commands on the gateway server with a single HTTP request.\n\nThe flaw, tracked as CVE-2026-90898 (CVSS score: 9.8), affects all versions of the Bifrost HTTP transport before 2.1.0 when management authentication is",
@@ -2528,6 +2552,21 @@
       "source": "cvefeed",
       "published": "2026-09-23T03:17:36+09:00",
       "lang": "en"
+    },
+    {
+      "title": "CVE-2026-76805 - Nuclei: Environment Variable Disclosure via Response-Derived Data in DAST/Fuzz Mode",
+      "summary": "CVE ID :CVE-2026-76805\n  \nPublished : Sept. 22, 2026, 5:17 p.m. | 22 minutes ago\n  \nDescription :Nuclei is a vulnerability scanner built on a simple YAML-based DSL. From 3.0.0 until 3.10.0, the DAST/fuzz payload path in pkg/fuzz/parts.go can evaluate substituted runtime data more than once, creating a second evaluation pass that allows response content captured by an internal: true extractor in one protocol step to be reinterpreted as template syntax in a later fuzz step. This vulnerability is an incomplete fix for CVE-2026-41645: the prior remediation made expressions.Evaluate() single-pass within one call but did not prevent DAST/fuzz callers from evaluating substituted output again. When -env-vars is enabled, a malicious scan target can return marker-shaped content that resolves against the template variable map and discloses scanner-host environment variables such as credentials, API keys, or tokens. The vulnerability requires a multi-step DAST or fuzz template, response data reused through an internal extractor, and explicit environment-variable expansion; users who do not enable -env-vars are not affected by the sensitive-information disclosure. This issue is fixed in version 3.10.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-76805\n  \nPublished : Sept. 22, 2026, 5:17 p.m. | 22 minutes ago\n  \nDescription :Nuclei is a vulnerability scanner built on a simple YAML-based DSL. From 3.0.0 until 3.10.0, the DAST/fuzz payload path in pkg/fuzz/parts.go can evaluate substituted runtime data more than once, creating a second evaluation pass that allows response content captured by an internal: true extractor in one protocol step to be reinterpreted as template syntax in a later fuzz step. This vulnerability is an incomplete fix for CVE-2026-41645: the prior remediation made expressions.Evaluate() single-pass within one call but did not prevent DAST/fuzz callers from evaluating substituted output again. When -env-vars is enabled, a malicious scan target can return marker-shaped content that resolves against the template variable map and discloses scanner-host environment variables such as credentials, API keys, or tokens. The vulnerability requires a multi-step DAST or fuzz template, response data reused through an internal extractor, and explicit environment-variable expansion; users who do not enable -env-vars are not affected by the sensitive-information disclosure. This issue is fixed in version 3.10.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-76805\n2. 26.09.23 오전2:17\n3. Nuclei is a vulnerability scanner built on a simpl",
+      "cve_id": "CVE-2026-76805",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76805",
+      "source": "cvefeed",
+      "published": "2026-09-23T02:17:25+09:00",
+      "lang": "it"
     },
     {
       "title": "CVE-2026-95805 - MISP ACLComponent: Typo in previewEventAttributes ACL key bypasses intended access restriction",
