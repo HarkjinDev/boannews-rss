@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-23T02:02:28.962211+09:00",
+  "fetched_at": "2026-09-23T02:31:15.127134+09:00",
   "security_news": [
     {
       "title": "VA, 데이터센터 규제 행정명령",
@@ -2460,30 +2460,6 @@
       "source": "naver",
       "published": "2026-09-20T07:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "허깅페이스 침해 뒤 브록먼 “AI 방어 활용해야”",
-      "summary": "브록먼은 8월 17일 공개한 글에서 오픈AI와 허깅페이스 사이의 보안 사고를 “사이버보안의 분수령”이라고 표현했다. AI 모델이 실제 공격의 일부를 자동화할 수준에 이르렀지만, 같은 기술로 취약점을 찾아내고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 허깅페이스 침해 뒤 브록먼 “AI 방어 활용해야” 브록먼은 8월 17일 공개한 글에서 오픈\n2. AI 모델이 실제 공격의 일부를 자동화할 수준에 이르렀지만, 같은 기술로 취약점을 찾아내고",
-      "link": "https://www.tokenpost.kr/news/ai/410875",
-      "source": "naver",
-      "published": "2026-09-20T02:14:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "북한 해킹조직 워터플럼, 가짜 채용으로 3만대 감염…지갑 7000개서 149억...",
-      "summary": "일본 경찰청(NPA)을 비롯해 미국, 오스트레일리아, 독일 당국이 북한 연계 해킹조직 워터플럼(WaterPlum)의 활동을 담은 합동 권고문을 발표했다. 워터플럼은 지난해 12월부터 올해 7월까지 전 세계 100개국 이상에서 3만대...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 워터플럼, 가짜 채용으로 3만대 감염\n2. 7000개 지갑서 149억 원 탈취 추정\n3. 일본 NPA 등 4개국 합동 권고문 발표",
-      "link": "https://www.wikitree.co.kr/articles/1160719",
-      "source": "naver",
-      "published": "2026-09-20T02:12:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3100,21 +3076,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-93954",
       "source": "cvefeed",
       "published": "2026-09-20T07:16:28+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82672 - Unvalidated chunk-size line tail in Mint HTTP/1 client enables response smuggling against strict intermediaries on pooled connections",
-      "summary": "CVE ID :CVE-2026-82672\n  \nPublished : Sept. 19, 2026, 5:16 p.m. | 29 minutes ago\n  \nDescription :Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') vulnerability in elixir-mint mint allows a malicious HTTP/1 server to desynchronize a strict intermediary and the Mint client on a pooled connection, enabling response-queue poisoning against subsequent requests that share the connection.\n\nMint.HTTP1.Parse.chunk_size/1 in lib/mint/http1/parse.ex stops at the first non-hexadecimal byte of a chunked response's chunk-size line and returns the remainder unexamined. Mint.HTTP1.decode_body/5 in lib/mint/http1.ex then discards every byte up to the CRLF with Parse.ignore_until_crlf/1, so the accepted grammar is a run of hex digits followed by arbitrary bytes, where RFC 9112 permits only a ;-introduced chunk extension. Lines such as 5ZZZZZ and 5 9 are accepted as chunk size 5, and 0ZZZZ is accepted as the terminating chunk that ends the message body. An RFC-strict intermediary rejects such a line while Mint accepts it, so the two disagree on chunk boundaries and on where the response ends.\n\nThis issue affects mint: from 0.1.0 before 1.10.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82672\n  \nPublished : Sept. 19, 2026, 5:16 p.m. | 29 minutes ago\n  \nDescription :Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') vulnerability in elixir-mint mint allows a malicious HTTP/1 server to desynchronize a strict intermediary and the Mint client on a pooled connection, enabling response-queue poisoning against subsequent requests that share the connection.\n\nMint.HTTP1.Parse.chunk_size/1 in lib/mint/http1/parse.ex stops at the first non-hexadecimal byte of a chunked response's chunk-size line and returns the remainder unexamined. Mint.HTTP1.decode_body/5 in lib/mint/http1.ex then discards every byte up to the CRLF with Parse.ignore_until_crlf/1, so the accepted grammar is a run of hex digits followed by arbitrary bytes, where RFC 9112 permits only a ;-introduced chunk extension. Lines such as 5ZZZZZ and 5 9 are accepted as chunk size 5, and 0ZZZZ is accepted as the terminating chunk that ends the message body. An RFC-strict intermediary rejects such a line while Mint accepts it, so the two disagree on chunk boundaries and on where the response ends.\n\nThis issue affects mint: from 0.1.0 before 1.10.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-82672\n2. 26.09.20 오전2:16\n3. Inconsistent Interpretation of HTTP Requests ('HTT",
-      "cve_id": "CVE-2026-82672",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82672",
-      "source": "cvefeed",
-      "published": "2026-09-20T02:16:35+09:00",
       "lang": "en"
     }
   ],
