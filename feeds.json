@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-23T03:31:15.523066+09:00",
+  "fetched_at": "2026-09-23T04:01:26.181878+09:00",
   "security_news": [
     {
       "title": "Critical Bifrost AI Gateway Flaw Lets Attackers Run Commands Without Credentials",
@@ -2499,6 +2499,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-95831 - Crypt::SelfCertificate versions from 1.01 through 1.05 for Perl contains malware which executes Python code from an obfuscated URL",
+      "summary": "CVE ID :CVE-2026-95831\n  \nPublished : Sept. 22, 2026, 6:21 p.m. | 37 minutes ago\n  \nDescription :Crypt::SelfCertificate versions from 1.01 through 1.05 for Perl contains malware which executes Python code from an obfuscated URL.\n\nThe generate_certificate runs a Python script saved as a certificate file.  The pyhton script attempts to retrieve code from a hardcoded http URL that is obfuscated with base64 encoding and run the response body directly.\n\nThe impact is that arbitrary code can be invoked as the user, without a dropped script being saved on the affected host.\n\nThe releases have no test scripts nor build hooks.  The intention may have been to trigger the payload after installation.\n\nFor version 1.01, the dropper script is in lib/Crypt/SelfCertificate/sample/validate.p12.\n\nFor version 1.05, the dropper script is in lib/Crypt/SelfCertificate/sample/cert7.pem.\n\nThe SHA-256 digests of the files are\n\n    fbff21f45ff748365062a5e36fb2d72558cad82a507a6f357f320b4fcdf07760 Crypt-SelfCertificate-1.01.tar.gz\n    27b2d2d3174ad771474fff2521f5084ec231e9218ea8c832515aef1cbd5897bc lib/Crypt/SelfCertificate/sample/validate.p12\n\n    9fdfa7d69b034b77d4510cda567e8da1e486ca81c7daaadc5732a45c41d71991 Crypt-SelfCertificate-1.05.tar.gz\n    27b2d2d3174ad771474fff2521f5084ec231e9218ea8c832515aef1cbd5897bc lib/Crypt/SelfCertificate/sample/cert7.pem\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-95831\n  \nPublished : Sept. 22, 2026, 6:21 p.m. | 37 minutes ago\n  \nDescription :Crypt::SelfCertificate versions from 1.01 through 1.05 for Perl contains malware which executes Python code from an obfuscated URL.\n\nThe generate_certificate runs a Python script saved as a certificate file.  The pyhton script attempts to retrieve code from a hardcoded http URL that is obfuscated with base64 encoding and run the response body directly.\n\nThe impact is that arbitrary code can be invoked as the user, without a dropped script being saved on the affected host.\n\nThe releases have no test scripts nor build hooks.  The intention may have been to trigger the payload after installation.\n\nFor version 1.01, the dropper script is in lib/Crypt/SelfCertificate/sample/validate.p12.\n\nFor version 1.05, the dropper script is in lib/Crypt/SelfCertificate/sample/cert7.pem.\n\nThe SHA-256 digests of the files are\n\n    fbff21f45ff748365062a5e36fb2d72558cad82a507a6f357f320b4fcdf07760 Crypt-SelfCertificate-1.01.tar.gz\n    27b2d2d3174ad771474fff2521f5084ec231e9218ea8c832515aef1cbd5897bc lib/Crypt/SelfCertificate/sample/validate.p12\n\n    9fdfa7d69b034b77d4510cda567e8da1e486ca81c7daaadc5732a45c41d71991 Crypt-SelfCertificate-1.05.tar.gz\n    27b2d2d3174ad771474fff2521f5084ec231e9218ea8c832515aef1cbd5897bc lib/Crypt/SelfCertificate/sample/cert7.pem\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-95831\n2. 26.09.23 오전3:21\n3. Crypt::SelfCertificate versions from 1.01 through ",
+      "cve_id": "CVE-2026-95831",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95831",
+      "source": "cvefeed",
+      "published": "2026-09-23T03:21:23+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-95624 - Tauri framework v2 malicious downgrade via allow_downgrades from frontend code",
+      "summary": "CVE ID :CVE-2026-95624\n  \nPublished : Sept. 22, 2026, 6:17 p.m. | 41 minutes ago\n  \nDescription :The Tauri updater plugin's 'check' IPC command accepts an allowDowngrades boolean parameter directly from frontend JavaScript code. When set to true, it replaces the version comparator from \"update must be newer\" to \"update must be different.\" Because the default permission set grants allow-check to the webview, any XSS in the app frontend can invoke this command and bypass the only anti-rollback protection the updater offers. Combined with another bug, this enables downgrade attacks without even needing to fake a higher version number.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-95624\n  \nPublished : Sept. 22, 2026, 6:17 p.m. | 41 minutes ago\n  \nDescription :The Tauri updater plugin's 'check' IPC command accepts an allowDowngrades boolean parameter directly from frontend JavaScript code. When set to true, it replaces the version comparator from \"update must be newer\" to \"update must be different.\" Because the default permission set grants allow-check to the webview, any XSS in the app frontend can invoke this command and bypass the only anti-rollback protection the updater offers. Combined with another bug, this enables downgrade attacks without even needing to fake a higher version number.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-95624\n2. 26.09.23 오전3:17\n3. The Tauri updater plugin's 'check' IPC command acc",
+      "cve_id": "CVE-2026-95624",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95624",
+      "source": "cvefeed",
+      "published": "2026-09-23T03:17:36+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-95805 - MISP ACLComponent: Typo in previewEventAttributes ACL key bypasses intended access restriction",
       "summary": "CVE ID :CVE-2026-95805\n  \nPublished : Sept. 22, 2026, 4:18 p.m. | 40 minutes ago\n  \nDescription :A typo in the MISP ACLComponent access control configuration caused the ACL rule for the previewEventAttributes action to reference the permission string 'theming_enabled*' (with a trailing asterisk) instead of the correct 'theming_enabled'. In the MISP ACL system, the array values define which role or permission grants access to a given controller action. The adjacent entry previewEventObjects correctly uses ['theming_enabled'], confirming the intended restriction. The malformed key 'theming_enabled*' does not match any valid permission identifier, causing the access control check for previewEventAttributes to malfunction. Depending on the ACL evaluation logic, this could result in either unauthorized users gaining access to the previewEventAttributes endpoint (authorization bypass) or legitimate users being denied access (availability impact). \n\nThe previewEventAttributes endpoint exposes event attribute data within MISP so an authorization bypass could expose sensitive indicator and attribute data to users who should not have access.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
