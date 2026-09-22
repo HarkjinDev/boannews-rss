@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-23T02:31:15.127134+09:00",
+  "fetched_at": "2026-09-23T03:04:01.821557+09:00",
   "security_news": [
+    {
+      "title": "Critical Bifrost AI Gateway Flaw Lets Attackers Run Commands Without Credentials",
+      "summary": "A critical vulnerability in Bifrost, an open-source AI gateway that routes requests to more than 20 LLM providers, allows an unauthenticated attacker to run arbitrary commands on the gateway server with a single HTTP request.\n\nThe flaw, tracked as CVE-2026-90898 (CVSS score: 9.8), affects all versions of the Bifrost HTTP transport before 2.1.0 when management authentication is",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Critical Bifrost AI Gateway Flaw Lets Attackers Ru\n2. The flaw, tracked as CVE-2026-90898 (CVSS score: 9",
+      "link": "https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html",
+      "source": "thehackernews",
+      "published": "2026-09-23T01:41:12+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Researcher Drops BigDiskBuster Zero-Day PoC That Blocks Microsoft Defender Updates",
+      "summary": "A zero-day proof-of-concept tool that stops Microsoft Defender from installing platform and signature updates by filling all available disk space was published on GitHub on September 19.\n\nThe tool, called BigDiskBuster, has no patch, no CVE, and no Microsoft advisory. Its author, Abdelhamid Naceri, is a former Microsoft security researcher whose earlier Defender exploits were used in",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Researcher Drops BigDiskBuster Zero-Day PoC That B\n2. The tool, called BigDiskBuster, has no patch, no C\n3. Its author, Abdelhamid Naceri, is a former Microso",
+      "link": "https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html",
+      "source": "thehackernews",
+      "published": "2026-09-23T01:14:04+09:00",
+      "lang": "en"
+    },
     {
       "title": "VA, 데이터센터 규제 행정명령",
       "summary": "이번 행정명령에는 데이터센터뿐 아니라 인공지능(AI) 관련 태스크포스 구성도 포함됐다. AI 기술 확산에 따른 일자리 변화, 개인정보 보호, 사이버보안 등의 문제를 검토하는 역할을 맡게 된다.",
@@ -2234,6 +2258,18 @@
       "lang": "ko"
     },
     {
+      "title": "북한 해킹그룹 워터플럼, 100여 개국 3만대 감염…개발자 노렸다",
+      "summary": "북한과 연계된 해킹그룹 ‘워터플럼(WaterPlum)’이 가짜 채용면접과 코딩테스트를 이용해 전 세계 개발자들을 공격하고 최소 3만대의 PC를 감염시킨 것으로 나타났다.미국 FBI와 일본 경찰청·국가사이버통괄실, 호주 사이버보안센터(ACSC), 독일 정보기관 등은 9월 18일 워터플럼에 대한 공동 사이버보안 경보를 발표했다. 워터플럼은 보안업계에서 ‘컨테이저스 인터뷰(Contagious Interview)’로도 알려진 북한 연계 공격그룹이다.미·일 당국은 워터플럼 공격자와 일부 북한 IT 노동자가 북한 노동당 중앙위원회 군수공업부",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 워터플럼, 100여개국 3만대 PC 감염\n2. 가짜 채용면접/코딩테스트로 개발자 노린 공격\n3. FBI, 일본 등 5개국 공동 경보 발표",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208556",
+      "source": "dailysecu",
+      "published": "2026-09-20T21:21:21+09:00",
+      "lang": "ko"
+    },
+    {
       "title": "[기획] '자사 포인트' 중심 보상 논란…과징금은 국고로, 피해구제는 별...",
       "summary": "20일 국회와 관련 업계 등에 따르면 티빙은 개인정보 유출 대상자에게 해킹·피싱 안심보험 1년과 3개월간 프리미엄급 시청환경, 5000원 상당의 티빙 포인트, 엔터테인먼트 쿠폰을 제공하는 보상안을 마련하고 신청을 받고...",
       "content": "",
@@ -2463,6 +2499,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-95805 - MISP ACLComponent: Typo in previewEventAttributes ACL key bypasses intended access restriction",
+      "summary": "CVE ID :CVE-2026-95805\n  \nPublished : Sept. 22, 2026, 4:18 p.m. | 40 minutes ago\n  \nDescription :A typo in the MISP ACLComponent access control configuration caused the ACL rule for the previewEventAttributes action to reference the permission string 'theming_enabled*' (with a trailing asterisk) instead of the correct 'theming_enabled'. In the MISP ACL system, the array values define which role or permission grants access to a given controller action. The adjacent entry previewEventObjects correctly uses ['theming_enabled'], confirming the intended restriction. The malformed key 'theming_enabled*' does not match any valid permission identifier, causing the access control check for previewEventAttributes to malfunction. Depending on the ACL evaluation logic, this could result in either unauthorized users gaining access to the previewEventAttributes endpoint (authorization bypass) or legitimate users being denied access (availability impact). \n\nThe previewEventAttributes endpoint exposes event attribute data within MISP so an authorization bypass could expose sensitive indicator and attribute data to users who should not have access.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-95805\n  \nPublished : Sept. 22, 2026, 4:18 p.m. | 40 minutes ago\n  \nDescription :A typo in the MISP ACLComponent access control configuration caused the ACL rule for the previewEventAttributes action to reference the permission string 'theming_enabled*' (with a trailing asterisk) instead of the correct 'theming_enabled'. In the MISP ACL system, the array values define which role or permission grants access to a given controller action. The adjacent entry previewEventObjects correctly uses ['theming_enabled'], confirming the intended restriction. The malformed key 'theming_enabled*' does not match any valid permission identifier, causing the access control check for previewEventAttributes to malfunction. Depending on the ACL evaluation logic, this could result in either unauthorized users gaining access to the previewEventAttributes endpoint (authorization bypass) or legitimate users being denied access (availability impact). \n\nThe previewEventAttributes endpoint exposes event attribute data within MISP so an authorization bypass could expose sensitive indicator and attribute data to users who should not have access.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-95805\n2. 26.09.23 오전1:18\n3. A typo in the MISP ACLComponent access control con",
+      "cve_id": "CVE-2026-95805",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95805",
+      "source": "cvefeed",
+      "published": "2026-09-23T01:18:24+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-95654 - Databasement before 1.7.14 Authorization Bypass via Stale Invitation Token",
       "summary": "CVE ID :CVE-2026-95654\n  \nPublished : Sept. 22, 2026, 3:24 p.m. | 15 minutes ago\n  \nDescription :Databasement before 1.7.14 validates invitation tokens only when the acceptance page loads, caching the authorization decision without re-checking token validity during acceptance. Attackers with a leaked or forwarded invitation link can load the page while pending, then accept the invitation after the legitimate user has already accepted it to overwrite the account password and gain authenticated access to managed database credentials and secrets.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
