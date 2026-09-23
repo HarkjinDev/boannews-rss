@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-24T04:02:31.675053+09:00",
+  "fetched_at": "2026-09-24T04:32:28.446053+09:00",
   "security_news": [
     {
       "title": "Hackers start exploiting critical WordPress flaw for code execution",
@@ -2991,6 +2991,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-84499 - Automation-controller: automation-controller-container: automation-controller: write-only survey password recovered in plaintext via schedule/workflowjobtemplatenode survey min/max validation error message",
+      "summary": "CVE ID :CVE-2026-84499\n  \nPublished : Sept. 23, 2026, 6:47 p.m. | 30 minutes ago\n  \nDescription :A flaw was found in Red Hat Ansible Automation Platform's automation-\ncontroller. Survey questions of type password are write-only and stored\nencrypted, displayed only as a placeholder on read. When a schedule or\nworkflow job template node is revalidated against a tightened survey\nspecification, the controller decrypts the stored password and includes its\nplaintext value in the minimum/maximum length validation error message\nreturned in the HTTP response. A user with the delegated JobTemplate Admin\nrole can tighten the survey length constraint and trigger revalidation of a\nschedule or node created by another, higher-privileged user, thereby\nrecovering that user's stored password in plaintext.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84499\n  \nPublished : Sept. 23, 2026, 6:47 p.m. | 30 minutes ago\n  \nDescription :A flaw was found in Red Hat Ansible Automation Platform's automation-\ncontroller. Survey questions of type password are write-only and stored\nencrypted, displayed only as a placeholder on read. When a schedule or\nworkflow job template node is revalidated against a tightened survey\nspecification, the controller decrypts the stored password and includes its\nplaintext value in the minimum/maximum length validation error message\nreturned in the HTTP response. A user with the delegated JobTemplate Admin\nrole can tighten the survey length constraint and trigger revalidation of a\nschedule or node created by another, higher-privileged user, thereby\nrecovering that user's stored password in plaintext.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-84499\n2. 26.09.24 오전3:47\n3. A flaw was found in Red Hat Ansible Automation Pla",
+      "cve_id": "CVE-2026-84499",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84499",
+      "source": "cvefeed",
+      "published": "2026-09-24T03:47:54+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-90903 - Joomla Extension - joomshaper.com - Missing CSRF Token Verification across Administrator AJAX API Endpoints in Easy Store extension 1.0.0-3.0.0",
+      "summary": "CVE ID :CVE-2026-90903\n  \nPublished : Sept. 23, 2026, 6:43 p.m. | 34 minutes ago\n  \nDescription :Joomla Extension - joomshaper.com - Missing CSRF Token Verification across Administrator AJAX API Endpoints in Easy Store extension 1.0.0-3.0.0 - The administrator ApiController only validated CSRF tokens inside the products() action. All other administrative AJAX endpoints (orders, coupons, media, customers, settings, tags, categories, reviews, and collections) accepted state-changing requests without checking anti-CSRF tokens. An attacker could trick a logged-in administrator into triggering unauthorized state modifications across the store backend. Resolved by implementing global CSRF verification in ApiController::execute() for all state-changing HTTP methods (POST, PUT, PATCH, DELETE) via Session::checkToken().\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-90903\n  \nPublished : Sept. 23, 2026, 6:43 p.m. | 34 minutes ago\n  \nDescription :Joomla Extension - joomshaper.com - Missing CSRF Token Verification across Administrator AJAX API Endpoints in Easy Store extension 1.0.0-3.0.0 - The administrator ApiController only validated CSRF tokens inside the products() action. All other administrative AJAX endpoints (orders, coupons, media, customers, settings, tags, categories, reviews, and collections) accepted state-changing requests without checking anti-CSRF tokens. An attacker could trick a logged-in administrator into triggering unauthorized state modifications across the store backend. Resolved by implementing global CSRF verification in ApiController::execute() for all state-changing HTTP methods (POST, PUT, PATCH, DELETE) via Session::checkToken().\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-90903\n2. 26.09.24 오전3:43\n3. Joomla Extension - joomshaper.com - Missing CSRF T",
+      "cve_id": "CVE-2026-90903",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-90903",
+      "source": "cvefeed",
+      "published": "2026-09-24T03:43:32+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-96672 - Frappe ERPNext before 16.34.1 Unauthorized Method Invocation",
       "summary": "CVE ID :CVE-2026-96672\n  \nPublished : Sept. 23, 2026, 3:35 p.m. | 13 minutes ago\n  \nDescription :Frappe ERPNext versions before 16.34.1 fail to validate that Financial Report Template calculation_formula values reference whitelisted methods before passing them to frappe.call(). Accounts Managers can supply arbitrary dotted Python paths to invoke non-whitelisted internal server-side methods and read their return values.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
