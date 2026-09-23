@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-24T00:02:30.217113+09:00",
+  "fetched_at": "2026-09-24T00:31:24.198312+09:00",
   "security_news": [
     {
       "title": "Exploit Released for Unpatched Ubuntu Linux Flaw Enabling Host-Root Container Escape",
@@ -3000,21 +3000,24 @@
       "source": "naver",
       "published": "2026-09-21T01:48:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[취재수첩] 절차는 건너뛰고 결과만 남은 '모두의창업'",
-      "summary": "허술한 보안 시스템으로 5000명의 개인정보와 창업 아이디어가 유출됐다. 문제가 반복되는 일을 막으려면 번거롭더라도 계속해서 의문점을 짚어볼 필요가 있다. 그것이 정부를 견제하는 언론의 역할이다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 모두의창업, 5000명 개인정보 유출\n2. 허술한 보안 시스템으로 창업 아이디어도 유출\n3. 반복 방지 위해 의문점 계속 짚어야",
-      "link": "https://n.news.naver.com/mnews/article/015/0005334424?sid=110",
-      "source": "naver",
-      "published": "2026-09-21T00:30:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-61834 - scim-patch: Mutation of Inherited Built-in Method Objects",
+      "summary": "CVE ID :CVE-2026-61834\n  \nPublished : Sept. 23, 2026, 2:02 p.m. | 37 minutes ago\n  \nDescription :scim-patch is a library for applying SCIM patch operations. Prior to 0.9.2, navigate() reads inherited properties and assign() uses prototype-chain membership checks while resolving attacker-controlled SCIM PATCH paths. A path or one of the dotted value keys beginning with an inherited property such as toString can therefore traverse into a shared built-in function object and add attacker-controlled properties, causing process-global mutation that may affect application logic reading inherited-method properties. This issue is fixed in version 0.9.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-61834\n  \nPublished : Sept. 23, 2026, 2:02 p.m. | 37 minutes ago\n  \nDescription :scim-patch is a library for applying SCIM patch operations. Prior to 0.9.2, navigate() reads inherited properties and assign() uses prototype-chain membership checks while resolving attacker-controlled SCIM PATCH paths. A path or one of the dotted value keys beginning with an inherited property such as toString can therefore traverse into a shared built-in function object and add attacker-controlled properties, causing process-global mutation that may affect application logic reading inherited-method properties. This issue is fixed in version 0.9.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-61834\n2. 26.09.23 오후11:02\n3. scim-patch is a library for applying SCIM patch op",
+      "cve_id": "CVE-2026-61834",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61834",
+      "source": "cvefeed",
+      "published": "2026-09-23T23:02:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-96456 - Reachy Mini Bluetooth PIN authentication can be bypassed by racing an authenticated device",
       "summary": "CVE ID :CVE-2026-96456\n  \nPublished : Sept. 23, 2026, 11:17 a.m. | 49 minutes ago\n  \nDescription :The Reachy Mini Bluetooth service asks a connecting device for a PIN before it will accept commands. The check protects the session but not the caller, so an attacker in Bluetooth range can ride along on someone else's successful authentication.\n\n\n\nThe authenticated state is kept in a single shared flag on the service instance rather than per device. BlueZ passes the calling device's identity to the characteristic write handler in the options argument, but WriteValue(self, value, options) in src/reachy_mini/daemon/app/services/bluetooth/bluetooth_service.py ignores options entirely. The handler therefore has no idea which device sent a given write, and it cannot tell the authenticated one from any other.\n\n\n\nOnce any device completes the PIN exchange, the flag is set and every nearby device can send CMD_ commands until it resets. An attacker simply waits within radio range for a legitimate user to authenticate, then writes commands into the same window. No PIN is ever guessed or brute-forced.\n\n\n\nThis is the second step of a three-step chain that JFrog documented against the robot. The first is the unrestricted file upload in the media sounds API, tracked as CVE-2026-55419, which places an attacker-controlled script on the filesystem. This issue then provides command access over Bluetooth. The third is the Bluetooth command handler path traversal, tracked as CVE-2026-62661, which runs that script as root.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
