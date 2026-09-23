@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-24T05:02:39.360056+09:00",
+  "fetched_at": "2026-09-24T05:32:41.510449+09:00",
   "security_news": [
+    {
+      "title": "[모닝 뉴스브리핑] XRP 지갑 6678개서 2000만달러 유출 外",
+      "summary": "AI 에이전트 확산으로 실시간 자율 통제형 보안 모델이 부상하고 있다. AI 에이전트가 외부 도구와 데이터를 자율적으로 다루면서 사람의 승인과 사후 대응을 전제로 한 기존 사이버보안 모델의 한계가...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [모닝 뉴스브리핑] XRP 지갑 6678개서 2000만달러 유출 外 AI 에이전트 확산으로\n2. AI 에이전트가 외부 도구와 데이터를 자율적으로 다루면서 사람의 승인과 사후 대응을 전제로",
+      "link": "https://www.tokenpost.kr/news/briefing/413121",
+      "source": "naver",
+      "published": "2026-09-24T05:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "창사 이래 적자는 없다…현대백화점 95분기 등 15곳 '無적자 신화'",
+      "summary": "SK텔레콤은 102분기 연속 흑자를 이어오다 지난해 유심 해킹 사태에 따른 개인정보 유출 보상 및 통신비... 다음으로는 102분기 연속 흑자를 질주하던 SK텔레콤이 유심 해킹 및 개인정보 유출에 따른 통신비 감면...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. SK텔레콤, 102분기 연속 흑자 기록\n2. 유심 해킹, 개인정보 유출로 통신비 감면 발생\n3. 현대백화점 포함 15곳 '무적자 신화' 지속",
+      "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=277342",
+      "source": "naver",
+      "published": "2026-09-24T05:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Check Point warns of hackers exploiting Security Gateway VPN RCE flaw",
       "summary": "Cybersecurity company Check Point has confirmed active exploitation of CVE-2026-85102, a pre-authentication remote code execution (RCE) vulnerability in the VPN certificate-handling functionality of its Security Gateway product. [...]",
@@ -3003,6 +3027,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-84716 - Automation-controller: automation-controller: instance install_bundle issues 10-year, non-revocable receptor mesh-ca certificates for caller-chosen (and case-variant impersonating) hostnames",
+      "summary": "CVE ID :CVE-2026-84716\n  \nPublished : Sept. 23, 2026, 7:40 p.m. | 8 minutes ago\n  \nDescription :A flaw was found in the automation-controller instance\n                  install-bundle endpoint. When a System Administrator downloads\n                  an execution/hop node's install bundle, the controller signs an\n                  X.509 certificate with the receptor mesh certificate authority\n                  in which the Common Name, DNS subject-alternative-name, and\n                  receptor node-id are taken verbatim from the caller-chosen\n                  instance hostname, with a hard-coded ten-year validity, a random\n                  serial, and no issuance log or revocation list. Because the\n                  hostname charset validator is case-insensitive while the\n                  uniqueness validator is case-sensitive, an administrator can\n                  register a case variant of an existing control node's hostname\n                  and obtain a mesh-CA-signed certificate that TLS peers, which\n                  match hostnames case-insensitively, accept as that control node.\n                  In managed/hosted deployments — where the customer holds\n                  controller superuser but the platform operator runs the mesh —\n                  this yields a long-lived, non-revocable mesh peer credential and,\n                  with an on-path position, TLS impersonation or interception of\n                  control/hybrid mesh nodes. It does not grant direct remote code\n                  execution, because receptor work submission is gated by a\n                  separate signing key not included in the bundle.\n  \nSeverity: 6.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84716\n  \nPublished : Sept. 23, 2026, 7:40 p.m. | 8 minutes ago\n  \nDescription :A flaw was found in the automation-controller instance\n                  install-bundle endpoint. When a System Administrator downloads\n                  an execution/hop node's install bundle, the controller signs an\n                  X.509 certificate with the receptor mesh certificate authority\n                  in which the Common Name, DNS subject-alternative-name, and\n                  receptor node-id are taken verbatim from the caller-chosen\n                  instance hostname, with a hard-coded ten-year validity, a random\n                  serial, and no issuance log or revocation list. Because the\n                  hostname charset validator is case-insensitive while the\n                  uniqueness validator is case-sensitive, an administrator can\n                  register a case variant of an existing control node's hostname\n                  and obtain a mesh-CA-signed certificate that TLS peers, which\n                  match hostnames case-insensitively, accept as that control node.\n                  In managed/hosted deployments — where the customer holds\n                  controller superuser but the platform operator runs the mesh —\n                  this yields a long-lived, non-revocable mesh peer credential and,\n                  with an on-path position, TLS impersonation or interception of\n                  control/hybrid mesh nodes. It does not grant direct remote code\n                  execution, because receptor work submission is gated by a\n                  separate signing key not included in the bundle.\n  \nSeverity: 6.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-84716\n2. 26.09.24 오전4:40\n3. A flaw was found in the automation-controller inst",
+      "cve_id": "CVE-2026-84716",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84716",
+      "source": "cvefeed",
+      "published": "2026-09-24T04:40:28+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-84499 - Automation-controller: automation-controller-container: automation-controller: write-only survey password recovered in plaintext via schedule/workflowjobtemplatenode survey min/max validation error message",
       "summary": "CVE ID :CVE-2026-84499\n  \nPublished : Sept. 23, 2026, 6:47 p.m. | 30 minutes ago\n  \nDescription :A flaw was found in Red Hat Ansible Automation Platform's automation-\ncontroller. Survey questions of type password are write-only and stored\nencrypted, displayed only as a placeholder on read. When a schedule or\nworkflow job template node is revalidated against a tightened survey\nspecification, the controller decrypts the stored password and includes its\nplaintext value in the minimum/maximum length validation error message\nreturned in the HTTP response. A user with the delegated JobTemplate Admin\nrole can tighten the survey length constraint and trigger revalidation of a\nschedule or node created by another, higher-privileged user, thereby\nrecovering that user's stored password in plaintext.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
