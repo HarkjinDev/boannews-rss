@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-23T21:01:17.313667+09:00",
+  "fetched_at": "2026-09-23T21:31:07.086743+09:00",
   "security_news": [
     {
       "title": "추석 연휴 D-1…조심해야 할 사이버 위협은",
@@ -3036,21 +3036,24 @@
       "source": "naver",
       "published": "2026-09-20T21:44:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "북한 해킹그룹 워터플럼, 100여 개국 3만대 감염…개발자 노렸다",
-      "summary": "북한과 연계된 해킹그룹 ‘워터플럼(WaterPlum)’이 가짜 채용면접과 코딩테스트를 이용해 전 세계 개발자들을 공격하고 최소 3만대의 PC를 감염시킨 것으로 나타났다.미국 FBI와 일본 경찰청·국가사이버통괄실, 호주 사이버보안센터(ACSC), 독일 정보기관 등은 9월 18일 워터플럼에 대한 공동 사이버보안 경보를 발표했다. 워터플럼은 보안업계에서 ‘컨테이저스 인터뷰(Contagious Interview)’로도 알려진 북한 연계 공격그룹이다.미·일 당국은 워터플럼 공격자와 일부 북한 IT 노동자가 북한 노동당 중앙위원회 군수공업부",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 워터플럼, 100여개국 3만대 PC 감염\n2. 가짜 채용면접/코딩테스트로 개발자 노린 공격\n3. FBI, 일본 등 5개국 공동 경보 발표",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208556",
-      "source": "dailysecu",
-      "published": "2026-09-20T21:21:21+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-96456 - Reachy Mini Bluetooth PIN authentication can be bypassed by racing an authenticated device",
+      "summary": "CVE ID :CVE-2026-96456\n  \nPublished : Sept. 23, 2026, 11:17 a.m. | 49 minutes ago\n  \nDescription :The Reachy Mini Bluetooth service asks a connecting device for a PIN before it will accept commands. The check protects the session but not the caller, so an attacker in Bluetooth range can ride along on someone else's successful authentication.\n\n\n\nThe authenticated state is kept in a single shared flag on the service instance rather than per device. BlueZ passes the calling device's identity to the characteristic write handler in the options argument, but WriteValue(self, value, options) in src/reachy_mini/daemon/app/services/bluetooth/bluetooth_service.py ignores options entirely. The handler therefore has no idea which device sent a given write, and it cannot tell the authenticated one from any other.\n\n\n\nOnce any device completes the PIN exchange, the flag is set and every nearby device can send CMD_ commands until it resets. An attacker simply waits within radio range for a legitimate user to authenticate, then writes commands into the same window. No PIN is ever guessed or brute-forced.\n\n\n\nThis is the second step of a three-step chain that JFrog documented against the robot. The first is the unrestricted file upload in the media sounds API, tracked as CVE-2026-55419, which places an attacker-controlled script on the filesystem. This issue then provides command access over Bluetooth. The third is the Bluetooth command handler path traversal, tracked as CVE-2026-62661, which runs that script as root.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-96456\n  \nPublished : Sept. 23, 2026, 11:17 a.m. | 49 minutes ago\n  \nDescription :The Reachy Mini Bluetooth service asks a connecting device for a PIN before it will accept commands. The check protects the session but not the caller, so an attacker in Bluetooth range can ride along on someone else's successful authentication.\n\n\n\nThe authenticated state is kept in a single shared flag on the service instance rather than per device. BlueZ passes the calling device's identity to the characteristic write handler in the options argument, but WriteValue(self, value, options) in src/reachy_mini/daemon/app/services/bluetooth/bluetooth_service.py ignores options entirely. The handler therefore has no idea which device sent a given write, and it cannot tell the authenticated one from any other.\n\n\n\nOnce any device completes the PIN exchange, the flag is set and every nearby device can send CMD_ commands until it resets. An attacker simply waits within radio range for a legitimate user to authenticate, then writes commands into the same window. No PIN is ever guessed or brute-forced.\n\n\n\nThis is the second step of a three-step chain that JFrog documented against the robot. The first is the unrestricted file upload in the media sounds API, tracked as CVE-2026-55419, which places an attacker-controlled script on the filesystem. This issue then provides command access over Bluetooth. The third is the Bluetooth command handler path traversal, tracked as CVE-2026-62661, which runs that script as root.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-96456\n2. 26.09.23 오후8:17\n3. The Reachy Mini Bluetooth service asks a connectin",
+      "cve_id": "CVE-2026-96456",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-96456",
+      "source": "cvefeed",
+      "published": "2026-09-23T20:17:18+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-96454 - Pake grants unrestricted IPC access to every HTTPS origin loaded in generated applications",
       "summary": "CVE ID :CVE-2026-96454\n  \nPublished : Sept. 23, 2026, 9:56 a.m. | 9 minutes ago\n  \nDescription :Pake turns a website into a desktop application built on Tauri. Every application it generates inherits two settings from the upstream template, and together they hand native functionality to untrusted web content.\n\n\n\nThe first is in src-tauri/capabilities/default.json, which grants IPC access with \"remote\": { \"urls\": [\"https://*.*\"] }. That wildcard tells Tauri to accept IPC from any HTTPS origin, not just the site the application was built to wrap. The second is \"withGlobalTauri\": true in src-tauri/tauri.conf.json, which puts window.__TAURI__.core.invoke() in reach of ordinary page JavaScript.\n\n\n\nTauri's access control list only checks plugin commands, the ones prefixed with plugin:. Commands the application registers itself through generate_handler!, known as app commands, are never checked against the ACL. So once an origin holds IPC access, it can call every app command with nothing else standing in the way. Pake registers download_file as an app command, and it does not appear in the permissions list because it does not need to.\n\n\n\nThe practical effect is that any script running on any HTTPS page inside a Pake application can invoke the application's native commands. That includes third-party script the wrapped site loads on its own, such as analytics, advertising, or a compromised CDN. Anyone distributing their own Pake application gets the same access without asking for it. Chained with the path traversal in download_file that is tracked separately as CVE-2026-82635, this reaches arbitrary file write and persistent code execution.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3845,21 +3848,6 @@
       "source": "krcert_notice",
       "published": "2026-09-21T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-92252 - Incorrect Default Permissions in WatchDog Anti-Virus Installation Directory",
-      "summary": "CVE ID :CVE-2026-92252\n  \nPublished : Sept. 20, 2026, 12:16 p.m. | 1 hour, 5 minutes ago\n  \nDescription :Incorrect default permissions in the installation directory of WatchDog Anti-Virus on Windows allow local, low-privileged users to modify, replace, or delete antivirus binaries and configuration files, because the installer grants the Users group Full Control over C:\\Program Files (x86)\\Watchdog Anti-Virus. This may disable antivirus protection or enable privileged code execution if modified binaries are loaded by an elevated WatchDog process.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-92252\n  \nPublished : Sept. 20, 2026, 12:16 p.m. | 1 hour, 5 minutes ago\n  \nDescription :Incorrect default permissions in the installation directory of WatchDog Anti-Virus on Windows allow local, low-privileged users to modify, replace, or delete antivirus binaries and configuration files, because the installer grants the Users group Full Control over C:\\Program Files (x86)\\Watchdog Anti-Virus. This may disable antivirus protection or enable privileged code execution if modified binaries are loaded by an elevated WatchDog process.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-92252\n2. 26.09.20 오후9:16\n3. Incorrect default permissions in the installation ",
-      "cve_id": "CVE-2026-92252",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92252",
-      "source": "cvefeed",
-      "published": "2026-09-20T21:16:45+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
