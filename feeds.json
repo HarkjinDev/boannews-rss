@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-23T09:34:40.153722+09:00",
+  "fetched_at": "2026-09-23T10:02:30.618537+09:00",
   "security_news": [
+    {
+      "title": "이훈기 \"계정 털린 티빙 보안인력 4명···성장 몰두, 이용자 보호 뒷전...",
+      "summary": "인천투데이=김도윤 기자 | 계정 3954만개가 해킹으로 유출된 국내 온라인동영상서비스(OTT) 티빙이 5년 간... 특히 티빙은 2024년 실시한 모의해킹에서 접속키를 소스코드에 그대로 저장하는 취약점을 발견하고도...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 이훈기 \"계정 털린 티빙 보안인력 4명···성장 몰두, 이용자 보호 뒷전...\n2. 인천투데이=김도윤 기자 | 계정 3954만개가 해킹으로 유출된 국내 온라인동영상서비스(OT\n3. 특히 티빙은 2024년 실시한 모의해킹에서 접속키를 소스코드에 그대로 저장하는 취약점을 발",
+      "link": "https://www.incheontoday.com/news/articleView.html?idxno=324111",
+      "source": "naver",
+      "published": "2026-09-23T09:52:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "티빙, 5년 새 매출 26배 늘었는데… 개인정보 보호 인력은 4명뿐",
+      "summary": "특히 티빙은 2024년 모의해킹에서 접속키를 소스 코드에 그대로 저장하는 취약점을 발견하고도 이를 개선하지 않았다. 침해사고 발생 당시에는 이상 징후가 나타난 지 약 14시간이 지나서야 정보보호 전담 조직과...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 티빙, 5년 새 매출 26배 늘었는데… 개인정보 보호 인력은 4명뿐 특히 티빙은 2024년\n2. 침해사고 발생 당시에는 이상 징후가 나타난 지 약 14시간이 지나서야 정보보호 전담 조직과",
+      "link": "https://news.ifm.kr/news/articleView.html?idxno=480095",
+      "source": "naver",
+      "published": "2026-09-23T09:40:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "노드VPN \"한국인, AI·인포스틸러 대응 취약\"",
       "summary": "한국인의 사이버 보안 기본 수칙에 대한 인식은 높은 수준이지만 개인정보 보호와 신종 사이버 위협에 대한... 특히 인포스틸러와 AI 활용에 따른 개인정보 유출 위험, 공용 와이파이와 앱 권한 관리 등 일상적인 보안...",
@@ -2676,21 +2700,24 @@
       "source": "naver",
       "published": "2026-09-20T10:23:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[단독] DYB교육, 해킹으로 회원 개인정보 유출… \"보안 조치 완료\"",
-      "summary": "영어 전문 교육 그룹인 DYB교육이 해킹 공격을 받아 학생과 학부모의 개인정보가 유출되는 사고가... DYB 교육 측은 \"최근 국내외 서버를 통한 대규모 해킹 공격으로 인해 당사 입학테스트 예약 시스템 내 일부 회원의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. DYB교육, 해킹 공격으로 회원 개인정보 유출 발생\n2. 입학테스트 예약 시스템 통해 대규모 정보 유출\n3. DYB교육, 보안 조치 완료 및 피해 최소화 노력",
-      "link": "https://n.news.naver.com/mnews/article/057/0001969881?sid=102",
-      "source": "naver",
-      "published": "2026-09-20T09:47:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Macfinger ClickFix campaign, (Tue, Sep 22nd)",
+      "summary": "Introduction\r",
+      "description": "Introduction\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Macfinger ClickFix campaign, (Tue, Sep 22nd)\n2. SANS_ISC\n3. Introduction",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33360",
+      "source": "sans_isc",
+      "published": "2026-09-23T09:55:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-77426 - Unleash: Missing await on permission check + cross-project IDOR in admin API",
       "summary": "CVE ID :CVE-2026-77426\n  \nPublished : Sept. 22, 2026, 8:31 p.m. | 27 minutes ago\n  \nDescription :Unleash is an open-source feature management platform. Prior to 8.0.3, the Unleash admin API contains five authorization vulnerabilities. POST /api/admin/segments/strategies assigns the Promise returned by hasPermission without awaiting it, allowing authenticated users to modify segment assignments without UPDATE_FEATURE_STRATEGY permission for the target project and environment. GET /api/admin/projects/:projectId/features/:featureName/environments/:environment/variants does not bind the requested feature to projectId, allowing cross-project variant configuration disclosure. GET .../strategies/:strategyId uses strategyId without validating the project and feature context, allowing cross-project strategy configuration disclosure. getEnvironmentInfo does not validate that the requested feature belongs to the supplied project, allowing cross-project environment information disclosure. PUT /:projectId/tags accepts feature identifiers without verifying that they belong to the URL project, allowing cross-project tag modification. This issue is fixed in version 8.0.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
