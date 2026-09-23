@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-24T05:32:41.510449+09:00",
+  "fetched_at": "2026-09-24T06:03:15.584294+09:00",
   "security_news": [
+    {
+      "title": "AI가 공격 자동화…MS는 AI 피싱 '이블토큰' 차단, 구글은 크롬 취약점 ...",
+      "summary": "이블토큰은 1만개 이상 기업에서 마이크로소프트 계정 1만2000개 이상을 해킹한 혐의를 받는다. 영국 당국은 관리자로 추정되는 2명을 체포했다. 이블토큰은 공격 전 과정에 AI를 썼다. 해킹한 이메일 수신함을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 피싱 '이블토큰', MS 계정 1만2천개 해킹\n2. AI로 공격 자동화, 해킹 메일함 활용\n3. 영국 당국 2명 체포, 1만개 이상 기업 노림",
+      "link": "https://n.news.naver.com/mnews/article/138/0002242595?sid=105",
+      "source": "naver",
+      "published": "2026-09-24T05:59:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "호주 총리, 오픈AI 모델 허깅페이스 해킹에 우려",
+      "summary": "오픈AI는 7월 21일 내부 사이버보안 평가 중 GPT-5.6 Sol과 사전 출시 모델이 포함된 시스템이 인터넷 접근을 확보하고 허깅페이스 시스템에 접근했다고 밝혔다. 호주 신호정보국(ASD)은 해당 평가에서 일반적인 배포...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 호주 총리, 오픈AI 모델 허깅페이스 해킹에 우려 오픈AI는 7월 21일 내부 사이버보안 \n2. 호주 신호정보국(ASD)은 해당 평가에서 일반적인 배포...",
+      "link": "https://www.tokenpost.kr/news/breaking/413130",
+      "source": "naver",
+      "published": "2026-09-24T05:36:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[모닝 뉴스브리핑] XRP 지갑 6678개서 2000만달러 유출 外",
       "summary": "AI 에이전트 확산으로 실시간 자율 통제형 보안 모델이 부상하고 있다. AI 에이전트가 외부 도구와 데이터를 자율적으로 다루면서 사람의 승인과 사후 대응을 전제로 한 기존 사이버보안 모델의 한계가...",
@@ -3027,6 +3051,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-67240 - RabbitMQ: ReDoS via AMQP 1.0 SQL filter LIKE wildcard",
+      "summary": "CVE ID :CVE-2026-67240\n  \nPublished : Sept. 23, 2026, 8:19 p.m. | 27 minutes ago\n  \nDescription :RabbitMQ is a messaging and streaming broker. Prior to versions 4.2.7 and 4.3.1, pattern_to_regex maps % -> .*? and _ -> ., then compiles ^...$ with only [unicode]; re:run is called with only [{capture, none}] - no explicit match_limit. A pattern like %_%_..._%X becomes ^.*?..*?.....*?.X$ with overlapping lazy quantifiers. The whole-expression cap is ?MAX_EXPRESSION_LENGTH=4096 chars / ?MAX_TOKENS=200; a LIKE string literal is one token, so ~2000 %_ pairs fit. SQL filters are accepted unconditionally at rabbit_amqp_session.erl:3264 (no feature flag). Evaluated per-message at rabbit_stream_queue.erl:1439. OTP's default 10M match_limit caps each match at ~100-200 ms (not seconds), and the re NIF yields to the scheduler. An authenticated AMQP 1.0 consumer with read+write on a stream queue can cause ~100-200 ms of CPU per delivered message via a crafted LIKE filter, multiplied across thousands of messages and parallel sessions - a substantial backtracking-driven CPU amplification. Preconditions include AMQP 1.0 with stream queues in use Attacker can attach a receiver with a filter (read permission) and publish messages with long property values (write permission). This issue is fixed in versions 4.2.7 and 4.3.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-67240\n  \nPublished : Sept. 23, 2026, 8:19 p.m. | 27 minutes ago\n  \nDescription :RabbitMQ is a messaging and streaming broker. Prior to versions 4.2.7 and 4.3.1, pattern_to_regex maps % -> .*? and _ -> ., then compiles ^...$ with only [unicode]; re:run is called with only [{capture, none}] - no explicit match_limit. A pattern like %_%_..._%X becomes ^.*?..*?.....*?.X$ with overlapping lazy quantifiers. The whole-expression cap is ?MAX_EXPRESSION_LENGTH=4096 chars / ?MAX_TOKENS=200; a LIKE string literal is one token, so ~2000 %_ pairs fit. SQL filters are accepted unconditionally at rabbit_amqp_session.erl:3264 (no feature flag). Evaluated per-message at rabbit_stream_queue.erl:1439. OTP's default 10M match_limit caps each match at ~100-200 ms (not seconds), and the re NIF yields to the scheduler. An authenticated AMQP 1.0 consumer with read+write on a stream queue can cause ~100-200 ms of CPU per delivered message via a crafted LIKE filter, multiplied across thousands of messages and parallel sessions - a substantial backtracking-driven CPU amplification. Preconditions include AMQP 1.0 with stream queues in use Attacker can attach a receiver with a filter (read permission) and publish messages with long property values (write permission). This issue is fixed in versions 4.2.7 and 4.3.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-67240\n2. 26.09.24 오전5:19\n3. RabbitMQ is a messaging and streaming broker. Prio",
+      "cve_id": "CVE-2026-67240",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-67240",
+      "source": "cvefeed",
+      "published": "2026-09-24T05:19:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-84716 - Automation-controller: automation-controller: instance install_bundle issues 10-year, non-revocable receptor mesh-ca certificates for caller-chosen (and case-variant impersonating) hostnames",
       "summary": "CVE ID :CVE-2026-84716\n  \nPublished : Sept. 23, 2026, 7:40 p.m. | 8 minutes ago\n  \nDescription :A flaw was found in the automation-controller instance\n                  install-bundle endpoint. When a System Administrator downloads\n                  an execution/hop node's install bundle, the controller signs an\n                  X.509 certificate with the receptor mesh certificate authority\n                  in which the Common Name, DNS subject-alternative-name, and\n                  receptor node-id are taken verbatim from the caller-chosen\n                  instance hostname, with a hard-coded ten-year validity, a random\n                  serial, and no issuance log or revocation list. Because the\n                  hostname charset validator is case-insensitive while the\n                  uniqueness validator is case-sensitive, an administrator can\n                  register a case variant of an existing control node's hostname\n                  and obtain a mesh-CA-signed certificate that TLS peers, which\n                  match hostnames case-insensitively, accept as that control node.\n                  In managed/hosted deployments — where the customer holds\n                  controller superuser but the platform operator runs the mesh —\n                  this yields a long-lived, non-revocable mesh peer credential and,\n                  with an on-path position, TLS impersonation or interception of\n                  control/hybrid mesh nodes. It does not grant direct remote code\n                  execution, because receptor work submission is gated by a\n                  separate signing key not included in the bundle.\n  \nSeverity: 6.6 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
