@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-24T14:31:02.391308+09:00",
+  "fetched_at": "2026-09-24T15:01:14.453703+09:00",
   "security_news": [
     {
       "title": "랜섬웨어 사고, 주말·연휴 노린다…'4일간 추석' 방심하면 '큰일'",
@@ -2712,33 +2712,24 @@
       "source": "thehackernews",
       "published": "2026-09-21T15:06:44+09:00",
       "lang": "en"
-    },
-    {
-      "title": "[SK 인사 전망] ① 지난해 발탁한 사장들 지금은… 연말 앞둔 SK 인사판",
-      "summary": "◇ 해킹 뒤 정재헌 투입… 한명진은 통신, 정석근·유경상은 AI SK텔레콤은 전혀 다른 이유로 지난해 CEO를 바꿨다. 개인정보 유출 사고 이후 유영상 대표가 물러나고 정재헌 사장이 CEO에 올랐다. 1968년생인 정 대표는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [SK 인사 전망] ① 지난해 발탁한 사장들 지금은… 연말 앞둔 SK 인사판 ◇ 해킹 뒤 \n2. 개인정보 유출 사고 이후 유영상 대표가 물러나고 정재헌 사장이 CEO에 올랐다.\n3. 1968년생인 정 대표는...",
-      "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3076052",
-      "source": "naver",
-      "published": "2026-09-21T14:46:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "가짜 면접으로 암호화폐 지갑 노려... 북한 워터플럼, 100개국 기기 3만...",
-      "summary": "북한 해킹 조직 '워터플럼'(WaterPlum)이 8개월 동안 100개국이 넘는 곳에서 구직자들의 기기를 감염시켜 암호화폐 지갑 7000개 이상을 털어 간 정황을 네 나라 수사당국이 공개했다. 일본과 미국, 호주, 독일...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 가짜 면접으로 암호화폐 지갑 노려... 북한 워터플럼, 100개국 기기 3만... 북한 해\n2. 일본과 미국, 호주, 독일...",
-      "link": "https://www.boannews.com/news/articleView.html?idxno=145974",
-      "source": "naver",
-      "published": "2026-09-21T14:46:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "ISC Stormcast For Thursday, September 24th, 2026 https://isc.sans.edu/podcastdetail/10108, (Thu, Sep 24th)",
+      "summary": "",
+      "description": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. ISC Stormcast For Thursday, September 24th, 2026 h\n2. SANS_ISC\n3. 설명 없음",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33364",
+      "source": "sans_isc",
+      "published": "2026-09-24T12:50:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-67240 - RabbitMQ: ReDoS via AMQP 1.0 SQL filter LIKE wildcard",
       "summary": "CVE ID :CVE-2026-67240\n  \nPublished : Sept. 23, 2026, 8:19 p.m. | 27 minutes ago\n  \nDescription :RabbitMQ is a messaging and streaming broker. Prior to versions 4.2.7 and 4.3.1, pattern_to_regex maps % -> .*? and _ -> ., then compiles ^...$ with only [unicode]; re:run is called with only [{capture, none}] - no explicit match_limit. A pattern like %_%_..._%X becomes ^.*?..*?.....*?.X$ with overlapping lazy quantifiers. The whole-expression cap is ?MAX_EXPRESSION_LENGTH=4096 chars / ?MAX_TOKENS=200; a LIKE string literal is one token, so ~2000 %_ pairs fit. SQL filters are accepted unconditionally at rabbit_amqp_session.erl:3264 (no feature flag). Evaluated per-message at rabbit_stream_queue.erl:1439. OTP's default 10M match_limit caps each match at ~100-200 ms (not seconds), and the re NIF yields to the scheduler. An authenticated AMQP 1.0 consumer with read+write on a stream queue can cause ~100-200 ms of CPU per delivered message via a crafted LIKE filter, multiplied across thousands of messages and parallel sessions - a substantial backtracking-driven CPU amplification. Preconditions include AMQP 1.0 with stream queues in use Attacker can attach a receiver with a filter (read permission) and publish messages with long property values (write permission). This issue is fixed in versions 4.2.7 and 4.3.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
