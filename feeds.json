@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-24T21:31:18.624433+09:00",
+  "fetched_at": "2026-09-24T22:01:37.802721+09:00",
   "security_news": [
+    {
+      "title": "AI-Powered Campaign Targets Hundreds of Online Retailers",
+      "summary": "A threat actor is using three AI harnesses for vulnerability research, exploitation, and attack orchestration.\nThe post AI-Powered Campaign Targets Hundreds of Online Retailers appeared first on SecurityWeek.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 기반 캠페인, 수백 개 온라인 리테일러 공격\n2. AI 3종으로 취약점 연구, 공격 오케스트레이션\n3. AI 기술 활용, 다수의 리테일러 대상 공격",
+      "link": "https://www.securityweek.com/ai-powered-campaign-targets-hundreds-of-online-retailers/",
+      "source": "securityweek",
+      "published": "2026-09-24T21:48:14+09:00",
+      "lang": "en"
+    },
     {
       "title": "“내 개인정보 털렸나”…온라인교육 사이트 해킹, 회원정보 유출",
       "summary": "온라인교육 사이트 운영업체가 해킹을 당해 회원들의 이름과 생년월일, 주소 등 개인정보가 유출됐다.... 특히, 해킹 과정에서 기관의 문자 계정을 이용한 스팸까지 발송된 것으로 확인됐다. 회사는 “기관 발신번호로 온...",
@@ -2448,18 +2460,6 @@
       "source": "naver",
       "published": "2026-09-21T22:32:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "정부, 개인정보 유출 사고 티빙 한달만에 '우수기업' 공시",
-      "summary": "매체는 해당 기관의 '우수 기업' 제도가 일정 기준만 충족하면 자동 공시되는 구조이기에 보안사고를 낸 기업을 거르는 기능이 없었다고 설명했습니다. 이에 정부는 앞으로 정보 유출 등 문제가 확인되면 해당 기업의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 티빙, 개인정보 유출 사고 발생\n2. '우수 기업' 자동 공시 제도로 걸러내지 못함\n3. 정보 유출 시 기업 공개 예정",
-      "link": "https://n.news.naver.com/mnews/article/437/0000512207?sid=102",
-      "source": "naver",
-      "published": "2026-09-21T21:47:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3241,21 +3241,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68825",
       "source": "msrc",
       "published": "2026-09-21T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-94379 - MISP: HTTP Method Bypass of Login Security Controls (Bruteforce Protection and Email OTP)",
-      "summary": "CVE ID :CVE-2026-94379\n  \nPublished : Sept. 21, 2026, 12:35 p.m. | 22 minutes ago\n  \nDescription :The login() function in MISP's UsersController.php contained insufficient HTTP method validation for several security-critical code paths. The original code used an allowlist approach, checking only for specific HTTP methods (POST and PUT) before enforcing bruteforce protection, email one-time-password (OTP) verification, and login-failure logging. Because the checks were not exhaustive, an unauthenticated attacker could issue login requests using other HTTP methods and bypass all three security controls simultaneously. Specifically: \n\n - the bruteforce blocklisting check and attempt counter were skipped, allowing unlimited credential-guessing attempts without being rate-limited or blocked\n -  the email OTP two-factor authentication step was skipped, defeating the second factor of authentication\n - login-failure events were neither logged nor counted, removing the audit trail and the mechanism that would normally trigger a blocklist entry.\n\n\n\n\nThe security impact is the effective disabling of brute-force protection and multi-factor authentication for any attacker who can craft an HTTP request with a non-POST/PUT method to the login endpoint, potentially leading to credential compromise and unauthorized access to the MISP instance.\n\n\n\n\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-94379\n  \nPublished : Sept. 21, 2026, 12:35 p.m. | 22 minutes ago\n  \nDescription :The login() function in MISP's UsersController.php contained insufficient HTTP method validation for several security-critical code paths. The original code used an allowlist approach, checking only for specific HTTP methods (POST and PUT) before enforcing bruteforce protection, email one-time-password (OTP) verification, and login-failure logging. Because the checks were not exhaustive, an unauthenticated attacker could issue login requests using other HTTP methods and bypass all three security controls simultaneously. Specifically: \n\n - the bruteforce blocklisting check and attempt counter were skipped, allowing unlimited credential-guessing attempts without being rate-limited or blocked\n -  the email OTP two-factor authentication step was skipped, defeating the second factor of authentication\n - login-failure events were neither logged nor counted, removing the audit trail and the mechanism that would normally trigger a blocklist entry.\n\n\n\n\nThe security impact is the effective disabling of brute-force protection and multi-factor authentication for any attacker who can craft an HTTP request with a non-POST/PUT method to the login endpoint, potentially leading to credential compromise and unauthorized access to the MISP instance.\n\n\n\n\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-94379\n2. 26.09.21 오후9:35\n3. The login() function in MISP's UsersController.php",
-      "cve_id": "CVE-2026-94379",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-94379",
-      "source": "cvefeed",
-      "published": "2026-09-21T21:35:26+09:00",
       "lang": "en"
     }
   ],
