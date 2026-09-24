@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-25T07:01:14.626734+09:00",
+  "fetched_at": "2026-09-25T07:31:09.436708+09:00",
   "security_news": [
     {
       "title": "리플 기반 수익 플랫폼 도플러 파이낸스, XDP 토큰 출시일 발표… 고수...",
@@ -2376,18 +2376,6 @@
       "source": "naver",
       "published": "2026-09-22T08:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[Who Is ?] 정재헌 SK텔레콤 대표이사 사장",
-      "summary": "SK텔레콤의 실적 그래프 <비즈니스포스트> △해킹사고 여파 딛고 실적 회복 2025년 유심 정보 유출 사고... 해킹사태로 경영진이 교체되면서 전임 유영상 사장은 SK수펙스추구협의회 AI위원회 위원장으로 자리를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. SK텔레콤, 2025년 유심 정보 유출 사고 발생\n2. 해킹사고로 경영진 교체, 실적 회복 딛고 반등\n3. 정재헌 대표, SK텔레콤 실적 회복 이끌어",
-      "link": "https://www.businesspost.co.kr/BP?command=article_view&num=446072",
-      "source": "naver",
-      "published": "2026-09-22T07:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3424,21 +3412,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-19658",
       "source": "cvefeed",
       "published": "2026-09-22T13:27:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-61652 - Zapros: Streaming decoders ignored the requested chunk size, allowing a single compressed response chunk to allocate unbounded memory (decompression bomb)",
-      "summary": "CVE ID :CVE-2026-61652\n  \nPublished : Sept. 21, 2026, 10:16 p.m. | 15 minutes ago\n  \nDescription :Zapros, a Python HTTP client, prior to version 0.14.0 is vulnerable to denial of service via memory exhaustion. The issue affects all callers who streamed compressed responses relying on the chunk size — explicit (`iter_bytes(chunk_size=...)`) or the default — to bound memory. The decoder ignored that bound, so a chunk could be far larger than requested and a single compressed response could overflow memory. Version 0.14.0 contains a patch. Some workarounds are available. Read the still-compressed body with `Response.iter_raw()` / `Response.async_iter_raw()`, which bypass the built-in decoders, and decompress it yourself with an explicit output-size bound (e.g. `zlib`'s `max_length`), aborting once a configured limit is exceeded. Where feasible, send `Accept-Encoding: identity` to disable response compression so bodies are not decompressed client-side. Avoid decoding response bodies from untrusted servers.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-61652\n  \nPublished : Sept. 21, 2026, 10:16 p.m. | 15 minutes ago\n  \nDescription :Zapros, a Python HTTP client, prior to version 0.14.0 is vulnerable to denial of service via memory exhaustion. The issue affects all callers who streamed compressed responses relying on the chunk size — explicit (`iter_bytes(chunk_size=...)`) or the default — to bound memory. The decoder ignored that bound, so a chunk could be far larger than requested and a single compressed response could overflow memory. Version 0.14.0 contains a patch. Some workarounds are available. Read the still-compressed body with `Response.iter_raw()` / `Response.async_iter_raw()`, which bypass the built-in decoders, and decompress it yourself with an explicit output-size bound (e.g. `zlib`'s `max_length`), aborting once a configured limit is exceeded. Where feasible, send `Accept-Encoding: identity` to disable response compression so bodies are not decompressed client-side. Avoid decoding response bodies from untrusted servers.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-61652\n2. 26.09.22 오전7:16\n3. Zapros, a Python HTTP client, prior to version 0.1",
-      "cve_id": "CVE-2026-61652",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61652",
-      "source": "cvefeed",
-      "published": "2026-09-22T07:16:57+09:00",
       "lang": "en"
     }
   ],
