@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-25T04:01:23.021099+09:00",
+  "fetched_at": "2026-09-25T04:31:29.609461+09:00",
   "security_news": [
+    {
+      "title": "뉴질랜드 위장 취업 북한 IT 노동자, 민감정보 공개 협박하며 금전 요구",
+      "summary": "뉴질랜드 국가사이버보안센터(NCSC)는 24일 발표한 2026년 사이버 위협 보고서(Cyber Threat Report 2026)에서 북한 IT 노동자가 가짜 신분을 사용해 뉴질랜드 기업에 위장취업한 사례를 공개했습니다.보고서에 따르면 회사명을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 IT 노동자, 뉴질랜드 NCSC 2026 보고서 공개\n2. 위장취업 후 민감정보 공개 협박, 금전 요구\n3. 뉴질랜드 기업 대상, 정보 유출 및 경제적 피해 우려",
+      "link": "https://www.voakorea.com/a/north-korean-it-worker-new-zealand-092452026/8203945.html",
+      "source": "naver",
+      "published": "2026-09-25T03:56:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"보안 직원 사칭\"...코인베이스 이용자 울린 사기꾼, 징역 12년형",
       "summary": "이번 사건은 거래소 자체의 보안 취약점이 아닌 치밀한 사칭 수법에서 비롯됐다. 스펙터는 코인베이스 보안 담당 직원을 사칭해 계정이 해킹 위협에 노출됐다고 속인 뒤, 자산을 안전한 지갑으로 옮기도록 유도해...",
@@ -2400,18 +2412,6 @@
       "source": "naver",
       "published": "2026-09-22T04:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "개인키 지켰는데도 리퀴드서 4000 BTC 증발…소프트웨어 결함이 승인 인...",
-      "summary": "그대로 뒀다는 의혹이 제기된 사건 직후 나왔다. 국제 수사당국도 앞서 북한과 연계된 해킹조직이 채용 위장 등의 수법으로 악성코드를 심어 암호화폐 지갑의 개인키와 시드 문구를 빼돌린 사례를 확인한 바 있다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 리퀴드 거래소서 4,000 BTC 증발, 소프트웨어 결함 의혹\n2. 개인키 유출 없이도 결함 통해 암호화폐 탈취\n3. 북한 해킹조직, 채용 위장 악성코드로 개인키 탈취",
-      "link": "https://www.wikitree.co.kr/articles/1161180",
-      "source": "naver",
-      "published": "2026-09-22T04:14:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2443,6 +2443,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-61732",
       "source": "cvefeed",
       "published": "2026-09-25T02:40:51+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-61788 - @bytebase/dbhub's read-only mode does not prevent database writes",
+      "summary": "CVE ID :CVE-2026-61788\n  \nPublished : Sept. 24, 2026, 5:37 p.m. | 18 minutes ago\n  \nDescription :DBHub is a database MCP server for Postgres, MySQL, SQL Server, Oracle, MariaDB, SQLite. Prior to version 0.22.6, setting `readonly = true` on the `execute_sql` tool does not make the connection read-only. The connectors are written to set PostgreSQL `default_transaction_read_only=on` (and open SQLite in `readOnly` mode), but that code is gated on a config value that is never populated, so it never runs. The only thing left enforcing read-only is a classifier that inspects the first keyword of each statement. Any `SELECT` that writes or has side effects through a function call passes it. With an ordinary role this allows sequence tampering; with a privileged role it allows writing arbitrary files on the server (`lo_export`), reading arbitrary host files (`pg_read_file`), and remote code execution (`dblink` + `COPY ... TO PROGRAM`). The HTTP transport is unauthenticated and binds to `0.0.0.0` by default, so this is reachable by any network caller of `/mcp`. Version 0.22.6 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-61788\n  \nPublished : Sept. 24, 2026, 5:37 p.m. | 18 minutes ago\n  \nDescription :DBHub is a database MCP server for Postgres, MySQL, SQL Server, Oracle, MariaDB, SQLite. Prior to version 0.22.6, setting `readonly = true` on the `execute_sql` tool does not make the connection read-only. The connectors are written to set PostgreSQL `default_transaction_read_only=on` (and open SQLite in `readOnly` mode), but that code is gated on a config value that is never populated, so it never runs. The only thing left enforcing read-only is a classifier that inspects the first keyword of each statement. Any `SELECT` that writes or has side effects through a function call passes it. With an ordinary role this allows sequence tampering; with a privileged role it allows writing arbitrary files on the server (`lo_export`), reading arbitrary host files (`pg_read_file`), and remote code execution (`dblink` + `COPY ... TO PROGRAM`). The HTTP transport is unauthenticated and binds to `0.0.0.0` by default, so this is reachable by any network caller of `/mcp`. Version 0.22.6 patches the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-61788\n2. 26.09.25 오전2:37\n3. DBHub is a database MCP server for Postgres, MySQL",
+      "cve_id": "CVE-2026-61788",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61788",
+      "source": "cvefeed",
+      "published": "2026-09-25T02:37:40+09:00",
       "lang": "en"
     },
     {
@@ -3433,21 +3448,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-73552",
       "source": "cvefeed",
       "published": "2026-09-22T04:37:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-91165 - Warpgate: Markup injection in SSO form_post return page via unencoded redirect/error values",
-      "summary": "CVE ID :CVE-2026-91165\n  \nPublished : Sept. 21, 2026, 7:17 p.m. | 29 minutes ago\n  \nDescription :Warpgate is an open source SSH, HTTPS and MySQL bastion host for Linux. Prior to 0.27.6, the response_mode=form_post SSO return path in warpgate-protocol-http/src/api/sso_provider_list.rs uses serde_json::to_string inside ReturnToSsoPostResponse without neutralizing a script-closing sequence. The vulnerable value can enter the script block through the attacker-controlled next redirect parameter stored by warpgate-protocol-http/src/api/sso_provider_detail.rs or through IdP-derived error messages that make_redirect_url concatenates without URL encoding. The IdP-derived path is reachable when the attacker controls a configured identity provider, or when the attacker controls the email or username claim on an attacker-controlled account and the configured identity provider permits the required unvalidated claim format. A victim must complete the form_post SSO flow for the injected markup to be rendered. The Warpgate Content-Security-Policy blocks injected JavaScript and event handlers, so the demonstrated impact is content spoofing, a false login form, or a meta refresh rather than script execution. This issue is fixed in version 0.27.6.\n  \nSeverity: 2.4 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-91165\n  \nPublished : Sept. 21, 2026, 7:17 p.m. | 29 minutes ago\n  \nDescription :Warpgate is an open source SSH, HTTPS and MySQL bastion host for Linux. Prior to 0.27.6, the response_mode=form_post SSO return path in warpgate-protocol-http/src/api/sso_provider_list.rs uses serde_json::to_string inside ReturnToSsoPostResponse without neutralizing a script-closing sequence. The vulnerable value can enter the script block through the attacker-controlled next redirect parameter stored by warpgate-protocol-http/src/api/sso_provider_detail.rs or through IdP-derived error messages that make_redirect_url concatenates without URL encoding. The IdP-derived path is reachable when the attacker controls a configured identity provider, or when the attacker controls the email or username claim on an attacker-controlled account and the configured identity provider permits the required unvalidated claim format. A victim must complete the form_post SSO flow for the injected markup to be rendered. The Warpgate Content-Security-Policy blocks injected JavaScript and event handlers, so the demonstrated impact is content spoofing, a false login form, or a meta refresh rather than script execution. This issue is fixed in version 0.27.6.\n  \nSeverity: 2.4 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-91165\n2. 26.09.22 오전4:17\n3. Warpgate is an open source SSH, HTTPS and MySQL ba",
-      "cve_id": "CVE-2026-91165",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-91165",
-      "source": "cvefeed",
-      "published": "2026-09-22T04:17:15+09:00",
       "lang": "en"
     }
   ],
