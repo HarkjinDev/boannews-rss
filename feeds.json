@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-25T08:01:09.627557+09:00",
+  "fetched_at": "2026-09-25T08:31:11.756702+09:00",
   "security_news": [
     {
       "title": "리플 기반 수익 플랫폼 도플러 파이낸스, XDP 토큰 출시일 발표… 고수...",
@@ -2340,21 +2340,24 @@
       "source": "naver",
       "published": "2026-09-22T08:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[이슈체크] 네이버와 공방 확전되나…토스, 플랫폼 확장에 커진 '운영 리...",
-      "summary": "토스페이먼츠는 자사 시스템이 직접 해킹된 것은 아니며 가맹점의 결제연동 인증정보가 노출된 사안이라고... 토스페이먼츠는 이번 사고가 자사 시스템에 대한 직접적인 해킹이나 취약점 공격으로 발생한 것은 아니라고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 토스페이먼츠, 가맹점 결제 인증정보 노출 사고 발생\n2. 직접 해킹 아닌 가맹점 시스템 통한 정보 유출로 추정\n3. 토스페이먼츠는 자사 시스템 직접 해킹 부인",
-      "link": "https://www.thepublic.kr/news/articleView.html?idxno=319350",
-      "source": "naver",
-      "published": "2026-09-22T08:24:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-97636 - Apache Airflow HashiCorp provider: HashiCorp Vault secrets backend: team-scope guard bypass via user-controlled key",
+      "summary": "CVE ID :CVE-2026-97636\n  \nPublished : Sept. 24, 2026, 9:54 p.m. | 12 minutes ago\n  \nDescription :Apache Airflow HashiCorp provider: the HashiCorp Vault secrets backend's team-scope guard can be bypassed with a user-controlled key. In a multi-team deployment, a Dag author scoped to one team can supply a Variable key containing a path separator that causes the backend to resolve a secret belonging to a different team, because after the team-scoped lookup misses the backend falls back to a team-agnostic path concatenated from the unvalidated key. The Execution API Variables route accepts a path-shaped key, so this is reachable from ordinary Dag code.\n\nAffects multi-team deployments using the HashiCorp Vault secrets backend. Single-team deployments are not affected, as there is no cross-team boundary to cross. This is the same class as CVE-2026-86465, CVE-2026-68870, CVE-2026-68871 and CVE-2026-68872 in the Akeyless, Azure Key Vault, Yandex Lockbox and Amazon secrets backends.\n\nUsers of apache-airflow-providers-hashicorp are recommended to upgrade to version 4.8.0 or later, which fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-97636\n  \nPublished : Sept. 24, 2026, 9:54 p.m. | 12 minutes ago\n  \nDescription :Apache Airflow HashiCorp provider: the HashiCorp Vault secrets backend's team-scope guard can be bypassed with a user-controlled key. In a multi-team deployment, a Dag author scoped to one team can supply a Variable key containing a path separator that causes the backend to resolve a secret belonging to a different team, because after the team-scoped lookup misses the backend falls back to a team-agnostic path concatenated from the unvalidated key. The Execution API Variables route accepts a path-shaped key, so this is reachable from ordinary Dag code.\n\nAffects multi-team deployments using the HashiCorp Vault secrets backend. Single-team deployments are not affected, as there is no cross-team boundary to cross. This is the same class as CVE-2026-86465, CVE-2026-68870, CVE-2026-68871 and CVE-2026-68872 in the Akeyless, Azure Key Vault, Yandex Lockbox and Amazon secrets backends.\n\nUsers of apache-airflow-providers-hashicorp are recommended to upgrade to version 4.8.0 or later, which fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-97636\n2. 26.09.25 오전6:54\n3. Apache Airflow HashiCorp provider: the HashiCorp V",
+      "cve_id": "CVE-2026-97636",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-97636",
+      "source": "cvefeed",
+      "published": "2026-09-25T06:54:58+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-93353 - copyparty SFTP Volume Restriction Bypass via mkdir/rmdir/chattr Handlers",
       "summary": "CVE ID :CVE-2026-93353\n  \nPublished : Sept. 24, 2026, 8:29 p.m. | 30 minutes ago\n  \nDescription :copyparty contains a volume restriction bypass vulnerability in its SFTP front end that allows authenticated SFTP users to create, remove, and truncate arbitrary paths outside permitted volume boundaries by exploiting three handlers that bypass the xvol volflag enforcement. The _mkdir, _rmdir, and _chattr handlers construct destination paths using vfs.get(), vn.canonical(), and os.path.join() without invoking the chk_ap access check, enabling attackers to traverse symlinks leaving a volume's top directory and perform unauthorized file creation, deletion, or truncation via SSH_FXP_SETSTAT operations on paths outside any volume the account is authorized to access.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
