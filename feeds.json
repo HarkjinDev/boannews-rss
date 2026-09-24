@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-24T23:01:21.957986+09:00",
+  "fetched_at": "2026-09-24T23:31:22.005895+09:00",
   "security_news": [
     {
       "title": "SEC 피어스, KYC·AML 대안으로 영지식증명 촉구",
@@ -2899,6 +2899,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-57099 ASP.NET Core Denial of Service Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-57099\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-57099",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57099",
+      "source": "msrc",
+      "published": "2026-09-22T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-95667 - MISP Installer Log and FIFO Created World-Readable, Exposing Sensitive Credentials",
       "summary": "CVE ID :CVE-2026-95667\n  \nPublished : Sept. 22, 2026, 1:11 p.m. | 37 minutes ago\n  \nDescription :The MISP installer scripts (for Debian 12, Debian 13, Ubuntu 24.04, and RHEL 9.4) create a log file at /var/log/misp_install.log and a named pipe (FIFO) at /var/log/misp_install.log.pipe to capture all installer output. The log captures highly sensitive data including the generated admin password, database passwords, GPG passphrase, and supervisor password. However, the log file was created by the tee command under the system default umask, resulting in world-readable permissions (typically 0644). Similarly, the FIFO was created with mkfifo without an explicit mode, also inheriting the default umask and remaining world-readable during the window before it was unlinked. \n\nAny local unprivileged user on the system could read the log file or the FIFO to obtain these credentials. \n\nAdditionally, the log file was not removed before creation, meaning a pre-existing symlink in /var/log could have been used to redirect the write to an arbitrary location.\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-95667\n  \nPublished : Sept. 22, 2026, 1:11 p.m. | 37 minutes ago\n  \nDescription :The MISP installer scripts (for Debian 12, Debian 13, Ubuntu 24.04, and RHEL 9.4) create a log file at /var/log/misp_install.log and a named pipe (FIFO) at /var/log/misp_install.log.pipe to capture all installer output. The log captures highly sensitive data including the generated admin password, database passwords, GPG passphrase, and supervisor password. However, the log file was created by the tee command under the system default umask, resulting in world-readable permissions (typically 0644). Similarly, the FIFO was created with mkfifo without an explicit mode, also inheriting the default umask and remaining world-readable during the window before it was unlinked. \n\nAny local unprivileged user on the system could read the log file or the FIFO to obtain these credentials. \n\nAdditionally, the log file was not removed before creation, meaning a pre-existing symlink in /var/log could have been used to redirect the write to an arbitrary location.\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3211,36 +3226,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-86473",
       "source": "cvefeed",
       "published": "2026-09-21T23:33:26+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-93339 - Ditty < 3.1.70 Stored XSS via Layout Tag Wrapper Attribute",
-      "summary": "CVE ID :CVE-2026-93339\n  \nPublished : Sept. 21, 2026, 2:29 p.m. | 28 minutes ago\n  \nDescription :Metaphor Creations Ditty (ditty-news-ticker) before 3.1.70 contains a stored cross-site scripting vulnerability that allows authenticated users with Author-level privileges or higher to inject arbitrary HTML elements by supplying malicious wrapper attribute values in layout tags. The ditty_layout_render_tag_wrapper() function inserts caller-supplied wrapper attribute values directly as HTML element names without allowlist validation, bypassing wp_kses_post() sanitization because KSES runs at save time before layout tag attributes are resolved at render time, causing the payload to execute in the browser of any visitor viewing posts or pages embedding the affected Ditty item.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-93339\n  \nPublished : Sept. 21, 2026, 2:29 p.m. | 28 minutes ago\n  \nDescription :Metaphor Creations Ditty (ditty-news-ticker) before 3.1.70 contains a stored cross-site scripting vulnerability that allows authenticated users with Author-level privileges or higher to inject arbitrary HTML elements by supplying malicious wrapper attribute values in layout tags. The ditty_layout_render_tag_wrapper() function inserts caller-supplied wrapper attribute values directly as HTML element names without allowlist validation, bypassing wp_kses_post() sanitization because KSES runs at save time before layout tag attributes are resolved at render time, causing the payload to execute in the browser of any visitor viewing posts or pages embedding the affected Ditty item.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-93339\n2. 26.09.21 오후11:29\n3. Metaphor Creations Ditty (ditty-news-ticker) befor",
-      "cve_id": "CVE-2026-93339",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93339",
-      "source": "cvefeed",
-      "published": "2026-09-21T23:29:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-61629 - nginx ignition has  ParseAcceptLanguage `_` separator bypass that enables ~75x CPU amplification via Accept-Language header in i18nMiddleware",
-      "summary": "CVE ID :CVE-2026-61629\n  \nPublished : Sept. 21, 2026, 2:22 p.m. | 35 minutes ago\n  \nDescription :nginx ignition is a user interface for the nginx web server. In versions 2.29.0 through 2.40.0, the gin i18n middleware in nginx-ignition's API server runs in front of every HTTP request and calls `golang.org/x/text/language.ParseAcceptLanguage` on the raw `Accept-Language` header without imposing any size or shape filter. The underlying parser has quadratic-time behaviour on long lists of malformed language tags. The CVE-2022-32149 guard that golang.org/x/text added in v0.3.8 caps the number of `-` characters in the input at 1000, but it does not cap `_` characters even though the parser's internal scanner aliases `_` to `-` before parsing. A single unauthenticated GET request with an `Accept-Language` header built out of `_` separators burns about 2.4 seconds of server CPU on the host running nginx-ignition; ten concurrent attackers saturate a ten-core box for the duration of the attack while consuming ~10 MiB/s of upstream bandwidth. Version 2.40.1 fixes this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-61629\n  \nPublished : Sept. 21, 2026, 2:22 p.m. | 35 minutes ago\n  \nDescription :nginx ignition is a user interface for the nginx web server. In versions 2.29.0 through 2.40.0, the gin i18n middleware in nginx-ignition's API server runs in front of every HTTP request and calls `golang.org/x/text/language.ParseAcceptLanguage` on the raw `Accept-Language` header without imposing any size or shape filter. The underlying parser has quadratic-time behaviour on long lists of malformed language tags. The CVE-2022-32149 guard that golang.org/x/text added in v0.3.8 caps the number of `-` characters in the input at 1000, but it does not cap `_` characters even though the parser's internal scanner aliases `_` to `-` before parsing. A single unauthenticated GET request with an `Accept-Language` header built out of `_` separators burns about 2.4 seconds of server CPU on the host running nginx-ignition; ten concurrent attackers saturate a ten-core box for the duration of the attack while consuming ~10 MiB/s of upstream bandwidth. Version 2.40.1 fixes this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-61629\n2. 26.09.21 오후11:22\n3. nginx ignition is a user interface for the nginx w",
-      "cve_id": "CVE-2026-61629",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-61629",
-      "source": "cvefeed",
-      "published": "2026-09-21T23:22:34+09:00",
       "lang": "en"
     }
   ],
