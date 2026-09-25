@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-26T03:03:44.830291+09:00",
+  "fetched_at": "2026-09-26T03:32:24.113007+09:00",
   "security_news": [
     {
       "title": "수파베이스 1만6000개 DB서 개인정보 노출",
@@ -1596,18 +1596,6 @@
       "source": "bleepingcomputer",
       "published": "2026-09-23T04:13:29+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Check Point Warns of Management Server Zero-Day Exploited in Targeted Attacks",
-      "summary": "Attackers exploited a previously unknown flaw in Check Point's Security Management Server in a handful of targeted attacks on July 23, the company said.\n\nThe flaw, CVE-2026-93616, allows an attacker who can access the server's web service to run scripts on it without logging in. Check Point released a fix on September 22 for the server that controls firewall policies for the Check Point",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Check Point Management Server 제로데이 취약점(CVE-2026-93\n2. 로그인 없이 스크립트 실행 가능한 무단 접근 공격\n3. 9월 22일 보안 업데이트 배포, 방화벽 정책 제어 기능 복구",
-      "link": "https://thehackernews.com/2026/09/check-point-warns-of-management-server.html",
-      "source": "thehackernews",
-      "published": "2026-09-23T03:29:39+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -2704,36 +2692,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-77426",
       "source": "cvefeed",
       "published": "2026-09-23T05:31:36+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-95831 - Crypt::SelfCertificate versions from 1.01 through 1.05 for Perl contains malware which executes Python code from an obfuscated URL",
-      "summary": "CVE ID :CVE-2026-95831\n  \nPublished : Sept. 22, 2026, 6:21 p.m. | 37 minutes ago\n  \nDescription :Crypt::SelfCertificate versions from 1.01 through 1.05 for Perl contains malware which executes Python code from an obfuscated URL.\n\nThe generate_certificate runs a Python script saved as a certificate file.  The pyhton script attempts to retrieve code from a hardcoded http URL that is obfuscated with base64 encoding and run the response body directly.\n\nThe impact is that arbitrary code can be invoked as the user, without a dropped script being saved on the affected host.\n\nThe releases have no test scripts nor build hooks.  The intention may have been to trigger the payload after installation.\n\nFor version 1.01, the dropper script is in lib/Crypt/SelfCertificate/sample/validate.p12.\n\nFor version 1.05, the dropper script is in lib/Crypt/SelfCertificate/sample/cert7.pem.\n\nThe SHA-256 digests of the files are\n\n    fbff21f45ff748365062a5e36fb2d72558cad82a507a6f357f320b4fcdf07760 Crypt-SelfCertificate-1.01.tar.gz\n    27b2d2d3174ad771474fff2521f5084ec231e9218ea8c832515aef1cbd5897bc lib/Crypt/SelfCertificate/sample/validate.p12\n\n    9fdfa7d69b034b77d4510cda567e8da1e486ca81c7daaadc5732a45c41d71991 Crypt-SelfCertificate-1.05.tar.gz\n    27b2d2d3174ad771474fff2521f5084ec231e9218ea8c832515aef1cbd5897bc lib/Crypt/SelfCertificate/sample/cert7.pem\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-95831\n  \nPublished : Sept. 22, 2026, 6:21 p.m. | 37 minutes ago\n  \nDescription :Crypt::SelfCertificate versions from 1.01 through 1.05 for Perl contains malware which executes Python code from an obfuscated URL.\n\nThe generate_certificate runs a Python script saved as a certificate file.  The pyhton script attempts to retrieve code from a hardcoded http URL that is obfuscated with base64 encoding and run the response body directly.\n\nThe impact is that arbitrary code can be invoked as the user, without a dropped script being saved on the affected host.\n\nThe releases have no test scripts nor build hooks.  The intention may have been to trigger the payload after installation.\n\nFor version 1.01, the dropper script is in lib/Crypt/SelfCertificate/sample/validate.p12.\n\nFor version 1.05, the dropper script is in lib/Crypt/SelfCertificate/sample/cert7.pem.\n\nThe SHA-256 digests of the files are\n\n    fbff21f45ff748365062a5e36fb2d72558cad82a507a6f357f320b4fcdf07760 Crypt-SelfCertificate-1.01.tar.gz\n    27b2d2d3174ad771474fff2521f5084ec231e9218ea8c832515aef1cbd5897bc lib/Crypt/SelfCertificate/sample/validate.p12\n\n    9fdfa7d69b034b77d4510cda567e8da1e486ca81c7daaadc5732a45c41d71991 Crypt-SelfCertificate-1.05.tar.gz\n    27b2d2d3174ad771474fff2521f5084ec231e9218ea8c832515aef1cbd5897bc lib/Crypt/SelfCertificate/sample/cert7.pem\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-95831\n2. 26.09.23 오전3:21\n3. Crypt::SelfCertificate versions from 1.01 through ",
-      "cve_id": "CVE-2026-95831",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95831",
-      "source": "cvefeed",
-      "published": "2026-09-23T03:21:23+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-95624 - Tauri framework v2 malicious downgrade via allow_downgrades from frontend code",
-      "summary": "CVE ID :CVE-2026-95624\n  \nPublished : Sept. 22, 2026, 6:17 p.m. | 41 minutes ago\n  \nDescription :The Tauri updater plugin's 'check' IPC command accepts an allowDowngrades boolean parameter directly from frontend JavaScript code. When set to true, it replaces the version comparator from \"update must be newer\" to \"update must be different.\" Because the default permission set grants allow-check to the webview, any XSS in the app frontend can invoke this command and bypass the only anti-rollback protection the updater offers. Combined with another bug, this enables downgrade attacks without even needing to fake a higher version number.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-95624\n  \nPublished : Sept. 22, 2026, 6:17 p.m. | 41 minutes ago\n  \nDescription :The Tauri updater plugin's 'check' IPC command accepts an allowDowngrades boolean parameter directly from frontend JavaScript code. When set to true, it replaces the version comparator from \"update must be newer\" to \"update must be different.\" Because the default permission set grants allow-check to the webview, any XSS in the app frontend can invoke this command and bypass the only anti-rollback protection the updater offers. Combined with another bug, this enables downgrade attacks without even needing to fake a higher version number.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-95624\n2. 26.09.23 오전3:17\n3. The Tauri updater plugin's 'check' IPC command acc",
-      "cve_id": "CVE-2026-95624",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95624",
-      "source": "cvefeed",
-      "published": "2026-09-23T03:17:36+09:00",
       "lang": "en"
     }
   ],
