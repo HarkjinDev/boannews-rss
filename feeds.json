@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-26T07:02:32.106020+09:00",
+  "fetched_at": "2026-09-26T07:31:12.123766+09:00",
   "security_news": [
     {
       "title": "[NOW 2027 AI 계정·권한관리 및 통제①] 제로 트러스트 원칙 필수",
@@ -1596,45 +1596,39 @@
       "source": "naver",
       "published": "2026-09-23T07:34:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"AI로 인류 멸종? 한국은 다른 것부터 고민해야 한다\"",
-      "summary": "AI 발전으로 인해 당장 해킹과 피싱 급증으로 이어질 것이란 우려에 대해 김 의원은 \"이번 국감에서도 중요... 앞선 답변에서 잠깐 대책을 소개했는데, 프론티어 AI의 발전으로 당장 시급한 것 역시 해킹, 보안 문제다. 이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 발전, 해킹·피싱 급증 우려\n2. 프론티어 AI, 보안 문제 시급\n3. 국감에서도 중요 논의 예정",
-      "link": "https://n.news.naver.com/mnews/article/047/0002530017?sid=102",
-      "source": "naver",
-      "published": "2026-09-23T07:26:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "통신3사, '보안 인력' 채용 릴레이…역량 강화 '잰걸음'",
-      "summary": "국내 이동통신 3사가 보안 분야 인재 확보에 열을 올리고 있다. 지난해 발생한 사이버 침해와 개인정보 유출 사고를 계기로 보안 체계를 강화한 데 이어 숙련된 전문 인력을 지속적으로 확보하려는 모습이다. 22일 업계에...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 통신3사, '보안 인력' 채용 릴레이…역량 강화 '잰걸음' 국내 이동통신 3사가 보안 분야\n2. 지난해 발생한 사이버 침해와 개인정보 유출 사고를 계기로 보안 체계를 강화한 데 이어 숙련",
-      "link": "https://www.newsway.co.kr/news/view?ud=2026092216422563791",
-      "source": "naver",
-      "published": "2026-09-23T07:14:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "인증만으론 못 막는다…PG사 개발·배포 '빈틈' 점검",
-      "summary": "외부 모의해킹이나 취약점 진단에서 문제가 확인되더라도 실제 개발 과정에서 수정되지 않거나 조치 이후 재검증이 이뤄지지 않으면 취약점은 그대로 남을 수 있다. 결국 보안 인증이나 취약점 진단 자체보다 개발·검수...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. PG사, 모의해킹 시에도 개발·배포 빈틈 노출.\n2. 취약점 미수정, 재검증 누락 시 보안 위협 발생.\n3. 보안 인증·진단보다 개발·검수 과정 중요.",
-      "link": "https://dealsite.co.kr/articles/169350",
-      "source": "naver",
-      "published": "2026-09-23T07:04:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-63431 - Horilla: Missing Authorization on Payroll Component Views Exposes Employee Salary Structures and Personal Loan Records (IDOR)",
+      "summary": "CVE ID :CVE-2026-63431\n  \nPublished : Sept. 25, 2026, 9:56 p.m. | 11 minutes ago\n  \nDescription :Horilla is an HR and CRM software. In 1.5.0-85 and earlier, payroll/views/component_views.py does not consistently authorize access in allowances_deductions_tab, view_single_allowance, and view_single_deduction before loading records selected by emp_id, allowance_id, or deduction_id. An authenticated employee can substitute those identifiers to read another employee's salary structure, allowance and deduction amounts, personal loan disbursements, and repayment schedules without owning the record or holding payroll-view permissions. No complete fixed version is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63431\n  \nPublished : Sept. 25, 2026, 9:56 p.m. | 11 minutes ago\n  \nDescription :Horilla is an HR and CRM software. In 1.5.0-85 and earlier, payroll/views/component_views.py does not consistently authorize access in allowances_deductions_tab, view_single_allowance, and view_single_deduction before loading records selected by emp_id, allowance_id, or deduction_id. An authenticated employee can substitute those identifiers to read another employee's salary structure, allowance and deduction amounts, personal loan disbursements, and repayment schedules without owning the record or holding payroll-view permissions. No complete fixed version is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-63431\n2. 26.09.26 오전6:56\n3. Horilla is an HR and CRM software. In 1.5.0-85 and",
+      "cve_id": "CVE-2026-63431",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63431",
+      "source": "cvefeed",
+      "published": "2026-09-26T06:56:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-6103 - Phar TAR phar_tar_number() Integer Overflow - Archive Entry Injection",
+      "summary": "CVE ID :CVE-2026-6103\n  \nPublished : Sept. 25, 2026, 9:17 p.m. | 50 minutes ago\n  \nDescription :phar_tar_number() parses the octal size field of a TAR header into a uint32_t with no overflow check. The field is 11 octal digits wide and holds values up to 0x1FFFFFFFF, so a size above 0xFFFFFFFF silently wraps. The parser then skips the wrong number of data blocks and interprets attacker-controlled file content as the next TAR header, which lets a crafted archive inject entries that PharData reports and extracts as if they were genuine.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-6103\n  \nPublished : Sept. 25, 2026, 9:17 p.m. | 50 minutes ago\n  \nDescription :phar_tar_number() parses the octal size field of a TAR header into a uint32_t with no overflow check. The field is 11 octal digits wide and holds values up to 0x1FFFFFFFF, so a size above 0xFFFFFFFF silently wraps. The parser then skips the wrong number of data blocks and interprets attacker-controlled file content as the next TAR header, which lets a crafted archive inject entries that PharData reports and extracts as if they were genuine.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-6103\n2. 26.09.26 오전6:17\n3. phar_tar_number() parses the octal size field of a",
+      "cve_id": "CVE-2026-6103",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6103",
+      "source": "cvefeed",
+      "published": "2026-09-26T06:17:23+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-100369 - CliInvoke: Argument Injection in Extensibility Runner Factory",
       "summary": "CVE ID :CVE-2026-100369\n  \nPublished : Sept. 25, 2026, 8:26 p.m. | 33 minutes ago\n  \nDescription :CliInvoke and its formerly named `AlastairLundy.CliInvoke` package are .NET libraries for invoking command-line programs and wrapping executable processes. `CliInvoke` versions 2.0.0 through 2.8.4, 2.9.0 through 2.9.3, 2.10.0 through 2.10.4, and 3.0.0-alpha.1 through 3.0.0-beta.1, as well as `AlastairLundy.CliInvoke` versions 2.0.0-alpha.1 through 2.0.0, contain an argument-injection vulnerability in `RunnerProcessFactory` on the 2.x line and `RunnerConfigurationFactory` on the 3.x line. These factories combine runner arguments, a caller-controlled target, and caller-controlled arguments into one `ProcessStartInfo.Arguments` string, allowing a double quote in the target or an argument to terminate an operating-system-level quoted region and inject unintended elements into the runner’s argument vector, potentially resulting in arbitrary command execution when a shell runner is used. The vulnerability is patched in `CliInvoke` versions 2.8.5, 2.9.4, 2.10.5, and 3.0.0-beta.2, and in `AlastairLundy.CliInvoke` version 2.0.2. No complete workaround is available; users unable to upgrade can partially mitigate the issue by removing double quotes from targets and arguments, additionally removing shell metacharacters when using shell runners, or bypassing the vulnerable factory and constructing a `ProcessConfiguration` with an explicit `ArgumentList`.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
