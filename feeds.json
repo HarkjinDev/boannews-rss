@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-26T05:32:16.157475+09:00",
+  "fetched_at": "2026-09-26T06:01:42.772641+09:00",
   "security_news": [
+    {
+      "title": "ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw",
+      "summary": "The Clop ransomware gang has moved its data leak site to a new Tor address after confirming its previous server was compromised and defaced through an unpatched Grav CMS flaw that BleepingComputer has learned is an unauthenticated path traversal vulnerability. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. ShinyHunters, Clop 랜섬웨어 사이트 해킹\n2. Grav CMS 취약점 이용, 서버 내용 변조\n3. Clop, 새 Tor 주소로 이전하여 운영",
+      "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-26T05:57:55+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[이승환 경감의 사기(詐欺) 심리학] 개인정보 노출 부주의",
+      "summary": "데이터가 유출된 웹사이트나 해킹된 이메일 등에서 털린 개인정보가 암암리에 거래되기도 한다. 사기 조직들은 이렇게 입수한 데이터를 활용해 표적 피싱(targeted phishing)을 시도한다. 사이버 사기의 절반 이상은 인간의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 개인정보 노출 부주의로 인한 데이터 유출, 암암리 거래.\n2. 사기 조직, 탈취한 개인정보로 표적 피싱 시도.\n3. 사이버 사기의 절반 이상이 인간 심리 악용.",
+      "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=320334",
+      "source": "naver",
+      "published": "2026-09-26T05:50:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "수파베이스 1만6000개 DB서 개인정보 노출",
       "summary": "사이버보안 기업 UpGuard(UpGuard)가 조사한 결과라고 테크크런치(TechCrunch)는 보도했다. 수파베이스는 웹·앱... 이번 사례는 인공지능으로 앱을 빠르게 개발하는 이른바 ‘바이브 코딩’ 과정에서 보안 설정이 누락될 수...",
@@ -1572,21 +1596,39 @@
       "source": "naver",
       "published": "2026-09-23T06:05:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "“비번 적은 종이 노트는 10년간 안털렸는데...”…잇단 해킹에 ‘오프...",
-      "summary": "3줄 요약 ㆍX 게시물 340만 조회…오프라인 보안 풍자 공감 ㆍ개인정보 유출 신고 447건, 62% 해킹 원인... 모든 것이 온라인에 저장되는 시대, 인터넷에 연결되지 않은 종이 노트가 역설적으로 ‘원격으로 해킹할 수 없는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. “비번 적은 종이 노트는 10년간 안털렸는데...”…잇단 해킹에 ‘오프...\n2. 3줄 요약 ㆍX 게시물 340만 조회…오프라인 보안 풍자 공감 ㆍ개인정보 유출 신고 447\n3. 모든 것이 온라인에 저장되는 시대, 인터넷에 연결되지 않은 종이 노트가 역설적으로 ‘원격으",
-      "link": "https://n.news.naver.com/mnews/article/023/0004000041?sid=105",
-      "source": "naver",
-      "published": "2026-09-23T06:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-100369 - CliInvoke: Argument Injection in Extensibility Runner Factory",
+      "summary": "CVE ID :CVE-2026-100369\n  \nPublished : Sept. 25, 2026, 8:26 p.m. | 33 minutes ago\n  \nDescription :CliInvoke and its formerly named `AlastairLundy.CliInvoke` package are .NET libraries for invoking command-line programs and wrapping executable processes. `CliInvoke` versions 2.0.0 through 2.8.4, 2.9.0 through 2.9.3, 2.10.0 through 2.10.4, and 3.0.0-alpha.1 through 3.0.0-beta.1, as well as `AlastairLundy.CliInvoke` versions 2.0.0-alpha.1 through 2.0.0, contain an argument-injection vulnerability in `RunnerProcessFactory` on the 2.x line and `RunnerConfigurationFactory` on the 3.x line. These factories combine runner arguments, a caller-controlled target, and caller-controlled arguments into one `ProcessStartInfo.Arguments` string, allowing a double quote in the target or an argument to terminate an operating-system-level quoted region and inject unintended elements into the runner’s argument vector, potentially resulting in arbitrary command execution when a shell runner is used. The vulnerability is patched in `CliInvoke` versions 2.8.5, 2.9.4, 2.10.5, and 3.0.0-beta.2, and in `AlastairLundy.CliInvoke` version 2.0.2. No complete workaround is available; users unable to upgrade can partially mitigate the issue by removing double quotes from targets and arguments, additionally removing shell metacharacters when using shell runners, or bypassing the vulnerable factory and constructing a `ProcessConfiguration` with an explicit `ArgumentList`.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-100369\n  \nPublished : Sept. 25, 2026, 8:26 p.m. | 33 minutes ago\n  \nDescription :CliInvoke and its formerly named `AlastairLundy.CliInvoke` package are .NET libraries for invoking command-line programs and wrapping executable processes. `CliInvoke` versions 2.0.0 through 2.8.4, 2.9.0 through 2.9.3, 2.10.0 through 2.10.4, and 3.0.0-alpha.1 through 3.0.0-beta.1, as well as `AlastairLundy.CliInvoke` versions 2.0.0-alpha.1 through 2.0.0, contain an argument-injection vulnerability in `RunnerProcessFactory` on the 2.x line and `RunnerConfigurationFactory` on the 3.x line. These factories combine runner arguments, a caller-controlled target, and caller-controlled arguments into one `ProcessStartInfo.Arguments` string, allowing a double quote in the target or an argument to terminate an operating-system-level quoted region and inject unintended elements into the runner’s argument vector, potentially resulting in arbitrary command execution when a shell runner is used. The vulnerability is patched in `CliInvoke` versions 2.8.5, 2.9.4, 2.10.5, and 3.0.0-beta.2, and in `AlastairLundy.CliInvoke` version 2.0.2. No complete workaround is available; users unable to upgrade can partially mitigate the issue by removing double quotes from targets and arguments, additionally removing shell metacharacters when using shell runners, or bypassing the vulnerable factory and constructing a `ProcessConfiguration` with an explicit `ArgumentList`.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-100369\n2. 26.09.26 오전5:26\n3. CliInvoke and its formerly named `AlastairLundy.Cl",
+      "cve_id": "CVE-2026-100369",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-100369",
+      "source": "cvefeed",
+      "published": "2026-09-26T05:26:51+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-17545 - PHP on Windows: Reserved Device Names Are Not Rejected Before File/Stream I/O which can cause DoS",
+      "summary": "CVE ID :CVE-2026-17545\n  \nPublished : Sept. 25, 2026, 8:18 p.m. | 42 minutes ago\n  \nDescription :On Windows, PHP's filesystem and stream APIs do not reject reserved device names such as CON, PRN, AUX, NUL, COM1 to COM9, LPT1 to LPT9, CONIN$ and CONOUT$ when they appear as a component of a path. An attacker-controlled filename therefore reaches CreateFileW() and opens a device instead of the regular file the application expected, which can block or hang the request and exhaust worker processes.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-17545\n  \nPublished : Sept. 25, 2026, 8:18 p.m. | 42 minutes ago\n  \nDescription :On Windows, PHP's filesystem and stream APIs do not reject reserved device names such as CON, PRN, AUX, NUL, COM1 to COM9, LPT1 to LPT9, CONIN$ and CONOUT$ when they appear as a component of a path. An attacker-controlled filename therefore reaches CreateFileW() and opens a device instead of the regular file the application expected, which can block or hang the request and exhaust worker processes.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-17545\n2. 26.09.26 오전5:18\n3. On Windows, PHP's filesystem and stream APIs do no",
+      "cve_id": "CVE-2026-17545",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-17545",
+      "source": "cvefeed",
+      "published": "2026-09-26T05:18:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-84458 - Zammad: Account takeover via unverified email matching during SSO auto-link",
       "summary": "CVE ID :CVE-2026-84458\n  \nPublished : Sept. 25, 2026, 7:17 p.m. | 37 minutes ago\n  \nDescription :Zammad is a web based open source helpdesk/customer support system. Prior to 7.1.2, when the \"Automatic account link on initial logon\" setting is enabled, Zammad binds an incoming third-party (SSO) identity to an existing local account by matching the email address the identity provider reports, without verifying that the provider actually confirmed ownership of that email. An attacker who controls any identity at a configured provider, including, by default, any Azure AD tenant via Zammad's multi-tenant Microsoft 365 /common app registration, can set that identity's email to a victim's address, authenticate, and be logged in as the victim. This bypasses the victim's local password entirely and affects any existing account, including agents and administrators. Zammad will honor the xms_edov ID token claim when email verification is required in the Microsoft 365 setting, treating a missing claim as unverified. This issue is fixed in version 7.1.2.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
