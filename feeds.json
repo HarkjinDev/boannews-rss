@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-25T22:03:12.787141+09:00",
+  "fetched_at": "2026-09-25T22:32:43.931723+09:00",
   "security_news": [
+    {
+      "title": "러시아 여당, 우크라戰 후 첫 총선서 압승…하원 78% 장악",
+      "summary": "러시아 중앙선관위는 이번 선거가 외부의 위협과 사이버 공격 속에서도 정상적으로 치러졌다고 주장했다. 선거 기간 선거관리 시스템을 겨냥한 디도스(DDoS·분산서비스거부) 공격 등이 발생했지만 결과에는 영향을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 러시아 여당, 우크라戰 후 첫 총선서 압승…하원 78% 장악 러시아 중앙선관위는 이번 선거\n2. 선거 기간 선거관리 시스템을 겨냥한 디도스(DDoS·분산서비스거부) 공격 등이 발생했지만 ",
+      "link": "https://n.news.naver.com/mnews/article/366/0001194416?sid=104",
+      "source": "naver",
+      "published": "2026-09-25T22:03:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "러 총선 집권당 349석 절대다수 확보…참전군인 46명 당선",
       "summary": "팜필로바 위원장은 총선 기간 러시아 선거시스템이 13차례에 걸쳐 총 468분간 분산서비스거부(DDoS·디도스) 공격을 받았는데, 보안 시스템이 이를 막아냈다고 말했다. 드미트리 페스코프 러시아 크렘린궁 대변인은 이날...",
@@ -1608,30 +1620,6 @@
       "source": "naver",
       "published": "2026-09-23T00:28:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "오픈AI, 생산 엔지니어 25% 보안 업무로 재배치",
-      "summary": "내부 시스템에 투입해 취약점을 찾고 패치·수정에 활용했다고 밝혔다. 오픈AI는 7월 내부 사이버보안 평가에서 일부 모델이 격리 통제를 우회해 인터넷에 접근하고 허깅페이스 시스템 일부를 침해했다고 설명했다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 오픈AI, 생산 엔지니어 25% 보안 업무로 재배치\n2. 내부 시스템 취약점 찾아내고 허깅페이스 침해 확인\n3. 모델 격리 통제 우회 등 보안 강화 조치 예정",
-      "link": "https://www.tokenpost.kr/news/breaking/412254",
-      "source": "naver",
-      "published": "2026-09-22T22:14:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "디링크 DIR-822A 공유기 ‘CVSS 10.0’ 제로데이…패치 없이 PoC 공개",
-      "summary": "디링크(D-Link)의 DIR-822A 무선 공유기에서 공격자가 인증 없이 원격으로 악성 코드를 실행할 가능성이 있는 최고 위험도의 보안 취약점이 발견됐다. 취약점을 이용하는 개념증명(PoC) 코드까지 공개된 가운데 아직 공식 패치가 제공되지 않아 해당 제품 사용자들의 주의가 요구된다.디링크가 9월 18일 공개한 보안 공지에 따르면 문제의 취약점은 CVE-2026-86296으로, DIR-822A의 DHCP 서버 기능을 담당하는 udhcpcd 컴포넌트에서 발생하는 스택 기반 버퍼 오버플로 취약점이다. 디링크는 CVSS v3.1과 CV",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 디링크 DIR-822A 공유기, CVSS 10.0 취약점(CVE-2026-86296) 발견\n2. 인증 없이 원격으로 악성코드 실행 가능, PoC 코드 이미 공개\n3. 공식 패치 없어 사용자 주의, udhcpcd 스택 버퍼 오버플로 발생",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208587",
-      "source": "dailysecu",
-      "published": "2026-09-22T22:07:42+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2803,36 +2791,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57099",
       "source": "msrc",
       "published": "2026-09-22T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-95667 - MISP Installer Log and FIFO Created World-Readable, Exposing Sensitive Credentials",
-      "summary": "CVE ID :CVE-2026-95667\n  \nPublished : Sept. 22, 2026, 1:11 p.m. | 37 minutes ago\n  \nDescription :The MISP installer scripts (for Debian 12, Debian 13, Ubuntu 24.04, and RHEL 9.4) create a log file at /var/log/misp_install.log and a named pipe (FIFO) at /var/log/misp_install.log.pipe to capture all installer output. The log captures highly sensitive data including the generated admin password, database passwords, GPG passphrase, and supervisor password. However, the log file was created by the tee command under the system default umask, resulting in world-readable permissions (typically 0644). Similarly, the FIFO was created with mkfifo without an explicit mode, also inheriting the default umask and remaining world-readable during the window before it was unlinked. \n\nAny local unprivileged user on the system could read the log file or the FIFO to obtain these credentials. \n\nAdditionally, the log file was not removed before creation, meaning a pre-existing symlink in /var/log could have been used to redirect the write to an arbitrary location.\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-95667\n  \nPublished : Sept. 22, 2026, 1:11 p.m. | 37 minutes ago\n  \nDescription :The MISP installer scripts (for Debian 12, Debian 13, Ubuntu 24.04, and RHEL 9.4) create a log file at /var/log/misp_install.log and a named pipe (FIFO) at /var/log/misp_install.log.pipe to capture all installer output. The log captures highly sensitive data including the generated admin password, database passwords, GPG passphrase, and supervisor password. However, the log file was created by the tee command under the system default umask, resulting in world-readable permissions (typically 0644). Similarly, the FIFO was created with mkfifo without an explicit mode, also inheriting the default umask and remaining world-readable during the window before it was unlinked. \n\nAny local unprivileged user on the system could read the log file or the FIFO to obtain these credentials. \n\nAdditionally, the log file was not removed before creation, meaning a pre-existing symlink in /var/log could have been used to redirect the write to an arbitrary location.\n\nVersion affected: <2.5.47\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-95667\n2. 26.09.22 오후10:11\n3. The MISP installer scripts (for Debian 12, Debian ",
-      "cve_id": "CVE-2026-95667",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95667",
-      "source": "cvefeed",
-      "published": "2026-09-22T22:11:44+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "LausivLoader analysis, or how to pass data between malware stages, (Thu, Sep 17th)",
-      "summary": "At the end of August, a malspam message was caught in the quarantine of a mail gateway operated by one of my customers. The message was not especially remarkable â€“ it asked the recipient to review some attached requirements and provide a price quotation for a fiber optic system and appeared to impersonate an employee of a legitimate company.\r",
-      "description": "At the end of August, a malspam message was caught in the quarantine of a mail gateway operated by one of my customers. The message was not especially remarkable â€“ it asked the recipient to review some attached requirements and provide a price quotation for a fiber optic system and appeared to impersonate an employee of a legitimate company.\r",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. LausivLoader analysis, or how to pass data between\n2. SANS_ISC\n3. At the end of August, a malspam message was caught",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33348",
-      "source": "sans_isc",
-      "published": "2026-09-22T22:10:20+09:00",
       "lang": "en"
     }
   ],
