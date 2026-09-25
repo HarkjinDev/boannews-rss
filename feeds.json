@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-25T15:32:24.929431+09:00",
+  "fetched_at": "2026-09-25T16:01:17.035110+09:00",
   "security_news": [
     {
       "title": "리플(XRP), 비트겟 해킹에 1억 290만 개 탈취…3억 5100만 달러 피해, 북...",
@@ -1872,45 +1872,24 @@
       "source": "naver",
       "published": "2026-09-22T16:12:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "국세청 사이버공격 8개월 만에 5만5천건…지난해의 5.8배 '폭증'",
-      "summary": "안 의원은 이번 국정감사에서 사이버공격 폭증 원인과 실제 침해 여부를 비롯해 공격 유형·경로별 취약점, 보안 전문인력과 예산, 실시간 탐지·차단체계 등 국세청의 사이버보안 대응체계와 원인을 집중 점검할...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국세청, 8개월간 5.5만 건 사이버 공격 발생\n2. 지난해 대비 5.8배 급증, 악성코드 유포 시도\n3. 국정감사서 국세청 사이버 보안 대응체계 점검",
-      "link": "https://www.sejungilbo.com/news/articleView.html?idxno=60259",
-      "source": "naver",
-      "published": "2026-09-22T15:48:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "KT 개인정보위 540억 과징금 '행정소송' 전망, 박윤영 해킹 관련 매출·...",
-      "summary": "박윤영 KT 대표이사 사장이 지난해 해킹사고에 따른 개인정보보호위원회의 539억7900만 원 과징금 처분을... 박윤영 KT 대표이사 사장(사진)이 지난해 해킹사고에 따른 개인정보보호위원회의 539억7900만 원 과징금 처분에...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. KT 개인정보위 540억 과징금 '행정소송' 전망, 박윤영 해킹 관련 매출·...\n2. 박윤영 KT 대표이사 사장이 지난해 해킹사고에 따른 개인정보보호위원회의 539억7900만 \n3. 박윤영 KT 대표이사 사장(사진)이 지난해 해킹사고에 따른 개인정보보호위원회의 539억79",
-      "link": "https://www.businesspost.co.kr/BP?command=article_view&num=447821",
-      "source": "naver",
-      "published": "2026-09-22T15:46:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "One Hidden Meta Muse Setting Could Let Attackers Turn the AI Assistant Into a Backdoor",
-      "summary": "Malware already running on a Mac can quietly take over Meta's Muse assistant and use the broad access its owner granted the app, security researcher Patrick Wardle has shown in a proof-of-concept released on September 21.\n\nIt works by changing a hidden setting so that when the user taps the microphone and dictates a prompt, the words go to the attacker instead of Meta.\n\nThe flaw is in",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. One Hidden Meta Muse Setting Could Let Attackers T\n2. It works by changing a hidden setting so that when\n3. The flaw is in",
-      "link": "https://thehackernews.com/2026/09/one-hidden-meta-muse-setting-could-let.html",
-      "source": "thehackernews",
-      "published": "2026-09-22T15:33:57+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-94376 - Better Messages <= 3.0.4 - Authenticated (Subscriber+) Stored DOM-Based Cross-Site Scripting via User Display Name",
+      "summary": "CVE ID :CVE-2026-94376\n  \nPublished : Sept. 25, 2026, 6:39 a.m. | 20 minutes ago\n  \nDescription :The Better Messages – Chat Rooms, Group Chat, Private Messages & AI Chat Bots plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via User Display Name in all versions up to, and including, 3.0.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is exploitable by Subscriber-level users because WordPress core's sanitize_text_field() preserves HTML-entity-encoded payloads (e.g., an iframe srcdoc attribute), allowing the encoded string to be stored as a display name without requiring the unfiltered_html capability, and the plugin subsequently decodes it server-side before rendering.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-94376\n  \nPublished : Sept. 25, 2026, 6:39 a.m. | 20 minutes ago\n  \nDescription :The Better Messages – Chat Rooms, Group Chat, Private Messages & AI Chat Bots plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via User Display Name in all versions up to, and including, 3.0.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is exploitable by Subscriber-level users because WordPress core's sanitize_text_field() preserves HTML-entity-encoded payloads (e.g., an iframe srcdoc attribute), allowing the encoded string to be stored as a display name without requiring the unfiltered_html capability, and the plugin subsequently decodes it server-side before rendering.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-94376\n2. 26.09.25 오후3:39\n3. The Better Messages – Chat Rooms, Group Chat, Priv",
+      "cve_id": "CVE-2026-94376",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-94376",
+      "source": "cvefeed",
+      "published": "2026-09-25T15:39:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-87722 - Regular Expression Denial of Service (ReDoS) in Search Query Predicates and REST Filter Endpoints in Gerrit Code Review",
       "summary": "CVE ID :CVE-2026-87722\n  \nPublished : Sept. 24, 2026, 10:03 p.m. | 22 minutes ago\n  \nDescription :Uncontrolled Resource Consumption (CWE-400 / CWE-1333) in regex search query predicates (such as RegexProjectPredicate, RegexRefPredicate, RegexPathPredicate, and sibling predicates) and REST regex filter endpoints (RegexListSearcher /projects/?r= and RefFilter /projects/{project}/branches/?r=) in Gerrit Code Review versions 2.1.6 through 3.12.9, 3.13.0 through 3.13.8, and 3.14.0 through 3.14.2 allows an unauthenticated remote attacker (or an authenticated user if anonymous read access is disabled) to cause a denial of service (CPU starvation and JVM heap exhaustion / OutOfMemoryError) via crafted search queries or REST API requests containing regular expressions with large counted repetitions or exponential DFA determinization patterns. Because the user-supplied regular expression is compiled into an unbounded dk.brics.automaton instance (new RegExp(re).toAutomaton()) on the request thread prior to index evaluation or access control visibility filtering, trivial queries can exhaust JVM heap or pin request threads regardless of heap size. This issue is fixed in Gerrit Code Review versions 3.12.10, 3.13.9, and 3.14.3.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
