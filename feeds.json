@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-25T13:01:06.889371+09:00",
+  "fetched_at": "2026-09-25T13:31:21.169616+09:00",
   "security_news": [
+    {
+      "title": "[단독]안보 위협 ‘중국산 인버터’…KS 인증받은 ‘태양광 인버터’ 6...",
+      "summary": "인터넷에 연결된 상태로 전력망에 전기를 집어넣는 ‘게이트웨이(관문)’ 역할을 하기 때문에, 인버터를 해킹 하거나 외부에서 조작하면 전력 공급을 조작할 수 있다. 제조 과정에서 ‘백도어’나 ‘악성코드’가...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KS 인증 태양광 인버터 6종, 중국산 부품 사용 의혹\n2. 제조 시 백도어/악성코드 심어 전력망 조작 가능성\n3. 인터넷 연결된 인버터, 안보 위협 및 전력 공급 차질 우려",
+      "link": "https://n.news.naver.com/mnews/article/021/0002821157?sid=101",
+      "source": "naver",
+      "published": "2026-09-25T13:27:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "국정감사 증인 누가 나오나.",
+      "summary": "최주희(티빙 대표) (증인) 10월 6일(화) : 티빙 해킹 및 고객 보상 관련. 윤상현(CJ ENM 대표이사) (증인) 10월 6일(화) : 종속회사 티빙의 대규모 개인정보 침해사고 관련 모회사 정보보호 거버넌스·투자·관리감독 관련....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 티빙 대표 최주희, CJ ENM 대표 윤상현 국감 증인 출석\n2. 티빙 해킹 및 개인정보 침해 사고, 고객 보상 및 모회사 관리감독 논의\n3. 10월 6일 증인 출석, 정보보호 거버넌스, 투자, 관리감독 이슈 부각",
+      "link": "https://slownews.kr/166960",
+      "source": "naver",
+      "published": "2026-09-25T13:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "비트겟서 XRP 1억293만개 무단 이체…라자루스 연계 가능성 제기",
       "summary": "탈취된 XRP 약 1억293만개가 북한 해킹그룹 라자루스와 연계된 과거 도난 자금 경로와 연결됐다는 온체인 분석도 나왔다. 비트겟은 25일 오전 3시31분(한국시간) 일부 핫월렛에서 무단 이체를 감지했다고 밝혔다....",
@@ -1944,18 +1968,6 @@
       "source": "naver",
       "published": "2026-09-22T13:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'4000만 유출' 티빙 비롯…유출사태 빚은 9개 기업, 줄줄이 국감증인",
-      "summary": "정보 해킹과 개인정보 침해·유출 사고를 빚은 기업 대표이사와 최고경영자가 줄줄이 올랐다. 명단 맨 위엔 최주희 티빙 대표와 티빙의 최대주주 CJENM의 윤상현 대표이사가 올랐다. 이들에 대해서는 해킹 사건과 고객...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. '4000만 유출' 티빙 비롯…유출사태 빚은 9개 기업, 줄줄이 국감증인 정보 해킹과 개인\n2. 명단 맨 위엔 최주희 티빙 대표와 티빙의 최대주주 CJENM의 윤상현 대표이사가 올랐다.\n3. 이들에 대해서는 해킹 사건과 고객...",
-      "link": "https://n.news.naver.com/mnews/article/006/0000137860?sid=100",
-      "source": "naver",
-      "published": "2026-09-22T13:29:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3007,21 +3019,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-87081",
       "source": "cvefeed",
       "published": "2026-09-22T16:25:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-19658 - Give Tributes <= 2.3.1 - Unauthenticated PHP Object Injection via 'give_tributes_ecard_notify[recipient][personalized][]' Parameter",
-      "summary": "CVE ID :CVE-2026-19658\n  \nPublished : Sept. 22, 2026, 4:27 a.m. | 30 minutes ago\n  \nDescription :The Give Tributes plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 2.3.1 via deserialization of untrusted input . This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present. This vulnerability is only reachable when the \"Allow Multiple Recipients\" option is enabled for the donation form, as the single-recipient code path applies sanitize_textarea_field() which would neutralize the payload. Exploitation additionally requires the eCard \"Custom Message\" option to be disabled, which is the plugin default: when it is enabled the personalized message becomes a required field and GiveWP's give_clean() blanks serialized input during validation, causing the donation to be rejected before it is stored.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-19658\n  \nPublished : Sept. 22, 2026, 4:27 a.m. | 30 minutes ago\n  \nDescription :The Give Tributes plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 2.3.1 via deserialization of untrusted input . This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present. This vulnerability is only reachable when the \"Allow Multiple Recipients\" option is enabled for the donation form, as the single-recipient code path applies sanitize_textarea_field() which would neutralize the payload. Exploitation additionally requires the eCard \"Custom Message\" option to be disabled, which is the plugin default: when it is enabled the personalized message becomes a required field and GiveWP's give_clean() blanks serialized input during validation, causing the donation to be rejected before it is stored.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-19658\n2. 26.09.22 오후1:27\n3. The Give Tributes plugin for WordPress is vulnerab",
-      "cve_id": "CVE-2026-19658",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-19658",
-      "source": "cvefeed",
-      "published": "2026-09-22T13:27:38+09:00",
       "lang": "en"
     }
   ],
