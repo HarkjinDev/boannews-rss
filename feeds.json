@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-26T18:31:30.880836+09:00",
+  "fetched_at": "2026-09-26T19:01:16.710248+09:00",
   "security_news": [
     {
       "title": "[보안칼럼] 클라우드 서비스의 사이버보안 확장 통제",
@@ -2377,21 +2377,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-96456",
       "source": "cvefeed",
       "published": "2026-09-23T20:17:18+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-96454 - Pake grants unrestricted IPC access to every HTTPS origin loaded in generated applications",
-      "summary": "CVE ID :CVE-2026-96454\n  \nPublished : Sept. 23, 2026, 9:56 a.m. | 9 minutes ago\n  \nDescription :Pake turns a website into a desktop application built on Tauri. Every application it generates inherits two settings from the upstream template, and together they hand native functionality to untrusted web content.\n\n\n\nThe first is in src-tauri/capabilities/default.json, which grants IPC access with \"remote\": { \"urls\": [\"https://*.*\"] }. That wildcard tells Tauri to accept IPC from any HTTPS origin, not just the site the application was built to wrap. The second is \"withGlobalTauri\": true in src-tauri/tauri.conf.json, which puts window.__TAURI__.core.invoke() in reach of ordinary page JavaScript.\n\n\n\nTauri's access control list only checks plugin commands, the ones prefixed with plugin:. Commands the application registers itself through generate_handler!, known as app commands, are never checked against the ACL. So once an origin holds IPC access, it can call every app command with nothing else standing in the way. Pake registers download_file as an app command, and it does not appear in the permissions list because it does not need to.\n\n\n\nThe practical effect is that any script running on any HTTPS page inside a Pake application can invoke the application's native commands. That includes third-party script the wrapped site loads on its own, such as analytics, advertising, or a compromised CDN. Anyone distributing their own Pake application gets the same access without asking for it. Chained with the path traversal in download_file that is tracked separately as CVE-2026-82635, this reaches arbitrary file write and persistent code execution.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-96454\n  \nPublished : Sept. 23, 2026, 9:56 a.m. | 9 minutes ago\n  \nDescription :Pake turns a website into a desktop application built on Tauri. Every application it generates inherits two settings from the upstream template, and together they hand native functionality to untrusted web content.\n\n\n\nThe first is in src-tauri/capabilities/default.json, which grants IPC access with \"remote\": { \"urls\": [\"https://*.*\"] }. That wildcard tells Tauri to accept IPC from any HTTPS origin, not just the site the application was built to wrap. The second is \"withGlobalTauri\": true in src-tauri/tauri.conf.json, which puts window.__TAURI__.core.invoke() in reach of ordinary page JavaScript.\n\n\n\nTauri's access control list only checks plugin commands, the ones prefixed with plugin:. Commands the application registers itself through generate_handler!, known as app commands, are never checked against the ACL. So once an origin holds IPC access, it can call every app command with nothing else standing in the way. Pake registers download_file as an app command, and it does not appear in the permissions list because it does not need to.\n\n\n\nThe practical effect is that any script running on any HTTPS page inside a Pake application can invoke the application's native commands. That includes third-party script the wrapped site loads on its own, such as analytics, advertising, or a compromised CDN. Anyone distributing their own Pake application gets the same access without asking for it. Chained with the path traversal in download_file that is tracked separately as CVE-2026-82635, this reaches arbitrary file write and persistent code execution.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-96454\n2. 26.09.23 오후6:56\n3. Pake turns a website into a desktop application bu",
-      "cve_id": "CVE-2026-96454",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-96454",
-      "source": "cvefeed",
-      "published": "2026-09-23T18:56:32+09:00",
       "lang": "en"
     }
   ],
