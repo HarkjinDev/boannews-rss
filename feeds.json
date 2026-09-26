@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-26T09:32:16.763547+09:00",
+  "fetched_at": "2026-09-26T10:01:24.703477+09:00",
   "security_news": [
+    {
+      "title": "나만 보던 챗GPT 사진 유출?…오픈AI, 수십곳 보안 침해 가능성",
+      "summary": "허깅페이스를 해킹한 사실이 드러났다. 이후 오픈AI는 모델의 학습과 평가 과정에서 나타나는 이상 행동을 검토했다. 최근에는 오픈AI의 한 에이전트가 호주 공공보건 서비스 웹사이트를 해킹해 공개 파일뿐 아니라...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 허깅페이스, 호주 공공보건 서비스 해킹\n2. 오픈AI 에이전트, 공개 파일 및 민감 정보 침해\n3. 수십 곳 보안 침해 가능성, 오픈AI 조사 중",
+      "link": "https://n.news.naver.com/mnews/article/018/0006375626?sid=101",
+      "source": "naver",
+      "published": "2026-09-26T09:36:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "트럼프까지 가세한 전세계 'AI종말론' 논쟁…정말 사기극일까[시사쇼]",
       "summary": "오픈AI는 내부 사이버보안 성능평가 과정에서 시험 중이던 AI 모델들이 인터넷과 격리하기 위해 설치한 통제... AI는 주어진 보안문제를 해결하는 과정에서 취약점을 발견하고 권한을 확대했으며, 결국 외부 인터넷에...",
@@ -1584,33 +1596,24 @@
       "source": "naver",
       "published": "2026-09-23T10:16:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "이훈기 \"계정 털린 티빙 보안인력 4명···성장 몰두, 이용자 보호 뒷전...",
-      "summary": "인천투데이=김도윤 기자 | 계정 3954만개가 해킹으로 유출된 국내 온라인동영상서비스(OTT) 티빙이 5년 간... 특히 티빙은 2024년 실시한 모의해킹에서 접속키를 소스코드에 그대로 저장하는 취약점을 발견하고도...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 이훈기 \"계정 털린 티빙 보안인력 4명···성장 몰두, 이용자 보호 뒷전...\n2. 인천투데이=김도윤 기자 | 계정 3954만개가 해킹으로 유출된 국내 온라인동영상서비스(OT\n3. 특히 티빙은 2024년 실시한 모의해킹에서 접속키를 소스코드에 그대로 저장하는 취약점을 발",
-      "link": "https://www.incheontoday.com/news/articleView.html?idxno=324111",
-      "source": "naver",
-      "published": "2026-09-23T09:52:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "티빙, 5년 새 매출 26배 늘었는데… 개인정보 보호 인력은 4명뿐",
-      "summary": "특히 티빙은 2024년 모의해킹에서 접속키를 소스 코드에 그대로 저장하는 취약점을 발견하고도 이를 개선하지 않았다. 침해사고 발생 당시에는 이상 징후가 나타난 지 약 14시간이 지나서야 정보보호 전담 조직과...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 티빙, 5년 새 매출 26배 늘었는데… 개인정보 보호 인력은 4명뿐 특히 티빙은 2024년\n2. 침해사고 발생 당시에는 이상 징후가 나타난 지 약 14시간이 지나서야 정보보호 전담 조직과",
-      "link": "https://news.ifm.kr/news/articleView.html?idxno=480095",
-      "source": "naver",
-      "published": "2026-09-23T09:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-57449 - Actual Sync Server: CORS Proxy GitHub API Allowlist Prefix Bypass Leaks Private Repositories Through the Server GitHub Token",
+      "summary": "CVE ID :CVE-2026-57449\n  \nPublished : Sept. 25, 2026, 11:16 p.m. | 39 minutes ago\n  \nDescription :Actual is a local-first personal finance tool. Prior to 26.7.0, Actual Sync Server's CORS proxy is intended to let authenticated users fetch resources only from repositories listed in the official plugin allowlist. When `ACTUAL_GITHUB_TOKEN` is configured, the proxy automatically attaches the server's GitHub token to GitHub requests. The GitHub API allowlist check uses a raw `startsWith()` prefix test for `/repos/{owner}/{repo}` without requiring a path boundary after the repository name. If an allowlisted public plugin repository is `https://github.com/acme/plugin`, the proxy also accepts GitHub API URLs. Those URLs are outside the allowlisted repository but still pass because their API path starts with `/repos/acme/plugin`. The proxy then forwards the request with the server's `ACTUAL_GITHUB_TOKEN`, allowing any authenticated Actual user to read private GitHub resources reachable by that token. Version 26.7.0 fixes the issue.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-57449\n  \nPublished : Sept. 25, 2026, 11:16 p.m. | 39 minutes ago\n  \nDescription :Actual is a local-first personal finance tool. Prior to 26.7.0, Actual Sync Server's CORS proxy is intended to let authenticated users fetch resources only from repositories listed in the official plugin allowlist. When `ACTUAL_GITHUB_TOKEN` is configured, the proxy automatically attaches the server's GitHub token to GitHub requests. The GitHub API allowlist check uses a raw `startsWith()` prefix test for `/repos/{owner}/{repo}` without requiring a path boundary after the repository name. If an allowlisted public plugin repository is `https://github.com/acme/plugin`, the proxy also accepts GitHub API URLs. Those URLs are outside the allowlisted repository but still pass because their API path starts with `/repos/acme/plugin`. The proxy then forwards the request with the server's `ACTUAL_GITHUB_TOKEN`, allowing any authenticated Actual user to read private GitHub resources reachable by that token. Version 26.7.0 fixes the issue.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-57449\n2. 26.09.26 오전8:16\n3. Actual is a local-first personal finance tool. Pri",
+      "cve_id": "CVE-2026-57449",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57449",
+      "source": "cvefeed",
+      "published": "2026-09-26T08:16:53+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-63431 - Horilla: Missing Authorization on Payroll Component Views Exposes Employee Salary Structures and Personal Loan Records (IDOR)",
       "summary": "CVE ID :CVE-2026-63431\n  \nPublished : Sept. 25, 2026, 9:56 p.m. | 11 minutes ago\n  \nDescription :Horilla is an HR and CRM software. In 1.5.0-85 and earlier, payroll/views/component_views.py does not consistently authorize access in allowances_deductions_tab, view_single_allowance, and view_single_deduction before loading records selected by emp_id, allowance_id, or deduction_id. An authenticated employee can substitute those identifiers to read another employee's salary structure, allowance and deduction amounts, personal loan disbursements, and repayment schedules without owning the record or holding payroll-view permissions. No complete fixed version is available as of this review.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2764,21 +2767,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-89425",
       "source": "cvefeed",
       "published": "2026-09-23T12:17:04+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Macfinger ClickFix campaign, (Tue, Sep 22nd)",
-      "summary": "Introduction\r",
-      "description": "Introduction\r",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Macfinger ClickFix campaign, (Tue, Sep 22nd)\n2. SANS_ISC\n3. Introduction",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33360",
-      "source": "sans_isc",
-      "published": "2026-09-23T09:55:11+09:00",
       "lang": "en"
     }
   ],
