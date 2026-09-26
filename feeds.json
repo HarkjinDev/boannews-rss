@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-27T05:01:21.709493+09:00",
+  "fetched_at": "2026-09-27T05:32:12.374004+09:00",
   "security_news": [
+    {
+      "title": "XRP, 9월 안에 1.7달러 갈 확률 32%로 '뚝'...칼시 계약가 0.32달러까지 ...",
+      "summary": "여기에 비트코인(Bitcoin, BTC)이 8만 4,000달러 선에 머물며 횡보하는 시장 분위기와 비트겟(Bitget) 해킹으로 유출된 1억 5,700만 달러 규모의 XRP 동결 불가 물량도 부담 요인으로 지목된다. 단기 전망 위축과 달리...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 비트겟, 1.57억 달러 XRP 유출\n2. 비트코인 8.4만 달러 횡보, XRP 전망 위축\n3. XRP 9월 1.7달러 갈 확률 32%",
+      "link": "http://coinreaders.com/260249",
+      "source": "naver",
+      "published": "2026-09-27T05:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "'선풍적 인기' 메타 AI에이전트 '뮤즈'에 취약점…\"경고 강화\"",
       "summary": "이용자가 뮤즈에 악성코드가 있는 웹사이트 링크를 주고 이를 요약하거나 정리해달라고 요청할 경우 이 같은 해킹 공격이 발생할 수 있었다. 이에 따라 메타는 해당 웹사이트의 악성코드 감염이 의심될 경우 이용자가...",
@@ -1212,18 +1224,6 @@
       "source": "naver",
       "published": "2026-09-24T05:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[모닝 뉴스브리핑] XRP 지갑 6678개서 2000만달러 유출 外",
-      "summary": "AI 에이전트 확산으로 실시간 자율 통제형 보안 모델이 부상하고 있다. AI 에이전트가 외부 도구와 데이터를 자율적으로 다루면서 사람의 승인과 사후 대응을 전제로 한 기존 사이버보안 모델의 한계가...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [모닝 뉴스브리핑] XRP 지갑 6678개서 2000만달러 유출 外 AI 에이전트 확산으로\n2. AI 에이전트가 외부 도구와 데이터를 자율적으로 다루면서 사람의 승인과 사후 대응을 전제로",
-      "link": "https://www.tokenpost.kr/news/briefing/413121",
-      "source": "naver",
-      "published": "2026-09-24T05:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2290,21 +2290,6 @@
       "link": "https://isc.sans.edu/diary/rss/33364",
       "source": "sans_isc",
       "published": "2026-09-24T12:50:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-67240 - RabbitMQ: ReDoS via AMQP 1.0 SQL filter LIKE wildcard",
-      "summary": "CVE ID :CVE-2026-67240\n  \nPublished : Sept. 23, 2026, 8:19 p.m. | 27 minutes ago\n  \nDescription :RabbitMQ is a messaging and streaming broker. Prior to versions 4.2.7 and 4.3.1, pattern_to_regex maps % -> .*? and _ -> ., then compiles ^...$ with only [unicode]; re:run is called with only [{capture, none}] - no explicit match_limit. A pattern like %_%_..._%X becomes ^.*?..*?.....*?.X$ with overlapping lazy quantifiers. The whole-expression cap is ?MAX_EXPRESSION_LENGTH=4096 chars / ?MAX_TOKENS=200; a LIKE string literal is one token, so ~2000 %_ pairs fit. SQL filters are accepted unconditionally at rabbit_amqp_session.erl:3264 (no feature flag). Evaluated per-message at rabbit_stream_queue.erl:1439. OTP's default 10M match_limit caps each match at ~100-200 ms (not seconds), and the re NIF yields to the scheduler. An authenticated AMQP 1.0 consumer with read+write on a stream queue can cause ~100-200 ms of CPU per delivered message via a crafted LIKE filter, multiplied across thousands of messages and parallel sessions - a substantial backtracking-driven CPU amplification. Preconditions include AMQP 1.0 with stream queues in use Attacker can attach a receiver with a filter (read permission) and publish messages with long property values (write permission). This issue is fixed in versions 4.2.7 and 4.3.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-67240\n  \nPublished : Sept. 23, 2026, 8:19 p.m. | 27 minutes ago\n  \nDescription :RabbitMQ is a messaging and streaming broker. Prior to versions 4.2.7 and 4.3.1, pattern_to_regex maps % -> .*? and _ -> ., then compiles ^...$ with only [unicode]; re:run is called with only [{capture, none}] - no explicit match_limit. A pattern like %_%_..._%X becomes ^.*?..*?.....*?.X$ with overlapping lazy quantifiers. The whole-expression cap is ?MAX_EXPRESSION_LENGTH=4096 chars / ?MAX_TOKENS=200; a LIKE string literal is one token, so ~2000 %_ pairs fit. SQL filters are accepted unconditionally at rabbit_amqp_session.erl:3264 (no feature flag). Evaluated per-message at rabbit_stream_queue.erl:1439. OTP's default 10M match_limit caps each match at ~100-200 ms (not seconds), and the re NIF yields to the scheduler. An authenticated AMQP 1.0 consumer with read+write on a stream queue can cause ~100-200 ms of CPU per delivered message via a crafted LIKE filter, multiplied across thousands of messages and parallel sessions - a substantial backtracking-driven CPU amplification. Preconditions include AMQP 1.0 with stream queues in use Attacker can attach a receiver with a filter (read permission) and publish messages with long property values (write permission). This issue is fixed in versions 4.2.7 and 4.3.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-67240\n2. 26.09.24 오전5:19\n3. RabbitMQ is a messaging and streaming broker. Prio",
-      "cve_id": "CVE-2026-67240",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-67240",
-      "source": "cvefeed",
-      "published": "2026-09-24T05:19:22+09:00",
       "lang": "en"
     }
   ],
