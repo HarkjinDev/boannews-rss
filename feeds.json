@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-26T23:31:18.006190+09:00",
+  "fetched_at": "2026-09-27T00:01:24.031157+09:00",
   "security_news": [
     {
       "title": "'티빙 개인정보 유출' 보안 재정비…최주희·윤상현 국감 선다",
@@ -1239,6 +1239,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-100717 - froxlor before 2.3.12 CRLF Injection via validateUrl userinfo",
+      "summary": "CVE ID :CVE-2026-100717\n  \nPublished : Sept. 26, 2026, 1:24 p.m. | 40 minutes ago\n  \nDescription :froxlor is a server administration panel. In versions 2.3.10 and earlier, Validate::validateUrl rejects carriage return and line feed characters only in the path, query and fragment components returned by parse_url, and never inspects the userinfo (user:pass@) components. This is an incomplete fix for GHSA-c3p2. An authenticated low-privilege customer with subdomain-create rights (no admin or change_serversettings privilege required) can supply a subdomain redirect URL that carries a CR/LF payload in the userinfo portion (e.g. http://user%0areturn 200 \"pwned\";%0a@evil.com/). The value passes validation, survives IDNA encoding, and is written verbatim into the generated nginx or Apache vhost configuration, allowing the attacker to break out of the emitted directive and inject arbitrary web-server configuration lines. froxlor regenerates and reloads the web-server configuration as root, so the injected directives take effect server-wide and can hijack responses or read local files. The issue is fixed in version 2.3.12.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-100717\n  \nPublished : Sept. 26, 2026, 1:24 p.m. | 40 minutes ago\n  \nDescription :froxlor is a server administration panel. In versions 2.3.10 and earlier, Validate::validateUrl rejects carriage return and line feed characters only in the path, query and fragment components returned by parse_url, and never inspects the userinfo (user:pass@) components. This is an incomplete fix for GHSA-c3p2. An authenticated low-privilege customer with subdomain-create rights (no admin or change_serversettings privilege required) can supply a subdomain redirect URL that carries a CR/LF payload in the userinfo portion (e.g. http://user%0areturn 200 \"pwned\";%0a@evil.com/). The value passes validation, survives IDNA encoding, and is written verbatim into the generated nginx or Apache vhost configuration, allowing the attacker to break out of the emitted directive and inject arbitrary web-server configuration lines. froxlor regenerates and reloads the web-server configuration as root, so the injected directives take effect server-wide and can hijack responses or read local files. The issue is fixed in version 2.3.12.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-100717\n2. 26.09.26 오후10:24\n3. froxlor is a server administration panel. In versi",
+      "cve_id": "CVE-2026-100717",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-100717",
+      "source": "cvefeed",
+      "published": "2026-09-26T22:24:08+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-100705 - Kyverno before 1.19.1 SSRF via legacy apiCall service executor",
+      "summary": "CVE ID :CVE-2026-100705\n  \nPublished : Sept. 26, 2026, 1:23 p.m. | 40 minutes ago\n  \nDescription :Kyverno before 1.19.1 is vulnerable to server-side request forgery. The default egress blocklist (169.254.169.254, 169.254.169.253, metadata.google.internal, 127.0.0.0/8, ::1/128) and the scoped-token control were wired only into the new CEL http.Get/Post library and were never applied to the legacy apiCall service executor (pkg/engine/apicall/executor.go) or to the GlobalContextEntry external-API path, which handle every non-CEL context[].apiCall.service call. Because these paths use a plain net/http client with no egress filtering and no validation of the configured service URL, a ClusterPolicy or GlobalContextEntry author — or, where a deployed policy templates the service URL from the admission resource, a lower-privileged resource submitter — can cause Kyverno to issue GET/POST requests to an arbitrary host, including the cloud metadata endpoint, loopback, and any in-cluster service, reading cloud instance credentials and reaching internal endpoints with Kyverno's network position. The executor also unconditionally attaches Kyverno's projected ServiceAccount token to the attacker-chosen destination; the token is audience-scoped, limiting its replay value. Fixed in 1.19.1.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-100705\n  \nPublished : Sept. 26, 2026, 1:23 p.m. | 40 minutes ago\n  \nDescription :Kyverno before 1.19.1 is vulnerable to server-side request forgery. The default egress blocklist (169.254.169.254, 169.254.169.253, metadata.google.internal, 127.0.0.0/8, ::1/128) and the scoped-token control were wired only into the new CEL http.Get/Post library and were never applied to the legacy apiCall service executor (pkg/engine/apicall/executor.go) or to the GlobalContextEntry external-API path, which handle every non-CEL context[].apiCall.service call. Because these paths use a plain net/http client with no egress filtering and no validation of the configured service URL, a ClusterPolicy or GlobalContextEntry author — or, where a deployed policy templates the service URL from the admission resource, a lower-privileged resource submitter — can cause Kyverno to issue GET/POST requests to an arbitrary host, including the cloud metadata endpoint, loopback, and any in-cluster service, reading cloud instance credentials and reaching internal endpoints with Kyverno's network position. The executor also unconditionally attaches Kyverno's projected ServiceAccount token to the attacker-chosen destination; the token is audience-scoped, limiting its replay value. Fixed in 1.19.1.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-100705\n2. 26.09.26 오후10:23\n3. Kyverno before 1.19.1 is vulnerable to server-side",
+      "cve_id": "CVE-2026-100705",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-100705",
+      "source": "cvefeed",
+      "published": "2026-09-26T22:23:59+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-100701 - Nodemailer 5.0.0 through 10.0.1 TLS servername Cache Confusion",
+      "summary": "CVE ID :CVE-2026-100701\n  \nPublished : Sept. 26, 2026, 1:23 p.m. | 40 minutes ago\n  \nDescription :Nodemailer versions 5.0.0 through 10.0.1 use a process-global DNS cache that is keyed only by the DNS host, while each cache entry also stores the caller-specific TLS servername. When two direct TLS/SMTPS transports (secure: true) resolve the same non-IP host with different tls.servername values, the first transport's servername is returned on the cache hit and overwrites the second transport's explicitly configured value, so Nodemailer sends the wrong SNI value and validates the peer certificate against the wrong identity. In multi-tenant services or SNI-routed SMTP gateways, an attacker who can prime the cache can cause a victim transport to connect to the attacker's TLS virtual host and accept the attacker's certificate even with rejectUnauthorized: true, disclosing the victim's SMTP credentials. Fixed in 10.0.2.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-100701\n  \nPublished : Sept. 26, 2026, 1:23 p.m. | 40 minutes ago\n  \nDescription :Nodemailer versions 5.0.0 through 10.0.1 use a process-global DNS cache that is keyed only by the DNS host, while each cache entry also stores the caller-specific TLS servername. When two direct TLS/SMTPS transports (secure: true) resolve the same non-IP host with different tls.servername values, the first transport's servername is returned on the cache hit and overwrites the second transport's explicitly configured value, so Nodemailer sends the wrong SNI value and validates the peer certificate against the wrong identity. In multi-tenant services or SNI-routed SMTP gateways, an attacker who can prime the cache can cause a victim transport to connect to the attacker's TLS virtual host and accept the attacker's certificate even with rejectUnauthorized: true, disclosing the victim's SMTP credentials. Fixed in 10.0.2.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-100701\n2. 26.09.26 오후10:23\n3. Nodemailer versions 5.0.0 through 10.0.1 use a pro",
+      "cve_id": "CVE-2026-100701",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-100701",
+      "source": "cvefeed",
+      "published": "2026-09-26T22:23:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-100312 - mathurvishal CloudClassroom-PHP-Project updateguest.php sql injection",
       "summary": "CVE ID :CVE-2026-100312\n  \nPublished : Sept. 26, 2026, 8:45 a.m. | 15 minutes ago\n  \nDescription :A security flaw has been discovered in mathurvishal CloudClassroom-PHP-Project up to 5dadec098bfbbf3300d60c3494db3fb95b66e7be. The impacted element is an unknown function of the file /updateguest.php. Performing a manipulation of the argument gname/editassid results in sql injection. It is possible to initiate the attack remotely. The exploit has been released to the public and may be used for attacks. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The vendor was contacted early about this disclosure but did not respond in any way.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
