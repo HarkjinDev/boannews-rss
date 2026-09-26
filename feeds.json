@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-27T04:02:11.440935+09:00",
+  "fetched_at": "2026-09-27T04:32:20.790918+09:00",
   "security_news": [
+    {
+      "title": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks",
+      "summary": "The ShinyHunters extortion gang is using a URL-encoding trick to bypass web application firewall rules that mitigate the Oracle PeopleSoft CVE-2026-35273 flaw, allowing the threat actors to resume widespread exploitation of a flaw on vulnerable servers. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. ShinyHunters uses WAF bypass trick in Oracle Peopl",
+      "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/",
+      "source": "bleepingcomputer",
+      "published": "2026-09-27T04:03:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "'티빙 개인정보 유출' 보안 재정비…최주희·윤상현 국감 선다",
       "summary": "이와 함께 AI(인공지능) 기반 보안 위협 탐지·차단 기술을 적용하고 클라우드 계정·권한까지 모의해킹과 취약점 진단 범위를 확대할 계획이다. 보안 취약점을 찾아 신고하면 보상을 지급하는 '버그바운티' 도입도...",
@@ -1227,6 +1239,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-97163 - Joomla Extension - lomart.fr - Unauthenticated remote code installation in UP plugin extension 5.0.0-5.2.0, 6.0.0-6.0.29",
+      "summary": "CVE ID :CVE-2026-97163\n  \nPublished : Sept. 26, 2026, 3:16 p.m. | 2 hours, 20 minutes ago\n  \nDescription :Joomla Extension - lomart.fr - Unauthenticated remote code installation in UP plugin extension 5.0.0-5.2.0, 6.0.0-6.0.29\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-97163\n  \nPublished : Sept. 26, 2026, 3:16 p.m. | 2 hours, 20 minutes ago\n  \nDescription :Joomla Extension - lomart.fr - Unauthenticated remote code installation in UP plugin extension 5.0.0-5.2.0, 6.0.0-6.0.29\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-97163\n2. 26.09.27 오전12:16\n3. Joomla Extension - lomart.fr - Unauthenticated rem",
+      "cve_id": "CVE-2026-97163",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-97163",
+      "source": "cvefeed",
+      "published": "2026-09-27T00:16:55+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-100717 - froxlor before 2.3.12 CRLF Injection via validateUrl userinfo",
       "summary": "CVE ID :CVE-2026-100717\n  \nPublished : Sept. 26, 2026, 1:24 p.m. | 40 minutes ago\n  \nDescription :froxlor is a server administration panel. In versions 2.3.10 and earlier, Validate::validateUrl rejects carriage return and line feed characters only in the path, query and fragment components returned by parse_url, and never inspects the userinfo (user:pass@) components. This is an incomplete fix for GHSA-c3p2. An authenticated low-privilege customer with subdomain-create rights (no admin or change_serversettings privilege required) can supply a subdomain redirect URL that carries a CR/LF payload in the userinfo portion (e.g. http://user%0areturn 200 \"pwned\";%0a@evil.com/). The value passes validation, survives IDNA encoding, and is written verbatim into the generated nginx or Apache vhost configuration, allowing the attacker to break out of the emitted directive and inject arbitrary web-server configuration lines. froxlor regenerates and reloads the web-server configuration as root, so the injected directives take effect server-wide and can hijack responses or read local files. The issue is fixed in version 2.3.12.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
