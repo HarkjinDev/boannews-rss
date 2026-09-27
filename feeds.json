@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-28T04:01:08.239805+09:00",
+  "fetched_at": "2026-09-28T04:31:05.318696+09:00",
   "security_news": [
     {
       "title": "韓·中 로봇청소기 안방 전쟁… 다이슨까지 참전",
@@ -1492,6 +1492,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-101047 - Fleet before 4.87.0 Unauthenticated iOS App Download via Predictable URLs",
+      "summary": "CVE ID :CVE-2026-101047\n  \nPublished : Sept. 27, 2026, 6:16 p.m. | 30 minutes ago\n  \nDescription :Fleet before 4.87.0 does not protect the two endpoints that serve in-house iOS application packages and manifests (enterprise tier only) with the intended random, time-limited URL token. Because Apple's InstallEnterpriseApplication MDM command requires these URLs to be reachable without a Fleet session, they cannot rely on session-based authentication, and the missing token allows an unauthenticated attacker with network access to the Fleet server to download in-house IPA binaries and their metadata (bundle identifier, version, and name) by guessing sequential title identifiers. The impact is limited to read-only disclosure; there is no privilege escalation or write access, and the free tier is unaffected (it returns fleet.ErrMissingLicense).\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-101047\n  \nPublished : Sept. 27, 2026, 6:16 p.m. | 30 minutes ago\n  \nDescription :Fleet before 4.87.0 does not protect the two endpoints that serve in-house iOS application packages and manifests (enterprise tier only) with the intended random, time-limited URL token. Because Apple's InstallEnterpriseApplication MDM command requires these URLs to be reachable without a Fleet session, they cannot rely on session-based authentication, and the missing token allows an unauthenticated attacker with network access to the Fleet server to download in-house IPA binaries and their metadata (bundle identifier, version, and name) by guessing sequential title identifiers. The impact is limited to read-only disclosure; there is no privilege escalation or write access, and the free tier is unaffected (it returns fleet.ErrMissingLicense).\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-101047\n2. 26.09.28 오전3:16\n3. Fleet before 4.87.0 does not protect the two endpo",
+      "cve_id": "CVE-2026-101047",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-101047",
+      "source": "cvefeed",
+      "published": "2026-09-28T03:16:31+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-101041 - Vulnerability-Lookup - Race Condition in Account Recovery Token Consumption Allows Password Takeover",
       "summary": "CVE ID :CVE-2026-101041\n  \nPublished : Sept. 27, 2026, 3:16 p.m. | 49 minutes ago\n  \nDescription :The account recovery (password reset) functionality in the vulnerability-lookup web application contains a time-of-check-to-time-of-use (TOCTOU) race condition in the consumption of single-use recovery tokens. The original implementation verified the token nonce against the stored digest and then consumed (cleared) it in separate database operations. Two concurrent HTTP requests presenting the same valid recovery token could both pass the verification check before either transaction committed, allowing both to set their own password on the target account. The last transaction to commit overwrites the first, enabling an attacker who possesses a valid recovery token to replace the legitimate user's password with one of their choosing.\n\nA secondary defect in the same endpoint (confirm_account) allowed a valid recovery link to be used to set an empty or trivially short password (e.g., three characters). The view handler performed only a manual equality comparison between the two password fields and never invoked the form's validation logic, bypassing the intended minimum-length and complexity constraints.\n\nThe affected component is the user account recovery endpoint (/user/confirm_account/) and the associated token verification and consumption logic in the User model (website/models/user.py) and the view layer (website/web/views/user.py).\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-101041\n  \nPublished : Sept. 27, 2026, 3:16 p.m. | 49 minutes ago\n  \nDescription :The account recovery (password reset) functionality in the vulnerability-lookup web application contains a time-of-check-to-time-of-use (TOCTOU) race condition in the consumption of single-use recovery tokens. The original implementation verified the token nonce against the stored digest and then consumed (cleared) it in separate database operations. Two concurrent HTTP requests presenting the same valid recovery token could both pass the verification check before either transaction committed, allowing both to set their own password on the target account. The last transaction to commit overwrites the first, enabling an attacker who possesses a valid recovery token to replace the legitimate user's password with one of their choosing.\n\nA secondary defect in the same endpoint (confirm_account) allowed a valid recovery link to be used to set an empty or trivially short password (e.g., three characters). The view handler performed only a manual equality comparison between the two password fields and never invoked the form's validation logic, bypassing the intended minimum-length and complexity constraints.\n\nThe affected component is the user account recovery endpoint (/user/confirm_account/) and the associated token verification and consumption logic in the User model (website/models/user.py) and the view layer (website/web/views/user.py).\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2164,21 +2179,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-93353",
       "source": "cvefeed",
       "published": "2026-09-25T05:29:36+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-89325 - Rapid7 Insight Agent: Uncontrolled search path element in InsightVM assessment content leads to local privilege escalation",
-      "summary": "CVE ID :CVE-2026-89325\n  \nPublished : Sept. 24, 2026, 7:17 p.m. | 43 minutes ago\n  \nDescription :An uncontrolled search path element in InsightVM assessment content in Rapid7 Insight Agent on Windows allows a local, low-privileged user to execute arbitrary code as SYSTEM via a planted executable resolved from the machine PATH.\n\nAssessment content at or below version 0.0.261.0 included a check that invoked the `code` command without a fully qualified path from a process running as SYSTEM. The command was resolved against the machine PATH environment variable at execution time. Where the machine PATH contained a directory writable by non-administrative users and ordered ahead of the legitimate Visual Studio Code installation, a local user could place an executable named `code` in that directory and cause the agent to execute it with SYSTEM privileges.\n\nThe version range above refers to InsightVM assessment content versions, not Insight Agent versions. All Insight Agent versions were affected while running assessment content at or below 0.0.261.0. Assessment content is delivered to all Insight Agents via the Rapid7 Insight Platform independently of the Insight Agent version and is not customer-managed.\n\nThis issue was resolved in assessment content version 0.0.269.0, which was made generally available on September 15, 2026. Remediation was deployed automatically and no customer action is required.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-89325\n  \nPublished : Sept. 24, 2026, 7:17 p.m. | 43 minutes ago\n  \nDescription :An uncontrolled search path element in InsightVM assessment content in Rapid7 Insight Agent on Windows allows a local, low-privileged user to execute arbitrary code as SYSTEM via a planted executable resolved from the machine PATH.\n\nAssessment content at or below version 0.0.261.0 included a check that invoked the `code` command without a fully qualified path from a process running as SYSTEM. The command was resolved against the machine PATH environment variable at execution time. Where the machine PATH contained a directory writable by non-administrative users and ordered ahead of the legitimate Visual Studio Code installation, a local user could place an executable named `code` in that directory and cause the agent to execute it with SYSTEM privileges.\n\nThe version range above refers to InsightVM assessment content versions, not Insight Agent versions. All Insight Agent versions were affected while running assessment content at or below 0.0.261.0. Assessment content is delivered to all Insight Agents via the Rapid7 Insight Platform independently of the Insight Agent version and is not customer-managed.\n\nThis issue was resolved in assessment content version 0.0.269.0, which was made generally available on September 15, 2026. Remediation was deployed automatically and no customer action is required.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-89325\n2. 26.09.25 오전4:17\n3. An uncontrolled search path element in InsightVM a",
-      "cve_id": "CVE-2026-89325",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-89325",
-      "source": "cvefeed",
-      "published": "2026-09-25T04:17:19+09:00",
       "lang": "en"
     }
   ],
