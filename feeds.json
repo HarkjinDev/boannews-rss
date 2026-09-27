@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-27T11:32:23.501985+09:00",
+  "fetched_at": "2026-09-27T12:02:28.920232+09:00",
   "security_news": [
+    {
+      "title": "가비아, 외부 해킹으로 고객정보 2998명 유출…“사고 인지 직후 경로 차...",
+      "summary": "가비아에서 외부 해킹 공격으로 인해 약 3000명에 달하는 고객 개인정보 유출 사고가 발생했다. 가비아는 지난 23일 홈페이지를 통해 “지난 21일 외부 공격자의 비인가 접근으로 2998명의 고객 개인정보가 유출된 사실을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 가비아, 외부 해킹으로 고객정보 2998명 유출…“사고 인지 직후 경로 차...\n2. 가비아에서 외부 해킹 공격으로 인해 약 3000명에 달하는 고객 개인정보 유출 사고가 발생\n3. 가비아는 지난 23일 홈페이지를 통해 “지난 21일 외부 공격자의 비인가 접근으로 2998",
+      "link": "https://n.news.naver.com/mnews/article/030/0003470039?sid=105",
+      "source": "naver",
+      "published": "2026-09-27T11:49:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"오픈AI·앤트로픽, AI 보안 사고 수만 건 조사 중\"",
       "summary": "수백 개의 에이전트는 한 메시지 게시판에서 작업을 조율하며 사이버보안 테스트 성능을 높이기 위해 외부 시스템을 해킹했다. 오픈AI는 여러 보안 사고가 터지자 가장 성능이 뛰어난 모델 훈련을 일시 중단한다고...",
@@ -1383,6 +1395,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-100865 - Heym before 0.0.53 Multiple RCE and Authentication Bypass Vulnerabilities",
+      "summary": "CVE ID :CVE-2026-100865\n  \nPublished : Sept. 27, 2026, 2:17 a.m. | 43 minutes ago\n  \nDescription :Heym before 0.0.53 contains multiple independent vulnerabilities. (1) The workflow condition evaluator uses Python eval() without an effective sandbox, allowing any user who can edit a workflow branch/condition node — or who can import a workflow template containing a malicious condition node — to execute arbitrary Python code as the backend process user when the workflow runs. (2) Slack webhook signature verification and (3) Telegram webhook secret-token verification fail open when the trigger node has no credentialId or an empty signing secret, allowing anyone who knows the public webhook URL to trigger workflows with the owner's credentials without authentication. (4) The OAuth authorization endpoint does not validate the redirect_uri scheme, so an attacker who registers a public OAuth client with a javascript: or data: redirect_uri and lures a victim to the consent screen receives the authorization code and executes attacker-controlled JavaScript in the Heym origin, including access to the victim's HttpOnly auth cookie. (5) WorkflowExecutionToken, PortalSession, HITLRequest.public_token, and OAuthAuthorizationCode values are stored in plaintext, so any database read exposure yields valid scoped bearer tokens, including portal and HITL tokens with a 168-hour TTL that permit workflow execution on behalf of the owner.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-100865\n  \nPublished : Sept. 27, 2026, 2:17 a.m. | 43 minutes ago\n  \nDescription :Heym before 0.0.53 contains multiple independent vulnerabilities. (1) The workflow condition evaluator uses Python eval() without an effective sandbox, allowing any user who can edit a workflow branch/condition node — or who can import a workflow template containing a malicious condition node — to execute arbitrary Python code as the backend process user when the workflow runs. (2) Slack webhook signature verification and (3) Telegram webhook secret-token verification fail open when the trigger node has no credentialId or an empty signing secret, allowing anyone who knows the public webhook URL to trigger workflows with the owner's credentials without authentication. (4) The OAuth authorization endpoint does not validate the redirect_uri scheme, so an attacker who registers a public OAuth client with a javascript: or data: redirect_uri and lures a victim to the consent screen receives the authorization code and executes attacker-controlled JavaScript in the Heym origin, including access to the victim's HttpOnly auth cookie. (5) WorkflowExecutionToken, PortalSession, HITLRequest.public_token, and OAuthAuthorizationCode values are stored in plaintext, so any database read exposure yields valid scoped bearer tokens, including portal and HITL tokens with a 168-hour TTL that permit workflow execution on behalf of the owner.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-100865\n2. 26.09.27 오전11:17\n3. Heym before 0.0.53 contains multiple independent v",
+      "cve_id": "CVE-2026-100865",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-100865",
+      "source": "cvefeed",
+      "published": "2026-09-27T11:17:26+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-97163 - Joomla Extension - lomart.fr - Unauthenticated remote code installation in UP plugin extension 5.0.0-5.2.0, 6.0.0-6.0.29",
       "summary": "CVE ID :CVE-2026-97163\n  \nPublished : Sept. 26, 2026, 3:16 p.m. | 2 hours, 20 minutes ago\n  \nDescription :Joomla Extension - lomart.fr - Unauthenticated remote code installation in UP plugin extension 5.0.0-5.2.0, 6.0.0-6.0.29\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
