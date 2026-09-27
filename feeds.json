@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-27T12:33:02.154752+09:00",
+  "fetched_at": "2026-09-27T13:02:20.562124+09:00",
   "security_news": [
     {
       "title": "[2026 국감이슈] 쿠팡·SKT 이어 티빙까지…개인정보 유출 1.4억건 달해",
@@ -1404,18 +1404,6 @@
       "source": "naver",
       "published": "2026-09-24T13:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"나가지 마\" 알고 보니 홈캠 해킹…누군가 당신의 빈집을 보고 있다",
-      "summary": "개인정보 보안에도 신경 써야 한다. 도어락 비밀번호나 현관 앞 택배 상자, 홈캠 설정 하나만 소홀히 해도 사생활 침해나 주거 침입 범죄로 이어질 수 있다. 연휴 전 챙겨야 할 보안 점검 사항을 정리했다. 우리 집 비밀번호...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 홈캠 해킹으로 빈집 사생활 침해 위험\n2. 도어락 비밀번호 등 보안 소홀 시 주거 침입\n3. 연휴 전 홈캠 등 보안 점검 중요",
-      "link": "https://n.news.naver.com/mnews/article/003/0014212209?sid=105",
-      "source": "naver",
-      "published": "2026-09-24T13:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -1432,6 +1420,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-100865",
       "source": "cvefeed",
       "published": "2026-09-27T11:17:26+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-100837 - Edgeless Systems Contrast through 1.20.0 Credential Leak via Registry Suffix Matching",
+      "summary": "CVE ID :CVE-2026-100837\n  \nPublished : Sept. 27, 2026, 1:30 a.m. | 37 minutes ago\n  \nDescription :Contrast (Edgeless Systems) through 1.20.0 performs unanchored suffix matching when selecting per-registry configuration in the imagepuller. Config.registryFor strips a single trailing dot and then uses strings.HasSuffix(hostname, fqdn) without requiring a DNS label boundary, so a registry entry such as [registries.\"ghcr.io.\"] is also applied to any host whose name merely ends in that byte sequence, including attacker-registered domains such as evilghcr.io. When an image or layer is pulled from such a sibling domain, the imagepuller sends the configured Authorization header (basic auth, registry token, or identity token), trusts the configured custom CA bundle, follows the configured mirror, and honours insecure-skip-verify (disabling TLS verification) for that host. Image integrity is not affected, as image bytes remain pinned by digest in the policy and are validated after the pull. Configurations that use a leading dot (e.g., [registries.\".example.registry\"]) are unaffected.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-100837\n  \nPublished : Sept. 27, 2026, 1:30 a.m. | 37 minutes ago\n  \nDescription :Contrast (Edgeless Systems) through 1.20.0 performs unanchored suffix matching when selecting per-registry configuration in the imagepuller. Config.registryFor strips a single trailing dot and then uses strings.HasSuffix(hostname, fqdn) without requiring a DNS label boundary, so a registry entry such as [registries.\"ghcr.io.\"] is also applied to any host whose name merely ends in that byte sequence, including attacker-registered domains such as evilghcr.io. When an image or layer is pulled from such a sibling domain, the imagepuller sends the configured Authorization header (basic auth, registry token, or identity token), trusts the configured custom CA bundle, follows the configured mirror, and honours insecure-skip-verify (disabling TLS verification) for that host. Image integrity is not affected, as image bytes remain pinned by digest in the policy and are validated after the pull. Configurations that use a leading dot (e.g., [registries.\".example.registry\"]) are unaffected.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-100837\n2. 26.09.27 오전10:30\n3. Contrast (Edgeless Systems) through 1.20.0 perform",
+      "cve_id": "CVE-2026-100837",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-100837",
+      "source": "cvefeed",
+      "published": "2026-09-27T10:30:05+09:00",
       "lang": "en"
     },
     {
@@ -2482,21 +2485,6 @@
       "link": "https://isc.sans.edu/diary/rss/33366",
       "source": "sans_isc",
       "published": "2026-09-24T15:25:06+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "ISC Stormcast For Thursday, September 24th, 2026 https://isc.sans.edu/podcastdetail/10108, (Thu, Sep 24th)",
-      "summary": "",
-      "description": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. ISC Stormcast For Thursday, September 24th, 2026 h\n2. SANS_ISC\n3. 설명 없음",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33364",
-      "source": "sans_isc",
-      "published": "2026-09-24T12:50:11+09:00",
       "lang": "en"
     }
   ],
