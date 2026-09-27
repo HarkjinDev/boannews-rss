@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-28T06:32:51.806156+09:00",
+  "fetched_at": "2026-09-28T07:03:23.884406+09:00",
   "security_news": [
+    {
+      "title": "취약점 많이 찾았다고 안전한 게 아니다”…김동민 라온시큐어 팀장",
+      "summary": "김동민 라온시큐어 화이트햇센터 팀장 (사진=라온시큐어) 김 팀장은 인공지능(AI)로 사이버 보안 위협이 커졌지만, 대규모 개인정보 유출로 이어지는 출발점은 과거와 크게 다르지 않다고 봤다. 그는 “소스코드나 협업...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 취약점 많이 찾았다고 안전한 게 아니다”…김동민 라온시큐어 팀장 김동민 라온시큐어 화이트햇\n2. 그는 “소스코드나 협업...",
+      "link": "https://n.news.naver.com/mnews/article/018/0006376085?sid=105",
+      "source": "naver",
+      "published": "2026-09-28T07:01:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "한국은행, 직원 180여명 개인정보 뚫렸다",
+      "summary": "이종욱 의원은 \"한국은행이 중앙은행으로서 직원 개인정보 유출과 잇단 홈페이지 접속 장애를 가벼이 봐서는 안 된다\"며 \"되풀이되는 사고 원인을 면밀히 분석하고 보안 체계 전반을 점검해 철저한 재발 방지...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 한국은행, 직원 180여명 개인정보 유출 발생.\n2. 홈페이지 접속 장애와 함께 개인정보 유출 사고 발생.\n3. 철저한 재발 방지 대책 마련 촉구.",
+      "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=311991",
+      "source": "naver",
+      "published": "2026-09-28T06:44:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "엔비디아가 쏘아 올린 AI 보안 공포… 6조 원 쏟아붓는 빅테크의 노림수",
       "summary": "노린 해킹 위협이 수면 위로 떠올랐다. 젠슨 황 CEO는 \"사이버보안은 AI의 다음 주요 성장 영역이 될 가능성이... AI 에이전트를 겨냥한 해킹 시도를 차단하는 전문 보안 수요가 늘어남에 따라 다각화된 방어 도구를 보유한...",
@@ -1476,18 +1500,6 @@
       "source": "naver",
       "published": "2026-09-25T08:42:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "리플 기반 수익 플랫폼 도플러 파이낸스, XDP 토큰 출시일 발표… 고수...",
-      "summary": "스마트 컨트랙트(자동 실행 코드)의 보안 취약점을 노린 해킹 리스크는 물론, 신규 발행 토큰의 토크노믹스(발행·유통 구조)가 불투명할 경우 투자금 전부를 잃을 수 있는 최악의 상황도 배제할 수 없어서다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 도플러 파이낸스, XDP 토큰 출시 예정\n2. 스마트 컨트랙트 취약점 및 토크노믹스 불투명 리스크\n3. 투자금 전액 손실 가능성 존재",
-      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=490242",
-      "source": "naver",
-      "published": "2026-09-25T06:44:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2164,21 +2176,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-87722",
       "source": "cvefeed",
       "published": "2026-09-25T07:03:48+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-97636 - Apache Airflow HashiCorp provider: HashiCorp Vault secrets backend: team-scope guard bypass via user-controlled key",
-      "summary": "CVE ID :CVE-2026-97636\n  \nPublished : Sept. 24, 2026, 9:54 p.m. | 12 minutes ago\n  \nDescription :Apache Airflow HashiCorp provider: the HashiCorp Vault secrets backend's team-scope guard can be bypassed with a user-controlled key. In a multi-team deployment, a Dag author scoped to one team can supply a Variable key containing a path separator that causes the backend to resolve a secret belonging to a different team, because after the team-scoped lookup misses the backend falls back to a team-agnostic path concatenated from the unvalidated key. The Execution API Variables route accepts a path-shaped key, so this is reachable from ordinary Dag code.\n\nAffects multi-team deployments using the HashiCorp Vault secrets backend. Single-team deployments are not affected, as there is no cross-team boundary to cross. This is the same class as CVE-2026-86465, CVE-2026-68870, CVE-2026-68871 and CVE-2026-68872 in the Akeyless, Azure Key Vault, Yandex Lockbox and Amazon secrets backends.\n\nUsers of apache-airflow-providers-hashicorp are recommended to upgrade to version 4.8.0 or later, which fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-97636\n  \nPublished : Sept. 24, 2026, 9:54 p.m. | 12 minutes ago\n  \nDescription :Apache Airflow HashiCorp provider: the HashiCorp Vault secrets backend's team-scope guard can be bypassed with a user-controlled key. In a multi-team deployment, a Dag author scoped to one team can supply a Variable key containing a path separator that causes the backend to resolve a secret belonging to a different team, because after the team-scoped lookup misses the backend falls back to a team-agnostic path concatenated from the unvalidated key. The Execution API Variables route accepts a path-shaped key, so this is reachable from ordinary Dag code.\n\nAffects multi-team deployments using the HashiCorp Vault secrets backend. Single-team deployments are not affected, as there is no cross-team boundary to cross. This is the same class as CVE-2026-86465, CVE-2026-68870, CVE-2026-68871 and CVE-2026-68872 in the Akeyless, Azure Key Vault, Yandex Lockbox and Amazon secrets backends.\n\nUsers of apache-airflow-providers-hashicorp are recommended to upgrade to version 4.8.0 or later, which fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-97636\n2. 26.09.25 오전6:54\n3. Apache Airflow HashiCorp provider: the HashiCorp V",
-      "cve_id": "CVE-2026-97636",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-97636",
-      "source": "cvefeed",
-      "published": "2026-09-25T06:54:58+09:00",
       "lang": "en"
     }
   ],
