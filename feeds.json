@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-28T01:31:25.541773+09:00",
+  "fetched_at": "2026-09-28T02:01:16.561825+09:00",
   "security_news": [
     {
       "title": "\"퇴사자라 막기 어려웠다\"…쿠팡의 황당한 과징금 감경 주장",
@@ -1503,6 +1503,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-101041 - Vulnerability-Lookup - Race Condition in Account Recovery Token Consumption Allows Password Takeover",
+      "summary": "CVE ID :CVE-2026-101041\n  \nPublished : Sept. 27, 2026, 3:16 p.m. | 49 minutes ago\n  \nDescription :The account recovery (password reset) functionality in the vulnerability-lookup web application contains a time-of-check-to-time-of-use (TOCTOU) race condition in the consumption of single-use recovery tokens. The original implementation verified the token nonce against the stored digest and then consumed (cleared) it in separate database operations. Two concurrent HTTP requests presenting the same valid recovery token could both pass the verification check before either transaction committed, allowing both to set their own password on the target account. The last transaction to commit overwrites the first, enabling an attacker who possesses a valid recovery token to replace the legitimate user's password with one of their choosing.\n\nA secondary defect in the same endpoint (confirm_account) allowed a valid recovery link to be used to set an empty or trivially short password (e.g., three characters). The view handler performed only a manual equality comparison between the two password fields and never invoked the form's validation logic, bypassing the intended minimum-length and complexity constraints.\n\nThe affected component is the user account recovery endpoint (/user/confirm_account/) and the associated token verification and consumption logic in the User model (website/models/user.py) and the view layer (website/web/views/user.py).\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-101041\n  \nPublished : Sept. 27, 2026, 3:16 p.m. | 49 minutes ago\n  \nDescription :The account recovery (password reset) functionality in the vulnerability-lookup web application contains a time-of-check-to-time-of-use (TOCTOU) race condition in the consumption of single-use recovery tokens. The original implementation verified the token nonce against the stored digest and then consumed (cleared) it in separate database operations. Two concurrent HTTP requests presenting the same valid recovery token could both pass the verification check before either transaction committed, allowing both to set their own password on the target account. The last transaction to commit overwrites the first, enabling an attacker who possesses a valid recovery token to replace the legitimate user's password with one of their choosing.\n\nA secondary defect in the same endpoint (confirm_account) allowed a valid recovery link to be used to set an empty or trivially short password (e.g., three characters). The view handler performed only a manual equality comparison between the two password fields and never invoked the form's validation logic, bypassing the intended minimum-length and complexity constraints.\n\nThe affected component is the user account recovery endpoint (/user/confirm_account/) and the associated token verification and consumption logic in the User model (website/models/user.py) and the view layer (website/web/views/user.py).\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-101041\n2. 26.09.28 오전12:16\n3. The account recovery (password reset) functionalit",
+      "cve_id": "CVE-2026-101041",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-101041",
+      "source": "cvefeed",
+      "published": "2026-09-28T00:16:27+09:00",
+      "lang": "en"
+    },
     {
       "title": "Wireshark 4.6.9 Released, (Sun, Sep 27th)",
       "summary": "Wireshark release 4.6.9 fixes 19 vulnerabilities and 16 bugs.\r",
