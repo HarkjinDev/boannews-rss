@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-29T03:03:29.101037+09:00",
+  "fetched_at": "2026-09-29T03:34:32.871450+09:00",
   "security_news": [
+    {
+      "title": "Bitget Says Attacker Exploited Third-Party Security Product Flaw to Steal $388M",
+      "summary": "The attacker who stole about $388 million from the cryptocurrency exchange Bitget gained access through a vulnerability in a third-party security product the exchange used, Bitget said on Monday.\n\nThe attacker exploited the flaw to obtain high-level internal credentials and then, on September 24, used them to send fraudulent withdrawal commands to Bitget's wallet system.\n\nExchanges keep most",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Bitget Says Attacker Exploited Third-Party Securit\n2. The attacker exploited the flaw to obtain high-lev\n3. Exchanges keep most",
+      "link": "https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html",
+      "source": "thehackernews",
+      "published": "2026-09-29T02:42:18+09:00",
+      "lang": "en"
+    },
     {
       "title": "북 해킹자금 거쳐간 '토르체인'...차단 요청 거부해 논란",
       "summary": "북한 해킹자금으로 공식 확인한 자산의 이동과 세탁을 막는 데에도 이 기능을 사용해야 한다고 지적했습니다. 조상진 기자가 보도합니다. 북한 해킹자금의 주요 교환 통로로 이용된 토르체인(THORChain)이 또 다른 대규모...",
@@ -1983,6 +1995,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-48100 - Payy: agg_agg trailing message slots are unconstrained and allow forged burn messages",
+      "summary": "CVE ID :CVE-2026-48100\n  \nPublished : Sept. 28, 2026, 4:43 p.m. | 19 minutes ago\n  \nDescription :Payy is an Ethereum L2 zk-rollup for privacy preserving and regulatory compliant transactions. Prior to version 1.3.0, agg_agg forwards the compacted message stream from its inner proofs into a public messages: [Field; 1000] array, but it never checks that the unused tail of the outer array is zero. A registered prover can build a valid agg_final proof for an approved rollup block while inserting an extra burn message after the real messages. RollupV1.verifyRollup() then parses that public input as a normal burn and transfers USDC from the rollup contract to the attacker. This is a severe circuit soundness failure: the proof system accepts a public statement whose messages array is not fully derived from the verified inner proofs. On the current deployment, verifyRollup() is restricted to the existing allowlisted prover, so a fresh public caller cannot submit the invalid proof directly. That gate limits who can reach L1 today; it does not make the circuit statement sound. The issue becomes permissionless under the prover model described in the Payy whitepaper. Section 3.3.2 states: \"To join as a prover, the prover is required to submit a small stake\", and Section 3.3.1 states that if a prover fails to submit, \"other nodes can submit the block proof instead.\" In that model, an attacker only needs to become a registered prover and use public validator approval data for an already approved block. This issue has been patched in version 1.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-48100\n  \nPublished : Sept. 28, 2026, 4:43 p.m. | 19 minutes ago\n  \nDescription :Payy is an Ethereum L2 zk-rollup for privacy preserving and regulatory compliant transactions. Prior to version 1.3.0, agg_agg forwards the compacted message stream from its inner proofs into a public messages: [Field; 1000] array, but it never checks that the unused tail of the outer array is zero. A registered prover can build a valid agg_final proof for an approved rollup block while inserting an extra burn message after the real messages. RollupV1.verifyRollup() then parses that public input as a normal burn and transfers USDC from the rollup contract to the attacker. This is a severe circuit soundness failure: the proof system accepts a public statement whose messages array is not fully derived from the verified inner proofs. On the current deployment, verifyRollup() is restricted to the existing allowlisted prover, so a fresh public caller cannot submit the invalid proof directly. That gate limits who can reach L1 today; it does not make the circuit statement sound. The issue becomes permissionless under the prover model described in the Payy whitepaper. Section 3.3.2 states: \"To join as a prover, the prover is required to submit a small stake\", and Section 3.3.1 states that if a prover fails to submit, \"other nodes can submit the block proof instead.\" In that model, an attacker only needs to become a registered prover and use public validator approval data for an already approved block. This issue has been patched in version 1.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-48100\n2. 26.09.29 오전1:43\n3. Payy is an Ethereum L2 zk-rollup for privacy prese",
+      "cve_id": "CVE-2026-48100",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-48100",
+      "source": "cvefeed",
+      "published": "2026-09-29T01:43:06+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54160 - Network UPS Tools: A PWN Request in make-dist workflow can execute PR-controlled code with write-scoped GITHUB_TOKEN",
       "summary": "CVE ID :CVE-2026-54160\n  \nPublished : Sept. 28, 2026, 4:35 p.m. | 17 minutes ago\n  \nDescription :Network UPS Tools is a collection of programs which provide a common interface for monitoring and administering UPS, PDU and SCD hardware. Prior to commits 658b24e and 1aa31d1, the GitHub Actions script used to prepare NUT tarballs and update GitHub Checks statuses and PR comments about it was mis-structured in terms of mixing code running with higher privileges (single-use token generated with write permissions) and untrusted inputs (PR source branch). A malicious PR run from a fork could extract the GITHUB_TOKEN value. It could potentially be abused while it was valid (while the GHA job ran) to manipulate Git repository contents, commit checks/statuses, or issue/PR comments, according to permissions it was issued with. This issue has been patched via commits 658b24e and 1aa31d1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
