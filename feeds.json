@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-28T16:01:42.805182+09:00",
+  "fetched_at": "2026-09-28T16:31:27.723607+09:00",
   "security_news": [
+    {
+      "title": "인스피언, AI 보안 분석 고도화…침투테스트 자동화 활용 가능성 검토",
+      "summary": "보안 전문가가 직접 수행하는 모의해킹에 AI를 결합해 반복적인 취약점 탐색과 공격 시나리오 분석을 자동화하는 방식이다. 실제 공격을 모의해 방어체계가 제대로 작동하는지 확인하는 침해·공격 시뮬레이션(BAS)도...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 인스피언, AI로 침투테스트 자동화 검토\n2. AI가 반복적 취약점 탐색 및 공격 시나리오 분석\n3. BAS 활용하여 방어체계 작동 여부 시뮬레이션",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208619",
+      "source": "naver",
+      "published": "2026-09-28T16:12:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "개보위 출범 후 과징금 '1조원' … 쿠팡 두 건에 56% 부과",
+      "summary": "올해에만 6월 해킹 등 개인정보 보호법 위반으로 4235억7500만원이 부과됐다. 별도 위반 건엔... 유출 원인이 기재된 사건에선 해킹이 276건, 업무과실이 275건이었다. 시스템 오류는 62건, 고의 유출은 14건으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 개보위 출범 후 과징금 1조원, 쿠팡에 56% 부과\n2. 개인정보 유출 원인 4235억원, 해킹 276건, 업무과실 275건\n3. 시스템 오류 62건, 고의 유출 14건 등 위반 건수 집계",
+      "link": "https://www.safetimes.co.kr/news/articleView.html?idxno=246034",
+      "source": "naver",
+      "published": "2026-09-28T16:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "빅오, 네트워크 인증 취약점 재현…비밀번호 틀렸는데 접속 성공",
       "summary": "네트워크 인증·보안 기업 빅오가 RADIUS 인증 프로토콜의 ‘블라스트래디어스(BlastRADIUS, CVE-2024-3596)’ 취약점을 자체 시험환경에서 재현했다고 밝혔다. 잘못된 비밀번호로 인증을 요청했는데도 클라이언트가 유효한 인증 승인 응답을 받아 최종적으로 접속을 허용하는 결과를 확인했다는 설명이다.블라스트래디어스는 공격자가 RADIUS 서버와 클라이언트 사이의 통신에 개입해 인증 응답을 위조할 수 있는 취약점이다. 서버가 보낸 인증 거부 응답을 승인 응답으로 바꾸면서도, 클라이언트의 기존 응답 검증을 통과하게 하는 방식",
@@ -1764,18 +1788,6 @@
       "source": "naver",
       "published": "2026-09-25T17:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[2026 AI 보안 솔루션 리포트] 어시스턴트를 넘어 '자율형 에이전트' 시...",
-      "summary": "또한 몇몇 취약점의 경우 이를 악용하려면 고도화된 해킹 기술과 작업이 필요하기 때문에 패치 우선... \"각종 IoT 단말을 취약점을 이용해 해킹하고, 여기서 얻은 정보를 이용해 중요 데이터가 있는 서버를 탈취할...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. IoT 단말 해킹, 중요 서버 탈취 시도\n2. 고도화된 해킹 기술로 취약점 악용\n3. AI 보안 솔루션, 자율형 에이전트 진화",
-      "link": "https://www.boannews.com/news/articleView.html?idxno=146038",
-      "source": "naver",
-      "published": "2026-09-25T16:18:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2393,37 +2405,22 @@
       "source": "msrc",
       "published": "2026-09-25T17:45:03+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-93477 - Private action arguments can be set by user input on the bulk destroy and bulk update paths in Ash",
-      "summary": "CVE ID :CVE-2026-93477\n  \nPublished : Sept. 25, 2026, 7:16 a.m. | 23 minutes ago\n  \nDescription :Improperly Controlled Modification of Dynamically-Determined Object Attributes vulnerability in ash-project ash allows a user to set the value of a private action argument on the bulk destroy and bulk update paths.\n\nAction arguments declared with public?: false are meant to be set only by trusted server-side code (for example via Ash.Changeset.set_private_argument/3) and must not be settable from end-user input. CVE-2026-55736 fixed the non-bulk changeset path to strip private arguments from user-supplied parameter maps, but the bulk destroy and bulk update paths were not covered.\n\nAsh.Actions.Destroy.Bulk.base_changeset/5 and Ash.Actions.Update.Bulk.base_changeset/5 match every key in the caller-supplied parameter map against all of the action's arguments with no public? check, then apply the matches to the base changeset. A caller who can submit parameters to a bulk destroy or bulk update action (for example through AshJsonApi, AshGraphql, or a controller that forwards request parameters to Ash.bulk_destroy/4 or Ash.bulk_update/4) can therefore set any private argument of that action, including one referenced by an arg(...) template in the action's changes or validations. Depending on how the application uses the argument (for example an acting_user_id driving authorization or record ownership, or audit metadata), this can lead to an integrity violation or privilege escalation.\n\nThe fix requires public? in the argument matching on both bulk paths; private arguments remain settable server-side via the :private_arguments option.\n\nThis issue affects ash: from 2.17.15 before 3.33.11.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-93477\n  \nPublished : Sept. 25, 2026, 7:16 a.m. | 23 minutes ago\n  \nDescription :Improperly Controlled Modification of Dynamically-Determined Object Attributes vulnerability in ash-project ash allows a user to set the value of a private action argument on the bulk destroy and bulk update paths.\n\nAction arguments declared with public?: false are meant to be set only by trusted server-side code (for example via Ash.Changeset.set_private_argument/3) and must not be settable from end-user input. CVE-2026-55736 fixed the non-bulk changeset path to strip private arguments from user-supplied parameter maps, but the bulk destroy and bulk update paths were not covered.\n\nAsh.Actions.Destroy.Bulk.base_changeset/5 and Ash.Actions.Update.Bulk.base_changeset/5 match every key in the caller-supplied parameter map against all of the action's arguments with no public? check, then apply the matches to the base changeset. A caller who can submit parameters to a bulk destroy or bulk update action (for example through AshJsonApi, AshGraphql, or a controller that forwards request parameters to Ash.bulk_destroy/4 or Ash.bulk_update/4) can therefore set any private argument of that action, including one referenced by an arg(...) template in the action's changes or validations. Depending on how the application uses the argument (for example an acting_user_id driving authorization or record ownership, or audit metadata), this can lead to an integrity violation or privilege escalation.\n\nThe fix requires public? in the argument matching on both bulk paths; private arguments remain settable server-side via the :private_arguments option.\n\nThis issue affects ash: from 2.17.15 before 3.33.11.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-93477\n2. 26.09.25 오후4:16\n3. Improperly Controlled Modification of Dynamically-",
-      "cve_id": "CVE-2026-93477",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93477",
-      "source": "cvefeed",
-      "published": "2026-09-25T16:16:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-93399 - Online Scheduling and Appointment Booking System <= 28.2 - Insecure Direct Object Reference to Unauthenticated Arbitrary Booking Token Disclosure and Deletion via 'order_id' Parameter",
-      "summary": "CVE ID :CVE-2026-93399\n  \nPublished : Sept. 25, 2026, 7:16 a.m. | 23 minutes ago\n  \nDescription :The Bookly plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 28.2 via the 'bookly_get_form_id', 'bookly_render_complete', 'bookly_add_to_calendar' and 'bookly_rollback_order' AJAX actions. This is due to the 'bookly_get_form_id' handler blindly storing the attacker-controlled 'order_id' from the submitted form_data into a new booking session, which the 'bookly_render_complete' handler then trusts to look up and return the corresponding Order's secret token without verifying that the current session created that order. This makes it possible for unauthenticated attackers to enumerate sequential order IDs, disclose other customers' order tokens, retrieve calendar/appointment information via 'bookly_add_to_calendar' and permanently delete arbitrary non-completed bookings via 'bookly_rollback_order', which cascade-deletes the customer_appointment and (when no other customers are attached) the underlying appointment.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-93399\n  \nPublished : Sept. 25, 2026, 7:16 a.m. | 23 minutes ago\n  \nDescription :The Bookly plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 28.2 via the 'bookly_get_form_id', 'bookly_render_complete', 'bookly_add_to_calendar' and 'bookly_rollback_order' AJAX actions. This is due to the 'bookly_get_form_id' handler blindly storing the attacker-controlled 'order_id' from the submitted form_data into a new booking session, which the 'bookly_render_complete' handler then trusts to look up and return the corresponding Order's secret token without verifying that the current session created that order. This makes it possible for unauthenticated attackers to enumerate sequential order IDs, disclose other customers' order tokens, retrieve calendar/appointment information via 'bookly_add_to_calendar' and permanently delete arbitrary non-completed bookings via 'bookly_rollback_order', which cascade-deletes the customer_appointment and (when no other customers are attached) the underlying appointment.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-93399\n2. 26.09.25 오후4:16\n3. The Bookly plugin for WordPress is vulnerable to I",
-      "cve_id": "CVE-2026-93399",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93399",
-      "source": "cvefeed",
-      "published": "2026-09-25T16:16:56+09:00",
-      "lang": "en"
     }
   ],
-  "reputation": []
+  "reputation": [
+    {
+      "title": "추석연휴 끝나니 ‘국감의 시간’…홈플러스·쿠팡·배민 줄줄이 국회로",
+      "summary": "배민 운영사 우아한형제들에서는 김정훈 CISO가 개인정보 침해·유출 사고와 관련해 증인 명단에 포함됐다.... 재정경제기획위원회는 다음달 22일 재정경제부·국세청 국정감사에 김범석 우아한형제들 대표를 증인으로...",
+      "description": "배민 운영사 우아한형제들에서는 김정훈 CISO가 개인정보 침해·유출 사고와 관련해 증인 명단에 포함됐다.... 재정경제기획위원회는 다음달 22일 재정경제부·국세청 국정감사에 김범석 우아한형제들 대표를 증인으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 홈플러스, 쿠팡, 배민 등 국내 기업 국정감사 증인 채택\n2. 우아한형제들 CISO, 개인정보 침해·유출 사고 관련 증인 출석\n3. 김범석 우아한형제들 대표, 재정경제기획위 국감 증인 채택",
+      "keyword_matched": "재정경제부",
+      "link": "https://n.news.naver.com/mnews/article/138/0002242866?sid=101",
+      "source": "naver_rep",
+      "published": "2026-09-28T16:29:00+09:00",
+      "lang": "ko"
+    }
+  ]
 }
