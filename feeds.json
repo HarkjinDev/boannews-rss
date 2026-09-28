@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-09-29T06:02:26.774038+09:00",
+  "fetched_at": "2026-09-29T06:33:34.898226+09:00",
   "security_news": [
+    {
+      "title": "One Packet Can Crash OT Servers in Industrial Sectors",
+      "summary": "A high-severity zero-day vulnerability affects the TDengine time-series database used across industrial, IoT, energy, and automotive environments.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. One Packet Can Crash OT Servers in Industrial Sect",
+      "link": "https://www.darkreading.com/ics-ot-security/one-packet-crash-servers-tdengine",
+      "source": "darkreading",
+      "published": "2026-09-29T06:13:04+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "해킹·외화벌이에 ‘AI 비서’ 붙인 北… 온라인 공습의 진화",
+      "summary": "3줄 요약 ㆍ북한 해킹그룹의 AI 활용 미끼 문서 제작 ㆍ챗GPT로 만든 가짜 군 공무원증 이미지 활용 ㆍ해외... 정상적인 업무 문서처럼 보이지만 북한 정찰총국 산하 해킹 그룹 ‘김수키’가 사이버 공격에 활용한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 해킹그룹, AI로 정상 문서 위장\n2. 챗GPT로 만든 군 공무원증 이미지 활용\n3. 김수키, 해외 대상 사이버 공격 진화",
+      "link": "https://n.news.naver.com/mnews/article/023/0004000957?sid=105",
+      "source": "naver",
+      "published": "2026-09-29T06:01:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "외부 서버 전송 없다…SK인텔릭스 나무엑스, 온디바이스 보안으로 승부",
+      "summary": "실증 단계에서는 5회에 걸친 모의해킹과 약 100명의 보안 전문가가 참여한 취약점 포상제(버그바운티)를 거쳐 취약점을 점검했다. 조직 체계는 대표이사가 위원장을 맡는 보안총괄위원회 체제로 가동된다. 글로벌...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. SK인텔릭스, 나무엑스 온디바이스 보안 솔루션 선보여\n2. 100명 보안 전문가 참여 버그바운티로 취약점 점검\n3. 대표이사 위원장 보안총괄위원회로 체계 관리",
+      "link": "https://n.news.naver.com/mnews/article/138/0002242892?sid=105",
+      "source": "naver",
+      "published": "2026-09-29T06:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "개인키 안 뚫렸는데 5266억 유출⋯비트겟 사태가 드러낸 거래소 보안 빈...",
       "summary": "비트겟이 해킹 사고로 중단한 출금을 순차 재개한다. 비트겟은 개인키 유출 없이 출금 승인 절차가... 그레이시 첸 비트겟 최고경영자(CEO)는 공격에 쓰인 일부 IP가 북한 해킹 조직이 과거 이용한 가상사설망(VPN)과 관련된...",
@@ -1944,18 +1980,6 @@
       "source": "naver",
       "published": "2026-09-26T07:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "성형 전 사진이 다크웹에 올라왔다 [해커들의 쇼핑몰]",
-      "summary": "병원 측은 문자를 통해 “최근 발생한 외부 해킹 공격으로 인해 일부 환자분의 개인정보 유출 정황이... 다크웹 해킹포럼 25곳과 개인정보가 거래되는 텔레그램 채널·계정 48개, 누구나 접속할 수 있는 일반 홈페이지...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 성형 전 환자 사진 등 개인정보, 다크웹 해킹포럼 25곳에 유출\n2. 외부 해킹 공격으로 인해 환자 개인정보 유출 정황 확인\n3. 텔레그램 채널·계정 48곳 및 일반 홈페이지에도 유포",
-      "link": "https://n.news.naver.com/mnews/article/005/0001875046?sid=102",
-      "source": "naver",
-      "published": "2026-09-26T06:12:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2407,21 +2431,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-63431",
       "source": "cvefeed",
       "published": "2026-09-26T06:56:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-6103 - Phar TAR phar_tar_number() Integer Overflow - Archive Entry Injection",
-      "summary": "CVE ID :CVE-2026-6103\n  \nPublished : Sept. 25, 2026, 9:17 p.m. | 50 minutes ago\n  \nDescription :phar_tar_number() parses the octal size field of a TAR header into a uint32_t with no overflow check. The field is 11 octal digits wide and holds values up to 0x1FFFFFFFF, so a size above 0xFFFFFFFF silently wraps. The parser then skips the wrong number of data blocks and interprets attacker-controlled file content as the next TAR header, which lets a crafted archive inject entries that PharData reports and extracts as if they were genuine.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-6103\n  \nPublished : Sept. 25, 2026, 9:17 p.m. | 50 minutes ago\n  \nDescription :phar_tar_number() parses the octal size field of a TAR header into a uint32_t with no overflow check. The field is 11 octal digits wide and holds values up to 0x1FFFFFFFF, so a size above 0xFFFFFFFF silently wraps. The parser then skips the wrong number of data blocks and interprets attacker-controlled file content as the next TAR header, which lets a crafted archive inject entries that PharData reports and extracts as if they were genuine.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-6103\n2. 26.09.26 오전6:17\n3. phar_tar_number() parses the octal size field of a",
-      "cve_id": "CVE-2026-6103",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6103",
-      "source": "cvefeed",
-      "published": "2026-09-26T06:17:23+09:00",
       "lang": "en"
     }
   ],
