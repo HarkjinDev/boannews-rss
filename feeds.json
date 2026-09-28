@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-29T02:02:30.328487+09:00",
+  "fetched_at": "2026-09-29T02:32:33.970136+09:00",
   "security_news": [
+    {
+      "title": "북 해킹자금 거쳐간 '토르체인'...차단 요청 거부해 논란",
+      "summary": "북한 해킹자금으로 공식 확인한 자산의 이동과 세탁을 막는 데에도 이 기능을 사용해야 한다고 지적했습니다. 조상진 기자가 보도합니다. 북한 해킹자금의 주요 교환 통로로 이용된 토르체인(THORChain)이 또 다른 대규모...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 해킹자금, 토르체인(THORChain) 거쳐 세탁\n2. 차단 요청 거부로 자금 추적 및 세탁 방해\n3. 향후 자금 이동 추적 및 차단 강화 필요",
+      "link": "https://www.voakorea.com/a/8205353.html",
+      "source": "naver",
+      "published": "2026-09-29T01:44:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "지역 현안 중앙 무대로… 강원 여야 국감 성적표에 '올인'",
       "summary": "같은 상임위인 국민의힘 박정하(원주 갑) 의원은 해킹·개인정보 유출 등 정보보안 문제와 AI·R&D 투자 성과를 점검하고 원주 의료·웰니스 AX 대전환 등 지역 첨단산업 현안을 중점적으로 다룰 방침이다. 농해수위에서는...",
@@ -1980,21 +1992,54 @@
       "source": "naver",
       "published": "2026-09-26T02:46:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CISA warns of Sharepoint, WSO2, Adobe Commerce flaws exploited in attacks",
-      "summary": "The Cybersecurity and Infrastructure Security Agency (CISA) warns that hackers are exploiting a critical authentication bypass vulnerability (CVE-2026-5430) affecting multiple products from enterprise software provider WSO2. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CISA warns of Sharepoint, WSO2, Adobe Commerce fla",
-      "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/",
-      "source": "bleepingcomputer",
-      "published": "2026-09-26T02:24:20+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54160 - Network UPS Tools: A PWN Request in make-dist workflow can execute PR-controlled code with write-scoped GITHUB_TOKEN",
+      "summary": "CVE ID :CVE-2026-54160\n  \nPublished : Sept. 28, 2026, 4:35 p.m. | 17 minutes ago\n  \nDescription :Network UPS Tools is a collection of programs which provide a common interface for monitoring and administering UPS, PDU and SCD hardware. Prior to commits 658b24e and 1aa31d1, the GitHub Actions script used to prepare NUT tarballs and update GitHub Checks statuses and PR comments about it was mis-structured in terms of mixing code running with higher privileges (single-use token generated with write permissions) and untrusted inputs (PR source branch). A malicious PR run from a fork could extract the GITHUB_TOKEN value. It could potentially be abused while it was valid (while the GHA job ran) to manipulate Git repository contents, commit checks/statuses, or issue/PR comments, according to permissions it was issued with. This issue has been patched via commits 658b24e and 1aa31d1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54160\n  \nPublished : Sept. 28, 2026, 4:35 p.m. | 17 minutes ago\n  \nDescription :Network UPS Tools is a collection of programs which provide a common interface for monitoring and administering UPS, PDU and SCD hardware. Prior to commits 658b24e and 1aa31d1, the GitHub Actions script used to prepare NUT tarballs and update GitHub Checks statuses and PR comments about it was mis-structured in terms of mixing code running with higher privileges (single-use token generated with write permissions) and untrusted inputs (PR source branch). A malicious PR run from a fork could extract the GITHUB_TOKEN value. It could potentially be abused while it was valid (while the GHA job ran) to manipulate Git repository contents, commit checks/statuses, or issue/PR comments, according to permissions it was issued with. This issue has been patched via commits 658b24e and 1aa31d1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-54160\n2. 26.09.29 오전1:35\n3. Network UPS Tools is a collection of programs whic",
+      "cve_id": "CVE-2026-54160",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54160",
+      "source": "cvefeed",
+      "published": "2026-09-29T01:35:45+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-85644 - XS::Parse::Infix versions from 0.40 through 0.49 for Perl treat a number as an array reference",
+      "summary": "CVE ID :CVE-2026-85644\n  \nPublished : Sept. 28, 2026, 4:09 p.m. | 44 minutes ago\n  \nDescription :XS::Parse::Infix versions from 0.40 through 0.49 for Perl treat a number as an array reference.\n\nThe wrapper function XS::Parse::Infix generates for a list-associative infix operator checks whether arguments are array references, but it tests using SvRV() rather than SvROK(). SvRV() reads a union slot that only holds a referent once SvROK(sv) is true, so the guard never validates that it is a reference. For an IV or NV that slot holds the number itself, SvRV() returns the caller's value and SvTYPE() dereferences it at offset 12. This will generally result in a segmentation fault.\n\nAn application that hands the wrapper a list built from decoded input (for example, from JSON) lets whoever supplies a number in that list choose the address that the interpreter dereferences.\n\nAn ordinary string's byte 12 is rarely SVt_PVAV so the guard croaks by luck, but an attacker-crafted string carrying 0x0b there passes, and the buffer is then used as an AV head, with AvARRAY taken from bytes 16-23 and its entries pushed onto the Perl stack as live SVs.\n\nA simple proof-of-concept uses the zip operator:\n\n    use Syntax::Operator::Zip 'zip';\n\n    my @args = ([1], 2);\n    zip(@args);\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-85644\n  \nPublished : Sept. 28, 2026, 4:09 p.m. | 44 minutes ago\n  \nDescription :XS::Parse::Infix versions from 0.40 through 0.49 for Perl treat a number as an array reference.\n\nThe wrapper function XS::Parse::Infix generates for a list-associative infix operator checks whether arguments are array references, but it tests using SvRV() rather than SvROK(). SvRV() reads a union slot that only holds a referent once SvROK(sv) is true, so the guard never validates that it is a reference. For an IV or NV that slot holds the number itself, SvRV() returns the caller's value and SvTYPE() dereferences it at offset 12. This will generally result in a segmentation fault.\n\nAn application that hands the wrapper a list built from decoded input (for example, from JSON) lets whoever supplies a number in that list choose the address that the interpreter dereferences.\n\nAn ordinary string's byte 12 is rarely SVt_PVAV so the guard croaks by luck, but an attacker-crafted string carrying 0x0b there passes, and the buffer is then used as an AV head, with AvARRAY taken from bytes 16-23 and its entries pushed onto the Perl stack as live SVs.\n\nA simple proof-of-concept uses the zip operator:\n\n    use Syntax::Operator::Zip 'zip';\n\n    my @args = ([1], 2);\n    zip(@args);\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-85644\n2. 26.09.29 오전1:09\n3. XS::Parse::Infix versions from 0.40 through 0.49 f",
+      "cve_id": "CVE-2026-85644",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85644",
+      "source": "cvefeed",
+      "published": "2026-09-29T01:09:02+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-93538 - Cross-tenant BundleDeployment and Secret disclosure via spoofed cluster labels during agent-initiated registration in Fleet",
+      "summary": "CVE ID :CVE-2026-93538\n  \nPublished : Sept. 28, 2026, 3:17 p.m. | 1 hour, 36 minutes ago\n  \nDescription :A cross-tenant authorization issue was discovered in SUSE Rancher Fleet. During agent-initiated cluster registration, cluster labels supplied by the registering agent, including labels in the reserved management.cattle.io/ namespace such as the cluster display name label, were applied to the resulting upstream Cluster object. Because Fleet resolves GitRepo and Bundle targets from those cluster labels, a party able to register a cluster into a Fleet workspace namespace shared with other tenants could cause its own cluster to satisfy targeting rules that administrators intended for a different cluster.\nThis affects SUSE Rancher Fleet 0.16 before 0.16.1, 0.15 before 0.15.6, 0.14 before 0.14.10, 0.13 before 0.13.15, 0.12 before 0.12.19 and older versions.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-93538\n  \nPublished : Sept. 28, 2026, 3:17 p.m. | 1 hour, 36 minutes ago\n  \nDescription :A cross-tenant authorization issue was discovered in SUSE Rancher Fleet. During agent-initiated cluster registration, cluster labels supplied by the registering agent, including labels in the reserved management.cattle.io/ namespace such as the cluster display name label, were applied to the resulting upstream Cluster object. Because Fleet resolves GitRepo and Bundle targets from those cluster labels, a party able to register a cluster into a Fleet workspace namespace shared with other tenants could cause its own cluster to satisfy targeting rules that administrators intended for a different cluster.\nThis affects SUSE Rancher Fleet 0.16 before 0.16.1, 0.15 before 0.15.6, 0.14 before 0.14.10, 0.13 before 0.13.15, 0.12 before 0.12.19 and older versions.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-93538\n2. 26.09.29 오전12:17\n3. A cross-tenant authorization issue was discovered ",
+      "cve_id": "CVE-2026-93538",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93538",
+      "source": "cvefeed",
+      "published": "2026-09-29T00:17:24+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-81355 Virtual Hard Disk (VHD) Miniport Driver Remote Code Execution Vulnerability",
       "summary": "Updated an acknowledgement. This is an informational change only.",
