@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-28T21:32:23.264746+09:00",
+  "fetched_at": "2026-09-28T22:02:47.137994+09:00",
   "security_news": [
+    {
+      "title": "[사설]새는 개인정보는 과징금만으로 못 막아",
+      "summary": "실제 유출이 확인된 641건 가운데 해킹이 276건, 업무상 과실이 275건으로 대부분을 차지했다. 외부 공격뿐 아니라 기업과 기관 내부의 관리 부실도 개인정보를 위험에 빠뜨리고 있다. 쿠팡 3322만여건, SK텔레콤 3164만여건...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 쿠팡 3322만건, SK텔레콤 3164만건 등 개인정보 유출\n2. 해킹 276건, 업무상 과실 275건으로 내부 관리 부실도 원인\n3. 과징금만으론 부족, 개인정보 보호 강화 필요",
+      "link": "http://www.gnmaeil.com/news/articleView.html?idxno=595627",
+      "source": "naver",
+      "published": "2026-09-28T21:42:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "무신사·강남언니·위버스…해킹사고 모두 '이곳'이 뚫렸다",
       "summary": "침해(해킹) 사고에서 API(응용프로그램인터페이스)의 보안 취약점이 드러나고 있다. 플랫폼 사이 연결이나 서비스 제휴 등을 위해 사용하는 API를 통한 해킹 사례가 잇따라 보고되면서 그에 맞춘 보안 강화가 필요하다는...",
@@ -1956,21 +1968,39 @@
       "source": "naver",
       "published": "2026-09-25T22:03:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "러 총선 집권당 349석 절대다수 확보…참전군인 46명 당선",
-      "summary": "팜필로바 위원장은 총선 기간 러시아 선거시스템이 13차례에 걸쳐 총 468분간 분산서비스거부(DDoS·디도스) 공격을 받았는데, 보안 시스템이 이를 막아냈다고 말했다. 드미트리 페스코프 러시아 크렘린궁 대변인은 이날...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 러시아 총선 기간, 집권당 349석 확보\n2. 선거시스템 13차례 468분 DDoS 공격 시도\n3. 보안 시스템으로 공격 차단, 46명 군인 당선",
-      "link": "https://n.news.naver.com/mnews/article/001/0016336451?sid=104",
-      "source": "naver",
-      "published": "2026-09-25T21:45:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-86330 - Noobaa-core: noobaa-core: os command injection in cluster_internal_api.set_hostname_internal",
+      "summary": "CVE ID :CVE-2026-86330\n  \nPublished : Sept. 28, 2026, 12:18 p.m. | 33 minutes ago\n  \nDescription :An OS command injection flaw was found in the set_hostname_internal function of NooBaa's cluster_internal_api. This component is responsible for managing the Multi-Cloud Object Gateway in OpenShift Data Foundation. The vulnerability occurs because the hostname parameter is passed directly to a shell command without proper sanitization. An authenticated attacker with administrative privileges can provide a specially crafted hostname containing shell metacharacters to execute arbitrary commands on the host system with the privileges of the NooBaa process.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-86330\n  \nPublished : Sept. 28, 2026, 12:18 p.m. | 33 minutes ago\n  \nDescription :An OS command injection flaw was found in the set_hostname_internal function of NooBaa's cluster_internal_api. This component is responsible for managing the Multi-Cloud Object Gateway in OpenShift Data Foundation. The vulnerability occurs because the hostname parameter is passed directly to a shell command without proper sanitization. An authenticated attacker with administrative privileges can provide a specially crafted hostname containing shell metacharacters to execute arbitrary commands on the host system with the privileges of the NooBaa process.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-86330\n2. 26.09.28 오후9:18\n3. An OS command injection flaw was found in the set_",
+      "cve_id": "CVE-2026-86330",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86330",
+      "source": "cvefeed",
+      "published": "2026-09-28T21:18:30+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-94194 - Mint HTTP/1 client applies chunked framing when chunked is not the final transfer coding, enabling response smuggling through intermediaries",
+      "summary": "CVE ID :CVE-2026-94194\n  \nPublished : Sept. 28, 2026, 12:17 p.m. | 34 minutes ago\n  \nDescription :Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') vulnerability in elixir-mint mint allows a malicious HTTP/1 server to desynchronize an intermediary and the Mint client on a pooled connection, poisoning the responses to subsequent requests that share the connection.\n\nmessage_body/1 in lib/mint/http1.ex selects chunked framing when chunked is the first coding listed in a response's Transfer-Encoding fields. RFC 9112 section 6.3 applies chunked framing only when chunked is the final coding, and otherwise reads the body until the server closes the connection. For a response such as Transfer-Encoding: chunked, gzip, an intermediary that follows the RFC treats every byte up to the close as the body, while Mint ends the body at the zero-length chunk and parses the remaining bytes as the response to the next request on the connection.\n\nMint also keeps the connection open after an HTTP/1.0 response, final or 1xx, that carries Transfer-Encoding and Connection: keep-alive. RFC 9112 section 6.1 requires treating the framing of such a message as faulty and closing the connection after it, so bytes after its chunked body are parsed as the response to the next request in the same way.\n\nThis issue affects mint: from 0.1.0 before 1.11.0.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-94194\n  \nPublished : Sept. 28, 2026, 12:17 p.m. | 34 minutes ago\n  \nDescription :Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') vulnerability in elixir-mint mint allows a malicious HTTP/1 server to desynchronize an intermediary and the Mint client on a pooled connection, poisoning the responses to subsequent requests that share the connection.\n\nmessage_body/1 in lib/mint/http1.ex selects chunked framing when chunked is the first coding listed in a response's Transfer-Encoding fields. RFC 9112 section 6.3 applies chunked framing only when chunked is the final coding, and otherwise reads the body until the server closes the connection. For a response such as Transfer-Encoding: chunked, gzip, an intermediary that follows the RFC treats every byte up to the close as the body, while Mint ends the body at the zero-length chunk and parses the remaining bytes as the response to the next request on the connection.\n\nMint also keeps the connection open after an HTTP/1.0 response, final or 1xx, that carries Transfer-Encoding and Connection: keep-alive. RFC 9112 section 6.1 requires treating the framing of such a message as faulty and closing the connection after it, so bytes after its chunked body are parsed as the response to the next request in the same way.\n\nThis issue affects mint: from 0.1.0 before 1.11.0.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-94194\n2. 26.09.28 오후9:17\n3. Inconsistent Interpretation of HTTP Requests ('HTT",
+      "cve_id": "CVE-2026-94194",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-94194",
+      "source": "cvefeed",
+      "published": "2026-09-28T21:17:42+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-90979 - Apache Karaf: LDAP filter injection in JAAS LDAP login modules",
       "summary": "CVE ID :CVE-2026-90979\n  \nPublished : Sept. 28, 2026, 9:34 a.m. | 29 minutes ago\n  \nDescription :LDAPCache and LDAPBackingEngine build LDAP search filters for user lookup and role lookup by textually substituting the placeholders %u, %dn, and %fqdn (drawn from the login name, the resolved user DN, and its fully qualified namespace form) into administrator-configured filter templates (userFilter, roleFilter). Before the fix, the only sanitization applied to the substituted value was double backslashed:\n\nfilter = filter.replaceAll(Pattern.quote(\"%u\"), Matcher.quoteReplacement(user));\n\nfilter = filter.replace(\"\\\\\", \"\\\\\\\\\");\n\n\n\n\nThis does not escape the other characters RFC 4515 requires escaping in an LDAP search filter: *, (, ), and NUL. A login name containing any of these can change the structure of the resulting filter rather than being matched as a literal value (e.g. a crafted username can turn an equality match into a wildcard match, or close/reopen filter clauses), widening what the search returns and potentially causing a login or role lookup to match an LDAP entry other than the intended one, over-granting roles, and depending on deployment-specific filter templates, potentially affecting which account a login resolved to.\n\n\n\n\nIt's not exploitable through every entry points: LDAPLoginModule and LDAPPubkeyLoginModule both called Util.doRFC2254Encoding() (correct RFC 4515 escaping) on the login name before handing it to LDAPCache, which masked the missing escaping in LDAPCache for those two call paths. Using LDAPCache directly (bypassing the login modules) does not reproduce through the normal LDAPLoginModule/LDAPPubkeyLoginModule authentication flow for this reason. It does reproduce through two other call paths that reach LDAPCache/LDAPBackingEngine without any prior escaping:\n\n  *  GSSAPILdapLoginModule passes the NameCallback name straight through, unescaped.\n  *  LDAPBackingEngine (listRoles) passes principal.getName() straight through, unescaped.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -2404,36 +2434,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-100177",
       "source": "cvefeed",
       "published": "2026-09-25T22:35:50+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-95832 - Reflected unknown field names in the kitty colour control escape code allow command execution in the user's shell",
-      "summary": "CVE ID :CVE-2026-95832\n  \nPublished : Sept. 25, 2026, 12:54 p.m. | 6 minutes ago\n  \nDescription :Improper Neutralization of Special Elements in Output Used by a Downstream Component in the colour control escape code handler in kitty from 0.47.3 before 0.49.0 allows a program writing to the terminal to execute an arbitrary command in the user's shell, because color_control() in kitty/window.py answers a query for an unrecognised field name by placing that field name into the reply, and write_escape_code_to_child() in kitty/screen.c then writes the reply to the pseudoterminal master, where it is not distinguishable from input typed by the user, without neutralising it for the shell that reads it. The payload is reduced to printable ASCII before the field name is echoed, which is the restriction introduced in 0.47.3 as the fix for CVE-2026-54057, and the record and field separators ; and = are consumed as delimiters, but every other printable character survives, which is sufficient to compose a shell command. A newline is available from handle_remote_ssh() in kitty/window.py, which writes the bytes yielded by get_ssh_data() in kittens/ssh/utils.py, the first of which begin with a newline, to the pseudoterminal master before any credential carried in the request is checked. The reply is framed as an OSC sequence carrying the escape code number, the field name, and the literal value ?. This results in execution of an attacker-chosen command with the privileges of the user running the terminal.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-95832\n  \nPublished : Sept. 25, 2026, 12:54 p.m. | 6 minutes ago\n  \nDescription :Improper Neutralization of Special Elements in Output Used by a Downstream Component in the colour control escape code handler in kitty from 0.47.3 before 0.49.0 allows a program writing to the terminal to execute an arbitrary command in the user's shell, because color_control() in kitty/window.py answers a query for an unrecognised field name by placing that field name into the reply, and write_escape_code_to_child() in kitty/screen.c then writes the reply to the pseudoterminal master, where it is not distinguishable from input typed by the user, without neutralising it for the shell that reads it. The payload is reduced to printable ASCII before the field name is echoed, which is the restriction introduced in 0.47.3 as the fix for CVE-2026-54057, and the record and field separators ; and = are consumed as delimiters, but every other printable character survives, which is sufficient to compose a shell command. A newline is available from handle_remote_ssh() in kitty/window.py, which writes the bytes yielded by get_ssh_data() in kittens/ssh/utils.py, the first of which begin with a newline, to the pseudoterminal master before any credential carried in the request is checked. The reply is framed as an OSC sequence carrying the escape code number, the field name, and the literal value ?. This results in execution of an attacker-chosen command with the privileges of the user running the terminal.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-95832\n2. 26.09.25 오후9:54\n3. Improper Neutralization of Special Elements in Out",
-      "cve_id": "CVE-2026-95832",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95832",
-      "source": "cvefeed",
-      "published": "2026-09-25T21:54:25+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "A Closer Look at Malware From the Macfinger ClickFix Campaign, (Fri, Sep 25th)",
-      "summary": "Introduction\r",
-      "description": "Introduction\r",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. A Closer Look at Malware From the Macfinger ClickF\n2. SANS_ISC\n3. Introduction",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33368",
-      "source": "sans_isc",
-      "published": "2026-09-25T21:45:19+09:00",
       "lang": "en"
     }
   ],
