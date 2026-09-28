@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-09-28T15:33:34.163459+09:00",
+  "fetched_at": "2026-09-28T16:01:42.805182+09:00",
   "security_news": [
+    {
+      "title": "빅오, 네트워크 인증 취약점 재현…비밀번호 틀렸는데 접속 성공",
+      "summary": "네트워크 인증·보안 기업 빅오가 RADIUS 인증 프로토콜의 ‘블라스트래디어스(BlastRADIUS, CVE-2024-3596)’ 취약점을 자체 시험환경에서 재현했다고 밝혔다. 잘못된 비밀번호로 인증을 요청했는데도 클라이언트가 유효한 인증 승인 응답을 받아 최종적으로 접속을 허용하는 결과를 확인했다는 설명이다.블라스트래디어스는 공격자가 RADIUS 서버와 클라이언트 사이의 통신에 개입해 인증 응답을 위조할 수 있는 취약점이다. 서버가 보낸 인증 거부 응답을 승인 응답으로 바꾸면서도, 클라이언트의 기존 응답 검증을 통과하게 하는 방식",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 빅오, RADIUS 프로토콜 '블라스트래디어스(CVE-2024-3596)' 취약점 재현\n2. 잘못된 비밀번호도 인증 승인 응답 위조, 접속 허용 확인\n3. 공격자는 RADIUS 서버-클라이언트 통신 개입, 인증 응답 위조 가능",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208616",
+      "source": "dailysecu",
+      "published": "2026-09-28T15:55:35+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[단독] 무신사 개인정보 3만건 추가 유출…입점사 정보 3만건도",
+      "summary": "앞서 무신사는 지난달 27일 산하 플랫폼 29CM에서 해킹 공격으로 고객 이름 13만8841건과 이름, 이메일, 휴대전화번호, 배송정보 2만1011건 등 모두 16만여건이 유출됐다고 밝힌 바 있다. 그러나 이외 유출 내용은 기존...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 무신사, 29CM에서 13만8841건 고객 이름 유출\n2. 이름, 이메일, 휴대전화, 배송 정보 2만1011건 추가 유출\n3. 총 16만 건 이상 개인정보 유출, 추가 조사 진행 중",
+      "link": "https://n.news.naver.com/mnews/article/028/0002824954?sid=101",
+      "source": "naver",
+      "published": "2026-09-28T15:44:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "정부·통신 3사, 유출 예방 공조…“CEO가 직접 챙긴다”",
+      "summary": "양측은 개인정보 보호 강화 기술(PET) 개발과 계약학과 학생 선발 등을 통한 개인정보 보호·사이버보안 전문인력 양성에도 협력하기로 했다. AI 혁신을 뒷받침하기 위한 제도 개선도 논의했다. 업계는 앞서 도입된 AI...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 정부·통신3사, 개인정보 유출 예방 위해 공조\n2. PET 개발, 전문인력 양성 협력, AI 제도 개선 논의\n3. CEO 직접 챙기며 AI 혁신 지원 위한 노력 강화",
+      "link": "https://n.news.naver.com/mnews/article/011/0004666005?sid=105",
+      "source": "naver",
+      "published": "2026-09-28T15:42:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "오픈AI 이미지 유출, 과제로 떠오른 'AI 행동 통제'",
       "summary": "AI 안전성 연구기관 METR와 레드우드리서치에 따르면 당시 에이전트들은 사이버보안 능력을 측정하는 'ExploitGym' 평가 과제를 수행하고 있었다. 시험 환경은 외부 인터넷 접속을 제한하도록 설계됐지만 에이전트들은...",
@@ -2386,21 +2422,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-93399",
       "source": "cvefeed",
       "published": "2026-09-25T16:16:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-94376 - Better Messages <= 3.0.4 - Authenticated (Subscriber+) Stored DOM-Based Cross-Site Scripting via User Display Name",
-      "summary": "CVE ID :CVE-2026-94376\n  \nPublished : Sept. 25, 2026, 6:39 a.m. | 20 minutes ago\n  \nDescription :The Better Messages – Chat Rooms, Group Chat, Private Messages & AI Chat Bots plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via User Display Name in all versions up to, and including, 3.0.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is exploitable by Subscriber-level users because WordPress core's sanitize_text_field() preserves HTML-entity-encoded payloads (e.g., an iframe srcdoc attribute), allowing the encoded string to be stored as a display name without requiring the unfiltered_html capability, and the plugin subsequently decodes it server-side before rendering.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-94376\n  \nPublished : Sept. 25, 2026, 6:39 a.m. | 20 minutes ago\n  \nDescription :The Better Messages – Chat Rooms, Group Chat, Private Messages & AI Chat Bots plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via User Display Name in all versions up to, and including, 3.0.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is exploitable by Subscriber-level users because WordPress core's sanitize_text_field() preserves HTML-entity-encoded payloads (e.g., an iframe srcdoc attribute), allowing the encoded string to be stored as a display name without requiring the unfiltered_html capability, and the plugin subsequently decodes it server-side before rendering.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-94376\n2. 26.09.25 오후3:39\n3. The Better Messages – Chat Rooms, Group Chat, Priv",
-      "cve_id": "CVE-2026-94376",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-94376",
-      "source": "cvefeed",
-      "published": "2026-09-25T15:39:57+09:00",
       "lang": "en"
     }
   ],
