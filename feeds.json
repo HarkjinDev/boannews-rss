@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-29T02:32:33.970136+09:00",
+  "fetched_at": "2026-09-29T03:03:29.101037+09:00",
   "security_news": [
     {
       "title": "북 해킹자금 거쳐간 '토르체인'...차단 요청 거부해 논란",
@@ -1980,18 +1980,6 @@
       "source": "naver",
       "published": "2026-09-26T05:50:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "수파베이스 1만6000개 DB서 개인정보 노출",
-      "summary": "사이버보안 기업 UpGuard(UpGuard)가 조사한 결과라고 테크크런치(TechCrunch)는 보도했다. 수파베이스는 웹·앱... 이번 사례는 인공지능으로 앱을 빠르게 개발하는 이른바 ‘바이브 코딩’ 과정에서 보안 설정이 누락될 수...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 수파베이스 1만6000개 DB서 개인정보 노출\n2. 보안 설정 누락된 AI 앱 개발 중 발생\n3. UpGuard, 개인정보 유출 위험 경고",
-      "link": "https://www.tokenpost.kr/news/tech/414232",
-      "source": "naver",
-      "published": "2026-09-26T02:46:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2023,6 +2011,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-85644",
       "source": "cvefeed",
       "published": "2026-09-29T01:09:02+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-91154 - Missing authentication in Ecommerce Template product cache revalidation allows unauthenticated denial of service",
+      "summary": "CVE ID :CVE-2026-91154\n  \nPublished : Sept. 28, 2026, 3:29 p.m. | 39 minutes ago\n  \nDescription :Missing Authentication for Critical Function (CWE-306) in the product cache revalidation Server Action (src/app/actions.ts, revalidateProducts) in MarcosCamara01 Ecommerce Template before commit ec97209 allows a remote, unauthenticated attacker to force expiration of the entire storefront product cache at will. The file declares \"use server\" at file scope, so every exported function compiles into a POST-invokable Server Action; revalidateProducts calls updateTag(\"products\") with no session or role check, unlike the read-only actions in the same file which are safe by construction. Two client components under src/components/admin import the function, which causes its Server Action id to be compiled into a public /_next/static chunk that the application's admin middleware (proxy.ts) does not gate, so any unauthenticated user can extract that id from the public bundle and invoke the action directly. With cacheComponents enabled, the entire storefront (home, categories, product pages, search) is served from \"use cache\" entries produced by getAllProducts, getCategoryProducts and getProduct, all tagged products with an hours-long cacheLife. Repeated unauthenticated invocation of revalidateProducts keeps that cache permanently cold, forcing every visitor's request to read the full product catalog from Postgres instead of serving from cache, degrading storefront availability at near-zero attacker cost.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-91154\n  \nPublished : Sept. 28, 2026, 3:29 p.m. | 39 minutes ago\n  \nDescription :Missing Authentication for Critical Function (CWE-306) in the product cache revalidation Server Action (src/app/actions.ts, revalidateProducts) in MarcosCamara01 Ecommerce Template before commit ec97209 allows a remote, unauthenticated attacker to force expiration of the entire storefront product cache at will. The file declares \"use server\" at file scope, so every exported function compiles into a POST-invokable Server Action; revalidateProducts calls updateTag(\"products\") with no session or role check, unlike the read-only actions in the same file which are safe by construction. Two client components under src/components/admin import the function, which causes its Server Action id to be compiled into a public /_next/static chunk that the application's admin middleware (proxy.ts) does not gate, so any unauthenticated user can extract that id from the public bundle and invoke the action directly. With cacheComponents enabled, the entire storefront (home, categories, product pages, search) is served from \"use cache\" entries produced by getAllProducts, getCategoryProducts and getProduct, all tagged products with an hours-long cacheLife. Repeated unauthenticated invocation of revalidateProducts keeps that cache permanently cold, forcing every visitor's request to read the full product catalog from Postgres instead of serving from cache, degrading storefront availability at near-zero attacker cost.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-91154\n2. 26.09.29 오전12:29\n3. Missing Authentication for Critical Function (CWE-",
+      "cve_id": "CVE-2026-91154",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-91154",
+      "source": "cvefeed",
+      "published": "2026-09-29T00:29:03+09:00",
       "lang": "en"
     },
     {
