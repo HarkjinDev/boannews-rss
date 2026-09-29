@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-29T21:01:18.091813+09:00",
+  "fetched_at": "2026-09-29T21:31:08.243388+09:00",
   "security_news": [
+    {
+      "title": "“도주 못하게 온몸 석고 고정”…한국행 시도한 北 해커 강제 북송",
+      "summary": "이후 암호화폐를 탈취하고 한국 정부기관과 중국 군사기관을 해킹한 것으로 조사됐다. 하지만 배용주는 한국으로 가기 위해 몽골 방향으로 이동하던 중 중국 내몽골에서 중국 경찰에 체포된 것으로 전해졌다. 그는 북한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 해커, 한국행 시도하다 몽골서 체포\n2. 암호화폐 탈취 및 한·중 군사기관 해킹 혐의\n3. 강제 북송 조치",
+      "link": "https://n.news.naver.com/mnews/article/666/0000125425?sid=004",
+      "source": "naver",
+      "published": "2026-09-29T21:17:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "개인정보위, 법·AI 전문가 위촉…\"과징금과 AI, 두 현안 잡는다\"",
       "summary": "최근 잇따르는 개인정보 유출 사고로 천문학적인 과징금이 부과되고, AI로 인한 보안 위협이 가중되면서 이에 대응하기 위함 움직임으로 해석된다. 29일 개인정보위에 따르면 지난 21일 권건보 아주대 법학전문대학원...",
@@ -2379,6 +2391,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-86843 - Apache Airflow Teradata provider: SQL injection via unvalidated Dag Params in the compute-cluster example Dag",
+      "summary": "CVE ID :CVE-2026-86843\n  \nPublished : Sept. 29, 2026, 10:17 a.m. | 1 hour, 5 minutes ago\n  \nDescription :The Apache Airflow Teradata provider's compute-cluster example Dag declared every one of its Dag Params as unconstrained free text and templated them straight into the compute-cluster operators, which interpolate those values into Teradata DDL. A user who is permitted to trigger that Dag - a lower-trust role than the Dag author, and one that needs no Teradata credentials of its own - could therefore supply SQL fragments that execute under the connection the task runs as, and could additionally redirect the task at any other connection defined in the deployment, because the connection id was itself a free-text Param. Only deployments that run this example Dag, or a Dag copied from it, are affected; the provider's operator code is unchanged. Users of apache-airflow-providers-teradata are recommended to upgrade to version 3.7.0 or later, whose example constrains the Params to validated identifiers and a closed value set and removes connection selection and free-form option strings from trigger-time input. Upgrading does not change a Dag already copied from the example; users who copied it should apply the same constraints to their copy.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-86843\n  \nPublished : Sept. 29, 2026, 10:17 a.m. | 1 hour, 5 minutes ago\n  \nDescription :The Apache Airflow Teradata provider's compute-cluster example Dag declared every one of its Dag Params as unconstrained free text and templated them straight into the compute-cluster operators, which interpolate those values into Teradata DDL. A user who is permitted to trigger that Dag - a lower-trust role than the Dag author, and one that needs no Teradata credentials of its own - could therefore supply SQL fragments that execute under the connection the task runs as, and could additionally redirect the task at any other connection defined in the deployment, because the connection id was itself a free-text Param. Only deployments that run this example Dag, or a Dag copied from it, are affected; the provider's operator code is unchanged. Users of apache-airflow-providers-teradata are recommended to upgrade to version 3.7.0 or later, whose example constrains the Params to validated identifiers and a closed value set and removes connection selection and free-form option strings from trigger-time input. Upgrading does not change a Dag already copied from the example; users who copied it should apply the same constraints to their copy.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-86843\n2. 26.09.29 오후7:17\n3. The Apache Airflow Teradata provider's compute-clu",
+      "cve_id": "CVE-2026-86843",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86843",
+      "source": "cvefeed",
+      "published": "2026-09-29T19:17:12+09:00",
+      "lang": "en"
+    },
     {
       "title": "Chromium CVE-2026-91728: Integer overflow",
       "summary": "Information published.",
