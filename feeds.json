@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-30T06:01:11.913414+09:00",
+  "fetched_at": "2026-09-30T06:31:03.852571+09:00",
   "security_news": [
     {
       "title": "AI 안전망 넓히는 오픈AI…에이전트 보안 강화",
@@ -2460,33 +2460,24 @@
       "source": "naver",
       "published": "2026-09-27T06:34:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"2차 피해차단·1.7조 보상\"…쿠팡이 내세운 과징금 감경 논리는",
-      "summary": "정상적으로 권한을 부여받았던 직원의 범행이어서 일반적인 외부 해킹보다 사전에 막기 어려웠다는 취지다. 이에 송경희 개인정보위원장은 퇴사자인 공격자를 두고 \"실제로 떠난 사람이다. 그러면 외부인이 되는 것이고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 쿠팡, 1.7조 과징금 감경 위해 2차 피해 차단 주장\n2. 퇴사 직원이 정보 탈취, 외부 해킹보다 막기 어려웠다\n3. 개인정보위, 퇴사자도 외부인으로 간주할 수 있음을 시사",
-      "link": "https://n.news.naver.com/mnews/article/001/0016337760?sid=102",
-      "source": "naver",
-      "published": "2026-09-27T06:09:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "쿠팡 개인정보유출 과징금 4천236억 어떻게 나왔나…속기록 보니",
-      "summary": "ISMS-P 인증 등 다층적 보안 체계를 구축하고 피해 확산 방지 조치와 고객 보상도 실시했다고 강조했다. 그러나 개인정보위는 쿠팡이 대체 인증 시스템을 인증키 유출에 취약한 구조로 설계·운영하고 침입 탐지·차단도...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 쿠팡 개인정보유출 과징금 4천236억 어떻게 나왔나…속기록 보니 ISMS-P 인증 등 다층\n2. 그러나 개인정보위는 쿠팡이 대체 인증 시스템을 인증키 유출에 취약한 구조로 설계·운영하고 ",
-      "link": "https://n.news.naver.com/mnews/article/001/0016337758?sid=101",
-      "source": "naver",
-      "published": "2026-09-27T06:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-102904 - JupyterLab: Argument injection in JupyterLab extension uninstall exposes server-readable files and internal URLs",
+      "summary": "CVE ID :CVE-2026-102904\n  \nPublished : Sept. 29, 2026, 8:47 p.m. | 15 minutes ago\n  \nDescription :JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook Architecture. From JupyterLab 4.0.0 until 4.5.11 and 4.6.4, the PyPI Extension Manager uninstall request reaches ExtensionHandler.post, which validates extension names for installation but passes uninstall names to PyPIExtensionManager.uninstall and python -m pip uninstall without rejecting option-like values. The security impact requires that the PyPI Extension Manager is enabled, the account can call the extension API, and kernels and terminals are disabled or delegated to remote hosts; otherwise the user can already read files and make outbound requests directly. An authenticated user with extension API access can supply a pip requirements option to make the server read a local file or fetch an internal URL, and reflected parse errors can return the first unparsable line or response content. A pip log option can also create or corrupt a chosen path with pip-generated log text, but the requester cannot select an arbitrary disclosed line or arbitrary file content, and the injection does not add code execution or availability impact beyond ordinary package removal. This issue is fixed in JupyterLab 4.5.11 and 4.6.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-102904\n  \nPublished : Sept. 29, 2026, 8:47 p.m. | 15 minutes ago\n  \nDescription :JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook Architecture. From JupyterLab 4.0.0 until 4.5.11 and 4.6.4, the PyPI Extension Manager uninstall request reaches ExtensionHandler.post, which validates extension names for installation but passes uninstall names to PyPIExtensionManager.uninstall and python -m pip uninstall without rejecting option-like values. The security impact requires that the PyPI Extension Manager is enabled, the account can call the extension API, and kernels and terminals are disabled or delegated to remote hosts; otherwise the user can already read files and make outbound requests directly. An authenticated user with extension API access can supply a pip requirements option to make the server read a local file or fetch an internal URL, and reflected parse errors can return the first unparsable line or response content. A pip log option can also create or corrupt a chosen path with pip-generated log text, but the requester cannot select an arbitrary disclosed line or arbitrary file content, and the injection does not add code execution or availability impact beyond ordinary package removal. This issue is fixed in JupyterLab 4.5.11 and 4.6.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102904\n2. 26.09.30 오전5:47\n3. JupyterLab is an extensible environment for intera",
+      "cve_id": "CVE-2026-102904",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102904",
+      "source": "cvefeed",
+      "published": "2026-09-30T05:47:43+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-102729 - Azure RTOS GUIX Heap-based Buffer Overflow",
       "summary": "CVE ID :CVE-2026-102729\n  \nPublished : Sept. 29, 2026, 5:58 p.m. | 22 minutes ago\n  \nDescription :`gx_binres_theme_load()` sizes its theme buffer for the theme it was asked for, and allocates it even when the resource holds no theme with that id. A theme id at or past the theme count declared by the resource gets a buffer of zero bytes. The load pass then walks past the end of the theme table, takes whatever follows as a theme header, and writes a `GX_THEME` and its tables into that zero-byte buffer.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
