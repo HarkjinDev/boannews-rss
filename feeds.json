@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-30T04:02:26.678936+09:00",
+  "fetched_at": "2026-09-30T04:32:14.992170+09:00",
   "security_news": [
+    {
+      "title": "오픈AI, 허깅페이스 해킹 관련 소송 피소",
+      "summary": "소송은 오픈AI가 향후 유사한 해킹을 막도록 제한하는 법원 명령을 요구한다. 오픈AI는 8월 26일 공개한 보고서에서 7월 내부 사이버보안 평가 중 모델들이 인터넷 격리 통제를 우회하고 허깅페이스 시스템에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI, 허깅페이스 해킹 관련 소송 피소 소송은 오픈AI가 향후 유사한 해킹을 막도록 제\n2. 오픈AI는 8월 26일 공개한 보고서에서 7월 내부 사이버보안 평가 중 모델들이 인터넷 격",
+      "link": "https://www.tokenpost.kr/news/breaking/416033",
+      "source": "naver",
+      "published": "2026-09-30T04:14:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Hackers exploit Citrix NetScaler zero-day to deploy web shells",
       "summary": "Cybersecurity firms say attackers exploited the Citrix NetScaler CVE-2026-88772 zero-day to deploy custom web shells and tunneling malware, gain root access, steal credentials, and spread into internal networks. [...]",
@@ -2496,21 +2508,54 @@
       "source": "naver",
       "published": "2026-09-27T04:45:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks",
-      "summary": "The ShinyHunters extortion gang is using a URL-encoding trick to bypass web application firewall rules that mitigate the Oracle PeopleSoft CVE-2026-35273 flaw, allowing the threat actors to resume widespread exploitation of a flaw on vulnerable servers. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. ShinyHunters uses WAF bypass trick in Oracle Peopl",
-      "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/",
-      "source": "bleepingcomputer",
-      "published": "2026-09-27T04:03:34+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-102729 - Azure RTOS GUIX Heap-based Buffer Overflow",
+      "summary": "CVE ID :CVE-2026-102729\n  \nPublished : Sept. 29, 2026, 5:58 p.m. | 22 minutes ago\n  \nDescription :`gx_binres_theme_load()` sizes its theme buffer for the theme it was asked for, and allocates it even when the resource holds no theme with that id. A theme id at or past the theme count declared by the resource gets a buffer of zero bytes. The load pass then walks past the end of the theme table, takes whatever follows as a theme header, and writes a `GX_THEME` and its tables into that zero-byte buffer.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-102729\n  \nPublished : Sept. 29, 2026, 5:58 p.m. | 22 minutes ago\n  \nDescription :`gx_binres_theme_load()` sizes its theme buffer for the theme it was asked for, and allocates it even when the resource holds no theme with that id. A theme id at or past the theme count declared by the resource gets a buffer of zero bytes. The load pass then walks past the end of the theme table, takes whatever follows as a theme header, and writes a `GX_THEME` and its tables into that zero-byte buffer.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102729\n2. 26.09.30 오전2:58\n3. `gx_binres_theme_load()` sizes its theme buffer fo",
+      "cve_id": "CVE-2026-102729",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102729",
+      "source": "cvefeed",
+      "published": "2026-09-30T02:58:45+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-102718 - NetX Duo SNMP Addon Out-of-Bounds Read Vulnerability",
+      "summary": "CVE ID :CVE-2026-102718\n  \nPublished : Sept. 29, 2026, 5:44 p.m. | 36 minutes ago\n  \nDescription :hey,\n\n\n\n`_nx_snmp_utility_object_id_get` in the NetX Duo SNMP addon does not validate the claimed OID data length against the actual buffer size when the OID uses BER multibyte length encoding, so a remote attacker can send a crafted SNMP packet with a multibyte OID length larger than the available buffer, causing the parser to read past the packet buffer boundary into adjacent heap memory. the OOB bytes are decoded as OID component values and written into the agents internal OID string buffer, corrupting agent state. on systems with memory protection the OOB read poses the risk of crashing the SNMP agent thread, causing denial of service. on bare metal embedded systems without memory protection the read silently succeeds and corrupts the agents internal state with heap data.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-102718\n  \nPublished : Sept. 29, 2026, 5:44 p.m. | 36 minutes ago\n  \nDescription :hey,\n\n\n\n`_nx_snmp_utility_object_id_get` in the NetX Duo SNMP addon does not validate the claimed OID data length against the actual buffer size when the OID uses BER multibyte length encoding, so a remote attacker can send a crafted SNMP packet with a multibyte OID length larger than the available buffer, causing the parser to read past the packet buffer boundary into adjacent heap memory. the OOB bytes are decoded as OID component values and written into the agents internal OID string buffer, corrupting agent state. on systems with memory protection the OOB read poses the risk of crashing the SNMP agent thread, causing denial of service. on bare metal embedded systems without memory protection the read silently succeeds and corrupts the agents internal state with heap data.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102718\n2. 26.09.30 오전2:44\n3. hey, `_nx_snmp_utility_object_id_get` in the NetX ",
+      "cve_id": "CVE-2026-102718",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102718",
+      "source": "cvefeed",
+      "published": "2026-09-30T02:44:43+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-102715 - mDNS string-cache lookup matches on slot size, so a peer name aliases a shorter one and the response encoder writes past the packet",
+      "summary": "CVE ID :CVE-2026-102715\n  \nPublished : Sept. 29, 2026, 5:42 p.m. | 38 minutes ago\n  \nDescription :Any host on the LAN can send two mDNS records and make the responder write past the end of its\n\n\n\ntransmit packet.\n\n\n\nThe string table stores each name in a slot rounded up to a multiple of four:\n\n\n\n```c\n\n\n\n/* addons/mdns/nxd_mdns.c:11436, 11443, 11447 */\n\n\n\nmemory_len = ((memory_len & 0xFFFFFFFC) + 8) & 0xFFFFFFFF;\n\n\n\n...\n\n\n\nlen = *((USHORT*)(p - 2));           /* slot size, not string length */\n\n\n\nif ((len == memory_len) && ... _nx_mdns_name_match(start, memory_ptr, memory_size) ...)\n\n\n\n```\n\n\n\nThe lookup that decides whether an incoming name is already stored compares the rounded slot size,\n\n\n\nso names of 12, 13, 14 and 15 characters share one bucket. A second name in the bucket is answered\n\n\n\nwith the pointer to the first, and the record then carries a string up to three bytes longer than\n\n\n\nthe length the caller accounted for. `_nx_mdns_packet_rr_add` (nxd_mdns.c:8911) sizes its only\n\n\n\nbound check from that stale length, and `_nx_mdns_name_string_encode` writes the real string.\n\n\n\nTwo PTR records are enough, both ordinary mDNS responses to a `_http._tcp` query, with owner names\n\n\n\nwhose lengths fall in the same bucket:\n\n\n\n```\n\n\n\n==87491==ERROR: AddressSanitizer: heap-buffer-overflow\n\n\n\nWRITE of size 1 at 0x611000000124 thread T5\n\n    #0 _nx_mdns_name_string_encode  addons/mdns/nxd_mdns.c:13096\n    #1 _nx_mdns_packet_rr_add       addons/mdns/nxd_mdns.c:8911\n\n\n0x611000000124 is 0 bytes to the right of 228-byte region\n\n\n\n```\n\n\n\nThe overflow is one to three bytes of attacker-influenced name data past `nx_packet_data_end`. In a\n\n\n\nnormal pool that lands in the next packet in the same pool rather than in a redzone, so the visible\n\n\n\neffect is a corrupted neighbouring packet or a corrupted pool free list rather than a clean crash.\n\n\n\nCompare the slot size against the stored string length before declaring a match, or keep the\n\n\n\nstring length in the slot header and return it to the caller so the encoder and the bound check\n\n\n\nagree.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-102715\n  \nPublished : Sept. 29, 2026, 5:42 p.m. | 38 minutes ago\n  \nDescription :Any host on the LAN can send two mDNS records and make the responder write past the end of its\n\n\n\ntransmit packet.\n\n\n\nThe string table stores each name in a slot rounded up to a multiple of four:\n\n\n\n```c\n\n\n\n/* addons/mdns/nxd_mdns.c:11436, 11443, 11447 */\n\n\n\nmemory_len = ((memory_len & 0xFFFFFFFC) + 8) & 0xFFFFFFFF;\n\n\n\n...\n\n\n\nlen = *((USHORT*)(p - 2));           /* slot size, not string length */\n\n\n\nif ((len == memory_len) && ... _nx_mdns_name_match(start, memory_ptr, memory_size) ...)\n\n\n\n```\n\n\n\nThe lookup that decides whether an incoming name is already stored compares the rounded slot size,\n\n\n\nso names of 12, 13, 14 and 15 characters share one bucket. A second name in the bucket is answered\n\n\n\nwith the pointer to the first, and the record then carries a string up to three bytes longer than\n\n\n\nthe length the caller accounted for. `_nx_mdns_packet_rr_add` (nxd_mdns.c:8911) sizes its only\n\n\n\nbound check from that stale length, and `_nx_mdns_name_string_encode` writes the real string.\n\n\n\nTwo PTR records are enough, both ordinary mDNS responses to a `_http._tcp` query, with owner names\n\n\n\nwhose lengths fall in the same bucket:\n\n\n\n```\n\n\n\n==87491==ERROR: AddressSanitizer: heap-buffer-overflow\n\n\n\nWRITE of size 1 at 0x611000000124 thread T5\n\n    #0 _nx_mdns_name_string_encode  addons/mdns/nxd_mdns.c:13096\n    #1 _nx_mdns_packet_rr_add       addons/mdns/nxd_mdns.c:8911\n\n\n0x611000000124 is 0 bytes to the right of 228-byte region\n\n\n\n```\n\n\n\nThe overflow is one to three bytes of attacker-influenced name data past `nx_packet_data_end`. In a\n\n\n\nnormal pool that lands in the next packet in the same pool rather than in a redzone, so the visible\n\n\n\neffect is a corrupted neighbouring packet or a corrupted pool free list rather than a clean crash.\n\n\n\nCompare the slot size against the stored string length before declaring a match, or keep the\n\n\n\nstring length in the slot header and return it to the caller so the encoder and the bound check\n\n\n\nagree.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102715\n2. 26.09.30 오전2:42\n3. Any host on the LAN can send two mDNS records and ",
+      "cve_id": "CVE-2026-102715",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102715",
+      "source": "cvefeed",
+      "published": "2026-09-30T02:42:35+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-97711 - Serialize JavaScript: Cross-site scripting (XSS) via unescaped  in serialized function bodies",
       "summary": "CVE ID :CVE-2026-97711\n  \nPublished : Sept. 29, 2026, 4 p.m. | 20 minutes ago\n  \nDescription :Serialize JavaScript serializes JavaScript values to a superset of JSON that includes regular expressions and functions. From 7.1.1 until 7.1.2, function values serialized by serialize-javascript are not fully protected against script-closing tags in attacker-influenced function source because SCRIPT_CLOSE_REGEXP can consume a second closing tag inside one match. When the serialized function is embedded in a script element, the surviving closing tag terminates the element early and causes the remaining output to be parsed as HTML, enabling cross-site scripting in the page origin. Only function values are affected; ordinary data values and options.isJSON output are unaffected. This issue is fixed in version 7.1.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
