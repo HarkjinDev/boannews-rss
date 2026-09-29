@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-29T09:32:16.937023+09:00",
+  "fetched_at": "2026-09-29T10:01:20.128486+09:00",
   "security_news": [
+    {
+      "title": "파수 AI, '보안 케어 서비스' 출시...\"실용적인 보안 체계 구축\"",
+      "summary": "악성메일 모의훈련 및 교육은 임직원의 잘못된 메일 클릭 한번으로 해킹이 시작되는 것을 방지하기 위해 악성 메일에 대한 대응력을 높인다. 솔루션 도입 단계에서는 데이터 유출을 방지하기 위해 기업이 가장 필요한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 파수AI, 실용적 보안 체계 위한 '보안 케어 서비스' 출시\n2. 악성메일 모의훈련, 임직원 실수로 인한 해킹 방지\n3. 데이터 유출 방지 위한 맞춤형 솔루션 도입 지원",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=703473",
+      "source": "naver",
+      "published": "2026-09-29T09:42:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"사용자 속이고 허락 없이 작업 진행\"…오픈AI, 차세대 모델 출시 포기",
       "summary": "오픈AI는 지난 7월 사이버보안 테스트를 수행하던 내부 에이전트 수백 개가 AI 개발 플랫폼 기업인 허깅페이스를 해킹하는 상황이 발생했다. 이후 호주 정부와 유엔 등은 오픈AI의 에이전트가 허깅페이스 해킹...",
@@ -2004,21 +2016,39 @@
       "source": "naver",
       "published": "2026-09-26T10:22:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "나만 보던 챗GPT 사진 유출?…오픈AI, 수십곳 보안 침해 가능성",
-      "summary": "허깅페이스를 해킹한 사실이 드러났다. 이후 오픈AI는 모델의 학습과 평가 과정에서 나타나는 이상 행동을 검토했다. 최근에는 오픈AI의 한 에이전트가 호주 공공보건 서비스 웹사이트를 해킹해 공개 파일뿐 아니라...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 허깅페이스, 호주 공공보건 서비스 해킹\n2. 오픈AI 에이전트, 공개 파일 및 민감 정보 침해\n3. 수십 곳 보안 침해 가능성, 오픈AI 조사 중",
-      "link": "https://n.news.naver.com/mnews/article/018/0006375626?sid=101",
-      "source": "naver",
-      "published": "2026-09-26T09:36:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-18747 - Integer underflow of net_buf length in the MCUmgr serial (SMP over console) transport leads to out-of-bounds read",
+      "summary": "CVE ID :CVE-2026-18747\n  \nPublished : Sept. 28, 2026, 11:25 p.m. | 43 minutes ago\n  \nDescription :The MCUmgr SMP-over-console transport decodes a base64 frame, reads a 16-bit packet length from it, verifies a CRC and then unconditionally strips the trailing CRC with rx_ctxt->nb->len -= 2U; in mcumgr_serial_process_frag() (subsys/mgmt/mcumgr/transport/src/serial_util.c). mcumgr_serial_extract_len() accepted any declared length, including 0 and 1, and a packet declaring length 0 passes the checksum test for free because crc16_itu_t() over zero bytes returns the zero seed. Since net_buf::len is a uint16_t, the subtraction underflows and the buffer is handed to SMP claiming roughly 65 KB of payload while its data area is only CONFIG_MCUMGR_TRANSPORT_NETBUF_SIZE bytes (default 384).\n\nThe trigger is a single unauthenticated 7-byte line on the management console — the 0x06 0x09 packet marker followed by the base64 group AAA= and a newline — delivered to any transport built on this helper: CONFIG_MCUMGR_TRANSPORT_UART (smp_uart.c) or CONFIG_MCUMGR_TRANSPORT_SHELL (smp_shell.c), both of which select MCUMGR_TRANSPORT_SERIAL_HAS_SMP_OVER_CONSOLE. No prior session state, fragmentation or credentials are required to trigger the underflow, and the malformed frame is mishandled before any command handler or command-level access control runs. The attacker only needs write access to that console, which on many boards is a USB CDC-ACM port rather than a bare UART header.\n\nWith the inflated length, smp_process_request_packet() in subsys/mgmt/mcumgr/smp/src/smp.c loses its bound: cbor_nb_reader_init() gives the CBOR decoder a ~65 KB window into a 384-byte buffer, and each request header's nh_len is checked only against the inflated length. On its own the 7-byte frame re-parses whatever stale bytes the reused pool buffer still holds, typically a replay of the previously received request followed by a parse error, without leaving the buffer. Because the transport is unauthenticated, though, the attacker also controls the frames sent before the trigger, and can stage buffer contents so that a request succeeds with an nh_len larger than the buffer; net_buf_pull(), guarded only by __ASSERT_NO_MSG, then moves the parse cursor out of bounds and the loop reads further headers and CBOR from adjacent memory. The consequence is an out-of-bounds read that can fault the MCUmgr thread (denial of service); memory disclosure is also possible, since the default-enabled os echo handler (CONFIG_MCUMGR_GRP_OS_ECHO) decodes its string inside that window and copies it into its response. There is no integrity gain beyond what the unauthenticated transport already permits.\n\nThe fix rejects any declared packet length of two bytes or fewer in mcumgr_serial_extract_len(), so the CRC-strip subtraction can no longer underflow. The identical pattern remains in the test-only loopback transport subsys/mgmt/mcumgr/transport/src/smp_dummy.c (CONFIG_MCUMGR_TRANSPORT_DUMMY), which has no external input path and therefore carries no practical exposure.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-18747\n  \nPublished : Sept. 28, 2026, 11:25 p.m. | 43 minutes ago\n  \nDescription :The MCUmgr SMP-over-console transport decodes a base64 frame, reads a 16-bit packet length from it, verifies a CRC and then unconditionally strips the trailing CRC with rx_ctxt->nb->len -= 2U; in mcumgr_serial_process_frag() (subsys/mgmt/mcumgr/transport/src/serial_util.c). mcumgr_serial_extract_len() accepted any declared length, including 0 and 1, and a packet declaring length 0 passes the checksum test for free because crc16_itu_t() over zero bytes returns the zero seed. Since net_buf::len is a uint16_t, the subtraction underflows and the buffer is handed to SMP claiming roughly 65 KB of payload while its data area is only CONFIG_MCUMGR_TRANSPORT_NETBUF_SIZE bytes (default 384).\n\nThe trigger is a single unauthenticated 7-byte line on the management console — the 0x06 0x09 packet marker followed by the base64 group AAA= and a newline — delivered to any transport built on this helper: CONFIG_MCUMGR_TRANSPORT_UART (smp_uart.c) or CONFIG_MCUMGR_TRANSPORT_SHELL (smp_shell.c), both of which select MCUMGR_TRANSPORT_SERIAL_HAS_SMP_OVER_CONSOLE. No prior session state, fragmentation or credentials are required to trigger the underflow, and the malformed frame is mishandled before any command handler or command-level access control runs. The attacker only needs write access to that console, which on many boards is a USB CDC-ACM port rather than a bare UART header.\n\nWith the inflated length, smp_process_request_packet() in subsys/mgmt/mcumgr/smp/src/smp.c loses its bound: cbor_nb_reader_init() gives the CBOR decoder a ~65 KB window into a 384-byte buffer, and each request header's nh_len is checked only against the inflated length. On its own the 7-byte frame re-parses whatever stale bytes the reused pool buffer still holds, typically a replay of the previously received request followed by a parse error, without leaving the buffer. Because the transport is unauthenticated, though, the attacker also controls the frames sent before the trigger, and can stage buffer contents so that a request succeeds with an nh_len larger than the buffer; net_buf_pull(), guarded only by __ASSERT_NO_MSG, then moves the parse cursor out of bounds and the loop reads further headers and CBOR from adjacent memory. The consequence is an out-of-bounds read that can fault the MCUmgr thread (denial of service); memory disclosure is also possible, since the default-enabled os echo handler (CONFIG_MCUMGR_GRP_OS_ECHO) decodes its string inside that window and copies it into its response. There is no integrity gain beyond what the unauthenticated transport already permits.\n\nThe fix rejects any declared packet length of two bytes or fewer in mcumgr_serial_extract_len(), so the CRC-strip subtraction can no longer underflow. The identical pattern remains in the test-only loopback transport subsys/mgmt/mcumgr/transport/src/smp_dummy.c (CONFIG_MCUMGR_TRANSPORT_DUMMY), which has no external input path and therefore carries no practical exposure.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-18747\n2. 26.09.29 오전8:25\n3. The MCUmgr SMP-over-console transport decodes a ba",
+      "cve_id": "CVE-2026-18747",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18747",
+      "source": "cvefeed",
+      "published": "2026-09-29T08:25:26+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-18746 - NULL pointer dereference in Zephyr LwM2M client when the CoAP Block1 context pool is exhausted",
+      "summary": "CVE ID :CVE-2026-18746\n  \nPublished : Sept. 28, 2026, 11:25 p.m. | 43 minutes ago\n  \nDescription :parse_write_op() in subsys/net/lib/lwm2m/lwm2m_message_handling.c handles inbound CoAP WRITE/CREATE requests that carry a Block1 option. For the first block of a transfer it called init_block_ctx() and then immediately stored the peer-selected block size with block_ctx->ctx.block_size = block_size before inspecting the return code. init_block_ctx() sets the caller's pointer to NULL and returns -ENOMEM when no entry of the static block1_contexts[] pool is free or timed out, so that store dereferences a NULL pointer.\n\nThe pool holds CONFIG_LWM2M_NUM_BLOCK1_CONTEXT entries (default 3) and an entry is only reclaimed once its transfer completes, fails, or ages past 30 seconds. A peer that reaches the client's LwM2M socket can therefore start three block-wise writes on three distinct object paths with the CoAP More bit set and leave them incomplete, then send the first block of a fourth write on a new path to reach the unguarded dereference. Reachability is gated only by the connected UDP socket's source-address filter unless CONFIG_LWM2M_DTLS_SUPPORT is enabled — which has no default — so in a NoSec deployment an on-path or address-spoofing attacker needs no credentials; the same sequence is also reachable from a bootstrap or lower-trust server, and can be hit accidentally by a legitimate server running four concurrent block transfers.\n\nThe write targets a fixed low address with a value between 0 and 7, so the consequence is a fatal memory fault (BusFault or corrupted low memory leading to a fault) rather than a usable memory-corruption primitive: the device crashes or resets. Confidentiality and integrity are not affected. The fix moves the store below the guard and validates the context pointer itself instead of the return code, so the context is only touched once it is known to be valid.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-18746\n  \nPublished : Sept. 28, 2026, 11:25 p.m. | 43 minutes ago\n  \nDescription :parse_write_op() in subsys/net/lib/lwm2m/lwm2m_message_handling.c handles inbound CoAP WRITE/CREATE requests that carry a Block1 option. For the first block of a transfer it called init_block_ctx() and then immediately stored the peer-selected block size with block_ctx->ctx.block_size = block_size before inspecting the return code. init_block_ctx() sets the caller's pointer to NULL and returns -ENOMEM when no entry of the static block1_contexts[] pool is free or timed out, so that store dereferences a NULL pointer.\n\nThe pool holds CONFIG_LWM2M_NUM_BLOCK1_CONTEXT entries (default 3) and an entry is only reclaimed once its transfer completes, fails, or ages past 30 seconds. A peer that reaches the client's LwM2M socket can therefore start three block-wise writes on three distinct object paths with the CoAP More bit set and leave them incomplete, then send the first block of a fourth write on a new path to reach the unguarded dereference. Reachability is gated only by the connected UDP socket's source-address filter unless CONFIG_LWM2M_DTLS_SUPPORT is enabled — which has no default — so in a NoSec deployment an on-path or address-spoofing attacker needs no credentials; the same sequence is also reachable from a bootstrap or lower-trust server, and can be hit accidentally by a legitimate server running four concurrent block transfers.\n\nThe write targets a fixed low address with a value between 0 and 7, so the consequence is a fatal memory fault (BusFault or corrupted low memory leading to a fault) rather than a usable memory-corruption primitive: the device crashes or resets. Confidentiality and integrity are not affected. The fix moves the store below the guard and validates the context pointer itself instead of the return code, so the context is only touched once it is known to be valid.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-18746\n2. 26.09.29 오전8:25\n3. parse_write_op() in subsys/net/lib/lwm2m/lwm2m_mes",
+      "cve_id": "CVE-2026-18746",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18746",
+      "source": "cvefeed",
+      "published": "2026-09-29T08:25:24+09:00",
+      "lang": "en"
+    },
     {
       "title": "Apple Emergency Patch for iOS 26/macOS26/macOS15 (CVE-2026-86950), (Mon, Sep 28th)",
       "summary": "Apple today released patches for all of its operating systems. However, only patches for older branches include a security fix. The vulnerability being addressed in iOS 26, macOS 26 and macOS 15 is already being exploited. iOS and macOS 27 are not affected. Today&#;x26;#;39;s update for the current \"27\" branch does not address security issues, but fixes some functional issues that got caught after the release two weeks ago. A 27.1 version was also expected to support the new foldable iPhone and will likely include specific features geared to the soon to be available device.\r",
