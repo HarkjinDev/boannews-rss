@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-29T23:31:02.467270+09:00",
+  "fetched_at": "2026-09-30T00:01:20.676165+09:00",
   "security_news": [
     {
       "title": "中 AI도 '거짓말·위조'드러나…알리바바·딥시크 에이전트 기만행동",
@@ -2439,6 +2439,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-97395 - Apache Polaris: Allows authorized table writers to redirect server-side Iceberg FileIO requests to attacker-controlled endpoints using operation-scoped storage credentials",
+      "summary": "CVE ID :CVE-2026-97395\n  \nPublished : Sept. 29, 2026, 1:57 p.m. | 22 minutes ago\n  \nDescription :Apache Polaris allows an authenticated principal with permission to create or update Iceberg table properties to set FileIO client settings such as s3.endpoint in table metadata.\n\n\nIn versions < 1.8.0, when Polaris performs server-side Iceberg operations, including commits and purges, it may use those settings to construct its (server-side) FileIO client. If the catalog storage configuration does not override the endpoint, Polaris can send storage requests to a host chosen by the table writer, using credentials scoped to the operation.\n\n\n\n\nThis can redirect server-side storage traffic and expose request authentication material to the chosen endpoint. Deployments are affected when table writers are not trusted to configure server-side storage endpoints.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-97395\n  \nPublished : Sept. 29, 2026, 1:57 p.m. | 22 minutes ago\n  \nDescription :Apache Polaris allows an authenticated principal with permission to create or update Iceberg table properties to set FileIO client settings such as s3.endpoint in table metadata.\n\n\nIn versions < 1.8.0, when Polaris performs server-side Iceberg operations, including commits and purges, it may use those settings to construct its (server-side) FileIO client. If the catalog storage configuration does not override the endpoint, Polaris can send storage requests to a host chosen by the table writer, using credentials scoped to the operation.\n\n\n\n\nThis can redirect server-side storage traffic and expose request authentication material to the chosen endpoint. Deployments are affected when table writers are not trusted to configure server-side storage endpoints.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-97395\n2. 26.09.29 오후10:57\n3. Apache Polaris allows an authenticated principal w",
+      "cve_id": "CVE-2026-97395",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-97395",
+      "source": "cvefeed",
+      "published": "2026-09-29T22:57:32+09:00",
+      "lang": "en"
+    },
     {
       "title": "Scans for Wordfence Protected Websites, (Tue, Sep 29th)",
       "summary": "Starting yesterday, our sensors picked up a small number of scans for \"wordfence-waf.php\". This particular script is used by Wordfence, a solution to protect WordPress sites. During the Wordfence install, the wordpress-waf.php file will be created in the site&#;x26;#;39;s root directory [1].\r",
