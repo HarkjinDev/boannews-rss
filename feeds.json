@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-09-29T19:31:14.641757+09:00",
+  "fetched_at": "2026-09-29T20:01:58.273377+09:00",
   "security_news": [
+    {
+      "title": "개인정보위, 법·AI 전문가 위촉…\"과징금과 AI, 두 현안 잡는다\"",
+      "summary": "최근 잇따르는 개인정보 유출 사고로 천문학적인 과징금이 부과되고, AI로 인한 보안 위협이 가중되면서 이에 대응하기 위함 움직임으로 해석된다. 29일 개인정보위에 따르면 지난 21일 권건보 아주대 법학전문대학원...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 개인정보위, 법·AI 전문가 위촉…\"과징금과 AI, 두 현안 잡는다\" 최근 잇따르는 개인정\n2. 29일 개인정보위에 따르면 지난 21일 권건보 아주대 법학전문대학원...",
+      "link": "https://n.news.naver.com/mnews/article/008/0005419917?sid=105",
+      "source": "naver",
+      "published": "2026-09-29T19:54:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "에브리존-명정보기술, 랜섬웨어 대응 강화 업무협약 체결",
       "summary": "랜섬웨어 대응 전문 보안기업 에브리존(대표 홍승균)과 데이터 복구 전문기업 명정보기술(대표 이명재)이... 명정보기술은 에브리존이 백신 개발 과정에서 축적한 악성코드 분석과 보안 기술 연구 경험을 바탕으로...",
@@ -2376,18 +2388,6 @@
       "source": "thehackernews",
       "published": "2026-09-26T20:46:40+09:00",
       "lang": "en"
-    },
-    {
-      "title": "'티빙 개인정보 유출' 보안 재정비…최주희·윤상현 국감 선다",
-      "summary": "이와 함께 AI(인공지능) 기반 보안 위협 탐지·차단 기술을 적용하고 클라우드 계정·권한까지 모의해킹과 취약점 진단 범위를 확대할 계획이다. 보안 취약점을 찾아 신고하면 보상을 지급하는 '버그바운티' 도입도...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 티빙 개인정보 유출로 최주희, 윤상현 국감 출석\n2. AI 보안 기술 강화, 클라우드 모의해킹 및 취약점 진단 확대\n3. 버그바운티 도입으로 보안 강화 및 신고 포상 지급",
-      "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5065874",
-      "source": "naver",
-      "published": "2026-09-26T19:52:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -2404,6 +2404,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-91728",
       "source": "msrc",
       "published": "2026-09-29T17:46:34+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-91085 - Apache Karaf: config:install missing ACL entry allows privilege escalation to admin",
+      "summary": "CVE ID :CVE-2026-91085\n  \nPublished : Sept. 29, 2026, 8:39 a.m. | 42 minutes ago\n  \nDescription :Apache Karaf's shell/SSH command security is enforced by per-scope ACL configuration files (etc/org.apache.karaf.command.acl..cfg). SecuredSessionFactoryImpl.checkSecurity() resolves the roles required for an invocation and, when no ACL rule matches the command, fails open: ACLConfigurationParser.Specificity.NO_MATCH sets passCheck = true. The safety valve for this, karaf.secured.command.compulsory.roles, ships commented out in etc/system.properties, so an unmatched command is allowed for any authenticated user.\n\n\nThe shipped org.apache.karaf.command.acl.config ACL (assemblies/features/standard/src/main/feature/feature.xml, mirrored into instance/.../etc/org.apache.karaf.command.acl.config.cfg) has no install entry. It restricts delete to admin, restricts edit/property-*/update on the jmx.acl.*, org.apache.karaf.command.acl.* and org.apache.karaf.service.acl.* PIDs to admin, and allows manager for everything else, but config:install was simply unmatched, and therefore allowed for any authenticated user, including one holding only the viewer role.\n\n\n\n\nconfig:install   fetches url and writes it into ${karaf.etc} as finalname. It calls PathUtils.checkWithin() to block .. traversal outside karaf.etc, but that folder holds every security-relevant file Karaf ships: users.properties, keys.properties, host.key, and all org.apache.karaf.*.acl.* files, including the very ACL file that (mis)governs this command. With -o/--override, an existing file is overwritten with attacker-controlled bytes fetched from an arbitrary URL.\n\n\n\n\nBecause felix.fileinstall.dir = ${karaf.etc} (etc/config.properties), Felix FileInstall also watches and reloads any .cfg file dropped there, closing the loop without requiring a restart.\n\n\n\n\nBy contrast, bundle:install, feature:install and kar:install are all admin-only in their own ACLs, and config:delete is admin in this same ACL, config:install was the outlier.\n\nMitigationAdd install = admin in etc/org.apache.karaf.command.acl.config.cfg (create the file is absent), and/or set karaf.secured.command.compulsory.roles=admin in etc/system.properties (and restart) to make unmatched commands fail closed by default.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-91085\n  \nPublished : Sept. 29, 2026, 8:39 a.m. | 42 minutes ago\n  \nDescription :Apache Karaf's shell/SSH command security is enforced by per-scope ACL configuration files (etc/org.apache.karaf.command.acl..cfg). SecuredSessionFactoryImpl.checkSecurity() resolves the roles required for an invocation and, when no ACL rule matches the command, fails open: ACLConfigurationParser.Specificity.NO_MATCH sets passCheck = true. The safety valve for this, karaf.secured.command.compulsory.roles, ships commented out in etc/system.properties, so an unmatched command is allowed for any authenticated user.\n\n\nThe shipped org.apache.karaf.command.acl.config ACL (assemblies/features/standard/src/main/feature/feature.xml, mirrored into instance/.../etc/org.apache.karaf.command.acl.config.cfg) has no install entry. It restricts delete to admin, restricts edit/property-*/update on the jmx.acl.*, org.apache.karaf.command.acl.* and org.apache.karaf.service.acl.* PIDs to admin, and allows manager for everything else, but config:install was simply unmatched, and therefore allowed for any authenticated user, including one holding only the viewer role.\n\n\n\n\nconfig:install   fetches url and writes it into ${karaf.etc} as finalname. It calls PathUtils.checkWithin() to block .. traversal outside karaf.etc, but that folder holds every security-relevant file Karaf ships: users.properties, keys.properties, host.key, and all org.apache.karaf.*.acl.* files, including the very ACL file that (mis)governs this command. With -o/--override, an existing file is overwritten with attacker-controlled bytes fetched from an arbitrary URL.\n\n\n\n\nBecause felix.fileinstall.dir = ${karaf.etc} (etc/config.properties), Felix FileInstall also watches and reloads any .cfg file dropped there, closing the loop without requiring a restart.\n\n\n\n\nBy contrast, bundle:install, feature:install and kar:install are all admin-only in their own ACLs, and config:delete is admin in this same ACL, config:install was the outlier.\n\nMitigationAdd install = admin in etc/org.apache.karaf.command.acl.config.cfg (create the file is absent), and/or set karaf.secured.command.compulsory.roles=admin in etc/system.properties (and restart) to make unmatched commands fail closed by default.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-91085\n2. 26.09.29 오후5:39\n3. Apache Karaf's shell/SSH command security is enfor",
+      "cve_id": "CVE-2026-91085",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-91085",
+      "source": "cvefeed",
+      "published": "2026-09-29T17:39:33+09:00",
       "lang": "en"
     },
     {
