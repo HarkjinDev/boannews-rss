@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-09-29T16:01:28.624956+09:00",
+  "fetched_at": "2026-09-29T16:31:19.247069+09:00",
   "security_news": [
+    {
+      "title": "티빙, 해킹 피해 보상 신청기간 연장…\"고객 불편 해소 노력\"",
+      "summary": "티빙 해킹 조회 결과 AI 생성 이미지(사진=챗GPT 이미지 생성) 티빙은 29일 고객센터 공지를 통해 사이버... 해킹·피싱 안심보험은 1년간 제공되며 사이버 금융사기와 인터넷 쇼핑몰·개인 간 직거래 사기 등에 대해 1인당...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 티빙, 해킹 피해 보상 신청 기간 연장\n2. 고객 개인 정보 일부 유출 가능성\n3. 1년간 사이버 해킹·피싱 안심보험 제공",
+      "link": "https://n.news.naver.com/mnews/article/018/0006377151?sid=105",
+      "source": "naver",
+      "published": "2026-09-29T16:16:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "대규모 해킹사고 일으킨 통신 3사 \"해킹 사전예방 하겠다\"",
+      "summary": "SK텔레콤·KT와 해킹 은폐 의혹으로 경찰에 고발된 LG유플러스가 개인정보 보호를 최우선 경영 가치로 삼겠다고 밝혔다. 투자와 보안 인력을 대폭 확대하는 등 조치를 통해 해킹 위협을 사전에 차단하겠다는 것이다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 통신 3사, 해킹 사전 예방에 총력\n2. 개인정보 유출 막기 위해 투자 확대\n3. 보안 인력 대폭 충원 약속",
+      "link": "https://n.news.naver.com/mnews/article/006/0000137963?sid=105",
+      "source": "naver",
+      "published": "2026-09-29T16:13:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "KISA 보안교육 맡긴 곳도 털렸다…사칭 문자까지",
       "summary": "국내 인터넷 침해사고를 방어하는 사이버 보안의 컨트롤타워, 바로 한국인터넷진흥원 KISA인데요. KISA가 보안 교육을 맡긴 국내 대표 보안 전문 교육기관에서도 고객 개인정보가 유출된 것으로 확인됐습니다. 안지혜...",
@@ -2304,21 +2328,24 @@
       "source": "naver",
       "published": "2026-09-26T17:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "국정원, 국가·공공기관 사이버보안 평가 강화",
-      "summary": "(모의해킹)를 내년부터 각각 연 1회 이상 시행하도록 한 바 있다. 기관별 사이버보안 현황도 공개한다.... 모바일 환경과 달리 PC에서 공동인증서 이용시 플러그인SW가 과도한 권한을 보유, 해킹 악용 사례가 빈번하다는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국정원, 내년부터 국가·공공기관 연 1회 이상 모의해킹 시행\n2. PC 공동인증서 플러그인 SW, 과도한 권한으로 해킹 악용 사례 빈번\n3. 기관별 사이버보안 현황 공개 예정, 보안 강화 기대",
-      "link": "https://n.news.naver.com/mnews/article/092/0002438799?sid=105",
-      "source": "naver",
-      "published": "2026-09-26T16:04:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Chromium CVE-2026-91728: Integer overflow",
+      "summary": "Information published.",
+      "description": "Information published.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-91728\n2. MSRC\n3. Information published.",
+      "cve_id": "CVE-2026-91728",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-91728",
+      "source": "msrc",
+      "published": "2026-09-29T17:46:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-18747 - Integer underflow of net_buf length in the MCUmgr serial (SMP over console) transport leads to out-of-bounds read",
       "summary": "CVE ID :CVE-2026-18747\n  \nPublished : Sept. 28, 2026, 11:25 p.m. | 43 minutes ago\n  \nDescription :The MCUmgr SMP-over-console transport decodes a base64 frame, reads a 16-bit packet length from it, verifies a CRC and then unconditionally strips the trailing CRC with rx_ctxt->nb->len -= 2U; in mcumgr_serial_process_frag() (subsys/mgmt/mcumgr/transport/src/serial_util.c). mcumgr_serial_extract_len() accepted any declared length, including 0 and 1, and a packet declaring length 0 passes the checksum test for free because crc16_itu_t() over zero bytes returns the zero seed. Since net_buf::len is a uint16_t, the subtraction underflows and the buffer is handed to SMP claiming roughly 65 KB of payload while its data area is only CONFIG_MCUMGR_TRANSPORT_NETBUF_SIZE bytes (default 384).\n\nThe trigger is a single unauthenticated 7-byte line on the management console — the 0x06 0x09 packet marker followed by the base64 group AAA= and a newline — delivered to any transport built on this helper: CONFIG_MCUMGR_TRANSPORT_UART (smp_uart.c) or CONFIG_MCUMGR_TRANSPORT_SHELL (smp_shell.c), both of which select MCUMGR_TRANSPORT_SERIAL_HAS_SMP_OVER_CONSOLE. No prior session state, fragmentation or credentials are required to trigger the underflow, and the malformed frame is mishandled before any command handler or command-level access control runs. The attacker only needs write access to that console, which on many boards is a USB CDC-ACM port rather than a bare UART header.\n\nWith the inflated length, smp_process_request_packet() in subsys/mgmt/mcumgr/smp/src/smp.c loses its bound: cbor_nb_reader_init() gives the CBOR decoder a ~65 KB window into a 384-byte buffer, and each request header's nh_len is checked only against the inflated length. On its own the 7-byte frame re-parses whatever stale bytes the reused pool buffer still holds, typically a replay of the previously received request followed by a parse error, without leaving the buffer. Because the transport is unauthenticated, though, the attacker also controls the frames sent before the trigger, and can stage buffer contents so that a request succeeds with an nh_len larger than the buffer; net_buf_pull(), guarded only by __ASSERT_NO_MSG, then moves the parse cursor out of bounds and the loop reads further headers and CBOR from adjacent memory. The consequence is an out-of-bounds read that can fault the MCUmgr thread (denial of service); memory disclosure is also possible, since the default-enabled os echo handler (CONFIG_MCUMGR_GRP_OS_ECHO) decodes its string inside that window and copies it into its response. There is no integrity gain beyond what the unauthenticated transport already permits.\n\nThe fix rejects any declared packet length of two bytes or fewer in mcumgr_serial_extract_len(), so the CRC-strip subtraction can no longer underflow. The identical pattern remains in the test-only loopback transport subsys/mgmt/mcumgr/transport/src/smp_dummy.c (CONFIG_MCUMGR_TRANSPORT_DUMMY), which has no external input path and therefore carries no practical exposure.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
