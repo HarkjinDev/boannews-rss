@@ -1,6 +1,54 @@
 {
-  "fetched_at": "2026-10-01T00:01:16.871105+09:00",
+  "fetched_at": "2026-10-01T00:33:42.797659+09:00",
   "security_news": [
+    {
+      "title": "Cisco Warns of Attackers Exploiting Critical Authentication Bypass in SD-WAN Manager",
+      "summary": "Attackers are exploiting a critical flaw in Cisco Catalyst SD-WAN Manager, the system companies use to manage their Cisco SD-WAN networks, Cisco said in an advisory on September 30.\n\nThe flaw, CVE-2026-76504, could allow a remote attacker with no login access to use the Manager's API as the admin user. Fixed releases are available, and there is no workaround.\n\nCVE-2026-76504 carries a",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 시스코, SD-WAN Manager 인증 우회 취약점(CVE-2026-76504) 경고\n2. 공격자는 로그인 없이 관리자 API 접근 가능\n3. 픽스 릴리스 배포, 우회책은 없음",
+      "link": "https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html",
+      "source": "thehackernews",
+      "published": "2026-10-01T00:24:54+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[데스크 칼럼] 대혼란 예고된 중수청 출범",
+      "summary": "온나라는 지난해 해킹 사례가 확인되면서 보안이 취약하다는 지적을 받았다. 피의자·피해자 개인정보와 진술, 수사 진행 상황 등 민감 정보가 온나라를 통해 유출되는 것 아니냐는 우려가 나온다. 결국 피해는 국민의 몫...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [데스크 칼럼] 대혼란 예고된 중수청 출범 온나라는 지난해 해킹 사례가 확인되면서 보안이 \n2. 피의자·피해자 개인정보와 진술, 수사 진행 상황 등 민감 정보가 온나라를 통해 유출되는 것\n3. 결국 피해는 국민의 몫...",
+      "link": "https://n.news.naver.com/mnews/article/015/0005337890?sid=110",
+      "source": "naver",
+      "published": "2026-10-01T00:22:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "오스티움 복구 포털 개설…피해 OLP 90.6% 전액 회수 가능",
+      "summary": "오스티움 해킹 피해를 본 오스티움 유동성 공급자(OLP) 보유자를 위한 복구 포털이 개설됐다. 피해... 앞서 오스티움은 7월 15일 해킹으로 OLP 금고에서 2375만달러(약 322억원) 상당의 USDC가 유출됐다. 더블록은...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오스티움, 해킹으로 322억원 상당 USDC 유출 피해\n2. 오스티움 복구 포털 개설, OLP 90.6% 전액 회수 가능\n3. 피해 OLP 보유자 대상 포털 통해 자산 회수 진행",
+      "link": "https://www.tokenpost.kr/news/breaking/416595",
+      "source": "naver",
+      "published": "2026-10-01T00:16:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "Russia's Star Blizzard Ditches ClickFix to Widen Phishing Net",
+      "summary": "The APT actor is using a new tactic, dubbed \"RedFlick,\" against Ukrainian-linked targets such as NGOs, think tanks, and journalists to deploy its CosmicPulse backdoor.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Russia's Star Blizzard Ditches ClickFix to Widen P",
+      "link": "https://www.darkreading.com/threat-intelligence/russia-star-blizzard-apt-ditches-clickfix-widen-phishing-net",
+      "source": "darkreading",
+      "published": "2026-10-01T00:02:25+09:00",
+      "lang": "en"
+    },
     {
       "title": "[열린마당] 개인정보보호도 ‘경영’해야 한다",
       "summary": "개인정보보호위원회가 지난해 처분한 유출 사건 115건의 원인은 업무 과실이 46%로 해킹 45%보다 많았다. 기술이 부족해서만 사고가 나는 것이 아니라는 뜻이다. 지금까지 개인정보보호는 기술과 예산, 법규 준수의 언어로...",
@@ -3535,36 +3583,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-101047",
       "source": "cvefeed",
       "published": "2026-09-28T03:16:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-101041 - Vulnerability-Lookup - Race Condition in Account Recovery Token Consumption Allows Password Takeover",
-      "summary": "CVE ID :CVE-2026-101041\n  \nPublished : Sept. 27, 2026, 3:16 p.m. | 49 minutes ago\n  \nDescription :The account recovery (password reset) functionality in the vulnerability-lookup web application contains a time-of-check-to-time-of-use (TOCTOU) race condition in the consumption of single-use recovery tokens. The original implementation verified the token nonce against the stored digest and then consumed (cleared) it in separate database operations. Two concurrent HTTP requests presenting the same valid recovery token could both pass the verification check before either transaction committed, allowing both to set their own password on the target account. The last transaction to commit overwrites the first, enabling an attacker who possesses a valid recovery token to replace the legitimate user's password with one of their choosing.\n\nA secondary defect in the same endpoint (confirm_account) allowed a valid recovery link to be used to set an empty or trivially short password (e.g., three characters). The view handler performed only a manual equality comparison between the two password fields and never invoked the form's validation logic, bypassing the intended minimum-length and complexity constraints.\n\nThe affected component is the user account recovery endpoint (/user/confirm_account/) and the associated token verification and consumption logic in the User model (website/models/user.py) and the view layer (website/web/views/user.py).\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-101041\n  \nPublished : Sept. 27, 2026, 3:16 p.m. | 49 minutes ago\n  \nDescription :The account recovery (password reset) functionality in the vulnerability-lookup web application contains a time-of-check-to-time-of-use (TOCTOU) race condition in the consumption of single-use recovery tokens. The original implementation verified the token nonce against the stored digest and then consumed (cleared) it in separate database operations. Two concurrent HTTP requests presenting the same valid recovery token could both pass the verification check before either transaction committed, allowing both to set their own password on the target account. The last transaction to commit overwrites the first, enabling an attacker who possesses a valid recovery token to replace the legitimate user's password with one of their choosing.\n\nA secondary defect in the same endpoint (confirm_account) allowed a valid recovery link to be used to set an empty or trivially short password (e.g., three characters). The view handler performed only a manual equality comparison between the two password fields and never invoked the form's validation logic, bypassing the intended minimum-length and complexity constraints.\n\nThe affected component is the user account recovery endpoint (/user/confirm_account/) and the associated token verification and consumption logic in the User model (website/models/user.py) and the view layer (website/web/views/user.py).\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-101041\n2. 26.09.28 오전12:16\n3. The account recovery (password reset) functionalit",
-      "cve_id": "CVE-2026-101041",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-101041",
-      "source": "cvefeed",
-      "published": "2026-09-28T00:16:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Wireshark 4.6.9 Released, (Sun, Sep 27th)",
-      "summary": "Wireshark release 4.6.9 fixes 19 vulnerabilities and 16 bugs.\r",
-      "description": "Wireshark release 4.6.9 fixes 19 vulnerabilities and 16 bugs.\r",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Wireshark 4.6.9 Released, (Sun, Sep 27th)\n2. SANS_ISC\n3. Wireshark release 4.6.9 fixes 19 vulnerabilities a",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33372",
-      "source": "sans_isc",
-      "published": "2026-09-28T00:04:49+09:00",
       "lang": "en"
     }
   ],
