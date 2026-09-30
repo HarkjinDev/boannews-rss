@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-01T01:01:12.536726+09:00",
+  "fetched_at": "2026-10-01T01:31:10.870819+09:00",
   "security_news": [
     {
       "title": "Cisco Warns of Attackers Exploiting Critical Authentication Bypass in SD-WAN Manager",
@@ -2808,33 +2808,24 @@
       "source": "naver",
       "published": "2026-09-28T02:17:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"퇴사자라 막기 어려웠다\"…쿠팡의 황당한 과징금 감경 주장",
-      "summary": "전직 직원이 내부 권한을 악용해 저지른 사건이어서 외부 해킹보다 사전에 막기 어려웠고, 유출된 정보도... 정상적인 권한을 가진 직원의 범행이었던 만큼 일반적인 외부 해킹보다 사전 예방이 어려웠다는 취지였다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 쿠팡, 전 직원 권한 악용 사건\n2. 내부 직원 범행, 외부 해킹보다 막기 어려웠다\n3. 과징금 감경 위한 황당 주장",
-      "link": "https://www.abcn.kr/news/articleView.html?idxno=92371",
-      "source": "naver",
-      "published": "2026-09-28T01:20:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Citrix admins warned to shut down NetScalers over 2 exploited zero-days",
-      "summary": "Two unpatched Citrix NetScaler zero-day vulnerabilities are reportedly being exploited in attacks, with cybersecurity agencies, security researchers, and IT providers privately warning organizations about the flaws ahead of patches expected next week. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Citrix NetScaler 2개 제로데이 취약점 공격 중\n2. 패치 미적용 상태에서 공격 악용\n3. Citrix, 긴급 패치 다음 주 배포 예정",
-      "link": "https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/",
-      "source": "bleepingcomputer",
-      "published": "2026-09-28T01:02:37+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-76570 - Joomla Extension - joomcode.com - Unauthenticated SQL injection in read and write queries in JCTables < 1.21.1",
+      "summary": "CVE ID :CVE-2026-76570\n  \nPublished : Sept. 30, 2026, 3:22 p.m. | 31 minutes ago\n  \nDescription :Joomla Extension - joomcode.com - Unauthenticated SQL injection in read and write queries in JCTables  1.21.1 - The front-end CRUD API controller performs no Joomla token validation and no authentication check on any task. Table names, column names, and values are taken directly from request parameters and concatenated into SQL queries, allowing SQLi for reading and writing queries.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-76570\n  \nPublished : Sept. 30, 2026, 3:22 p.m. | 31 minutes ago\n  \nDescription :Joomla Extension - joomcode.com - Unauthenticated SQL injection in read and write queries in JCTables  1.21.1 - The front-end CRUD API controller performs no Joomla token validation and no authentication check on any task. Table names, column names, and values are taken directly from request parameters and concatenated into SQL queries, allowing SQLi for reading and writing queries.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-76570\n2. 26.10.01 오전12:22\n3. Joomla Extension - joomcode.com - Unauthenticated ",
+      "cve_id": "CVE-2026-76570",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76570",
+      "source": "cvefeed",
+      "published": "2026-10-01T00:22:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-103237 - MISP: Nested Model Alias Key Bypasses Sanitization to Modify Cross-Tenant Rows",
       "summary": "CVE ID :CVE-2026-103237\n  \nPublished : Sept. 30, 2026, 9:56 a.m. | 21 minutes ago\n  \nDescription :MISP contains an improper input validation vulnerability in its ORM save path. When a user submits data through various endpoints (attribute add/edit, event edit, free-text import, sighting capture, shadow attribute proposal, event report creation, object reference add, user admin edit), the application sanitizes the flat record by stripping the primary key and pinning the event_id or object_id to the caller's context. However, the underlying ORM's set() method gives priority to a nested key whose name matches the model alias and discards the outer scalar fields.\n\nAn authenticated user with basic write permissions can exploit this by embedding a nested block under the model alias key inside their request. The sanitization logic (id removal, event_id pinning) is applied to the outer record, but the ORM binds to the inner record instead, which carries an attacker-chosen id and event_id. This allows the attacker to overwrite, re-parent, or soft-delete rows belonging to other organizations or events they have no read access to.\n\nImpact:\n\n- Cross-tenant data integrity compromise (attribute values rewritten, objects re-parented to attacker events, rows soft-deleted)\n\n- Affects multiple entity types: Attribute, Object, EventReport, Sighting, AttributeTag, ShadowAttribute\n\n- Requires only a low-privilege authenticated account with perm_add\n\nAffected versions: <2.5.48\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
