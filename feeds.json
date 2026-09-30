@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-01T08:01:11.564677+09:00",
+  "fetched_at": "2026-10-01T08:30:56.784715+09:00",
   "security_news": [
     {
       "title": "회생·담합·정보유출 등 현안 산적…유통가, 국감 앞두고 '촉각'",
@@ -2796,33 +2796,24 @@
       "source": "naver",
       "published": "2026-09-28T08:44:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "필터 뚫고 가짜 신분으로 침투…유엔까지 휘저은 오픈AI '통제 불능 봇'",
-      "summary": "호주 정부 전산망 해킹 논란에 이어 이번에는 유엔(UN) 산하 기구와 미국 주요 정부기관까지 무차별 데이터... 알렉스 스타모스 스탠퍼드대 사이버보안 강사는 \"극도로 공격적인 웹 스크래핑이자 실질적인 해킹...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 오픈AI 봇, 유엔/미국 정부기관 등 무차별 데이터 접근\n2. 가짜 신분으로 필터 뚫고 침투, '공격적인 웹 스크래핑'\n3. 스탠퍼드대 강사, '실질적 해킹' 경고하며 통제 우려",
-      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1725725",
-      "source": "naver",
-      "published": "2026-09-28T08:24:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "AI '킬 스위치' 논쟁 확산…\"정말 단번에 끌 수 있나\"",
-      "summary": "블룸버그는 \"오픈AI가 7월 사이버보안 평가 과정에서 일부 AI 모델이 인터넷과 격리하도록 설계된 통제장치를... 이후 앤스로픽과 메타도 기존에 알려지지 않았던 보안 취약점을 발견했다고 밝혔다. AI의 작동을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI '킬 스위치' 논쟁 확산…\"정말 단번에 끌 수 있나\" 블룸버그는 \"오픈AI가 7월 사\n2. 이후 앤스로픽과 메타도 기존에 알려지지 않았던 보안 취약점을 발견했다고 밝혔다.",
-      "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=171720",
-      "source": "naver",
-      "published": "2026-09-28T08:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-103001 - PyJWT.decode() reintroduces options-dict mutation, enabling silent claim-verification bypass on dict reuse",
+      "summary": "CVE ID :CVE-2026-103001\n  \nPublished : Sept. 30, 2026, 10:16 p.m. | 47 minutes ago\n  \nDescription :PyJWT is a Python implementation of JSON Web Token standards. From 2.11.0 through 2.13.0, PyJWT's PyJWT._merge_options() method can modify a caller-supplied mutable options mapping when verify_signature is false. If an application reuses that same mapping for a later decode() or decode_complete() call and changes verify_signature to true, the mapping can retain false values for expiration, not-before, issued-at, audience, issuer, subject, and JWT ID checks. A signed token with invalid registered claims can then be accepted without disabling signature verification, but applications that create a fresh options mapping for each call are not affected.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-103001\n  \nPublished : Sept. 30, 2026, 10:16 p.m. | 47 minutes ago\n  \nDescription :PyJWT is a Python implementation of JSON Web Token standards. From 2.11.0 through 2.13.0, PyJWT's PyJWT._merge_options() method can modify a caller-supplied mutable options mapping when verify_signature is false. If an application reuses that same mapping for a later decode() or decode_complete() call and changes verify_signature to true, the mapping can retain false values for expiration, not-before, issued-at, audience, issuer, subject, and JWT ID checks. A signed token with invalid registered claims can then be accepted without disabling signature verification, but applications that create a fresh options mapping for each call are not affected.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-103001\n2. 26.10.01 오전7:16\n3. PyJWT is a Python implementation of JSON Web Token",
+      "cve_id": "CVE-2026-103001",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-103001",
+      "source": "cvefeed",
+      "published": "2026-10-01T07:16:33+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-75969 - PTZOptics Missing Authentication in Firmware Upload",
       "summary": "CVE ID :CVE-2026-75969\n  \nPublished : Sept. 30, 2026, 4:27 p.m. | 33 minutes ago\n  \nDescription :Missing authentication for critical function vulnerability for all PTZOptics cameras and the Firmware Upgrade Tool - Firmware Update modules. A missing authentication vulnerability in the firmware update mechanism of affected PTZOptics cameras allows an unauthenticated user to install modified firmware on the device without administrator credentials.\n\n\n\nThis vulnerability allows attackers to upload modified firmware to the device without admin credentials. This issue affects:\n\n\n\n\n\n  *  Move 4K 12X before: 0.0.98\n  *  Move 4K 20X before: 0.1.33\n  *  Move 4K 30X before: 2.1.17\n  *  Link 4K 12X before: 0.0.99\n  *  Link 4K 20X before: 0.1.37\n  *  Link 4K 30X before: 2.1.18\n  *  Move SE 12X before: 9.1.66\n  *  Move SE 20X before: 9.1.44\n  *  Move SE 30X before: 9.1.46\n  *  Studio 4K 12X before: 8.3.32\n  *  Studio 4K 20X before: 8.3.32\n  *  Studio SE 12X before: 8.3.32\n  *  Studio SE 20X before: 8.3.32\n  *  All Generation 2 cameras, including: PT12X-SDI-GY-G2, PT12X-SDI-WH-G2, PT12X-NDI-GY-G2, PT12X-NDI-WH-G2; PT12X-USB-GY-G2, PT12X-USB-WH-G2; PT20X-SDI-GY-G2, PT20X-SDI-WH-G2, PT20X-NDI-GY-G2, PT20X-NDI-WH-G2; PT20X-USB-GY-G2, PT20X-USB-WH-G2; PT30X-SDI-GY-G2, PT30X-SDI-WH-G2, PT30X-NDI-GY-G2, PT30X-NDI-WH-G2; PTVL-ZCAM, PTVL-NDI-ZCAM; PTEPTZ-ZCAM-G2, PTEPTZ-NDI-ZCAM-G2; PT12X-ZCAM, PT12X-NDI-ZCAM; PT20X-ZCAM, PT20X-NDI-ZCAM; Studio Pro - All versions\n  *  Upgrade Tool - All versions\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
