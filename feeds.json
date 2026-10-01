@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-02T03:31:24.075998+09:00",
+  "fetched_at": "2026-10-02T04:01:20.440229+09:00",
   "security_news": [
     {
       "title": "드리프트 재단, 해킹 2억9500만달러 중 920만달러 동결…이더리움 10만 ...",
@@ -3276,21 +3276,39 @@
       "source": "naver",
       "published": "2026-09-29T04:28:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Hackers Use NeedyMantis to Maintain Long-Term Access in Breached Networks",
-      "summary": "Hackers have used a malware family called NeedyMantis to maintain long-term access to networks they had already breached, Microsoft said in a technical analysis.\n\nThe malware has been seen in a small number of targeted intrusions at telecommunications organizations, universities, medical nonprofits, intergovernmental organizations, and government contractors. Its use goes back to at least",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Hackers Use NeedyMantis to Maintain Long-Term Acce\n2. The malware has been seen in a small number of tar\n3. Its use goes back to at least",
-      "link": "https://thehackernews.com/2026/09/hackers-use-needymantis-to-maintain.html",
-      "source": "thehackernews",
-      "published": "2026-09-29T03:35:42+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-78577 - Unauthenticated Onboarding Scan Information Disclosure in TP-Link Tapo C120 & C200",
+      "summary": "CVE ID :CVE-2026-78577\n  \nPublished : Oct. 1, 2026, 5:41 p.m. | 43 minutes ago\n  \nDescription :Tapo C120 v1 and C200 V5\ncontain a vulnerability in the HTTPS onboarding scan function due to missing authentication.\nAfter initial setup, an unauthenticated attacker on the same local network can\ninvoke the scan action and retrieve nearby wireless access-point metadata,\nincluding SSIDs, BSSIDs, authentication and encryption modes, and\nsignal-strength information.\n\n\n\n\n\n\n\n\n\nSuccessful\nexploitation may disclose information about the wireless environment\nsurrounding the camera, allowing an attacker to learn elements of the local\nwireless topology.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-78577\n  \nPublished : Oct. 1, 2026, 5:41 p.m. | 43 minutes ago\n  \nDescription :Tapo C120 v1 and C200 V5\ncontain a vulnerability in the HTTPS onboarding scan function due to missing authentication.\nAfter initial setup, an unauthenticated attacker on the same local network can\ninvoke the scan action and retrieve nearby wireless access-point metadata,\nincluding SSIDs, BSSIDs, authentication and encryption modes, and\nsignal-strength information.\n\n\n\n\n\n\n\n\n\nSuccessful\nexploitation may disclose information about the wireless environment\nsurrounding the camera, allowing an attacker to learn elements of the local\nwireless topology.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-78577\n2. 26.10.02 오전2:41\n3. Tapo C120 v1 and C200 V5 contain a vulnerability i",
+      "cve_id": "CVE-2026-78577",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78577",
+      "source": "cvefeed",
+      "published": "2026-10-02T02:41:49+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-68496 - jackson-dataformats-binary: Smile parser does not enforce StreamReadConstraints.maxNameLength, enabling memory-exhaustion denial of service",
+      "summary": "CVE ID :CVE-2026-68496\n  \nPublished : Oct. 1, 2026, 5:36 p.m. | 48 minutes ago\n  \nDescription :The Smile parser in FasterXML jackson-dataformats-binary never invokes StreamReadConstraints.validateNameLength() when decoding JSON object property names, so the maxNameLength limit is not enforced for this format. SmileParser._handleLongFieldName() grows its internal name buffer through an unconstrained _growArrayTo() call and performs no length validation. An attacker who can have a Smile document parsed may therefore embed a single property name of unbounded length; the parser buffers the whole name in memory before returning it, whatever maxNameLength is configured to. Because StreamReadConstraints.maxDocumentLength is also disabled by default, nothing else bounds the name under default settings, so the only limits are the attacker's upload capacity and available heap, leading to memory exhaustion and denial of service. No privileges beyond the ability to submit data to a parsing endpoint are required, and exploitation needs only that the bytes reach SmileFactory parsing, directly or through an ObjectMapper configured with the Smile module. jackson-core's own JSON parsers enforce maxNameLength incrementally during name decoding; this gap is specific to the binary formats. maxNameLength and validateNameLength were introduced in jackson-core 2.16.0, so releases before 2.16.0 do not contain the constraint that is left unenforced. This issue is tracked together with the CBOR parser defect in the same vendor advisory, GHSA-3v8f-v6vx-fmrm, which covers both binary formats. The Smile parser defect (jackson-dataformats-binary issue #726) is CVE-2026-68496; the CBOR parser defect (issue #725) is assigned CVE-2026-68495.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-68496\n  \nPublished : Oct. 1, 2026, 5:36 p.m. | 48 minutes ago\n  \nDescription :The Smile parser in FasterXML jackson-dataformats-binary never invokes StreamReadConstraints.validateNameLength() when decoding JSON object property names, so the maxNameLength limit is not enforced for this format. SmileParser._handleLongFieldName() grows its internal name buffer through an unconstrained _growArrayTo() call and performs no length validation. An attacker who can have a Smile document parsed may therefore embed a single property name of unbounded length; the parser buffers the whole name in memory before returning it, whatever maxNameLength is configured to. Because StreamReadConstraints.maxDocumentLength is also disabled by default, nothing else bounds the name under default settings, so the only limits are the attacker's upload capacity and available heap, leading to memory exhaustion and denial of service. No privileges beyond the ability to submit data to a parsing endpoint are required, and exploitation needs only that the bytes reach SmileFactory parsing, directly or through an ObjectMapper configured with the Smile module. jackson-core's own JSON parsers enforce maxNameLength incrementally during name decoding; this gap is specific to the binary formats. maxNameLength and validateNameLength were introduced in jackson-core 2.16.0, so releases before 2.16.0 do not contain the constraint that is left unenforced. This issue is tracked together with the CBOR parser defect in the same vendor advisory, GHSA-3v8f-v6vx-fmrm, which covers both binary formats. The Smile parser defect (jackson-dataformats-binary issue #726) is CVE-2026-68496; the CBOR parser defect (issue #725) is assigned CVE-2026-68495.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-68496\n2. 26.10.02 오전2:36\n3. The Smile parser in FasterXML jackson-dataformats-",
+      "cve_id": "CVE-2026-68496",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68496",
+      "source": "cvefeed",
+      "published": "2026-10-02T02:36:57+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-73975 - djehuty: Authenticated SPARQL injection in session editing allows writing arbitrary RDF triples",
       "summary": "CVE ID :CVE-2026-73975\n  \nPublished : Oct. 1, 2026, 5:17 p.m. | 17 minutes ago\n  \nDescription :djehuty is a research data repository system developed by 4TU.ResearchData. Prior to version 26.3.2, an authenticated depositor can inject arbitrary SPARQL into a state-modifying (DELETE/INSERT) query by supplying a crafted session name, letting them write (and delete) arbitrary triples anywhere in the RDF store. Because the RDF store is shared across all accounts and datasets, this is an integrity compromise of the whole repository's metadata, not just the attacker's own records. Having a logged-in account is a precondition. djehuty allows self-registration via ORCID/SAML, so this is a low barrier in typical deployments. This issue has been patched in version 26.3.2.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4144,21 +4162,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-87741",
       "source": "cvefeed",
       "published": "2026-09-29T04:50:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-100753 - Joomla Extension - ordasoft.com - Reflected Cross-Site Scripting in Real Estate Manager (Free) < 6.7.9",
-      "summary": "CVE ID :CVE-2026-100753\n  \nPublished : Sept. 28, 2026, 6:41 p.m. | 21 minutes ago\n  \nDescription :Joomla Extension - ordasoft.com - Reflected Cross-Site Scripting in Real Estate Manager (Free) < 6.7.9 -  The public property-detail page’s “leave a review” form repopulates its title field directly from the request with no escaping and no filtering function of any kind, unlike the adjacent comment field on the same form, which at least receives partial tag-stripping. A \" character in the title query parameter breaks out of the HTML attribute the value is placed in, allowing a following",
-      "description": "CVE ID :CVE-2026-100753\n  \nPublished : Sept. 28, 2026, 6:41 p.m. | 21 minutes ago\n  \nDescription :Joomla Extension - ordasoft.com - Reflected Cross-Site Scripting in Real Estate Manager (Free) < 6.7.9 -  The public property-detail page’s “leave a review” form repopulates its title field directly from the request with no escaping and no filtering function of any kind, unlike the adjacent comment field on the same form, which at least receives partial tag-stripping. A \" character in the title query parameter breaks out of the HTML attribute the value is placed in, allowing a following",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-100753\n2. 26.09.29 오전3:41\n3. Joomla Extension - ordasoft.com - Reflected Cross-",
-      "cve_id": "CVE-2026-100753",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-100753",
-      "source": "cvefeed",
-      "published": "2026-09-29T03:41:14+09:00",
       "lang": "en"
     }
   ],
