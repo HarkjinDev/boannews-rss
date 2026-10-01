@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-10-01T20:02:23.141886+09:00",
+  "fetched_at": "2026-10-01T20:32:31.831878+09:00",
   "security_news": [
+    {
+      "title": "李대통령 \"감당하기 힘든 과징금\" 경고 다음날 신한은행서 해킹 사고 발...",
+      "summary": "해킹으로 이용자 이름·전화번호뿐 아니라 연소득·대출 관련 개인 신용정보도 유출됐다. 정 은행장은... 이번 해킹이 크리덴셜 스터핑(계정·비밀번호를 취득한 뒤 다른 사이트에서 로그인에 성공할 때까지 무차별적으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 신한은행, 해킹 사고 발생\n2. 연소득, 대출 정보 등 개인 신용정보 유출\n3. 크리덴셜 스터핑 공격 추정",
+      "link": "https://n.news.naver.com/mnews/article/006/0000138009?sid=101",
+      "source": "naver",
+      "published": "2026-10-01T20:07:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[EBN 오늘(1일) 이슈 종합] 해킹 감사 되는 국감...빅테크 한국 대표도 ...",
+      "summary": "◆해킹 감사 되는 국감...빅테크 한국 대표도 줄소환 오는 6일 열리는 국회 과학기술정보방송통신위원회... 지난해부터 이어진 해킹·개인정보 유출 사고에 대한 책임과 재발방지 대책이 주요 현안으로 다뤄지면서...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [EBN 오늘(1일) 이슈 종합] 해킹 감사 되는 국감...빅테크 한국 대표도 ...\n2. ◆해킹 감사 되는 국감...빅테크 한국 대표도 줄소환 오는 6일 열리는 국회 과학기술정보방\n3. 지난해부터 이어진 해킹·개인정보 유출 사고에 대한 책임과 재발방지 대책이 주요 현안으로 다",
+      "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1726480",
+      "source": "naver",
+      "published": "2026-10-01T20:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "신협, 개인정보 유출 과징금 불복 항소…1만6000명 중 배상 10명 미만",
+      "summary": "금융위원회는 2024년 12월 직원의 업무 목적 외 정보 누설과 신협중앙회의 보안·내부통제 미흡을 이유로 총 28억7200만원의 과징금을 부과했다. 법원도 1심에서 개인신용정보 저장·전송 과정의 내부통제와 사고 인지...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 신협, 개인정보 유출 과징금 불복 항소…1만6000명 중 배상 10명 미만 금융위원회는 2\n2. 법원도 1심에서 개인신용정보 저장·전송 과정의 내부통제와 사고 인지...",
+      "link": "https://www.ngetnews.com/news/articleView.html?idxno=553989",
+      "source": "naver",
+      "published": "2026-10-01T19:58:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "기업 AI 보안 지킨다…루카스메타, 'PQCSAFE' 구글 마켓에 출시",
       "summary": "루카스메타 관계자는 \"기존 VPN(가상사설망)은 외부 접속자 한 명의 PC가 악성코드에 감염되면 사내망 전체가 해커나 외부 AI에 노출될 위험이 있다\"며 \"PQCSAFE는 해킹 시도가 발생하더라도 다른 시스템으로 번지는...",
@@ -3219,6 +3255,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-88789 - Apache Camel Quarkus: Camel Quarkus: Forced Xalan TransformerFactory drops upstream external-DTD/stylesheet hardening",
+      "summary": "CVE ID :CVE-2026-88789\n  \nPublished : Oct. 1, 2026, 10:51 a.m. | 31 minutes ago\n  \nDescription :Improper Restriction of XML External Entity Reference in the XSLT support extension (camel-quarkus-support-xalan) in Apache Camel Quarkus from 3.2.0 before 3.33.3 and from 3.34.0 before 3.40.0 on all platforms allows an attacker who supplies the XML document being transformed to read local files or issue requests to internal network locations via an external entity declaration in that document.\n\nThe extension supplies its own Xalan-backed TransformerFactory to the xslt component and registers it as the JAXP default. Xalan-J 2.7.x predates JAXP 1.5 and does not honour javax.xml.XMLConstants.ACCESS_EXTERNAL_DTD or ACCESS_EXTERNAL_STYLESHEET, so the external access restrictions Apache Camel applies to the TransformerFactory it creates were not in effect. On the xslt component path this affects message bodies that reach the transformer already as a javax.xml.transform.Source; bodies of other types are converted to a SAXSource by Apache Camel with external entities and external DTD loading disabled, and are not affected. Because the factory is also the JAXP default, other code in the application obtaining one through TransformerFactory.newInstance() loses the same restrictions without error.\n\nApplications are affected if they use any of camel-quarkus-xslt, camel-quarkus-xslt-saxon, camel-quarkus-tika or camel-quarkus-xmlsecurity, each of which brings the XSLT support extension onto the classpath. For all but camel-quarkus-xslt, the exposure is limited to the JAXP default factory, since those extensions do not perform XSLT transformations themselves.\n\nUsers are recommended to upgrade to version 3.33.3 or 3.40.0, which fixes this issue.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-88789\n  \nPublished : Oct. 1, 2026, 10:51 a.m. | 31 minutes ago\n  \nDescription :Improper Restriction of XML External Entity Reference in the XSLT support extension (camel-quarkus-support-xalan) in Apache Camel Quarkus from 3.2.0 before 3.33.3 and from 3.34.0 before 3.40.0 on all platforms allows an attacker who supplies the XML document being transformed to read local files or issue requests to internal network locations via an external entity declaration in that document.\n\nThe extension supplies its own Xalan-backed TransformerFactory to the xslt component and registers it as the JAXP default. Xalan-J 2.7.x predates JAXP 1.5 and does not honour javax.xml.XMLConstants.ACCESS_EXTERNAL_DTD or ACCESS_EXTERNAL_STYLESHEET, so the external access restrictions Apache Camel applies to the TransformerFactory it creates were not in effect. On the xslt component path this affects message bodies that reach the transformer already as a javax.xml.transform.Source; bodies of other types are converted to a SAXSource by Apache Camel with external entities and external DTD loading disabled, and are not affected. Because the factory is also the JAXP default, other code in the application obtaining one through TransformerFactory.newInstance() loses the same restrictions without error.\n\nApplications are affected if they use any of camel-quarkus-xslt, camel-quarkus-xslt-saxon, camel-quarkus-tika or camel-quarkus-xmlsecurity, each of which brings the XSLT support extension onto the classpath. For all but camel-quarkus-xslt, the exposure is limited to the JAXP default factory, since those extensions do not perform XSLT transformations themselves.\n\nUsers are recommended to upgrade to version 3.33.3 or 3.40.0, which fixes this issue.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-88789\n2. 26.10.01 오후7:51\n3. Improper Restriction of XML External Entity Refere",
+      "cve_id": "CVE-2026-88789",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88789",
+      "source": "cvefeed",
+      "published": "2026-10-01T19:51:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-103651 - MISP HOTP Token Replay via Stale Session-Cached Counter Allows Second-Factor Authentication Bypass",
       "summary": "CVE ID :CVE-2026-103651\n  \nPublished : Oct. 1, 2026, 7:34 a.m. | 49 minutes ago\n  \nDescription :MISP contains a vulnerability in its one-time password (OTP) authentication flow that allows replay of a consumed HOTP (paper) token and rewinding of the token counter.\n\nThe HOTP verification logic compared the submitted token against a counter value that was cached in the user's session at the time the password was entered, rather than against the authoritative counter stored in the database. Because the session-cached counter is not updated after a token is successfully consumed, an attacker who holds a valid session (password already submitted) can reuse a previously burned HOTP token. The stale cached counter still matches the replayed token, granting a second successful authentication and effectively rewinding the counter state.\n\nPreconditions:\n\n- The target user has HOTP (paper token) second-factor authentication enabled.\n\n- The attacker possesses a valid session in which the password step has already been completed (the OTP step is pending).\n\n- The attacker has access to at least one HOTP token value (e.g., a paper token list).\n\nSecurity impact:\n\n- Bypass of the second authentication factor, allowing unauthorized access to a user's MISP account.\n\n- Corruption of the HOTP counter state, potentially invalidating subsequent legitimate tokens or enabling further replays.\n\nAffected versions: <2.5.48.\n  \nSeverity: 7.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
