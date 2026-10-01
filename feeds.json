@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-10-02T04:31:25.481808+09:00",
+  "fetched_at": "2026-10-02T05:02:45.519381+09:00",
   "security_news": [
+    {
+      "title": "오픈AI, 안전팀 연구원 3명 해고...\"외부 AI 안전 단체에 기밀 유출\"",
+      "summary": "오픈AI AI 에이전트들이 통제를 벗어나 일부 기업 웹사이트를 해킹했고 여러 웹사이트를 공격적으로 탐색했다. 이런 가운데 오픈AI는 이번 주 초 안전 우려를 이유로 AI 모델 'GPT-6.1 아스트라' 출시 계획을 취소한다고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈AI, 안전팀 연구원 3명 해고\n2. AI 에이전트, 기업 웹사이트 해킹 및 공격적 탐색\n3. 'GPT-6.1 아스트라' 출시 취소",
+      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=704486",
+      "source": "naver",
+      "published": "2026-10-02T04:56:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "Microsoft says threat actors are ahead in the early AI race",
+      "summary": "Microsoft says cyberattackers are currently benefiting from artificial intelligence faster than defenders, allowing threat actors to speed up vulnerability discovery, malware development, and post-compromise activity while security teams struggle to keep pace. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Microsoft says threat actors are ahead in the earl",
+      "link": "https://www.bleepingcomputer.com/news/security/microsoft-says-threat-actors-are-ahead-in-the-early-ai-race/",
+      "source": "bleepingcomputer",
+      "published": "2026-10-02T04:32:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "거리서 국회로 간 '인앱결제 전쟁'…구글 윤구, 국감 증인석 선다",
       "summary": "과방위가 채택한 이날 일반 증인 13명 가운데 12명이 해킹·개인정보 유출 등 정보보호 문제와 관련된 인사인... 잇따른 해킹과 개인정보 침해·유출 사고와 관련해 채택됐다. 윤 사장에게는 구글 앱마켓 거래조건과...",
@@ -3264,18 +3288,6 @@
       "source": "naver",
       "published": "2026-09-29T06:01:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "개인키 안 뚫렸는데 5266억 유출⋯비트겟 사태가 드러낸 거래소 보안 빈...",
-      "summary": "비트겟이 해킹 사고로 중단한 출금을 순차 재개한다. 비트겟은 개인키 유출 없이 출금 승인 절차가... 그레이시 첸 비트겟 최고경영자(CEO)는 공격에 쓰인 일부 IP가 북한 해킹 조직이 과거 이용한 가상사설망(VPN)과 관련된...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 개인키 안 뚫렸는데 5266억 유출⋯비트겟 사태가 드러낸 거래소 보안 빈...\n2. 비트겟이 해킹 사고로 중단한 출금을 순차 재개한다.\n3. 비트겟은 개인키 유출 없이 출금 승인 절차가...",
-      "link": "https://www.etoday.co.kr/news/view/2629860",
-      "source": "naver",
-      "published": "2026-09-29T05:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4147,21 +4159,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-18414",
       "source": "cvefeed",
       "published": "2026-09-29T06:17:17+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-87741 - ConvertPlus <= 3.6.3 - Authenticated (Subscriber+) PHP Object Injection via 'style' Parameter",
-      "summary": "CVE ID :CVE-2026-87741\n  \nPublished : Sept. 28, 2026, 7:50 p.m. | 13 minutes ago\n  \nDescription :The ConvertPlus plugin for WordPress is vulnerable to Deserialization of Untrusted Data in all versions up to, and including, 3.6.3 via the style parameter of the cp_display_preview_modal AJAX action. The vulnerability exists because the action's nonce guard is gated behind an isset() check and fails open when the cp_admin_page_nonce parameter is omitted entirely, no capability check is performed on the callback, and sanitize_text_field() — applied to the $style value before it is concatenated directly into a shortcode string evaluated by do_shortcode() — does not strip shortcode delimiters, allowing an attacker to inject a second, fully attacker-controlled [smile_modal] invocation that causes smile_modal_popup() to pass attacker-supplied base64-decoded bytes to maybe_unserialize() with no allowed_classes restriction. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-87741\n  \nPublished : Sept. 28, 2026, 7:50 p.m. | 13 minutes ago\n  \nDescription :The ConvertPlus plugin for WordPress is vulnerable to Deserialization of Untrusted Data in all versions up to, and including, 3.6.3 via the style parameter of the cp_display_preview_modal AJAX action. The vulnerability exists because the action's nonce guard is gated behind an isset() check and fails open when the cp_admin_page_nonce parameter is omitted entirely, no capability check is performed on the callback, and sanitize_text_field() — applied to the $style value before it is concatenated directly into a shortcode string evaluated by do_shortcode() — does not strip shortcode delimiters, allowing an attacker to inject a second, fully attacker-controlled [smile_modal] invocation that causes smile_modal_popup() to pass attacker-supplied base64-decoded bytes to maybe_unserialize() with no allowed_classes restriction. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-87741\n2. 26.09.29 오전4:50\n3. The ConvertPlus plugin for WordPress is vulnerable",
-      "cve_id": "CVE-2026-87741",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-87741",
-      "source": "cvefeed",
-      "published": "2026-09-29T04:50:22+09:00",
       "lang": "en"
     }
   ],
