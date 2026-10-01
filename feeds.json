@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-02T03:01:25.307490+09:00",
+  "fetched_at": "2026-10-02T03:31:24.075998+09:00",
   "security_news": [
+    {
+      "title": "드리프트 재단, 해킹 2억9500만달러 중 920만달러 동결…이더리움 10만 ...",
+      "summary": "코인에디션은 사건 직후 TRM Labs와 맨디언트 등 보안업체들이 국가와 연계된 북한 사이버 범죄 조직... 대상은 보안 연구자와 화이트햇(선의의 해커) 등 자금 추적이나 회수에 도움을 줄 수 있는 이들이다.재단은...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 드리프트 재단, 2억9500만달러 해킹 중 920만달러 동결\n2. 북한 연계 해킹 조직, 이더리움 10만개 탈취 시도\n3. TRM Labs, 맨디언트 등 보안업체 보안 연구원 대상",
+      "link": "https://www.wikitree.co.kr/articles/1163407",
+      "source": "naver",
+      "published": "2026-10-02T03:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "AI 개발 늦추자더니… 구글, 최상위 ‘제미나이4’ 공개",
       "summary": "이에 대해 구글 측은 강력한 취약점 탐지 능력이 자칫 해킹에 악용될 우려가 있기 때문이라고 설명했다. 방어 기관에 안전장치를 뺀 모델을 줘 취약점을 먼저 메우게 한다는 취지다. 잇따른 AI 통제 불능 사태를 막고자...",
@@ -3280,6 +3292,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-73975 - djehuty: Authenticated SPARQL injection in session editing allows writing arbitrary RDF triples",
+      "summary": "CVE ID :CVE-2026-73975\n  \nPublished : Oct. 1, 2026, 5:17 p.m. | 17 minutes ago\n  \nDescription :djehuty is a research data repository system developed by 4TU.ResearchData. Prior to version 26.3.2, an authenticated depositor can inject arbitrary SPARQL into a state-modifying (DELETE/INSERT) query by supplying a crafted session name, letting them write (and delete) arbitrary triples anywhere in the RDF store. Because the RDF store is shared across all accounts and datasets, this is an integrity compromise of the whole repository's metadata, not just the attacker's own records. Having a logged-in account is a precondition. djehuty allows self-registration via ORCID/SAML, so this is a low barrier in typical deployments. This issue has been patched in version 26.3.2.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-73975\n  \nPublished : Oct. 1, 2026, 5:17 p.m. | 17 minutes ago\n  \nDescription :djehuty is a research data repository system developed by 4TU.ResearchData. Prior to version 26.3.2, an authenticated depositor can inject arbitrary SPARQL into a state-modifying (DELETE/INSERT) query by supplying a crafted session name, letting them write (and delete) arbitrary triples anywhere in the RDF store. Because the RDF store is shared across all accounts and datasets, this is an integrity compromise of the whole repository's metadata, not just the attacker's own records. Having a logged-in account is a precondition. djehuty allows self-registration via ORCID/SAML, so this is a low barrier in typical deployments. This issue has been patched in version 26.3.2.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-73975\n2. 26.10.02 오전2:17\n3. djehuty is a research data repository system devel",
+      "cve_id": "CVE-2026-73975",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-73975",
+      "source": "cvefeed",
+      "published": "2026-10-02T02:17:31+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-94620 - Classroom 50 vulnerable to arbitrary file overwrite on the teacher's machine via symlink in a student repo (gh teacher download)",
       "summary": "CVE ID :CVE-2026-94620\n  \nPublished : Oct. 1, 2026, 4:18 p.m. | 16 minutes ago\n  \nDescription :Classroom 50 is a free and open-source tool for managing and grading programming assignments via GitHub. Prior to version 1.11.0, `gh teacher download` clones each student's assignment repository and then writes autograde artifacts (`result.json` and `results.json`) into the just-cloned working tree. The write followed symlinks, so a student who committed `result.json` or `results.json` as a **symlink** (materialized verbatim by `git clone`) could redirect the teacher's write to an arbitrary path — e.g. `~/.zshrc`, `~/.ssh/authorized_keys`, a cron file, or an in-clone `.git/hooks/*` file that git subsequently executes. The written bytes are attacker-controlled (the student's uploaded release asset for `result.json`; student-chosen submit-tag names for `results.json`). This is an arbitrary file write leading to code execution as the teacher, whose `gh` token carries `admin:org`, `repo`, and `workflow` across the entire classroom organization. Version 1.11.0 contains a patch. Some workarounds are available. Avoid running `gh teacher download` against untrusted student repositories, or run it inside a disposable sandbox / container with no access to sensitive host files or credentials. Inspect cloned trees for symlinked, hardlinked, or special (`result.json`/`results.json`) entries before allowing the artifact-refresh step to run.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-94620\n  \nPublished : Oct. 1, 2026, 4:18 p.m. | 16 minutes ago\n  \nDescription :Classroom 50 is a free and open-source tool for managing and grading programming assignments via GitHub. Prior to version 1.11.0, `gh teacher download` clones each student's assignment repository and then writes autograde artifacts (`result.json` and `results.json`) into the just-cloned working tree. The write followed symlinks, so a student who committed `result.json` or `results.json` as a **symlink** (materialized verbatim by `git clone`) could redirect the teacher's write to an arbitrary path — e.g. `~/.zshrc`, `~/.ssh/authorized_keys`, a cron file, or an in-clone `.git/hooks/*` file that git subsequently executes. The written bytes are attacker-controlled (the student's uploaded release asset for `result.json`; student-chosen submit-tag names for `results.json`). This is an arbitrary file write leading to code execution as the teacher, whose `gh` token carries `admin:org`, `repo`, and `workflow` across the entire classroom organization. Version 1.11.0 contains a patch. Some workarounds are available. Avoid running `gh teacher download` against untrusted student repositories, or run it inside a disposable sandbox / container with no access to sensitive host files or credentials. Inspect cloned trees for symlinked, hardlinked, or special (`result.json`/`results.json`) entries before allowing the artifact-refresh step to run.\n  \nSeverity: 9.4 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4132,21 +4159,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-100753",
       "source": "cvefeed",
       "published": "2026-09-29T03:41:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-101911 - ip-address: Address6 builds a parse diagnostic proportional to the input with no length bound, allowing a single long string to stall or crash the process",
-      "summary": "CVE ID :CVE-2026-101911\n  \nPublished : Sept. 28, 2026, 6:17 p.m. | 36 minutes ago\n  \nDescription :ip-address is a library for parsing and manipulating IPv4 and IPv6 addresses in JavaScript. Prior to 10.7.1, the Address6 constructor, Address6.isValid, and parse code in src/ipv6.ts accept unbounded strings and expand invalid characters through RE_BAD_CHARACTERS into large diagnostics. Material impact occurs only when an application accepts a very large attacker-controlled field and passes it to Address6 parsing without an earlier length bound. Common URL and header limits, and common body-parser defaults, generally constrain the effect; common defaults typically exclude 32 MiB fields. Megabyte-scale fields can cause a synchronous stall and high transient memory use, approximately 16 MiB can trigger an invalid string length exception, and process termination occurs at approximately 32 MiB. The affected entry points include Address6.isValid and construction paths that reach parse. This issue is fixed in version 10.7.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-101911\n  \nPublished : Sept. 28, 2026, 6:17 p.m. | 36 minutes ago\n  \nDescription :ip-address is a library for parsing and manipulating IPv4 and IPv6 addresses in JavaScript. Prior to 10.7.1, the Address6 constructor, Address6.isValid, and parse code in src/ipv6.ts accept unbounded strings and expand invalid characters through RE_BAD_CHARACTERS into large diagnostics. Material impact occurs only when an application accepts a very large attacker-controlled field and passes it to Address6 parsing without an earlier length bound. Common URL and header limits, and common body-parser defaults, generally constrain the effect; common defaults typically exclude 32 MiB fields. Megabyte-scale fields can cause a synchronous stall and high transient memory use, approximately 16 MiB can trigger an invalid string length exception, and process termination occurs at approximately 32 MiB. The affected entry points include Address6.isValid and construction paths that reach parse. This issue is fixed in version 10.7.1.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-101911\n2. 26.09.29 오전3:17\n3. ip-address is a library for parsing and manipulati",
-      "cve_id": "CVE-2026-101911",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-101911",
-      "source": "cvefeed",
-      "published": "2026-09-29T03:17:20+09:00",
       "lang": "en"
     }
   ],
