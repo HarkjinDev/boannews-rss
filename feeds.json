@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-03T03:02:27.352089+09:00",
+  "fetched_at": "2026-10-03T03:31:18.170682+09:00",
   "security_news": [
+    {
+      "title": "보안업체들 “비트겟 해킹, 북한 연계”…약 4억 달러 탈취 자금 이동 ...",
+      "summary": "엘립틱은 최근 발표한 분석에서 비트겟 탈취 자금이 과거 북한 소행으로 분류된 해킹 사건의 자금세탁 주소들과 연결됐다고 밝혔습니다. 여기에는 지난해 바이비트 해킹의 탈취 자금을 세탁하는 데 사용된 주소들과의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 비트겟 해킹, 북한 연계 추정… 약 4억 달러 탈취\n2. 탈취 자금, 북한 연계 해킹 사건 자금 세탁 주소와 연결\n3. 바이비트 해킹 자금세탁 주소와도 연관성 발견",
+      "link": "https://www.voakorea.com/a/bitget-dprk-crypto-fund-movement-100226/8207168.html",
+      "source": "naver",
+      "published": "2026-10-03T02:43:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "개인정보 유출 신고 급증…정부, 신속·전문 대응체계 구축한다",
       "summary": "대규모 피해나 사회적 관심이 집중된 사건, 주요 공공시스템 해킹 사례 등이 중요사건으로 분류된다. 최근 인공지능 기술 확산과 함께 개인정보를 대상으로 한 공격이 고도화·지능화되면서 유출·침해 사고가 증가하고...",
@@ -4680,21 +4692,24 @@
       "source": "bleepingcomputer",
       "published": "2026-09-30T03:37:12+09:00",
       "lang": "en"
-    },
-    {
-      "title": "비트겟 해킹 나흘 뒤 CEO에 투자사 사칭 접근",
-      "summary": "회사는 이후 피해 규모를 3억8750만달러로 집계했으며, 제3자 보안 제품의 취약점으로 공격자가 내부 관리... 관련 경위와 대응 내용은 제3자 보안 제품 취약점이 공격에 영향을 줬을 가능성을 포함한 사건 보고서로...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 비트겟, 3억8750만달러 해킹 나흘 후 CEO 대상 2차 공격 시도\n2. 제3자 보안 제품 취약점 이용, CEO에게 투자사 사칭 접근 시도\n3. 2차 공격 관련 보고서 작성 중, 잠재적 영향 분석",
-      "link": "https://www.tokenpost.kr/news/cryptocurrency/416017",
-      "source": "naver",
-      "published": "2026-09-30T03:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-104854 - Nx daemon and plugin worker sockets are accessible to other local users",
+      "summary": "CVE ID :CVE-2026-104854\n  \nPublished : Oct. 2, 2026, 4:59 p.m. | 28 minutes ago\n  \nDescription :Nx is a monorepo solution for TypeScript and polyglot codebases. From 14.6.0 until 22.7.9 and 23.1.2, Nx creates Unix domain sockets for its daemon and isolated plugin workers in shared temporary locations without owner-only directory and socket permissions. Another unprivileged local account on a shared build server, developer host, or multi-user container can discover and connect to a running socket because the transport performs no authentication and relies on filesystem containment. The daemon's PROCESS_IN_BACKGROUND request accepts a module path and invokes its default export, allowing a caller that controls a file to execute code as the account running Nx; other handlers can expose workspace file contents, project graphs, and task hashes. Disabling the daemon alone does not remove the vulnerable plugin-worker sockets, while single-user machines without another local account are not exposed. This issue is fixed in versions 22.7.9 and 23.1.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-104854\n  \nPublished : Oct. 2, 2026, 4:59 p.m. | 28 minutes ago\n  \nDescription :Nx is a monorepo solution for TypeScript and polyglot codebases. From 14.6.0 until 22.7.9 and 23.1.2, Nx creates Unix domain sockets for its daemon and isolated plugin workers in shared temporary locations without owner-only directory and socket permissions. Another unprivileged local account on a shared build server, developer host, or multi-user container can discover and connect to a running socket because the transport performs no authentication and relies on filesystem containment. The daemon's PROCESS_IN_BACKGROUND request accepts a module path and invokes its default export, allowing a caller that controls a file to execute code as the account running Nx; other handlers can expose workspace file contents, project graphs, and task hashes. Disabling the daemon alone does not remove the vulnerable plugin-worker sockets, while single-user machines without another local account are not exposed. This issue is fixed in versions 22.7.9 and 23.1.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-104854\n2. 26.10.03 오전1:59\n3. Nx is a monorepo solution for TypeScript and polyg",
+      "cve_id": "CVE-2026-104854",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104854",
+      "source": "cvefeed",
+      "published": "2026-10-03T01:59:48+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-17508 - Password-based KDF cost parameters honoured unbounded from untrusted input across the remaining PBE entry points",
       "summary": "CVE ID :CVE-2026-17508\n  \nPublished : Oct. 2, 2026, 7:27 a.m. | 1 hour ago\n  \nDescription :In Bouncy Castle for Java before 1.86, several password-based key derivation entry points ran the KDF with cost parameters taken from the untrusted input being processed, without bounding them, so a small input could dictate an arbitrary amount of work before any password or integrity check could reject it. The affected paths are the RFC 9579 PBMAC1 MAC calculator builders, which took the PBKDF2 iteration count and derived-key length straight out of PBMAC1Params (JcePBMac1CalculatorBuilder, and PKCS12PBEUtils.createPBMac1Calculator reached from PKCS12PfxPdu.isMacValid); the scrypt parallelization parameter p in the PKCS#8 and PKCS#12 cost guards, which bounded only the cost parameter N and the block size r even though the scratch buffer scales with r times p, so the configured memory ceiling could be evaded entirely; the raw JCA PBKDF2 provider (org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2); and the bcrypt round count read from an encrypted OpenSSH v1 private key's own kdfoptions. Each now bounds the parameter before deriving, in line with the caps already applied elsewhere in the tree, with the OpenSSH round count configurable through the new org.bouncycastle.openssh.max_rounds property. This completes the bounding begun in 1.85 for the PKCS#8 / PBES2 decryptors (CVE-2026-15055). This issue also affects Bouncy Castle for Java LTS before 2.73.13, and Bouncy Castle for Java FIPS (BC-FJA) before bcpkix-fips 1.0.13 (1.0.X series), 2.0.13 (2.0.X series) and 2.1.13 (2.1.X series).\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
