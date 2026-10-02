@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-02T22:02:55.214966+09:00",
+  "fetched_at": "2026-10-02T22:31:18.147084+09:00",
   "security_news": [
+    {
+      "title": "[인사이트 뉴스] \"정문은 단단한데, 뒷문이 뚫렸다\"… AI 해커가 시작한...",
+      "summary": "국내 은행권에서 짧은 기간에 해킹과 개인정보 유출이 잇따르면서 이 같은 우려가 금융 현장에서 현실적인 문제로 떠올랐다. 신한은행에서 약 2만5천명의 고객 정보가 유출된 데 이어 KB국민은행 119명, 하나은행 89명의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 신한은행 2.5만, KB국민 119, 하나은행 89명 정보 유출\n2. AI 해커, 은행권 '뒷문' 노려 개인정보 노렸다.\n3. 금융권, AI 보안 강화 및 시스템 점검 시급",
+      "link": "https://www.moneystorm.kr/news/articleView.html?idxno=7026",
+      "source": "naver",
+      "published": "2026-10-02T22:16:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "은행 해킹 잇따르자 금융당국 '비상'···은행·카드사 전수 점검",
       "summary": "이번 조치는 금융권에서 해킹 사고가 연이어 확인된 데 따른 것이다. 신한은행에서는 약 2만5000명의 고객정보가 유출됐고 KB국민은행에서도 119명의 개인신용정보 유출이 확인됐다. 이날 하나은행과 BNK부산은행에서도...",
@@ -5353,36 +5365,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-97395",
       "source": "cvefeed",
       "published": "2026-09-29T22:57:32+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Scans for Wordfence Protected Websites, (Tue, Sep 29th)",
-      "summary": "Starting yesterday, our sensors picked up a small number of scans for \"wordfence-waf.php\". This particular script is used by Wordfence, a solution to protect WordPress sites. During the Wordfence install, the wordpress-waf.php file will be created in the site&#;x26;#;39;s root directory [1].\r",
-      "description": "Starting yesterday, our sensors picked up a small number of scans for \"wordfence-waf.php\". This particular script is used by Wordfence, a solution to protect WordPress sites. During the Wordfence install, the wordpress-waf.php file will be created in the site&#;x26;#;39;s root directory [1].\r",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Scans for Wordfence Protected Websites, (Tue, Sep \n2. SANS_ISC\n3. Starting yesterday, our sensors picked up a small ",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33382",
-      "source": "sans_isc",
-      "published": "2026-09-29T22:29:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-98164 - KVM: x86/mmu: Check write tracking in all address spaces",
-      "summary": "CVE ID :CVE-2026-98164\n  \nPublished : Sept. 29, 2026, 1:17 p.m. | 50 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: x86/mmu: Check write tracking in all address spaces\n\nkvm_gfn_is_write_tracked() checks only the supplied memslot, but page\ntracking is per-address-space and shadow pages are shared across all\naddress spaces.  With SMM, a GFN can therefore be write-tracked in one\naddress space and appear untracked through the other.\n\nCheck the supplied slot first, then the slot for the other address space.\nThis ensures all callers honor write tracking regardless of the active\naddress space.  In particular, it prevents mmu_try_to_unsync_pages() from\nmarking an upper-level shadow page unsync and eventually triggering the\nBUG in pte_list_remove().\n\n[invert direction of the conditional. - Paolo]\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-98164\n  \nPublished : Sept. 29, 2026, 1:17 p.m. | 50 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: x86/mmu: Check write tracking in all address spaces\n\nkvm_gfn_is_write_tracked() checks only the supplied memslot, but page\ntracking is per-address-space and shadow pages are shared across all\naddress spaces.  With SMM, a GFN can therefore be write-tracked in one\naddress space and appear untracked through the other.\n\nCheck the supplied slot first, then the slot for the other address space.\nThis ensures all callers honor write tracking regardless of the active\naddress space.  In particular, it prevents mmu_try_to_unsync_pages() from\nmarking an upper-level shadow page unsync and eventually triggering the\nBUG in pte_list_remove().\n\n[invert direction of the conditional. - Paolo]\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-98164\n2. 26.09.29 오후10:17\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-98164",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-98164",
-      "source": "cvefeed",
-      "published": "2026-09-29T22:17:53+09:00",
       "lang": "en"
     }
   ],
