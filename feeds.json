@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-10-03T05:32:37.847057+09:00",
+  "fetched_at": "2026-10-03T06:02:26.559478+09:00",
   "security_news": [
+    {
+      "title": "은행권, 오픈소스 AI에이전트 해킹 가시화…\"국가적 AiPT 대비해야\"",
+      "summary": "최근 은행권 개인정보 유출 과정에서 중국산 오픈소스 인공지능(AI)기반 에이전트가 해킹 테스트 도구로... 지속적인 해킹 공격을 의미한다. AiPT 공격은 AI 에이전트와 도구를 활용해 보안 정찰, 취약점 악용, 내부...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈소스 AI 에이전트, 은행권 해킹 테스트 도구로 사용\n2. 중국산 AI 기반 에이전트, 개인정보 유출 과정서 악용\n3. 국가적 AiPT 대비, AI 에이전트 악용 공격 막아야",
+      "link": "https://n.news.naver.com/mnews/article/092/0002439747?sid=105",
+      "source": "naver",
+      "published": "2026-10-03T05:45:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "은행 전산망은 확대…보안 격차에 '해킹'",
+      "summary": "국내 3대 은행이라고 부를 수 있는 KB국민은행·신한은행·하나은행서 외부 해킹으로 인한 개인정보 유출이... 이뿐만 아니라 우리은행에서도 해킹 정황이 발견됐으며, BNK부산은행서도 정보 유출이 일어난 것으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KB국민, 신한, 하나은행 등 3대 은행서 해킹 발생\n2. 우리은행, BNK부산은행도 해킹 정황 및 정보 유출\n3. 은행 전산망 확대 속 보안 격차 심화 우려",
+      "link": "https://n.news.naver.com/mnews/article/092/0002439746?sid=105",
+      "source": "naver",
+      "published": "2026-10-03T05:30:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "대한민국 5대 은행 노린 해커들…금융권 보안 '초비상'",
       "summary": "핵심요약5대 은행 모두 외부 '해킹' 공격 받아 신한·국민·하나 고객정보 실제 유출 금융당국, 금융권 전산시스템 긴급점검 상시 취약점 점검…CISO 권한 강화 5대 은행이 모두 외부 해킹 공격을 받은 것으로 확인되면서...",
@@ -4692,18 +4716,6 @@
       "source": "darkreading",
       "published": "2026-09-30T06:31:29+09:00",
       "lang": "en"
-    },
-    {
-      "title": "'1365포털' 8785명 개인정보 유출…개인정보위는 4개월 뒤 조사",
-      "summary": "5월 해킹 피해… 가입자 1500만명 정부24도 3년째 유출 사고 반복 국내 최대 자원봉사 플랫폼인... 5월19일 해킹 공격을 받았다. 행안부는 이튿날 피해 사실을 인지해 개인정보위에 796명의 개인정보가 유출됐다고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 1365포털 8785명 개인정보 유출, 정부24도 3년째 사고 반복\n2. 5월 19일 해킹으로 796명 정보 유출 추정\n3. 개인정보위 4개월 뒤 조사 착수",
-      "link": "https://n.news.naver.com/mnews/article/022/0004162845?sid=102",
-      "source": "naver",
-      "published": "2026-09-30T06:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -5320,21 +5332,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-102930",
       "source": "cvefeed",
       "published": "2026-09-30T06:17:18+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-102904 - JupyterLab: Argument injection in JupyterLab extension uninstall exposes server-readable files and internal URLs",
-      "summary": "CVE ID :CVE-2026-102904\n  \nPublished : Sept. 29, 2026, 8:47 p.m. | 15 minutes ago\n  \nDescription :JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook Architecture. From JupyterLab 4.0.0 until 4.5.11 and 4.6.4, the PyPI Extension Manager uninstall request reaches ExtensionHandler.post, which validates extension names for installation but passes uninstall names to PyPIExtensionManager.uninstall and python -m pip uninstall without rejecting option-like values. The security impact requires that the PyPI Extension Manager is enabled, the account can call the extension API, and kernels and terminals are disabled or delegated to remote hosts; otherwise the user can already read files and make outbound requests directly. An authenticated user with extension API access can supply a pip requirements option to make the server read a local file or fetch an internal URL, and reflected parse errors can return the first unparsable line or response content. A pip log option can also create or corrupt a chosen path with pip-generated log text, but the requester cannot select an arbitrary disclosed line or arbitrary file content, and the injection does not add code execution or availability impact beyond ordinary package removal. This issue is fixed in JupyterLab 4.5.11 and 4.6.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-102904\n  \nPublished : Sept. 29, 2026, 8:47 p.m. | 15 minutes ago\n  \nDescription :JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook Architecture. From JupyterLab 4.0.0 until 4.5.11 and 4.6.4, the PyPI Extension Manager uninstall request reaches ExtensionHandler.post, which validates extension names for installation but passes uninstall names to PyPIExtensionManager.uninstall and python -m pip uninstall without rejecting option-like values. The security impact requires that the PyPI Extension Manager is enabled, the account can call the extension API, and kernels and terminals are disabled or delegated to remote hosts; otherwise the user can already read files and make outbound requests directly. An authenticated user with extension API access can supply a pip requirements option to make the server read a local file or fetch an internal URL, and reflected parse errors can return the first unparsable line or response content. A pip log option can also create or corrupt a chosen path with pip-generated log text, but the requester cannot select an arbitrary disclosed line or arbitrary file content, and the injection does not add code execution or availability impact beyond ordinary package removal. This issue is fixed in JupyterLab 4.5.11 and 4.6.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-102904\n2. 26.09.30 오전5:47\n3. JupyterLab is an extensible environment for intera",
-      "cve_id": "CVE-2026-102904",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102904",
-      "source": "cvefeed",
-      "published": "2026-09-30T05:47:43+09:00",
       "lang": "en"
     }
   ],
