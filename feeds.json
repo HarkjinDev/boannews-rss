@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-10-03T19:01:25.479901+09:00",
+  "fetched_at": "2026-10-03T19:31:30.262233+09:00",
   "security_news": [
+    {
+      "title": "금융권 해킹 비상에 긴급 권고…\"웹·API 취약점 즉각 점검하라\"",
+      "summary": "국내 금융권을 겨냥한 해킹 사고가 이어진 가운데 관계 당국이 긴급 권고를 발표했다. 한국인터넷진흥원(KISA) 위협분석단 AI종합분석팀은 3일 '사이버 공격 대비 기업 보안강화 권고'를 발표하고, 각 기업과 기관에 초기...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국내 금융권 겨냥 해킹 사고, KISA 즉각 점검 권고\n2. 웹, API 취약점 이용 공격 지속, 초기 침투 방어 중요\n3. 금융권 긴급 보안 강화, 사이버 위협 대비 필요",
+      "link": "https://n.news.naver.com/mnews/article/138/0002243600?sid=105",
+      "source": "naver",
+      "published": "2026-10-03T19:05:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"대통령이 북한=주적 말 못한다\"는 국힘에 한겨레 \"정쟁화 멈춰야\"",
+      "summary": "\"내부자가 자료를 빼돌리는 통상의 기술 유출 사건은 중수청 소관 밖으로 경찰 등 다른 기관으로 넘어갔다\"며 민간 기업을 노린 대규모 해킹도 관할이 모호하다고 지적했다. 수사기관 사이 사건이 이첩되면 \"고소장을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 민간 기업 대상 대규모 해킹, 중수청 소관 밖\n2. 내부자 기술 유출, 경찰 등 타 기관 이관\n3. 관할 모호성으로 수사 기관 간 사건 이첩",
+      "link": "https://n.news.naver.com/mnews/article/006/0000138040?sid=102",
+      "source": "naver",
+      "published": "2026-10-03T19:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "초유의 금융권 연쇄 해킹…국감·연말 인사까지 '후폭풍'",
+      "summary": "공교롭게 연말 은행장 인선을 앞둔 시점이어서 보안사고 대응과 내부통제가 경영진 평가의 새로운 변수로... 보안업계에서는 유출된 계정정보를 대량으로 대입하는 '크리덴셜 스터핑' 등에 AI가 활용됐을 가능성도...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융권 연쇄 해킹, 연말 은행장 인사 변수로\n2. AI 활용 크리덴셜 스터핑 공격 가능성 제기\n3. 보안사고 대응, 내부통제 경영진 평가에 영향",
+      "link": "https://www.peoplewatch.co.kr/article/view/ppw202610030003",
+      "source": "naver",
+      "published": "2026-10-03T18:56:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "당국이 공유한 '해커 IP' 추적하니 추가 피해 줄줄이…연휴에도 비상 대...",
       "summary": "3일 금융권에 따르면 금융당국은 최근 은행권에서 무차별적으로 발생한 해킹 사고와 관련해 확보한 공격자... 현재까지 KB국민은행과 신한은행, 하나은행, 부산은행 등에서 해킹에 따른 개인정보 유출이 확인됐다....",
@@ -4672,6 +4708,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-10502",
       "source": "msrc",
       "published": "2026-10-03T18:05:04+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-18040 - HQC leaks private key information through secret-indexed GF(2^8) tables and a secret-dependent fixed-weight sampler",
+      "summary": "CVE ID :CVE-2026-18040\n  \nPublished : Oct. 3, 2026, 8:55 a.m. | 34 minutes ago\n  \nDescription :In Bouncy Castle for Java before 1.86, HQC leaked secret-derived data through two side channels: its GF(2^8) arithmetic used lookup tables indexed by field elements, making the cache line touched a function of the operand, and its fixed-weight support sampler left its duplicate scan as soon as a collision was found and stored accepted positions at a secret index. Both run on secret inputs during encapsulation and decapsulation, and the sampler re-expands the secret key from its seed on every decapsulation, so an attacker able to observe cache behaviour or decapsulation timing can recover information about the HQC private key. The field arithmetic is now table-free and the sampler branch-free within a batch of candidates, with output and randomness consumption unchanged.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-18040\n  \nPublished : Oct. 3, 2026, 8:55 a.m. | 34 minutes ago\n  \nDescription :In Bouncy Castle for Java before 1.86, HQC leaked secret-derived data through two side channels: its GF(2^8) arithmetic used lookup tables indexed by field elements, making the cache line touched a function of the operand, and its fixed-weight support sampler left its duplicate scan as soon as a collision was found and stored accepted positions at a secret index. Both run on secret inputs during encapsulation and decapsulation, and the sampler re-expands the secret key from its seed on every decapsulation, so an attacker able to observe cache behaviour or decapsulation timing can recover information about the HQC private key. The field arithmetic is now table-free and the sampler branch-free within a batch of candidates, with output and randomness consumption unchanged.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-18040\n2. 26.10.03 오후5:55\n3. In Bouncy Castle for Java before 1.86, HQC leaked ",
+      "cve_id": "CVE-2026-18040",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-18040",
+      "source": "cvefeed",
+      "published": "2026-10-03T17:55:06+09:00",
       "lang": "en"
     },
     {
