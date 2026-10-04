@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-05T02:30:56.854585+09:00",
+  "fetched_at": "2026-10-05T03:01:07.383708+09:00",
   "security_news": [
     {
       "title": "은행 사칭해 대출상담 ‘피싱’ 2차피해 우려",
@@ -5839,36 +5839,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-70650",
       "source": "cvefeed",
       "published": "2026-10-02T04:39:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-78577 - Unauthenticated Onboarding Scan Information Disclosure in TP-Link Tapo C120 & C200",
-      "summary": "CVE ID :CVE-2026-78577\n  \nPublished : Oct. 1, 2026, 5:41 p.m. | 43 minutes ago\n  \nDescription :Tapo C120 v1 and C200 V5\ncontain a vulnerability in the HTTPS onboarding scan function due to missing authentication.\nAfter initial setup, an unauthenticated attacker on the same local network can\ninvoke the scan action and retrieve nearby wireless access-point metadata,\nincluding SSIDs, BSSIDs, authentication and encryption modes, and\nsignal-strength information.\n\n\n\n\n\n\n\n\n\nSuccessful\nexploitation may disclose information about the wireless environment\nsurrounding the camera, allowing an attacker to learn elements of the local\nwireless topology.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-78577\n  \nPublished : Oct. 1, 2026, 5:41 p.m. | 43 minutes ago\n  \nDescription :Tapo C120 v1 and C200 V5\ncontain a vulnerability in the HTTPS onboarding scan function due to missing authentication.\nAfter initial setup, an unauthenticated attacker on the same local network can\ninvoke the scan action and retrieve nearby wireless access-point metadata,\nincluding SSIDs, BSSIDs, authentication and encryption modes, and\nsignal-strength information.\n\n\n\n\n\n\n\n\n\nSuccessful\nexploitation may disclose information about the wireless environment\nsurrounding the camera, allowing an attacker to learn elements of the local\nwireless topology.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-78577\n2. 26.10.02 오전2:41\n3. Tapo C120 v1 and C200 V5 contain a vulnerability i",
-      "cve_id": "CVE-2026-78577",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-78577",
-      "source": "cvefeed",
-      "published": "2026-10-02T02:41:49+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-68496 - jackson-dataformats-binary: Smile parser does not enforce StreamReadConstraints.maxNameLength, enabling memory-exhaustion denial of service",
-      "summary": "CVE ID :CVE-2026-68496\n  \nPublished : Oct. 1, 2026, 5:36 p.m. | 48 minutes ago\n  \nDescription :The Smile parser in FasterXML jackson-dataformats-binary never invokes StreamReadConstraints.validateNameLength() when decoding JSON object property names, so the maxNameLength limit is not enforced for this format. SmileParser._handleLongFieldName() grows its internal name buffer through an unconstrained _growArrayTo() call and performs no length validation. An attacker who can have a Smile document parsed may therefore embed a single property name of unbounded length; the parser buffers the whole name in memory before returning it, whatever maxNameLength is configured to. Because StreamReadConstraints.maxDocumentLength is also disabled by default, nothing else bounds the name under default settings, so the only limits are the attacker's upload capacity and available heap, leading to memory exhaustion and denial of service. No privileges beyond the ability to submit data to a parsing endpoint are required, and exploitation needs only that the bytes reach SmileFactory parsing, directly or through an ObjectMapper configured with the Smile module. jackson-core's own JSON parsers enforce maxNameLength incrementally during name decoding; this gap is specific to the binary formats. maxNameLength and validateNameLength were introduced in jackson-core 2.16.0, so releases before 2.16.0 do not contain the constraint that is left unenforced. This issue is tracked together with the CBOR parser defect in the same vendor advisory, GHSA-3v8f-v6vx-fmrm, which covers both binary formats. The Smile parser defect (jackson-dataformats-binary issue #726) is CVE-2026-68496; the CBOR parser defect (issue #725) is assigned CVE-2026-68495.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-68496\n  \nPublished : Oct. 1, 2026, 5:36 p.m. | 48 minutes ago\n  \nDescription :The Smile parser in FasterXML jackson-dataformats-binary never invokes StreamReadConstraints.validateNameLength() when decoding JSON object property names, so the maxNameLength limit is not enforced for this format. SmileParser._handleLongFieldName() grows its internal name buffer through an unconstrained _growArrayTo() call and performs no length validation. An attacker who can have a Smile document parsed may therefore embed a single property name of unbounded length; the parser buffers the whole name in memory before returning it, whatever maxNameLength is configured to. Because StreamReadConstraints.maxDocumentLength is also disabled by default, nothing else bounds the name under default settings, so the only limits are the attacker's upload capacity and available heap, leading to memory exhaustion and denial of service. No privileges beyond the ability to submit data to a parsing endpoint are required, and exploitation needs only that the bytes reach SmileFactory parsing, directly or through an ObjectMapper configured with the Smile module. jackson-core's own JSON parsers enforce maxNameLength incrementally during name decoding; this gap is specific to the binary formats. maxNameLength and validateNameLength were introduced in jackson-core 2.16.0, so releases before 2.16.0 do not contain the constraint that is left unenforced. This issue is tracked together with the CBOR parser defect in the same vendor advisory, GHSA-3v8f-v6vx-fmrm, which covers both binary formats. The Smile parser defect (jackson-dataformats-binary issue #726) is CVE-2026-68496; the CBOR parser defect (issue #725) is assigned CVE-2026-68495.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-68496\n2. 26.10.02 오전2:36\n3. The Smile parser in FasterXML jackson-dataformats-",
-      "cve_id": "CVE-2026-68496",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68496",
-      "source": "cvefeed",
-      "published": "2026-10-02T02:36:57+09:00",
       "lang": "en"
     }
   ],
