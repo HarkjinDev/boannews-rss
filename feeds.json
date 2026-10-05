@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-06T01:32:14.882213+09:00",
+  "fetched_at": "2026-10-06T02:01:14.240882+09:00",
   "security_news": [
     {
       "title": "상응 조치는 없었다, 지뢰 제거만 촉구한 軍",
@@ -5352,30 +5352,6 @@
       "source": "thehackernews",
       "published": "2026-10-03T02:02:12+09:00",
       "lang": "en"
-    },
-    {
-      "title": "국민·하나·부산은행까지 뚫렸다…\"기존 대응 체계 무력화, 공동 대응...",
-      "summary": "신한은행에 이어 KB국민은행과 하나은행, BNK부산은행까지 해킹 공격을 받아 고객 및 외주 직원의 개인정보가... 국내 5대 시중은행이 모두 인공지능(AI) 기반으로 추정되는 해킹 공격의 표적이 된 가운데, 이 중 세 곳에서...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국민, 하나, 부산은행 등 3개 시중은행 해킹 공격 대상\n2. AI 기반 공격으로 추정, 고객 및 외주 직원 개인정보 유출\n3. 5대 시중은행 모두 표적, 기존 대응 체계 무력화",
-      "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=65257",
-      "source": "naver",
-      "published": "2026-10-03T01:56:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[한국은 지금] 김여정, 이틀 만에 또 담화…이 대통령 ‘국군의 날’ 기...",
-      "summary": "한국의 주요 은행들이 잇따라 해킹 공격을 받아 고객 개인정보가 유출되는 사고가 발생했습니다.... 우리은행과 NH농협은행도 비슷한 해킹 공격을 받았지만 현재까지 정보 유출은 확인되지 않았습니다.진행자) 가장 큰...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 우리은행, NH농협은행 등 한국 주요 은행 해킹 시도\n2. 고객 개인정보 유출 사고 발생, 정확한 피해 규모 미확인\n3. 금융당국, 보안 강화 및 피해 최소화 조치 중",
-      "link": "https://www.voakorea.com/a/korea-now-100226/8207141.html",
-      "source": "naver",
-      "published": "2026-10-03T01:55:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -5752,21 +5728,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-104855",
       "source": "cvefeed",
       "published": "2026-10-03T03:17:02+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-104854 - Nx daemon and plugin worker sockets are accessible to other local users",
-      "summary": "CVE ID :CVE-2026-104854\n  \nPublished : Oct. 2, 2026, 4:59 p.m. | 28 minutes ago\n  \nDescription :Nx is a monorepo solution for TypeScript and polyglot codebases. From 14.6.0 until 22.7.9 and 23.1.2, Nx creates Unix domain sockets for its daemon and isolated plugin workers in shared temporary locations without owner-only directory and socket permissions. Another unprivileged local account on a shared build server, developer host, or multi-user container can discover and connect to a running socket because the transport performs no authentication and relies on filesystem containment. The daemon's PROCESS_IN_BACKGROUND request accepts a module path and invokes its default export, allowing a caller that controls a file to execute code as the account running Nx; other handlers can expose workspace file contents, project graphs, and task hashes. Disabling the daemon alone does not remove the vulnerable plugin-worker sockets, while single-user machines without another local account are not exposed. This issue is fixed in versions 22.7.9 and 23.1.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-104854\n  \nPublished : Oct. 2, 2026, 4:59 p.m. | 28 minutes ago\n  \nDescription :Nx is a monorepo solution for TypeScript and polyglot codebases. From 14.6.0 until 22.7.9 and 23.1.2, Nx creates Unix domain sockets for its daemon and isolated plugin workers in shared temporary locations without owner-only directory and socket permissions. Another unprivileged local account on a shared build server, developer host, or multi-user container can discover and connect to a running socket because the transport performs no authentication and relies on filesystem containment. The daemon's PROCESS_IN_BACKGROUND request accepts a module path and invokes its default export, allowing a caller that controls a file to execute code as the account running Nx; other handlers can expose workspace file contents, project graphs, and task hashes. Disabling the daemon alone does not remove the vulnerable plugin-worker sockets, while single-user machines without another local account are not exposed. This issue is fixed in versions 22.7.9 and 23.1.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-104854\n2. 26.10.03 오전1:59\n3. Nx is a monorepo solution for TypeScript and polyg",
-      "cve_id": "CVE-2026-104854",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104854",
-      "source": "cvefeed",
-      "published": "2026-10-03T01:59:48+09:00",
       "lang": "en"
     }
   ],
