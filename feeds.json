@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-06T02:32:34.047298+09:00",
+  "fetched_at": "2026-10-06T03:01:15.473109+09:00",
   "security_news": [
     {
       "title": "개인, 비밀번호 30자리 안팎 설정… 기업 ‘실전 모의훈련’ 필수",
@@ -5352,21 +5352,39 @@
       "source": "bleepingcomputer",
       "published": "2026-10-03T03:33:01+09:00",
       "lang": "en"
-    },
-    {
-      "title": "보안업체들 “비트겟 해킹, 북한 연계”…약 4억 달러 탈취 자금 이동 ...",
-      "summary": "엘립틱은 최근 발표한 분석에서 비트겟 탈취 자금이 과거 북한 소행으로 분류된 해킹 사건의 자금세탁 주소들과 연결됐다고 밝혔습니다. 여기에는 지난해 바이비트 해킹의 탈취 자금을 세탁하는 데 사용된 주소들과의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 비트겟 해킹, 북한 연계 추정… 약 4억 달러 탈취\n2. 탈취 자금, 북한 연계 해킹 사건 자금 세탁 주소와 연결\n3. 바이비트 해킹 자금세탁 주소와도 연관성 발견",
-      "link": "https://www.voakorea.com/a/bitget-dprk-crypto-fund-movement-100226/8207168.html",
-      "source": "naver",
-      "published": "2026-10-03T02:43:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-104966 - Plane: Cross-Workspace IDOR in Estimate and Comment Endpoints Allows Read, Modify, and Inject Across Workspaces",
+      "summary": "CVE ID :CVE-2026-104966\n  \nPublished : Oct. 5, 2026, 4:54 p.m. | 9 minutes ago\n  \nDescription :Plane is an open-source project management tool. Prior to 1.4.0, two endpoint families fail to verify that nested resource identifiers belong to the workspace and project named in the URL. An authenticated user can read or modify estimates from another workspace through PATCH /api/workspaces/{slug}/projects/{project_id}/estimates/{estimate_id}/, and can inject comments into an issue from another workspace through POST /api/workspaces/{slug}/projects/{project_id}/issues/{issue_id}/comments/. ProjectEntityPermission verifies membership in the workspace and project from the URL, but estimate_id and issue_id are fetched by primary key without confirming the same scope. The list, retrieve, and destroy handlers correctly scope their queries, demonstrating the inconsistency. This issue is fixed in 1.4.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-104966\n  \nPublished : Oct. 5, 2026, 4:54 p.m. | 9 minutes ago\n  \nDescription :Plane is an open-source project management tool. Prior to 1.4.0, two endpoint families fail to verify that nested resource identifiers belong to the workspace and project named in the URL. An authenticated user can read or modify estimates from another workspace through PATCH /api/workspaces/{slug}/projects/{project_id}/estimates/{estimate_id}/, and can inject comments into an issue from another workspace through POST /api/workspaces/{slug}/projects/{project_id}/issues/{issue_id}/comments/. ProjectEntityPermission verifies membership in the workspace and project from the URL, but estimate_id and issue_id are fetched by primary key without confirming the same scope. The list, retrieve, and destroy handlers correctly scope their queries, demonstrating the inconsistency. This issue is fixed in 1.4.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-104966\n2. 26.10.06 오전1:54\n3. Plane is an open-source project management tool. P",
+      "cve_id": "CVE-2026-104966",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104966",
+      "source": "cvefeed",
+      "published": "2026-10-06T01:54:27+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-12171 - auto-changelog: code execution via untrusted in-repository configuration (handlebarsSetup/plugins), plus argument injection, path traversal, and SSRF",
+      "summary": "CVE ID :CVE-2026-12171\n  \nPublished : Oct. 5, 2026, 4:25 p.m. | 38 minutes ago\n  \nDescription :auto-changelog before 2.6.1 merges configuration from inside the target repository (the .auto-changelog file and the auto-changelog key in package.json) into its options, and honors security-sensitive options from that untrusted source. The handlebarsSetup option is passed to require(), so running auto-changelog over attacker-controlled repository content (for example, in a CI workflow that checks out an untrusted pull request head, or locally on a forked or third-party repository) executes attacker-chosen code with the privileges of the invoking user or CI job, including access to workflow secrets, without the repository dependencies ever being installed. The plugins option similarly loads attacker-controlled modules from the repository. Under the same conditions, appendGitLog/appendGitTag allow git argument injection (e.g. --output= to write arbitrary files), output allows writing attacker-influenced content to arbitrary paths, and template causes an outbound request to an attacker-chosen URL. Version 2.6.1 treats in-repository configuration as untrusted and refuses to run when it sets these options, unless the new --unsafe-config flag is passed.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-12171\n  \nPublished : Oct. 5, 2026, 4:25 p.m. | 38 minutes ago\n  \nDescription :auto-changelog before 2.6.1 merges configuration from inside the target repository (the .auto-changelog file and the auto-changelog key in package.json) into its options, and honors security-sensitive options from that untrusted source. The handlebarsSetup option is passed to require(), so running auto-changelog over attacker-controlled repository content (for example, in a CI workflow that checks out an untrusted pull request head, or locally on a forked or third-party repository) executes attacker-chosen code with the privileges of the invoking user or CI job, including access to workflow secrets, without the repository dependencies ever being installed. The plugins option similarly loads attacker-controlled modules from the repository. Under the same conditions, appendGitLog/appendGitTag allow git argument injection (e.g. --output= to write arbitrary files), output allows writing attacker-influenced content to arbitrary paths, and template causes an outbound request to an attacker-chosen URL. Version 2.6.1 treats in-repository configuration as untrusted and refuses to run when it sets these options, unless the new --unsafe-config flag is passed.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-12171\n2. 26.10.06 오전1:25\n3. auto-changelog before 2.6.1 merges configuration f",
+      "cve_id": "CVE-2026-12171",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12171",
+      "source": "cvefeed",
+      "published": "2026-10-06T01:25:19+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-69267 Windows Connected User Experiences and Telemetry Information Disclosure Vulnerability",
       "summary": "Updated an acknowledgement. This is an informational change only.",
