@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-07T02:32:35.822293+09:00",
+  "fetched_at": "2026-10-07T03:04:44.645525+09:00",
   "security_news": [
+    {
+      "title": "Atlassian warns of critical file-access flaw in Jira, Confluence",
+      "summary": "Atlassian is warning customers of a critical vulnerability, tracked as CVE-2026-21589, that can be exploited for arbitrary file-access in multiple self-hosted Data Center products, including Confluence, Jira, and Bitbucket. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Atlassian warns of critical file-access flaw in Ji",
+      "link": "https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/",
+      "source": "bleepingcomputer",
+      "published": "2026-10-07T02:34:59+09:00",
+      "lang": "en"
+    },
     {
       "title": "블록체인 조사자 “북한 바이비트 탈취 자금 추적…중국계 세탁망 의심...",
       "summary": "암호화폐 거래 기록을 분석해 해킹 자금과 사기 피해금의 흐름을 추적하는 민간 조사자 자크엑스비티(ZachXBT)가 북한의 바이비트 해킹 자금을 옮긴 것으로 의심되는 중국계 자금세탁망의 활동 정황을 공개했습니다....",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-10-04T18:42:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "금융당국 긴급회의 개최...\"해킹 추가 피해 가능성\"",
-      "summary": "당국은 금융권에 보안점검 체크리스트를 배포하고 자체점검 결과를 요청하는 등 총력 대응에 나섰습니다. 또 외부에 노출된 전산 시스템과 서비스를 빠짐없이 파악하고 보안 취약점도 다시 들여다볼 것을 지시했습니다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융당국 긴급회의 개최...\"해킹 추가 피해 가능성\" 당국은 금융권에 보안점검 체크리스트를\n2. 또 외부에 노출된 전산 시스템과 서비스를 빠짐없이 파악하고 보안 취약점도 다시 들여다볼 것",
-      "link": "https://n.news.naver.com/mnews/article/052/0002414685?sid=101",
-      "source": "naver",
-      "published": "2026-10-04T18:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-106106 - Quasar Framework: SSR/SSG dev error page discloses the full shell environment and its  escape is bypassable",
+      "summary": "CVE ID :CVE-2026-106106\n  \nPublished : Oct. 6, 2026, 5:24 p.m. | 22 minutes ago\n  \nDescription :Quasar Framework is a framework for building high-performance Vue.js user interfaces. Prior to @quasar/render-ssr-error 2.2.4 and @quasar/app-vite 3.3.0, renderSSRError() in utils/render-ssr-error/src/index.js used diagnostic data from utils/render-ssr-error/src/env.js to serialize process.env, request headers, and cookies into the HTTP page returned by serve.devError(), while the development server listened on all interfaces by default. Any network-adjacent client that reaches an SSR or SSG render failure through this development-only error path can obtain shell environment secrets. The renderer escaped only one exact lowercase script closing-tag spelling, so case variants and valid closing-tag delimiter variants in reflected diagnostic data could terminate the script element and inject markup; executing the injected code in a developer browser additionally requires the payload to accompany that developer's request. This issue is fixed in @quasar/render-ssr-error 2.2.4 and @quasar/app-vite 3.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-106106\n  \nPublished : Oct. 6, 2026, 5:24 p.m. | 22 minutes ago\n  \nDescription :Quasar Framework is a framework for building high-performance Vue.js user interfaces. Prior to @quasar/render-ssr-error 2.2.4 and @quasar/app-vite 3.3.0, renderSSRError() in utils/render-ssr-error/src/index.js used diagnostic data from utils/render-ssr-error/src/env.js to serialize process.env, request headers, and cookies into the HTTP page returned by serve.devError(), while the development server listened on all interfaces by default. Any network-adjacent client that reaches an SSR or SSG render failure through this development-only error path can obtain shell environment secrets. The renderer escaped only one exact lowercase script closing-tag spelling, so case variants and valid closing-tag delimiter variants in reflected diagnostic data could terminate the script element and inject markup; executing the injected code in a developer browser additionally requires the payload to accompany that developer's request. This issue is fixed in @quasar/render-ssr-error 2.2.4 and @quasar/app-vite 3.3.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-106106\n2. 26.10.07 오전2:24\n3. Quasar Framework is a framework for building high-",
+      "cve_id": "CVE-2026-106106",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-106106",
+      "source": "cvefeed",
+      "published": "2026-10-07T02:24:07+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-87975 - Privilege abuse in model formsets with editable primary keys",
       "summary": "CVE ID :CVE-2026-87975\n  \nPublished : 6 de Outubro de 2026 às 13:35 | 9 minutos ago\n  \nDescription :An issue was discovered in Django 6.1 before 6.1.2, 6.0 before 6.0.9, and 5.2 before 5.2.18.\n`django.forms.models.BaseModelFormSet.save_existing_objects()` used the presence of a primary key on a submitted form's instance as evidence that the instance belonged to the formset's limiting queryset. An object outside that queryset is represented by a newly constructed instance whose primary key can still be populated from submitted data when the model's primary key is a field accepted by the form, such as a `OneToOneField` or parent link used as the primary key of an inline formset's model, or a natural or UUID primary key included in the form's fields. This allows an authenticated user permitted to submit such a formset to delete rows outside the limiting queryset, without any permission on the targeted object, via forged management-form data marking an out-of-queryset object for deletion. Models using the default AutoField primary key are not affected.\nEarlier, unsupported Django series (such as 5.1.x, 5.0.x, and 4.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seonggwon Yoon for reporting this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
