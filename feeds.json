@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-07T22:05:03.327760+09:00",
+  "fetched_at": "2026-10-07T22:34:31.263520+09:00",
   "security_news": [
+    {
+      "title": "개인정보 유출 피해 85만명…여의도순복음 수사의뢰 검토",
+      "summary": "교인과 직원 등의 개인정보를 해킹당한 여의도순복음교회와 사랑의교회가 한국인터넷진흥원에 침해 사고 사실을 정식으로 신고하고, 수사 의뢰를 검토 중입니다. 외부 해킹 사실을 통보받은 여의도순복음교회는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 여의도순복음교회, 85만명 개인정보 유출\n2. 외부 해킹으로 교인 및 직원 정보 탈취\n3. 한국인터넷진흥원 신고, 수사 의뢰 검토",
+      "link": "https://n.news.naver.com/mnews/article/437/0000514620?sid=102",
+      "source": "naver",
+      "published": "2026-10-07T22:03:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "펀드 토큰화, 자산·화폐 연계와 위험 관리가 관건",
       "summary": "펀드 지분 토큰화가 결제 효율과 투자상품 접근성을 높일 수 있지만, 자산과 화폐를 함께 토큰화하고 보안... 마클루프 총재는 토큰화 과정에서 사이버보안, 운영 복잡성, 수탁, 법적 확실성, 거버넌스가 취약점이 될 수...",
@@ -5988,21 +6000,39 @@
       "source": "naver",
       "published": "2026-10-06T09:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "연쇄 해킹에 AI정책 혼선까지…과방위 국감, 사이버안보·독파모 쟁점",
-      "summary": "통신사와 플랫폼에 이어 금융권에서도 개인정보 유출과 해킹 사고가 잇따르면서 6일 열리는 국회... 최근 신한은행을 비롯해 저축은행·캐피탈사 등 금융권으로 해킹 피해가 확산하면서 과기정통부와 한국인터넷진흥원...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 연쇄 해킹에 AI정책 혼선까지…과방위 국감, 사이버안보·독파모 쟁점 통신사와 플랫폼에 이어\n2. 최근 신한은행을 비롯해 저축은행·캐피탈사 등 금융권으로 해킹 피해가 확산하면서 과기정통부와",
-      "link": "https://n.news.naver.com/mnews/article/008/0005422298?sid=100",
-      "source": "naver",
-      "published": "2026-10-06T08:58:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-107180 - MISP: Forced TOTP Enrolment Bypassed via Non-Browser Request Types on otp_required Instances",
+      "summary": "CVE ID :CVE-2026-107180\n  \nPublished : Oct. 7, 2026, 12:49 p.m. | 23 minutes ago\n  \nDescription :On MISP instances configured to require TOTP enrolment (Security.otp_required), the enforcement of the mandatory two-factor authentication setup applied only to standard browser requests. An authenticated user who had not yet enrolled in TOTP could bypass the forced setup by issuing any non-browser request type, including AJAX/XHR calls, REST API requests, .json format URLs, restSearch queries, or automation actions. Because these machine-readable request shapes cannot follow the redirect that the browser path uses to send the user to the TOTP enrolment page, the guard simply skipped the check and the user retained full access to the instance without completing the required second-factor setup.\n\nThe initial fix (commit 8deb0619e) added a guard specifically for AJAX requests. A follow-up fix (commit 6b527ba6e) broadened the guard to cover every non-browser request shape, while preserving the exemption for identities authenticated via API key (logged_by_authkey flag).\n\nImpact: an authenticated user on an otp_required instance can operate with full access indefinitely without enrolling in TOTP, nullifying the instance-level two-factor authentication policy.\n\nAffected version: <2.5.48\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107180\n  \nPublished : Oct. 7, 2026, 12:49 p.m. | 23 minutes ago\n  \nDescription :On MISP instances configured to require TOTP enrolment (Security.otp_required), the enforcement of the mandatory two-factor authentication setup applied only to standard browser requests. An authenticated user who had not yet enrolled in TOTP could bypass the forced setup by issuing any non-browser request type, including AJAX/XHR calls, REST API requests, .json format URLs, restSearch queries, or automation actions. Because these machine-readable request shapes cannot follow the redirect that the browser path uses to send the user to the TOTP enrolment page, the guard simply skipped the check and the user retained full access to the instance without completing the required second-factor setup.\n\nThe initial fix (commit 8deb0619e) added a guard specifically for AJAX requests. A follow-up fix (commit 6b527ba6e) broadened the guard to cover every non-browser request shape, while preserving the exemption for identities authenticated via API key (logged_by_authkey flag).\n\nImpact: an authenticated user on an otp_required instance can operate with full access indefinitely without enrolling in TOTP, nullifying the instance-level two-factor authentication policy.\n\nAffected version: <2.5.48\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107180\n2. 26.10.07 오후9:49\n3. On MISP instances configured to require TOTP enrol",
+      "cve_id": "CVE-2026-107180",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107180",
+      "source": "cvefeed",
+      "published": "2026-10-07T21:49:40+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-107175 - MISP Correlation Engine Fails to Refresh When Event Distribution or Sharing Group Changes",
+      "summary": "CVE ID :CVE-2026-107175\n  \nPublished : Oct. 7, 2026, 12:38 p.m. | 34 minutes ago\n  \nDescription :MISP contains a defect in its event save workflow that prevents the correlation engine from recalculating correlations when an event's distribution level or sharing group is modified.\n\nWhen a user edits an existing event and changes its distribution or sharing_group_id, the internal before-save hook stored the incoming (new) data rather than the previously persisted values. As a result, the after-save comparison that determines whether a correlation refresh is needed never detected the change, and stale correlations persisted.\n\nSecurity impact:\n\n- Stale correlations may continue to expose event data to users in a broader sharing group after the event has been moved to a more restrictive group, resulting in unintended information disclosure.\n\n- Conversely, newly relevant correlations may not appear after a distribution widening, degrading the completeness of threat intelligence sharing.\n\nPreconditions:\n\n- An authenticated user with write access to at least one MISP event.\n\n- The user modifies the event's distribution or sharing_group_id field.\n\nAffected versions: <2.5.48\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107175\n  \nPublished : Oct. 7, 2026, 12:38 p.m. | 34 minutes ago\n  \nDescription :MISP contains a defect in its event save workflow that prevents the correlation engine from recalculating correlations when an event's distribution level or sharing group is modified.\n\nWhen a user edits an existing event and changes its distribution or sharing_group_id, the internal before-save hook stored the incoming (new) data rather than the previously persisted values. As a result, the after-save comparison that determines whether a correlation refresh is needed never detected the change, and stale correlations persisted.\n\nSecurity impact:\n\n- Stale correlations may continue to expose event data to users in a broader sharing group after the event has been moved to a more restrictive group, resulting in unintended information disclosure.\n\n- Conversely, newly relevant correlations may not appear after a distribution widening, degrading the completeness of threat intelligence sharing.\n\nPreconditions:\n\n- An authenticated user with write access to at least one MISP event.\n\n- The user modifies the event's distribution or sharing_group_id field.\n\nAffected versions: <2.5.48\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107175\n2. 26.10.07 오후9:38\n3. MISP contains a defect in its event save workflow ",
+      "cve_id": "CVE-2026-107175",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107175",
+      "source": "cvefeed",
+      "published": "2026-10-07T21:38:44+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-92393 - Apache YuniKorn: Admission control bypass via workload UPDATE operation",
       "summary": "CVE ID :CVE-2026-92393\n  \nPublished : Oct. 7, 2026, 10:17 a.m. | 54 minutes ago\n  \nDescription :Apache YuniKorn 1.9.0 and earlier does not implement label and user annotation checks for workload UPDATE action bypassing all checks. Workloads in YuniKorn are defined as the following Kubernetes objects: \"deployments\", \"replicasets\", \"statefulsets\", \"daemonsets\", \"jobs\", \"cronjobs\". The CREATE action correctly enforces the checks for all object types.\n\n\nThe bypass allows any user to specify an arbitrary user info annotation. The same bypass also allows changing the application ID for the workload. The combination of the two applied in one UPDATE could allow access to a queue that the user normally would not have access to. Quota usage for the queue might be impacted if the application runs in the incorrect queue. User based quota enforcement is also based on the user annotation. User quota tracking could be side stepped even if the application runs in the correct queue.\n\n\n\n\nUsers are recommended to upgrade to version 1.10.0, which fixes this issue.\n  \nSeverity: 2.0 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
