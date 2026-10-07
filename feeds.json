@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-07T23:33:35.668295+09:00",
+  "fetched_at": "2026-10-08T00:03:21.238533+09:00",
   "security_news": [
     {
       "title": "[사설]美, 대북 사이버 협력에 국정원 배제… 불신받는 ‘정보 동맹’",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "Scans for Atlassian vulnerablity (CVE-2026-21589), (Wed, Oct 7th)",
+      "summary": "On October 5th, Atlassian published patches&#;x26;#;xc2;&#;x26;#;xa0;for multiple products to fix an \"Arbitrary File Access\" vulnerability &#;x26;#;x5b;CVE-2026-21589&#;x26;#;x5d;. An attacker can read arbitrary files in the web application&#;x26;#;39;s directory, potentially exposing sensitive information such as configuration files.\r",
+      "description": "On October 5th, Atlassian published patches&#;x26;#;xc2;&#;x26;#;xa0;for multiple products to fix an \"Arbitrary File Access\" vulnerability &#;x26;#;x5b;CVE-2026-21589&#;x26;#;x5d;. An attacker can read arbitrary files in the web application&#;x26;#;39;s directory, potentially exposing sensitive information such as configuration files.\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-21589\n2. SANS_ISC\n3. On October 5th, Atlassian published patches&#;x26;",
+      "cve_id": "CVE-2026-21589",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33406",
+      "source": "sans_isc",
+      "published": "2026-10-07T23:59:33+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-98373 - mm/hugetlb: preserve mremap address delta when skipping page tables",
       "summary": "CVE ID :CVE-2026-98373\n  \nPublished : Oct. 7, 2026, 1:17 p.m. | 55 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nmm/hugetlb: preserve mremap address delta when skipping page tables\n\nmove_hugetlb_page_tables() optimizes mremap() by advancing to the last\nentry in the page table when the source page table does not exist, either\ninitially or after unsharing a PMD table.  The common loop increment then\nsteps to the first entry in the next page table.\n\nHowever, the code advances both the source and destination addresses to\nthe last entries in their respective page tables, which is wrong.  The\ndestination address must be advanced only by the same amount as the source\naddress.\n\nIf the source and destination offsets within their page tables differ, the\ndestination address can be advanced too far, causing follow-up issues. \nFix this by advancing the destination address by the source advance\ndistance.\n\nWith a reproducer, we were able to trigger a kernel panic on x86-64.  With\nthis fix in place, we can no longer reproduce the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
