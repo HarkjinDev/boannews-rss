@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-08T00:33:44.700924+09:00",
+  "fetched_at": "2026-10-08T01:03:34.882047+09:00",
   "security_news": [
     {
       "title": "PoeLLM malware infects exposed AI servers in cryptomining attacks",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-77214 - libexpat Heap Buffer Over-read in xmlparse.c via XML_ParseBuffer",
+      "summary": "CVE ID :CVE-2026-77214\n  \nPublished : Oct. 7, 2026, 3:17 p.m. | 41 minutes ago\n  \nDescription :libexpat before commit 13c5f63 contains a heap buffer over-read vulnerability in xmlparse.c. XML_ParseBuffer advances the parse buffer end with parser->m_bufferEnd += len using a caller-supplied length that is not validated against the allocated buffer size, so repeated XML_ParseBuffer calls move m_bufferEnd past the end of the heap allocation and subsequent parsing reads out of bounds. Reaching this path requires a parse buffer to already be present; otherwise XML_ParseBuffer returns XML_ERROR_NO_BUFFER. A buffer is present after a prior call to XML_GetBuffer, either directly (the common case) or indirectly through a prior XML_Parse call that allocates the buffer internally. The over-read discloses adjacent heap memory to the calling application, recovering heap pointers, libc function pointers, and code pointers sufficient to defeat ASLR and build further exploitation primitives.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-77214\n  \nPublished : Oct. 7, 2026, 3:17 p.m. | 41 minutes ago\n  \nDescription :libexpat before commit 13c5f63 contains a heap buffer over-read vulnerability in xmlparse.c. XML_ParseBuffer advances the parse buffer end with parser->m_bufferEnd += len using a caller-supplied length that is not validated against the allocated buffer size, so repeated XML_ParseBuffer calls move m_bufferEnd past the end of the heap allocation and subsequent parsing reads out of bounds. Reaching this path requires a parse buffer to already be present; otherwise XML_ParseBuffer returns XML_ERROR_NO_BUFFER. A buffer is present after a prior call to XML_GetBuffer, either directly (the common case) or indirectly through a prior XML_Parse call that allocates the buffer internally. The over-read discloses adjacent heap memory to the calling application, recovering heap pointers, libc function pointers, and code pointers sufficient to defeat ASLR and build further exploitation primitives.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-77214\n2. 26.10.08 오전12:17\n3. libexpat before commit 13c5f63 contains a heap buf",
+      "cve_id": "CVE-2026-77214",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77214",
+      "source": "cvefeed",
+      "published": "2026-10-08T00:17:53+09:00",
+      "lang": "en"
+    },
     {
       "title": "Scans for Atlassian vulnerablity (CVE-2026-21589), (Wed, Oct 7th)",
       "summary": "On October 5th, Atlassian published patches&#;x26;#;xc2;&#;x26;#;xa0;for multiple products to fix an \"Arbitrary File Access\" vulnerability &#;x26;#;x5b;CVE-2026-21589&#;x26;#;x5d;. An attacker can read arbitrary files in the web application&#;x26;#;39;s directory, potentially exposing sensitive information such as configuration files.\r",
