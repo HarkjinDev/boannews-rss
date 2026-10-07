@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-08T03:03:20.267569+09:00",
+  "fetched_at": "2026-10-08T03:33:22.639589+09:00",
   "security_news": [
     {
       "title": "황명선 의원, 국방부 공공데이터 포털 클릭하면 '성인 사이트'로 이동",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-92542 - Blind VXLAN injection into encrypted overlay networks from cluster peer",
+      "summary": "CVE ID :CVE-2026-92542\n  \nPublished : Oct. 7, 2026, 5:17 p.m. | 1 hour, 9 minutes ago\n  \nDescription :The firewall rules which mark VXLAN datagrams for encryption indiscriminately match both authentic VXLAN datagrams sent from the kernel and forged datagrams sent by user processes. Any packet sent from the host network namespace of a Linux Swarm node is encrypted with the overlay-network IPsec parameters which meets the following criteria:\n\n- UDP datagram\n- Destination port is the Swarm data-path port\n- Datagram starts with a VXLAN header for the VNI of an encrypted overlay network which any running container on the node is connected to\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-92542\n  \nPublished : Oct. 7, 2026, 5:17 p.m. | 1 hour, 9 minutes ago\n  \nDescription :The firewall rules which mark VXLAN datagrams for encryption indiscriminately match both authentic VXLAN datagrams sent from the kernel and forged datagrams sent by user processes. Any packet sent from the host network namespace of a Linux Swarm node is encrypted with the overlay-network IPsec parameters which meets the following criteria:\n\n- UDP datagram\n- Destination port is the Swarm data-path port\n- Datagram starts with a VXLAN header for the VNI of an encrypted overlay network which any running container on the node is connected to\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-92542\n2. 26.10.08 오전2:17\n3. The firewall rules which mark VXLAN datagrams for ",
+      "cve_id": "CVE-2026-92542",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92542",
+      "source": "cvefeed",
+      "published": "2026-10-08T02:17:02+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-77214 - libexpat Heap Buffer Over-read in xmlparse.c via XML_ParseBuffer",
       "summary": "CVE ID :CVE-2026-77214\n  \nPublished : Oct. 7, 2026, 3:17 p.m. | 41 minutes ago\n  \nDescription :libexpat before commit 13c5f63 contains a heap buffer over-read vulnerability in xmlparse.c. XML_ParseBuffer advances the parse buffer end with parser->m_bufferEnd += len using a caller-supplied length that is not validated against the allocated buffer size, so repeated XML_ParseBuffer calls move m_bufferEnd past the end of the heap allocation and subsequent parsing reads out of bounds. Reaching this path requires a parse buffer to already be present; otherwise XML_ParseBuffer returns XML_ERROR_NO_BUFFER. A buffer is present after a prior call to XML_GetBuffer, either directly (the common case) or indirectly through a prior XML_Parse call that allocates the buffer internally. The over-read discloses adjacent heap memory to the calling application, recovering heap pointers, libc function pointers, and code pointers sufficient to defeat ASLR and build further exploitation primitives.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
