@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-08T20:33:34.087122+09:00",
+  "fetched_at": "2026-10-08T21:04:01.976102+09:00",
   "security_news": [
+    {
+      "title": "“중 광둥성 사는 26세 청년, 금융권 해킹 추정”",
+      "summary": "최근 한국 금융권을 연이어 해킹한 공격자의 신원을 추정할 수 있는 단서가 처음으로 나왔다. 한 사이버보안 기업이 이번 해킹 공격자가 중국 광둥성에 사는 26세 청년일 가능성이 있다고 주장했다. 공격자로 추정되는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 한국 금융권 해킹, 중국 광둥성 26세 청년 추정\n2. 사이버보안 기업, 해킹 공격자 신원 단서 제시\n3. 금융권 보안 강화 및 조사 진행 중",
+      "link": "https://n.news.naver.com/mnews/article/032/0003475230?sid=101",
+      "source": "naver",
+      "published": "2026-10-08T20:36:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "금융권 정보 유출…나이스신평 \"단기 신용도 영향 제한적\"",
       "summary": "원인 조사와 포렌식, 고객 통지, 보안체계 보강 등에 비용이 발생하더라도 단기간에 재무안정성을 크게 훼손할 가능성은 낮다고 봤다. 변수는 피해가 어디까지 확산하느냐다. 유출된 개인정보가 보이스피싱이나 명의도용...",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-10-06T22:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "“이번엔 권익위도 털렸다”…청렴교육사이트 해킹에 10만여명 개인정보...",
-      "summary": "정보보안에 대한 우려가 커지고 있다. 4일 금융당국에 따르면 신한·KB국민·하나·BNK부산은행과 예가람... 금융감독원은 전 금융권 약 500개사에 공격 IP와 보안 유의사항을 공유했으며, 금융사들은 외부에 노출된 IT 자산과...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. “이번엔 권익위도 털렸다”…청렴교육사이트 해킹에 10만여명 개인정보...\n2. 정보보안에 대한 우려가 커지고 있다.\n3. 4일 금융당국에 따르면 신한·KB국민·하나·BNK부산은행과 예가람...",
-      "link": "https://n.news.naver.com/mnews/article/666/0000126332?sid=102",
-      "source": "naver",
-      "published": "2026-10-06T22:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-103649 - Synchronous Access of Remote Resource without Timeout in hMailServer",
+      "summary": "CVE ID :CVE-2026-103649\n  \nPublished : Oct. 8, 2026, 10:53 a.m. | 22 minutes ago\n  \nDescription :Missing network timeouts in the Linux builds of Progressive Robot hMailServer 6.3.0 through 6.3.5 allow a remote attacker to hold server threads indefinitely and so stop outbound mail delivery (denial of service). The server set its socket timeouts in the form Windows takes, which Linux refuses, and its HTTPS clients read without a deadline, so a peer that accepts a connection and then sends nothing held the waiting thread for as long as the connection stayed open. The MTA-STS policy fetch, enabled by default, is made during outbound delivery to mta-sts., so anyone who can make the server deliver mail to a domain they control - for example as the envelope sender of a message that bounces - can hold delivery threads until outbound delivery stops. The same flaw affects the DANE TLSA query, the OAuth2 token request, the ACME client, and the ManageSieve and metrics listeners, which a silent client stops from serving anyone else. Windows builds are not affected.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-103649\n  \nPublished : Oct. 8, 2026, 10:53 a.m. | 22 minutes ago\n  \nDescription :Missing network timeouts in the Linux builds of Progressive Robot hMailServer 6.3.0 through 6.3.5 allow a remote attacker to hold server threads indefinitely and so stop outbound mail delivery (denial of service). The server set its socket timeouts in the form Windows takes, which Linux refuses, and its HTTPS clients read without a deadline, so a peer that accepts a connection and then sends nothing held the waiting thread for as long as the connection stayed open. The MTA-STS policy fetch, enabled by default, is made during outbound delivery to mta-sts., so anyone who can make the server deliver mail to a domain they control - for example as the envelope sender of a message that bounces - can hold delivery threads until outbound delivery stops. The same flaw affects the DANE TLSA query, the OAuth2 token request, the ACME client, and the ManageSieve and metrics listeners, which a silent client stops from serving anyone else. Windows builds are not affected.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-103649\n2. 26.10.08 오후7:53\n3. Missing network timeouts in the Linux builds of Pr",
+      "cve_id": "CVE-2026-103649",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-103649",
+      "source": "cvefeed",
+      "published": "2026-10-08T19:53:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-107503 - Eclipse Ditto Explorer OpenID Connect Authority Injection Vulnerability",
       "summary": "CVE ID :CVE-2026-107503\n  \nPublished : Oct. 8, 2026, 9:32 a.m. | 40 minutes ago\n  \nDescription :Unvalidated environments URL allows OAuth authorization code + PKCE verifier theft and account takeover via injected OIDC authority in Ditto Explorer in Eclipse Ditto Ditto Explorer [3.6.0,3.9.7] allows a craft link set an attacker-controlled OIDC authority with autoSso enabled. The UI then automatically starts a login at the genuine identity provider but exchanges the returned authorization code together with its PKCE code_verifier at an attacker-controlled token endpoint. This lets the attacker redeem the code for the victim's access and refresh tokens. Alternatively, an attacker-controlled api_uri causes the UI to send the victim's bearer token or Basic credentials to the attacker. Because the configuration is persisted, later visits to the UI without the crafted link repeat the token theft.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
