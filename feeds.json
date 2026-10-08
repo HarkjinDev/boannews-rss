@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-08T21:33:32.256596+09:00",
+  "fetched_at": "2026-10-08T22:02:52.940934+09:00",
   "security_news": [
     {
       "title": "[단독] \"의원님 영국 출장건입니다\"…외교기관 사칭에 국회도 뚫렸다",
@@ -6826,21 +6826,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69267",
       "source": "msrc",
       "published": "2026-10-05T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-77805 - Weak Executable Signature Verification Vulnerability in Progress® Telerik® Fiddler® Classic",
-      "summary": "CVE ID :CVE-2026-77805\n  \nPublished : Oct. 5, 2026, 12:40 p.m. | 47 minutes ago\n  \nDescription :In Progress® Telerik® Fiddler® Classic for Windows, versions prior to v6.0.20262.10021, the integrity check applied to the external helper tools launched by the application is insufficient. Before executing a helper tool, the application only verifies that the file carries a valid Authenticode signature whose certificate subject name matches a broad allow list of publisher name fragments, rather than verifying that the file is the specific executable shipped with that version of the product. A local threat actor with low privileges who replaces one of these helper executables with any other validly signed binary from an allow-listed publisher can cause the substituted binary to be executed by the application, including with Administrator privileges for the tools that request elevation, resulting in privilege escalation and execution of unintended code. Successful exploitation requires the user to launch the affected external tool and to approve the elevation prompt without noticing that it refers to a different executable.\n  \nSeverity: 7.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-77805\n  \nPublished : Oct. 5, 2026, 12:40 p.m. | 47 minutes ago\n  \nDescription :In Progress® Telerik® Fiddler® Classic for Windows, versions prior to v6.0.20262.10021, the integrity check applied to the external helper tools launched by the application is insufficient. Before executing a helper tool, the application only verifies that the file carries a valid Authenticode signature whose certificate subject name matches a broad allow list of publisher name fragments, rather than verifying that the file is the specific executable shipped with that version of the product. A local threat actor with low privileges who replaces one of these helper executables with any other validly signed binary from an allow-listed publisher can cause the substituted binary to be executed by the application, including with Administrator privileges for the tools that request elevation, resulting in privilege escalation and execution of unintended code. Successful exploitation requires the user to launch the affected external tool and to approve the elevation prompt without noticing that it refers to a different executable.\n  \nSeverity: 7.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-77805\n2. 26.10.05 오후9:40\n3. In Progress® Telerik® Fiddler® Classic for Windows",
-      "cve_id": "CVE-2026-77805",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77805",
-      "source": "cvefeed",
-      "published": "2026-10-05T21:40:57+09:00",
       "lang": "en"
     }
   ],
