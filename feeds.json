@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-09T01:32:27.457370+09:00",
+  "fetched_at": "2026-10-09T02:03:54.582381+09:00",
   "security_news": [
+    {
+      "title": "[단독]“러트닉, 대미투자 협상때 김정관에 ‘美의 국정원 불신’ 전달...",
+      "summary": "북한 핵시설 정보 공유 제한과 북한 해킹 대응을 위한 한미일 사이버 위협 대응 회의 배제 등 국정원을... 北해킹 대응회의 배제에… “국익 차이로 오해, 현재 긴밀 협력” 도널드 트럼프 미국 행정부가 한미 통상 당국 간...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 러트닉, 대미투자 협상서 국정원 불신 전달\n2. 북한 핵시설 정보 공유 제한, 한미일 회의 배제\n3. 국익 차이 오해, 현재 긴밀 협력 중",
+      "link": "https://n.news.naver.com/mnews/article/020/0003753859?sid=100",
+      "source": "naver",
+      "published": "2026-10-09T01:45:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "2개→35개, 해킹 의심 IP 급증…금감원 “IP 차단만으론 한계”",
       "summary": "AI를 막으려면 결국 AI를 쓸 수밖에 없다”며 보안을 전제로 한 망분리 규제 해제를 추진 중이라고 밝혔다. 한편 미국 사이버보안 기업 크라우드스트라이크는 7일(현지시간) 공개한 분석 보고서에서 이번 금융권...",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-10-07T00:13:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "금감원, AI 에이전트 활용 추정 해킹 '공격 주소' 19개 특정",
-      "summary": "아울러 외부에 노출된 IT 자산과 서비스의 취약점 점검, 대외 시스템의 인증·인가·검증 기능 확인 등 보안 강화를 당부했다. 또한, 공격자 IP 차단 여부, 침해 시도·피해 발생 여부, 실시간 보안 관제 체계 운영 여부 등...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금감원, AI 에이전트 활용 추정 해킹 '공격 주소' 19개 특정 아울러 외부에 노출된 I\n2. 또한, 공격자 IP 차단 여부, 침해 시도·피해 발생 여부, 실시간 보안 관제 체계 운영 ",
-      "link": "https://www.cbci.co.kr/news/articleView.html?idxno=612675",
-      "source": "naver",
-      "published": "2026-10-07T00:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th)",
+      "summary": "We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8&#;x26;#;xc2;&#;x26;#;xa0;of the most popular AI coding assistants and&#;x26;#;xc2;&#;x26;#;xa0;agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I&#;x26;#;39;ve been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located.\r",
+      "description": "We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8&#;x26;#;xc2;&#;x26;#;xa0;of the most popular AI coding assistants and&#;x26;#;xc2;&#;x26;#;xa0;agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I&#;x26;#;39;ve been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located.\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Reconstructing AI Agent Activity: Two New Scripts \n2. SANS_ISC\n3. We just did a major update to FOR577 and added a l",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33410",
+      "source": "sans_isc",
+      "published": "2026-10-09T01:52:53+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-93017 - Insights-operator: gather serviceaccount has cluster-wide secret read plus nodes/proxy and cluster-reader",
       "summary": "CVE ID :CVE-2026-93017\n  \nPublished : Oct. 8, 2026, 2:31 p.m. | 41 minutes ago\n  \nDescription :The `insights-operator-gather` ClusterRole grants the operator's service account read access to secrets in the core API group with no namespace or resourceNames restriction — therefore, access to every secret in every namespace in the cluster.\n\nRef: https://github.com/openshift/insights-operator/blob/8f15e3157ff09f54ab22801f5b21da35a195cc6d/manifests/03-clusterrole.yaml#L368-L373\n```\n- apiGroups:\n  - \"\"\n  resources:\n  - secrets\n  verbs:\n  - get\n  - list\n```\n\nBy spawning a pod with the gather service account mounted, an attacker will be able to access any secret in any namespace.\n\n```\nspec:\n serviceAccountName:\"gather\"\n```\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6766,21 +6781,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-78413",
       "source": "cvefeed",
       "published": "2026-10-06T02:48:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-104966 - Plane: Cross-Workspace IDOR in Estimate and Comment Endpoints Allows Read, Modify, and Inject Across Workspaces",
-      "summary": "CVE ID :CVE-2026-104966\n  \nPublished : Oct. 5, 2026, 4:54 p.m. | 9 minutes ago\n  \nDescription :Plane is an open-source project management tool. Prior to 1.4.0, two endpoint families fail to verify that nested resource identifiers belong to the workspace and project named in the URL. An authenticated user can read or modify estimates from another workspace through PATCH /api/workspaces/{slug}/projects/{project_id}/estimates/{estimate_id}/, and can inject comments into an issue from another workspace through POST /api/workspaces/{slug}/projects/{project_id}/issues/{issue_id}/comments/. ProjectEntityPermission verifies membership in the workspace and project from the URL, but estimate_id and issue_id are fetched by primary key without confirming the same scope. The list, retrieve, and destroy handlers correctly scope their queries, demonstrating the inconsistency. This issue is fixed in 1.4.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-104966\n  \nPublished : Oct. 5, 2026, 4:54 p.m. | 9 minutes ago\n  \nDescription :Plane is an open-source project management tool. Prior to 1.4.0, two endpoint families fail to verify that nested resource identifiers belong to the workspace and project named in the URL. An authenticated user can read or modify estimates from another workspace through PATCH /api/workspaces/{slug}/projects/{project_id}/estimates/{estimate_id}/, and can inject comments into an issue from another workspace through POST /api/workspaces/{slug}/projects/{project_id}/issues/{issue_id}/comments/. ProjectEntityPermission verifies membership in the workspace and project from the URL, but estimate_id and issue_id are fetched by primary key without confirming the same scope. The list, retrieve, and destroy handlers correctly scope their queries, demonstrating the inconsistency. This issue is fixed in 1.4.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-104966\n2. 26.10.06 오전1:54\n3. Plane is an open-source project management tool. P",
-      "cve_id": "CVE-2026-104966",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104966",
-      "source": "cvefeed",
-      "published": "2026-10-06T01:54:27+09:00",
       "lang": "en"
     }
   ],
