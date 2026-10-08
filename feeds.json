@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-09T07:32:39.216158+09:00",
+  "fetched_at": "2026-10-09T08:02:35.800671+09:00",
   "security_news": [
+    {
+      "title": "금융권 해외發 해킹에 '깜깜이'…18건 중 16건 공격자 불명",
+      "summary": "나머지 16건 가운데 13건은 공격 IP가 도메인 조회나 자체 보안장비 탐지, 침해사고 조사 등을 통해 해외... 반면 지난 8월 말 보안 취약점을 이용한 해킹 사고가 발생한 코엠페이먼츠는 공격자가 직접 연락을 해왔지만...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융권 해외發 해킹에 '깜깜이'…18건 중 16건 공격자 불명 나머지 16건 가운데 13건\n2. 반면 지난 8월 말 보안 취약점을 이용한 해킹 사고가 발생한 코엠페이먼츠는 공격자가 직접 ",
+      "link": "https://n.news.naver.com/mnews/article/001/0016367193?sid=102",
+      "source": "naver",
+      "published": "2026-10-09T07:53:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "아마추어 해커에게 시중은행들이 털린 이유…AI가 바꾼 해킹 경제학[해...",
       "summary": "보안 전문가들은 \"AI 에이전트의 등장은 사이버 공격의 법칙을 바꾸는 거대한 변곡점이 될 것\"이라고 입을... 보안 전문가들은 취약점 탐색과 코드 생성을 AI가 맡으면서 '초광속 해킹'이 현실화했다고 경고한다. 올해 3월...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-10-07T05:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "韓총리, 오늘 출입기자단 간담회…취임 100일 소회·현안 입장 밝힐 듯",
-      "summary": "AI를 활용한 해킹과 피싱 등 2차 피해를 막기 위한 대책을 비롯해 전 금융권 보안점검, 개인정보보호 인증체계 재검토의 추진 일정 등에 관한 설명이 나올지도 주목된다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 韓총리, AI 해킹/피싱 2차 피해 대책 논의\n2. 전 금융권 보안점검, 개인정보보호 인증 재검토\n3. 취임 100일 맞아 현안 입장 및 정책 방향 발표",
-      "link": "https://n.news.naver.com/mnews/article/421/0009213019?sid=100",
-      "source": "naver",
-      "published": "2026-10-07T05:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6721,36 +6721,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-105784",
       "source": "cvefeed",
       "published": "2026-10-06T08:11:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-105760 - vLLM: GLMGA video sampling permits request-driven CPU and memory exhaustion",
-      "summary": "CVE ID :CVE-2026-105760\n  \nPublished : Oct. 5, 2026, 11:01 p.m. | 28 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. Prior to 0.30.0, a caller can use the request-level media_io_kwargs field to select the GLMGA video backend and supply large values for the fps and max_frames options without a strict work ceiling. GLMGA constructs and deduplicates an attacker-sized pre-decode frame-index list, allowing a compact request and tiny valid video to consume disproportionate CPU time and memory in the shared media-loading executor. This issue is fixed in version 0.30.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-105760\n  \nPublished : Oct. 5, 2026, 11:01 p.m. | 28 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. Prior to 0.30.0, a caller can use the request-level media_io_kwargs field to select the GLMGA video backend and supply large values for the fps and max_frames options without a strict work ceiling. GLMGA constructs and deduplicates an attacker-sized pre-decode frame-index list, allowing a compact request and tiny valid video to consume disproportionate CPU time and memory in the shared media-loading executor. This issue is fixed in version 0.30.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-105760\n2. 26.10.06 오전8:01\n3. vLLM is an inference and serving engine for large ",
-      "cve_id": "CVE-2026-105760",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-105760",
-      "source": "cvefeed",
-      "published": "2026-10-06T08:01:54+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-104852 - GraphQL Tools has prototype pollution in well-established utility function `mergeDeep`",
-      "summary": "CVE ID :CVE-2026-104852\n  \nPublished : Oct. 5, 2026, 10:56 p.m. | 33 minutes ago\n  \nDescription :GraphQL Tools provides utilities for building, stitching, and mocking GraphQL schemas. Prior to 12.0.1, the GraphQL Tools utils package's mergeDeep function follows inherited properties while recursively merging source objects and does not exclude __proto__, constructor, or prototype keys. An unauthenticated GraphQL client can alias fields to those names so responses from two subgraphs collide during ordinary supergraph result merging, causing mergeDeep to traverse Object and Function prototypes and overwrite Function.prototype.call with a subgraph-supplied value. This breaks subsequent requests in the process until restart. This issue is fixed in version 12.0.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-104852\n  \nPublished : Oct. 5, 2026, 10:56 p.m. | 33 minutes ago\n  \nDescription :GraphQL Tools provides utilities for building, stitching, and mocking GraphQL schemas. Prior to 12.0.1, the GraphQL Tools utils package's mergeDeep function follows inherited properties while recursively merging source objects and does not exclude __proto__, constructor, or prototype keys. An unauthenticated GraphQL client can alias fields to those names so responses from two subgraphs collide during ordinary supergraph result merging, causing mergeDeep to traverse Object and Function prototypes and overwrite Function.prototype.call with a subgraph-supplied value. This breaks subsequent requests in the process until restart. This issue is fixed in version 12.0.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-104852\n2. 26.10.06 오전7:56\n3. GraphQL Tools provides utilities for building, sti",
-      "cve_id": "CVE-2026-104852",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104852",
-      "source": "cvefeed",
-      "published": "2026-10-06T07:56:43+09:00",
       "lang": "en"
     }
   ],
