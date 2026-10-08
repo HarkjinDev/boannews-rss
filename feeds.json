@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-09T00:02:49.401524+09:00",
+  "fetched_at": "2026-10-09T00:32:48.698375+09:00",
   "security_news": [
+    {
+      "title": "2개→35개, 해킹 의심 IP 급증…금감원 “IP 차단만으론 한계”",
+      "summary": "AI를 막으려면 결국 AI를 쓸 수밖에 없다”며 보안을 전제로 한 망분리 규제 해제를 추진 중이라고 밝혔다. 한편 미국 사이버보안 기업 크라우드스트라이크는 7일(현지시간) 공개한 분석 보고서에서 이번 금융권...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융권 해킹 의심 IP 2개→35개 급증\n2. AI 기반 공격 방어 위해 AI 도입 필요\n3. 금감원, 망분리 규제 완화 검토",
+      "link": "https://n.news.naver.com/mnews/article/025/0003556768?sid=101",
+      "source": "naver",
+      "published": "2026-10-09T00:28:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "상장 앞둔 엔키화이트햇, 올해도 매출 70% 급성장…'오펜' 고공행진",
       "summary": "기존 모의해킹은 화이트해커가 고객사별로 직접 투입되는 구조다. 오펜은 같은 인력으로 여러 고객을 상시 점검할 수 있다. 회사는 기존 서비스 형태의 취약점 진단과 모의해킹 수요를 오펜으로 전환하고 사람이 직접...",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-10-07T00:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "해킹 없었는데…AI 비서 탓 내 정보 줄줄 샌다",
-      "summary": "금융권을 겨냥한 인공지능(AI) 해킹 위협이 본격화된 가운데, 메타 ‘뮤즈’처럼 사용자를 대신해 예약·결제까지 처리하는 ‘에이전트 AI(AI 비서)’가 별도의 해킹 없이도 개인정보 유출의 통로가 될 수 있다는 경고가...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 해킹 없었는데…AI 비서 탓 내 정보 줄줄 샌다 금융권을 겨냥한 인공지능(AI) 해킹 위협",
-      "link": "https://n.news.naver.com/mnews/article/025/0003556191?sid=105",
-      "source": "naver",
-      "published": "2026-10-07T00:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-88257 - beam_mcp: nested tool argument constraints advertised but not enforced",
+      "summary": "CVE ID :CVE-2026-88257\n  \nPublished : Oct. 8, 2026, 2:17 p.m. | 47 minutes ago\n  \nDescription :Improper Input Validation vulnerability in BeamMCP.Schema in ScriptKittyOS beam_mcp allows an MCP client to reach a tool's dispatch function with arguments that violate the input schema the server advertised. BeamMCP.Schema.validate/2 checked type, required, additionalProperties, enum and numeric bounds on the top-level arguments object only. Constraints inside nested objects and on array items (items, minItems, maxItems, minLength, maxLength, pattern, nested required, enum and additionalProperties: false) were advertised by tools/list and never checked at tools/call or prompts/get, and keywords outside the enforced subset (oneOf, anyOf, $ref) were advertised and ignored.\n\nA host whose dispatch code relies on the schema it declared receives values the schema forbids, such as an out-of-range number or an undeclared key inside a nested object. What the host does with such a value decides the impact.\n\nThis issue affects beam_mcp: from 0.1.0 before 0.10.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-88257\n  \nPublished : Oct. 8, 2026, 2:17 p.m. | 47 minutes ago\n  \nDescription :Improper Input Validation vulnerability in BeamMCP.Schema in ScriptKittyOS beam_mcp allows an MCP client to reach a tool's dispatch function with arguments that violate the input schema the server advertised. BeamMCP.Schema.validate/2 checked type, required, additionalProperties, enum and numeric bounds on the top-level arguments object only. Constraints inside nested objects and on array items (items, minItems, maxItems, minLength, maxLength, pattern, nested required, enum and additionalProperties: false) were advertised by tools/list and never checked at tools/call or prompts/get, and keywords outside the enforced subset (oneOf, anyOf, $ref) were advertised and ignored.\n\nA host whose dispatch code relies on the schema it declared receives values the schema forbids, such as an out-of-range number or an undeclared key inside a nested object. What the host does with such a value decides the impact.\n\nThis issue affects beam_mcp: from 0.1.0 before 0.10.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-88257\n2. 26.10.08 오후11:17\n3. Improper Input Validation vulnerability in BeamMCP",
+      "cve_id": "CVE-2026-88257",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88257",
+      "source": "cvefeed",
+      "published": "2026-10-08T23:17:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-69581 Windows Device Association Service Elevation of Privilege Vulnerability",
       "summary": "Updated an acknowledgement. This is an informational change only.",
