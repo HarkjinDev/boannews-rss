@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-09T01:02:47.907697+09:00",
+  "fetched_at": "2026-10-09T01:32:27.457370+09:00",
   "security_news": [
     {
       "title": "2개→35개, 해킹 의심 IP 급증…금감원 “IP 차단만으론 한계”",
@@ -6004,6 +6004,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-93017 - Insights-operator: gather serviceaccount has cluster-wide secret read plus nodes/proxy and cluster-reader",
+      "summary": "CVE ID :CVE-2026-93017\n  \nPublished : Oct. 8, 2026, 2:31 p.m. | 41 minutes ago\n  \nDescription :The `insights-operator-gather` ClusterRole grants the operator's service account read access to secrets in the core API group with no namespace or resourceNames restriction — therefore, access to every secret in every namespace in the cluster.\n\nRef: https://github.com/openshift/insights-operator/blob/8f15e3157ff09f54ab22801f5b21da35a195cc6d/manifests/03-clusterrole.yaml#L368-L373\n```\n- apiGroups:\n  - \"\"\n  resources:\n  - secrets\n  verbs:\n  - get\n  - list\n```\n\nBy spawning a pod with the gather service account mounted, an attacker will be able to access any secret in any namespace.\n\n```\nspec:\n serviceAccountName:\"gather\"\n```\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-93017\n  \nPublished : Oct. 8, 2026, 2:31 p.m. | 41 minutes ago\n  \nDescription :The `insights-operator-gather` ClusterRole grants the operator's service account read access to secrets in the core API group with no namespace or resourceNames restriction — therefore, access to every secret in every namespace in the cluster.\n\nRef: https://github.com/openshift/insights-operator/blob/8f15e3157ff09f54ab22801f5b21da35a195cc6d/manifests/03-clusterrole.yaml#L368-L373\n```\n- apiGroups:\n  - \"\"\n  resources:\n  - secrets\n  verbs:\n  - get\n  - list\n```\n\nBy spawning a pod with the gather service account mounted, an attacker will be able to access any secret in any namespace.\n\n```\nspec:\n serviceAccountName:\"gather\"\n```\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-93017\n2. 26.10.08 오후11:31\n3. The `insights-operator-gather` ClusterRole grants ",
+      "cve_id": "CVE-2026-93017",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93017",
+      "source": "cvefeed",
+      "published": "2026-10-08T23:31:58+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-88257 - beam_mcp: nested tool argument constraints advertised but not enforced",
       "summary": "CVE ID :CVE-2026-88257\n  \nPublished : Oct. 8, 2026, 2:17 p.m. | 47 minutes ago\n  \nDescription :Improper Input Validation vulnerability in BeamMCP.Schema in ScriptKittyOS beam_mcp allows an MCP client to reach a tool's dispatch function with arguments that violate the input schema the server advertised. BeamMCP.Schema.validate/2 checked type, required, additionalProperties, enum and numeric bounds on the top-level arguments object only. Constraints inside nested objects and on array items (items, minItems, maxItems, minLength, maxLength, pattern, nested required, enum and additionalProperties: false) were advertised by tools/list and never checked at tools/call or prompts/get, and keywords outside the enforced subset (oneOf, anyOf, $ref) were advertised and ignored.\n\nA host whose dispatch code relies on the schema it declared receives values the schema forbids, such as an out-of-range number or an undeclared key inside a nested object. What the host does with such a value decides the impact.\n\nThis issue affects beam_mcp: from 0.1.0 before 0.10.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-88257\n  \nPublished : Oct. 8, 2026, 2:17 p.m. | 47 minutes ago\n  \nDescription :Improper Input Validation vulnerability in BeamMCP.Schema in ScriptKittyOS beam_mcp allows an MCP client to reach a tool's dispatch function with arguments that violate the input schema the server advertised. BeamMCP.Schema.validate/2 checked type, required, additionalProperties, enum and numeric bounds on the top-level arguments object only. Constraints inside nested objects and on array items (items, minItems, maxItems, minLength, maxLength, pattern, nested required, enum and additionalProperties: false) were advertised by tools/list and never checked at tools/call or prompts/get, and keywords outside the enforced subset (oneOf, anyOf, $ref) were advertised and ignored.\n\nA host whose dispatch code relies on the schema it declared receives values the schema forbids, such as an out-of-range number or an undeclared key inside a nested object. What the host does with such a value decides the impact.\n\nThis issue affects beam_mcp: from 0.1.0 before 0.10.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6766,21 +6781,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-104966",
       "source": "cvefeed",
       "published": "2026-10-06T01:54:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-12171 - auto-changelog: code execution via untrusted in-repository configuration (handlebarsSetup/plugins), plus argument injection, path traversal, and SSRF",
-      "summary": "CVE ID :CVE-2026-12171\n  \nPublished : Oct. 5, 2026, 4:25 p.m. | 38 minutes ago\n  \nDescription :auto-changelog before 2.6.1 merges configuration from inside the target repository (the .auto-changelog file and the auto-changelog key in package.json) into its options, and honors security-sensitive options from that untrusted source. The handlebarsSetup option is passed to require(), so running auto-changelog over attacker-controlled repository content (for example, in a CI workflow that checks out an untrusted pull request head, or locally on a forked or third-party repository) executes attacker-chosen code with the privileges of the invoking user or CI job, including access to workflow secrets, without the repository dependencies ever being installed. The plugins option similarly loads attacker-controlled modules from the repository. Under the same conditions, appendGitLog/appendGitTag allow git argument injection (e.g. --output= to write arbitrary files), output allows writing attacker-influenced content to arbitrary paths, and template causes an outbound request to an attacker-chosen URL. Version 2.6.1 treats in-repository configuration as untrusted and refuses to run when it sets these options, unless the new --unsafe-config flag is passed.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12171\n  \nPublished : Oct. 5, 2026, 4:25 p.m. | 38 minutes ago\n  \nDescription :auto-changelog before 2.6.1 merges configuration from inside the target repository (the .auto-changelog file and the auto-changelog key in package.json) into its options, and honors security-sensitive options from that untrusted source. The handlebarsSetup option is passed to require(), so running auto-changelog over attacker-controlled repository content (for example, in a CI workflow that checks out an untrusted pull request head, or locally on a forked or third-party repository) executes attacker-chosen code with the privileges of the invoking user or CI job, including access to workflow secrets, without the repository dependencies ever being installed. The plugins option similarly loads attacker-controlled modules from the repository. Under the same conditions, appendGitLog/appendGitTag allow git argument injection (e.g. --output= to write arbitrary files), output allows writing attacker-influenced content to arbitrary paths, and template causes an outbound request to an attacker-chosen URL. Version 2.6.1 treats in-repository configuration as untrusted and refuses to run when it sets these options, unless the new --unsafe-config flag is passed.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-12171\n2. 26.10.06 오전1:25\n3. auto-changelog before 2.6.1 merges configuration f",
-      "cve_id": "CVE-2026-12171",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12171",
-      "source": "cvefeed",
-      "published": "2026-10-06T01:25:19+09:00",
       "lang": "en"
     }
   ],
