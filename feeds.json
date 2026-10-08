@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-09T03:02:44.934960+09:00",
+  "fetched_at": "2026-10-09T03:32:35.762793+09:00",
   "security_news": [
     {
       "title": "\"택배 차도 섰다\" 한밤 쿠팡·쿠팡이츠·쿠팡플레이 동시 먹통…물류까...",
@@ -6003,6 +6003,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-107375 - JHipster: SQL Injection in the Parameter of JHipster-Generated Reactive (WebFlux + R2DBC) Applicationssort",
+      "summary": "CVE ID :CVE-2026-107375\n  \nPublished : Oct. 8, 2026, 5:36 p.m. | 38 minutes ago\n  \nDescription :JHipster is a development platform to quickly generate, develop, and deploy modern web applications and microservice architectures. From 7.0.0 until 9.4.0, reactive applications generated with Spring WebFlux, Spring Data R2DBC, and a SQL database pass the attacker-controlled sort request parameter from paginated entity-list endpoints into createOrderByFields in generators/spring-boot/generators/data-relational/templates/src/main/java/package/repository/EntityManager_reactive.java.ejs. The generated code renders these properties into the SQL ORDER BY clause without validation or quoting, and the R2DBC simple query protocol can execute additional statements separated by semicolons. A normal authenticated user can consequently read sensitive tables, modify or delete data, or drop tables, while non-reactive JPA applications and NoSQL backends are outside this root cause. This issue is fixed in 9.4.0.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107375\n  \nPublished : Oct. 8, 2026, 5:36 p.m. | 38 minutes ago\n  \nDescription :JHipster is a development platform to quickly generate, develop, and deploy modern web applications and microservice architectures. From 7.0.0 until 9.4.0, reactive applications generated with Spring WebFlux, Spring Data R2DBC, and a SQL database pass the attacker-controlled sort request parameter from paginated entity-list endpoints into createOrderByFields in generators/spring-boot/generators/data-relational/templates/src/main/java/package/repository/EntityManager_reactive.java.ejs. The generated code renders these properties into the SQL ORDER BY clause without validation or quoting, and the R2DBC simple query protocol can execute additional statements separated by semicolons. A normal authenticated user can consequently read sensitive tables, modify or delete data, or drop tables, while non-reactive JPA applications and NoSQL backends are outside this root cause. This issue is fixed in 9.4.0.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107375\n2. 26.10.09 오전2:36\n3. JHipster is a development platform to quickly gene",
+      "cve_id": "CVE-2026-107375",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107375",
+      "source": "cvefeed",
+      "published": "2026-10-09T02:36:48+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-107334 - Incorrect Authorization in Malcolm",
+      "summary": "CVE ID :CVE-2026-107334\n  \nPublished : Oct. 8, 2026, 5:32 p.m. | 42 minutes ago\n  \nDescription :Malcolm's nginx Lua role-based access control (RBAC) layer decides whether an authenticated user may reach a role-restricted path (e.g. /htadmin, /auth, /admin_login, /arkime/api/esadmin, NetBox, upload endpoints) by pattern-matching the raw, percent-encoded request URI. Nginx itself, however, selects which location block actually serves the request using the percent-decoded, normalized URI. Because the RBAC check never percent-decodes its input, an authenticated low-privilege user can request an admin-only path using percent-encoding (e.g. /%68tadmin.php) and have nginx route it to the restricted location while the Lua RBAC gate evaluating the un-decoded raw string finds no matching restriction and grants access.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107334\n  \nPublished : Oct. 8, 2026, 5:32 p.m. | 42 minutes ago\n  \nDescription :Malcolm's nginx Lua role-based access control (RBAC) layer decides whether an authenticated user may reach a role-restricted path (e.g. /htadmin, /auth, /admin_login, /arkime/api/esadmin, NetBox, upload endpoints) by pattern-matching the raw, percent-encoded request URI. Nginx itself, however, selects which location block actually serves the request using the percent-decoded, normalized URI. Because the RBAC check never percent-decodes its input, an authenticated low-privilege user can request an admin-only path using percent-encoding (e.g. /%68tadmin.php) and have nginx route it to the restricted location while the Lua RBAC gate evaluating the un-decoded raw string finds no matching restriction and grants access.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107334\n2. 26.10.09 오전2:32\n3. Malcolm's nginx Lua role-based access control (RBA",
+      "cve_id": "CVE-2026-107334",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107334",
+      "source": "cvefeed",
+      "published": "2026-10-09T02:32:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th)",
       "summary": "We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8&#;x26;#;xc2;&#;x26;#;xa0;of the most popular AI coding assistants and&#;x26;#;xc2;&#;x26;#;xa0;agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I&#;x26;#;39;ve been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located.\r",
