@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-08T23:03:33.366093+09:00",
+  "fetched_at": "2026-10-08T23:32:38.234294+09:00",
   "security_news": [
     {
       "title": "OAuth grants pile up faster than you can review them. Here's how to keep up.",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-69581 Windows Device Association Service Elevation of Privilege Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-69581\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-69581",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69581",
+      "source": "msrc",
+      "published": "2026-10-08T23:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-103649 - Synchronous Access of Remote Resource without Timeout in hMailServer",
       "summary": "CVE ID :CVE-2026-103649\n  \nPublished : Oct. 8, 2026, 10:53 a.m. | 22 minutes ago\n  \nDescription :Missing network timeouts in the Linux builds of Progressive Robot hMailServer 6.3.0 through 6.3.5 allow a remote attacker to hold server threads indefinitely and so stop outbound mail delivery (denial of service). The server set its socket timeouts in the form Windows takes, which Linux refuses, and its HTTPS clients read without a deadline, so a peer that accepts a connection and then sends nothing held the waiting thread for as long as the connection stayed open. The MTA-STS policy fetch, enabled by default, is made during outbound delivery to mta-sts., so anyone who can make the server deliver mail to a domain they control - for example as the envelope sender of a message that bounces - can hold delivery threads until outbound delivery stops. The same flaw affects the DANE TLSA query, the OAuth2 token request, the ACME client, and the ManageSieve and metrics listeners, which a silent client stops from serving anyone else. Windows builds are not affected.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
