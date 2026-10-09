@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-10T04:02:29.124401+09:00",
+  "fetched_at": "2026-10-10T04:32:27.576561+09:00",
   "security_news": [
+    {
+      "title": "[데스크 칼럼] 해킹 사고 숨기는 게 이득이면 누가 먼저 신고할까",
+      "summary": "대표·최고보안책임자(CISO)가 출석했다. 이들은 고객정보 유출사고를 추궁하는 의원들의 질타에 연신 고개를 숙였고, 피해 보상과 보안 투자 확대를 약속했다. 지난 8일 국회 정무위원회는 KB국민은행·신한은행·하나은행...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [데스크 칼럼] 해킹 사고 숨기는 게 이득이면 누가 먼저 신고할까 대표·최고보안책임자(CI\n2. 이들은 고객정보 유출사고를 추궁하는 의원들의 질타에 연신 고개를 숙였고, 피해 보상과 보안\n3. 지난 8일 국회 정무위원회는 KB국민은행·신한은행·하나은행...",
+      "link": "https://n.news.naver.com/mnews/article/366/0001197080?sid=110",
+      "source": "naver",
+      "published": "2026-10-10T04:03:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "북한 연계 해커, 개발용 프로그램에 악성코드…‘기업 접속정보 탈취’",
       "summary": "있다는 보안업체 분석이 나왔습니다. 개발자의 컴퓨터를 기업 침투의 통로로 삼고, 공개 블록체인을 이용해... 미국 사이버 보안업체 팔로알토 네트웍스의 유닛42는 최근 공개한 보고서에서 이 같은 공격 방식을...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-10-07T10:52:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "탈퇴해도 면허증 유출, 포인트도 털렸다…日기업 해킹피해 확산",
-      "summary": "아시아투데이 최영재 도쿄 특파원 = 일본 기업들의 해킹 피해가 잇따르면서 서비스를 탈퇴한 회원의 운전면허증 이미지까지 유출되고, 적립 포인트가 상품권으로 무단 교환되는 피해가 발생하고 있다. 개인정보 유출이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 탈퇴해도 면허증 유출, 포인트도 털렸다…日기업 해킹피해 확산 아시아투데이 최영재 도쿄 특파\n2. 개인정보 유출이...",
-      "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261007010001909",
-      "source": "naver",
-      "published": "2026-10-07T10:52:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6736,21 +6736,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-106063",
       "source": "cvefeed",
       "published": "2026-10-07T04:34:29+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-103009 - Authorization Bypass Through User-Controlled Key in Elasticsearch Leading to Information Disclosure",
-      "summary": "CVE ID :CVE-2026-103009\n  \nPublished : 6 de Outubro de 2026 às 19:31 | 15 minutos ago\n  \nDescription :Authorization Bypass Through User-Controlled Key (CWE-639) in Elasticsearch can lead to Information Disclosure via a specially crafted cross-cluster search request that references an unauthorized shard identifier. Elasticsearch contains an authorization bypass weakness in its handling of cross-cluster search requests made through the Remote Cluster Security (RCS) 2.0 model. An authorization check validates a request against one identifying attribute of the target shard, while a separate, independently-supplied identifying attribute in the same request determines which shard is actually accessed. A holder of a cross-cluster API key authorized for one index can craft a request whose two identifying attributes refer to different indices, causing the request to be authorized against an index they can access while actually operating against a different, unauthorized index. This can expose that index's document contents, field mappings, and other metadata, and in limited cases allows modification of retention-lease state on the unauthorized index.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-103009\n  \nPublished : 6 de Outubro de 2026 às 19:31 | 15 minutos ago\n  \nDescription :Authorization Bypass Through User-Controlled Key (CWE-639) in Elasticsearch can lead to Information Disclosure via a specially crafted cross-cluster search request that references an unauthorized shard identifier. Elasticsearch contains an authorization bypass weakness in its handling of cross-cluster search requests made through the Remote Cluster Security (RCS) 2.0 model. An authorization check validates a request against one identifying attribute of the target shard, while a separate, independently-supplied identifying attribute in the same request determines which shard is actually accessed. A holder of a cross-cluster API key authorized for one index can craft a request whose two identifying attributes refer to different indices, causing the request to be authorized against an index they can access while actually operating against a different, unauthorized index. This can expose that index's document contents, field mappings, and other metadata, and in limited cases allows modification of retention-lease state on the unauthorized index.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-103009\n2. 26.10.07 오전4:31\n3. Authorization Bypass Through User-Controlled Key (",
-      "cve_id": "CVE-2026-103009",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-103009",
-      "source": "cvefeed",
-      "published": "2026-10-07T04:31:53+09:00",
       "lang": "en"
     }
   ],
