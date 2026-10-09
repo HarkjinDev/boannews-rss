@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-10T00:32:31.053573+09:00",
+  "fetched_at": "2026-10-10T01:02:37.124082+09:00",
   "security_news": [
     {
       "title": "\"탈북 비용 1억 넘어\"…3000명 탈북 도운 前브로커의 목숨 건 증언",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-39460 - Red Lion Controls N-Tron 700 Series Insufficiently Protected Credentials",
+      "summary": "CVE ID :CVE-2026-39460\n  \nPublished : Oct. 9, 2026, 3:17 p.m. | 27 minutes ago\n  \nDescription :Usernames and passwords, including the default factory credentials, are stored in plaintext within the configuration file. With administrator rights, the configuration file can be viewed through the CLI or they can be exported from the device through a TFTP transfer from the web interface. A TFTP transfer can be initiated through SNMP which does not require authentication.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-39460\n  \nPublished : Oct. 9, 2026, 3:17 p.m. | 27 minutes ago\n  \nDescription :Usernames and passwords, including the default factory credentials, are stored in plaintext within the configuration file. With administrator rights, the configuration file can be viewed through the CLI or they can be exported from the device through a TFTP transfer from the web interface. A TFTP transfer can be initiated through SNMP which does not require authentication.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-39460\n2. 26.10.10 오전12:17\n3. Usernames and passwords, including the default fac",
+      "cve_id": "CVE-2026-39460",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-39460",
+      "source": "cvefeed",
+      "published": "2026-10-10T00:17:14+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-78384 - Apache CXF: Unbounded DEFLATE Decompression in CXF JOSE/JWE and SAML Processing (Decompression Bomb)",
       "summary": "CVE ID :CVE-2026-78384\n  \nPublished : Oct. 9, 2026, 10:18 a.m. | 1 hour, 10 minutes ago\n  \nDescription :CompressionUtils.inflate() decompressed attacker-controlled DEFLATE data with no output-size cap. A small (~KB) crafted payload could expand to gigabytes on the heap. Reachable via JWE decryption when zip=DEF (e.g. JoseSessionTokenProvider with RSA-OAEP key wrap) and via SAML redirect/POST binding token inflation — in both cases decompression happens before/independent of trust validation.\n\nFix: Added a configurable maximum inflated-size cap (default 10 MiB, org.apache.cxf.compression-max-inflated-size system property) to CompressionUtils.inflate(); aborts with DataFormatException once exceeded.\nUsers are recommended to upgrade to versions 4.2.4 or 4.1.9 or 3.6.13, which fix this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
