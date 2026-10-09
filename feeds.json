@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-10T01:02:37.124082+09:00",
+  "fetched_at": "2026-10-10T01:31:15.400113+09:00",
   "security_news": [
     {
       "title": "\"탈북 비용 1억 넘어\"…3000명 탈북 도운 前브로커의 목숨 건 증언",
@@ -6016,6 +6016,36 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-39460",
       "source": "cvefeed",
       "published": "2026-10-10T00:17:14+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-104113 - Double free in OmniOS and SmartOS ipmgmtd allows local users to crash the daemon",
+      "summary": "CVE ID :CVE-2026-104113\n  \nPublished : Oct. 9, 2026, 2:17 p.m. | 25 minutes ago\n  \nDescription :A double free in the IP management daemon (ipmgmtd) of OmniOS and SmartOS allows a local user to crash the daemon. When authorizing a door request that modifies interface configuration, ipmgmt_handler() in usr/src/cmd/cmd-inet/lib/ipmgmtd/ipmgmt_door.c frees the caller's credential with ucred_free() immediately after reading the user ID, and frees it a second time on the error path if the authorization check fails. An unprivileged local user who does not hold the solaris.network.interface.config authorization can send such a request, for example IPMGMT_CMD_RESETIF, to the ipmgmtd door, causing ipmgmtd to abort; repeated requests place the svc:/network/ip-interface-management service into maintenance, preventing IP interface configuration. The early free was introduced in 2014 to support lx-branded zones (OmniOS commit 4c170900) and is not present in upstream illumos-gate. It affects OmniOS r151020 and later, and SmartOS, prior to the fix.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-104113\n  \nPublished : Oct. 9, 2026, 2:17 p.m. | 25 minutes ago\n  \nDescription :A double free in the IP management daemon (ipmgmtd) of OmniOS and SmartOS allows a local user to crash the daemon. When authorizing a door request that modifies interface configuration, ipmgmt_handler() in usr/src/cmd/cmd-inet/lib/ipmgmtd/ipmgmt_door.c frees the caller's credential with ucred_free() immediately after reading the user ID, and frees it a second time on the error path if the authorization check fails. An unprivileged local user who does not hold the solaris.network.interface.config authorization can send such a request, for example IPMGMT_CMD_RESETIF, to the ipmgmtd door, causing ipmgmtd to abort; repeated requests place the svc:/network/ip-interface-management service into maintenance, preventing IP interface configuration. The early free was introduced in 2014 to support lx-branded zones (OmniOS commit 4c170900) and is not present in upstream illumos-gate. It affects OmniOS r151020 and later, and SmartOS, prior to the fix.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-104113\n2. 26.10.09 오후11:17\n3. A double free in the IP management daemon (ipmgmtd",
+      "cve_id": "CVE-2026-104113",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104113",
+      "source": "cvefeed",
+      "published": "2026-10-09T23:17:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-104081 - KodExplorer < 4.55 Path Traversal via unzip_pre_name() ZIP Extraction",
+      "summary": "CVE ID :CVE-2026-104081\n  \nPublished : Oct. 9, 2026, 2:13 p.m. | 29 minutes ago\n  \nDescription :KodExplorer before 4.55 contains a path traversal vulnerability in the unzip_pre_name() function within app/function/helper.function.php, where a single non-recursive str_replace() sanitization pass can be bypassed using crafted filenames like \"....//\", combined with PclZip's extract() call in KodArchive.class.php lacking the PCLZIP_OPT_EXTRACT_DIR_RESTRICTION option. Authenticated attackers can upload a malicious ZIP archive with traversal sequences to overwrite arbitrary files such as core JavaScript assets, enabling stored XSS that leads to admin account takeover and subsequent remote code execution via unrestricted PHP file upload.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-104081\n  \nPublished : Oct. 9, 2026, 2:13 p.m. | 29 minutes ago\n  \nDescription :KodExplorer before 4.55 contains a path traversal vulnerability in the unzip_pre_name() function within app/function/helper.function.php, where a single non-recursive str_replace() sanitization pass can be bypassed using crafted filenames like \"....//\", combined with PclZip's extract() call in KodArchive.class.php lacking the PCLZIP_OPT_EXTRACT_DIR_RESTRICTION option. Authenticated attackers can upload a malicious ZIP archive with traversal sequences to overwrite arbitrary files such as core JavaScript assets, enabling stored XSS that leads to admin account takeover and subsequent remote code execution via unrestricted PHP file upload.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-104081\n2. 26.10.09 오후11:13\n3. KodExplorer before 4.55 contains a path traversal ",
+      "cve_id": "CVE-2026-104081",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104081",
+      "source": "cvefeed",
+      "published": "2026-10-09T23:13:49+09:00",
       "lang": "en"
     },
     {
