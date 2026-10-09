@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-10T03:32:21.184696+09:00",
+  "fetched_at": "2026-10-10T04:02:29.124401+09:00",
   "security_news": [
     {
       "title": "북한 연계 해커, 개발용 프로그램에 악성코드…‘기업 접속정보 탈취’",
@@ -6003,6 +6003,66 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-107841 - pacioli: A submit consent marker licensed cancellation of caller-named pre-existing documents",
+      "summary": "CVE ID :CVE-2026-107841\n  \nPublished : Oct. 9, 2026, 6:11 p.m. | 10 minutes ago\n  \nDescription :pacioli provides least-privilege governance and a governed agent broker for ERPNext. From version 0.9.6 until version 0.10.0, the pacioli-guard document-layer consent gate allows nested cancellation operations to ride any consent established by an enclosing governed act without checking whether the marker authorizes cancellation. A credential with API Key Scope.require_consent can submit a caller-controlled Sales Invoice or other supported document under a valid human-minted submit marker and reach Document.cancel() for a different pre-existing submitted document, bypassing the marker's document and act binding, single-use spend, and denial audit. The unauthorized cancellation can reverse the target document's ledger effect; principals without a consent-gated grant are not affected. This issue is fixed in version 0.10.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107841\n  \nPublished : Oct. 9, 2026, 6:11 p.m. | 10 minutes ago\n  \nDescription :pacioli provides least-privilege governance and a governed agent broker for ERPNext. From version 0.9.6 until version 0.10.0, the pacioli-guard document-layer consent gate allows nested cancellation operations to ride any consent established by an enclosing governed act without checking whether the marker authorizes cancellation. A credential with API Key Scope.require_consent can submit a caller-controlled Sales Invoice or other supported document under a valid human-minted submit marker and reach Document.cancel() for a different pre-existing submitted document, bypassing the marker's document and act binding, single-use spend, and denial audit. The unauthorized cancellation can reverse the target document's ledger effect; principals without a consent-gated grant are not affected. This issue is fixed in version 0.10.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107841\n2. 26.10.10 오전3:11\n3. pacioli provides least-privilege governance and a ",
+      "cve_id": "CVE-2026-107841",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107841",
+      "source": "cvefeed",
+      "published": "2026-10-10T03:11:07+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-107839 - ageLANServer: Unbounded JSON Array Allocation in AoE3 Cloud `getFileURL` Endpoint Leads to Remote Denial of Service",
+      "summary": "CVE ID :CVE-2026-107839\n  \nPublished : Oct. 9, 2026, 5:58 p.m. | 23 minutes ago\n  \nDescription :ageLANServer provides a cross-platform web server and launcher for offline multiplayer in several Age of Empires and Age of Mythology games. Prior to version 1.15.2, the AoE3 POST /game/cloud/getFileURL handler in the bundled game server has no request body size limit or cap on the attacker-controlled JSON names array and allocates response storage directly from the unbounded array length. A remote unauthenticated client can use the default self-registration flow and send an oversized request that causes excessive memory allocation, crashes or hangs the server process, disconnects active players, and keeps the service unavailable until it is restarted. This issue is fixed in version 1.15.2.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107839\n  \nPublished : Oct. 9, 2026, 5:58 p.m. | 23 minutes ago\n  \nDescription :ageLANServer provides a cross-platform web server and launcher for offline multiplayer in several Age of Empires and Age of Mythology games. Prior to version 1.15.2, the AoE3 POST /game/cloud/getFileURL handler in the bundled game server has no request body size limit or cap on the attacker-controlled JSON names array and allocates response storage directly from the unbounded array length. A remote unauthenticated client can use the default self-registration flow and send an oversized request that causes excessive memory allocation, crashes or hangs the server process, disconnects active players, and keeps the service unavailable until it is restarted. This issue is fixed in version 1.15.2.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107839\n2. 26.10.10 오전2:58\n3. ageLANServer provides a cross-platform web server ",
+      "cve_id": "CVE-2026-107839",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107839",
+      "source": "cvefeed",
+      "published": "2026-10-10T02:58:09+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-107838 - RIOT: nanocoap_fileserver ignores response initialization failure, leading to reachable assertion",
+      "summary": "CVE ID :CVE-2026-107838\n  \nPublished : Oct. 9, 2026, 5:55 p.m. | 26 minutes ago\n  \nDescription :RIOT is an open-source microcontroller operating system designed for Internet of Things devices and other embedded systems. From version 2023.07 through version 2026.07, nanocoap_fileserver callers in sys/net/application_layer/nanocoap/fileserver.c ignore a failure returned by _resp_init() when coap_build_reply() cannot fit a response header into the response buffer. A remote client can send a CoAP request with a sufficiently large extended token when nanocoap_token_ext is enabled, causing response initialization to fail while _get_file() or _get_directory() continues with stale response state. The path then reaches _calc_szx2() and its pdu->payload_len > reserve assertion, terminating the affected service or device task. No fixed release is available as of this review.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107838\n  \nPublished : Oct. 9, 2026, 5:55 p.m. | 26 minutes ago\n  \nDescription :RIOT is an open-source microcontroller operating system designed for Internet of Things devices and other embedded systems. From version 2023.07 through version 2026.07, nanocoap_fileserver callers in sys/net/application_layer/nanocoap/fileserver.c ignore a failure returned by _resp_init() when coap_build_reply() cannot fit a response header into the response buffer. A remote client can send a CoAP request with a sufficiently large extended token when nanocoap_token_ext is enabled, causing response initialization to fail while _get_file() or _get_directory() continues with stale response state. The path then reaches _calc_szx2() and its pdu->payload_len > reserve assertion, terminating the affected service or device task. No fixed release is available as of this review.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107838\n2. 26.10.10 오전2:55\n3. RIOT is an open-source microcontroller operating s",
+      "cve_id": "CVE-2026-107838",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107838",
+      "source": "cvefeed",
+      "published": "2026-10-10T02:55:34+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-107825 - OWASP Coraza WAF: ProcessURI silently drops QUERY_STRING and ARGS_GET on URI parse failure — defense-in-depth bypass for non-net/http integrations",
+      "summary": "CVE ID :CVE-2026-107825\n  \nPublished : Oct. 9, 2026, 5:32 p.m. | 49 minutes ago\n  \nDescription :OWASP Coraza WAF is a golang modsecurity compatible web application firewall library. From 3.0.0 until 3.8.0, ProcessURI in internal/corazawaf/transaction.go handles a url.ParseRequestURI failure by retaining the raw URI but leaving QUERY_STRING, ARGS_GET, ARGS_GET_NAMES, and the GET-derived portion of ARGS empty. An unauthenticated attacker can place control bytes in a URI passed directly by integrations such as coraza-spoa, coraza-proxy-wasm, custom FFI hosts, or WASM hosts, causing Coraza to omit query parameters that the downstream integration may still process and allowing rules targeting those variables to be bypassed. The bundled coraza/v3/http integration is not affected because Go net/http rejects such malformed request targets before calling Coraza. This issue is fixed in version 3.8.0.\n  \nSeverity: 4.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107825\n  \nPublished : Oct. 9, 2026, 5:32 p.m. | 49 minutes ago\n  \nDescription :OWASP Coraza WAF is a golang modsecurity compatible web application firewall library. From 3.0.0 until 3.8.0, ProcessURI in internal/corazawaf/transaction.go handles a url.ParseRequestURI failure by retaining the raw URI but leaving QUERY_STRING, ARGS_GET, ARGS_GET_NAMES, and the GET-derived portion of ARGS empty. An unauthenticated attacker can place control bytes in a URI passed directly by integrations such as coraza-spoa, coraza-proxy-wasm, custom FFI hosts, or WASM hosts, causing Coraza to omit query parameters that the downstream integration may still process and allowing rules targeting those variables to be bypassed. The bundled coraza/v3/http integration is not affected because Go net/http rejects such malformed request targets before calling Coraza. This issue is fixed in version 3.8.0.\n  \nSeverity: 4.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107825\n2. 26.10.10 오전2:32\n3. OWASP Coraza WAF is a golang modsecurity compatibl",
+      "cve_id": "CVE-2026-107825",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107825",
+      "source": "cvefeed",
+      "published": "2026-10-10T02:32:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-75597 - pyLoad: Unauthenticated access to /web/ bypasses authentication on sensitive templates and leaks internal error details via exception attribute typo",
       "summary": "CVE ID :CVE-2026-75597\n  \nPublished : Oct. 9, 2026, 4:41 p.m. | 48 minutes ago\n  \nDescription :pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev101, the `/web/` route in `src/pyload/webui/app/blueprints/app_blueprint.py` renders Jinja2 templates without any authentication requirement. Every equivalent direct route (`/logs`, `/settings`, `/queue`, `/dashboard`, etc.) is protected by `@login_required`, but the underlying templates for all of these pages are accessible unauthenticated via this endpoint. Combined with an exception attribute typo in `src/pyload/webui/app/handlers.py` (`exc.desc` instead of `exc.description`), internal Jinja2 variable names are leaked in HTTP 500 response bodies to unauthenticated callers. An attacker can also enumerate all valid template names by observing 200 vs 500 response differentiation. Version 0.5.0b3.dev101 contains a patch.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
