@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-10T23:02:46.113543+09:00",
+  "fetched_at": "2026-10-10T23:31:20.104491+09:00",
   "security_news": [
     {
       "title": "정부 주최 AI해킹 대회 12월 열린다...'ACDC' 예선 참가자 모집",
@@ -4596,33 +4596,24 @@
       "source": "naver",
       "published": "2026-10-07T23:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[사설]美, 대북 사이버 협력에 국정원 배제… 불신받는 ‘정보 동맹’",
-      "summary": "미국 정부가 북한의 해킹 등 사이버 활동에 맞서 대응책을 논의하는 한미일 3국 협의체에 우리 국가정보원의... 한미일 외교당국과 정보기관의 북핵·사이버 담당자 60여 명이 참석한 회의에 대북 사이버 안보를 담당하는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [사설]美, 대북 사이버 협력에 국정원 배제… 불신받는 ‘정보 동맹’ 미국 정부가 북한의 \n2. 한미일 외교당국과 정보기관의 북핵·사이버 담당자 60여 명이 참석한 회의에 대북 사이버 안",
-      "link": "https://n.news.naver.com/mnews/article/020/0003753487?sid=110",
-      "source": "naver",
-      "published": "2026-10-07T23:30:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "당국, 보안점검 분석...일부 금융사 털리고도 몰라",
-      "summary": "금융권에서의 해킹 공격이 발생한 것과 관련해 일부 금융사는 공격을 받은 뒤 금융보안원 정보를 토대로 유출을 알아차린 것으로 나타났습니다. 은행과 카드사 보안 점검 결과를 받은 금융당국은 증권사와 보험사 등에...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 당국, 보안점검 분석...일부 금융사 털리고도 몰라 금융권에서의 해킹 공격이 발생한 것과 \n2. 은행과 카드사 보안 점검 결과를 받은 금융당국은 증권사와 보험사 등에...",
-      "link": "https://n.news.naver.com/mnews/article/052/0002416021?sid=101",
-      "source": "naver",
-      "published": "2026-10-07T23:09:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-103636 - Apache DataSketches: datasketches-cpp: Out-of-bounds read in VarOpt union deserialization allows denial of service via a truncated sketch",
+      "summary": "CVE ID :CVE-2026-103636\n  \nPublished : Oct. 10, 2026, 11:17 a.m. | 3 hours, 12 minutes ago\n  \nDescription :Out-of-bounds read in the VarOpt union deserialization of Apache DataSketches C++ (repo: datasketches-cpp).\n\nvar_opt_union::deserialize() read the 32-byte preamble of a non-empty union after checking that only 8 bytes were available, so a truncated serialized union could cause a read of up to 24 bytes past the end of the input. For such inputs, the size remaining for the embedded sketch was also computed by an unsigned subtraction that could wrap around, so the embedded sketch's own size checks no longer limited reads to the input. The bytes read can become part of the deserialized union's state. This can cause a crash (denial of service) and could expose adjacent memory contents.\n\nThis issue affects Apache DataSketches C++: from 2.0.0-incubating before 5.3.0. Only applications that deserialize VarOpt unions from untrusted sources are affected.\n\nUsers are recommended to upgrade to version 5.3.0, which fixes this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-103636\n  \nPublished : Oct. 10, 2026, 11:17 a.m. | 3 hours, 12 minutes ago\n  \nDescription :Out-of-bounds read in the VarOpt union deserialization of Apache DataSketches C++ (repo: datasketches-cpp).\n\nvar_opt_union::deserialize() read the 32-byte preamble of a non-empty union after checking that only 8 bytes were available, so a truncated serialized union could cause a read of up to 24 bytes past the end of the input. For such inputs, the size remaining for the embedded sketch was also computed by an unsigned subtraction that could wrap around, so the embedded sketch's own size checks no longer limited reads to the input. The bytes read can become part of the deserialized union's state. This can cause a crash (denial of service) and could expose adjacent memory contents.\n\nThis issue affects Apache DataSketches C++: from 2.0.0-incubating before 5.3.0. Only applications that deserialize VarOpt unions from untrusted sources are affected.\n\nUsers are recommended to upgrade to version 5.3.0, which fixes this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-103636\n2. 26.10.10 오후8:17\n3. Out-of-bounds read in the VarOpt union deserializa",
+      "cve_id": "CVE-2026-103636",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-103636",
+      "source": "cvefeed",
+      "published": "2026-10-10T20:17:36+09:00",
+      "lang": "en"
+    },
     {
       "title": "Why TLP should not replace your internal information classification, (Sat, Oct 10th)",
       "summary": "The Traffic Light Protocol (TLP)[1], which is now in its second incarnation, is a wonderful standard that enables one to easily communicate whether information may be shared further (and if so, how far).\r",
