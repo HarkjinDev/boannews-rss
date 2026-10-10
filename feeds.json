@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-11T03:01:14.174038+09:00",
+  "fetched_at": "2026-10-11T03:31:07.003904+09:00",
   "security_news": [
     {
       "title": "[비즈토크<하>] 금융권 해킹 '도미노'…보안망 다시 도마",
@@ -5149,21 +5149,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-107222",
       "source": "cvefeed",
       "published": "2026-10-08T03:45:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-107313 - pgjdbc stores bytes of earlier messages in place of a large value on GSS-encrypted connections",
-      "summary": "CVE ID :CVE-2026-107313\n  \nPublished : Oct. 7, 2026, 6:19 p.m. | 53 minutes ago\n  \nDescription :pgjdbc, the PostgreSQL JDBC Driver, versions 42.7.4 and 42.7.5 can send the previous contents of the GSS send buffer in place of the first part of a value on a connection with GSS encryption (gssEncMode=prefer or require), and the server stores the value without an error. The buffer is 16320 bytes with MIT Kerberos. The stored value then holds bytes of the messages the driver sent just before it on the same connection, such as the statement's SQL text, its other parameters, and earlier rows of the same batch, instead of the bytes the application supplied. Values at least as long as the buffer are affected when the driver writes them from a byte array: bind parameters set with setString, setBytes, or a ByteStreamWriter, CopyIn.writeToCopy, and LargeObject.write. Most such writes fail with an ArrayIndexOutOfBoundsException instead. The default, gssEncMode=allow, does not start GSS encryption, and connections without GSS encryption are not affected. Versions 42.7.3 and earlier are not affected, and 42.7.6 fixes the problem.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-107313\n  \nPublished : Oct. 7, 2026, 6:19 p.m. | 53 minutes ago\n  \nDescription :pgjdbc, the PostgreSQL JDBC Driver, versions 42.7.4 and 42.7.5 can send the previous contents of the GSS send buffer in place of the first part of a value on a connection with GSS encryption (gssEncMode=prefer or require), and the server stores the value without an error. The buffer is 16320 bytes with MIT Kerberos. The stored value then holds bytes of the messages the driver sent just before it on the same connection, such as the statement's SQL text, its other parameters, and earlier rows of the same batch, instead of the bytes the application supplied. Values at least as long as the buffer are affected when the driver writes them from a byte array: bind parameters set with setString, setBytes, or a ByteStreamWriter, CopyIn.writeToCopy, and LargeObject.write. Most such writes fail with an ArrayIndexOutOfBoundsException instead. The default, gssEncMode=allow, does not start GSS encryption, and connections without GSS encryption are not affected. Versions 42.7.3 and earlier are not affected, and 42.7.6 fixes the problem.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-107313\n2. 26.10.08 오전3:19\n3. pgjdbc, the PostgreSQL JDBC Driver, versions 42.7.",
-      "cve_id": "CVE-2026-107313",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107313",
-      "source": "cvefeed",
-      "published": "2026-10-08T03:19:53+09:00",
       "lang": "en"
     }
   ],
