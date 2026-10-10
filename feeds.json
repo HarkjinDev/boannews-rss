@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-10-11T00:02:34.001914+09:00",
+  "fetched_at": "2026-10-11T00:32:36.381524+09:00",
   "security_news": [
+    {
+      "title": "[비즈토크<하>] 금융권 해킹 '도미노'…보안망 다시 도마",
+      "summary": "시스템, 해킹 통로로 활용…AI 활용 사이버 공격 -최근 금융권에서 개인정보 유출 사고가 잇따르고 있습니다.... 금융감독원은 지난 8월부터 국가배후 해킹조직의 공격 징후와 금융권 침해 시도 관련 정보를 금융회사에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [비즈토크<하>] 금융권 해킹 '도미노'…보안망 다시 도마 시스템, 해킹 통로로 활용…AI\n2. 금융감독원은 지난 8월부터 국가배후 해킹조직의 공격 징후와 금융권 침해 시도 관련 정보를 ",
+      "link": "https://n.news.naver.com/mnews/article/629/0000540837?sid=101",
+      "source": "naver",
+      "published": "2026-10-11T00:04:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[비즈토크<상>] \"5원 미션이 뭐길래\"…네이버·토스 2년 갈등, 국감서 맞...",
+      "summary": "금융권에서는 잇따른 해킹 사고가 화두였습니다. 금융당국이 사전에 공격 위험을 경고했지만 개인정보 유출이 이어졌고, 일부 금융사는 사고를 인지하기까지 닷새가량 걸렸는데요. 금융사들의 보안 대응에 의문이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [비즈토크<상>] \"5원 미션이 뭐길래\"…네이버·토스 2년 갈등, 국감서 맞... 금융권에\n2. 금융당국이 사전에 공격 위험을 경고했지만 개인정보 유출이 이어졌고, 일부 금융사는 사고를 \n3. 금융사들의 보안 대응에 의문이...",
+      "link": "https://n.news.naver.com/mnews/article/629/0000540835?sid=101",
+      "source": "naver",
+      "published": "2026-10-11T00:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "정부 주최 AI해킹 대회 12월 열린다...'ACDC' 예선 참가자 모집",
       "summary": "'AI 해킹 방어 대회(ACDC)'는 인공지능을 활용해 사이버 위협에 대응하는 ‘인공지능을 활용한 보안(AI for... 인공지능과 사이버보안에 관심이 있으면누구나 4인 1팀을 구성해 대회에 참가할 수 있다. 참가 신청은...",
@@ -4548,18 +4572,6 @@
       "source": "naver",
       "published": "2026-10-08T01:08:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "PoeLLM malware infects exposed AI servers in cryptomining attacks",
-      "summary": "A cryptomining campaign targeting exposed AI services is using PoeLLM malware to turn compromised servers into scanners and exploit launchpads. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. PoeLLM malware infects exposed AI servers in crypt",
-      "link": "https://www.bleepingcomputer.com/news/security/poellm-malware-infects-exposed-ai-servers-in-cryptomining-attacks/",
-      "source": "bleepingcomputer",
-      "published": "2026-10-08T00:04:08+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -5206,21 +5218,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-76472",
       "source": "cvefeed",
       "published": "2026-10-08T01:19:54+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-77214 - libexpat Heap Buffer Over-read in xmlparse.c via XML_ParseBuffer",
-      "summary": "CVE ID :CVE-2026-77214\n  \nPublished : Oct. 7, 2026, 3:17 p.m. | 41 minutes ago\n  \nDescription :libexpat before commit 13c5f63 contains a heap buffer over-read vulnerability in xmlparse.c. XML_ParseBuffer advances the parse buffer end with parser->m_bufferEnd += len using a caller-supplied length that is not validated against the allocated buffer size, so repeated XML_ParseBuffer calls move m_bufferEnd past the end of the heap allocation and subsequent parsing reads out of bounds. Reaching this path requires a parse buffer to already be present; otherwise XML_ParseBuffer returns XML_ERROR_NO_BUFFER. A buffer is present after a prior call to XML_GetBuffer, either directly (the common case) or indirectly through a prior XML_Parse call that allocates the buffer internally. The over-read discloses adjacent heap memory to the calling application, recovering heap pointers, libc function pointers, and code pointers sufficient to defeat ASLR and build further exploitation primitives.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-77214\n  \nPublished : Oct. 7, 2026, 3:17 p.m. | 41 minutes ago\n  \nDescription :libexpat before commit 13c5f63 contains a heap buffer over-read vulnerability in xmlparse.c. XML_ParseBuffer advances the parse buffer end with parser->m_bufferEnd += len using a caller-supplied length that is not validated against the allocated buffer size, so repeated XML_ParseBuffer calls move m_bufferEnd past the end of the heap allocation and subsequent parsing reads out of bounds. Reaching this path requires a parse buffer to already be present; otherwise XML_ParseBuffer returns XML_ERROR_NO_BUFFER. A buffer is present after a prior call to XML_GetBuffer, either directly (the common case) or indirectly through a prior XML_Parse call that allocates the buffer internally. The over-read discloses adjacent heap memory to the calling application, recovering heap pointers, libc function pointers, and code pointers sufficient to defeat ASLR and build further exploitation primitives.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-77214\n2. 26.10.08 오전12:17\n3. libexpat before commit 13c5f63 contains a heap buf",
-      "cve_id": "CVE-2026-77214",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77214",
-      "source": "cvefeed",
-      "published": "2026-10-08T00:17:53+09:00",
       "lang": "en"
     }
   ],
