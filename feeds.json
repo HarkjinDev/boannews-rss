@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-10T22:02:30.409965+09:00",
+  "fetched_at": "2026-10-10T22:32:20.459121+09:00",
   "security_news": [
     {
       "title": "미국 정부, 한국에 사실상 경고... 이례적일 정도로 수위가 높다",
@@ -4632,18 +4632,6 @@
       "source": "naver",
       "published": "2026-10-07T22:35:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "개인정보 유출 피해 85만명…여의도순복음 수사의뢰 검토",
-      "summary": "교인과 직원 등의 개인정보를 해킹당한 여의도순복음교회와 사랑의교회가 한국인터넷진흥원에 침해 사고 사실을 정식으로 신고하고, 수사 의뢰를 검토 중입니다. 외부 해킹 사실을 통보받은 여의도순복음교회는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 여의도순복음교회, 85만명 개인정보 유출\n2. 외부 해킹으로 교인 및 직원 정보 탈취\n3. 한국인터넷진흥원 신고, 수사 의뢰 검토",
-      "link": "https://n.news.naver.com/mnews/article/437/0000514620?sid=102",
-      "source": "naver",
-      "published": "2026-10-07T22:03:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -5306,21 +5294,6 @@
       "source": "sans_isc",
       "published": "2026-10-07T23:59:33+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-98373 - mm/hugetlb: preserve mremap address delta when skipping page tables",
-      "summary": "CVE ID :CVE-2026-98373\n  \nPublished : Oct. 7, 2026, 1:17 p.m. | 55 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nmm/hugetlb: preserve mremap address delta when skipping page tables\n\nmove_hugetlb_page_tables() optimizes mremap() by advancing to the last\nentry in the page table when the source page table does not exist, either\ninitially or after unsharing a PMD table.  The common loop increment then\nsteps to the first entry in the next page table.\n\nHowever, the code advances both the source and destination addresses to\nthe last entries in their respective page tables, which is wrong.  The\ndestination address must be advanced only by the same amount as the source\naddress.\n\nIf the source and destination offsets within their page tables differ, the\ndestination address can be advanced too far, causing follow-up issues. \nFix this by advancing the destination address by the source advance\ndistance.\n\nWith a reproducer, we were able to trigger a kernel panic on x86-64.  With\nthis fix in place, we can no longer reproduce the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-98373\n  \nPublished : Oct. 7, 2026, 1:17 p.m. | 55 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nmm/hugetlb: preserve mremap address delta when skipping page tables\n\nmove_hugetlb_page_tables() optimizes mremap() by advancing to the last\nentry in the page table when the source page table does not exist, either\ninitially or after unsharing a PMD table.  The common loop increment then\nsteps to the first entry in the next page table.\n\nHowever, the code advances both the source and destination addresses to\nthe last entries in their respective page tables, which is wrong.  The\ndestination address must be advanced only by the same amount as the source\naddress.\n\nIf the source and destination offsets within their page tables differ, the\ndestination address can be advanced too far, causing follow-up issues. \nFix this by advancing the destination address by the source advance\ndistance.\n\nWith a reproducer, we were able to trigger a kernel panic on x86-64.  With\nthis fix in place, we can no longer reproduce the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-98373\n2. 26.10.07 오후10:17\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-98373",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-98373",
-      "source": "cvefeed",
-      "published": "2026-10-07T22:17:22+09:00",
-      "lang": "no"
     }
   ],
   "reputation": [
