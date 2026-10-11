@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-11T23:02:45.501213+09:00",
+  "fetched_at": "2026-10-11T23:32:43.577344+09:00",
   "security_news": [
     {
       "title": "스마트폰 해킹 의심 땐 앱 검사…피해 신고는 118·112",
@@ -3571,6 +3571,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-62744 Microsoft Windows Media Foundation Remote Code Execution Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-62744\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-62744",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62744",
+      "source": "msrc",
+      "published": "2026-10-09T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-78384 - Apache CXF: Unbounded DEFLATE Decompression in CXF JOSE/JWE and SAML Processing (Decompression Bomb)",
       "summary": "CVE ID :CVE-2026-78384\n  \nPublished : Oct. 9, 2026, 10:18 a.m. | 1 hour, 10 minutes ago\n  \nDescription :CompressionUtils.inflate() decompressed attacker-controlled DEFLATE data with no output-size cap. A small (~KB) crafted payload could expand to gigabytes on the heap. Reachable via JWE decryption when zip=DEF (e.g. JoseSessionTokenProvider with RSA-OAEP key wrap) and via SAML redirect/POST binding token inflation — in both cases decompression happens before/independent of trust validation.\n\nFix: Added a configurable maximum inflated-size cap (default 10 MiB, org.apache.cxf.compression-max-inflated-size system property) to CompressionUtils.inflate(); aborts with DataFormatException once exceeded.\nUsers are recommended to upgrade to versions 4.2.4 or 4.1.9 or 3.6.13, which fix this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-78384\n  \nPublished : Oct. 9, 2026, 10:18 a.m. | 1 hour, 10 minutes ago\n  \nDescription :CompressionUtils.inflate() decompressed attacker-controlled DEFLATE data with no output-size cap. A small (~KB) crafted payload could expand to gigabytes on the heap. Reachable via JWE decryption when zip=DEF (e.g. JoseSessionTokenProvider with RSA-OAEP key wrap) and via SAML redirect/POST binding token inflation — in both cases decompression happens before/independent of trust validation.\n\nFix: Added a configurable maximum inflated-size cap (default 10 MiB, org.apache.cxf.compression-max-inflated-size system property) to CompressionUtils.inflate(); aborts with DataFormatException once exceeded.\nUsers are recommended to upgrade to versions 4.2.4 or 4.1.9 or 3.6.13, which fix this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3733,36 +3748,6 @@
       "link": "https://isc.sans.edu/diary/rss/33410",
       "source": "sans_isc",
       "published": "2026-10-09T01:52:53+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-93017 - Insights-operator: gather serviceaccount has cluster-wide secret read plus nodes/proxy and cluster-reader",
-      "summary": "CVE ID :CVE-2026-93017\n  \nPublished : Oct. 8, 2026, 2:31 p.m. | 41 minutes ago\n  \nDescription :The `insights-operator-gather` ClusterRole grants the operator's service account read access to secrets in the core API group with no namespace or resourceNames restriction — therefore, access to every secret in every namespace in the cluster.\n\nRef: https://github.com/openshift/insights-operator/blob/8f15e3157ff09f54ab22801f5b21da35a195cc6d/manifests/03-clusterrole.yaml#L368-L373\n```\n- apiGroups:\n  - \"\"\n  resources:\n  - secrets\n  verbs:\n  - get\n  - list\n```\n\nBy spawning a pod with the gather service account mounted, an attacker will be able to access any secret in any namespace.\n\n```\nspec:\n serviceAccountName:\"gather\"\n```\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-93017\n  \nPublished : Oct. 8, 2026, 2:31 p.m. | 41 minutes ago\n  \nDescription :The `insights-operator-gather` ClusterRole grants the operator's service account read access to secrets in the core API group with no namespace or resourceNames restriction — therefore, access to every secret in every namespace in the cluster.\n\nRef: https://github.com/openshift/insights-operator/blob/8f15e3157ff09f54ab22801f5b21da35a195cc6d/manifests/03-clusterrole.yaml#L368-L373\n```\n- apiGroups:\n  - \"\"\n  resources:\n  - secrets\n  verbs:\n  - get\n  - list\n```\n\nBy spawning a pod with the gather service account mounted, an attacker will be able to access any secret in any namespace.\n\n```\nspec:\n serviceAccountName:\"gather\"\n```\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-93017\n2. 26.10.08 오후11:31\n3. The `insights-operator-gather` ClusterRole grants ",
-      "cve_id": "CVE-2026-93017",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93017",
-      "source": "cvefeed",
-      "published": "2026-10-08T23:31:58+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-88257 - beam_mcp: nested tool argument constraints advertised but not enforced",
-      "summary": "CVE ID :CVE-2026-88257\n  \nPublished : Oct. 8, 2026, 2:17 p.m. | 47 minutes ago\n  \nDescription :Improper Input Validation vulnerability in BeamMCP.Schema in ScriptKittyOS beam_mcp allows an MCP client to reach a tool's dispatch function with arguments that violate the input schema the server advertised. BeamMCP.Schema.validate/2 checked type, required, additionalProperties, enum and numeric bounds on the top-level arguments object only. Constraints inside nested objects and on array items (items, minItems, maxItems, minLength, maxLength, pattern, nested required, enum and additionalProperties: false) were advertised by tools/list and never checked at tools/call or prompts/get, and keywords outside the enforced subset (oneOf, anyOf, $ref) were advertised and ignored.\n\nA host whose dispatch code relies on the schema it declared receives values the schema forbids, such as an out-of-range number or an undeclared key inside a nested object. What the host does with such a value decides the impact.\n\nThis issue affects beam_mcp: from 0.1.0 before 0.10.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-88257\n  \nPublished : Oct. 8, 2026, 2:17 p.m. | 47 minutes ago\n  \nDescription :Improper Input Validation vulnerability in BeamMCP.Schema in ScriptKittyOS beam_mcp allows an MCP client to reach a tool's dispatch function with arguments that violate the input schema the server advertised. BeamMCP.Schema.validate/2 checked type, required, additionalProperties, enum and numeric bounds on the top-level arguments object only. Constraints inside nested objects and on array items (items, minItems, maxItems, minLength, maxLength, pattern, nested required, enum and additionalProperties: false) were advertised by tools/list and never checked at tools/call or prompts/get, and keywords outside the enforced subset (oneOf, anyOf, $ref) were advertised and ignored.\n\nA host whose dispatch code relies on the schema it declared receives values the schema forbids, such as an out-of-range number or an undeclared key inside a nested object. What the host does with such a value decides the impact.\n\nThis issue affects beam_mcp: from 0.1.0 before 0.10.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-88257\n2. 26.10.08 오후11:17\n3. Improper Input Validation vulnerability in BeamMCP",
-      "cve_id": "CVE-2026-88257",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-88257",
-      "source": "cvefeed",
-      "published": "2026-10-08T23:17:01+09:00",
       "lang": "en"
     }
   ],
