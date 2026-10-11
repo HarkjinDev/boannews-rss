@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-12T02:02:41.759596+09:00",
+  "fetched_at": "2026-10-12T02:32:36.664993+09:00",
   "security_news": [
+    {
+      "title": "정보 유출 보상, 고령층엔 ‘그림의 떡’",
+      "summary": "해킹에 따른 개인정보 유출 사고 이후 기업들이 이용자에게 보상안을 내놓고 있지만 온라인 신청이나 쿠폰 등록 등의 절차 때문에 디지털 기기 사용에 익숙하지 않은 고령층 등에게는 ‘그림의 떡’이라는 지적이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 정보 유출 사고 후 기업, 고령층에 보상안 제시\n2. 온라인 신청, 쿠폰 등록 등 디지털 절차로 접근 난항\n3. 고령층 등 디지털 취약계층, 보상 혜택 받기 어려워",
+      "link": "https://n.news.naver.com/mnews/article/005/0001878021?sid=102",
+      "source": "naver",
+      "published": "2026-10-12T02:06:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "국회 보건복지위원회 10월 6일~27일 22일간 국정감사",
       "summary": "▲정보보안·조직문화·환자안전 이외에 의료기관을 겨냥한 해킹·랜섬웨어 공격에 대응한 보건의료정보 보호 및 정보보안체계 강화, 간호사 ‘태움’ 등 의료기관 내 직장 내 괴롭힘 예방을 위한 조직문화·근무환경...",
@@ -3348,21 +3360,24 @@
       "source": "naver",
       "published": "2026-10-09T04:26:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"택배 차도 섰다\" 한밤 쿠팡·쿠팡이츠·쿠팡플레이 동시 먹통…물류까...",
-      "summary": "최근 은행권에서 잇따른 해킹 사고로 금융정보 보안에 대한 경계감이 높아진 가운데 쿠팡 서비스 장애까지 발생하면서 이용자들의 불안도 커지는 모습이다. 한 네티즌은 \"해킹으로 서버가 터진 것 아니냐. (개인정보) 다...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. \"택배 차도 섰다\" 한밤 쿠팡·쿠팡이츠·쿠팡플레이 동시 먹통…물류까... 최근 은행권에서 \n2. 한 네티즌은 \"해킹으로 서버가 터진 것 아니냐.\n3. (개인정보) 다...",
-      "link": "https://www.newsquest.co.kr/news/articleView.html?idxno=302357",
-      "source": "naver",
-      "published": "2026-10-09T02:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-107761 - Channel tokens and organization API key exposed in API responses",
+      "summary": "CVE ID :CVE-2026-107761\n  \nPublished : Oct. 11, 2026, 3:23 p.m. | 59 minutes ago\n  \nDescription :Several Postiz endpoints return the complete database row of the record they operate on instead of only the fields the client needs. Two of them include secrets the caller is not meant to receive.\n\nThe public API's channel delete returns the deleted integration row, including the channel's platform access token and refresh token. A third-party OAuth app permitted to delete a channel therefore receives that channel's social platform credentials and can use them against the connected account directly, outside Postiz.\n\n`GET /user/organizations` returns each organization row, including its API key, to every member of the organization. The API key is intended for admins only, so a member with a lower role can obtain it and call the public API on behalf of the organization.\n\nBoth endpoints require a valid session, API key or OAuth token and are scoped to the caller's own organization. There is no anonymous access and no cross-tenant exposure.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107761\n  \nPublished : Oct. 11, 2026, 3:23 p.m. | 59 minutes ago\n  \nDescription :Several Postiz endpoints return the complete database row of the record they operate on instead of only the fields the client needs. Two of them include secrets the caller is not meant to receive.\n\nThe public API's channel delete returns the deleted integration row, including the channel's platform access token and refresh token. A third-party OAuth app permitted to delete a channel therefore receives that channel's social platform credentials and can use them against the connected account directly, outside Postiz.\n\n`GET /user/organizations` returns each organization row, including its API key, to every member of the organization. The API key is intended for admins only, so a member with a lower role can obtain it and call the public API on behalf of the organization.\n\nBoth endpoints require a valid session, API key or OAuth token and are scoped to the caller's own organization. There is no anonymous access and no cross-tenant exposure.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107761\n2. 26.10.12 오전12:23\n3. Several Postiz endpoints return the complete datab",
+      "cve_id": "CVE-2026-107761",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107761",
+      "source": "cvefeed",
+      "published": "2026-10-12T00:23:15+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-108521 - Studio-Saelix Sencho Add Remote Node API Endpoint validation.ts isValidRemoteUrl server-side request forgery",
       "summary": "CVE ID :CVE-2026-108521\n  \nPublished : Oct. 11, 2026, 3:16 a.m. | 13 minutes ago\n  \nDescription :A vulnerability has been found in Studio-Saelix Sencho up to 0.97.1. Affected by this issue is the function isValidRemoteUrl of the file backend/src/utils/validation.ts of the component Add Remote Node API Endpoint. Such manipulation leads to server-side request forgery. The attack can be executed remotely. The exploit has been disclosed to the public and may be used. The vendor confirms: \"The node API URL could be configured by an authenticated user with node-management permission and used to initiate server-side requests. [T]he report demonstrates server-side request capability but not arbitrary internal response exfiltration.\"\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3766,21 +3781,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-107375",
       "source": "cvefeed",
       "published": "2026-10-09T02:36:48+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-107334 - Incorrect Authorization in Malcolm",
-      "summary": "CVE ID :CVE-2026-107334\n  \nPublished : Oct. 8, 2026, 5:32 p.m. | 42 minutes ago\n  \nDescription :Malcolm's nginx Lua role-based access control (RBAC) layer decides whether an authenticated user may reach a role-restricted path (e.g. /htadmin, /auth, /admin_login, /arkime/api/esadmin, NetBox, upload endpoints) by pattern-matching the raw, percent-encoded request URI. Nginx itself, however, selects which location block actually serves the request using the percent-decoded, normalized URI. Because the RBAC check never percent-decodes its input, an authenticated low-privilege user can request an admin-only path using percent-encoding (e.g. /%68tadmin.php) and have nginx route it to the restricted location while the Lua RBAC gate evaluating the un-decoded raw string finds no matching restriction and grants access.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-107334\n  \nPublished : Oct. 8, 2026, 5:32 p.m. | 42 minutes ago\n  \nDescription :Malcolm's nginx Lua role-based access control (RBAC) layer decides whether an authenticated user may reach a role-restricted path (e.g. /htadmin, /auth, /admin_login, /arkime/api/esadmin, NetBox, upload endpoints) by pattern-matching the raw, percent-encoded request URI. Nginx itself, however, selects which location block actually serves the request using the percent-decoded, normalized URI. Because the RBAC check never percent-decodes its input, an authenticated low-privilege user can request an admin-only path using percent-encoding (e.g. /%68tadmin.php) and have nginx route it to the restricted location while the Lua RBAC gate evaluating the un-decoded raw string finds no matching restriction and grants access.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-107334\n2. 26.10.09 오전2:32\n3. Malcolm's nginx Lua role-based access control (RBA",
-      "cve_id": "CVE-2026-107334",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107334",
-      "source": "cvefeed",
-      "published": "2026-10-09T02:32:00+09:00",
       "lang": "en"
     }
   ],
