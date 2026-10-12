@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-12T23:02:48.971991+09:00",
+  "fetched_at": "2026-10-12T23:32:54.849939+09:00",
   "security_news": [
+    {
+      "title": "북한 해킹조직 ‘김수키’, 우크라 안보 전문가 겨냥…국제회의 사칭 ‘...",
+      "summary": "북한 연계 해킹조직 김수키가 우크라이나 외교 안보 전문가들을 대상으로 사이버 공격을 시도한 것으로... 북한 연계 해킹조직 김수키가 우크라이나 외교·안보 전문가들을 겨냥해 조직적인 사이버 첩보 활동을 벌인...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 해킹조직 ‘김수키’, 우크라 안보 전문가 겨냥…국제회의 사칭 ‘...\n2. 북한 연계 해킹조직 김수키가 우크라이나 외교 안보 전문가들을 대상으로 사이버 공격을 시도한\n3. 북한 연계 해킹조직 김수키가 우크라이나 외교·안보 전문가들을 겨냥해 조직적인 사이버 첩보 ",
+      "link": "https://www.voakorea.com/a/nk-kimsuky-hacking-attempt-101226/8210337.html",
+      "source": "naver",
+      "published": "2026-10-12T22:59:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "레저 지갑, 8600만 달러 탈취 피해...자오창펑 \"신규 지갑 2주간 묵혀둬...",
       "summary": "하드웨어 지갑의 물리적 배송망 보안 취약점은 업계 전반으로 번지고 있다. 8월에는 콜드카드(Coldcard)... 새로운 보안 수칙으로 떠오르고 있다. 공급망을 파고든 물리적 해킹 공격이 가상자산 콜드월렛 생태계의...",
@@ -4176,30 +4188,6 @@
       "source": "naver",
       "published": "2026-10-10T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "AI 해킹에 흔들리는 은행 신뢰…내 돈은 안전한가",
-      "summary": "국내 주요 은행을 겨냥한 연쇄 사이버 공격과 고객정보 유출 사고가 잇따르면서 금융소비자의 불안이... 금융권에서는 사이버 보안이 고객 신뢰와 금융시스템 안정성을 좌우하는 핵심 위험으로 떠오르고 있다는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 해킹에 흔들리는 은행 신뢰…내 돈은 안전한가 국내 주요 은행을 겨냥한 연쇄 사이버 공\n2. 금융권에서는 사이버 보안이 고객 신뢰와 금융시스템 안정성을 좌우하는 핵심 위험으로 떠오르고",
-      "link": "https://www.dongponews.net/news/articleView.html?idxno=60974",
-      "source": "naver",
-      "published": "2026-10-09T23:18:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[오늘과 내일/조건희]보이스피싱 ‘칸막이 철거’, 민생 범죄 대응 원칙...",
-      "summary": "최근 금융권을 덮친 인공지능(AI) 해킹은 신호탄일지도 모른다. 새로운 유형의 범죄가 앞으로 홍수처럼 밀려들 공산이 크다. 경찰은 수사에 착수했지만, 사건을 2일 출범한 중대범죄수사청에 넘겨야 하는지는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [오늘과 내일/조건희]보이스피싱 ‘칸막이 철거’, 민생 범죄 대응 원칙...\n2. 최근 금융권을 덮친 인공지능(AI) 해킹은 신호탄일지도 모른다.\n3. 새로운 유형의 범죄가 앞으로 홍수처럼 밀려들 공산이 크다.",
-      "link": "https://n.news.naver.com/mnews/article/020/0003753938?sid=110",
-      "source": "naver",
-      "published": "2026-10-09T23:16:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4621,36 +4609,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-39460",
       "source": "cvefeed",
       "published": "2026-10-10T00:17:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-104113 - Double free in OmniOS and SmartOS ipmgmtd allows local users to crash the daemon",
-      "summary": "CVE ID :CVE-2026-104113\n  \nPublished : Oct. 9, 2026, 2:17 p.m. | 25 minutes ago\n  \nDescription :A double free in the IP management daemon (ipmgmtd) of OmniOS and SmartOS allows a local user to crash the daemon. When authorizing a door request that modifies interface configuration, ipmgmt_handler() in usr/src/cmd/cmd-inet/lib/ipmgmtd/ipmgmt_door.c frees the caller's credential with ucred_free() immediately after reading the user ID, and frees it a second time on the error path if the authorization check fails. An unprivileged local user who does not hold the solaris.network.interface.config authorization can send such a request, for example IPMGMT_CMD_RESETIF, to the ipmgmtd door, causing ipmgmtd to abort; repeated requests place the svc:/network/ip-interface-management service into maintenance, preventing IP interface configuration. The early free was introduced in 2014 to support lx-branded zones (OmniOS commit 4c170900) and is not present in upstream illumos-gate. It affects OmniOS r151020 and later, and SmartOS, prior to the fix.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-104113\n  \nPublished : Oct. 9, 2026, 2:17 p.m. | 25 minutes ago\n  \nDescription :A double free in the IP management daemon (ipmgmtd) of OmniOS and SmartOS allows a local user to crash the daemon. When authorizing a door request that modifies interface configuration, ipmgmt_handler() in usr/src/cmd/cmd-inet/lib/ipmgmtd/ipmgmt_door.c frees the caller's credential with ucred_free() immediately after reading the user ID, and frees it a second time on the error path if the authorization check fails. An unprivileged local user who does not hold the solaris.network.interface.config authorization can send such a request, for example IPMGMT_CMD_RESETIF, to the ipmgmtd door, causing ipmgmtd to abort; repeated requests place the svc:/network/ip-interface-management service into maintenance, preventing IP interface configuration. The early free was introduced in 2014 to support lx-branded zones (OmniOS commit 4c170900) and is not present in upstream illumos-gate. It affects OmniOS r151020 and later, and SmartOS, prior to the fix.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-104113\n2. 26.10.09 오후11:17\n3. A double free in the IP management daemon (ipmgmtd",
-      "cve_id": "CVE-2026-104113",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104113",
-      "source": "cvefeed",
-      "published": "2026-10-09T23:17:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-104081 - KodExplorer < 4.55 Path Traversal via unzip_pre_name() ZIP Extraction",
-      "summary": "CVE ID :CVE-2026-104081\n  \nPublished : Oct. 9, 2026, 2:13 p.m. | 29 minutes ago\n  \nDescription :KodExplorer before 4.55 contains a path traversal vulnerability in the unzip_pre_name() function within app/function/helper.function.php, where a single non-recursive str_replace() sanitization pass can be bypassed using crafted filenames like \"....//\", combined with PclZip's extract() call in KodArchive.class.php lacking the PCLZIP_OPT_EXTRACT_DIR_RESTRICTION option. Authenticated attackers can upload a malicious ZIP archive with traversal sequences to overwrite arbitrary files such as core JavaScript assets, enabling stored XSS that leads to admin account takeover and subsequent remote code execution via unrestricted PHP file upload.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-104081\n  \nPublished : Oct. 9, 2026, 2:13 p.m. | 29 minutes ago\n  \nDescription :KodExplorer before 4.55 contains a path traversal vulnerability in the unzip_pre_name() function within app/function/helper.function.php, where a single non-recursive str_replace() sanitization pass can be bypassed using crafted filenames like \"....//\", combined with PclZip's extract() call in KodArchive.class.php lacking the PCLZIP_OPT_EXTRACT_DIR_RESTRICTION option. Authenticated attackers can upload a malicious ZIP archive with traversal sequences to overwrite arbitrary files such as core JavaScript assets, enabling stored XSS that leads to admin account takeover and subsequent remote code execution via unrestricted PHP file upload.\n  \nSeverity: 8.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-104081\n2. 26.10.09 오후11:13\n3. KodExplorer before 4.55 contains a path traversal ",
-      "cve_id": "CVE-2026-104081",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104081",
-      "source": "cvefeed",
-      "published": "2026-10-09T23:13:49+09:00",
       "lang": "en"
     }
   ],
