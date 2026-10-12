@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-13T02:32:27.559299+09:00",
+  "fetched_at": "2026-10-13T03:01:08.156776+09:00",
   "security_news": [
     {
       "title": "\"주영대사관, 국경일 행사 초청 대상자 명단 노출\"",
@@ -4567,36 +4567,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-108096",
       "source": "cvefeed",
       "published": "2026-10-10T03:10:24+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-107839 - ageLANServer: Unbounded JSON Array Allocation in AoE3 Cloud `getFileURL` Endpoint Leads to Remote Denial of Service",
-      "summary": "CVE ID :CVE-2026-107839\n  \nPublished : Oct. 9, 2026, 5:58 p.m. | 23 minutes ago\n  \nDescription :ageLANServer provides a cross-platform web server and launcher for offline multiplayer in several Age of Empires and Age of Mythology games. Prior to version 1.15.2, the AoE3 POST /game/cloud/getFileURL handler in the bundled game server has no request body size limit or cap on the attacker-controlled JSON names array and allocates response storage directly from the unbounded array length. A remote unauthenticated client can use the default self-registration flow and send an oversized request that causes excessive memory allocation, crashes or hangs the server process, disconnects active players, and keeps the service unavailable until it is restarted. This issue is fixed in version 1.15.2.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-107839\n  \nPublished : Oct. 9, 2026, 5:58 p.m. | 23 minutes ago\n  \nDescription :ageLANServer provides a cross-platform web server and launcher for offline multiplayer in several Age of Empires and Age of Mythology games. Prior to version 1.15.2, the AoE3 POST /game/cloud/getFileURL handler in the bundled game server has no request body size limit or cap on the attacker-controlled JSON names array and allocates response storage directly from the unbounded array length. A remote unauthenticated client can use the default self-registration flow and send an oversized request that causes excessive memory allocation, crashes or hangs the server process, disconnects active players, and keeps the service unavailable until it is restarted. This issue is fixed in version 1.15.2.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-107839\n2. 26.10.10 오전2:58\n3. ageLANServer provides a cross-platform web server ",
-      "cve_id": "CVE-2026-107839",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107839",
-      "source": "cvefeed",
-      "published": "2026-10-10T02:58:09+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-107838 - RIOT: nanocoap_fileserver ignores response initialization failure, leading to reachable assertion",
-      "summary": "CVE ID :CVE-2026-107838\n  \nPublished : Oct. 9, 2026, 5:55 p.m. | 26 minutes ago\n  \nDescription :RIOT is an open-source microcontroller operating system designed for Internet of Things devices and other embedded systems. From version 2023.07 through version 2026.07, nanocoap_fileserver callers in sys/net/application_layer/nanocoap/fileserver.c ignore a failure returned by _resp_init() when coap_build_reply() cannot fit a response header into the response buffer. A remote client can send a CoAP request with a sufficiently large extended token when nanocoap_token_ext is enabled, causing response initialization to fail while _get_file() or _get_directory() continues with stale response state. The path then reaches _calc_szx2() and its pdu->payload_len > reserve assertion, terminating the affected service or device task. No fixed release is available as of this review.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-107838\n  \nPublished : Oct. 9, 2026, 5:55 p.m. | 26 minutes ago\n  \nDescription :RIOT is an open-source microcontroller operating system designed for Internet of Things devices and other embedded systems. From version 2023.07 through version 2026.07, nanocoap_fileserver callers in sys/net/application_layer/nanocoap/fileserver.c ignore a failure returned by _resp_init() when coap_build_reply() cannot fit a response header into the response buffer. A remote client can send a CoAP request with a sufficiently large extended token when nanocoap_token_ext is enabled, causing response initialization to fail while _get_file() or _get_directory() continues with stale response state. The path then reaches _calc_szx2() and its pdu->payload_len > reserve assertion, terminating the affected service or device task. No fixed release is available as of this review.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-107838\n2. 26.10.10 오전2:55\n3. RIOT is an open-source microcontroller operating s",
-      "cve_id": "CVE-2026-107838",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107838",
-      "source": "cvefeed",
-      "published": "2026-10-10T02:55:34+09:00",
       "lang": "en"
     }
   ],
