@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-13T02:03:53.310325+09:00",
+  "fetched_at": "2026-10-13T02:32:27.559299+09:00",
   "security_news": [
     {
       "title": "\"주영대사관, 국경일 행사 초청 대상자 명단 노출\"",
@@ -4176,30 +4176,6 @@
       "source": "naver",
       "published": "2026-10-10T04:03:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "북한 연계 해커, 개발용 프로그램에 악성코드…‘기업 접속정보 탈취’",
-      "summary": "있다는 보안업체 분석이 나왔습니다. 개발자의 컴퓨터를 기업 침투의 통로로 삼고, 공개 블록체인을 이용해... 미국 사이버 보안업체 팔로알토 네트웍스의 유닛42는 최근 공개한 보고서에서 이 같은 공격 방식을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 연계 해커, 개발용 프로그램에 악성코드…‘기업 접속정보 탈취’ 있다는 보안업체 분석이\n2. 개발자의 컴퓨터를 기업 침투의 통로로 삼고, 공개 블록체인을 이용해...\n3. 미국 사이버 보안업체 팔로알토 네트웍스의 유닛42는 최근 공개한 보고서에서 이 같은 공격 ",
-      "link": "https://www.voakorea.com/a/dprk-blockchain-supply-chain-attacks-100926/8209627.html",
-      "source": "naver",
-      "published": "2026-10-10T02:32:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Unpatched AhsayCBS flaws exploited to deploy webshells, mine crypto",
-      "summary": "Threat actors are exploiting one critical and one medium-severity vulnerability still unpatched in the AhsayCBS backup management platform to deploy webshells and cryptocurrency miners. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Unpatched AhsayCBS flaws exploited to deploy websh",
-      "link": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/",
-      "source": "bleepingcomputer",
-      "published": "2026-10-10T02:17:23+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -4621,21 +4597,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-107838",
       "source": "cvefeed",
       "published": "2026-10-10T02:55:34+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-107825 - OWASP Coraza WAF: ProcessURI silently drops QUERY_STRING and ARGS_GET on URI parse failure — defense-in-depth bypass for non-net/http integrations",
-      "summary": "CVE ID :CVE-2026-107825\n  \nPublished : Oct. 9, 2026, 5:32 p.m. | 49 minutes ago\n  \nDescription :OWASP Coraza WAF is a golang modsecurity compatible web application firewall library. From 3.0.0 until 3.8.0, ProcessURI in internal/corazawaf/transaction.go handles a url.ParseRequestURI failure by retaining the raw URI but leaving QUERY_STRING, ARGS_GET, ARGS_GET_NAMES, and the GET-derived portion of ARGS empty. An unauthenticated attacker can place control bytes in a URI passed directly by integrations such as coraza-spoa, coraza-proxy-wasm, custom FFI hosts, or WASM hosts, causing Coraza to omit query parameters that the downstream integration may still process and allowing rules targeting those variables to be bypassed. The bundled coraza/v3/http integration is not affected because Go net/http rejects such malformed request targets before calling Coraza. This issue is fixed in version 3.8.0.\n  \nSeverity: 4.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-107825\n  \nPublished : Oct. 9, 2026, 5:32 p.m. | 49 minutes ago\n  \nDescription :OWASP Coraza WAF is a golang modsecurity compatible web application firewall library. From 3.0.0 until 3.8.0, ProcessURI in internal/corazawaf/transaction.go handles a url.ParseRequestURI failure by retaining the raw URI but leaving QUERY_STRING, ARGS_GET, ARGS_GET_NAMES, and the GET-derived portion of ARGS empty. An unauthenticated attacker can place control bytes in a URI passed directly by integrations such as coraza-spoa, coraza-proxy-wasm, custom FFI hosts, or WASM hosts, causing Coraza to omit query parameters that the downstream integration may still process and allowing rules targeting those variables to be bypassed. The bundled coraza/v3/http integration is not affected because Go net/http rejects such malformed request targets before calling Coraza. This issue is fixed in version 3.8.0.\n  \nSeverity: 4.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-107825\n2. 26.10.10 오전2:32\n3. OWASP Coraza WAF is a golang modsecurity compatibl",
-      "cve_id": "CVE-2026-107825",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107825",
-      "source": "cvefeed",
-      "published": "2026-10-10T02:32:11+09:00",
       "lang": "en"
     }
   ],
