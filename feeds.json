@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-13T03:01:08.156776+09:00",
+  "fetched_at": "2026-10-13T03:32:12.001349+09:00",
   "security_news": [
+    {
+      "title": "레저 해킹 의혹에 커진 수탁 불안…ETF·거래소로 눈 돌리나",
+      "summary": "그는 해당 기기들이 물리적으로 변조됐을 가능성을 언급하며 \"지갑이 도착하기도 전에 이미 하드웨어가 해킹됐을 수 있다는 뜻\"이라고 지적했다. 최근 콜드카드 해킹과 트레저 등 업체의 개인정보 유출 사례도 자체...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 레저 해킹 의혹에 커진 수탁 불안…ETF·거래소로 눈 돌리나 그는 해당 기기들이 물리적으로\n2. 최근 콜드카드 해킹과 트레저 등 업체의 개인정보 유출 사례도 자체...",
+      "link": "https://www.tokenpost.kr/news/cryptocurrency/421603",
+      "source": "naver",
+      "published": "2026-10-13T03:24:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"주영대사관, 국경일 행사 초청 대상자 명단 노출\"",
       "summary": "김 의원은 \"요즘 피싱, 해킹도 많은데 이메일에 누가 초대됐는지 달아서 보냈느냐\"며 \"보안 의식 없이 한국의 네트워킹을 그대로 다 보여준 것이다. 외교적 문제가 될 수도 있다\"고 지적했다. 이에 김흥종 주영 대사는...",
@@ -4180,6 +4192,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-109448 - psqlODBC SQLBindParameter heap memory corruption when binding more than 32767 parameters",
+      "summary": "CVE ID :CVE-2026-109448\n  \nPublished : Oct. 12, 2026, 5:42 p.m. | 47 minutes ago\n  \nDescription :Integer wraparound in psqlODBC SQLBindParameter allows an application, or an attacker who controls how many parameters the application binds on one statement, to corrupt heap memory. psqlODBC stores the binding count in a signed 16-bit field. Binding parameter number 32768 wraps that count to -32768. Binding parameter 32769 then writes about 2.5 MB of zeros starting 1.25 MB before the binding array, which crashes the application or leaves it running on a corrupted heap. Applications that build parameter lists from untrusted input, such as an IN (?, ?, ...) list, are exposed. Versions before psqlODBC 18.00.0005 are affected.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-109448\n  \nPublished : Oct. 12, 2026, 5:42 p.m. | 47 minutes ago\n  \nDescription :Integer wraparound in psqlODBC SQLBindParameter allows an application, or an attacker who controls how many parameters the application binds on one statement, to corrupt heap memory. psqlODBC stores the binding count in a signed 16-bit field. Binding parameter number 32768 wraps that count to -32768. Binding parameter 32769 then writes about 2.5 MB of zeros starting 1.25 MB before the binding array, which crashes the application or leaves it running on a corrupted heap. Applications that build parameter lists from untrusted input, such as an IN (?, ?, ...) list, are exposed. Versions before psqlODBC 18.00.0005 are affected.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-109448\n2. 26.10.13 오전2:42\n3. Integer wraparound in psqlODBC SQLBindParameter al",
+      "cve_id": "CVE-2026-109448",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-109448",
+      "source": "cvefeed",
+      "published": "2026-10-13T02:42:59+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-96618 - Hex exhausts memory and disk on oversized or compressed responses from an untrusted mirror",
       "summary": "CVE ID :CVE-2026-96618\n  \nPublished : Oct. 12, 2026, 4:17 p.m. | 15 minutes ago\n  \nDescription :Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in hexpm hex allows an untrusted package mirror to exhaust the memory or disk space of the machine running mix deps.get, mix deps.update, mix hex.package fetch or mix hex.docs fetch.\n\nHex treats a mirror configured with HEX_MIRROR_URL, HEX_MIRROR or mirror_url as untrusted: it doesn't send credentials to it, and it checks registry signatures and package checksums that the mirror can't forge. Several response paths consume memory or disk in proportion to what the mirror sends before any of those checks run.\n\nHex.HTTP.request/5 reads the whole response body into memory and decompresses it with :zlib.gunzip/1 whenever the response's Content-Encoding contains gzip, with no limit on the compressed or decompressed size. Hex doesn't ask for compressed responses, so the server decides whether this step runs. It applies to registry, package, docs and API responses.\n\nPackage tarballs have no download size limit. Hex 2.5.1 holds the whole tarball in memory and writes it to the cache, and the development branch streams it to a temporary file; the 16 MiB tarball limit is checked only when the file is unpacked. The tarball is then unpacked, into deps/ in 2.5.1 and into a staging directory on the development branch, before its checksums are compared with the registry.\n\nmix hex.docs fetch, and mix hex.docs offline when docs are missing, write the docs tarball to disk and extract it with :mix_hex_erl_tar.extract/2 without the 16 MiB compressed and 128 MiB decompressed limits that mix_hex_tarball:unpack_docs/3 applies. The signed registry doesn't cover docs tarballs, so nothing checks them.\n\nRegistry responses are also decompressed before their signature is checked, in hex_core code that Hex vendors; that part is tracked in https://github.com/hexpm/hex_core/security/advisories/GHSA-7c4r-cgf9-9jmq.\n\nThis issue affects hex: from 0.11.2 before 2.5.2.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-96618\n  \nPublished : Oct. 12, 2026, 4:17 p.m. | 15 minutes ago\n  \nDescription :Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in hexpm hex allows an untrusted package mirror to exhaust the memory or disk space of the machine running mix deps.get, mix deps.update, mix hex.package fetch or mix hex.docs fetch.\n\nHex treats a mirror configured with HEX_MIRROR_URL, HEX_MIRROR or mirror_url as untrusted: it doesn't send credentials to it, and it checks registry signatures and package checksums that the mirror can't forge. Several response paths consume memory or disk in proportion to what the mirror sends before any of those checks run.\n\nHex.HTTP.request/5 reads the whole response body into memory and decompresses it with :zlib.gunzip/1 whenever the response's Content-Encoding contains gzip, with no limit on the compressed or decompressed size. Hex doesn't ask for compressed responses, so the server decides whether this step runs. It applies to registry, package, docs and API responses.\n\nPackage tarballs have no download size limit. Hex 2.5.1 holds the whole tarball in memory and writes it to the cache, and the development branch streams it to a temporary file; the 16 MiB tarball limit is checked only when the file is unpacked. The tarball is then unpacked, into deps/ in 2.5.1 and into a staging directory on the development branch, before its checksums are compared with the registry.\n\nmix hex.docs fetch, and mix hex.docs offline when docs are missing, write the docs tarball to disk and extract it with :mix_hex_erl_tar.extract/2 without the 16 MiB compressed and 128 MiB decompressed limits that mix_hex_tarball:unpack_docs/3 applies. The signed registry doesn't cover docs tarballs, so nothing checks them.\n\nRegistry responses are also decompressed before their signature is checked, in hex_core code that Hex vendors; that part is tracked in https://github.com/hexpm/hex_core/security/advisories/GHSA-7c4r-cgf9-9jmq.\n\nThis issue affects hex: from 0.11.2 before 2.5.2.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4537,36 +4564,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-108264",
       "source": "cvefeed",
       "published": "2026-10-10T05:52:19+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-107841 - pacioli: A submit consent marker licensed cancellation of caller-named pre-existing documents",
-      "summary": "CVE ID :CVE-2026-107841\n  \nPublished : Oct. 9, 2026, 6:11 p.m. | 10 minutes ago\n  \nDescription :pacioli provides least-privilege governance and a governed agent broker for ERPNext. From version 0.9.6 until version 0.10.0, the pacioli-guard document-layer consent gate allows nested cancellation operations to ride any consent established by an enclosing governed act without checking whether the marker authorizes cancellation. A credential with API Key Scope.require_consent can submit a caller-controlled Sales Invoice or other supported document under a valid human-minted submit marker and reach Document.cancel() for a different pre-existing submitted document, bypassing the marker's document and act binding, single-use spend, and denial audit. The unauthorized cancellation can reverse the target document's ledger effect; principals without a consent-gated grant are not affected. This issue is fixed in version 0.10.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-107841\n  \nPublished : Oct. 9, 2026, 6:11 p.m. | 10 minutes ago\n  \nDescription :pacioli provides least-privilege governance and a governed agent broker for ERPNext. From version 0.9.6 until version 0.10.0, the pacioli-guard document-layer consent gate allows nested cancellation operations to ride any consent established by an enclosing governed act without checking whether the marker authorizes cancellation. A credential with API Key Scope.require_consent can submit a caller-controlled Sales Invoice or other supported document under a valid human-minted submit marker and reach Document.cancel() for a different pre-existing submitted document, bypassing the marker's document and act binding, single-use spend, and denial audit. The unauthorized cancellation can reverse the target document's ledger effect; principals without a consent-gated grant are not affected. This issue is fixed in version 0.10.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-107841\n2. 26.10.10 오전3:11\n3. pacioli provides least-privilege governance and a ",
-      "cve_id": "CVE-2026-107841",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107841",
-      "source": "cvefeed",
-      "published": "2026-10-10T03:11:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-108096 - Improper authorization in query resolvers for SQL-backed models in AWS Amplify API Category",
-      "summary": "CVE ID :CVE-2026-108096\n  \nPublished : 9 de Outubro de 2026 às 18:10 | 16 minutos ago\n  \nDescription :Improper authorization in the query resolvers generated by @aws-amplify/graphql-index-transformer in AWS Amplify API Category before 3.1.2 might allow an authenticated remote user to read records owned by other users of the same application via crafted queries.\n\n\n\nThis issue has been addressed in @aws-amplify/graphql-index-transformer  3.1.2 https://www.npmjs.com/package/@aws-amplify/graphql-index-transformer/v/3.1.2  (included in @aws-amplify/data-construct  1.17.4 https://www.npmjs.com/package/@aws-amplify/data-construct/v/1.17.4  and @aws-amplify/graphql-api-construct  1.21.4 https://www.npmjs.com/package/@aws-amplify/graphql-api-construct/v/1.21.4 ). We recommend upgrading to the latest version ensuring any forked or derivative code is patched to incorporate the new fixes and then redeploying their backend.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-108096\n  \nPublished : 9 de Outubro de 2026 às 18:10 | 16 minutos ago\n  \nDescription :Improper authorization in the query resolvers generated by @aws-amplify/graphql-index-transformer in AWS Amplify API Category before 3.1.2 might allow an authenticated remote user to read records owned by other users of the same application via crafted queries.\n\n\n\nThis issue has been addressed in @aws-amplify/graphql-index-transformer  3.1.2 https://www.npmjs.com/package/@aws-amplify/graphql-index-transformer/v/3.1.2  (included in @aws-amplify/data-construct  1.17.4 https://www.npmjs.com/package/@aws-amplify/data-construct/v/1.17.4  and @aws-amplify/graphql-api-construct  1.21.4 https://www.npmjs.com/package/@aws-amplify/graphql-api-construct/v/1.21.4 ). We recommend upgrading to the latest version ensuring any forked or derivative code is patched to incorporate the new fixes and then redeploying their backend.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-108096\n2. 26.10.10 오전3:10\n3. Improper authorization in the query resolvers gene",
-      "cve_id": "CVE-2026-108096",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-108096",
-      "source": "cvefeed",
-      "published": "2026-10-10T03:10:24+09:00",
       "lang": "en"
     }
   ],
