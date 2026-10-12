@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-13T01:32:43.745547+09:00",
+  "fetched_at": "2026-10-13T02:03:53.310325+09:00",
   "security_news": [
     {
       "title": "\"주영대사관, 국경일 행사 초청 대상자 명단 노출\"",
@@ -12,6 +12,18 @@
       "source": "naver",
       "published": "2026-10-13T01:14:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "⚡ Weekly Recap: Helpdesk 0-Days, Rogue Certs, ShinyHunters Arrest, AI-Fooling Malware and More",
+      "summary": "Some meetings last longer than it took attackers to jump on a newly disclosed security flaw this week. Within hours, they were already testing it. That's not much time to read the warning, let alone do something about it.\n\nBut speed is only part of the problem. A secure connection didn't always mean a safe destination. People offering to fix a ransomware mess had questions to answer themselves.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. ⚡ Weekly Recap: Helpdesk 0-Days, Rogue Certs, Shin\n2. That's not much time to read the warning, let alon\n3. But speed is only part of the problem.",
+      "link": "https://thehackernews.com/2026/10/weekly-recap-helpdesk-0-days-rogue.html",
+      "source": "thehackernews",
+      "published": "2026-10-13T00:16:26+09:00",
+      "lang": "en"
     },
     {
       "title": "[권희춘의 인공지능세상] AI 안경 시대, 기술과 사생활 보호 공존 필요",
@@ -4188,30 +4200,6 @@
       "source": "bleepingcomputer",
       "published": "2026-10-10T02:17:23+09:00",
       "lang": "en"
-    },
-    {
-      "title": "[단독]“성형외과 환자 이름-연락처 400만원에 판매” 2차 해킹 우려 확...",
-      "summary": "금융권을 겨냥한 인공지능(AI) 해킹 공격이 잇따르는 가운데, 해킹에 악용될 수 있는 개인정보가 인터넷 사이트에서 버젓이 거래되는 모습이 포착됐다. 전문가들은 인터넷에 떠도는 개인정보가 AI 도구와 결합하면...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 성형외과 환자 정보 400만원에 판매\n2. AI 해킹에 악용될 개인정보, 인터넷 거래 포착\n3. 2차 해킹 위험 우려, 금융권 추가 피해 가능성",
-      "link": "https://n.news.naver.com/mnews/article/020/0003753956?sid=101",
-      "source": "naver",
-      "published": "2026-10-10T01:43:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "美, 국정원 배제 논란에 \"동맹국들 정보 적절 처리해야\"",
-      "summary": "이윤희 특파원 = 도널드 트럼프 미국 행정부가 북한 해킹 대응 회의에 국정원 참여를 거부한 것으로 알려져 논란이 된 가운데, 미국 국무부가 9일(현지 시간) 정보와 방첩 사안 관리를 배경으로 언급했다. 사실상 한국...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 美, 국정원 배제 논란에 \"동맹국들 정보 적절 처리해야\" 이윤희 특파원 = 도널드 트럼프 ",
-      "link": "https://n.news.naver.com/mnews/article/003/0014243958?sid=104",
-      "source": "naver",
-      "published": "2026-10-10T01:37:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4648,21 +4636,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-107825",
       "source": "cvefeed",
       "published": "2026-10-10T02:32:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-75597 - pyLoad: Unauthenticated access to /web/ bypasses authentication on sensitive templates and leaks internal error details via exception attribute typo",
-      "summary": "CVE ID :CVE-2026-75597\n  \nPublished : Oct. 9, 2026, 4:41 p.m. | 48 minutes ago\n  \nDescription :pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev101, the `/web/` route in `src/pyload/webui/app/blueprints/app_blueprint.py` renders Jinja2 templates without any authentication requirement. Every equivalent direct route (`/logs`, `/settings`, `/queue`, `/dashboard`, etc.) is protected by `@login_required`, but the underlying templates for all of these pages are accessible unauthenticated via this endpoint. Combined with an exception attribute typo in `src/pyload/webui/app/handlers.py` (`exc.desc` instead of `exc.description`), internal Jinja2 variable names are leaked in HTTP 500 response bodies to unauthenticated callers. An attacker can also enumerate all valid template names by observing 200 vs 500 response differentiation. Version 0.5.0b3.dev101 contains a patch.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-75597\n  \nPublished : Oct. 9, 2026, 4:41 p.m. | 48 minutes ago\n  \nDescription :pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev101, the `/web/` route in `src/pyload/webui/app/blueprints/app_blueprint.py` renders Jinja2 templates without any authentication requirement. Every equivalent direct route (`/logs`, `/settings`, `/queue`, `/dashboard`, etc.) is protected by `@login_required`, but the underlying templates for all of these pages are accessible unauthenticated via this endpoint. Combined with an exception attribute typo in `src/pyload/webui/app/handlers.py` (`exc.desc` instead of `exc.description`), internal Jinja2 variable names are leaked in HTTP 500 response bodies to unauthenticated callers. An attacker can also enumerate all valid template names by observing 200 vs 500 response differentiation. Version 0.5.0b3.dev101 contains a patch.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-75597\n2. 26.10.10 오전1:41\n3. pyLoad is a free and open-source download manager ",
-      "cve_id": "CVE-2026-75597",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75597",
-      "source": "cvefeed",
-      "published": "2026-10-10T01:41:21+09:00",
       "lang": "en"
     }
   ],
