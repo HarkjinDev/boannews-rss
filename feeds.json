@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-14T03:02:30.616988+09:00",
+  "fetched_at": "2026-10-14T03:32:33.592711+09:00",
   "security_news": [
     {
       "title": "프랑스 \"냉장고 해킹 피해 슈퍼 700곳…식량안보 건드렸다\"",
@@ -5775,6 +5775,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-82416 - FrankenPHP: Cross-request PHP session ID leak in worker mode when the session extension is a shared module",
+      "summary": "CVE ID :CVE-2026-82416\n  \nPublished : Oct. 13, 2026, 5:17 p.m. | 28 minutes ago\n  \nDescription :FrankenPHP is a modern application server for PHP. Prior to 1.12.5, FrankenPHP worker mode can retain PHP session state between requests when the session extension is loaded as a shared module and is unavailable through HAVE_PHP_SESSION at compile time. In this build configuration, frankenphp_reset_session_state() is compiled out, PS(id) can survive a request boundary, and a subsequent session_start() can ignore the new request's cookie because an identifier is already present. Under concurrent requests, session_id() can therefore return another client's identifier or a stale identifier from a previous request on the same worker thread, causing cross-user session exposure, possible session hijacking, and intermittent logout behavior. Builds with the session extension statically linked, including the official static binaries and Docker images, are not affected. This issue is fixed in version 1.12.5.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82416\n  \nPublished : Oct. 13, 2026, 5:17 p.m. | 28 minutes ago\n  \nDescription :FrankenPHP is a modern application server for PHP. Prior to 1.12.5, FrankenPHP worker mode can retain PHP session state between requests when the session extension is loaded as a shared module and is unavailable through HAVE_PHP_SESSION at compile time. In this build configuration, frankenphp_reset_session_state() is compiled out, PS(id) can survive a request boundary, and a subsequent session_start() can ignore the new request's cookie because an identifier is already present. Under concurrent requests, session_id() can therefore return another client's identifier or a stale identifier from a previous request on the same worker thread, causing cross-user session exposure, possible session hijacking, and intermittent logout behavior. Builds with the session extension statically linked, including the official static binaries and Docker images, are not affected. This issue is fixed in version 1.12.5.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-82416\n2. 26.10.14 오전2:17\n3. FrankenPHP is a modern application server for PHP.",
+      "cve_id": "CVE-2026-82416",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82416",
+      "source": "cvefeed",
+      "published": "2026-10-14T02:17:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-55675 - Salty documentation workflow executes fork-controlled Python build hooks with deployment secrets",
       "summary": "CVE ID :CVE-2026-55675\n  \nPublished : Oct. 13, 2026, 4:17 p.m. | 19 minutes ago\n  \nDescription :The Salty documentation repository builds and deploys the docs.saltbox.dev website. Prior to commit 649c9aea2daef1168eeb0415b44e65dbbde9f220, .github/workflows/trigger-pr-build.yml records an untrusted fork commit in the pr_info artifact, and the secret-bearing workflow_run job in .github/workflows/build-pr.yml checks out that commit before running pip install -r requirements.txt. A fork pull request can therefore supply attacker-authored setup.py or PEP 517 build hooks whose installation code executes in the privileged base-repository workflow with CF_API_TOKEN, GH_TOKEN, MKDOCS_GIT_COMMITTERS_APIKEY, and a write-capable GITHUB_TOKEN, allowing secret disclosure and follow-on compromise. The vulnerability is not caused by the repository-fork guard, and the demonstrated path requires attacker control of fork content rather than merely the artifact metadata. This vulnerability is fixed with commit 649c9aea2daef1168eeb0415b44e65dbbde9f220.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
