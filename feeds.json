@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-14T02:32:31.767666+09:00",
+  "fetched_at": "2026-10-14T03:02:30.616988+09:00",
   "security_news": [
     {
       "title": "프랑스 \"냉장고 해킹 피해 슈퍼 700곳…식량안보 건드렸다\"",
@@ -5775,6 +5775,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-55675 - Salty documentation workflow executes fork-controlled Python build hooks with deployment secrets",
+      "summary": "CVE ID :CVE-2026-55675\n  \nPublished : Oct. 13, 2026, 4:17 p.m. | 19 minutes ago\n  \nDescription :The Salty documentation repository builds and deploys the docs.saltbox.dev website. Prior to commit 649c9aea2daef1168eeb0415b44e65dbbde9f220, .github/workflows/trigger-pr-build.yml records an untrusted fork commit in the pr_info artifact, and the secret-bearing workflow_run job in .github/workflows/build-pr.yml checks out that commit before running pip install -r requirements.txt. A fork pull request can therefore supply attacker-authored setup.py or PEP 517 build hooks whose installation code executes in the privileged base-repository workflow with CF_API_TOKEN, GH_TOKEN, MKDOCS_GIT_COMMITTERS_APIKEY, and a write-capable GITHUB_TOKEN, allowing secret disclosure and follow-on compromise. The vulnerability is not caused by the repository-fork guard, and the demonstrated path requires attacker control of fork content rather than merely the artifact metadata. This vulnerability is fixed with commit 649c9aea2daef1168eeb0415b44e65dbbde9f220.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55675\n  \nPublished : Oct. 13, 2026, 4:17 p.m. | 19 minutes ago\n  \nDescription :The Salty documentation repository builds and deploys the docs.saltbox.dev website. Prior to commit 649c9aea2daef1168eeb0415b44e65dbbde9f220, .github/workflows/trigger-pr-build.yml records an untrusted fork commit in the pr_info artifact, and the secret-bearing workflow_run job in .github/workflows/build-pr.yml checks out that commit before running pip install -r requirements.txt. A fork pull request can therefore supply attacker-authored setup.py or PEP 517 build hooks whose installation code executes in the privileged base-repository workflow with CF_API_TOKEN, GH_TOKEN, MKDOCS_GIT_COMMITTERS_APIKEY, and a write-capable GITHUB_TOKEN, allowing secret disclosure and follow-on compromise. The vulnerability is not caused by the repository-fork guard, and the demonstrated path requires attacker control of fork content rather than merely the artifact metadata. This vulnerability is fixed with commit 649c9aea2daef1168eeb0415b44e65dbbde9f220.\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-55675\n2. 26.10.14 오전1:17\n3. The Salty documentation repository builds and depl",
+      "cve_id": "CVE-2026-55675",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55675",
+      "source": "cvefeed",
+      "published": "2026-10-14T01:17:21+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-54697 - ConnectBot SSH: Excessive allocation and integer overflow in DER private-key parsing",
       "summary": "CVE ID :CVE-2026-54697\n  \nPublished : Oct. 13, 2026, 3:54 p.m. | 7 minutes ago\n  \nDescription :ConnectBot SSH Client Library is written in Kotlin with Kaitai Struct and KStateMachine. Prior to 0.3.1, DerReader.readLength() accepts excessive long-form DER length octets, accumulates them into an Int, and primitive readers allocate arrays without checking the declared size against the remaining input. An application or user that loads an attacker-provided private-key file through SshClient.authenticatePublicKey(), SshKeys.decodePemPrivateKey(), SshSigning.sign(), or SshSigning.getPublicKey() can trigger integer wraparound, excessive allocation, or an uncaught OutOfMemoryError. SSH server host keys and agent-forwarding messages do not use this application-supplied private-key input path. No usable weakened key and no confidentiality or integrity impact have been demonstrated. This issue is fixed in version 0.3.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
