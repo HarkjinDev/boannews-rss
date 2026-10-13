@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-14T02:02:37.242883+09:00",
+  "fetched_at": "2026-10-14T02:32:31.767666+09:00",
   "security_news": [
+    {
+      "title": "프랑스 \"냉장고 해킹 피해 슈퍼 700곳…식량안보 건드렸다\"",
+      "summary": "관련된 냉장시스템 관리 업체 중 하나인 덴마크 단포스는 전날 영향받은 제품이 더는 소프트웨어 및 보안 업데이트가 되지 않는 구형이라고 설명했다. 기본적인 보안상 취약점을 노렸을 가능성이 있는 셈이다. 통상 해킹...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 프랑스 슈퍼마켓 700곳 냉장 시스템 해킹 피해 발생\n2. 구형 소프트웨어 취약점 노린 해킹…식량 안보 위협\n3. 덴마크 단포스, 업데이트 안 되는 구형 제품 문제 지적",
+      "link": "https://n.news.naver.com/mnews/article/001/0016374656?sid=104",
+      "source": "naver",
+      "published": "2026-10-14T02:14:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Ivanti warns of Connect Secure zero-day exploited in attacks",
       "summary": "Ivanti urged customers on Tuesday to immediately patch an actively exploited zero-day vulnerability in the Ivanti Connect Secure (ICS) remote access gateway. [...]",
@@ -5791,6 +5803,36 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-102702",
       "source": "cvefeed",
       "published": "2026-10-14T00:45:13+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-102988 - Plane: ORM Field Injection via Unvalidated `order_by` Parameter (Including Unauthenticated Path)",
+      "summary": "CVE ID :CVE-2026-102988\n  \nPublished : 13 de Outubro de 2026 às 15:30 | 25 minutos ago\n  \nDescription :Plane is an open-source project management tool. Prior to 1.4.0, multiple issue-listing endpoints, including unauthenticated public deploy boards handled by IssueListSpaceEndpoint in apps/api/plane/space/views/issue.py, pass the user-controlled order_by parameter through order_issue_queryset in apps/api/plane/utils/order_queryset.py to Django's order_by without allowlist validation. An attacker can use double-underscore relationship traversal to reference arbitrary related model fields, revealing database schema details through errors and potentially disclosing field values through differential ordering. This issue is fixed in version 1.4.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-102988\n  \nPublished : 13 de Outubro de 2026 às 15:30 | 25 minutos ago\n  \nDescription :Plane is an open-source project management tool. Prior to 1.4.0, multiple issue-listing endpoints, including unauthenticated public deploy boards handled by IssueListSpaceEndpoint in apps/api/plane/space/views/issue.py, pass the user-controlled order_by parameter through order_issue_queryset in apps/api/plane/utils/order_queryset.py to Django's order_by without allowlist validation. An attacker can use double-underscore relationship traversal to reference arbitrary related model fields, revealing database schema details through errors and potentially disclosing field values through differential ordering. This issue is fixed in version 1.4.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102988\n2. 26.10.14 오전12:30\n3. Plane is an open-source project management tool. P",
+      "cve_id": "CVE-2026-102988",
+      "cvss": "0.0",
+      "severity": "Low",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102988",
+      "source": "cvefeed",
+      "published": "2026-10-14T00:30:42+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-96299 - MongoDB Nested `$_internalSchemaAllElemMatchFromIndex` Cross-Product MatchExpression OOM",
+      "summary": "CVE ID :CVE-2026-96299\n  \nPublished : 13 de Outubro de 2026 às 15:27 | 28 minutos ago\n  \nDescription :Missing limits on resource use in the match expression evaluator of MongoDB Server can cause the server to consume excessive memory. Internal schema validation operators that are meant only for server use are accepted in user-supplied query filters. When these operators are nested and applied to documents that contain arrays, the server evaluates every combination of array elements without a sufficient limit on the resources used. This can cause memory use to grow until the mongod process runs out of memory and terminates. The behavior can occur when an authenticated user with read-only privileges runs an aggregation query that nests these operators.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-96299\n  \nPublished : 13 de Outubro de 2026 às 15:27 | 28 minutos ago\n  \nDescription :Missing limits on resource use in the match expression evaluator of MongoDB Server can cause the server to consume excessive memory. Internal schema validation operators that are meant only for server use are accepted in user-supplied query filters. When these operators are nested and applied to documents that contain arrays, the server evaluates every combination of array elements without a sufficient limit on the resources used. This can cause memory use to grow until the mongod process runs out of memory and terminates. The behavior can occur when an authenticated user with read-only privileges runs an aggregation query that nests these operators.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-96299\n2. 26.10.14 오전12:27\n3. Missing limits on resource use in the match expres",
+      "cve_id": "CVE-2026-96299",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-96299",
+      "source": "cvefeed",
+      "published": "2026-10-14T00:27:57+09:00",
       "lang": "en"
     },
     {
