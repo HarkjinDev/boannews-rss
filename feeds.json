@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-10-14T04:02:38.883530+09:00",
+  "fetched_at": "2026-10-14T04:32:31.201419+09:00",
   "security_news": [
+    {
+      "title": "미국, 북한 IT 노동자 거점망 해체…노트북 등 장비 187대 압수",
+      "summary": "법원 신청서에 따르면, 미국의 한 주요 사이버보안 기업은 이 위협 그룹을 페이머스 천리마(Famous Chollima)라고 명명했습니다. 검찰은 이날 보도자료에서 이번 작전이 북한의 대량살상무기와 탄도미사일, 정보 및 핵...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 미국, 북한 IT 노동자 거점망 해체…노트북 등 장비 187대 압수 법원 신청서에 따르면,\n2. 검찰은 이날 보도자료에서 이번 작전이 북한의 대량살상무기와 탄도미사일, 정보 및 핵...",
+      "link": "https://www.voakorea.com/a/us-dismantles-north-korean-it-worker-network-101326/8210885.html",
+      "source": "naver",
+      "published": "2026-10-14T04:03:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "피싱 범죄 책임 금융사에 전가…무과실 배상책임 논란",
+      "summary": "최근 주요 금융사 7곳에서 해킹으로 인한 개인정보 유출 사고가 연달아 터지면서 유출된 정보가 보이스피싱이나 스미싱 등 2차 범죄로 이어질 위험성도 제기된다. 보안업계는 연소득과 대출 정보 등 민감한 개인정보가...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 피싱 범죄 책임 금융사에 전가…무과실 배상책임 논란 최근 주요 금융사 7곳에서 해킹으로 인\n2. 보안업계는 연소득과 대출 정보 등 민감한 개인정보가...",
+      "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=322102",
+      "source": "naver",
+      "published": "2026-10-14T04:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "佛 마트 황당한 사이버 공격… 해커들, 찜통 냉장고 만들었다",
+      "summary": "IoT(사물인터넷) 기기가 늘어나는 가운데 AI(인공지능) 모델 개발사인 앤트로픽은 \"AI모델이 보안이 취약한... 프랑스 사이버보안청은 덴마크 기업 댄포스가 공급한 소프트웨어에서 보안취약점이 확인됐다고 밝혔다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 佛 마트 황당한 사이버 공격… 해커들, 찜통 냉장고 만들었다 IoT(사물인터넷) 기기가 늘\n2. 프랑스 사이버보안청은 덴마크 기업 댄포스가 공급한 소프트웨어에서 보안취약점이 확인됐다고 밝",
+      "link": "https://n.news.naver.com/mnews/article/008/0005425870?sid=104",
+      "source": "naver",
+      "published": "2026-10-14T04:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Ivanti Zero-Day Chain Gave Attackers Root Access to Fully Patched VPN",
       "summary": "CVE-2026-104935 affects Ivanti Connect Secure and it can be exploited for unauthenticated remote code execution with elevated privileges. \nThe post Ivanti Zero-Day Chain Gave Attackers Root Access to Fully Patched VPN appeared first on SecurityWeek.",
@@ -5775,6 +5811,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th)",
+      "summary": "Microsoft today released patches for 1,417 vulnerabilities. 76 of these vulnerabilities are rated critical, with 7 critical vulnerabiilties requiring no customer actions. One vulnerability was disclosed before today&#;x26;#;39;s patch Tuesday, and one is already exploited.\r",
+      "description": "Microsoft today released patches for 1,417 vulnerabilities. 76 of these vulnerabilities are rated critical, with 7 critical vulnerabiilties requiring no customer actions. One vulnerability was disclosed before today&#;x26;#;39;s patch Tuesday, and one is already exploited.\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. October 2026 Microsoft Patch Tuesday, (Tue, Oct 13\n2. SANS_ISC\n3. Microsoft today released patches for 1,417 vulnera",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33422",
+      "source": "sans_isc",
+      "published": "2026-10-14T04:25:52+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-82416 - FrankenPHP: Cross-request PHP session ID leak in worker mode when the session extension is a shared module",
       "summary": "CVE ID :CVE-2026-82416\n  \nPublished : Oct. 13, 2026, 5:17 p.m. | 28 minutes ago\n  \nDescription :FrankenPHP is a modern application server for PHP. Prior to 1.12.5, FrankenPHP worker mode can retain PHP session state between requests when the session extension is loaded as a shared module and is unavailable through HAVE_PHP_SESSION at compile time. In this build configuration, frankenphp_reset_session_state() is compiled out, PS(id) can survive a request boundary, and a subsequent session_start() can ignore the new request's cookie because an identifier is already present. Under concurrent requests, session_id() can therefore return another client's identifier or a stale identifier from a previous request on the same worker thread, causing cross-user session exposure, possible session hijacking, and intermittent logout behavior. Builds with the session extension statically linked, including the official static binaries and Docker images, are not affected. This issue is fixed in version 1.12.5.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
