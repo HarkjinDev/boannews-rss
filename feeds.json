@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-14T00:32:59.103313+09:00",
+  "fetched_at": "2026-10-14T01:02:48.137508+09:00",
   "security_news": [
+    {
+      "title": "Ivanti warns of Connect Secure zero-day exploited in attacks",
+      "summary": "Ivanti urged customers on Tuesday to immediately patch an actively exploited zero-day vulnerability in the Ivanti Connect Secure (ICS) remote access gateway. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Ivanti warns of Connect Secure zero-day exploited ",
+      "link": "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-connect-secure-zero-day-exploited-in-attacks/",
+      "source": "bleepingcomputer",
+      "published": "2026-10-14T00:45:50+09:00",
+      "lang": "en"
+    },
     {
       "title": "Docker Hub flaw let attackers impersonate users, tamper with images",
       "summary": "Docker has disclosed a critical vulnerability (CVE-2026-105445) in Docker Hub that let attackers access another user's container repositories using a personal access token (PAT). [...]",
@@ -5751,6 +5763,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54697 - ConnectBot SSH: Excessive allocation and integer overflow in DER private-key parsing",
+      "summary": "CVE ID :CVE-2026-54697\n  \nPublished : Oct. 13, 2026, 3:54 p.m. | 7 minutes ago\n  \nDescription :ConnectBot SSH Client Library is written in Kotlin with Kaitai Struct and KStateMachine. Prior to 0.3.1, DerReader.readLength() accepts excessive long-form DER length octets, accumulates them into an Int, and primitive readers allocate arrays without checking the declared size against the remaining input. An application or user that loads an attacker-provided private-key file through SshClient.authenticatePublicKey(), SshKeys.decodePemPrivateKey(), SshSigning.sign(), or SshSigning.getPublicKey() can trigger integer wraparound, excessive allocation, or an uncaught OutOfMemoryError. SSH server host keys and agent-forwarding messages do not use this application-supplied private-key input path. No usable weakened key and no confidentiality or integrity impact have been demonstrated. This issue is fixed in version 0.3.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54697\n  \nPublished : Oct. 13, 2026, 3:54 p.m. | 7 minutes ago\n  \nDescription :ConnectBot SSH Client Library is written in Kotlin with Kaitai Struct and KStateMachine. Prior to 0.3.1, DerReader.readLength() accepts excessive long-form DER length octets, accumulates them into an Int, and primitive readers allocate arrays without checking the declared size against the remaining input. An application or user that loads an attacker-provided private-key file through SshClient.authenticatePublicKey(), SshKeys.decodePemPrivateKey(), SshSigning.sign(), or SshSigning.getPublicKey() can trigger integer wraparound, excessive allocation, or an uncaught OutOfMemoryError. SSH server host keys and agent-forwarding messages do not use this application-supplied private-key input path. No usable weakened key and no confidentiality or integrity impact have been demonstrated. This issue is fixed in version 0.3.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-54697\n2. 26.10.14 오전12:54\n3. ConnectBot SSH Client Library is written in Kotlin",
+      "cve_id": "CVE-2026-54697",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54697",
+      "source": "cvefeed",
+      "published": "2026-10-14T00:54:48+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-102702 - Arm: multiple issues with GNTTABOP_cache_flush",
+      "summary": "CVE ID :CVE-2026-102702\n  \nPublished : Oct. 13, 2026, 3:45 p.m. | 16 minutes ago\n  \nDescription :[This CNA information record relates to multiple CVEs; the\ntext explains which aspects/vulnerabilities correspond to which CVE.]\n\n1) XSA-437 (CVE-2023-34321) addressed issues with overflows in\n   calculations involved in guests flushing caches through\n   GNTTABOP_cache_flush.  Unfortunately the fix there introduced a\n   calculation which may underflow, resulting in a loop which would - at\n   least on 64-bit Arm - take excessively long, and which would likely\n   eventually crash the hypervisor.\n\n   This is CVE-2026-102699.\n\n2) GNTTABOP_cache_flush may be issued on memory mapped from another\n   domain using the grant table interface.  However there was no\n   restriction to disallow the use of invalidate-without-clean against\n   read-only grant mappings, which may corrupt the granted memory.\n\n   This is CVE-2026-102702.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-102702\n  \nPublished : Oct. 13, 2026, 3:45 p.m. | 16 minutes ago\n  \nDescription :[This CNA information record relates to multiple CVEs; the\ntext explains which aspects/vulnerabilities correspond to which CVE.]\n\n1) XSA-437 (CVE-2023-34321) addressed issues with overflows in\n   calculations involved in guests flushing caches through\n   GNTTABOP_cache_flush.  Unfortunately the fix there introduced a\n   calculation which may underflow, resulting in a loop which would - at\n   least on 64-bit Arm - take excessively long, and which would likely\n   eventually crash the hypervisor.\n\n   This is CVE-2026-102699.\n\n2) GNTTABOP_cache_flush may be issued on memory mapped from another\n   domain using the grant table interface.  However there was no\n   restriction to disallow the use of invalidate-without-clean against\n   read-only grant mappings, which may corrupt the granted memory.\n\n   This is CVE-2026-102702.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102702\n2. 26.10.14 오전12:45\n3. [This CNA information record relates to multiple C",
+      "cve_id": "CVE-2026-102702",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102702",
+      "source": "cvefeed",
+      "published": "2026-10-14T00:45:13+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-65200 - Huawei malicious on-bus PLDM or NCSI device can drive out-of-bounds-heap reads via short MCTP responses",
       "summary": "CVE ID :CVE-2026-65200\n  \nPublished : Oct. 13, 2026, 3:17 p.m. | 15 minutes ago\n  \nDescription :The openUBMC device-management process parses PLDM-over-MCTP and NCSI-over-MCTP responses from on-bus devices, and three response parsers in the shared transport libraries subtract a fixed header or reserved-field size from a device-supplied response length without a lower-bound check. An undersized response wraps the unsigned length difference to a very large value, and the parser then reads far past the response buffer. The affected code sits in the base (non-vendor) PLDM control class and the Huawei NCSI driver, so it is reachable for any PLDM endpoint or Huawei NIC on the internal management bus, unlike the vendor-specific wangxun parser tracked separately.\n  \nSeverity: 3.5 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
