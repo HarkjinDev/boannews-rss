@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-15T03:32:33.810993+09:00",
+  "fetched_at": "2026-10-15T04:02:50.773037+09:00",
   "security_news": [
+    {
+      "title": "AI 공격에 역할커진 금융보안원… \"예산 늘려 규모 키워야\" 목소리",
+      "summary": "금융권을 겨냥한 AI(인공지능) 사이버공격이 현실화한 가운데 법상 통합보안 관제센터이자 침해사고 대응기관인 금융보안원의 규모를 키워야 한다는 지적이 나온다. 특히 AI 해킹으로 취약점이 이전보다 쉽게 노출되면서...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융권 AI 사이버 공격 현실화, 금융보안원 역할 증대\n2. AI 해킹, 취약점 노출 용이성 증대\n3. 금융보안원 규모 확대 및 예산 증액 필요",
+      "link": "https://n.news.naver.com/mnews/article/008/0005426477?sid=101",
+      "source": "naver",
+      "published": "2026-10-15T03:52:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "애플워치 차고 집 가까워지면, AI가 난방 켜준다",
       "summary": "LG 역시 보안 솔루션 ‘LG 쉴드’를 적용해 해킹이나 데이터 유출 가능성을 줄였다고 설명했다. ● LG전자, 애플 생태계 발판 삼아 스마트홈 시장으로 외연 확장 사실 애플에 스마트홈 기기는 ‘아픈 손가락’이다. 앞서...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-10-12T07:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[천지일보 이슈종합] 국정감사 2주 차·개인정보 100만명 유출·李대통령...",
-      "summary": "◆\"금융권부터 공기업·교회까지\" 해킹에 개인정보 100만건 노출(종합)☞ 개인정보 유출 사고가 금융권과 공기업, 대학, 대형 교회 등 전방위적으로 번지고 있다. 대출 신청 관련 개인정보부터 공기업 직원 연락처, 대학...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융권·공기업·대학·교회 등 100만 건 개인정보 유출\n2. 대출 정보, 공기업 직원 연락처 등 대규모 유출 발생\n3. 전방위적 확산으로 피해 우려, 국정감사에서도 논의",
-      "link": "https://www.newscj.com/news/articleView.html?idxno=3439428",
-      "source": "naver",
-      "published": "2026-10-12T07:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6016,6 +6016,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-103414",
       "source": "cvefeed",
       "published": "2026-10-15T02:32:12+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-75085 - Out-of-bounds read from received-frame length underflow in the STM32WBA IEEE 802.15.4 driver",
+      "summary": "CVE ID :CVE-2026-75085\n  \nPublished : Oct. 14, 2026, 5:19 p.m. | 17 minutes ago\n  \nDescription :The STM32WBA IEEE 802.15.4 driver in drivers/ieee802154/ieee802154_stm32wba.c computed the packet length of a received frame as pkt_len = rx_frame->length - IEEE802154_FCS_LENGTH without first checking that the radio-reported length could hold an FCS. pkt_len is a uint8_t, so a reported length of 0 or 1 wrapped to 254 or 255. The only bound on the resulting value was __ASSERT_NO_MSG(pkt_len <= CONFIG_NET_BUF_DATA_SIZE), which compiles to nothing in the default production configuration (CONFIG_ASSERT=n).\n\nThe length originates in the ST link-layer receive-done metadata (p_metadata->length, stored by stm32wba_802154_receive_done()), and ultimately in the PHY header of a frame received over the air, so it is influenced by any attacker within radio range of the device. Reaching the underflow requires the vendor link layer to surface a frame shorter than the FCS with no error; the driver performed no validation of its own on that value.\n\nWhen the underflow occurs, stm32wba_802154_rx_thread() calls net_pkt_write(pkt, rx_frame->psdu, pkt_len) with a length of about 254 bytes against a receive buffer that holds at most one PHY packet (IEEE802154_MAX_PHY_PACKET_SIZE, 127 bytes). This reads roughly 128 bytes past the end of the radio receive buffer and copies that adjacent memory into a network packet that is submitted to the networking stack, giving an out-of-bounds read with a potential disclosure of adjacent RAM plus needless oversized packet allocation in the RX thread.\n\nThe fix rejects a frame whose reported length is smaller than IEEE802154_FCS_LENGTH before the subtraction, and replaces the compiled-out assertion with a runtime length check that drops oversized frames — matching the runtime check already present in drivers/ieee802154/ieee802154_nrf5.c.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-75085\n  \nPublished : Oct. 14, 2026, 5:19 p.m. | 17 minutes ago\n  \nDescription :The STM32WBA IEEE 802.15.4 driver in drivers/ieee802154/ieee802154_stm32wba.c computed the packet length of a received frame as pkt_len = rx_frame->length - IEEE802154_FCS_LENGTH without first checking that the radio-reported length could hold an FCS. pkt_len is a uint8_t, so a reported length of 0 or 1 wrapped to 254 or 255. The only bound on the resulting value was __ASSERT_NO_MSG(pkt_len <= CONFIG_NET_BUF_DATA_SIZE), which compiles to nothing in the default production configuration (CONFIG_ASSERT=n).\n\nThe length originates in the ST link-layer receive-done metadata (p_metadata->length, stored by stm32wba_802154_receive_done()), and ultimately in the PHY header of a frame received over the air, so it is influenced by any attacker within radio range of the device. Reaching the underflow requires the vendor link layer to surface a frame shorter than the FCS with no error; the driver performed no validation of its own on that value.\n\nWhen the underflow occurs, stm32wba_802154_rx_thread() calls net_pkt_write(pkt, rx_frame->psdu, pkt_len) with a length of about 254 bytes against a receive buffer that holds at most one PHY packet (IEEE802154_MAX_PHY_PACKET_SIZE, 127 bytes). This reads roughly 128 bytes past the end of the radio receive buffer and copies that adjacent memory into a network packet that is submitted to the networking stack, giving an out-of-bounds read with a potential disclosure of adjacent RAM plus needless oversized packet allocation in the RX thread.\n\nThe fix rejects a frame whose reported length is smaller than IEEE802154_FCS_LENGTH before the subtraction, and replaces the compiled-out assertion with a runtime length check that drops oversized frames — matching the runtime check already present in drivers/ieee802154/ieee802154_nrf5.c.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-75085\n2. 26.10.15 오전2:19\n3. The STM32WBA IEEE 802.15.4 driver in drivers/ieee8",
+      "cve_id": "CVE-2026-75085",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75085",
+      "source": "cvefeed",
+      "published": "2026-10-15T02:19:10+09:00",
       "lang": "en"
     },
     {
