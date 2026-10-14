@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-15T06:33:43.016758+09:00",
+  "fetched_at": "2026-10-15T07:03:25.150420+09:00",
   "security_news": [
+    {
+      "title": "中 텐센트 클라우드서 AI에이전트들 일탈…알리바바 지도 보안 우회",
+      "summary": "연구진은 에이전트들이 다른 시스템까지 침입한 정황은 없으며, 앞서 오픈AI 에이전트들의 허깅페이스 해킹 사건보다 규모가 훨씬 작다고 NYT에 설명했다. 당시엔 사이버보안 평가 중이던 오픈AI 에이전트 약 1200개가...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 中 텐센트 클라우드서 AI에이전트들 일탈…알리바바 지도 보안 우회 연구진은 에이전트들이 다\n2. 당시엔 사이버보안 평가 중이던 오픈AI 에이전트 약 1200개가...",
+      "link": "https://n.news.naver.com/mnews/article/029/0003053212?sid=105",
+      "source": "naver",
+      "published": "2026-10-15T06:45:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "해킹 공포 확산하는데⋯전통 제약사 3곳 보안 내부 전담인력 ‘0명’",
       "summary": "최근 금융권을 비롯한 산업계 전반에서 해킹 사고가 잇따르면서 외부업체를 통한 보안 관리 문제도 부각되는 가운데, 제약·바이오 업계도 정보유출 위험에서 안전하지 않다는 우려가 나온다. 특히 기업 내부에 보안...",
@@ -12,6 +24,18 @@
       "source": "naver",
       "published": "2026-10-15T06:22:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Ivanti ICS Zero-Day Attacks Highlight Vendor Patching Hurdles",
+      "summary": "CVE-2026-104935, a high-severity authentication bypass + RCE vulnerability, was only partially discovered and patched in July, leaving an opening for threat actors to capitalize on.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Ivanti ICS Zero-Day Attacks Highlight Vendor Patch",
+      "link": "https://www.darkreading.com/vulnerabilities-threats/ivanti-ics-zero-day-attacks-vendor-patching",
+      "source": "darkreading",
+      "published": "2026-10-15T06:20:13+09:00",
+      "lang": "en"
     },
     {
       "title": "AI 해킹에 망분리 완화 ‘속도’…“일부 열고 적절히 통제해야”",
@@ -5976,33 +6000,24 @@
       "source": "naver",
       "published": "2026-10-12T09:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"기업은행에 뭐가 있기에...\" 4개 국책은행에 대한 해킹의 92%가 기업은...",
-      "summary": "다만 최근 시중은행의 정보 유출 사고 배경에 AI(인공지능)를 활용한 고도화된 해킹 방식이 원인이 되고 있다는 진단에 따라 국책은행도 피해 예방을 위해 정보보안 시스템 강화가 시급하다는 지적이다. 강민국...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. \"기업은행에 뭐가 있기에...\" 4개 국책은행에 대한 해킹의 92%가 기업은...\n2. 다만 최근 시중은행의 정보 유출 사고 배경에 AI(인공지능)를 활용한 고도화된 해킹 방식이",
-      "link": "https://www.dailybrief.co.kr/news/articleView.html?idxno=6951",
-      "source": "naver",
-      "published": "2026-10-12T08:57:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "사고 때마다 몸값 뛰는 금융권 보안책임자…CISO 선임도 이사회 손에",
-      "summary": "금융권에서 해킹에 따른 정보유출 사고가 잇따르면서 정보보호최고책임자(CISO)의 독립성을 강화하는 입법에 힘이 실리고 있다. 대형 사고 때마다 전담 조직과 인력을 확충해 온 금융권의 정보보호 체계가 다시 한번...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 사고 때마다 몸값 뛰는 금융권 보안책임자…CISO 선임도 이사회 손에 금융권에서 해킹에 따\n2. 대형 사고 때마다 전담 조직과 인력을 확충해 온 금융권의 정보보호 체계가 다시 한번...",
-      "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4438620",
-      "source": "naver",
-      "published": "2026-10-12T08:56:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-104107 - FileRise: Authenticated path traversal escapes configured storage root through inherited ACLs",
+      "summary": "CVE ID :CVE-2026-104107\n  \nPublished : Oct. 14, 2026, 9:17 p.m. | 20 minutes ago\n  \nDescription :FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. In FileRise 3.22.0, the /api/file/saveFile.php operation accepts dot and dot-dot segments in its attacker-controlled folder input before ACL inheritance evaluates the uncanonicalized string. With an authenticated non-administrator session, a valid CSRF token, and inherited edit permission on a legitimate ancestor, the local filesystem or WebDAV adapter later resolves those segments as path navigation, permitting attacker-controlled file creation outside the authorized folder and, where backend credentials permit, outside the configured WebDAV root. Local storage also created directories before final containment validation and used a prefix comparison that accepted similarly named sibling roots. This issue is fixed in version 3.23.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-104107\n  \nPublished : Oct. 14, 2026, 9:17 p.m. | 20 minutes ago\n  \nDescription :FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. In FileRise 3.22.0, the /api/file/saveFile.php operation accepts dot and dot-dot segments in its attacker-controlled folder input before ACL inheritance evaluates the uncanonicalized string. With an authenticated non-administrator session, a valid CSRF token, and inherited edit permission on a legitimate ancestor, the local filesystem or WebDAV adapter later resolves those segments as path navigation, permitting attacker-controlled file creation outside the authorized folder and, where backend credentials permit, outside the configured WebDAV root. Local storage also created directories before final containment validation and used a prefix comparison that accepted similarly named sibling roots. This issue is fixed in version 3.23.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-104107\n2. 26.10.15 오전6:17\n3. FileRise is a self-hosted web-based file manager w",
+      "cve_id": "CVE-2026-104107",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104107",
+      "source": "cvefeed",
+      "published": "2026-10-15T06:17:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-103414 - GUIX Binary Resource Loader Heap-based Buffer Overflow",
       "summary": "CVE ID :CVE-2026-103414\n  \nPublished : Oct. 14, 2026, 5:32 p.m. | 14 minutes ago\n  \nDescription :The GUIX binary resource (theme) loader sizes its arena and populates it in two separate passes that traverse the resource file with independent cursor arithmetic. Because `gx_page_header_data_size` is never validated against the glyph data a page actually contains, the two passes can read different page headers for the same font page, derive different glyph counts, and reserve less than the load pass writes. The excess is written past the end of the arena, with content taken verbatim from the file.\n\n\n\nThe overflowed buffer is allocated by GUIX itself, through `_gx_system_memory_allocator`, rather than supplied by the caller. The public API `gx_binres_theme_load()` takes no size parameter, so no amount of caller diligence prevents this.\n\n\n\nReproduces in the shipped default configuration; `GX_BINARY_RESOURCE_SUPPORT` is enabled by default.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
