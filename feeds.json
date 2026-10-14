@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-15T01:32:25.657185+09:00",
+  "fetched_at": "2026-10-15T02:02:37.292389+09:00",
   "security_news": [
     {
       "title": "애플워치 차고 집 가까워지면, AI가 난방 켜준다",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-77572 - VeraCrypt: Missing authorization on veracrypt.sys IOCTLs exposes disk topology, symlink targets, and DeviceObject reference count to any client of \\\\.\\VeraCrypt",
+      "summary": "CVE ID :CVE-2026-77572\n  \nPublished : Oct. 14, 2026, 3:26 p.m. | 19 minutes ago\n  \nDescription :VeraCrypt provides disk encryption with strong security based on TrueCrypt. In 1.26.29 and earlier, selected metadata IOCTL handlers in the VeraCrypt Windows veracrypt.sys driver accept caller-supplied object-manager and device paths broader than supported VeraCrypt workflows require. A local user who can open the intentionally user-accessible \\.\\VeraCrypt device can use TC_IOCTL_GET_RESOLVED_SYMLINK, TC_IOCTL_GET_DRIVE_PARTITION_INFO, VC_IOCTL_GET_DRIVE_GEOMETRY_EX, or the legacy TC_IOCTL_GET_DRIVE_GEOMETRY handler to make src/Driver/Ntdriver.c perform kernel-context symbolic-link or disk-device lookups outside the intended path scope. This can disclose low-sensitivity drive-letter targets, partition information, disk geometry, GPT or MBR state, and limited object-manager path metadata.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-77572\n  \nPublished : Oct. 14, 2026, 3:26 p.m. | 19 minutes ago\n  \nDescription :VeraCrypt provides disk encryption with strong security based on TrueCrypt. In 1.26.29 and earlier, selected metadata IOCTL handlers in the VeraCrypt Windows veracrypt.sys driver accept caller-supplied object-manager and device paths broader than supported VeraCrypt workflows require. A local user who can open the intentionally user-accessible \\.\\VeraCrypt device can use TC_IOCTL_GET_RESOLVED_SYMLINK, TC_IOCTL_GET_DRIVE_PARTITION_INFO, VC_IOCTL_GET_DRIVE_GEOMETRY_EX, or the legacy TC_IOCTL_GET_DRIVE_GEOMETRY handler to make src/Driver/Ntdriver.c perform kernel-context symbolic-link or disk-device lookups outside the intended path scope. This can disclose low-sensitivity drive-letter targets, partition information, disk geometry, GPT or MBR state, and limited object-manager path metadata.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-77572\n2. 26.10.15 오전12:26\n3. VeraCrypt provides disk encryption with strong sec",
+      "cve_id": "CVE-2026-77572",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77572",
+      "source": "cvefeed",
+      "published": "2026-10-15T00:26:31+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-83943 Azure API Center Information Disclosure Vulnerability",
       "summary": "CWE added. Informational change only.",
