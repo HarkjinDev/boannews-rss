@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-14T20:33:29.280074+09:00",
+  "fetched_at": "2026-10-14T21:03:05.251019+09:00",
   "security_news": [
+    {
+      "title": "\"사이버보안 중요하다더니\"…KISA 인력 증원 요청 반영률 고작 5%",
+      "summary": "정부가 잇따른 대형 해킹 사고를 계기로 사이버보안 강화를 강조하고 있지만 정작 사이버 침해사고... 김장겸 의원은 \"정부는 대형 해킹 사고가 터질 때마다 사이버보안 강화와 대응체계 혁신을 외치지만, 증원은...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KISA, 인력 증원 요청 반영률 5%로 저조\n2. 대형 해킹 사고에도 사이버보안 강화 미흡\n3. 정부, 대응체계 혁신 외치나 실질적 조치 부족",
+      "link": "https://n.news.naver.com/mnews/article/119/0003142858?sid=100",
+      "source": "naver",
+      "published": "2026-10-14T20:58:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "유니트리 CEO \"1~2년 내 챗GPT 순간…GPT-7, 로봇 한계 깬다\"",
       "summary": "사이버보안 전문가들은 고성능 AI가 통제를 벗어나 다른 조직을 해킹하는 데 악용될 가능성을 우려하고 있다. 왕싱싱 CEO의 전망대로 향후 1~2년 안에 AI 역량이 크게 발전한다면 로봇 산업에도 상당한 변화가 나타날...",
@@ -5988,21 +6000,54 @@
       "source": "naver",
       "published": "2026-10-12T06:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "중국어로 지시했는데 한국 금융권 공격…어떻게 가능했나",
-      "summary": "금융기관의 보안 취약점을 찾아낼 수 있을까? 최근 국내 금융권 해킹에 사용된 흔적이 확인된 AI 침투테스트 도구 '아르텍스'(ARTEX)는 이런 작업을 기술적으로 가능하게 하는 프로그램입니다. AI가 보안 취약점을 찾는 데...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중국어로 지시했는데 한국 금융권 공격…어떻게 가능했나 금융기관의 보안 취약점을 찾아낼 수 \n2. 최근 국내 금융권 해킹에 사용된 흔적이 확인된 AI 침투테스트 도구 '아르텍스'(ARTEX\n3. AI가 보안 취약점을 찾는 데...",
-      "link": "https://n.news.naver.com/mnews/article/055/0001394633?sid=102",
-      "source": "naver",
-      "published": "2026-10-12T05:59:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-108072 - Insecure Permissions on Shared Startup Scripts Allow Cross-User Code Execution and Potential Privilege Escalation",
+      "summary": "CVE ID :CVE-2026-108072\n  \nPublished : Oct. 14, 2026, 11:17 a.m. | 15 minutes ago\n  \nDescription :Vulnerability due to incorrect permissions in TSplus Remote Access shared login scripts. The autostart1.tscr files, located in the shared themes directory, allow users without sufficient privileges to write to them. A local attacker with a valid session on the terminal or remote desktop server could modify these files to execute arbitrary commands within another user’s security context when that user logs in using the same theme or operating mode. Depending on the affected user’s privileges, exploitation could allow lateral movement between users or privilege escalation.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-108072\n  \nPublished : Oct. 14, 2026, 11:17 a.m. | 15 minutes ago\n  \nDescription :Vulnerability due to incorrect permissions in TSplus Remote Access shared login scripts. The autostart1.tscr files, located in the shared themes directory, allow users without sufficient privileges to write to them. A local attacker with a valid session on the terminal or remote desktop server could modify these files to execute arbitrary commands within another user’s security context when that user logs in using the same theme or operating mode. Depending on the affected user’s privileges, exploitation could allow lateral movement between users or privilege escalation.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-108072\n2. 26.10.14 오후8:17\n3. Vulnerability due to incorrect permissions in TSpl",
+      "cve_id": "CVE-2026-108072",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-108072",
+      "source": "cvefeed",
+      "published": "2026-10-14T20:17:03+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-104795 - Insights-runtime-extractor: insights-runtime-extractor: container escape via privileged binary execution",
+      "summary": "CVE ID :CVE-2026-104795\n  \nPublished : Oct. 14, 2026, 11:16 a.m. | 15 minutes ago\n  \nDescription :The insights-runtime-extractor runs as a privileged DaemonSet (`hostPID: true`)\nthat scans container processes for runtime fingerprinting. When scanning a\ncontainer, the coordinator:\n\n1. **fork()s** a child process\n2. **setns()** into the target container's PID and mount namespaces\n3. **fchdir()** back to an orphaned FD pointing at the extractor's own root\n   filesystem (where `/crio.sock` is hostPath-mounted)\n4. Calls **only `seteuid(target_uid)`** — changing the effective UID but leaving\n   the **real UID and saved-set-UID at 0** and **retaining the permitted\n   capability set**\n5. The `check_no_privileged_perms()` guard inspects only the Effective capability\n   set (so it passes), and is **skipped entirely when the target runs as uid 0**\n6. The `VersionExecutable` fingerprint invokes `fpr_kind_executable` with\n   `process.command_line[0]` — the target's argv[0], read from\n   `/proc//cmdline` and **fully controlled by the workload**\n7. `fpr_kind_executable` calls `exec.Command(executable, \"--version\").Output()`\n   — executing the **workload's own binary** inside the workload's mount\n   namespace while **ruid=0 in the host user namespace**\n\nThe executed process can call `setuid(0)` to restore full root with\n`CAP_SYS_ADMIN`, and inherits the orphaned cwd which resolves into the extractor\ncontainer's filesystem containing the host CRI-O socket.\n\n## Affected Code\n\n### 1. Insufficient privilege drop (Rust — extractor coordinator)\n\n**File:** `extractor/src/insights_runtime_extractor.rs`\n\n```rust\n// Lines 139-146 — seteuid-only drop, guard skipped for root containers\njoin_process_namespaces(process.pid)?;\nchange_dir(current_dir);\nswitch_user(*process.uid)?;\nif *process.uid != 0 {\n    perms::check_no_privileged_perms()\n        .expect(\"Must not have privileged permissions to run fingerprints\");\n}\nfingerprint::run_fingerprints(&config, out_dir, &process);\n```\n\n```rust\n// Lines 182-185 — only effective UID changed; ruid/suid stay 0\nfn switch_user(uid: u32) -> Result<(), ScannerError> {\n    debug!(\"... Becoming user: {uid}\");\n    seteuid(uid.into()).map_err(|e| ScannerError::Errno(e))\n}\n```\n\n### 2. Execution of untrusted binary (Go — fingerprint)\n\n**File:** `fingerprints/pkg/utils/file.go`\n\n```go\n// Lines 75-80 — executes a path taken verbatim from workload's argv[0]\nfunc GetExecutableVersionOutput(executable string) (string, error) {\n    out, err := exec.Command(executable, \"--version\").Output()\n    if err != nil {\n        return \"\", err\n    }\n    return string(out), nil\n}\n```\n\n### 3. Workload-controlled path forwarded (Rust — version_executable)\n\n**File:** `version_executable.rs`\n\n```rust\n// Lines 29-34 — workload-controlled command_line[0] forwarded to fingerprint\nreturn Some(vec![\n    fpr_kind_executable,\n    out_dir.to_string(),\n    String::from(&process.command_line[0]),\n    String::from(&version_executable.runtime_kind_name),\n]);\n```\n\n## Attack Pattern\n\n**Attacker:** Any tenant able to schedule a pod (unprivileged, any namespace)\n**Victim:** The node running the insights-runtime-extractor DaemonSet\n**Trigger:** Automatic — the DaemonSet scans all container processes on the node\n\n**Attack sequence:**\n\n1. Attacker creates a pod whose process name matches a configured\n   versioned-executable pattern (`node`, `python`, `python3`, `MainThread`,\n   or contains `java`)\n2. The pod's main binary (at the path matching argv[0]) is a malicious\n   executable that calls `setuid(0)` to restore root\n3. When the insights operator triggers a scan, the DaemonSet forks, enters the\n   attacker's mount namespace, and executes the attacker's binary with ruid=0\n4. The attacker's code regains full root with `CAP_SYS_ADMIN` in the host user\n   namespace\n5. The inherited cwd contains the host CRI-O socket → full node compromise\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-104795\n  \nPublished : Oct. 14, 2026, 11:16 a.m. | 15 minutes ago\n  \nDescription :The insights-runtime-extractor runs as a privileged DaemonSet (`hostPID: true`)\nthat scans container processes for runtime fingerprinting. When scanning a\ncontainer, the coordinator:\n\n1. **fork()s** a child process\n2. **setns()** into the target container's PID and mount namespaces\n3. **fchdir()** back to an orphaned FD pointing at the extractor's own root\n   filesystem (where `/crio.sock` is hostPath-mounted)\n4. Calls **only `seteuid(target_uid)`** — changing the effective UID but leaving\n   the **real UID and saved-set-UID at 0** and **retaining the permitted\n   capability set**\n5. The `check_no_privileged_perms()` guard inspects only the Effective capability\n   set (so it passes), and is **skipped entirely when the target runs as uid 0**\n6. The `VersionExecutable` fingerprint invokes `fpr_kind_executable` with\n   `process.command_line[0]` — the target's argv[0], read from\n   `/proc//cmdline` and **fully controlled by the workload**\n7. `fpr_kind_executable` calls `exec.Command(executable, \"--version\").Output()`\n   — executing the **workload's own binary** inside the workload's mount\n   namespace while **ruid=0 in the host user namespace**\n\nThe executed process can call `setuid(0)` to restore full root with\n`CAP_SYS_ADMIN`, and inherits the orphaned cwd which resolves into the extractor\ncontainer's filesystem containing the host CRI-O socket.\n\n## Affected Code\n\n### 1. Insufficient privilege drop (Rust — extractor coordinator)\n\n**File:** `extractor/src/insights_runtime_extractor.rs`\n\n```rust\n// Lines 139-146 — seteuid-only drop, guard skipped for root containers\njoin_process_namespaces(process.pid)?;\nchange_dir(current_dir);\nswitch_user(*process.uid)?;\nif *process.uid != 0 {\n    perms::check_no_privileged_perms()\n        .expect(\"Must not have privileged permissions to run fingerprints\");\n}\nfingerprint::run_fingerprints(&config, out_dir, &process);\n```\n\n```rust\n// Lines 182-185 — only effective UID changed; ruid/suid stay 0\nfn switch_user(uid: u32) -> Result<(), ScannerError> {\n    debug!(\"... Becoming user: {uid}\");\n    seteuid(uid.into()).map_err(|e| ScannerError::Errno(e))\n}\n```\n\n### 2. Execution of untrusted binary (Go — fingerprint)\n\n**File:** `fingerprints/pkg/utils/file.go`\n\n```go\n// Lines 75-80 — executes a path taken verbatim from workload's argv[0]\nfunc GetExecutableVersionOutput(executable string) (string, error) {\n    out, err := exec.Command(executable, \"--version\").Output()\n    if err != nil {\n        return \"\", err\n    }\n    return string(out), nil\n}\n```\n\n### 3. Workload-controlled path forwarded (Rust — version_executable)\n\n**File:** `version_executable.rs`\n\n```rust\n// Lines 29-34 — workload-controlled command_line[0] forwarded to fingerprint\nreturn Some(vec![\n    fpr_kind_executable,\n    out_dir.to_string(),\n    String::from(&process.command_line[0]),\n    String::from(&version_executable.runtime_kind_name),\n]);\n```\n\n## Attack Pattern\n\n**Attacker:** Any tenant able to schedule a pod (unprivileged, any namespace)\n**Victim:** The node running the insights-runtime-extractor DaemonSet\n**Trigger:** Automatic — the DaemonSet scans all container processes on the node\n\n**Attack sequence:**\n\n1. Attacker creates a pod whose process name matches a configured\n   versioned-executable pattern (`node`, `python`, `python3`, `MainThread`,\n   or contains `java`)\n2. The pod's main binary (at the path matching argv[0]) is a malicious\n   executable that calls `setuid(0)` to restore root\n3. When the insights operator triggers a scan, the DaemonSet forks, enters the\n   attacker's mount namespace, and executes the attacker's binary with ruid=0\n4. The attacker's code regains full root with `CAP_SYS_ADMIN` in the host user\n   namespace\n5. The inherited cwd contains the host CRI-O socket → full node compromise\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-104795\n2. 26.10.14 오후8:16\n3. The insights-runtime-extractor runs as a privilege",
+      "cve_id": "CVE-2026-104795",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104795",
+      "source": "cvefeed",
+      "published": "2026-10-14T20:16:59+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-103905 - Unauthenticated Plugin Safe Mode Toggle Vulnerability in JTL-Shop",
+      "summary": "CVE ID :CVE-2026-103905\n  \nPublished : Oct. 14, 2026, 11:16 a.m. | 15 minutes ago\n  \nDescription :The authentication middleware of the JTL-Shop\nadministration backend processes the plugin safe mode toggle on the admin\nlogout route before checking whether the requesting user is\nauthenticated. An unauthenticated remote attacker can therefore switch the shop's\nplugin safe mode on and off, which deactivates all installed plugins and their\nfunctionality, such as payment and shipping integrations, resulting in a shop-wide\ndenial of service. The attack requires a single request and can be\nautomated against many installations.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-103905\n  \nPublished : Oct. 14, 2026, 11:16 a.m. | 15 minutes ago\n  \nDescription :The authentication middleware of the JTL-Shop\nadministration backend processes the plugin safe mode toggle on the admin\nlogout route before checking whether the requesting user is\nauthenticated. An unauthenticated remote attacker can therefore switch the shop's\nplugin safe mode on and off, which deactivates all installed plugins and their\nfunctionality, such as payment and shipping integrations, resulting in a shop-wide\ndenial of service. The attack requires a single request and can be\nautomated against many installations.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-103905\n2. 26.10.14 오후8:16\n3. The authentication middleware of the JTL-Shop admi",
+      "cve_id": "CVE-2026-103905",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-103905",
+      "source": "cvefeed",
+      "published": "2026-10-14T20:16:59+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-100231 - Gstreamer1-plugins-bad-free: gstreamer1-plugins-bad-free: heap out-of-bounds write in asfmux due to incorrect utf-16 size calculation for non-bmp characters",
       "summary": "CVE ID :CVE-2026-100231\n  \nPublished : Oct. 14, 2026, 10 a.m. | 15 minutes ago\n  \nDescription :A flaw was found in the GStreamer multimedia framework's ASF muxer plugin (asfmux). When writing string metadata tags containing Unicode characters outside the Basic Multilingual Plane (such as emoji) to an ASF container, the plugin incorrectly calculates the buffer size needed for the UTF-16LE representation. The size calculation assumes each Unicode code point requires 2 bytes, but non-BMP characters require 4 bytes (surrogate pairs). This leads to a heap out-of-bounds write when the actual UTF-16LE conversion is written into the undersized buffer. An attacker could exploit this by providing media with crafted metadata tags to an application that transcodes or remuxes to ASF format while preserving metadata, potentially causing a denial of service or limited memory corruption.\n  \nSeverity: 6.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
