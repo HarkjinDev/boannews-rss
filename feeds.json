@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-14T12:32:47.240164+09:00",
+  "fetched_at": "2026-10-14T13:02:37.782686+09:00",
   "security_news": [
     {
       "title": "국민연금공단, 하루 787건 해킹 시도...보안인력 '기준 미달'",
@@ -5976,21 +5976,24 @@
       "source": "naver",
       "published": "2026-10-11T13:13:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[기획]투자도 바쁜데 보안·안전까지…기업들 '리스크 관리' 비상",
-      "summary": "인공지능(AI)과 생산시설 등 미래 먹거리 투자가 필요한 상황에서 안전·보안까지 챙겨야 할 영역이... 잇따른 해킹과 개인정보 유출 사고로 사이버 보안 역시 기업의 핵심 경영 리스크로 부상하면서다. SK텔레콤은 향후...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [기획]투자도 바쁜데 보안·안전까지…기업들 '리스크 관리' 비상 인공지능(AI)과 생산시설\n2. 잇따른 해킹과 개인정보 유출 사고로 사이버 보안 역시 기업의 핵심 경영 리스크로 부상하면서\n3. SK텔레콤은 향후...",
-      "link": "https://www.m-i.kr/news/articleView.html?idxno=2003555",
-      "source": "naver",
-      "published": "2026-10-11T13:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-110447 - Collabora Online CODE Server OS Command Injection Vulnerability",
+      "summary": "CVE ID :CVE-2026-110447\n  \nPublished : Oct. 14, 2026, 3:17 a.m. | 28 minutes ago\n  \nDescription :Collabora Online Built-in CODE Server before 26.4.303 (richdocumentscode), a Nextcloud app, allows remote code execution, as exploited in the wild in September and October 2026, a different vulnerability than CVE-2025-66208. This is an OS command injection in proxy.php when the CODE server isn't running (e.g., the product was recently restarted). The vulnerability is not present in standalone Collabora Online servers; only this deployment with CODE Server is affected.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-110447\n  \nPublished : Oct. 14, 2026, 3:17 a.m. | 28 minutes ago\n  \nDescription :Collabora Online Built-in CODE Server before 26.4.303 (richdocumentscode), a Nextcloud app, allows remote code execution, as exploited in the wild in September and October 2026, a different vulnerability than CVE-2025-66208. This is an OS command injection in proxy.php when the CODE server isn't running (e.g., the product was recently restarted). The vulnerability is not present in standalone Collabora Online servers; only this deployment with CODE Server is affected.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-110447\n2. 26.10.14 오후12:17\n3. Collabora Online Built-in CODE Server before 26.4.",
+      "cve_id": "CVE-2026-110447",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-110447",
+      "source": "cvefeed",
+      "published": "2026-10-14T12:17:20+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-92097 - Click to Chat <= 4.44 - Unauthenticated Arbitrary Shortcode Execution via REQUEST_URI via {url} Placeholder",
       "summary": "CVE ID :CVE-2026-92097\n  \nPublished : Oct. 14, 2026, 1:27 a.m. | 18 minutes ago\n  \nDescription :The Click to Chat for WhatsApp plugin for WordPress is vulnerable to Arbitrary Shortcode Execution in versions up to, and including, 4.44 This is due to the greetings_dialog() function building the {url} template placeholder from a sanitize_text_field()-filtered $_SERVER['REQUEST_URI'] on archive pages and then passing the substituted greeting content to do_shortcode() in the greetings-1 and greetings-2 templates, without stripping shortcode delimiters. Because wp_kses() runs against main_content BEFORE the {url} substitution, the attacker-controlled URL bytes reach do_shortcode() unfiltered. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes registered by WordPress core, the active theme, or any other plugin (e.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
