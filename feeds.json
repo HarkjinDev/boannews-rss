@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-15T02:32:32.864283+09:00",
+  "fetched_at": "2026-10-15T03:04:20.824147+09:00",
   "security_news": [
     {
       "title": "애플워치 차고 집 가까워지면, AI가 난방 켜준다",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-92151 - F´: SpacePacketDeframer Small Packet Assertion DoS",
+      "summary": "CVE ID :CVE-2026-92151\n  \nPublished : Oct. 14, 2026, 4:26 p.m. | 22 minutes ago\n  \nDescription :F´ (F Prime) is a framework that enables development and deployment of spaceflight and other embedded software applications. Prior to 4.2.0, Svc::Ccsds::SpacePacketDeframer dataIn_handler is vulnerable because the handler treats the minimum packet-length condition as FW_ASSERT rather than rejecting and returning the buffer. When a CCSDS telecommand frame leaves a payload of six bytes or fewer after TcDeframer removes its header and trailer, the assertion aborts or resets the flight-software process, causing denial of service. This issue is fixed in version 4.2.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-92151\n  \nPublished : Oct. 14, 2026, 4:26 p.m. | 22 minutes ago\n  \nDescription :F´ (F Prime) is a framework that enables development and deployment of spaceflight and other embedded software applications. Prior to 4.2.0, Svc::Ccsds::SpacePacketDeframer dataIn_handler is vulnerable because the handler treats the minimum packet-length condition as FW_ASSERT rather than rejecting and returning the buffer. When a CCSDS telecommand frame leaves a payload of six bytes or fewer after TcDeframer removes its header and trailer, the assertion aborts or resets the flight-software process, causing denial of service. This issue is fixed in version 4.2.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-92151\n2. 26.10.15 오전1:26\n3. F´ (F Prime) is a framework that enables developme",
+      "cve_id": "CVE-2026-92151",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92151",
+      "source": "cvefeed",
+      "published": "2026-10-15T01:26:08+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-102083 - Junos OS: SRX Series: With WebFiltering enabled prolonged HTTP session load can cause a crash",
       "summary": "CVE ID :CVE-2026-102083\n  \nPublished : Oct. 14, 2026, 4:24 p.m. | 19 minutes ago\n  \nDescription :An Improper Resource Locking vulnerability in the UTM processing of Juniper Networks Junos OS on SRX Series allows an unauthenticated, network-based attacker to cause a Denial-of-Service (DoS).\n\n\n\nWhen UTM WebFiltering is configured and the WebFiltering cloud server is unreachable, sustained HTTP traffic load may cause the UTM subsystem to crash and restart, which will lead to a complete service outage until the system has recovered.\nWhen category lookup requests cannot be completed, they accumulate internally. Under high load and specific timing conditions, an invalid internal state can occur during cleanup of pending WebFiltering lookups, resulting in a crash of the UTM process.\nThis issue applies to both NextGeneration WebFiltering (NGWF) and Enhanced WebFiltering (EWF).\n\nThis issue affects Junos OS on SRX Series:\n\n\n  *  23.2 versions from 23.2R2 before 23.2R2-S7.7;\n  *  23.4 versions from 23.4R2 before 23.4R2-S8.13;\n  *  24.2 versions before 24.2R2-S5.5;\n  *  24.4 versions before 24.4R2-S4;\n  *  25.2 versions before 25.2R2-S1;\n  *  25.4 versions before 25.4R1-S3, 25.4R2.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
