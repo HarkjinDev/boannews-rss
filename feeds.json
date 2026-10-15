@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-16T04:01:58.173108+09:00",
+  "fetched_at": "2026-10-16T04:32:10.193100+09:00",
   "security_news": [
     {
       "title": "OK저축은행 고객 250명 정보유출…현재 은행·저축은행·캐피탈 등 총 16개사 침해사고",
@@ -6946,36 +6946,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-109424",
       "source": "cvefeed",
       "published": "2026-10-13T04:35:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-89140 - Temporal Server internal completion callbacks are not bound to their namespace, allowing cross-namespace changes to Scheduler V2 schedule state",
-      "summary": "CVE ID :CVE-2026-89140\n  \nPublished : Oct. 12, 2026, 7:16 p.m. | 44 minutes ago\n  \nDescription :Temporal Server does not bind internal completion callbacks to the namespace that attached them, which allows an authenticated caller with write permission in one namespace to alter Scheduler V2 schedule state in another namespace. The callback address temporal://internal is reserved for callbacks that Scheduler V2 attaches to the Workflows it starts. In affected releases, any authenticated caller could attach a callback with that address to a Workflow start request, the address was exempt from the component.callbacks.allowedAddresses allowlist, and the History service delivered the callback to the component its token named, in whatever namespace that was, without authorizing the original caller there. When the forged completion matches an action a target schedule is running, the schedule records the action as completed while its Workflow still runs, which can defeat an overlap policy such as SKIP, and passes caller-controlled data to the next scheduled Workflow as its last completion result. A forged failure may also pause a schedule configured to pause on failure. A forgery requires the target namespace identifier, the schedule identifier, and the identity and timing of a running action. No disclosure of Workflow payloads or history was identified. Only namespaces that hold Scheduler V2 schedules can be targeted; Scheduler V2 is off by default, and existing Scheduler V2 schedules remain targets after the settings that create them are turned off.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-89140\n  \nPublished : Oct. 12, 2026, 7:16 p.m. | 44 minutes ago\n  \nDescription :Temporal Server does not bind internal completion callbacks to the namespace that attached them, which allows an authenticated caller with write permission in one namespace to alter Scheduler V2 schedule state in another namespace. The callback address temporal://internal is reserved for callbacks that Scheduler V2 attaches to the Workflows it starts. In affected releases, any authenticated caller could attach a callback with that address to a Workflow start request, the address was exempt from the component.callbacks.allowedAddresses allowlist, and the History service delivered the callback to the component its token named, in whatever namespace that was, without authorizing the original caller there. When the forged completion matches an action a target schedule is running, the schedule records the action as completed while its Workflow still runs, which can defeat an overlap policy such as SKIP, and passes caller-controlled data to the next scheduled Workflow as its last completion result. A forged failure may also pause a schedule configured to pause on failure. A forgery requires the target namespace identifier, the schedule identifier, and the identity and timing of a running action. No disclosure of Workflow payloads or history was identified. Only namespaces that hold Scheduler V2 schedules can be targeted; Scheduler V2 is off by default, and existing Scheduler V2 schedules remain targets after the settings that create them are turned off.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-89140\n2. 26.10.13 오전4:16\n3. Temporal Server does not bind internal completion ",
-      "cve_id": "CVE-2026-89140",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-89140",
-      "source": "cvefeed",
-      "published": "2026-10-13T04:16:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-57143 - PraisonAI: Server-Side Request Forgery (SSRF) in SearxNG / search_web tools via attacker-controlled searxng_url parameter",
-      "summary": "CVE ID :CVE-2026-57143\n  \nPublished : Oct. 12, 2026, 7:16 p.m. | 44 minutes ago\n  \nDescription :PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.62, searxng_search and the search_web SearxNG provider pass the LLM-controlled searxng_url parameter directly to requests.get without validating its scheme, host, port, or resolved address. Prompt-injected content can direct the default search tool to internal JSON services, distinguish open and closed internal ports, and attempt cloud-metadata requests, with returned JSON results entering agent context. This issue is fixed in praisonaiagents 1.6.62.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-57143\n  \nPublished : Oct. 12, 2026, 7:16 p.m. | 44 minutes ago\n  \nDescription :PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.62, searxng_search and the search_web SearxNG provider pass the LLM-controlled searxng_url parameter directly to requests.get without validating its scheme, host, port, or resolved address. Prompt-injected content can direct the default search tool to internal JSON services, distinguish open and closed internal ports, and attempt cloud-metadata requests, with returned JSON results entering agent context. This issue is fixed in praisonaiagents 1.6.62.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-57143\n2. 26.10.13 오전4:16\n3. PraisonAI is a multi-agent teams system. Prior to ",
-      "cve_id": "CVE-2026-57143",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57143",
-      "source": "cvefeed",
-      "published": "2026-10-13T04:16:39+09:00",
       "lang": "en"
     }
   ],
