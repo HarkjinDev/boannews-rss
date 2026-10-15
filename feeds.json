@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-16T02:33:41.959978+09:00",
+  "fetched_at": "2026-10-16T03:02:46.799161+09:00",
   "security_news": [
     {
       "title": "OK저축은행 고객 250명 정보유출…현재 은행·저축은행·캐피탈 등 총 16개사 침해사고",
@@ -6931,21 +6931,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-57143",
       "source": "cvefeed",
       "published": "2026-10-13T04:16:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-109448 - psqlODBC SQLBindParameter heap memory corruption when binding more than 32767 parameters",
-      "summary": "CVE ID :CVE-2026-109448\n  \nPublished : Oct. 12, 2026, 5:42 p.m. | 47 minutes ago\n  \nDescription :Integer wraparound in psqlODBC SQLBindParameter allows an application, or an attacker who controls how many parameters the application binds on one statement, to corrupt heap memory. psqlODBC stores the binding count in a signed 16-bit field. Binding parameter number 32768 wraps that count to -32768. Binding parameter 32769 then writes about 2.5 MB of zeros starting 1.25 MB before the binding array, which crashes the application or leaves it running on a corrupted heap. Applications that build parameter lists from untrusted input, such as an IN (?, ?, ...) list, are exposed. Versions before psqlODBC 18.00.0005 are affected.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-109448\n  \nPublished : Oct. 12, 2026, 5:42 p.m. | 47 minutes ago\n  \nDescription :Integer wraparound in psqlODBC SQLBindParameter allows an application, or an attacker who controls how many parameters the application binds on one statement, to corrupt heap memory. psqlODBC stores the binding count in a signed 16-bit field. Binding parameter number 32768 wraps that count to -32768. Binding parameter 32769 then writes about 2.5 MB of zeros starting 1.25 MB before the binding array, which crashes the application or leaves it running on a corrupted heap. Applications that build parameter lists from untrusted input, such as an IN (?, ?, ...) list, are exposed. Versions before psqlODBC 18.00.0005 are affected.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-109448\n2. 26.10.13 오전2:42\n3. Integer wraparound in psqlODBC SQLBindParameter al",
-      "cve_id": "CVE-2026-109448",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-109448",
-      "source": "cvefeed",
-      "published": "2026-10-13T02:42:59+09:00",
       "lang": "en"
     }
   ],
