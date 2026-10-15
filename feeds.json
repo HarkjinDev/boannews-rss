@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-15T11:05:29.766194+09:00",
+  "fetched_at": "2026-10-15T11:32:46.801368+09:00",
   "security_news": [
     {
       "title": "페어스퀘어랩, DFNS와 전략적 파트너십…은행권 디지털 자산 인프라 강...",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "ISC Stormcast For Thursday, October 15th, 2026 https://isc.sans.edu/podcastdetail/10138, (Thu, Oct 15th)",
+      "summary": "",
+      "description": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. ISC Stormcast For Thursday, October 15th, 2026 htt\n2. SANS_ISC\n3. 설명 없음",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33428",
+      "source": "sans_isc",
+      "published": "2026-10-15T11:00:03+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-104107 - FileRise: Authenticated path traversal escapes configured storage root through inherited ACLs",
       "summary": "CVE ID :CVE-2026-104107\n  \nPublished : Oct. 14, 2026, 9:17 p.m. | 20 minutes ago\n  \nDescription :FileRise is a self-hosted web-based file manager with multi-file upload, editing, and batch operations. In FileRise 3.22.0, the /api/file/saveFile.php operation accepts dot and dot-dot segments in its attacker-controlled folder input before ACL inheritance evaluates the uncanonicalized string. With an authenticated non-administrator session, a valid CSRF token, and inherited edit permission on a legitimate ancestor, the local filesystem or WebDAV adapter later resolves those segments as path navigation, permitting attacker-controlled file creation outside the authorized folder and, where backend credentials permit, outside the configured WebDAV root. Local storage also created directories before final containment validation and used a prefix comparison that accepted similarly named sibling roots. This issue is fixed in version 3.23.0.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
