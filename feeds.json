@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-16T00:03:46.363389+09:00",
+  "fetched_at": "2026-10-16T00:32:16.307218+09:00",
   "security_news": [
     {
       "title": "나스닥 1.21% 하락…AI 매도세·PPI 쇼크 겹친 뉴욕증시 혼조",
@@ -6902,36 +6902,6 @@
       "source": "cvefeed",
       "published": "2026-10-13T01:17:05+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-108094 - Mutter: mutter: client-triggered use-after-free in wayland color-management icc image description path",
-      "summary": "CVE ID :CVE-2026-108094\n  \nPublished : Oct. 12, 2026, 3:17 p.m. | 13 minutes ago\n  \nDescription :A use-after-free flaw was found in mutter in the Wayland color-management ICC image-description path. A local attacker who can run a malicious Wayland client can destroy a wp_image_description_v1 resource while an asynchronous ICC file read is still in progress. When the read completes, the compositor uses the freed wl_resource, writes into freed memory, and frees a pointer derived from that memory. This can crash the GNOME session and may allow arbitrary code execution within the compositor process.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-108094\n  \nPublished : Oct. 12, 2026, 3:17 p.m. | 13 minutes ago\n  \nDescription :A use-after-free flaw was found in mutter in the Wayland color-management ICC image-description path. A local attacker who can run a malicious Wayland client can destroy a wp_image_description_v1 resource while an asynchronous ICC file read is still in progress. When the read completes, the compositor uses the freed wl_resource, writes into freed memory, and frees a pointer derived from that memory. This can crash the GNOME session and may allow arbitrary code execution within the compositor process.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-108094\n2. 26.10.13 오전12:17\n3. A use-after-free flaw was found in mutter in the W",
-      "cve_id": "CVE-2026-108094",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-108094",
-      "source": "cvefeed",
-      "published": "2026-10-13T00:17:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-103526 - CVE-2026-103526",
-      "summary": "CVE ID :CVE-2026-103526\n  \nPublished : Oct. 12, 2026, 3:17 p.m. | 13 minutes ago\n  \nDescription :In Thelia v2.6.0, both the administrative login and forgotten password endpoints return different responses for invalid usernames and incorrect passwords, allowing unauthenticated attackers to enumerate valid administrator accounts. Because the endpoint also lacks rate limiting or other protections against repeated authentication attempts, username enumeration can be performed efficiently at scale.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-103526\n  \nPublished : Oct. 12, 2026, 3:17 p.m. | 13 minutes ago\n  \nDescription :In Thelia v2.6.0, both the administrative login and forgotten password endpoints return different responses for invalid usernames and incorrect passwords, allowing unauthenticated attackers to enumerate valid administrator accounts. Because the endpoint also lacks rate limiting or other protections against repeated authentication attempts, username enumeration can be performed efficiently at scale.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-103526\n2. 26.10.13 오전12:17\n3. In Thelia v2.6.0, both the administrative login an",
-      "cve_id": "CVE-2026-103526",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-103526",
-      "source": "cvefeed",
-      "published": "2026-10-13T00:17:06+09:00",
-      "lang": "vi"
     }
   ],
   "reputation": []
