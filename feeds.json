@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-16T01:02:42.025051+09:00",
+  "fetched_at": "2026-10-16T01:32:44.164386+09:00",
   "security_news": [
+    {
+      "title": "OK저축은행 고객 250명 정보유출…현재 은행·저축은행·캐피탈 등 총 16개사 침해사고",
+      "summary": "OK저축은행이 홈페이지 대출신청 서비스를 이용한 고객 250명의 개인정보 유출을 확인했다. 은행은 초기 183명의 정보가 유출됐을 가능성을 알렸지만, 외부 보안 전문 관제업체 2곳과 정밀 조사한 결과 피해 대상이 67명 늘었다고 10월 15일 밝혔다.유출 항목에는 이름, 생년월일, 휴대전화번호, 계좌번호, 주소, 이메일, 직장명, 사업자번호, 연소득, 대출금액 등 대출신청 관련 정보가 포함됐다. 은행 측에 따르면 공격은 11일 오후 8시 44분께 시작돼 12일 오전 2시 14분께 종료됐다. 은행은 12일 오전 10시께 대출신청 웹페",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. OK저축은행 고객 250명 개인정보 유출 확인\n2. 대출 신청 정보(이름, 계좌번호, 연소득 등) 유출\n3. 총 16개 금융사 침해사고 연관 가능성",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=208898",
+      "source": "dailysecu",
+      "published": "2026-10-16T01:16:03+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Vulnerability Management Isn't About the Score — It's About How It Applies to You",
       "summary": "Organizations need to move away from vendor-assigned, theoretical scores toward real exploit data specific to their environments.",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-10-13T06:20:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "슈퍼마켓 냉장고 50도로 해킹…프랑스 수백개 매장 피해",
-      "summary": "프랑스 전역에서 여러 슈퍼마켓 체인 냉장고 온도를 최고 50도까지 올리는 사이버 공격이 발생해 수백 개... 세바스티앙 르코르뉘 총리는 국가사이버보안청(ANSSI)에도 조사를 지시했습니다. 까르푸는 80개 점포가 피해를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 슈퍼마켓 냉장고 50도로 해킹…프랑스 수백개 매장 피해 프랑스 전역에서 여러 슈퍼마켓 체인\n2. 세바스티앙 르코르뉘 총리는 국가사이버보안청(ANSSI)에도 조사를 지시했습니다.\n3. 까르푸는 80개 점포가 피해를...",
-      "link": "https://n.news.naver.com/mnews/article/422/0000914953?sid=104",
-      "source": "naver",
-      "published": "2026-10-13T06:06:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6916,36 +6916,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-109448",
       "source": "cvefeed",
       "published": "2026-10-13T02:42:59+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-96618 - Hex exhausts memory and disk on oversized or compressed responses from an untrusted mirror",
-      "summary": "CVE ID :CVE-2026-96618\n  \nPublished : Oct. 12, 2026, 4:17 p.m. | 15 minutes ago\n  \nDescription :Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in hexpm hex allows an untrusted package mirror to exhaust the memory or disk space of the machine running mix deps.get, mix deps.update, mix hex.package fetch or mix hex.docs fetch.\n\nHex treats a mirror configured with HEX_MIRROR_URL, HEX_MIRROR or mirror_url as untrusted: it doesn't send credentials to it, and it checks registry signatures and package checksums that the mirror can't forge. Several response paths consume memory or disk in proportion to what the mirror sends before any of those checks run.\n\nHex.HTTP.request/5 reads the whole response body into memory and decompresses it with :zlib.gunzip/1 whenever the response's Content-Encoding contains gzip, with no limit on the compressed or decompressed size. Hex doesn't ask for compressed responses, so the server decides whether this step runs. It applies to registry, package, docs and API responses.\n\nPackage tarballs have no download size limit. Hex 2.5.1 holds the whole tarball in memory and writes it to the cache, and the development branch streams it to a temporary file; the 16 MiB tarball limit is checked only when the file is unpacked. The tarball is then unpacked, into deps/ in 2.5.1 and into a staging directory on the development branch, before its checksums are compared with the registry.\n\nmix hex.docs fetch, and mix hex.docs offline when docs are missing, write the docs tarball to disk and extract it with :mix_hex_erl_tar.extract/2 without the 16 MiB compressed and 128 MiB decompressed limits that mix_hex_tarball:unpack_docs/3 applies. The signed registry doesn't cover docs tarballs, so nothing checks them.\n\nRegistry responses are also decompressed before their signature is checked, in hex_core code that Hex vendors; that part is tracked in https://github.com/hexpm/hex_core/security/advisories/GHSA-7c4r-cgf9-9jmq.\n\nThis issue affects hex: from 0.11.2 before 2.5.2.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-96618\n  \nPublished : Oct. 12, 2026, 4:17 p.m. | 15 minutes ago\n  \nDescription :Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in hexpm hex allows an untrusted package mirror to exhaust the memory or disk space of the machine running mix deps.get, mix deps.update, mix hex.package fetch or mix hex.docs fetch.\n\nHex treats a mirror configured with HEX_MIRROR_URL, HEX_MIRROR or mirror_url as untrusted: it doesn't send credentials to it, and it checks registry signatures and package checksums that the mirror can't forge. Several response paths consume memory or disk in proportion to what the mirror sends before any of those checks run.\n\nHex.HTTP.request/5 reads the whole response body into memory and decompresses it with :zlib.gunzip/1 whenever the response's Content-Encoding contains gzip, with no limit on the compressed or decompressed size. Hex doesn't ask for compressed responses, so the server decides whether this step runs. It applies to registry, package, docs and API responses.\n\nPackage tarballs have no download size limit. Hex 2.5.1 holds the whole tarball in memory and writes it to the cache, and the development branch streams it to a temporary file; the 16 MiB tarball limit is checked only when the file is unpacked. The tarball is then unpacked, into deps/ in 2.5.1 and into a staging directory on the development branch, before its checksums are compared with the registry.\n\nmix hex.docs fetch, and mix hex.docs offline when docs are missing, write the docs tarball to disk and extract it with :mix_hex_erl_tar.extract/2 without the 16 MiB compressed and 128 MiB decompressed limits that mix_hex_tarball:unpack_docs/3 applies. The signed registry doesn't cover docs tarballs, so nothing checks them.\n\nRegistry responses are also decompressed before their signature is checked, in hex_core code that Hex vendors; that part is tracked in https://github.com/hexpm/hex_core/security/advisories/GHSA-7c4r-cgf9-9jmq.\n\nThis issue affects hex: from 0.11.2 before 2.5.2.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-96618\n2. 26.10.13 오전1:17\n3. Improper Handling of Highly Compressed Data (Data ",
-      "cve_id": "CVE-2026-96618",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-96618",
-      "source": "cvefeed",
-      "published": "2026-10-13T01:17:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-81856 - Terminal escape sequence injection in Hex via unneutralized server-supplied output",
-      "summary": "CVE ID :CVE-2026-81856\n  \nPublished : Oct. 12, 2026, 4:17 p.m. | 15 minutes ago\n  \nDescription :Improper Neutralization of Escape, Meta, or Control Sequences vulnerability in hexpm hex allows a malicious package publisher or a hostile repository server to inject terminal control sequences into the output of Mix tasks.\n\nHex prints strings supplied by the package repository and the documentation search service straight to the terminal through Hex.Shell.info/1 and Hex.Shell.error/1, neutralizing no control characters. Affected sinks span package metadata and configuration snippets in mix hex.info, search results in mix hex.package search and mix hex.search, owner and organization listings, publish and sponsor URLs, the authenticated username in mix hex.user, policy identities in mix hex.policy, and API error bodies rendered by Hex.Utils.print_error_result/1. A malicious package can embed ANSI escape sequences (cursor movement, line erase, carriage returns, OSC 52 clipboard writes) or Unicode bidirectional overrides in any of those fields, so the bytes reach the terminal unchanged, forging displayed URLs, package descriptions and suggested commands, concealing real output, or writing to the clipboard. No authentication or privileged position is required; only publishing a package.\n\nThis issue affects hex: from 0.0.1 before 2.5.2.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-81856\n  \nPublished : Oct. 12, 2026, 4:17 p.m. | 15 minutes ago\n  \nDescription :Improper Neutralization of Escape, Meta, or Control Sequences vulnerability in hexpm hex allows a malicious package publisher or a hostile repository server to inject terminal control sequences into the output of Mix tasks.\n\nHex prints strings supplied by the package repository and the documentation search service straight to the terminal through Hex.Shell.info/1 and Hex.Shell.error/1, neutralizing no control characters. Affected sinks span package metadata and configuration snippets in mix hex.info, search results in mix hex.package search and mix hex.search, owner and organization listings, publish and sponsor URLs, the authenticated username in mix hex.user, policy identities in mix hex.policy, and API error bodies rendered by Hex.Utils.print_error_result/1. A malicious package can embed ANSI escape sequences (cursor movement, line erase, carriage returns, OSC 52 clipboard writes) or Unicode bidirectional overrides in any of those fields, so the bytes reach the terminal unchanged, forging displayed URLs, package descriptions and suggested commands, concealing real output, or writing to the clipboard. No authentication or privileged position is required; only publishing a package.\n\nThis issue affects hex: from 0.0.1 before 2.5.2.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-81856\n2. 26.10.13 오전1:17\n3. Improper Neutralization of Escape, Meta, or Contro",
-      "cve_id": "CVE-2026-81856",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-81856",
-      "source": "cvefeed",
-      "published": "2026-10-13T01:17:05+09:00",
       "lang": "en"
     }
   ],
