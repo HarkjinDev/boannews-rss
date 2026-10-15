@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-16T03:02:46.799161+09:00",
+  "fetched_at": "2026-10-16T03:31:58.722743+09:00",
   "security_news": [
     {
       "title": "OK저축은행 고객 250명 정보유출…현재 은행·저축은행·캐피탈 등 총 16개사 침해사고",
@@ -6003,6 +6003,51 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-103936 - libp2p: Single pre-auth STUN packet terminates `@libp2p/webrtc` WebRTC-direct Node.js listeners",
+      "summary": "CVE ID :CVE-2026-103936\n  \nPublished : Oct. 15, 2026, 5:28 p.m. | 14 minutes ago\n  \nDescription :libp2p is a JavaScript implementation of the libp2p networking stack. Prior to 6.0.28, the @libp2p/webrtc webRTCDirect() Node.js listener processes unauthenticated STUN Binding Requests before PeerId authentication, Noise, muxing, protocol negotiation, connection creation, or connection-manager admission. The listener in packages/transport-webrtc/src/private-to-public/utils/stun-listener.ts forwards the packet-controlled request.ufrag into DirectRTCPeerConnection.setLocalDescription, where the value is reused as an ICE password without validating its required length and character set. A short credential causes node-datachannel or libdatachannel to raise an uncaught native invalid_argument and abort the process with SIGABRT, allowing a single remote UDP packet to deny service. The confirmed impact is process termination only, with no demonstrated memory corruption, code execution, browser impact, confidentiality impact, integrity impact, or connection-limit bypass. This issue is fixed in version 6.0.28.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-103936\n  \nPublished : Oct. 15, 2026, 5:28 p.m. | 14 minutes ago\n  \nDescription :libp2p is a JavaScript implementation of the libp2p networking stack. Prior to 6.0.28, the @libp2p/webrtc webRTCDirect() Node.js listener processes unauthenticated STUN Binding Requests before PeerId authentication, Noise, muxing, protocol negotiation, connection creation, or connection-manager admission. The listener in packages/transport-webrtc/src/private-to-public/utils/stun-listener.ts forwards the packet-controlled request.ufrag into DirectRTCPeerConnection.setLocalDescription, where the value is reused as an ICE password without validating its required length and character set. A short credential causes node-datachannel or libdatachannel to raise an uncaught native invalid_argument and abort the process with SIGABRT, allowing a single remote UDP packet to deny service. The confirmed impact is process termination only, with no demonstrated memory corruption, code execution, browser impact, confidentiality impact, integrity impact, or connection-limit bypass. This issue is fixed in version 6.0.28.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-103936\n2. 26.10.16 오전2:28\n3. libp2p is a JavaScript implementation of the libp2",
+      "cve_id": "CVE-2026-103936",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-103936",
+      "source": "cvefeed",
+      "published": "2026-10-16T02:28:32+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-55875 - Helium: SSRF via External Calendar URL Allows Authenticated Users to Probe Internal Network",
+      "summary": "CVE ID :CVE-2026-55875\n  \nPublished : Oct. 15, 2026, 5:24 p.m. | 19 minutes ago\n  \nDescription :Helium is a free online student planner for classes, homework, grades, and notes. Prior to 2.2.60, any authenticated user can submit an arbitrary URL to POST /feed/externalcalendars/, where helium/feed/services/icalexternalcalendarservice.py uses validate_url to check only URL syntax before passing the value to urllib.request.urlopen, and fetch_ical_conditional periodically refetches the stored URL. The server can therefore issue requests to attacker-selected external or internal hosts, while distinct responses, including an uncaught http.client.RemoteDisconnected condition for non-HTTP services, reveal internal host and port reachability. The supported impact is forced outbound requests and internal service reconnaissance; the advisory does not demonstrate secret retrieval because the relevant ECS credentials path is task-specific and unpredictable. This issue is fixed in version 2.2.60.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55875\n  \nPublished : Oct. 15, 2026, 5:24 p.m. | 19 minutes ago\n  \nDescription :Helium is a free online student planner for classes, homework, grades, and notes. Prior to 2.2.60, any authenticated user can submit an arbitrary URL to POST /feed/externalcalendars/, where helium/feed/services/icalexternalcalendarservice.py uses validate_url to check only URL syntax before passing the value to urllib.request.urlopen, and fetch_ical_conditional periodically refetches the stored URL. The server can therefore issue requests to attacker-selected external or internal hosts, while distinct responses, including an uncaught http.client.RemoteDisconnected condition for non-HTTP services, reveal internal host and port reachability. The supported impact is forced outbound requests and internal service reconnaissance; the advisory does not demonstrate secret retrieval because the relevant ECS credentials path is task-specific and unpredictable. This issue is fixed in version 2.2.60.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-55875\n2. 26.10.16 오전2:24\n3. Helium is a free online student planner for classe",
+      "cve_id": "CVE-2026-55875",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55875",
+      "source": "cvefeed",
+      "published": "2026-10-16T02:24:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-102631 - authd: Account takeover via username fallback in identity matching after IdP email reassignment",
+      "summary": "CVE ID :CVE-2026-102631\n  \nPublished : Oct. 15, 2026, 5:17 p.m. | 26 minutes ago\n  \nDescription :In authd before 0.7.1, the user identity matching in UpdateUser (internal/users/manager.go) resolves an incoming login by the broker-scoped provider ID, but falls back to matching the username when the provider ID does not belong to any known user, and does not reject a conflicting non-empty provider ID. If an identity provider reassigns an email address, which authd uses as the username, to a new account, the new account inherits the previous user's local UID and home directory on its next login. This allows the new user to access and modify files belonging to the previous user, including credentials such as SSH keys and cloud API tokens, and silently rebinds the local account record to the new identity. As a mitigation, administrators should lock or delete the previous user's local authd account when the corresponding IdP account is removed.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-102631\n  \nPublished : Oct. 15, 2026, 5:17 p.m. | 26 minutes ago\n  \nDescription :In authd before 0.7.1, the user identity matching in UpdateUser (internal/users/manager.go) resolves an incoming login by the broker-scoped provider ID, but falls back to matching the username when the provider ID does not belong to any known user, and does not reject a conflicting non-empty provider ID. If an identity provider reassigns an email address, which authd uses as the username, to a new account, the new account inherits the previous user's local UID and home directory on its next login. This allows the new user to access and modify files belonging to the previous user, including credentials such as SSH keys and cloud API tokens, and silently rebinds the local account record to the new identity. As a mitigation, administrators should lock or delete the previous user's local authd account when the corresponding IdP account is removed.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102631\n2. 26.10.16 오전2:17\n3. In authd before 0.7.1, the user identity matching ",
+      "cve_id": "CVE-2026-102631",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102631",
+      "source": "cvefeed",
+      "published": "2026-10-16T02:17:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-53582 - OPNsense: XPATH Injection can disclose any secret in config.xml",
       "summary": "CVE ID :CVE-2026-53582\n  \nPublished : Oct. 15, 2026, 4:18 p.m. | 36 minutes ago\n  \nDescription :OPNsense is a FreeBSD based firewall and routing platform. Prior to version 26.1.10, the Trust module stores attacker-controlled certificate authority and certificate refid values and interpolates them into XPath expressions in src/opnsense/mvc/app/models/OPNsense/Trust/FieldTypes/CAsField.php and src/opnsense/mvc/app/models/OPNsense/Trust/FieldTypes/CertificatesField.php. A user with CA Manager or Certificate Manager privileges can submit a crafted refid and repeatedly retrieve the object to obtain a boolean refcount oracle, allowing values in config.xml to be recovered character by character. Exposed values can include password hashes, API credentials, certificate private keys, VPN key material, and high-availability credentials, enabling privilege escalation and compromise of other security domains. This issue is fixed in version 26.1.10.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
