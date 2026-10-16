@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-17T00:31:36.351160+09:00",
+  "fetched_at": "2026-10-17T01:01:35.062693+09:00",
   "security_news": [
     {
       "title": "In Other News: ICS-Sniper Attack, Hacking XWorm Malware Operators, $250k Chrome Exploit",
@@ -5400,18 +5400,6 @@
       "source": "naver",
       "published": "2026-10-14T02:14:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Ivanti warns of Connect Secure zero-day exploited in attacks",
-      "summary": "Ivanti urged customers on Tuesday to immediately patch an actively exploited zero-day vulnerability in the Ivanti Connect Secure (ICS) remote access gateway. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Ivanti warns of Connect Secure zero-day exploited ",
-      "link": "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-connect-secure-zero-day-exploited-in-attacks/",
-      "source": "bleepingcomputer",
-      "published": "2026-10-14T00:45:50+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -6343,36 +6331,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-55675",
       "source": "cvefeed",
       "published": "2026-10-14T01:17:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-54697 - ConnectBot SSH: Excessive allocation and integer overflow in DER private-key parsing",
-      "summary": "CVE ID :CVE-2026-54697\n  \nPublished : Oct. 13, 2026, 3:54 p.m. | 7 minutes ago\n  \nDescription :ConnectBot SSH Client Library is written in Kotlin with Kaitai Struct and KStateMachine. Prior to 0.3.1, DerReader.readLength() accepts excessive long-form DER length octets, accumulates them into an Int, and primitive readers allocate arrays without checking the declared size against the remaining input. An application or user that loads an attacker-provided private-key file through SshClient.authenticatePublicKey(), SshKeys.decodePemPrivateKey(), SshSigning.sign(), or SshSigning.getPublicKey() can trigger integer wraparound, excessive allocation, or an uncaught OutOfMemoryError. SSH server host keys and agent-forwarding messages do not use this application-supplied private-key input path. No usable weakened key and no confidentiality or integrity impact have been demonstrated. This issue is fixed in version 0.3.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-54697\n  \nPublished : Oct. 13, 2026, 3:54 p.m. | 7 minutes ago\n  \nDescription :ConnectBot SSH Client Library is written in Kotlin with Kaitai Struct and KStateMachine. Prior to 0.3.1, DerReader.readLength() accepts excessive long-form DER length octets, accumulates them into an Int, and primitive readers allocate arrays without checking the declared size against the remaining input. An application or user that loads an attacker-provided private-key file through SshClient.authenticatePublicKey(), SshKeys.decodePemPrivateKey(), SshSigning.sign(), or SshSigning.getPublicKey() can trigger integer wraparound, excessive allocation, or an uncaught OutOfMemoryError. SSH server host keys and agent-forwarding messages do not use this application-supplied private-key input path. No usable weakened key and no confidentiality or integrity impact have been demonstrated. This issue is fixed in version 0.3.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-54697\n2. 26.10.14 오전12:54\n3. ConnectBot SSH Client Library is written in Kotlin",
-      "cve_id": "CVE-2026-54697",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54697",
-      "source": "cvefeed",
-      "published": "2026-10-14T00:54:48+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-102702 - Arm: multiple issues with GNTTABOP_cache_flush",
-      "summary": "CVE ID :CVE-2026-102702\n  \nPublished : Oct. 13, 2026, 3:45 p.m. | 16 minutes ago\n  \nDescription :[This CNA information record relates to multiple CVEs; the\ntext explains which aspects/vulnerabilities correspond to which CVE.]\n\n1) XSA-437 (CVE-2023-34321) addressed issues with overflows in\n   calculations involved in guests flushing caches through\n   GNTTABOP_cache_flush.  Unfortunately the fix there introduced a\n   calculation which may underflow, resulting in a loop which would - at\n   least on 64-bit Arm - take excessively long, and which would likely\n   eventually crash the hypervisor.\n\n   This is CVE-2026-102699.\n\n2) GNTTABOP_cache_flush may be issued on memory mapped from another\n   domain using the grant table interface.  However there was no\n   restriction to disallow the use of invalidate-without-clean against\n   read-only grant mappings, which may corrupt the granted memory.\n\n   This is CVE-2026-102702.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-102702\n  \nPublished : Oct. 13, 2026, 3:45 p.m. | 16 minutes ago\n  \nDescription :[This CNA information record relates to multiple CVEs; the\ntext explains which aspects/vulnerabilities correspond to which CVE.]\n\n1) XSA-437 (CVE-2023-34321) addressed issues with overflows in\n   calculations involved in guests flushing caches through\n   GNTTABOP_cache_flush.  Unfortunately the fix there introduced a\n   calculation which may underflow, resulting in a loop which would - at\n   least on 64-bit Arm - take excessively long, and which would likely\n   eventually crash the hypervisor.\n\n   This is CVE-2026-102699.\n\n2) GNTTABOP_cache_flush may be issued on memory mapped from another\n   domain using the grant table interface.  However there was no\n   restriction to disallow the use of invalidate-without-clean against\n   read-only grant mappings, which may corrupt the granted memory.\n\n   This is CVE-2026-102702.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-102702\n2. 26.10.14 오전12:45\n3. [This CNA information record relates to multiple C",
-      "cve_id": "CVE-2026-102702",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102702",
-      "source": "cvefeed",
-      "published": "2026-10-14T00:45:13+09:00",
       "lang": "en"
     }
   ],
