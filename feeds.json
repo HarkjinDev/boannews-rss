@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-16T23:31:28.586339+09:00",
+  "fetched_at": "2026-10-17T00:01:28.135557+09:00",
   "security_news": [
     {
       "title": "In Other News: ICS-Sniper Attack, Hacking XWorm Malware Operators, $250k Chrome Exploit",
@@ -5448,33 +5448,24 @@
       "source": "naver",
       "published": "2026-10-14T00:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[앤트로픽 AI보안] \"질문 쏟아부어 AI 훔치던 꼼수 끝\"…앤트로픽, 강력...",
-      "summary": "재판매 및 DB 금지] 앤트로픽이 새롭게 도입한 보안 시스템으로 AI 모델 '클로드'에 대한 조직적 해킹과 '증류' 공격으로 인한 데이터 유출을 90∼99% 차단했다고 밝혔다. 앤트로픽은 최근 보안 조치를 통해 클로드의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 앤트로픽, AI 모델 '클로드'에 대한 해킹 90~99% 차단\n2. '증류' 공격 통한 데이터 유출 시도 성공률 대폭 감소\n3. 강력한 보안 시스템 도입으로 AI 모델 보호 강화",
-      "link": "https://www.cbci.co.kr/news/articleView.html?idxno=614963",
-      "source": "naver",
-      "published": "2026-10-14T00:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "AI 해킹 막으려면 기본부터… 시스코 \"인증·권한 관리가 핵심\"",
-      "summary": "AI가 사이버 공격의 속도와 규모를 키우고 있지만 공격자가 파고드는 보안 허점은 여전히 기본적인 관리... 시대의 사이버보안' 기자간담회에서 \"최근 한국에서 발생한 공격 사례를 살펴봤다\"며 \"공격자들이 AI로 속도를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 해킹 막으려면 기본부터… 시스코 \"인증·권한 관리가 핵심\" AI가 사이버 공격의 속도\n2. 시대의 사이버보안' 기자간담회에서 \"최근 한국에서 발생한 공격 사례를 살펴봤다\"며 \"공격자",
-      "link": "https://www.newscj.com/news/articleView.html?idxno=3440042",
-      "source": "naver",
-      "published": "2026-10-14T00:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Cyber Threat Actors Use a Variety of Techniques to Target Election and Campaign Officials",
+      "summary": "CISA and the Federal Bureau of Investigation (FBI) released a Public Service Announcement (PSA) warning election and campaign officials about cyber threats during the 2026 U.S. midterm elections. Malicious cyber actors may use phishing and smishing techniques to steal login credentials and other sensitive information or install malware on targeted devices. Election officials, candidates, and political organizations may be attractive targets because of their access to voter registration data, current government officials, and sensitive campaign information.\nCyber actors are increasingly using sophisticated phishing and smishing campaigns that closely resemble legitimate communications. These efforts may include convincing emails, text messages, audio, and video content designed to manipulate recipients into disclosing sensitive information or interacting with malicious links and attachments.\nCISA and the FBI urge election officials, campaign personnel, and the public to review the PSA, follow recommended cybersecurity practices, and remain vigilant for suspicious emails and mobile messages.",
+      "description": "CISA and the Federal Bureau of Investigation (FBI) released a Public Service Announcement (PSA) warning election and campaign officials about cyber threats during the 2026 U.S. midterm elections. Malicious cyber actors may use phishing and smishing techniques to steal login credentials and other sensitive information or install malware on targeted devices. Election officials, candidates, and political organizations may be attractive targets because of their access to voter registration data, current government officials, and sensitive campaign information.\nCyber actors are increasingly using sophisticated phishing and smishing campaigns that closely resemble legitimate communications. These efforts may include convincing emails, text messages, audio, and video content designed to manipulate recipients into disclosing sensitive information or interacting with malicious links and attachments.\nCISA and the FBI urge election officials, campaign personnel, and the public to review the PSA, follow recommended cybersecurity practices, and remain vigilant for suspicious emails and mobile messages.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Cyber Threat Actors Use a Variety of Techniques to\n2. CISA\n3. CISA and the Federal Bureau of Investigation (FBI)",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/resources-tools/resources/cyber-threat-actors-use-variety-techniques-target-election-and-campaign-officials",
+      "source": "cisa",
+      "published": "2026-10-16T21:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-111114 - Nexter Extension <= 4.7.11 - Authenticated (Subscriber+) Privilege Escalation to 'reset-view' Parameter",
       "summary": "CVE ID :CVE-2026-111114\n  \nPublished : Oct. 16, 2026, 5:17 a.m. | 25 minutes ago\n  \nDescription :The Nexter Extension – Security, Performance, Code Snippets & Site Toolkit plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.7.11 The vulnerability exists because the `/?reset-view` handler in `role_switcher_to_view_admin_as()` performs no nonce or capability check when the supplied username matches the authenticated caller, and because the plugin's only cleanup mechanism — the `profile_update` hook — does not fire when WordPress performs a bulk role change via `wp-admin/users.php?action=promote`, which calls `WP_User::set_role()` directly and leaves a stale `administrator` value in the `nxtext_view_admin_original_role` user meta. This makes it possible for authenticated attackers with Subscriber-level access or above to restore the stale stored Administrator role to their own account, effectively escalating their privileges to Administrator. Exploitation requires that the attacker's account previously held the Administrator role and used the View Admin Role Switcher feature before being demoted specifically through the bulk role-change control rather than the Edit User screen, as only the bulk path bypasses the `profile_update` hook that would otherwise have cleared the stored original role.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6434,36 +6425,6 @@
       "source": "cvefeed",
       "published": "2026-10-14T00:17:44+09:00",
       "lang": "en"
-    },
-    {
-      "title": "GitLab 제품 보안 업데이트 권고",
-      "summary": "1. GitLab社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "description": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. GitLab社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72215",
-      "source": "krcert_notice",
-      "published": "2026-10-14T00:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Ivanti 제품 보안 업데이트 권고",
-      "summary": "1. Ivanti社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "description": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Ivanti社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72214",
-      "source": "krcert_notice",
-      "published": "2026-10-14T00:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "reputation": []
