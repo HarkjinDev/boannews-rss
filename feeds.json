@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-10-17T07:32:47.413690+09:00",
+  "fetched_at": "2026-10-17T08:01:43.783551+09:00",
   "security_news": [
+    {
+      "title": "현대차·기아, 인도서 차량 사이버보안·SW 업데이트 관리체계 인증 획...",
+      "summary": "현대차 인도기술연구소, AIS:189·190 충족…印 마루티 스즈키 이어 두번째 해킹 위협 대응·OTA 관리 역량... 외부 해킹과 차량 전자제어장치(ECU)에 대한 무단 접근 등 보안 위협을 파악하고 예방·대응하는 조직과...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 현대차·기아가 인도서 AIS:189·190 충족, 차량 사이버보안 인증 획득\n2. 차량 ECU 무단 접근 등 해킹 위협 대응·OTA 관리 역량 강화\n3. 인도 마루티 스즈키 이어 두번째, SW 업데이트 관리체계 인정",
+      "link": "https://www.theguru.co.kr/news/article.html?no=108386",
+      "source": "naver",
+      "published": "2026-10-17T07:56:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "‘중국 전기차 국내 주요 군사시설 출입 논란’ 보도의 시사점",
+      "summary": "미국 FBI와 사이버보안·인프라보안국은 2024년 중국 연계 행위자들이 통신망에 침입해 통화기록과 일부 사적 통신을 확보했다고 발표했습니다. 적법한 근거에 따른 정보 수집과 해킹을 통한 탈취는 명백히 다릅니다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 중국 연계 해커, 2024년 통신망 침입 시도\n2. 통화기록, 사적 통신 등 정보 탈취 시도\n3. FBI, 적법 정보수집과 해킹 구분 강조",
+      "link": "https://www.christiantoday.co.kr/news/377949",
+      "source": "naver",
+      "published": "2026-10-17T07:44:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[N2 포커스] 예가람저축은행 해킹 유출, 업권 사례 5배↑…제재 수위 '촉...",
       "summary": "금융권 해킹 사고로 침해가 확인된 금융회사가 16곳으로 늘고 금융당국이 경영진 책임 강화를 예고했다. 이 가운데 예가람저축은행의 유출 규모가 앞서 제재를 받은 저축은행 해킹 사례의 5배를 웃도는 것으로 파악돼...",
@@ -5139,6 +5163,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-110758 - Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace",
+      "summary": "CVE ID :CVE-2026-110758\n  \nPublished : Oct. 16, 2026, 10:08 p.m. | 32 minutes ago\n  \nDescription :Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace.\n\nUnder allow_whitespace, strip_trail_whitespace removes trailing spaces and tabs from each unquoted field without stopping at the start of the field. For a field of only blanks it reads the byte before the field's heap buffer. If that byte is also a space or tab, it may be zeroed and the walk continue backwards, depending on what the allocator placed there.\n\nLeading blanks are normally skipped before a field is stored, but an all-blank field still arrives after a leading escape_char that differs from quote_char, or as a quoted field in getline when its line ends in two CRs.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-110758\n  \nPublished : Oct. 16, 2026, 10:08 p.m. | 32 minutes ago\n  \nDescription :Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace.\n\nUnder allow_whitespace, strip_trail_whitespace removes trailing spaces and tabs from each unquoted field without stopping at the start of the field. For a field of only blanks it reads the byte before the field's heap buffer. If that byte is also a space or tab, it may be zeroed and the walk continue backwards, depending on what the allocator placed there.\n\nLeading blanks are normally skipped before a field is stored, but an all-blank field still arrives after a leading escape_char that differs from quote_char, or as a quoted field in getline when its line ends in two CRs.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-110758\n2. 26.10.17 오전7:08\n3. Text::CSV_XS versions before 1.65 for Perl read be",
+      "cve_id": "CVE-2026-110758",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-110758",
+      "source": "cvefeed",
+      "published": "2026-10-17T07:08:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-68498 - jackson-core: Delayed maxNameLength enforcement for char-backed input (ReaderBasedJsonParser) allows memory-exhaustion denial of service",
       "summary": "CVE ID :CVE-2026-68498\n  \nPublished : Oct. 16, 2026, 9:11 p.m. | 38 minutes ago\n  \nDescription :StreamReadConstraints.maxNameLength (default 50,000 characters) is intended to bound how much memory a single JSON Object property name can consume while being parsed, independently of the much larger maxStringLength (default 100,000,000 characters) that bounds ordinary string values. For parsers built over character input — Reader, String or char[] sources, all served by ReaderBasedJsonParser — that bound is not applied while the name is being accumulated. The code path instead re-uses the string-value length check, which is roughly 2000x larger by default.\n\n\n\nIn the character-input slow path, ReaderBasedJsonParser._parseName2() accumulates the name into the TextBuffer and, when a segment fills, calls TextBuffer.finishCurrentSegment(), which validates only maxStringLength. The correct check, StreamReadConstraints.validateNameLength(int), is reached afterwards in CharsToNameCanonicalizer.findSymbol(), once the entire name has been scanned to its closing quote. By that point the full name — up to maxStringLength characters — has already been buffered in memory.\n\n\n\nA remote attacker who can have a single sufficiently long JSON Object property name parsed through this path can force allocation on the order of 100,000,000 characters (approximately 200 MB, with segment bookkeeping pushing real peak usage higher) before any StreamConstraintsException is thrown, instead of the approximately 50,000-character (about 100 KB) bound the API promises. Repeating this across concurrent requests can exhaust the heap and crash the process. No authentication or user interaction is required. Because StreamReadConstraints.maxDocumentLength is disabled by default (-1), nothing else bounds the token first, so the issue is exploitable under default configuration.\n\n\n\nByte-input parsers are not affected: UTF8StreamJsonParser, UTF8DataInputJsonParser and the non-blocking (async) parsers re-validate maxNameLength on every growth of the name-decode buffer via ParserBase._growNameDecodeBuffer(), rejecting an oversized name after allocating only tens of kilobytes. Applications are exposed when untrusted JSON is parsed from a String, Reader or char[] — for example an HTTP request body already read into a String — rather than from raw UTF-8 bytes.\n\n\n\nThis issue affects com.fasterxml.jackson.core:jackson-core from 2.16.0 and tools.jackson.core:jackson-core from 3.0.0. Releases before 2.16.0 are not affected, because StreamReadConstraints.maxNameLength was first introduced in jackson-core 2.16.0.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
