@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-17T02:01:25.707281+09:00",
+  "fetched_at": "2026-10-17T02:31:29.985371+09:00",
   "security_news": [
     {
       "title": "사이버 보안단체 “북한 해커, 가짜 화상 통화로 38만5천 달러 탈취”",
@@ -5412,18 +5412,6 @@
       "source": "securityweek",
       "published": "2026-10-14T03:43:43+09:00",
       "lang": "en"
-    },
-    {
-      "title": "프랑스 \"냉장고 해킹 피해 슈퍼 700곳…식량안보 건드렸다\"",
-      "summary": "관련된 냉장시스템 관리 업체 중 하나인 덴마크 단포스는 전날 영향받은 제품이 더는 소프트웨어 및 보안 업데이트가 되지 않는 구형이라고 설명했다. 기본적인 보안상 취약점을 노렸을 가능성이 있는 셈이다. 통상 해킹...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 프랑스 슈퍼마켓 700곳 냉장 시스템 해킹 피해 발생\n2. 구형 소프트웨어 취약점 노린 해킹…식량 안보 위협\n3. 덴마크 단포스, 업데이트 안 되는 구형 제품 문제 지적",
-      "link": "https://n.news.naver.com/mnews/article/001/0016374656?sid=104",
-      "source": "naver",
-      "published": "2026-10-14T02:14:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -5470,6 +5458,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-106288",
       "source": "msrc",
       "published": "2026-10-16T23:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation",
+      "summary": "The National Institute of Standards and Technology (NIST), National Security Agency’s Super Intelligence Security Center (NSA SISC) and Cybersecurity and Infrastructure Security Agency (CISA) published Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation. The product outlines ten voluntary core practices to help organizations that train and evaluate highly capable super intelligence (SI) agents—particularly pre-deployment, cutting edge SI agents with reduced safeguards or other high-risk, non-public systems—prepare for and manage SI control incidents.\nA SI control incident occurs when one or more SI agents takes uninstructed actions that conflict with or compromise policies, controls, or security measures that scope the task and provide human oversight. This product aligns with cyber incident response best practices, includes additional SI considerations and highlights the importance of testing controls and validating containment before resuming SI agent activities. It addresses:\n\nmeasures for limiting agent access to information, systems, tools, and networks; \nmonitoring for unexpected activity; \npreserving evidence and shutting down undesired behavior; \nrebuilding from verified baselines; and \nreporting incidents and near-misses to relevant government agencies and affected parties. \n\nFor more information and resources visit CISA’s Super Intelligence page.",
+      "description": "The National Institute of Standards and Technology (NIST), National Security Agency’s Super Intelligence Security Center (NSA SISC) and Cybersecurity and Infrastructure Security Agency (CISA) published Key Practices for Incident Readiness and Response in Super Intelligence Training and Evaluation. The product outlines ten voluntary core practices to help organizations that train and evaluate highly capable super intelligence (SI) agents—particularly pre-deployment, cutting edge SI agents with reduced safeguards or other high-risk, non-public systems—prepare for and manage SI control incidents.\nA SI control incident occurs when one or more SI agents takes uninstructed actions that conflict with or compromise policies, controls, or security measures that scope the task and provide human oversight. This product aligns with cyber incident response best practices, includes additional SI considerations and highlights the importance of testing controls and validating containment before resuming SI agent activities. It addresses:\n\nmeasures for limiting agent access to information, systems, tools, and networks; \nmonitoring for unexpected activity; \npreserving evidence and shutting down undesired behavior; \nrebuilding from verified baselines; and \nreporting incidents and near-misses to relevant government agencies and affected parties. \n\nFor more information and resources visit CISA’s Super Intelligence page.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Key Practices for Incident Readiness and Response \n2. CISA\n3. The National Institute of Standards and Technology",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/resources-tools/resources/key-practices-incident-readiness-and-response-super-intelligence-training-and-evaluation",
+      "source": "cisa",
+      "published": "2026-10-16T21:00:00+09:00",
       "lang": "en"
     },
     {
@@ -6325,21 +6328,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-109429",
       "source": "cvefeed",
       "published": "2026-10-14T03:22:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82416 - FrankenPHP: Cross-request PHP session ID leak in worker mode when the session extension is a shared module",
-      "summary": "CVE ID :CVE-2026-82416\n  \nPublished : Oct. 13, 2026, 5:17 p.m. | 28 minutes ago\n  \nDescription :FrankenPHP is a modern application server for PHP. Prior to 1.12.5, FrankenPHP worker mode can retain PHP session state between requests when the session extension is loaded as a shared module and is unavailable through HAVE_PHP_SESSION at compile time. In this build configuration, frankenphp_reset_session_state() is compiled out, PS(id) can survive a request boundary, and a subsequent session_start() can ignore the new request's cookie because an identifier is already present. Under concurrent requests, session_id() can therefore return another client's identifier or a stale identifier from a previous request on the same worker thread, causing cross-user session exposure, possible session hijacking, and intermittent logout behavior. Builds with the session extension statically linked, including the official static binaries and Docker images, are not affected. This issue is fixed in version 1.12.5.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82416\n  \nPublished : Oct. 13, 2026, 5:17 p.m. | 28 minutes ago\n  \nDescription :FrankenPHP is a modern application server for PHP. Prior to 1.12.5, FrankenPHP worker mode can retain PHP session state between requests when the session extension is loaded as a shared module and is unavailable through HAVE_PHP_SESSION at compile time. In this build configuration, frankenphp_reset_session_state() is compiled out, PS(id) can survive a request boundary, and a subsequent session_start() can ignore the new request's cookie because an identifier is already present. Under concurrent requests, session_id() can therefore return another client's identifier or a stale identifier from a previous request on the same worker thread, causing cross-user session exposure, possible session hijacking, and intermittent logout behavior. Builds with the session extension statically linked, including the official static binaries and Docker images, are not affected. This issue is fixed in version 1.12.5.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-82416\n2. 26.10.14 오전2:17\n3. FrankenPHP is a modern application server for PHP.",
-      "cve_id": "CVE-2026-82416",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82416",
-      "source": "cvefeed",
-      "published": "2026-10-14T02:17:47+09:00",
       "lang": "en"
     }
   ],
