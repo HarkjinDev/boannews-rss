@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-17T12:32:49.508369+09:00",
+  "fetched_at": "2026-10-17T13:02:41.769526+09:00",
   "security_news": [
     {
       "title": "장동혁 국민의힘 대표 \"경제·안보 위기\"…정점식 \"증시 폭락 진상규명...",
@@ -4695,6 +4695,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-107762 - Kirki <= 6.3.2 - Insecure Direct Object Reference to Unauthenticated Sensitive Information Exposure via Context Smuggling via 'context' Parameter",
+      "summary": "CVE ID :CVE-2026-107762\n  \nPublished : Oct. 17, 2026, 2:31 a.m. | 29 minutes ago\n  \nDescription :The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 6.3.2 via the 'context' parameter due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to expose arbitrary users' sensitive profile data — including email address, display name, nicename, registration date, profile image URL, and any string-valued user meta fields such as first name, last name, nickname, description, and custom meta keys — via the REST response. Exploitation requires a published page that uses a Kirki template containing at least one user-type dynamic content block; target user IDs are enumerable via standard WordPress REST endpoints, making the only prerequisite the presence of such a template on the site.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107762\n  \nPublished : Oct. 17, 2026, 2:31 a.m. | 29 minutes ago\n  \nDescription :The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 6.3.2 via the 'context' parameter due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to expose arbitrary users' sensitive profile data — including email address, display name, nicename, registration date, profile image URL, and any string-valued user meta fields such as first name, last name, nickname, description, and custom meta keys — via the REST response. Exploitation requires a published page that uses a Kirki template containing at least one user-type dynamic content block; target user IDs are enumerable via standard WordPress REST endpoints, making the only prerequisite the presence of such a template on the site.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107762\n2. 26.10.17 오전11:31\n3. The Kirki – Freeform Page Builder, Website Builder",
+      "cve_id": "CVE-2026-107762",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107762",
+      "source": "cvefeed",
+      "published": "2026-10-17T11:31:05+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-110758 - Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace",
       "summary": "CVE ID :CVE-2026-110758\n  \nPublished : Oct. 16, 2026, 10:08 p.m. | 32 minutes ago\n  \nDescription :Text::CSV_XS versions before 1.65 for Perl read before the start of an all-blank field under allow_whitespace in strip_trail_whitespace.\n\nUnder allow_whitespace, strip_trail_whitespace removes trailing spaces and tabs from each unquoted field without stopping at the start of the field. For a field of only blanks it reads the byte before the field's heap buffer. If that byte is also a space or tab, it may be zeroed and the walk continue backwards, depending on what the allocator placed there.\n\nLeading blanks are normally skipped before a field is stored, but an all-blank field still arrives after a leading escape_char that differs from quote_char, or as a quoted field in getline when its line ends in two CRs.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
