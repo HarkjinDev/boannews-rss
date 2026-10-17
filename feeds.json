@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-18T02:02:53.256354+09:00",
+  "fetched_at": "2026-10-18T02:32:34.600870+09:00",
   "security_news": [
     {
       "title": "ZachXBT, 바이비트 해킹 자금 1200만달러 추적…44만2000 USDT 동결 밝혀",
@@ -4432,36 +4432,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-104107",
       "source": "cvefeed",
       "published": "2026-10-15T06:17:34+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-103414 - GUIX Binary Resource Loader Heap-based Buffer Overflow",
-      "summary": "CVE ID :CVE-2026-103414\n  \nPublished : Oct. 14, 2026, 5:32 p.m. | 14 minutes ago\n  \nDescription :The GUIX binary resource (theme) loader sizes its arena and populates it in two separate passes that traverse the resource file with independent cursor arithmetic. Because `gx_page_header_data_size` is never validated against the glyph data a page actually contains, the two passes can read different page headers for the same font page, derive different glyph counts, and reserve less than the load pass writes. The excess is written past the end of the arena, with content taken verbatim from the file.\n\n\n\nThe overflowed buffer is allocated by GUIX itself, through `_gx_system_memory_allocator`, rather than supplied by the caller. The public API `gx_binres_theme_load()` takes no size parameter, so no amount of caller diligence prevents this.\n\n\n\nReproduces in the shipped default configuration; `GX_BINARY_RESOURCE_SUPPORT` is enabled by default.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-103414\n  \nPublished : Oct. 14, 2026, 5:32 p.m. | 14 minutes ago\n  \nDescription :The GUIX binary resource (theme) loader sizes its arena and populates it in two separate passes that traverse the resource file with independent cursor arithmetic. Because `gx_page_header_data_size` is never validated against the glyph data a page actually contains, the two passes can read different page headers for the same font page, derive different glyph counts, and reserve less than the load pass writes. The excess is written past the end of the arena, with content taken verbatim from the file.\n\n\n\nThe overflowed buffer is allocated by GUIX itself, through `_gx_system_memory_allocator`, rather than supplied by the caller. The public API `gx_binres_theme_load()` takes no size parameter, so no amount of caller diligence prevents this.\n\n\n\nReproduces in the shipped default configuration; `GX_BINARY_RESOURCE_SUPPORT` is enabled by default.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-103414\n2. 26.10.15 오전2:32\n3. The GUIX binary resource (theme) loader sizes its ",
-      "cve_id": "CVE-2026-103414",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-103414",
-      "source": "cvefeed",
-      "published": "2026-10-15T02:32:12+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-75085 - Out-of-bounds read from received-frame length underflow in the STM32WBA IEEE 802.15.4 driver",
-      "summary": "CVE ID :CVE-2026-75085\n  \nPublished : Oct. 14, 2026, 5:19 p.m. | 17 minutes ago\n  \nDescription :The STM32WBA IEEE 802.15.4 driver in drivers/ieee802154/ieee802154_stm32wba.c computed the packet length of a received frame as pkt_len = rx_frame->length - IEEE802154_FCS_LENGTH without first checking that the radio-reported length could hold an FCS. pkt_len is a uint8_t, so a reported length of 0 or 1 wrapped to 254 or 255. The only bound on the resulting value was __ASSERT_NO_MSG(pkt_len <= CONFIG_NET_BUF_DATA_SIZE), which compiles to nothing in the default production configuration (CONFIG_ASSERT=n).\n\nThe length originates in the ST link-layer receive-done metadata (p_metadata->length, stored by stm32wba_802154_receive_done()), and ultimately in the PHY header of a frame received over the air, so it is influenced by any attacker within radio range of the device. Reaching the underflow requires the vendor link layer to surface a frame shorter than the FCS with no error; the driver performed no validation of its own on that value.\n\nWhen the underflow occurs, stm32wba_802154_rx_thread() calls net_pkt_write(pkt, rx_frame->psdu, pkt_len) with a length of about 254 bytes against a receive buffer that holds at most one PHY packet (IEEE802154_MAX_PHY_PACKET_SIZE, 127 bytes). This reads roughly 128 bytes past the end of the radio receive buffer and copies that adjacent memory into a network packet that is submitted to the networking stack, giving an out-of-bounds read with a potential disclosure of adjacent RAM plus needless oversized packet allocation in the RX thread.\n\nThe fix rejects a frame whose reported length is smaller than IEEE802154_FCS_LENGTH before the subtraction, and replaces the compiled-out assertion with a runtime length check that drops oversized frames — matching the runtime check already present in drivers/ieee802154/ieee802154_nrf5.c.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-75085\n  \nPublished : Oct. 14, 2026, 5:19 p.m. | 17 minutes ago\n  \nDescription :The STM32WBA IEEE 802.15.4 driver in drivers/ieee802154/ieee802154_stm32wba.c computed the packet length of a received frame as pkt_len = rx_frame->length - IEEE802154_FCS_LENGTH without first checking that the radio-reported length could hold an FCS. pkt_len is a uint8_t, so a reported length of 0 or 1 wrapped to 254 or 255. The only bound on the resulting value was __ASSERT_NO_MSG(pkt_len <= CONFIG_NET_BUF_DATA_SIZE), which compiles to nothing in the default production configuration (CONFIG_ASSERT=n).\n\nThe length originates in the ST link-layer receive-done metadata (p_metadata->length, stored by stm32wba_802154_receive_done()), and ultimately in the PHY header of a frame received over the air, so it is influenced by any attacker within radio range of the device. Reaching the underflow requires the vendor link layer to surface a frame shorter than the FCS with no error; the driver performed no validation of its own on that value.\n\nWhen the underflow occurs, stm32wba_802154_rx_thread() calls net_pkt_write(pkt, rx_frame->psdu, pkt_len) with a length of about 254 bytes against a receive buffer that holds at most one PHY packet (IEEE802154_MAX_PHY_PACKET_SIZE, 127 bytes). This reads roughly 128 bytes past the end of the radio receive buffer and copies that adjacent memory into a network packet that is submitted to the networking stack, giving an out-of-bounds read with a potential disclosure of adjacent RAM plus needless oversized packet allocation in the RX thread.\n\nThe fix rejects a frame whose reported length is smaller than IEEE802154_FCS_LENGTH before the subtraction, and replaces the compiled-out assertion with a runtime length check that drops oversized frames — matching the runtime check already present in drivers/ieee802154/ieee802154_nrf5.c.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-75085\n2. 26.10.15 오전2:19\n3. The STM32WBA IEEE 802.15.4 driver in drivers/ieee8",
-      "cve_id": "CVE-2026-75085",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-75085",
-      "source": "cvefeed",
-      "published": "2026-10-15T02:19:10+09:00",
       "lang": "en"
     }
   ],
