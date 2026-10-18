@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-19T03:33:46.515684+09:00",
+  "fetched_at": "2026-10-19T04:01:34.719401+09:00",
   "security_news": [
     {
       "title": "[기고] 성도 ‘디지털 인격’ 지키는 교회의 책임",
@@ -2803,6 +2803,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-98859",
       "source": "cvefeed",
       "published": "2026-10-19T01:17:40+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-98850 - net/packet: prevent TX_RING byte count overflow",
+      "summary": "CVE ID :CVE-2026-98850\n  \nPublished : Oct. 18, 2026, 4:17 p.m. | 1 hour, 41 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet/packet: prevent TX_RING byte count overflow\n\ntpacket_snd() drains every SEND_REQUEST frame in a TX ring and adds\neach valid packet length to the signed int len_sum. Userspace can\nrecycle completed frames concurrently, so a single blocking send call\nis not bounded by the ring size.\n\nAfter enough successful transmissions len_sum wraps into the negative\nrange. In particular, 65536 65535-byte frames followed by a 65007-byte\nframe produce 0xfffffdef, or -EIOCBQUEUED. sock_sendmsg_nosec() treats\nthat as an impossible return and triggers a BUG. On systems configured\nto panic on oops, a CAP_NET_RAW holder can panic the host kernel.\n\nStop before the next frame would make the byte count exceed INT_MAX.\nThe positive short count leaves that frame pending for a later send\ncall.\n\nA two-thread TPACKET_V2 reproducer triggered the BUG on an arm64 build\nof Linux 7.3-rc4. With this change, the same reproducer returned the\nexpected positive short count without an oops.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-98850\n  \nPublished : Oct. 18, 2026, 4:17 p.m. | 1 hour, 41 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet/packet: prevent TX_RING byte count overflow\n\ntpacket_snd() drains every SEND_REQUEST frame in a TX ring and adds\neach valid packet length to the signed int len_sum. Userspace can\nrecycle completed frames concurrently, so a single blocking send call\nis not bounded by the ring size.\n\nAfter enough successful transmissions len_sum wraps into the negative\nrange. In particular, 65536 65535-byte frames followed by a 65007-byte\nframe produce 0xfffffdef, or -EIOCBQUEUED. sock_sendmsg_nosec() treats\nthat as an impossible return and triggers a BUG. On systems configured\nto panic on oops, a CAP_NET_RAW holder can panic the host kernel.\n\nStop before the next frame would make the byte count exceed INT_MAX.\nThe positive short count leaves that frame pending for a later send\ncall.\n\nA two-thread TPACKET_V2 reproducer triggered the BUG on an arm64 build\nof Linux 7.3-rc4. With this change, the same reproducer returned the\nexpected positive short count without an oops.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-98850\n2. 26.10.19 오전1:17\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-98850",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-98850",
+      "source": "cvefeed",
+      "published": "2026-10-19T01:17:39+09:00",
       "lang": "en"
     },
     {
