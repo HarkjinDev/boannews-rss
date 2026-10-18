@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-19T05:02:43.130399+09:00",
+  "fetched_at": "2026-10-19T05:33:30.306582+09:00",
   "security_news": [
+    {
+      "title": "할리스 멤버십 털렸다… 비번·이름 등 유출",
+      "summary": "국내 커피 전문 프랜차이즈 할리스의 멤버십 시스템이 한 달 넘게 이어진 것으로 추정되는 해킹 공격을 받아 고객 개인정보가 유출되는 사고가 발생했다. 할리스는 멤버십 가입 회원들에게 지난 16일 멤버십 시스템에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 할리스 커피, 멤버십 시스템 해킹으로 고객 정보 유출\n2. 비밀번호, 이름 등 민감 정보 다수 노출 추정\n3. 16일 고객 통보, 개인정보 보호 강화 조치",
+      "link": "https://n.news.naver.com/mnews/article/081/0003690102?sid=101",
+      "source": "naver",
+      "published": "2026-10-19T05:05:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[기고] 성도 ‘디지털 인격’ 지키는 교회의 책임",
       "summary": "실상은 수많은 한국교회가 자신도 모르는 사이 이미 해킹 공격을 받았을 가능성이 매우 높다. “소 잃고... 아울러 개인정보보호 관리체계(ISMS) 기준과 관련 제도를 참고하고 활용해 해킹 방어 능력을 체계적으로 강화해...",
@@ -2736,42 +2748,6 @@
       "source": "naver",
       "published": "2026-10-16T05:51:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers",
-      "summary": "Threat actors are exploiting a critical command execution flaw, now tracked as CVE-2026-110447, in the Collabora Online - Built-in CODE Server app (richdocumentscode) for Nextcloud. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Collabora Online RCE 취약점(CVE-2026-110447) 악용\n2. Nextcloud 서버에 원격 코드 실행 및 백도어 설치\n3. 다수 Nextcloud 서버 감염 및 데이터 유출 위험",
-      "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/",
-      "source": "bleepingcomputer",
-      "published": "2026-10-16T05:25:04+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
-      "summary": "A newly disclosed critical flaw in the Linux kernel allows code inside a virtual machine to read memory on the host computer it runs on. A researcher demonstrated the leak against Vercel's live cloud sandboxes, and Vercel confirmed it.\n\nThe flaw, now tracked as CVE-2026-99999 and nicknamed PwnEscape, is in the Linux kernel's networking code, not in any one cloud's setup, so it reaches the shared",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Critical PwnEscape Linux Kernel Vulnerability Lets\n2. A researcher demonstrated the leak against Vercel'\n3. The flaw, now tracked as CVE-2026-99999 and nickna",
-      "link": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
-      "source": "thehackernews",
-      "published": "2026-10-16T05:24:36+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "[열린세상] AI 개발 속도 둘러싼 논란",
-      "summary": "최근 대한민국 금융권이 해킹당해 수만 명의 개인정보가 유출되었다. 경각심을 가지고 있던 핵심 금융... 해킹 일주일 만에 해커의 단서가 공개되었는데 20대 중국 대학생이 자신의 공격 관련 정보를 클로드 코드에...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 대한민국 금융권 대상 해킹, 수만 명 개인정보 유출\n2. 20대 중국 대학생, Claude 코드에 공격 정보 노출\n3. 금융권, AI 개발 속도 관련 보안 경각심 고조",
-      "link": "https://n.news.naver.com/mnews/article/081/0003689506?sid=110",
-      "source": "naver",
-      "published": "2026-10-16T05:05:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -3268,21 +3244,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-94135",
       "source": "cvefeed",
       "published": "2026-10-16T07:21:12+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-104198 - ZoneMinder failed token handling bypasses web authentication",
-      "summary": "CVE ID :CVE-2026-104198\n  \nPublished : 15 de Outubro de 2026 às 20:17 | 18 minutos ago\n  \nDescription :ZoneMinder is a free, open source closed-circuit television software application. In versions 1.34.0 through 1.36.38, the web interface mishandles failed token authentication in web/includes/auth.php. validateToken() returns false when a token is malformed or has an invalid signature, but the caller assigns that value to the global $user variable; because web/index.php tests isset($user), boolean false is treated as a present user and the normal login redirect is skipped. This can dispatch views that rely on the outer authentication gate, including the zones view, which accepts an attacker-selected monitor ID and discloses monitor and zone metadata without an independent permission check. Permission helpers receive the false user value and deny privileged operations, so unauthorized state changes have not been established. This vulnerability is fixed in version 1.36.63, where conversion to ZM\\User objects causes invalid token state to fail before view dispatch. Later defense-in-depth changes explicitly leave $user unset after failed token validation and reject non-ZM\\User values at the web authentication gate.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-104198\n  \nPublished : 15 de Outubro de 2026 às 20:17 | 18 minutos ago\n  \nDescription :ZoneMinder is a free, open source closed-circuit television software application. In versions 1.34.0 through 1.36.38, the web interface mishandles failed token authentication in web/includes/auth.php. validateToken() returns false when a token is malformed or has an invalid signature, but the caller assigns that value to the global $user variable; because web/index.php tests isset($user), boolean false is treated as a present user and the normal login redirect is skipped. This can dispatch views that rely on the outer authentication gate, including the zones view, which accepts an attacker-selected monitor ID and discloses monitor and zone metadata without an independent permission check. Permission helpers receive the false user value and deny privileged operations, so unauthorized state changes have not been established. This vulnerability is fixed in version 1.36.63, where conversion to ZM\\User objects causes invalid token state to fail before view dispatch. Later defense-in-depth changes explicitly leave $user unset after failed token validation and reject non-ZM\\User values at the web authentication gate.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-104198\n2. 26.10.16 오전5:17\n3. ZoneMinder is a free, open source closed-circuit t",
-      "cve_id": "CVE-2026-104198",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104198",
-      "source": "cvefeed",
-      "published": "2026-10-16T05:17:06+09:00",
       "lang": "en"
     }
   ],
