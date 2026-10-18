@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-18T21:33:54.380396+09:00",
+  "fetched_at": "2026-10-18T22:02:30.426684+09:00",
   "security_news": [
     {
       "title": "LG 손끝에 애플 감성 더했다… 집 지키는 스마트홈 기기 7종 첫선",
@@ -2787,6 +2787,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "Orphaned VBA Projects Inside DWG Files: YARA Rule, (Sun, Oct 18th)",
+      "summary": "Here is the YARA rule I used to detect \"Orphaned VBA Projects Inside DWG Files\".\r",
+      "description": "Here is the YARA rule I used to detect \"Orphaned VBA Projects Inside DWG Files\".\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Orphaned VBA Projects Inside DWG Files: YARA Rule,\n2. SANS_ISC\n3. Here is the YARA rule I used to detect \"Orphaned V",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33434",
+      "source": "sans_isc",
+      "published": "2026-10-18T21:59:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-111874 - OpenCATS Career Portal CareersUI.php processLogin excessive authentication",
       "summary": "CVE ID :CVE-2026-111874\n  \nPublished : Oct. 18, 2026, 6:16 a.m. | 1 hour, 14 minutes ago\n  \nDescription :A flaw has been found in OpenCATS 0.10.0. Affected is the function processLogin of the file modules/careers/CareersUI.php of the component Career Portal. This manipulation of the argument applyToJobSubAction causes improper restriction of excessive authentication attempts. Remote exploitation of the attack is possible. A high degree of complexity is needed for the attack. The exploitability is told to be difficult. The exploit has been published and may be used. Patch name: 1cf4fa3ee9054314b023be79d404078645c22ade. It is suggested to install a patch to address this issue. The project maintainer explains: \"Candidates will now need to authenticate each time they access the Career Portal and successfully complete the CAPTCHA as part of that authentication flow. The authenticated candidate identity is now maintained server-side rather than relying on the previous persistent client-side cats…cw cookie mechanism. Application-level rate limiting is deliberately not in scope for this change. In my view, request throttling and brute-force protection of that kind are better applied at the network, reverse-proxy or web-server layer, where they can be configured appropriately for each deployment without OpenCATS having to implement and maintain its own rate-limiting framework. I'll update the online documentation to that effect.\"\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
