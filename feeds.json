@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-19T00:33:04.324344+09:00",
+  "fetched_at": "2026-10-19T01:01:35.678331+09:00",
   "security_news": [
     {
       "title": "[정용수의 한반도 큐] 방심해선 안 될 북한의 ‘수중 빨치산’ 전략",
@@ -3301,21 +3301,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-53582",
       "source": "cvefeed",
       "published": "2026-10-16T01:18:12+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-100351 - kin-openapi: ValidationHandler security-requirement bypass via encoded-path operation confusion",
-      "summary": "CVE ID :CVE-2026-100351\n  \nPublished : Oct. 15, 2026, 3:52 p.m. | 10 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.144.0 until 0.147.0, openapi3filter.ValidationHandler validates an operation selected from decoded URL.Path while a downstream gorilla/mux router configured with UseEncodedPath can dispatch a different operation selected from URL.RawPath. When a public exact route and a protected parameterized route use the same method and overlap after decoding, an unauthenticated remote request containing an encoded path separator can be validated as public and then dispatched to the protected handler without invoking the configured AuthenticationFunc. The reachable path parameter is constrained to an encoded representation that decodes to the public literal route, and proxies that canonicalize the URI before forwarding prevent this specific mismatch. This issue is fixed in version 0.147.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-100351\n  \nPublished : Oct. 15, 2026, 3:52 p.m. | 10 minutes ago\n  \nDescription :kin-openapi is a Go project for handling OpenAPI files. From 0.144.0 until 0.147.0, openapi3filter.ValidationHandler validates an operation selected from decoded URL.Path while a downstream gorilla/mux router configured with UseEncodedPath can dispatch a different operation selected from URL.RawPath. When a public exact route and a protected parameterized route use the same method and overlap after decoding, an unauthenticated remote request containing an encoded path separator can be validated as public and then dispatched to the protected handler without invoking the configured AuthenticationFunc. The reachable path parameter is constrained to an encoded representation that decodes to the public literal route, and proxies that canonicalize the URI before forwarding prevent this specific mismatch. This issue is fixed in version 0.147.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-100351\n2. 26.10.16 오전12:52\n3. kin-openapi is a Go project for handling OpenAPI f",
-      "cve_id": "CVE-2026-100351",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-100351",
-      "source": "cvefeed",
-      "published": "2026-10-16T00:52:30+09:00",
       "lang": "en"
     }
   ],
