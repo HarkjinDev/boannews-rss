@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-20T00:32:40.220477+09:00",
+  "fetched_at": "2026-10-20T01:02:15.191920+09:00",
   "security_news": [
+    {
+      "title": "美, 연방기관 시스템서 중국 '딥시크' AI 모델 사용금지",
+      "summary": "DHS는 딥시크 모델에 \"악성코드나 기타 보안 취약점이 포함돼 있을 가능성도 있다\"고도 지적했다. DHS는 딥시크 제품이 완전히 제거 될 때까지 연방 기관들에 정부 웹사이트를 드나드는 네트워크 트래픽을 모니터링하고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 美, 연방기관 시스템서 중국 '딥시크' AI 모델 사용금지 DHS는 딥시크 모델에 \"악성코\n2. DHS는 딥시크 제품이 완전히 제거 될 때까지 연방 기관들에 정부 웹사이트를 드나드는 네트",
+      "link": "https://n.news.naver.com/mnews/article/469/0000960426?sid=104",
+      "source": "naver",
+      "published": "2026-10-20T00:57:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "美 연방기관서 中 딥시크 퇴출…민감 정보 이전 우려",
       "summary": "미국 사이버보안법을 근거로 들었고, 딥시크의 연방정부 계약 참여도 막았다. 국토안보부는 딥시크 모델이... 다른 보안 취약점이 포함돼 있을 수 있다\"고 강조했다. 앞서 상무부와 해군 등 일부 기관은 정부 기기에서...",
@@ -3612,21 +3624,24 @@
       "source": "naver",
       "published": "2026-10-17T05:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "사이버 보안단체 “북한 해커, 가짜 화상 통화로 38만5천 달러 탈취”",
-      "summary": "북한 연계 해킹 조직이 마이크로소프트 팀즈를 사칭한 화상통화를 이용해 38만5천 달러를 탈취했다고... 업무용 화상회의로 위장한 북한 연계 해킹 공격에서 38만5천 달러의 피해가 발생했다는 사이버 보안단체의 분석이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해커, MS 팀즈 사칭 화상통화로 38만5천 달러 탈취\n2. 업무용 화상회의 위장 공격, 38만5천 달러 피해 발생\n3. 북한 연계 해킹 조직의 금품 탈취 시도 포착",
-      "link": "https://www.voakorea.com/a/dprk-fake-teams-crypto-theft-101626/8212009.html",
-      "source": "naver",
-      "published": "2026-10-17T00:58:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-107569 - Unchecked Input for Loop Condition in hMailServer",
+      "summary": "CVE ID :CVE-2026-107569\n  \nPublished : Oct. 19, 2026, 3:34 p.m. | 27 minutes ago\n  \nDescription :Unchecked input for a loop condition in Progressive Robot hMailServer 6.0.0 through 6.3.6 allows a remote unauthenticated attacker to stop the server carrying mail. The server bounds the mail it generates in response to a message - a rule forward, reply or copy, an account forward, a Sieve redirect, vacation or notify, a bounce, an out-of-office reply - by a counter it carries in the message's X-hMailServer-LoopCount header, and makes no more once the counter reaches the configured rule loop limit (5 by default); that is what ends a forwarding or auto-reply cycle in a bounded number of hops. X-hMailServer-LoopCount is an ordinary header that is not stripped from mail arriving from outside, and the server read it with a signed conversion and no validation, so a count below zero passed every test against the limit: a sender who sets X-hMailServer-LoopCount to a negative value, or on the Linux builds to a value above the 32-bit signed range that the conversion wraps to a negative one, lifts the bound, and a message that enters a generated-mail cycle then loops up to about two thousand million times, each hop a queued message and a delivery, filling the queue and disk and stopping mail service. The Sieve notify action (from 6.2.22) consulted no limit at all, and its increment of the count could overflow a signed integer; and an account could reset the counter on its own mail through a Sieve editheader of the header (from 6.2.22) or a rule Set header value action (all versions) ahead of a forward or redirect.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-107569\n  \nPublished : Oct. 19, 2026, 3:34 p.m. | 27 minutes ago\n  \nDescription :Unchecked input for a loop condition in Progressive Robot hMailServer 6.0.0 through 6.3.6 allows a remote unauthenticated attacker to stop the server carrying mail. The server bounds the mail it generates in response to a message - a rule forward, reply or copy, an account forward, a Sieve redirect, vacation or notify, a bounce, an out-of-office reply - by a counter it carries in the message's X-hMailServer-LoopCount header, and makes no more once the counter reaches the configured rule loop limit (5 by default); that is what ends a forwarding or auto-reply cycle in a bounded number of hops. X-hMailServer-LoopCount is an ordinary header that is not stripped from mail arriving from outside, and the server read it with a signed conversion and no validation, so a count below zero passed every test against the limit: a sender who sets X-hMailServer-LoopCount to a negative value, or on the Linux builds to a value above the 32-bit signed range that the conversion wraps to a negative one, lifts the bound, and a message that enters a generated-mail cycle then loops up to about two thousand million times, each hop a queued message and a delivery, filling the queue and disk and stopping mail service. The Sieve notify action (from 6.2.22) consulted no limit at all, and its increment of the count could overflow a signed integer; and an account could reset the counter on its own mail through a Sieve editheader of the header (from 6.2.22) or a rule Set header value action (all versions) ahead of a forward or redirect.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-107569\n2. 26.10.20 오전12:34\n3. Unchecked input for a loop condition in Progressiv",
+      "cve_id": "CVE-2026-107569",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-107569",
+      "source": "cvefeed",
+      "published": "2026-10-20T00:34:37+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-91858 - Apache Camel: Camel-FOP Resolves External DTDs and Entities From Untrusted XSL-FO Input When a Third-Party JAXP TransformerFactory Is Present",
       "summary": "CVE ID :CVE-2026-91858\n  \nPublished : Oct. 19, 2026, 11:17 a.m. | 1 hour, 28 minutes ago\n  \nDescription :FopProducer transforms the incoming XSL-FO message body by creating a javax.xml.transform.TransformerFactory through TransformerFactory.newInstance() and enabling only FEATURE_SECURE_PROCESSING before running an identity transform over the body. On the JDK's built-in transformer, that feature alone already empties the accessExternalDTD and accessExternalStylesheet limits, so an external DTD or entity is refused. When a third-party JAXP TransformerFactory such as Saxon-HE is on the classpath, for example because the application also uses camel-xslt-saxon or camel-saxon, TransformerFactory.newInstance() returns that implementation instead, and FEATURE_SECURE_PROCESSING on its own does not restrict external resource access on it. A DOCTYPE with an external subset, or an external general entity, declared in the XSL-FO document is then resolved and expanded while the body is transformed. An external sender whose XSL-FO reaches a fop producer could therefore read files readable by the Camel process and cause the process to issue requests to hosts the document names. camel-fop does not bring such a factory itself, and excludes Xalan, so a default deployment using the JDK transformer is not affected; the issue is reachable only where another component has placed an alternative JAXP TransformerFactory on the classpath. Releases on the 4.14.x line and earlier reached end of life before this issue was resolved and do not receive a fix.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
