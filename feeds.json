@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-20T01:30:58.995037+09:00",
+  "fetched_at": "2026-10-20T02:01:17.944549+09:00",
   "security_news": [
     {
       "title": "美, 연방기관 시스템서 중국 '딥시크' AI 모델 사용금지",
@@ -3627,6 +3627,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2025-6623 - Stored Cross-Site Scripting via XML Input in Multiple WSO2 Products Allows UI Manipulation and Redirection",
+      "summary": "CVE ID :CVE-2025-6623\n  \nPublished : Oct. 19, 2026, 4:25 p.m. | 17 minutes ago\n  \nDescription :The carbon console accepts user-supplied XML input without sufficiently encoding potentially executable content, allowing for the injection of malicious scripts.\n\nSuccessful exploitation allows a remote attacker to execute arbitrary JavaScript in the context of a victim's browser, leading to actions such as redirecting the user to a malicious website or modifying the web page's user interface. Session hijacking is not possible as sensitive session cookies are protected by the httpOnly flag.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2025-6623\n  \nPublished : Oct. 19, 2026, 4:25 p.m. | 17 minutes ago\n  \nDescription :The carbon console accepts user-supplied XML input without sufficiently encoding potentially executable content, allowing for the injection of malicious scripts.\n\nSuccessful exploitation allows a remote attacker to execute arbitrary JavaScript in the context of a victim's browser, leading to actions such as redirecting the user to a malicious website or modifying the web page's user interface. Session hijacking is not possible as sensitive session cookies are protected by the httpOnly flag.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2025-6623\n2. 26.10.20 오전1:25\n3. The carbon console accepts user-supplied XML input",
+      "cve_id": "CVE-2025-6623",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2025-6623",
+      "source": "cvefeed",
+      "published": "2026-10-20T01:25:50+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-107569 - Unchecked Input for Loop Condition in hMailServer",
       "summary": "CVE ID :CVE-2026-107569\n  \nPublished : Oct. 19, 2026, 3:34 p.m. | 27 minutes ago\n  \nDescription :Unchecked input for a loop condition in Progressive Robot hMailServer 6.0.0 through 6.3.6 allows a remote unauthenticated attacker to stop the server carrying mail. The server bounds the mail it generates in response to a message - a rule forward, reply or copy, an account forward, a Sieve redirect, vacation or notify, a bounce, an out-of-office reply - by a counter it carries in the message's X-hMailServer-LoopCount header, and makes no more once the counter reaches the configured rule loop limit (5 by default); that is what ends a forwarding or auto-reply cycle in a bounded number of hops. X-hMailServer-LoopCount is an ordinary header that is not stripped from mail arriving from outside, and the server read it with a signed conversion and no validation, so a count below zero passed every test against the limit: a sender who sets X-hMailServer-LoopCount to a negative value, or on the Linux builds to a value above the 32-bit signed range that the conversion wraps to a negative one, lifts the bound, and a message that enters a generated-mail cycle then loops up to about two thousand million times, each hop a queued message and a delivery, filling the queue and disk and stopping mail service. The Sieve notify action (from 6.2.22) consulted no limit at all, and its increment of the count could overflow a signed integer; and an account could reset the counter on its own mail through a Sieve editheader of the header (from 6.2.22) or a rule Set header value action (all versions) ahead of a forward or redirect.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
