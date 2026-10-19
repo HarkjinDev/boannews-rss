@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-10-19T21:32:29.294583+09:00",
+  "fetched_at": "2026-10-19T22:02:51.484883+09:00",
   "security_news": [
+    {
+      "title": "'보안 만점'의 역설…신한은행, 개인정보 유출 피해 전액 보상 방침 밝...",
+      "summary": "한편 KB국민·신한·하나·우리·NH농협 등 5대 시중은행장들은 이날 국정감사에서 최근 금융권에 대한 AI 해킹... 관련해 이찬진 금감원장은 \"내부통제 기준 관리 의무와 사이버 보안 해킹사건과 관련해 최초로 CEO...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. '보안 만점'의 역설…신한은행, 개인정보 유출 피해 전액 보상 방침 밝...\n2. 한편 KB국민·신한·하나·우리·NH농협 등 5대 시중은행장들은 이날 국정감사에서 최근 금융\n3. 관련해 이찬진 금감원장은 \"내부통제 기준 관리 의무와 사이버 보안 해킹사건과 관련해 최초로",
+      "link": "https://n.news.naver.com/mnews/article/123/0002392159?sid=101",
+      "source": "naver",
+      "published": "2026-10-19T21:56:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "해킹 책임 규명 전 3연임 기로…정상혁 신한은행장, 53억 성과보수는",
+      "summary": "고객 2만5729명의 정보가 유출된 가운데 정 행장이 국회 국정감사에서 보안 관리의 미흡한 부분을 직접... 이번 질의에서는 정 행장이 보안 관리의 미흡함을 인정한 데 이어 금융당국의 조사 결과에 따라 경영진의 손해배상...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 해킹 책임 규명 전 3연임 기로…정상혁 신한은행장, 53억 성과보수는 고객 2만5729명의\n2. 이번 질의에서는 정 행장이 보안 관리의 미흡함을 인정한 데 이어 금융당국의 조사 결과에 따",
+      "link": "https://n.news.naver.com/mnews/article/293/0000091811?sid=101",
+      "source": "naver",
+      "published": "2026-10-19T21:34:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "남양주시, 대민 웹서비스 전면 보안 진단… AI발 사이버 위협 대응 강화",
       "summary": "이번 점검은 해킹과 개인정보 유출로 이어질 수 있는 취약 요소를 찾아 개선하는 데 초점을 맞춘다. 웹서비스의 보안 설정이 적절한지, 개인정보 보호조치가 제대로 적용됐는지, 외부 공격에 노출될 만한 약점은 없는지...",
@@ -3543,6 +3567,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-91858 - Apache Camel: Camel-FOP Resolves External DTDs and Entities From Untrusted XSL-FO Input When a Third-Party JAXP TransformerFactory Is Present",
+      "summary": "CVE ID :CVE-2026-91858\n  \nPublished : Oct. 19, 2026, 11:17 a.m. | 1 hour, 28 minutes ago\n  \nDescription :FopProducer transforms the incoming XSL-FO message body by creating a javax.xml.transform.TransformerFactory through TransformerFactory.newInstance() and enabling only FEATURE_SECURE_PROCESSING before running an identity transform over the body. On the JDK's built-in transformer, that feature alone already empties the accessExternalDTD and accessExternalStylesheet limits, so an external DTD or entity is refused. When a third-party JAXP TransformerFactory such as Saxon-HE is on the classpath, for example because the application also uses camel-xslt-saxon or camel-saxon, TransformerFactory.newInstance() returns that implementation instead, and FEATURE_SECURE_PROCESSING on its own does not restrict external resource access on it. A DOCTYPE with an external subset, or an external general entity, declared in the XSL-FO document is then resolved and expanded while the body is transformed. An external sender whose XSL-FO reaches a fop producer could therefore read files readable by the Camel process and cause the process to issue requests to hosts the document names. camel-fop does not bring such a factory itself, and excludes Xalan, so a default deployment using the JDK transformer is not affected; the issue is reachable only where another component has placed an alternative JAXP TransformerFactory on the classpath. Releases on the 4.14.x line and earlier reached end of life before this issue was resolved and do not receive a fix.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-91858\n  \nPublished : Oct. 19, 2026, 11:17 a.m. | 1 hour, 28 minutes ago\n  \nDescription :FopProducer transforms the incoming XSL-FO message body by creating a javax.xml.transform.TransformerFactory through TransformerFactory.newInstance() and enabling only FEATURE_SECURE_PROCESSING before running an identity transform over the body. On the JDK's built-in transformer, that feature alone already empties the accessExternalDTD and accessExternalStylesheet limits, so an external DTD or entity is refused. When a third-party JAXP TransformerFactory such as Saxon-HE is on the classpath, for example because the application also uses camel-xslt-saxon or camel-saxon, TransformerFactory.newInstance() returns that implementation instead, and FEATURE_SECURE_PROCESSING on its own does not restrict external resource access on it. A DOCTYPE with an external subset, or an external general entity, declared in the XSL-FO document is then resolved and expanded while the body is transformed. An external sender whose XSL-FO reaches a fop producer could therefore read files readable by the Camel process and cause the process to issue requests to hosts the document names. camel-fop does not bring such a factory itself, and excludes Xalan, so a default deployment using the JDK transformer is not affected; the issue is reachable only where another component has placed an alternative JAXP TransformerFactory on the classpath. Releases on the 4.14.x line and earlier reached end of life before this issue was resolved and do not receive a fix.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-91858\n2. 26.10.19 오후8:17\n3. FopProducer transforms the incoming XSL-FO message",
+      "cve_id": "CVE-2026-91858",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-91858",
+      "source": "cvefeed",
+      "published": "2026-10-19T20:17:25+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-85246 - Apache Camel: Camel-Mina Information Disclosure via Unmuted Consumer Exceptions",
       "summary": "CVE ID :CVE-2026-85246\n  \nPublished : Oct. 19, 2026, 10:33 a.m. | 19 minutes ago\n  \nDescription :Generation of Error Message Containing Sensitive Information vulnerability in Apache Camel Mina component.\n\nThis issue affects Apache Camel: from 4.0.0 before 4.18.5, from 4.19.0 before 4.22.1.\n\nWhen processing of an exchange failed, the Mina consumer wrote exchange.getException() straight back over the socket to the remote peer. Over a textline codec that hands the peer the exception's class name and message; over the object codec it hands over the serialised exception, cause chain included. A remote peer able to provoke a failure could therefore read internal detail about the deployment - class and package names, and whatever a message or nested cause happens to carry, which in practice can include paths, host names and connection detail. The consumer had no option to suppress this, unlike the HTTP-family consumers aligned by CAMEL-23651.\n\nUpgrade to Apache Camel 4.23.0, which fixes the issue. Users on the 4.18.x LTS releases stream should upgrade to 4.18.5. Users on the 4.22.x LTS releases stream should upgrade to 4.22.1. A muteException consumer option, defaulting to true, replaces the route exception with a generic one carrying no class name, message or stack trace, while still writing a reply so that a synchronous peer is not left to time out. Set muteException=false to restore the previous behaviour. For deployments that cannot upgrade immediately, add an onException handler that sets the reply body explicitly, so the framework never writes the exception back to the peer.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
