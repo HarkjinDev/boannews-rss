@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-20T02:01:17.944549+09:00",
+  "fetched_at": "2026-10-20T02:31:16.656558+09:00",
   "security_news": [
+    {
+      "title": "Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor",
+      "summary": "Copies of Rank Math PRO, the paid version of the Rank Math SEO plugin for WordPress, that were downloaded from rankmath.com or delivered as updates between 20:02 UTC on October 15 and 07:12 UTC on October 16 contained malware, Rank Math said in a security notice published on October 16.\n\nAny site that installed and activated one of those copies should be treated as compromised, and the",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 워드프레스 SEO 플러그인 Rank Math PRO 악성코드 감염\n2. 10월 15-16일 사이 다운로드/업데이트본에 자체 복구 백도어 탑재\n3. 해당 버전 설치 사이트 즉시 감염 처리 및 조치 권고",
+      "link": "https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html",
+      "source": "thehackernews",
+      "published": "2026-10-20T01:28:47+09:00",
+      "lang": "en"
+    },
     {
       "title": "美, 연방기관 시스템서 중국 '딥시크' AI 모델 사용금지",
       "summary": "DHS는 딥시크 모델에 \"악성코드나 기타 보안 취약점이 포함돼 있을 가능성도 있다\"고도 지적했다. DHS는 딥시크 제품이 완전히 제거 될 때까지 연방 기관들에 정부 웹사이트를 드나드는 네트워크 트래픽을 모니터링하고...",
@@ -3627,6 +3639,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-111862 - Rank Math SEO PRO 3.0.123 - Unauthenticated Embedded Malicious Code",
+      "summary": "CVE ID :CVE-2026-111862\n  \nPublished : Oct. 19, 2026, 4:35 p.m. | 31 minutes ago\n  \nDescription :Rank Math SEO PRO for WordPress is affected by a supply-chain compromise in a subset of version 3.0.123 packages downloaded or updated between October 15, 2026 at 20:02 UTC and October 16, 2026 at 07:12 UTC. Rank Math states that the affected plugin files contained malware that could compromise a website if the plugin was activated and directs sites that activated an affected package to treat the website as compromised. The malware may establish persistent access, communicate with rank1cdn[.]com, recreate hidden backdoors on page visits, and expose WordPress credentials, database credentials, API keys, and other secrets accessible to the web server. Rank Math identifies three malicious wp_options keys, hidden PHP backdoors, unauthorized administrator accounts, a fake WordPress core file, PHP-executable .cache files, and a system cron marker as incident indicators. Only packages obtained during the vendor-confirmed window are claimed as affected; version 3.0.123 alone is not sufficient to establish compromise. Rank Math removed the affected files and released version 3.0.124 as the clean replacement.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-111862\n  \nPublished : Oct. 19, 2026, 4:35 p.m. | 31 minutes ago\n  \nDescription :Rank Math SEO PRO for WordPress is affected by a supply-chain compromise in a subset of version 3.0.123 packages downloaded or updated between October 15, 2026 at 20:02 UTC and October 16, 2026 at 07:12 UTC. Rank Math states that the affected plugin files contained malware that could compromise a website if the plugin was activated and directs sites that activated an affected package to treat the website as compromised. The malware may establish persistent access, communicate with rank1cdn[.]com, recreate hidden backdoors on page visits, and expose WordPress credentials, database credentials, API keys, and other secrets accessible to the web server. Rank Math identifies three malicious wp_options keys, hidden PHP backdoors, unauthorized administrator accounts, a fake WordPress core file, PHP-executable .cache files, and a system cron marker as incident indicators. Only packages obtained during the vendor-confirmed window are claimed as affected; version 3.0.123 alone is not sufficient to establish compromise. Rank Math removed the affected files and released version 3.0.124 as the clean replacement.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-111862\n2. 26.10.20 오전1:35\n3. Rank Math SEO PRO for WordPress is affected by a s",
+      "cve_id": "CVE-2026-111862",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-111862",
+      "source": "cvefeed",
+      "published": "2026-10-20T01:35:59+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2025-6623 - Stored Cross-Site Scripting via XML Input in Multiple WSO2 Products Allows UI Manipulation and Redirection",
       "summary": "CVE ID :CVE-2025-6623\n  \nPublished : Oct. 19, 2026, 4:25 p.m. | 17 minutes ago\n  \nDescription :The carbon console accepts user-supplied XML input without sufficiently encoding potentially executable content, allowing for the injection of malicious scripts.\n\nSuccessful exploitation allows a remote attacker to execute arbitrary JavaScript in the context of a victim's browser, leading to actions such as redirecting the user to a malicious website or modifying the web page's user interface. Session hijacking is not possible as sensitive session cookies are protected by the httpOnly flag.\n  \nSeverity: 4.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
