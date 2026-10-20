@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-21T02:01:24.036296+09:00",
+  "fetched_at": "2026-10-21T02:32:18.368420+09:00",
   "security_news": [
+    {
+      "title": "해킹 문턱 낮춘 AI,어떻게 막을까[MT시평/장항배]",
+      "summary": "인공지능(AI)이 해킹의 문턱을 낮추고 있다. 공격자는 AI의 도움으로 취약점을 찾고 공격 코드를 수정하며 침입을 반복할 수 있다. 기업이 주목해야 할 변화는 공격기술의 고도화만이 아니다. 과거에는 시간과 노력이 많이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI, 해킹 문턱 낮춰 공격자에게 시간·노력 절감\n2. AI로 취약점 탐색·공격 코드 수정 쉬워져\n3. AI 악용 공격 증가에 기업 보안 강화 필요",
+      "link": "https://n.news.naver.com/mnews/article/008/0005429250?sid=110",
+      "source": "naver",
+      "published": "2026-10-21T02:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA",
       "summary": "Palo Alto Networks has disclosed that it's continuing to observe exploitation of a now-patched security flaw impacting  PAN-OS and Prisma Access by ransomware actors.\n\nThe activity relates to CVE-2026-0257 (CVSS score: 7.8), an authentication bypass flaw that could be exploited by bad actors to set up unauthorized VPN connections. It was patched by Palo Alto Networks in May 2026 and was",
@@ -5379,6 +5391,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-93475 - Out-of-bounds Write via an Unbounded RSA Modulus in NetX Secure X.509",
+      "summary": "CVE ID :CVE-2026-93475\n  \nPublished : Oct. 20, 2026, 4:17 p.m. | 53 minutes ago\n  \nDescription :The X.509 parser in NetX Secure accepts an RSA public key of any size, but every signature-verification path decrypts into fixed-size buffers dimensioned for the `NX_CRYPTO_MAX_RSA_MODULUS_SIZE` default of 4096 bits. A certificate carrying a larger modulus drives an out-of-bounds write past a file-scope static during ordinary certificate-chain verification.\n\n\n\nIt is reachable pre-authentication. The issuer used for the crypto operation is looked up in the remote, peer-supplied store before the trusted store, so the attacker supplies the oversized key themselves as an intermediate in the chain they present. It triggers on a TLS or DTLS client verifying a malicious server's chain, and on a server performing client-certificate authentication.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-93475\n  \nPublished : Oct. 20, 2026, 4:17 p.m. | 53 minutes ago\n  \nDescription :The X.509 parser in NetX Secure accepts an RSA public key of any size, but every signature-verification path decrypts into fixed-size buffers dimensioned for the `NX_CRYPTO_MAX_RSA_MODULUS_SIZE` default of 4096 bits. A certificate carrying a larger modulus drives an out-of-bounds write past a file-scope static during ordinary certificate-chain verification.\n\n\n\nIt is reachable pre-authentication. The issuer used for the crypto operation is looked up in the remote, peer-supplied store before the trusted store, so the attacker supplies the oversized key themselves as an intermediate in the chain they present. It triggers on a TLS or DTLS client verifying a malicious server's chain, and on a server performing client-certificate authentication.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-93475\n2. 26.10.21 오전1:17\n3. The X.509 parser in NetX Secure accepts an RSA pub",
+      "cve_id": "CVE-2026-93475",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-93475",
+      "source": "cvefeed",
+      "published": "2026-10-21T01:17:17+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-91059 - JPEG decoder: a duplicate SOF0 after SOS publishes a pixelmap that misreports its own allocation size",
       "summary": "CVE ID :CVE-2026-91059\n  \nPublished : Oct. 20, 2026, 2:54 p.m. | 25 minutes ago\n  \nDescription :The GUIX JPEG software decoder enforces no ordering on JPEG markers. A file that places a second `SOF0` frame header after `SOS` re-runs the frame header parser after the output buffer has already been allocated and its geometry latched. The decoder returns `GX_SUCCESS` and publishes a `GX_PIXELMAP` whose reported dimensions and `data_size` exceed the allocation behind it.\n\n\n\nAny consumer that trusts the returned structure reads out of bounds, including GUIX's own display drivers, reached through the ordinary draw path.\n\n\n\nReproduces in the shipped default configuration; `GX_SOFTWARE_DECODER_SUPPORT` is enabled by default.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
