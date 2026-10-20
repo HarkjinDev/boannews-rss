@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-10-20T12:02:44.920009+09:00",
+  "fetched_at": "2026-10-20T12:31:21.779366+09:00",
   "security_news": [
+    {
+      "title": "“국정의 성패가 좌우된다는 각오로”…이재명 대통령, 오늘 '이것' 두고...",
+      "summary": "해킹, 불법 사금융, 보이스피싱, 마약 등 민생 침해 범죄에는 무관용 원칙으로 대응하라고 했다.이날 국무회의에 처음 참석한 김지용 중대범죄수사청장에게도 당부를 건넸다. 이 대통령은 \"화이트칼라 범죄나 권력형...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 이재명 대통령, 민생 침해 범죄 엄단 지시\n2. 해킹, 불법 사금융, 보이스피싱, 마약 범죄 무관용 대응\n3. 김지용 중대범죄수사청장에게도 당부",
+      "link": "https://www.wikitree.co.kr/articles/1167592",
+      "source": "naver",
+      "published": "2026-10-20T12:10:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "한병도 민주당 원내대표 \"초광역특구법 투트랙 발의…금융권 해킹사태...",
+      "summary": "특히 정보 유출 사실조차 제대로 모르는 고객에게 피해 입증 책임을 전가하는 태도를 비판하며, \"보안에 쓸 돈은 아끼고 그 대가를 고객에게 치르게 해서는 안...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융권 해킹으로 개인정보 유출 발생\n2. 고객에게 피해 입증 책임 전가 비판\n3. 보안 투자 부족 비판하며 대책 촉구",
+      "link": "http://www.breaknews.com/1244176",
+      "source": "naver",
+      "published": "2026-10-20T12:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[IT라운지] 에쓰핀 애저 MSP 등록·모픽 MCP 출시·'알바몬 스마트픽'·에...",
       "summary": "VB 컨퍼런스는 영국 보안 정보·테스트·인증 기관 바이러스 불러틴이 1991년부터 개최해 온 사이버보안 학술행사로, S2W는 2021년부터 6년째 참여하고 있다. 김 연구원은 3일차 세션에서 PoC 코드가 악성코드 감염...",
@@ -4239,6 +4263,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-105299 - Pingora forwards client-nominated Connection headers to HTTP/1 upstreams, allowing ACL bypass in specific chained deployments",
+      "summary": "CVE ID :CVE-2026-105299\n  \nPublished : Oct. 20, 2026, 2:17 a.m. | 29 minutes ago\n  \nDescription :Summary\n\n\n\nBefore version 0.9.0, the HTTP/1 upstream path in pingora-proxy passed the downstream request through upstream_request_filter and wrote it to the upstream without removing the client's Connection header, other hop-by-hop headers, or the headers Connection nominated, although RFC 9110 Section 7.6.1 requires intermediaries to remove them. The HTTP/2 upstream path already removed Connection and related HTTP/1-specific headers. A client could therefore nominate a header that the application adds in upstream_request_filter (for example, Connection: keep-alive, X-Forwarded-For). A downstream HTTP/1 intermediary that honors Connection would then strip the Pingora-added header before it reached the origin.\n\n\n\n\nImpact\n\n\n\nSpecifically affects chained deployments where an HTTP/1 intermediary between Pingora and the origin processes Connection nominations (for example, Go's net/http/httputil.ReverseProxy) and the origin trusts headers added by that intermediary (for example, X-Forwarded-For for IP-based authorization). A remote, unauthenticated attacker can have those headers removed, potentially bypassing authorization. The reporter demonstrated access to an IP-restricted endpoint using X-Forwarded-For for IP validation on the origin. This is the same class of issue as CVE-2022-31813 in Apache HTTP Server.\n\n\n\n\nNote that Cloudflare CDN customers were unaffected, as no such chained deployment as described above exists with internal Pingora services, and Connection headers are sanitized before arriving at Pingora gateways.\n\n\n\nMitigation:\n\n  *  \n\nUpgrade to pingora 0.9.0 or later. By default, Pingora now removes hop-by-hop and Connection-nominated headers from upstream requests, and rejects requests whose Connection header nominates Host, X-Forwarded-For, X-Forwarded-Host, X-Forwarded-Proto, or a pseudo-header. This is controlled by PeerOptions::http_upstream_request_policy (HttpUpstreamRequestPolicy). Fix commits:  https://github.com/cloudflare/pingora/commit/28c18e6b6b04dd0bd937234e5950049e6d74cded ,  https://github.com/cloudflare/pingora/commit/ca23f1668eca8e78be7ba62ef0edbd458b40eeee \n\n\n  *  \n\nDo not use HttpUpstreamRequestPolicy::preserve() if the origin relies on headers added by Pingora; it restores the old passthrough behavior.\n\n\n  *  \n\nIf you cannot upgrade: in upstream_request_filter, remove the Connection header and every header it nominates before adding trusted headers.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-105299\n  \nPublished : Oct. 20, 2026, 2:17 a.m. | 29 minutes ago\n  \nDescription :Summary\n\n\n\nBefore version 0.9.0, the HTTP/1 upstream path in pingora-proxy passed the downstream request through upstream_request_filter and wrote it to the upstream without removing the client's Connection header, other hop-by-hop headers, or the headers Connection nominated, although RFC 9110 Section 7.6.1 requires intermediaries to remove them. The HTTP/2 upstream path already removed Connection and related HTTP/1-specific headers. A client could therefore nominate a header that the application adds in upstream_request_filter (for example, Connection: keep-alive, X-Forwarded-For). A downstream HTTP/1 intermediary that honors Connection would then strip the Pingora-added header before it reached the origin.\n\n\n\n\nImpact\n\n\n\nSpecifically affects chained deployments where an HTTP/1 intermediary between Pingora and the origin processes Connection nominations (for example, Go's net/http/httputil.ReverseProxy) and the origin trusts headers added by that intermediary (for example, X-Forwarded-For for IP-based authorization). A remote, unauthenticated attacker can have those headers removed, potentially bypassing authorization. The reporter demonstrated access to an IP-restricted endpoint using X-Forwarded-For for IP validation on the origin. This is the same class of issue as CVE-2022-31813 in Apache HTTP Server.\n\n\n\n\nNote that Cloudflare CDN customers were unaffected, as no such chained deployment as described above exists with internal Pingora services, and Connection headers are sanitized before arriving at Pingora gateways.\n\n\n\nMitigation:\n\n  *  \n\nUpgrade to pingora 0.9.0 or later. By default, Pingora now removes hop-by-hop and Connection-nominated headers from upstream requests, and rejects requests whose Connection header nominates Host, X-Forwarded-For, X-Forwarded-Host, X-Forwarded-Proto, or a pseudo-header. This is controlled by PeerOptions::http_upstream_request_policy (HttpUpstreamRequestPolicy). Fix commits:  https://github.com/cloudflare/pingora/commit/28c18e6b6b04dd0bd937234e5950049e6d74cded ,  https://github.com/cloudflare/pingora/commit/ca23f1668eca8e78be7ba62ef0edbd458b40eeee \n\n\n  *  \n\nDo not use HttpUpstreamRequestPolicy::preserve() if the origin relies on headers added by Pingora; it restores the old passthrough behavior.\n\n\n  *  \n\nIf you cannot upgrade: in upstream_request_filter, remove the Connection header and every header it nominates before adding trusted headers.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-105299\n2. 26.10.20 오전11:17\n3. Summary Before version 0.9.0, the HTTP/1 upstream ",
+      "cve_id": "CVE-2026-105299",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-105299",
+      "source": "cvefeed",
+      "published": "2026-10-20T11:17:08+09:00",
+      "lang": "en"
+    },
     {
       "title": "ISC Stormcast For Tuesday, October 20th, 2026 https://isc.sans.edu/podcastdetail/10142, (Tue, Oct 20th)",
       "summary": "",
