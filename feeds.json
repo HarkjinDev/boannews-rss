@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-20T22:32:37.547287+09:00",
+  "fetched_at": "2026-10-20T23:01:18.369224+09:00",
   "security_news": [
+    {
+      "title": "하늘 나는 자동차 시대…박찬대 인천시장이 주목한 '이 기술'",
+      "summary": "이어 \"금융권의 대규모 개인정보 유출 사고가 보여주듯 사이버보안은 갈수록 중요해지고 있다\"며 \"특히 달리는 자동차의 보안은 사람의 생명과 직결된다\"고 덧붙였다. 그러면서 \"인천은 AI 커넥티드카를 미래 특화산업으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 박찬대 인천시장은 금융권 개인정보 유출 사고 언급\n2. 커넥티드카 보안은 생명과 직결된다 강조\n3. 인천시는 AI 커넥티드카를 미래 특화산업 육성",
+      "link": "https://n.news.naver.com/mnews/article/079/0004200884?sid=102",
+      "source": "naver",
+      "published": "2026-10-20T22:55:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"국책연구기관 보안 관리 부실 심각\"",
       "summary": "서 의원은 감사 결과에도 관련 기관 책임자에 대한 처벌이 없었으며, 서버 백신 설치율도 매우 낮은 수준이라고 지적했다. 이어 \"허술한 보안 관리는 해킹과 국가 기술 유출로 이어질 수 있는 심각한 문제\"라고 강조했다.",
@@ -5295,6 +5307,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-83782 Windows Shell Remote Code Execution Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-83782\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-83782",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83782",
+      "source": "msrc",
+      "published": "2026-10-20T23:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-105949 - Cruise-control: streams for apache kafka cruise control: authentication bypass via extra path segment allows unauthenticated access to all admin endpoints",
       "summary": "CVE ID :CVE-2026-105949\n  \nPublished : Oct. 20, 2026, 12:17 p.m. | 16 minutes ago\n  \nDescription :Cruise Control's Jetty ConstraintSecurityHandler registers security constraints on exact path specs without a catch-all wildcard constraint and without calling setDenyUncoveredHttpMethods(true). The servlet routes requests using Path.of(pathInfo).getFileName(), which strips all leading segments and trailing slashes. Requests like POST /kafkacruisecontrol/x/rebalance bypass authentication entirely but still dispatch to admin endpoints. All 15 admin endpoints become reachable without authentication. In AMQ Streams, the Strimzi operator's NetworkPolicy restricts Cruise Control port 9090 to operator pods only, reducing effective severity to Important.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
