@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-10-20T22:02:40.477437+09:00",
+  "fetched_at": "2026-10-20T22:32:37.547287+09:00",
   "security_news": [
+    {
+      "title": "\"국책연구기관 보안 관리 부실 심각\"",
+      "summary": "서 의원은 감사 결과에도 관련 기관 책임자에 대한 처벌이 없었으며, 서버 백신 설치율도 매우 낮은 수준이라고 지적했다. 이어 \"허술한 보안 관리는 해킹과 국가 기술 유출로 이어질 수 있는 심각한 문제\"라고 강조했다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. \"국책연구기관 보안 관리 부실 심각\" 서 의원은 감사 결과에도 관련 기관 책임자에 대한 처\n2. 이어 \"허술한 보안 관리는 해킹과 국가 기술 유출로 이어질 수 있는 심각한 문제\"라고 강조",
+      "link": "http://www.gnmaeil.com/news/articleView.html?idxno=596929",
+      "source": "naver",
+      "published": "2026-10-20T22:24:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "독일 극우 AfD, 해킹으로 당원 정보 털려…이메일 42만건 유출",
+      "summary": "독일의 극우 정당 독일대안당(AfD)이 해킹당해 이메일 42만 1000여 건과 당원의 개인정보가 유출됐다는... 이번 해킹의 배후가 누구인지는 아직 밝혀지지 않았다. AfD 대변인은 해커들이 당에서 이용하던 이메일 서비스...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 독일 극우 AfD, 해킹으로 당원 정보 털려…이메일 42만건 유출 독일의 극우 정당 독일대\n2. 이번 해킹의 배후가 누구인지는 아직 밝혀지지 않았다.\n3. AfD 대변인은 해커들이 당에서 이용하던 이메일 서비스...",
+      "link": "https://n.news.naver.com/mnews/article/421/0009240096?sid=104",
+      "source": "naver",
+      "published": "2026-10-20T22:20:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[국감2026] '한미전략투자공사 사장 태도 지적' 잇따른 재경위 국감…\"K...",
+      "summary": "관세정보원에는 \"외부 해킹 시도와 개인정보 유출 우려에 대응해 관세청과 협의하고 보안 인프라를 확보해야 한다\"고 주문했다. 조승래 재경위원장(왼쪽 위)이 ​​20일 종감 점 발언하고 있다. 사진-=",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [국감2026] '한미전략투자공사 사장 태도 지적' 잇따른 재경위 국감…\"K...\n2. 관세정보원에는 \"외부 해킹 시도와 개인정보 유출 우려에 대응해 관세청과 협의하고 보안 인프\n3. 조승래 재경위원장(왼쪽 위)이 ​​20일 종감 점 발언하고 있다.",
+      "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7189891",
+      "source": "naver",
+      "published": "2026-10-20T22:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "PingCAP 해킹 주장…비트겟 \"TiDB엔 공개 체결 기록뿐\"",
       "summary": "랜섬웨어 조직 Fulcrumsec이 자체 유출 사이트에 데이터베이스 TiDB 개발사 PingCAP를 피해자로 올렸다고 블록템포(BlockTempo)가 보도했다. Fulcrumsec은 PingCAP에서 자료를 탈취했다고 주장했다....",
@@ -5259,6 +5295,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-105949 - Cruise-control: streams for apache kafka cruise control: authentication bypass via extra path segment allows unauthenticated access to all admin endpoints",
+      "summary": "CVE ID :CVE-2026-105949\n  \nPublished : Oct. 20, 2026, 12:17 p.m. | 16 minutes ago\n  \nDescription :Cruise Control's Jetty ConstraintSecurityHandler registers security constraints on exact path specs without a catch-all wildcard constraint and without calling setDenyUncoveredHttpMethods(true). The servlet routes requests using Path.of(pathInfo).getFileName(), which strips all leading segments and trailing slashes. Requests like POST /kafkacruisecontrol/x/rebalance bypass authentication entirely but still dispatch to admin endpoints. All 15 admin endpoints become reachable without authentication. In AMQ Streams, the Strimzi operator's NetworkPolicy restricts Cruise Control port 9090 to operator pods only, reducing effective severity to Important.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-105949\n  \nPublished : Oct. 20, 2026, 12:17 p.m. | 16 minutes ago\n  \nDescription :Cruise Control's Jetty ConstraintSecurityHandler registers security constraints on exact path specs without a catch-all wildcard constraint and without calling setDenyUncoveredHttpMethods(true). The servlet routes requests using Path.of(pathInfo).getFileName(), which strips all leading segments and trailing slashes. Requests like POST /kafkacruisecontrol/x/rebalance bypass authentication entirely but still dispatch to admin endpoints. All 15 admin endpoints become reachable without authentication. In AMQ Streams, the Strimzi operator's NetworkPolicy restricts Cruise Control port 9090 to operator pods only, reducing effective severity to Important.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-105949\n2. 26.10.20 오후9:17\n3. Cruise Control's Jetty ConstraintSecurityHandler r",
+      "cve_id": "CVE-2026-105949",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-105949",
+      "source": "cvefeed",
+      "published": "2026-10-20T21:17:28+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-110725 - fast-uri vulnerable to scheme injection via an unescaped first-segment colon in suffix references",
       "summary": "CVE ID :CVE-2026-110725\n  \nPublished : Oct. 20, 2026, 7:06 a.m. | 17 minutes ago\n  \nDescription :fast-uri is a dependency-free RFC 3986 URI parser and serializer for Node.js. In versions before 2.4.8, from 3.0.0 through 3.1.8, and from 4.0.0 through 4.2.2, when serialize(), normalize(), or resolve() are called with the non-default option reference set to suffix on a reference that has no authority, the emitted relative reference can contain a bare colon in its first path segment without escaping it, even though RFC 3986 forbids that because it makes the string reparse as an absolute URI with a scheme. An application that serializes or normalizes a relative reference with the suffix option and then treats the result as a URI can turn inert input into a live javascript, data, or vbscript URL, a cross-site scripting vector, and the equal() comparison can conflate a scheme-bearing reference with a relative one. Exposure is limited to applications using the non-default suffix reference option. The issue is fixed in fast-uri 2.4.8, 3.1.9, and 4.2.3, and users should upgrade to one of these versions or later. As a workaround, avoid the suffix reference option on untrusted input, or percent-encode a colon in the first path segment of the result before treating it as a URI.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
