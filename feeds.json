@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-22T02:01:19.375732+09:00",
+  "fetched_at": "2026-10-22T02:32:20.192933+09:00",
   "security_news": [
+    {
+      "title": "PHP 보안 해킹 위험 터진 유럽… 현지 공공기관 웹사이트 줄줄이 선제차...",
+      "summary": "해킹 피해가 확인돼 서비스를 멈춘 것이 아니라 공격 위험을 줄이기 위해 선제적으로 운영을 중단한 조치다.... 유럽연합(EU)은 전날 PHP 취약점에 따른 해킹 위험을 경고하며 보안 패치가 배포되는 즉시 적용하라고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 유럽 공공기관, PHP 취약점 위험으로 웹사이트 선제 차단\n2. EU, PHP 취약점 경고…보안 패치 즉시 적용 권고\n3. (추가 정보 부족으로 인한 요약 불가)",
+      "link": "https://www.dkilbo.com/news/articleView.html?idxno=558059",
+      "source": "naver",
+      "published": "2026-10-22T02:20:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "웹사이트 해킹 비상에 유럽 주요 공공기관 접속 차단(종합)",
       "summary": "발견에 해킹 우려…즉각 보안배치 적용해야\" 경계령 현윤경 특파원 = 인터넷 전반에 걸쳐 광범위하게 사용되는 프로그래밍 언어 PHP에서 치명적인 보안 취약점이 발견돼 해킹 비상이 걸리자 상당수 유럽 국가도 21일...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-10-19T10:01:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "정부, 국가기술유출 활용 재산상 이득 몰수 나선다…범정부 공조체계 가...",
-      "summary": "보안이 취약한 협력사 등에 취약점 진단 및 지원을 강화하고, 연구 현장에서 기술이 유출되지 않도록 국가핵심기술 관련 연구개발(R&D)과제의 보안 관리도 강화한다. 국가핵심기술 등 중요 기술 사전 보호체계도 강화한다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 정부, 국가기술유출 활용 재산상 이득 몰수 나선다…범정부 공조체계 가...\n2. 보안이 취약한 협력사 등에 취약점 진단 및 지원을 강화하고, 연구 현장에서 기술이 유출되지\n3. 국가핵심기술 등 중요 기술 사전 보호체계도 강화한다....",
-      "link": "https://n.news.naver.com/mnews/article/016/0002711061?sid=101",
-      "source": "naver",
-      "published": "2026-10-19T10:01:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6016,6 +6016,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-76497",
       "source": "cvefeed",
       "published": "2026-10-22T01:18:13+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-76505 - Cisco IOS XR Software for ASR 9000 Series Routers IPv4 Unicast Packets Denial of Service Vulnerability",
+      "summary": "CVE ID :CVE-2026-76505\n  \nPublished : Oct. 21, 2026, 4:18 p.m. | 56 minutes ago\n  \nDescription :A vulnerability in the IPv4 packet processing functionality of Cisco IOS XR Software that affects Cisco ASR 9000 and 9900 Series Aggregation Services Routers as well as Cisco ASR 9902 and 9903 Compact High-Performance Routers could allow an unauthenticated, remote attacker to cause network processor (NP) errors, resulting in a line card reset or shutdown and a denial of service (DoS) condition. \n\nThis vulnerability is due to the incorrect handling of crafted IPv4 packets that are received on an affected line card interface and processed as for-us traffic. The issue can result in an NP reset, causing traffic loss on the affected line card while it recovers. Under repeated reset conditions, the network processor may enter a persistent shutdown state, in which case an explicit line card reload may be required to restore traffic.\nThe vulnerability is within the IPv4 packet-processing path. Transit IPv4 traffic does not trigger this issue and IPv6 traffic cannot trigger it.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-76505\n  \nPublished : Oct. 21, 2026, 4:18 p.m. | 56 minutes ago\n  \nDescription :A vulnerability in the IPv4 packet processing functionality of Cisco IOS XR Software that affects Cisco ASR 9000 and 9900 Series Aggregation Services Routers as well as Cisco ASR 9902 and 9903 Compact High-Performance Routers could allow an unauthenticated, remote attacker to cause network processor (NP) errors, resulting in a line card reset or shutdown and a denial of service (DoS) condition. \n\nThis vulnerability is due to the incorrect handling of crafted IPv4 packets that are received on an affected line card interface and processed as for-us traffic. The issue can result in an NP reset, causing traffic loss on the affected line card while it recovers. Under repeated reset conditions, the network processor may enter a persistent shutdown state, in which case an explicit line card reload may be required to restore traffic.\nThe vulnerability is within the IPv4 packet-processing path. Transit IPv4 traffic does not trigger this issue and IPv6 traffic cannot trigger it.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-76505\n2. 26.10.22 오전1:18\n3. A vulnerability in the IPv4 packet processing func",
+      "cve_id": "CVE-2026-76505",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-76505",
+      "source": "cvefeed",
+      "published": "2026-10-22T01:18:12+09:00",
       "lang": "en"
     },
     {
@@ -6181,6 +6196,96 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-114119",
       "source": "cvefeed",
       "published": "2026-10-21T09:37:16+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[webapps] Keycloak  26.7.2 - Unauthenticated Account Takeover",
+      "summary": "Keycloak  26.7.2 - Unauthenticated Account Takeover",
+      "description": "Keycloak  26.7.2 - Unauthenticated Account Takeover",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [webapps] Keycloak 26.7.2 - Unauthenticated Accoun\n2. EXPLOITDB\n3. Keycloak 26.7.2 - Unauthenticated Account Takeover",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52699",
+      "source": "exploitdb",
+      "published": "2026-10-21T09:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[webapps] Open eClass 3.15 - RCE",
+      "summary": "Open eClass 3.15 - RCE",
+      "description": "Open eClass 3.15 - RCE",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [webapps] Open eClass 3.15 - RCE\n2. EXPLOITDB\n3. Open eClass 3.15 - RCE",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52698",
+      "source": "exploitdb",
+      "published": "2026-10-21T09:00:00+09:00",
+      "lang": "nl"
+    },
+    {
+      "title": "[webapps] Automotive Shop Management System 1.0 - SQLi",
+      "summary": "Automotive Shop Management System 1.0 - SQLi",
+      "description": "Automotive Shop Management System 1.0 - SQLi",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [webapps] Automotive Shop Management System 1.0 - \n2. EXPLOITDB\n3. Automotive Shop Management System 1.0 - SQLi",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52697",
+      "source": "exploitdb",
+      "published": "2026-10-21T09:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[remote] Edimax BR-6478AC firmware v2.20 - authenticated command injection",
+      "summary": "Edimax BR-6478AC firmware v2.20 - authenticated command injection",
+      "description": "Edimax BR-6478AC firmware v2.20 - authenticated command injection",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [remote] Edimax BR-6478AC firmware v2.20 - authent\n2. EXPLOITDB\n3. Edimax BR-6478AC firmware v2.20 - authenticated co",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52696",
+      "source": "exploitdb",
+      "published": "2026-10-21T09:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[remote] Exasol Database 7.1.30 - command execution",
+      "summary": "Exasol Database 7.1.30 - command execution",
+      "description": "Exasol Database 7.1.30 - command execution",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [remote] Exasol Database 7.1.30 - command executio\n2. EXPLOITDB\n3. Exasol Database 7.1.30 - command execution",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52695",
+      "source": "exploitdb",
+      "published": "2026-10-21T09:00:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "[remote] ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
+      "summary": "ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
+      "description": "ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [remote] ProSoft RLX-IFH24E v2.2.44 - Unsigned Fir\n2. EXPLOITDB\n3. ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upg",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.exploit-db.com/exploits/52693",
+      "source": "exploitdb",
+      "published": "2026-10-21T09:00:00+09:00",
       "lang": "en"
     },
     {
