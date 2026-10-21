@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-22T00:32:33.534769+09:00",
+  "fetched_at": "2026-10-22T01:02:20.583697+09:00",
   "security_news": [
+    {
+      "title": "AI로 찾은 PHP 취약점, 해킹에 악용될라…전세계 웹사이트 보안 비상",
+      "summary": "전 세계 웹사이트 최대 70%에 사용되는 프로그래밍 언어 PHP의 치명적인 보안 취약점은 보안 전문가들이 인공지능(AI)을 활용해 발견한 것이라고 월스트리트저널(WSJ)이 21일(현지시간) 보도했다. PHP 개발진이 명명한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI로 찾은 PHP 취약점, 해킹에 악용될라…전세계 웹사이트 보안 비상 전 세계 웹사이트 \n2. PHP 개발진이 명명한...",
+      "link": "https://n.news.naver.com/mnews/article/421/0009242688?sid=104",
+      "source": "naver",
+      "published": "2026-10-22T00:44:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "전세계 웹사이트에 해킹 비상…AI가 치명적 보안결함 발견(종합)",
       "summary": "사이버보안업체 캘리프는 오픈AI의 모델 'GPT-5.6 솔(Sol)'을 이용해 취약점을 찾아냈으며, 구글 계열 사이버보안업체 위즈도 독자적으로 두 건의 취약점을 발견해 신고했다. 이 결함은 수년간 PHP 코드에 존재했으며...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-10-19T09:47:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[국감 이 사람] 박성훈 \"경제의 중심은 민생\"...정쟁보다 현장 집중",
-      "summary": "해킹 등 개인정보 유출 신고가 늘어나는 상황에서 현장조사 비율이 5.7%에 그친다는 점을 지적하며 서면조사 중심의 대응에서 벗어나 현장조사를 확대해야 한다고 촉구했다. 사고 발생 이후 책임을 묻는 데 머물지 않고...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [국감 이 사람] 박성훈 \"경제의 중심은 민생\"...정쟁보다 현장 집중 해킹 등 개인정보 \n2. 사고 발생 이후 책임을 묻는 데 머물지 않고...",
-      "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=873559",
-      "source": "naver",
-      "published": "2026-10-19T09:44:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6016,6 +6016,21 @@
       "link": "https://isc.sans.edu/diary/rss/33440",
       "source": "sans_isc",
       "published": "2026-10-21T21:44:16+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Critical Vulnerabilities in PHP Require Immediate Patching",
+      "summary": "CISA strongly urges organizations to immediately patch the recently disclosed critical vulnerabilities in PHP, CVE-2026-109618 and CVE-2026-109619. These vulnerabilities, known as “php2shell,” allow for unauthenticated remote code execution in PHP and affect all PHP installations serving web requests. Organizations should immediately update to PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 to fix these vulnerabilities. While CISA has not observed exploitation of these vulnerabilities as of the time of publication, they pose a risk to organizations if left unpatched. \nCISA urges organizations to take the following actions:\n\nIdentify and inventory systems running any version of PHP across your organization. \n\nPHP is often a component of other software and prevalence may not be directly observable.\n\n\nApply the patch immediately, prioritizing internet-facing systems.\nOrganizations that cannot update immediately, or that continue to use PHP 8.1 or earlier unsupported versions, should take PHP-based systems offline until they can be patched or updated.\nA web application firewall may provide some protection until systems are updated or patched.\nReview the official PHP security advisory for guidance on patching.\nMonitor for suspicious activity, including PHP worker processes launching shells or downloading tools. \n\nCISA urges network defenders to review the following advisory and apply necessary updates: \n\nSecurity Advisory: Critical Remote Code Execution Vulnerabilities, Update Now \n\nDisclaimer\nThe information in this report is being provided “as is” for informational purposes only. CISA does not endorse any commercial entity, product, company, or service, including any entities, products, or services linked within this document. Any reference to specific commercial entities, products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply endorsement, recommendation, or favoring by CISA.",
+      "description": "CISA strongly urges organizations to immediately patch the recently disclosed critical vulnerabilities in PHP, CVE-2026-109618 and CVE-2026-109619. These vulnerabilities, known as “php2shell,” allow for unauthenticated remote code execution in PHP and affect all PHP installations serving web requests. Organizations should immediately update to PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 to fix these vulnerabilities. While CISA has not observed exploitation of these vulnerabilities as of the time of publication, they pose a risk to organizations if left unpatched. \nCISA urges organizations to take the following actions:\n\nIdentify and inventory systems running any version of PHP across your organization. \n\nPHP is often a component of other software and prevalence may not be directly observable.\n\n\nApply the patch immediately, prioritizing internet-facing systems.\nOrganizations that cannot update immediately, or that continue to use PHP 8.1 or earlier unsupported versions, should take PHP-based systems offline until they can be patched or updated.\nA web application firewall may provide some protection until systems are updated or patched.\nReview the official PHP security advisory for guidance on patching.\nMonitor for suspicious activity, including PHP worker processes launching shells or downloading tools. \n\nCISA urges network defenders to review the following advisory and apply necessary updates: \n\nSecurity Advisory: Critical Remote Code Execution Vulnerabilities, Update Now \n\nDisclaimer\nThe information in this report is being provided “as is” for informational purposes only. CISA does not endorse any commercial entity, product, company, or service, including any entities, products, or services linked within this document. Any reference to specific commercial entities, products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply endorsement, recommendation, or favoring by CISA.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-109618\n2. CISA\n3. CISA strongly urges organizations to immediately p",
+      "cve_id": "CVE-2026-109618",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
+      "source": "cisa",
+      "published": "2026-10-21T21:00:00+09:00",
       "lang": "en"
     },
     {
