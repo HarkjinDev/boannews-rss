@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-10-23T02:02:44.018878+09:00",
+  "fetched_at": "2026-10-23T02:32:45.979514+09:00",
   "security_news": [
+    {
+      "title": "Arista patches new VeloCloud Orchestrator zero-day exploited in attacks",
+      "summary": "Arista Networks released security updates to patch an actively exploited zero-day vulnerability affecting VeloCloud Orchestrator (VCO) On-Prem deployments. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Arista Networks, VeloCloud Orchestrator(VCO) 제로데이 \n2. 공격자가 VCO 온프레미스 환경에서 제로데이 취약점을 악용\n3. Arista, 즉각적인 보안 업데이트 배포 및 사용자 권고",
+      "link": "https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/",
+      "source": "bleepingcomputer",
+      "published": "2026-10-23T02:18:22+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "코인베이스(COIN) \"PHP 취약점, 우리는 문제 없어\"...자오창펑은 주의 당...",
+      "summary": "하드웨어 지갑은 전송 주소를 표시하지만, 해킹된 웹사이트가 잘못된 주소를 제시했는지까지 판별하지는 못한다고 설명했다. [기사 핵심 요약] -코인베이스와 비트고는 PHP 취약점 노출 정황이 없다고 밝혔으며...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 코인베이스, PHP 취약점 노출 정황 없다고 밝혀\n2. 해킹 웹사이트, 잘못된 전송 주소 제시 가능성\n3. 하드웨어 지갑, 주소 판별 기능 부족",
+      "link": "http://coinreaders.com/264759",
+      "source": "naver",
+      "published": "2026-10-23T02:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "한국 금융권 해킹에 쓰인 中 ‘아텍스’… 글로벌 기업·기관 수백곳 공...",
       "summary": "침입 후에는 접속 권한을 바꿔, 보안 조치 후에도 다시 침입할 통로를 마련하기도 했다. 아텍스는 원래 AI로 전산 시스템의 보안 허점을 점검하는 도구다. 하지만 해커가 악용하면 공격 대상 조사부터 보안 취약점 탐색...",
@@ -5976,33 +6000,24 @@
       "source": "naver",
       "published": "2026-10-20T09:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[현장] 화담숲에 담은 장기고객 예우…LG유플러스, 경험으로 차별화",
-      "summary": "▶2년 이상 이용하면 장기고객 기본 혜택을 제공하며, 피싱·해킹 관련 보험도 장기고객 혜택으로 운영하고 있다. '유플투쁠'에서는 매달 마지막 주 목요일에 장기고객 데이를 운영해 생활에서 편하게 이용할 수 있는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [현장] 화담숲에 담은 장기고객 예우…LG유플러스, 경험으로 차별화 ▶2년 이상 이용하면 \n2. '유플투쁠'에서는 매달 마지막 주 목요일에 장기고객 데이를 운영해 생활에서 편하게 이용할 ",
-      "link": "http://www.4th.kr/news/articleView.html?idxno=2119982",
-      "source": "naver",
-      "published": "2026-10-20T09:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "금융·공공까지 해킹 확산···위협 IP 21만개 탐지",
-      "summary": "20일 보안업계에 따르면 AI 사이버보안 기업 에버스핀은 자사 웹 보안 솔루션 '에버세이프 웹(Eversafe for Web)'을 사용하는 고객사 7곳을 분석한 결과, 지난 9월 1일부터 10월 17일까지 총 6204만6671건의 공격 시도를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융·공공까지 해킹 확산···위협 IP 21만개 탐지 20일 보안업계에 따르면 AI 사이버",
-      "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=874333",
-      "source": "naver",
-      "published": "2026-10-20T08:56:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-115453 - Cross user deletion and modification of cart and wishlist rows in Ecommerce Template through unscoped primary key queries",
+      "summary": "CVE ID :CVE-2026-115453\n  \nPublished : Oct. 22, 2026, 4:17 p.m. | 32 minutes ago\n  \nDescription :Authorization Bypass Through User-Controlled Key (CWE-639) in the cart and wishlist repositories of MarcosCamara01 Ecommerce Template allows any authenticated user to delete and modify the cart and wishlist rows of any other user, because cartRepository.delete(), cartRepository.updateQuantityInternal() and wishlistRepository.delete() in src/lib/db/drizzle/repositories/ match rows by primary key alone, with no predicate on the owning user, and the per user authorization for those three operations rests on PostgreSQL row level security. The migrations run ALTER TABLE ... ENABLE ROW LEVEL SECURITY and create policies comparing app.current_user_id() with user_id, but never ALTER TABLE ... FORCE ROW LEVEL SECURITY, and PostgreSQL does not apply policies to the role that owns a table. The template uses one DATABASE_URL both to run the migrations, which create the tables, and for the application at runtime, so the application connects as the owner of the tables and the policies do not apply to it. cart_items.id and wishlist.id are sequential bigserial values, so the identifiers of rows belonging to other users can be enumerated, and the update path returns the modified row, which carries the identifier of the user it belongs to. This results in the destruction and modification of cart and wishlist contents belonging to other accounts of the installation.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-115453\n  \nPublished : Oct. 22, 2026, 4:17 p.m. | 32 minutes ago\n  \nDescription :Authorization Bypass Through User-Controlled Key (CWE-639) in the cart and wishlist repositories of MarcosCamara01 Ecommerce Template allows any authenticated user to delete and modify the cart and wishlist rows of any other user, because cartRepository.delete(), cartRepository.updateQuantityInternal() and wishlistRepository.delete() in src/lib/db/drizzle/repositories/ match rows by primary key alone, with no predicate on the owning user, and the per user authorization for those three operations rests on PostgreSQL row level security. The migrations run ALTER TABLE ... ENABLE ROW LEVEL SECURITY and create policies comparing app.current_user_id() with user_id, but never ALTER TABLE ... FORCE ROW LEVEL SECURITY, and PostgreSQL does not apply policies to the role that owns a table. The template uses one DATABASE_URL both to run the migrations, which create the tables, and for the application at runtime, so the application connects as the owner of the tables and the policies do not apply to it. cart_items.id and wishlist.id are sequential bigserial values, so the identifiers of rows belonging to other users can be enumerated, and the update path returns the modified row, which carries the identifier of the user it belongs to. This results in the destruction and modification of cart and wishlist contents belonging to other accounts of the installation.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-115453\n2. 26.10.23 오전1:17\n3. Authorization Bypass Through User-Controlled Key (",
+      "cve_id": "CVE-2026-115453",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115453",
+      "source": "cvefeed",
+      "published": "2026-10-23T01:17:35+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-61791 - OCO-Server: Stored XSS through agent hostnames in command buttons",
       "summary": "CVE ID :CVE-2026-61791\n  \nPublished : Oct. 22, 2026, 2:55 p.m. | 19 minutes ago\n  \nDescription :OCO-Server is a self-hosted endpoint management application for computer inventory, software deployment, and mobile device management. Prior to 1.2.1, `Html::commandButton()` in `lib/Html.class.php` embeds an action URL containing a stored computer hostname into a JavaScript string in an inline `onclick` handler, using `htmlspecialchars(ENT_QUOTES)` only for HTML escaping. Browsers decode the HTML entities before interpreting the handler as JavaScript, allowing a crafted hostname to escape the string and execute script in an administrator's authenticated session when an affected command button is activated. `frontend/views/computer-details.php` passes `$computer->hostname` to this helper using `Computer::DEFAULT_COMPUTER_COMMANDS` in `lib/Models/Computer.class.php`, whose VNC, RDP, SSH, and Ping entries use `new_tab=false` and the vulnerable `window.location` branch. A remote attacker who possesses the shared `agent-registration-key` can use the `oco.agent.hello` handler in `frontend/api-agent.php` to store an unchecked hostname when `agent-self-registration-enabled` is enabled; self-registration is disabled by default. The vulnerable default command buttons require no custom command configuration. The injected script can abuse the administrator's privileges, including permission to deploy software jobs to managed computers. This issue is fixed in version 1.2.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
