@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-24T02:32:17.357181+09:00",
+  "fetched_at": "2026-10-24T03:01:24.115490+09:00",
   "security_news": [
     {
       "title": "[심층: 대북제재] 1. 완화 제안 속 제재의 실제 효과…북한 자금 차단·...",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-106069 - Node.js TLS Hostname Verification Bypass",
+      "summary": "CVE ID :CVE-2026-106069\n  \nPublished : Oct. 23, 2026, 4:15 p.m. | 1 hour, 2 minutes ago\n  \nDescription :A flaw in Node.js TLS hostname verification can cause a server certificate to be validated against a different IP address than the one the client connected to, when the host is a non-canonical IPv4 literal with a leading zero, such as `0127.0.0.1`.\n\n`tls.checkServerIdentity()` normalizes the host following the WHATWG URL rules, which read a leading-zero octet as octal (`0127.0.0.1` becomes `87.0.0.1`), while the connection is made through the operating system resolver, which on some platforms such as macOS reads it as decimal (`127.0.0.1`). A server at the connected address can then be authenticated with a certificate issued for another IP address.\n\nThis vulnerability affects Node.js **26.x**, **24.x**, and **22.x**.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-106069\n  \nPublished : Oct. 23, 2026, 4:15 p.m. | 1 hour, 2 minutes ago\n  \nDescription :A flaw in Node.js TLS hostname verification can cause a server certificate to be validated against a different IP address than the one the client connected to, when the host is a non-canonical IPv4 literal with a leading zero, such as `0127.0.0.1`.\n\n`tls.checkServerIdentity()` normalizes the host following the WHATWG URL rules, which read a leading-zero octet as octal (`0127.0.0.1` becomes `87.0.0.1`), while the connection is made through the operating system resolver, which on some platforms such as macOS reads it as decimal (`127.0.0.1`). A server at the connected address can then be authenticated with a certificate issued for another IP address.\n\nThis vulnerability affects Node.js **26.x**, **24.x**, and **22.x**.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-106069\n2. 26.10.24 오전1:15\n3. A flaw in Node.js TLS hostname verification can ca",
+      "cve_id": "CVE-2026-106069",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-106069",
+      "source": "cvefeed",
+      "published": "2026-10-24T01:15:05+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-55465 - Goobi viewer: Solr injection via unvalidated region parameter in spatial search",
       "summary": "CVE ID :CVE-2026-55465\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 22.04 to before version 26.05, the unauthenticated REST endpoint GET /api/v1/index/{solrField}/spatial/search concatenates the user-supplied region query parameter directly into a Solr query string with no escaping, no local-param stripping, and no runtime schema enforcement (the OpenAPI @Schema(pattern=...) annotation is documentation-only at the JAX-RS layer). An attacker can inject Solr local-param syntax ({!parent ...}, {!join ...}) and boolean operators to make access-restricted georeferenced records match the query, bypassing the access-condition filter. This issue has been patched in version 26.05.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
