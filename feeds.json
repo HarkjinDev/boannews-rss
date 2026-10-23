@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-24T03:01:24.115490+09:00",
+  "fetched_at": "2026-10-24T03:31:30.365945+09:00",
   "security_news": [
     {
       "title": "[심층: 대북제재] 1. 완화 제안 속 제재의 실제 효과…북한 자금 차단·...",
@@ -6229,6 +6229,21 @@
       "lang": "en"
     },
     {
+      "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\nCVE-2026-114625 Arista VeloCloud Orchestrator SQL Injection Vulnerability\n\nThis type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.\nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria.\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "description": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\nCVE-2026-114625 Arista VeloCloud Orchestrator SQL Injection Vulnerability\n\nThis type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.\nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria.\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-114625\n2. CISA\n3. CISA has added one new vulnerability to its Known ",
+      "cve_id": "CVE-2026-114625",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "source": "cisa",
+      "published": "2026-10-23T21:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-98910 - drm/amdkfd: Unwind debug trap enable on copy_to_user failure",
       "summary": "CVE ID :CVE-2026-98910\n  \nPublished : Oct. 23, 2026, 11:54 a.m. | 30 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdkfd: Unwind debug trap enable on copy_to_user failure\n\nIf kfd_dbg_trap_enable() fails while copying runtime_info to userspace,\nit had already activated the trap, set debug_trap_enabled, taken an extra\nprocess reference, and opened the debug event file. Return -EFAULT without\nunwinding that state, leaving inconsistent trap state and a refcount\nimbalance that could break later DISABLE/ENABLE.\n\nOn copy_to_user failure, deactivate the trap and undo the rest of the\nenable setup before returning.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-98910\n  \nPublished : Oct. 23, 2026, 11:54 a.m. | 30 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdkfd: Unwind debug trap enable on copy_to_user failure\n\nIf kfd_dbg_trap_enable() fails while copying runtime_info to userspace,\nit had already activated the trap, set debug_trap_enabled, taken an extra\nprocess reference, and opened the debug event file. Return -EFAULT without\nunwinding that state, leaving inconsistent trap state and a refcount\nimbalance that could break later DISABLE/ENABLE.\n\nOn copy_to_user failure, deactivate the trap and undo the rest of the\nenable setup before returning.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -7096,21 +7111,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-94265",
       "source": "cvefeed",
       "published": "2026-10-21T05:26:18+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-113672 - Argo CD: A Jsonnet import can read files from the repo-server",
-      "summary": "CVE ID :CVE-2026-113672\n  \nPublished : Oct. 20, 2026, 6:17 p.m. | 52 minutes ago\n  \nDescription :Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From 0.9.0 until 3.3.15, 3.4.10, 3.5.4, and 3.6.0-rc2, the repo-server evaluates .jsonnet files with an importer that does not confine import, importstr, or importbin to the repository root. Absolute paths, parent-directory traversal, and repository symlinks can open any file readable by the repo-server, including /proc/self/environ, projected service-account tokens, mounted private keys, and repository credentials. Although generated Secrets are redacted, placing imported contents in a ConfigMap returns the data to the caller. Using importstr on a non-terminating device such as /dev/zero can exhaust repo-server memory. An attacker can commit a .jsonnet file to a Git repository used by an Application or upload the file through POST /api/v1/applications/manifestsWithFiles, also exposed by argocd app diff --local --server-side-generate. Directory applications evaluate every .jsonnet file in the application directory. The upload path requires only Application get permission on an existing directory Application, without Application update or sync permission or repository write access. This issue is fixed in versions 3.3.15, 3.4.10, 3.5.4, and 3.6.0-rc2.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-113672\n  \nPublished : Oct. 20, 2026, 6:17 p.m. | 52 minutes ago\n  \nDescription :Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From 0.9.0 until 3.3.15, 3.4.10, 3.5.4, and 3.6.0-rc2, the repo-server evaluates .jsonnet files with an importer that does not confine import, importstr, or importbin to the repository root. Absolute paths, parent-directory traversal, and repository symlinks can open any file readable by the repo-server, including /proc/self/environ, projected service-account tokens, mounted private keys, and repository credentials. Although generated Secrets are redacted, placing imported contents in a ConfigMap returns the data to the caller. Using importstr on a non-terminating device such as /dev/zero can exhaust repo-server memory. An attacker can commit a .jsonnet file to a Git repository used by an Application or upload the file through POST /api/v1/applications/manifestsWithFiles, also exposed by argocd app diff --local --server-side-generate. Directory applications evaluate every .jsonnet file in the application directory. The upload path requires only Application get permission on an existing directory Application, without Application update or sync permission or repository write access. This issue is fixed in versions 3.3.15, 3.4.10, 3.5.4, and 3.6.0-rc2.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-113672\n2. 26.10.21 오전3:17\n3. Argo CD is a declarative, GitOps continuous delive",
-      "cve_id": "CVE-2026-113672",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-113672",
-      "source": "cvefeed",
-      "published": "2026-10-21T03:17:20+09:00",
       "lang": "en"
     }
   ],
