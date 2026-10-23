@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-23T23:32:50.496096+09:00",
+  "fetched_at": "2026-10-24T00:02:47.296599+09:00",
   "security_news": [
     {
       "title": "비대면진료 제도화, '의료+ICT 융합' 새 시장 연다",
@@ -6004,6 +6004,21 @@
   ],
   "vulnerability": [
     {
+      "title": "PHP 신규 취약점(CVE-2026-115560) 임시 조치 권고",
+      "summary": "1. PHP 개발팀은 세션 업로드 진행률(Session Upload Progress) 기능 관련\n2. PHP 개발팀은 해당 취약점이 일반적이지 않은 설정 조합에서만 발생하여 실제 악용 가능성이\n3. 해당 취약점은 10.21. 배포된 보안 업데이트로 해결되지 않으며, 보안 업데이트 배포 전",
+      "description": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. PHP 개발팀은 세션 업로드 진행률(Session Upload Progress) 기능 관련\n2. PHP 개발팀은 해당 취약점이 일반적이지 않은 설정 조합에서만 발생하여 실제 악용 가능성이\n3. 해당 취약점은 10.21. 배포된 보안 업데이트로 해결되지 않으며, 보안 업데이트 배포 전",
+      "cve_id": "CVE-2026-115560",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72237",
+      "source": "krcert_notice",
+      "published": "2026-10-24T00:00:00+09:00",
+      "lang": "ko"
+    },
+    {
       "title": "CVE-2026-114622 - baserCMS: Encoded path traversal bypass in the theme file API",
       "summary": "CVE ID :CVE-2026-114622\n  \nPublished : Oct. 23, 2026, 1:41 p.m. | 42 minutes ago\n  \nDescription :baserCMS is a website development framework. In versions 5.2.3 before 5.3.2 and 5.4.0 before 5.4.2, the optional BcThemeFile plugin's Admin API validates a raw path in ThemeFilesService::update() and getFullpath(), but ThemeFileForm::_execute() subsequently applies rawurldecode() to fullpath before writing. Because normalizePath() resolves only literal dot segments, percent-encoded traversal can pass the containment checks and become a path outside the theme directory at the write sink. An authenticated administrator can write PHP files into writable locations such as webroot and execute them, exceeding the intended theme-template editing boundary. The source also identifies the same check-before-decode ordering in ThemeFilesService::copy(), although that path was not dynamically verified. Exploitation requires the non-default plugin, an administrator session, and a same-origin Origin header; USE_CORE_ADMIN_API=false does not block session-authenticated requests. The Admin web form is not affected by this encoded-path tampering because FormProtection protects fullpath. This is a third bypass of the protections associated with CVE-2026-30940, using encoded traversal decoded after validation. This issue has been patched in versions 5.3.2 and 5.4.2.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-114622\n  \nPublished : Oct. 23, 2026, 1:41 p.m. | 42 minutes ago\n  \nDescription :baserCMS is a website development framework. In versions 5.2.3 before 5.3.2 and 5.4.0 before 5.4.2, the optional BcThemeFile plugin's Admin API validates a raw path in ThemeFilesService::update() and getFullpath(), but ThemeFileForm::_execute() subsequently applies rawurldecode() to fullpath before writing. Because normalizePath() resolves only literal dot segments, percent-encoded traversal can pass the containment checks and become a path outside the theme directory at the write sink. An authenticated administrator can write PHP files into writable locations such as webroot and execute them, exceeding the intended theme-template editing boundary. The source also identifies the same check-before-decode ordering in ThemeFilesService::copy(), although that path was not dynamically verified. Exploitation requires the non-default plugin, an administrator session, and a same-origin Origin header; USE_CORE_ADMIN_API=false does not block session-authenticated requests. The Admin web form is not affected by this encoded-path tampering because FormProtection protects fullpath. This is a third bypass of the protections associated with CVE-2026-30940, using encoded traversal decoded after validation. This issue has been patched in versions 5.3.2 and 5.4.2.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -7052,69 +7067,23 @@
       "source": "cvefeed",
       "published": "2026-10-21T01:17:17+09:00",
       "lang": "en"
-    },
-    {
-      "title": "PHP 제품 보안 업데이트 권고",
-      "summary": "1. The PHP Group은 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "description": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. The PHP Group은 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72227",
-      "source": "krcert_notice",
-      "published": "2026-10-21T00:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Ahsay 제품 보안 업데이트 권고",
-      "summary": "1. Ahsay社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "description": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Ahsay社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72226",
-      "source": "krcert_notice",
-      "published": "2026-10-21T00:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-91059 - JPEG decoder: a duplicate SOF0 after SOS publishes a pixelmap that misreports its own allocation size",
-      "summary": "CVE ID :CVE-2026-91059\n  \nPublished : Oct. 20, 2026, 2:54 p.m. | 25 minutes ago\n  \nDescription :The GUIX JPEG software decoder enforces no ordering on JPEG markers. A file that places a second `SOF0` frame header after `SOS` re-runs the frame header parser after the output buffer has already been allocated and its geometry latched. The decoder returns `GX_SUCCESS` and publishes a `GX_PIXELMAP` whose reported dimensions and `data_size` exceed the allocation behind it.\n\n\n\nAny consumer that trusts the returned structure reads out of bounds, including GUIX's own display drivers, reached through the ordinary draw path.\n\n\n\nReproduces in the shipped default configuration; `GX_SOFTWARE_DECODER_SUPPORT` is enabled by default.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-91059\n  \nPublished : Oct. 20, 2026, 2:54 p.m. | 25 minutes ago\n  \nDescription :The GUIX JPEG software decoder enforces no ordering on JPEG markers. A file that places a second `SOF0` frame header after `SOS` re-runs the frame header parser after the output buffer has already been allocated and its geometry latched. The decoder returns `GX_SUCCESS` and publishes a `GX_PIXELMAP` whose reported dimensions and `data_size` exceed the allocation behind it.\n\n\n\nAny consumer that trusts the returned structure reads out of bounds, including GUIX's own display drivers, reached through the ordinary draw path.\n\n\n\nReproduces in the shipped default configuration; `GX_SOFTWARE_DECODER_SUPPORT` is enabled by default.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-91059\n2. 26.10.20 오후11:54\n3. The GUIX JPEG software decoder enforces no orderin",
-      "cve_id": "CVE-2026-91059",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-91059",
-      "source": "cvefeed",
-      "published": "2026-10-20T23:54:37+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-95111 - Module queue front-send validates a word count as a byte count",
-      "summary": "CVE ID :CVE-2026-95111\n  \nPublished : Oct. 20, 2026, 2:35 p.m. | 44 minutes ago\n  \nDescription :A memory-protected ThreadX module's queue request reaches the Module Manager's dispatch layer, which decides how much of the module's buffer the privileged queue copy may touch and hands that extent to the module port's range check. A queue's `tx_queue_message_size` is a count of `ULONG`s and the copy moves that many words, so the extent is `message_size * sizeof(ULONG)` bytes.\n\n\n\nThe front-send dispatcher passed the word count itself. `tx_queue_send` and `tx_queue_receive`, either side of it in the same header, have always multiplied.\n\n\n\nA source buffer ending `message_size` bytes into memory the module may read was therefore accepted, and `_txe_queue_front_send` then read `message_size * sizeof(ULONG)` bytes from it in privileged mode — `3 * message_size` bytes past the end of what the module is allowed to read. The words are written into the queue's message area, so a module that can receive from that queue reads them back.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-95111\n  \nPublished : Oct. 20, 2026, 2:35 p.m. | 44 minutes ago\n  \nDescription :A memory-protected ThreadX module's queue request reaches the Module Manager's dispatch layer, which decides how much of the module's buffer the privileged queue copy may touch and hands that extent to the module port's range check. A queue's `tx_queue_message_size` is a count of `ULONG`s and the copy moves that many words, so the extent is `message_size * sizeof(ULONG)` bytes.\n\n\n\nThe front-send dispatcher passed the word count itself. `tx_queue_send` and `tx_queue_receive`, either side of it in the same header, have always multiplied.\n\n\n\nA source buffer ending `message_size` bytes into memory the module may read was therefore accepted, and `_txe_queue_front_send` then read `message_size * sizeof(ULONG)` bytes from it in privileged mode — `3 * message_size` bytes past the end of what the module is allowed to read. The words are written into the queue's message area, so a module that can receive from that queue reads them back.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-95111\n2. 26.10.20 오후11:35\n3. A memory-protected ThreadX module's queue request ",
-      "cve_id": "CVE-2026-95111",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95111",
-      "source": "cvefeed",
-      "published": "2026-10-20T23:35:40+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
+    {
+      "title": "[2026국감] 프런티어 AI 기록 부실 공방… PHP 보안·통신사 책임론도",
+      "summary": "류제명 2차관은 \"공식 기안문은 5월 말 기획예산처·재정경제부에 낸 부처 예산 요구서\"라며 \"재정당국과... LG유플러스는 침해사고 조사 과정에서 일부 서버를 재설치·폐기해 증거를 훼손하고 조사를 방해했다는...",
+      "description": "류제명 2차관은 \"공식 기안문은 5월 말 기획예산처·재정경제부에 낸 부처 예산 요구서\"라며 \"재정당국과... LG유플러스는 침해사고 조사 과정에서 일부 서버를 재설치·폐기해 증거를 훼손하고 조사를 방해했다는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [2026국감] 프런티어 AI 기록 부실 공방… PHP 보안·통신사 책임론도 류제명 2차관\n2. LG유플러스는 침해사고 조사 과정에서 일부 서버를 재설치·폐기해 증거를 훼손하고 조사를 방",
+      "keyword_matched": "재정경제부",
+      "link": "https://www.newscj.com/news/articleView.html?idxno=3442718",
+      "source": "naver_rep",
+      "published": "2026-10-23T23:50:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[2026 국감] 지하철 5G 와이파이 전국 확대 요구…PHP 등 보안 대응도 촉...",
       "summary": "원자력안전위원회, 한국원자력안전기술원 등이 포함됐다. 배 부총리는 “사실이라면 심각한 문제”라며 점검 조치를 취하겠다고 밝혔다. 이주희 더불어민주당 의원은 “침해사고가 잇따르는데도 국가정보원...",
