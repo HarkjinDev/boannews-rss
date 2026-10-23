@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-24T00:32:37.265030+09:00",
+  "fetched_at": "2026-10-24T01:02:34.246658+09:00",
   "security_news": [
+    {
+      "title": "PHP 패치 구버전 적용 불가...\"선제 대응 필요\"",
+      "summary": "해킹할 경우, 고객 정보 유출과 웹 서버 원격 조종을 통한 데이터 탈취와 변조가 가능합니다. PHP 측은 긴급 보안패치를 배포했지만, PHP 구 버전에는 적용이 안 돼 대다수 사용자들은 즉각적인 대처가 불가능합니다. 또...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. PHP 패치 구버전 적용 불가...\"선제 대응 필요\" 해킹할 경우, 고객 정보 유출과 웹 \n2. PHP 측은 긴급 보안패치를 배포했지만, PHP 구 버전에는 적용이 안 돼 대다수 사용자들",
+      "link": "https://n.news.naver.com/mnews/article/052/0002422962?sid=105",
+      "source": "naver",
+      "published": "2026-10-24T00:46:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "비대면진료 제도화, '의료+ICT 융합' 새 시장 연다",
       "summary": "사이버보안의 중요성을 한층 높일 전망이다. 무엇보다 의료 정보는 여타 일반적인 서비스 이용자에 대한 정보보다 더 민감하고 유출이나 변조가 환자의 건강과 안전에 중대한 영향을 미칠 수 있다. 따라서 시스템 보안에...",
@@ -5988,21 +6000,54 @@
       "source": "naver",
       "published": "2026-10-21T06:49:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[초점] 개인정보 유출은 일상화, 피해 보상은 제자리…기업 책임 어디까...",
-      "summary": "해킹으로 고객정보가 대량 유출되는 사례가 반복되지만, 사고를 예방할 보안 투자와 정부의 조사 역량은... # 8개월 만에 지난해 연간 신고 건수 추월…해킹이 절반 넘어 21일 개인정보보호위원회 자료에 따르면 올해 1~8월...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 8개월간 개인정보 유출 1만 6천건 넘어\n2. 해킹 통한 유출 사고가 절반 이상 차지\n3. 기업 보안 투자 및 정부 조사 역량 부족",
-      "link": "http://www.newsian.co.kr/news/articleView.html?idxno=97400",
-      "source": "naver",
-      "published": "2026-10-21T06:36:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-55465 - Goobi viewer: Solr injection via unvalidated region parameter in spatial search",
+      "summary": "CVE ID :CVE-2026-55465\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 22.04 to before version 26.05, the unauthenticated REST endpoint GET /api/v1/index/{solrField}/spatial/search concatenates the user-supplied region query parameter directly into a Solr query string with no escaping, no local-param stripping, and no runtime schema enforcement (the OpenAPI @Schema(pattern=...) annotation is documentation-only at the JAX-RS layer). An attacker can inject Solr local-param syntax ({!parent ...}, {!join ...}) and boolean operators to make access-restricted georeferenced records match the query, bypassing the access-condition filter. This issue has been patched in version 26.05.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-55465\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 22.04 to before version 26.05, the unauthenticated REST endpoint GET /api/v1/index/{solrField}/spatial/search concatenates the user-supplied region query parameter directly into a Solr query string with no escaping, no local-param stripping, and no runtime schema enforcement (the OpenAPI @Schema(pattern=...) annotation is documentation-only at the JAX-RS layer). An attacker can inject Solr local-param syntax ({!parent ...}, {!join ...}) and boolean operators to make access-restricted georeferenced records match the query, bypassing the access-condition filter. This issue has been patched in version 26.05.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-55465\n2. 26.10.24 오전12:17\n3. The Goobi viewer is a web application that allows ",
+      "cve_id": "CVE-2026-55465",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55465",
+      "source": "cvefeed",
+      "published": "2026-10-24T00:17:33+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-53942 - Conda Organization Infrastructure: Pwn Request in update workflow allows PR-controlled template rendering with SYNC_TOKEN",
+      "summary": "CVE ID :CVE-2026-53942\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :Conda Organization Infrastructure is a centralized location for infrastructure codes. Prior to commit 9c0f238, a GitHub Actions Pwn Request vulnerability appears to remain present in conda/conda. The affected workflow is .github/workflows/update.yml. It is triggered by issue_comment events containing @conda-bot render or @conda-bot recreate. For the render path, the workflow obtains the pull request head repository and branch from the PR API, checks out that PR-controlled repository/ref using secrets.SYNC_TOKEN, and then runs conda/actions/template-files@7f6830b1428a9bd47f0b068892c77eae95207037. The external template-files action reads its default configuration and templates from the checked-out working directory. In the confirmed finding, that action uses an unsandboxed Jinja2 environment to render attacker-controlled template content. This creates a Pwn Request chain in which an untrusted PR/comment path can reach template rendering in a privileged token context. This issue has been patched via commit 9c0f238.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-53942\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :Conda Organization Infrastructure is a centralized location for infrastructure codes. Prior to commit 9c0f238, a GitHub Actions Pwn Request vulnerability appears to remain present in conda/conda. The affected workflow is .github/workflows/update.yml. It is triggered by issue_comment events containing @conda-bot render or @conda-bot recreate. For the render path, the workflow obtains the pull request head repository and branch from the PR API, checks out that PR-controlled repository/ref using secrets.SYNC_TOKEN, and then runs conda/actions/template-files@7f6830b1428a9bd47f0b068892c77eae95207037. The external template-files action reads its default configuration and templates from the checked-out working directory. In the confirmed finding, that action uses an unsandboxed Jinja2 environment to render attacker-controlled template content. This creates a Pwn Request chain in which an untrusted PR/comment path can reach template rendering in a privileged token context. This issue has been patched via commit 9c0f238.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-53942\n2. 26.10.24 오전12:17\n3. Conda Organization Infrastructure is a centralized",
+      "cve_id": "CVE-2026-53942",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53942",
+      "source": "cvefeed",
+      "published": "2026-10-24T00:17:32+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-115478 - obsidian-tc: Memory-lifecycle tools overwrite unowned notes or partially commit lifecycle changes",
+      "summary": "CVE ID :CVE-2026-115478\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :obsidian-tc is a governed, agent-ready Model Context Protocol server for Obsidian vaults. From 1.0.1 until 1.31.4, `create_entity`, `link_entities`, `rename_entity`, `unlink_entities` and `delete_entity` regenerate memory notes from SQLite at the computed `memory//.md` path without reliably preserving note ownership or the consistency of a failed lifecycle operation. During shared materialization, a hand-authored note or an orphan left by a different entity whose name sanitized to the same path could have its entire body overwritten on the next write naming that type and name, with non-owned frontmatter preserved. `rename_entity` also seeded the destination path with a direct atomic write without validating ownership and could overwrite a foreign note there. Separately, several tools mutated SQLite before fallible filesystem work: `create_entity` and `link_entities` inserted the row or relation before materialization; `rename_entity` updated the entity, including a retired status, before updating its note; `unlink_entities` removed a relation before rematerializing the source note; and `delete_entity`'s cascade removed the target and its relations before rematerializing neighbouring notes. A later filesystem failure could therefore leave a row or relation changed and the memory graph inconsistent with the notes on disk even when the operation failed. An authorized caller with the required memory-tool permissions could, without intending to, destroy the body of a vault note outside the entity being written; `delete_entity` additionally requires its deletion permission and destructive confirmation, which this memory flaw does not bypass. Snapshots-before-write through `restore_note` mitigate the overwrite only where snapshots are enabled and the note had previously been written through obsidian-tc. This issue is fixed in version 1.31.4.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-115478\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :obsidian-tc is a governed, agent-ready Model Context Protocol server for Obsidian vaults. From 1.0.1 until 1.31.4, `create_entity`, `link_entities`, `rename_entity`, `unlink_entities` and `delete_entity` regenerate memory notes from SQLite at the computed `memory//.md` path without reliably preserving note ownership or the consistency of a failed lifecycle operation. During shared materialization, a hand-authored note or an orphan left by a different entity whose name sanitized to the same path could have its entire body overwritten on the next write naming that type and name, with non-owned frontmatter preserved. `rename_entity` also seeded the destination path with a direct atomic write without validating ownership and could overwrite a foreign note there. Separately, several tools mutated SQLite before fallible filesystem work: `create_entity` and `link_entities` inserted the row or relation before materialization; `rename_entity` updated the entity, including a retired status, before updating its note; `unlink_entities` removed a relation before rematerializing the source note; and `delete_entity`'s cascade removed the target and its relations before rematerializing neighbouring notes. A later filesystem failure could therefore leave a row or relation changed and the memory graph inconsistent with the notes on disk even when the operation failed. An authorized caller with the required memory-tool permissions could, without intending to, destroy the body of a vault note outside the entity being written; `delete_entity` additionally requires its deletion permission and destructive confirmation, which this memory flaw does not bypass. Snapshots-before-write through `restore_note` mitigate the overwrite only where snapshots are enabled and the note had previously been written through obsidian-tc. This issue is fixed in version 1.31.4.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-115478\n2. 26.10.24 오전12:17\n3. obsidian-tc is a governed, agent-ready Model Conte",
+      "cve_id": "CVE-2026-115478",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115478",
+      "source": "cvefeed",
+      "published": "2026-10-24T00:17:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "PHP 신규 취약점(CVE-2026-115560) 임시 조치 권고",
       "summary": "1. PHP 개발팀은 세션 업로드 진행률(Session Upload Progress) 기능 관련\n2. PHP 개발팀은 해당 취약점이 일반적이지 않은 설정 조합에서만 발생하여 실제 악용 가능성이\n3. 해당 취약점은 10.21. 배포된 보안 업데이트로 해결되지 않으며, 보안 업데이트 배포 전",
