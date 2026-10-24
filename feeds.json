@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-24T22:01:13.192805+09:00",
+  "fetched_at": "2026-10-24T22:31:05.064313+09:00",
   "security_news": [
     {
       "title": "AI가 스스로 감시 장치를 껐다…AI ‘미스얼라인먼트’의 정체",
@@ -5028,33 +5028,24 @@
       "source": "naver",
       "published": "2026-10-21T23:01:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "중소기업 돈줄 줄인 우리은행…대기업 대출은 8.8조 늘었다",
-      "summary": "지난 19일 국회 정무위원회의 금융감독원 국정감사에서는 은행권의 해킹과 개인정보 유출, 보안 관리 문제가 주요 쟁점으로 다뤄졌다. 정진완 우리은행장도 증인으로 출석했다. 다만 이날 중소기업 대출 감소 문제가...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 우리은행, 중소기업 대출은 줄이고 대기업 대출 8.8조 증가\n2. 해킹, 개인정보 유출 등 보안 관리 문제 국감 주요 쟁점\n3. 우리은행장, 국회 정무위원회 증인으로 출석",
-      "link": "https://www.hinews.co.kr/view.php?ud=202610212220328642cd8b879b3c_48",
-      "source": "naver",
-      "published": "2026-10-21T22:24:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "금융권 넘어 민간기업까지 사이버 공격 확산, 지역 기관도 ‘보안 비상...",
-      "summary": "인공지능(AI)을 활용한 해킹 위협이 커지면서 보안 대응이 중요해지고 있다. 게티이미지뱅크 인공지능(AI)을 활용한 해킹과 정보유출 사고가 전방위 확산하면서 기업과 공공기관 모두 보안 관리에 비상이 걸렸다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융권 넘어 민간기업까지 사이버 공격 확산, 지역 기관도 ‘보안 비상...\n2. 인공지능(AI)을 활용한 해킹 위협이 커지면서 보안 대응이 중요해지고 있다.\n3. 게티이미지뱅크 인공지능(AI)을 활용한 해킹과 정보유출 사고가 전방위 확산하면서 기업과 공",
-      "link": "https://www.yeongnam.com/web/view.php?key=20261021028155987",
-      "source": "naver",
-      "published": "2026-10-21T22:04:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-116019 - Grav 2.0.15 before 2.2.13 Allowlist Bypass via Flex Form Override Directives",
+      "summary": "CVE ID :CVE-2026-116019\n  \nPublished : Oct. 24, 2026, 12:16 p.m. | 1 hour, 13 minutes ago\n  \nDescription :Grav 2.0.15 before 2.2.13 contains an allowlist bypass vulnerability that allows page editors to invoke arbitrary public static methods by relocating data-*@ directives with unset-name@ or integer keys. Attackers with page-edit permission can embed crafted fields in Flex form overrides in page frontmatter to call methods like Folder::delete or Utils::download, deleting directories, overwriting files, or reading files outside the page tree.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-116019\n  \nPublished : Oct. 24, 2026, 12:16 p.m. | 1 hour, 13 minutes ago\n  \nDescription :Grav 2.0.15 before 2.2.13 contains an allowlist bypass vulnerability that allows page editors to invoke arbitrary public static methods by relocating data-*@ directives with unset-name@ or integer keys. Attackers with page-edit permission can embed crafted fields in Flex form overrides in page frontmatter to call methods like Folder::delete or Utils::download, deleting directories, overwriting files, or reading files outside the page tree.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-116019\n2. 26.10.24 오후9:16\n3. Grav 2.0.15 before 2.2.13 contains an allowlist by",
+      "cve_id": "CVE-2026-116019",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-116019",
+      "source": "cvefeed",
+      "published": "2026-10-24T21:16:58+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-115806 - Prime Mover <= 2.2.1 - Unauthenticated PHP Object Injection via Base64-Encoded Comment during Migration Search-and-Replace",
       "summary": "CVE ID :CVE-2026-115806\n  \nPublished : Oct. 24, 2026, 4:32 a.m. | 38 minutes ago\n  \nDescription :The Prime Mover – Backup and Migration plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 2.2.1 via deserialization of untrusted input in the migration search-and-replace routine (recursiveUnserializeReplace()). An unauthenticated attacker can store a crafted, base64-encoded serialized object in wp_comments.comment_content through the standard comment-submission endpoint (wp-comments-post.php). When an administrator subsequently performs a routine Prime Mover export or restore, the plugin base64-decodes that stored value and passes it to unserialize() with no allowed_classes restriction. A Property-Oriented Programming (POP) chain is present in the plugin's own bundled Freemius library (FS_Clone_Manager::__set → FS_Option_Manager::set_option → store() → update_option()), so no additional plugin or theme is required — the plugin ships the gadget itself.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -5848,6 +5839,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-96643",
       "source": "cvefeed",
       "published": "2026-10-22T06:20:32+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) [infocon yellow], (Wed, Oct 21st)",
+      "summary": "PHP.net announced that it will release a critical update today. We decided to change the infoCon to YELLOW due to the widespread use of PHP, the expected severity of the flaw (CVSS 9.4), and the availability of early PoC exploits before the patch became available. \r",
+      "description": "PHP.net announced that it will release a critical update today. We decided to change the infoCon to YELLOW due to the widespread use of PHP, the expected severity of the flaw (CVSS 9.4), and the availability of early PoC exploits before the patch became available. \r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-109618\n2. SANS_ISC\n3. PHP.net announced that it will release a critical ",
+      "cve_id": "CVE-2026-109618",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33440",
+      "source": "sans_isc",
+      "published": "2026-10-22T06:02:43+09:00",
       "lang": "en"
     },
     {
