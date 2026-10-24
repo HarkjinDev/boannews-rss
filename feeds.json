@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-25T06:31:55.810934+09:00",
+  "fetched_at": "2026-10-25T07:01:32.632820+09:00",
   "security_news": [
     {
       "title": "[단독] 롯데 쿠폰 발행사 고객정보 유출…이름·계좌번호까지 털렸다",
@@ -4752,45 +4752,24 @@
       "source": "naver",
       "published": "2026-10-22T07:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "연구안보 시대, 기술주권을 지키는 마지막 방어선 [율촌 기술안보리포트...",
-      "summary": "또 연구안보와 사이버보안 간 연계가 아직 충분하지 않다는 점도 한계로 지적된다. 최근 연구자료 유출은 물리적 반출보다는 해킹, 클라우드 계정 탈취, 이메일 공격, 생성형 AI 악용 등 사이버 공격을 통해 이뤄지는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 연구안보 시대, 기술주권을 지키는 마지막 방어선 [율촌 기술안보리포트...\n2. 또 연구안보와 사이버보안 간 연계가 아직 충분하지 않다는 점도 한계로 지적된다.\n3. 최근 연구자료 유출은 물리적 반출보다는 해킹, 클라우드 계정 탈취, 이메일 공격, 생성형 ",
-      "link": "https://n.news.naver.com/mnews/article/009/0005752156?sid=102",
-      "source": "naver",
-      "published": "2026-10-22T07:01:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[月朝 총력 특집] 북한의 '서울 불바다' 위협 <3> 국정원은 무엇을 해야...",
-      "summary": "2026년 9월 29일 개정(12월 30일 시행)된 국가정보원법은 민간 기업의 침해 사고도 해킹 수법이나 피해 양상 등에 비춰 국제·국가배후 해킹 조직의 활동으로 의심할 상당한 이유가 있으면 국정원의 사이버안보 정보업무...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국정원법 개정, 민간 침해 사고도 국정원 사이버안보 업무로\n2. 북한 해킹 의심 시, 국제·국가 배후 활동으로 간주 가능\n3. 국정원, 민간 기업 사이버 침해 사고 정보 수집 및 분석 강화",
-      "link": "https://monthly.chosun.com/news/articleView.html?idxno=71745",
-      "source": "naver",
-      "published": "2026-10-22T06:44:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "“전 세계 웹사이트 최대 70% 영향권”…AI가 찾아낸 PHP 보안 결함",
-      "summary": "해커가 이를 악용할 경우 취약한 PHP 시스템을 장악해 정보를 탈취하거나 해킹된 웹사이트 방문자를 대상으로 추가 사이버 공격을 감행할 수 있는 것으로 나타났다. ‘PHP2Shell’로 명명된 이번 취약점은 PHP가 컴퓨터...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. “전 세계 웹사이트 최대 70% 영향권”…AI가 찾아낸 PHP 보안 결함 해커가 이를 악용\n2. ‘PHP2Shell’로 명명된 이번 취약점은 PHP가 컴퓨터...",
-      "link": "https://www.etoday.co.kr/news/view/2638607",
-      "source": "naver",
-      "published": "2026-10-22T06:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-115933 - Forged signed tokens let any registered user take over other users and organizations",
+      "summary": "CVE ID :CVE-2026-115933\n  \nPublished : Oct. 24, 2026, 3:17 p.m. | 5 hours, 16 minutes ago\n  \nDescription :Postiz signs its session, invitation and password reset tokens with one shared secret and without any marker of what a token is for. A route that refreshes the credentials of a browser-extension channel signed data taken from the request itself and stored the result where the requesting user can read it back. A user could therefore obtain a validly signed token containing any claims they choose, which the application accepts as a session, as an organization invitation with a chosen role, as a password reset or as an enterprise provisioning token.\n\nA second, narrower route that creates team invitations signs extra fields from the request body in the same way.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-115933\n  \nPublished : Oct. 24, 2026, 3:17 p.m. | 5 hours, 16 minutes ago\n  \nDescription :Postiz signs its session, invitation and password reset tokens with one shared secret and without any marker of what a token is for. A route that refreshes the credentials of a browser-extension channel signed data taken from the request itself and stored the result where the requesting user can read it back. A user could therefore obtain a validly signed token containing any claims they choose, which the application accepts as a session, as an organization invitation with a chosen role, as a password reset or as an enterprise provisioning token.\n\nA second, narrower route that creates team invitations signs extra fields from the request body in the same way.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-115933\n2. 26.10.25 오전12:17\n3. Postiz signs its session, invitation and password ",
+      "cve_id": "CVE-2026-115933",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115933",
+      "source": "cvefeed",
+      "published": "2026-10-25T00:17:33+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-116019 - Grav 2.0.15 before 2.2.13 Allowlist Bypass via Flex Form Override Directives",
       "summary": "CVE ID :CVE-2026-116019\n  \nPublished : Oct. 24, 2026, 12:16 p.m. | 1 hour, 13 minutes ago\n  \nDescription :Grav 2.0.15 before 2.2.13 contains an allowlist bypass vulnerability that allows page editors to invoke arbitrary public static methods by relocating data-*@ directives with unset-name@ or integer keys. Attackers with page-edit permission can embed crafted fields in Flex form overrides in page frontmatter to call methods like Folder::delete or Utils::download, deleting directories, overwriting files, or reading files outside the page tree.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
