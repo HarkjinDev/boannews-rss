@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-25T04:31:23.495086+09:00",
+  "fetched_at": "2026-10-25T05:01:29.875127+09:00",
   "security_news": [
     {
       "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
@@ -4848,18 +4848,6 @@
       "source": "naver",
       "published": "2026-10-22T05:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "美, PHP 해킹비상에 \"즉각 업데이트 못하면 오프라인 전환하라\"",
-      "summary": "실행' 해킹 경고 보안업체 \"기업 인터넷·상업 인프라 상당 부분 잠재적 위협 노출\" 홍정규 특파원 = 전 세계 웹사이트의 70% 이상에서 쓰이는 프로그래밍 언어 PHP의 치명적인 보안 취약점이 발견되면서 해킹 비상이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. PHP 치명적 취약점 발견, 70% 웹사이트 위협\n2. 무차별 공격 위험, 즉각 업데이트 필수\n3. 미 보안당국, 오프라인 전환 권고",
-      "link": "https://n.news.naver.com/mnews/article/001/0016392735?sid=104",
-      "source": "naver",
-      "published": "2026-10-22T04:53:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -5686,21 +5674,6 @@
       "link": "https://isc.sans.edu/diary/rss/33440",
       "source": "sans_isc",
       "published": "2026-10-22T06:02:43+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-114135 - Jupyter Server: Gateway WebSocket handler bypasses kernel execute authorization",
-      "summary": "CVE ID :CVE-2026-114135\n  \nPublished : Oct. 21, 2026, 7:58 p.m. | 26 minutes ago\n  \nDescription :Jupyter Server is the backend for Jupyter web applications. From 2.0.0 until 2.6.0, enabling GatewayClient.url replaced the normal KernelWebsocketHandler with WebSocketChannelsHandler, which authenticated the user but did not call authorizer.is_authorized(...) for the execute action on the kernels resource. A restricted authenticated user could therefore open an upstream kernel channel and obtain kernel execution despite the configured Authorizer denying that action, exposing data and credentials available to the kernel and permitting modification or disruption of the kernel environment. The default gateway configuration is fixed in version 2.6.0. In 2.6.0 and later, the same authorization bypass remains possible when a deployment manually registers the deprecated jupyter_server.gateway.handlers module, because its handler still omits the configured kernel-execute authorization decision.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-114135\n  \nPublished : Oct. 21, 2026, 7:58 p.m. | 26 minutes ago\n  \nDescription :Jupyter Server is the backend for Jupyter web applications. From 2.0.0 until 2.6.0, enabling GatewayClient.url replaced the normal KernelWebsocketHandler with WebSocketChannelsHandler, which authenticated the user but did not call authorizer.is_authorized(...) for the execute action on the kernels resource. A restricted authenticated user could therefore open an upstream kernel channel and obtain kernel execution despite the configured Authorizer denying that action, exposing data and credentials available to the kernel and permitting modification or disruption of the kernel environment. The default gateway configuration is fixed in version 2.6.0. In 2.6.0 and later, the same authorization bypass remains possible when a deployment manually registers the deprecated jupyter_server.gateway.handlers module, because its handler still omits the configured kernel-execute authorization decision.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-114135\n2. 26.10.22 오전4:58\n3. Jupyter Server is the backend for Jupyter web appl",
-      "cve_id": "CVE-2026-114135",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-114135",
-      "source": "cvefeed",
-      "published": "2026-10-22T04:58:51+09:00",
       "lang": "en"
     }
   ],
