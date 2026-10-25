@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-26T01:03:03.788965+09:00",
+  "fetched_at": "2026-10-26T01:33:57.440591+09:00",
   "security_news": [
+    {
+      "title": "렛저·트레저 이어 키스톤까지...하드웨어 지갑, 줄줄이 보안 사고로 시...",
+      "summary": "트레저는 올여름 물류업체 십몽크(ShipMonk)에서 발생한 해킹으로 고객 이름과 이메일, 전화번호, 배송 주소... -렛저는 동남아시아 유통 기기 변조 사건, 트레저는 물류업체 해킹으로 고객 8만 명 이상의 정보 유출을 겪는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 렛저, 트레저, 키스톤 하드웨어 지갑서 연이어 보안 사고 발생\n2. 트레저는 물류업체 해킹으로 8만 명 이상 고객 정보 유출\n3. 렛저는 유통 기기 변조, 키스톤은 아직 구체적 사고 미공개",
+      "link": "http://coinreaders.com/265119",
+      "source": "naver",
+      "published": "2026-10-26T01:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "과기부 관련 기관 15곳 문서, 개인정보 등 제대로 안 가려",
       "summary": "해킹 등 특별한 기술을 사용하지 않고, ‘보여달라’는 지시문으로 민감 정보를 확인한 것이다. 이처럼 정부 부처와 산하 연구기관들이 개인정보나 비공개 정보를 문서에서 완전히 삭제하지 않고, 하얀 도형 등으로 가린...",
@@ -4309,21 +4321,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-114611",
       "source": "cvefeed",
       "published": "2026-10-23T02:33:13+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-115453 - Cross user deletion and modification of cart and wishlist rows in Ecommerce Template through unscoped primary key queries",
-      "summary": "CVE ID :CVE-2026-115453\n  \nPublished : Oct. 22, 2026, 4:17 p.m. | 32 minutes ago\n  \nDescription :Authorization Bypass Through User-Controlled Key (CWE-639) in the cart and wishlist repositories of MarcosCamara01 Ecommerce Template allows any authenticated user to delete and modify the cart and wishlist rows of any other user, because cartRepository.delete(), cartRepository.updateQuantityInternal() and wishlistRepository.delete() in src/lib/db/drizzle/repositories/ match rows by primary key alone, with no predicate on the owning user, and the per user authorization for those three operations rests on PostgreSQL row level security. The migrations run ALTER TABLE ... ENABLE ROW LEVEL SECURITY and create policies comparing app.current_user_id() with user_id, but never ALTER TABLE ... FORCE ROW LEVEL SECURITY, and PostgreSQL does not apply policies to the role that owns a table. The template uses one DATABASE_URL both to run the migrations, which create the tables, and for the application at runtime, so the application connects as the owner of the tables and the policies do not apply to it. cart_items.id and wishlist.id are sequential bigserial values, so the identifiers of rows belonging to other users can be enumerated, and the update path returns the modified row, which carries the identifier of the user it belongs to. This results in the destruction and modification of cart and wishlist contents belonging to other accounts of the installation.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-115453\n  \nPublished : Oct. 22, 2026, 4:17 p.m. | 32 minutes ago\n  \nDescription :Authorization Bypass Through User-Controlled Key (CWE-639) in the cart and wishlist repositories of MarcosCamara01 Ecommerce Template allows any authenticated user to delete and modify the cart and wishlist rows of any other user, because cartRepository.delete(), cartRepository.updateQuantityInternal() and wishlistRepository.delete() in src/lib/db/drizzle/repositories/ match rows by primary key alone, with no predicate on the owning user, and the per user authorization for those three operations rests on PostgreSQL row level security. The migrations run ALTER TABLE ... ENABLE ROW LEVEL SECURITY and create policies comparing app.current_user_id() with user_id, but never ALTER TABLE ... FORCE ROW LEVEL SECURITY, and PostgreSQL does not apply policies to the role that owns a table. The template uses one DATABASE_URL both to run the migrations, which create the tables, and for the application at runtime, so the application connects as the owner of the tables and the policies do not apply to it. cart_items.id and wishlist.id are sequential bigserial values, so the identifiers of rows belonging to other users can be enumerated, and the update path returns the modified row, which carries the identifier of the user it belongs to. This results in the destruction and modification of cart and wishlist contents belonging to other accounts of the installation.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-115453\n2. 26.10.23 오전1:17\n3. Authorization Bypass Through User-Controlled Key (",
-      "cve_id": "CVE-2026-115453",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115453",
-      "source": "cvefeed",
-      "published": "2026-10-23T01:17:35+09:00",
       "lang": "en"
     }
   ],
