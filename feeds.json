@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-26T02:03:44.226030+09:00",
+  "fetched_at": "2026-10-26T02:32:43.208435+09:00",
   "security_news": [
     {
       "title": "렛저·트레저 이어 키스톤까지...하드웨어 지갑, 줄줄이 보안 사고로 시...",
@@ -3696,21 +3696,24 @@
       "source": "naver",
       "published": "2026-10-23T03:41:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Arista patches new VeloCloud Orchestrator zero-day exploited in attacks",
-      "summary": "Arista Networks released security updates to patch an actively exploited zero-day vulnerability affecting VeloCloud Orchestrator (VCO) On-Prem deployments. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Arista Networks, VeloCloud Orchestrator(VCO) 제로데이 \n2. 공격자가 VCO 온프레미스 환경에서 제로데이 취약점을 악용\n3. Arista, 즉각적인 보안 업데이트 배포 및 사용자 권고",
-      "link": "https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/",
-      "source": "bleepingcomputer",
-      "published": "2026-10-23T02:18:22+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-115823 - Starman versions before 0.4019 for Perl send response bodies for HEAD requests, desynchronizing responses on keep-alive connections",
+      "summary": "CVE ID :CVE-2026-115823\n  \nPublished : Oct. 25, 2026, 4:51 p.m. | 28 minutes ago\n  \nDescription :Starman versions before 0.4019 for Perl send response bodies for HEAD requests, desynchronizing responses on keep-alive connections.\n\nFor a HEAD request Starman omits chunked framing but still writes the body returned by the application, on both the array and streaming response paths. Responses with a 1xx, 204 or 304 status also carry the body.\n\nOn a keep-alive or pipelined connection the client reads those bytes as the start of the next response. A front-end proxy that reuses upstream connections may then pair responses with the wrong requests.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-115823\n  \nPublished : Oct. 25, 2026, 4:51 p.m. | 28 minutes ago\n  \nDescription :Starman versions before 0.4019 for Perl send response bodies for HEAD requests, desynchronizing responses on keep-alive connections.\n\nFor a HEAD request Starman omits chunked framing but still writes the body returned by the application, on both the array and streaming response paths. Responses with a 1xx, 204 or 304 status also carry the body.\n\nOn a keep-alive or pipelined connection the client reads those bytes as the start of the next response. A front-end proxy that reuses upstream connections may then pair responses with the wrong requests.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-115823\n2. 26.10.26 오전1:51\n3. Starman versions before 0.4019 for Perl send respo",
+      "cve_id": "CVE-2026-115823",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115823",
+      "source": "cvefeed",
+      "published": "2026-10-26T01:51:19+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-114148 ASP.NET Core Elevation of Privilege Vulnerability",
       "summary": "Incorrect default permissions in ASP.NET Core allows an authorized attacker to elevate privileges locally.",
