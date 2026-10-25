@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-26T02:32:43.208435+09:00",
+  "fetched_at": "2026-10-26T03:02:47.986403+09:00",
   "security_news": [
+    {
+      "title": "놀유니버스, 외부 해킹으로 임직원 개인정보 유출…시스템 보안 취약점...",
+      "summary": "놀유니버스가 외부 해킹 공격으로 일부 임직원의 개인정보가 유출되는 침해사고를 당한 것으로 확인됐다. 놀유니버스는 최근 자사 시스템에 대한 외부의 비정상적인 접근으로 일부 임직원의 개인정보가 유출된 사실을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 놀유니버스, 외부 해킹으로 임직원 개인정보 유출…시스템 보안 취약점...\n2. 놀유니버스가 외부 해킹 공격으로 일부 임직원의 개인정보가 유출되는 침해사고를 당한 것으로 \n3. 놀유니버스는 최근 자사 시스템에 대한 외부의 비정상적인 접근으로 일부 임직원의 개인정보가 ",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209056",
+      "source": "naver",
+      "published": "2026-10-26T02:48:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "렛저·트레저 이어 키스톤까지...하드웨어 지갑, 줄줄이 보안 사고로 시...",
       "summary": "트레저는 올여름 물류업체 십몽크(ShipMonk)에서 발생한 해킹으로 고객 이름과 이메일, 전화번호, 배송 주소... -렛저는 동남아시아 유통 기기 변조 사건, 트레저는 물류업체 해킹으로 고객 8만 명 이상의 정보 유출을 겪는...",
@@ -4312,21 +4324,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-114620",
       "source": "cvefeed",
       "published": "2026-10-23T06:34:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-114611 - OCO-Server: MDM /profile endpoint accepts self-signed PKCS#7 signatures (PKCS7_NOVERIFY): device MDM identity (certificate + private key) disclosure and device-record hijack",
-      "summary": "CVE ID :CVE-2026-114611\n  \nPublished : Oct. 22, 2026, 5:33 p.m. | 14 minutes ago\n  \nDescription :OCO-Server is a self-hosted endpoint management application for computer inventory, software deployment, and mobile device management. Prior to 1.2.3,the Apple MDM enrollment endpoint `frontend/api-mdm.php` verifies the signed enrollment-request plist with `openssl_pkcs7_verify(..., PKCS7_NOVERIFY, ...)`. `PKCS7_NOVERIFY` disables signer certificate chain and trust validation, so the signature only has to be self-consistent with whatever certificate is embedded in the PKCS#7 blob. A self-signed certificate from an unrelated attacker is accepted. Because the endpoint trusts the `SERIAL` field taken from the unverified payload, anyone who knows a registered device's serial number can sign a forged plist (`SERIAL` = victim device, attacker-chosen `UDID`) with an arbitrary self-signed certificate; POST it unauthenticated to `/api-mdm.php/profile` (Content-Type: `application/pkcs7-signature`); and receive the victim device's freshly minted MDM identity: a certificate with `CN=` issued by the server's internal MDM device CA, bundled with its private key in a PKCS#12 payload inside the returned `.mobileconfig` enrollment profile. Additionally, the victim's `mobile_device` database row is silently overwritten with the attacker-supplied `UDID` (device-record hijack). With the stolen certificate and key, the attacker can impersonate the victim device on all subsequent MDM traffic (`/checkin`, `/mdm`, `/parameters`), which authenticate callers by the certificate CN (the serial number) via `checkSignature()` in the same file. This yields control over the victim device's MDM relationship: reading its management data, replacing its push token, and disrupting or redirecting its enrollment. Version 1.2.3 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-114611\n  \nPublished : Oct. 22, 2026, 5:33 p.m. | 14 minutes ago\n  \nDescription :OCO-Server is a self-hosted endpoint management application for computer inventory, software deployment, and mobile device management. Prior to 1.2.3,the Apple MDM enrollment endpoint `frontend/api-mdm.php` verifies the signed enrollment-request plist with `openssl_pkcs7_verify(..., PKCS7_NOVERIFY, ...)`. `PKCS7_NOVERIFY` disables signer certificate chain and trust validation, so the signature only has to be self-consistent with whatever certificate is embedded in the PKCS#7 blob. A self-signed certificate from an unrelated attacker is accepted. Because the endpoint trusts the `SERIAL` field taken from the unverified payload, anyone who knows a registered device's serial number can sign a forged plist (`SERIAL` = victim device, attacker-chosen `UDID`) with an arbitrary self-signed certificate; POST it unauthenticated to `/api-mdm.php/profile` (Content-Type: `application/pkcs7-signature`); and receive the victim device's freshly minted MDM identity: a certificate with `CN=` issued by the server's internal MDM device CA, bundled with its private key in a PKCS#12 payload inside the returned `.mobileconfig` enrollment profile. Additionally, the victim's `mobile_device` database row is silently overwritten with the attacker-supplied `UDID` (device-record hijack). With the stolen certificate and key, the attacker can impersonate the victim device on all subsequent MDM traffic (`/checkin`, `/mdm`, `/parameters`), which authenticate callers by the certificate CN (the serial number) via `checkSignature()` in the same file. This yields control over the victim device's MDM relationship: reading its management data, replacing its push token, and disrupting or redirecting its enrollment. Version 1.2.3 fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-114611\n2. 26.10.23 오전2:33\n3. OCO-Server is a self-hosted endpoint management ap",
-      "cve_id": "CVE-2026-114611",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-114611",
-      "source": "cvefeed",
-      "published": "2026-10-23T02:33:13+09:00",
       "lang": "en"
     }
   ],
