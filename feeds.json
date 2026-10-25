@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-26T04:31:06.749685+09:00",
+  "fetched_at": "2026-10-26T05:01:16.379602+09:00",
   "security_news": [
     {
       "title": "대한전기학회, 개인정보 유출 사고 후속조치 완료…회원 계좌번호 전량...",
@@ -3636,45 +3636,24 @@
       "source": "naver",
       "published": "2026-10-23T05:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "4대 금융지주 3분기 순익 5.6조 전망…실적·해킹 대응이 연임 가른다",
-      "summary": "최근 잇따른 해킹·개인정보 유출 사고로 내부통제 책임론도 불거진 만큼 실적과 함께 보안 관리와 사고... KB국민·신한·하나은행에서 잇따라 해킹·개인정보 유출 사고가 발생하면서 보안과 내부통제 역량이 경영진...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 4대 금융지주 3분기 순익 5.6조 전망…실적·해킹 대응이 연임 가른다 최근 잇따른 해킹·\n2. KB국민·신한·하나은행에서 잇따라 해킹·개인정보 유출 사고가 발생하면서 보안과 내부통제 역",
-      "link": "https://n.news.naver.com/mnews/article/421/0009245307?sid=101",
-      "source": "naver",
-      "published": "2026-10-23T05:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "국토부·예산처·과기부 등 종합국감…부동산·해킹 대응 도마, 미래대...",
-      "summary": "과학기술방송통신위원회(과방위)에선 전 세계 웹사이트에서 널리 쓰이는 프로그래밍 언어 PHP에서 인증 절차 없이 서버를 장악할 수 있는 치명적인 보안 취약점이 발견된 것과 관련해 여야의 질문이 쏟아질 것으로...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국토부·예산처·과기부 등 종합국감…부동산·해킹 대응 도마, 미래대...\n2. 과학기술방송통신위원회(과방위)에선 전 세계 웹사이트에서 널리 쓰이는 프로그래밍 언어 PHP",
-      "link": "https://n.news.naver.com/mnews/article/003/0014273036?sid=100",
-      "source": "naver",
-      "published": "2026-10-23T05:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "정부, ‘PHP 해킹’ 우려에 위기 경보 격상… 민관군 긴급 회의도",
-      "summary": "전 세계에서 널리 쓰이는 프로그래밍 언어 ‘PHP’에서 치명적인 보안 취약점이 발견되자 정부가 사이버위기 경보를 높이고 민관군 공동 대응에 나섰다. 해커가 별도의 로그인 없이 서버에서 악성 명령을 실행할 수...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 정부, ‘PHP 해킹’ 우려에 위기 경보 격상… 민관군 긴급 회의도 전 세계에서 널리 쓰이\n2. 해커가 별도의 로그인 없이 서버에서 악성 명령을 실행할 수...",
-      "link": "https://n.news.naver.com/mnews/article/020/0003757112?sid=101",
-      "source": "naver",
-      "published": "2026-10-23T04:36:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "YARA-X 1.22.0 Release, (Sun, Oct 25th)",
+      "summary": "YARA-X&#;x26;#;39;s 1.22.0 release brings 11 improvements and 9 bugfixes.\r",
+      "description": "YARA-X&#;x26;#;39;s 1.22.0 release brings 11 improvements and 9 bugfixes.\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. YARA-X 1.22.0 Release, (Sun, Oct 25th)\n2. SANS_ISC\n3. YARA-X&#;x26;#;39;s 1.22.0 release brings 11 impro",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33454",
+      "source": "sans_isc",
+      "published": "2026-10-26T04:57:53+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-115823 - Starman versions before 0.4019 for Perl send response bodies for HEAD requests, desynchronizing responses on keep-alive connections",
       "summary": "CVE ID :CVE-2026-115823\n  \nPublished : Oct. 25, 2026, 4:51 p.m. | 28 minutes ago\n  \nDescription :Starman versions before 0.4019 for Perl send response bodies for HEAD requests, desynchronizing responses on keep-alive connections.\n\nFor a HEAD request Starman omits chunked framing but still writes the body returned by the application, on both the array and streaming response paths. Responses with a 1xx, 204 or 304 status also carry the body.\n\nOn a keep-alive or pipelined connection the client reads those bytes as the start of the next response. A front-end proxy that reuses upstream connections may then pair responses with the wrong requests.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
