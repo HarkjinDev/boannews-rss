@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-27T01:03:07.018724+09:00",
+  "fetched_at": "2026-10-27T01:32:31.149146+09:00",
   "security_news": [
+    {
+      "title": "[GAM] AI 투자 지형이 바뀐다 ② PHP 취약점 사태 속 사이버보안주는 랠...",
+      "summary": "에서 이어짐  ◆ 사이버보안·소프트웨어주 동반 랠리 시장은 즉각 반응했다. 사이버보안주는 취약점 공개 직전인 20일 장 후반부터 오름세를 타기 시작해 보안 당국의 경고가 나온 21일 일제히 급등했다. 이날...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. PHP 취약점 사태로 보안주 급등\n2. 20일 장 후반부터 오름세 시작\n3. 21일 보안 당국 경고 후 일제히 급등",
+      "link": "https://www.newspim.com/news/view/20261027000005",
+      "source": "naver",
+      "published": "2026-10-27T01:24:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "일본 사이버공격 급증에 정부 긴급대책 착수…기업들 고객 피해보상 확...",
       "summary": "GMO인터넷 해킹 피해 보상…공격자 금전 요구 거부 일본의 대형 인터넷 서비스 기업 GMO인터넷그룹은... 주요 대책에는 인공지능을 활용한 시스템 취약점 점검, 전문인력의 모의해킹, 중소기업 보안 지원 확대, 민관...",
@@ -3924,18 +3936,6 @@
       "source": "naver",
       "published": "2026-10-24T01:39:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "백업만 믿다 150억 날린 제약사…에브리존 \"랜섬웨어, 단말에서 막아야...",
-      "summary": "랜섬웨어 피해를 방지하기 위해서는 방산 업체가 기술 유출과 업무 중단을 함께 막는 보안 체계를 갖춰야 한다고 제안했다. 김 팀장은 이날 방산기술보호·보안협의회가 주최한 '2026 AI기반 방산기술보호 컨퍼런스'에서...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 백업만 믿다 150억 날린 제약사…에브리존 \"랜섬웨어, 단말에서 막아야...\n2. 랜섬웨어 피해를 방지하기 위해서는 방산 업체가 기술 유출과 업무 중단을 함께 막는 보안 체\n3. 김 팀장은 이날 방산기술보호·보안협의회가 주최한 '2026 AI기반 방산기술보호 컨퍼런스'",
-      "link": "https://n.news.naver.com/mnews/article/092/0002442226?sid=105",
-      "source": "naver",
-      "published": "2026-10-24T01:27:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4432,21 +4432,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-115569",
       "source": "cvefeed",
       "published": "2026-10-24T03:09:47+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-106069 - Node.js TLS Hostname Verification Bypass",
-      "summary": "CVE ID :CVE-2026-106069\n  \nPublished : Oct. 23, 2026, 4:15 p.m. | 1 hour, 2 minutes ago\n  \nDescription :A flaw in Node.js TLS hostname verification can cause a server certificate to be validated against a different IP address than the one the client connected to, when the host is a non-canonical IPv4 literal with a leading zero, such as `0127.0.0.1`.\n\n`tls.checkServerIdentity()` normalizes the host following the WHATWG URL rules, which read a leading-zero octet as octal (`0127.0.0.1` becomes `87.0.0.1`), while the connection is made through the operating system resolver, which on some platforms such as macOS reads it as decimal (`127.0.0.1`). A server at the connected address can then be authenticated with a certificate issued for another IP address.\n\nThis vulnerability affects Node.js **26.x**, **24.x**, and **22.x**.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-106069\n  \nPublished : Oct. 23, 2026, 4:15 p.m. | 1 hour, 2 minutes ago\n  \nDescription :A flaw in Node.js TLS hostname verification can cause a server certificate to be validated against a different IP address than the one the client connected to, when the host is a non-canonical IPv4 literal with a leading zero, such as `0127.0.0.1`.\n\n`tls.checkServerIdentity()` normalizes the host following the WHATWG URL rules, which read a leading-zero octet as octal (`0127.0.0.1` becomes `87.0.0.1`), while the connection is made through the operating system resolver, which on some platforms such as macOS reads it as decimal (`127.0.0.1`). A server at the connected address can then be authenticated with a certificate issued for another IP address.\n\nThis vulnerability affects Node.js **26.x**, **24.x**, and **22.x**.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-106069\n2. 26.10.24 오전1:15\n3. A flaw in Node.js TLS hostname verification can ca",
-      "cve_id": "CVE-2026-106069",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-106069",
-      "source": "cvefeed",
-      "published": "2026-10-24T01:15:05+09:00",
       "lang": "en"
     }
   ],
