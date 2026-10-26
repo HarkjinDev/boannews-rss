@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-10-27T00:02:48.029301+09:00",
+  "fetched_at": "2026-10-27T00:34:59.166814+09:00",
   "security_news": [
+    {
+      "title": "[이광형의 퍼스펙티브] AI로 낮아진 해킹 문턱, ‘제로 트러스트’로 맞...",
+      "summary": "최근 국내 금융권을 겨냥한 해킹에서 AI를 이용한 공격 정황이 드러났다. 일부 고객 정보도 유출됐다. 미국... 공개 AI 모델, 자동화 도구 확산 은행 등 해킹 방법 더 복잡해져 결국 AI 활용 해킹 주체는 사람 범죄자 추적...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 활용한 해킹, 국내 금융권 겨냥 정황 포착\n2. 공개 AI 모델·자동화 도구로 고객 정보 유출\n3. '제로 트러스트' 도입으로 복잡해진 해킹 방어",
+      "link": "https://n.news.naver.com/mnews/article/025/0003560660?sid=110",
+      "source": "naver",
+      "published": "2026-10-27T00:14:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "미래에셋생명, 사이버 침해사고로 고객 개인·신용정보 유출 확인…피해 규모 조사 중",
+      "summary": "미래에셋생명에서 사이버 침해사고가 발생해 고객 개인·신용정보가 유출된 것으로 확인됐다. 회사는 사고를 인지한 직후 긴급 대응에 나섰으며, 현재 정확한 유출 대상과 정보 항목 등 피해 범위를 조사하고 있다.미래에셋생명은 고객 대상 공지를 통해 지난 10월 25일 일부 시스템에서 이상증상을 발견하고 사이버 침해사고를 인지했다고 밝혔다. 이후 외부 전문기관과 사고 원인을 분석하는 과정에서 26일 새벽 개인정보 유출 사실을 확인했다.다만 현재까지 정확한 개인정보 유출 규모와 피해 대상, 유출된 정보의 구체적인 항목은 확인되지 않았다. 회사",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 미래에셋생명, 10월 25일 사이버 침해사고 발생\n2. 고객 개인·신용정보 일부 유출 확인, 규모 조사 중\n3. 외부 전문기관과 사고 원인 분석 및 대응 중",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209077",
+      "source": "dailysecu",
+      "published": "2026-10-27T00:02:03+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "AI가 찾은 취약점, 공격 코드 생성까지…보안 대응 시험대",
+      "summary": "되면서 해킹의 대중화가 현실화하고 있다\"며 \"취약점 발견부터 패치까지 대응할 수 있는 시간이 과거보다 크게 줄어든 만큼 사이버 해킹이 더욱 활성화되기 전에 취약점을 능동적으로 먼저 발견하고 패치해야...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI가 취약점 발견, 공격 코드 생성까지 지원\n2. 해킹 대중화 현실화, 대응 시간 단축 우려\n3. 능동적 취약점 탐지 및 패치 필요성 증대",
+      "link": "https://n.news.naver.com/mnews/article/629/0000545740?sid=105",
+      "source": "naver",
+      "published": "2026-10-27T00:01:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[포인트뉴스] 초코파이 국제택배에 마약 봉지…베트남인 8명 구속 外",
       "summary": "▶ AI로 기업 90곳 해킹·820만건 정보 탈취…\"돈 내놔\"협박했다 덜미 국내 기업 90여 곳을 해킹해 800만 건이 넘는 개인정보를 빼돌린 일당이 경찰에 붙잡혔습니다. 독학으로 해킹을 익힌 총책은 생성형 AI까지 사용해...",
@@ -3892,6 +3928,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-111103 - HTTP/2 StreamError recovery rolls back connection state and bypasses per-connection limits in Bandit",
+      "summary": "CVE ID :CVE-2026-111103\n  \nPublished : Oct. 26, 2026, 1:32 p.m. | 51 minutes ago\n  \nDescription :Improper Cleanup on Thrown Exception vulnerability in the HTTP/2 handler of mtrudel bandit allows an unauthenticated remote attacker to bypass per-connection resource limits via a single TCP write that carries several frames, one of which raises a stream error.\n\nWhen a frame raises StreamError partway through a chunk, Bandit.HTTP2.Handler.handle_data/3 sends RST_STREAM and continues with the connection state from before the chunk, dropping the rest of it. Streams opened by earlier frames in the chunk keep running their Plug calls, but the stream counts, last_stream_id, the rapid-reset timestamps, the HPACK decoder state and the buffer roll back, so max_concurrent_streams, max_requests and the rapid-reset limiter never see those streams. A client that sends one HEADERS frame more than max_concurrent_streams in each write has the extra refused and the others forgotten: with a limit of 10, five such writes run 50 Plug calls at once.\n\nThis issue affects bandit: from 1.9.0 before 1.14.0.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-111103\n  \nPublished : Oct. 26, 2026, 1:32 p.m. | 51 minutes ago\n  \nDescription :Improper Cleanup on Thrown Exception vulnerability in the HTTP/2 handler of mtrudel bandit allows an unauthenticated remote attacker to bypass per-connection resource limits via a single TCP write that carries several frames, one of which raises a stream error.\n\nWhen a frame raises StreamError partway through a chunk, Bandit.HTTP2.Handler.handle_data/3 sends RST_STREAM and continues with the connection state from before the chunk, dropping the rest of it. Streams opened by earlier frames in the chunk keep running their Plug calls, but the stream counts, last_stream_id, the rapid-reset timestamps, the HPACK decoder state and the buffer roll back, so max_concurrent_streams, max_requests and the rapid-reset limiter never see those streams. A client that sends one HEADERS frame more than max_concurrent_streams in each write has the extra refused and the others forgotten: with a limit of 10, five such writes run 50 Plug calls at once.\n\nThis issue affects bandit: from 1.9.0 before 1.14.0.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-111103\n2. 26.10.26 오후10:32\n3. Improper Cleanup on Thrown Exception vulnerability",
+      "cve_id": "CVE-2026-111103",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-111103",
+      "source": "cvefeed",
+      "published": "2026-10-26T22:32:06+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-89209 - Mendix SAML Module SAML Assertion Replay Vulnerability",
       "summary": "CVE ID :CVE-2026-89209\n  \nPublished : 26 de Outubro de 2026 às 10:41 | 49 minutos ago\n  \nDescription :A vulnerability has been identified in Mendix SAML (Mendix 10 compatible) (All versions < V4.2.4), Mendix SAML (Mendix 11 compatible) (All versions < V4.2.4), Mendix SAML (Mendix 9 compatible) (All versions < V3.6.29). Affected versions of the module do not properly protect against SAML assertion replay in IdP-initiated authentication flows. This could allow unauthenticated remote attackers to gain unauthorized access to the application by replaying a valid SAML response.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-89209\n  \nPublished : 26 de Outubro de 2026 às 10:41 | 49 minutos ago\n  \nDescription :A vulnerability has been identified in Mendix SAML (Mendix 10 compatible) (All versions < V4.2.4), Mendix SAML (Mendix 11 compatible) (All versions < V4.2.4), Mendix SAML (Mendix 9 compatible) (All versions < V3.6.29). Affected versions of the module do not properly protect against SAML assertion replay in IdP-initiated authentication flows. This could allow unauthenticated remote attackers to gain unauthorized access to the application by replaying a valid SAML response.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4309,51 +4360,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-106069",
       "source": "cvefeed",
       "published": "2026-10-24T01:15:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-55465 - Goobi viewer: Solr injection via unvalidated region parameter in spatial search",
-      "summary": "CVE ID :CVE-2026-55465\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 22.04 to before version 26.05, the unauthenticated REST endpoint GET /api/v1/index/{solrField}/spatial/search concatenates the user-supplied region query parameter directly into a Solr query string with no escaping, no local-param stripping, and no runtime schema enforcement (the OpenAPI @Schema(pattern=...) annotation is documentation-only at the JAX-RS layer). An attacker can inject Solr local-param syntax ({!parent ...}, {!join ...}) and boolean operators to make access-restricted georeferenced records match the query, bypassing the access-condition filter. This issue has been patched in version 26.05.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-55465\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 22.04 to before version 26.05, the unauthenticated REST endpoint GET /api/v1/index/{solrField}/spatial/search concatenates the user-supplied region query parameter directly into a Solr query string with no escaping, no local-param stripping, and no runtime schema enforcement (the OpenAPI @Schema(pattern=...) annotation is documentation-only at the JAX-RS layer). An attacker can inject Solr local-param syntax ({!parent ...}, {!join ...}) and boolean operators to make access-restricted georeferenced records match the query, bypassing the access-condition filter. This issue has been patched in version 26.05.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-55465\n2. 26.10.24 오전12:17\n3. The Goobi viewer is a web application that allows ",
-      "cve_id": "CVE-2026-55465",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-55465",
-      "source": "cvefeed",
-      "published": "2026-10-24T00:17:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-53942 - Conda Organization Infrastructure: Pwn Request in update workflow allows PR-controlled template rendering with SYNC_TOKEN",
-      "summary": "CVE ID :CVE-2026-53942\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :Conda Organization Infrastructure is a centralized location for infrastructure codes. Prior to commit 9c0f238, a GitHub Actions Pwn Request vulnerability appears to remain present in conda/conda. The affected workflow is .github/workflows/update.yml. It is triggered by issue_comment events containing @conda-bot render or @conda-bot recreate. For the render path, the workflow obtains the pull request head repository and branch from the PR API, checks out that PR-controlled repository/ref using secrets.SYNC_TOKEN, and then runs conda/actions/template-files@7f6830b1428a9bd47f0b068892c77eae95207037. The external template-files action reads its default configuration and templates from the checked-out working directory. In the confirmed finding, that action uses an unsandboxed Jinja2 environment to render attacker-controlled template content. This creates a Pwn Request chain in which an untrusted PR/comment path can reach template rendering in a privileged token context. This issue has been patched via commit 9c0f238.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-53942\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :Conda Organization Infrastructure is a centralized location for infrastructure codes. Prior to commit 9c0f238, a GitHub Actions Pwn Request vulnerability appears to remain present in conda/conda. The affected workflow is .github/workflows/update.yml. It is triggered by issue_comment events containing @conda-bot render or @conda-bot recreate. For the render path, the workflow obtains the pull request head repository and branch from the PR API, checks out that PR-controlled repository/ref using secrets.SYNC_TOKEN, and then runs conda/actions/template-files@7f6830b1428a9bd47f0b068892c77eae95207037. The external template-files action reads its default configuration and templates from the checked-out working directory. In the confirmed finding, that action uses an unsandboxed Jinja2 environment to render attacker-controlled template content. This creates a Pwn Request chain in which an untrusted PR/comment path can reach template rendering in a privileged token context. This issue has been patched via commit 9c0f238.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-53942\n2. 26.10.24 오전12:17\n3. Conda Organization Infrastructure is a centralized",
-      "cve_id": "CVE-2026-53942",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-53942",
-      "source": "cvefeed",
-      "published": "2026-10-24T00:17:32+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-115478 - obsidian-tc: Memory-lifecycle tools overwrite unowned notes or partially commit lifecycle changes",
-      "summary": "CVE ID :CVE-2026-115478\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :obsidian-tc is a governed, agent-ready Model Context Protocol server for Obsidian vaults. From 1.0.1 until 1.31.4, `create_entity`, `link_entities`, `rename_entity`, `unlink_entities` and `delete_entity` regenerate memory notes from SQLite at the computed `memory//.md` path without reliably preserving note ownership or the consistency of a failed lifecycle operation. During shared materialization, a hand-authored note or an orphan left by a different entity whose name sanitized to the same path could have its entire body overwritten on the next write naming that type and name, with non-owned frontmatter preserved. `rename_entity` also seeded the destination path with a direct atomic write without validating ownership and could overwrite a foreign note there. Separately, several tools mutated SQLite before fallible filesystem work: `create_entity` and `link_entities` inserted the row or relation before materialization; `rename_entity` updated the entity, including a retired status, before updating its note; `unlink_entities` removed a relation before rematerializing the source note; and `delete_entity`'s cascade removed the target and its relations before rematerializing neighbouring notes. A later filesystem failure could therefore leave a row or relation changed and the memory graph inconsistent with the notes on disk even when the operation failed. An authorized caller with the required memory-tool permissions could, without intending to, destroy the body of a vault note outside the entity being written; `delete_entity` additionally requires its deletion permission and destructive confirmation, which this memory flaw does not bypass. Snapshots-before-write through `restore_note` mitigate the overwrite only where snapshots are enabled and the note had previously been written through obsidian-tc. This issue is fixed in version 1.31.4.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-115478\n  \nPublished : Oct. 23, 2026, 3:17 p.m. | 22 minutes ago\n  \nDescription :obsidian-tc is a governed, agent-ready Model Context Protocol server for Obsidian vaults. From 1.0.1 until 1.31.4, `create_entity`, `link_entities`, `rename_entity`, `unlink_entities` and `delete_entity` regenerate memory notes from SQLite at the computed `memory//.md` path without reliably preserving note ownership or the consistency of a failed lifecycle operation. During shared materialization, a hand-authored note or an orphan left by a different entity whose name sanitized to the same path could have its entire body overwritten on the next write naming that type and name, with non-owned frontmatter preserved. `rename_entity` also seeded the destination path with a direct atomic write without validating ownership and could overwrite a foreign note there. Separately, several tools mutated SQLite before fallible filesystem work: `create_entity` and `link_entities` inserted the row or relation before materialization; `rename_entity` updated the entity, including a retired status, before updating its note; `unlink_entities` removed a relation before rematerializing the source note; and `delete_entity`'s cascade removed the target and its relations before rematerializing neighbouring notes. A later filesystem failure could therefore leave a row or relation changed and the memory graph inconsistent with the notes on disk even when the operation failed. An authorized caller with the required memory-tool permissions could, without intending to, destroy the body of a vault note outside the entity being written; `delete_entity` additionally requires its deletion permission and destructive confirmation, which this memory flaw does not bypass. Snapshots-before-write through `restore_note` mitigate the overwrite only where snapshots are enabled and the note had previously been written through obsidian-tc. This issue is fixed in version 1.31.4.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-115478\n2. 26.10.24 오전12:17\n3. obsidian-tc is a governed, agent-ready Model Conte",
-      "cve_id": "CVE-2026-115478",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115478",
-      "source": "cvefeed",
-      "published": "2026-10-24T00:17:30+09:00",
       "lang": "en"
     }
   ],
