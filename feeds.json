@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-27T06:32:52.788473+09:00",
+  "fetched_at": "2026-10-27T07:01:29.975166+09:00",
   "security_news": [
+    {
+      "title": "정보 새나가도 제때 몰랐다…KB 해킹 피해 2천명 더 나와",
+      "summary": "금융권 해킹 사고가 잇따르는 가운데 KB국민은행에서는 피해 규모가 늘어났고, 미래에셋생명에서도... [기자] 네, 국민은행에 따르면 앞서 밝힌 해킹의 정보 유출 인원이 2천명 넘게 더 있는 것으로 확인됐습니다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KB국민은행, 2천명 추가 정보 유출 확인\n2. 해킹 사고로 개인정보 유출 규모 증가\n3. 피해 규모 확대, 추가 조사 진행 중",
+      "link": "https://n.news.naver.com/mnews/article/374/0000539888?sid=101",
+      "source": "naver",
+      "published": "2026-10-27T06:56:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"해커의 무기인가, 보안관의 갑옷인가\"… 中 오픈소스 AI 확산에 '사이버...",
       "summary": "악의적인 해킹 공격 시도가 감지되면 개발사가 즉시 계정을 차단하고 프롬프트 요청을 거부할 수 있다.... 실제로 폐쇄형 모델은 엄격한 안전 필터 때문에 취약점 분석이나 침투 테스트(모의 해킹) 같은 정당한...",
@@ -4056,30 +4068,6 @@
       "source": "naver",
       "published": "2026-10-24T07:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[천지일보 이슈종합] 최충락 보호관찰소 탐지기 통과·소방 재정 부담 ...",
-      "summary": "◆PHP 해킹 시도 수백만건 폭증… 각국 정부·기업 대응☞ 전 세계 웹사이트의 약 70%에 사용되는... 이후 해킹 시도가 수백만건으로 급증한 것으로 나타났다. ◆정부, 북한 DMZ 지뢰 폭발·MDL 긴장 고조에 유엔 서한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. PHP 기반 웹사이트 약 70%에 수백만 건 해킹 시도 급증\n2. 북한, DMZ 지뢰 폭발·MDL 긴장 고조로 유엔 서한 발송\n3. (뉴스 내용에 해당 정보 없음)",
-      "link": "https://www.newscj.com/news/articleView.html?idxno=3442721",
-      "source": "naver",
-      "published": "2026-10-24T07:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "\"공격코드 등장까지 125일→반나절\"…AI가 바꾼 해킹의 시간표[초광속 ...",
-      "summary": "하지만 실제 해킹 방법이 확인되지 않아 위험성이 묻혀 있었다. 그런데 지난 21일 공개된 연구 결과는... 현재 세계 곳곳에서 해킹 공포를 떨게 만든 웹 프로그래밍 언어 'PHP'의 취약점(php2shell) 이야기다. 이 결함의 공격...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 등장으로 해킹 코드 개발 시간 125일→반나절 단축\n2. PHP 취약점(php2shell) 통해 웹 해킹 위험 급증\n3. AI 활용 해킹 기술 발달로 보안 위협 증대",
-      "link": "https://n.news.naver.com/mnews/article/003/0014275358?sid=105",
-      "source": "naver",
-      "published": "2026-10-24T07:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4606,36 +4594,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-115883",
       "source": "cvefeed",
       "published": "2026-10-24T07:16:57+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-115938 - Low privilege condition filter escapes Twig sandbox, recovers \"securityKey\" and reaches RCE",
-      "summary": "CVE ID :CVE-2026-115938\n  \nPublished : Oct. 23, 2026, 9:58 p.m. | 30 minutes ago\n  \nDescription :Craft CMS allows any authenticated control panel user to submit an element-search condition whose element selector is evaluated as a sandboxed Twig object template. Craft’s allowed column filter delegates property lookup to Yii ArrayHelper, outside Twig’s SecurityPolicy. Repeated single-segment lookups therefore bypass the sandbox’s empty property/method allowlists.\n\n\n\nThe vulnerable condition value is ultimately cast to an integer. That does not protect the secret: the template can return author ID 1 when a guessed key character is correct and an impossible ID otherwise. The JSON endpoint returns entries for the first case and an empty array for the second, forming a stable remote character oracle.\n\n\n\nAfter recovering GeneralConfig::securityKey, the same user can compute Craft’s generic HMAC wire format offline. Signed parameters such as redirect are then accepted and passed to unsandboxed View::renderObjectTemplate(), where Twig’s string-callable form can invoke native PHP callables. The regression proof uses the harmless substr() callback and observes abcdef becoming cdef; it does not execute an OS command.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-115938\n  \nPublished : Oct. 23, 2026, 9:58 p.m. | 30 minutes ago\n  \nDescription :Craft CMS allows any authenticated control panel user to submit an element-search condition whose element selector is evaluated as a sandboxed Twig object template. Craft’s allowed column filter delegates property lookup to Yii ArrayHelper, outside Twig’s SecurityPolicy. Repeated single-segment lookups therefore bypass the sandbox’s empty property/method allowlists.\n\n\n\nThe vulnerable condition value is ultimately cast to an integer. That does not protect the secret: the template can return author ID 1 when a guessed key character is correct and an impossible ID otherwise. The JSON endpoint returns entries for the first case and an empty array for the second, forming a stable remote character oracle.\n\n\n\nAfter recovering GeneralConfig::securityKey, the same user can compute Craft’s generic HMAC wire format offline. Signed parameters such as redirect are then accepted and passed to unsandboxed View::renderObjectTemplate(), where Twig’s string-callable form can invoke native PHP callables. The regression proof uses the harmless substr() callback and observes abcdef becoming cdef; it does not execute an OS command.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-115938\n2. 26.10.24 오전6:58\n3. Craft CMS allows any authenticated control panel u",
-      "cve_id": "CVE-2026-115938",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115938",
-      "source": "cvefeed",
-      "published": "2026-10-24T06:58:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-115937 - Unauthenticated payment reuse allows unpaid orders to be marked as paid",
-      "summary": "CVE ID :CVE-2026-115937\n  \nPublished : Oct. 23, 2026, 9:50 p.m. | 39 minutes ago\n  \nDescription :The Mollie webhook endpoint accepts two independent, attacker-controlled parameters and never verifies that they belong together:\n\n  *  commerceTransactionHash — selects which Craft Commerce transaction is completed\n  *  id — selects which Mollie payment is queried for its status\n\n\n\n\nAn unauthenticated attacker holding any paid Mollie payment ID from the merchant’s account can pair it with any transaction hash.\n\n\n\nCommerce queries Mollie, sees status: paid, and marks the target transaction successful for that transaction’s full\namount, regardless of how much was actually paid.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-115937\n  \nPublished : Oct. 23, 2026, 9:50 p.m. | 39 minutes ago\n  \nDescription :The Mollie webhook endpoint accepts two independent, attacker-controlled parameters and never verifies that they belong together:\n\n  *  commerceTransactionHash — selects which Craft Commerce transaction is completed\n  *  id — selects which Mollie payment is queried for its status\n\n\n\n\nAn unauthenticated attacker holding any paid Mollie payment ID from the merchant’s account can pair it with any transaction hash.\n\n\n\nCommerce queries Mollie, sees status: paid, and marks the target transaction successful for that transaction’s full\namount, regardless of how much was actually paid.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-115937\n2. 26.10.24 오전6:50\n3. The Mollie webhook endpoint accepts two independen",
-      "cve_id": "CVE-2026-115937",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115937",
-      "source": "cvefeed",
-      "published": "2026-10-24T06:50:13+09:00",
       "lang": "en"
     }
   ],
