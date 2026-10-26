@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-27T01:32:31.149146+09:00",
+  "fetched_at": "2026-10-27T02:02:39.213939+09:00",
   "security_news": [
+    {
+      "title": "KB국민은행 해외 정보유출 119→2천210명...\"재발방지 최선\"",
+      "summary": "KB국민은행의 해킹 사고에 따른 개인정보 유출이 당초 알려진 119명에서 2210명으로 늘어났다. 이달초 해킹 사고 발표 뒤 3주나 지난 시점에 피해 규모가 확대된 것이다. KB국민은행은 26일 기존 침해사고에 대한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. KB국민은행 해외 정보유출 119→2천210명...\"재발방지 최선\" KB국민은행의 해킹 사\n2. 이달초 해킹 사고 발표 뒤 3주나 지난 시점에 피해 규모가 확대된 것이다.\n3. KB국민은행은 26일 기존 침해사고에 대한...",
+      "link": "https://www.tfmedia.co.kr/news/article.html?no=208370",
+      "source": "naver",
+      "published": "2026-10-27T01:48:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[GAM] AI 투자 지형이 바뀐다 ② PHP 취약점 사태 속 사이버보안주는 랠...",
       "summary": "에서 이어짐  ◆ 사이버보안·소프트웨어주 동반 랠리 시장은 즉각 반응했다. 사이버보안주는 취약점 공개 직전인 20일 장 후반부터 오름세를 타기 시작해 보안 당국의 경고가 나온 21일 일제히 급등했다. 이날...",
@@ -3924,21 +3936,54 @@
       "source": "naver",
       "published": "2026-10-24T05:05:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[심층: 대북제재] 1. 완화 제안 속 제재의 실제 효과…북한 자금 차단·...",
-      "summary": "동결·압수는 이렇게 벌어들인 자금을 북한이 쓰지 못하도록 차단한 조치입니다.법무부는 북한 해킹 조직 APT38이 가상자산 업체의 취약점을 공격해 북한 정부를 위한 수입을 마련하고, 여러...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [심층: 대북제재] 1.\n2. 완화 제안 속 제재의 실제 효과…북한 자금 차단·...\n3. 동결·압수는 이렇게 벌어들인 자금을 북한이 쓰지 못하도록 차단한 조치입니다.법무부는 북한 ",
-      "link": "https://www.voakorea.com/a/8214546.html",
-      "source": "naver",
-      "published": "2026-10-24T01:39:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-99095 - drm/vc4: drain the hangcheck timer and works on V3D unbind",
+      "summary": "CVE ID :CVE-2026-99095\n  \nPublished : 26 de Outubro de 2026 às 15:16 | 38 minutos ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/vc4: drain the hangcheck timer and works on V3D unbind\n\nNothing stops the hangcheck timer that submitted jobs arm, or the\njob_done_work that the render-done interrupt queues, at teardown:\nvc4_irq_disable() cancels only overflow_mem_work, and vc4_gem_destroy()\nruns from the drm-managed release, after vc4_v3d_unbind() has already\nuninstalled the V3D interrupt and cleared vc4->v3d. A timer still armed\nby then reads V3D registers through the NULL vc4->v3d pointer, and the\nlate callbacks run on the vc4_dev embedding them after it has been\nfreed.\n\nDrain them in vc4_v3d_unbind(): shut the timer down and cancel\nreset_work before the interrupt is taken down, because its\nvc4_irq_reset() re-enables it, then flush job_done_work so that\ncompletions queued at teardown still release their jobs.\n\nThis issue was found by an in-house static analysis tool.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-99095\n  \nPublished : 26 de Outubro de 2026 às 15:16 | 38 minutos ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/vc4: drain the hangcheck timer and works on V3D unbind\n\nNothing stops the hangcheck timer that submitted jobs arm, or the\njob_done_work that the render-done interrupt queues, at teardown:\nvc4_irq_disable() cancels only overflow_mem_work, and vc4_gem_destroy()\nruns from the drm-managed release, after vc4_v3d_unbind() has already\nuninstalled the V3D interrupt and cleared vc4->v3d. A timer still armed\nby then reads V3D registers through the NULL vc4->v3d pointer, and the\nlate callbacks run on the vc4_dev embedding them after it has been\nfreed.\n\nDrain them in vc4_v3d_unbind(): shut the timer down and cancel\nreset_work before the interrupt is taken down, because its\nvc4_irq_reset() re-enables it, then flush job_done_work so that\ncompletions queued at teardown still release their jobs.\n\nThis issue was found by an in-house static analysis tool.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-99095\n2. 26.10.27 오전12:16\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-99095",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99095",
+      "source": "cvefeed",
+      "published": "2026-10-27T00:16:48+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-99092 - riscv: patch: fix handling of bpf-jit execmem addresses",
+      "summary": "CVE ID :CVE-2026-99092\n  \nPublished : 26 de Outubro de 2026 às 15:16 | 38 minutos ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nriscv: patch: fix handling of bpf-jit execmem addresses\n\nCommit 8718e5a3090b (\"riscv: patch: skip fixmap mapping when kernel text\nis already writable\") gated the core_kernel_text() branch of patch_map()\non CONFIG_STRICT_KERNEL_RWX, and explicitly left the vmalloc branch\nunchanged. That branch has a separate problem.\n\nThat branch only creates a temporary writable fixmap alias when\nCONFIG_STRICT_MODULE_RWX is enabled, and otherwise assumes the target is\ndirectly writable and returns the address unchanged. That assumption no\nlonger holds: bpf_prog_pack_alloc calls set_memory_rox() on every pack\nunconditionally in alloc_new_pack(), independently of any\nCONFIG_STRICT_*_RWX option, so BPF text in the vmalloc area is read-only\nregardless of what CONFIG_STRICT_MODULE_RWX says.\n\nWith CONFIG_STRICT_MODULE_RWX=n, patch_map() returns the read-only\naddress directly, the subsequent copy_to_kernel_nofault() takes a\npage fault and returns -EFAULT. bpf_arch_text_copy() turns that into\n-EINVAL, which propagates through bpf_jit_binary_pack_finalize() to the\nWARN_ON() in bpf_int_jit_compile() and leaves the program un-JITed.\n\nNote that BPF cannot be fixed the way kprobes was in\ncommit bdc46e507b59 (\"riscv: mm: make EXECMEM_KPROBES writable without\nCONFIG_STRICT_MODULE_RWX\"). EXECMEM_BPF is already PAGE_KERNEL, i.e.\nwritable at allocation time; the read-only mapping is established\nafterwards by generic code in alloc_new_pack(), which arch code cannot\ninfluence. The only place this can be handled is patch_map().\n\nThis is the same problem that was fixed on arm64 by commit b1480ed230ac\n(\"arm64: patching: fix handling of execmem addresses\"), and the fix is\nthe same: CONFIG_EXECMEM is what actually tracks whether the vmalloc\narea can hold executable memory that needs a temporary alias to be\nwritten. CONFIG_BPF_JIT, CONFIG_KPROBES and CONFIG_MODULES all select\nit.\n\nNote that this is not limited to CONFIG_MODULES=n. Unlike arm64, riscv\nselects CONFIG_ARCH_OPTIONAL_KERNEL_RWX, so CONFIG_STRICT_MODULE_RWX can\nbe disabled with CONFIG_MODULES=y as well, and the bug is reachable in\nthat configuration too.\n\nThe !CONFIG_MMU build is unaffected: it has its own __patch_insn_set()\nand __patch_insn_write() implementations and never calls patch_map().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-99092\n  \nPublished : 26 de Outubro de 2026 às 15:16 | 38 minutos ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nriscv: patch: fix handling of bpf-jit execmem addresses\n\nCommit 8718e5a3090b (\"riscv: patch: skip fixmap mapping when kernel text\nis already writable\") gated the core_kernel_text() branch of patch_map()\non CONFIG_STRICT_KERNEL_RWX, and explicitly left the vmalloc branch\nunchanged. That branch has a separate problem.\n\nThat branch only creates a temporary writable fixmap alias when\nCONFIG_STRICT_MODULE_RWX is enabled, and otherwise assumes the target is\ndirectly writable and returns the address unchanged. That assumption no\nlonger holds: bpf_prog_pack_alloc calls set_memory_rox() on every pack\nunconditionally in alloc_new_pack(), independently of any\nCONFIG_STRICT_*_RWX option, so BPF text in the vmalloc area is read-only\nregardless of what CONFIG_STRICT_MODULE_RWX says.\n\nWith CONFIG_STRICT_MODULE_RWX=n, patch_map() returns the read-only\naddress directly, the subsequent copy_to_kernel_nofault() takes a\npage fault and returns -EFAULT. bpf_arch_text_copy() turns that into\n-EINVAL, which propagates through bpf_jit_binary_pack_finalize() to the\nWARN_ON() in bpf_int_jit_compile() and leaves the program un-JITed.\n\nNote that BPF cannot be fixed the way kprobes was in\ncommit bdc46e507b59 (\"riscv: mm: make EXECMEM_KPROBES writable without\nCONFIG_STRICT_MODULE_RWX\"). EXECMEM_BPF is already PAGE_KERNEL, i.e.\nwritable at allocation time; the read-only mapping is established\nafterwards by generic code in alloc_new_pack(), which arch code cannot\ninfluence. The only place this can be handled is patch_map().\n\nThis is the same problem that was fixed on arm64 by commit b1480ed230ac\n(\"arm64: patching: fix handling of execmem addresses\"), and the fix is\nthe same: CONFIG_EXECMEM is what actually tracks whether the vmalloc\narea can hold executable memory that needs a temporary alias to be\nwritten. CONFIG_BPF_JIT, CONFIG_KPROBES and CONFIG_MODULES all select\nit.\n\nNote that this is not limited to CONFIG_MODULES=n. Unlike arm64, riscv\nselects CONFIG_ARCH_OPTIONAL_KERNEL_RWX, so CONFIG_STRICT_MODULE_RWX can\nbe disabled with CONFIG_MODULES=y as well, and the bug is reachable in\nthat configuration too.\n\nThe !CONFIG_MMU build is unaffected: it has its own __patch_insn_set()\nand __patch_insn_write() implementations and never calls patch_map().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-99092\n2. 26.10.27 오전12:16\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-99092",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99092",
+      "source": "cvefeed",
+      "published": "2026-10-27T00:16:48+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-92171 - Infinispan-operator: infinispan operator: sensitive information disclosure due pod args store",
+      "summary": "CVE ID :CVE-2026-92171\n  \nPublished : 26 de Outubro de 2026 às 15:16 | 38 minutos ago\n  \nDescription :A flaw was found in the Infinispan Operator for Red Hat Data Grid. When cross-site (xsite) TLS is enabled, the operator launches the Gossip Router container with keystore and truststore passwords passed as plain-text command-line arguments (`-tls_keystore_password`, `-tls_truststore_password`). Container args are stored in the Pod spec and visible to any principal with `get pods` permission in the namespace (no `get secrets` required), to node-level processes via `/proc//cmdline`, and frequently captured in audit/event logs.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-92171\n  \nPublished : 26 de Outubro de 2026 às 15:16 | 38 minutos ago\n  \nDescription :A flaw was found in the Infinispan Operator for Red Hat Data Grid. When cross-site (xsite) TLS is enabled, the operator launches the Gossip Router container with keystore and truststore passwords passed as plain-text command-line arguments (`-tls_keystore_password`, `-tls_truststore_password`). Container args are stored in the Pod spec and visible to any principal with `get pods` permission in the namespace (no `get secrets` required), to node-level processes via `/proc//cmdline`, and frequently captured in audit/event logs.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-92171\n2. 26.10.27 오전12:16\n3. A flaw was found in the Infinispan Operator for Re",
+      "cve_id": "CVE-2026-92171",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92171",
+      "source": "cvefeed",
+      "published": "2026-10-27T00:16:45+09:00",
+      "lang": "it"
+    },
     {
       "title": "CVE-2026-99098 - dm-integrity: fix buffer overflow in inline mode with large tag size",
       "summary": "CVE ID :CVE-2026-99098\n  \nPublished : Oct. 26, 2026, 2:52 p.m. | 19 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ndm-integrity: fix buffer overflow in inline mode with large tag size\n\nIn inline mode, dm_integrity_check and dm_integrity_inline_recheck\ncompute the checksum of each block into an on-stack buffer of\nHASH_MAX_DIGESTSIZE bytes. integrity_sector_checksum pads its result\nwith zeroes up to the tag size, so if the tag size is larger than\nHASH_MAX_DIGESTSIZE, the padding runs past the end of the buffer. With\nCONFIG_STACKPROTECTOR the kernel panics in dm_integrity_check on the\nfirst read.\n\nEnlarge both buffers to hold MAX_TAG_SIZE bytes, as commit b93b6643e9b5\n(\"dm integrity: fix a crash with unusually large tag size\") did for\nintegrity_metadata.\n\nNote that this is not a security bug because the buffer overflow can only\nbe triggered by root.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
