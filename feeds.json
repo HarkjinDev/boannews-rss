@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-28T00:31:20.427419+09:00",
+  "fetched_at": "2026-10-28T01:01:31.479413+09:00",
   "security_news": [
     {
       "title": "[기고] 앱·API 보안, AX 필수 조건",
@@ -5175,6 +5175,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-104189 - 3Dviewer-Nextcloud: Share password not enforced when streaming 3D models from a public link share",
+      "summary": "CVE ID :CVE-2026-104189\n  \nPublished : Oct. 27, 2026, 3:22 p.m. | 28 minutes ago\n  \nDescription :The 3D Viewer for Nextcloud is a comprehensive 3D model viewer application for Nextcloud that supports multiple 3D file formats. In versions 1.7.9 through 3.3.1, the app's public file endpoint performed no share authorization. Anyone who knows a share token could read the shared file's contents even when the link share was protected by a password. `PublicFileController` extended `OCP\\AppFramework\\Controller` and marked its routes `#[PublicPage]`. Nextcloud only enforces share passwords through `PublicShareMiddleware`, which returns early for any controller that is not an `OCP\\AppFramework\\PublicShareController` instance — so no password, expiry, or share-type check ran for these routes. `ShareFileService::loadLinkShare()` compounded this by treating any token that `getShareByToken()` matched as authorised. A share token is the part of the URL that people paste into chats, emails, and tickets. Password protection exists precisely for the case where holding the token should not by itself grant access, and that guarantee did not hold. Requests to `GET /ocs/v2.php/apps/threedviewer/public/file/{token}/{fileId}` returned `200` with the full file body for password-protected shares, with no password and no session. Nextcloud's own share page correctly redirected such requests to the password prompt. Scope is limited to files in the formats this app handles (STL, GLB/glTF, OBJ, STEP, IFC, and the other supported 3D types). Non-3D files in the same share are unaffected. Expired shares returned `500` rather than leaking contents. This issue is fixed in 3.3.2. `PublicFileController` now extends `PublicShareController` and implements `isValidToken()`, `isPasswordProtected()`, and `getPasswordHash()`, delegating password and token validation to the framework and gaining brute-force throttling. `ShareFileService::findValidLinkShare()` additionally rejects share types other than link and email, rejects expired shares, and treats a `ShareNotFound` from the share manager as \"no share\" instead of letting it surface as a 500. As a workaround, disable the 3D Viewer app (`occ app:disable threedviewer`), or avoid relying on passwords to protect link shares that contain 3D model files, until you can upgrade.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-104189\n  \nPublished : Oct. 27, 2026, 3:22 p.m. | 28 minutes ago\n  \nDescription :The 3D Viewer for Nextcloud is a comprehensive 3D model viewer application for Nextcloud that supports multiple 3D file formats. In versions 1.7.9 through 3.3.1, the app's public file endpoint performed no share authorization. Anyone who knows a share token could read the shared file's contents even when the link share was protected by a password. `PublicFileController` extended `OCP\\AppFramework\\Controller` and marked its routes `#[PublicPage]`. Nextcloud only enforces share passwords through `PublicShareMiddleware`, which returns early for any controller that is not an `OCP\\AppFramework\\PublicShareController` instance — so no password, expiry, or share-type check ran for these routes. `ShareFileService::loadLinkShare()` compounded this by treating any token that `getShareByToken()` matched as authorised. A share token is the part of the URL that people paste into chats, emails, and tickets. Password protection exists precisely for the case where holding the token should not by itself grant access, and that guarantee did not hold. Requests to `GET /ocs/v2.php/apps/threedviewer/public/file/{token}/{fileId}` returned `200` with the full file body for password-protected shares, with no password and no session. Nextcloud's own share page correctly redirected such requests to the password prompt. Scope is limited to files in the formats this app handles (STL, GLB/glTF, OBJ, STEP, IFC, and the other supported 3D types). Non-3D files in the same share are unaffected. Expired shares returned `500` rather than leaking contents. This issue is fixed in 3.3.2. `PublicFileController` now extends `PublicShareController` and implements `isValidToken()`, `isPasswordProtected()`, and `getPasswordHash()`, delegating password and token validation to the framework and gaining brute-force throttling. `ShareFileService::findValidLinkShare()` additionally rejects share types other than link and email, rejects expired shares, and treats a `ShareNotFound` from the share manager as \"no share\" instead of letting it surface as a 500. As a workaround, disable the 3D Viewer app (`occ app:disable threedviewer`), or avoid relying on passwords to protect link shares that contain 3D model files, until you can upgrade.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-104189\n2. 26.10.28 오전12:22\n3. The 3D Viewer for Nextcloud is a comprehensive 3D ",
+      "cve_id": "CVE-2026-104189",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104189",
+      "source": "cvefeed",
+      "published": "2026-10-28T00:22:14+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-70277 Windows Fast FAT File System Driver Information Disclosure Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-70277\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-70277",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70277",
+      "source": "msrc",
+      "published": "2026-10-27T23:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-102800 - Joomla Extension - dj-extensions.com - Unauthenticated Stored XSS in DJ-HelpfulArticles < 1.3.0",
       "summary": "CVE ID :CVE-2026-102800\n  \nPublished : Oct. 27, 2026, 12:17 p.m. | 32 minutes ago\n  \nDescription :Joomla Extension - dj-extensions.com - Unauthenticated Stored XSS in DJ-HelpfulArticles < 1.3.0 - The “was this article helpful” voting widget posts a client-supplied ip field to its AJAX handlers (getDeny, getConfirm, getDenyReason in mod_djhelpful_articles/helper.php), reachable without authentication through com_ajax. The value was stored exactly as submitted instead of being taken from the connection by the server. It was then printed without output escaping in the administrator backend’s “Helpful articles” overview (views/items/tmpl/default.php). $db->quote() was applied on insert, which protects the SQL statement but does nothing for HTML output. There was no CSRF token, no rate limit, and the vote de-duplication keyed on the same attacker-controlled field.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
