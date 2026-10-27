@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-27T21:31:18.798433+09:00",
+  "fetched_at": "2026-10-27T22:01:25.723683+09:00",
   "security_news": [
+    {
+      "title": "FTC, 앤트로픽 경영진 '소환장' 발송 … AI 해킹 조사",
+      "summary": "미국 연방거래위원회(FTC)가 인공지능(AI) 기업 앤트로픽 경영진에 AI 해킹과 보안 사고 관련 공식 증언을... FTC는 앤트로픽 경영진에 AI 위험성과 보안 사고 경위, 안전성 확보 절차, 개인정보 보호정책 등에 대한 증언을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. FTC, AI 기업 앤트로픽 경영진에 소환장 발송\n2. AI 해킹 및 보안 사고 조사 착수\n3. 위험성, 안전성, 개인정보 보호 정책 증언 요구",
+      "link": "https://www.safetimes.co.kr/news/articleView.html?idxno=246900",
+      "source": "naver",
+      "published": "2026-10-27T21:50:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "해킹, 기업 책임 어디까지? 디엘지 \"안전조치와 사고 대응이 책임 범위...",
       "summary": "이런 가운데 법무법인 디엘지가 27일 리포트 '해킹·개인정보 유출 사고, 기업은 어디까지 책임져야 할까'를 내고 \"해킹으로 개인정보가 유출되면 기업이 법적 책임을 피하기 어려운 측면이 있지만 사고 전 안전조치 이행...",
@@ -5151,6 +5163,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-102800 - Joomla Extension - dj-extensions.com - Unauthenticated Stored XSS in DJ-HelpfulArticles < 1.3.0",
+      "summary": "CVE ID :CVE-2026-102800\n  \nPublished : Oct. 27, 2026, 12:17 p.m. | 32 minutes ago\n  \nDescription :Joomla Extension - dj-extensions.com - Unauthenticated Stored XSS in DJ-HelpfulArticles < 1.3.0 - The “was this article helpful” voting widget posts a client-supplied ip field to its AJAX handlers (getDeny, getConfirm, getDenyReason in mod_djhelpful_articles/helper.php), reachable without authentication through com_ajax. The value was stored exactly as submitted instead of being taken from the connection by the server. It was then printed without output escaping in the administrator backend’s “Helpful articles” overview (views/items/tmpl/default.php). $db->quote() was applied on insert, which protects the SQL statement but does nothing for HTML output. There was no CSRF token, no rate limit, and the vote de-duplication keyed on the same attacker-controlled field.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-102800\n  \nPublished : Oct. 27, 2026, 12:17 p.m. | 32 minutes ago\n  \nDescription :Joomla Extension - dj-extensions.com - Unauthenticated Stored XSS in DJ-HelpfulArticles < 1.3.0 - The “was this article helpful” voting widget posts a client-supplied ip field to its AJAX handlers (getDeny, getConfirm, getDenyReason in mod_djhelpful_articles/helper.php), reachable without authentication through com_ajax. The value was stored exactly as submitted instead of being taken from the connection by the server. It was then printed without output escaping in the administrator backend’s “Helpful articles” overview (views/items/tmpl/default.php). $db->quote() was applied on insert, which protects the SQL statement but does nothing for HTML output. There was no CSRF token, no rate limit, and the vote de-duplication keyed on the same attacker-controlled field.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102800\n2. 26.10.27 오후9:17\n3. Joomla Extension - dj-extensions.com - Unauthentic",
+      "cve_id": "CVE-2026-102800",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102800",
+      "source": "cvefeed",
+      "published": "2026-10-27T21:17:04+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-112362 - @fastify/express vulnerable to path-scoped middleware bypass via absolute-form request targets",
       "summary": "CVE ID :CVE-2026-112362\n  \nPublished : Oct. 27, 2026, 11:27 a.m. | 28 minutes ago\n  \nDescription :@fastify/express is a Fastify plugin that runs Express middleware inside Fastify. In versions 4.0.5 through 4.0.8, when Fastify runs with the non-default ignoreDuplicateSlashes option enabled, the plugin matches path-scoped Express middleware against a URL whose duplicate-slash normalization has also collapsed the separator after an absolute-form request target's scheme, so Fastify's router resolves the request to the scoped path and runs the handler while the Express layer no longer sees that path. As a result, a request using an absolute-form target can reach a handler on a scoped route such as an admin path while the middleware for authentication, authorization, or rate limiting is skipped. An unauthenticated attacker needs only the non-default ignoreDuplicateSlashes option to be enabled. The issue is fixed in @fastify/express 4.0.9, and users should upgrade to 4.0.9 or later. As a workaround, enforce authentication in a Fastify hook such as preHandler that runs after the router resolves the request, or leave ignoreDuplicateSlashes at its default.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
