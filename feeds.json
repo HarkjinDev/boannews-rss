@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-10-27T19:33:34.746171+09:00",
+  "fetched_at": "2026-10-27T20:01:49.555940+09:00",
   "security_news": [
+    {
+      "title": "해킹, 기업 책임 어디까지? 디엘지 \"안전조치와 사고 대응이 책임 범위...",
+      "summary": "이런 가운데 법무법인 디엘지가 27일 리포트 '해킹·개인정보 유출 사고, 기업은 어디까지 책임져야 할까'를 내고 \"해킹으로 개인정보가 유출되면 기업이 법적 책임을 피하기 어려운 측면이 있지만 사고 전 안전조치 이행...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 해킹·개인정보 유출 시 기업 책임, 디엘지 리포트 발표\n2. 안전조치 미흡 시 기업 책임 불명확, 사고 대응 중요\n3. 법적 책임 범위, 안전조치 이행 여부에 따라 달라짐",
+      "link": "https://www.econovill.com/news/articleView.html?idxno=755077",
+      "source": "naver",
+      "published": "2026-10-27T19:44:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
+      "summary": "​Apple has backported security patches released last month to older iPhones and iPads, addressing a zero-day bug exploited in \"extremely sophisticated\" targeted attacks on iOS devices. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 애플, iOS 기기 대상 제로데이 취약점 패치\n2. CoreGraphics 제로데이 버그, 고도화된 타깃 공격에 악용\n3. 구형 아이폰/아이패드에도 패치 백포팅 적용",
+      "link": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
+      "source": "bleepingcomputer",
+      "published": "2026-10-27T19:36:12+09:00",
+      "lang": "en"
+    },
     {
       "title": "중국산 테슬라에 ‘FSD’ 몰래 켰다…80명 무더기 송치",
       "summary": "국토부는 지난 3월 31일 테슬라코리아로부터 차량 소프트웨어 취약점에 따른 사이버보안 위협 신고를 받았다며, 승인 없이 FSD를 켜면 자동차관리법 제29조에 따라 안전기준을 충족하지 못한 차로 간주되고 제35조에...",
@@ -5148,21 +5172,24 @@
       "source": "naver",
       "published": "2026-10-24T20:08:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "오픈AI 연구원 3명 해고, '순환 추론' 유출 조사서 비롯…시그널 대화 쟁...",
-      "summary": "AI 안전 평가기관 METR은 오픈AI 에이전트의 허깅페이스 해킹 사건을 조사하면서 그에게 로그 분석을 맡겼다. 오픈AI 측 협업팀에 참여한 코르박은 이 과정에서 사내 슬랙과 시그널로 그린블랫과 소통했다고 밝혔다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 오픈AI, 순환 추론 유출 조사서 연구원 3명 해고\n2. 허깅페이스 해킹 사건 조사 중 사내 메시지 유출\n3. AI 안전 기관 METR, 오픈AI 협업팀 조사 착수",
-      "link": "https://www.aitimes.com/news/articleView.html?idxno=216616",
-      "source": "naver",
-      "published": "2026-10-24T19:54:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-110737 - Push Endpoint Returns Permissive CORS Headers",
+      "summary": "CVE ID :CVE-2026-110737\n  \nPublished : Oct. 27, 2026, 10:26 a.m. | 32 minutes ago\n  \nDescription :The push endpoint of a Vaadin application that uses server push reflects the request Origin into the Access-Control-Allow-Origin response header and allows credentials, because Flow configures Atmosphere with DROP_ACCESS_CONTROL_ALLOW_ORIGIN_HEADER set to false and its CorsInterceptor then echoes whatever Origin the request carries. A page on any origin can therefore make a cross origin request to that endpoint with the user's cookies and read the response, although reading anything useful also requires the push identifier of that session. Applications that do not use @Push are not affected, and neither is the WebSocket transport. The behaviour was introduced in January 2015 and is present in every Flow release and in Vaadin Framework from 7.1.0, which is when push was added.\n\n\nUsers of affected versions should apply the following mitigation or upgrade. Releases that have fixed this issue include:\n\nProduct version\nVaadin 14.14.0 - 14.14.7\nVaadin 23.6.0 - 23.6.16\nVaadin 24.4.0 - 24.4.25\nVaadin 24.5.0 - 24.5.15\nVaadin 24.6.0 - 24.6.13\nVaadin 24.7.0 - 24.7.16\nVaadin 24.8.0 - 24.8.17\nVaadin 24.9.0 - 24.9.23\nVaadin 24.10.0 - 24.10.11\nVaadin 25.0.0 - 25.0.13\nVaadin 25.1.0 - 25.1.13\nVaadin 25.2.0 - 25.2.10\nVaadin 25.3.0 - 25.3.2\nVaadin Framework 7.1.0 - 7.7.54\nVaadin Framework 8.0.0 - 8.32.1\n\nMitigation\nUpgrade to 14.14.8\nUpgrade to 23.6.17\nUpgrade to 24.4.26\nUpgrade to 24.7.17\nUpgrade to 24.7.17\nUpgrade to 24.7.17\nUpgrade to 24.9.24\nUpgrade to 24.9.24\nUpgrade to 24.10.12\nUpgrade to 25.2.11\nUpgrade to 25.2.11\nUpgrade to 25.2.11\nUpgrade to 25.3.3\nUpgrade to 7.7.55\nUpgrade to 8.32.2\n\nPlease note that Vaadin versions 10-13 and 15-22 are no longer supported and you should update either to the latest 14, 23, 24, 25 version.\n\nArtifacts\nMaven coordinates / Vulnerable versions / Fixed version\ncom.vaadin:vaadin / 14.14.0 - 14.14.7 / >=14.14.8\ncom.vaadin:vaadin / 23.6.0 - 23.6.16 / >=23.6.17\ncom.vaadin:vaadin / 24.4.0 - 24.4.25 / >=24.4.26\ncom.vaadin:vaadin / 24.5.0 - 24.5.15 / >=24.7.17\ncom.vaadin:vaadin / 24.6.0 - 24.6.13 / >=24.7.17\ncom.vaadin:vaadin / 24.7.0 - 24.7.16 / >=24.7.17\ncom.vaadin:vaadin / 24.8.0 - 24.8.17 / >=24.9.24\ncom.vaadin:vaadin / 24.9.0 - 24.9.23 / >=24.9.24\ncom.vaadin:vaadin / 24.10.0 - 24.10.11 / >=24.10.12\ncom.vaadin:vaadin / 25.0.0 - 25.0.13 / >=25.2.11\ncom.vaadin:vaadin / 25.1.0 - 25.1.13 / >=25.2.11\ncom.vaadin:vaadin / 25.2.0 - 25.2.10 / >=25.2.11\ncom.vaadin:vaadin / 25.3.0 - 25.3.2 / >=25.3.3\ncom.vaadin:vaadin-core / 14.14.0 - 14.14.7 / >=14.14.8\ncom.vaadin:vaadin-core / 23.6.0 - 23.6.16 / >=23.6.17\ncom.vaadin:vaadin-core / 24.4.0 - 24.4.25 / >=24.4.26\ncom.vaadin:vaadin-core / 24.5.0 - 24.5.15 / >=24.7.17\ncom.vaadin:vaadin-core / 24.6.0 - 24.6.13 / >=24.7.17\ncom.vaadin:vaadin-core / 24.7.0 - 24.7.16 / >=24.7.17\ncom.vaadin:vaadin-core / 24.8.0 - 24.8.17 / >=24.9.24\ncom.vaadin:vaadin-core / 24.9.0 - 24.9.23 / >=24.9.24\ncom.vaadin:vaadin-core / 24.10.0 - 24.10.11 / >=24.10.12\ncom.vaadin:vaadin-core / 25.0.0 - 25.0.13 / >=25.2.11\ncom.vaadin:vaadin-core / 25.1.0 - 25.1.13 / >=25.2.11\ncom.vaadin:vaadin-core / 25.2.0 - 25.2.10 / >=25.2.11\ncom.vaadin:vaadin-core / 25.3.0 - 25.3.2 / >=25.3.3\ncom.vaadin:flow-server / 2.13.0 - 2.13.7 / >=2.13.8\ncom.vaadin:flow-server / 23.6.0 - 23.6.15 / >=23.6.16\ncom.vaadin:flow-server / 24.4.0 - 24.4.18 / >=24.4.19\ncom.vaadin:flow-server / 24.5.0 - 24.5.17 / >=24.7.17\ncom.vaadin:flow-server / 24.6.0 - 24.6.14 / >=24.7.17\ncom.vaadin:flow-server / 24.7.0 - 24.7.15 / >=24.7.16\ncom.vaadin:flow-server / 24.8.0 - 24.8.16 / >=24.9.24\ncom.vaadin:flow-server / 24.9.0 - 24.9.28 / >=24.9.29\ncom.vaadin:flow-server / 24.10.0 - 24.10.14 / >=24.10.15\ncom.vaadin:flow-server / 25.0.0 - 25.0.15 / >=25.2.11\ncom.vaadin:flow-server / 25.1.0 - 25.1.18 / >=25.1.19\ncom.vaadin:flow-server / 25.2.0 - 25.2.12 / >=25.2.13\ncom.vaadin:flow-server / 25.3.0 - 25.3.3 / >=25.3.4\ncom.vaadin:vaadin-server / 7.1.0 - 7.7.54 / >=7.7.55\ncom.vaadin:vaadin-server / 8.0.0 - 8.32.1 / >=8.32.2\ncom.vaadin:vaadin-server-mpr-jakarta / 7.7.36 - 7.7.54 / >=7.7.55\ncom.vaadin:vaadin-server-mpr-jakarta / 8.18.0 - 8.32.1 / >=8.32.2\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-110737\n  \nPublished : Oct. 27, 2026, 10:26 a.m. | 32 minutes ago\n  \nDescription :The push endpoint of a Vaadin application that uses server push reflects the request Origin into the Access-Control-Allow-Origin response header and allows credentials, because Flow configures Atmosphere with DROP_ACCESS_CONTROL_ALLOW_ORIGIN_HEADER set to false and its CorsInterceptor then echoes whatever Origin the request carries. A page on any origin can therefore make a cross origin request to that endpoint with the user's cookies and read the response, although reading anything useful also requires the push identifier of that session. Applications that do not use @Push are not affected, and neither is the WebSocket transport. The behaviour was introduced in January 2015 and is present in every Flow release and in Vaadin Framework from 7.1.0, which is when push was added.\n\n\nUsers of affected versions should apply the following mitigation or upgrade. Releases that have fixed this issue include:\n\nProduct version\nVaadin 14.14.0 - 14.14.7\nVaadin 23.6.0 - 23.6.16\nVaadin 24.4.0 - 24.4.25\nVaadin 24.5.0 - 24.5.15\nVaadin 24.6.0 - 24.6.13\nVaadin 24.7.0 - 24.7.16\nVaadin 24.8.0 - 24.8.17\nVaadin 24.9.0 - 24.9.23\nVaadin 24.10.0 - 24.10.11\nVaadin 25.0.0 - 25.0.13\nVaadin 25.1.0 - 25.1.13\nVaadin 25.2.0 - 25.2.10\nVaadin 25.3.0 - 25.3.2\nVaadin Framework 7.1.0 - 7.7.54\nVaadin Framework 8.0.0 - 8.32.1\n\nMitigation\nUpgrade to 14.14.8\nUpgrade to 23.6.17\nUpgrade to 24.4.26\nUpgrade to 24.7.17\nUpgrade to 24.7.17\nUpgrade to 24.7.17\nUpgrade to 24.9.24\nUpgrade to 24.9.24\nUpgrade to 24.10.12\nUpgrade to 25.2.11\nUpgrade to 25.2.11\nUpgrade to 25.2.11\nUpgrade to 25.3.3\nUpgrade to 7.7.55\nUpgrade to 8.32.2\n\nPlease note that Vaadin versions 10-13 and 15-22 are no longer supported and you should update either to the latest 14, 23, 24, 25 version.\n\nArtifacts\nMaven coordinates / Vulnerable versions / Fixed version\ncom.vaadin:vaadin / 14.14.0 - 14.14.7 / >=14.14.8\ncom.vaadin:vaadin / 23.6.0 - 23.6.16 / >=23.6.17\ncom.vaadin:vaadin / 24.4.0 - 24.4.25 / >=24.4.26\ncom.vaadin:vaadin / 24.5.0 - 24.5.15 / >=24.7.17\ncom.vaadin:vaadin / 24.6.0 - 24.6.13 / >=24.7.17\ncom.vaadin:vaadin / 24.7.0 - 24.7.16 / >=24.7.17\ncom.vaadin:vaadin / 24.8.0 - 24.8.17 / >=24.9.24\ncom.vaadin:vaadin / 24.9.0 - 24.9.23 / >=24.9.24\ncom.vaadin:vaadin / 24.10.0 - 24.10.11 / >=24.10.12\ncom.vaadin:vaadin / 25.0.0 - 25.0.13 / >=25.2.11\ncom.vaadin:vaadin / 25.1.0 - 25.1.13 / >=25.2.11\ncom.vaadin:vaadin / 25.2.0 - 25.2.10 / >=25.2.11\ncom.vaadin:vaadin / 25.3.0 - 25.3.2 / >=25.3.3\ncom.vaadin:vaadin-core / 14.14.0 - 14.14.7 / >=14.14.8\ncom.vaadin:vaadin-core / 23.6.0 - 23.6.16 / >=23.6.17\ncom.vaadin:vaadin-core / 24.4.0 - 24.4.25 / >=24.4.26\ncom.vaadin:vaadin-core / 24.5.0 - 24.5.15 / >=24.7.17\ncom.vaadin:vaadin-core / 24.6.0 - 24.6.13 / >=24.7.17\ncom.vaadin:vaadin-core / 24.7.0 - 24.7.16 / >=24.7.17\ncom.vaadin:vaadin-core / 24.8.0 - 24.8.17 / >=24.9.24\ncom.vaadin:vaadin-core / 24.9.0 - 24.9.23 / >=24.9.24\ncom.vaadin:vaadin-core / 24.10.0 - 24.10.11 / >=24.10.12\ncom.vaadin:vaadin-core / 25.0.0 - 25.0.13 / >=25.2.11\ncom.vaadin:vaadin-core / 25.1.0 - 25.1.13 / >=25.2.11\ncom.vaadin:vaadin-core / 25.2.0 - 25.2.10 / >=25.2.11\ncom.vaadin:vaadin-core / 25.3.0 - 25.3.2 / >=25.3.3\ncom.vaadin:flow-server / 2.13.0 - 2.13.7 / >=2.13.8\ncom.vaadin:flow-server / 23.6.0 - 23.6.15 / >=23.6.16\ncom.vaadin:flow-server / 24.4.0 - 24.4.18 / >=24.4.19\ncom.vaadin:flow-server / 24.5.0 - 24.5.17 / >=24.7.17\ncom.vaadin:flow-server / 24.6.0 - 24.6.14 / >=24.7.17\ncom.vaadin:flow-server / 24.7.0 - 24.7.15 / >=24.7.16\ncom.vaadin:flow-server / 24.8.0 - 24.8.16 / >=24.9.24\ncom.vaadin:flow-server / 24.9.0 - 24.9.28 / >=24.9.29\ncom.vaadin:flow-server / 24.10.0 - 24.10.14 / >=24.10.15\ncom.vaadin:flow-server / 25.0.0 - 25.0.15 / >=25.2.11\ncom.vaadin:flow-server / 25.1.0 - 25.1.18 / >=25.1.19\ncom.vaadin:flow-server / 25.2.0 - 25.2.12 / >=25.2.13\ncom.vaadin:flow-server / 25.3.0 - 25.3.3 / >=25.3.4\ncom.vaadin:vaadin-server / 7.1.0 - 7.7.54 / >=7.7.55\ncom.vaadin:vaadin-server / 8.0.0 - 8.32.1 / >=8.32.2\ncom.vaadin:vaadin-server-mpr-jakarta / 7.7.36 - 7.7.54 / >=7.7.55\ncom.vaadin:vaadin-server-mpr-jakarta / 8.18.0 - 8.32.1 / >=8.32.2\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-110737\n2. 26.10.27 오후7:26\n3. The push endpoint of a Vaadin application that use",
+      "cve_id": "CVE-2026-110737",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-110737",
+      "source": "cvefeed",
+      "published": "2026-10-27T19:26:37+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-75891 - Kirki <= 6.2.5 - Authenticated (Subscriber+) PHP Object Injection to Administrator Account Takeover via 'get-single-symbol' AJAX Endpoint",
       "summary": "CVE ID :CVE-2026-75891\n  \nPublished : Oct. 27, 2026, 7:16 a.m. | 1 hour, 3 minutes ago\n  \nDescription :The Kirki plugin for WordPress is vulnerable to Privilege Escalation via PHP Object Injection in all versions up to, and including, 6.2.5 via deserialization of untrusted input through the 'get-single-symbol' branch of the kirki_post_apis() AJAX dispatcher due to a missing capability check. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object. The additional presence of a POP chain allows attackers to overwrite an administrator's password and gain administrative access.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
