@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-28T02:01:28.670399+09:00",
+  "fetched_at": "2026-10-28T02:31:31.631454+09:00",
   "security_news": [
+    {
+      "title": "이호성 하나은행장 연임 명분은 실적…변수는 내부통제",
+      "summary": "하나은행은 이달 초 외부 해킹으로 고객 89명의 개인정보가 유출된 사실을 확인했다. 금융거래 정보 유출은 확인되지 않았지만 고객정보 보호체계에 대한 점검 필요성이 제기됐다. 특히 주목할 대목은 이호성 행장이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 하나은행, 고객 89명 개인정보 유출 확인\n2. 금융거래 정보 유출은 없었으나 보안 점검 필요\n3. 내부통제 강화로 이호성 행장 연임 변수로 작용",
+      "link": "https://sateconomy.co.kr/news/view/1065546207924935",
+      "source": "naver",
+      "published": "2026-10-28T02:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"660억 내놔라\"...일본 기업 해커 집단 '몸값' 요구",
       "summary": "일본 기업을 해킹한 범죄 집단이 고객 정보를 빌미로 돈을 달라고 협박하고 나섰습니다. 그러면서 우리 돈... 일본에서 가장 큰 온라인 여행사인 '라쿠텐 트래블'도 해킹 피해를 봤습니다. 최대 260만 건의 개인정보가...",
@@ -5223,6 +5235,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-57189 - Asterisk: Possible RED T.140 Generation Accumulation OOB Write",
+      "summary": "CVE ID :CVE-2026-57189\n  \nPublished : Oct. 27, 2026, 4:59 p.m. | 17 minutes ago\n  \nDescription :Asterisk is an open source private branch exchange and telephony toolkit. In affected deployments, an authenticated attacker may cause a `T.140 RED` out-of-bounds write during `generation accumulation` using carefully crafted packets, potentially allowing remote code execution or causing Asterisk to crash. The `chan_sip` channel driver must be installed and configured, and its `textsupport` option must be enabled; `textsupport` defaults to no. `The chan_sip driver was deprecated in Asterisk 20 and completely removed in all later versions.` Repository comparisons verify patch containment in Asterisk 20.20.1, 21.12.3, 22.10.1 and 23.4.1, and Certified Asterisk 20.7-cert11 and 22.8-cert3. The affected release-track scope remains unresolved: structured metadata includes later release tracks even though the advisory says the required `chan_sip` driver was removed there.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-57189\n  \nPublished : Oct. 27, 2026, 4:59 p.m. | 17 minutes ago\n  \nDescription :Asterisk is an open source private branch exchange and telephony toolkit. In affected deployments, an authenticated attacker may cause a `T.140 RED` out-of-bounds write during `generation accumulation` using carefully crafted packets, potentially allowing remote code execution or causing Asterisk to crash. The `chan_sip` channel driver must be installed and configured, and its `textsupport` option must be enabled; `textsupport` defaults to no. `The chan_sip driver was deprecated in Asterisk 20 and completely removed in all later versions.` Repository comparisons verify patch containment in Asterisk 20.20.1, 21.12.3, 22.10.1 and 23.4.1, and Certified Asterisk 20.7-cert11 and 22.8-cert3. The affected release-track scope remains unresolved: structured metadata includes later release tracks even though the advisory says the required `chan_sip` driver was removed there.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-57189\n2. 26.10.28 오전1:59\n3. Asterisk is an open source private branch exchange",
+      "cve_id": "CVE-2026-57189",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-57189",
+      "source": "cvefeed",
+      "published": "2026-10-28T01:59:46+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-116673 - systeminformation: Path traversal in Linux networkStats() allows symlink-based file disclosure outside /sys/class/net",
+      "summary": "CVE ID :CVE-2026-116673\n  \nPublished : Oct. 27, 2026, 4:38 p.m. | 38 minutes ago\n  \nDescription :systeminformation is a System and OS information library for node.js. Prior to 5.33.14, the Linux networkStats(iface) implementation uses the caller-supplied interface value in an fs.existsSync() check and to build /sys/class/net/ paths, including the operstate path, without verifying that it is a single interface-name segment or that the resolved path remains under /sys/class/net. An attacker who can control iface and create a directory containing symlinked statistics files can use parent-directory components and symlink traversal to make the API return the first line of a file readable by the Node.js process. The package does not expose a network endpoint, and the demonstrated scenario requires local filesystem setup. This issue is fixed in version 5.33.14.\n  \nSeverity: 3.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-116673\n  \nPublished : Oct. 27, 2026, 4:38 p.m. | 38 minutes ago\n  \nDescription :systeminformation is a System and OS information library for node.js. Prior to 5.33.14, the Linux networkStats(iface) implementation uses the caller-supplied interface value in an fs.existsSync() check and to build /sys/class/net/ paths, including the operstate path, without verifying that it is a single interface-name segment or that the resolved path remains under /sys/class/net. An attacker who can control iface and create a directory containing symlinked statistics files can use parent-directory components and symlink traversal to make the API return the first line of a file readable by the Node.js process. The package does not expose a network endpoint, and the demonstrated scenario requires local filesystem setup. This issue is fixed in version 5.33.14.\n  \nSeverity: 3.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-116673\n2. 26.10.28 오전1:38\n3. systeminformation is a System and OS information l",
+      "cve_id": "CVE-2026-116673",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-116673",
+      "source": "cvefeed",
+      "published": "2026-10-28T01:38:15+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-104189 - 3Dviewer-Nextcloud: Share password not enforced when streaming 3D models from a public link share",
       "summary": "CVE ID :CVE-2026-104189\n  \nPublished : Oct. 27, 2026, 3:22 p.m. | 28 minutes ago\n  \nDescription :The 3D Viewer for Nextcloud is a comprehensive 3D model viewer application for Nextcloud that supports multiple 3D file formats. In versions 1.7.9 through 3.3.1, the app's public file endpoint performed no share authorization. Anyone who knows a share token could read the shared file's contents even when the link share was protected by a password. `PublicFileController` extended `OCP\\AppFramework\\Controller` and marked its routes `#[PublicPage]`. Nextcloud only enforces share passwords through `PublicShareMiddleware`, which returns early for any controller that is not an `OCP\\AppFramework\\PublicShareController` instance — so no password, expiry, or share-type check ran for these routes. `ShareFileService::loadLinkShare()` compounded this by treating any token that `getShareByToken()` matched as authorised. A share token is the part of the URL that people paste into chats, emails, and tickets. Password protection exists precisely for the case where holding the token should not by itself grant access, and that guarantee did not hold. Requests to `GET /ocs/v2.php/apps/threedviewer/public/file/{token}/{fileId}` returned `200` with the full file body for password-protected shares, with no password and no session. Nextcloud's own share page correctly redirected such requests to the password prompt. Scope is limited to files in the formats this app handles (STL, GLB/glTF, OBJ, STEP, IFC, and the other supported 3D types). Non-3D files in the same share are unaffected. Expired shares returned `500` rather than leaking contents. This issue is fixed in 3.3.2. `PublicFileController` now extends `PublicShareController` and implements `isValidToken()`, `isPasswordProtected()`, and `getPasswordHash()`, delegating password and token validation to the framework and gaining brute-force throttling. `ShareFileService::findValidLinkShare()` additionally rejects share types other than link and email, rejects expired shares, and treats a `ShareNotFound` from the share manager as \"no share\" instead of letting it surface as a 500. As a workaround, disable the 3D Viewer app (`occ app:disable threedviewer`), or avoid relying on passwords to protect link shares that contain 3D model files, until you can upgrade.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
