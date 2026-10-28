@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-29T03:02:49.123166+09:00",
+  "fetched_at": "2026-10-29T03:31:37.332274+09:00",
   "security_news": [
+    {
+      "title": "랜섬웨어 공격 경험 18%…방어 전략 불신은 45%",
+      "summary": "조사는 2026년 7~8월 전 세계 IT·사이버보안 전문가 400명을 대상으로 진행됐다. (보고서 발표) 공개 발표문은... 직원 대상 보안 인식 교육을 제공한다는 응답은 84%로 전년 보고서의 74%보다 10%포인트 늘었다. 교육 제공...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 전 세계 IT·보안 전문가 400명 대상 조사\n2. 18%가 랜섬웨어 공격 경험, 45%는 방어 전략 불신\n3. 직원 보안 교육 84%로 작년보다 10%p 증가",
+      "link": "https://www.tokenpost.kr/news/tech/428782",
+      "source": "naver",
+      "published": "2026-10-29T03:26:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "공격자의 실익을 꺾어라 ··· 자동화된 공격 무력화할 5가지 방어선",
       "summary": "국내 금융사 해킹 피해가 잇따르는 가운데 일본에서도 AI 기반 공격에 따른 정보유출 사고가 발생하고 있다.... CISO를 위한 핵심 시사점• 위협의 진화: AI 기반 공격 자동화로 미관리 자산과 계정 탈취를 노린 해킹의...",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-10-26T11:58:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "PHP 이어 Node.js도 뚫릴 위험…웹 서버 기반 소프트웨어 취약점 확산",
-      "summary": "해킹 관련 자료사진. 연합뉴스  웹사이트 개발에 널리 사용되는 PHP에 이어 Node.js에서도 인증없이 서버를 공격할 수 있는 보안 취약점이 발견됐다. 26일 업계에 따르면 Node.js 프로젝트는 지난 21일 공식 보안공지를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. PHP에 이어 Node.js도 인증 없는 서버 공격 취약점 발견\n2. CVE-2024-24686 포함, 노드JS 프로젝트 21일 보안공지\n3. 웹 서버 기반 소프트웨어 취약점 확산 우려",
-      "link": "http://www.seouleconews.com/news/articleView.html?idxno=94569",
-      "source": "naver",
-      "published": "2026-10-26T11:56:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-116266 - MIME::Head versions from 5.518 before 5.521 for Perl decode a partly encoded multipart boundary without flagging the parse as ambiguous",
+      "summary": "CVE ID :CVE-2026-116266\n  \nPublished : Oct. 28, 2026, 5:32 p.m. | 28 minutes ago\n  \nDescription :MIME::Head versions from 5.518 before 5.521 for Perl decode a partly encoded multipart boundary without flagging the parse as ambiguous.\n\nThe multipart_boundary() method decodes RFC 2047 encoded words anywhere in the boundary, but the ambiguity check only fires when the whole value is one encoded word. A boundary such as abc=?us-ascii?Q?def?= is used as abcdef, and ambiguous_content() returns false.\n\nEncoded words are not allowed in parameters, so other mail readers split the message on the literal value. A remote sender can hide an attachment from a filter that relies on ambiguous_content() while the recipient's mail client shows it.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-116266\n  \nPublished : Oct. 28, 2026, 5:32 p.m. | 28 minutes ago\n  \nDescription :MIME::Head versions from 5.518 before 5.521 for Perl decode a partly encoded multipart boundary without flagging the parse as ambiguous.\n\nThe multipart_boundary() method decodes RFC 2047 encoded words anywhere in the boundary, but the ambiguity check only fires when the whole value is one encoded word. A boundary such as abc=?us-ascii?Q?def?= is used as abcdef, and ambiguous_content() returns false.\n\nEncoded words are not allowed in parameters, so other mail readers split the message on the literal value. A remote sender can hide an attachment from a filter that relies on ambiguous_content() while the recipient's mail client shows it.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-116266\n2. 26.10.29 오전2:32\n3. MIME::Head versions from 5.518 before 5.521 for Pe",
+      "cve_id": "CVE-2026-116266",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-116266",
+      "source": "cvefeed",
+      "published": "2026-10-29T02:32:28+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-82962 - Out-of-bounds write in Zephyr Ethernet L2 when adding the link-layer header to a forwarded packet",
       "summary": "CVE ID :CVE-2026-82962\n  \nPublished : Oct. 28, 2026, 5:18 p.m. | 12 minutes ago\n  \nDescription :ethernet_fill_header() in subsys/net/l2/ethernet/ethernet.c can prepend the Ethernet header in place, by pushing it into the headroom of the packet's first fragment, instead of allocating a separate header fragment. Before this fix the in-place path was selected purely from the build-time value of CONFIG_NET_L2_ETHERNET_RESERVE_HEADER, with no check that the packet actually has that headroom, and then called net_buf_push(pkt->buffer, hdr_len). Only Ethernet TX allocations reserve that space: net_pkt_alloc_buffer() invokes the L2 alloc hook (ethernet_l2_alloc()) only when is_pkt_tx() is true and the packet's interface is the Ethernet interface.\n\nA packet that was allocated by a different L2 and then handed to Ethernet for transmission therefore has too little (usually zero) headroom. Such packets are produced by ordinary routing and tunnelling paths: net_route_packet_if() re-targets a received packet to another interface when CONFIG_NET_IPV4_FORWARDING / CONFIG_NET_IPV6_FORWARDING are enabled (for example an 802.15.4/OpenThread or PPP interface forwarding to Wi-Fi/Ethernet), net_route_ipv6_mcast_forward_packet() forwards an RX-slab clone that carries no reserve, and the IPIP tunnel interface_send() prepends an outer IP header allocated on the virtual interface. In these configurations a remote or adjacent attacker triggers the condition simply by sending traffic that the device forwards.\n\nBecause net_buf_simple_push() only asserts on the headroom bound, a build without CONFIG_ASSERT (and without the newer CONFIG_NET_BUF_HARDENING) moves the fragment data pointer below the start of its data block and writes 14 bytes — 18 with VLAN — of Ethernet header out of bounds. With the default fixed-size buffer pools this overwrites the tail of the neighbouring buffer's payload or memory preceding the pool array; with variable-size pools it overwrites the buffer reference count and the heap chunk header. The attacker controls neither the written bytes nor the offset, so the practical impact is memory corruption leading to a crash, packet corruption, or heap inconsistency rather than controlled code execution. The fix takes the in-place path only when net_buf_headroom(pkt->buffer) is large enough and otherwise falls back to a separate header fragment.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
