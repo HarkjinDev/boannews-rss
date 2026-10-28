@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-29T01:32:33.752676+09:00",
+  "fetched_at": "2026-10-29T02:01:27.822690+09:00",
   "security_news": [
     {
       "title": "PHP2Shell Attack Roots 25 Servers, Breaches U.S. Government-Affiliated Network",
@@ -6901,21 +6901,6 @@
       "link": "https://isc.sans.edu/diary/rss/33454",
       "source": "sans_isc",
       "published": "2026-10-26T04:57:53+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-115823 - Starman versions before 0.4019 for Perl send response bodies for HEAD requests, desynchronizing responses on keep-alive connections",
-      "summary": "CVE ID :CVE-2026-115823\n  \nPublished : Oct. 25, 2026, 4:51 p.m. | 28 minutes ago\n  \nDescription :Starman versions before 0.4019 for Perl send response bodies for HEAD requests, desynchronizing responses on keep-alive connections.\n\nFor a HEAD request Starman omits chunked framing but still writes the body returned by the application, on both the array and streaming response paths. Responses with a 1xx, 204 or 304 status also carry the body.\n\nOn a keep-alive or pipelined connection the client reads those bytes as the start of the next response. A front-end proxy that reuses upstream connections may then pair responses with the wrong requests.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-115823\n  \nPublished : Oct. 25, 2026, 4:51 p.m. | 28 minutes ago\n  \nDescription :Starman versions before 0.4019 for Perl send response bodies for HEAD requests, desynchronizing responses on keep-alive connections.\n\nFor a HEAD request Starman omits chunked framing but still writes the body returned by the application, on both the array and streaming response paths. Responses with a 1xx, 204 or 304 status also carry the body.\n\nOn a keep-alive or pipelined connection the client reads those bytes as the start of the next response. A front-end proxy that reuses upstream connections may then pair responses with the wrong requests.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-115823\n2. 26.10.26 오전1:51\n3. Starman versions before 0.4019 for Perl send respo",
-      "cve_id": "CVE-2026-115823",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115823",
-      "source": "cvefeed",
-      "published": "2026-10-26T01:51:19+09:00",
       "lang": "en"
     }
   ],
