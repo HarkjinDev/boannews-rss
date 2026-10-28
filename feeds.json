@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-29T01:01:59.733949+09:00",
+  "fetched_at": "2026-10-29T01:32:33.752676+09:00",
   "security_news": [
+    {
+      "title": "PHP2Shell Attack Roots 25 Servers, Breaches U.S. Government-Affiliated Network",
+      "summary": "Cybersecurity researchers have disclosed details of what appears to be an artificial intelligence (AI)-assisted attack orchestrated by a suspected China-nexus threat actor that has leveraged the PHP2Shell vulnerabilities to breach exposed systems.\n\nThe activity, which was observed on October 25, 2026, involved an attacker combining PHP2Shell with a kernel privilege escalation exploit to root",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. PHP2Shell Attack Roots 25 Servers, Breaches U.S.\n2. Government-Affiliated Network Cybersecurity resear\n3. The activity, which was observed on October 25, 20",
+      "link": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
+      "source": "thehackernews",
+      "published": "2026-10-29T01:02:45+09:00",
+      "lang": "en"
+    },
     {
       "title": "줄줄이 뚫렸는데‥'북한 IP' 440만 건 포착",
       "summary": "[곽진 / 아주대 사이버보안학과 교수] \"공통된 정보가 있었어요. 주민등록번호, 휴대폰 번호라고 하는. 특정... 수 있는 만큼 해커 국적을 북한으로 단정할 수는 없다고 금융보안원은 설명했습니다. MBC뉴스 송서영입니다.",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-10-26T11:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "PHP 이어 구글 '브로틀리'도 보안 취약점…원격코드 실행 우려",
-      "summary": "(Brotli)'에서도 보안 취약점이 발견됐다. 이번 취약점은 외부 공격자가 서버에서 임의 코드를 실행하는 데 악용될 수 있는 문제다. 26일 한국인터넷진흥원(KISA)에 따르면 구글은 브로틀리에서 발견된 보안 취약점(CVE-2026...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. PHP 이어 구글 '브로틀리'도 보안 취약점…원격코드 실행 우려 (Brotli)'에서도 보\n2. 이번 취약점은 외부 공격자가 서버에서 임의 코드를 실행하는 데 악용될 수 있는 문제다.\n3. 26일 한국인터넷진흥원(KISA)에 따르면 구글은 브로틀리에서 발견된 보안 취약점(CVE-",
-      "link": "https://n.news.naver.com/mnews/article/293/0000092126?sid=105",
-      "source": "naver",
-      "published": "2026-10-26T11:31:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Yet Another ClickFix Campaign, (Wed, Oct 28th)",
+      "summary": "Introduction\r",
+      "description": "Introduction\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Yet Another ClickFix Campaign, (Wed, Oct 28th)\n2. SANS_ISC\n3. Introduction",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33466",
+      "source": "sans_isc",
+      "published": "2026-10-29T01:07:03+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-47235 - SimulationCraft: Heap-Based Buffer Overflow / Out-of-Bounds Write in SimulationCraft's gem_id Array",
       "summary": "CVE ID :CVE-2026-47235\n  \nPublished : Oct. 28, 2026, 3:38 p.m. | 22 minutes ago\n  \nDescription :SimulationCraft is a tool to explore combat mechanics in World of Warcraft. In builds after release-820-01 and before the identified May 7, 2026 nightly, the `bcp_api.cpp` loop over the JSON `sockets` array uses `slot_data[\"sockets\"].Size()` without bounding `gem_idx` by `MAX_GEM_SLOTS`, which is four in `engine/sc_enums.hpp`. The destination `gem_id` and `gem_bonus_id` arrays in `engine/item/item.hpp` have only four elements. More than four socket entries therefore write beyond `gem_id` into the adjacent `gem_bonus_id` vector storage; `bonus_list` entries can also access `gem_bonus_id` out of bounds. Corrupting a vector's `_M_start` pointer causes the `item_t` destructor to free an attacker-influenced pointer during normal cleanup. The advisory reports crashes and code execution demonstrated in a testing environment. Attack inputs can arrive through a malicious `.simc` profile with a `[[equipment]]` section, a compromised addon export, or `Battle.net API` responses modified by an attacker with a privileged network position. The fix is contained in the nightly build identified as simc-1205-01-516b5d7; no containing release tag is available.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
