@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-28T23:32:55.664977+09:00",
+  "fetched_at": "2026-10-29T00:01:38.077542+09:00",
   "security_news": [
+    {
+      "title": "[사설]‘북한 IP’ 440만 회 접근 시도…전방위 금융해킹 실체 밝혀내라",
+      "summary": "대규모 해킹을 감행하기 전 시스템 취약점이나 접근 경로를 탐색하기 위한 ‘스캔성 접근’으로 의심된다.... 금융권 해킹의 연장선인지는 아직 불분명하다. 이달 초부터 중순까지 은행 등 금융회사 16곳에서 해킹 피해로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 IP, 440만 회 접근 시도 의혹\n2. 금융권 해킹 연장선, 시스템 취약점 탐색 추정\n3. 16개 금융회사 해킹 피해, 추가 조사 필요",
+      "link": "https://n.news.naver.com/mnews/article/020/0003758443?sid=110",
+      "source": "naver",
+      "published": "2026-10-28T23:31:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[단독] 마이리얼트립, 외부 침입에 고객 개인정보 유출…여권번호도 포...",
       "summary": "회사 측은 사고 인지 즉시 보안 시스템을 보완했으며, 추가 피해 여부 등을 지속 점검하고 있다고 밝혔다.... 마이리얼트립 “사고 경위와 원인 파악 등을 위해 최선을 다하는 한편, 보안 체계를 철저히 점검·강화해 추가...",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-10-26T10:58:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "“아이디·비번 몰라도 다 뚫는다”…네티즌 떨게 만든 ‘보안 비상’ ...",
-      "summary": "PHP 이어 Node.js도 보안 취약점 발견 개인정보 유출·서버 마비 우려 인터넷 쇼핑몰이나 기업 홈페이지를 운영하는 서버에 비상등이 켜졌다. 해커가 아이디나 비밀번호를 몰라도 외부에서 서버에 침입할 수 있는 보안...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. “아이디·비번 몰라도 다 뚫는다”…네티즌 떨게 만든 ‘보안 비상’ ...\n2. PHP 이어 Node.js도 보안 취약점 발견 개인정보 유출·서버 마비 우려 인터넷 쇼핑몰\n3. 해커가 아이디나 비밀번호를 몰라도 외부에서 서버에 침입할 수 있는 보안...",
-      "link": "https://n.news.naver.com/mnews/article/009/0005753889?sid=105",
-      "source": "naver",
-      "published": "2026-10-26T10:58:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-59959 - SAIL: WebP decoder division by zero through malformed animated canvas metadata",
+      "summary": "CVE ID :CVE-2026-59959\n  \nPublished : Oct. 28, 2026, 1:17 p.m. | 39 minutes ago\n  \nDescription :SAIL is a cross-platform library for loading and saving images with support for animation, metadata, and ICC profiles. Prior to version 1.0.2, the built-in WebP decoder can crash during loader initialization when processing a malformed animated WebP file with inconsistent container or `ANMF` frame metadata. In `sail_codec_load_init_v8_webp()` in `src/sail-codecs/webp/webp.c`, `WebPDemuxGetI` with `WEBP_FF_CANVAS_WIDTH` can return a zero `image_local->width`, which is then used as a divisor when calculating `bytes_per_pixel` from the image row size. The division happens before frame decoding and before generic image skeleton validation in `src/sail/sail_advanced.c`, causing an arithmetic fault and process termination. Applications accepting untrusted WebP images can consequently suffer denial of service; builds must include the affected WebP codec. This issue is fixed in version 1.0.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59959\n  \nPublished : Oct. 28, 2026, 1:17 p.m. | 39 minutes ago\n  \nDescription :SAIL is a cross-platform library for loading and saving images with support for animation, metadata, and ICC profiles. Prior to version 1.0.2, the built-in WebP decoder can crash during loader initialization when processing a malformed animated WebP file with inconsistent container or `ANMF` frame metadata. In `sail_codec_load_init_v8_webp()` in `src/sail-codecs/webp/webp.c`, `WebPDemuxGetI` with `WEBP_FF_CANVAS_WIDTH` can return a zero `image_local->width`, which is then used as a divisor when calculating `bytes_per_pixel` from the image row size. The division happens before frame decoding and before generic image skeleton validation in `src/sail/sail_advanced.c`, causing an arithmetic fault and process termination. Applications accepting untrusted WebP images can consequently suffer denial of service; builds must include the affected WebP codec. This issue is fixed in version 1.0.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-59959\n2. 26.10.28 오후10:17\n3. SAIL is a cross-platform library for loading and s",
+      "cve_id": "CVE-2026-59959",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59959",
+      "source": "cvefeed",
+      "published": "2026-10-28T22:17:29+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-99215 - power: supply: core: prevent unregistering a power supply while a callback runs",
       "summary": "CVE ID :CVE-2026-99215\n  \nPublished : Oct. 28, 2026, 11:17 a.m. | 42 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\npower: supply: core: prevent unregistering a power supply while a callback runs\n\nOnce a power supply is registered, its callbacks can immediately start\nfiring from other contexts, such as external_power_changed() triggered by\nthe TCPM stack. If a power supply is unregistered while the callback is\nstill running, the driver data can already be freed when the callback\ntries to access it, leading to a use-after-free.\n\nThis happens e.g. when the hardware bus carrying the power supply device\nmalfunctions (e.g. I2C is hogged down by another malfunctioning device)\nimmediately after the power supply is registered, and thus the core is\nstill processing the callbacks which were queued up when the driver\nstarts the removal, leading in some cases to a kernel crash, e.g.:\n\n[   11.645942] Unable to handle kernel NULL pointer dereference at virtual address 0000000000000005\n[   11.646751] Mem abort info:\n[   11.647006]   ESR = 0x0000000096000004\n[   11.647338]   EC = 0x25: DABT (current EL), IL = 32 bits\n[   11.647806]   SET = 0, FnV = 0\n[   11.648077]   EA = 0, S1PTW = 0\n[   11.648356]   FSC = 0x04: level 0 translation fault\n[   11.648785] Data abort info:\n[   11.649041]   ISV = 0, ISS = 0x00000004, ISS2 = 0x00000000\n[   11.649524]   CM = 0, WnR = 0, TnD = 0, TagAccess = 0\n[   11.649981]   GCS = 0, Overlay = 0, DirtyBit = 0\n[   11.650390] [0000000000000005] user address but active_mm is swapper\n[   11.650955] Internal error: Oops: 0000000096000004 [#1]  SMP\n[   11.651460] Modules linked in:\n[   11.651742] CPU: 1 UID: 0 PID: 144 Comm: kworker/1:2 Not tainted 7.2.0-rc6-g62a9297af2cd #1 PREEMPT\n[   11.652553] Hardware name: Flipper One rev. F0B1C2 (DT)\n[   11.653024] Workqueue: events power_supply_changed_work\n[   11.653511] pstate: 60000005 (nZCv daif -PAN -UAO -TCO -DIT -SSBS BTYPE=--)\n[   11.654135] pc : __power_supply_is_supplied_by+0x18/0x100\n[   11.654624] lr : __power_supply_am_i_supplied+0x40/0xb8\n[   11.655098] sp : ffff80008192bb30\n[   11.655399] x29: ffff80008192bb30 x28: 0000000000000000 x27: 0000000000000000\n[   11.656049] x26: 0000000000000000 x25: 0000000000000000 x24: 0000000000000000\n[   11.656695] x23: ffff0000c19f4200 x22: ffffdb2232ba4ea8 x21: ffff80008192bc28\n[   11.657344] x20: ffff0000c1eef000 x19: ffff80008192bc18 x18: 00000000a0886e62\n[   11.657991] x17: 000000040044ffff x16: 04500072b5503510 x15: 0000000000000000\n[   11.658639] x14: 0000000000000000 x13: 0000000000000220 x12: 0000000000000000\n[   11.659286] x11: 0000000000000000 x10: ffff0000c1fdb2b0 x9 : ffffdb2232ba5590\n[   11.659934] x8 : 00000000e5b906e6 x7 : ffff0000c2502778 x6 : ffffdb22339793d0\n[   11.660581] x5 : ffff80008192bc18 x4 : ffff0000c19cbca0 x3 : 0000000000000000\n[   11.661228] x2 : ffff0000c1fdaf40 x1 : ffffffffffffffed x0 : ffff0000c1eef000\n[   11.661878] Call trace:\n[   11.662103]  __power_supply_is_supplied_by+0x18/0x100 (P)\n[   11.662596]  __power_supply_am_i_supplied+0x40/0xb8\n[   11.663040]  psy_for_each_psy_cb+0x20/0x40\n[   11.663416]  class_for_each_device+0x110/0x150\n[   11.663825]  power_supply_am_i_supplied+0x68/0x100\n[   11.664262]  bq257xx_external_power_changed+0x58/0x140\n[   11.664733]  __power_supply_changed_work+0x60/0x80\n[   11.665170]  psy_for_each_psy_cb+0x20/0x40\n[   11.665545]  class_for_each_device+0x110/0x150\n[   11.665953]  power_supply_changed_work+0x98/0x1b8\n[   11.666382]  process_one_work+0x164/0x4c0\n[   11.666758]  worker_thread+0x19c/0x320\n[   11.667104]  kthread+0x138/0x150\n[   11.667408]  ret_from_fork+0x10/0x20\n[   11.667744] Code: d503233f a9bd7bfd 910003fd a90153f3 (f9400c34)\n[   11.668294] ---[ end trace 0000000000000000 ]---\n\nAdd a read-write semaphore between external_power_changed() and\npower_supply_unregister() to prevent the latter from returning (and thus\nthe driver from freeing its data) while the callback is still running.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6842,21 +6857,6 @@
       "source": "cvefeed",
       "published": "2026-10-26T01:51:19+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Google 제품 보안 업데이트 권고",
-      "summary": "1. Google社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "description": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Google社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표\n2. 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72238",
-      "source": "krcert_notice",
-      "published": "2026-10-26T00:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "reputation": []
