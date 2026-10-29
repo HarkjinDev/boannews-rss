@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-29T23:32:50.982572+09:00",
+  "fetched_at": "2026-10-30T00:03:00.818489+09:00",
   "security_news": [
+    {
+      "title": "은행권 해킹 대응 고삐 죈다",
+      "summary": "금융보안원장과 심사위원 및 우리은행 관계자들이 기념사진을 촬영하고 있다. 우리은행 제공 은행권이 취약점 점검과 보안 투자 확대로 해킹 대응을 강화하고 있다. 30일 금융권에 따르면 우리은행(은행장 정진완)과...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 은행권 해킹 대응 고삐 죈다 금융보안원장과 심사위원 및 우리은행 관계자들이 기념사진을 촬영\n2. 우리은행 제공 은행권이 취약점 점검과 보안 투자 확대로 해킹 대응을 강화하고 있다.\n3. 30일 금융권에 따르면 우리은행(은행장 정진완)과...",
+      "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3080682",
+      "source": "naver",
+      "published": "2026-10-30T00:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "건담베이스 회원 34만 명 털렸다···반다이남코 외주망 해킹에 비상",
       "summary": "전자우편 발송 대행업체의 전산망이 해킹 공격에 뚫린 것이 원인으로, 일본 현지에서는 한정판 건프라... 접근(해킹)이 발생해 고객 정보가 외부로 유출됐다고 밝혔다. 공식 집계 결과 유출된 정보는 건담베이스 공식...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-10-27T13:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[PHP 비상] Node.js 취약점까지…\"웹사이트 플랫폼·플러그인 업데이트론...",
-      "summary": "펜타시큐리티, 엑스게이트, 수산아이앤티, 스패로우, AI스페라, SGA솔루션즈, 코닉글로리는 해킹 공격 탐지와 차단을 위한 보안 기술과 대응 정보를 지원하고 있다. 안랩, 큐비트시큐리티, 로그프레소는 공격 분석과...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [PHP 비상] Node.js 취약점까지…\"웹사이트 플랫폼·플러그인 업데이트론...\n2. 펜타시큐리티, 엑스게이트, 수산아이앤티, 스패로우, AI스페라, SGA솔루션즈, 코닉글로리\n3. 안랩, 큐비트시큐리티, 로그프레소는 공격 분석과...",
-      "link": "https://n.news.naver.com/mnews/article/138/0002246151?sid=105",
-      "source": "naver",
-      "published": "2026-10-27T13:22:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -7097,81 +7097,6 @@
       "source": "cvefeed",
       "published": "2026-10-27T00:16:45+09:00",
       "lang": "it"
-    },
-    {
-      "title": "CVE-2026-99098 - dm-integrity: fix buffer overflow in inline mode with large tag size",
-      "summary": "CVE ID :CVE-2026-99098\n  \nPublished : Oct. 26, 2026, 2:52 p.m. | 19 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ndm-integrity: fix buffer overflow in inline mode with large tag size\n\nIn inline mode, dm_integrity_check and dm_integrity_inline_recheck\ncompute the checksum of each block into an on-stack buffer of\nHASH_MAX_DIGESTSIZE bytes. integrity_sector_checksum pads its result\nwith zeroes up to the tag size, so if the tag size is larger than\nHASH_MAX_DIGESTSIZE, the padding runs past the end of the buffer. With\nCONFIG_STACKPROTECTOR the kernel panics in dm_integrity_check on the\nfirst read.\n\nEnlarge both buffers to hold MAX_TAG_SIZE bytes, as commit b93b6643e9b5\n(\"dm integrity: fix a crash with unusually large tag size\") did for\nintegrity_metadata.\n\nNote that this is not a security bug because the buffer overflow can only\nbe triggered by root.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-99098\n  \nPublished : Oct. 26, 2026, 2:52 p.m. | 19 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ndm-integrity: fix buffer overflow in inline mode with large tag size\n\nIn inline mode, dm_integrity_check and dm_integrity_inline_recheck\ncompute the checksum of each block into an on-stack buffer of\nHASH_MAX_DIGESTSIZE bytes. integrity_sector_checksum pads its result\nwith zeroes up to the tag size, so if the tag size is larger than\nHASH_MAX_DIGESTSIZE, the padding runs past the end of the buffer. With\nCONFIG_STACKPROTECTOR the kernel panics in dm_integrity_check on the\nfirst read.\n\nEnlarge both buffers to hold MAX_TAG_SIZE bytes, as commit b93b6643e9b5\n(\"dm integrity: fix a crash with unusually large tag size\") did for\nintegrity_metadata.\n\nNote that this is not a security bug because the buffer overflow can only\nbe triggered by root.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-99098\n2. 26.10.26 오후11:52\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-99098",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99098",
-      "source": "cvefeed",
-      "published": "2026-10-26T23:52:04+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-99093 - mm: don't schedule deferred kernel page table freeing while booting",
-      "summary": "CVE ID :CVE-2026-99093\n  \nPublished : Oct. 26, 2026, 2:52 p.m. | 19 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nmm: don't schedule deferred kernel page table freeing while booting\n\nBooting with a boot-time function tracer and a filter, for example\n\n  ftrace=function ftrace_filter=pud_free_pmd_page\n\npanics on 7.3-rc4 as soon as the tracer starts:\n\n  [   23.531178] Starting tracer 'function'\n  [   23.675800] Oops: general protection fault, probably for non-canonical address 0xdffffc0000000038: 0000 [#1] SMP KASAN NOPTI\n  [   23.819917] KASAN: null-ptr-deref in range [0x00000000000001c0-0x00000000000001c7]\n  [   23.964025] CPU: 0 UID: 0 PID: 0 Comm: swapper Not tainted 7.3.0-rc4-fe2ec83746e5-with-fixes-v2+ #195 PREEMPT(undef)\n  [   24.252248] RIP: 0010:__queue_work+0xab/0xf00\n  [   25.981629] Call Trace:\n  [   26.125727]  \n  [   26.413912]  ? pagetable_free_kernel+0x20/0x120\n  [   26.990283]  queue_work_on+0x97/0xf0\n  [   27.134382]  __cpa_collapse_large_pages+0x501/0x6f0\n  [   27.566662]  cpa_flush+0x394/0x620\n  [   27.998953]  change_page_attr_set_clr+0x321/0x4a0\n  [   29.151729]  set_memory_rox+0xa2/0xf0\n  [   29.584018]  create_trampoline+0x431/0x6f0\n  ...\n  [   44.343347] Kernel panic - not syncing: Attempted to kill the idle task!\n\nThe boot-time tracer is started from early_trace_init(), which runs\nbefore workqueue_init_early().  Making its trampoline read-only splits a\nlarge page, and CPA collapses it again right away.  The split table has\nbeen a kernel page table since commit 9e4a3ec3411b\n(\"x86/mm/pat: Allocate split page tables as kernel page tables\"), so the\ncollapse frees it through pagetable_free_kernel(), which queues work on\nsystem_percpu_wq - still NULL at that point.  That commit is correct in\nitself; it only lets CPA reach pagetable_free_kernel() before the\nworkqueue that function relies on exists.\n\nKeep putting the table on the list, but don't schedule the work while\nthe system is still booting.  A core_initcall schedules it once to free\nwhatever was queued by then.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-99093\n  \nPublished : Oct. 26, 2026, 2:52 p.m. | 19 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nmm: don't schedule deferred kernel page table freeing while booting\n\nBooting with a boot-time function tracer and a filter, for example\n\n  ftrace=function ftrace_filter=pud_free_pmd_page\n\npanics on 7.3-rc4 as soon as the tracer starts:\n\n  [   23.531178] Starting tracer 'function'\n  [   23.675800] Oops: general protection fault, probably for non-canonical address 0xdffffc0000000038: 0000 [#1] SMP KASAN NOPTI\n  [   23.819917] KASAN: null-ptr-deref in range [0x00000000000001c0-0x00000000000001c7]\n  [   23.964025] CPU: 0 UID: 0 PID: 0 Comm: swapper Not tainted 7.3.0-rc4-fe2ec83746e5-with-fixes-v2+ #195 PREEMPT(undef)\n  [   24.252248] RIP: 0010:__queue_work+0xab/0xf00\n  [   25.981629] Call Trace:\n  [   26.125727]  \n  [   26.413912]  ? pagetable_free_kernel+0x20/0x120\n  [   26.990283]  queue_work_on+0x97/0xf0\n  [   27.134382]  __cpa_collapse_large_pages+0x501/0x6f0\n  [   27.566662]  cpa_flush+0x394/0x620\n  [   27.998953]  change_page_attr_set_clr+0x321/0x4a0\n  [   29.151729]  set_memory_rox+0xa2/0xf0\n  [   29.584018]  create_trampoline+0x431/0x6f0\n  ...\n  [   44.343347] Kernel panic - not syncing: Attempted to kill the idle task!\n\nThe boot-time tracer is started from early_trace_init(), which runs\nbefore workqueue_init_early().  Making its trampoline read-only splits a\nlarge page, and CPA collapses it again right away.  The split table has\nbeen a kernel page table since commit 9e4a3ec3411b\n(\"x86/mm/pat: Allocate split page tables as kernel page tables\"), so the\ncollapse frees it through pagetable_free_kernel(), which queues work on\nsystem_percpu_wq - still NULL at that point.  That commit is correct in\nitself; it only lets CPA reach pagetable_free_kernel() before the\nworkqueue that function relies on exists.\n\nKeep putting the table on the list, but don't schedule the work while\nthe system is still booting.  A core_initcall schedules it once to free\nwhatever was queued by then.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-99093\n2. 26.10.26 오후11:52\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-99093",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99093",
-      "source": "cvefeed",
-      "published": "2026-10-26T23:52:01+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-99091 - Bluetooth: MGMT: Fix status of pending commands flushed on power off",
-      "summary": "CVE ID :CVE-2026-99091\n  \nPublished : Oct. 26, 2026, 2:52 p.m. | 19 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: MGMT: Fix status of pending commands flushed on power off\n\ncmd_complete_rsp() receives a struct cmd_lookup and, for a pending\ncommand that has no cmd_complete callback, falls through to\ncmd_status_rsp(cmd, data). cmd_status_rsp() reads data as a u8 *, so\nthe status sent comes from the first byte of match->sk's\nrepresentation, not from match->mgmt_status.\n\ncommit f53e1c9c726d (\"Bluetooth: MGMT: Fix possible crash on\nmgmt_index_removed\") changed the callers' data from &status to &match\nand updated the cmd_complete branch to match->mgmt_status, but left\nthe fall-through passing data unchanged.\n\nIn mgmt_index_removed() match->sk is NULL, so every such command is\nanswered with status 0x00 (Success) instead of\nMGMT_STATUS_INVALID_INDEX. In __mgmt_power_off() it is NULL too,\nunless a Set Powered command was pending: then settings_rsp() has\nstored that command's socket in match->sk, and the byte sent comes\nfrom the socket pointer. Either way the status the caller set,\nMGMT_STATUS_NOT_POWERED (or MGMT_STATUS_INVALID_INDEX when the device\nis being unregistered), is lost.\n\nPass the status the callers set.\n\nThis was seen on a QCA9377 laptop: bluetoothd's Start Discovery,\npending when the adapter was powered off, was answered with Command\nStatus 0x00 and no parameters, and bluetoothd 5.72 crashed on the\nzero-length success. BlueZ master has since added the length check\non that path (\"adapter: Fix crash on short start discovery reply\",\nBlueZ a734b06059cb), but userspace should still be told Not Powered,\nnot Success.\n\nTested on Ubuntu 7.0.0-31 with a virtual controller (hci_vhci):\npower off is held in HCI Write Scan Enable while a Start Discovery is\nsubmitted, and the flush answers it with status 0x00 before this\nchange and 0x0f (Not Powered) after.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-99091\n  \nPublished : Oct. 26, 2026, 2:52 p.m. | 19 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: MGMT: Fix status of pending commands flushed on power off\n\ncmd_complete_rsp() receives a struct cmd_lookup and, for a pending\ncommand that has no cmd_complete callback, falls through to\ncmd_status_rsp(cmd, data). cmd_status_rsp() reads data as a u8 *, so\nthe status sent comes from the first byte of match->sk's\nrepresentation, not from match->mgmt_status.\n\ncommit f53e1c9c726d (\"Bluetooth: MGMT: Fix possible crash on\nmgmt_index_removed\") changed the callers' data from &status to &match\nand updated the cmd_complete branch to match->mgmt_status, but left\nthe fall-through passing data unchanged.\n\nIn mgmt_index_removed() match->sk is NULL, so every such command is\nanswered with status 0x00 (Success) instead of\nMGMT_STATUS_INVALID_INDEX. In __mgmt_power_off() it is NULL too,\nunless a Set Powered command was pending: then settings_rsp() has\nstored that command's socket in match->sk, and the byte sent comes\nfrom the socket pointer. Either way the status the caller set,\nMGMT_STATUS_NOT_POWERED (or MGMT_STATUS_INVALID_INDEX when the device\nis being unregistered), is lost.\n\nPass the status the callers set.\n\nThis was seen on a QCA9377 laptop: bluetoothd's Start Discovery,\npending when the adapter was powered off, was answered with Command\nStatus 0x00 and no parameters, and bluetoothd 5.72 crashed on the\nzero-length success. BlueZ master has since added the length check\non that path (\"adapter: Fix crash on short start discovery reply\",\nBlueZ a734b06059cb), but userspace should still be told Not Powered,\nnot Success.\n\nTested on Ubuntu 7.0.0-31 with a virtual controller (hci_vhci):\npower off is held in HCI Write Scan Enable while a Start Discovery is\nsubmitted, and the flush answers it with status 0x00 before this\nchange and 0x0f (Not Powered) after.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-99091\n2. 26.10.26 오후11:52\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-99091",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99091",
-      "source": "cvefeed",
-      "published": "2026-10-26T23:52:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-99088 - net: openvswitch: validate transport header presence in set_ipv6_addr",
-      "summary": "CVE ID :CVE-2026-99088\n  \nPublished : Oct. 26, 2026, 2:51 p.m. | 19 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet: openvswitch: validate transport header presence in set_ipv6_addr\n\nWhen executing IPv6 address rewrite actions on IPv6 fragments,\nset_ipv6_addr() calls update_ipv6_checksum(). If parse_ipv6hdr()\nprocesses a non-first IPv6 fragment, it sets key->ip.proto to\nNEXTHDR_FRAGMENT and returns early without calling\nskb_set_transport_header().\n\nupdate_ipv6_checksum() unconditionally evaluates skb_transport_offset()\non entry before checking l4_proto.  Because skb->transport_header is\nuninitialized, this triggers a warning under CONFIG_DEBUG_NET=y although\nit is completely harmless.\n\nFix this by returning early in update_ipv6_checksum() if l4_proto is\nNEXTHDR_FRAGMENT. This avoids reading the uninitialized transport offset\nfor fragments while preserving the debug warning for any other protocol\nwhere the transport header is unexpectedly missing.\n\nSee the syzbot trace:\n\n!skb_transport_header_was_set(skb)\nWARNING: ./include/linux/skbuff.h:3075 at skb_transport_header include/linux/skbuff.h:3075 [inline], CPU#1: syz-executor463/5635\nWARNING: ./include/linux/skbuff.h:3075 at skb_transport_offset include/linux/skbuff.h:3250 [inline], CPU#1: syz-executor463/5635\nWARNING: ./include/linux/skbuff.h:3075 at update_ipv6_checksum net/openvswitch/actions.c:361 [inline], CPU#1: syz-executor463/5635\nWARNING: ./include/linux/skbuff.h:3075 at set_ipv6_addr+0x462/0x660 net/openvswitch/actions.c:399, CPU#1: syz-executor463/5635\n[...]\nRIP: 0010:skb_transport_header include/linux/skbuff.h:3075 [inline]\nRIP: 0010:skb_transport_offset include/linux/skbuff.h:3250 [inline]\nRIP: 0010:update_ipv6_checksum net/openvswitch/actions.c:361 [inline]\nRIP: 0010:set_ipv6_addr+0x462/0x660 net/openvswitch/actions.c:399\n[...]\nCall Trace:\n \n set_ipv6 net/openvswitch/actions.c:531 [inline]\n do_execute_actions+0x557e/0x8600 net/openvswitch/actions.c:1366\n ovs_execute_actions+0xde/0x520 net/openvswitch/actions.c:1592\n ovs_packet_cmd_execute+0xb4f/0xf10 net/openvswitch/datapath.c:705\n genl_family_rcv_msg_doit+0x233/0x340 net/netlink/genetlink.c:1114\n genl_rcv_msg+0x614/0x7a0 net/netlink/genetlink.c:1209\n netlink_rcv_skb+0x226/0x4a0 net/netlink/af_netlink.c:2572\n genl_rcv+0x28/0x40 net/netlink/genetlink.c:1218\n netlink_unicast+0x7bd/0x940 net/netlink/af_netlink.c:1361\n netlink_sendmsg+0x813/0xb40 net/netlink/af_netlink.c:1916\n sock_sendmsg_nosec+0x14e/0x190 net/socket.c:800\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-99088\n  \nPublished : Oct. 26, 2026, 2:51 p.m. | 19 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet: openvswitch: validate transport header presence in set_ipv6_addr\n\nWhen executing IPv6 address rewrite actions on IPv6 fragments,\nset_ipv6_addr() calls update_ipv6_checksum(). If parse_ipv6hdr()\nprocesses a non-first IPv6 fragment, it sets key->ip.proto to\nNEXTHDR_FRAGMENT and returns early without calling\nskb_set_transport_header().\n\nupdate_ipv6_checksum() unconditionally evaluates skb_transport_offset()\non entry before checking l4_proto.  Because skb->transport_header is\nuninitialized, this triggers a warning under CONFIG_DEBUG_NET=y although\nit is completely harmless.\n\nFix this by returning early in update_ipv6_checksum() if l4_proto is\nNEXTHDR_FRAGMENT. This avoids reading the uninitialized transport offset\nfor fragments while preserving the debug warning for any other protocol\nwhere the transport header is unexpectedly missing.\n\nSee the syzbot trace:\n\n!skb_transport_header_was_set(skb)\nWARNING: ./include/linux/skbuff.h:3075 at skb_transport_header include/linux/skbuff.h:3075 [inline], CPU#1: syz-executor463/5635\nWARNING: ./include/linux/skbuff.h:3075 at skb_transport_offset include/linux/skbuff.h:3250 [inline], CPU#1: syz-executor463/5635\nWARNING: ./include/linux/skbuff.h:3075 at update_ipv6_checksum net/openvswitch/actions.c:361 [inline], CPU#1: syz-executor463/5635\nWARNING: ./include/linux/skbuff.h:3075 at set_ipv6_addr+0x462/0x660 net/openvswitch/actions.c:399, CPU#1: syz-executor463/5635\n[...]\nRIP: 0010:skb_transport_header include/linux/skbuff.h:3075 [inline]\nRIP: 0010:skb_transport_offset include/linux/skbuff.h:3250 [inline]\nRIP: 0010:update_ipv6_checksum net/openvswitch/actions.c:361 [inline]\nRIP: 0010:set_ipv6_addr+0x462/0x660 net/openvswitch/actions.c:399\n[...]\nCall Trace:\n \n set_ipv6 net/openvswitch/actions.c:531 [inline]\n do_execute_actions+0x557e/0x8600 net/openvswitch/actions.c:1366\n ovs_execute_actions+0xde/0x520 net/openvswitch/actions.c:1592\n ovs_packet_cmd_execute+0xb4f/0xf10 net/openvswitch/datapath.c:705\n genl_family_rcv_msg_doit+0x233/0x340 net/netlink/genetlink.c:1114\n genl_rcv_msg+0x614/0x7a0 net/netlink/genetlink.c:1209\n netlink_rcv_skb+0x226/0x4a0 net/netlink/af_netlink.c:2572\n genl_rcv+0x28/0x40 net/netlink/genetlink.c:1218\n netlink_unicast+0x7bd/0x940 net/netlink/af_netlink.c:1361\n netlink_sendmsg+0x813/0xb40 net/netlink/af_netlink.c:1916\n sock_sendmsg_nosec+0x14e/0x190 net/socket.c:800\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-99088\n2. 26.10.26 오후11:51\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-99088",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99088",
-      "source": "cvefeed",
-      "published": "2026-10-26T23:51:58+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-77056 - Use of Default Credentials in boneIO",
-      "summary": "CVE ID :CVE-2026-77056\n  \nPublished : Oct. 26, 2026, 2:45 p.m. | 26 minutes ago\n  \nDescription :boneIO black_debian_images ships with a Mosquitto MQTT broker that uses the same default credentials on all devices. These credentials are publicly documented on github, and there is no indication in the instructions to change them. A remote attacker can use them to gain full read and write access to the broker, allowing control of connected relays, blinds, and gates, and injection of fake entities into a linked Home Assistant installation.\n\nThis issue was fixed in version 1.6.0 of the image: MQTT passwords are generated per device at first boot. Devices upgraded from earlier versions keep their existing broker credentials; from boneio 1.6.0 the web panel reports credentials that are still the published defaults, and the owner has to change them.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-77056\n  \nPublished : Oct. 26, 2026, 2:45 p.m. | 26 minutes ago\n  \nDescription :boneIO black_debian_images ships with a Mosquitto MQTT broker that uses the same default credentials on all devices. These credentials are publicly documented on github, and there is no indication in the instructions to change them. A remote attacker can use them to gain full read and write access to the broker, allowing control of connected relays, blinds, and gates, and injection of fake entities into a linked Home Assistant installation.\n\nThis issue was fixed in version 1.6.0 of the image: MQTT passwords are generated per device at first boot. Devices upgraded from earlier versions keep their existing broker credentials; from boneio 1.6.0 the web panel reports credentials that are still the published defaults, and the owner has to change them.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-77056\n2. 26.10.26 오후11:45\n3. boneIO black_debian_images ships with a Mosquitto ",
-      "cve_id": "CVE-2026-77056",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77056",
-      "source": "cvefeed",
-      "published": "2026-10-26T23:45:53+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
