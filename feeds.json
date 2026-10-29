@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-30T01:32:52.599946+09:00",
+  "fetched_at": "2026-10-30T02:01:53.743721+09:00",
   "security_news": [
     {
       "title": "10월29일 모닝뉴스 헤드라인",
@@ -7021,36 +7021,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-19742",
       "source": "cvefeed",
       "published": "2026-10-27T02:17:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-115912 - vLLM: Public multimodal SHM handle forgery reaches worker-side `pickle.loads()` with insecure serialization disabled",
-      "summary": "CVE ID :CVE-2026-115912\n  \nPublished : Oct. 26, 2026, 4:54 p.m. | 26 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. Prior to 0.32.0, an authenticated caller can place forged shared-memory address and monotonic_id values in public multimodal features.kwargs_data. In scale-out deployments with shared-memory multimodal caching enabled, workers trust those values and pass attacker-selected bytes to pickle.loads(), allowing arbitrary Python execution even when insecure serialization is disabled. This issue is fixed in version 0.32.0.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-115912\n  \nPublished : Oct. 26, 2026, 4:54 p.m. | 26 minutes ago\n  \nDescription :vLLM is an inference and serving engine for large language models. Prior to 0.32.0, an authenticated caller can place forged shared-memory address and monotonic_id values in public multimodal features.kwargs_data. In scale-out deployments with shared-memory multimodal caching enabled, workers trust those values and pass attacker-selected bytes to pickle.loads(), allowing arbitrary Python execution even when insecure serialization is disabled. This issue is fixed in version 0.32.0.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-115912\n2. 26.10.27 오전1:54\n3. vLLM is an inference and serving engine for large ",
-      "cve_id": "CVE-2026-115912",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115912",
-      "source": "cvefeed",
-      "published": "2026-10-27T01:54:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-116612 - GStreamer Editing Services Arbitrary Code Execution Vulnerability",
-      "summary": "CVE ID :CVE-2026-116612\n  \nPublished : Oct. 26, 2026, 4:48 p.m. | 32 minutes ago\n  \nDescription :A flaw was found in GStreamer Editing Services (gst-editing-services). A GES project file can embed an arbitrary GStreamer pipeline description as an effect definition. When such a file is loaded, either explicitly by an editing application or automatically by a media player or file-manager thumbnailing service that uses GStreamer autoplugging, the pipeline description is parsed and instantiated without restriction on which elements may be used or which properties may be set. A remote attacker who can deliver a crafted project file to a victim's system can trigger reading or writing of arbitrary local files, issue outbound network requests to attacker-controlled servers, or cause the application to crash. Under certain conditions the file-write capability may be leveraged to achieve code execution.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-116612\n  \nPublished : Oct. 26, 2026, 4:48 p.m. | 32 minutes ago\n  \nDescription :A flaw was found in GStreamer Editing Services (gst-editing-services). A GES project file can embed an arbitrary GStreamer pipeline description as an effect definition. When such a file is loaded, either explicitly by an editing application or automatically by a media player or file-manager thumbnailing service that uses GStreamer autoplugging, the pipeline description is parsed and instantiated without restriction on which elements may be used or which properties may be set. A remote attacker who can deliver a crafted project file to a victim's system can trigger reading or writing of arbitrary local files, issue outbound network requests to attacker-controlled servers, or cause the application to crash. Under certain conditions the file-write capability may be leveraged to achieve code execution.\n  \nSeverity: 7.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-116612\n2. 26.10.27 오전1:48\n3. A flaw was found in GStreamer Editing Services (gs",
-      "cve_id": "CVE-2026-116612",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-116612",
-      "source": "cvefeed",
-      "published": "2026-10-27T01:48:37+09:00",
       "lang": "en"
     }
   ],
