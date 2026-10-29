@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-30T03:01:34.319147+09:00",
+  "fetched_at": "2026-10-30T03:32:47.212373+09:00",
   "security_news": [
+    {
+      "title": "폴리마켓 이용자 자산 무단 유출 신고…거래 제한·조사 착수",
+      "summary": "우블록체인은 일부 이용자가 웹사이트 프런트엔드의 보안 취약점이나 악성 코드 삽입 가능성을 의심했다고 보도했다. 같은 매체는 폴리마켓이 거래 기능을 제한하고 조사에 착수했다고 전했다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 폴리마켓, 이용자 자산 무단 유출 의혹 신고 접수\n2. 웹사이트 프런트엔드 취약점 및 악성코드 삽입 가능성 제기\n3. 폴리마켓, 거래 기능 제한 및 조사 착수",
+      "link": "https://www.tokenpost.kr/news/breaking/429523",
+      "source": "naver",
+      "published": "2026-10-30T03:26:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "10월29일 모닝뉴스 헤드라인",
       "summary": "연방선거위원회의 전자신고 시스템이 해킹 시도 의혹으로인해 현재 정상 작동하지 않고 있다. 이에 따라... 국토안보부 소속 직원 4만명의 개인정보가 해킹으로 유출됐다. 유출된 정보에는 세관국경보호국) 직원 2만여명...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-10-27T13:58:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "PHP 해킹 사태…비트코인은 '사이버 팬데믹'에 어떻게 대응할까",
-      "summary": "다만 AI가 등장했다고 해킹의 본질 자체가 달라진 것은 아니라고 선을 그었다. 기존 공격 기법에 AI가 결합하면서 취약점 발견과 악용 속도가 빨라지고 있다는 취지다. 비트코인 진영이 주목하는 부분은 핵심 프로토콜과...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. PHP 해킹 사태…비트코인은 '사이버 팬데믹'에 어떻게 대응할까 다만 AI가 등장했다고 해\n2. 기존 공격 기법에 AI가 결합하면서 취약점 발견과 악용 속도가 빨라지고 있다는 취지다.\n3. 비트코인 진영이 주목하는 부분은 핵심 프로토콜과...",
-      "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=710270",
-      "source": "naver",
-      "published": "2026-10-27T13:54:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6016,6 +6016,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-62374",
       "source": "cvefeed",
       "published": "2026-10-30T02:18:10+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-119115 - Incorrect authorization in issuer resolution in AWS Private CA Connector for Kubernetes",
+      "summary": "CVE ID :CVE-2026-119115\n  \nPublished : Oct. 29, 2026, 5:18 p.m. | 39 minutes ago\n  \nDescription :Incorrect authorization in the issuer resolution logic in AWS Private CA Connector for Kubernetes (aws-privateca-issuer) before v1.10.1 might allow an authenticated remote user to obtain certificates, including subordinate CA certificates, signed by a cluster-scoped AWS Private CA issuer that their approval policy does not authorize.\n\n\n\nTo remediate this issue, users should upgrade aws-privateca-issuer to version v1.10.1 or the AWS Private CA Connector for Kubernetes EKS add-on to version v1.10.1-eksbuild.1, and update any certificate requests, Certificate resources, or Ingress annotations whose issuerRef.kind is missing, incorrect, or does not match the referenced issuer, since v1.10.1 requires issuerRef.kind to be exactly AWSPCAIssuer or AWSPCAClusterIssuer and to match the issuer it references.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-119115\n  \nPublished : Oct. 29, 2026, 5:18 p.m. | 39 minutes ago\n  \nDescription :Incorrect authorization in the issuer resolution logic in AWS Private CA Connector for Kubernetes (aws-privateca-issuer) before v1.10.1 might allow an authenticated remote user to obtain certificates, including subordinate CA certificates, signed by a cluster-scoped AWS Private CA issuer that their approval policy does not authorize.\n\n\n\nTo remediate this issue, users should upgrade aws-privateca-issuer to version v1.10.1 or the AWS Private CA Connector for Kubernetes EKS add-on to version v1.10.1-eksbuild.1, and update any certificate requests, Certificate resources, or Ingress annotations whose issuerRef.kind is missing, incorrect, or does not match the referenced issuer, since v1.10.1 requires issuerRef.kind to be exactly AWSPCAIssuer or AWSPCAClusterIssuer and to match the issuer it references.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-119115\n2. 26.10.30 오전2:18\n3. Incorrect authorization in the issuer resolution l",
+      "cve_id": "CVE-2026-119115",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-119115",
+      "source": "cvefeed",
+      "published": "2026-10-30T02:18:07+09:00",
       "lang": "en"
     },
     {
