@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-10-30T22:03:07.860175+09:00",
+  "fetched_at": "2026-10-30T22:33:00.932244+09:00",
   "security_news": [
+    {
+      "title": "바이낸스 탈취 자금, 스테이블코인 5억달러 이동…28억달러 동결",
+      "summary": "체이널리시스는 블로그 게시 시점 기준 탈취 자산 약 28억달러(약 3조7460억원)가 동결됐다고 집계했다. 체이널리시스는 이번 공격이 북한 연계 해킹 조직 트레이더트레이터의 소행일 가능성이 높다고 평가했다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 바이낸스 탈취 자금 5억 달러, 스테이블코인으로 이동\n2. 북한 연계 해킹 조직 트레이더트레이터 소행 가능성\n3. 탈취 자산 약 28억 달러 동결",
+      "link": "https://www.tokenpost.kr/news/breaking/430198",
+      "source": "naver",
+      "published": "2026-10-30T22:08:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "바이낸스 해킹에 쓰인 EIP-7702 서명 50건 유효…GCSA 분석",
+      "summary": "블록템포(BlockTempo)는 글로벌사이버보안연맹(Global Cybersecurity Alliance, GCSA)의 독립 포렌식 보고서가 바이낸스 해킹에 사용된 EIP-7702 서명 50건이 유효하더라도 개인키가 유출되지 않았다고 단정할...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 바이낸스 해킹에 EIP-7702 서명 50건 유효 확인\n2. GCSA, 개인키 유출 없이 공격 발생 추정\n3. 해킹 방식 및 영향 범위 조사 중",
+      "link": "https://www.tokenpost.kr/news/breaking/430195",
+      "source": "naver",
+      "published": "2026-10-30T22:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "현대이지웰 개인정보 유출 사고 발생... 피해 규모 확인 중",
       "summary": "현대이지웰은 홈페이지에 게재한 사과문을 통해 “이번 사고로 고객 여러분께 심려와 불안을 끼쳐 드린 점에 대해 깊이 사과드린다”라며 “이번 사고를 계기로 전사 보안 시스템과 취약점을 원점에서 전면...",
@@ -5976,33 +6000,24 @@
       "source": "naver",
       "published": "2026-10-28T12:28:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "연말 은행장 인사 앞두고…이찬진, 금융지주 이사회에 '공정 승계' 압박",
-      "summary": "인공지능(AI)을 활용한 해킹으로 보안 위협이 고도화하는 만큼 금융회사 스스로 IT 자산을 관리하고 취약점을 찾아내는 자율 방어체계를 구축해야 한다는 것이다. 보안 투자를 단순 비용으로 여기는 관행도 경계했다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 해킹 위협 증가, 금융 IT 자산 자율 관리 필요\n2. 금융사, 보안 투자 관행 경계하며 취약점 자율 진단해야\n3. '공정 승계' 압박 속 IT 자산 관리 강화 촉구",
-      "link": "https://www.newsinside.kr/news/articleView.html?idxno=5034988",
-      "source": "naver",
-      "published": "2026-10-28T12:26:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "금감원, '3.8만명 정보유출' 대신증권 현장점검 착수(종합)",
-      "summary": "최홍 김진아 기자 = 금융감독원이 인공지능(AI) 해킹 사고로 3만 8000명의 고객 정보를 유출한 대신증권에 대해... 전반적인 해킹 사고가 발생한 것으로 알고 있다\"고 밝혔다. 이 원장은 최근 금융권 침해사고와 관련해...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금감원, '3.8만명 정보유출' 대신증권 현장점검 착수(종합) 최홍 김진아 기자 = 금융감\n2. 전반적인 해킹 사고가 발생한 것으로 알고 있다\"고 밝혔다.\n3. 이 원장은 최근 금융권 침해사고와 관련해...",
-      "link": "https://n.news.naver.com/mnews/article/003/0014284168?sid=101",
-      "source": "naver",
-      "published": "2026-10-28T12:16:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-59396 - DoS Vulnerability in UAA Related to JWKS URI Handling",
+      "summary": "CVE ID :CVE-2026-59396\n  \nPublished : Oct. 30, 2026, 9:17 a.m. | 2 hours, 24 minutes ago\n  \nDescription :A denial-of-service vulnerability exists in UAA's private_key_jwt client-authentication mechanism. When UAA retrieves a remote JWKS URI, it caches the response. Invalid authentication attempts can trigger full deserialization of this cached data. An attacker with prerequisites (write access to clients or a compromised endpoint) can send anonymous requests that force repeated parsing of large cached objects, causing excessive CPU usage and potential Java heap exhaustion via OutOfMemoryError, resulting in service unavailability.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59396\n  \nPublished : Oct. 30, 2026, 9:17 a.m. | 2 hours, 24 minutes ago\n  \nDescription :A denial-of-service vulnerability exists in UAA's private_key_jwt client-authentication mechanism. When UAA retrieves a remote JWKS URI, it caches the response. Invalid authentication attempts can trigger full deserialization of this cached data. An attacker with prerequisites (write access to clients or a compromised endpoint) can send anonymous requests that force repeated parsing of large cached objects, causing excessive CPU usage and potential Java heap exhaustion via OutOfMemoryError, resulting in service unavailability.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-59396\n2. 26.10.30 오후6:17\n3. A denial-of-service vulnerability exists in UAA's ",
+      "cve_id": "CVE-2026-59396",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59396",
+      "source": "cvefeed",
+      "published": "2026-10-30T18:17:15+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-109821 - Unbounded port parsing in URI.parse/1 enables CPU exhaustion denial of service in Elixir",
       "summary": "CVE ID :CVE-2026-109821\n  \nPublished : Oct. 30, 2026, 8:54 a.m. | 32 minutes ago\n  \nDescription :Improper Validation of Specified Quantity in Input vulnerability in the Elixir standard library's URI module allows an attacker who supplies a URL to cause a denial of service through CPU exhaustion.\n\nURI.parse/1 converts the port component with String.to_integer/1 in split_authority/1 (lib/elixir/lib/uri.ex) without bounding its length, so a port of up to 1,262,592 decimal digits produces a bignum of that size and a longer one raises SystemLimitError. Rendering the parsed URI back to text (URI.to_string/1, inspect/1, logging, error formatting) converts the bignum with :erlang.integer_to_binary/1, which is quadratic on Erlang/OTP 27, 28 and 29.0: a 400,000-digit port renders in about 2.6 seconds and a 1 MB port in about 18 seconds. Ports above 65535 are also accepted.\n\nThis issue affects elixir: from 0.5.0 before 1.18.6, from 1.19.0-rc.0 before 1.19.7, and from 1.20.0-rc.0 before 1.20.5.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
