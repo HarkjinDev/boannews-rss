@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-31T22:03:59.560490+09:00",
+  "fetched_at": "2026-10-31T22:32:33.916155+09:00",
   "security_news": [
     {
       "title": "北 바이낸스 해커, 63억 달러 털고 '지갑 핑퐁'…자동 거래 정황",
@@ -7291,21 +7291,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62877",
       "source": "msrc",
       "published": "2026-10-28T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59959 - SAIL: WebP decoder division by zero through malformed animated canvas metadata",
-      "summary": "CVE ID :CVE-2026-59959\n  \nPublished : Oct. 28, 2026, 1:17 p.m. | 39 minutes ago\n  \nDescription :SAIL is a cross-platform library for loading and saving images with support for animation, metadata, and ICC profiles. Prior to version 1.0.2, the built-in WebP decoder can crash during loader initialization when processing a malformed animated WebP file with inconsistent container or `ANMF` frame metadata. In `sail_codec_load_init_v8_webp()` in `src/sail-codecs/webp/webp.c`, `WebPDemuxGetI` with `WEBP_FF_CANVAS_WIDTH` can return a zero `image_local->width`, which is then used as a divisor when calculating `bytes_per_pixel` from the image row size. The division happens before frame decoding and before generic image skeleton validation in `src/sail/sail_advanced.c`, causing an arithmetic fault and process termination. Applications accepting untrusted WebP images can consequently suffer denial of service; builds must include the affected WebP codec. This issue is fixed in version 1.0.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59959\n  \nPublished : Oct. 28, 2026, 1:17 p.m. | 39 minutes ago\n  \nDescription :SAIL is a cross-platform library for loading and saving images with support for animation, metadata, and ICC profiles. Prior to version 1.0.2, the built-in WebP decoder can crash during loader initialization when processing a malformed animated WebP file with inconsistent container or `ANMF` frame metadata. In `sail_codec_load_init_v8_webp()` in `src/sail-codecs/webp/webp.c`, `WebPDemuxGetI` with `WEBP_FF_CANVAS_WIDTH` can return a zero `image_local->width`, which is then used as a divisor when calculating `bytes_per_pixel` from the image row size. The division happens before frame decoding and before generic image skeleton validation in `src/sail/sail_advanced.c`, causing an arithmetic fault and process termination. Applications accepting untrusted WebP images can consequently suffer denial of service; builds must include the affected WebP codec. This issue is fixed in version 1.0.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-59959\n2. 26.10.28 오후10:17\n3. SAIL is a cross-platform library for loading and s",
-      "cve_id": "CVE-2026-59959",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59959",
-      "source": "cvefeed",
-      "published": "2026-10-28T22:17:29+09:00",
       "lang": "en"
     }
   ],
