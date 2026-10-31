@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-01T05:31:07.428667+09:00",
+  "fetched_at": "2026-11-01T06:01:24.170603+09:00",
   "security_news": [
     {
       "title": "일감 미끼로 보안 설정까지 바꾸게…北 해커, 개발자 신뢰 노린다",
@@ -6977,21 +6977,6 @@
       "source": "cvefeed",
       "published": "2026-10-29T07:17:16+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-118664 - decode-uri-component: Denial of service via quadratic replacement of percent-encoded runs",
-      "summary": "CVE ID :CVE-2026-118664\n  \nPublished : Oct. 28, 2026, 8:37 p.m. | 47 minutes ago\n  \nDescription :decode-uri-component provides a more robust alternative to decodeURIComponent. Prior to 0.5.1, decodeUriComponent in index.js falls back to customDecodeURIComponent after native decoding throws, and the fallback collects every distinct percent-encoded run before performing a full-string regular-expression replacement for each entry. Malformed input containing many distinct runs can therefore make both the number of replacements and the scanned input length grow together, causing quadratic CPU consumption and blocking the Node.js event loop; request-body inputs can reach the demonstrated size, while ordinary URL header limits reduce the practical delay. This issue is fixed in version 0.5.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-118664\n  \nPublished : Oct. 28, 2026, 8:37 p.m. | 47 minutes ago\n  \nDescription :decode-uri-component provides a more robust alternative to decodeURIComponent. Prior to 0.5.1, decodeUriComponent in index.js falls back to customDecodeURIComponent after native decoding throws, and the fallback collects every distinct percent-encoded run before performing a full-string regular-expression replacement for each entry. Malformed input containing many distinct runs can therefore make both the number of replacements and the scanned input length grow together, causing quadratic CPU consumption and blocking the Node.js event loop; request-body inputs can reach the demonstrated size, while ordinary URL header limits reduce the practical delay. This issue is fixed in version 0.5.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-118664\n2. 26.10.29 오전5:37\n3. decode-uri-component provides a more robust altern",
-      "cve_id": "CVE-2026-118664",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-118664",
-      "source": "cvefeed",
-      "published": "2026-10-29T05:37:19+09:00",
-      "lang": "ca"
     }
   ],
   "reputation": [
