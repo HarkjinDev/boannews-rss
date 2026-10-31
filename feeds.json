@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-10-31T19:34:07.708258+09:00",
+  "fetched_at": "2026-10-31T20:03:14.104302+09:00",
   "security_news": [
+    {
+      "title": "[뉴스추적] 달라진 북한 외화벌이 / '확성기 전선' / 다른 비핵화?",
+      "summary": "대남 확성기 전선 구축과 무력시위로 연일 긴장감을 높이는 북한이 대규모 해킹의 배후로까지 지목됐습니다.... 과거에는 위조지폐나 마약 제조 밀매였다면 이제는 해킹이 명실상부 북한의 기간산업이 됐다는 평가가...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한, 대남 확성기 전선 구축과 함께 대규모 해킹의 배후로 지목\n2. 과거 위조지폐, 마약 밀매 대신 해킹이 주요 외화벌이 수단으로 부상\n3. 해킹, 북한의 명실상부한 기간산업으로 평가되며 새로운 외화벌이 수단으로 자리매김",
+      "link": "https://n.news.naver.com/mnews/article/057/0001976102?sid=100",
+      "source": "naver",
+      "published": "2026-10-31T19:51:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "'사상 최대' 바이낸스 해킹에 美 FBI·비밀경호국 나섰다…트럼프 \"주시...",
       "summary": "어제 세계 최대 가상자산 거래소 바이낸스가 63억 달러 규모의 해킹 피해를 입은 가운데, 미국 수사당국이... 북한이 바이낸스 내부의 사이버 보안 통제 시스템을 뚫는 데 성공했습니다.\" 유례를 찾기 힘든 해킹 사건에, 미...",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-10-29T04:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[단독]금융권 대규모 해킹 시도 IP주소 등록지는 ‘평양’",
-      "summary": "북한 인터넷주소(IP주소)에서 국내 금융권을 겨냥한 해킹 시도가 440만 건가량 탐지된 가운데, 북한 해킹 조직이 한국을 겨냥한 대규모 공격을 준비하고 있다는 분석이 나왔다. 이번에 탐지된 IP주소는 평양에 등록돼...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 평양 IP주소서 금융권 해킹 시도 440만 건 탐지\n2. 북한 해킹 조직, 한국 대상 대규모 공격 준비 분석\n3. 국내 금융 시스템 전반에 위협 제기 가능성",
-      "link": "https://n.news.naver.com/mnews/article/020/0003758524?sid=101",
-      "source": "naver",
-      "published": "2026-10-29T04:34:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Wireshark 5.0.0rc1 Release, (Sat, Oct 31st)",
+      "summary": "Wireshark Release Candidate 5.0.0 was published: soon we can expect a new major version of Wireshark.\r",
+      "description": "Wireshark Release Candidate 5.0.0 was published: soon we can expect a new major version of Wireshark.\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Wireshark 5.0.0rc1 Release, (Sat, Oct 31st)\n2. SANS_ISC\n3. Wireshark Release Candidate 5.0.0 was published: s",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33476",
+      "source": "sans_isc",
+      "published": "2026-10-31T19:52:53+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-118599 - epiphany: TAR-based .xpi with hard links can overwrite user files during WebExtension install",
       "summary": "CVE ID :CVE-2026-118599\n  \nPublished : Oct. 31, 2026, 9:29 a.m. | 26 minutes ago\n  \nDescription :A file overwrite vulnerability exists in Epiphany when installing WebExtension packages from .xpi files.\n\nIn src/webextension/ephy-web-extension-manager.c, decompress_xpi_thread() used libarchive with archive_read_support_format_all() (and filters), so the installer did not require a real ZIP. A TAR file named *.xpi was extracted. TAR supports hard-link entry types; with Epiphany's archive_write_disk options (including ARCHIVE_EXTRACT_PERM), a crafted hard-link target can cause an attacker-chosen existing user-writable file to be truncated and overwritten with attacker-controlled content and mode bits, without a dedicated warning dialog, when the user installs or opens the crafted .xpi.\n\nThis is related to but separate from the ZIP-slip path traversal fixed as CVE-2026-77679 (#2922 / MR !2143).\n\nRequirements: the victim must install or open a malicious WebExtension (.xpi).\n\nAffected: Epiphany >= 47.0 (WebExtension XPI install path).\nFixed: https://gitlab.gnome.org/GNOME/epiphany/-/merge_requests/2248 (commit 0cc9ab55 — only enable ZIP format support).\nUpstream: https://gitlab.gnome.org/GNOME/epiphany/-/work_items/2988\nReporter acknowledgment: Fernando Munoz\n  \nSeverity: 5.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
