@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-01T00:32:56.162578+09:00",
+  "fetched_at": "2026-11-01T01:02:58.812378+09:00",
   "security_news": [
+    {
+      "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+      "summary": "A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed \"SMS of Death\" and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. New Android SMS of Death exploit can remotely cras",
+      "link": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+      "source": "bleepingcomputer",
+      "published": "2026-11-01T00:35:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "[북한 해킹 산업] \"세계서 가장 숙련된 해킹단\"…북한, 가상화폐 탈취로...",
       "summary": "재판매 및 DB 금지] 북한의 해킹 활동이 국가 기간산업 수준으로 부상한 가운데, 이로 인한 외화 수입이... 유엔 안전보장이사회 전문가 패널은 2017년부터 2023년까지 북한이 연루된 것으로 보이는 가상화폐 기업 해킹이...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-10-29T06:20:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CI까지 털렸다는데 괜찮을까?... 날마다 터지는 금융사 정보유출 사고에...",
-      "summary": "특히 인공지능(AI) 기술을 동원한 해킹 피해는 특정 고객을 겨냥한 개인별 맞춤형 사기와 생체정보를 AI... 이번 해킹으로 인해 고객의 개인정보는 물론 대출을 비롯한 금융 관련 정보도 유출됨에 따라 2차 범죄로 인해...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 활용 해킹, 금융사 정보 유출 심화\n2. 개인 맞춤형 사기, 생체정보 등 유출 위험\n3. 2차 범죄 우려, 금융 정보 노출 심각",
-      "link": "http://www.consumernews.co.kr/news/articleView.html?idxno=766986",
-      "source": "naver",
-      "published": "2026-10-29T06:20:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -7081,36 +7081,6 @@
       "link": "https://isc.sans.edu/diary/rss/33466",
       "source": "sans_isc",
       "published": "2026-10-29T01:07:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-47235 - SimulationCraft: Heap-Based Buffer Overflow / Out-of-Bounds Write in SimulationCraft's gem_id Array",
-      "summary": "CVE ID :CVE-2026-47235\n  \nPublished : Oct. 28, 2026, 3:38 p.m. | 22 minutes ago\n  \nDescription :SimulationCraft is a tool to explore combat mechanics in World of Warcraft. In builds after release-820-01 and before the identified May 7, 2026 nightly, the `bcp_api.cpp` loop over the JSON `sockets` array uses `slot_data[\"sockets\"].Size()` without bounding `gem_idx` by `MAX_GEM_SLOTS`, which is four in `engine/sc_enums.hpp`. The destination `gem_id` and `gem_bonus_id` arrays in `engine/item/item.hpp` have only four elements. More than four socket entries therefore write beyond `gem_id` into the adjacent `gem_bonus_id` vector storage; `bonus_list` entries can also access `gem_bonus_id` out of bounds. Corrupting a vector's `_M_start` pointer causes the `item_t` destructor to free an attacker-influenced pointer during normal cleanup. The advisory reports crashes and code execution demonstrated in a testing environment. Attack inputs can arrive through a malicious `.simc` profile with a `[[equipment]]` section, a compromised addon export, or `Battle.net API` responses modified by an attacker with a privileged network position. The fix is contained in the nightly build identified as simc-1205-01-516b5d7; no containing release tag is available.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-47235\n  \nPublished : Oct. 28, 2026, 3:38 p.m. | 22 minutes ago\n  \nDescription :SimulationCraft is a tool to explore combat mechanics in World of Warcraft. In builds after release-820-01 and before the identified May 7, 2026 nightly, the `bcp_api.cpp` loop over the JSON `sockets` array uses `slot_data[\"sockets\"].Size()` without bounding `gem_idx` by `MAX_GEM_SLOTS`, which is four in `engine/sc_enums.hpp`. The destination `gem_id` and `gem_bonus_id` arrays in `engine/item/item.hpp` have only four elements. More than four socket entries therefore write beyond `gem_id` into the adjacent `gem_bonus_id` vector storage; `bonus_list` entries can also access `gem_bonus_id` out of bounds. Corrupting a vector's `_M_start` pointer causes the `item_t` destructor to free an attacker-influenced pointer during normal cleanup. The advisory reports crashes and code execution demonstrated in a testing environment. Attack inputs can arrive through a malicious `.simc` profile with a `[[equipment]]` section, a compromised addon export, or `Battle.net API` responses modified by an attacker with a privileged network position. The fix is contained in the nightly build identified as simc-1205-01-516b5d7; no containing release tag is available.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-47235\n2. 26.10.29 오전12:38\n3. SimulationCraft is a tool to explore combat mechan",
-      "cve_id": "CVE-2026-47235",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-47235",
-      "source": "cvefeed",
-      "published": "2026-10-29T00:38:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59979 - YosemiteCrew: Missing organization authorization on service and PMS library/template routes",
-      "summary": "CVE ID :CVE-2026-59979\n  \nPublished : Oct. 28, 2026, 3:36 p.m. | 23 minutes ago\n  \nDescription :YosemiteCrew provides organization-based service and task management. In the source-reported affected main and dev snapshots, YosemiteCrew's service and PMS task-library/template routes omit organization and permission checks. `authorizeCognito` in `apps/backend/src/middlewares/auth.ts` sets the authenticated user's ID but does not provide the `withOrgPermissions()` and `requirePermission(...)` checks used by protected siblings. In `apps/backend/src/routers/service.router.ts`, `PATCH /fhir/v1/service/:id` and `DELETE /fhir/v1/service/:id` are authentication-only, while `GET /fhir/v1/service/:id` has no authentication middleware. The trace through `apps/backend/src/controllers/web/service.controller.ts` to `apps/backend/src/services/service.service.ts` passes a global record ID into `ServiceModel.findById(oid)` without an `organisationId` filter. In `apps/backend/src/routers/task.router.ts`, `PUT /v1/task/pms/library/:libraryId`, `POST /v1/task/pms/templates`, `PATCH /v1/task/pms/templates/:templateId` and `DELETE /v1/task/pms/templates/:templateId` likewise lack organization/role enforcement. Any registered platform user, including a patient/companion-app account, can modify or delete another organization's service catalogue and PMS task-library/template data, affecting bookings and billing; service records can additionally be read without authentication. An earlier security change protected create routes but left these sibling operations exposed. A fixed release cannot be established from the available evidence.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59979\n  \nPublished : Oct. 28, 2026, 3:36 p.m. | 23 minutes ago\n  \nDescription :YosemiteCrew provides organization-based service and task management. In the source-reported affected main and dev snapshots, YosemiteCrew's service and PMS task-library/template routes omit organization and permission checks. `authorizeCognito` in `apps/backend/src/middlewares/auth.ts` sets the authenticated user's ID but does not provide the `withOrgPermissions()` and `requirePermission(...)` checks used by protected siblings. In `apps/backend/src/routers/service.router.ts`, `PATCH /fhir/v1/service/:id` and `DELETE /fhir/v1/service/:id` are authentication-only, while `GET /fhir/v1/service/:id` has no authentication middleware. The trace through `apps/backend/src/controllers/web/service.controller.ts` to `apps/backend/src/services/service.service.ts` passes a global record ID into `ServiceModel.findById(oid)` without an `organisationId` filter. In `apps/backend/src/routers/task.router.ts`, `PUT /v1/task/pms/library/:libraryId`, `POST /v1/task/pms/templates`, `PATCH /v1/task/pms/templates/:templateId` and `DELETE /v1/task/pms/templates/:templateId` likewise lack organization/role enforcement. Any registered platform user, including a patient/companion-app account, can modify or delete another organization's service catalogue and PMS task-library/template data, affecting bookings and billing; service records can additionally be read without authentication. An earlier security change protected create routes but left these sibling operations exposed. A fixed release cannot be established from the available evidence.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-59979\n2. 26.10.29 오전12:36\n3. YosemiteCrew provides organization-based service a",
-      "cve_id": "CVE-2026-59979",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59979",
-      "source": "cvefeed",
-      "published": "2026-10-29T00:36:57+09:00",
       "lang": "en"
     }
   ],
