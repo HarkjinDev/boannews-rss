@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-01T02:32:18.105290+09:00",
+  "fetched_at": "2026-11-01T03:03:41.924925+09:00",
   "security_news": [
+    {
+      "title": "산업화된 '코인 털이'...\"북한 외화수입의 절반\" [앵커리포트]",
+      "summary": "이제 '해킹'은 북한 주요 산업으로, 주요 외화벌이 수단으로 자리 잡았단 평가까지 나옵니다. 국제사회... 이번 '바이낸스 해킹' 피해액은 사상 최대인 63억 달러, 북한 국민총소득(GNI) 5분의 1에 달하는 규모입니다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한, 바이낸스 해킹으로 63억 달러 외화 벌어\n2. 산업화된 코인 털이, 외화수입의 절반 차지\n3. 북한 GNI 5분의 1 규모 피해 발생",
+      "link": "https://n.news.naver.com/mnews/article/052/0002426664?sid=104",
+      "source": "naver",
+      "published": "2026-11-01T02:56:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
       "summary": "A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed \"SMS of Death\" and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message. [...]",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-10-29T06:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "은행·보험·증권·가상자산까지 뚫렸는데…카드업계 아직 '무풍지대'",
-      "summary": "은행·보험·증권·가상자산 등 금융권 전반에서 한 달 가까이 해킹 피해가 이어지는 가운데 카드업계에서는 아직 피해가 확인되지 않았다. 카드업계는 과거 대규모 정보 유출과 지난해 롯데카드 해킹 사건을 겪으며...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 은행, 보험, 증권, 가상자산 등 금융권 침해 확산\n2. 롯데카드 등 과거 정보 유출 사건 발생\n3. 카드업계는 아직 피해 없어 '무풍지대'",
-      "link": "https://n.news.naver.com/mnews/article/421/0009256701?sid=101",
-      "source": "naver",
-      "published": "2026-10-29T06:20:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Chromium: CVE-2026-118304 Improper input validation in SVG",
+      "summary": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
+      "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-118304\n2. MSRC\n3. This CVE was assigned by Chrome. Microsoft Edge (C",
+      "cve_id": "CVE-2026-118304",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118304",
+      "source": "msrc",
+      "published": "2026-10-31T23:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "Wireshark 5.0.0rc1 Release, (Sat, Oct 31st)",
       "summary": "Wireshark Release Candidate 5.0.0 was published: soon we can expect a new major version of Wireshark.\r",
@@ -7036,21 +7051,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-6647",
       "source": "cvefeed",
       "published": "2026-10-29T04:21:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-116266 - MIME::Head versions from 5.518 before 5.521 for Perl decode a partly encoded multipart boundary without flagging the parse as ambiguous",
-      "summary": "CVE ID :CVE-2026-116266\n  \nPublished : Oct. 28, 2026, 5:32 p.m. | 28 minutes ago\n  \nDescription :MIME::Head versions from 5.518 before 5.521 for Perl decode a partly encoded multipart boundary without flagging the parse as ambiguous.\n\nThe multipart_boundary() method decodes RFC 2047 encoded words anywhere in the boundary, but the ambiguity check only fires when the whole value is one encoded word. A boundary such as abc=?us-ascii?Q?def?= is used as abcdef, and ambiguous_content() returns false.\n\nEncoded words are not allowed in parameters, so other mail readers split the message on the literal value. A remote sender can hide an attachment from a filter that relies on ambiguous_content() while the recipient's mail client shows it.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-116266\n  \nPublished : Oct. 28, 2026, 5:32 p.m. | 28 minutes ago\n  \nDescription :MIME::Head versions from 5.518 before 5.521 for Perl decode a partly encoded multipart boundary without flagging the parse as ambiguous.\n\nThe multipart_boundary() method decodes RFC 2047 encoded words anywhere in the boundary, but the ambiguity check only fires when the whole value is one encoded word. A boundary such as abc=?us-ascii?Q?def?= is used as abcdef, and ambiguous_content() returns false.\n\nEncoded words are not allowed in parameters, so other mail readers split the message on the literal value. A remote sender can hide an attachment from a filter that relies on ambiguous_content() while the recipient's mail client shows it.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-116266\n2. 26.10.29 오전2:32\n3. MIME::Head versions from 5.518 before 5.521 for Pe",
-      "cve_id": "CVE-2026-116266",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-116266",
-      "source": "cvefeed",
-      "published": "2026-10-29T02:32:28+09:00",
       "lang": "en"
     }
   ],
