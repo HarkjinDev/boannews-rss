@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-02T01:01:46.624168+09:00",
+  "fetched_at": "2026-11-02T01:31:35.810823+09:00",
   "security_news": [
+    {
+      "title": "바이낸스, 아비트럼·트론 6개 경로 열어 9개 네트워크 복구…모든 자산...",
+      "summary": "두 네트워크의 다른 토큰은 조치에 포함되지 않았다.배경은 10월 29일 발생한 핫월렛 해킹이다.... 미국 연방수사국은 10월 31일 경보에서 도난을 북한의 트레이더트레이터 해킹 조직의 소행으로 지목했다. 도널드...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 바이낸스, 아비트럼·트론 6개 경로 통해 9개 네트워크 복구\n2. 10월 29일 핫월렛 해킹, 북한 트레이더트레이터 소행으로 지목\n3. 도난 자산 복구, 다른 토큰은 조치 미포함",
+      "link": "https://www.wikitree.co.kr/articles/1170917",
+      "source": "naver",
+      "published": "2026-11-02T01:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "‘北, 자금세탁-테러자금 고위험국가’ 유지",
       "summary": "미국 가상자산 거래소 바이낸스에서 발생한 63억 달러(약 8조5000억 원) 규모 해킹 사고의 배후로 북한이 거론되는 가운데 국제자금세탁방지기구(FATF)가 북한의 ‘고위험 국가(블랙리스트)’ 지위를 유지하기로...",
@@ -5979,6 +5991,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-120338 - Prefab UI Pyodide sandbox escape to host RCE",
+      "summary": "CVE ID :CVE-2026-120338\n  \nPublished : Nov. 1, 2026, 3:24 p.m. | 18 minutes ago\n  \nDescription :Prefab UI's Generative UI sandbox runs caller-supplied Python inside Pyodide, Python compiled to WebAssembly, in a Deno subprocess. The feature is documented as isolation for untrusted code, including LLM-written UI. From prefab-ui 0.14.0 through 0.20.2 the launcher starts Deno with unrestricted --allow-read, --allow-write, and --allow-net, and the runner leaves the Deno API on the JavaScript global object. Pyodide's js module proxies that global, so the Python can call Deno.readTextFileSync and Deno.writeTextFileSync. A caller who can supply the code can read and write files as the server OS user, and can persist code execution by writing a .pth file into the server virtualenv's site-packages. The usual remote path is FastMCP's GenerativeUI provider, which registers the MCP tool generate_prefab_ui and forwards that tool's code argument into this sandbox. On a FastMCP server with no authentication configured, any client who can reach the server can call the tool. With authentication, any client allowed to call tools can. Generative UI is opt-in, and the host must have Deno installed. Confirmed on prefab-ui 0.20.2. Fixed in 0.21.0: after the runtime and Prefab sources load, the runner revokes Deno read, write, and network permission before it accepts code, the process is started with --no-prompt so a permission request cannot grant them again, and bootstrap network access is limited to cdn.jsdelivr.net. The fix is commit 030f074 (pull request 538).\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-120338\n  \nPublished : Nov. 1, 2026, 3:24 p.m. | 18 minutes ago\n  \nDescription :Prefab UI's Generative UI sandbox runs caller-supplied Python inside Pyodide, Python compiled to WebAssembly, in a Deno subprocess. The feature is documented as isolation for untrusted code, including LLM-written UI. From prefab-ui 0.14.0 through 0.20.2 the launcher starts Deno with unrestricted --allow-read, --allow-write, and --allow-net, and the runner leaves the Deno API on the JavaScript global object. Pyodide's js module proxies that global, so the Python can call Deno.readTextFileSync and Deno.writeTextFileSync. A caller who can supply the code can read and write files as the server OS user, and can persist code execution by writing a .pth file into the server virtualenv's site-packages. The usual remote path is FastMCP's GenerativeUI provider, which registers the MCP tool generate_prefab_ui and forwards that tool's code argument into this sandbox. On a FastMCP server with no authentication configured, any client who can reach the server can call the tool. With authentication, any client allowed to call tools can. Generative UI is opt-in, and the host must have Deno installed. Confirmed on prefab-ui 0.20.2. Fixed in 0.21.0: after the runtime and Prefab sources load, the runner revokes Deno read, write, and network permission before it accepts code, the process is started with --no-prompt so a permission request cannot grant them again, and bootstrap network access is limited to cdn.jsdelivr.net. The fix is commit 030f074 (pull request 538).\n  \nSeverity: 10.0 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-120338\n2. 26.11.02 오전12:24\n3. Prefab UI's Generative UI sandbox runs caller-supp",
+      "cve_id": "CVE-2026-120338",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-120338",
+      "source": "cvefeed",
+      "published": "2026-11-02T00:24:54+09:00",
+      "lang": "es"
+    },
     {
       "title": "CVE-2026-120308 - Beta9 host filesystem exposure via volume path traversal",
       "summary": "CVE ID :CVE-2026-120308\n  \nPublished : Nov. 1, 2026, 12:51 p.m. | 25 minutes ago\n  \nDescription :A Beta9 tenant can attach a volume when deploying a function, endpoint, or task queue. The gateway builds the host path by joining the shared volumes root, the workspace name, and the volume identifier from the stub configuration. Nothing checks that the identifier names a volume that workspace owns. Parent-directory segments in the identifier collapse the joined path to the worker's filesystem root, and the worker bind-mounts that path into the sandbox read-write unless the volume was explicitly marked read-only. A tenant with a workspace token can therefore read and write the worker's files, including other tenants' volumes stored on that machine. Confirmed against gateway 0.1.769 and worker 0.1.745. Fixed in gateway 0.1.776 and worker 0.1.756: volume identifiers and mount paths are validated before a mount is built, including for stubs saved before the check existed, and the gateway rejects a volume that does not exist or is not owned by the workspace.\n  \nSeverity: 9.9 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
