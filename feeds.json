@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-04T04:01:46.316197+09:00",
+  "fetched_at": "2026-11-04T04:31:47.489221+09:00",
   "security_news": [
+    {
+      "title": "[시대시평/이정민] 국방 AI화가 만능은 아니다",
+      "summary": "게다가 미 연방수사국(FBI)은 세계 최대 가상화폐 거래소 바이낸스 해킹 사건이 북한 조직의 소행이라고 밝혔다. 중국에 절대적으로 의존하는 북한이 중국계로 볼 수도 있는 기업을 공격했다는 점은 김정은 정권의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. FBI, 바이낸스 해킹 사건 북한 소행으로 지목\n2. 북한, 중국계 기업 바이낸스 노린 해킹 자행\n3. 국방 AI화, 북한 등 위협 앞에 만능 아냐",
+      "link": "https://n.news.naver.com/mnews/article/417/0001163131?sid=110",
+      "source": "naver",
+      "published": "2026-11-04T04:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "금융사 해킹 사고에 경영진 책임 강조…감독당국 '징벌적 과징금' 추진",
       "summary": "이 원장은 인공지능(AI)을 활용한 사이버 공격이 상시적이고 동시다발적으로 발생하는 현실에서, 금융사... 집중된 상황에서 \"금융권 사이버보안 해킹 사건 최초로 CEO 책임 문제가 다뤄지게 될 것\"이라고 언급한 바 있다.",
@@ -5988,21 +6000,54 @@
       "source": "naver",
       "published": "2026-11-02T05:20:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "북한 해커가 빼낸 63억 달러, 얼마나 쓸 수 있나… 탈취 이후 추적전",
-      "summary": "바이낸스에서 발생한 대규모 가상자산 탈취 사건은 보안이 무너진 과정뿐 아니라 돈이 빠져나간 뒤의... 여기서 20분은 최초 침입부터 보안을 무너뜨리기까지 걸린 시간이 아니라, 대부분의 자산이 유출된 시간이다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해커가 빼낸 63억 달러, 얼마나 쓸 수 있나… 탈취 이후 추적전 바이낸스에서 발생한\n2. 여기서 20분은 최초 침입부터 보안을 무너뜨리기까지 걸린 시간이 아니라, 대부분의 자산이 ",
-      "link": "https://www.news2day.co.kr/article/20261102500003",
-      "source": "naver",
-      "published": "2026-11-02T05:20:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-120954 - Silent element-count truncation via 32-bit bit-length overflow in packed-bit vector views",
+      "summary": "CVE ID :CVE-2026-120954\n  \nPublished : Nov. 3, 2026, 6:45 p.m. | 27 minutes ago\n  \nDescription :A weakness in the BSON library's handling of a specialized binary vector data type allows an arithmetic wraparound when computing the number of elements described by an oversized attacker-supplied value. On builds where the platform word size is 32 bits, an application that parses untrusted BSON data can be made to process only a small fraction of the supplied elements while the operation reports success, producing results that disagree with byte-oriented accessors and with 64-bit builds of the same library. No authentication or user interaction is required beyond getting the application to parse the data. The impact is limited to data integrity; memory safety is not affected and no information is disclosed.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-120954\n  \nPublished : Nov. 3, 2026, 6:45 p.m. | 27 minutes ago\n  \nDescription :A weakness in the BSON library's handling of a specialized binary vector data type allows an arithmetic wraparound when computing the number of elements described by an oversized attacker-supplied value. On builds where the platform word size is 32 bits, an application that parses untrusted BSON data can be made to process only a small fraction of the supplied elements while the operation reports success, producing results that disagree with byte-oriented accessors and with 64-bit builds of the same library. No authentication or user interaction is required beyond getting the application to parse the data. The impact is limited to data integrity; memory safety is not affected and no information is disclosed.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-120954\n2. 26.11.04 오전3:45\n3. A weakness in the BSON library's handling of a spe",
+      "cve_id": "CVE-2026-120954",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-120954",
+      "source": "cvefeed",
+      "published": "2026-11-04T03:45:40+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-82976 - Image-customization-controller: unauthenticated plaintext image server with directory listing exposes ignition images containing cluster pull secret",
+      "summary": "CVE ID :CVE-2026-82976\n  \nPublished : Nov. 3, 2026, 6:36 p.m. | 36 minutes ago\n  \nDescription :A flaw was found in the image-customization-controller used in OpenShift's bare metal provisioning stack. The controller registers an HTTP file server on port 8084 with no authentication. The custom imageFileSystem implementation exposes a browsable HTML directory listing of all registered images at the root path. The only access control on per-host images is the random UUID filename; the directory listing discloses those UUIDs to any caller on the provisioning network. Each served image embeds an Ignition config containing the base64-encoded cluster pull secret, optional IRONIC_RAMDISK_SSH_KEY, proxy settings, and per-host NetworkManager keyfiles. An adjacent network attacker can enumerate all image UUIDs via directory listing, download any image, extract the embedded Ignition config, and recover the cluster pull secret and SSH key.\n\n### Evidence\n**pkg/imagehandler/imagefilesystem.go — root directory is browsable and enumerates all UUID image names**\n```go\nfunc (f *imageFileSystem) Readdir(n int) ([]fs.FileInfo, error) {\n    f.mu.Lock()\n    defer f.mu.Unlock()\n    result := []fs.FileInfo{}\n    for _, im := range f.images {\n        result = append(result, im)\n    }\n    return result, nil\n}\n\nfunc (f *imageFileSystem) Open(name string) (http.File, error) {\n    f.log.Info(\"Open\", \"path\", name)\n    if name == \"/\" {\n        return f, nil\n    }\n    ...\n```\n\n**cmd/controller/main.go — file server bound on all interfaces without auth or TLS**\n```go\nhttp.Handle(\"/\", http.FileServer(imageServer.FileSystem()))\n\ngo func() {\n    server := &http.Server{\n        Addr:              imagesBindAddr,   // default \":8084\"\n        ReadHeaderTimeout: 5 * time.Second,\n    }\n    err := server.ListenAndServe()\n```\n\n**pkg/ignition/service_config.go:94-100 — pull secret is embedded in every served image**\n```go\nfunc (b *ignitionBuilder) authFile() ignition_config_types_32.File {\n    source := \"data:;base64,\" + strings.TrimSpace(b.ironicAgentPullSecret)\n    return ignition_config_types_32.File{\n        Node: ignition_config_types_32.Node{Path: \"/etc/authfile.json\"},\n        ...\n```\n\n### Attack Pattern\nAdjacent provisioning-network client → GET / lists UUID image names → download ISO/initramfs → extract embedded Ignition → recover cluster pull secret and SSH key.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-82976\n  \nPublished : Nov. 3, 2026, 6:36 p.m. | 36 minutes ago\n  \nDescription :A flaw was found in the image-customization-controller used in OpenShift's bare metal provisioning stack. The controller registers an HTTP file server on port 8084 with no authentication. The custom imageFileSystem implementation exposes a browsable HTML directory listing of all registered images at the root path. The only access control on per-host images is the random UUID filename; the directory listing discloses those UUIDs to any caller on the provisioning network. Each served image embeds an Ignition config containing the base64-encoded cluster pull secret, optional IRONIC_RAMDISK_SSH_KEY, proxy settings, and per-host NetworkManager keyfiles. An adjacent network attacker can enumerate all image UUIDs via directory listing, download any image, extract the embedded Ignition config, and recover the cluster pull secret and SSH key.\n\n### Evidence\n**pkg/imagehandler/imagefilesystem.go — root directory is browsable and enumerates all UUID image names**\n```go\nfunc (f *imageFileSystem) Readdir(n int) ([]fs.FileInfo, error) {\n    f.mu.Lock()\n    defer f.mu.Unlock()\n    result := []fs.FileInfo{}\n    for _, im := range f.images {\n        result = append(result, im)\n    }\n    return result, nil\n}\n\nfunc (f *imageFileSystem) Open(name string) (http.File, error) {\n    f.log.Info(\"Open\", \"path\", name)\n    if name == \"/\" {\n        return f, nil\n    }\n    ...\n```\n\n**cmd/controller/main.go — file server bound on all interfaces without auth or TLS**\n```go\nhttp.Handle(\"/\", http.FileServer(imageServer.FileSystem()))\n\ngo func() {\n    server := &http.Server{\n        Addr:              imagesBindAddr,   // default \":8084\"\n        ReadHeaderTimeout: 5 * time.Second,\n    }\n    err := server.ListenAndServe()\n```\n\n**pkg/ignition/service_config.go:94-100 — pull secret is embedded in every served image**\n```go\nfunc (b *ignitionBuilder) authFile() ignition_config_types_32.File {\n    source := \"data:;base64,\" + strings.TrimSpace(b.ironicAgentPullSecret)\n    return ignition_config_types_32.File{\n        Node: ignition_config_types_32.Node{Path: \"/etc/authfile.json\"},\n        ...\n```\n\n### Attack Pattern\nAdjacent provisioning-network client → GET / lists UUID image names → download ISO/initramfs → extract embedded Ignition → recover cluster pull secret and SSH key.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-82976\n2. 26.11.04 오전3:36\n3. A flaw was found in the image-customization-contro",
+      "cve_id": "CVE-2026-82976",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82976",
+      "source": "cvefeed",
+      "published": "2026-11-04T03:36:24+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-44267 - Elo: Sandbox escape to arbitrary Node.js / browser code execution via unfiltered `.constructor` member access in Elo JavaScript emitter",
+      "summary": "CVE ID :CVE-2026-44267\n  \nPublished : Nov. 3, 2026, 6:18 p.m. | 54 minutes ago\n  \nDescription :Elo is a purely functional expression language for no-code tools. Prior to 1.0.1, plain Elo strings supplied to defaultFormats.elo.parse(), bin/elo, or elo-lang.org/try can use .constructor.constructor to reach JavaScript Function because the member_access handler in src/transform.ts does not reject meta-properties, src/compilers/javascript.ts emits the surviving property directly, and src/parser.ts accepts constructor as an ordinary identifier. The resulting generated JavaScript executes attacker-selected code in the host runtime. This permits browser script execution and session compromise on the auto-running playground and arbitrary Node.js code execution on library, CI, or DevOps hosts. This plain-string path is distinct from the programmatic AST-object injection issue. This issue is fixed in version 1.0.1.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-44267\n  \nPublished : Nov. 3, 2026, 6:18 p.m. | 54 minutes ago\n  \nDescription :Elo is a purely functional expression language for no-code tools. Prior to 1.0.1, plain Elo strings supplied to defaultFormats.elo.parse(), bin/elo, or elo-lang.org/try can use .constructor.constructor to reach JavaScript Function because the member_access handler in src/transform.ts does not reject meta-properties, src/compilers/javascript.ts emits the surviving property directly, and src/parser.ts accepts constructor as an ordinary identifier. The resulting generated JavaScript executes attacker-selected code in the host runtime. This permits browser script execution and session compromise on the auto-running playground and arbitrary Node.js code execution on library, CI, or DevOps hosts. This plain-string path is distinct from the programmatic AST-object injection issue. This issue is fixed in version 1.0.1.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-44267\n2. 26.11.04 오전3:18\n3. Elo is a purely functional expression language for",
+      "cve_id": "CVE-2026-44267",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-44267",
+      "source": "cvefeed",
+      "published": "2026-11-04T03:18:03+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-115714 - Improper Certificate Validation in Elastic Docker Images Leading to Interception of TLS Connections",
       "summary": "CVE ID :CVE-2026-115714\n  \nPublished : Nov. 3, 2026, 4:44 p.m. | 34 minutes ago\n  \nDescription :Improper Certificate Validation (CWE-295) in the operating system certificate bundle shipped in the Docker images of APM Server; Auditbeat, Filebeat, Heartbeat, Metricbeat and Packetbeat; Elastic Agent, including Fleet Server and Cloudbeat; Logstash, for TLS connections that use the operating system certificate bundle; Elastic connectors; Universal Profiling (host agent, collector and symbolizer); and Elastic Maps Server. This certificate bundle, a dependency of these products (Dependency on Vulnerable Third-Party Component, CWE-1395), could allow an attacker to intercept or modify TLS-protected traffic via Signature Spoofing by Key Theft (CAPEC-474). The certificate bundle includes root certificate authorities that signed eight eMudhra intermediate certificate authorities whose private keys are compromised. Anyone with these keys can issue a certificate for any host name that these products accept as trusted. Exploitation requires an attacker in a network position between the product and the remote party, who presents a certificate issued with one of the compromised keys.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
