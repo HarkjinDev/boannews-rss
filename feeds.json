@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-04T22:33:21.605774+09:00",
+  "fetched_at": "2026-11-04T23:04:19.853743+09:00",
   "security_news": [
+    {
+      "title": "[시사천국] 美 중간선거 민주당 압승…트럼프 '백약이 무효'",
+      "summary": "북한이 최근에 이제 가상자산 해킹해 가지고 돈을 많이 가지고 간 것도 김여정이 이제 강력하게 반발을 했는데 그것도 이제 대화가 되면 아마 의제가 되지 않을까 그런 생각이 듭니다. 오늘 여기까지 하겠습니다. 문희정...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한, 가상자산 해킹으로 막대한 이득 취함\n2. 김여정, 해킹 및 자금 확보에 대해 강력히 반발\n3. 향후 대화 시, 가상자산 해킹 문제 의제화 예상",
+      "link": "https://news.cpbc.co.kr/article/1176836?division=NAVER",
+      "source": "naver",
+      "published": "2026-11-04T22:34:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "프랑스서 혈액은행 냉장고 해킹…슈퍼마켓 이어 표적 확산",
       "summary": "프랑스 보건부와 사이버보안 당국은 이번 사건의 정확한 경위를 조사하고 있다. 이번 사태는 프랑스를 비롯한 유럽 여러 국가에서 슈퍼마켓의 냉장·냉동시설을 겨냥한 해킹 공격이 잇따르는 가운데 발생했다. 해커들은...",
@@ -5988,18 +6000,6 @@
       "source": "dailysecu",
       "published": "2026-11-02T23:59:04+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "냉동고 온도 50도까지…유럽 슈퍼마켓 잇단 해킹 의심 사고",
-      "summary": "스웨덴 셰보 지역의 한 ICA 매장은 SNS를 통해 냉장고와 냉동고가 해킹당해 섭씨 50도로 설정됐다고 주장했다. 다만 ICA와 쿠프 본사는 사이버 공격 여부를 확인하지 못했다고 밝혔다. 스웨덴 국가사이버보안센터는 전국...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 냉동고 온도 50도까지…유럽 슈퍼마켓 잇단 해킹 의심 사고 스웨덴 셰보 지역의 한 ICA \n2. 다만 ICA와 쿠프 본사는 사이버 공격 여부를 확인하지 못했다고 밝혔다.\n3. 스웨덴 국가사이버보안센터는 전국...",
-      "link": "https://n.news.naver.com/mnews/article/025/0003562295?sid=104",
-      "source": "naver",
-      "published": "2026-11-02T23:54:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6016,6 +6016,21 @@
       "link": "https://isc.sans.edu/diary/rss/33488",
       "source": "sans_isc",
       "published": "2026-11-04T22:24:13+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-121373 - Symfony: HtmlSanitizer MetaRefreshAttributeSanitizer Matches Only a Narrow Subset of the Browser Refresh Grammar (Incomplete Fix for CVE-2026-48761)",
+      "summary": "CVE ID :CVE-2026-121373\n  \nPublished : Nov. 4, 2026, 12:59 p.m. | 25 minutes ago\n  \nDescription :The Symfony HtmlSanitizer component MetaRefreshAttributeSanitizer, introduced to fix CVE-2026-48761, sanitizes the refresh URL of content attributes of meta tags using a regular expression that is too narrow, allowing sanitization to be bypassed, and resulting in potential URL redirection to untrusted sites in Symfony versions 6.1.x prior to 6.4.50, 7.x prior to 7.4.23, and 8.x prior to 8.1.11.\n\n\n\n\nThe shared declarative refresh steps in the WHATWG HTML Standard require a broader approach: the separator after the time may be ASCII whitespace alone, with no ; or ,, and the url= keyword is optional. Directives the browser honours, but the regular expression misses are returned unchanged, so the attacker URL skips UrlSanitizer entirely and both allowLinkSchemes and allowLinkHosts are defeated for the refresh navigation.\n\n\n\n\nThis is reachable under any configuration that allows meta with http-equiv and content, including the documented allowStaticElements() preset.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-121373\n  \nPublished : Nov. 4, 2026, 12:59 p.m. | 25 minutes ago\n  \nDescription :The Symfony HtmlSanitizer component MetaRefreshAttributeSanitizer, introduced to fix CVE-2026-48761, sanitizes the refresh URL of content attributes of meta tags using a regular expression that is too narrow, allowing sanitization to be bypassed, and resulting in potential URL redirection to untrusted sites in Symfony versions 6.1.x prior to 6.4.50, 7.x prior to 7.4.23, and 8.x prior to 8.1.11.\n\n\n\n\nThe shared declarative refresh steps in the WHATWG HTML Standard require a broader approach: the separator after the time may be ASCII whitespace alone, with no ; or ,, and the url= keyword is optional. Directives the browser honours, but the regular expression misses are returned unchanged, so the attacker URL skips UrlSanitizer entirely and both allowLinkSchemes and allowLinkHosts are defeated for the refresh navigation.\n\n\n\n\nThis is reachable under any configuration that allows meta with http-equiv and content, including the documented allowStaticElements() preset.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-121373\n2. 26.11.04 오후9:59\n3. The Symfony HtmlSanitizer component MetaRefreshAtt",
+      "cve_id": "CVE-2026-121373",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-121373",
+      "source": "cvefeed",
+      "published": "2026-11-04T21:59:22+09:00",
       "lang": "en"
     },
     {
@@ -6046,6 +6061,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-118513",
       "source": "cvefeed",
       "published": "2026-11-04T21:19:53+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-114456 - Missing origin validation for the externalbrowser authenticator callback in multiple Snowflake client drivers",
+      "summary": "CVE ID :CVE-2026-114456\n  \nPublished : Nov. 4, 2026, 12:17 p.m. | 1 hour, 7 minutes ago\n  \nDescription :Multiple Snowflake client drivers implementing the `authenticator=externalbrowser` single sign-on flow could have allowed an attacker to interfere with a user's login attempt through weaknesses in the local loopback callback listener used to receive the identity provider's response. The listener reflected an arbitrary request's Origin header into its CORS response headers and accepted the first token-bearing request it received during the login window without verifying a CSRF state value bound to that specific login attempt. An attacker able to reach the listener during an active login might have leveraged this to submit a forged callback response, causing the authentication attempt to fail. The fix is available in Snowflake Connector for Python 4.8.0, Snowflake Go Driver v2.3.0, Snowflake JDBC Driver 4.4.0 (including the snowflake-jdbc-fips and snowflake-jdbc-thin artifacts), Snowflake Node.js Driver 3.4.0, Snowflake Connector for .NET 6.3.0, Snowflake ODBC Driver 4.0.0, Snowflake PHP PDO Driver 4.3.0, and libsnowflakeclient 2.11.1. Go v1 users must migrate to the latest major version of the module. Users must manually upgrade.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-114456\n  \nPublished : Nov. 4, 2026, 12:17 p.m. | 1 hour, 7 minutes ago\n  \nDescription :Multiple Snowflake client drivers implementing the `authenticator=externalbrowser` single sign-on flow could have allowed an attacker to interfere with a user's login attempt through weaknesses in the local loopback callback listener used to receive the identity provider's response. The listener reflected an arbitrary request's Origin header into its CORS response headers and accepted the first token-bearing request it received during the login window without verifying a CSRF state value bound to that specific login attempt. An attacker able to reach the listener during an active login might have leveraged this to submit a forged callback response, causing the authentication attempt to fail. The fix is available in Snowflake Connector for Python 4.8.0, Snowflake Go Driver v2.3.0, Snowflake JDBC Driver 4.4.0 (including the snowflake-jdbc-fips and snowflake-jdbc-thin artifacts), Snowflake Node.js Driver 3.4.0, Snowflake Connector for .NET 6.3.0, Snowflake ODBC Driver 4.0.0, Snowflake PHP PDO Driver 4.3.0, and libsnowflakeclient 2.11.1. Go v1 users must migrate to the latest major version of the module. Users must manually upgrade.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-114456\n2. 26.11.04 오후9:17\n3. Multiple Snowflake client drivers implementing the",
+      "cve_id": "CVE-2026-114456",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-114456",
+      "source": "cvefeed",
+      "published": "2026-11-04T21:17:06+09:00",
       "lang": "en"
     },
     {
