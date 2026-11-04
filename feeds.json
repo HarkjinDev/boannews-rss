@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-05T04:03:29.125664+09:00",
+  "fetched_at": "2026-11-05T04:33:21.843191+09:00",
   "security_news": [
     {
       "title": "\"AI 시대 보안 전략 공유\"...AIS 2026, 보안담당자 700여 명 참석 성황리...",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-113780 - ESF-IDF: Unvalidated Stack Pointer at the ESP-TEE Privilege-Switch Boundary",
+      "summary": "CVE ID :CVE-2026-113780\n  \nPublished : Nov. 4, 2026, 7:04 p.m. | 16 minutes ago\n  \nDescription :ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. From 5.5.5 until 5.5.6, 6.0.4, and 6.1.1, the esp_tee trap entry in esp_tee_vectors_plic.S and esp_tee_vectors_clic.S saves a caller-controlled register frame through the REE-supplied stack pointer before switching to the trusted TEE stack or validating the pointer. A local unprivileged REE application can direct this machine-mode write into TEE-exclusive memory on ESP32-C5, ESP32-C6, ESP32-C61, and ESP32-H2 devices, breaking the REE/TEE isolation boundary and potentially corrupting TEE control-flow data for code execution, denial of service, or system crashes. Both secure-service ecall and interrupt entry paths contain the vulnerable ordering. This issue is fixed in version 5.5.6 and is scheduled to be fixed in versions 6.0.4 and 6.1.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-113780\n  \nPublished : Nov. 4, 2026, 7:04 p.m. | 16 minutes ago\n  \nDescription :ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. From 5.5.5 until 5.5.6, 6.0.4, and 6.1.1, the esp_tee trap entry in esp_tee_vectors_plic.S and esp_tee_vectors_clic.S saves a caller-controlled register frame through the REE-supplied stack pointer before switching to the trusted TEE stack or validating the pointer. A local unprivileged REE application can direct this machine-mode write into TEE-exclusive memory on ESP32-C5, ESP32-C6, ESP32-C61, and ESP32-H2 devices, breaking the REE/TEE isolation boundary and potentially corrupting TEE control-flow data for code execution, denial of service, or system crashes. Both secure-service ecall and interrupt entry paths contain the vulnerable ordering. This issue is fixed in version 5.5.6 and is scheduled to be fixed in versions 6.0.4 and 6.1.1.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-113780\n2. 26.11.05 오전4:04\n3. ESF-IDF is the Espressif Internet of Things (IOT) ",
+      "cve_id": "CVE-2026-113780",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-113780",
+      "source": "cvefeed",
+      "published": "2026-11-05T04:04:21+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-92704 - SharpEmu: Cross-site request forgery in the debugger frontend leads to arbitrary process execution",
       "summary": "CVE ID :CVE-2026-92704\n  \nPublished : Nov. 4, 2026, 3:24 p.m. | 13 minutes ago\n  \nDescription :SharpEmu is an experimental PlayStation 5 emulator for Windows and Linux. In version 0.0.3-release.3 and earlier, the repository-provided debugger frontend tooling is vulnerable while running. This tooling is not included in the release archives. The frontend exposes an HTTP API on 127.0.0.1:8765 without authentication or CSRF token. Its  do_POST  handler in  tools/SharpEmu.DebuggerFrontend/debugger_frontend.py  does not validate the Origin, Referer, Sec-Fetch-Site, or Host headers. The  _read_json_body()  function also accepts JSON sent with browser-simple content types instead of requiring  application/json . A malicious page that can reach the loopback listener can send cross-origin requests to  /api/launch ,  /api/command , and  /api/connect . Chromium may require Local Network Access permission for pages served from public origins. Local-origin pages and other delivery paths are not consistently subject to this restriction. The  /api/launch  endpoint accepts an attacker-selected  emulatorPath  if it points to an existing file on the victim’s host. On POSIX systems, that file must also be executable. The endpoint additionally requires an existing  ebootPath . The  /api/command  endpoint exposes debugger operations, including  write-memory ,  set-register , and  continue . The  /api/connect  endpoint can initiate outbound TCP connections. These operations can let an attacker execute an existing binary with the victim’s privileges, control the attached emulated process, or reach network services accessible from the host. DNS rebinding can additionally let the attacker read API responses interactively. This issue is fixed in version 0.0.3-release.3-patch.1\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
