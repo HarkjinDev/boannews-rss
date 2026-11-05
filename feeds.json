@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-06T02:33:22.510111+09:00",
+  "fetched_at": "2026-11-06T03:03:23.204174+09:00",
   "security_news": [
     {
       "title": "비트코인(BTC), ETF 사흘 연속 순유출에도 7만 9,000달러 회복",
@@ -6019,6 +6019,21 @@
       "lang": "en"
     },
     {
+      "title": "CVE-2026-85286 - HomeBox: Timing Side-Channel in Login Endpoint Allows User Enumeration via Bcrypt Hashing Delay",
+      "summary": "CVE ID :CVE-2026-85286\n  \nPublished : Nov. 5, 2026, 4:01 p.m. | 14 minutes ago\n  \nDescription :HomeBox is a home inventory and organization system. Prior to 0.27.0, the POST /api/v1/users/login endpoint performs password-hash verification only when the submitted username matches an existing account, while unknown usernames return immediately. Although both paths return the same 401 unauthorized response, the processing-time discrepancy allows an unauthenticated remote attacker to distinguish registered email addresses; rate limiting only reduces the number of attempts per window. This issue is fixed in version 0.27.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-85286\n  \nPublished : Nov. 5, 2026, 4:01 p.m. | 14 minutes ago\n  \nDescription :HomeBox is a home inventory and organization system. Prior to 0.27.0, the POST /api/v1/users/login endpoint performs password-hash verification only when the submitted username matches an existing account, while unknown usernames return immediately. Although both paths return the same 401 unauthorized response, the processing-time discrepancy allows an unauthenticated remote attacker to distinguish registered email addresses; rate limiting only reduces the number of attempts per window. This issue is fixed in version 0.27.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-85286\n2. 26.11.06 오전1:01\n3. HomeBox is a home inventory and organization syste",
+      "cve_id": "CVE-2026-85286",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85286",
+      "source": "cvefeed",
+      "published": "2026-11-06T01:01:52+09:00",
+      "lang": "en"
+    },
+    {
       "title": "Vulnerability Scans for Older Cisco IOS Vulnerability / Opt-Out Headers, (Thu, Nov 5th)",
       "summary": "This morning, I was browsing our honeypot data for any new and existing PHP exploit attempts. Instead, I first ran into some GeoServer exploits, but found them to be too boring to write up. This Cisco IOS exploit attempt was a bit more interesting. Still nothing new. I suspect this is for CVE-2023-20198.\r",
       "description": "This morning, I was browsing our honeypot data for any new and existing PHP exploit attempts. Instead, I first ran into some GeoServer exploits, but found them to be too boring to write up. This Cisco IOS exploit attempt was a bit more interesting. Still nothing new. I suspect this is for CVE-2023-20198.\r",
@@ -6031,6 +6046,21 @@
       "link": "https://isc.sans.edu/diary/rss/33492",
       "source": "sans_isc",
       "published": "2026-11-06T00:29:08+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-70659 - stable-diffusion.cpp: Heap out-of-bounds write in the imatrix loader (`load_imatrix`) via a duplicate tensor name",
+      "summary": "CVE ID :CVE-2026-70659\n  \nPublished : Nov. 5, 2026, 3:26 p.m. | 49 minutes ago\n  \nDescription :stable-diffusion.cpp is a pure C/C++ library for running diffusion model (Stable Diffusion, Flux, Wan, Qwen Image, Z-Image, and more) inference. From master-742-1a13107 until master-763-4fcc6fe, IMatrixCollector::load_imatrix in src/runtime/imatrix.cpp reuses the values and counts vectors for entries with the same tensor name but resizes them only when they are empty. An untrusted .imatrix file can provide a small nval for the first entry and a larger nval for a second entry with the same name, causing the accumulation loop to write attacker-controlled floating-point and integer values beyond both heap buffers. Loading the file through the --imat-in conversion path can corrupt the heap or crash the process before a model is required. This issue is fixed in master-763-4fcc6fe.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-70659\n  \nPublished : Nov. 5, 2026, 3:26 p.m. | 49 minutes ago\n  \nDescription :stable-diffusion.cpp is a pure C/C++ library for running diffusion model (Stable Diffusion, Flux, Wan, Qwen Image, Z-Image, and more) inference. From master-742-1a13107 until master-763-4fcc6fe, IMatrixCollector::load_imatrix in src/runtime/imatrix.cpp reuses the values and counts vectors for entries with the same tensor name but resizes them only when they are empty. An untrusted .imatrix file can provide a small nval for the first entry and a larger nval for a second entry with the same name, causing the accumulation loop to write attacker-controlled floating-point and integer values beyond both heap buffers. Loading the file through the --imat-in conversion path can corrupt the heap or crash the process before a model is required. This issue is fixed in master-763-4fcc6fe.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-70659\n2. 26.11.06 오전12:26\n3. stable-diffusion.cpp is a pure C/C++ library for r",
+      "cve_id": "CVE-2026-70659",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-70659",
+      "source": "cvefeed",
+      "published": "2026-11-06T00:26:33+09:00",
       "lang": "en"
     },
     {
