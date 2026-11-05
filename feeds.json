@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-05T23:05:36.016025+09:00",
+  "fetched_at": "2026-11-05T23:34:14.388379+09:00",
   "security_news": [
     {
       "title": "쿠팡, 4200억대 과징금 집행정지 기각…“검토 후 대응”",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-105330 - Apache OFBiz: Use of Hard-coded Cryptographic Key in JWT Token Authentication Enables Unauthenticated Administrative Access",
+      "summary": "CVE ID :CVE-2026-105330\n  \nPublished : Nov. 5, 2026, 1:40 p.m. | 22 minutes ago\n  \nDescription :Use of Hard-coded Cryptographic Key in JWT token authentication in Apache OFBiz 24.09.06 and 24.09.07 on all platforms allows an unauthenticated, network-reachable attacker to obtain full administrative access via a forged JWT signed with the factory-default security.token.key value that CVE-2026-31986 removed from newly generated configurations, on a deployment that upgraded from a release predating that fix while retaining its existing security.properties with security.internal.sso.enabled set to true. Users are recommended to upgrade to version 24.09.08. Upgrading alone does not replace an already-configured key: deployments that carried framework/security/config/security.properties forward from a release predating the CVE-2026-31986 fix must also run './gradlew rotateSecretKeys' after upgrading, since the existing generateSecretKeys task leaves an already-set value untouched.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-105330\n  \nPublished : Nov. 5, 2026, 1:40 p.m. | 22 minutes ago\n  \nDescription :Use of Hard-coded Cryptographic Key in JWT token authentication in Apache OFBiz 24.09.06 and 24.09.07 on all platforms allows an unauthenticated, network-reachable attacker to obtain full administrative access via a forged JWT signed with the factory-default security.token.key value that CVE-2026-31986 removed from newly generated configurations, on a deployment that upgraded from a release predating that fix while retaining its existing security.properties with security.internal.sso.enabled set to true. Users are recommended to upgrade to version 24.09.08. Upgrading alone does not replace an already-configured key: deployments that carried framework/security/config/security.properties forward from a release predating the CVE-2026-31986 fix must also run './gradlew rotateSecretKeys' after upgrading, since the existing generateSecretKeys task leaves an already-set value untouched.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-105330\n2. 26.11.05 오후10:40\n3. Use of Hard-coded Cryptographic Key in JWT token a",
+      "cve_id": "CVE-2026-105330",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-105330",
+      "source": "cvefeed",
+      "published": "2026-11-05T22:40:03+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-107774 - Dokan < 5.3.3 - Unauthenticated Email Sender Spoofing via Store Contact Form",
       "summary": "CVE ID :CVE-2026-107774\n  \nPublished : Nov. 5, 2026, 6:17 a.m. | 14 minutes ago\n  \nDescription :The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.3.3 does not use a trusted site-owned sender address when relaying its store contact form, instead placing the unauthenticated submitter's supplied address directly in the message's From header rather than a Reply-To, allowing unauthenticated attackers to make the site email its own vendors with the sender spoofed to an address at the site's own domain (such as its administrator), aligned with the domain's own SPF/DKIM.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
