@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-06T02:03:23.733646+09:00",
+  "fetched_at": "2026-11-06T02:33:22.510111+09:00",
   "security_news": [
+    {
+      "title": "비트코인(BTC), ETF 사흘 연속 순유출에도 7만 9,000달러 회복",
+      "summary": "바이낸스 해킹 충격과 중간선거 경계감이 자금을 밀어냈다. 이후 비트코인은 선거 직후 저점에서... 유출을 부른 첫 충격은 10월 29일 바이낸스 해킹이었다. 수사 당국이 북한 해킹 조직 트레이더트레이터...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 비트코인(BTC), ETF 사흘 연속 순유출에도 7만 9,000달러 회복 바이낸스 해킹 충\n2. 이후 비트코인은 선거 직후 저점에서...\n3. 유출을 부른 첫 충격은 10월 29일 바이낸스 해킹이었다.",
+      "link": "http://coinreaders.com/267898",
+      "source": "naver",
+      "published": "2026-11-06T02:12:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Hackers backdoor Linux servers using trojanized CWP web server",
       "summary": "A new Linux malware called CWPdoor is being distributed through a trojanized version of cwpsrv, the web server behind the Control Web Panel (CWP) management interface. [...]",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-11-03T19:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "유럽에 번지는 냉장·냉동시설 해킹… 누가, 왜 식품을 상하게 만드나",
-      "summary": "보안기업 센티널원의 연구원 톰 헤겔은 로이터에 최근 사건에서 금전 요구가 없다는 점이 사보타주, 즉... 로이터가 프랑스 사건 당시 취재한 보안 전문가 켄 먼로는 공개된 관리장치와 알려진 취약점 때문에 공격 문턱이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 유럽에 번지는 냉장·냉동시설 해킹… 누가, 왜 식품을 상하게 만드나 보안기업 센티널원의 연\n2. 로이터가 프랑스 사건 당시 취재한 보안 전문가 켄 먼로는 공개된 관리장치와 알려진 취약점 ",
-      "link": "https://www.news2day.co.kr/article/20261103500345",
-      "source": "naver",
-      "published": "2026-11-03T18:58:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-54145 - OpenHuman: Bearer token leaked via approval gate session_id (SQLite plaintext + debug log + RPC response)",
+      "summary": "CVE ID :CVE-2026-54145\n  \nPublished : Nov. 5, 2026, 5:18 p.m. | 13 minutes ago\n  \nDescription :OpenHuman is an open-source agent harness available as a desktop application and Rust library. In affected versions before 0.57.5, the approval gate uses the JSON-RPC bearer token as an approval session identifier. This exposes the credential through persisted approval records, events, debug logs, and RPC responses, including during normal desktop operation. An attacker who obtains these artifacts can recover the token and access the core RPC interface while it remains valid. This can expose sensitive agent and integration data and permit privileged operations. Stable tokens remain usable until rotated; launch-specific tokens remain usable while the corresponding core instance is active. The fix is included in version 0.57.5.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-54145\n  \nPublished : Nov. 5, 2026, 5:18 p.m. | 13 minutes ago\n  \nDescription :OpenHuman is an open-source agent harness available as a desktop application and Rust library. In affected versions before 0.57.5, the approval gate uses the JSON-RPC bearer token as an approval session identifier. This exposes the credential through persisted approval records, events, debug logs, and RPC responses, including during normal desktop operation. An attacker who obtains these artifacts can recover the token and access the core RPC interface while it remains valid. This can expose sensitive agent and integration data and permit privileged operations. Stable tokens remain usable until rotated; launch-specific tokens remain usable while the corresponding core instance is active. The fix is included in version 0.57.5.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-54145\n2. 26.11.06 오전2:18\n3. OpenHuman is an open-source agent harness availabl",
+      "cve_id": "CVE-2026-54145",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-54145",
+      "source": "cvefeed",
+      "published": "2026-11-06T02:18:19+09:00",
+      "lang": "en"
+    },
     {
       "title": "Vulnerability Scans for Older Cisco IOS Vulnerability / Opt-Out Headers, (Thu, Nov 5th)",
       "summary": "This morning, I was browsing our honeypot data for any new and existing PHP exploit attempts. Instead, I first ran into some GeoServer exploits, but found them to be too boring to write up. This Cisco IOS exploit attempt was a bit more interesting. Still nothing new. I suspect this is for CVE-2023-20198.\r",
