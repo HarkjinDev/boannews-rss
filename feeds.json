@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-07T01:32:33.245972+09:00",
+  "fetched_at": "2026-11-07T02:01:37.432747+09:00",
   "security_news": [
+    {
+      "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
+      "summary": "Threat actors are attempting to exploit a recently disclosed security flaw impacting OpenSSH that can enable sign-ins to accounts that have no password set, according to Previdian.\n\nThe vulnerability, tracked as CVE-2026-123158 (CVSS score: 8.1) and codenamed SSHole (or *sshole), impacts Linux systems that run OpenSSH on the musl C library with Pluggable Authentication Modules (PAM) disabled,",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 해커, OpenSSH SSHole 취약점(CVE-2026-123158) 노린 공격\n2. 비밀번호 없는 계정 로그인 허용, root 권한 탈취 시도\n3. musl C 라이브러리+PAM 비활성화된 Linux 시스템 노려",
+      "link": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
+      "source": "thehackernews",
+      "published": "2026-11-07T00:21:49+09:00",
+      "lang": "en"
+    },
     {
       "title": "[주간政談<상>] '강서에 강선우가 있습니다'…무소속 의원실은 지금",
       "summary": "-민간 또는 공공에서 개인정보 유출 사고가 잇따르고는 있지만, 최고 수준의 보안이 적용돼야 하는 대통령과... 이 대통령은 취임 뒤 꾸준히 개인정보 보안을 강조해 왔는데, 내부에서 이런 일이 발생하다니, 아이러니한 것...",
@@ -5988,21 +6000,54 @@
       "source": "naver",
       "published": "2026-11-04T13:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "김인제 서울시의원 “자원봉사자 3만명 개인정보 유출…서울시 위탁관...",
-      "summary": "김 의원이 확보한 자료에 따르면 지난 9월 V클래스에 등록된 회원 2만9,553명 전원의 개인정보가 외부 해킹으로 유출됐다. 유출 항목은 아이디와 성명, 이메일 주소, 비밀번호, 휴대전화 번호 등이다. 다만 비밀번호와...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 김인제 서울시의원 “자원봉사자 3만명 개인정보 유출…서울시 위탁관...\n2. 김 의원이 확보한 자료에 따르면 지난 9월 V클래스에 등록된 회원 2만9,553명 전원의 \n3. 유출 항목은 아이디와 성명, 이메일 주소, 비밀번호, 휴대전화 번호 등이다.",
-      "link": "https://www.viva100.com/article/20261104500855",
-      "source": "naver",
-      "published": "2026-11-04T13:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-123792 - Symfony: Exponential and Quadratic Parse Times in the YAML Parser Let a Single Document Hold a Process",
+      "summary": "CVE ID :CVE-2026-123792\n  \nPublished : Nov. 6, 2026, 3:19 p.m. | 26 minutes ago\n  \nDescription :The Symfony Yaml components Inline and Parser, parse some YAML documents inefficiently, so that a small crafted document can take disproportionately long to process, keeping a PHP process busy for seconds or minutes, potentially causing a denial of service in Symfony versions prior to 5.4.56, 6.x prior to 6.4.50, 7.x prior to 7.4.23, and 8.x prior to 8.1.11.\n\nThe parser repeats work it has already done in several places. An embedded mapping in a flow sequence is parsed again for every scalar appended to it, and so are the collections nested in it, so the parse time grows exponentially with the nesting depth. The patterns matching mapping keys and tags scan a run of spaces once per character of the run, and each scalar of a flow collection is matched against a copy of the rest of the collection, so the parse time grows quadratically with the size of the input. Nested blocks are also copied at each nesting level, which consumes memory as well as time. A few other constructs, such as an empty sequence item followed by a blank line or an anchor named 0, trigger similar repeated work.\n\n\nAny code parsing untrusted YAML is affected, with the default flags. In Symfony 7.4 and later, that includes #[MapRequestPayload] when the Yaml component is installed and the endpoint does not restrict acceptFormat. A single unauthenticated request with a YAML content type keeps a PHP worker busy until max_execution_time. JSON documents are valid YAML, so a JSON payload sent with a YAML content type is enough for the flow collection case. In Symfony 6.4, #[MapRequestPayload] accepts YAML only when the application registers a yaml request format.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-123792\n  \nPublished : Nov. 6, 2026, 3:19 p.m. | 26 minutes ago\n  \nDescription :The Symfony Yaml components Inline and Parser, parse some YAML documents inefficiently, so that a small crafted document can take disproportionately long to process, keeping a PHP process busy for seconds or minutes, potentially causing a denial of service in Symfony versions prior to 5.4.56, 6.x prior to 6.4.50, 7.x prior to 7.4.23, and 8.x prior to 8.1.11.\n\nThe parser repeats work it has already done in several places. An embedded mapping in a flow sequence is parsed again for every scalar appended to it, and so are the collections nested in it, so the parse time grows exponentially with the nesting depth. The patterns matching mapping keys and tags scan a run of spaces once per character of the run, and each scalar of a flow collection is matched against a copy of the rest of the collection, so the parse time grows quadratically with the size of the input. Nested blocks are also copied at each nesting level, which consumes memory as well as time. A few other constructs, such as an empty sequence item followed by a blank line or an anchor named 0, trigger similar repeated work.\n\n\nAny code parsing untrusted YAML is affected, with the default flags. In Symfony 7.4 and later, that includes #[MapRequestPayload] when the Yaml component is installed and the endpoint does not restrict acceptFormat. A single unauthenticated request with a YAML content type keeps a PHP worker busy until max_execution_time. JSON documents are valid YAML, so a JSON payload sent with a YAML content type is enough for the flow collection case. In Symfony 6.4, #[MapRequestPayload] accepts YAML only when the application registers a yaml request format.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-123792\n2. 26.11.07 오전12:19\n3. The Symfony Yaml components Inline and Parser, par",
+      "cve_id": "CVE-2026-123792",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-123792",
+      "source": "cvefeed",
+      "published": "2026-11-07T00:19:58+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-87045 - NULL pointer dereference in the Zephyr HTTP/2 server when a header block is completed by a CONTINUATION frame",
+      "summary": "CVE ID :CVE-2026-87045\n  \nPublished : Nov. 6, 2026, 3:17 p.m. | 28 minutes ago\n  \nDescription :The HTTP/2 server in subsys/net/lib/http/http_server_http2.c clears the connection's stream binding at the start of every frame. handle_http_frame_header() executed client->current_stream = NULL unconditionally, but a CONTINUATION frame does not open a new stream and enter_http_frame_continuation_state() never re-bound one, so the rest of the header block was processed with client->current_stream unset. Two paths then write through the NULL pointer. A request for an unregistered resource, or a method the matched resource does not support, is answered by send_http2_404() or send_http2_405(), and both call send_headers_frame(), which unconditionally sets client->current_stream->headers_sent = true. A POST, PUT or PATCH to a registered dynamic resource reaches handle_http2_dynamic_resource(), which unlike its siblings (handle_http2_static_resource(), dynamic_get_del_opts_req_v2(), dynamic_post_put_req_v2()) had no client->current_stream == NULL guard, and stores through the pointer with client->current_stream->current_detail = dynamic_detail.\n\nAny peer that can reach the server can trigger this without authentication or prior state. A single stray CONTINUATION frame with END_HEADERS set, sent right after the client preface and requesting any unregistered path, is enough, because nothing rejected a CONTINUATION that no HEADERS frame had opened. A legitimate split header block (a HEADERS frame with END_HEADERS clear whose payload ends on a header-field boundary, then a CONTINUATION with END_HEADERS set) reaches the same state. The in-tree test test_http2_post_headers_with_continuation() did not catch this because it splits the header block mid field, which takes the handle_incomplete_http_header() shortcut that keeps the stream bound.\n\nThe result is a write to a fixed low address (a small offset into struct http2_stream_ctx), which faults on mainstream targets (flash/vector-table region on Cortex-M, or a trap under MPU/MMU null-pointer detection), and the default fatal-error handler halts the system. Impact is an unauthenticated, remotely triggerable denial of service against any device running the HTTP/2 server: the 404 path needs no particular resource to be registered, and HTTP/2 is built into CONFIG_HTTP_SERVER with cleartext h2c accepted, so TLS does not prevent it. Neither the target address nor the written value is attacker-controlled, so there is no confidentiality or integrity impact. Applications built without CONFIG_HTTP_SERVER are not affected.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-87045\n  \nPublished : Nov. 6, 2026, 3:17 p.m. | 28 minutes ago\n  \nDescription :The HTTP/2 server in subsys/net/lib/http/http_server_http2.c clears the connection's stream binding at the start of every frame. handle_http_frame_header() executed client->current_stream = NULL unconditionally, but a CONTINUATION frame does not open a new stream and enter_http_frame_continuation_state() never re-bound one, so the rest of the header block was processed with client->current_stream unset. Two paths then write through the NULL pointer. A request for an unregistered resource, or a method the matched resource does not support, is answered by send_http2_404() or send_http2_405(), and both call send_headers_frame(), which unconditionally sets client->current_stream->headers_sent = true. A POST, PUT or PATCH to a registered dynamic resource reaches handle_http2_dynamic_resource(), which unlike its siblings (handle_http2_static_resource(), dynamic_get_del_opts_req_v2(), dynamic_post_put_req_v2()) had no client->current_stream == NULL guard, and stores through the pointer with client->current_stream->current_detail = dynamic_detail.\n\nAny peer that can reach the server can trigger this without authentication or prior state. A single stray CONTINUATION frame with END_HEADERS set, sent right after the client preface and requesting any unregistered path, is enough, because nothing rejected a CONTINUATION that no HEADERS frame had opened. A legitimate split header block (a HEADERS frame with END_HEADERS clear whose payload ends on a header-field boundary, then a CONTINUATION with END_HEADERS set) reaches the same state. The in-tree test test_http2_post_headers_with_continuation() did not catch this because it splits the header block mid field, which takes the handle_incomplete_http_header() shortcut that keeps the stream bound.\n\nThe result is a write to a fixed low address (a small offset into struct http2_stream_ctx), which faults on mainstream targets (flash/vector-table region on Cortex-M, or a trap under MPU/MMU null-pointer detection), and the default fatal-error handler halts the system. Impact is an unauthenticated, remotely triggerable denial of service against any device running the HTTP/2 server: the 404 path needs no particular resource to be registered, and HTTP/2 is built into CONFIG_HTTP_SERVER with cleartext h2c accepted, so TLS does not prevent it. Neither the target address nor the written value is attacker-controlled, so there is no confidentiality or integrity impact. Applications built without CONFIG_HTTP_SERVER are not affected.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-87045\n2. 26.11.07 오전12:17\n3. The HTTP/2 server in subsys/net/lib/http/http_serv",
+      "cve_id": "CVE-2026-87045",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-87045",
+      "source": "cvefeed",
+      "published": "2026-11-07T00:17:26+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-59105 - Universal sysadmin credential vulnerability in Jumis",
+      "summary": "CVE ID :CVE-2026-59105\n  \nPublished : Nov. 6, 2026, 3:17 p.m. | 28 minutes ago\n  \nDescription :Jumis (formerly Tildes Jumis) creates and uses a Microsoft SQL Server login named ##Tilde_JumisAdmin## whose password is derived deterministically from a single non-secret input - the SQL Server name (@@servername). The derivation algorithm is hard-coded in the client application and is identical across every installation; it contains a hard-coded secret key for entropy. Because the only input (the server name) is not secret - the instance suffix is hard-coded and the host name is discoverable via the SQL Server Browser service (UDP 1434), the TDS pre-login response, or DNS/NetBIOS - any party able to reach a Jumis SQL Server can compute the password offline and authenticate. The ##Tilde_JumisAdmin## login is a member of the sysadmin server role. Successful authentication therefore grants full administrative control of the SQL Server instance and read/write access to every customer's accounting database hosted on it. The on-premise server installation also programmatically enables xp_cmdshell during routine operation, so sysadmin access escalates to operating-system command execution on the database server.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59105\n  \nPublished : Nov. 6, 2026, 3:17 p.m. | 28 minutes ago\n  \nDescription :Jumis (formerly Tildes Jumis) creates and uses a Microsoft SQL Server login named ##Tilde_JumisAdmin## whose password is derived deterministically from a single non-secret input - the SQL Server name (@@servername). The derivation algorithm is hard-coded in the client application and is identical across every installation; it contains a hard-coded secret key for entropy. Because the only input (the server name) is not secret - the instance suffix is hard-coded and the host name is discoverable via the SQL Server Browser service (UDP 1434), the TDS pre-login response, or DNS/NetBIOS - any party able to reach a Jumis SQL Server can compute the password offline and authenticate. The ##Tilde_JumisAdmin## login is a member of the sysadmin server role. Successful authentication therefore grants full administrative control of the SQL Server instance and read/write access to every customer's accounting database hosted on it. The on-premise server installation also programmatically enables xp_cmdshell during routine operation, so sysadmin access escalates to operating-system command execution on the database server.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-59105\n2. 26.11.07 오전12:17\n3. Jumis (formerly Tildes Jumis) creates and uses a M",
+      "cve_id": "CVE-2026-59105",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59105",
+      "source": "cvefeed",
+      "published": "2026-11-07T00:17:22+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-84161 - Authenticated remote denial of service through unbounded zlib decompression in storeAnalysisStatistics",
       "summary": "CVE ID :CVE-2026-84161\n  \nPublished : Nov. 6, 2026, 10:48 a.m. | 38 minutes ago\n  \nDescription :When an operator enables store.analysis_statistics_dir, a network client with PRODUCT_STORE permission for a product can call that product's storeAnalysisStatistics Thrift-over-HTTP method. CodeChecker 6.29.0 decodes the attacker-controlled Base64 string and passes the complete compressed input to one-shot zlib.decompress(). No maximum decompressed size is enforced.\n\n\n\nThis gives a correctly authorized, non-superuser store account a high-ratio memory and persistent-disk amplification primitive. The complete output is first materialized as a Python bytes object and is then written to the configured statistics directory. A sufficiently scaled payload can exhaust the API worker or host memory and impair CodeChecker availability.\n\n\n\nThe shipped value of store.analysis_statistics_dir is null, so the affected feature is disabled by default. The primary assessment does not rely on authentication being disabled. There is no authorization bypass and no path traversal in this report.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6871,21 +6916,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-44267",
       "source": "cvefeed",
       "published": "2026-11-04T03:18:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-115714 - Improper Certificate Validation in Elastic Docker Images Leading to Interception of TLS Connections",
-      "summary": "CVE ID :CVE-2026-115714\n  \nPublished : Nov. 3, 2026, 4:44 p.m. | 34 minutes ago\n  \nDescription :Improper Certificate Validation (CWE-295) in the operating system certificate bundle shipped in the Docker images of APM Server; Auditbeat, Filebeat, Heartbeat, Metricbeat and Packetbeat; Elastic Agent, including Fleet Server and Cloudbeat; Logstash, for TLS connections that use the operating system certificate bundle; Elastic connectors; Universal Profiling (host agent, collector and symbolizer); and Elastic Maps Server. This certificate bundle, a dependency of these products (Dependency on Vulnerable Third-Party Component, CWE-1395), could allow an attacker to intercept or modify TLS-protected traffic via Signature Spoofing by Key Theft (CAPEC-474). The certificate bundle includes root certificate authorities that signed eight eMudhra intermediate certificate authorities whose private keys are compromised. Anyone with these keys can issue a certificate for any host name that these products accept as trusted. Exploitation requires an attacker in a network position between the product and the remote party, who presents a certificate issued with one of the compromised keys.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-115714\n  \nPublished : Nov. 3, 2026, 4:44 p.m. | 34 minutes ago\n  \nDescription :Improper Certificate Validation (CWE-295) in the operating system certificate bundle shipped in the Docker images of APM Server; Auditbeat, Filebeat, Heartbeat, Metricbeat and Packetbeat; Elastic Agent, including Fleet Server and Cloudbeat; Logstash, for TLS connections that use the operating system certificate bundle; Elastic connectors; Universal Profiling (host agent, collector and symbolizer); and Elastic Maps Server. This certificate bundle, a dependency of these products (Dependency on Vulnerable Third-Party Component, CWE-1395), could allow an attacker to intercept or modify TLS-protected traffic via Signature Spoofing by Key Theft (CAPEC-474). The certificate bundle includes root certificate authorities that signed eight eMudhra intermediate certificate authorities whose private keys are compromised. Anyone with these keys can issue a certificate for any host name that these products accept as trusted. Exploitation requires an attacker in a network position between the product and the remote party, who presents a certificate issued with one of the compromised keys.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-115714\n2. 26.11.04 오전1:44\n3. Improper Certificate Validation (CWE-295) in the o",
-      "cve_id": "CVE-2026-115714",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115714",
-      "source": "cvefeed",
-      "published": "2026-11-04T01:44:18+09:00",
       "lang": "en"
     }
   ],
