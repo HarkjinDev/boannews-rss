@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-07T03:31:16.338879+09:00",
+  "fetched_at": "2026-11-07T04:02:31.675538+09:00",
   "security_news": [
+    {
+      "title": "Fake security tools on GitHub push backdoors and infostealers",
+      "summary": "Cybersecurity professionals are being targeted with infected security projects on GitHub that deploy a backdoor and information stealer malware. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Fake security tools on GitHub push backdoors and i",
+      "link": "https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/",
+      "source": "bleepingcomputer",
+      "published": "2026-11-07T03:46:52+09:00",
+      "lang": "en"
+    },
     {
       "title": "바이낸스 63억 달러 4시간 만에 털렸다…발단은 6월 직원이 받은 변조 설...",
       "summary": "북한 연계 조직 트레이더트레이터(TraderTraitor)의 가짜 채용 캠페인과 관련된 위장 회사도 올해 최소 4곳 확인했다.SEAL은 다른 대형 해킹에서도 비슷한 다단계 침투 패턴을 찾았다. 3억 8,800만 달러가 털린 비트겟 해킹...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-11-04T13:50:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "'가짜 면접'에 털린 190억...北 해커, 18개월간 수십 건 공격",
-      "summary": "3일(현지시간) 블록체인 분석업체 체이널리시스는 북한 연계 해킹 조직이 지난 18개월간 가짜 면접과... 체이널리시스는 \"바이낸스 공격 역시 장기간 축적된 해킹 경험과 사전 준비의 결과일 가능성이 있다\"고 평가했다. 톰...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. '가짜 면접'에 털린 190억...北 해커, 18개월간 수십 건 공격 3일(현지시간) 블록\n2. 체이널리시스는 \"바이낸스 공격 역시 장기간 축적된 해킹 경험과 사전 준비의 결과일 가능성이",
-      "link": "https://n.news.naver.com/mnews/article/119/0003151225?sid=101",
-      "source": "naver",
-      "published": "2026-11-04T13:46:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6871,36 +6871,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-110288",
       "source": "cvefeed",
       "published": "2026-11-04T07:50:39+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-120954 - Silent element-count truncation via 32-bit bit-length overflow in packed-bit vector views",
-      "summary": "CVE ID :CVE-2026-120954\n  \nPublished : Nov. 3, 2026, 6:45 p.m. | 27 minutes ago\n  \nDescription :A weakness in the BSON library's handling of a specialized binary vector data type allows an arithmetic wraparound when computing the number of elements described by an oversized attacker-supplied value. On builds where the platform word size is 32 bits, an application that parses untrusted BSON data can be made to process only a small fraction of the supplied elements while the operation reports success, producing results that disagree with byte-oriented accessors and with 64-bit builds of the same library. No authentication or user interaction is required beyond getting the application to parse the data. The impact is limited to data integrity; memory safety is not affected and no information is disclosed.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-120954\n  \nPublished : Nov. 3, 2026, 6:45 p.m. | 27 minutes ago\n  \nDescription :A weakness in the BSON library's handling of a specialized binary vector data type allows an arithmetic wraparound when computing the number of elements described by an oversized attacker-supplied value. On builds where the platform word size is 32 bits, an application that parses untrusted BSON data can be made to process only a small fraction of the supplied elements while the operation reports success, producing results that disagree with byte-oriented accessors and with 64-bit builds of the same library. No authentication or user interaction is required beyond getting the application to parse the data. The impact is limited to data integrity; memory safety is not affected and no information is disclosed.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-120954\n2. 26.11.04 오전3:45\n3. A weakness in the BSON library's handling of a spe",
-      "cve_id": "CVE-2026-120954",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-120954",
-      "source": "cvefeed",
-      "published": "2026-11-04T03:45:40+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82976 - Image-customization-controller: unauthenticated plaintext image server with directory listing exposes ignition images containing cluster pull secret",
-      "summary": "CVE ID :CVE-2026-82976\n  \nPublished : Nov. 3, 2026, 6:36 p.m. | 36 minutes ago\n  \nDescription :A flaw was found in the image-customization-controller used in OpenShift's bare metal provisioning stack. The controller registers an HTTP file server on port 8084 with no authentication. The custom imageFileSystem implementation exposes a browsable HTML directory listing of all registered images at the root path. The only access control on per-host images is the random UUID filename; the directory listing discloses those UUIDs to any caller on the provisioning network. Each served image embeds an Ignition config containing the base64-encoded cluster pull secret, optional IRONIC_RAMDISK_SSH_KEY, proxy settings, and per-host NetworkManager keyfiles. An adjacent network attacker can enumerate all image UUIDs via directory listing, download any image, extract the embedded Ignition config, and recover the cluster pull secret and SSH key.\n\n### Evidence\n**pkg/imagehandler/imagefilesystem.go — root directory is browsable and enumerates all UUID image names**\n```go\nfunc (f *imageFileSystem) Readdir(n int) ([]fs.FileInfo, error) {\n    f.mu.Lock()\n    defer f.mu.Unlock()\n    result := []fs.FileInfo{}\n    for _, im := range f.images {\n        result = append(result, im)\n    }\n    return result, nil\n}\n\nfunc (f *imageFileSystem) Open(name string) (http.File, error) {\n    f.log.Info(\"Open\", \"path\", name)\n    if name == \"/\" {\n        return f, nil\n    }\n    ...\n```\n\n**cmd/controller/main.go — file server bound on all interfaces without auth or TLS**\n```go\nhttp.Handle(\"/\", http.FileServer(imageServer.FileSystem()))\n\ngo func() {\n    server := &http.Server{\n        Addr:              imagesBindAddr,   // default \":8084\"\n        ReadHeaderTimeout: 5 * time.Second,\n    }\n    err := server.ListenAndServe()\n```\n\n**pkg/ignition/service_config.go:94-100 — pull secret is embedded in every served image**\n```go\nfunc (b *ignitionBuilder) authFile() ignition_config_types_32.File {\n    source := \"data:;base64,\" + strings.TrimSpace(b.ironicAgentPullSecret)\n    return ignition_config_types_32.File{\n        Node: ignition_config_types_32.Node{Path: \"/etc/authfile.json\"},\n        ...\n```\n\n### Attack Pattern\nAdjacent provisioning-network client → GET / lists UUID image names → download ISO/initramfs → extract embedded Ignition → recover cluster pull secret and SSH key.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82976\n  \nPublished : Nov. 3, 2026, 6:36 p.m. | 36 minutes ago\n  \nDescription :A flaw was found in the image-customization-controller used in OpenShift's bare metal provisioning stack. The controller registers an HTTP file server on port 8084 with no authentication. The custom imageFileSystem implementation exposes a browsable HTML directory listing of all registered images at the root path. The only access control on per-host images is the random UUID filename; the directory listing discloses those UUIDs to any caller on the provisioning network. Each served image embeds an Ignition config containing the base64-encoded cluster pull secret, optional IRONIC_RAMDISK_SSH_KEY, proxy settings, and per-host NetworkManager keyfiles. An adjacent network attacker can enumerate all image UUIDs via directory listing, download any image, extract the embedded Ignition config, and recover the cluster pull secret and SSH key.\n\n### Evidence\n**pkg/imagehandler/imagefilesystem.go — root directory is browsable and enumerates all UUID image names**\n```go\nfunc (f *imageFileSystem) Readdir(n int) ([]fs.FileInfo, error) {\n    f.mu.Lock()\n    defer f.mu.Unlock()\n    result := []fs.FileInfo{}\n    for _, im := range f.images {\n        result = append(result, im)\n    }\n    return result, nil\n}\n\nfunc (f *imageFileSystem) Open(name string) (http.File, error) {\n    f.log.Info(\"Open\", \"path\", name)\n    if name == \"/\" {\n        return f, nil\n    }\n    ...\n```\n\n**cmd/controller/main.go — file server bound on all interfaces without auth or TLS**\n```go\nhttp.Handle(\"/\", http.FileServer(imageServer.FileSystem()))\n\ngo func() {\n    server := &http.Server{\n        Addr:              imagesBindAddr,   // default \":8084\"\n        ReadHeaderTimeout: 5 * time.Second,\n    }\n    err := server.ListenAndServe()\n```\n\n**pkg/ignition/service_config.go:94-100 — pull secret is embedded in every served image**\n```go\nfunc (b *ignitionBuilder) authFile() ignition_config_types_32.File {\n    source := \"data:;base64,\" + strings.TrimSpace(b.ironicAgentPullSecret)\n    return ignition_config_types_32.File{\n        Node: ignition_config_types_32.Node{Path: \"/etc/authfile.json\"},\n        ...\n```\n\n### Attack Pattern\nAdjacent provisioning-network client → GET / lists UUID image names → download ISO/initramfs → extract embedded Ignition → recover cluster pull secret and SSH key.\n  \nSeverity: 7.1 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-82976\n2. 26.11.04 오전3:36\n3. A flaw was found in the image-customization-contro",
-      "cve_id": "CVE-2026-82976",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82976",
-      "source": "cvefeed",
-      "published": "2026-11-04T03:36:24+09:00",
       "lang": "en"
     }
   ],
