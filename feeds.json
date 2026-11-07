@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-07T22:01:45.614947+09:00",
+  "fetched_at": "2026-11-07T22:31:03.127079+09:00",
   "security_news": [
     {
       "title": "[아주경제 오늘의 뉴스 종합] 美 '블루웨이브' 충격에 세계 증시 시총 하...",
@@ -5868,45 +5868,24 @@
       "source": "naver",
       "published": "2026-11-04T22:34:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "프랑스서 혈액은행 냉장고 해킹…슈퍼마켓 이어 표적 확산",
-      "summary": "프랑스 보건부와 사이버보안 당국은 이번 사건의 정확한 경위를 조사하고 있다. 이번 사태는 프랑스를 비롯한 유럽 여러 국가에서 슈퍼마켓의 냉장·냉동시설을 겨냥한 해킹 공격이 잇따르는 가운데 발생했다. 해커들은...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 프랑스서 혈액은행 냉장고 해킹…슈퍼마켓 이어 표적 확산 프랑스 보건부와 사이버보안 당국은 \n2. 이번 사태는 프랑스를 비롯한 유럽 여러 국가에서 슈퍼마켓의 냉장·냉동시설을 겨냥한 해킹 공",
-      "link": "https://n.news.naver.com/mnews/article/421/0009271022?sid=104",
-      "source": "naver",
-      "published": "2026-11-04T22:22:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "솔라나 92.52달러…시장 위험회피에 88~91달러 지지 시험대",
-      "summary": "바이낸스 해킹 우려와 미국 현물 비트코인 상장지수펀드(ETF) 자금 유출, 미국 중간선거 불확실성이... 코인마켓캡 AI 분석은 미국 현물 비트코인 ETF에서 자금 유출이 이어지고 있고, 최근 바이낸스 해킹으로 불안감이...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 솔라나 92.52달러…시장 위험회피에 88~91달러 지지 시험대 바이낸스 해킹 우려와 미국\n2. 코인마켓캡 AI 분석은 미국 현물 비트코인 ETF에서 자금 유출이 이어지고 있고, 최근 바",
-      "link": "http://coinreaders.com/267520",
-      "source": "naver",
-      "published": "2026-11-04T22:12:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "리플 고래 순유출 74.5% 급증…XRP 1.30달러 돌파 신호탄인가?",
-      "summary": "비트코인(BTC) 역시 바이낸스 해킹 여파로 6주 만의 최저 수준인 7만6,000달러 부근까지 하락한 뒤 7만8,000달러선을 회복하며 시장 반등을 뒷받침했다. 온체인 분석업체 크립토퀀트(CryptoQuant)에 따르면, 여러...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 리플 고래 순유출 74.5% 급증…XRP 1.30달러 돌파 신호탄인가?\n2. 비트코인(BTC) 역시 바이낸스 해킹 여파로 6주 만의 최저 수준인 7만6,000달러 부근\n3. 온체인 분석업체 크립토퀀트(CryptoQuant)에 따르면, 여러...",
-      "link": "http://coinreaders.com/267519",
-      "source": "naver",
-      "published": "2026-11-04T22:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-123776 - RRD::CGI::Image versions through 0.01 for Perl pass CGI query parameters containting \"tz\" to tzset(), , so a FIFO or device path blocks the CGI process",
+      "summary": "CVE ID :CVE-2026-123776\n  \nPublished : Nov. 7, 2026, 11:51 a.m. | 24 minutes ago\n  \nDescription :RRD::CGI::Image versions through 0.01 for Perl pass CGI query parameters containting \"tz\" to tzset(), , so a FIFO or device path blocks the CGI process.\n\nThe normalize_params method sends any query key matching /tz/i to tz(), which sets $ENV{TZ} to that value, with no validation. It then calls tzset(). glibc treats a TZ value starting with / or : as a file path and opens it, so a value naming a FIFO or a blocking device stalls the process inside tzset().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-123776\n  \nPublished : Nov. 7, 2026, 11:51 a.m. | 24 minutes ago\n  \nDescription :RRD::CGI::Image versions through 0.01 for Perl pass CGI query parameters containting \"tz\" to tzset(), , so a FIFO or device path blocks the CGI process.\n\nThe normalize_params method sends any query key matching /tz/i to tz(), which sets $ENV{TZ} to that value, with no validation. It then calls tzset(). glibc treats a TZ value starting with / or : as a file path and opens it, so a value naming a FIFO or a blocking device stalls the process inside tzset().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-123776\n2. 26.11.07 오후8:51\n3. RRD::CGI::Image versions through 0.01 for Perl pas",
+      "cve_id": "CVE-2026-123776",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-123776",
+      "source": "cvefeed",
+      "published": "2026-11-07T20:51:18+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-83495 - Trainer: trainer: trainjob env passthrough enables valuefrom.secretkeyref injection for namespace secret exfiltration",
       "summary": "CVE ID :CVE-2026-83495\n  \nPublished : Nov. 7, 2026, 7:17 a.m. | 28 minutes ago\n  \nDescription :A flaw was found in the Trainer v2 TrainJob API. A user with permissions to create TrainJobs can exploit this by injecting `valueFrom.secretKeyRef` into environment variable definitions. This allows them to read and exfiltrate sensitive information (secrets) from the namespace, leading to a privilege escalation. This occurs when the TrainJob Role-Based Access Control (RBAC) is broader than the Secret read RBAC.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6700,21 +6679,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-119776",
       "source": "cvefeed",
       "published": "2026-11-04T23:15:32+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "The Classics Return: Vulnerable E-Mail Scripts, (Wed, Nov 4th)",
-      "summary": "One of the early web application vulnerabilities I remember was CVE-2000-0411 [CVE]. This was a simple vulnerability in a CGI-bin script used to send e-mail. The vulnerability was pretty straightforward: Adding additional parameters to the URL leaked environment variables. Other vulnerabilities allowed setting the \"To\" address and were heavily abused by spammers. And if parameters were passed directly to the sendmail binary, similar vulnerabilities could allow arbitrary code execution.\r",
-      "description": "One of the early web application vulnerabilities I remember was CVE-2000-0411 [CVE]. This was a simple vulnerability in a CGI-bin script used to send e-mail. The vulnerability was pretty straightforward: Adding additional parameters to the URL leaked environment variables. Other vulnerabilities allowed setting the \"To\" address and were heavily abused by spammers. And if parameters were passed directly to the sendmail binary, similar vulnerabilities could allow arbitrary code execution.\r",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2000-0411\n2. SANS_ISC\n3. One of the early web application vulnerabilities I",
-      "cve_id": "CVE-2000-0411",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33488",
-      "source": "sans_isc",
-      "published": "2026-11-04T22:24:13+09:00",
       "lang": "en"
     }
   ],
