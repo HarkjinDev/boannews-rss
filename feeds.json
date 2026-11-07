@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-07T16:31:12.763329+09:00",
+  "fetched_at": "2026-11-07T17:01:27.965762+09:00",
   "security_news": [
+    {
+      "title": "[AIS 2026] 마크애니, AI로 화면 촬영 탐지…비가시성 워터마크로 유출 ...",
+      "summary": "마크애니는 디지털 워터마킹, 위변조 방지, 개인정보 보호 기술을 바탕으로 기업 사이버보안과 스마트시티, 국방 보안 등 다양한 분야에서 사업을 전개하고 있다. 제품 공급과 함께 위험 기반의 통합 보안 체계를...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 마크애니, AI로 화면 촬영 탐지 기술 공개\n2. 비가시성 워터마크로 중요 문서 유출 방지\n3. 기업 사이버보안, 스마트시티, 국방 보안 강화",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209373",
+      "source": "naver",
+      "published": "2026-11-07T16:58:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "대구로 해킹 여파에 산하기관 보안 일제 점검",
       "summary": "대구로,해킹,보안점검 대구시청 산격청사 전경. 뉴스클레임DB 최근 공공배달앱 대구로 해킹과 금융권 정보 유출 등으로 시민들의 보안 불안감이 고조되자 대구시가 대규모 사이버보안 특별점검에 나섰다. 대구시는 오는...",
@@ -5988,21 +6000,39 @@
       "source": "naver",
       "published": "2026-11-04T19:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "미국 교육서비스 기업 해킹…130만 명 이상 개인정보 유출",
-      "summary": "미국 교육행정 소프트웨어 기업 프런트라인 에듀케이션(Frontline Education)이 해킹 공격을 받아 130만 명 이상의 개인정보가 유출된 것으로 파악됐다. 유출 정보에는 미국 사회보장번호(SSN)를 비롯해 여권번호...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 미국 교육서비스 기업 해킹…130만 명 이상 개인정보 유출 미국 교육행정 소프트웨어 기업 \n2. 유출 정보에는 미국 사회보장번호(SSN)를 비롯해 여권번호...",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209310",
-      "source": "naver",
-      "published": "2026-11-04T19:28:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-83495 - Trainer: trainer: trainjob env passthrough enables valuefrom.secretkeyref injection for namespace secret exfiltration",
+      "summary": "CVE ID :CVE-2026-83495\n  \nPublished : Nov. 7, 2026, 7:17 a.m. | 28 minutes ago\n  \nDescription :A flaw was found in the Trainer v2 TrainJob API. A user with permissions to create TrainJobs can exploit this by injecting `valueFrom.secretKeyRef` into environment variable definitions. This allows them to read and exfiltrate sensitive information (secrets) from the namespace, leading to a privilege escalation. This occurs when the TrainJob Role-Based Access Control (RBAC) is broader than the Secret read RBAC.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-83495\n  \nPublished : Nov. 7, 2026, 7:17 a.m. | 28 minutes ago\n  \nDescription :A flaw was found in the Trainer v2 TrainJob API. A user with permissions to create TrainJobs can exploit this by injecting `valueFrom.secretKeyRef` into environment variable definitions. This allows them to read and exfiltrate sensitive information (secrets) from the namespace, leading to a privilege escalation. This occurs when the TrainJob Role-Based Access Control (RBAC) is broader than the Secret read RBAC.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-83495\n2. 26.11.07 오후4:17\n3. A flaw was found in the Trainer v2 TrainJob API. A",
+      "cve_id": "CVE-2026-83495",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-83495",
+      "source": "cvefeed",
+      "published": "2026-11-07T16:17:04+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-120515 - SEOPress <= 10.3 - Authenticated (Subscriber+) Stored Cross-Site Scripting via 'seopress_google_analytics_affiliate_tracking' and 'seopress_google_analytics_download_tracking' Parameters",
+      "summary": "CVE ID :CVE-2026-120515\n  \nPublished : Nov. 7, 2026, 7:17 a.m. | 28 minutes ago\n  \nDescription :The SEOPress – AI SEO Plugin & On-site SEO plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'seopress_google_analytics_affiliate_tracking' and 'seopress_google_analytics_download_tracking' settings in versions up to, and including, 10.3. This is due to insufficient input sanitization and output escaping on these settings as they are interpolated into the inline Google Analytics tracking snippet by seopress_google_analytics_js(): the affiliate value receives no sanitization at all (it is omitted from inc/admin/sanitize/Sanitize.php) and lands inside a",
+      "description": "CVE ID :CVE-2026-120515\n  \nPublished : Nov. 7, 2026, 7:17 a.m. | 28 minutes ago\n  \nDescription :The SEOPress – AI SEO Plugin & On-site SEO plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'seopress_google_analytics_affiliate_tracking' and 'seopress_google_analytics_download_tracking' settings in versions up to, and including, 10.3. This is due to insufficient input sanitization and output escaping on these settings as they are interpolated into the inline Google Analytics tracking snippet by seopress_google_analytics_js(): the affiliate value receives no sanitization at all (it is omitted from inc/admin/sanitize/Sanitize.php) and lands inside a",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-120515\n2. 26.11.07 오후4:17\n3. The SEOPress – AI SEO Plugin & On-site SEO plugin ",
+      "cve_id": "CVE-2026-120515",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-120515",
+      "source": "cvefeed",
+      "published": "2026-11-07T16:17:03+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-44519 - liboqs: Missing value barrier in FO implicit rejection path (FrodoKEM, NTRU, and others)",
       "summary": "CVE ID :CVE-2026-44519\n  \nPublished : Nov. 6, 2026, 9:22 p.m. | 39 minutes ago\n  \nDescription :liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. Prior to 0.16.0, the ct_select function in src/kem/frodokem/external/util.c for the FrodoKEM-640, FrodoKEM-976, and FrodoKEM-1344 AES and SHAKE reference variants lacks a value barrier in the Fujisaki-Okamoto implicit-rejection path. When compiled with Clang 17 or later at an affected optimization level such as -Os, the compiler can emit a secret-dependent conditional load, causing the real and rejection secret paths to leave distinguishable cache residency after successful and failed decapsulation. A local attacker able to perform repeated cache-timing measurements may use this oracle as part of a private-key recovery attack. Default -O3 builds vectorize both source loads and do not exhibit the reported behavior, and the advisory does not report the same generated memory-access pattern in NTRU, NTRU-Prime, BIKE, HQC, Classic McEliece, Kyber, or the already-barriered ML-KEM implementation. This issue is fixed in version 0.16.0.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
