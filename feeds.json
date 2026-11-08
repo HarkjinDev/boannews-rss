@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-08T22:32:11.709569+09:00",
+  "fetched_at": "2026-11-08T23:02:45.593507+09:00",
   "security_news": [
+    {
+      "title": "[특파원리포트] 개인정보 유출이 AI 탓이라고?",
+      "summary": "日 IT기업 GMO 등 잇단 해킹 인공지능을 원인 지목했지만 시스템 취약점 미리 알고서도 사후약방문 같은... 지난해 3월 도쿄에 온 직후 한국 통신사 해킹 사태로 유심을 바꿀 수도 없어 전전긍긍했는데, 이제는 일본에서도...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [특파원리포트] 개인정보 유출이 AI 탓이라고?\n2. 日 IT기업 GMO 등 잇단 해킹 인공지능을 원인 지목했지만 시스템 취약점 미리 알고서도 \n3. 지난해 3월 도쿄에 온 직후 한국 통신사 해킹 사태로 유심을 바꿀 수도 없어 전전긍긍했는데",
+      "link": "https://n.news.naver.com/mnews/article/022/0004173484?sid=110",
+      "source": "naver",
+      "published": "2026-11-08T22:49:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "SM·계열사 개인정보 유출…주민번호·계약정보까지 탈탈 털렸나?(1부)",
       "summary": "관계당국과 사고 경위를 조사하는 한편 외부 전문기관과 협력해 정밀 조사와 추가 보안점검을 추진할... 보안업계 관계자는 \"이름과 연락처에 소속·직무 정보까지 결합되면 정상적인 업무 연락을 가장한 사칭에 악용될 수...",
@@ -4416,21 +4428,24 @@
       "source": "naver",
       "published": "2026-11-05T23:38:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "쿠팡, 4200억대 과징금 집행정지 기각…“검토 후 대응”",
-      "summary": "인증 서명키 관리와 접근통제 등 기본적인 보안 조치가 미흡했다는 판단에서다. 이는 단일 개인정보 유출 사고에 부과된 과징금으로는 역대 최대 규모다. 개보위는 과징금과 함께 유사 사고 재발 방지를 위한 안전조치...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 쿠팡, 4200억 과징금 집행정지 기각\n2. 개인정보 유출 사고, 보안 조치 미흡 지적\n3. 역대 최대 규모 과징금, 재발 방지 안전조치 요구",
-      "link": "https://n.news.naver.com/mnews/article/018/0006404641?sid=101",
-      "source": "naver",
-      "published": "2026-11-05T22:34:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-124483 - OpenEMR before 8.4.0 Improper Authorization via Prescription REST API",
+      "summary": "CVE ID :CVE-2026-124483\n  \nPublished : Nov. 8, 2026, 1:16 p.m. | 17 minutes ago\n  \nDescription :OpenEMR before 8.4.0 contains an incorrect authorization vulnerability because the prescription REST API routes check the patients.med ACL instead of patients.rx and request no specific permission bit, so read-only Medical/History access passes the check. Authenticated staff users can reuse the UI-exposed APICSRFTOKEN to enumerate prescription UUIDs, forge prescriptions for arbitrary patients, and deactivate existing prescriptions tenant-wide.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-124483\n  \nPublished : Nov. 8, 2026, 1:16 p.m. | 17 minutes ago\n  \nDescription :OpenEMR before 8.4.0 contains an incorrect authorization vulnerability because the prescription REST API routes check the patients.med ACL instead of patients.rx and request no specific permission bit, so read-only Medical/History access passes the check. Authenticated staff users can reuse the UI-exposed APICSRFTOKEN to enumerate prescription UUIDs, forge prescriptions for arbitrary patients, and deactivate existing prescriptions tenant-wide.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-124483\n2. 26.11.08 오후10:16\n3. OpenEMR before 8.4.0 contains an incorrect authori",
+      "cve_id": "CVE-2026-124483",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-124483",
+      "source": "cvefeed",
+      "published": "2026-11-08T22:16:02+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-97192 - Secure Custom Fields < 6.9.8 - Contributor+ Admin-Restricted Custom Field Update via Post Save Path",
       "summary": "CVE ID :CVE-2026-97192\n  \nPublished : 2026年11月8日 06:17 | 1 小时，12 分钟 ago\n  \nDescription :The Secure Custom Fields WordPress plugin before 6.9.8 does not re-apply its field-group location rules when persisting values submitted through the post editor save path, allowing users with contributor-level access and above to write custom fields the site restricted to administrators onto their own posts.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -5119,21 +5134,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-82910",
       "source": "cvefeed",
       "published": "2026-11-05T23:17:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-105330 - Apache OFBiz: Use of Hard-coded Cryptographic Key in JWT Token Authentication Enables Unauthenticated Administrative Access",
-      "summary": "CVE ID :CVE-2026-105330\n  \nPublished : Nov. 5, 2026, 1:40 p.m. | 22 minutes ago\n  \nDescription :Use of Hard-coded Cryptographic Key in JWT token authentication in Apache OFBiz 24.09.06 and 24.09.07 on all platforms allows an unauthenticated, network-reachable attacker to obtain full administrative access via a forged JWT signed with the factory-default security.token.key value that CVE-2026-31986 removed from newly generated configurations, on a deployment that upgraded from a release predating that fix while retaining its existing security.properties with security.internal.sso.enabled set to true. Users are recommended to upgrade to version 24.09.08. Upgrading alone does not replace an already-configured key: deployments that carried framework/security/config/security.properties forward from a release predating the CVE-2026-31986 fix must also run './gradlew rotateSecretKeys' after upgrading, since the existing generateSecretKeys task leaves an already-set value untouched.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-105330\n  \nPublished : Nov. 5, 2026, 1:40 p.m. | 22 minutes ago\n  \nDescription :Use of Hard-coded Cryptographic Key in JWT token authentication in Apache OFBiz 24.09.06 and 24.09.07 on all platforms allows an unauthenticated, network-reachable attacker to obtain full administrative access via a forged JWT signed with the factory-default security.token.key value that CVE-2026-31986 removed from newly generated configurations, on a deployment that upgraded from a release predating that fix while retaining its existing security.properties with security.internal.sso.enabled set to true. Users are recommended to upgrade to version 24.09.08. Upgrading alone does not replace an already-configured key: deployments that carried framework/security/config/security.properties forward from a release predating the CVE-2026-31986 fix must also run './gradlew rotateSecretKeys' after upgrading, since the existing generateSecretKeys task leaves an already-set value untouched.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-105330\n2. 26.11.05 오후10:40\n3. Use of Hard-coded Cryptographic Key in JWT token a",
-      "cve_id": "CVE-2026-105330",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-105330",
-      "source": "cvefeed",
-      "published": "2026-11-05T22:40:03+09:00",
       "lang": "en"
     }
   ],
