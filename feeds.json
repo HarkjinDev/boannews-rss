@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-08T23:02:45.593507+09:00",
+  "fetched_at": "2026-11-08T23:31:25.707058+09:00",
   "security_news": [
+    {
+      "title": "글로벌 인증서 기업 디지서트 해킹…고객 여권·운전면허증 등 신원확인...",
+      "summary": "글로벌 디지털 인증서 발급기업 디지서트(DigiCert)가 내부 업무 시스템의 보안 설정 오류와 접근권한 관리 취약점으로 해킹 피해를 입었다. 공격자는 외부에서 임의로 계정을 생성한 뒤 과거 고객정보가 보관된 시스템에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 디지서트, 신원확인 정보 보관 시스템 해킹 피해\n2. 보안 설정 오류·계정 관리 취약점으로 고객 정보 유출\n3. 여권·운전면허증 등 신원 정보 침해 가능성",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209392",
+      "source": "naver",
+      "published": "2026-11-08T23:10:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[특파원리포트] 개인정보 유출이 AI 탓이라고?",
       "summary": "日 IT기업 GMO 등 잇단 해킹 인공지능을 원인 지목했지만 시스템 취약점 미리 알고서도 사후약방문 같은... 지난해 3월 도쿄에 온 직후 한국 통신사 해킹 사태로 유심을 바꿀 수도 없어 전전긍긍했는데, 이제는 일본에서도...",
@@ -5120,21 +5132,6 @@
       "source": "krcert_notice",
       "published": "2026-11-06T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-82910 - Apache OFBiz: renderLink compiles link parameters as FreeMarker source",
-      "summary": "CVE ID :CVE-2026-82910\n  \nPublished : Nov. 5, 2026, 2:17 p.m. | 57 minutes ago\n  \nDescription :Improper Neutralization of Special Elements Used in a Template Engine ('Server-Side Template Injection') in MacroScreenRenderer in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote authenticated attacker holding only the two view permissions of a control-servlet webapp (e.g. CATALOG_VIEW and OFBTOOLS_VIEW on /catalog, held by OFBiz's own shipped order-entry clerk role) to execute arbitrary operating system commands as the OFBiz service account with a single GET request, by placing an apostrophe followed by FreeMarker expression source in a screen link parameter value, because renderLink concatenates link parameter values verbatim between apostrophes into an unquoted, unescaped template-source string that is compiled and evaluated at render time, allowing the injected expression to reach the allow-listed FlexibleStringExpander.expandString call and, through a runtime-assembled Groovy interpolation, unsandboxed code execution. Users are recommended to upgrade to version 24.09.08, which fixes this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82910\n  \nPublished : Nov. 5, 2026, 2:17 p.m. | 57 minutes ago\n  \nDescription :Improper Neutralization of Special Elements Used in a Template Engine ('Server-Side Template Injection') in MacroScreenRenderer in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote authenticated attacker holding only the two view permissions of a control-servlet webapp (e.g. CATALOG_VIEW and OFBTOOLS_VIEW on /catalog, held by OFBiz's own shipped order-entry clerk role) to execute arbitrary operating system commands as the OFBiz service account with a single GET request, by placing an apostrophe followed by FreeMarker expression source in a screen link parameter value, because renderLink concatenates link parameter values verbatim between apostrophes into an unquoted, unescaped template-source string that is compiled and evaluated at render time, allowing the injected expression to reach the allow-listed FlexibleStringExpander.expandString call and, through a runtime-assembled Groovy interpolation, unsandboxed code execution. Users are recommended to upgrade to version 24.09.08, which fixes this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-82910\n2. 26.11.05 오후11:17\n3. Improper Neutralization of Special Elements Used i",
-      "cve_id": "CVE-2026-82910",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82910",
-      "source": "cvefeed",
-      "published": "2026-11-05T23:17:05+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
