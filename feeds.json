@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-10T02:01:31.373062+09:00",
+  "fetched_at": "2026-11-10T02:31:33.186480+09:00",
   "security_news": [
+    {
+      "title": "[패트롤] 인천시의회 문복위-방지현-김광훈-조민경-김동민-신영희",
+      "summary": "이어 신한은행의 최근 보안사고에 따른 개인정보 유출 문제를 언급하며 재단의 피해 여부와 자산관리 안정성 점검을 주문했다. 또한 2024년 1월 1일부터 2027년 7월 7일까지인 운용 약정기간을 고려해 향후 재계약...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 신한은행, 보안사고로 개인정보 유출 발생\n2. 재단 피해 여부 및 자산관리 안정성 점검 주문\n3. 2024년~2027년 운용 약정기간 고려",
+      "link": "https://www.ekn.kr/web/view.php?key=20261110025427495",
+      "source": "naver",
+      "published": "2026-11-10T02:20:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Hackers exploit SSHole OpenSSH flaw to breach Linux systems",
       "summary": "Hackers are actively exploiting the \"SSHole\" vulnerability (CVE-2026-123158) in OpenSSH to execute commands, steal credentials, and establish persistent access. [...]",
@@ -4644,21 +4656,24 @@
       "source": "naver",
       "published": "2026-11-07T03:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
-      "summary": "QNAP urges users to update Plex Media Server to the latest version available in the QNAP App Center, as hackers are exploiting the Plex2Shell vulnerability chain. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. QNAP NAS, Plex2Shell 공격으로 취약점 악용\n2. 해커, Plex Media Server 취약점 이용해 침투\n3. QNAP, 최신 버전 업데이트 권고",
-      "link": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
-      "source": "bleepingcomputer",
-      "published": "2026-11-07T02:04:23+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-124683 - Eclipse Langium Algorithmic Complexity Denial of Service",
+      "summary": "CVE ID :CVE-2026-124683\n  \nPublished : Nov. 9, 2026, 4:02 p.m. | 29 minutes ago\n  \nDescription :Eclipse Langium versions 3.2.0 through 4.4.0 contain an inefficient algorithmic complexity issue (CWE-407) in the opt-in IndentationAwareTokenBuilder and IndentationAwareLexer. When producing DEDENT tokens, the token builder recomputes line numbers by re-scanning the entire preceding document text. A document whose indentation changes on most lines then takes quadratic time to tokenize. Because tokenization is synchronous, a crafted document of a few hundred kilobytes can block the Node.js event loop for tens of seconds. That causes a DoS for every user served by the same process. Languages built with the DefaultLexer and DefaultTokenBuilder are unaffected.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-124683\n  \nPublished : Nov. 9, 2026, 4:02 p.m. | 29 minutes ago\n  \nDescription :Eclipse Langium versions 3.2.0 through 4.4.0 contain an inefficient algorithmic complexity issue (CWE-407) in the opt-in IndentationAwareTokenBuilder and IndentationAwareLexer. When producing DEDENT tokens, the token builder recomputes line numbers by re-scanning the entire preceding document text. A document whose indentation changes on most lines then takes quadratic time to tokenize. Because tokenization is synchronous, a crafted document of a few hundred kilobytes can block the Node.js event loop for tens of seconds. That causes a DoS for every user served by the same process. Languages built with the DefaultLexer and DefaultTokenBuilder are unaffected.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-124683\n2. 26.11.10 오전1:02\n3. Eclipse Langium versions 3.2.0 through 4.4.0 conta",
+      "cve_id": "CVE-2026-124683",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-124683",
+      "source": "cvefeed",
+      "published": "2026-11-10T01:02:50+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-124079 - rConfig Core 8.0.0 before 8.2.19 and rConfig Pro before 8.4.1 RCE via Unauthenticated Redis Queue Poisoning",
       "summary": "CVE ID :CVE-2026-124079\n  \nPublished : Nov. 9, 2026, 1:17 p.m. | 1 hour, 12 minutes ago\n  \nDescription :rConfig Core 8.0.0 before 8.2.19 and rConfig Pro before 8.4.1 contain a deserialization of untrusted data vulnerability that allows unauthenticated network attackers to execute arbitrary code by pushing a crafted serialized job onto the Redis-backed Laravel Horizon queue, which runs without authentication in affected deployments. Laravel's CallQueuedHandler unserializes the job without class restrictions, allowing attackers to instantiate the existing App\\\\Jobs\\\\TaskDownloadRun class and invoke an attacker-controlled Artisan command. Attackers can leverage the bundled laravel/tinker package to execute arbitrary PHP and operating system commands as the queue worker's user, write a persistent web shell into the web-served storage/app/public directory, and read database credentials, stored device credentials, and API tokens. Where Redis is not directly reachable, authenticated attackers can deliver the payload through the application by configuring a device target that points at the rConfig server's loopback address.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
