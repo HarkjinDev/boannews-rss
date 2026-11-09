@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-10T05:32:31.999281+09:00",
+  "fetched_at": "2026-11-10T06:01:25.191299+09:00",
   "security_news": [
+    {
+      "title": "엔비디아·AMD 견제하던 구글, 왜 AMD 손 잡았나[김창영의 실리콘밸리 룩...",
+      "summary": "기업용에 이어 메타 뮤즈, 오픈AI 닷츠 등 개인 에이전트가 인기를 끄는 가운데 개인정보 유출이나 보안 사고가 확산하면서 에이전트 구동에 최적화되면서 보안 성능을 강화한 칩이 중요해졌다. 구글은 AI...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 구글, 엔비디아·AMD 견제 대신 AMD와 협력\n2. 개인 에이전트 보안 강화 칩 개발에 집중\n3. 개인정보 유출, 보안 사고 확산 대비",
+      "link": "https://n.news.naver.com/mnews/article/011/0004680383?sid=104",
+      "source": "naver",
+      "published": "2026-11-10T05:34:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"얼굴 공개됐는데도 8년째 못 잡았다\"…미 FBI도 혀 내두른 꽃미남 北 해...",
       "summary": "세계 최대 가상자산 거래소 바이낸스에서 발생한 8조 원대 사상 최대 규모의 해킹 사건 배후로 북한 연계... 트레이더트레이터는 미 사이버안보국(CISA)과 재무부 등이 북한 정찰총국의 핵심 해킹 조직인 '라자루스...",
@@ -4740,33 +4752,39 @@
       "source": "naver",
       "published": "2026-11-07T06:30:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "정보보호 전담조직 1.6%뿐…해킹에 무방비 노출된 중소기업",
-      "summary": "금융권과 대형 유통업계까지 해킹과 개인정보 유출 사고가 잇따르는 가운데 중소기업의 정보보호 공백은... 잇따른 해킹과 정보유출 사고에 중소기업 관련 협·단체는 보안 경각심을 높이고 대응 지원에 나섰다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중소기업 1.6%만 정보보호 전담조직 보유\n2. 금융·유통업계 해킹·개인정보 유출 사고 발생\n3. 중소기업 보안 공백 우려, 경각심 고조",
-      "link": "https://n.news.naver.com/mnews/article/008/0005437889?sid=101",
-      "source": "naver",
-      "published": "2026-11-07T06:01:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "정부24 털리고 봉사포털 뚫리고… 정보공개포털선 암 진단 정보까지 [정...",
-      "summary": "지난 8월에는 정부 통합행정서비스 포털인 정부24가 해킹 공격을 받아 민감한 개인정보가 유출되는 사고가 발생했다. 정부24에서 해킹에 따른 유출 사고가 난 것은 처음이다. 행안부가 9월 정춘생 조국혁신당 의원실에...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 정부24, 통합행정서비스 포털 해킹 공격 발생\n2. 민감 개인정보 유출, 조국혁신당 의원실 통보\n3. 최초 해킹 사고, 행안부 사실 확인 중",
-      "link": "https://n.news.naver.com/mnews/article/022/0004173177?sid=102",
-      "source": "naver",
-      "published": "2026-11-07T05:41:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-87857 - Temporal Server workflow-history pagination token is not bound to the requested namespace and workflow",
+      "summary": "CVE ID :CVE-2026-87857\n  \nPublished : Nov. 9, 2026, 8:18 p.m. | 23 minutes ago\n  \nDescription :Temporal Server does not bind a workflow-history pagination token to the namespace and workflow named in the request that presents it. GetWorkflowExecutionHistory and GetWorkflowExecutionHistoryReverse authorize the caller against the namespace in the request, then select history from the branch recorded inside the caller-supplied next_page_token. The normal history continuation carries a run identifier, event bounds, a persistence cursor, and a branch token, but no namespace or workflow identity, and it is serialized as unauthenticated protobuf bytes. An authenticated caller holding read permission on one namespace, together with a genuine non-final continuation issued earlier for a workflow in a second namespace, can submit that continuation with a request naming the first namespace and receive the second namespace's workflow history, provided the supplied workflow identifier selects the same History shard as the continuation's branch. No workflow with the supplied identifier needs to exist. Because the token is unauthenticated, a holder can also advance its event range and clear its persistence cursor, which returns history events created after that caller's current credential no longer granted access to the continuation's namespace. Determining exposure is a version question rather than a configuration question: every release listed as affected omits the binding check on the forward history path, and on the reverse history path in releases from 1.16.0, which introduced GetWorkflowExecutionHistoryReverse; no setting in an affected release restores it, and affected releases emit no metric or log for the condition, so their telemetry provides no detection. Fixed releases add the check and, when a page token's branch token is not the requested execution's current branch token, record the counter pagination_token_branch_mismatch tagged with namespace and reason and write a History-service warning log reading \"Pagination branch token is not the execution's current branch token\" with the fields wf-namespace, wf-id, wf-run-id, reason, wf-branch-token, and wf-request-branch-token. Search History warning logs for that message, or for reason=foreign_branch, which denotes a branch token the requested execution never recorded and is not expected in normal operation; reason=non_current_branch denotes a retained but superseded branch of the same execution and can occur legitimately after conflict resolution or failover. A foreign_branch record does not by itself prove the read was refused, because the counter and log are emitted before the enforcement decision and therefore appear both when the check rejects the request and when history.enablePaginationTokenBranchValidationShadowMode is enabled and the read is served; confirm refusal from the gRPC response, which is InvalidArgument carrying a CurrentBranchChangedFailure detail. The metric and log are tagged with the requesting namespace, not the namespace whose history the token selects, so a foreign_branch alert does not name the exposed namespace. The issue does not provide unauthenticated access, construction of a usable continuation from public workflow identifiers, enumeration of workflows for which the caller holds no continuation, or any modification of workflow state.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-87857\n  \nPublished : Nov. 9, 2026, 8:18 p.m. | 23 minutes ago\n  \nDescription :Temporal Server does not bind a workflow-history pagination token to the namespace and workflow named in the request that presents it. GetWorkflowExecutionHistory and GetWorkflowExecutionHistoryReverse authorize the caller against the namespace in the request, then select history from the branch recorded inside the caller-supplied next_page_token. The normal history continuation carries a run identifier, event bounds, a persistence cursor, and a branch token, but no namespace or workflow identity, and it is serialized as unauthenticated protobuf bytes. An authenticated caller holding read permission on one namespace, together with a genuine non-final continuation issued earlier for a workflow in a second namespace, can submit that continuation with a request naming the first namespace and receive the second namespace's workflow history, provided the supplied workflow identifier selects the same History shard as the continuation's branch. No workflow with the supplied identifier needs to exist. Because the token is unauthenticated, a holder can also advance its event range and clear its persistence cursor, which returns history events created after that caller's current credential no longer granted access to the continuation's namespace. Determining exposure is a version question rather than a configuration question: every release listed as affected omits the binding check on the forward history path, and on the reverse history path in releases from 1.16.0, which introduced GetWorkflowExecutionHistoryReverse; no setting in an affected release restores it, and affected releases emit no metric or log for the condition, so their telemetry provides no detection. Fixed releases add the check and, when a page token's branch token is not the requested execution's current branch token, record the counter pagination_token_branch_mismatch tagged with namespace and reason and write a History-service warning log reading \"Pagination branch token is not the execution's current branch token\" with the fields wf-namespace, wf-id, wf-run-id, reason, wf-branch-token, and wf-request-branch-token. Search History warning logs for that message, or for reason=foreign_branch, which denotes a branch token the requested execution never recorded and is not expected in normal operation; reason=non_current_branch denotes a retained but superseded branch of the same execution and can occur legitimately after conflict resolution or failover. A foreign_branch record does not by itself prove the read was refused, because the counter and log are emitted before the enforcement decision and therefore appear both when the check rejects the request and when history.enablePaginationTokenBranchValidationShadowMode is enabled and the read is served; confirm refusal from the gRPC response, which is InvalidArgument carrying a CurrentBranchChangedFailure detail. The metric and log are tagged with the requesting namespace, not the namespace whose history the token selects, so a foreign_branch alert does not name the exposed namespace. The issue does not provide unauthenticated access, construction of a usable continuation from public workflow identifiers, enumeration of workflows for which the caller holds no continuation, or any modification of workflow state.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-87857\n2. 26.11.10 오전5:18\n3. Temporal Server does not bind a workflow-history p",
+      "cve_id": "CVE-2026-87857",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-87857",
+      "source": "cvefeed",
+      "published": "2026-11-10T05:18:14+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-124077 - Apache Commons Codec: NUL bytes in tree entry names cause Git/SWHID identifier collisions (GitIdentifiers class)",
+      "summary": "CVE ID :CVE-2026-124077\n  \nPublished : Nov. 9, 2026, 8:18 p.m. | 23 minutes ago\n  \nDescription :The GitIdentifiers class in Apache Commons Codec did not reject NUL bytes in tree entry names. Because Git uses a NUL byte to mark the end of each entry name in a tree object, a crafted name could make one tree serialize to the same bytes as a different tree. Two different directory trees could then receive the same Git tree identifier or SWHID.\n\n\n\nThe impact is limited: common file systems do not allow NUL bytes in file names, so trees built by walking a file system are not affected. Only applications that build trees from names supplied by other sources, such as entries of archive formats that permit NUL bytes in names (e.g. ZIP) or names passed directly to the API, are exposed.\n\n\n\nThis issue affects Apache Commons Codec: from 1.22.0 before 1.23.0.\n\n\n\nUsers are recommended to upgrade to version 1.23.0, which fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-124077\n  \nPublished : Nov. 9, 2026, 8:18 p.m. | 23 minutes ago\n  \nDescription :The GitIdentifiers class in Apache Commons Codec did not reject NUL bytes in tree entry names. Because Git uses a NUL byte to mark the end of each entry name in a tree object, a crafted name could make one tree serialize to the same bytes as a different tree. Two different directory trees could then receive the same Git tree identifier or SWHID.\n\n\n\nThe impact is limited: common file systems do not allow NUL bytes in file names, so trees built by walking a file system are not affected. Only applications that build trees from names supplied by other sources, such as entries of archive formats that permit NUL bytes in names (e.g. ZIP) or names passed directly to the API, are exposed.\n\n\n\nThis issue affects Apache Commons Codec: from 1.22.0 before 1.23.0.\n\n\n\nUsers are recommended to upgrade to version 1.23.0, which fixes the issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-124077\n2. 26.11.10 오전5:18\n3. The GitIdentifiers class in Apache Commons Codec d",
+      "cve_id": "CVE-2026-124077",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-124077",
+      "source": "cvefeed",
+      "published": "2026-11-10T05:18:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "Attackers Searching for SAP Netweaver Webshells, (Mon, Nov 9th)",
       "summary": "Just saw a new (to me) URL in our honeypot data today:\r",
@@ -4870,6 +4888,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-119610",
       "source": "cvefeed",
       "published": "2026-11-09T22:17:05+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+      "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation. \n\nCVE-2026-102895 GPUStack Improper Authentication Vulnerability \nCVE-2026-116779 SignalWire FreeSwitch Code Injection Vulnerability \nCVE-2026-123158 OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability \nCVE-2026-123218 IBM Aspera Faspex Incorrect Authorization Vulnerability \n\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. \nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. \n\n\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria. \n\n\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "description": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation. \n\nCVE-2026-102895 GPUStack Improper Authentication Vulnerability \nCVE-2026-116779 SignalWire FreeSwitch Code Injection Vulnerability \nCVE-2026-123158 OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability \nCVE-2026-123218 IBM Aspera Faspex Incorrect Authorization Vulnerability \n\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. \nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. \n\n\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria. \n\n\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102895\n2. CISA\n3. CISA has added four new vulnerabilities to its Kno",
+      "cve_id": "CVE-2026-102895",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+      "source": "cisa",
+      "published": "2026-11-09T21:00:00+09:00",
       "lang": "en"
     },
     {
