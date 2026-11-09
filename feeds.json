@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-09T19:32:29.113857+09:00",
+  "fetched_at": "2026-11-09T20:02:18.366347+09:00",
   "security_news": [
+    {
+      "title": "경기도의회 최혜경 \"경기신보 상담시스템 해킹 시도...2명 개인신용정보...",
+      "summary": "사진제공=경기도의회 최근 경기신용보증재단(경기신보) 고객 개인정보를 빼내려는 해킹 시도가 있었고, 그... 경기신보는 해킹 시도가 있었고, 개인정보보호위원회와 한국인터넷진흥원에 신고했으며, 당사자들에게...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 경기신보 상담시스템에 2명 개인신용정보 해킹 시도\n2. 악성코드를 이용한 해킹 시도로 파악됨\n3. 개인정보보호위, KISA 신고 및 당사자 통보",
+      "link": "https://www.gukjenews.com/news/articleView.html?idxno=3746769",
+      "source": "naver",
+      "published": "2026-11-09T19:30:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "일 니토리, 사이버 공격에 최대 3,762만 건 개인정보 유출",
       "summary": "가구와 일상용품 회사인 니토리는 최근 해킹 공격을 받았으며, 최대 3,762만 건의 개인 정보 유출 가능성이... 이메일 배포 서비스 제공 업체가 해킹 공격을 받았으며 약 199만 명의 회원 이메일 주소와 생년월일 등이...",
@@ -4560,18 +4572,6 @@
       "source": "naver",
       "published": "2026-11-06T20:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "한전KDN, 'AI·디지털 전환 가속'... 4대 전력ICT 핵심 기술 공개",
-      "summary": "통합 보안 체계 등 4건의 미래 핵심 프로젝트를 소개해 높은 관심을 받았다. 특히 최근 국내외 산업계 전반에서 심각한 위협으로 대두된 인공지능 기반 지능형 해킹 시도와 오픈소스 PHP 보안 취약점 등 갈수록...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한전KDN, 'AI·디지털 전환 가속'...\n2. 4대 전력ICT 핵심 기술 공개 통합 보안 체계 등 4건의 미래 핵심 프로젝트를 소개해 높\n3. 특히 최근 국내외 산업계 전반에서 심각한 위협으로 대두된 인공지능 기반 지능형 해킹 시도와",
-      "link": "https://www.newsworker.co.kr/news/articleView.html?idxno=512813",
-      "source": "naver",
-      "published": "2026-11-06T19:52:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -5008,36 +5008,6 @@
       "link": "https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog",
       "source": "cisa",
       "published": "2026-11-06T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-84161 - Authenticated remote denial of service through unbounded zlib decompression in storeAnalysisStatistics",
-      "summary": "CVE ID :CVE-2026-84161\n  \nPublished : Nov. 6, 2026, 10:48 a.m. | 38 minutes ago\n  \nDescription :When an operator enables store.analysis_statistics_dir, a network client with PRODUCT_STORE permission for a product can call that product's storeAnalysisStatistics Thrift-over-HTTP method. CodeChecker 6.29.0 decodes the attacker-controlled Base64 string and passes the complete compressed input to one-shot zlib.decompress(). No maximum decompressed size is enforced.\n\n\n\nThis gives a correctly authorized, non-superuser store account a high-ratio memory and persistent-disk amplification primitive. The complete output is first materialized as a Python bytes object and is then written to the configured statistics directory. A sufficiently scaled payload can exhaust the API worker or host memory and impair CodeChecker availability.\n\n\n\nThe shipped value of store.analysis_statistics_dir is null, so the affected feature is disabled by default. The primary assessment does not rely on authentication being disabled. There is no authorization bypass and no path traversal in this report.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-84161\n  \nPublished : Nov. 6, 2026, 10:48 a.m. | 38 minutes ago\n  \nDescription :When an operator enables store.analysis_statistics_dir, a network client with PRODUCT_STORE permission for a product can call that product's storeAnalysisStatistics Thrift-over-HTTP method. CodeChecker 6.29.0 decodes the attacker-controlled Base64 string and passes the complete compressed input to one-shot zlib.decompress(). No maximum decompressed size is enforced.\n\n\n\nThis gives a correctly authorized, non-superuser store account a high-ratio memory and persistent-disk amplification primitive. The complete output is first materialized as a Python bytes object and is then written to the configured statistics directory. A sufficiently scaled payload can exhaust the API worker or host memory and impair CodeChecker availability.\n\n\n\nThe shipped value of store.analysis_statistics_dir is null, so the affected feature is disabled by default. The primary assessment does not rely on authentication being disabled. There is no authorization bypass and no path traversal in this report.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-84161\n2. 26.11.06 오후7:48\n3. When an operator enables store.analysis_statistics",
-      "cve_id": "CVE-2026-84161",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84161",
-      "source": "cvefeed",
-      "published": "2026-11-06T19:48:16+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-84164 - Stored XSS in the static HTML report export, because json.dumps does not escape the markup character",
-      "summary": "CVE ID :CVE-2026-84164\n  \nPublished : Nov. 6, 2026, 10:35 a.m. | 51 minutes ago\n  \nDescription :The HTML report that plist-to-html, CodeChecker parse --export html and CodeChecker cmd diff --output html generate puts the report message, the checker name and the source file path into a script block through json.dumps. json.dumps does not escape the less-than character, so a closing script tag in any of those three fields ends the script element and what follows is parsed as HTML.\n\n\n\n\nThe input author is whoever controls the analysed tree or a third-party result file that report-converter ingests, or who holds PRODUCT_STORE in the cmd diff flow. The viewer is somebody else: docs/jenkins_gerrit_integration.md documents writing the report into Jenkins userContent and posting its URL into a Gerrit review. One caveat worth stating up front is that Jenkins serves userContent under a restrictive CSP that would block an inline handler, so that destination is probably safe as configured. The generated report sets no CSP of its own, so the impact lands wherever it is published without one.\n  \nSeverity: 0.0 | NONE\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-84164\n  \nPublished : Nov. 6, 2026, 10:35 a.m. | 51 minutes ago\n  \nDescription :The HTML report that plist-to-html, CodeChecker parse --export html and CodeChecker cmd diff --output html generate puts the report message, the checker name and the source file path into a script block through json.dumps. json.dumps does not escape the less-than character, so a closing script tag in any of those three fields ends the script element and what follows is parsed as HTML.\n\n\n\n\nThe input author is whoever controls the analysed tree or a third-party result file that report-converter ingests, or who holds PRODUCT_STORE in the cmd diff flow. The viewer is somebody else: docs/jenkins_gerrit_integration.md documents writing the report into Jenkins userContent and posting its URL into a Gerrit review. One caveat worth stating up front is that Jenkins serves userContent under a restrictive CSP that would block an inline handler, so that destination is probably safe as configured. The generated report sets no CSP of its own, so the impact lands wherever it is published without one.\n  \nSeverity: 0.0 | NONE\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-84164\n2. 26.11.06 오후7:35\n3. The HTML report that plist-to-html, CodeChecker pa",
-      "cve_id": "CVE-2026-84164",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84164",
-      "source": "cvefeed",
-      "published": "2026-11-06T19:35:15+09:00",
       "lang": "en"
     }
   ],
