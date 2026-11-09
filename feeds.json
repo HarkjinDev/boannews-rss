@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-11-10T06:01:25.191299+09:00",
+  "fetched_at": "2026-11-10T06:32:28.567368+09:00",
   "security_news": [
+    {
+      "title": "N-able takes cloud platform offline after 30+ \"zero-days\" published",
+      "summary": "N-able has taken its hosted N-central environments offline and urged on-premises customers to shut down their servers after a security researcher publicly disclosed more than 30 alleged zero-day vulnerabilities, including exploits that could let attackers take over vulnerable systems. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. N-able takes cloud platform offline after 30+ \"zer",
+      "link": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+      "source": "bleepingcomputer",
+      "published": "2026-11-10T06:26:25+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "촘촘하다 자신했건만…줄줄 샌 개인정보 [취재진담]",
+      "summary": "본지는 지난해 4대 은행을 겨냥한 해킹 시도가 해마다 가파르게 급증하고 있다고 보도했다. 연관 기사☞[단독]은행권에 쏟아지는 해킹 시도…3년 새 ‘기하급수 폭증’ 지난해 상반기 기준 4대 은행을 향한 해킹 시도는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 4대 은행 대상 해킹 시도 급증\n2. 개인정보 유출, 금융 시스템 취약점 노출\n3. 금융권 보안 강화 및 대책 마련 시급",
+      "link": "https://www.kukinews.com/article/view/kuk202611090223",
+      "source": "naver",
+      "published": "2026-11-10T06:02:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "엔비디아·AMD 견제하던 구글, 왜 AMD 손 잡았나[김창영의 실리콘밸리 룩...",
       "summary": "기업용에 이어 메타 뮤즈, 오픈AI 닷츠 등 개인 에이전트가 인기를 끄는 가운데 개인정보 유출이나 보안 사고가 확산하면서 에이전트 구동에 최적화되면서 보안 성능을 강화한 칩이 중요해졌다. 구글은 AI...",
@@ -4740,21 +4764,24 @@
       "source": "naver",
       "published": "2026-11-07T06:33:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "14시간 통신장애에 고객정보 30만건 유출...日 도코모 ‘설상가상’",
-      "summary": "일본 이동통신사 NTT도코모에서 전국 단위 통신장애와 해킹에 따른 고객정보 유출이 잇따라 발생했다. 5G... 해킹으로 신분증 계좌정보 유출 통신장애에 앞서 도코모는 4일 온라인숍과 마이 도코모에 대한 외부...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 일본 NTT도코모, 14시간 통신장애 및 고객정보 30만건 유출\n2. 해킹으로 신분증·계좌정보 등 민감 정보 유출 발생\n3. 전국적 통신망 마비로 서비스 이용 불편 초래",
-      "link": "https://n.news.naver.com/mnews/article/092/0002444300?sid=105",
-      "source": "naver",
-      "published": "2026-11-07T06:30:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-123808 - Nuxt UI: UAuthForm / UForm SSR markup omits `method`, leaking credentials via GET if submitted before hydration",
+      "summary": "CVE ID :CVE-2026-123808\n  \nPublished : Nov. 9, 2026, 8:41 p.m. | 50 minutes ago\n  \nDescription :Nuxt UI is an intuitive Vue UI library powered by Reka UI and Tailwind CSS. Prior to 4.8.1, the server-rendered form element produced by UForm in src/runtime/components/Form.vue omits the method and action attributes and relies solely on the hydrated @submit.prevent handler to stop native submission. UAuthForm composes UForm and can render named credential fields, including an input with type password, inside the same markup. If a user submits before Vue hydration completes, or when the client bundle is blocked or unavailable, the browser performs its default GET submission and serializes the named fields into the current URL query string. The credentials can then appear in the address bar, browser history, reverse-proxy, CDN, or WAF request logs, and Referer headers sent with same-origin subresource requests. This issue is fixed in version 4.8.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-123808\n  \nPublished : Nov. 9, 2026, 8:41 p.m. | 50 minutes ago\n  \nDescription :Nuxt UI is an intuitive Vue UI library powered by Reka UI and Tailwind CSS. Prior to 4.8.1, the server-rendered form element produced by UForm in src/runtime/components/Form.vue omits the method and action attributes and relies solely on the hydrated @submit.prevent handler to stop native submission. UAuthForm composes UForm and can render named credential fields, including an input with type password, inside the same markup. If a user submits before Vue hydration completes, or when the client bundle is blocked or unavailable, the browser performs its default GET submission and serializes the named fields into the current URL query string. The credentials can then appear in the address bar, browser history, reverse-proxy, CDN, or WAF request logs, and Referer headers sent with same-origin subresource requests. This issue is fixed in version 4.8.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-123808\n2. 26.11.10 오전5:41\n3. Nuxt UI is an intuitive Vue UI library powered by ",
+      "cve_id": "CVE-2026-123808",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-123808",
+      "source": "cvefeed",
+      "published": "2026-11-10T05:41:49+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-87857 - Temporal Server workflow-history pagination token is not bound to the requested namespace and workflow",
       "summary": "CVE ID :CVE-2026-87857\n  \nPublished : Nov. 9, 2026, 8:18 p.m. | 23 minutes ago\n  \nDescription :Temporal Server does not bind a workflow-history pagination token to the namespace and workflow named in the request that presents it. GetWorkflowExecutionHistory and GetWorkflowExecutionHistoryReverse authorize the caller against the namespace in the request, then select history from the branch recorded inside the caller-supplied next_page_token. The normal history continuation carries a run identifier, event bounds, a persistence cursor, and a branch token, but no namespace or workflow identity, and it is serialized as unauthenticated protobuf bytes. An authenticated caller holding read permission on one namespace, together with a genuine non-final continuation issued earlier for a workflow in a second namespace, can submit that continuation with a request naming the first namespace and receive the second namespace's workflow history, provided the supplied workflow identifier selects the same History shard as the continuation's branch. No workflow with the supplied identifier needs to exist. Because the token is unauthenticated, a holder can also advance its event range and clear its persistence cursor, which returns history events created after that caller's current credential no longer granted access to the continuation's namespace. Determining exposure is a version question rather than a configuration question: every release listed as affected omits the binding check on the forward history path, and on the reverse history path in releases from 1.16.0, which introduced GetWorkflowExecutionHistoryReverse; no setting in an affected release restores it, and affected releases emit no metric or log for the condition, so their telemetry provides no detection. Fixed releases add the check and, when a page token's branch token is not the requested execution's current branch token, record the counter pagination_token_branch_mismatch tagged with namespace and reason and write a History-service warning log reading \"Pagination branch token is not the execution's current branch token\" with the fields wf-namespace, wf-id, wf-run-id, reason, wf-branch-token, and wf-request-branch-token. Search History warning logs for that message, or for reason=foreign_branch, which denotes a branch token the requested execution never recorded and is not expected in normal operation; reason=non_current_branch denotes a retained but superseded branch of the same execution and can occur legitimately after conflict resolution or failover. A foreign_branch record does not by itself prove the read was refused, because the counter and log are emitted before the enforcement decision and therefore appear both when the check rejects the request and when history.enablePaginationTokenBranchValidationShadowMode is enabled and the read is served; confirm refusal from the gRPC response, which is InvalidArgument carrying a CurrentBranchChangedFailure detail. The metric and log are tagged with the requesting namespace, not the namespace whose history the token selects, so a foreign_branch alert does not name the exposed namespace. The issue does not provide unauthenticated access, construction of a usable continuation from public workflow identifiers, enumeration of workflows for which the caller holds no continuation, or any modification of workflow state.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -5173,66 +5200,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-120515",
       "source": "cvefeed",
       "published": "2026-11-07T16:17:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-44519 - liboqs: Missing value barrier in FO implicit rejection path (FrodoKEM, NTRU, and others)",
-      "summary": "CVE ID :CVE-2026-44519\n  \nPublished : Nov. 6, 2026, 9:22 p.m. | 39 minutes ago\n  \nDescription :liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. Prior to 0.16.0, the ct_select function in src/kem/frodokem/external/util.c for the FrodoKEM-640, FrodoKEM-976, and FrodoKEM-1344 AES and SHAKE reference variants lacks a value barrier in the Fujisaki-Okamoto implicit-rejection path. When compiled with Clang 17 or later at an affected optimization level such as -Os, the compiler can emit a secret-dependent conditional load, causing the real and rejection secret paths to leave distinguishable cache residency after successful and failed decapsulation. A local attacker able to perform repeated cache-timing measurements may use this oracle as part of a private-key recovery attack. Default -O3 builds vectorize both source loads and do not exhibit the reported behavior, and the advisory does not report the same generated memory-access pattern in NTRU, NTRU-Prime, BIKE, HQC, Classic McEliece, Kyber, or the already-barriered ML-KEM implementation. This issue is fixed in version 0.16.0.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-44519\n  \nPublished : Nov. 6, 2026, 9:22 p.m. | 39 minutes ago\n  \nDescription :liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. Prior to 0.16.0, the ct_select function in src/kem/frodokem/external/util.c for the FrodoKEM-640, FrodoKEM-976, and FrodoKEM-1344 AES and SHAKE reference variants lacks a value barrier in the Fujisaki-Okamoto implicit-rejection path. When compiled with Clang 17 or later at an affected optimization level such as -Os, the compiler can emit a secret-dependent conditional load, causing the real and rejection secret paths to leave distinguishable cache residency after successful and failed decapsulation. A local attacker able to perform repeated cache-timing measurements may use this oracle as part of a private-key recovery attack. Default -O3 builds vectorize both source loads and do not exhibit the reported behavior, and the advisory does not report the same generated memory-access pattern in NTRU, NTRU-Prime, BIKE, HQC, Classic McEliece, Kyber, or the already-barriered ML-KEM implementation. This issue is fixed in version 0.16.0.\n  \nSeverity: 5.1 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-44519\n2. 26.11.07 오전6:22\n3. liboqs is a C-language cryptographic library that ",
-      "cve_id": "CVE-2026-44519",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-44519",
-      "source": "cvefeed",
-      "published": "2026-11-07T06:22:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-85726 - Chartbrew: Blind NoSQL injection via date variable in embedded chart",
-      "summary": "CVE ID :CVE-2026-85726\n  \nPublished : Nov. 6, 2026, 9:17 p.m. | 44 minutes ago\n  \nDescription :Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, a date-typed MongoDB variable placed inside a quoted query placeholder was inserted as an unescaped string, unlike the safely escaped or coerced string, number, and Boolean branches. The vulnerable surface is mongoDB-backed public, shareable, or embedded charts processed by date-variable substitution. An unauthenticated user supplies a crafted URL filter to a public, shareable, or embedded MongoDB chart whose query places a date-typed variable in a quoted literal. The crafted date value breaks out of the quoted literal and changes query logic; the chart's returned row count becomes a Boolean oracle for character-by-character field extraction. The chart must be externally reachable and use the vulnerable date-in-quoted-placeholder branch. Extraction is read-only and limited to one queried collection per request, and it requires neither an account nor a known field value. The blind oracle can disclose any field in the queried collection, including secrets the chart does not display. This issue is fixed in version 5.2.3.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-85726\n  \nPublished : Nov. 6, 2026, 9:17 p.m. | 44 minutes ago\n  \nDescription :Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, a date-typed MongoDB variable placed inside a quoted query placeholder was inserted as an unescaped string, unlike the safely escaped or coerced string, number, and Boolean branches. The vulnerable surface is mongoDB-backed public, shareable, or embedded charts processed by date-variable substitution. An unauthenticated user supplies a crafted URL filter to a public, shareable, or embedded MongoDB chart whose query places a date-typed variable in a quoted literal. The crafted date value breaks out of the quoted literal and changes query logic; the chart's returned row count becomes a Boolean oracle for character-by-character field extraction. The chart must be externally reachable and use the vulnerable date-in-quoted-placeholder branch. Extraction is read-only and limited to one queried collection per request, and it requires neither an account nor a known field value. The blind oracle can disclose any field in the queried collection, including secrets the chart does not display. This issue is fixed in version 5.2.3.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-85726\n2. 26.11.07 오전6:17\n3. Chartbrew is an open-source web application that c",
-      "cve_id": "CVE-2026-85726",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-85726",
-      "source": "cvefeed",
-      "published": "2026-11-07T06:17:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-63441 - 2FAuth: SSRF guard misses IPv6 NAT64 prefixes, allowing image fetch to reach internal/metadata targets",
-      "summary": "CVE ID :CVE-2026-63441\n  \nPublished : Nov. 6, 2026, 9:17 p.m. | 44 minutes ago\n  \nDescription :2FAuth is a web app to manage Two-Factor Authentication (2FA) accounts and generate their security codes. From 6.1.0 until 8.0.0, App\\Services\\Traits\\ValidatesUrls::isPublicIp() does not recognize the 64:ff9b::/96 and 64:ff9b:1::/48 NAT64 prefixes, so an otpauth URI image parameter can pass an IPv6 literal or DNS64-synthesized address whose embedded IPv4 target is private, link-local, loopback, or cloud metadata. In a deployment with image fetching enabled and a NAT64 translation path to the internal IPv4 target, an account holder can submit the crafted URI directly, or an external attacker can induce a victim to import a crafted URI or migration payload. IconService::buildFromRemoteImage() then issues an HTTP GET to the embedded target, allowing image-shaped responses to be recovered or other endpoints to be probed blindly. This issue is fixed in version 8.0.0.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-63441\n  \nPublished : Nov. 6, 2026, 9:17 p.m. | 44 minutes ago\n  \nDescription :2FAuth is a web app to manage Two-Factor Authentication (2FA) accounts and generate their security codes. From 6.1.0 until 8.0.0, App\\Services\\Traits\\ValidatesUrls::isPublicIp() does not recognize the 64:ff9b::/96 and 64:ff9b:1::/48 NAT64 prefixes, so an otpauth URI image parameter can pass an IPv6 literal or DNS64-synthesized address whose embedded IPv4 target is private, link-local, loopback, or cloud metadata. In a deployment with image fetching enabled and a NAT64 translation path to the internal IPv4 target, an account holder can submit the crafted URI directly, or an external attacker can induce a victim to import a crafted URI or migration payload. IconService::buildFromRemoteImage() then issues an HTTP GET to the embedded target, allowing image-shaped responses to be recovered or other endpoints to be probed blindly. This issue is fixed in version 8.0.0.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-63441\n2. 26.11.07 오전6:17\n3. 2FAuth is a web app to manage Two-Factor Authentic",
-      "cve_id": "CVE-2026-63441",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63441",
-      "source": "cvefeed",
-      "published": "2026-11-07T06:17:10+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59171 - JSON-java: JSONTokener Unbounded Numeric String Resource-Exhaustion DoS",
-      "summary": "CVE ID :CVE-2026-59171\n  \nPublished : Nov. 6, 2026, 9:17 p.m. | 20 minutes ago\n  \nDescription :JSON-java is a reference implementation of a JSON package in Java. From version 20150729 through 20260522, JSONTokener.nextSimpleValue can accumulate unbounded numeric tokens before JSONObject.stringToNumber passes them to BigInteger or BigDecimal conversion without a length limit. An application that parses attacker-controlled JSON or XML through JSONObject, JSONArray, or XML.toJSONObject can spend super-linear CPU time converting a sufficiently long numeric literal, blocking request-handling threads and causing denial of service. Strict mode and keep-strings settings in JSONParserConfiguration do not prevent the affected conversion path. Version 20260719 limits numeric conversion length.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59171\n  \nPublished : Nov. 6, 2026, 9:17 p.m. | 20 minutes ago\n  \nDescription :JSON-java is a reference implementation of a JSON package in Java. From version 20150729 through 20260522, JSONTokener.nextSimpleValue can accumulate unbounded numeric tokens before JSONObject.stringToNumber passes them to BigInteger or BigDecimal conversion without a length limit. An application that parses attacker-controlled JSON or XML through JSONObject, JSONArray, or XML.toJSONObject can spend super-linear CPU time converting a sufficiently long numeric literal, blocking request-handling threads and causing denial of service. Strict mode and keep-strings settings in JSONParserConfiguration do not prevent the affected conversion path. Version 20260719 limits numeric conversion length.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-59171\n2. 26.11.07 오전6:17\n3. JSON-java is a reference implementation of a JSON ",
-      "cve_id": "CVE-2026-59171",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59171",
-      "source": "cvefeed",
-      "published": "2026-11-07T06:17:09+09:00",
       "lang": "en"
     }
   ],
