@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-10T02:31:33.186480+09:00",
+  "fetched_at": "2026-11-10T03:01:27.608907+09:00",
   "security_news": [
     {
       "title": "[패트롤] 인천시의회 문복위-방지현-김광훈-조민경-김동민-신영희",
@@ -4659,6 +4659,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-123367 - ThorVG: Heap buffer overflow (OOB write) in bundled jpgd JPEG decoder",
+      "summary": "CVE ID :CVE-2026-123367\n  \nPublished : Nov. 9, 2026, 5:21 p.m. | 10 minutes ago\n  \nDescription :Thor Vector Graphics (ThorVG) is a production-ready vector graphics engine. Prior to 1.1.2, the bundled jpgd JPEG decoder accepts duplicate component selectors in an SOS scan header, causing each duplicate to increase m_blocks_per_mcu without checking the buffers sized from the frame components. A crafted grayscale JPEG can repeat its component in the SOS header, causing decode paths in src/loaders/jpg/tvgJpgd.cpp to write beyond heap buffers sized for one component. The issue is reachable through direct JPEG decoding and through JPEG images embedded in Lottie content, and confirmed impact is memory corruption followed by a process crash. This issue is fixed in version 1.1.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-123367\n  \nPublished : Nov. 9, 2026, 5:21 p.m. | 10 minutes ago\n  \nDescription :Thor Vector Graphics (ThorVG) is a production-ready vector graphics engine. Prior to 1.1.2, the bundled jpgd JPEG decoder accepts duplicate component selectors in an SOS scan header, causing each duplicate to increase m_blocks_per_mcu without checking the buffers sized from the frame components. A crafted grayscale JPEG can repeat its component in the SOS header, causing decode paths in src/loaders/jpg/tvgJpgd.cpp to write beyond heap buffers sized for one component. The issue is reachable through direct JPEG decoding and through JPEG images embedded in Lottie content, and confirmed impact is memory corruption followed by a process crash. This issue is fixed in version 1.1.2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-123367\n2. 26.11.10 오전2:21\n3. Thor Vector Graphics (ThorVG) is a production-read",
+      "cve_id": "CVE-2026-123367",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-123367",
+      "source": "cvefeed",
+      "published": "2026-11-10T02:21:00+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-19706 - Openshift/installer: openshift installer: unconditional csr approval during agent-based installation (abi) bootstrap",
+      "summary": "CVE ID :CVE-2026-19706\n  \nPublished : Nov. 9, 2026, 5:20 p.m. | 11 minutes ago\n  \nDescription :During ABI bootstrap, the bootstrap node's approve-csr.service approves and signs every CSR without identity validation.\n\nAn attacker on the install network can retrieve the unauthenticated Ignition file (ports 22623/22624), extract a limited kubeconfig, submit a CSR for CN=system:admin, receive the signed certificate, and gain full cluster-admin access.\n\nExploitable only during the narrow bootstrap window.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-19706\n  \nPublished : Nov. 9, 2026, 5:20 p.m. | 11 minutes ago\n  \nDescription :During ABI bootstrap, the bootstrap node's approve-csr.service approves and signs every CSR without identity validation.\n\nAn attacker on the install network can retrieve the unauthenticated Ignition file (ports 22623/22624), extract a limited kubeconfig, submit a CSR for CN=system:admin, receive the signed certificate, and gain full cluster-admin access.\n\nExploitable only during the narrow bootstrap window.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-19706\n2. 26.11.10 오전2:20\n3. During ABI bootstrap, the bootstrap node's approve",
+      "cve_id": "CVE-2026-19706",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-19706",
+      "source": "cvefeed",
+      "published": "2026-11-10T02:20:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-124683 - Eclipse Langium Algorithmic Complexity Denial of Service",
       "summary": "CVE ID :CVE-2026-124683\n  \nPublished : Nov. 9, 2026, 4:02 p.m. | 29 minutes ago\n  \nDescription :Eclipse Langium versions 3.2.0 through 4.4.0 contain an inefficient algorithmic complexity issue (CWE-407) in the opt-in IndentationAwareTokenBuilder and IndentationAwareLexer. When producing DEDENT tokens, the token builder recomputes line numbers by re-scanning the entire preceding document text. A document whose indentation changes on most lines then takes quadratic time to tokenize. Because tokenization is synchronous, a crafted document of a few hundred kilobytes can block the Node.js event loop for tens of seconds. That causes a DoS for every user served by the same process. Languages built with the DefaultLexer and DefaultTokenBuilder are unaffected.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
