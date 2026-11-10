@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-11T04:33:32.061189+09:00",
+  "fetched_at": "2026-11-11T05:03:05.719758+09:00",
   "security_news": [
+    {
+      "title": "[단독]“회사업무 AI, 해킹통로 될라”… 서버 8000여개 외부 인터넷 노...",
+      "summary": "● 국내 AI 시스템 중 8030개 인터넷 노출 10일 미국 사이버보안 기업 센시스(Censys)에 따르면 올해 6∼8월... 임준오 티오리한국 AI·사이버리서치팀 총괄은 “보안 관리가 체계적으로 이루어지지 않은 업무 자동화...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국내 AI 시스템 8030개, 외부 인터넷 노출 상태 발견\n2. 센시스, 6~8월 조사서 보안 관리 미흡한 AI 업무 자동화 시스템 확인\n3. 악성코드 침투 통로 될 위험, 체계적 보안 관리 필요",
+      "link": "https://n.news.naver.com/mnews/article/020/0003761568?sid=101",
+      "source": "naver",
+      "published": "2026-11-11T04:34:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Exploited Outlook Zero-Day Among 1,094 Flaws Patched by Microsoft",
       "summary": "CVE-2026-124194 is the Outlook zero-day for which Microsoft says it’s aware of active exploitation. \nThe post Exploited Outlook Zero-Day Among 1,094 Flaws Patched by Microsoft appeared first on SecurityWeek.",
@@ -11,6 +23,18 @@
       "link": "https://www.securityweek.com/exploited-outlook-zero-day-among-1094-flaws-patched-by-microsoft/",
       "source": "securityweek",
       "published": "2026-11-11T04:19:46+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
+      "summary": "An attacker exploited a remote code execution flaw in SGLang, an open-source inference engine, and ran code on one of NEAR AI's inference servers last Sunday.\n\nThe attacker could also have seen requests being processed on that server that day, including requests sent in confidential mode, the company said earlier this week. That mode processes requests inside a trusted execution environment (TEE",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. SGLang RCE Exploit Breaches NEAR AI, Steals Data F\n2. The attacker could also have seen requests being p\n3. That mode processes requests inside a trusted exec",
+      "link": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
+      "source": "thehackernews",
+      "published": "2026-11-11T04:19:39+09:00",
       "lang": "en"
     },
     {
@@ -5496,21 +5520,24 @@
       "source": "naver",
       "published": "2026-11-08T05:04:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "伊외무 \"개인정보 다크웹에 유출\"…멜로니 \"친러 해커 소행\"",
-      "summary": "이번 정보 유출은 최근 유럽 곳곳에서 잇따른 허위 폭탄 위협으로 항공편 운항에 차질이 빚어지고 방송사들이 보안 위협을 받는 한편, 슈퍼마켓 냉장·냉동 시스템에 대한 해킹 공격이 벌어진 가운데 발생했다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 이탈리아 외무부, 멜로니 총리가 친러 해커 소행 지목\n2. 다크웹 통해 개인정보 유출, 유럽 항공편/방송사/슈퍼마켓 보안 위협\n3. 잇따른 해킹 공격으로 유럽 전역 정보 유출 및 시스템 마비 우려",
-      "link": "https://n.news.naver.com/mnews/article/001/0016428396?sid=104",
-      "source": "naver",
-      "published": "2026-11-08T04:38:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-99288 - inet: reject unhashed sockets during established lookups",
+      "summary": "CVE ID :CVE-2026-99288\n  \nPublished : Nov. 10, 2026, 7:22 p.m. | 12 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ninet: reject unhashed sockets during established lookups\n\nTCP established ehash lookups are lockless. The socket caches involved\nuse SLAB_TYPESAFE_BY_RCU, so memory can be reused before an RCU reader\nthat retained its old address has finished.\n\nAfter a tuple match, __inet_lookup_established() and\n__inet6_lookup_established() acquire a reference and repeat the tuple\ncheck. They do not check whether the new object is hashed. If the\naddress is reused for a socket with the same tuple, the lookup can\nacquire a reference to the new object and return it while its nulls node\nis unhashed.\n\nA PoC that drives reuse with a SYN cookie request socket reproduced the\ncrash. The new request socket is unhashed and has a NULL rsk_listener.\nA lookup that had loaded the address of the old request socket acquired\nthe reference published by tcp_get_cookie_sock() and returned the new\nobject. tcp_v4_rcv() then read sk_state through the NULL listener.\n\nThe resulting crash was:\n\n  BUG: kernel NULL pointer dereference, address: 0000000000000012\n  #PF: supervisor read access in kernel mode\n  #PF: error_code(0x0000) - not-present page\n  ...\n  Oops: Oops: 0000 [#1] SMP NOPTI\n  CPU: 4 UID: 0 PID: 0 Comm: swapper/4 Not tainted 7.3.0-00591-g0e135910deec #1 PREEMPT(lazy)\n  ...\n  RIP: 0010:tcp_v4_rcv+0x44e/0x1280\n  ...\n  R10: 0000000000000001 R11: 00000000024ca8c0 R12: 0000000000000000\n  ...\n  CR2: 0000000000000012 CR3: 0000000103d50004 CR4: 0000000000770ef0\n  ...\n  Call Trace:\n   \n   ? raw_local_deliver+0xae/0x240\n   ip_protocol_deliver_rcu+0x2d/0x180\n   ip_local_deliver_finish+0x84/0x100\n   ip_sublist_rcv_finish+0x5f/0x70\n   ip_sublist_rcv+0x12a/0x1d0\n   ip_list_rcv+0xfd/0x130\n   __netif_receive_skb_list_core+0x223/0x250\n   netif_receive_skb_list_internal+0x1d2/0x2c0\n   ? try_fill_recv+0x39/0x7b0\n   napi_complete_done+0x74/0x170\n   virtnet_poll+0x445/0x600\n   __napi_poll+0x27/0x1e0\n   net_rx_action+0x2fe/0x3b0\n   handle_softirqs+0xc2/0x2c0\n   __irq_exit_rcu+0x74/0xd0\n   common_interrupt+0x7f/0x90\n   \n  ...\n  Kernel panic - not syncing: Fatal exception in interrupt\n\nAfter taking a reference, check whether the nulls node is unhashed in\nboth IPv4 and IPv6 established lookups. If it is unhashed or the tuple\nno longer matches, drop the reference and restart the lookup.\n\nLookups racing with the TIME_WAIT hashdance, or with a request being\nreplaced by its child, now restart and find the new socket instead of\nreturning the old one.\n\nRequest sockets that were never inserted into ehash can have a nonzero\nrefcount, and a stale lookup can hold a transient reference. Therefore,\nwhen SYN cookie, Fast Open, and request migration paths fail after\nsetting a nonzero refcount, release the references held by those paths\nwith reqsk_put() instead of freeing the request directly.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-99288\n  \nPublished : Nov. 10, 2026, 7:22 p.m. | 12 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\ninet: reject unhashed sockets during established lookups\n\nTCP established ehash lookups are lockless. The socket caches involved\nuse SLAB_TYPESAFE_BY_RCU, so memory can be reused before an RCU reader\nthat retained its old address has finished.\n\nAfter a tuple match, __inet_lookup_established() and\n__inet6_lookup_established() acquire a reference and repeat the tuple\ncheck. They do not check whether the new object is hashed. If the\naddress is reused for a socket with the same tuple, the lookup can\nacquire a reference to the new object and return it while its nulls node\nis unhashed.\n\nA PoC that drives reuse with a SYN cookie request socket reproduced the\ncrash. The new request socket is unhashed and has a NULL rsk_listener.\nA lookup that had loaded the address of the old request socket acquired\nthe reference published by tcp_get_cookie_sock() and returned the new\nobject. tcp_v4_rcv() then read sk_state through the NULL listener.\n\nThe resulting crash was:\n\n  BUG: kernel NULL pointer dereference, address: 0000000000000012\n  #PF: supervisor read access in kernel mode\n  #PF: error_code(0x0000) - not-present page\n  ...\n  Oops: Oops: 0000 [#1] SMP NOPTI\n  CPU: 4 UID: 0 PID: 0 Comm: swapper/4 Not tainted 7.3.0-00591-g0e135910deec #1 PREEMPT(lazy)\n  ...\n  RIP: 0010:tcp_v4_rcv+0x44e/0x1280\n  ...\n  R10: 0000000000000001 R11: 00000000024ca8c0 R12: 0000000000000000\n  ...\n  CR2: 0000000000000012 CR3: 0000000103d50004 CR4: 0000000000770ef0\n  ...\n  Call Trace:\n   \n   ? raw_local_deliver+0xae/0x240\n   ip_protocol_deliver_rcu+0x2d/0x180\n   ip_local_deliver_finish+0x84/0x100\n   ip_sublist_rcv_finish+0x5f/0x70\n   ip_sublist_rcv+0x12a/0x1d0\n   ip_list_rcv+0xfd/0x130\n   __netif_receive_skb_list_core+0x223/0x250\n   netif_receive_skb_list_internal+0x1d2/0x2c0\n   ? try_fill_recv+0x39/0x7b0\n   napi_complete_done+0x74/0x170\n   virtnet_poll+0x445/0x600\n   __napi_poll+0x27/0x1e0\n   net_rx_action+0x2fe/0x3b0\n   handle_softirqs+0xc2/0x2c0\n   __irq_exit_rcu+0x74/0xd0\n   common_interrupt+0x7f/0x90\n   \n  ...\n  Kernel panic - not syncing: Fatal exception in interrupt\n\nAfter taking a reference, check whether the nulls node is unhashed in\nboth IPv4 and IPv6 established lookups. If it is unhashed or the tuple\nno longer matches, drop the reference and restart the lookup.\n\nLookups racing with the TIME_WAIT hashdance, or with a request being\nreplaced by its child, now restart and find the new socket instead of\nreturning the old one.\n\nRequest sockets that were never inserted into ehash can have a nonzero\nrefcount, and a stale lookup can hold a transient reference. Therefore,\nwhen SYN cookie, Fast Open, and request migration paths fail after\nsetting a nonzero refcount, release the references held by those paths\nwith reqsk_put() instead of freeing the request directly.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-99288\n2. 26.11.11 오전4:22\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-99288",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99288",
+      "source": "cvefeed",
+      "published": "2026-11-11T04:22:32+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-99285 - netfilter: nft_byteorder: remove multi-register support",
       "summary": "CVE ID :CVE-2026-99285\n  \nPublished : Nov. 10, 2026, 5:37 p.m. | 10 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_byteorder: remove multi-register support\n\n64bit byteorder conversion is broken when several registers need to be\nconverted because the source register array advances in steps for 4 bytes\ninstead of 8:\n\n  for (i = ...\n      src64 = nft_reg_load64(&src[i]);\n                             ~~~~~ u32 *src\n      nft_reg_store64(&dst64[i],\n\nRemove the multi-register support, it has other issues as well:\n\nPablo points out that commit\ncaf3ef7468f7 (\"netfilter: nf_tables: prevent OOB access in nft_byteorder_eval\")\nalters semantics: before the loop operated on registers, i.e.\n for ( ... )\n   dst32[i] = htons((u16)src32[i])\n\n .. but after the patch it will operate on bytes, which makes this\n useless to convert e.g. concatenations, which store each compound\n in its own register.\n\nMulti-convert of u32 has one theoretical application:\n\nct mark . meta mark . tcp dport @intervalset\n\nBecause ct mark and meta mark are host byte order, use with\nintervals has to convert the byteorder for ct/meta mark value\nto network byte order (bigendian).\n\nnftables emits this:\n [ meta load mark => reg 1 ]\n [ byteorder reg 1 = hton(reg 1, 4, 4) ]\n [ ct load mark => reg 9 ]\n [ byteorder reg 9 = hton(reg 9, 4, 4) ]\n ...\n\nI.e. two separate calls.  Theoretically it could be changed to do:\n [ meta load mark => reg 1 ]\n [ ct load mark => reg 9 ]\n [ byteorder reg 1 = htonl(reg 1, 4, 8) ]\n ...\n\nBut then all it would take to change the set to\nmeta mark . tcp dport . ct mark\n\n... and we'd be back to two \"byteorder\" calls. IOW, support to\nconvert a range of registers is both dysfunctional and dubious.\n\nSimplify this: remove the feature.\n\nPablo Neira Ayuso points out that nftables before 1.1.0 can generate\nincorrect byteorder conversions, see 9fe58952c45a,\n\"evaluate: skip byteorder conversion for selector smaller than 2 bytes\"\nin nftables.git).  Affected rulesets fail to load with this change and\nold userspace due to 'len != size' check.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
