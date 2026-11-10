@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-11T02:01:28.320470+09:00",
+  "fetched_at": "2026-11-11T02:31:21.462958+09:00",
   "security_news": [
     {
       "title": "Critical Xen Orchestra auth bypass flaw exploited to hijack VM servers",
@@ -5472,21 +5472,39 @@
       "source": "naver",
       "published": "2026-11-08T04:26:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "비트코인(BTC), 악재 속 6월 저점 대비 33.7% 반등…AI주는 최대 62% 하락",
-      "summary": "역대 최대 규모의 암호화폐 해킹이다. 이튿날인 30일 미국 현물 비트코인 상장지수펀드(ETF)에서는 6억 4,330만 달러(약 8,781억 원)가 순유출됐다. 그러나 비트코인 가격은 이후에도 크게 움직이지 않았다. 매체는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 비트코인, 6월 저점 대비 33.7% 반등\n2. 암호화폐 최대 규모 해킹 발생, ETF 8,781억 원 순유출\n3. 비트코인 가격 큰 변동 없이 유지",
-      "link": "http://coinreaders.com/268312",
-      "source": "naver",
-      "published": "2026-11-08T02:12:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-26052 - Intel Graphics Driver Privilege Escalation Vulnerability",
+      "summary": "CVE ID :CVE-2026-26052\n  \nPublished : 10 de Novembro de 2026 às 16:28 | 8 minutos ago\n  \nDescription :Insecure inherited permissions for some Intel(R) Graphics Driver software installers within Ring 3: User Applications may allow an escalation of privilege. Unprivileged software adversary with an authenticated user combined with a high complexity attack may enable escalation of privilege. This result may potentially occur via local access when attack requirements are present without special internal knowledge and requires active user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-26052\n  \nPublished : 10 de Novembro de 2026 às 16:28 | 8 minutos ago\n  \nDescription :Insecure inherited permissions for some Intel(R) Graphics Driver software installers within Ring 3: User Applications may allow an escalation of privilege. Unprivileged software adversary with an authenticated user combined with a high complexity attack may enable escalation of privilege. This result may potentially occur via local access when attack requirements are present without special internal knowledge and requires active user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-26052\n2. 26.11.11 오전1:28\n3. Insecure inherited permissions for some Intel(R) G",
+      "cve_id": "CVE-2026-26052",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-26052",
+      "source": "cvefeed",
+      "published": "2026-11-11T01:28:09+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-63651 - LiveDocs: fetch_docs/introspect fetch client-supplied URLs with no host allowlist and follow redirects",
+      "summary": "CVE ID :CVE-2026-63651\n  \nPublished : 10 de Novembro de 2026 às 16:25 | 11 minutos ago\n  \nDescription :LiveDocs is a primary-source-first documentation for AI agents. Prior to version 0.7.0, fetch_docs and introspect (kinds openapi/graphql, and resolve_source's docs_url) pass a client-supplied URL straight to URLSession with no scheme or host allowlist, and redirects are followed unconditionally. A prompt-injection payload embedded in fetched documentation can steer the model to call fetch_docs against internal or metadata endpoints and stream the response back into the conversation. This issue has been patched in version 0.7.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-63651\n  \nPublished : 10 de Novembro de 2026 às 16:25 | 11 minutos ago\n  \nDescription :LiveDocs is a primary-source-first documentation for AI agents. Prior to version 0.7.0, fetch_docs and introspect (kinds openapi/graphql, and resolve_source's docs_url) pass a client-supplied URL straight to URLSession with no scheme or host allowlist, and redirects are followed unconditionally. A prompt-injection payload embedded in fetched documentation can steer the model to call fetch_docs against internal or metadata endpoints and stream the response back into the conversation. This issue has been patched in version 0.7.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-63651\n2. 26.11.11 오전1:25\n3. LiveDocs is a primary-source-first documentation f",
+      "cve_id": "CVE-2026-63651",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-63651",
+      "source": "cvefeed",
+      "published": "2026-11-11T01:25:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-12708 - Unbounded HTTP/3 Datagram flow map growth in tokio-quiche",
       "summary": "CVE ID :CVE-2026-12708\n  \nPublished : Nov. 10, 2026, 1:25 p.m. | 16 minutes ago\n  \nDescription :Summary\nCloudflare tokio-quiche was found to contain an uncontrolled resource consumption vulnerability in its HTTP/3 DATAGRAM handling. For every previously unseen flow identifier (quarter stream ID) received in a DATAGRAM frame, tokio-quiche creates and retains new, per-flow state. A remote peer can send DATAGRAMs with many distinct identifiers, causing the per-connection flow map and associated channel state to grow without bound.\n\n\n\nImpact\nExploitation can exhaust process memory and cause a denial of service. The vulnerable code is used in both client and server configurations, so either role can be affected by a malicious peer. QUIC DATAGRAM support in tokio-quiche is enabled by default through QuicSettings::enable_dgram; applications can disable it by setting this field to false. The vulnerable HTTP/3 path is reachable only when DATAGRAM support is negotiated with the peer. Core quiche and HTTP/3 deployments without DATAGRAM support are not affected. \n\n\n\nMitigation\nDisable DATAGRAMs in tokio-quiche’s QuicSettings::enable_dgram.\n\n\n\nRemediation\nUpgrade to tokio-quiche version 0.23.0 or later. The fixed code creates flow state only for valid DATAGRAM-capable request streams, which are bounded by QUIC’s stream limits. To tolerate packet reordering, servers retain early DATAGRAMs in a bounded, expiring buffer, while clients discard DATAGRAMs for unknown flows.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
