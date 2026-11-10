@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-11T02:31:21.462958+09:00",
+  "fetched_at": "2026-11-11T03:01:27.141055+09:00",
   "security_news": [
     {
       "title": "Critical Xen Orchestra auth bypass flaw exploited to hijack VM servers",
@@ -5475,6 +5475,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-125121 - compose-lint: Text in a pull request can still issue CI workflow commands through compose-lint 0.31.0's output",
+      "summary": "CVE ID :CVE-2026-125121\n  \nPublished : 10 Nov 2026, 4:43 p.m. | 33 minutes ago\n  \nDescription :compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. In version 0.31.0, compose-lint escapes GitHub Actions workflow-command openers only after ASCII spaces and tabs, while the runner strips all leading Unicode whitespace before interpreting a line. Untrusted Compose values or repository paths beginning with Unicode whitespace followed by :: can therefore reach the text report, fix guidance, the fix dry-run diff, and stderr diagnostics as workflow commands when the package, pre-commit hook, or Docker image runs directly in CI. The GitHub Action is not affected because it disables command processing, and the flaw does not change the lint pass or fail result. This issue is fixed in version 0.32.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-125121\n  \nPublished : 10 Nov 2026, 4:43 p.m. | 33 minutes ago\n  \nDescription :compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. In version 0.31.0, compose-lint escapes GitHub Actions workflow-command openers only after ASCII spaces and tabs, while the runner strips all leading Unicode whitespace before interpreting a line. Untrusted Compose values or repository paths beginning with Unicode whitespace followed by :: can therefore reach the text report, fix guidance, the fix dry-run diff, and stderr diagnostics as workflow commands when the package, pre-commit hook, or Docker image runs directly in CI. The GitHub Action is not affected because it disables command processing, and the flaw does not change the lint pass or fail result. This issue is fixed in version 0.32.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-125121\n2. 26.11.11 오전1:43\n3. compose-lint is a Docker Compose security linter t",
+      "cve_id": "CVE-2026-125121",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-125121",
+      "source": "cvefeed",
+      "published": "2026-11-11T01:43:01+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-26052 - Intel Graphics Driver Privilege Escalation Vulnerability",
       "summary": "CVE ID :CVE-2026-26052\n  \nPublished : 10 de Novembro de 2026 às 16:28 | 8 minutos ago\n  \nDescription :Insecure inherited permissions for some Intel(R) Graphics Driver software installers within Ring 3: User Applications may allow an escalation of privilege. Unprivileged software adversary with an authenticated user combined with a high complexity attack may enable escalation of privilege. This result may potentially occur via local access when attack requirements are present without special internal knowledge and requires active user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.\n  \nSeverity: 5.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
