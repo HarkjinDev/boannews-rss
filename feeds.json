@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-11-10T22:31:25.684572+09:00",
+  "fetched_at": "2026-11-10T23:03:53.377374+09:00",
   "security_news": [
+    {
+      "title": "해킹에 뚫린 금융보안원…\"긴급 차단·정밀 조사 착수\"",
+      "summary": "금융보안 전담기관 금융보안원이 보안평가 관련 일부 정보가 유출된 사고와 관련해 정밀 조사에 착수했다고 밝혔다. 금융보안원은 10일 \"11월9일 오후 3시경 금융회사 평가를 지원하는 상시평가 시스템에서 외부...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융보안원, 상시평가 시스템 보안 유출 사고 발생\n2. 평가 지원 시스템서 일부 정보 외부 유출 추정\n3. 금융보안원, 긴급 차단 및 정밀 조사 착수",
+      "link": "https://n.news.naver.com/mnews/article/138/0002248011?sid=105",
+      "source": "naver",
+      "published": "2026-11-10T22:59:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[인사이트 뉴스] 금융권 보안 파수꾼마저 뚫렸다…금융보안원 해킹, 2차...",
+      "summary": "금융권의 사이버 보안과 해킹 사고 대응을 지원하는 금융보안원이 해킹 공격을 받아 금융회사들이 제출한 정보보호 평가 관련 자료와 일부 개인정보가 유출된 정황이 확인됐다. 금융회사들의 보안 수준을 점검하고 사이버...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [인사이트 뉴스] 금융권 보안 파수꾼마저 뚫렸다…금융보안원 해킹, 2차...\n2. 금융권의 사이버 보안과 해킹 사고 대응을 지원하는 금융보안원이 해킹 공격을 받아 금융회사들\n3. 금융회사들의 보안 수준을 점검하고 사이버...",
+      "link": "https://www.moneystorm.kr/news/articleView.html?idxno=8284",
+      "source": "naver",
+      "published": "2026-11-10T22:55:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "은행·보험사 등 200여 곳 회원 둔 금보원도 해킹 사고",
+      "summary": "최근 금융권서 사이버보안 침해사고가 잇달고 있는 가운데 은행, 보험사 등 200여 금융사를 회원으로 둔 금융감독원 산하 비영리기관인 금융보안원(금보원)도 해킹 공격을 받아 일부 정보가 외부로 유출됐다. 이번 사고로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 은행·보험사 등 200여 곳 회원 둔 금보원도 해킹 사고 최근 금융권서 사이버보안 침해사고",
+      "link": "https://n.news.naver.com/mnews/article/092/0002444727?sid=105",
+      "source": "naver",
+      "published": "2026-11-10T22:46:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "아이폰 5C, 복고 카메라 수요 타고 검색량 4만% 급증",
       "summary": "이 때문에 아이폰 5C는 최신 아이폰처럼 개인 데이터를 보호하기 어려워 데이터 유출, 해킹, 기타 보안 침해에 취약할 수 있다고 경고했다. 리 엘리엇은 아이폰 5C를 복고 디지털카메라 대용으로 쓰려면 기기를...",
@@ -5344,6 +5380,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-12708 - Unbounded HTTP/3 Datagram flow map growth in tokio-quiche",
+      "summary": "CVE ID :CVE-2026-12708\n  \nPublished : Nov. 10, 2026, 1:25 p.m. | 16 minutes ago\n  \nDescription :Summary\nCloudflare tokio-quiche was found to contain an uncontrolled resource consumption vulnerability in its HTTP/3 DATAGRAM handling. For every previously unseen flow identifier (quarter stream ID) received in a DATAGRAM frame, tokio-quiche creates and retains new, per-flow state. A remote peer can send DATAGRAMs with many distinct identifiers, causing the per-connection flow map and associated channel state to grow without bound.\n\n\n\nImpact\nExploitation can exhaust process memory and cause a denial of service. The vulnerable code is used in both client and server configurations, so either role can be affected by a malicious peer. QUIC DATAGRAM support in tokio-quiche is enabled by default through QuicSettings::enable_dgram; applications can disable it by setting this field to false. The vulnerable HTTP/3 path is reachable only when DATAGRAM support is negotiated with the peer. Core quiche and HTTP/3 deployments without DATAGRAM support are not affected. \n\n\n\nMitigation\nDisable DATAGRAMs in tokio-quiche’s QuicSettings::enable_dgram.\n\n\n\nRemediation\nUpgrade to tokio-quiche version 0.23.0 or later. The fixed code creates flow state only for valid DATAGRAM-capable request streams, which are bounded by QUIC’s stream limits. To tolerate packet reordering, servers retain early DATAGRAMs in a bounded, expiring buffer, while clients discard DATAGRAMs for unknown flows.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-12708\n  \nPublished : Nov. 10, 2026, 1:25 p.m. | 16 minutes ago\n  \nDescription :Summary\nCloudflare tokio-quiche was found to contain an uncontrolled resource consumption vulnerability in its HTTP/3 DATAGRAM handling. For every previously unseen flow identifier (quarter stream ID) received in a DATAGRAM frame, tokio-quiche creates and retains new, per-flow state. A remote peer can send DATAGRAMs with many distinct identifiers, causing the per-connection flow map and associated channel state to grow without bound.\n\n\n\nImpact\nExploitation can exhaust process memory and cause a denial of service. The vulnerable code is used in both client and server configurations, so either role can be affected by a malicious peer. QUIC DATAGRAM support in tokio-quiche is enabled by default through QuicSettings::enable_dgram; applications can disable it by setting this field to false. The vulnerable HTTP/3 path is reachable only when DATAGRAM support is negotiated with the peer. Core quiche and HTTP/3 deployments without DATAGRAM support are not affected. \n\n\n\nMitigation\nDisable DATAGRAMs in tokio-quiche’s QuicSettings::enable_dgram.\n\n\n\nRemediation\nUpgrade to tokio-quiche version 0.23.0 or later. The fixed code creates flow state only for valid DATAGRAM-capable request streams, which are bounded by QUIC’s stream limits. To tolerate packet reordering, servers retain early DATAGRAMs in a bounded, expiring buffer, while clients discard DATAGRAMs for unknown flows.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-12708\n2. 26.11.10 오후10:25\n3. Summary Cloudflare tokio-quiche was found to conta",
+      "cve_id": "CVE-2026-12708",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12708",
+      "source": "cvefeed",
+      "published": "2026-11-10T22:25:09+09:00",
+      "lang": "en"
+    },
+    {
       "title": "Apple Patches Everyting: November 2026 Edition, (Tue, Nov 10th)",
       "summary": "\r",
       "description": "\r",
@@ -5356,6 +5407,21 @@
       "link": "https://isc.sans.edu/diary/rss/33506",
       "source": "sans_isc",
       "published": "2026-11-10T21:48:55+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-120326 - Unescaped Download File Name Allows Content-Disposition Parameter Injection in Vaadin Flow",
+      "summary": "CVE ID :CVE-2026-120326\n  \nPublished : Nov. 10, 2026, 12:17 p.m. | 1 hour, 24 minutes ago\n  \nDescription :DownloadEvent.setFileName(String) in Vaadin Flow writes the download file name into the Content-Disposition header without escaping it. When the name is pure US-ASCII the header is built as attachment; filename=\"\" with the name inserted verbatim, so a double quote in the name ends the quoted string early and the rest of the name is read by the browser as further header parameters. The inline(String) variant, present from Vaadin 25.0, builds the name the same way. An application that passes an untrusted file name to either method, for example when re-serving a file under the name it was uploaded with, lets an attacker add a filename* parameter. Browsers prefer filename* over filename, so the file is saved under a name and extension of the attacker's choosing, which defeats any file name or extension restriction the application enforces. The attacker cannot change the attachment or inline disposition itself and cannot split the header.\n\nUsers of affected versions should apply the following mitigation or upgrade. Releases that have fixed this issue include:\n\nProduct version\nVaadin 24.8.0 - 24.8.17\nVaadin 24.9.0 - 24.9.25\nVaadin 24.10.0 - 24.10.13\nVaadin 25.0.0 - 25.0.13\nVaadin 25.1.0 - 25.1.13\nVaadin 25.2.0 - 25.2.12\nVaadin 25.3.0 - 25.3.4\n\nMitigation\nNo fixed release on this line, upgrade to 24.9.26 or newer\nUpgrade to 24.9.26\nUpgrade to 24.10.14\nNo fixed release on this line, upgrade to 25.2.13 or newer\nNo fixed release on this line, upgrade to 25.2.13 or newer\nUpgrade to 25.2.13\nUpgrade to 25.3.5\n\nVaadin versions below 24.8 are not affected: the DownloadEvent API does not exist in them.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-120326\n  \nPublished : Nov. 10, 2026, 12:17 p.m. | 1 hour, 24 minutes ago\n  \nDescription :DownloadEvent.setFileName(String) in Vaadin Flow writes the download file name into the Content-Disposition header without escaping it. When the name is pure US-ASCII the header is built as attachment; filename=\"\" with the name inserted verbatim, so a double quote in the name ends the quoted string early and the rest of the name is read by the browser as further header parameters. The inline(String) variant, present from Vaadin 25.0, builds the name the same way. An application that passes an untrusted file name to either method, for example when re-serving a file under the name it was uploaded with, lets an attacker add a filename* parameter. Browsers prefer filename* over filename, so the file is saved under a name and extension of the attacker's choosing, which defeats any file name or extension restriction the application enforces. The attacker cannot change the attachment or inline disposition itself and cannot split the header.\n\nUsers of affected versions should apply the following mitigation or upgrade. Releases that have fixed this issue include:\n\nProduct version\nVaadin 24.8.0 - 24.8.17\nVaadin 24.9.0 - 24.9.25\nVaadin 24.10.0 - 24.10.13\nVaadin 25.0.0 - 25.0.13\nVaadin 25.1.0 - 25.1.13\nVaadin 25.2.0 - 25.2.12\nVaadin 25.3.0 - 25.3.4\n\nMitigation\nNo fixed release on this line, upgrade to 24.9.26 or newer\nUpgrade to 24.9.26\nUpgrade to 24.10.14\nNo fixed release on this line, upgrade to 25.2.13 or newer\nNo fixed release on this line, upgrade to 25.2.13 or newer\nUpgrade to 25.2.13\nUpgrade to 25.3.5\n\nVaadin versions below 24.8 are not affected: the DownloadEvent API does not exist in them.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-120326\n2. 26.11.10 오후9:17\n3. DownloadEvent.setFileName(String) in Vaadin Flow w",
+      "cve_id": "CVE-2026-120326",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-120326",
+      "source": "cvefeed",
+      "published": "2026-11-10T21:17:16+09:00",
       "lang": "en"
     },
     {
