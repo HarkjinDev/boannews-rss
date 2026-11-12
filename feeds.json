@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-13T00:34:59.546398+09:00",
+  "fetched_at": "2026-11-13T01:03:45.107418+09:00",
   "security_news": [
+    {
+      "title": "“가짜 채용 면접으로 돈 빼간다”",
+      "summary": "그는 AI를 악용한 사이버범죄 사례로 가짜 채용 면접을 통한 해킹을 소개했다. 구인·구직 플랫폼에서 가짜 면접을 제안한 뒤 코딩 과제로 위장한 파일을 내려받게 해 악성코드를 심고, 이를 통해 기업 시스템에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. “가짜 채용 면접으로 돈 빼간다” 그는 AI를 악용한 사이버범죄 사례로 가짜 채용 면접을 \n2. 구인·구직 플랫폼에서 가짜 면접을 제안한 뒤 코딩 과제로 위장한 파일을 내려받게 해 악성코",
+      "link": "https://www.koreatimes.com/article/11631294?utm_source=naver",
+      "source": "naver",
+      "published": "2026-11-13T00:48:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "AI 쓴 사기 조직, 수익성 4.5배…체이널리시스·트론·테더 DCTF 가동",
       "summary": "단속 대상은 투자 사기와 로맨스 사기, 해킹과 탈취 자금, 테러 자금 조달, 북한의 사이버 작전, 카르텔 자금세탁이다. 크립토 브리핑은 여기에 아동 성착취물 관련 활동과 마약 거래도 포함된다고 전했다.트론...",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-11-10T07:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "척추장애 심사부터 민원 답변까지…국민연금공단, 'N-GPT' 실무 밀착형 ...",
-      "summary": "특히 N-GPT는 외부 인터넷망과 완벽히 분리된 내부 업무망 환경에 독립 구축돼 정보 유출 위험과 외부 해킹 우려를 원천적으로 차단했다. 이를 통해 보안성이 보장된 안전한 환경에서 민감한 공공 데이터를 다룰 수 있는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 척추장애 심사부터 민원 답변까지…국민연금공단, 'N-GPT' 실무 밀착형 ...\n2. 특히 N-GPT는 외부 인터넷망과 완벽히 분리된 내부 업무망 환경에 독립 구축돼 정보 유출\n3. 이를 통해 보안성이 보장된 안전한 환경에서 민감한 공공 데이터를 다룰 수 있는...",
-      "link": "https://www.cstimes.com/news/articleView.html?idxno=727246",
-      "source": "naver",
-      "published": "2026-11-10T06:50:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-6460 - PostgreSQL type confusion after ALTER ... SET DATA TYPE executes arbitrary code",
+      "summary": "CVE ID :CVE-2026-6460\n  \nPublished : Nov. 12, 2026, 3:17 p.m. | 45 minutes ago\n  \nDescription :Type confusion in PostgreSQL allows an object creator to execute arbitrary code as the operating system user running the database, via ALTER ... SET DATA TYPE primarily.  Other DDL attack routes exist, such as \"ALTER TABLE ... ADD COLUMN; ROLLBACK; ALTER TABLE ... ADD COLUMN\".  The system had inadequate tracking of typed values, and values were not self-identifying.  Stale values could appear in data dictionary entries, PL/pgSQL variables, and many other parts of the system.  PostgreSQL Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-6460\n  \nPublished : Nov. 12, 2026, 3:17 p.m. | 45 minutes ago\n  \nDescription :Type confusion in PostgreSQL allows an object creator to execute arbitrary code as the operating system user running the database, via ALTER ... SET DATA TYPE primarily.  Other DDL attack routes exist, such as \"ALTER TABLE ... ADD COLUMN; ROLLBACK; ALTER TABLE ... ADD COLUMN\".  The system had inadequate tracking of typed values, and values were not self-identifying.  Stale values could appear in data dictionary entries, PL/pgSQL variables, and many other parts of the system.  PostgreSQL Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-6460\n2. 26.11.13 오전12:17\n3. Type confusion in PostgreSQL allows an object crea",
+      "cve_id": "CVE-2026-6460",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-6460",
+      "source": "cvefeed",
+      "published": "2026-11-13T00:17:51+09:00",
+      "lang": "en"
+    },
     {
       "title": "Exploit Attempts for GPUStack Authentication Bypass (CVE-2026-102895), (Thu, Nov 12th)",
       "summary": "CVE-2026-102895 is a trivial authentication-bypass vulnerability. GPUStack is also an attractive target. It is open-source software that manages clusters of GPUs, which are typically used to run AI workloads. All versions of GPUStack prior to 2.2.0, which was released at the end of June. This vulnerability was not made public until the end of July, and the CVE was assigned on November 4th. \r",
@@ -6946,21 +6961,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-19706",
       "source": "cvefeed",
       "published": "2026-11-10T02:20:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-124683 - Eclipse Langium Algorithmic Complexity Denial of Service",
-      "summary": "CVE ID :CVE-2026-124683\n  \nPublished : Nov. 9, 2026, 4:02 p.m. | 29 minutes ago\n  \nDescription :Eclipse Langium versions 3.2.0 through 4.4.0 contain an inefficient algorithmic complexity issue (CWE-407) in the opt-in IndentationAwareTokenBuilder and IndentationAwareLexer. When producing DEDENT tokens, the token builder recomputes line numbers by re-scanning the entire preceding document text. A document whose indentation changes on most lines then takes quadratic time to tokenize. Because tokenization is synchronous, a crafted document of a few hundred kilobytes can block the Node.js event loop for tens of seconds. That causes a DoS for every user served by the same process. Languages built with the DefaultLexer and DefaultTokenBuilder are unaffected.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-124683\n  \nPublished : Nov. 9, 2026, 4:02 p.m. | 29 minutes ago\n  \nDescription :Eclipse Langium versions 3.2.0 through 4.4.0 contain an inefficient algorithmic complexity issue (CWE-407) in the opt-in IndentationAwareTokenBuilder and IndentationAwareLexer. When producing DEDENT tokens, the token builder recomputes line numbers by re-scanning the entire preceding document text. A document whose indentation changes on most lines then takes quadratic time to tokenize. Because tokenization is synchronous, a crafted document of a few hundred kilobytes can block the Node.js event loop for tens of seconds. That causes a DoS for every user served by the same process. Languages built with the DefaultLexer and DefaultTokenBuilder are unaffected.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-124683\n2. 26.11.10 오전1:02\n3. Eclipse Langium versions 3.2.0 through 4.4.0 conta",
-      "cve_id": "CVE-2026-124683",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-124683",
-      "source": "cvefeed",
-      "published": "2026-11-10T01:02:50+09:00",
       "lang": "en"
     }
   ],
