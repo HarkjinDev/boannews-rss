@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-13T05:32:48.614430+09:00",
+  "fetched_at": "2026-11-13T06:02:24.580234+09:00",
   "security_news": [
     {
       "title": "생활 속 연결기기, 국가 사이버전의 새 전장으로 [IoT 해킹 비상 ②]",
@@ -6004,6 +6004,36 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-126205 - Loofah: Regular expression denial of service in the SVG local-reference check",
+      "summary": "CVE ID :CVE-2026-126205\n  \nPublished : Nov. 12, 2026, 8:41 p.m. | 5 minutes ago\n  \nDescription :Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Prior to 2.25.3, the Loofah HTML5 sanitizer checks href and xlink:href on elements in SVG_ALLOW_LOCAL_HREF with a regular expression whose line anchor and newline-matching whitespace cause an all-whitespace value to be rescanned from every line start. An attacker can submit an SVG reference element with a long multiline-whitespace attribute and consume CPU quadratically during sanitization. CRuby 3.1 and earlier and JRuby are affected, while CRuby 3.2 and later uses linear-time regular-expression matching. The default safelist reaches the vulnerable check without a configuration change. This issue is fixed in version 2.25.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-126205\n  \nPublished : Nov. 12, 2026, 8:41 p.m. | 5 minutes ago\n  \nDescription :Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Prior to 2.25.3, the Loofah HTML5 sanitizer checks href and xlink:href on elements in SVG_ALLOW_LOCAL_HREF with a regular expression whose line anchor and newline-matching whitespace cause an all-whitespace value to be rescanned from every line start. An attacker can submit an SVG reference element with a long multiline-whitespace attribute and consume CPU quadratically during sanitization. CRuby 3.1 and earlier and JRuby are affected, while CRuby 3.2 and later uses linear-time regular-expression matching. The default safelist reaches the vulnerable check without a configuration change. This issue is fixed in version 2.25.3.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-126205\n2. 26.11.13 오전5:41\n3. Loofah is a general library for manipulating and t",
+      "cve_id": "CVE-2026-126205",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-126205",
+      "source": "cvefeed",
+      "published": "2026-11-13T05:41:25+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-45265 - Atomic-Read-File RecordCount Stack-Based Out-of-Bounds Write in bacnet-stack",
+      "summary": "CVE ID :CVE-2026-45265\n  \nPublished : Nov. 12, 2026, 8:18 p.m. | 27 minutes ago\n  \nDescription :BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.4 and 1.5.1, there is a stack-based out-of-bounds write / stack-buffer-overflow in bacnet-stack when the server processes a malicious Atomic-Read-File request in record access mode. The bug is triggered on the real server side. A crafted request can set an excessively large RecordCount, which is later used as the loop bound for writing record data into a stack-allocated BACNET_ATOMIC_READ_FILE_DATA data structure. However, the stack object only has space for one fileData element. When the loop reaches i = 1, the code computes &data->fileData[1], which is already out of bounds, and the resulting invalid pointer is passed down to memmove(), causing a stack-buffer-overflow. This issue has been patched in versions 1.4.4 and 1.5.1.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-45265\n  \nPublished : Nov. 12, 2026, 8:18 p.m. | 27 minutes ago\n  \nDescription :BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.4 and 1.5.1, there is a stack-based out-of-bounds write / stack-buffer-overflow in bacnet-stack when the server processes a malicious Atomic-Read-File request in record access mode. The bug is triggered on the real server side. A crafted request can set an excessively large RecordCount, which is later used as the loop bound for writing record data into a stack-allocated BACNET_ATOMIC_READ_FILE_DATA data structure. However, the stack object only has space for one fileData element. When the loop reaches i = 1, the code computes &data->fileData[1], which is already out of bounds, and the resulting invalid pointer is passed down to memmove(), causing a stack-buffer-overflow. This issue has been patched in versions 1.4.4 and 1.5.1.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-45265\n2. 26.11.13 오전5:18\n3. BACnet Stack is a BACnet open source protocol stac",
+      "cve_id": "CVE-2026-45265",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45265",
+      "source": "cvefeed",
+      "published": "2026-11-13T05:18:38+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-120033 - frr: bgpd Send Hold Timer expiry bypasses the FSM, leaving a phantom Established session or crashing bgpd with Graceful Restart",
       "summary": "CVE ID :CVE-2026-120033\n  \nPublished : Nov. 12, 2026, 7:16 p.m. | 30 minutes ago\n  \nDescription :In FRRouting 10.1 and later, bgpd does not correctly close a BGP session when the Send Hold Timer (RFC 9687) expires, i.e. when a neighbor has stopped accepting data from the router for twice the hold time. The connection is closed, but bgpd still considers the session to be up.\n\n\nA BGP neighbor that keeps sending KEEPALIVEs but stops reading from its connection, at a time when the router has a large amount of data to send to it (for example while sending it a full routing table), can cause one of the following:\n\n  *  If the neighbor announced Graceful Restart support: bgpd crashes shortly after the session is closed (after the neighbor's announced restart time plus one keepalive interval), taking down all BGP sessions on the router. The neighbor can repeat this each time bgpd restarts.\n  *  Otherwise: the session stays stuck in the Established state. The neighbor's routes stay installed and keep being advertised to other peers, and the neighbor cannot reconnect until an operator runs \"clear bgp \".\n\nThe neighbor does not need to be malicious; an overloaded or stuck peer can trigger the same behavior.\n\n\nRequired configuration: no special configuration is needed. Any BGP neighbor with an established session can trigger the issue under default settings, for example:\n\n  router bgp 65001\n   neighbor 192.0.2.2 remote-as 65002\n\nGraceful Restart helper mode, which leads to the crash, is enabled by default. With default timers (keepalive 60s, hold time 180s), the session is closed about 6 minutes after the neighbor stops reading.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-120033\n  \nPublished : Nov. 12, 2026, 7:16 p.m. | 30 minutes ago\n  \nDescription :In FRRouting 10.1 and later, bgpd does not correctly close a BGP session when the Send Hold Timer (RFC 9687) expires, i.e. when a neighbor has stopped accepting data from the router for twice the hold time. The connection is closed, but bgpd still considers the session to be up.\n\n\nA BGP neighbor that keeps sending KEEPALIVEs but stops reading from its connection, at a time when the router has a large amount of data to send to it (for example while sending it a full routing table), can cause one of the following:\n\n  *  If the neighbor announced Graceful Restart support: bgpd crashes shortly after the session is closed (after the neighbor's announced restart time plus one keepalive interval), taking down all BGP sessions on the router. The neighbor can repeat this each time bgpd restarts.\n  *  Otherwise: the session stays stuck in the Established state. The neighbor's routes stay installed and keep being advertised to other peers, and the neighbor cannot reconnect until an operator runs \"clear bgp \".\n\nThe neighbor does not need to be malicious; an overloaded or stuck peer can trigger the same behavior.\n\n\nRequired configuration: no special configuration is needed. Any BGP neighbor with an established session can trigger the issue under default settings, for example:\n\n  router bgp 65001\n   neighbor 192.0.2.2 remote-as 65002\n\nGraceful Restart helper mode, which leads to the crash, is enabled by default. With default timers (keepalive 60s, hold time 180s), the session is closed about 6 minutes after the neighbor stops reading.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6946,21 +6976,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-90585",
       "source": "cvefeed",
       "published": "2026-11-10T07:03:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-123808 - Nuxt UI: UAuthForm / UForm SSR markup omits `method`, leaking credentials via GET if submitted before hydration",
-      "summary": "CVE ID :CVE-2026-123808\n  \nPublished : Nov. 9, 2026, 8:41 p.m. | 50 minutes ago\n  \nDescription :Nuxt UI is an intuitive Vue UI library powered by Reka UI and Tailwind CSS. Prior to 4.8.1, the server-rendered form element produced by UForm in src/runtime/components/Form.vue omits the method and action attributes and relies solely on the hydrated @submit.prevent handler to stop native submission. UAuthForm composes UForm and can render named credential fields, including an input with type password, inside the same markup. If a user submits before Vue hydration completes, or when the client bundle is blocked or unavailable, the browser performs its default GET submission and serializes the named fields into the current URL query string. The credentials can then appear in the address bar, browser history, reverse-proxy, CDN, or WAF request logs, and Referer headers sent with same-origin subresource requests. This issue is fixed in version 4.8.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-123808\n  \nPublished : Nov. 9, 2026, 8:41 p.m. | 50 minutes ago\n  \nDescription :Nuxt UI is an intuitive Vue UI library powered by Reka UI and Tailwind CSS. Prior to 4.8.1, the server-rendered form element produced by UForm in src/runtime/components/Form.vue omits the method and action attributes and relies solely on the hydrated @submit.prevent handler to stop native submission. UAuthForm composes UForm and can render named credential fields, including an input with type password, inside the same markup. If a user submits before Vue hydration completes, or when the client bundle is blocked or unavailable, the browser performs its default GET submission and serializes the named fields into the current URL query string. The credentials can then appear in the address bar, browser history, reverse-proxy, CDN, or WAF request logs, and Referer headers sent with same-origin subresource requests. This issue is fixed in version 4.8.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-123808\n2. 26.11.10 오전5:41\n3. Nuxt UI is an intuitive Vue UI library powered by ",
-      "cve_id": "CVE-2026-123808",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-123808",
-      "source": "cvefeed",
-      "published": "2026-11-10T05:41:49+09:00",
       "lang": "en"
     }
   ],
