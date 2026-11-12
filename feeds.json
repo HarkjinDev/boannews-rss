@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-12T22:04:10.468408+09:00",
+  "fetched_at": "2026-11-12T22:33:40.086336+09:00",
   "security_news": [
     {
       "title": "LH, 3기 신도시 보상기간 단축 추진…사이버보안 대응체계도 강화",
@@ -7037,51 +7037,6 @@
       "source": "krcert_notice",
       "published": "2026-11-10T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-124079 - rConfig Core 8.0.0 before 8.2.19 and rConfig Pro before 8.4.1 RCE via Unauthenticated Redis Queue Poisoning",
-      "summary": "CVE ID :CVE-2026-124079\n  \nPublished : Nov. 9, 2026, 1:17 p.m. | 1 hour, 12 minutes ago\n  \nDescription :rConfig Core 8.0.0 before 8.2.19 and rConfig Pro before 8.4.1 contain a deserialization of untrusted data vulnerability that allows unauthenticated network attackers to execute arbitrary code by pushing a crafted serialized job onto the Redis-backed Laravel Horizon queue, which runs without authentication in affected deployments. Laravel's CallQueuedHandler unserializes the job without class restrictions, allowing attackers to instantiate the existing App\\\\Jobs\\\\TaskDownloadRun class and invoke an attacker-controlled Artisan command. Attackers can leverage the bundled laravel/tinker package to execute arbitrary PHP and operating system commands as the queue worker's user, write a persistent web shell into the web-served storage/app/public directory, and read database credentials, stored device credentials, and API tokens. Where Redis is not directly reachable, authenticated attackers can deliver the payload through the application by configuring a device target that points at the rConfig server's loopback address.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-124079\n  \nPublished : Nov. 9, 2026, 1:17 p.m. | 1 hour, 12 minutes ago\n  \nDescription :rConfig Core 8.0.0 before 8.2.19 and rConfig Pro before 8.4.1 contain a deserialization of untrusted data vulnerability that allows unauthenticated network attackers to execute arbitrary code by pushing a crafted serialized job onto the Redis-backed Laravel Horizon queue, which runs without authentication in affected deployments. Laravel's CallQueuedHandler unserializes the job without class restrictions, allowing attackers to instantiate the existing App\\\\Jobs\\\\TaskDownloadRun class and invoke an attacker-controlled Artisan command. Attackers can leverage the bundled laravel/tinker package to execute arbitrary PHP and operating system commands as the queue worker's user, write a persistent web shell into the web-served storage/app/public directory, and read database credentials, stored device credentials, and API tokens. Where Redis is not directly reachable, authenticated attackers can deliver the payload through the application by configuring a device target that points at the rConfig server's loopback address.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-124079\n2. 26.11.09 오후10:17\n3. rConfig Core 8.0.0 before 8.2.19 and rConfig Pro b",
-      "cve_id": "CVE-2026-124079",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-124079",
-      "source": "cvefeed",
-      "published": "2026-11-09T22:17:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-119613 - AshAi sends unrecognized tool errors verbatim to MCP clients and the model, disclosing internal details",
-      "summary": "CVE ID :CVE-2026-119613\n  \nPublished : Nov. 9, 2026, 1:17 p.m. | 23 minutes ago\n  \nDescription :Generation of Error Message Containing Sensitive Information vulnerability in ash-project ash_ai allows a caller of an AshAi tool to read internal error details, including module names and data values, by making a tool call fail.\n\nAshAi.ToToolError gained an implementation for Ash.Error.Unknown.UnknownError that returns the error's error field as is, and AshAi.Tool.Errors.format/1 sends that text to MCP clients (tool calls and resource reads in AshAi.Mcp.Server) and to the model in AshAi.ToolLoop. Ash stores the full Exception.format/2 output of a raised exception, or inspect/1 of a bare {:error, term} return, in that field. A tool result that cannot be JSON-encoded raises a Protocol.UndefinedError whose text includes the inspected value, which can be a whole record with fields the tool never returns. None of these errors were logged. The fix logs them under an error id and returns only that id to the caller.\n\nThis issue affects ash_ai: from 1.5.0 before 1.5.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-119613\n  \nPublished : Nov. 9, 2026, 1:17 p.m. | 23 minutes ago\n  \nDescription :Generation of Error Message Containing Sensitive Information vulnerability in ash-project ash_ai allows a caller of an AshAi tool to read internal error details, including module names and data values, by making a tool call fail.\n\nAshAi.ToToolError gained an implementation for Ash.Error.Unknown.UnknownError that returns the error's error field as is, and AshAi.Tool.Errors.format/1 sends that text to MCP clients (tool calls and resource reads in AshAi.Mcp.Server) and to the model in AshAi.ToolLoop. Ash stores the full Exception.format/2 output of a raised exception, or inspect/1 of a bare {:error, term} return, in that field. A tool result that cannot be JSON-encoded raises a Protocol.UndefinedError whose text includes the inspected value, which can be a whole record with fields the tool never returns. None of these errors were logged. The fix logs them under an error id and returns only that id to the caller.\n\nThis issue affects ash_ai: from 1.5.0 before 1.5.1.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-119613\n2. 26.11.09 오후10:17\n3. Generation of Error Message Containing Sensitive I",
-      "cve_id": "CVE-2026-119613",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-119613",
-      "source": "cvefeed",
-      "published": "2026-11-09T22:17:06+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-119610 - Gstreamer1-plugins-good: gstreamer1-plugins-good: out-of-bounds heap read in mtap16/mtap24 h.264 rtp depayloader via signed/unsigned underflow",
-      "summary": "CVE ID :CVE-2026-119610\n  \nPublished : Nov. 9, 2026, 1:17 p.m. | 23 minutes ago\n  \nDescription :A flaw was found in GStreamer's gst-plugins-good, specifically in the H.264 RTP depayloader element. When processing MTAP16 or MTAP24 multi-time aggregation RTP packets, a signed/unsigned integer conversion error causes the remaining-length counter to underflow to a large positive value when the packet is truncated. This allows a remote, unauthenticated attacker to trigger an out-of-bounds heap read of up to approximately 64 KiB of process memory by sending a single malformed RTP packet. Successful exploitation can crash the receiving GStreamer pipeline (denial of service), and in relay or transcoding deployments where output is accessible to the attacker, may expose adjacent heap contents.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-119610\n  \nPublished : Nov. 9, 2026, 1:17 p.m. | 23 minutes ago\n  \nDescription :A flaw was found in GStreamer's gst-plugins-good, specifically in the H.264 RTP depayloader element. When processing MTAP16 or MTAP24 multi-time aggregation RTP packets, a signed/unsigned integer conversion error causes the remaining-length counter to underflow to a large positive value when the packet is truncated. This allows a remote, unauthenticated attacker to trigger an out-of-bounds heap read of up to approximately 64 KiB of process memory by sending a single malformed RTP packet. Successful exploitation can crash the receiving GStreamer pipeline (denial of service), and in relay or transcoding deployments where output is accessible to the attacker, may expose adjacent heap contents.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-119610\n2. 26.11.09 오후10:17\n3. A flaw was found in GStreamer's gst-plugins-good, ",
-      "cve_id": "CVE-2026-119610",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-119610",
-      "source": "cvefeed",
-      "published": "2026-11-09T22:17:05+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
