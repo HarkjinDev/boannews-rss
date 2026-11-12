@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-11-12T19:33:36.707487+09:00",
+  "fetched_at": "2026-11-12T20:03:56.295459+09:00",
   "security_news": [
+    {
+      "title": "Hackers Deploy Malware in Fresh ScreenConnect Campaign",
+      "summary": "The attackers exploited a vulnerability in a legitimate extension to bypass ScreenConnect authentication.\nThe post Hackers Deploy Malware in Fresh ScreenConnect Campaign appeared first on SecurityWeek.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Hackers Deploy Malware in Fresh ScreenConnect Camp\n2. The post Hackers Deploy Malware in Fresh ScreenCon",
+      "link": "https://www.securityweek.com/hackers-deploy-malware-in-fresh-screenconnect-campaign/",
+      "source": "securityweek",
+      "published": "2026-11-12T19:39:34+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "일본, 중소기업 개인정보 유출 확산",
+      "summary": "지난해 서버를 해킹당해 복구에 8개월이나 걸렸습니다. 결국 수천만 엔을 들여 보안을 강화했습니다. 전문가는 중소기업의 사이버 피해 확산은 자금 부족으로 보안에 충분한 투자가 어렵기 때문이라며, 정부의 세제 혜택...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 일본 중소기업, 서버 해킹으로 수천만 엔 피해\n2. 복구에 8개월 소요, 개인정보 유출 확산 우려\n3. 자금 부족으로 보안 투자 어려움, 정부 지원 필요",
+      "link": "https://n.news.naver.com/mnews/article/056/0012292759?sid=104",
+      "source": "naver",
+      "published": "2026-11-12T19:26:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "플라이빗도 '다우오피스'로 뚫렸다…빗썸·한양증권 이어 세번째 해킹",
       "summary": "가상자산 거래소인 플라이빗을 운영하는 한국디지털거래소가 사내 그룹웨어를 통한 외부 침입으로 고객 개인정보가 유출됐다.이번에도 다우기술의 그룹웨어인 다우오피스가 뚫렸다. 빗썸과 한양증권에 이어 세...",
@@ -5976,33 +6000,54 @@
       "source": "naver",
       "published": "2026-11-10T03:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "부산 블록체인·사이버보안 스타트업 안암145, CES 최고혁신상",
-      "summary": "거래를 승인하는 비밀키를 보호할 뿐 아니라 해킹으로 조작된 지시가 실행되지 않도록 막는다. 안암145는 대학의 연구 역량과 지역 금융의 창업 지원, 부산의 사업 현장을 연결해 성장했다. 2023년 창업해 부산...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 안암145, CES 최고혁신상 수상\n2. 비밀키 보호 및 해킹 조작 방지 기술\n3. 부산 스타트업, 기술력으로 인정받음",
-      "link": "https://n.news.naver.com/mnews/article/082/0001406377?sid=101",
-      "source": "naver",
-      "published": "2026-11-10T03:05:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Hackers Exploit Qubole's Trusted AWS Access to Breach Customer Accounts and Steal Data",
-      "summary": "An attacker broke into AWS accounts belonging to multiple Qubole customers between October 14 and October 26 and stole stored secrets and data, cloud security company Wiz said today.\n\nThe attacker used credentials for an AWS account that Qubole's platform uses to reach those customers. How the attacker got those credentials has not been disclosed.\n\nQubole, a data lake platform owned by Idera,",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 큐볼 고객 계정에 침입, AWS 접근 정보 탈취\n2. 10월 14~26일 사이 고객 데이터 및 민감 정보 유출\n3. Idera 소유 큐볼 플랫폼, AWS 계정 신뢰도 악용",
-      "link": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
-      "source": "thehackernews",
-      "published": "2026-11-10T02:51:21+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-126644 - Ansible.posix: authorized_key module follows a parent-directory symlink allowing writes outside the intended directory",
+      "summary": "CVE ID :CVE-2026-126644\n  \nPublished : 12 Nov 2026, 10:50 a.m. | 9 minutes ago\n  \nDescription :A link-following flaw was found in the authorized_key module of the ansible.posix collection, residual to the fix for CVE-2026-11837. That fix guards only the final path component (os.chown with follow_symlinks=False and O_NOFOLLOW in _safe_open_write()). When an unprivileged local user replaces their ~/.ssh directory with a symlink to a directory they do not own, and an operator subsequently runs the authorized_key task as root (a common provisioning pattern), the module resolves its path operations through the symlink: atomic_move() writes the temporary file in the symlink target and renames it to /authorized_keys, creating or overwriting a file in the attacker-chosen directory, and os.chmod(sshdir, 0o700) follows the symlink and changes the target directory's permissions. The written file is chowned to the unprivileged user, so this is not a privilege escalation, but it allows an attacker to create or overwrite files (for example in /etc/apt/apt.conf.d/, which APT reads regardless of file ownership) to cause integrity and availability impacts.\n  \nSeverity: 3.9 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-126644\n  \nPublished : 12 Nov 2026, 10:50 a.m. | 9 minutes ago\n  \nDescription :A link-following flaw was found in the authorized_key module of the ansible.posix collection, residual to the fix for CVE-2026-11837. That fix guards only the final path component (os.chown with follow_symlinks=False and O_NOFOLLOW in _safe_open_write()). When an unprivileged local user replaces their ~/.ssh directory with a symlink to a directory they do not own, and an operator subsequently runs the authorized_key task as root (a common provisioning pattern), the module resolves its path operations through the symlink: atomic_move() writes the temporary file in the symlink target and renames it to /authorized_keys, creating or overwriting a file in the attacker-chosen directory, and os.chmod(sshdir, 0o700) follows the symlink and changes the target directory's permissions. The written file is chowned to the unprivileged user, so this is not a privilege escalation, but it allows an attacker to create or overwrite files (for example in /etc/apt/apt.conf.d/, which APT reads regardless of file ownership) to cause integrity and availability impacts.\n  \nSeverity: 3.9 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-126644\n2. 26.11.12 오후7:50\n3. A link-following flaw was found in the authorized_",
+      "cve_id": "CVE-2026-126644",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-126644",
+      "source": "cvefeed",
+      "published": "2026-11-12T19:50:16+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-126643 - Aap-gateway-operator: resource-server secret exposed in plaintext in the automationcontroller custom resource",
+      "summary": "CVE ID :CVE-2026-126643\n  \nPublished : 12 Nov 2026, 10:47 a.m. | 12 minutes ago\n  \nDescription :A cleartext storage flaw was found in the AAP Gateway Operator. When reconciling an AutomationController, the operator reads the protected resource-server Secret (Secret/-resource-server, key controller_resource_server_secret) and copies its plaintext value into the generated AutomationController custom resource under spec.extra_settings (RESOURCE_SERVER.SECRET_KEY). Although the operator uses no_log to keep the value out of its own logs, serializing it into the custom resource exposes it to any principal able to read the AutomationController CR without permission to read the backing Kubernetes Secret, breaking the expected OpenShift RBAC separation between the two resources. The value may also propagate into Kubernetes API/etcd storage, GitOps and Argo diffs and history, rendered manifests, support bundles, and audit data. The resource-server secret is intended for trusted Gateway-to-Controller service authentication, and its disclosure may allow a user to impersonate a trusted Controller service and reach privileged service-index APIs.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-126643\n  \nPublished : 12 Nov 2026, 10:47 a.m. | 12 minutes ago\n  \nDescription :A cleartext storage flaw was found in the AAP Gateway Operator. When reconciling an AutomationController, the operator reads the protected resource-server Secret (Secret/-resource-server, key controller_resource_server_secret) and copies its plaintext value into the generated AutomationController custom resource under spec.extra_settings (RESOURCE_SERVER.SECRET_KEY). Although the operator uses no_log to keep the value out of its own logs, serializing it into the custom resource exposes it to any principal able to read the AutomationController CR without permission to read the backing Kubernetes Secret, breaking the expected OpenShift RBAC separation between the two resources. The value may also propagate into Kubernetes API/etcd storage, GitOps and Argo diffs and history, rendered manifests, support bundles, and audit data. The resource-server secret is intended for trusted Gateway-to-Controller service authentication, and its disclosure may allow a user to impersonate a trusted Controller service and reach privileged service-index APIs.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-126643\n2. 26.11.12 오후7:47\n3. A cleartext storage flaw was found in the AAP Gate",
+      "cve_id": "CVE-2026-126643",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-126643",
+      "source": "cvefeed",
+      "published": "2026-11-12T19:47:33+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-126641 - Ansible-pylibssh: accepts a changed ssh host key when host_key_auto_add is enabled",
+      "summary": "CVE ID :CVE-2026-126641\n  \nPublished : 12 Nov 2026, 10:47 a.m. | 12 minutes ago\n  \nDescription :A host key verification flaw was found in ansible-pylibssh and in the ansible.netcommon libssh connection plugin. When trust-on-first-use is enabled (host_key_auto_add on the libssh connection plugin, or AutoAddPolicy in ansible-pylibssh), a host that is already present in known_hosts but now presents a different key is accepted without warning. The pylibssh Session.verify_knownhost() method passes the SSH_KNOWN_HOSTS_CHANGED and SSH_KNOWN_HOSTS_OTHER states to the same missing_host_key() policy hook used for unknown hosts, and the bundled AutoAddPolicy/RejectPolicy classes (as well as ansible.netcommon's MyAddPolicy, which is modeled on paramiko's AutoAddPolicy) therefore add the changed key and continue the connection rather than aborting as paramiko's BadHostKeyException path would. As a result the controller authenticates to the substitute host, runs the play there, and appends the new key to known_hosts, which can disclose connection credentials to an attacker performing a machine-in-the-middle attack. Default configurations (host_key_checking enabled, host_key_auto_add unset) are not affected; non-interactive runs fail closed.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-126641\n  \nPublished : 12 Nov 2026, 10:47 a.m. | 12 minutes ago\n  \nDescription :A host key verification flaw was found in ansible-pylibssh and in the ansible.netcommon libssh connection plugin. When trust-on-first-use is enabled (host_key_auto_add on the libssh connection plugin, or AutoAddPolicy in ansible-pylibssh), a host that is already present in known_hosts but now presents a different key is accepted without warning. The pylibssh Session.verify_knownhost() method passes the SSH_KNOWN_HOSTS_CHANGED and SSH_KNOWN_HOSTS_OTHER states to the same missing_host_key() policy hook used for unknown hosts, and the bundled AutoAddPolicy/RejectPolicy classes (as well as ansible.netcommon's MyAddPolicy, which is modeled on paramiko's AutoAddPolicy) therefore add the changed key and continue the connection rather than aborting as paramiko's BadHostKeyException path would. As a result the controller authenticates to the substitute host, runs the play there, and appends the new key to known_hosts, which can disclose connection credentials to an attacker performing a machine-in-the-middle attack. Default configurations (host_key_checking enabled, host_key_auto_add unset) are not affected; non-interactive runs fail closed.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-126641\n2. 26.11.12 오후7:47\n3. A host key verification flaw was found in ansible-",
+      "cve_id": "CVE-2026-126641",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-126641",
+      "source": "cvefeed",
+      "published": "2026-11-12T19:47:30+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-126642 - Awx: webhook credential assignment omits use_role check, exposing another user's token",
       "summary": "CVE ID :CVE-2026-126642\n  \nPublished : Nov. 12, 2026, 9:16 a.m. | 38 minutes ago\n  \nDescription :An incorrect authorization flaw was found in AWX, the automation controller component of Red Hat Ansible Automation Platform. The API access classes for JobTemplate and WorkflowJobTemplate do not check the caller's Credential use_role when assigning the single-valued webhook_credential foreign key: JobTemplateAccess.can_add/can_change and WorkflowJobTemplateAccess.can_change in awx/main/access.py omit the check_related('webhook_credential', Credential, ..., role_field='use_role') call that UnifiedCredentialsMixin.can_attach performs for the normal many-to-many credentials relationship, and the serializer validates only the credential's type and namespace. A user who may administer their own job template (or workflow job template) and use its project and inventory can therefore attach a webhook token credential (for example a GitLab token) that they do not have use permission on. The template administrator can retrieve the template's webhook key; a subsequent webhook event causes AWX to decrypt the attached token and send it in the request header (for GitLab, PRIVATE-TOKEN) to a status URL derived from the event payload, disclosing the victim's token to a destination the attacker can influence. This may disclose another user's personal access token and allow whatever actions that token permits.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
