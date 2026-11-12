@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-13T02:32:38.075825+09:00",
+  "fetched_at": "2026-11-13T03:02:34.721398+09:00",
   "security_news": [
+    {
+      "title": "[단독] 정보유출·해킹 피해 개인들 ‘피해 보상’ 법원 문턱 높다",
+      "summary": "국민일보는 12일 법률데이터기업 엘박스를 통해 올해 선고된 개인정보 유출·해킹 관련 판결문 47건을 전수분석했다. 이 중 개인정보 유출·해킹 피해자 개인이 손해배상 청구소송을 제기한 것이 12건이었는데, 8건이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 개인정보 유출·해킹 피해자, 12건 소송 중 8건 패소\n2. 법원, 개인정보 유출·해킹 관련 손해배상 청구 인정 까다로워\n3. '엘박스' 판결문 47건 분석, 피해 보상 법적 문턱 높음",
+      "link": "https://n.news.naver.com/mnews/article/005/0001884900?sid=102",
+      "source": "naver",
+      "published": "2026-11-13T03:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "“지시도 안했는데 식당 예약 문의”… 선 넘는 ‘AI 비서’",
       "summary": "곽진 아주대 사이버보안학과 교수는 “AI가 목표 달성을 윤리적 규칙보다 우선할 수 있다”며 “외부 전화나 개인정보 전달 등은 이용자가 최종 승인하도록 통제장치를 마련해야 한다”고 강조했다.",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-11-10T08:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "한국인터넷진흥원(KISA) 차세대 보안 리더 '팀 비오비', 대만 국제 해킹...",
-      "summary": "대한민국의 사이버보안 위상을 드높였다. KISA는 지난 11월 7일부터 8일까지 대만 국립성공대학교(NCKU)... 대만 국가중산과학연구원(NCSIST) 등이 주최하는 이지스 해킹대회는 대만을 대표하는 사이버보안...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한국인터넷진흥원(KISA) 차세대 보안 리더 '팀 비오비', 대만 국제 해킹...\n2. 대한민국의 사이버보안 위상을 드높였다.\n3. KISA는 지난 11월 7일부터 8일까지 대만 국립성공대학교(NCKU)...",
-      "link": "https://www.cstimes.com/news/articleView.html?idxno=727235",
-      "source": "naver",
-      "published": "2026-11-10T07:50:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-111497 Google: CVE-2026-111497 Buffer overflow vulnerability in the Brotli decoder",
+      "summary": "Updated the Security Updates table to include affected Windows versions and the applicable November 2026 security updates. Microsoft recommends that customers install the applicable updates to be protected from this vulnerability.",
+      "description": "Updated the Security Updates table to include affected Windows versions and the applicable November 2026 security updates. Microsoft recommends that customers install the applicable updates to be protected from this vulnerability.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-111497\n2. MSRC\n3. Updated the Security Updates table to include affe",
+      "cve_id": "CVE-2026-111497",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-111497",
+      "source": "msrc",
+      "published": "2026-11-13T01:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-6460 - PostgreSQL type confusion after ALTER ... SET DATA TYPE executes arbitrary code",
       "summary": "CVE ID :CVE-2026-6460\n  \nPublished : Nov. 12, 2026, 3:17 p.m. | 45 minutes ago\n  \nDescription :Type confusion in PostgreSQL allows an object creator to execute arbitrary code as the operating system user running the database, via ALTER ... SET DATA TYPE primarily.  Other DDL attack routes exist, such as \"ALTER TABLE ... ADD COLUMN; ROLLBACK; ALTER TABLE ... ADD COLUMN\".  The system had inadequate tracking of typed values, and values were not self-identifying.  Stale values could appear in data dictionary entries, PL/pgSQL variables, and many other parts of the system.  PostgreSQL Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
