@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-12T20:33:54.983152+09:00",
+  "fetched_at": "2026-11-12T21:05:05.196981+09:00",
   "security_news": [
+    {
+      "title": "사기·횡령에 해킹까지…하나은행 신뢰 '흔들'",
+      "summary": "\" 지난달에는 금융권 해킹 공격에 고객 89명의 정보가 유출됐습니다. 주민번호와 이름, 주소, 휴대폰 번호, 직장명 등 웬만한 개인정보가 다 넘어갔습니다. {이호성/ 하나은행장/ \"AI해킹 피해에 대해서 고객분들과...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 하나은행, 고객 89명 정보 유출 사고 발생\n2. 주민번호, 이름, 주소 등 개인정보 유출 확인\n3. AI 해킹 피해 관련 이호성 행장 발언 있었음",
+      "link": "https://news.knn.co.kr/news/article/194398",
+      "source": "naver",
+      "published": "2026-11-12T20:32:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "“CVE·패치 나오기 전 악용되는 AI 취약점 공격, ‘런타임 보안’으로...",
       "summary": "실행 중인 라이브러리를 식별해, 실제 취약점 악용 위험이 발생할 경우 공개된 보안 취약점(CVE)과 보안패치가 나오지 않았더라도 코드 실행은 물론 네트워크나 파일에 접근하지 못하도록 정책을 실행하는 방식으로...",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-11-10T04:12:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "12월2일 예산안 심사 카운트다운, 국회 문턱 넘으려면",
-      "summary": "앤트로픽의 프론티어급 AI인 '미토스'가 20년 이상 몰랐던 취약점을 알아내 자동공격하는 등 해킹에서도 뛰어난 성능을 보이자 전 세계가 경악했던 사건이다. 정부는 글로벌 빅테크가 막대한 자본과 컴퓨팅 인프라를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 앤트로픽 '미토스' AI, 20년 이상 숨겨진 취약점 자동 공격\n2. AI, 20년 이상 몰랐던 취약점 찾아내 해킹 성능 입증\n3. 빅테크 AI 능력에 정부, 글로벌 보안 위협 우려",
-      "link": "https://n.news.naver.com/mnews/article/008/0005438736?sid=105",
-      "source": "naver",
-      "published": "2026-11-10T04:10:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "Exploit Attempts for GPUStack Authentication Bypass (CVE-2026-102895), (Thu, Nov 12th)",
+      "summary": "CVE-2026-102895 is a trivial authentication-bypass vulnerability. GPUStack is also an attractive target. It is open-source software that manages clusters of GPUs, which are typically used to run AI workloads. All versions of GPUStack prior to 2.2.0, which was released at the end of June. This vulnerability was not made public until the end of July, and the CVE was assigned on November 4th. \r",
+      "description": "CVE-2026-102895 is a trivial authentication-bypass vulnerability. GPUStack is also an attractive target. It is open-source software that manages clusters of GPUs, which are typically used to run AI workloads. All versions of GPUStack prior to 2.2.0, which was released at the end of June. This vulnerability was not made public until the end of July, and the CVE was assigned on November 4th. \r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102895\n2. SANS_ISC\n3. CVE-2026-102895 is a trivial authentication-bypass",
+      "cve_id": "CVE-2026-102895",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33514",
+      "source": "sans_isc",
+      "published": "2026-11-12T20:56:24+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-126644 - Ansible.posix: authorized_key module follows a parent-directory symlink allowing writes outside the intended directory",
       "summary": "CVE ID :CVE-2026-126644\n  \nPublished : 12 Nov 2026, 10:50 a.m. | 9 minutes ago\n  \nDescription :A link-following flaw was found in the authorized_key module of the ansible.posix collection, residual to the fix for CVE-2026-11837. That fix guards only the final path component (os.chown with follow_symlinks=False and O_NOFOLLOW in _safe_open_write()). When an unprivileged local user replaces their ~/.ssh directory with a symlink to a directory they do not own, and an operator subsequently runs the authorized_key task as root (a common provisioning pattern), the module resolves its path operations through the symlink: atomic_move() writes the temporary file in the symlink target and renames it to /authorized_keys, creating or overwriting a file in the attacker-chosen directory, and os.chmod(sshdir, 0o700) follows the symlink and changes the target directory's permissions. The written file is chowned to the unprivileged user, so this is not a privilege escalation, but it allows an attacker to create or overwrite files (for example in /etc/apt/apt.conf.d/, which APT reads regardless of file ownership) to cause integrity and availability impacts.\n  \nSeverity: 3.9 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -7052,21 +7067,6 @@
       "source": "cvefeed",
       "published": "2026-11-09T22:17:05+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-      "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation. \n\nCVE-2026-102895 GPUStack Improper Authentication Vulnerability \nCVE-2026-116779 SignalWire FreeSwitch Code Injection Vulnerability \nCVE-2026-123158 OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability \nCVE-2026-123218 IBM Aspera Faspex Incorrect Authorization Vulnerability \n\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. \nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. \n\n\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria. \n\n\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
-      "description": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation. \n\nCVE-2026-102895 GPUStack Improper Authentication Vulnerability \nCVE-2026-116779 SignalWire FreeSwitch Code Injection Vulnerability \nCVE-2026-123158 OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability \nCVE-2026-123218 IBM Aspera Faspex Incorrect Authorization Vulnerability \n\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. \nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. \n\n\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria. \n\n\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-102895\n2. CISA\n3. CISA has added four new vulnerabilities to its Kno",
-      "cve_id": "CVE-2026-102895",
-      "cvss": "",
-      "severity": "",
-      "link": "https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-      "source": "cisa",
-      "published": "2026-11-09T21:00:00+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
@@ -7096,6 +7096,20 @@
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAtUFM2cXpFVUtVT1RJeUJCd2UzR1VwNGVoYXhMalRPbjFyNm5wUE5leUxFNlQ4c1BQR2JSMjNqLWFzLWw2NjRRQ0Fzb1h1MTJFZ1E?oc=5",
       "source": "google_rep",
       "published": "2026-11-12T05:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "미래에셋운용, '연기금투자풀' 해킹 피해… 기금 수익률 조회기록까지 ...",
+      "summary": "기획예산처가 주무부처이며 미래에셋자산운용은 삼성자산운용과 함께 주간운용사로 참여하고 있다.... 금감원에 제출된 침해사고 신고서에 따르면 해커는 지난달 22일 오후 7시 11분께 해외 IP를 통해 연기금투자풀...",
+      "description": "기획예산처가 주무부처이며 미래에셋자산운용은 삼성자산운용과 함께 주간운용사로 참여하고 있다.... 금감원에 제출된 침해사고 신고서에 따르면 해커는 지난달 22일 오후 7시 11분께 해외 IP를 통해 연기금투자풀...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 미래에셋운용, '연기금투자풀' 해킹 피해… 기금 수익률 조회기록까지 ...\n2. 기획예산처가 주무부처이며 미래에셋자산운용은 삼성자산운용과 함께 주간운용사로 참여하고 있다.\n3. 금감원에 제출된 침해사고 신고서에 따르면 해커는 지난달 22일 오후 7시 11분께 해외 I",
+      "keyword_matched": "기획예산처",
+      "link": "https://www.ilyoseoul.co.kr/news/articleView.html?idxno=524943",
+      "source": "naver_rep",
+      "published": "2026-11-11T15:44:00+09:00",
       "lang": "ko"
     }
   ]
