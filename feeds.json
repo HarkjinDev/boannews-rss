@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-13T03:02:34.721398+09:00",
+  "fetched_at": "2026-11-13T03:32:10.620050+09:00",
   "security_news": [
     {
       "title": "[단독] 정보유출·해킹 피해 개인들 ‘피해 보상’ 법원 문턱 높다",
@@ -6004,6 +6004,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-71363 - Awx: unauthenticated debug endpoints trigger scheduler operations",
+      "summary": "CVE ID :CVE-2026-71363\n  \nPublished : Nov. 12, 2026, 5:19 p.m. | 27 minutes ago\n  \nDescription :A flaw was found in AWX. The debug API endpoints (/api/debug/task_manager/, /api/debug/dependency_manager/, /api/debug/workflow_manager/) are registered unconditionally in the URL configuration and use AllowAny permission class with _ignore_model_permissions=True. This allows an unauthenticated remote attacker to repeatedly invoke scheduler operations that acquire database advisory locks and open transactions, potentially leading to resource exhaustion and degraded service availability.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-71363\n  \nPublished : Nov. 12, 2026, 5:19 p.m. | 27 minutes ago\n  \nDescription :A flaw was found in AWX. The debug API endpoints (/api/debug/task_manager/, /api/debug/dependency_manager/, /api/debug/workflow_manager/) are registered unconditionally in the URL configuration and use AllowAny permission class with _ignore_model_permissions=True. This allows an unauthenticated remote attacker to repeatedly invoke scheduler operations that acquire database advisory locks and open transactions, potentially leading to resource exhaustion and degraded service availability.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-71363\n2. 26.11.13 오전2:19\n3. A flaw was found in AWX. The debug API endpoints (",
+      "cve_id": "CVE-2026-71363",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-71363",
+      "source": "cvefeed",
+      "published": "2026-11-13T02:19:27+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-111497 Google: CVE-2026-111497 Buffer overflow vulnerability in the Brotli decoder",
       "summary": "Updated the Security Updates table to include affected Windows versions and the applicable November 2026 security updates. Microsoft recommends that customers install the applicable updates to be protected from this vulnerability.",
       "description": "Updated the Security Updates table to include affected Windows versions and the applicable November 2026 security updates. Microsoft recommends that customers install the applicable updates to be protected from this vulnerability.",
@@ -6946,21 +6961,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-124077",
       "source": "cvefeed",
       "published": "2026-11-10T05:18:10+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Attackers Searching for SAP Netweaver Webshells, (Mon, Nov 9th)",
-      "summary": "Just saw a new (to me) URL in our honeypot data today:\r",
-      "description": "Just saw a new (to me) URL in our honeypot data today:\r",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Attackers Searching for SAP Netweaver Webshells, (\n2. SANS_ISC\n3. Just saw a new (to me) URL in our honeypot data to",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33502",
-      "source": "sans_isc",
-      "published": "2026-11-10T03:18:15+09:00",
       "lang": "en"
     }
   ],
