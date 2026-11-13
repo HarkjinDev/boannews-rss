@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-14T04:31:15.469541+09:00",
+  "fetched_at": "2026-11-14T05:01:50.631221+09:00",
   "security_news": [
+    {
+      "title": "중기부 '모두의 창업' 5개월 만에 또 뚫렸다…외부에 늑장 공개도",
+      "summary": "노린 해킹 공격이 발생해 2만여명의 개인정보가 유출됐다. 지난 6월 1차 사고 이후 5개월 만에 판박이 해킹 수법에 또다시 뚫리면서 정부의 전반적인 보안 관리체계 부실 논란이 확산하고 있다. 지난 13일...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 중기부 '모두의 창업' 5개월 만에 2만 명 개인정보 유출\n2. 판박이 해킹 수법으로 재발, 늑장 공개로 논란 확산\n3. 정부 보안 관리체계 부실 논란, 전반적인 대책 시급",
+      "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=300869",
+      "source": "naver",
+      "published": "2026-11-14T04:30:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "중기부 '모두의 창업'이 '모두의 유출'로…5000명 털려 모집 미뤘는데 또...",
       "summary": "또다시 해킹 사고가 터졌다. 첫 사고 이후 참가자 모집 일정까지 연기하며 사업을 재정비했지만, 불과 5개월 만에 개인정보가 다시 유출된 것이다. 이번에는 2차 사업 참가자 818명의 개인정보가 외부 해킹으로...",
@@ -5988,21 +6000,24 @@
       "source": "naver",
       "published": "2026-11-11T05:04:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[단독] 4년 전 ‘유출 우려’ 지적당한 금융보안원 시스템, 진짜 뚫렸다",
-      "summary": "최근 해킹을 당한 금융보안원의 정보보호 상시평가 지원시스템과 관련해 금융위원회가 4년 전 자료 유출... 금융보안원이 운영하는 또 다른 사이트인 ‘레그테크포털’도 이미 두 차례 보안 지적을 받는 등 해킹에 취약한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [단독] 4년 전 ‘유출 우려’ 지적당한 금융보안원 시스템, 진짜 뚫렸다 최근 해킹을 당한\n2. 금융보안원이 운영하는 또 다른 사이트인 ‘레그테크포털’도 이미 두 차례 보안 지적을 받는 ",
-      "link": "https://n.news.naver.com/mnews/article/005/0001884394?sid=101",
-      "source": "naver",
-      "published": "2026-11-11T05:03:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-128079 - envd: Host file disclosure through requirements path traversal and TOCTOU",
+      "summary": "CVE ID :CVE-2026-128079\n  \nPublished : 13 Nov 2026, 5:53 p.m. | 22 minutes ago\n  \nDescription :envd provides reproducible development environments for humans and agents. In versions starting with 0.3.38 and before 1.3.6, insufficient containment of host-side requirements-file reads in  install.python_packages(requirements=...)  could allow access to files outside the build context. An attacker able to influence build input could cause file contents interpreted as dependency entries to appear in debug logs or build-step metadata, subject to the envd process’s permissions. Exploitation in version 1.3.5 additionally requires concurrent modification of relevant filesystem paths. This issue is fixed in version 1.3.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-128079\n  \nPublished : 13 Nov 2026, 5:53 p.m. | 22 minutes ago\n  \nDescription :envd provides reproducible development environments for humans and agents. In versions starting with 0.3.38 and before 1.3.6, insufficient containment of host-side requirements-file reads in  install.python_packages(requirements=...)  could allow access to files outside the build context. An attacker able to influence build input could cause file contents interpreted as dependency entries to appear in debug logs or build-step metadata, subject to the envd process’s permissions. Exploitation in version 1.3.5 additionally requires concurrent modification of relevant filesystem paths. This issue is fixed in version 1.3.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-128079\n2. 26.11.14 오전2:53\n3. envd provides reproducible development environment",
+      "cve_id": "CVE-2026-128079",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-128079",
+      "source": "cvefeed",
+      "published": "2026-11-14T02:53:46+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-128076 - Nuxt: Colliding island props can share one `/__nuxt_island` path (incomplete fix for CVE-2026-46342)",
       "summary": "CVE ID :CVE-2026-128076\n  \nPublished : Nov. 13, 2026, 5:38 p.m. | 15 minutes ago\n  \nDescription :Nuxt is an open-source web development framework for Vue.js. From 3.21.6 to before 4.0.0 and from 4.4.6 until 4.6.4, the /__nuxt_island path hash uses ohash serialization that does not escape quotes in string values or delimiters in object keys, allowing different island-prop tuples to produce the same path. For prerendering, substituted content is written into the generated page only if the crawler reaches a colliding URL before rendering the page with the legitimate props. Separately, a CDN or reverse proxy that keys island responses by path alone can be primed with the colliding response. If the substituted prop reaches v-html, innerHTML, or another unsafe HTML sink, the response can execute script in the application origin; otherwise the impact is content substitution. Applications that do not use server components or NuxtIsland, islands without attacker-influenced string props, and responses not cached by path alone are unaffected. This issue is fixed in version 4.6.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
