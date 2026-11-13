@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-14T03:02:41.345431+09:00",
+  "fetched_at": "2026-11-14T03:32:38.907425+09:00",
   "security_news": [
     {
       "title": "중기부 '모두의 창업'이 '모두의 유출'로…5000명 털려 모집 미뤘는데 또...",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-128076 - Nuxt: Colliding island props can share one `/__nuxt_island` path (incomplete fix for CVE-2026-46342)",
+      "summary": "CVE ID :CVE-2026-128076\n  \nPublished : Nov. 13, 2026, 5:38 p.m. | 15 minutes ago\n  \nDescription :Nuxt is an open-source web development framework for Vue.js. From 3.21.6 to before 4.0.0 and from 4.4.6 until 4.6.4, the /__nuxt_island path hash uses ohash serialization that does not escape quotes in string values or delimiters in object keys, allowing different island-prop tuples to produce the same path. For prerendering, substituted content is written into the generated page only if the crawler reaches a colliding URL before rendering the page with the legitimate props. Separately, a CDN or reverse proxy that keys island responses by path alone can be primed with the colliding response. If the substituted prop reaches v-html, innerHTML, or another unsafe HTML sink, the response can execute script in the application origin; otherwise the impact is content substitution. Applications that do not use server components or NuxtIsland, islands without attacker-influenced string props, and responses not cached by path alone are unaffected. This issue is fixed in version 4.6.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-128076\n  \nPublished : Nov. 13, 2026, 5:38 p.m. | 15 minutes ago\n  \nDescription :Nuxt is an open-source web development framework for Vue.js. From 3.21.6 to before 4.0.0 and from 4.4.6 until 4.6.4, the /__nuxt_island path hash uses ohash serialization that does not escape quotes in string values or delimiters in object keys, allowing different island-prop tuples to produce the same path. For prerendering, substituted content is written into the generated page only if the crawler reaches a colliding URL before rendering the page with the legitimate props. Separately, a CDN or reverse proxy that keys island responses by path alone can be primed with the colliding response. If the substituted prop reaches v-html, innerHTML, or another unsafe HTML sink, the response can execute script in the application origin; otherwise the impact is content substitution. Applications that do not use server components or NuxtIsland, islands without attacker-influenced string props, and responses not cached by path alone are unaffected. This issue is fixed in version 4.6.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-128076\n2. 26.11.14 오전2:38\n3. Nuxt is an open-source web development framework f",
+      "cve_id": "CVE-2026-128076",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-128076",
+      "source": "cvefeed",
+      "published": "2026-11-14T02:38:34+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-127031 - Eclipse AAS4J XML External Entity Injection",
       "summary": "CVE ID :CVE-2026-127031\n  \nPublished : Nov. 13, 2026, 3:17 p.m. | 17 minutes ago\n  \nDescription :In Eclipse AAS4J before 3.0.1, `XmlSchemaValidator.validateSchema()` (and `AASXValidator.validateSchema()`, which calls it) validates untrusted XML with a default JAXP `Validator` that resolves external DTDs and external entities. An attacker who supplies a crafted AAS XML document or AASX package can read local files from the host, send their contents out-of-band to an attacker-controlled server, and make the validating process send arbitrary outbound requests (SSRF). Validation still returns no errors.\n\n\n\nDetails:\n\n\n\n- Vulnerable code: `dataformat-xml/src/main/java/org/eclipse/digitaltwin/aas4j/v3/dataformat/xml/XmlSchemaValidator.java`. `schema.newValidator().validate(new StreamSource(...))` runs without `ACCESS_EXTERNAL_DTD` / `ACCESS_EXTERNAL_SCHEMA` restrictions and without `disallow-doctype-decl`.\n\n\n\n- Second entry point: `dataformat-aasx/src/main/java/org/eclipse/digitaltwin/aas4j/v3/dataformat/aasx/AASXValidator.java`. The AAS XML part of an `.aasx` package is passed unchanged to the vulnerable validator.\n\n\n\n- `XmlDeserializer` (Jackson/Woodstox) is not affected, because DTD support is disabled by default there.\n\n\n\n- Present since the initial import of the code base (commit `cc9da52`).\n\n\n\n- Fix: harden the validator by setting `ACCESS_EXTERNAL_DTD` and `ACCESS_EXTERNAL_SCHEMA` to `\"\"` and rejecting `DOCTYPE` declarations. The bundled `AAS.xsd` does not need DTDs, so no functionality is lost.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
