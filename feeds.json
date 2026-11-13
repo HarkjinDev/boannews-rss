@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-13T22:03:05.489318+09:00",
+  "fetched_at": "2026-11-13T22:34:40.817683+09:00",
   "security_news": [
+    {
+      "title": "“API 보안 강화했다더니 또”…‘모두의 창업’ 5개월 만에 개인정보 ...",
+      "summary": "외부 해킹 공격이 발생했다. 이번 사고로 해당 업체가 보유하던 이용자 2만28명의 개인정보가 유출됐다. 이... 문제는 해킹 과정에서 확인된 보안 취약점이다. 아미쿠스렉스가 KISA 등에 제출한 침해사고 유출신고서에는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 모두의 창업, API 보안 강화에도 2만28명 개인정보 유출\n2. KISA 제출 신고서, 아미쿠스렉스 통해 해킹 공격 발생\n3. 5개월 만에 재발, 개인정보 유출 심각성 드러나",
+      "link": "https://n.news.naver.com/mnews/article/016/0002723315?sid=101",
+      "source": "naver",
+      "published": "2026-11-13T22:06:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "비트마트, 상위 50명과 두 차례 협의…법률 문서 작성 착수",
       "summary": "두 번째는 과거 해킹으로 유출된 자산의 회수분에 연동한 회수 토큰(Restitution Token)을 받는 방식이다.... 구조조정안의 배경에는 2021년 해킹으로 줄어든 디지털자산 준비금이 있다. 비트마트는 초기안에서 2021년 12월...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-11-11T05:01:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[단독]“회사업무 AI, 해킹통로 될라”… 서버 8000여개 외부 인터넷 노...",
-      "summary": "● 국내 AI 시스템 중 8030개 인터넷 노출 10일 미국 사이버보안 기업 센시스(Censys)에 따르면 올해 6∼8월... 임준오 티오리한국 AI·사이버리서치팀 총괄은 “보안 관리가 체계적으로 이루어지지 않은 업무 자동화...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국내 AI 시스템 8030개, 외부 인터넷 노출 상태 발견\n2. 센시스, 6~8월 조사서 보안 관리 미흡한 AI 업무 자동화 시스템 확인\n3. 악성코드 침투 통로 될 위험, 체계적 보안 관리 필요",
-      "link": "https://n.news.naver.com/mnews/article/020/0003761568?sid=101",
-      "source": "naver",
-      "published": "2026-11-11T04:34:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6406,6 +6406,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-126051",
       "source": "cvefeed",
       "published": "2026-11-12T03:35:45+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "Microsoft Patch Tuesday November 2026, (Tue, Nov 10th)",
+      "summary": "Microsoft continues its AI-induced patch surge, addressing 1,260 different vulnerabilities this month. 68 of these vulnerabilities are considered critical. 167 of the vulnerabilities are Chromium issues affecting Microsoft Edge.\r",
+      "description": "Microsoft continues its AI-induced patch surge, addressing 1,260 different vulnerabilities this month. 68 of these vulnerabilities are considered critical. 167 of the vulnerabilities are Chromium issues affecting Microsoft Edge.\r",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Microsoft Patch Tuesday November 2026, (Tue, Nov 1\n2. SANS_ISC\n3. Microsoft continues its AI-induced patch surge, ad",
+      "cve_id": "",
+      "cvss": "",
+      "severity": "",
+      "link": "https://isc.sans.edu/diary/rss/33508",
+      "source": "sans_isc",
+      "published": "2026-11-12T03:28:43+09:00",
       "lang": "en"
     },
     {
@@ -6902,21 +6917,6 @@
       "source": "krcert_notice",
       "published": "2026-11-11T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-12708 - Unbounded HTTP/3 Datagram flow map growth in tokio-quiche",
-      "summary": "CVE ID :CVE-2026-12708\n  \nPublished : Nov. 10, 2026, 1:25 p.m. | 16 minutes ago\n  \nDescription :Summary\nCloudflare tokio-quiche was found to contain an uncontrolled resource consumption vulnerability in its HTTP/3 DATAGRAM handling. For every previously unseen flow identifier (quarter stream ID) received in a DATAGRAM frame, tokio-quiche creates and retains new, per-flow state. A remote peer can send DATAGRAMs with many distinct identifiers, causing the per-connection flow map and associated channel state to grow without bound.\n\n\n\nImpact\nExploitation can exhaust process memory and cause a denial of service. The vulnerable code is used in both client and server configurations, so either role can be affected by a malicious peer. QUIC DATAGRAM support in tokio-quiche is enabled by default through QuicSettings::enable_dgram; applications can disable it by setting this field to false. The vulnerable HTTP/3 path is reachable only when DATAGRAM support is negotiated with the peer. Core quiche and HTTP/3 deployments without DATAGRAM support are not affected. \n\n\n\nMitigation\nDisable DATAGRAMs in tokio-quiche’s QuicSettings::enable_dgram.\n\n\n\nRemediation\nUpgrade to tokio-quiche version 0.23.0 or later. The fixed code creates flow state only for valid DATAGRAM-capable request streams, which are bounded by QUIC’s stream limits. To tolerate packet reordering, servers retain early DATAGRAMs in a bounded, expiring buffer, while clients discard DATAGRAMs for unknown flows.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-12708\n  \nPublished : Nov. 10, 2026, 1:25 p.m. | 16 minutes ago\n  \nDescription :Summary\nCloudflare tokio-quiche was found to contain an uncontrolled resource consumption vulnerability in its HTTP/3 DATAGRAM handling. For every previously unseen flow identifier (quarter stream ID) received in a DATAGRAM frame, tokio-quiche creates and retains new, per-flow state. A remote peer can send DATAGRAMs with many distinct identifiers, causing the per-connection flow map and associated channel state to grow without bound.\n\n\n\nImpact\nExploitation can exhaust process memory and cause a denial of service. The vulnerable code is used in both client and server configurations, so either role can be affected by a malicious peer. QUIC DATAGRAM support in tokio-quiche is enabled by default through QuicSettings::enable_dgram; applications can disable it by setting this field to false. The vulnerable HTTP/3 path is reachable only when DATAGRAM support is negotiated with the peer. Core quiche and HTTP/3 deployments without DATAGRAM support are not affected. \n\n\n\nMitigation\nDisable DATAGRAMs in tokio-quiche’s QuicSettings::enable_dgram.\n\n\n\nRemediation\nUpgrade to tokio-quiche version 0.23.0 or later. The fixed code creates flow state only for valid DATAGRAM-capable request streams, which are bounded by QUIC’s stream limits. To tolerate packet reordering, servers retain early DATAGRAMs in a bounded, expiring buffer, while clients discard DATAGRAMs for unknown flows.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-12708\n2. 26.11.10 오후10:25\n3. Summary Cloudflare tokio-quiche was found to conta",
-      "cve_id": "CVE-2026-12708",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-12708",
-      "source": "cvefeed",
-      "published": "2026-11-10T22:25:09+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
