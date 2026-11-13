@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-14T05:01:50.631221+09:00",
+  "fetched_at": "2026-11-14T05:31:36.255328+09:00",
   "security_news": [
     {
       "title": "중기부 '모두의 창업' 5개월 만에 또 뚫렸다…외부에 늑장 공개도",
@@ -5976,33 +5976,39 @@
       "source": "naver",
       "published": "2026-11-11T05:40:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "억대 보험료·재보험 문턱…기업도 막막",
-      "summary": "개인정보 유출 사고가 잇따르면서 기업들이 사이버 보험에 눈을 돌리고 있다. 그러나 바로 가입으로... 상반기 사이버 보험 원수보험료는 313억4279만원으로 전년 동기보다 26.4% 늘었다. 원수보험료는 보험사가 계약을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 개인정보 유출 사고가 잇따르면서 기업들이 사이버 보험에 눈을 돌리고 있다.\n2. 그러나 바로 가입으로... 상반기 사이버 보험 원수보험료는 313억4279만원으로 전년 동\n3. 원수보험료는 보험사가 계약을...",
-      "link": "https://n.news.naver.com/mnews/article/417/0001163896?sid=102",
-      "source": "naver",
-      "published": "2026-11-11T05:10:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "‘보안문지기’ 금융보안원까지 해킹당했다",
-      "summary": "금융보안원이 해킹 공격을 받아 금융사 보안 관련 일부 개인 정보가 유출됐다. 지난 9월 말부터 금융권 연쇄 해킹이 이어지는 가운데 ‘금융보안 문지기’ 역할을 하는 금융보안원까지 취약점이 노출되면서 보안 시스템...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융보안원이 해킹 공격을 받아 금융사 보안 관련 일부 개인 정보가 유출됐다.\n2. 지난 9월 말부터 금융권 연쇄 해킹이 이어지는 가운데 ‘금융보안 문지기’ 역할을 하는 금융",
-      "link": "https://n.news.naver.com/mnews/article/081/0003698000?sid=101",
-      "source": "naver",
-      "published": "2026-11-11T05:04:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-68905 - Hugo Blog: Unauthenticated AI Proxy Allows Abuse of Server-Side API Key",
+      "summary": "CVE ID :CVE-2026-68905\n  \nPublished : Nov. 13, 2026, 7:21 p.m. | 53 minutes ago\n  \nDescription :Hugo Blog is a tech blog site. In commit 744ca15 and prior, the AI assistant proxy exposes three HTTP endpoints (POST /api/blog-assistant, POST /api/blog-search-embedding, POST /api/blog-search-rerank) without any authentication check. When deployed following the documented Nginx reverse-proxy setup, any unauthenticated remote attacker can send arbitrary requests that the proxy forwards to the upstream LLM/embedding/rerank API using the operator's server-side API key (OPENAI_API_KEY / AI_SEARCH_API_KEY). This enables unlimited quota consumption, cost exhaustion, and potential service unavailability for the operator. At time of publication, there are no publicly available patches.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-68905\n  \nPublished : Nov. 13, 2026, 7:21 p.m. | 53 minutes ago\n  \nDescription :Hugo Blog is a tech blog site. In commit 744ca15 and prior, the AI assistant proxy exposes three HTTP endpoints (POST /api/blog-assistant, POST /api/blog-search-embedding, POST /api/blog-search-rerank) without any authentication check. When deployed following the documented Nginx reverse-proxy setup, any unauthenticated remote attacker can send arbitrary requests that the proxy forwards to the upstream LLM/embedding/rerank API using the operator's server-side API key (OPENAI_API_KEY / AI_SEARCH_API_KEY). This enables unlimited quota consumption, cost exhaustion, and potential service unavailability for the operator. At time of publication, there are no publicly available patches.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-68905\n2. 26.11.14 오전4:21\n3. Hugo Blog is a tech blog site. In commit 744ca15 a",
+      "cve_id": "CVE-2026-68905",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-68905",
+      "source": "cvefeed",
+      "published": "2026-11-14T04:21:26+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-128088 - russh try_sign: asynchronous confirmation can sign after agent lock",
+      "summary": "CVE ID :CVE-2026-128088\n  \nPublished : Nov. 13, 2026, 7:19 p.m. | 55 minutes ago\n  \nDescription :russh is a Rust SSH client and server library that includes an SSH agent protocol implementation. Prior to version 0.65.1, try_sign() captures an Arc before awaiting Agent::confirm() and does not revalidate the shared lock state or key presence after the await. This is a distinct residual defect in the remediation for CVE-2026-116794. A peer, including a remote SSH server using agent forwarding, can begin a confirmation-constrained signature request while the agent is unlocked and receive the signature after another connection locks the agent if the stale confirmation returns true. New post-lock requests are rejected and private key material is not disclosed, but the pending operation bypasses the current lock state. This issue is fixed in version 0.65.1.\n  \nSeverity: 2.2 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-128088\n  \nPublished : Nov. 13, 2026, 7:19 p.m. | 55 minutes ago\n  \nDescription :russh is a Rust SSH client and server library that includes an SSH agent protocol implementation. Prior to version 0.65.1, try_sign() captures an Arc before awaiting Agent::confirm() and does not revalidate the shared lock state or key presence after the await. This is a distinct residual defect in the remediation for CVE-2026-116794. A peer, including a remote SSH server using agent forwarding, can begin a confirmation-constrained signature request while the agent is unlocked and receive the signature after another connection locks the agent if the stale confirmation returns true. New post-lock requests are rejected and private key material is not disclosed, but the pending operation bypasses the current lock state. This issue is fixed in version 0.65.1.\n  \nSeverity: 2.2 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-128088\n2. 26.11.14 오전4:19\n3. russh is a Rust SSH client and server library that",
+      "cve_id": "CVE-2026-128088",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-128088",
+      "source": "cvefeed",
+      "published": "2026-11-14T04:19:31+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-128079 - envd: Host file disclosure through requirements path traversal and TOCTOU",
       "summary": "CVE ID :CVE-2026-128079\n  \nPublished : 13 Nov 2026, 5:53 p.m. | 22 minutes ago\n  \nDescription :envd provides reproducible development environments for humans and agents. In versions starting with 0.3.38 and before 1.3.6, insufficient containment of host-side requirements-file reads in  install.python_packages(requirements=...)  could allow access to files outside the build context. An attacker able to influence build input could cause file contents interpreted as dependency entries to appear in debug logs or build-step metadata, subject to the envd process’s permissions. Exploitation in version 1.3.5 additionally requires concurrent modification of relevant filesystem paths. This issue is fixed in version 1.3.6.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6061,6 +6067,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-92241",
       "source": "cvefeed",
       "published": "2026-11-13T23:03:47+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+      "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\n\n\nCVE-2026-114713 UnrealIRCd Improper Neutralization of Delimiters Vulnerability\n\n\n\n\nCVE-2026-123039 Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability\n\n\n\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise.\n\n\nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.\n\n\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria.\n\n\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "description": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\n\n\nCVE-2026-114713 UnrealIRCd Improper Neutralization of Delimiters Vulnerability\n\n\n\n\nCVE-2026-123039 Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability\n\n\n\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise.\n\n\nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.\n\n\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria.\n\n\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-114713\n2. CISA\n3. CISA has added two new vulnerabilities to its Know",
+      "cve_id": "CVE-2026-114713",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+      "source": "cisa",
+      "published": "2026-11-13T21:00:00+09:00",
       "lang": "en"
     },
     {
