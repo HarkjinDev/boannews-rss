@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-14T01:34:01.882591+09:00",
+  "fetched_at": "2026-11-14T02:02:42.180920+09:00",
   "security_news": [
     {
       "title": "중기부 '모두의 창업'이 '모두의 유출'로…5000명 털려 모집 미뤘는데 또...",
@@ -6826,21 +6826,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-121691",
       "source": "cvefeed",
       "published": "2026-11-11T02:29:34+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-125121 - compose-lint: Text in a pull request can still issue CI workflow commands through compose-lint 0.31.0's output",
-      "summary": "CVE ID :CVE-2026-125121\n  \nPublished : 10 Nov 2026, 4:43 p.m. | 33 minutes ago\n  \nDescription :compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. In version 0.31.0, compose-lint escapes GitHub Actions workflow-command openers only after ASCII spaces and tabs, while the runner strips all leading Unicode whitespace before interpreting a line. Untrusted Compose values or repository paths beginning with Unicode whitespace followed by :: can therefore reach the text report, fix guidance, the fix dry-run diff, and stderr diagnostics as workflow commands when the package, pre-commit hook, or Docker image runs directly in CI. The GitHub Action is not affected because it disables command processing, and the flaw does not change the lint pass or fail result. This issue is fixed in version 0.32.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-125121\n  \nPublished : 10 Nov 2026, 4:43 p.m. | 33 minutes ago\n  \nDescription :compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. In version 0.31.0, compose-lint escapes GitHub Actions workflow-command openers only after ASCII spaces and tabs, while the runner strips all leading Unicode whitespace before interpreting a line. Untrusted Compose values or repository paths beginning with Unicode whitespace followed by :: can therefore reach the text report, fix guidance, the fix dry-run diff, and stderr diagnostics as workflow commands when the package, pre-commit hook, or Docker image runs directly in CI. The GitHub Action is not affected because it disables command processing, and the flaw does not change the lint pass or fail result. This issue is fixed in version 0.32.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-125121\n2. 26.11.11 오전1:43\n3. compose-lint is a Docker Compose security linter t",
-      "cve_id": "CVE-2026-125121",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-125121",
-      "source": "cvefeed",
-      "published": "2026-11-11T01:43:01+09:00",
       "lang": "en"
     }
   ],
