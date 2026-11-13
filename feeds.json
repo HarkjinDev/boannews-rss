@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-14T02:33:45.700202+09:00",
+  "fetched_at": "2026-11-14T03:02:41.345431+09:00",
   "security_news": [
     {
       "title": "중기부 '모두의 창업'이 '모두의 유출'로…5000명 털려 모집 미뤘는데 또...",
@@ -6797,21 +6797,6 @@
       "source": "cvefeed",
       "published": "2026-11-11T04:22:32+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-99285 - netfilter: nft_byteorder: remove multi-register support",
-      "summary": "CVE ID :CVE-2026-99285\n  \nPublished : Nov. 10, 2026, 5:37 p.m. | 10 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_byteorder: remove multi-register support\n\n64bit byteorder conversion is broken when several registers need to be\nconverted because the source register array advances in steps for 4 bytes\ninstead of 8:\n\n  for (i = ...\n      src64 = nft_reg_load64(&src[i]);\n                             ~~~~~ u32 *src\n      nft_reg_store64(&dst64[i],\n\nRemove the multi-register support, it has other issues as well:\n\nPablo points out that commit\ncaf3ef7468f7 (\"netfilter: nf_tables: prevent OOB access in nft_byteorder_eval\")\nalters semantics: before the loop operated on registers, i.e.\n for ( ... )\n   dst32[i] = htons((u16)src32[i])\n\n .. but after the patch it will operate on bytes, which makes this\n useless to convert e.g. concatenations, which store each compound\n in its own register.\n\nMulti-convert of u32 has one theoretical application:\n\nct mark . meta mark . tcp dport @intervalset\n\nBecause ct mark and meta mark are host byte order, use with\nintervals has to convert the byteorder for ct/meta mark value\nto network byte order (bigendian).\n\nnftables emits this:\n [ meta load mark => reg 1 ]\n [ byteorder reg 1 = hton(reg 1, 4, 4) ]\n [ ct load mark => reg 9 ]\n [ byteorder reg 9 = hton(reg 9, 4, 4) ]\n ...\n\nI.e. two separate calls.  Theoretically it could be changed to do:\n [ meta load mark => reg 1 ]\n [ ct load mark => reg 9 ]\n [ byteorder reg 1 = htonl(reg 1, 4, 8) ]\n ...\n\nBut then all it would take to change the set to\nmeta mark . tcp dport . ct mark\n\n... and we'd be back to two \"byteorder\" calls. IOW, support to\nconvert a range of registers is both dysfunctional and dubious.\n\nSimplify this: remove the feature.\n\nPablo Neira Ayuso points out that nftables before 1.1.0 can generate\nincorrect byteorder conversions, see 9fe58952c45a,\n\"evaluate: skip byteorder conversion for selector smaller than 2 bytes\"\nin nftables.git).  Affected rulesets fail to load with this change and\nold userspace due to 'len != size' check.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-99285\n  \nPublished : Nov. 10, 2026, 5:37 p.m. | 10 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_byteorder: remove multi-register support\n\n64bit byteorder conversion is broken when several registers need to be\nconverted because the source register array advances in steps for 4 bytes\ninstead of 8:\n\n  for (i = ...\n      src64 = nft_reg_load64(&src[i]);\n                             ~~~~~ u32 *src\n      nft_reg_store64(&dst64[i],\n\nRemove the multi-register support, it has other issues as well:\n\nPablo points out that commit\ncaf3ef7468f7 (\"netfilter: nf_tables: prevent OOB access in nft_byteorder_eval\")\nalters semantics: before the loop operated on registers, i.e.\n for ( ... )\n   dst32[i] = htons((u16)src32[i])\n\n .. but after the patch it will operate on bytes, which makes this\n useless to convert e.g. concatenations, which store each compound\n in its own register.\n\nMulti-convert of u32 has one theoretical application:\n\nct mark . meta mark . tcp dport @intervalset\n\nBecause ct mark and meta mark are host byte order, use with\nintervals has to convert the byteorder for ct/meta mark value\nto network byte order (bigendian).\n\nnftables emits this:\n [ meta load mark => reg 1 ]\n [ byteorder reg 1 = hton(reg 1, 4, 4) ]\n [ ct load mark => reg 9 ]\n [ byteorder reg 9 = hton(reg 9, 4, 4) ]\n ...\n\nI.e. two separate calls.  Theoretically it could be changed to do:\n [ meta load mark => reg 1 ]\n [ ct load mark => reg 9 ]\n [ byteorder reg 1 = htonl(reg 1, 4, 8) ]\n ...\n\nBut then all it would take to change the set to\nmeta mark . tcp dport . ct mark\n\n... and we'd be back to two \"byteorder\" calls. IOW, support to\nconvert a range of registers is both dysfunctional and dubious.\n\nSimplify this: remove the feature.\n\nPablo Neira Ayuso points out that nftables before 1.1.0 can generate\nincorrect byteorder conversions, see 9fe58952c45a,\n\"evaluate: skip byteorder conversion for selector smaller than 2 bytes\"\nin nftables.git).  Affected rulesets fail to load with this change and\nold userspace due to 'len != size' check.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-99285\n2. 26.11.11 오전2:37\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-99285",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99285",
-      "source": "cvefeed",
-      "published": "2026-11-11T02:37:13+09:00",
-      "lang": "no"
     }
   ],
   "reputation": [
