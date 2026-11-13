@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-14T02:02:42.180920+09:00",
+  "fetched_at": "2026-11-14T02:33:45.700202+09:00",
   "security_news": [
     {
       "title": "중기부 '모두의 창업'이 '모두의 유출'로…5000명 털려 모집 미뤘는데 또...",
@@ -6812,21 +6812,6 @@
       "source": "cvefeed",
       "published": "2026-11-11T02:37:13+09:00",
       "lang": "no"
-    },
-    {
-      "title": "CVE-2026-121691 - Unbounded decompression in the whatstk ZIP loader exhausts memory and disk",
-      "summary": "CVE ID :CVE-2026-121691\n  \nPublished : Nov. 10, 2026, 5:29 p.m. | 18 minutes ago\n  \nDescription :Improper Handling of Highly Compressed Data (CWE-409) in the ZIP loader of whatstk from 0.7.0 before 0.9.0 allows a party that supplies a chat export to exhaust the memory and the disk of the process that parses it, because _str_from_file() (whatstk/whatsapp/parser.py) calls zip_ref.extractall() with no bound on the size of the members and no check of the compression ratio, then reads the extracted file in full with f.read(). The only guard on the archive counts the extracted files and raises when there is not exactly one, but it runs after extractall() has already written them, so it does not prevent the cost. _clean_text() then passes the whole text through unicodedata.normalize(\"NFKD\", text), which holds a second copy, and the parse builds a list of regular expression matches and a DataFrame over it, so peak memory is a multiple of the decompressed text rather than of the archive. A ZIP is a documented input of WhatsAppChat.from_source() and df_from_whatsapp(), and is the form in which WhatsApp exports a chat on iOS, so the attacker supplies the whole file. This results in a small upload costing hundreds of megabytes of memory and of disk, and in the process being killed where that exceeds what is available.\n  \nSeverity: 6.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-121691\n  \nPublished : Nov. 10, 2026, 5:29 p.m. | 18 minutes ago\n  \nDescription :Improper Handling of Highly Compressed Data (CWE-409) in the ZIP loader of whatstk from 0.7.0 before 0.9.0 allows a party that supplies a chat export to exhaust the memory and the disk of the process that parses it, because _str_from_file() (whatstk/whatsapp/parser.py) calls zip_ref.extractall() with no bound on the size of the members and no check of the compression ratio, then reads the extracted file in full with f.read(). The only guard on the archive counts the extracted files and raises when there is not exactly one, but it runs after extractall() has already written them, so it does not prevent the cost. _clean_text() then passes the whole text through unicodedata.normalize(\"NFKD\", text), which holds a second copy, and the parse builds a list of regular expression matches and a DataFrame over it, so peak memory is a multiple of the decompressed text rather than of the archive. A ZIP is a documented input of WhatsAppChat.from_source() and df_from_whatsapp(), and is the form in which WhatsApp exports a chat on iOS, so the attacker supplies the whole file. This results in a small upload costing hundreds of megabytes of memory and of disk, and in the process being killed where that exceeds what is available.\n  \nSeverity: 6.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-121691\n2. 26.11.11 오전2:29\n3. Improper Handling of Highly Compressed Data (CWE-4",
-      "cve_id": "CVE-2026-121691",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-121691",
-      "source": "cvefeed",
-      "published": "2026-11-11T02:29:34+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
