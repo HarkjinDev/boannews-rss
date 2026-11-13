@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-13T21:03:24.386686+09:00",
+  "fetched_at": "2026-11-13T21:33:19.525875+09:00",
   "security_news": [
+    {
+      "title": "커피 한 잔에 담은 보안 꿀팁…영남이공대 학생들 나섰다",
+      "summary": "한편, 영남이공대 사이버보안과는 해킹 공격·방어 기술과 보안시스템 운영 능력을 갖춘 실무형 인재 양성에 주력하고 있다. 독립된 해킹실습 전용망을 갖춰 학생들이 24시간 자율적으로 공격·방어 기술을 익힐 수 있도록...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 커피 한 잔에 담은 보안 꿀팁…영남이공대 학생들 나섰다 한편, 영남이공대 사이버보안과는 해\n2. 독립된 해킹실습 전용망을 갖춰 학생들이 24시간 자율적으로 공격·방어 기술을 익힐 수 있도",
+      "link": "https://www.kukinews.com/article/view/kuk202611130178",
+      "source": "naver",
+      "published": "2026-11-13T21:12:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[단독] 금융보안원 뚫린 이유…\"불편하다고 제한 풀어\"",
       "summary": "[곽진/아주대 사이버보안학과 교수 : 유출 사고 발생을 했을 때 역추적하는 데 어려운 상황이 벌어질 수가 있고요, 이상 징후를 조기 탐지하는 것 자체가 조금 많이 어려워질 수가 있죠.] 보안원은 고정 IP를 쓰는 방식을...",
@@ -5988,18 +6000,6 @@
       "source": "thehackernews",
       "published": "2026-11-11T04:19:39+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day",
-      "summary": "Today is Microsoft's November 2026 Patch Tuesday, with security updates addressing a record-breaking 1,235 flaws, including one actively exploited Microsoft Outlook zero-day vulnerability. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 마이크로소프트, 1,235개 취약점 패치\n2. 아웃룩 제로데이 취약점 악용 확인\n3. 11월 패치로 총 1,235개 보안 문제 해결",
-      "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
-      "source": "bleepingcomputer",
-      "published": "2026-11-11T04:07:36+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -6931,21 +6931,6 @@
       "link": "https://isc.sans.edu/diary/rss/33506",
       "source": "sans_isc",
       "published": "2026-11-10T21:48:55+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-120326 - Unescaped Download File Name Allows Content-Disposition Parameter Injection in Vaadin Flow",
-      "summary": "CVE ID :CVE-2026-120326\n  \nPublished : Nov. 10, 2026, 12:17 p.m. | 1 hour, 24 minutes ago\n  \nDescription :DownloadEvent.setFileName(String) in Vaadin Flow writes the download file name into the Content-Disposition header without escaping it. When the name is pure US-ASCII the header is built as attachment; filename=\"\" with the name inserted verbatim, so a double quote in the name ends the quoted string early and the rest of the name is read by the browser as further header parameters. The inline(String) variant, present from Vaadin 25.0, builds the name the same way. An application that passes an untrusted file name to either method, for example when re-serving a file under the name it was uploaded with, lets an attacker add a filename* parameter. Browsers prefer filename* over filename, so the file is saved under a name and extension of the attacker's choosing, which defeats any file name or extension restriction the application enforces. The attacker cannot change the attachment or inline disposition itself and cannot split the header.\n\nUsers of affected versions should apply the following mitigation or upgrade. Releases that have fixed this issue include:\n\nProduct version\nVaadin 24.8.0 - 24.8.17\nVaadin 24.9.0 - 24.9.25\nVaadin 24.10.0 - 24.10.13\nVaadin 25.0.0 - 25.0.13\nVaadin 25.1.0 - 25.1.13\nVaadin 25.2.0 - 25.2.12\nVaadin 25.3.0 - 25.3.4\n\nMitigation\nNo fixed release on this line, upgrade to 24.9.26 or newer\nUpgrade to 24.9.26\nUpgrade to 24.10.14\nNo fixed release on this line, upgrade to 25.2.13 or newer\nNo fixed release on this line, upgrade to 25.2.13 or newer\nUpgrade to 25.2.13\nUpgrade to 25.3.5\n\nVaadin versions below 24.8 are not affected: the DownloadEvent API does not exist in them.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-120326\n  \nPublished : Nov. 10, 2026, 12:17 p.m. | 1 hour, 24 minutes ago\n  \nDescription :DownloadEvent.setFileName(String) in Vaadin Flow writes the download file name into the Content-Disposition header without escaping it. When the name is pure US-ASCII the header is built as attachment; filename=\"\" with the name inserted verbatim, so a double quote in the name ends the quoted string early and the rest of the name is read by the browser as further header parameters. The inline(String) variant, present from Vaadin 25.0, builds the name the same way. An application that passes an untrusted file name to either method, for example when re-serving a file under the name it was uploaded with, lets an attacker add a filename* parameter. Browsers prefer filename* over filename, so the file is saved under a name and extension of the attacker's choosing, which defeats any file name or extension restriction the application enforces. The attacker cannot change the attachment or inline disposition itself and cannot split the header.\n\nUsers of affected versions should apply the following mitigation or upgrade. Releases that have fixed this issue include:\n\nProduct version\nVaadin 24.8.0 - 24.8.17\nVaadin 24.9.0 - 24.9.25\nVaadin 24.10.0 - 24.10.13\nVaadin 25.0.0 - 25.0.13\nVaadin 25.1.0 - 25.1.13\nVaadin 25.2.0 - 25.2.12\nVaadin 25.3.0 - 25.3.4\n\nMitigation\nNo fixed release on this line, upgrade to 24.9.26 or newer\nUpgrade to 24.9.26\nUpgrade to 24.10.14\nNo fixed release on this line, upgrade to 25.2.13 or newer\nNo fixed release on this line, upgrade to 25.2.13 or newer\nUpgrade to 25.2.13\nUpgrade to 25.3.5\n\nVaadin versions below 24.8 are not affected: the DownloadEvent API does not exist in them.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-120326\n2. 26.11.10 오후9:17\n3. DownloadEvent.setFileName(String) in Vaadin Flow w",
-      "cve_id": "CVE-2026-120326",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-120326",
-      "source": "cvefeed",
-      "published": "2026-11-10T21:17:16+09:00",
       "lang": "en"
     }
   ],
