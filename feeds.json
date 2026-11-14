@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-15T03:31:24.063675+09:00",
+  "fetched_at": "2026-11-15T04:01:26.267966+09:00",
   "security_news": [
     {
       "title": "[단독] 인제대·경일대 해킹한 해커, 해킹 포럼에 “한국 대학 31곳 데이터 탈취·공개” 주장…수능 앞두고 대학 보안 비상",
@@ -4596,42 +4596,6 @@
       "source": "naver",
       "published": "2026-11-12T04:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "산업의 운명 가르는 세액공제…'세금의 힘' 커진다",
-      "summary": "금융당국은 잇따른 해킹과 정보유출 사고에 대응해 금융사에 보안투자 확대를 주문하고 있다. 하지만 현행 통합투자세액공제는 기계·설비 등 유형자산 중심으로 설계돼 보안 소프트웨어와 AI(인공지능) 기반 보안시스템...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융당국, 해킹·정보유출 대응 위해 보안투자 확대 주문\n2. 유형자산 중심 세액공제, AI 보안시스템 투자엔 부족\n3. 금융사, 보안 강화 위한 세제 혜택 확대 필요성 제기",
-      "link": "https://n.news.naver.com/mnews/article/008/0005439929?sid=101",
-      "source": "naver",
-      "published": "2026-11-12T04:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "머니투데이 오프라인 헤드라인-12일",
-      "summary": "직접 챙긴다 [정책사회·문화] 보안인증 수년째 외면...아이스크림미디어, 정보유출 불렀다 [사회] 'AI 해킹' 뚫리는데...꽉 만힌 수사관 채용 [증권] 부메랑이 된 황율 방패...해외 리츠 덮친 '환헤지 청구서'",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 아이스크림미디어, 보안인증 미비로 정보유출 사고 발생\n2. AI 해킹 등 신종 위협 증가, 수사관 채용 병목 현상\n3. 해외 리츠, 환헤지 리스크로 '부메랑' 효과 직면",
-      "link": "https://n.news.naver.com/mnews/article/008/0005439930?sid=102",
-      "source": "naver",
-      "published": "2026-11-12T04:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "'AI 해킹' 뚫리는데… 꽉 막힌 수사관 채용",
-      "summary": "사이버보안 전문가를 확보하기 위한 경쟁이 치열해져 경찰의 처우와 채용조건만으로는 우수인재를 유치하기 어렵다는 지적이 나온다. 현재 사이버수사분야 경력채용에 지원하려면 컴퓨터시스템응용·정보통신...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 해킹 공격 증가, 경찰 인력 확보 난항\n2. 경찰 처우·채용조건 미흡, 전문인력 유치 어려움\n3. 사이버수사 분야 경쟁 심화, 인재 확보 시급",
-      "link": "https://n.news.naver.com/mnews/article/008/0005439925?sid=102",
-      "source": "naver",
-      "published": "2026-11-12T04:00:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -5233,21 +5197,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-67543",
       "source": "cvefeed",
       "published": "2026-11-12T06:39:53+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-126051 - Node.js is vulnerable to a remotely triggerable uncaught exception in TLS servers via deferred handshake callbacks",
-      "summary": "CVE ID :CVE-2026-126051\n  \nPublished : Nov. 11, 2026, 6:35 p.m. | 25 minutes ago\n  \nDescription :A deferred-callback use-after-destroy in Node.js TLS server handshake handling allows a remote, unauthenticated attacker to terminate the server process. When a TLS server uses any of the SNICallback, OCSPRequest, newSession, or resumeSession hooks, or server.addContext(), the corresponding OpenSSL callbacks are deferred, and the deferred code does not handle the underlying socket being destroyed between scheduling and execution. By sending a client hello that reaches the vulnerable path (for example, no SNI together with an OCSP request) followed by padding and a socket FIN, an attacker makes OpenSSL deliver the client hello and the end-of-file in the same tick, so the socket is destroyed before the deferred callback runs and the process raises an uncaught exception instead of emitting an 'error' event. This vulnerability affects Node.js 26.x and 24.x.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-126051\n  \nPublished : Nov. 11, 2026, 6:35 p.m. | 25 minutes ago\n  \nDescription :A deferred-callback use-after-destroy in Node.js TLS server handshake handling allows a remote, unauthenticated attacker to terminate the server process. When a TLS server uses any of the SNICallback, OCSPRequest, newSession, or resumeSession hooks, or server.addContext(), the corresponding OpenSSL callbacks are deferred, and the deferred code does not handle the underlying socket being destroyed between scheduling and execution. By sending a client hello that reaches the vulnerable path (for example, no SNI together with an OCSP request) followed by padding and a socket FIN, an attacker makes OpenSSL deliver the client hello and the end-of-file in the same tick, so the socket is destroyed before the deferred callback runs and the process raises an uncaught exception instead of emitting an 'error' event. This vulnerability affects Node.js 26.x and 24.x.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-126051\n2. 26.11.12 오전3:35\n3. A deferred-callback use-after-destroy in Node.js T",
-      "cve_id": "CVE-2026-126051",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-126051",
-      "source": "cvefeed",
-      "published": "2026-11-12T03:35:45+09:00",
       "lang": "en"
     }
   ],
