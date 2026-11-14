@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-15T01:01:36.612441+09:00",
+  "fetched_at": "2026-11-15T01:31:28.549912+09:00",
   "security_news": [
     {
       "title": "[단독] 인제대·경일대 해킹한 해커, 해킹 포럼에 “한국 대학 31곳 데이터 탈취·공개” 주장…수능 앞두고 대학 보안 비상",
@@ -4632,30 +4632,6 @@
       "source": "naver",
       "published": "2026-11-12T01:32:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Maersk confirms data breach as WhiteArmor ransomware demands $5 million",
-      "summary": "Maersk announced that a threat actor gained unauthorized access to a local legacy system inherited through an earlier acquisition and extracted data from it. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 머스크, 화이트아머 랜섬웨어 공격으로 데이터 유출 확인\n2. 5백만 달러 요구, 인수 합병된 구형 시스템 해킹\n3. 랜섬웨어 공격으로 인한 데이터 유출 발생",
-      "link": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
-      "source": "bleepingcomputer",
-      "published": "2026-11-12T01:24:18+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation",
-      "summary": "Zoom has released software updates to address two security flaws impacting Zoom Workplace for Windows, including a critical bug that could result in privilege escalation on affected systems.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-108186 (CVSS score: 9.6) - An improper input validation vulnerability that could allow an unauthenticated user to conduct an escalation of privilege via",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 줌 워크플레이스 윈도우용 치명적 취약점 CVE-2026-108186 발견\n2. 인증 없는 원격 사용자, 권한 상승 가능성 존재\n3. 줌, 즉각 SW 업데이트 배포 완료",
-      "link": "https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html",
-      "source": "thehackernews",
-      "published": "2026-11-12T01:12:46+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -4792,6 +4768,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-128076",
       "source": "cvefeed",
       "published": "2026-11-14T02:38:34+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-94522 Windows Kernel Transaction Manager Elevation of Privilege Vulnerability",
+      "summary": "Updated an acknowledgement. This is an informational change only.",
+      "description": "Updated an acknowledgement. This is an informational change only.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-94522\n2. MSRC\n3. Updated an acknowledgement. This is an information",
+      "cve_id": "CVE-2026-94522",
+      "cvss": "",
+      "severity": "",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-94522",
+      "source": "msrc",
+      "published": "2026-11-14T01:00:00+09:00",
       "lang": "en"
     },
     {
@@ -5288,51 +5279,6 @@
       "source": "cvefeed",
       "published": "2026-11-12T01:41:42+09:00",
       "lang": "vi"
-    },
-    {
-      "title": "CVE-2026-64855 - soapbar: verify_envelope_bsp accepts an unauthenticated embedded certificate (signature forgery / authentication bypass)",
-      "summary": "CVE ID :CVE-2026-64855\n  \nPublished : Nov. 11, 2026, 4:17 p.m. | 59 minutes ago\n  \nDescription :soapbar is a SOAP library for Python — client, server, and WSDL handling. Prior to version 0.13.0, verify_envelope_bsp() derived its trust anchor from the message it was verifying. It read the X.509 certificate out of the caller-untrusted wsse:BinarySecurityToken, validated only that certificate's not-before / not-after dates, and then verified the signature against that same certificate. There was no CA-chain validation, no issuer/subject allowlist, and no pinning. A successful verify_envelope_bsp() therefore proved only that the envelope was signed by whoever supplied the embedded certificate — never that it was signed by a trusted party. An attacker who mints their own certificate, signs a forged envelope, and embeds that certificate in the token passes verification. Any consumer that treats a successful BSP verification as authentication can be impersonated (signature forgery / authentication bypass). verify_envelope() (which pins a caller-supplied x509_cert) was not affected — the flaw was specific to the BSP variant whose trust anchor came from the message. This issue has been patched in version 0.13.0.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-64855\n  \nPublished : Nov. 11, 2026, 4:17 p.m. | 59 minutes ago\n  \nDescription :soapbar is a SOAP library for Python — client, server, and WSDL handling. Prior to version 0.13.0, verify_envelope_bsp() derived its trust anchor from the message it was verifying. It read the X.509 certificate out of the caller-untrusted wsse:BinarySecurityToken, validated only that certificate's not-before / not-after dates, and then verified the signature against that same certificate. There was no CA-chain validation, no issuer/subject allowlist, and no pinning. A successful verify_envelope_bsp() therefore proved only that the envelope was signed by whoever supplied the embedded certificate — never that it was signed by a trusted party. An attacker who mints their own certificate, signs a forged envelope, and embeds that certificate in the token passes verification. Any consumer that treats a successful BSP verification as authentication can be impersonated (signature forgery / authentication bypass). verify_envelope() (which pins a caller-supplied x509_cert) was not affected — the flaw was specific to the BSP variant whose trust anchor came from the message. This issue has been patched in version 0.13.0.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-64855\n2. 26.11.12 오전1:17\n3. soapbar is a SOAP library for Python — client, ser",
-      "cve_id": "CVE-2026-64855",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64855",
-      "source": "cvefeed",
-      "published": "2026-11-12T01:17:25+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-105440 - Switch Engine (EXOS) JSON-RPC Authorization Bypass Allows Read-Only Users to Disclose Sensitive Information",
-      "summary": "CVE ID :CVE-2026-105440\n  \nPublished : Nov. 11, 2026, 4:17 p.m. | 59 minutes ago\n  \nDescription :Missing authorization in the JSON-RPC web services interface\nof Extreme Networks Switch Engine (EXOS) allows an authenticated,\nlow-privileged (read-only) user to execute CLI show commands that are\nrestricted to that role through the command line interface. Successful\nexploitation results in disclosure of sensitive information, including the\ndevice configuration and the password hashes of local accounts. Configuration,\nenable, and debug commands are not affected. Disclosed password hashes can be\nattacked offline, and a weak password could lead to administrative access to\nthe device. This issue is fixed in Switch Engine 33.7.1-patch1-11,\n33.1.100.133-patch1-9, and 32.7.4.15-patch1-11.\n\n\n\n\n\n\n\n\nExtreme Networks would like to thank Toàn Lê (GitHub: https://github.com/toanln-cov) for responsibly disclosing this vulnerability and for working with our PSIRT team through coordinated disclosure.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-105440\n  \nPublished : Nov. 11, 2026, 4:17 p.m. | 59 minutes ago\n  \nDescription :Missing authorization in the JSON-RPC web services interface\nof Extreme Networks Switch Engine (EXOS) allows an authenticated,\nlow-privileged (read-only) user to execute CLI show commands that are\nrestricted to that role through the command line interface. Successful\nexploitation results in disclosure of sensitive information, including the\ndevice configuration and the password hashes of local accounts. Configuration,\nenable, and debug commands are not affected. Disclosed password hashes can be\nattacked offline, and a weak password could lead to administrative access to\nthe device. This issue is fixed in Switch Engine 33.7.1-patch1-11,\n33.1.100.133-patch1-9, and 32.7.4.15-patch1-11.\n\n\n\n\n\n\n\n\nExtreme Networks would like to thank Toàn Lê (GitHub: https://github.com/toanln-cov) for responsibly disclosing this vulnerability and for working with our PSIRT team through coordinated disclosure.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-105440\n2. 26.11.12 오전1:17\n3. Missing authorization in the JSON-RPC web services",
-      "cve_id": "CVE-2026-105440",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-105440",
-      "source": "cvefeed",
-      "published": "2026-11-12T01:17:24+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-100290 - Double free after allocation failure in regcomp and regexec",
-      "summary": "CVE ID :CVE-2026-100290\n  \nPublished : Nov. 11, 2026, 4:17 p.m. | 59 minutes ago\n  \nDescription :The regcomp and regexec functions in the GNU C Library version 2.3 to version 2.44 may read freed memory and free the same heap block twice when a memory allocation fails while a regular expression is compiled or matched.  The re_dfa_add_node (the NFA node table) and build_range_exp (bracket ranges) grow several arrays with consecutive realloc calls and store the new pointers only after all of them succeed.  When a later call fails, the pattern buffer keeps pointers to blocks that were already freed, and the error cleanup frees them again.  In regexec, the back-reference cache (match_ctx_add_entry) frees its array when a realloc fails but keeps the pointer, which is freed again on the error path.\n\nAn attacker does not need to supply a crafted regular expression: patterns large enough to grow these arrays are common.  The failure has to hit a specific allocation, though, so the issue can only be reached when the system is already under memory pressure.  An attacker who supplies the pattern or the subject string has little control over which allocation fails, so the expected impact is a crash of the process.  This issue affects all architectures and ABIs supported by the GNU C Library.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-100290\n  \nPublished : Nov. 11, 2026, 4:17 p.m. | 59 minutes ago\n  \nDescription :The regcomp and regexec functions in the GNU C Library version 2.3 to version 2.44 may read freed memory and free the same heap block twice when a memory allocation fails while a regular expression is compiled or matched.  The re_dfa_add_node (the NFA node table) and build_range_exp (bracket ranges) grow several arrays with consecutive realloc calls and store the new pointers only after all of them succeed.  When a later call fails, the pattern buffer keeps pointers to blocks that were already freed, and the error cleanup frees them again.  In regexec, the back-reference cache (match_ctx_add_entry) frees its array when a realloc fails but keeps the pointer, which is freed again on the error path.\n\nAn attacker does not need to supply a crafted regular expression: patterns large enough to grow these arrays are common.  The failure has to hit a specific allocation, though, so the issue can only be reached when the system is already under memory pressure.  An attacker who supplies the pattern or the subject string has little control over which allocation fails, so the expected impact is a crash of the process.  This issue affects all architectures and ABIs supported by the GNU C Library.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-100290\n2. 26.11.12 오전1:17\n3. The regcomp and regexec functions in the GNU C Lib",
-      "cve_id": "CVE-2026-100290",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-100290",
-      "source": "cvefeed",
-      "published": "2026-11-12T01:17:24+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
