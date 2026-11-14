@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-14T14:01:18.788115+09:00",
+  "fetched_at": "2026-11-14T14:31:21.293760+09:00",
   "security_news": [
+    {
+      "title": "주진모, 아빠 된다… 소속사 \"아내 민혜연 임신 초기\"",
+      "summary": "등 다수의 작품에 출연하며 필모그래피를 쌓았다. 그러나 2020년 휴대폰 해킹 피해로 대화 내용의 일부가 유출된 후 논란에 휩싸이며 별다른 작품 활동을 하지 않았다. 그의 마지막 작품은 드라마 '빅이슈'다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 배우 주진모, 2020년 휴대폰 해킹 피해\n2. 대화 내용 일부 유출 후 활동 중단\n3. 임신 초기 소식, '빅이슈' 이후 근황",
+      "link": "https://m.entertain.naver.com/article/469/0000965553",
+      "source": "naver",
+      "published": "2026-11-14T14:03:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[이호연의 D톡스] 금감원 출신 독식한 금융보안원장…해킹에 인사 관행...",
       "summary": "금융 감독 경험은 풍부하지만 사이버보안이나 침해사고 대응 실무 경력은 없다. 물론 금융보안원장이 반드시 보안 기술 분야의 실무 전문성을 갖춰야 하는 것은 아니다. 하지 금융권의 사이버 위협에 대응하는...",
@@ -5364,30 +5376,6 @@
       "source": "naver",
       "published": "2026-11-11T14:47:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[오늘의 키워드] PHP",
-      "summary": "최근 논란이 된 PHP 해킹은 'PHP2Shell'에서 보안 취약점이 발견됐으며, 해커들은 이를 악용한 맞춤형 해킹도구를 개발해 전 세계 방화벽 25개의 최고 권한을 탈취하는데 성공했다고 알려졌다. 특히 해커들은...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. PHP2Shell 취약점 악용, 전 세계 방화벽 25개 최고 권한 탈취\n2. 맞춤형 해킹 도구 개발, PHP 보안 취약점 노림\n3. PHP 관련 시스템 침해, 광범위한 보안 위협 우려",
-      "link": "http://www.financialreview.co.kr/news/articleView.html?idxno=46199",
-      "source": "naver",
-      "published": "2026-11-11T14:28:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "해킹으로 흔들리는 금융계",
-      "summary": "11일 금융회사 평가를 지원하는 상시평가 시스템이 해킹돼 정보가 유출 사고가 발생한 경기 용인시 금융보안원 본원의 모습. 2026.11.11. hwang@newsis.com",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융보안원 상시평가 시스템 해킹\n2. 정보 유출 사고 발생, 용인 본원\n3. 금융계 흔드는 보안 위협",
-      "link": "https://n.news.naver.com/mnews/article/003/0014315860?sid=105",
-      "source": "naver",
-      "published": "2026-11-11T14:27:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6169,36 +6157,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-126626",
       "source": "cvefeed",
       "published": "2026-11-11T18:17:14+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-64678 - Nitrite: Unfiltered Java Deserialization in Legacy v1 Database Migration Path",
-      "summary": "CVE ID :CVE-2026-64678\n  \nPublished : Nov. 11, 2026, 5:19 a.m. | 29 minutes ago\n  \nDescription :NOsql Object (NO2 a.k.a Nitrite) database is an open source nosql embedded document store. Prior to version 4.4.1, when Nitrite opens a database file, MVStoreUtils.openOrCreate() automatically checks for a legacy v1-format store and, on detecting one (or hitting a compatibility error while opening), triggers an automatic migration path. This path deserializes stored values using NitriteDataType.deserialize(byte[]), which passes the raw bytes directly to java.io.ObjectInputStream.readObject() via a custom NitriteObjectInputStream subclass. That subclass overrides only readClassDescriptor() — solely to remap a handful of known legacy class names to their current equivalents — and implements no class allowlist, blocklist, or ObjectInputFilter (JEP 290). Any Serializable class reachable on the embedding application's classpath can therefore be instantiated via readObject(), with readObject()/readExternal()/readResolve() callbacks invoked unconditionally. If a suitable gadget class (e.g. from commons-collections or similar) happens to be present on the classpath, this is a precondition for remote code execution. This issue has been patched in version 4.4.1.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-64678\n  \nPublished : Nov. 11, 2026, 5:19 a.m. | 29 minutes ago\n  \nDescription :NOsql Object (NO2 a.k.a Nitrite) database is an open source nosql embedded document store. Prior to version 4.4.1, when Nitrite opens a database file, MVStoreUtils.openOrCreate() automatically checks for a legacy v1-format store and, on detecting one (or hitting a compatibility error while opening), triggers an automatic migration path. This path deserializes stored values using NitriteDataType.deserialize(byte[]), which passes the raw bytes directly to java.io.ObjectInputStream.readObject() via a custom NitriteObjectInputStream subclass. That subclass overrides only readClassDescriptor() — solely to remap a handful of known legacy class names to their current equivalents — and implements no class allowlist, blocklist, or ObjectInputFilter (JEP 290). Any Serializable class reachable on the embedding application's classpath can therefore be instantiated via readObject(), with readObject()/readExternal()/readResolve() callbacks invoked unconditionally. If a suitable gadget class (e.g. from commons-collections or similar) happens to be present on the classpath, this is a precondition for remote code execution. This issue has been patched in version 4.4.1.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-64678\n2. 26.11.11 오후2:19\n3. NOsql Object (NO2 a.k.a Nitrite) database is an op",
-      "cve_id": "CVE-2026-64678",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64678",
-      "source": "cvefeed",
-      "published": "2026-11-11T14:19:51+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-64669 - pam_usb: deny_remote bypassed by compressed IPv6 addresses in pusb_tmux_has_remote_clients",
-      "summary": "CVE ID :CVE-2026-64669\n  \nPublished : Nov. 11, 2026, 5:19 a.m. | 29 minutes ago\n  \nDescription :pam_usb provides hardware authentication for Linux using removable media. From version 0.8.0 to before version 0.9.3, the deny_remote feature in pam_usb uses /usr/bin/w -i to detect whether the authenticating user has an active remote tmux session. In pusb_tmux_has_remote_clients() (src/tmux.c), the IPv6 detection regex required exactly four explicit colon-separated groups of 1-4 hex digits (e.g. 2001:0db8:85a3:0000). Any IPv6 address in compressed notation — including loopback (::1), link-local (fe80::1), and global unicast addresses (2001:db8::1) — did not match this pattern. As a result the remote-client check silently returned \"no remote clients\" even when a remote tmux client was connected from such an address. This issue has been patched in version 0.9.3.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-64669\n  \nPublished : Nov. 11, 2026, 5:19 a.m. | 29 minutes ago\n  \nDescription :pam_usb provides hardware authentication for Linux using removable media. From version 0.8.0 to before version 0.9.3, the deny_remote feature in pam_usb uses /usr/bin/w -i to detect whether the authenticating user has an active remote tmux session. In pusb_tmux_has_remote_clients() (src/tmux.c), the IPv6 detection regex required exactly four explicit colon-separated groups of 1-4 hex digits (e.g. 2001:0db8:85a3:0000). Any IPv6 address in compressed notation — including loopback (::1), link-local (fe80::1), and global unicast addresses (2001:db8::1) — did not match this pattern. As a result the remote-client check silently returned \"no remote clients\" even when a remote tmux client was connected from such an address. This issue has been patched in version 0.9.3.\n  \nSeverity: 7.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-64669\n2. 26.11.11 오후2:19\n3. pam_usb provides hardware authentication for Linux",
-      "cve_id": "CVE-2026-64669",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-64669",
-      "source": "cvefeed",
-      "published": "2026-11-11T14:19:51+09:00",
       "lang": "en"
     }
   ],
