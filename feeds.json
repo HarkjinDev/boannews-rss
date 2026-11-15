@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-16T05:02:36.626196+09:00",
+  "fetched_at": "2026-11-16T05:31:18.256073+09:00",
   "security_news": [
+    {
+      "title": "[사이버 위협] 군 전산망 해킹 없이 뚫린 안보…상업용 '위치 브로커' 시...",
+      "summary": "유출 경로는 군 내부 전산망 해킹이 아니라 일반 스마트폰 애플리케이션이었다. 이용자가 앱 실행 단계에서 위치정보 접근을 허용하면 앱 사업자와 제휴사에 좌표가 전송되고, 이용약관에 따라 제3자 제공 상품으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 군 전산망 해킹 없이 스마트폰 앱 통해 위치 정보 노출.\n2. 앱 사업자와 제휴사, 이용 약관 따라 좌표 등 제3자 제공.\n3. 상업용 '위치 브로커'가 군 안보 위협하는 경로로 악용.",
+      "link": "https://www.the-today.com/news/articleView.html?idxno=93630",
+      "source": "naver",
+      "published": "2026-11-16T05:12:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "계열사 4곳 해킹 미래에셋, 보안 위법 확인",
       "summary": "증권·생명·자산운용 등 계열사 4곳에서 줄줄이 정보 유출 사고가 난 미래에셋그룹이 정보보안 관련 법을... 금감원은 금융권 보안 취약점 점검을 진행 중이다. 최근 약 580개 사에 외부 접점 및 내부통제 체계 전수점검...",
@@ -4309,21 +4321,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-126205",
       "source": "cvefeed",
       "published": "2026-11-13T05:41:25+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-45265 - Atomic-Read-File RecordCount Stack-Based Out-of-Bounds Write in bacnet-stack",
-      "summary": "CVE ID :CVE-2026-45265\n  \nPublished : Nov. 12, 2026, 8:18 p.m. | 27 minutes ago\n  \nDescription :BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.4 and 1.5.1, there is a stack-based out-of-bounds write / stack-buffer-overflow in bacnet-stack when the server processes a malicious Atomic-Read-File request in record access mode. The bug is triggered on the real server side. A crafted request can set an excessively large RecordCount, which is later used as the loop bound for writing record data into a stack-allocated BACNET_ATOMIC_READ_FILE_DATA data structure. However, the stack object only has space for one fileData element. When the loop reaches i = 1, the code computes &data->fileData[1], which is already out of bounds, and the resulting invalid pointer is passed down to memmove(), causing a stack-buffer-overflow. This issue has been patched in versions 1.4.4 and 1.5.1.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-45265\n  \nPublished : Nov. 12, 2026, 8:18 p.m. | 27 minutes ago\n  \nDescription :BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.4 and 1.5.1, there is a stack-based out-of-bounds write / stack-buffer-overflow in bacnet-stack when the server processes a malicious Atomic-Read-File request in record access mode. The bug is triggered on the real server side. A crafted request can set an excessively large RecordCount, which is later used as the loop bound for writing record data into a stack-allocated BACNET_ATOMIC_READ_FILE_DATA data structure. However, the stack object only has space for one fileData element. When the loop reaches i = 1, the code computes &data->fileData[1], which is already out of bounds, and the resulting invalid pointer is passed down to memmove(), causing a stack-buffer-overflow. This issue has been patched in versions 1.4.4 and 1.5.1.\n  \nSeverity: 8.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-45265\n2. 26.11.13 오전5:18\n3. BACnet Stack is a BACnet open source protocol stac",
-      "cve_id": "CVE-2026-45265",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-45265",
-      "source": "cvefeed",
-      "published": "2026-11-13T05:18:38+09:00",
       "lang": "en"
     }
   ],
