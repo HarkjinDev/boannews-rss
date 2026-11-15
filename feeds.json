@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-16T02:02:55.661700+09:00",
+  "fetched_at": "2026-11-16T02:32:25.403332+09:00",
   "security_news": [
+    {
+      "title": "바이낸스 ‘다음 주 말까지’ 전면 재개는 보장 아닌 목표…전체 네트워...",
+      "summary": "바이낸스가 해킹 이후 막아 둔 출금을 전면 재개하는 마지막 단계에 들어섰다. 바이낸스는 11월 14일... 10월에 발생한 해킹으로 약 63억 달러(약 8조 4,000억 원, 1달러 1,336원 기준) 상당의 토큰이 유출됐다. 이번에 처음...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 바이낸스 ‘다음 주 말까지’ 전면 재개는 보장 아닌 목표…전체 네트워... 바이낸스가 해킹\n2. 바이낸스는 11월 14일... 10월에 발생한 해킹으로 약 63억 달러(약 8조 4,000\n3. 이번에 처음...",
+      "link": "https://www.wikitree.co.kr/articles/1174825",
+      "source": "naver",
+      "published": "2026-11-16T02:08:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[뉴스이슈&비즈] 역대 최대 2조원 ESS 입찰 삼성SDI·SK온 맞대결…LG엔...",
       "summary": "◇ 코인원 외주센터 해킹…주민번호·계좌번호까지 유출 가능성 가상자산 거래소 코인원은 고객 상담 업무를 맡긴 수탁업체 메타엠의 서버가 외부 공격을 받아 고객 정보가 유출됐다고 15일 공지했다. 공격자는...",
@@ -3948,18 +3960,6 @@
       "source": "thehackernews",
       "published": "2026-11-13T02:50:27+09:00",
       "lang": "en"
-    },
-    {
-      "title": "“지시도 안했는데 식당 예약 문의”… 선 넘는 ‘AI 비서’",
-      "summary": "곽진 아주대 사이버보안학과 교수는 “AI가 목표 달성을 윤리적 규칙보다 우선할 수 있다”며 “외부 전화나 개인정보 전달 등은 이용자가 최종 승인하도록 통제장치를 마련해야 한다”고 강조했다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 비서, 사용자 동의 없이 식당 예약 등 임의 행동.\n2. 개인정보 전달 등 임의 수행, 윤리적 규칙보다 목표 우선.\n3. 사용자 최종 승인 등 통제 장치 마련 필요성 강조.",
-      "link": "https://n.news.naver.com/mnews/article/005/0001884884?sid=102",
-      "source": "naver",
-      "published": "2026-11-13T02:09:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -4396,36 +4396,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-120033",
       "source": "cvefeed",
       "published": "2026-11-13T04:16:48+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-71363 - Awx: unauthenticated debug endpoints trigger scheduler operations",
-      "summary": "CVE ID :CVE-2026-71363\n  \nPublished : Nov. 12, 2026, 5:19 p.m. | 27 minutes ago\n  \nDescription :A flaw was found in AWX. The debug API endpoints (/api/debug/task_manager/, /api/debug/dependency_manager/, /api/debug/workflow_manager/) are registered unconditionally in the URL configuration and use AllowAny permission class with _ignore_model_permissions=True. This allows an unauthenticated remote attacker to repeatedly invoke scheduler operations that acquire database advisory locks and open transactions, potentially leading to resource exhaustion and degraded service availability.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-71363\n  \nPublished : Nov. 12, 2026, 5:19 p.m. | 27 minutes ago\n  \nDescription :A flaw was found in AWX. The debug API endpoints (/api/debug/task_manager/, /api/debug/dependency_manager/, /api/debug/workflow_manager/) are registered unconditionally in the URL configuration and use AllowAny permission class with _ignore_model_permissions=True. This allows an unauthenticated remote attacker to repeatedly invoke scheduler operations that acquire database advisory locks and open transactions, potentially leading to resource exhaustion and degraded service availability.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-71363\n2. 26.11.13 오전2:19\n3. A flaw was found in AWX. The debug API endpoints (",
-      "cve_id": "CVE-2026-71363",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-71363",
-      "source": "cvefeed",
-      "published": "2026-11-13T02:19:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-121876 - Sandboxed-containers: kernel: systemd-gpt-auto-generator: guest data leakage in confidential computing (sandboxed containers)",
-      "summary": "CVE ID :CVE-2026-121876\n  \nPublished : Nov. 12, 2026, 5:17 p.m. | 27 minutes ago\n  \nDescription :A flaw was found in the interaction between systemd-gpt-auto-generator and \nconfidential computing guest VM images in OpenShift Sandboxed Containers \n(confidential peer pods). systemd-gpt-auto-generator automatically discovers \nand mounts GPT partitions by type GUID at boot with no user confirmation. In \nthe confidential computing threat model, where the host/hypervisor is the \nadversary, a malicious host can inject partitions into the guest's virtual \ndisk. Most critically, injecting a swap partition causes the guest kernel to \npage out TEE-encrypted memory to a host-controlled block device, breaking the \nconfidentiality guarantee of the hardware TEE (AMD SEV-SNP, Intel TDX).\n\nThe PodVM images use a GPT-partitioned disk with dm-verity on the root \npartition. However, the roothash= kernel parameter only disables root \nauto-discovery — non-root partitions (swap, /home, /var, /srv, /var/tmp) are \nstill auto-discovered and mounted. The generator is shipped unmasked in the \nRHEL systemd-udev subpackage, and no kernel command line parameter in the \nmeasured UKI addon disables it. Additionally, the PodVM measurement script \ncaptures PCRs 3, 9, 11, and 12, but not PCR 5 (GPT partition table), so \npartition table modifications are not detected by remote attestation.\n  \nSeverity: 7.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-121876\n  \nPublished : Nov. 12, 2026, 5:17 p.m. | 27 minutes ago\n  \nDescription :A flaw was found in the interaction between systemd-gpt-auto-generator and \nconfidential computing guest VM images in OpenShift Sandboxed Containers \n(confidential peer pods). systemd-gpt-auto-generator automatically discovers \nand mounts GPT partitions by type GUID at boot with no user confirmation. In \nthe confidential computing threat model, where the host/hypervisor is the \nadversary, a malicious host can inject partitions into the guest's virtual \ndisk. Most critically, injecting a swap partition causes the guest kernel to \npage out TEE-encrypted memory to a host-controlled block device, breaking the \nconfidentiality guarantee of the hardware TEE (AMD SEV-SNP, Intel TDX).\n\nThe PodVM images use a GPT-partitioned disk with dm-verity on the root \npartition. However, the roothash= kernel parameter only disables root \nauto-discovery — non-root partitions (swap, /home, /var, /srv, /var/tmp) are \nstill auto-discovered and mounted. The generator is shipped unmasked in the \nRHEL systemd-udev subpackage, and no kernel command line parameter in the \nmeasured UKI addon disables it. Additionally, the PodVM measurement script \ncaptures PCRs 3, 9, 11, and 12, but not PCR 5 (GPT partition table), so \npartition table modifications are not detected by remote attestation.\n  \nSeverity: 7.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-121876\n2. 26.11.13 오전2:17\n3. A flaw was found in the interaction between system",
-      "cve_id": "CVE-2026-121876",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-121876",
-      "source": "cvefeed",
-      "published": "2026-11-13T02:17:29+09:00",
       "lang": "en"
     }
   ],
