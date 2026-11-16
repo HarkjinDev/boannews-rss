@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-16T23:33:24.316597+09:00",
+  "fetched_at": "2026-11-17T00:02:56.487139+09:00",
   "security_news": [
     {
       "title": "[단독] 대학 산학협력단 연쇄 해킹 확산…한림대·숙명여대·한경국립대...",
@@ -4059,6 +4059,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-110710 - @fastify/multipart vulnerable to Denial of Service via temporary file leak after client disconnect",
+      "summary": "CVE ID :CVE-2026-110710\n  \nPublished : Nov. 16, 2026, 1:17 p.m. | 17 minutes ago\n  \nDescription :@fastify/multipart is the official Fastify plugin for handling multipart/form-data uploads. In versions 3.0.0 through 10.1.3, temporary files written by the saveRequestFiles helper are removed only by a response hook that runs when the response finishes or errors. When a client completes an upload and then disconnects before the handler writes the reply, for example while the handler scans, hashes or forwards the file, the response only emits a close event, the cleanup hook never runs, and the saved files are left on disk. An unauthenticated client can repeat this cheaply to exhaust disk space and deny service to applications that save uploaded files to disk. The issue is fixed in @fastify/multipart 10.1.4, and users should upgrade to 10.1.4 or later. As a workaround, avoid saving request files for untrusted clients, or clean the saved files from a close handler on the raw response so removal also happens when the client disconnects.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-110710\n  \nPublished : Nov. 16, 2026, 1:17 p.m. | 17 minutes ago\n  \nDescription :@fastify/multipart is the official Fastify plugin for handling multipart/form-data uploads. In versions 3.0.0 through 10.1.3, temporary files written by the saveRequestFiles helper are removed only by a response hook that runs when the response finishes or errors. When a client completes an upload and then disconnects before the handler writes the reply, for example while the handler scans, hashes or forwards the file, the response only emits a close event, the cleanup hook never runs, and the saved files are left on disk. An unauthenticated client can repeat this cheaply to exhaust disk space and deny service to applications that save uploaded files to disk. The issue is fixed in @fastify/multipart 10.1.4, and users should upgrade to 10.1.4 or later. As a workaround, avoid saving request files for untrusted clients, or clean the saved files from a close handler on the raw response so removal also happens when the client disconnects.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-110710\n2. 26.11.16 오후10:17\n3. @fastify/multipart is the official Fastify plugin ",
+      "cve_id": "CVE-2026-110710",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-110710",
+      "source": "cvefeed",
+      "published": "2026-11-16T22:17:18+09:00",
+      "lang": "en"
+    },
     {
       "title": "Scans for LiteLLM/Starlette (CVE-2026-42271, CVE-2026-48710), (Mon, Nov 16th)",
       "summary": "This weekend, we started seeing requests for /mcp-rest/test/tools/list hitting our honeypots. These requests appear to attempt to exploit CVE-2026-42271 and CVE-2026-48710. Horizon3.ai published a short write-up about how these vulnerabilities can be chained to achieve remote code execution without authentication [Horizon3]\r",
