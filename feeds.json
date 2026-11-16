@@ -1,6 +1,54 @@
 {
-  "fetched_at": "2026-11-17T05:01:18.120610+09:00",
+  "fetched_at": "2026-11-17T05:33:59.854794+09:00",
   "security_news": [
+    {
+      "title": "20분 만에 8조원 사라졌는데…책임지는 규정 없다[기고]",
+      "summary": "미국 연방수사국(FBI)은 이틀 뒤인 지난달 31일 성명을 내고 북한 해킹조직 ‘트레이더트레이터(TraderTraitor)... 블록체인은 해킹이 불가능하다고 하지 않았느냐고. 이번에도 블록체인은 뚫리지 않았다. 공격자가 장악한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 해킹조직 ‘트레이더트레이터’ 추정, 20분 만에 8조원 상당 피해\n2. 블록체인 자체는 뚫리지 않았으나, 공격자가 장악한 스마트 컨트랙트 이용\n3. 책임 규정 부재로 막대한 손실에 대한 명확한 법적 조치 어려움",
+      "link": "https://n.news.naver.com/mnews/article/018/0006410768?sid=101",
+      "source": "naver",
+      "published": "2026-11-17T05:04:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "코인 안 털려도 안심 못 해⋯거래 정보 유출되면 사칭ㆍ피싱 우려",
+      "summary": "금융감독원은 19일 거래소·수탁업체 등 가상자산사업자의 정보보호 최고책임자(CISO)를 대상으로 해킹 사고 대응회의를 열 예정이다. 금융당국은 12일에도 가상자산사업자에 상시 감시·대응체계와 보안 점검 강화를 주문한...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융감독원, 가상자산사업자 CISO 대상 해킹 대응 회의 개최\n2. 거래 정보 유출 시 사칭, 피싱 범죄 우려\n3. 보안 점검 강화 및 상시 감시/대응체계 구축 명령",
+      "link": "https://www.etoday.co.kr/news/view/2648599",
+      "source": "naver",
+      "published": "2026-11-17T05:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "北 IT 인력, 국내 위장취업 정황 확인…\"국정원·경찰 '공동 전담반' 필...",
+      "summary": "미 연방수사국(FBI)이 북한의 소행으로 지목한 지난달 29일 '바이낸스' 해킹에선 공격자가 채용 담당자를 사칭해 거래소 개발자에게 접근한 정황이 확인되기도 했다. 보고서는 그동안 국내 기업의 대면 근무 관행 때문에...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 北 IT 인력, 국내 위장취업 정황 확인…\"국정원·경찰 '공동 전담반' 필...\n2. 미 연방수사국(FBI)이 북한의 소행으로 지목한 지난달 29일 '바이낸스' 해킹에선 공격자\n3. 보고서는 그동안 국내 기업의 대면 근무 관행 때문에...",
+      "link": "https://n.news.naver.com/mnews/article/421/0009292496?sid=100",
+      "source": "naver",
+      "published": "2026-11-17T05:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "Ransomware Attacks Increase Behind AI, But Payments Decline",
+      "summary": "Large language models and other AI systems allow a growing number of ransomware groups to create convincing phishing emails and identify sensitive data quickly.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Ransomware Attacks Increase Behind AI, But Payment",
+      "link": "https://www.darkreading.com/threat-intelligence/ransomware-attacks-increase-ai-payments-decline",
+      "source": "darkreading",
+      "published": "2026-11-17T04:56:05+09:00",
+      "lang": "en"
+    },
     {
       "title": "[사설] 첨단 아파트 해킹 확산, 준공 후 보안관리체계 정비 필요",
       "summary": "아파트 커뮤니티 시설과 입주민 플랫폼에서 해킹 사고가 잇따르면서 개인정보 보호에 비상이 걸렸다.... 최근 GS건설의 아파트 커뮤니티 시설 예약·관리 시스템이 해킹돼 입주민 개인정보가 유출되는 사고가 발생했다....",
@@ -4131,6 +4179,36 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-129303 - Guard Core: Whitespace-collapse preprocessing permanently disables the CRLF-anchored http-splitting and command-injection detectors in the default detection mode",
+      "summary": "CVE ID :CVE-2026-129303\n  \nPublished : Nov. 16, 2026, 7:34 p.m. | 42 minutes ago\n  \nDescription :Guard Core is an API security core engine for the FastAPI-Guard, FlaskAPI Guard, and DjAPI Guard adapters. From 1.0.0 until 3.13.0, ContentPreprocessor.preprocess() in guard_core/detection_engine/preprocessor.py collapses all whitespace before built-in pattern matching in the default enhanced mode. This removes carriage returns and newlines required by the http_split and newline-anchored cmd_injection detectors in guard_core/handlers/suspatterns_handler.py, making those detectors unable to match. Framework-decoded CRLF can therefore pass through Guard Core unflagged while the downstream application still receives the raw newline-bearing value. Direct security impact requires a downstream stack or application that persists or re-emits the value into a CRLF-tolerant response or command context. This issue is fixed in version 3.13.0.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-129303\n  \nPublished : Nov. 16, 2026, 7:34 p.m. | 42 minutes ago\n  \nDescription :Guard Core is an API security core engine for the FastAPI-Guard, FlaskAPI Guard, and DjAPI Guard adapters. From 1.0.0 until 3.13.0, ContentPreprocessor.preprocess() in guard_core/detection_engine/preprocessor.py collapses all whitespace before built-in pattern matching in the default enhanced mode. This removes carriage returns and newlines required by the http_split and newline-anchored cmd_injection detectors in guard_core/handlers/suspatterns_handler.py, making those detectors unable to match. Framework-decoded CRLF can therefore pass through Guard Core unflagged while the downstream application still receives the raw newline-bearing value. Direct security impact requires a downstream stack or application that persists or re-emits the value into a CRLF-tolerant response or command context. This issue is fixed in version 3.13.0.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-129303\n2. 26.11.17 오전4:34\n3. Guard Core is an API security core engine for the ",
+      "cve_id": "CVE-2026-129303",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129303",
+      "source": "cvefeed",
+      "published": "2026-11-17T04:34:47+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-83817 - CodeWhale: Automation auto_approve defaults to true, bypassing the task-path hardening fix for silent recurring agent execution",
+      "summary": "CVE ID :CVE-2026-83817\n  \nPublished : Nov. 16, 2026, 7:17 p.m. | 59 minutes ago\n  \nDescription :CodeWhale is a DeepSeek and MiMo coding agent for the terminal. Prior to 0.9.0, DEFAULT_AUTOMATION_AUTO_APPROVE caused AutomationRecord::task_auto_approve to resolve an omitted setting to true, and the automation_create schema advertised the same insecure default. enqueue_run_task converted that omission into an explicit true value, bypassing the safer task-path fallback and selecting ApprovalMode::Bypass for each scheduled run. After a user approved creation of an apparently benign recurring automation, subsequent executions could silently authorize mutating tools without a human present, and an automation created with shell access could repeatedly execute commands. This issue is fixed in version 0.9.0.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-83817\n  \nPublished : Nov. 16, 2026, 7:17 p.m. | 59 minutes ago\n  \nDescription :CodeWhale is a DeepSeek and MiMo coding agent for the terminal. Prior to 0.9.0, DEFAULT_AUTOMATION_AUTO_APPROVE caused AutomationRecord::task_auto_approve to resolve an omitted setting to true, and the automation_create schema advertised the same insecure default. enqueue_run_task converted that omission into an explicit true value, bypassing the safer task-path fallback and selecting ApprovalMode::Bypass for each scheduled run. After a user approved creation of an apparently benign recurring automation, subsequent executions could silently authorize mutating tools without a human present, and an automation created with shell access could repeatedly execute commands. This issue is fixed in version 0.9.0.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-83817\n2. 26.11.17 오전4:17\n3. CodeWhale is a DeepSeek and MiMo coding agent for ",
+      "cve_id": "CVE-2026-83817",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-83817",
+      "source": "cvefeed",
+      "published": "2026-11-17T04:17:53+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-129306 - libspdm: libspdm_x509_verify_cert_chain() does not verify CA nameConstraints / pathLenConstraint",
       "summary": "CVE ID :CVE-2026-129306\n  \nPublished : Nov. 16, 2026, 5:59 p.m. | 22 minutes ago\n  \nDescription :libspdm is a sample implementation that follows the DMTF SPDM specifications. Prior to 3.8.3 and 4.0.0-rc2, libspdm_x509_verify_cert_chain() in os_stub/cryptlib_openssl/pk/x509.c and os_stub/cryptlib_mbedtls/pk/x509.c validates certificate signatures one link at a time instead of validating the complete X.509 path. In deployments using a pinned root with a constrained multi-tier PKI, an attacker holding a valid issuer credential below a constrained CA can present a subordinate certificate that exceeds pathLenConstraint or nameConstraints and may be accepted for SPDM identity validation. Exploitation requires the application to use libspdm's backend validation without an additional certificate-chain validation mechanism, the pinned root cannot be substituted, and the deployment's measurement policy must allow identity impersonation alone to satisfy its acceptance requirements. The mbedTLS backend remains unable to enforce nameConstraints because upstream mbedTLS does not implement that check. The full-chain validation changes are released in versions 3.8.3 and 4.0.0-rc2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
