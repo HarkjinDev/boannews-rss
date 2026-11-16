@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-11-17T01:32:40.898665+09:00",
+  "fetched_at": "2026-11-17T02:02:40.716354+09:00",
   "security_news": [
+    {
+      "title": "[POC 2026] 사파리 해킹 시연부터 AI 취약점 탐지까지…37개국 400여 명 집...",
+      "summary": "국제 해킹·보안 컨퍼런스 'POC(Power of Community) 2026'이 11월 12일부터 13일까지 서울 강남구 더 웨스틴... 2006년 국내 최초의 국제 해킹 컨퍼런스로 출발한 POC는 각국 연구자들이 취약점을 어떻게 발견하고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [POC 2026] 사파리 해킹 시연부터 AI 취약점 탐지까지…37개국 400여 명 집..\n2. 국제 해킹·보안 컨퍼런스 'POC(Power of Community) 2026'이 11월 \n3. 2006년 국내 최초의 국제 해킹 컨퍼런스로 출발한 POC는 각국 연구자들이 취약점을 어떻",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209556",
+      "source": "naver",
+      "published": "2026-11-17T01:38:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "[사설] 진화하는 北 사이버 공격, ‘통합 방어·대응’ 시급하다",
+      "summary": "단순한 해킹이나 정보 유출 같은 사이버 범죄의 범위를 넘어섰다. 표적은 우리의 공공기관과 금융회사... 보안 전문기업 지니언스에 따르면 북한 연계 해킹조직 ‘김수키’로 의심되는 세력이 국회의원실 선임비서관을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [사설] 진화하는 北 사이버 공격, ‘통합 방어·대응’ 시급하다 단순한 해킹이나 정보 유출\n2. 표적은 우리의 공공기관과 금융회사...\n3. 보안 전문기업 지니언스에 따르면 북한 연계 해킹조직 ‘김수키’로 의심되는 세력이 국회의원실",
+      "link": "https://n.news.naver.com/mnews/article/005/0001885540?sid=110",
+      "source": "naver",
+      "published": "2026-11-17T01:32:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "日 악사손보 해킹, 고객 정보 약 59만 7000건 유출 가능성",
       "summary": "| 내외경제TV=정동진 기자 | 일본 악사손해보험(AXA Direct Japan)의 고객 전용 웹페이지와 긴급출동 위탁업체 시스템에 제3자 무단 접속이 잇따라 발생해 고객 개인정보가 유출됐다. 17일 일본 악사손해보험에 따르면...",
@@ -4023,6 +4047,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-129237 - qbee-agent: Docker Compose build context Zip Slip writes outside context directory",
+      "summary": "CVE ID :CVE-2026-129237\n  \nPublished : Nov. 16, 2026, 4:52 p.m. | 9 minutes ago\n  \nDescription :qbee-agent is the device agent component of the qbee.io IoT device management platform. Prior to 2026.41, the unpackTar extraction logic in app/utils/tar.go validates cleaned archive entry paths with strings.HasPrefix(targetPath, destdirClean) without enforcing a path-separator boundary. When UseContext enables the Docker Compose build context path in app/configuration/bundle_docker_compose.go, a less-privileged archive supplier with delegated configuration and/or file-manager access can provide a sibling-prefix traversal entry that passes the check, causing utils.UnpackTar to create directories and regular files outside the intended context extraction directory with qbee-agent process privileges, despite the supplier lacking authority to write those sibling files. In deployments where only full device or fleet administrators can provide Docker Compose context archives, this behavior is hardening rather than a crossed security boundary. The demonstrated impact is limited to nearby cache or project paths sharing the destination prefix, may affect integrity or availability of qbee-agent-managed Docker Compose state, and does not establish arbitrary absolute-path writes or direct code execution. This issue is fixed in version 2026.41.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-129237\n  \nPublished : Nov. 16, 2026, 4:52 p.m. | 9 minutes ago\n  \nDescription :qbee-agent is the device agent component of the qbee.io IoT device management platform. Prior to 2026.41, the unpackTar extraction logic in app/utils/tar.go validates cleaned archive entry paths with strings.HasPrefix(targetPath, destdirClean) without enforcing a path-separator boundary. When UseContext enables the Docker Compose build context path in app/configuration/bundle_docker_compose.go, a less-privileged archive supplier with delegated configuration and/or file-manager access can provide a sibling-prefix traversal entry that passes the check, causing utils.UnpackTar to create directories and regular files outside the intended context extraction directory with qbee-agent process privileges, despite the supplier lacking authority to write those sibling files. In deployments where only full device or fleet administrators can provide Docker Compose context archives, this behavior is hardening rather than a crossed security boundary. The demonstrated impact is limited to nearby cache or project paths sharing the destination prefix, may affect integrity or availability of qbee-agent-managed Docker Compose state, and does not establish arbitrary absolute-path writes or direct code execution. This issue is fixed in version 2026.41.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-129237\n2. 26.11.17 오전1:52\n3. qbee-agent is the device agent component of the qb",
+      "cve_id": "CVE-2026-129237",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129237",
+      "source": "cvefeed",
+      "published": "2026-11-17T01:52:38+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-129919 - Kunai Mount Namespace Cache TOCTOU Allows Incorrect Event Resolution Against Host Files",
       "summary": "CVE ID :CVE-2026-129919\n  \nPublished : Nov. 16, 2026, 1:49 p.m. | 34 minutes ago\n  \nDescription :Kunai, a security monitoring tool, contains a time-of-check to time-of-use (TOCTOU) race condition in its mount namespace (mnt ns) caching logic. When resolving a security event that references a specific process PID and an expected mount namespace, the Switcher::new function read /proc//ns/mnt to determine the target namespace and cached the result under the expected namespace key without verifying that the resolved namespace actually matched the expected one.\n\nAn attacker with local access could exploit this by either (1) arranging for the referenced PID to be reused by a process in a different namespace (e.g., the host namespace) before Kunai resolves it, or (2) calling unshare or setns on the target process after the event is generated but before the namespace is resolved. In either case, the wrong namespace (potentially the host's own namespace) would be cached under the container's namespace key.\n\nThe security impact is that subsequent container security events would be resolved against host filesystem paths rather than container paths. This undermines the integrity of the security monitoring data: container activity could be misattributed to the host, host activity could be misattributed to a container, and file-path-based detections or alerts would reference incorrect paths. An attacker could potentially use this to obscure malicious activity within a container by making it appear as benign host activity, or to generate misleading security alerts.\n\nThe vulnerability requires local access to the system and a specific timing window between event generation and namespace resolution. No remote attack vector or user interaction is required.\n  \nSeverity: 2.0 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
