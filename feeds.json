@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-16T19:34:11.315546+09:00",
+  "fetched_at": "2026-11-16T20:03:00.014577+09:00",
   "security_news": [
     {
       "title": "“번개장터도 털렸나”…전화번호에 계좌번호까지 유출 가능성",
@@ -4020,57 +4020,39 @@
       "source": "naver",
       "published": "2026-11-13T20:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
-      "summary": "An international police operation took down servers behind Gootloader, CastleRAT and StealC this week. Criminals used the three malware tools to gain access to computers, steal passwords, and launch ransomware attacks.\n\nPolice also seized about 6.4 million stolen logins belonging to more than 40,000 victims, according to Germany's Federal Criminal Police Office (BKA).\n\nGootloader is a loader:",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Operation Endgame Takes Down Gootloader, CastleRAT\n2. Criminals used the three malware tools to gain acc\n3. Police also seized about 6.4 million stolen logins",
-      "link": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
-      "source": "thehackernews",
-      "published": "2026-11-13T19:55:03+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "대통령이 문책 지시한 지 사흘…정부 ‘모두의창업’ 또 개인정보 유출",
-      "summary": "업체가 해킹 정황을 발견한 시점은 11일 오전 8시 30분이지만 창업진흥원에 통보한 것은 12일 오후 6시 10분이었다. 약 34시간 동안 관계기관 통보가 이뤄지지 않은 셈이다. 앞서 지난 6월 1차 모두의창업 사업에서는 합격자...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 대통령이 문책 지시한 지 사흘…정부 ‘모두의창업’ 또 개인정보 유출 업체가 해킹 정황을 발\n2. 약 34시간 동안 관계기관 통보가 이뤄지지 않은 셈이다.\n3. 앞서 지난 6월 1차 모두의창업 사업에서는 합격자...",
-      "link": "https://wemakenews.co.kr/news/view.php?no=26838",
-      "source": "naver",
-      "published": "2026-11-13T19:54:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Check Point warns of zero-day flaw exploited for root access",
-      "summary": "Check Point Software has released emergency hotfixes to address a high-severity flaw that hackers have been exploiting to gain root privileges and establish persistence on vulnerable devices since late October. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Check Point warns of zero-day flaw exploited for r",
-      "link": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
-      "source": "bleepingcomputer",
-      "published": "2026-11-13T19:44:22+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "[단독] 경일대 교직원 전자문서시스템 해킹…다크웹 포럼에 해커 “108GB 탈취” 주장",
-      "summary": "경북 경산시에 위치한 경일대학교(KIU)의 교직원 전용 전자문서시스템에 해커로 추정되는 외부 침입이 발생했다.대학은 다른 시스템으로 피해가 확산될 우려가 있다며 주요 정보서비스의 외부 접속을 통제했다. 같은 날 온라인 해킹 포럼에는 경일대 데이터 108GB를 확보했다는 주장이 올라왔다. 게시자가 지목한 주소는 대학이 안내한 전자문서시스템 주소와 일치한다. 대학은 홈페이지 안내에서 침입 사실을 밝혔으며, 실제 데이터 반출 규모와 개인정보 유출 여부는 공개하지 않았다.대학 “12일 오후 8시께 침입”…구성원에 비밀번호 변경 당부데일리시",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [단독] 경일대 교직원 전자문서시스템 해킹…다크웹 포럼에 해커 “108GB 탈취” 주장 경\n2. 같은 날 온라인 해킹 포럼에는 경일대 데이터 108GB를 확보했다는 주장이 올라왔다.\n3. 게시자가 지목한 주소는 대학이 안내한 전자문서시스템 주소와 일치한다.",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209515",
-      "source": "dailysecu",
-      "published": "2026-11-13T19:37:44+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-129784 - Insecure deserializaiton in the httpx Ruby gem via unsafe Oj object-mode",
+      "summary": "CVE ID :CVE-2026-129784\n  \nPublished : Nov. 16, 2026, 10:53 a.m. | 9 minutes ago\n  \nDescription :The httpx Ruby gem parses JSON response bodies through its transcoder layer. HTTPX::Response#json delegates to Transcoder::JSON.decode, and when the oj gem is loaded and multi_json is absent, the decoder falls back to json_load, which calls Oj.load(response.to_s) with no mode option. Oj.load defaults to :object mode, in which a response document can allocate any already-loaded Ruby class (\"^o\":\"ClassName\") and set its instance variables, or resolve a class or module reference (\"^c\":\"Name\"). An attacker who controls, or can influence, the URL an application fetches with HTTPX.get(url).json therefore controls object instantiation in the victim process. With a matching gadget chain, this issue can potentially cause remote code execution. Affects httpx 1.9.0; fixed in 1.9.1.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-129784\n  \nPublished : Nov. 16, 2026, 10:53 a.m. | 9 minutes ago\n  \nDescription :The httpx Ruby gem parses JSON response bodies through its transcoder layer. HTTPX::Response#json delegates to Transcoder::JSON.decode, and when the oj gem is loaded and multi_json is absent, the decoder falls back to json_load, which calls Oj.load(response.to_s) with no mode option. Oj.load defaults to :object mode, in which a response document can allocate any already-loaded Ruby class (\"^o\":\"ClassName\") and set its instance variables, or resolve a class or module reference (\"^c\":\"Name\"). An attacker who controls, or can influence, the URL an application fetches with HTTPX.get(url).json therefore controls object instantiation in the victim process. With a matching gadget chain, this issue can potentially cause remote code execution. Affects httpx 1.9.0; fixed in 1.9.1.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-129784\n2. 26.11.16 오후7:53\n3. The httpx Ruby gem parses JSON response bodies thr",
+      "cve_id": "CVE-2026-129784",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129784",
+      "source": "cvefeed",
+      "published": "2026-11-16T19:53:51+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-99308 - usb: xhci: Fix bounce buffer overflow",
+      "summary": "CVE ID :CVE-2026-99308\n  \nPublished : Nov. 16, 2026, 10:17 a.m. | 45 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nusb: xhci: Fix bounce buffer overflow\n\nHigh-speed devices with out of spec 1024 byte bulk endpoints exist and\nare allowed by USB core, but xhci-hcd always sets packet size to 512.\nThe exact nature of these devices isn't documented, commit fb5ee84ea72c\n(\"USB: Accept bulk endpoints with 1024-byte maxpacket\") only states\nthat they \"don't work with xHCI host controllers\", whatever it means.\n\nBut somebody (or a malicious device) can try, and then the driver will\nallocate a 512 byte bounce buffer for this endpoint and may write up to\n1024 bytes into it if particular scatter-gather URBs are used, because\nxhci_align_td() obtains packet size from the descriptor. Fix this.\n\nAs a side effect, TRBs will be aligned to the packet size chosen by the\ndriver on all endpoints of all speeds. Alignment serves the xHC, not\ndevice, so this is fine. Only out of spec devices are affected anyway.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-99308\n  \nPublished : Nov. 16, 2026, 10:17 a.m. | 45 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nusb: xhci: Fix bounce buffer overflow\n\nHigh-speed devices with out of spec 1024 byte bulk endpoints exist and\nare allowed by USB core, but xhci-hcd always sets packet size to 512.\nThe exact nature of these devices isn't documented, commit fb5ee84ea72c\n(\"USB: Accept bulk endpoints with 1024-byte maxpacket\") only states\nthat they \"don't work with xHCI host controllers\", whatever it means.\n\nBut somebody (or a malicious device) can try, and then the driver will\nallocate a 512 byte bounce buffer for this endpoint and may write up to\n1024 bytes into it if particular scatter-gather URBs are used, because\nxhci_align_td() obtains packet size from the descriptor. Fix this.\n\nAs a side effect, TRBs will be aligned to the packet size chosen by the\ndriver on all endpoints of all speeds. Alignment serves the xHC, not\ndevice, so this is fine. Only out of spec devices are affected anyway.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-99308\n2. 26.11.16 오후7:17\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-99308",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99308",
+      "source": "cvefeed",
+      "published": "2026-11-16T19:17:05+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-99311 - udf: fix return value for non-recorded-allocated extents in udf_map_block()",
       "summary": "CVE ID :CVE-2026-99311\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nudf: fix return value for non-recorded-allocated extents in udf_map_block()\n\nWhen someone creates a corrupted UDF filesystem where symlink contains\nother extent type than EXT_RECORDED_ALLOCATED, it can leads to a crash\nlike:\n\n Oops: general protection fault\n KASAN: maybe wild-memory-access\n RIP: 0010:page_get_link (fs/namei.c:6503)\n Call Trace:\n  vfs_readlink (fs/namei.c:6419)\n  do_readlinkat (fs/stat.c:583)\n  __x64_sys_readlink (fs/stat.c:605 fs/stat.c:602 fs/stat.c:602)\n\nThis is because in this case udf_map_block() fails to convert return\nvalue of inode_bmap() from 1 to 0. Returned '1' propagates through\nudf_bread() all the way up to __page_get_link() where it ends up being\ntreated as a folio pointer with obvious results.\n\nMove the reset to 0 line outside the if, so udf_map_block() returns either\n0 or -errno, even if the extent type is not EXT_RECORDED_ALLOCATED.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
