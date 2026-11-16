@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-11-16T23:03:20.667923+09:00",
+  "fetched_at": "2026-11-16T23:33:24.316597+09:00",
   "security_news": [
+    {
+      "title": "[단독] 대학 산학협력단 연쇄 해킹 확산…한림대·숙명여대·한경국립대...",
+      "summary": "국내 대학 산학협력단의 연구행정시스템을 겨냥한 해킹 사고가 확산하고 있다. 한림대학교와... 숙명여자대학교 산학협력단에서도 같은 날 발생한 외부 해킹 공격으로 연구행정통합시스템 이용자의 개인정보 1,359건이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 대학 산학협력단 연쇄 해킹, 한림대·숙명여대 등 공격\n2. 숙명여대 산학협력단, 연구행정시스템 개인정보 1,359건 유출\n3. 연구행정통합시스템 대상 해킹 확산, 추가 피해 우려",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209552",
+      "source": "naver",
+      "published": "2026-11-16T23:28:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "리플 검증인 \"XRP, 인터넷 시대 금 될 수 있어\"",
+      "summary": "이는 단일 키 의존도를 낮추지만, 인증 정보를 지키고 복구 체계를 유지하는 책임은 이용자에게 있으며 피싱이나 기기 해킹을 막아주지는 못한다. XRP는 단순 보유를 넘어 거래 기능도 갖고 있다. XRP 레저의 자동...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 리플 검증인 \"XRP, 인터넷 시대 금 될 수 있어\" 이는 단일 키 의존도를 낮추지만, 인\n2. XRP는 단순 보유를 넘어 거래 기능도 갖고 있다.\n3. XRP 레저의 자동...",
+      "link": "http://coinreaders.com/270717",
+      "source": "naver",
+      "published": "2026-11-16T23:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "Google warns that fully-automated AI attacks are coming soon",
+      "summary": "Threat actors are now relying on agentic workflows powered by AI-based offensive frameworks to automate vulnerability discovery and exploitation, accelerating attacks to machine speed. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Google warns that fully-automated AI attacks are c",
+      "link": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/",
+      "source": "bleepingcomputer",
+      "published": "2026-11-16T23:00:00+09:00",
+      "lang": "en"
+    },
     {
       "title": "법무법인 원, 기술법무 전담조직 TIF팀 출범",
       "summary": "개인정보와 AI 규제, 지식재산권, 정보보안 등 여러 법률 쟁점이 함께 발생하는 사안에 대해 분야별 전문... 팀 산하에는 '기술유출·정보보호 AI 센터'를 설치해 기술유출과 영업비밀 침해, 개인정보 보호, 정보보안 및...",
@@ -4486,21 +4522,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-127031",
       "source": "cvefeed",
       "published": "2026-11-14T00:17:44+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-92241 - Bluetooth Classic AVRCP browsing channel can deadlock the Bluetooth receive thread, hanging the host",
-      "summary": "CVE ID :CVE-2026-92241\n  \nPublished : Nov. 13, 2026, 2:03 p.m. | 11 minutes ago\n  \nDescription :The AVRCP browsing channel's L2CAP receive-buffer callback, browsing_avrcp_l2cap_alloc_buf() in subsys/bluetooth/host/classic/avrcp.c, allocated from the shared avctp_browsing_rx_pool with K_FOREVER. L2CAP invokes that callback from the Bluetooth RX work queue thread (bt_workq, \"BT RX WQ\"), both for the head buffer of a new SDU and — through l2cap_br_alloc_frag() and net_buf_append_bytes() — for every further fragment of a reassembled SDU. That same thread is the only context that ever releases these buffers, after bt_l2cap_br_recv_seg() delivers a completed SDU and calls net_buf_unref(), so a wait taken there can never be satisfied.\n\nThe pool holds CONFIG_BT_MAX_CONN + 1 buffers of CONFIG_BT_AVRCP_BROWSING_L2CAP_MTU bytes (two buffers of 339 bytes in the default configuration). A connected browsing peer can drain it because bt_l2cap_br_recv_seg() in subsys/bluetooth/host/classic/l2cap_br.c accepts the SDU length declared in an SAR_START segment without bounding it by br_chan->rx.mtu: a peer that announces a large SDU and then streams continuation segments forces one pool buffer per segment-worth of data. Once the pool is empty the next allocation blocks forever inside the callback.\n\nTriggering the flaw requires a build with CONFIG_BT_CLASSIC and the experimental CONFIG_BT_AVRCP_BROWSING option, an application that registers AVRCP callbacks, and a BR/EDR peer that has established the AVRCP control channel and then the browsing channel, which requires an encrypted (paired) link. No malformed packet is needed — a few hundred bytes of ordinary segmented L2CAP traffic suffice.\n\nThe consequence is a permanent hang of the whole Bluetooth host, not just of AVRCP: the blocked thread drains bt_dev.rx_queue for all HCI ACL data and low-priority events and also runs the host's internal work items, so all connections stop being serviced and the state is unrecoverable without a reboot. There is no memory-corruption or information-disclosure component. The fix allocates with K_NO_WAIT, so an empty pool now yields a local-busy indication or a channel disconnect that the application can recover from.\n  \nSeverity: 5.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-92241\n  \nPublished : Nov. 13, 2026, 2:03 p.m. | 11 minutes ago\n  \nDescription :The AVRCP browsing channel's L2CAP receive-buffer callback, browsing_avrcp_l2cap_alloc_buf() in subsys/bluetooth/host/classic/avrcp.c, allocated from the shared avctp_browsing_rx_pool with K_FOREVER. L2CAP invokes that callback from the Bluetooth RX work queue thread (bt_workq, \"BT RX WQ\"), both for the head buffer of a new SDU and — through l2cap_br_alloc_frag() and net_buf_append_bytes() — for every further fragment of a reassembled SDU. That same thread is the only context that ever releases these buffers, after bt_l2cap_br_recv_seg() delivers a completed SDU and calls net_buf_unref(), so a wait taken there can never be satisfied.\n\nThe pool holds CONFIG_BT_MAX_CONN + 1 buffers of CONFIG_BT_AVRCP_BROWSING_L2CAP_MTU bytes (two buffers of 339 bytes in the default configuration). A connected browsing peer can drain it because bt_l2cap_br_recv_seg() in subsys/bluetooth/host/classic/l2cap_br.c accepts the SDU length declared in an SAR_START segment without bounding it by br_chan->rx.mtu: a peer that announces a large SDU and then streams continuation segments forces one pool buffer per segment-worth of data. Once the pool is empty the next allocation blocks forever inside the callback.\n\nTriggering the flaw requires a build with CONFIG_BT_CLASSIC and the experimental CONFIG_BT_AVRCP_BROWSING option, an application that registers AVRCP callbacks, and a BR/EDR peer that has established the AVRCP control channel and then the browsing channel, which requires an encrypted (paired) link. No malformed packet is needed — a few hundred bytes of ordinary segmented L2CAP traffic suffice.\n\nThe consequence is a permanent hang of the whole Bluetooth host, not just of AVRCP: the blocked thread drains bt_dev.rx_queue for all HCI ACL data and low-priority events and also runs the host's internal work items, so all connections stop being serviced and the state is unrecoverable without a reboot. There is no memory-corruption or information-disclosure component. The fix allocates with K_NO_WAIT, so an empty pool now yields a local-busy indication or a channel disconnect that the application can recover from.\n  \nSeverity: 5.7 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-92241\n2. 26.11.13 오후11:03\n3. The AVRCP browsing channel's L2CAP receive-buffer ",
-      "cve_id": "CVE-2026-92241",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-92241",
-      "source": "cvefeed",
-      "published": "2026-11-13T23:03:47+09:00",
       "lang": "en"
     }
   ],
