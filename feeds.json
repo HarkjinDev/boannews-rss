@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-17T00:02:56.487139+09:00",
+  "fetched_at": "2026-11-17T00:32:49.542562+09:00",
   "security_news": [
     {
       "title": "[단독] 대학 산학협력단 연쇄 해킹 확산…한림대·숙명여대·한경국립대...",
@@ -4020,45 +4020,24 @@
       "source": "naver",
       "published": "2026-11-14T01:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "FBI “북한, ‘주당 수천만 회 다운로드 소프트웨어 감염’ 시도 …신속...",
-      "summary": "관리자 한 사람 속여 대규모 감염 통로 노려FBI에 따르면 북한 해커들은 이를 통해 개인 한명 씩을 해킹하는 수고 대신 한번에 수백, 수천만 명을 공격할 수 있는 방식을 시도 했습니다.북한 해커들은 라이브러리 관리자를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. FBI “북한, ‘주당 수천만 회 다운로드 소프트웨어 감염’ 시도 …신속...\n2. 관리자 한 사람 속여 대규모 감염 통로 노려FBI에 따르면 북한 해커들은 이를 통해 개인 ",
-      "link": "https://www.voakorea.com/a/8223336.html",
-      "source": "naver",
-      "published": "2026-11-14T00:20:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "In Other News: New CISA Director Nominee, Connected Car Hacking, Baker Tilly Data Breach",
-      "summary": "Noteworthy stories that might have slipped under the radar: Siemens details security advisory policy, OpenAI Codex backdoor risk, Microsoft warns of model weight backdoors.\nThe post In Other News: New CISA Director Nominee, Connected Car Hacking, Baker Tilly Data Breach appeared first on SecurityWeek.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. In Other News: New CISA Director Nominee, Connecte\n2. The post In Other News: New CISA Director Nominee,",
-      "link": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/",
-      "source": "securityweek",
-      "published": "2026-11-14T00:20:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "[사실은 이렇습니다] 민간 AI 솔루션 기업 A사 개인정보 유출...유출 대...",
-      "summary": "외부 해킹 공격 정황을 포착했습니다. 이후 조사 결과, 해당 기업이 보유하고 있던 총 20,028명의 개인정보가... 금번 해킹 공격으로 아미쿠스렉스가 보유·관리하던 AI 솔루션 이용자의 이름, 전화번호, 이메일 주소가...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [사실은 이렇습니다] 민간 AI 솔루션 기업 A사 개인정보 유출...유출 대...\n2. 외부 해킹 공격 정황을 포착했습니다.\n3. 이후 조사 결과, 해당 기업이 보유하고 있던 총 20,028명의 개인정보가...",
-      "link": "https://www.korea.kr/briefing/actuallyView.do?newsId=148975732&call_from=naver_news",
-      "source": "naver",
-      "published": "2026-11-14T00:17:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-129919 - Kunai Mount Namespace Cache TOCTOU Allows Incorrect Event Resolution Against Host Files",
+      "summary": "CVE ID :CVE-2026-129919\n  \nPublished : Nov. 16, 2026, 1:49 p.m. | 34 minutes ago\n  \nDescription :Kunai, a security monitoring tool, contains a time-of-check to time-of-use (TOCTOU) race condition in its mount namespace (mnt ns) caching logic. When resolving a security event that references a specific process PID and an expected mount namespace, the Switcher::new function read /proc//ns/mnt to determine the target namespace and cached the result under the expected namespace key without verifying that the resolved namespace actually matched the expected one.\n\nAn attacker with local access could exploit this by either (1) arranging for the referenced PID to be reused by a process in a different namespace (e.g., the host namespace) before Kunai resolves it, or (2) calling unshare or setns on the target process after the event is generated but before the namespace is resolved. In either case, the wrong namespace (potentially the host's own namespace) would be cached under the container's namespace key.\n\nThe security impact is that subsequent container security events would be resolved against host filesystem paths rather than container paths. This undermines the integrity of the security monitoring data: container activity could be misattributed to the host, host activity could be misattributed to a container, and file-path-based detections or alerts would reference incorrect paths. An attacker could potentially use this to obscure malicious activity within a container by making it appear as benign host activity, or to generate misleading security alerts.\n\nThe vulnerability requires local access to the system and a specific timing window between event generation and namespace resolution. No remote attack vector or user interaction is required.\n  \nSeverity: 2.0 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-129919\n  \nPublished : Nov. 16, 2026, 1:49 p.m. | 34 minutes ago\n  \nDescription :Kunai, a security monitoring tool, contains a time-of-check to time-of-use (TOCTOU) race condition in its mount namespace (mnt ns) caching logic. When resolving a security event that references a specific process PID and an expected mount namespace, the Switcher::new function read /proc//ns/mnt to determine the target namespace and cached the result under the expected namespace key without verifying that the resolved namespace actually matched the expected one.\n\nAn attacker with local access could exploit this by either (1) arranging for the referenced PID to be reused by a process in a different namespace (e.g., the host namespace) before Kunai resolves it, or (2) calling unshare or setns on the target process after the event is generated but before the namespace is resolved. In either case, the wrong namespace (potentially the host's own namespace) would be cached under the container's namespace key.\n\nThe security impact is that subsequent container security events would be resolved against host filesystem paths rather than container paths. This undermines the integrity of the security monitoring data: container activity could be misattributed to the host, host activity could be misattributed to a container, and file-path-based detections or alerts would reference incorrect paths. An attacker could potentially use this to obscure malicious activity within a container by making it appear as benign host activity, or to generate misleading security alerts.\n\nThe vulnerability requires local access to the system and a specific timing window between event generation and namespace resolution. No remote attack vector or user interaction is required.\n  \nSeverity: 2.0 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-129919\n2. 26.11.16 오후10:49\n3. Kunai, a security monitoring tool, contains a time",
+      "cve_id": "CVE-2026-129919",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129919",
+      "source": "cvefeed",
+      "published": "2026-11-16T22:49:48+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-110710 - @fastify/multipart vulnerable to Denial of Service via temporary file leak after client disconnect",
       "summary": "CVE ID :CVE-2026-110710\n  \nPublished : Nov. 16, 2026, 1:17 p.m. | 17 minutes ago\n  \nDescription :@fastify/multipart is the official Fastify plugin for handling multipart/form-data uploads. In versions 3.0.0 through 10.1.3, temporary files written by the saveRequestFiles helper are removed only by a response hook that runs when the response finishes or errors. When a client completes an upload and then disconnects before the handler writes the reply, for example while the handler scans, hashes or forwards the file, the response only emits a close event, the cleanup hook never runs, and the saved files are left on disk. An unauthenticated client can repeat this cheaply to exhaust disk space and deny service to applications that save uploaded files to disk. The issue is fixed in @fastify/multipart 10.1.4, and users should upgrade to 10.1.4 or later. As a workaround, avoid saving request files for untrusted clients, or clean the saved files from a close handler on the raw response so removal also happens when the client disconnects.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4522,21 +4501,6 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-125342",
       "source": "msrc",
       "published": "2026-11-14T01:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-127031 - Eclipse AAS4J XML External Entity Injection",
-      "summary": "CVE ID :CVE-2026-127031\n  \nPublished : Nov. 13, 2026, 3:17 p.m. | 17 minutes ago\n  \nDescription :In Eclipse AAS4J before 3.0.1, `XmlSchemaValidator.validateSchema()` (and `AASXValidator.validateSchema()`, which calls it) validates untrusted XML with a default JAXP `Validator` that resolves external DTDs and external entities. An attacker who supplies a crafted AAS XML document or AASX package can read local files from the host, send their contents out-of-band to an attacker-controlled server, and make the validating process send arbitrary outbound requests (SSRF). Validation still returns no errors.\n\n\n\nDetails:\n\n\n\n- Vulnerable code: `dataformat-xml/src/main/java/org/eclipse/digitaltwin/aas4j/v3/dataformat/xml/XmlSchemaValidator.java`. `schema.newValidator().validate(new StreamSource(...))` runs without `ACCESS_EXTERNAL_DTD` / `ACCESS_EXTERNAL_SCHEMA` restrictions and without `disallow-doctype-decl`.\n\n\n\n- Second entry point: `dataformat-aasx/src/main/java/org/eclipse/digitaltwin/aas4j/v3/dataformat/aasx/AASXValidator.java`. The AAS XML part of an `.aasx` package is passed unchanged to the vulnerable validator.\n\n\n\n- `XmlDeserializer` (Jackson/Woodstox) is not affected, because DTD support is disabled by default there.\n\n\n\n- Present since the initial import of the code base (commit `cc9da52`).\n\n\n\n- Fix: harden the validator by setting `ACCESS_EXTERNAL_DTD` and `ACCESS_EXTERNAL_SCHEMA` to `\"\"` and rejecting `DOCTYPE` declarations. The bundled `AAS.xsd` does not need DTDs, so no functionality is lost.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-127031\n  \nPublished : Nov. 13, 2026, 3:17 p.m. | 17 minutes ago\n  \nDescription :In Eclipse AAS4J before 3.0.1, `XmlSchemaValidator.validateSchema()` (and `AASXValidator.validateSchema()`, which calls it) validates untrusted XML with a default JAXP `Validator` that resolves external DTDs and external entities. An attacker who supplies a crafted AAS XML document or AASX package can read local files from the host, send their contents out-of-band to an attacker-controlled server, and make the validating process send arbitrary outbound requests (SSRF). Validation still returns no errors.\n\n\n\nDetails:\n\n\n\n- Vulnerable code: `dataformat-xml/src/main/java/org/eclipse/digitaltwin/aas4j/v3/dataformat/xml/XmlSchemaValidator.java`. `schema.newValidator().validate(new StreamSource(...))` runs without `ACCESS_EXTERNAL_DTD` / `ACCESS_EXTERNAL_SCHEMA` restrictions and without `disallow-doctype-decl`.\n\n\n\n- Second entry point: `dataformat-aasx/src/main/java/org/eclipse/digitaltwin/aas4j/v3/dataformat/aasx/AASXValidator.java`. The AAS XML part of an `.aasx` package is passed unchanged to the vulnerable validator.\n\n\n\n- `XmlDeserializer` (Jackson/Woodstox) is not affected, because DTD support is disabled by default there.\n\n\n\n- Present since the initial import of the code base (commit `cc9da52`).\n\n\n\n- Fix: harden the validator by setting `ACCESS_EXTERNAL_DTD` and `ACCESS_EXTERNAL_SCHEMA` to `\"\"` and rejecting `DOCTYPE` declarations. The bundled `AAS.xsd` does not need DTDs, so no functionality is lost.\n  \nSeverity: 7.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-127031\n2. 26.11.14 오전12:17\n3. In Eclipse AAS4J before 3.0.1, `XmlSchemaValidator",
-      "cve_id": "CVE-2026-127031",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-127031",
-      "source": "cvefeed",
-      "published": "2026-11-14T00:17:44+09:00",
       "lang": "en"
     }
   ],
