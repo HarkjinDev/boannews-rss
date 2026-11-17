@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-17T23:31:11.829860+09:00",
+  "fetched_at": "2026-11-18T00:02:37.309855+09:00",
   "security_news": [
+    {
+      "title": "바라쿠다 이메일 보안 장비 취약점 2건 실제 악용",
+      "summary": "싱가포르 사이버보안청(CSA)은 11월 16일 바라쿠다 네트웍스(Barracuda Networks)의 이메일 보안 장비 취약점 2건이 실제 공격에 악용되고 있다며 즉시 패치를 권고했다. 바라쿠다는 11월 2일 취약점을 처음...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 바라쿠다 이메일 보안 장비 취약점 2건 실제 악용 싱가포르 사이버보안청(CSA)은 11월 \n2. 바라쿠다는 11월 2일 취약점을 처음...",
+      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209578",
+      "source": "naver",
+      "published": "2026-11-17T23:54:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "오픈AI 에이전트의 허깅페이스 해킹, ‘예외’라더니 통제 상실 80회 넘...",
       "summary": "회사의 보안 시스템을 뚫은 일이다. 오픈AI는 자체 사고 보고서에서 이 사건을 “드물고 예상치 못한... 본타 장관은 성명에서 “오픈AI의 행동은 현실의 사이버보안 위험을 키웠고 사회의 안전과 건강, 복리를...",
@@ -35,6 +47,18 @@
       "link": "https://n.news.naver.com/mnews/article/092/0002445752?sid=105",
       "source": "naver",
       "published": "2026-11-17T22:23:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "메타엠 서버 해킹…전화번호·상담 대화 털려",
+      "summary": "고객상담 위탁업체 메타엠이 해킹당해 코인원, 번개장터, 메가MGC커피 이용자의 개인정보가 외부로 빠져나갔다. 코인원은 주민등록번호, 계좌번호, 비밀번호까지 포함됐을 가능성이 있다고 공지했다. 메타엠(대표...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 메타엠 서버 해킹…전화번호·상담 대화 털려 고객상담 위탁업체 메타엠이 해킹당해 코인원, 번\n2. 코인원은 주민등록번호, 계좌번호, 비밀번호까지 포함됐을 가능성이 있다고 공지했다.",
+      "link": "https://n.news.naver.com/mnews/article/092/0002445751?sid=105",
+      "source": "naver",
+      "published": "2026-11-17T22:16:00+09:00",
       "lang": "ko"
     },
     {
@@ -5379,6 +5403,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-130627 - Vert.x HTTP client forwards Authorization and all headers to cross-authority redirect target when followRedirects(true)",
+      "summary": "CVE ID :CVE-2026-130627\n  \nPublished : Nov. 17, 2026, 2:21 p.m. | 10 minutes ago\n  \nDescription :The Vert.x HTTP client transport (a2a-java-sdk-http-client-vertx) hand-rolls a POST redirect follower that, when the documented PostBuilder.followRedirects(true) opt-in is enabled, re-issues the redirected request with the full request header map copied verbatim and performs no credential stripping and no same-authority check. A malicious, compromised, or mistyped agent that returns a 30x response with an absolute cross-host Location causes the client to forward the standard Authorization header (Bearer/Basic/OAuth) — plus every other header, including the allowlisted API-key headers — to the attacker-controlled authority. This breaks the project's own cross-transport invariant (SECURITY.md §8, OkHttpPostRedirectHeaderLeakTest) that credentials are stripped on cross-authority redirects even when redirects are followed. The sibling JDK and OkHttp/Android transports strip Authorization; Vert.x uniquely does not. This is a \"fix introduced the bug\" variant — the follower was added by the GHSA-9rhm hardening PR (3ae82912, refined by a5e76a0b).\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-130627\n  \nPublished : Nov. 17, 2026, 2:21 p.m. | 10 minutes ago\n  \nDescription :The Vert.x HTTP client transport (a2a-java-sdk-http-client-vertx) hand-rolls a POST redirect follower that, when the documented PostBuilder.followRedirects(true) opt-in is enabled, re-issues the redirected request with the full request header map copied verbatim and performs no credential stripping and no same-authority check. A malicious, compromised, or mistyped agent that returns a 30x response with an absolute cross-host Location causes the client to forward the standard Authorization header (Bearer/Basic/OAuth) — plus every other header, including the allowlisted API-key headers — to the attacker-controlled authority. This breaks the project's own cross-transport invariant (SECURITY.md §8, OkHttpPostRedirectHeaderLeakTest) that credentials are stripped on cross-authority redirects even when redirects are followed. The sibling JDK and OkHttp/Android transports strip Authorization; Vert.x uniquely does not. This is a \"fix introduced the bug\" variant — the follower was added by the GHSA-9rhm hardening PR (3ae82912, refined by a5e76a0b).\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-130627\n2. 26.11.17 오후11:21\n3. The Vert.x HTTP client transport (a2a-java-sdk-htt",
+      "cve_id": "CVE-2026-130627",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-130627",
+      "source": "cvefeed",
+      "published": "2026-11-17T23:21:40+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-127138 - Circumvention of offline barcode revocation check in pretixSCAN",
       "summary": "CVE ID :CVE-2026-127138\n  \nPublished : Nov. 17, 2026, 12:09 p.m. | 1 hour, 6 minutes ago\n  \nDescription :pretix provides a mechanism where ticket QR codes are cryptographically signed and can be verified by our pretixSCAN apps in offline mode without any database of valid tickets. pretixSCAN checks the signature to verify that the ticket was issued by the correct pretix event and compares the QR code against a list of revoked QR codes. A QR code becomes revoked when the order is canceled, or the ticket is changed in a way that a new QR code needs to be generated.\n\n\n\n\nHowever, the parsing of the QR code in all of our pretixSCAN apps contained a faulty computation, rendering the check for the correct length of the contents faulty. This way, an attacker is able to craft multiple QR codes for the same ticket which have the same content, but look different and therefore do not match against the revocation list. This does not allow to fabricate entirely new tickets, but it does allow to enter the event with e.g. a canceled ticket. This attack requires pretixSCAN to be scanning in offline mode and the \"pretix signature scheme 1\" to be used for the event's QR codes.\n\n\n\n\nIf the attack is executed, the ticket unfortunately shows as valid (green) on the scanner but as invalid (red) on the server since the server later cannot match it to a ticket. We scanned the entire database of scans on pretix Hosted and could not find any traces of this being exploited in the past.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
