@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-11-17T22:01:24.390845+09:00",
+  "fetched_at": "2026-11-17T22:32:27.138982+09:00",
   "security_news": [
+    {
+      "title": "MSP ScreenConnect Servers Targeted in Month-Long Campaign",
+      "summary": "More than 40 servers received over 688,000 requests exploiting CVE-2026-84869 to execute guest-pushed files.\nThe post MSP ScreenConnect Servers Targeted in Month-Long Campaign appeared first on SecurityWeek.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. MSP ScreenConnect Servers Targeted in Month-Long C\n2. The post MSP ScreenConnect Servers Targeted in Mon",
+      "link": "https://www.securityweek.com/msp-screenconnect-servers-targeted-in-month-long-campaign/",
+      "source": "securityweek",
+      "published": "2026-11-17T22:24:43+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "구글 \"해킹 진화...자율형 멀티 에이전트 기승\"",
+      "summary": "둘째, LLM과 에이전틱 프레임워크로 보안 패치 전후의 코드 변화를 비교 분석(differential analysis)해 수정된... '엔데이 취약점'은 보안 패치를 배포했음에도 아직 시스템에 적용하지 않아 공격에 노출된 취약점을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 구글 \"해킹 진화...자율형 멀티 에이전트 기승\" 둘째, LLM과 에이전틱 프레임워크로 보\n2. '엔데이 취약점'은 보안 패치를 배포했음에도 아직 시스템에 적용하지 않아 공격에 노출된 취",
+      "link": "https://n.news.naver.com/mnews/article/092/0002445752?sid=105",
+      "source": "naver",
+      "published": "2026-11-17T22:23:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "허이 바이낸스 공동 CEO, 해킹 당일 자금 이동 의혹에 “AI 전략 시험했...",
+      "summary": "업계 보안에 근본적인 의문을 던졌다고 짚었다. 미국 연방수사국(FBI)은 이 공격을 북한의 소행으로... 세마포는 이 사건이 대부분의 사이버 보안과 기업 운영에서 가장 약한 고리, 곧 사람 자체를 다시 부각했다고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 허이 바이낸스 공동 CEO, 해킹 당일 자금 이동 의혹에 “AI 전략 시험했...\n2. 업계 보안에 근본적인 의문을 던졌다고 짚었다.\n3. 미국 연방수사국(FBI)은 이 공격을 북한의 소행으로...",
+      "link": "https://www.wikitree.co.kr/articles/1175422",
+      "source": "naver",
+      "published": "2026-11-17T22:08:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "N-able Kills Legacy APIs, Patches 17 N-central Zero-Days",
       "summary": "The patches target recently disclosed zero-days, including vulnerabilities already exploited in the wild.\nThe post N-able Kills Legacy APIs, Patches 17 N-central Zero-Days appeared first on SecurityWeek.",
@@ -5340,21 +5376,24 @@
       "source": "naver",
       "published": "2026-11-14T23:24:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "북한 해커, 감염된 지인의 계정과 웹캠 영상으로 다음 피해자 노린다…...",
-      "summary": "FBI가 북한 연계 해커들이 쓰는 사회공학(사람의 신뢰를 악용해 속이는 해킹) 수법 ‘페이스스틸러... FBI는 이 활동을 민간에서 사파이어 슬릿, UNC1069, 스타더스트 천리마, APT38, 블루노로프로 부르는 북한 해킹 조직의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해커, 지인 계정·웹캠 영상으로 다음 타겟 물색\n2. 페이스스틸러 악성코드, 계정 정보 탈취 시도\n3. FBI, 북한 연계 조직 UNC1069 등 추적 중",
-      "link": "https://www.wikitree.co.kr/articles/1174639",
-      "source": "naver",
-      "published": "2026-11-14T22:28:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-127138 - Circumvention of offline barcode revocation check in pretixSCAN",
+      "summary": "CVE ID :CVE-2026-127138\n  \nPublished : Nov. 17, 2026, 12:09 p.m. | 1 hour, 6 minutes ago\n  \nDescription :pretix provides a mechanism where ticket QR codes are cryptographically signed and can be verified by our pretixSCAN apps in offline mode without any database of valid tickets. pretixSCAN checks the signature to verify that the ticket was issued by the correct pretix event and compares the QR code against a list of revoked QR codes. A QR code becomes revoked when the order is canceled, or the ticket is changed in a way that a new QR code needs to be generated.\n\n\n\n\nHowever, the parsing of the QR code in all of our pretixSCAN apps contained a faulty computation, rendering the check for the correct length of the contents faulty. This way, an attacker is able to craft multiple QR codes for the same ticket which have the same content, but look different and therefore do not match against the revocation list. This does not allow to fabricate entirely new tickets, but it does allow to enter the event with e.g. a canceled ticket. This attack requires pretixSCAN to be scanning in offline mode and the \"pretix signature scheme 1\" to be used for the event's QR codes.\n\n\n\n\nIf the attack is executed, the ticket unfortunately shows as valid (green) on the scanner but as invalid (red) on the server since the server later cannot match it to a ticket. We scanned the entire database of scans on pretix Hosted and could not find any traces of this being exploited in the past.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-127138\n  \nPublished : Nov. 17, 2026, 12:09 p.m. | 1 hour, 6 minutes ago\n  \nDescription :pretix provides a mechanism where ticket QR codes are cryptographically signed and can be verified by our pretixSCAN apps in offline mode without any database of valid tickets. pretixSCAN checks the signature to verify that the ticket was issued by the correct pretix event and compares the QR code against a list of revoked QR codes. A QR code becomes revoked when the order is canceled, or the ticket is changed in a way that a new QR code needs to be generated.\n\n\n\n\nHowever, the parsing of the QR code in all of our pretixSCAN apps contained a faulty computation, rendering the check for the correct length of the contents faulty. This way, an attacker is able to craft multiple QR codes for the same ticket which have the same content, but look different and therefore do not match against the revocation list. This does not allow to fabricate entirely new tickets, but it does allow to enter the event with e.g. a canceled ticket. This attack requires pretixSCAN to be scanning in offline mode and the \"pretix signature scheme 1\" to be used for the event's QR codes.\n\n\n\n\nIf the attack is executed, the ticket unfortunately shows as valid (green) on the scanner but as invalid (red) on the server since the server later cannot match it to a ticket. We scanned the entire database of scans on pretix Hosted and could not find any traces of this being exploited in the past.\n  \nSeverity: 6.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-127138\n2. 26.11.17 오후9:09\n3. pretix provides a mechanism where ticket QR codes ",
+      "cve_id": "CVE-2026-127138",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-127138",
+      "source": "cvefeed",
+      "published": "2026-11-17T21:09:15+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-125163 - TYPO3 CMS - Unrestricted File Upload in Form Framework",
       "summary": "CVE ID :CVE-2026-125163\n  \nPublished : Nov. 17, 2026, 11:17 a.m. | 42 minutes ago\n  \nDescription :The FileUpload and ImageUpload elements of the Form Framework use the property allowedMimeTypes as an allow list of MIME types accepted for upload. An empty allowedMimeTypes list was treated as \"no restriction\". Forms containing upload elements without any configured MIME type, for example in manually created form definitions or when all MIME types were deselected in the form editor, accepted any file except those blocked by the file deny pattern, which only covers PHP-related file extensions. This allowed unauthenticated users to upload files with browser-executable content, such as HTML or SVG documents, to the configured upload folder, which by default is located in a public storage. If attackers know the URL of an uploaded file (see TYPO3-CORE-SA-2026-029), this could lead to Cross-Site Scripting on web servers that do not apply the Content-Security-Policy recommended by TYPO3 to the form upload target folder.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
