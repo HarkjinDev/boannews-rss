@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-17T20:31:13.670310+09:00",
+  "fetched_at": "2026-11-17T21:02:30.958042+09:00",
   "security_news": [
+    {
+      "title": "외부에 맡긴 업무가 보안 구멍으로…기업·공공기관 연쇄 '개인정보 유...",
+      "summary": "고객상담·AI 콜센터 수탁업체 메타엠이 홈페이지에 해킹에 의한 개인정보유츌을 고지하고 있다. (사진=메타엠 홈페이지) 최근 고객상담·AI 콜센터 수탁업체 메타엠(MetaM)의 해킹 사고는 외부에 맡긴 업무가 여러 기업의...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 메타엠, 해킹으로 개인정보 유출 발생\n2. 고객상담·AI 콜센터 수탁업체 이용 기업 정보 노출\n3. 외주 업체 보안 관리 미흡으로 인한 사고",
+      "link": "https://www.newsverse.kr/news/articleView.html?idxno=11951",
+      "source": "naver",
+      "published": "2026-11-17T20:48:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "해킹 조직 n0n, 비자·마스터카드·JP모건 등 글로벌 기업 무더기 공격 ...",
       "summary": "사이버보안 매체 시크리틱(Secritic)에 따르면 월마트와 닐슨, 프록터앤드갬블(P&G), 의료용품업체 메들라인... 핵마낙이 요약한 주장에는 카드번호와 카드 보안코드(CVV), 결제 거래내역, 로그인 정보가 포함되지 않았다....",
@@ -36,6 +48,18 @@
       "source": "securityweek",
       "published": "2026-11-17T19:22:20+09:00",
       "lang": "en"
+    },
+    {
+      "title": "[단독] 민주당 중진, '최민희 경징계'로 의견 모아…지난 주말 회동서 논...",
+      "summary": "그리고 김정은도 해킹, 8조 4천억 원을 했기 때문에 '이건 북한의 소행이다' 미국 FBI가 얘기를 했는데도 사실상 트럼프는 김정은 만나겠다고 하면서 그 뉴스가 싹 사라졌잖아요. 그러면서 김정은은 조용원을 푸틴에게...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [단독] 민주당 중진, '최민희 경징계'로 의견 모아…지난 주말 회동서 논...\n2. 그리고 김정은도 해킹, 8조 4천억 원을 했기 때문에 '이건 북한의 소행이다' 미국 FBI\n3. 그러면서 김정은은 조용원을 푸틴에게...",
+      "link": "https://n.news.naver.com/mnews/article/437/0000521156?sid=100",
+      "source": "naver",
+      "published": "2026-11-17T18:50:00+09:00",
+      "lang": "ko"
     },
     {
       "title": "비밀번호 보안 미흡에 외부망 미분리까지…중소형 금융사 보안관리 '구...",
@@ -5367,6 +5391,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-125163 - TYPO3 CMS - Unrestricted File Upload in Form Framework",
+      "summary": "CVE ID :CVE-2026-125163\n  \nPublished : Nov. 17, 2026, 11:17 a.m. | 42 minutes ago\n  \nDescription :The FileUpload and ImageUpload elements of the Form Framework use the property allowedMimeTypes as an allow list of MIME types accepted for upload. An empty allowedMimeTypes list was treated as \"no restriction\". Forms containing upload elements without any configured MIME type, for example in manually created form definitions or when all MIME types were deselected in the form editor, accepted any file except those blocked by the file deny pattern, which only covers PHP-related file extensions. This allowed unauthenticated users to upload files with browser-executable content, such as HTML or SVG documents, to the configured upload folder, which by default is located in a public storage. If attackers know the URL of an uploaded file (see TYPO3-CORE-SA-2026-029), this could lead to Cross-Site Scripting on web servers that do not apply the Content-Security-Policy recommended by TYPO3 to the form upload target folder.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-125163\n  \nPublished : Nov. 17, 2026, 11:17 a.m. | 42 minutes ago\n  \nDescription :The FileUpload and ImageUpload elements of the Form Framework use the property allowedMimeTypes as an allow list of MIME types accepted for upload. An empty allowedMimeTypes list was treated as \"no restriction\". Forms containing upload elements without any configured MIME type, for example in manually created form definitions or when all MIME types were deselected in the form editor, accepted any file except those blocked by the file deny pattern, which only covers PHP-related file extensions. This allowed unauthenticated users to upload files with browser-executable content, such as HTML or SVG documents, to the configured upload folder, which by default is located in a public storage. If attackers know the URL of an uploaded file (see TYPO3-CORE-SA-2026-029), this could lead to Cross-Site Scripting on web servers that do not apply the Content-Security-Policy recommended by TYPO3 to the form upload target folder.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-125163\n2. 26.11.17 오후8:17\n3. The FileUpload and ImageUpload elements of the For",
+      "cve_id": "CVE-2026-125163",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-125163",
+      "source": "cvefeed",
+      "published": "2026-11-17T20:17:25+09:00",
+      "lang": "en"
+    },
     {
       "title": "A phishing page interested in MX records, (Tue, Nov 17th)",
       "summary": "I&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;ve mentioned before in some of my diaries that it can be instructive to look at what appear to be &#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x9c;generic&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x9d; phishing messages in detail from time to time, since some of them might prove not to be as generic as they initially appear. I came across a good example of this while going over phishing messages delivered to our handler inbox over the past few weeks, when a message that, at first glance, appeared to be a fairly ordinary attempt at stealing e-mail credentials turned out to lead to a page interested in collecting a little more information than just the victim&#;x26;#;39;s password.\r",
