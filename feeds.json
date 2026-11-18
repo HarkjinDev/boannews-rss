@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-18T21:02:22.818159+09:00",
+  "fetched_at": "2026-11-18T21:31:11.877560+09:00",
   "security_news": [
     {
       "title": "전주대 개인정보 18만 건 유출···주민번호 2만 5000건",
@@ -6003,6 +6003,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-87790 - Blind SSRF in LVRTC eParakstītājs 3.0",
+      "summary": "CVE ID :CVE-2026-87790\n  \nPublished : Nov. 18, 2026, 11:55 a.m. | 34 minutes ago\n  \nDescription :Latvijas Valsts radio un televīzijas centrs (LVRTC)\neParakstītājs 3.0 version 1.10.0-resolute allows an unauthenticated remote\nattacker to cause HTTP GET requests from a user's workstation by convincing the\nuser to open a crafted signed eDOC file. Automatic certificate validation\nretrieves a signer-controlled Authority Information Access (AIA) caIssuers URL\nand follows redirects without restricting the destination, enabling blind SSRF\nto loopback and private-network services. Additionally, unrestricted loading of\nlocal file URIs (such as file:///dev/zero) causes unbounded memory buffering\nresulting in Denial of Service (OutOfMemoryError). In automated server\nverification pipelines with UI:N, impact scales up to CVSS 8.6 High.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-87790\n  \nPublished : Nov. 18, 2026, 11:55 a.m. | 34 minutes ago\n  \nDescription :Latvijas Valsts radio un televīzijas centrs (LVRTC)\neParakstītājs 3.0 version 1.10.0-resolute allows an unauthenticated remote\nattacker to cause HTTP GET requests from a user's workstation by convincing the\nuser to open a crafted signed eDOC file. Automatic certificate validation\nretrieves a signer-controlled Authority Information Access (AIA) caIssuers URL\nand follows redirects without restricting the destination, enabling blind SSRF\nto loopback and private-network services. Additionally, unrestricted loading of\nlocal file URIs (such as file:///dev/zero) causes unbounded memory buffering\nresulting in Denial of Service (OutOfMemoryError). In automated server\nverification pipelines with UI:N, impact scales up to CVSS 8.6 High.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-87790\n2. 26.11.18 오후8:55\n3. Latvijas Valsts radio un televīzijas centrs (LVRTC",
+      "cve_id": "CVE-2026-87790",
+      "cvss": "8.8",
+      "severity": "High",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-87790",
+      "source": "cvefeed",
+      "published": "2026-11-18T20:55:26+09:00",
+      "lang": "lv"
+    },
     {
       "title": "CVE-2026-129509 - Apache Airflow Microsoft Azure provider: S3ToAzureBlobStorageOperator disables S3 TLS verification by default",
       "summary": "CVE ID :CVE-2026-129509\n  \nPublished : Nov. 18, 2026, 9:37 a.m. | 1 hour, 1 minute ago\n  \nDescription :In the Apache Airflow Microsoft Azure provider 10.2.0 through 15.3.0, `S3ToAzureBlobStorageOperator` turned off TLS certificate verification for its connection to Amazon S3 by default (`s3_verify=False`), whatever the AWS connection's own verification settings were. An attacker positioned on the network between an Airflow worker and S3 could intercept that traffic, read the signed requests and alter the listed object keys and the copied file contents. Deployments are affected when a Dag uses `S3ToAzureBlobStorageOperator` without setting `s3_verify`. Users are advised to upgrade to apache-airflow-providers-microsoft-azure 15.3.1 or later, which uses the AWS connection's verification settings by default.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
