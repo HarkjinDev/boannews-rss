@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20T00:31:48.727632+09:00",
+  "fetched_at": "2026-11-20T01:01:21.891952+09:00",
   "security_news": [
     {
       "title": "포항공대 해킹으로 개인정보 1만9천978건 유출…연구실 GPU 서버서 불법...",
@@ -5944,6 +5944,66 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-99421 - ovl: always encode the origin fh when index is enabled",
+      "summary": "CVE ID :CVE-2026-99421\n  \nPublished : Nov. 19, 2026, 2:40 p.m. | 12 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\novl: always encode the origin fh when index is enabled\n\nOn an overlay with index=on,nfs_export=on, copy up of a directory\ncrashes the kernel once an LSM has started to deny CAP_DAC_READ_SEARCH\nto the mounter, the task that mounted the overlay. The mount and the LSM\npolicy change require root. After that, any user who can write to a\ndirectory that exists only in a lower layer triggers the oops by doing\nso.\n\nBefore a file or directory that exists only in a lower layer is changed\nfor the first time, overlayfs copies it to the writable upper layer.\nThis is called copy up.\n\nOn copy up, ovl_get_origin_fh() encodes the file handle of the lower\ninode, called the origin. It returns NULL if ovl_can_decode_fh() says\nthat the lower filesystem cannot decode handles. Whether the callers can\nhandle NULL depends on the index option:\n\n- Without an index, NULL is fine: the callers store an empty origin\n  xattr.\n- With index enabled, overlayfs keeps entries for copied up inodes in an\n  internal index directory. The name of an index entry is derived from\n  the handle, so ovl_get_origin_fh() must return a handle or an error.\n\nThe mount only enables the index if ovl_can_decode_fh() succeeds for all\nlayers, but the result can change later. The function checks the export\noperations of the filesystem and capable(CAP_DAC_READ_SEARCH). Copy up\nruns with the mounter's credentials, and an LSM can start to deny the\ncapability to those credentials after the mount. ovl_get_origin_fh()\nthen returns NULL with index enabled.\n\nThis goes wrong in two callers:\n\n- With nfs_export=on, copy up of a directory creates an index entry for\n  the directory. ovl_create_index() passes the NULL handle to\n  ovl_get_index_name_fh(), which dereferences it.\n- If the result changes while mount(2) is still running,\n  ovl_get_indexdir() passes a NULL from ovl_get_origin_fh() to\n  ovl_verify_set_fh() in the same way.\n\nBefore the commit in the Fixes tag, these two callers encoded the handle\nthemselves, without consulting ovl_can_decode_fh().\n\nReproduced with a BPF LSM program that started to deny the capability\nafter the mount. An unprivileged touch in a directory that had not been\ncopied up yet oopsed in ovl_get_index_name_fh(). With this patch the\ntouch succeeds and the directory gets its index entry.\n\nFix this by calling ovl_can_decode_fh() in ovl_get_origin_fh() only when\nindex is disabled.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-99421\n  \nPublished : Nov. 19, 2026, 2:40 p.m. | 12 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\novl: always encode the origin fh when index is enabled\n\nOn an overlay with index=on,nfs_export=on, copy up of a directory\ncrashes the kernel once an LSM has started to deny CAP_DAC_READ_SEARCH\nto the mounter, the task that mounted the overlay. The mount and the LSM\npolicy change require root. After that, any user who can write to a\ndirectory that exists only in a lower layer triggers the oops by doing\nso.\n\nBefore a file or directory that exists only in a lower layer is changed\nfor the first time, overlayfs copies it to the writable upper layer.\nThis is called copy up.\n\nOn copy up, ovl_get_origin_fh() encodes the file handle of the lower\ninode, called the origin. It returns NULL if ovl_can_decode_fh() says\nthat the lower filesystem cannot decode handles. Whether the callers can\nhandle NULL depends on the index option:\n\n- Without an index, NULL is fine: the callers store an empty origin\n  xattr.\n- With index enabled, overlayfs keeps entries for copied up inodes in an\n  internal index directory. The name of an index entry is derived from\n  the handle, so ovl_get_origin_fh() must return a handle or an error.\n\nThe mount only enables the index if ovl_can_decode_fh() succeeds for all\nlayers, but the result can change later. The function checks the export\noperations of the filesystem and capable(CAP_DAC_READ_SEARCH). Copy up\nruns with the mounter's credentials, and an LSM can start to deny the\ncapability to those credentials after the mount. ovl_get_origin_fh()\nthen returns NULL with index enabled.\n\nThis goes wrong in two callers:\n\n- With nfs_export=on, copy up of a directory creates an index entry for\n  the directory. ovl_create_index() passes the NULL handle to\n  ovl_get_index_name_fh(), which dereferences it.\n- If the result changes while mount(2) is still running,\n  ovl_get_indexdir() passes a NULL from ovl_get_origin_fh() to\n  ovl_verify_set_fh() in the same way.\n\nBefore the commit in the Fixes tag, these two callers encoded the handle\nthemselves, without consulting ovl_can_decode_fh().\n\nReproduced with a BPF LSM program that started to deny the capability\nafter the mount. An unprivileged touch in a directory that had not been\ncopied up yet oopsed in ovl_get_index_name_fh(). With this patch the\ntouch succeeds and the directory gets its index entry.\n\nFix this by calling ovl_can_decode_fh() in ovl_get_origin_fh() only when\nindex is disabled.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-99421\n2. 26.11.19 오후11:40\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-99421",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99421",
+      "source": "cvefeed",
+      "published": "2026-11-19T23:40:23+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-99412 - xfs: avoid cross-rtgroup reaping after a repair",
+      "summary": "CVE ID :CVE-2026-99412\n  \nPublished : Nov. 19, 2026, 2:40 p.m. | 12 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nxfs: avoid cross-rtgroup reaping after a repair\n\nLOLLM notices that the extents stored in a xrtb_bitmap (aka xfs_rtblock\nbitmap) can span multiple rtgroups due to two circumstances.  The first\nis that the size of an rtgroup is an exact power of two, which means\nthat rtgroups are adjacent in the segmented xfs_rtblock_t address space.\nThis is fairly common to reduce the amount of multiplication and\ndivision needed to handle space on the rt volume.\n\nThe second is that (unlike in the original rtgroups design), rtgroups do\nnot have fixed-location metadata like AGs do, which means that there's\nnothing to force a break between rtgroups.\n\nTherefore, we must loop through the rtgroups in xreap_rtmeta_extent to\navoid running off the end of an rtgroup while reaping.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-99412\n  \nPublished : Nov. 19, 2026, 2:40 p.m. | 12 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nxfs: avoid cross-rtgroup reaping after a repair\n\nLOLLM notices that the extents stored in a xrtb_bitmap (aka xfs_rtblock\nbitmap) can span multiple rtgroups due to two circumstances.  The first\nis that the size of an rtgroup is an exact power of two, which means\nthat rtgroups are adjacent in the segmented xfs_rtblock_t address space.\nThis is fairly common to reduce the amount of multiplication and\ndivision needed to handle space on the rt volume.\n\nThe second is that (unlike in the original rtgroups design), rtgroups do\nnot have fixed-location metadata like AGs do, which means that there's\nnothing to force a break between rtgroups.\n\nTherefore, we must loop through the rtgroups in xreap_rtmeta_extent to\navoid running off the end of an rtgroup while reaping.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-99412\n2. 26.11.19 오후11:40\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-99412",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99412",
+      "source": "cvefeed",
+      "published": "2026-11-19T23:40:08+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-129916 - Eclipse Ditto resolved policy view discloses non-readable content of imported, namespace root and referenced policy entries",
+      "summary": "CVE ID :CVE-2026-129916\n  \nPublished : Nov. 19, 2026, 2:32 p.m. | 20 minutes ago\n  \nDescription :In Eclipse Ditto versions 3.9.0 to 3.9.8, the resolved policy view (`GET /api/2/policies/{policyId}?policy-view=resolved`) does not restrict merged policy content to what the caller may read in the policy it originates from. Imported and namespace-root entries are returned in full as soon as the caller may read any part of them in the source policy, entries of transitive imports and of the imports of namespace-root policies are only checked against the intermediate policy, and content copied into an entry by `references`, also from another entry of the same policy, is not checked against the referenced entry. An authenticated caller with READ on a policy can therefore read subjects, resources and granted/revoked permissions of policy entries that are hidden from them, including by explicit revokes, when reading the originating policy directly.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-129916\n  \nPublished : Nov. 19, 2026, 2:32 p.m. | 20 minutes ago\n  \nDescription :In Eclipse Ditto versions 3.9.0 to 3.9.8, the resolved policy view (`GET /api/2/policies/{policyId}?policy-view=resolved`) does not restrict merged policy content to what the caller may read in the policy it originates from. Imported and namespace-root entries are returned in full as soon as the caller may read any part of them in the source policy, entries of transitive imports and of the imports of namespace-root policies are only checked against the intermediate policy, and content copied into an entry by `references`, also from another entry of the same policy, is not checked against the referenced entry. An authenticated caller with READ on a policy can therefore read subjects, resources and granted/revoked permissions of policy entries that are hidden from them, including by explicit revokes, when reading the originating policy directly.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-129916\n2. 26.11.19 오후11:32\n3. In Eclipse Ditto versions 3.9.0 to 3.9.8, the reso",
+      "cve_id": "CVE-2026-129916",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129916",
+      "source": "cvefeed",
+      "published": "2026-11-19T23:32:38+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-133188 - MISP Protected Event Signature Bypass via Whitespace Injection in JSON Keys and Identifiers",
+      "summary": "CVE ID :CVE-2026-133188\n  \nPublished : Nov. 19, 2026, 2:32 p.m. | 20 minutes ago\n  \nDescription :MISP contains a vulnerability in the cryptographic signature verification of protected events. When a MISP instance signs a protected event for synchronization, it strips all whitespace from the JSON body before computing the PGP signature (preg_replace(\"/\\s+/\", \"\", $data)). The receiving instance performs the same whitespace-stripping before verification. Because the signature covers only the whitespace-free representation, a network relay positioned between two MISP instances can insert whitespace characters into JSON object keys (effectively renaming fields) or into identifier values such as UUIDs, timestamps, and distribution fields without invalidating the signature. The receiving instance accepts the modified event as authentic.\n\nThe vulnerability affects the protected event synchronization path: event creation (EventsController::add), event editing (EventsController::edit), event viewing (EventsController::view1), and server-to-server pull synchronization (ServerSyncTool, Server model). An attacker with a network position to intercept and modify traffic between MISP instances can alter the semantic content of protected events while the PGP signature still validates, undermining the integrity guarantees that protected events are designed to provide.\n\nThe fix introduces two complementary mechanisms. First, a post-verification scan rejects any received body that contains whitespace in JSON keys (except under Galaxy cluster 'meta' keys) or in identifier-like values (uuid, id, timestamp, distribution, date). Second, a new exact-byte signature scheme (x-pgp-signature-v2) signs the body as transmitted, without whitespace normalization. MISP 3.0 and later peers exchange this exact-byte signature; older peers retain the legacy whitespace-stripped signature. A signature_version field is embedded in protected events so that a 3.0 receiver refuses a body carrying that marker if only the legacy signature is present. Both mechanisms together close the whitespace-injection vector while preserving backward compatibility with pre-3.0 instances.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-133188\n  \nPublished : Nov. 19, 2026, 2:32 p.m. | 20 minutes ago\n  \nDescription :MISP contains a vulnerability in the cryptographic signature verification of protected events. When a MISP instance signs a protected event for synchronization, it strips all whitespace from the JSON body before computing the PGP signature (preg_replace(\"/\\s+/\", \"\", $data)). The receiving instance performs the same whitespace-stripping before verification. Because the signature covers only the whitespace-free representation, a network relay positioned between two MISP instances can insert whitespace characters into JSON object keys (effectively renaming fields) or into identifier values such as UUIDs, timestamps, and distribution fields without invalidating the signature. The receiving instance accepts the modified event as authentic.\n\nThe vulnerability affects the protected event synchronization path: event creation (EventsController::add), event editing (EventsController::edit), event viewing (EventsController::view1), and server-to-server pull synchronization (ServerSyncTool, Server model). An attacker with a network position to intercept and modify traffic between MISP instances can alter the semantic content of protected events while the PGP signature still validates, undermining the integrity guarantees that protected events are designed to provide.\n\nThe fix introduces two complementary mechanisms. First, a post-verification scan rejects any received body that contains whitespace in JSON keys (except under Galaxy cluster 'meta' keys) or in identifier-like values (uuid, id, timestamp, distribution, date). Second, a new exact-byte signature scheme (x-pgp-signature-v2) signs the body as transmitted, without whitespace normalization. MISP 3.0 and later peers exchange this exact-byte signature; older peers retain the legacy whitespace-stripped signature. A signature_version field is embedded in protected events so that a 3.0 receiver refuses a body carrying that marker if only the legacy signature is present. Both mechanisms together close the whitespace-injection vector while preserving backward compatibility with pre-3.0 instances.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-133188\n2. 26.11.19 오후11:32\n3. MISP contains a vulnerability in the cryptographic",
+      "cve_id": "CVE-2026-133188",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-133188",
+      "source": "cvefeed",
+      "published": "2026-11-19T23:32:35+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-123058 - Missing authentication for critical function in JTL-Shop",
       "summary": "CVE ID :CVE-2026-123058\n  \nPublished : Nov. 19, 2026, 11:48 a.m. | 25 minutes ago\n  \nDescription :The web installer of JTL-Shop executes its\nstate-changing installation tasks without checking whether the shop is already\ninstalled, and was not removed or locked after the installation. An unauthenticated\nremote attacker who can reach the installer directory can supply their own\ndatabase credentials, create administrator and synchronisation accounts and\noverwrite the shop configuration. This can lead to a full takeover of\nthe shop, including code execution on the server.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-123058\n  \nPublished : Nov. 19, 2026, 11:48 a.m. | 25 minutes ago\n  \nDescription :The web installer of JTL-Shop executes its\nstate-changing installation tasks without checking whether the shop is already\ninstalled, and was not removed or locked after the installation. An unauthenticated\nremote attacker who can reach the installer directory can supply their own\ndatabase credentials, create administrator and synchronisation accounts and\noverwrite the shop configuration. This can lead to a full takeover of\nthe shop, including code execution on the server.\n  \nSeverity: 9.2 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6766,36 +6826,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-129237",
       "source": "cvefeed",
       "published": "2026-11-17T01:52:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-105544 .NET VSTest Elevation of Privilege Vulnerability",
-      "summary": "Corrected the CVE description and title. This is an informational change only.",
-      "description": "Corrected the CVE description and title. This is an informational change only.",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-105544\n2. MSRC\n3. Corrected the CVE description and title. This is a",
-      "cve_id": "CVE-2026-105544",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105544",
-      "source": "msrc",
-      "published": "2026-11-17T01:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-124223 Microsoft Office SharePoint Remote Code Execution Vulnerability",
-      "summary": "Information published. This CVE was addressed by updates that were released in November 2026, but the CVE was inadvertently omitted from the November 2026 Security Updates. This is an informational change only. Customers who have already installed the November 2026 updates do not need to take any further action.",
-      "description": "Information published. This CVE was addressed by updates that were released in November 2026, but the CVE was inadvertently omitted from the November 2026 Security Updates. This is an informational change only. Customers who have already installed the November 2026 updates do not need to take any further action.",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-124223\n2. MSRC\n3. Information published. This CVE was addressed by u",
-      "cve_id": "CVE-2026-124223",
-      "cvss": "",
-      "severity": "",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124223",
-      "source": "msrc",
-      "published": "2026-11-17T01:00:00+09:00",
       "lang": "en"
     }
   ],
