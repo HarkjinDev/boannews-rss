@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-11-20T05:32:44.350054+09:00",
+  "fetched_at": "2026-11-20T06:01:29.234544+09:00",
   "security_news": [
+    {
+      "title": "[보안칼럼] 빠른 해킹은 요란하고, 위험한 해킹은 조용하다",
+      "summary": "사이버보안 논의는 '취약점'에 쏠려 있다. 정부는 5월 말 한국인터넷진흥원에 취약점 관리센터를 두고 패치... 실제로 국내 금융권 공격은 시작된 지 몇 주 만에 드러났고, 보안업체들은 공격자가 열어 둔 서버에서 작업...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국내 금융권, 몇 주간의 조용한 공격 후 해킹 드러나\n2. 공격자, 열어둔 서버에서 작업 중 보안업체에 노출\n3. 취약점 관리센터 설치에도 불구하고 해킹 위험 여전",
+      "link": "https://n.news.naver.com/mnews/article/092/0002446140?sid=110",
+      "source": "naver",
+      "published": "2026-11-20T05:46:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "AI 안경 막아선 대기업, 협력사 보안은 허술'",
+      "summary": "협력사들은 보안 관리 밖에 놓여 있다. 수많은 1·2차 협력사가 얽힌 제조업 특성상 대기업이 자체 보안을 철저히 하더라도 협력사를 통한 기술 유출까지 막기는 어렵다. 협력사 보안 지원은 해킹 대응에 치우쳐 있고 정부...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 안경 대기업, 1·2차 협력사 보안은 허술\n2. 협력사 통한 기술 유출 방지 어려워\n3. 해킹 대응 위주 보안 지원, 정부 지원 필요",
+      "link": "https://n.news.naver.com/mnews/article/417/0001164999?sid=101",
+      "source": "naver",
+      "published": "2026-11-20T05:30:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "위험도 9.2 '자바포셸' 비상…악성 패턴 탐지·전용 스캐너까지",
       "summary": "자바(Java) 실행환경인 오픈JDK에서 치명적인 보안 취약점이 발견되자 국내 보안업계도 대응책을 잇달아 내놓고 있다. 지난 17일 공개된 자바포셸(Java4Shell·CVE-2026-114938)은 오픈소스 자바 플랫폼인 오픈JDK의 Base64...",
@@ -5863,6 +5887,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-131299",
       "source": "cvefeed",
       "published": "2026-11-20T04:56:45+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-130159 - RepoManager: Authenticated Path Traversal allows arbitrary file read via service unit log viewer",
+      "summary": "CVE ID :CVE-2026-130159\n  \nPublished : Nov. 19, 2026, 7:17 p.m. | 27 minutes ago\n  \nDescription :RepoManager is a self-hosted deb/rpm package repository. Prior to 5.13.3, the authenticated get-unit-log action accepts a caller-controlled logfile value. Validate::string() escapes HTML but leaves path traversal components unchanged. The action joins the caller-controlled logfile to SERVICE_LOGS_DIR without enforcing containment, so traversal can resolve the file read outside that directory. www/controllers/ajax/status/service.php reads and returns the resolved file, and any authenticated user can invoke the action to retrieve files readable by the www-data service account, including application configuration, source code, and the GPG signing-key passphrase. Fixed in 5.13.3.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-130159\n  \nPublished : Nov. 19, 2026, 7:17 p.m. | 27 minutes ago\n  \nDescription :RepoManager is a self-hosted deb/rpm package repository. Prior to 5.13.3, the authenticated get-unit-log action accepts a caller-controlled logfile value. Validate::string() escapes HTML but leaves path traversal components unchanged. The action joins the caller-controlled logfile to SERVICE_LOGS_DIR without enforcing containment, so traversal can resolve the file read outside that directory. www/controllers/ajax/status/service.php reads and returns the resolved file, and any authenticated user can invoke the action to retrieve files readable by the www-data service account, including application configuration, source code, and the GPG signing-key passphrase. Fixed in 5.13.3.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-130159\n2. 26.11.20 오전4:17\n3. RepoManager is a self-hosted deb/rpm package repos",
+      "cve_id": "CVE-2026-130159",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-130159",
+      "source": "cvefeed",
+      "published": "2026-11-20T04:17:25+09:00",
       "lang": "en"
     },
     {
