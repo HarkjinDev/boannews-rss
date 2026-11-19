@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-11-19T19:31:20.322380+09:00",
+  "fetched_at": "2026-11-19T20:01:22.182271+09:00",
   "security_news": [
+    {
+      "title": "해킹 이어 사기까지…KB국민은행, ‘12년 이어진 외부인 사기’ 뒤늦게...",
+      "summary": "KB국민은행은 지난달 2일 외부 해킹으로 고객 등의 개인정보가 유출됐다고 발표했다. KB국민은행은 당초... KB국민은행은 정정 과정에서 새로운 해킹으로 인한 유출이 아니라고 설명했다. 기존 유출 사고 발생 시스템과...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 해킹 이어 사기까지…KB국민은행, ‘12년 이어진 외부인 사기’ 뒤늦게...\n2. KB국민은행은 지난달 2일 외부 해킹으로 고객 등의 개인정보가 유출됐다고 발표했다.\n3. KB국민은행은 당초...",
+      "link": "https://n.news.naver.com/mnews/article/020/0003763768?sid=101",
+      "source": "naver",
+      "published": "2026-11-19T19:52:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "연쇄 해킹에 놀란 은행권, ‘화이트해커' 모시기 경쟁",
+      "summary": "지난 9월부터 이어진 금융권 연쇄 해킹을 계기로 은행들이 ‘화이트해커’ 모시기 경쟁에 나섰다. 해커들이... 19일 금융권에 따르면 신한은행은 지난 17일 마감한 정보보호 인력 수시채용을 통해 모의해킹·취약점 진단...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 금융권 연쇄 해킹 후 신한은행, 정보보호 인력 채용\n2. 신한은행, 모의해킹·취약점 진단 인력 채용\n3. 은행권, 화이트해커 확보 경쟁 치열",
+      "link": "https://n.news.naver.com/mnews/article/018/0006412760?sid=101",
+      "source": "naver",
+      "published": "2026-11-19T19:34:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "대구경북 대학가 덮친 해킹 공포…보안 체계 전면 재점검해야",
       "summary": "현장 보안 담당자와 전문가들은 외부에 노출하는 개인정보를 줄이고, 외주로 운영하는 시스템의 관리와 보안 책임을 강화해야 한다고 입을 모았다.각 대학에 따르면 이달 들어 경일대(12일 전자문서시스템), 대구한의대...",
@@ -6874,21 +6898,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-15707",
       "source": "cvefeed",
       "published": "2026-11-16T20:54:32+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-129784 - Insecure deserializaiton in the httpx Ruby gem via unsafe Oj object-mode",
-      "summary": "CVE ID :CVE-2026-129784\n  \nPublished : Nov. 16, 2026, 10:53 a.m. | 9 minutes ago\n  \nDescription :The httpx Ruby gem parses JSON response bodies through its transcoder layer. HTTPX::Response#json delegates to Transcoder::JSON.decode, and when the oj gem is loaded and multi_json is absent, the decoder falls back to json_load, which calls Oj.load(response.to_s) with no mode option. Oj.load defaults to :object mode, in which a response document can allocate any already-loaded Ruby class (\"^o\":\"ClassName\") and set its instance variables, or resolve a class or module reference (\"^c\":\"Name\"). An attacker who controls, or can influence, the URL an application fetches with HTTPX.get(url).json therefore controls object instantiation in the victim process. With a matching gadget chain, this issue can potentially cause remote code execution. Affects httpx 1.9.0; fixed in 1.9.1.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-129784\n  \nPublished : Nov. 16, 2026, 10:53 a.m. | 9 minutes ago\n  \nDescription :The httpx Ruby gem parses JSON response bodies through its transcoder layer. HTTPX::Response#json delegates to Transcoder::JSON.decode, and when the oj gem is loaded and multi_json is absent, the decoder falls back to json_load, which calls Oj.load(response.to_s) with no mode option. Oj.load defaults to :object mode, in which a response document can allocate any already-loaded Ruby class (\"^o\":\"ClassName\") and set its instance variables, or resolve a class or module reference (\"^c\":\"Name\"). An attacker who controls, or can influence, the URL an application fetches with HTTPX.get(url).json therefore controls object instantiation in the victim process. With a matching gadget chain, this issue can potentially cause remote code execution. Affects httpx 1.9.0; fixed in 1.9.1.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-129784\n2. 26.11.16 오후7:53\n3. The httpx Ruby gem parses JSON response bodies thr",
-      "cve_id": "CVE-2026-129784",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129784",
-      "source": "cvefeed",
-      "published": "2026-11-16T19:53:51+09:00",
       "lang": "en"
     }
   ],
