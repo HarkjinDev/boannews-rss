@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-19T20:31:19.186692+09:00",
+  "fetched_at": "2026-11-19T21:01:30.020418+09:00",
   "security_news": [
+    {
+      "title": "북한 연계 6900억원 흐름, 스카이 준비자산 경유 보도",
+      "summary": "경로를 거쳤다고 코인데스크(CoinDesk)는 보도했다. 코인데스크는 블록체인 조사에 2025년 바이비트(Bybit) 해킹 관련 흐름도 포함됐으며, 이 경로가 수십억달러 규모 자산을 동결 위험에 놓을 수 있다고 전했다.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 북한 연계 6,900억원 자산, 바이비트(Bybit) 경유\n2. 코인데스크, 2025년 바이비트 해킹 관련 자금 흐름 조사\n3. 수십억 달러 자산 동결 위험 노출 가능성 시사",
+      "link": "https://www.tokenpost.kr/news/breaking/440794",
+      "source": "naver",
+      "published": "2026-11-19T20:46:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[코인 시황] 비트코인 6만3000달러대 약세…금 대비 상대적 강세에도 AI...",
       "summary": "보안업체 체인시큐리티는 지난해 해당 상품에서 자금 유출로 이어질 수 있는 취약점을 발견했지만, 이번... 채굴업체들의 자금 조달 부담, 탈중앙화금융의 보안 위험 등이 투자심리에 영향을 미칠 것으로 보인다.",
@@ -5944,6 +5956,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-99320 - ipv6: raw: fix use-after-free in rawv6_send_hdrinc()",
+      "summary": "CVE ID :CVE-2026-99320\n  \nPublished : Nov. 19, 2026, 9:18 a.m. | 1 hour, 13 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: raw: fix use-after-free in rawv6_send_hdrinc()\n\nrawv6_send_hdrinc() caches the route before handing the skb to\nl3mdev_ip6_out(). The VRF output path may replace skb->dst and release\nthe original route, leaving the cached pointer stale.\n\nThe function later dereferences that pointer for statistics accounting\nand as the output device passed to NF_HOOK(). Its RCU read-side critical\nsection starts after l3mdev_ip6_out(), so it cannot prevent the old route\nfrom being reclaimed in between.\n\nReload the route from the current skb destination after\nl3mdev_ip6_out() returns.\n\nKASAN reports a slab-use-after-free in rawv6_sendmsg(), with the route\nallocated by ip6_dst_alloc(), freed by dst_destroy() from rcu_core(), and\nthe related RCU callback queued from vrf_l3_out().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-99320\n  \nPublished : Nov. 19, 2026, 9:18 a.m. | 1 hour, 13 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: raw: fix use-after-free in rawv6_send_hdrinc()\n\nrawv6_send_hdrinc() caches the route before handing the skb to\nl3mdev_ip6_out(). The VRF output path may replace skb->dst and release\nthe original route, leaving the cached pointer stale.\n\nThe function later dereferences that pointer for statistics accounting\nand as the output device passed to NF_HOOK(). Its RCU read-side critical\nsection starts after l3mdev_ip6_out(), so it cannot prevent the old route\nfrom being reclaimed in between.\n\nReload the route from the current skb destination after\nl3mdev_ip6_out() returns.\n\nKASAN reports a slab-use-after-free in rawv6_sendmsg(), with the route\nallocated by ip6_dst_alloc(), freed by dst_destroy() from rcu_core(), and\nthe related RCU callback queued from vrf_l3_out().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-99320\n2. 26.11.19 오후6:18\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-99320",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99320",
+      "source": "cvefeed",
+      "published": "2026-11-19T18:18:18+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-117678 - idna: punycode labels are decoded before the 63-octet length check, so a long xn-- label causes super-linear CPU use",
       "summary": "CVE ID :CVE-2026-117678\n  \nPublished : Nov. 19, 2026, 5:36 a.m. | 38 minutes ago\n  \nDescription :Inefficient Algorithmic Complexity vulnerability in benoitc idna allows an attacker who controls a hostname passed to the library to exhaust CPU via an over-long xn-- label. idna:ulabel/1 in src/idna.erl hands every ASCII label that starts with xn-- to punycode:decode/1 without applying check_label_length/1, the 63-octet DNS label limit. punycode:decode/1 in src/punycode.erl builds its output with list appends in insert/4, so its cost grows super-linearly with the label length. A label of a few kilobytes keeps a scheduler busy for seconds to minutes before the label is rejected as invalid punycode.\n\nEvery decode entry point reaches this path: decode/1, decode/2, to_unicode/1 and from_ascii/1. The encode path reaches it as well, because alabel/1 calls ulabel/1 on an ASCII xn-- label before its own length check, so encode/1, encode/2 and to_ascii/1 are affected for such input.\n\nThis issue affects idna: from 0.5.0 before 8.0.0.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-117678\n  \nPublished : Nov. 19, 2026, 5:36 a.m. | 38 minutes ago\n  \nDescription :Inefficient Algorithmic Complexity vulnerability in benoitc idna allows an attacker who controls a hostname passed to the library to exhaust CPU via an over-long xn-- label. idna:ulabel/1 in src/idna.erl hands every ASCII label that starts with xn-- to punycode:decode/1 without applying check_label_length/1, the 63-octet DNS label limit. punycode:decode/1 in src/punycode.erl builds its output with list appends in insert/4, so its cost grows super-linearly with the label length. A label of a few kilobytes keeps a scheduler busy for seconds to minutes before the label is rejected as invalid punycode.\n\nEvery decode entry point reaches this path: decode/1, decode/2, to_unicode/1 and from_ascii/1. The encode path reaches it as well, because alabel/1 calls ulabel/1 on an ASCII xn-- label before its own length check, so encode/1, encode/2 and to_ascii/1 are affected for such input.\n\nThis issue affects idna: from 0.5.0 before 8.0.0.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6871,21 +6898,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-113456",
       "source": "cvefeed",
       "published": "2026-11-16T21:24:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-15707 - Netskope Client and Endpoint DLP Local Privilege Escalation via Insecure OpenSSL Configuration",
-      "summary": "CVE ID :CVE-2026-15707\n  \nPublished : Nov. 16, 2026, 11:54 a.m. | 7 minutes ago\n  \nDescription :An uncontrolled search path vulnerability (CWE-427) in statically linked OpenSSL libraries within Netskope Client (stAgentSvc.exe) and Endpoint DLP (epdlp.exe) on Windows allows an authenticated local attacker to execute arbitrary code with elevated SYSTEM privileges. The services retain internal build-time paths referencing a secondary drive location. On Windows systems where default volume permissions allow standard users to create root-level directories on secondary drives, an attacker can place a malicious configuration file (openssl.cnf) that is loaded under the NT AUTHORITY\\SYSTEM context upon service startup or system reboot. Under default operating system permissions, macOS and Linux are not susceptible, and mobile platforms are unaffected.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-15707\n  \nPublished : Nov. 16, 2026, 11:54 a.m. | 7 minutes ago\n  \nDescription :An uncontrolled search path vulnerability (CWE-427) in statically linked OpenSSL libraries within Netskope Client (stAgentSvc.exe) and Endpoint DLP (epdlp.exe) on Windows allows an authenticated local attacker to execute arbitrary code with elevated SYSTEM privileges. The services retain internal build-time paths referencing a secondary drive location. On Windows systems where default volume permissions allow standard users to create root-level directories on secondary drives, an attacker can place a malicious configuration file (openssl.cnf) that is loaded under the NT AUTHORITY\\SYSTEM context upon service startup or system reboot. Under default operating system permissions, macOS and Linux are not susceptible, and mobile platforms are unaffected.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-15707\n2. 26.11.16 오후8:54\n3. An uncontrolled search path vulnerability (CWE-427",
-      "cve_id": "CVE-2026-15707",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-15707",
-      "source": "cvefeed",
-      "published": "2026-11-16T20:54:32+09:00",
       "lang": "en"
     }
   ],
