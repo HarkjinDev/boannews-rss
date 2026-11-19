@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-11-20T05:01:27.045676+09:00",
+  "fetched_at": "2026-11-20T05:32:44.350054+09:00",
   "security_news": [
+    {
+      "title": "위험도 9.2 '자바포셸' 비상…악성 패턴 탐지·전용 스캐너까지",
+      "summary": "자바(Java) 실행환경인 오픈JDK에서 치명적인 보안 취약점이 발견되자 국내 보안업계도 대응책을 잇달아 내놓고 있다. 지난 17일 공개된 자바포셸(Java4Shell·CVE-2026-114938)은 오픈소스 자바 플랫폼인 오픈JDK의 Base64...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 오픈JDK서 '자바포셸(CVE-2026-114938)' 취약점 발견\n2. Base64 디코딩 관련 원격 코드 실행 가능\n3. 국내 보안업계, 탐지·전용 스캐너로 대응",
+      "link": "https://n.news.naver.com/mnews/article/421/0009300380?sid=105",
+      "source": "naver",
+      "published": "2026-11-20T05:20:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "JP모건, 거래 장애 이어 외부 공급업체 해킹…피해 규모 미공개",
+      "summary": "미국 최대 은행 JP모건 체이스가 외부 공급업체 해킹으로 일부 고객의 이름과 이메일 주소가 유출됐을... 해킹 사실은 JP모건이 거래 처리 장애를 겪은 지 며칠 만에 공개됐다. 이번 주 초 소프트웨어 결함으로 JP모건과...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. JP모건, 공급업체 해킹으로 고객 정보 일부 유출\n2. 고객 이름, 이메일 주소 유출…구체적 피해 규모는 미공개\n3. 거래 장애 며칠 만에 발생…소프트웨어 결함도 연관",
+      "link": "https://n.news.naver.com/mnews/article/138/0002249303?sid=105",
+      "source": "naver",
+      "published": "2026-11-20T05:14:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "Navigating Vulnerability Hysteria in the AI Era",
+      "summary": "This installment of the Reporters' Notebook video series examines the fallout from recent high-severity flaw disclosures, exploring how fears of AI-assisted exploits trigger widespread panic, operational disruptions, and growing warning fatigue.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 시대, 고위험 취약점 공개 후 공포 확산\n2. AI 기반 공격 우려로 혼란 가중, 경고 피로도 증가\n3. 운영 중단 및 광범위한 패닉 발생",
+      "link": "https://www.darkreading.com/vulnerabilities-threats/navigating-vulnerability-hysteria-ai-era",
+      "source": "darkreading",
+      "published": "2026-11-20T04:46:44+09:00",
+      "lang": "en"
+    },
     {
       "title": "Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT",
       "summary": "Google says a China-linked espionage group exploited a critical VMware vCenter authentication bypass before Broadcom released a patch.\nThe post Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT appeared first on SecurityWeek.",
@@ -5796,21 +5832,39 @@
       "source": "naver",
       "published": "2026-11-17T06:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "20분 만에 8조원 사라졌는데…책임지는 규정 없다[기고]",
-      "summary": "미국 연방수사국(FBI)은 이틀 뒤인 지난달 31일 성명을 내고 북한 해킹조직 ‘트레이더트레이터(TraderTraitor)... 블록체인은 해킹이 불가능하다고 하지 않았느냐고. 이번에도 블록체인은 뚫리지 않았다. 공격자가 장악한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해킹조직 ‘트레이더트레이터’ 추정, 20분 만에 8조원 상당 피해\n2. 블록체인 자체는 뚫리지 않았으나, 공격자가 장악한 스마트 컨트랙트 이용\n3. 책임 규정 부재로 막대한 손실에 대한 명확한 법적 조치 어려움",
-      "link": "https://n.news.naver.com/mnews/article/018/0006410768?sid=101",
-      "source": "naver",
-      "published": "2026-11-17T05:04:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-104199 - aMQTT: Inefficient Regular Expression Complexity and Uncontrolled Resource Consumption and Improper Input Validation",
+      "summary": "CVE ID :CVE-2026-104199\n  \nPublished : Nov. 19, 2026, 7:57 p.m. | 26 minutes ago\n  \nDescription :aMQTT is an open source MQTT broker and client. From 0.11.0 until 0.11.4, add_subscription() in amqtt/broker.py accepts malformed single-level + wildcard placement because it checks substrings instead of validating each slash-delimited level. The _matches() function converts each + into a greedy regular-expression fragment and evaluates it with re.fullmatch(), allowing a filter containing many adjacent + characters to trigger catastrophic backtracking when compared with a topic that partially matches but ultimately fails. Because matching runs synchronously in _run_broadcast(), one subscription followed by a publish can block the broker event loop, stopping message delivery and new connection processing until restart. Anonymous clients can trigger the issue with the default configuration. Any authenticated client permitted to create arbitrary subscriptions and publish messages may still exploit it when authentication is enabled. This issue is fixed in version 0.11.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-104199\n  \nPublished : Nov. 19, 2026, 7:57 p.m. | 26 minutes ago\n  \nDescription :aMQTT is an open source MQTT broker and client. From 0.11.0 until 0.11.4, add_subscription() in amqtt/broker.py accepts malformed single-level + wildcard placement because it checks substrings instead of validating each slash-delimited level. The _matches() function converts each + into a greedy regular-expression fragment and evaluates it with re.fullmatch(), allowing a filter containing many adjacent + characters to trigger catastrophic backtracking when compared with a topic that partially matches but ultimately fails. Because matching runs synchronously in _run_broadcast(), one subscription followed by a publish can block the broker event loop, stopping message delivery and new connection processing until restart. Anonymous clients can trigger the issue with the default configuration. Any authenticated client permitted to create arbitrary subscriptions and publish messages may still exploit it when authentication is enabled. This issue is fixed in version 0.11.4.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-104199\n2. 26.11.20 오전4:57\n3. aMQTT is an open source MQTT broker and client. Fr",
+      "cve_id": "CVE-2026-104199",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104199",
+      "source": "cvefeed",
+      "published": "2026-11-20T04:57:23+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-131299 - Extensible Markup Language External Entity Injection through the REST API in Splunk App for Stream",
+      "summary": "CVE ID :CVE-2026-131299\n  \nPublished : Nov. 19, 2026, 7:56 p.m. | 27 minutes ago\n  \nDescription :In Splunk App for Stream versions below 8.1.7, an unauthenticated user who can reach the Splunk App for Stream Representational State Transfer (REST) API on the management port (8089) could upload an Extensible Markup Language (XML) vocabulary file, which lets the vocabulary upload endpoint read local files accessible to the Splunk process or send outbound requests.\nThe vulnerability is possible because the vocabulary upload endpoint parses uploaded XML without an application-level policy that blocks external entity resolution.\nFor more information see About Splunk Stream (https://help.splunk.com/en/splunk-enterprise/collect-stream-data/install-and-configure-splunk-stream/8.1/introduction/about-splunk-stream) and restmap.conf (https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/9.4/configuration-file-reference/9.4.3-configuration-file-reference/restmap.conf) in the Splunk documentation.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-131299\n  \nPublished : Nov. 19, 2026, 7:56 p.m. | 27 minutes ago\n  \nDescription :In Splunk App for Stream versions below 8.1.7, an unauthenticated user who can reach the Splunk App for Stream Representational State Transfer (REST) API on the management port (8089) could upload an Extensible Markup Language (XML) vocabulary file, which lets the vocabulary upload endpoint read local files accessible to the Splunk process or send outbound requests.\nThe vulnerability is possible because the vocabulary upload endpoint parses uploaded XML without an application-level policy that blocks external entity resolution.\nFor more information see About Splunk Stream (https://help.splunk.com/en/splunk-enterprise/collect-stream-data/install-and-configure-splunk-stream/8.1/introduction/about-splunk-stream) and restmap.conf (https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/9.4/configuration-file-reference/9.4.3-configuration-file-reference/restmap.conf) in the Splunk documentation.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-131299\n2. 26.11.20 오전4:56\n3. In Splunk App for Stream versions below 8.1.7, an ",
+      "cve_id": "CVE-2026-131299",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-131299",
+      "source": "cvefeed",
+      "published": "2026-11-20T04:56:45+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-127060 - @fastify/http-proxy vulnerable to prefix escape via semicolon path-parameter dot-segments",
       "summary": "CVE ID :CVE-2026-127060\n  \nPublished : Nov. 19, 2026, 6:18 p.m. | 13 minutes ago\n  \nDescription :@fastify/http-proxy is a Fastify plugin that proxies HTTP and WebSocket traffic to an upstream server. In versions before 11.6.10, it rejects destinations containing parent-directory path segments by an exact string match, so a segment that carries a semicolon path parameter, such as a dot-dot segment followed by a semicolon and an optional parameter, is not equal to the plain dot-dot form and passes the check, and the WHATWG URL parser keeps it as an ordinary segment so the rewrite-prefix containment check also passes. Servlet containers such as Apache Tomcat and Jetty strip semicolon path parameters from each segment before resolving dot-segments, so a request routed through the configured prefix is rewritten and reaches the upstream where it resolves above the intended subtree, escaping the path the proxy is meant to expose and, on some containers, crossing application contexts. Both the HTTP and WebSocket proxy paths are affected. The issue is fixed in @fastify/http-proxy 11.6.10, and users should upgrade to 11.6.10 or later.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6755,21 +6809,6 @@
       "source": "cvefeed",
       "published": "2026-11-17T07:18:25+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-124019 - VB-Audio VB-CABLE Kernel Driver Out-of-Bounds Write",
-      "summary": "CVE ID :CVE-2026-124019\n  \nPublished : Nov. 16, 2026, 8:09 p.m. | 8 minutes ago\n  \nDescription :VB-Audio VB-CABLE virtual audio device kernel streaming driver (vbaudio_cable64_win10.sys 10.0.10011.16384) contains out-of-bounds read and write vulnerabilities in its KSPROPSETID_Audio MUTE, VOLUMELEVEL, and PEAKMETER2 property handlers that allow a local standard user to supply an all-channels sentinel value which is improperly used as a loop terminator or array index instead of being bounds-checked. Attackers can exploit the accessible low-integrity KS filter device object to write attacker-controlled values sequentially into kernel memory corrupting kernel globals and object pointers, or read past an array boundary to leak kernel memory, resulting in local privilege escalation or denial of service via a kernel bug check.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-124019\n  \nPublished : Nov. 16, 2026, 8:09 p.m. | 8 minutes ago\n  \nDescription :VB-Audio VB-CABLE virtual audio device kernel streaming driver (vbaudio_cable64_win10.sys 10.0.10011.16384) contains out-of-bounds read and write vulnerabilities in its KSPROPSETID_Audio MUTE, VOLUMELEVEL, and PEAKMETER2 property handlers that allow a local standard user to supply an all-channels sentinel value which is improperly used as a loop terminator or array index instead of being bounds-checked. Attackers can exploit the accessible low-integrity KS filter device object to write attacker-controlled values sequentially into kernel memory corrupting kernel globals and object pointers, or read past an array boundary to leak kernel memory, resulting in local privilege escalation or denial of service via a kernel bug check.\n  \nSeverity: 8.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-124019\n2. 26.11.17 오전5:09\n3. VB-Audio VB-CABLE virtual audio device kernel stre",
-      "cve_id": "CVE-2026-124019",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-124019",
-      "source": "cvefeed",
-      "published": "2026-11-17T05:09:10+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
@@ -6799,20 +6838,6 @@
       "link": "https://www.news2day.co.kr/article/20261116500223",
       "source": "naver_rep",
       "published": "2026-11-17T06:30:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "■11월 17일 화 경제 캘린더",
-      "summary": "■ 국제통화기금, 한국과 연례 협의 결과 브리핑 국제통화기금, IMF가 재정경제부 등 한국 주요 기관과의... 금융감독원은 전자금융업 등을 포함한 업계 관계자들을 대상으로 최근 침해사고와 관련한 전수점검 방법과...",
-      "description": "■ 국제통화기금, 한국과 연례 협의 결과 브리핑 국제통화기금, IMF가 재정경제부 등 한국 주요 기관과의... 금융감독원은 전자금융업 등을 포함한 업계 관계자들을 대상으로 최근 침해사고와 관련한 전수점검 방법과...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. IMF, 한국 연례 협의 결과 발표.\n2. 금융감독원, 전자금융업계 침해사고 전수점검.\n3. 국내 주요 기관 대상 보안 점검 강화.",
-      "keyword_matched": "재정경제부",
-      "link": "https://n.news.naver.com/mnews/article/052/0002433771?sid=101",
-      "source": "naver_rep",
-      "published": "2026-11-17T05:28:00+09:00",
       "lang": "ko"
     }
   ]
