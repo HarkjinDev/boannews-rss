@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-19T18:32:14.749868+09:00",
+  "fetched_at": "2026-11-19T19:01:27.021427+09:00",
   "security_news": [
+    {
+      "title": "민주당 정보통신특위 출범…강릉 출신 김현·김우영 의원 합류",
+      "summary": "특위는 이날 AI를 악용한 해킹과 개인정보 유출 대응 현황을 점검하고, 스마트기기를 활용한 AI 부정행위... 활용한 해킹과 개인정보 유출에 체계적으로 대응하는 방안 등을 논의하고 정책화하는 데 제일 앞장서 주실...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 민주당, AI 해킹·개인정보 유출 대응 특위 출범\n2. AI 악용 해킹, 스마트기기 AI 부정행위 등 논의\n3. 체계적 대응 방안 마련 및 정책화 추진",
+      "link": "https://n.news.naver.com/mnews/article/087/0001232115?sid=100",
+      "source": "naver",
+      "published": "2026-11-19T18:54:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "전북 교육기관 개인정보 줄유출···2년 전 '전북대 해킹' 잊었나",
       "summary": "이정현 전북정보보호지원센터장은 \"개인정보보호법상 목적을 다한 정보는 즉시 파기하고 구형 시스템도 암호화해야 하는데 이를 방치해 해커의 먹잇감이 되고 있다\"며 \"'퇴근 없는' 해커들이 틈을 노리는 만큼 보안을...",
@@ -5988,18 +6000,6 @@
       "source": "naver",
       "published": "2026-11-16T19:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "자오창펑 바이낸스 CEO \"우린 비트코인 안 팔았다\"",
-      "summary": "앞서 지난달 29일 바이낸스에서는 약 63억달러(원화 약 8조5000억원) 규모의 해킹 피해가 발생했으며 미국 연방수사국(FBI)은 그 배후로 북한 해킹 조직을 지목했다. 이 사건 이후 시장에서는 바이낸스가 보유...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 자오창펑 바이낸스 CEO \"우린 비트코인 안 팔았다\" 앞서 지난달 29일 바이낸스에서는 약\n2. 이 사건 이후 시장에서는 바이낸스가 보유...",
-      "link": "https://n.news.naver.com/mnews/article/018/0006410702?sid=101",
-      "source": "naver",
-      "published": "2026-11-16T19:03:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6976,96 +6976,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-99308",
       "source": "cvefeed",
       "published": "2026-11-16T19:17:05+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-99311 - udf: fix return value for non-recorded-allocated extents in udf_map_block()",
-      "summary": "CVE ID :CVE-2026-99311\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nudf: fix return value for non-recorded-allocated extents in udf_map_block()\n\nWhen someone creates a corrupted UDF filesystem where symlink contains\nother extent type than EXT_RECORDED_ALLOCATED, it can leads to a crash\nlike:\n\n Oops: general protection fault\n KASAN: maybe wild-memory-access\n RIP: 0010:page_get_link (fs/namei.c:6503)\n Call Trace:\n  vfs_readlink (fs/namei.c:6419)\n  do_readlinkat (fs/stat.c:583)\n  __x64_sys_readlink (fs/stat.c:605 fs/stat.c:602 fs/stat.c:602)\n\nThis is because in this case udf_map_block() fails to convert return\nvalue of inode_bmap() from 1 to 0. Returned '1' propagates through\nudf_bread() all the way up to __page_get_link() where it ends up being\ntreated as a folio pointer with obvious results.\n\nMove the reset to 0 line outside the if, so udf_map_block() returns either\n0 or -errno, even if the extent type is not EXT_RECORDED_ALLOCATED.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-99311\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nudf: fix return value for non-recorded-allocated extents in udf_map_block()\n\nWhen someone creates a corrupted UDF filesystem where symlink contains\nother extent type than EXT_RECORDED_ALLOCATED, it can leads to a crash\nlike:\n\n Oops: general protection fault\n KASAN: maybe wild-memory-access\n RIP: 0010:page_get_link (fs/namei.c:6503)\n Call Trace:\n  vfs_readlink (fs/namei.c:6419)\n  do_readlinkat (fs/stat.c:583)\n  __x64_sys_readlink (fs/stat.c:605 fs/stat.c:602 fs/stat.c:602)\n\nThis is because in this case udf_map_block() fails to convert return\nvalue of inode_bmap() from 1 to 0. Returned '1' propagates through\nudf_bread() all the way up to __page_get_link() where it ends up being\ntreated as a folio pointer with obvious results.\n\nMove the reset to 0 line outside the if, so udf_map_block() returns either\n0 or -errno, even if the extent type is not EXT_RECORDED_ALLOCATED.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-99311\n2. 26.11.16 오후6:59\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-99311",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99311",
-      "source": "cvefeed",
-      "published": "2026-11-16T18:59:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-99307 - ceph: require the dentry lease record to cover struct ceph_mds_reply_lease",
-      "summary": "CVE ID :CVE-2026-99307\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nceph: require the dentry lease record to cover struct ceph_mds_reply_lease\n\nparse_reply_info_lease() reads a 32-bit struct_len off the wire and only\nchecks that many bytes are present, without requiring struct_len to cover\nsizeof(struct ceph_mds_reply_lease) (10 bytes).  A malicious MDS can\ndeclare a shorter record and still get the pointer published: the\nfollowing *p += sizeof(**lease) overshoot is undone by *p = lend, so\nnothing downstream rejects the reply.  ceph_fill_trace() ->\nupdate_dentry_lease() then reads 10 bytes through that pointer on any\nlookup on a mounted CephFS, running past the end of the message front.\n\nRequire the record to cover the structure, matching the sibling\nparse_reply_info_dir().  A conforming MDS always encodes the full 10\nbytes.\n\n  BUG: KASAN: slab-out-of-bounds in __update_dentry_lease.constprop.0 (fs/ceph/inode.c:1459)\n  Read of size 4 at addr ffff888026c63d65 by task kworker/0:3/2366\n  Workqueue: ceph-msgr ceph_con_workfn\n  Call Trace:\n   __update_dentry_lease.constprop.0 (fs/ceph/inode.c:1459)\n   ceph_fill_trace (fs/ceph/inode.c:1474 fs/ceph/inode.c:1823)\n   mds_dispatch (fs/ceph/mds_client.c:4229 fs/ceph/mds_client.c:7225)\n   ceph_con_process_message (net/ceph/messenger.c:1424)\n   ceph_con_v1_try_read (net/ceph/messenger_v1.c:1430)\n   ceph_con_workfn (net/ceph/messenger.c:1576)\n   process_one_work (kernel/workqueue.c:3396)\n   worker_thread (kernel/workqueue.c:3479 kernel/workqueue.c:3560)\n   kthread (kernel/kthread.c:436)\n   ret_from_fork (arch/x86/kernel/process.c:158)\n   ret_from_fork_asm (arch/x86/entry/entry_64.S:245)\n\n  The buggy address is located 357 bytes inside of\n   allocated 360-byte region [ffff888026c63c00, ffff888026c63d68)\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-99307\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nceph: require the dentry lease record to cover struct ceph_mds_reply_lease\n\nparse_reply_info_lease() reads a 32-bit struct_len off the wire and only\nchecks that many bytes are present, without requiring struct_len to cover\nsizeof(struct ceph_mds_reply_lease) (10 bytes).  A malicious MDS can\ndeclare a shorter record and still get the pointer published: the\nfollowing *p += sizeof(**lease) overshoot is undone by *p = lend, so\nnothing downstream rejects the reply.  ceph_fill_trace() ->\nupdate_dentry_lease() then reads 10 bytes through that pointer on any\nlookup on a mounted CephFS, running past the end of the message front.\n\nRequire the record to cover the structure, matching the sibling\nparse_reply_info_dir().  A conforming MDS always encodes the full 10\nbytes.\n\n  BUG: KASAN: slab-out-of-bounds in __update_dentry_lease.constprop.0 (fs/ceph/inode.c:1459)\n  Read of size 4 at addr ffff888026c63d65 by task kworker/0:3/2366\n  Workqueue: ceph-msgr ceph_con_workfn\n  Call Trace:\n   __update_dentry_lease.constprop.0 (fs/ceph/inode.c:1459)\n   ceph_fill_trace (fs/ceph/inode.c:1474 fs/ceph/inode.c:1823)\n   mds_dispatch (fs/ceph/mds_client.c:4229 fs/ceph/mds_client.c:7225)\n   ceph_con_process_message (net/ceph/messenger.c:1424)\n   ceph_con_v1_try_read (net/ceph/messenger_v1.c:1430)\n   ceph_con_workfn (net/ceph/messenger.c:1576)\n   process_one_work (kernel/workqueue.c:3396)\n   worker_thread (kernel/workqueue.c:3479 kernel/workqueue.c:3560)\n   kthread (kernel/kthread.c:436)\n   ret_from_fork (arch/x86/kernel/process.c:158)\n   ret_from_fork_asm (arch/x86/entry/entry_64.S:245)\n\n  The buggy address is located 357 bytes inside of\n   allocated 360-byte region [ffff888026c63c00, ffff888026c63d68)\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-99307\n2. 26.11.16 오후6:59\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-99307",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99307",
-      "source": "cvefeed",
-      "published": "2026-11-16T18:59:31+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-99298 - net: ipv4: add zero check for snd_cwnd_clamp",
-      "summary": "CVE ID :CVE-2026-99298\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ipv4: add zero check for snd_cwnd_clamp\n\nWhen RTAX_CWND is locked, user is able to pass 0 into it.\nThis could lead to writing 0 to tp->snd_cwnd, leading to a\ndivision by zero error.\n\nOops: divide error: 0000 [#1] SMP KASAN NOPTI\nCall Trace:\n \n tcp_reno_cong_avoid (net/ipv4/tcp_cong.c:510 (discriminator 1))\n tcp_ack (net/ipv4/tcp_input.c:3517 net/ipv4/tcp_input.c:3873 net/ipv4/tcp_input.c:4440)\n tcp_rcv_established (net/ipv4/tcp_input.c:6685)\n tcp_v4_do_rcv (net/ipv4/tcp_ipv4.c:1854)\n tcp_v4_rcv (net/ipv4/tcp_ipv4.c:2248)\n ip_protocol_deliver_rcu (net/ipv4/ip_input.c:207 (discriminator 1))\n ip_local_deliver_finish (net/ipv4/ip_input.c:241 (discriminator 1))\n ip_local_deliver (./include/linux/netfilter.h:325 ./include/linux/netfilter.h:319 net/ipv4/ip_input.c:262)\n ip_rcv (./include/net/dst.h:481 (discriminator 6) net/ipv4/ip_input.c:492 (discriminator 6) ./include/linux/netfilter.h:325 (discriminator 6) ./include/li)\n __netif_receive_skb_one_core (net/core/dev.c:6297 (discriminator 4))\n __netif_receive_skb (net/core/dev.c:6410)\n process_backlog (net/core/dev.c:6761)\n __napi_poll.constprop.0 (net/core/dev.c:7830)\n net_rx_action (net/core/dev.c:7893 net/core/dev.c:8050)\n handle_softirqs (kernel/softirq.c:645)\n __irq_exit_rcu (kernel/softirq.c:679 kernel/softirq.c:519 kernel/softirq.c:758)\n irq_exit_rcu (kernel/softirq.c:775)\n sysvec_apic_timer_interrupt (arch/x86/kernel/apic/apic.c:1062 (discriminator 35) arch/x86/kernel/apic/apic.c:1062 (discriminator 35))\nRIP: 0010:tcp_cong_avoid_ai (net/ipv4/tcp_cong.c:482)\n\nFix by checking if user pass in zero as parameter and if lock is present.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-99298\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ipv4: add zero check for snd_cwnd_clamp\n\nWhen RTAX_CWND is locked, user is able to pass 0 into it.\nThis could lead to writing 0 to tp->snd_cwnd, leading to a\ndivision by zero error.\n\nOops: divide error: 0000 [#1] SMP KASAN NOPTI\nCall Trace:\n \n tcp_reno_cong_avoid (net/ipv4/tcp_cong.c:510 (discriminator 1))\n tcp_ack (net/ipv4/tcp_input.c:3517 net/ipv4/tcp_input.c:3873 net/ipv4/tcp_input.c:4440)\n tcp_rcv_established (net/ipv4/tcp_input.c:6685)\n tcp_v4_do_rcv (net/ipv4/tcp_ipv4.c:1854)\n tcp_v4_rcv (net/ipv4/tcp_ipv4.c:2248)\n ip_protocol_deliver_rcu (net/ipv4/ip_input.c:207 (discriminator 1))\n ip_local_deliver_finish (net/ipv4/ip_input.c:241 (discriminator 1))\n ip_local_deliver (./include/linux/netfilter.h:325 ./include/linux/netfilter.h:319 net/ipv4/ip_input.c:262)\n ip_rcv (./include/net/dst.h:481 (discriminator 6) net/ipv4/ip_input.c:492 (discriminator 6) ./include/linux/netfilter.h:325 (discriminator 6) ./include/li)\n __netif_receive_skb_one_core (net/core/dev.c:6297 (discriminator 4))\n __netif_receive_skb (net/core/dev.c:6410)\n process_backlog (net/core/dev.c:6761)\n __napi_poll.constprop.0 (net/core/dev.c:7830)\n net_rx_action (net/core/dev.c:7893 net/core/dev.c:8050)\n handle_softirqs (kernel/softirq.c:645)\n __irq_exit_rcu (kernel/softirq.c:679 kernel/softirq.c:519 kernel/softirq.c:758)\n irq_exit_rcu (kernel/softirq.c:775)\n sysvec_apic_timer_interrupt (arch/x86/kernel/apic/apic.c:1062 (discriminator 35) arch/x86/kernel/apic/apic.c:1062 (discriminator 35))\nRIP: 0010:tcp_cong_avoid_ai (net/ipv4/tcp_cong.c:482)\n\nFix by checking if user pass in zero as parameter and if lock is present.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-99298\n2. 26.11.16 오후6:59\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-99298",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99298",
-      "source": "cvefeed",
-      "published": "2026-11-16T18:59:25+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-99292 - smb: client: fix slab-out-of-bounds write in id_mode_to_cifs_acl()",
-      "summary": "CVE ID :CVE-2026-99292\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix slab-out-of-bounds write in id_mode_to_cifs_acl()\n\nIn id_mode_to_cifs_acl(), while the chown branch reserves\nsizeof(struct smb_ntsd) + 2 * sizeof(struct smb_sid) (plus\nsizeof(struct smb_acl) and the worst-case ACE space after\ncommit 0ee150794c75 (\"smb: client: fix heap overflow in DACL owner/group\nrewrite\")), the chmod branch only adds 2 * sizeof(struct smb_ace) or\n5 * sizeof(struct smb_ace) to secdesclen (or 1 * sizeof(struct smb_ace)\non posix).\n\nHowever, the chmod branch also invokes build_sec_desc() ->\ncopy_sec_desc(), which unconditionally writes the Owner SID at\npnntsd + sidsoffset and the Group SID at\npnntsd + sidsoffset + sizeof(struct smb_sid) (2 * 68 = 136 bytes total),\nand set_chmod_dacl() always writes a struct smb_acl header (8 bytes)\neven when the source descriptor has dacloffset == 0. When a security\ndescriptor has compact or overlapping Owner/Group SIDs (or\ndacloffset == 0), calling chmod() under-allocates pnntsd and writes past\nthe end of the slab buffer.\n\nReserve sizeof(struct smb_acl) + 2 * sizeof(struct smb_sid) (plus\nsizeof(struct smb_ntsd) on the posix path) in the chmod branch of\nid_mode_to_cifs_acl().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-99292\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix slab-out-of-bounds write in id_mode_to_cifs_acl()\n\nIn id_mode_to_cifs_acl(), while the chown branch reserves\nsizeof(struct smb_ntsd) + 2 * sizeof(struct smb_sid) (plus\nsizeof(struct smb_acl) and the worst-case ACE space after\ncommit 0ee150794c75 (\"smb: client: fix heap overflow in DACL owner/group\nrewrite\")), the chmod branch only adds 2 * sizeof(struct smb_ace) or\n5 * sizeof(struct smb_ace) to secdesclen (or 1 * sizeof(struct smb_ace)\non posix).\n\nHowever, the chmod branch also invokes build_sec_desc() ->\ncopy_sec_desc(), which unconditionally writes the Owner SID at\npnntsd + sidsoffset and the Group SID at\npnntsd + sidsoffset + sizeof(struct smb_sid) (2 * 68 = 136 bytes total),\nand set_chmod_dacl() always writes a struct smb_acl header (8 bytes)\neven when the source descriptor has dacloffset == 0. When a security\ndescriptor has compact or overlapping Owner/Group SIDs (or\ndacloffset == 0), calling chmod() under-allocates pnntsd and writes past\nthe end of the slab buffer.\n\nReserve sizeof(struct smb_acl) + 2 * sizeof(struct smb_sid) (plus\nsizeof(struct smb_ntsd) on the posix path) in the chmod branch of\nid_mode_to_cifs_acl().\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-99292\n2. 26.11.16 오후6:59\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-99292",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99292",
-      "source": "cvefeed",
-      "published": "2026-11-16T18:59:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-99290 - ksmbd: fix use-after-free after a failed durable reconnect",
-      "summary": "CVE ID :CVE-2026-99290\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: fix use-after-free after a failed durable reconnect\n\nksmbd_reopen_durable_fd() republishes a detached durable handle in the\nreconnecting session's file table and takes no reference for that entry.\nIf smb2_open() then fails, cleanup relies on the final ksmbd_fd_put() to\nremove the volatile id.\n\nTwo reconnects of the same handle can both take a lookup reference before\neither attaches it. If the one that reopens first then fails and drops\nits references first, the other request makes the final put through\nksmbd_put_durable_fd(). That frees the handle without removing the first\nsession's table entry, so tearing that session down writes to freed\nmemory.\n\n  BUG: KASAN: slab-use-after-free in __close_file_table_ids+0x14d/0x740 [ksmbd]\n  Call Trace:\n   __close_file_table_ids+0x14d/0x740 [ksmbd]\n   ksmbd_destroy_file_table+0x76/0x100 [ksmbd]\n   ksmbd_session_destroy+0xf8/0x480 [ksmbd]\n   ksmbd_dispose_sessions+0x13e/0x200 [ksmbd]\n   ksmbd_conn_sessions_cleanup+0x4c3/0x6d0 [ksmbd]\n  Freed by task 1030:\n   __ksmbd_close_fd+0x97d/0x1000 [ksmbd]\n   smb2_open+0x14eb/0xd9f0 [ksmbd]\n\nCommit 3515503322f4 (\"ksmbd: fix durable reconnect error path file\nlifetime\") handles a final put made by the reconnecting request, but not\none made by another holder.\n\nRemove the volatile id under the file-table lock on this error path,\nbefore the references are dropped, as ksmbd_close_fd() does on the\nrequest_open path just above. Removal then no longer depends on which\nholder makes the final put. The stale comment in the reconnect cleanup\nis updated to match. A successful reconnect is unchanged.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-99290\n  \nPublished : Nov. 16, 2026, 9:59 a.m. | 24 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: fix use-after-free after a failed durable reconnect\n\nksmbd_reopen_durable_fd() republishes a detached durable handle in the\nreconnecting session's file table and takes no reference for that entry.\nIf smb2_open() then fails, cleanup relies on the final ksmbd_fd_put() to\nremove the volatile id.\n\nTwo reconnects of the same handle can both take a lookup reference before\neither attaches it. If the one that reopens first then fails and drops\nits references first, the other request makes the final put through\nksmbd_put_durable_fd(). That frees the handle without removing the first\nsession's table entry, so tearing that session down writes to freed\nmemory.\n\n  BUG: KASAN: slab-use-after-free in __close_file_table_ids+0x14d/0x740 [ksmbd]\n  Call Trace:\n   __close_file_table_ids+0x14d/0x740 [ksmbd]\n   ksmbd_destroy_file_table+0x76/0x100 [ksmbd]\n   ksmbd_session_destroy+0xf8/0x480 [ksmbd]\n   ksmbd_dispose_sessions+0x13e/0x200 [ksmbd]\n   ksmbd_conn_sessions_cleanup+0x4c3/0x6d0 [ksmbd]\n  Freed by task 1030:\n   __ksmbd_close_fd+0x97d/0x1000 [ksmbd]\n   smb2_open+0x14eb/0xd9f0 [ksmbd]\n\nCommit 3515503322f4 (\"ksmbd: fix durable reconnect error path file\nlifetime\") handles a final put made by the reconnecting request, but not\none made by another holder.\n\nRemove the volatile id under the file-table lock on this error path,\nbefore the references are dropped, as ksmbd_close_fd() does on the\nrequest_open path just above. Removal then no longer depends on which\nholder makes the final put. The stale comment in the reconnect cleanup\nis updated to match. A successful reconnect is unchanged.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-99290\n2. 26.11.16 오후6:59\n3. In the Linux kernel, the following vulnerability h",
-      "cve_id": "CVE-2026-99290",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99290",
-      "source": "cvefeed",
-      "published": "2026-11-16T18:59:19+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-115690 - Apache WSS4J: Replay protection bypassed by concurrent copies of a message",
-      "summary": "CVE ID :CVE-2026-115690\n  \nPublished : Nov. 16, 2026, 9:54 a.m. | 29 minutes ago\n  \nDescription :Apache WSS4J remembers the UsernameToken Nonce, the Timestamp and signature of a signed message, and the ID of a SAML 2.0 \"OneTimeUse\" assertion, so that a captured message cannot be accepted twice. It checked whether a value had already been seen, validated the message, and only then remembered the value, as two separate steps. If several copies of the same message were processed at the same time, they could all pass the check before any of them was remembered, and all be accepted. An attacker who obtained a valid message before the recipient first processed it could send several copies at once, so that the same authenticated request was executed more than once. Where a UsernameToken is not bound to the message by a signature, the copies could carry different message bodies. The attacker needs to obtain the message while it is still in transit; a message captured after it has been accepted cannot be replayed. Affects deployments with a replay cache configured, as Apache CXF has by default. The value is now checked and remembered in a single atomic step. Custom ReplayCache implementations should override the new ReplayCache.addIfAbsent method with an operation that is atomic in their underlying store. Users are recommended to upgrade to versions 4.0.3 or 3.0.7 or 2.4.5, which fix this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-115690\n  \nPublished : Nov. 16, 2026, 9:54 a.m. | 29 minutes ago\n  \nDescription :Apache WSS4J remembers the UsernameToken Nonce, the Timestamp and signature of a signed message, and the ID of a SAML 2.0 \"OneTimeUse\" assertion, so that a captured message cannot be accepted twice. It checked whether a value had already been seen, validated the message, and only then remembered the value, as two separate steps. If several copies of the same message were processed at the same time, they could all pass the check before any of them was remembered, and all be accepted. An attacker who obtained a valid message before the recipient first processed it could send several copies at once, so that the same authenticated request was executed more than once. Where a UsernameToken is not bound to the message by a signature, the copies could carry different message bodies. The attacker needs to obtain the message while it is still in transit; a message captured after it has been accepted cannot be replayed. Affects deployments with a replay cache configured, as Apache CXF has by default. The value is now checked and remembered in a single atomic step. Custom ReplayCache implementations should override the new ReplayCache.addIfAbsent method with an operation that is atomic in their underlying store. Users are recommended to upgrade to versions 4.0.3 or 3.0.7 or 2.4.5, which fix this issue.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-115690\n2. 26.11.16 오후6:54\n3. Apache WSS4J remembers the UsernameToken Nonce, th",
-      "cve_id": "CVE-2026-115690",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115690",
-      "source": "cvefeed",
-      "published": "2026-11-16T18:54:21+09:00",
       "lang": "en"
     }
   ],
