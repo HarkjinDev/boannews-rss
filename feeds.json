@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20T04:32:40.936982+09:00",
+  "fetched_at": "2026-11-20T05:01:27.045676+09:00",
   "security_news": [
     {
       "title": "Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT",
@@ -5808,42 +5808,6 @@
       "source": "naver",
       "published": "2026-11-17T05:04:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "코인 안 털려도 안심 못 해⋯거래 정보 유출되면 사칭ㆍ피싱 우려",
-      "summary": "금융감독원은 19일 거래소·수탁업체 등 가상자산사업자의 정보보호 최고책임자(CISO)를 대상으로 해킹 사고 대응회의를 열 예정이다. 금융당국은 12일에도 가상자산사업자에 상시 감시·대응체계와 보안 점검 강화를 주문한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 금융감독원, 가상자산사업자 CISO 대상 해킹 대응 회의 개최\n2. 거래 정보 유출 시 사칭, 피싱 범죄 우려\n3. 보안 점검 강화 및 상시 감시/대응체계 구축 명령",
-      "link": "https://www.etoday.co.kr/news/view/2648599",
-      "source": "naver",
-      "published": "2026-11-17T05:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "北 IT 인력, 국내 위장취업 정황 확인…\"국정원·경찰 '공동 전담반' 필...",
-      "summary": "미 연방수사국(FBI)이 북한의 소행으로 지목한 지난달 29일 '바이낸스' 해킹에선 공격자가 채용 담당자를 사칭해 거래소 개발자에게 접근한 정황이 확인되기도 했다. 보고서는 그동안 국내 기업의 대면 근무 관행 때문에...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 北 IT 인력, 국내 위장취업 정황 확인…\"국정원·경찰 '공동 전담반' 필...\n2. 미 연방수사국(FBI)이 북한의 소행으로 지목한 지난달 29일 '바이낸스' 해킹에선 공격자\n3. 보고서는 그동안 국내 기업의 대면 근무 관행 때문에...",
-      "link": "https://n.news.naver.com/mnews/article/421/0009292496?sid=100",
-      "source": "naver",
-      "published": "2026-11-17T05:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Ransomware Attacks Increase Behind AI, But Payments Decline",
-      "summary": "Large language models and other AI systems allow a growing number of ransomware groups to create convincing phishing emails and identify sensitive data quickly.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Ransomware Attacks Increase Behind AI, But Payment",
-      "link": "https://www.darkreading.com/threat-intelligence/ransomware-attacks-increase-ai-payments-decline",
-      "source": "darkreading",
-      "published": "2026-11-17T04:56:05+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -5861,6 +5825,21 @@
       "source": "cvefeed",
       "published": "2026-11-20T03:18:57+09:00",
       "lang": "ca"
+    },
+    {
+      "title": "CVE-2026-77382 - falcon-rust: Discrete-Gaussian sampler runs at 2^-33 precision, far below Falcon's requirement (reference KAT vectors no longer pass)",
+      "summary": "CVE ID :CVE-2026-77382\n  \nPublished : Nov. 19, 2026, 5:19 p.m. | 1 hour, 6 minutes ago\n  \nDescription :falcon-rust is a Rust implementation of the Falcon post-quantum signature scheme. Prior to 0.2.0, the discrete-Gaussian sampler in src/samplerz.rs evaluates approx_exp, ber_exp, and sampler_z acceptance probabilities with FixedPoint64 values having only 32 fractional bits. The scaling in approx_exp quantizes its input and limits relative precision to about 2^-33, below Falcon's required bound, causing reference known-answer vectors to diverge and invalidating the proof assumption that secret-dependent signature and key distributions are negligibly close to the ideal discrete Gaussian. This is a cryptographic-soundness defect and no practical key-recovery attack has been demonstrated. This issue is fixed in version 0.2.0.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-77382\n  \nPublished : Nov. 19, 2026, 5:19 p.m. | 1 hour, 6 minutes ago\n  \nDescription :falcon-rust is a Rust implementation of the Falcon post-quantum signature scheme. Prior to 0.2.0, the discrete-Gaussian sampler in src/samplerz.rs evaluates approx_exp, ber_exp, and sampler_z acceptance probabilities with FixedPoint64 values having only 32 fractional bits. The scaling in approx_exp quantizes its input and limits relative precision to about 2^-33, below Falcon's required bound, causing reference known-answer vectors to diverge and invalidating the proof assumption that secret-dependent signature and key distributions are negligibly close to the ideal discrete Gaussian. This is a cryptographic-soundness defect and no practical key-recovery attack has been demonstrated. This issue is fixed in version 0.2.0.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-77382\n2. 26.11.20 오전2:19\n3. falcon-rust is a Rust implementation of the Falcon",
+      "cve_id": "CVE-2026-77382",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77382",
+      "source": "cvefeed",
+      "published": "2026-11-20T02:19:00+09:00",
+      "lang": "en"
     },
     {
       "title": "CVE-2026-99563 - smb: smbdirect: release failed pending sockets of a listener",
@@ -6790,21 +6769,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-124019",
       "source": "cvefeed",
       "published": "2026-11-17T05:09:10+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-129303 - Guard Core: Whitespace-collapse preprocessing permanently disables the CRLF-anchored http-splitting and command-injection detectors in the default detection mode",
-      "summary": "CVE ID :CVE-2026-129303\n  \nPublished : Nov. 16, 2026, 7:34 p.m. | 42 minutes ago\n  \nDescription :Guard Core is an API security core engine for the FastAPI-Guard, FlaskAPI Guard, and DjAPI Guard adapters. From 1.0.0 until 3.13.0, ContentPreprocessor.preprocess() in guard_core/detection_engine/preprocessor.py collapses all whitespace before built-in pattern matching in the default enhanced mode. This removes carriage returns and newlines required by the http_split and newline-anchored cmd_injection detectors in guard_core/handlers/suspatterns_handler.py, making those detectors unable to match. Framework-decoded CRLF can therefore pass through Guard Core unflagged while the downstream application still receives the raw newline-bearing value. Direct security impact requires a downstream stack or application that persists or re-emits the value into a CRLF-tolerant response or command context. This issue is fixed in version 3.13.0.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-129303\n  \nPublished : Nov. 16, 2026, 7:34 p.m. | 42 minutes ago\n  \nDescription :Guard Core is an API security core engine for the FastAPI-Guard, FlaskAPI Guard, and DjAPI Guard adapters. From 1.0.0 until 3.13.0, ContentPreprocessor.preprocess() in guard_core/detection_engine/preprocessor.py collapses all whitespace before built-in pattern matching in the default enhanced mode. This removes carriage returns and newlines required by the http_split and newline-anchored cmd_injection detectors in guard_core/handlers/suspatterns_handler.py, making those detectors unable to match. Framework-decoded CRLF can therefore pass through Guard Core unflagged while the downstream application still receives the raw newline-bearing value. Direct security impact requires a downstream stack or application that persists or re-emits the value into a CRLF-tolerant response or command context. This issue is fixed in version 3.13.0.\n  \nSeverity: 3.7 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-129303\n2. 26.11.17 오전4:34\n3. Guard Core is an API security core engine for the ",
-      "cve_id": "CVE-2026-129303",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129303",
-      "source": "cvefeed",
-      "published": "2026-11-17T04:34:47+09:00",
       "lang": "en"
     }
   ],
