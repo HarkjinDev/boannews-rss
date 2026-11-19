@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-20T02:31:18.149016+09:00",
+  "fetched_at": "2026-11-20T03:01:41.252343+09:00",
   "security_news": [
+    {
+      "title": "김정은은 왜 트럼프의 전화를 받지 않나…북미대화 불발 배경은",
+      "summary": "미 연방수사국(FBI)이 이달 초 세계 최대 가상자산 거래소 바이낸스에서 60억 달러(약 8조 원) 이상이 탈취된 사건의 배후로 북한 연계 해킹조직을 지목하자, 김여정 노동당 총무부장은 이를 \"엄중한 정치적 도발\"이라고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. FBI, 바이낸스 60억 달러 탈취에 북한 해킹 조직 지목\n2. 김여정, FBI 발표 \"엄중한 정치적 도발\" 반박\n3. 북한 연계 조직, 가상자산 탈취 배후 의혹",
+      "link": "https://n.news.naver.com/mnews/article/421/0009300343?sid=104",
+      "source": "naver",
+      "published": "2026-11-20T02:46:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "포항공대 해킹으로 개인정보 1만9천978건 유출…연구실 GPU 서버서 불법...",
       "summary": "포항공과대학교(POSTECH)가 외부 해킹 공격을 받아 개인정보 1만9천978건이 유출되는 사고가 발생했다. 특히 연구실 GPU 서버에서 불법 암호화폐 채굴 프로그램이 발견된 뒤 진행한 조사에서 대학 내부 시스템 해킹과...",
@@ -5868,18 +5880,6 @@
       "source": "naver",
       "published": "2026-11-17T03:12:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"공공사이트 로그인, 보안 프로그램 설치 없이\"…국정원, 개인용 공동인...",
-      "summary": "보안 측면에서는 이용자 PC에서 높은 권한으로 동작하는 설치형 프로그램의 배포가 줄어들면서, 해당 프로그램의 취약점을 악용한 해킹과 정보 유출 위험을 낮추는 효과가 기대된다. 클라우드 전환 이후에는 공공기관과...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국정원, 개인용 공동인증서 설치 없이 공공사이트 로그인 허용.\n2. 설치형 프로그램 취약점 악용 해킹 및 정보 유출 위험 감소.\n3. 클라우드 전환으로 공공기관 보안 강화 및 이용 편리성 증대.",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209557",
-      "source": "naver",
-      "published": "2026-11-17T02:44:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6856,36 +6856,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-119350",
       "source": "cvefeed",
       "published": "2026-11-17T04:17:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-129306 - libspdm: libspdm_x509_verify_cert_chain() does not verify CA nameConstraints / pathLenConstraint",
-      "summary": "CVE ID :CVE-2026-129306\n  \nPublished : Nov. 16, 2026, 5:59 p.m. | 22 minutes ago\n  \nDescription :libspdm is a sample implementation that follows the DMTF SPDM specifications. Prior to 3.8.3 and 4.0.0-rc2, libspdm_x509_verify_cert_chain() in os_stub/cryptlib_openssl/pk/x509.c and os_stub/cryptlib_mbedtls/pk/x509.c validates certificate signatures one link at a time instead of validating the complete X.509 path. In deployments using a pinned root with a constrained multi-tier PKI, an attacker holding a valid issuer credential below a constrained CA can present a subordinate certificate that exceeds pathLenConstraint or nameConstraints and may be accepted for SPDM identity validation. Exploitation requires the application to use libspdm's backend validation without an additional certificate-chain validation mechanism, the pinned root cannot be substituted, and the deployment's measurement policy must allow identity impersonation alone to satisfy its acceptance requirements. The mbedTLS backend remains unable to enforce nameConstraints because upstream mbedTLS does not implement that check. The full-chain validation changes are released in versions 3.8.3 and 4.0.0-rc2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-129306\n  \nPublished : Nov. 16, 2026, 5:59 p.m. | 22 minutes ago\n  \nDescription :libspdm is a sample implementation that follows the DMTF SPDM specifications. Prior to 3.8.3 and 4.0.0-rc2, libspdm_x509_verify_cert_chain() in os_stub/cryptlib_openssl/pk/x509.c and os_stub/cryptlib_mbedtls/pk/x509.c validates certificate signatures one link at a time instead of validating the complete X.509 path. In deployments using a pinned root with a constrained multi-tier PKI, an attacker holding a valid issuer credential below a constrained CA can present a subordinate certificate that exceeds pathLenConstraint or nameConstraints and may be accepted for SPDM identity validation. Exploitation requires the application to use libspdm's backend validation without an additional certificate-chain validation mechanism, the pinned root cannot be substituted, and the deployment's measurement policy must allow identity impersonation alone to satisfy its acceptance requirements. The mbedTLS backend remains unable to enforce nameConstraints because upstream mbedTLS does not implement that check. The full-chain validation changes are released in versions 3.8.3 and 4.0.0-rc2.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-129306\n2. 26.11.17 오전2:59\n3. libspdm is a sample implementation that follows th",
-      "cve_id": "CVE-2026-129306",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129306",
-      "source": "cvefeed",
-      "published": "2026-11-17T02:59:44+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-129301 - mail-parser: One hostile attachment aborts `write_attachments()` and silently drops the rest of the batch",
-      "summary": "CVE ID :CVE-2026-129301\n  \nPublished : Nov. 16, 2026, 5:47 p.m. | 34 minutes ago\n  \nDescription :mail-parser is a tool that parses emails by enhancing the Python standard library and extracting message details into a comprehensive object. From 4.6.0 until 4.6.3, write_attachments() calls _safe_attachment_filename() and write_sample() without isolating failures for individual attacker-controlled MIME parts. An RFC 2231 filename containing a NUL, a basename exceeding NAME_MAX, or an undecodable base64 payload can raise ValueError, OSError, or binascii.Error and abort the entire save loop. Later attachments remain unwritten; when a caller catches only MailParserError, the failure is not surfaced through the expected library-exception path. If a downstream scanner or sandbox reads only the extraction directory, a payload after the crafted part can be missed even though it remains in the delivered message, and the aborted batch also causes availability loss. This issue is fixed in version 4.6.3.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-129301\n  \nPublished : Nov. 16, 2026, 5:47 p.m. | 34 minutes ago\n  \nDescription :mail-parser is a tool that parses emails by enhancing the Python standard library and extracting message details into a comprehensive object. From 4.6.0 until 4.6.3, write_attachments() calls _safe_attachment_filename() and write_sample() without isolating failures for individual attacker-controlled MIME parts. An RFC 2231 filename containing a NUL, a basename exceeding NAME_MAX, or an undecodable base64 payload can raise ValueError, OSError, or binascii.Error and abort the entire save loop. Later attachments remain unwritten; when a caller catches only MailParserError, the failure is not surfaced through the expected library-exception path. If a downstream scanner or sandbox reads only the extraction directory, a payload after the crafted part can be missed even though it remains in the delivered message, and the aborted batch also causes availability loss. This issue is fixed in version 4.6.3.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-129301\n2. 26.11.17 오전2:47\n3. mail-parser is a tool that parses emails by enhanc",
-      "cve_id": "CVE-2026-129301",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129301",
-      "source": "cvefeed",
-      "published": "2026-11-17T02:47:32+09:00",
       "lang": "en"
     }
   ],
