@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20T03:31:32.537372+09:00",
+  "fetched_at": "2026-11-20T04:01:27.698028+09:00",
   "security_news": [
     {
       "title": "EU 집행위도 지난달 AI 이용한 사이버공격 받아…“개인정보 유출 확인...",
@@ -5844,45 +5844,24 @@
       "source": "naver",
       "published": "2026-11-17T04:20:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[기고]향후 30년 사이버보안의 방향",
-      "summary": "초기 단순 네트워크 공격에 머문 해킹은 기업의 생산활동을 마비시키고 사회와 국가기반시설을 위협하는 수준에 이르렀다. 특히 2003년 대한민국 인터넷망이 디도스(DDoS) 공격으로 마비된 '1·25 인터넷대란'은...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 2003년 1·25 인터넷대란, DDoS 공격으로 국내 인터넷망 마비\n2. 단순 해킹 넘어 생산활동 마비, 사회·국가기반시설 위협\n3. 사이버 위협 수준 고도화, 30년 간 보안 패러다임 변화",
-      "link": "https://n.news.naver.com/mnews/article/008/0005442003?sid=110",
-      "source": "naver",
-      "published": "2026-11-17T04:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "북 해킹조직, 사이버 공격에 SI 활용 ‘일상적’ … 공격 규모 더 커질 ...",
-      "summary": "북한 해킹조직이 인공지능(AI)으로 불리는 초지능(SI)를 활용해 소수 인력으로도 대규모 사이버 공격을... INSS은 16일 발표한 'AI 도구 활용 국가배후 해킹조직(APT) 활동의 안보적 영향 분석' 보고서에서 북한 해킹조직의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해킹조직, AI 활용해 소수 인력으로 대규모 사이버 공격\n2. INSS 보고서, AI 도구 활용 APT 활동 안보 영향 분석\n3. AI 활용으로 공격 규모 확대 및 탐지 회피 가능성 우려",
-      "link": "https://www.voakorea.com/a/8224267.html",
-      "source": "naver",
-      "published": "2026-11-17T03:43:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "카바 대출앱 해킹으로 5390만 KAVA 유출…7일간 종료안 표결 추진",
-      "summary": "카바 체인(Kava Chain)의 대출 앱 HARD Lend에서 11월 14일 해킹으로 카바(KAVA) 5390만개가 빠져나갔다. 크립토슬레이트(CryptoSlate)는 비트쿼리를 인용해 해킹 전 시세 기준 피해액을 약 370만달러(약 49억4000만원)로...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 카바 대출앱 HARD Lend 해킹, KAVA 5390만 개 유출\n2. 370만 달러 상당 KAVA, 11월 14일 새벽 공격으로 빠져나가\n3. 7일간 종료안 표결 추진, 피해 복구 및 재발 방지 모색",
-      "link": "https://www.tokenpost.kr/news/breaking/439302",
-      "source": "naver",
-      "published": "2026-11-17T03:38:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-127060 - @fastify/http-proxy vulnerable to prefix escape via semicolon path-parameter dot-segments",
+      "summary": "CVE ID :CVE-2026-127060\n  \nPublished : Nov. 19, 2026, 6:18 p.m. | 13 minutes ago\n  \nDescription :@fastify/http-proxy is a Fastify plugin that proxies HTTP and WebSocket traffic to an upstream server. In versions before 11.6.10, it rejects destinations containing parent-directory path segments by an exact string match, so a segment that carries a semicolon path parameter, such as a dot-dot segment followed by a semicolon and an optional parameter, is not equal to the plain dot-dot form and passes the check, and the WHATWG URL parser keeps it as an ordinary segment so the rewrite-prefix containment check also passes. Servlet containers such as Apache Tomcat and Jetty strip semicolon path parameters from each segment before resolving dot-segments, so a request routed through the configured prefix is rewritten and reaches the upstream where it resolves above the intended subtree, escaping the path the proxy is meant to expose and, on some containers, crossing application contexts. Both the HTTP and WebSocket proxy paths are affected. The issue is fixed in @fastify/http-proxy 11.6.10, and users should upgrade to 11.6.10 or later.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-127060\n  \nPublished : Nov. 19, 2026, 6:18 p.m. | 13 minutes ago\n  \nDescription :@fastify/http-proxy is a Fastify plugin that proxies HTTP and WebSocket traffic to an upstream server. In versions before 11.6.10, it rejects destinations containing parent-directory path segments by an exact string match, so a segment that carries a semicolon path parameter, such as a dot-dot segment followed by a semicolon and an optional parameter, is not equal to the plain dot-dot form and passes the check, and the WHATWG URL parser keeps it as an ordinary segment so the rewrite-prefix containment check also passes. Servlet containers such as Apache Tomcat and Jetty strip semicolon path parameters from each segment before resolving dot-segments, so a request routed through the configured prefix is rewritten and reaches the upstream where it resolves above the intended subtree, escaping the path the proxy is meant to expose and, on some containers, crossing application contexts. Both the HTTP and WebSocket proxy paths are affected. The issue is fixed in @fastify/http-proxy 11.6.10, and users should upgrade to 11.6.10 or later.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-127060\n2. 26.11.20 오전3:18\n3. @fastify/http-proxy is a Fastify plugin that proxi",
+      "cve_id": "CVE-2026-127060",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-127060",
+      "source": "cvefeed",
+      "published": "2026-11-20T03:18:57+09:00",
+      "lang": "ca"
+    },
     {
       "title": "CVE-2026-99563 - smb: smbdirect: release failed pending sockets of a listener",
       "summary": "CVE ID :CVE-2026-99563\n  \nPublished : Nov. 19, 2026, 3:18 p.m. | 18 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: smbdirect: release failed pending sockets of a listener\n\nA child of a listener only left the listen.pending or listen.ready\nlist via smbdirect_socket_accept() or when the listener was\ndestroyed. So every connection that failed before it was accepted\n(negotiate timeout, peer disconnect, invalid negotiate request, ...)\nstayed on the list and counted against the backlog until the listener\nwas destroyed. After about backlog (10 for ksmbd) such connections\nsmbdirect_listen_connect_request() rejected every new connection with\n-EBUSY, so an unauthenticated peer was able to permanently stop\nksmbd from accepting SMB-Direct connections.\n\nNow a failed child moves itself to a new listen.orphaned list at the\nend of smbdirect_socket_cleanup_work(), after the disconnect was\nstarted, and queues listen.purge_orphaned_work, which releases it\nwith smbdirect_socket_release(), without holding the listener's\nrdma_lock_handler() lock, in the same way smbdirect_socket_destroy()\ndoes for the remaining children. Orphaned sockets still count against\nthe backlog until they are released.\n\nsc->accept.listener is now only changed under listener->listen.lock\nand whoever clears it is responsible for releasing the socket:\nsmbdirect_socket_accept(), purge_orphaned_work or the destroy of the\nlistener.\n\nIn order to make that work:\n\n- a struct smbdirect_socket that is a listener is now freed via\n  kfree_rcu(), so that a child can dereference sc->accept.listener\n  under rcu_read_lock(), even if the listener is released concurrently.\n\n- smbdirect_listen_connect_request() adds nsc to the listen.pending\n  list and sets nsc->accept.listener before it calls\n  smbdirect_accept_connect_request(), and always returns 0 so the\n  rdma_cm core keeps the connection id and nsc owns it. On a non-zero\n  return it schedules nsc's teardown with\n  smbdirect_socket_schedule_cleanup(), which orphans it off the\n  listener so that purge_orphaned_work releases it; nsc destroys its\n  own connection id with rdma_destroy_id() in that teardown. The\n  teardown has to be deferred because the rdma_cm core holds nsc's\n  id_priv->handler_mutex across the handler, so nsc->rdma.cm_id must\n  not be destroyed synchronously from here. That same handler_mutex\n  (and the listener's) also guarantees nsc can't go away under us,\n  so setting the listener before the call is safe and lets a failure\n  orphan nsc.\n\n- smbdirect_accept_negotiate_recv_work() no longer moves a socket to\n  the ready list if it already failed or no longer belongs to the\n  listener. Every accepting socket has a listener, so if\n  sc->accept.listener is already cleared, it no longer sends a\n  negotiate response, as the socket is about to be released.\n\n- smbdirect_socket_destroy() of the listener disables\n  purge_orphaned_work and also releases the orphaned sockets.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
