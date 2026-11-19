@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-19T22:33:36.821527+09:00",
+  "fetched_at": "2026-11-19T23:01:09.584910+09:00",
   "security_news": [
     {
       "title": "예매망 뚫린 레고랜드, 日 15만 명 유출·韓 추가 확인 중",
@@ -5916,30 +5916,6 @@
       "source": "naver",
       "published": "2026-11-16T23:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Google warns that fully-automated AI attacks are coming soon",
-      "summary": "Threat actors are now relying on agentic workflows powered by AI-based offensive frameworks to automate vulnerability discovery and exploitation, accelerating attacks to machine speed. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Google warns that fully-automated AI attacks are c",
-      "link": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/",
-      "source": "bleepingcomputer",
-      "published": "2026-11-16T23:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "법무법인 원, 기술법무 전담조직 TIF팀 출범",
-      "summary": "개인정보와 AI 규제, 지식재산권, 정보보안 등 여러 법률 쟁점이 함께 발생하는 사안에 대해 분야별 전문... 팀 산하에는 '기술유출·정보보호 AI 센터'를 설치해 기술유출과 영업비밀 침해, 개인정보 보호, 정보보안 및...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 법무법인 원, 기술법무 전담조직 TIF팀 출범 개인정보와 AI 규제, 지식재산권, 정보보안\n2. 팀 산하에는 '기술유출·정보보호 AI 센터'를 설치해 기술유출과 영업비밀 침해, 개인정보 ",
-      "link": "https://www.lawissue.co.kr/view.php?ud=202611162251232463f4ab64559d_12",
-      "source": "naver",
-      "published": "2026-11-16T22:52:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6842,21 +6818,6 @@
       "source": "krcert_notice",
       "published": "2026-11-17T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-129919 - Kunai Mount Namespace Cache TOCTOU Allows Incorrect Event Resolution Against Host Files",
-      "summary": "CVE ID :CVE-2026-129919\n  \nPublished : Nov. 16, 2026, 1:49 p.m. | 34 minutes ago\n  \nDescription :Kunai, a security monitoring tool, contains a time-of-check to time-of-use (TOCTOU) race condition in its mount namespace (mnt ns) caching logic. When resolving a security event that references a specific process PID and an expected mount namespace, the Switcher::new function read /proc//ns/mnt to determine the target namespace and cached the result under the expected namespace key without verifying that the resolved namespace actually matched the expected one.\n\nAn attacker with local access could exploit this by either (1) arranging for the referenced PID to be reused by a process in a different namespace (e.g., the host namespace) before Kunai resolves it, or (2) calling unshare or setns on the target process after the event is generated but before the namespace is resolved. In either case, the wrong namespace (potentially the host's own namespace) would be cached under the container's namespace key.\n\nThe security impact is that subsequent container security events would be resolved against host filesystem paths rather than container paths. This undermines the integrity of the security monitoring data: container activity could be misattributed to the host, host activity could be misattributed to a container, and file-path-based detections or alerts would reference incorrect paths. An attacker could potentially use this to obscure malicious activity within a container by making it appear as benign host activity, or to generate misleading security alerts.\n\nThe vulnerability requires local access to the system and a specific timing window between event generation and namespace resolution. No remote attack vector or user interaction is required.\n  \nSeverity: 2.0 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-129919\n  \nPublished : Nov. 16, 2026, 1:49 p.m. | 34 minutes ago\n  \nDescription :Kunai, a security monitoring tool, contains a time-of-check to time-of-use (TOCTOU) race condition in its mount namespace (mnt ns) caching logic. When resolving a security event that references a specific process PID and an expected mount namespace, the Switcher::new function read /proc//ns/mnt to determine the target namespace and cached the result under the expected namespace key without verifying that the resolved namespace actually matched the expected one.\n\nAn attacker with local access could exploit this by either (1) arranging for the referenced PID to be reused by a process in a different namespace (e.g., the host namespace) before Kunai resolves it, or (2) calling unshare or setns on the target process after the event is generated but before the namespace is resolved. In either case, the wrong namespace (potentially the host's own namespace) would be cached under the container's namespace key.\n\nThe security impact is that subsequent container security events would be resolved against host filesystem paths rather than container paths. This undermines the integrity of the security monitoring data: container activity could be misattributed to the host, host activity could be misattributed to a container, and file-path-based detections or alerts would reference incorrect paths. An attacker could potentially use this to obscure malicious activity within a container by making it appear as benign host activity, or to generate misleading security alerts.\n\nThe vulnerability requires local access to the system and a specific timing window between event generation and namespace resolution. No remote attack vector or user interaction is required.\n  \nSeverity: 2.0 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-129919\n2. 26.11.16 오후10:49\n3. Kunai, a security monitoring tool, contains a time",
-      "cve_id": "CVE-2026-129919",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129919",
-      "source": "cvefeed",
-      "published": "2026-11-16T22:49:48+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
