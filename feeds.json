@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-21T03:31:30.476119+09:00",
+  "fetched_at": "2026-11-21T04:01:18.674695+09:00",
   "security_news": [
     {
       "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
@@ -5170,6 +5170,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-95824",
       "source": "cvefeed",
       "published": "2026-11-21T02:18:28+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-122244 - Budibase: Cross-privilege Stored XSS in the Budibase Builder via broken HTML-escaping in `jsonFormatter.format()` rendered through `{@html}` in the CSP-less Builder origin",
+      "summary": "CVE ID :CVE-2026-122244\n  \nPublished : Nov. 20, 2026, 4:50 p.m. | 24 minutes ago\n  \nDescription :Budibase is an open-source low-code platform. Prior to 3.50.0, a BASIC application user, or an unauthenticated visitor to a public write form, can store markup in a shared external datasource that a builder or administrator later evaluates in any Handlebars binding Preview that surfaces the value, including the Data-section Formula column editor or any binding drawer. jsonFormatter.format() in packages/frontend-core/src/utils/jsonFormatter.ts leaves raw strings and object keys unescaped, while packages/builder/src/components/common/bindings/EvaluationSidePanel.svelte inserts the formatted result as raw HTML. The Handlebars SafeString path preserves the attacker-controlled value, and the Builder origin lacks a Content-Security-Policy that would block the resulting script. This permits stored script execution in the higher-privileged builder or administrator session rather than the writer's own role, allowing privileged Builder API actions and workspace data access. This issue is fixed in versions 3.50.0 and 4.0.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-122244\n  \nPublished : Nov. 20, 2026, 4:50 p.m. | 24 minutes ago\n  \nDescription :Budibase is an open-source low-code platform. Prior to 3.50.0, a BASIC application user, or an unauthenticated visitor to a public write form, can store markup in a shared external datasource that a builder or administrator later evaluates in any Handlebars binding Preview that surfaces the value, including the Data-section Formula column editor or any binding drawer. jsonFormatter.format() in packages/frontend-core/src/utils/jsonFormatter.ts leaves raw strings and object keys unescaped, while packages/builder/src/components/common/bindings/EvaluationSidePanel.svelte inserts the formatted result as raw HTML. The Handlebars SafeString path preserves the attacker-controlled value, and the Builder origin lacks a Content-Security-Policy that would block the resulting script. This permits stored script execution in the higher-privileged builder or administrator session rather than the writer's own role, allowing privileged Builder API actions and workspace data access. This issue is fixed in versions 3.50.0 and 4.0.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-122244\n2. 26.11.21 오전1:50\n3. Budibase is an open-source low-code platform. Prio",
+      "cve_id": "CVE-2026-122244",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-122244",
+      "source": "cvefeed",
+      "published": "2026-11-21T01:50:06+09:00",
       "lang": "en"
     },
     {
