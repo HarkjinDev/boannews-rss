@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-21T04:31:39.467268+09:00",
+  "fetched_at": "2026-11-21T05:01:23.029496+09:00",
   "security_news": [
     {
       "title": "스카이 USDS, 20억달러 이상 유출에도 1달러 유지…불법자금 연계 반박",
@@ -5112,45 +5112,24 @@
       "source": "naver",
       "published": "2026-11-18T05:02:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[단독] 김정은 “돈 없다“ 한마디에…북핵 돈줄 된 실리콘밸리",
-      "summary": "북한 해커 조직이 2022년 3월 동남아에서 인기인 가상화폐 보상형 게임 ‘액시 인피니티’의 거래망을 해킹해 6억2500만 달러를 탈취한 사건을 가리킨 것이다. 양측은 공동 태스크포스(TF)를 꾸려 자금줄 차단에 나섰다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [단독] 김정은 “돈 없다“ 한마디에…북핵 돈줄 된 실리콘밸리 북한 해커 조직이 2022년\n2. 양측은 공동 태스크포스(TF)를 꾸려 자금줄 차단에 나섰다....",
-      "link": "https://n.news.naver.com/mnews/article/025/0003566015?sid=100",
-      "source": "naver",
-      "published": "2026-11-18T05:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[출근길포인트]AI 데이터센터 금융 양극화…우량 리츠 '웃고' 개발 PF '울...",
-      "summary": "◇'AI 해킹' 공습에 보안株 들썩… \"방패도 AI로 갈아탄다\" 생성형 AI가 제작. 중국 연계 해킹 조직이 인공지능(AI) 에이전트 도구를 활용해 국내 외교·정책 기관 침투에 성공하면서, 사이버보안 업계와 증시의 시선이 'AI...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [출근길포인트]AI 데이터센터 금융 양극화…우량 리츠 '웃고' 개발 PF '울...\n2. ◇'AI 해킹' 공습에 보안株 들썩… \"방패도 AI로 갈아탄다\" 생성형 AI가 제작.\n3. 중국 연계 해킹 조직이 인공지능(AI) 에이전트 도구를 활용해 국내 외교·정책 기관 침투에",
-      "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=326317",
-      "source": "naver",
-      "published": "2026-11-18T05:00:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "“로그인 없이 서버 공격 가능”…자바 치명적 취약점 경고, 오라클 652...",
-      "summary": "출처=박세준 티오리 대표 페이스북 박세준 티오리 대표 “최신 버전에서도 원격 공격 확인” 국내 사이버보안업체 티오리의 박세준 대표도 비슷한 취약점을 독자적으로 발견했다고 밝혔다. 박 대표는 자신의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. “로그인 없이 서버 공격 가능”…자바 치명적 취약점 경고, 오라클 652...\n2. 출처=박세준 티오리 대표 페이스북 박세준 티오리 대표 “최신 버전에서도 원격 공격 확인” \n3. 박 대표는 자신의...",
-      "link": "https://n.news.naver.com/mnews/article/018/0006411447?sid=105",
-      "source": "naver",
-      "published": "2026-11-18T04:55:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-94566 - NukeVie: Login Lockout Bypass via Untrusted Forwarded-IP Headers",
+      "summary": "CVE ID :CVE-2026-94566\n  \nPublished : Nov. 20, 2026, 7:18 p.m. | 41 minutes ago\n  \nDescription :NukeViet CMS is a multi Content Management System. In 4.6.00, an unauthenticated attacker can rotate X-Forwarded-For because vendor/vinades/nukeviet/Core/Ips.php accepts forwarded client-IP headers without first confirming that REMOTE_ADDR is a trusted proxy. The resulting NV_CLIENT_IP keys the administrator login blocker in includes/core/admin_login.php; changing only the header value bypasses that lockout and permits effectively unlimited password guesses. The same spoofable address is also consumed by the user login blocker in modules/users/funcs/login.php, IP restrictions, bans, flood controls, and security logs, but those additional code-level effects were not dynamically demonstrated. This issue is fixed in version 4.6.01.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-94566\n  \nPublished : Nov. 20, 2026, 7:18 p.m. | 41 minutes ago\n  \nDescription :NukeViet CMS is a multi Content Management System. In 4.6.00, an unauthenticated attacker can rotate X-Forwarded-For because vendor/vinades/nukeviet/Core/Ips.php accepts forwarded client-IP headers without first confirming that REMOTE_ADDR is a trusted proxy. The resulting NV_CLIENT_IP keys the administrator login blocker in includes/core/admin_login.php; changing only the header value bypasses that lockout and permits effectively unlimited password guesses. The same spoofable address is also consumed by the user login blocker in modules/users/funcs/login.php, IP restrictions, bans, flood controls, and security logs, but those additional code-level effects were not dynamically demonstrated. This issue is fixed in version 4.6.01.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-94566\n2. 26.11.21 오전4:18\n3. NukeViet CMS is a multi Content Management System.",
+      "cve_id": "CVE-2026-94566",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-94566",
+      "source": "cvefeed",
+      "published": "2026-11-21T04:18:56+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-104186 - LinkAce: IDOR on Authenticated Atom Feed Endpoints Exposes Private List and Tag Names Without Authorization Check",
       "summary": "CVE ID :CVE-2026-104186\n  \nPublished : Nov. 20, 2026, 5:40 p.m. | 19 minutes ago\n  \nDescription :LinkAce is a self-hosted archive to collect website links. Prior to 2.6.0, the authenticated GET /lists/{list}/feed and GET /tags/{tag}/feed handlers in app/Http/Controllers/App/FeedController.php use integer route model binding without an object-level authorization or visibility check. Unlike the web list controller, which invokes LinkListPolicy::view(), the feed controller lets a normal authenticated user enumerate another user's private list or tag and receive its name and feed metadata, along with public or internal bookmark entries associated with that taxonomy. The existing per-link visibility filter still excludes PRIVATE link records, so the disclosure is limited to the private taxonomy and its non-private member links. This issue is fixed in version 2.6.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
