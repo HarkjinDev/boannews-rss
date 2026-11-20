@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-21T02:01:39.455192+09:00",
+  "fetched_at": "2026-11-21T02:31:16.470519+09:00",
   "security_news": [
+    {
+      "title": "USDS 20억달러 넘게 USDC 교환…PSM 20일 잔액 11억달러 웃돌아",
+      "summary": "인카 디지털이 북한 연계로 분류한 지갑 관련 거래는 1억190만달러(약 1356억원), 2025년 바이비트 해킹 관련 거래는 9150만달러(약 1218억원)였다. 인카 디지털의 원문 보고서는 공개되지 않았다. 스카이...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. USDS, 20억달러 이상 USDC 교환\n2. 북한 연계 지갑 1.019억달러 거래\n3. 바이비트 해킹 9,150만달러 거래",
+      "link": "https://www.tokenpost.kr/news/cryptocurrency/441716",
+      "source": "naver",
+      "published": "2026-11-21T02:26:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "11월20일 모닝뉴스 헤드라인",
       "summary": "지난 월요일 JP모건체이스와 비자카드, 그리고 매스터카드 등에 서비스를 제공하는 외부 업체가 해킹을 당해 일부 고객정보가 유출된 것으로 확인됐다. 누구정보가 유출됐는지, 또한 유출됐으면 어떤 조치를...",
@@ -5136,45 +5148,24 @@
       "source": "naver",
       "published": "2026-11-18T02:36:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "비트코인, 반등에도 6만달러 풋옵션 8억달러 넘게 쌓여…옵션 시장은 하...",
-      "summary": "앤트로픽이 1조4,000억달러 기업가치를 목표로 하고 11월 18일 공모가가 정해질 것으로 보도됐다는 내용이다.10월 말 바이낸스 해킹도 부담 요인으로 거론됐다. 이 사건으로 63억달러가 탈취된 것으로 알려졌고 북한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 앤트로픽, 1조4천억 달러 기업가치 목표\n2. 10월 말 바이낸스 63억 달러 해킹 부담\n3. 11월 18일 공모가 확정 예정",
-      "link": "https://www.wikitree.co.kr/articles/1175446",
-      "source": "naver",
-      "published": "2026-11-18T02:10:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "아이폰 마이크 ‘허용 안 함’ 눌러도 녹음됐다…오디오 서비스 결함 8...",
-      "summary": "미국 사이버보안·인프라보안국(CISA)은 이 결함에 10점 만점에 5.0의 CVSS 점수를 매겼고, 지난주 말 갱신된 악용 확인 취약점(KEV) 목록에는 올라 있지 않다. 원격으로 악용할 수는 없고 악성 앱이 먼저 설치돼...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 아이폰 마이크, ‘허용 안 함’에도 녹음 가능했던 결함 발견\n2. 악성 앱 설치 시 원격 악용 가능, CVSS 점수 5.0\n3. CISA KEV 목록 미등재, 사용자 영향 경미",
-      "link": "https://www.wikitree.co.kr/articles/1175445",
-      "source": "naver",
-      "published": "2026-11-18T02:10:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "구글 “북한 해커, 기업 AI 코딩 도구 설정 조작해 악성코드 유포”",
-      "summary": "북한과 연계된 것으로 의심되는 해킹 조직이 북미와 유럽 가상자산 기업들의 내부 시스템에 침투한 뒤... 전달 통로로 삼았다고 분석하면서 북한 해킹 조직의 기술적 진화에 우려를 나타냈습니다. VOA 뉴스 조상진입니다.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 북한 해커, 기업 AI 코딩 도구 설정 조작\n2. 가상자산 기업 시스템 침투, 악성코드 유포\n3. 북한 해킹 조직 기술 진화 우려",
-      "link": "https://www.voakorea.com/a/google-dprk-ai-coding-tool-backdoor/8224657.html",
-      "source": "naver",
-      "published": "2026-11-18T02:08:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-133850 - flowintel: Stale Authorization Allows Notification Disclosure After Case Access Revocation",
+      "summary": "CVE ID :CVE-2026-133850\n  \nPublished : 20 de Novembro de 2026 às 15:17 | 29 minutos ago\n  \nDescription :flowintel contains an authorization flaw in its recurring reminder notification subsystem. When a user is subscribed to recurring notifications for a case, the system does not re-verify the recipient's current access rights to that case before generating or displaying the notification.\n\nAs a result, a user who previously had access to a private case and later had that access revoked can still:\n- Receive recurring reminder notifications containing case-related content.\n- View stored reminder notifications in their notification list, including notification counts, even though they no longer have permission to view the underlying case.\n\nThe vulnerability affects both the notification creation path (recurring reminder generation) and the notification display path (listing and counting stored reminders). The issue arises because the authorization check performed at subscription time is not re-applied at delivery or retrieval time.\n\nSecurity impact is limited to information disclosure: an unauthorized user may observe case titles, reminder messages, and associated metadata that they no longer have permission to access. No integrity or availability impact is indicated by the patch.\n\nAffected versions: flowintel prior to 4.1.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-133850\n  \nPublished : 20 de Novembro de 2026 às 15:17 | 29 minutos ago\n  \nDescription :flowintel contains an authorization flaw in its recurring reminder notification subsystem. When a user is subscribed to recurring notifications for a case, the system does not re-verify the recipient's current access rights to that case before generating or displaying the notification.\n\nAs a result, a user who previously had access to a private case and later had that access revoked can still:\n- Receive recurring reminder notifications containing case-related content.\n- View stored reminder notifications in their notification list, including notification counts, even though they no longer have permission to view the underlying case.\n\nThe vulnerability affects both the notification creation path (recurring reminder generation) and the notification display path (listing and counting stored reminders). The issue arises because the authorization check performed at subscription time is not re-applied at delivery or retrieval time.\n\nSecurity impact is limited to information disclosure: an unauthorized user may observe case titles, reminder messages, and associated metadata that they no longer have permission to access. No integrity or availability impact is indicated by the patch.\n\nAffected versions: flowintel prior to 4.1.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-133850\n2. 26.11.21 오전12:17\n3. flowintel contains an authorization flaw in its re",
+      "cve_id": "CVE-2026-133850",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-133850",
+      "source": "cvefeed",
+      "published": "2026-11-21T00:17:53+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-133853 - FlowIntel Chatbot Shared MCP Session Allows Cross-User API Identity Confusion",
       "summary": "CVE ID :CVE-2026-133853\n  \nPublished : Nov. 20, 2026, 3:17 p.m. | 41 minutes ago\n  \nDescription :FlowIntel's chatbot component used a single shared MCP (Model Context Protocol) session and process-wide environment variable to pass per-user API credentials to a child process. Because the session and the ambient FLOWINTEL_API_KEY environment variable were shared across all concurrent requests, a user's authenticated identity could be applied to another user's tool invocation, or a stale/ambient credential could be inherited by a new request.\n\nPreconditions:\n- An authenticated user with access to the chatbot interface.\n- Concurrent or overlapping chatbot tool invocations from different users, or a request made after another user's credentials were written to the process environment.\n\nImpact:\n- A lower-privilege user could read data belonging to a higher-privilege user (e.g., private investigation cases).\n- A user whose session was invalidated (deleted, password changed, key revoked) could still operate under a previously cached ambient credential.\n- The parent process environment was mutated with user-specific secrets, creating a persistent credential leak surface.\n\nAffected versions: FlowIntel prior to 4.1.0.\n  \nSeverity: 6.0 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6329,21 +6320,6 @@
       "source": "cvefeed",
       "published": "2026-11-18T02:44:48+09:00",
       "lang": "en"
-    },
-    {
-      "title": "CVE-2026-130803 - CVE-2026-130803",
-      "summary": "CVE ID :CVE-2026-130803\n  \nPublished : 17 novembre 2026 17:18 | 1 heure, 1 minute ago\n  \nDescription :The firmware and flash memory store critical cryptographic secrets, such as global AES keys and network master keys, in unencrypted formats. Additionally, active session tokens (Store Pairing Tokens) are written to the flash in plaintext, exposing live network credentials.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-130803\n  \nPublished : 17 novembre 2026 17:18 | 1 heure, 1 minute ago\n  \nDescription :The firmware and flash memory store critical cryptographic secrets, such as global AES keys and network master keys, in unencrypted formats. Additionally, active session tokens (Store Pairing Tokens) are written to the flash in plaintext, exposing live network credentials.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-130803\n2. 26.11.18 오전2:18\n3. The firmware and flash memory store critical crypt",
-      "cve_id": "CVE-2026-130803",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-130803",
-      "source": "cvefeed",
-      "published": "2026-11-18T02:18:05+09:00",
-      "lang": "vi"
     }
   ],
   "reputation": [
