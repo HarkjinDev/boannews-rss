@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20T21:33:43.943313+09:00",
+  "fetched_at": "2026-11-20T22:01:25.457738+09:00",
   "security_news": [
     {
       "title": "급변하는 전남광주 미래차 산업 지도...장기적 인재 양성 플랫폼 '시급...",
@@ -5199,6 +5199,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-131170 - Insufficient validation of payment status for Stripe",
+      "summary": "CVE ID :CVE-2026-131170\n  \nPublished : Nov. 20, 2026, 11:29 a.m. | 55 minutes ago\n  \nDescription :Our payment integration with Stripe did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid tickets with only one payment. However, the attack requires knowledge of a valid charge ID from the same event which we believe is usually not exposed to users.\n\n\n\n\nTo simplify attack surface, the fix removes support for incoming webhooks regarding payments created through Stripe's old \"source\" API. pretix stopped creating payments using this API in 2024.1 for most payment methods and in 2024.9 for all payment methods.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-131170\n  \nPublished : Nov. 20, 2026, 11:29 a.m. | 55 minutes ago\n  \nDescription :Our payment integration with Stripe did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid tickets with only one payment. However, the attack requires knowledge of a valid charge ID from the same event which we believe is usually not exposed to users.\n\n\n\n\nTo simplify attack surface, the fix removes support for incoming webhooks regarding payments created through Stripe's old \"source\" API. pretix stopped creating payments using this API in 2024.1 for most payment methods and in 2024.9 for all payment methods.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-131170\n2. 26.11.20 오후8:29\n3. Our payment integration with Stripe did not proper",
+      "cve_id": "CVE-2026-131170",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-131170",
+      "source": "cvefeed",
+      "published": "2026-11-20T20:29:20+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-133667 - flowintel DOM-based XSS via Timeline Autolinking, Search Highlighting, and Content-Type Confusion",
       "summary": "CVE ID :CVE-2026-133667\n  \nPublished : Nov. 20, 2026, 11:18 a.m. | 18 minutes ago\n  \nDescription :flowintel contains multiple related flaws that allow an authenticated attacker to inject arbitrary HTML or script into pages viewed by other users.\n\n- Timeline rendering: the timeline library's autolinking feature rewrote already-sanitised case notes and imported MISP attribute values into generated HTML link elements. Crafted text containing quote characters could break out of the generated attribute context, altering the surrounding markup and enabling script execution in the victim's browser.\n\n- Search highlighting: the highlight injection logic used a regular expression to locate text between angle brackets and spliced  elements into the resulting string. Because the pattern could match inside HTML attribute values, the rewrite could corrupt or inject content into attributes of already-sanitised markup, again leading to DOM-based cross-site scripting.\n\n- Content-Type confusion: three analyser selection endpoints returned session-stored JSON strings with a text/html content type. A browser receiving such a response will parse and render the body as HTML, so any HTML or script embedded in the stored value is executed in the victim's context.\n\nPreconditions: the attacker must be an authenticated user with the ability to create or import case content (notes, MISP attributes) containing specially crafted quote or angle-bracket sequences. The victim must subsequently open the affected case timeline, run a search, or request one of the selection endpoints.\n\nImpact: successful exploitation yields DOM-based cross-site scripting in the victim's browser session, potentially allowing disclosure of case data, session manipulation, or execution of arbitrary actions under the victim's identity.\n\nAffected versions: flowintel prior to 4.1.0.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
