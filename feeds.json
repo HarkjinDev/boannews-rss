@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20T18:33:04.583515+09:00",
+  "fetched_at": "2026-11-20T19:01:08.888687+09:00",
   "security_news": [
     {
       "title": "F5 BIG-IP, 인증 없는 원격 코드 실행 위험…APM·트래픽 처리 설정 점검...",
@@ -5184,42 +5184,6 @@
       "source": "securityweek",
       "published": "2026-11-17T19:22:20+09:00",
       "lang": "en"
-    },
-    {
-      "title": "[단독] 민주당 중진, '최민희 경징계'로 의견 모아…지난 주말 회동서 논...",
-      "summary": "그리고 김정은도 해킹, 8조 4천억 원을 했기 때문에 '이건 북한의 소행이다' 미국 FBI가 얘기를 했는데도 사실상 트럼프는 김정은 만나겠다고 하면서 그 뉴스가 싹 사라졌잖아요. 그러면서 김정은은 조용원을 푸틴에게...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [단독] 민주당 중진, '최민희 경징계'로 의견 모아…지난 주말 회동서 논...\n2. 그리고 김정은도 해킹, 8조 4천억 원을 했기 때문에 '이건 북한의 소행이다' 미국 FBI\n3. 그러면서 김정은은 조용원을 푸틴에게...",
-      "link": "https://n.news.naver.com/mnews/article/437/0000521156?sid=100",
-      "source": "naver",
-      "published": "2026-11-17T18:50:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "비밀번호 보안 미흡에 외부망 미분리까지…중소형 금융사 보안관리 '구...",
-      "summary": "최근 금융권에서 해킹 사고가 잇따르는 가운데 중소형 금융사들의 기본적인 보안관리 취약점이 드러난... 다른 금융회사의 해킹 보도를 접한 뒤에야 자체 침해사고를 발견한 사례도 있었다. 한양증권은 지난달 25일 발생한...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 중소형 금융사, 비밀번호 미흡·망 분리 미비\n2. 한양증권, 외부 해킹으로 자체 침해사고 발견\n3. 금융권 전반의 기본 보안 관리 실태 우려",
-      "link": "https://n.news.naver.com/mnews/article/003/0014328323?sid=101",
-      "source": "naver",
-      "published": "2026-11-17T18:36:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "[속보] 글로벌 178개 기관 사이버 공격 노출…CNN·BBC·HSBC·레저까지",
-      "summary": "다만 레저의 하드웨어 지갑 자체가 해킹됐다는 의미는 아니다. 이번 사건은 글로벌 기업들이 공통으로... 다만 178개 기관의 내부 시스템이 모두 해킹됐다는 의미는 아니다. 실제 개인정보 유출 규모와 암호화폐 탈취...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 178개 글로벌 기관, CNN·BBC·HSBC·레저 등 사이버 공격 노출\n2. 레저 하드웨어 지갑 해킹은 아니나, 178개 기관 일부 시스템 노출\n3. 개인정보 유출·암호화폐 탈취 등 구체적 피해 규모는 미확인",
-      "link": "https://www.cbci.co.kr/news/articleView.html?idxno=627874",
-      "source": "naver",
-      "published": "2026-11-17T18:34:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -5236,6 +5200,21 @@
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-1531",
       "source": "msrc",
       "published": "2026-11-20T18:05:37+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-133627 - flowintel Case History Log Injection via Line Separator Characters in User-Authored Fields",
+      "summary": "CVE ID :CVE-2026-133627\n  \nPublished : Nov. 20, 2026, 8:52 a.m. | 11 minutes ago\n  \nDescription :flowintel contains a log injection vulnerability in its case history (audit log) subsystem. The case history is stored as a line-delimited file where each line represents a single event attributed to a specific user. User-controlled fields, including user names, event messages, and case titles used during case merging, were written to the history file without sanitizing embedded line separator characters (such as carriage return, line feed, vertical tab, form feed, and Unicode line/paragraph separators).\n\nAn authenticated user with the ability to create or modify case history entries could embed line separators in these fields. Upon writing, the injected separators would split a single intended entry into multiple lines, each of which the history format interprets as a distinct event. This allows an attacker to forge additional history entries attributed to arbitrary users, corrupting the audit trail and undermining the integrity of case records.\n\nThe vulnerability affects the case history append and merge operations. No authentication bypass or privilege escalation is required beyond normal case-management access.\n\nAffected versions: flowintel prior to 4.1.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-133627\n  \nPublished : Nov. 20, 2026, 8:52 a.m. | 11 minutes ago\n  \nDescription :flowintel contains a log injection vulnerability in its case history (audit log) subsystem. The case history is stored as a line-delimited file where each line represents a single event attributed to a specific user. User-controlled fields, including user names, event messages, and case titles used during case merging, were written to the history file without sanitizing embedded line separator characters (such as carriage return, line feed, vertical tab, form feed, and Unicode line/paragraph separators).\n\nAn authenticated user with the ability to create or modify case history entries could embed line separators in these fields. Upon writing, the injected separators would split a single intended entry into multiple lines, each of which the history format interprets as a distinct event. This allows an attacker to forge additional history entries attributed to arbitrary users, corrupting the audit trail and undermining the integrity of case records.\n\nThe vulnerability affects the case history append and merge operations. No authentication bypass or privilege escalation is required beyond normal case-management access.\n\nAffected versions: flowintel prior to 4.1.0.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-133627\n2. 26.11.20 오후5:52\n3. flowintel contains a log injection vulnerability i",
+      "cve_id": "CVE-2026-133627",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-133627",
+      "source": "cvefeed",
+      "published": "2026-11-20T17:52:54+09:00",
       "lang": "en"
     },
     {
