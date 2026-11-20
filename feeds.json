@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20T23:01:23.083514+09:00",
+  "fetched_at": "2026-11-20T23:31:12.093245+09:00",
   "security_news": [
     {
       "title": "급변하는 전남광주 미래차 산업 지도...장기적 인재 양성 플랫폼 '시급...",
@@ -6308,21 +6308,6 @@
       "source": "krcert_notice",
       "published": "2026-11-18T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-130627 - Vert.x HTTP client forwards Authorization and all headers to cross-authority redirect target when followRedirects(true)",
-      "summary": "CVE ID :CVE-2026-130627\n  \nPublished : Nov. 17, 2026, 2:21 p.m. | 10 minutes ago\n  \nDescription :The Vert.x HTTP client transport (a2a-java-sdk-http-client-vertx) hand-rolls a POST redirect follower that, when the documented PostBuilder.followRedirects(true) opt-in is enabled, re-issues the redirected request with the full request header map copied verbatim and performs no credential stripping and no same-authority check. A malicious, compromised, or mistyped agent that returns a 30x response with an absolute cross-host Location causes the client to forward the standard Authorization header (Bearer/Basic/OAuth) — plus every other header, including the allowlisted API-key headers — to the attacker-controlled authority. This breaks the project's own cross-transport invariant (SECURITY.md §8, OkHttpPostRedirectHeaderLeakTest) that credentials are stripped on cross-authority redirects even when redirects are followed. The sibling JDK and OkHttp/Android transports strip Authorization; Vert.x uniquely does not. This is a \"fix introduced the bug\" variant — the follower was added by the GHSA-9rhm hardening PR (3ae82912, refined by a5e76a0b).\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-130627\n  \nPublished : Nov. 17, 2026, 2:21 p.m. | 10 minutes ago\n  \nDescription :The Vert.x HTTP client transport (a2a-java-sdk-http-client-vertx) hand-rolls a POST redirect follower that, when the documented PostBuilder.followRedirects(true) opt-in is enabled, re-issues the redirected request with the full request header map copied verbatim and performs no credential stripping and no same-authority check. A malicious, compromised, or mistyped agent that returns a 30x response with an absolute cross-host Location causes the client to forward the standard Authorization header (Bearer/Basic/OAuth) — plus every other header, including the allowlisted API-key headers — to the attacker-controlled authority. This breaks the project's own cross-transport invariant (SECURITY.md §8, OkHttpPostRedirectHeaderLeakTest) that credentials are stripped on cross-authority redirects even when redirects are followed. The sibling JDK and OkHttp/Android transports strip Authorization; Vert.x uniquely does not. This is a \"fix introduced the bug\" variant — the follower was added by the GHSA-9rhm hardening PR (3ae82912, refined by a5e76a0b).\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-130627\n2. 26.11.17 오후11:21\n3. The Vert.x HTTP client transport (a2a-java-sdk-htt",
-      "cve_id": "CVE-2026-130627",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-130627",
-      "source": "cvefeed",
-      "published": "2026-11-17T23:21:40+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
