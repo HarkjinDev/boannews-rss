@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-11-20T19:31:13.920650+09:00",
+  "fetched_at": "2026-11-20T20:02:48.016581+09:00",
   "security_news": [
+    {
+      "title": "울산시, 해킹 대비 42개 정보시스템 긴급 점검",
+      "summary": "전국 공공기관과 대학에서 해킹과 개인정보 유출 사고가 잇따르면서 울산시도 보안 점검을 강화하고... 또 산하 공공기관에도 보안 점검을 권고하고 24시간 감시체계를 운영하고 있으며 현재까지 확인된 해킹 피해는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 울산시, 42개 정보시스템 대상 긴급 보안 점검\n2. 개인정보 유출 사고 잇따라… 24시간 감시체계 운영\n3. 산하 공공기관에도 보안 점검 권고",
+      "link": "https://n.news.naver.com/mnews/article/056/0012298312?sid=102",
+      "source": "naver",
+      "published": "2026-11-20T19:49:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE",
+      "summary": "Tracked as CVE-2026-132825, the bug is a heap-based buffer overflow that could lead to remote code execution (RCE).\nThe post Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE appeared first on SecurityWeek.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 루비(Ruby) 개발팀, RCE 유발 가능한 'Ruby2Shell' 취약점(CVE-2026\n2. 힙 기반 버퍼 오버플로우 공격 통해 원격 코드 실행(RCE) 가능.\n3. 해당 취약점 악용 시 시스템 침해 위험, 즉각적인 패치 적용 권고.",
+      "link": "https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/",
+      "source": "securityweek",
+      "published": "2026-11-20T19:34:10+09:00",
+      "lang": "en"
+    },
     {
       "title": "[단독] 에이엠씨손해보험중개 보험금 청구 앱 해킹…주민번호·병명·치...",
       "summary": "보험금 청구 모바일 앱에서 고객사 임직원의 주민등록번호와 병명, 치료정보 등 민감한 개인정보가 외부로 유출되는 사고가 발생했다. 보험금 청구 과정에서 수집된 의료정보까지 유출됐을 가능성이 있어 피해 규모와...",
@@ -3938,6 +3962,18 @@
       "lang": "ko"
     },
     {
+      "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
+      "summary": "At least 178 top web destinations unwittingly served a variety of malware exploits against visitors over the past 24 hours thanks to a security vulnerability involving Optimizely, a company that helps websites customize user experiences and test out new features. Experts say the incident, which saw data-stealing malicious software silently injected into sites like the BBC, CNN, Equifax, Ledger and Zoom, was exacerbated by the reality that few popular websites enforce strict rules on the sources of third-party content.",
+      "content": "At least 178 top web destinations unwittingly served a variety of malware exploits against visitors over the past 24 hours thanks to a security vulnerability involving Optimizely, a company that helps websites customize user experiences and test out new features. Experts say the incident, which saw data-stealing malicious software silently injected into sites like the BBC, CNN, Equifax, Ledger and Zoom, was exacerbated by the reality that few popular websites enforce strict rules on the sources of third-party content.\nThe Zoom.com homepage loading the malicious JavaScript file from Optimizely. Image: blog.report-uri.com. Click to enlarge.\nAccording to a blog post from the security firm Report URI, on November 16 malicious JavaScript code was served to visitors of 178 organizations through Optimizely’s platform. Report URI researcher Scott Helme wrote that the payload delivered by the malicious Javascript was rebuilt 26 times during the day, dropping a multi-purpose malware kit that could steal payment card data, cookies and screenshots, and swap any cryptocurrency payment addresses for the attacker’s.\nHelme noted the affected websites also served exploit code custom made to attack known vulnerabilities in older Apple iPhone and iPad devices. Known by such names as “DarkSword” and “Coruna,” these are zero-click exploit kits that chain together a half-dozen security holes to seize complete control over outdated devices and extract data.\n“The important lesson here is that trusted JavaScript doesn’t always remain trustworthy,” Helme wrote. “A website can be compromised through a third-party dependency without its own code or infrastructure ever being breached.”\nContacted for comment, Optimizely said that on November 16, 2026 it “identified a security incident in which an unauthorized party exploited a vulnerability in the Optimizely Experimentation to add malicious JavaScript to some customer projects.”\n“We acted swiftly to contain the incident and have fully remediated the identified vulnerability,” reads a written statement shared by Optimizely. “These measures included blocking access to the vulnerable path, deploying a fix, removing the injected code from affected projects, ending active sessions, revoking tokens, and resetting access for affected user accounts. We have also implemented additional protections to prevent malicious code from being delivered in Cloudflare. While the incident has been fully remediated, we are working with third-party experts on a comprehensive investigation.”\nMany top web properties no longer fully display content unless visitors agree to let often dozens of third parties serve JavaScript, a powerful web scripting language that enables interactive content. JavaScript code is run on the user’s device, and it can read information displayed in the user’s browser and even modify a website’s appearance or content.\nOne reason JavaScript is so heavily used is that it enables fairly precise browser fingerprinting and other ways of tracking visitors and clicks. According to the 2025 Web Almanac by HTTP Archive, the median homepage loads at least 22 JavaScript files. But as the incident with Optimizely shows, a compromise at a third-party vendor’s website can quickly snowball into a supply chain attack against downstream websites that end up serving visitors tampered and malicious JavaScript files.\nZach Edwards is a researcher at Infoblox and the co-founder of the ad-tracking service DecryptAds. Edwards said Optimizely is a vendor which often collects data outside of consent flows, with their JavaScript snippets being embedded as close to the top of the page as possible to ensure that it’s one of the first things to render, which is important since the product is primarily built for A/B testing.\n“So to make the product work as expected, this code is setup to fire immediately on-page load, and not restrict rendering behind a consent dialog box,” he said. “This means that this supply chain attack didn’t require any clicking or consent to trigger — most of the impacted clients would immediately serve up the payload as soon as someone loaded the page, further increasing risks from this type of JavaScript snippet being compromised.”\nWebsites can minimize the chances that a breach at a third-party content provider spirals into a supply chain attack by taking full advantage of “Content Security Policies” or CSPs, which specify the domain names that are allowed to serve third-party content. But Edwards said most websites — apart from perhaps the largest e-commerce, social media and financial platforms — don’t even bother with CSPs, or else tend to leave them overly permissive for marketing reasons.\n“With literally all websites which embed 3rd party JavaScript resources, if you don’t have a content security policy then if any of those partners get compromised, new domains can be injected into your website via JavaScript which won’t be stopped,” he said. “We’re in the age of JavaScript supply chain attacks and yet almost no one is talking about why content security policies were invented and how this is largely the solution for operators, even though it’s not always simple to get it initially deployed.”\nHow broadly deployed were CSPs at the websites impacted by the Optimizely attack? According to Report URI, 68 of the sites had no CSP at all, while 50 of them had a CSP that still allowed the malware payload and the data theft. The company found only 24 of the affected sites (15 percent) had CSPs that fully blocked the malicious payload.\nImage: blog.report-uri.com.\nThe overall deployment of CSPs across the Web’s busiest sites is somewhat lower — about 10 percent — according to Helme’s site crawler.ninja, which scans the top million websites daily for security issues. Helme said he hopes this incident will encourage more sites to adopt effective CSPs, noting that it could have been far worse: By Report URI’s estimates, the purveyors of this malware attack managed to steal only around $7,500 worth of virtual currency from affected users, as well as an unknown number of payment card records.\nHelme said he often compares the current widespread lack of CSPs to the Wild West.\n“Organizations are running all this code, but they don’t know what it’s doing,” Helme said in an interview with KrebsOnSecurity. “This is why we keep seeing such large scale breaches in places [where] there are no checks and rules in place on the code we’re running, so this was kind of inevitable. Once an attacker gets to the point of running code on your site, the question is what do they want to do with that and can they write the script to do it. Now with AI that’s not a problem anymore.”\nInternet users can control the JavaScript elements allowed to run on webpages by using simple script-blocking plugins like NoScript. But these tools have always only been effective for diehard security and privacy nerds who are willing to put up with sifting through dozens of JavaScript requests on each new website.\nHappily, modern ad blocking software can handily block most third-party JavaScript requests. Ten years ago, the standard security advice for end users was to install antivirus and enable a firewall. These days, your ad/script blocker is your firewall. We explored several options and approaches to blocking ads in our August 2026 story, Who’s Tracking You?\nUpdate, Nov. 18, 7:06 a.m.: Optimizely has published a report (PDF) on its initial findings about the attack.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Optimizely 이용, 178개 웹사이트 통해 악성코드 유포\n2. BBC, CNN 등 유명 사이트 통해 악성 자바스크립트 주입\n3. 데이터 탈취 악성코드 유포, 24시간 동안 26회 변형",
+      "link": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/",
+      "source": "krebsonsecurity",
+      "published": "2026-11-18T11:52:04+09:00",
+      "lang": "en"
+    },
+    {
       "title": "먹지도 자지도 않는 해커, 혼자 취약점 찾아 공격하는 AI",
       "summary": "특히 지난 7월 기술 스타트업 허깅페이스(Hugging Face)가 해킹당한 사건을 계기로 안전장치 강화와 규제 입법... 오픈AI는 원인을 '보상 해킹'(reward hacking)에서 찾았다. 에이전트들이 과제를 의도한 방식으로 풀지 않고...",
       "content": "",
@@ -5160,30 +5196,6 @@
       "source": "naver",
       "published": "2026-11-17T20:48:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "해킹 조직 n0n, 비자·마스터카드·JP모건 등 글로벌 기업 무더기 공격 ...",
-      "summary": "사이버보안 매체 시크리틱(Secritic)에 따르면 월마트와 닐슨, 프록터앤드갬블(P&G), 의료용품업체 메들라인... 핵마낙이 요약한 주장에는 카드번호와 카드 보안코드(CVV), 결제 거래내역, 로그인 정보가 포함되지 않았다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 해커 n0n, 비자·마스터카드·JP모건 등 무더기 공격\n2. 카드번호·CVV 유출은 없었으나 로그인 정보 등 공격\n3. 월마트, 닐슨, P&G, 메들라인 등 글로벌 기업 대상",
-      "link": "https://www.news2day.co.kr/article/20261117500380",
-      "source": "naver",
-      "published": "2026-11-17T19:48:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "\"北 지뢰 도발 피해 장병 가족 찾아 '북한군 목함지뢰' 증언 확인\"-2026 ...",
-      "summary": "AI로 홈페이지 만들어 수억원 들어간 정부 사업과 비교 이 비서관은 올해 재외동포청 사이버 보안을 파고들었다. 외교부에서 정보 유출 사고가 나자 '재외동포청은 괜찮을까' 싶어 곧바로 자료를 요청했다. 사이버 공격은...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 재외동포청, 외교부 정보 유출 사고에 사이버 보안 점검\n2. AI 홈페이지 제작 사업 수억원, 재외동포청 사이버 보안 우려\n3. 북한군 목함지뢰 증언 확인, 사이버 공격 관련성 조사",
-      "link": "https://monthly.chosun.com/news/articleView.html?idxno=72008",
-      "source": "naver",
-      "published": "2026-11-17T19:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6325,21 +6337,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-125163",
       "source": "cvefeed",
       "published": "2026-11-17T20:17:25+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "A phishing page interested in MX records, (Tue, Nov 17th)",
-      "summary": "I&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;ve mentioned before in some of my diaries that it can be instructive to look at what appear to be &#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x9c;generic&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x9d; phishing messages in detail from time to time, since some of them might prove not to be as generic as they initially appear. I came across a good example of this while going over phishing messages delivered to our handler inbox over the past few weeks, when a message that, at first glance, appeared to be a fairly ordinary attempt at stealing e-mail credentials turned out to lead to a page interested in collecting a little more information than just the victim&#;x26;#;39;s password.\r",
-      "description": "I&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;ve mentioned before in some of my diaries that it can be instructive to look at what appear to be &#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x9c;generic&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x9d; phishing messages in detail from time to time, since some of them might prove not to be as generic as they initially appear. I came across a good example of this while going over phishing messages delivered to our handler inbox over the past few weeks, when a message that, at first glance, appeared to be a fairly ordinary attempt at stealing e-mail credentials turned out to lead to a page interested in collecting a little more information than just the victim&#;x26;#;39;s password.\r",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. A phishing page interested in MX records, (Tue, No\n2. SANS_ISC\n3. I&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;ve mention",
-      "cve_id": "",
-      "cvss": "",
-      "severity": "",
-      "link": "https://isc.sans.edu/diary/rss/33526",
-      "source": "sans_isc",
-      "published": "2026-11-17T19:56:38+09:00",
       "lang": "en"
     }
   ],
