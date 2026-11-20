@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-21T05:01:23.029496+09:00",
+  "fetched_at": "2026-11-21T05:31:29.769505+09:00",
   "security_news": [
     {
       "title": "스카이 USDS, 20억달러 이상 유출에도 1달러 유지…불법자금 연계 반박",
@@ -5076,42 +5076,6 @@
       "source": "naver",
       "published": "2026-11-18T05:48:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "구글 “인간 없이 다중 협력해 자율 공격”… AI 해킹, 더 빨라진다",
-      "summary": "AI 에이전트가 기업이 공개한 보안 패치까지 역으로 분석해 공격에 활용하면서 과거에는 보안 전문가가 상당한 시간과 기술을 들여야 했던 취약점 분석과 공격 코드 작성 과정이 크게 단축됐다는 분석이다. 실제로...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 구글 “인간 없이 다중 협력해 자율 공격”… AI 해킹, 더 빨라진다 AI 에이전트가 기업",
-      "link": "https://n.news.naver.com/mnews/article/081/0003700525?sid=105",
-      "source": "naver",
-      "published": "2026-11-18T05:06:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "‘국정원 권한 확대’ 우려 어떻게 해소할까…“국가안보 영역 명확히 ...",
-      "summary": "최근 바이낸스 해킹 사태 등을 계기로 북한과 중국 등 국가 배후 해킹 조직의 위협에 대응해 국정원의 사이버 보안 역량을 강화해야 한다는 주장이 나오는 가운데, 이를 경계하는 시민사회의 반대 목소리도 만만치 않다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 국정원, 북·중 해킹 위협에 사이버 보안 역량 강화 논의\n2. 바이낸스 해킹 등 국가 배후 공격 정황 포착\n3. 시민사회, 국정원 권한 확대 우려 및 반대 목소리",
-      "link": "https://n.news.naver.com/mnews/article/028/0002832713?sid=105",
-      "source": "naver",
-      "published": "2026-11-18T05:02:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "안경 하나로 털리는 국가·산업 기밀…보안의 ‘사각지대’가 열렸다 [...",
-      "summary": "과거 내부자 유출이나 해킹에 집중됐던 보안망은 이제 일상적인 웨어러블 기기와 AI 플랫폼의 공세 앞에 무력화될 위기에 처했다. 대한민국 경제의 심장부인 실물경제의 ‘보안 국경’이 거대한 도전과 마주한 셈이다....",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 안경 하나로 털리는 국가·산업 기밀…보안의 ‘사각지대’가 열렸다 [...\n2. 과거 내부자 유출이나 해킹에 집중됐던 보안망은 이제 일상적인 웨어러블 기기와 AI 플랫폼의\n3. 대한민국 경제의 심장부인 실물경제의 ‘보안 국경’이 거대한 도전과 마주한 셈이다....",
-      "link": "https://www.etoday.co.kr/news/view/2649109",
-      "source": "naver",
-      "published": "2026-11-18T05:02:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6343,21 +6307,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-121757",
       "source": "cvefeed",
       "published": "2026-11-18T07:23:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-95822 - Out-of-bounds read and kernel stack disclosure in the SOCKS5 client when the destination address family differs from the proxy address family",
-      "summary": "CVE ID :CVE-2026-95822\n  \nPublished : Nov. 17, 2026, 8:17 p.m. | 24 minutes ago\n  \nDescription :The SOCKS5 client in subsys/net/lib/socks/socks.c built the CONNECT request in socks5_tcp_connect() by choosing the SOCKS5 address type from the address family of the proxy (proxy->sa_family) while reading the bytes out of the destination address supplied to connect(). A SOCKS5 request encodes the destination independently of the transport used to reach the proxy, so the two families are unrelated and nothing in the path forces them to agree: set_context_proxy() only requires the proxy family to match the socket, and zsock_connect_ctx() enters the SOCKS branch before any destination validation. With an IPv6 proxy and an AF_INET destination the code treated an 8-byte struct net_sockaddr_in as a struct net_sockaddr_in6 and copied the 16-byte sin6_addr from it, reading 12 bytes past the end of the object and transmitting them to the proxy.\n\nWith CONFIG_USERSPACE enabled, z_vrfy_zsock_connect() copies only addrlen user bytes into a stack-resident struct net_sockaddr_storage and enforces no per-family minimum length, so the oversized read stays within the storage but returns stale, uninitialised kernel-stack bytes. An unprivileged user-mode thread can therefore open an AF_INET6 stream socket, point setsockopt(SO_SOCKS5) at a proxy it controls, and call connect() with a short AF_INET destination to have the kernel send it 12 bytes of supervisor stack residue per attempt. Without CONFIG_USERSPACE the read runs past the end of the caller's own struct net_sockaddr_in, disclosing adjacent memory to the proxy; the family mismatch can arise unintentionally when a destination is obtained from DNS while an IPv6 proxy is configured.\n\nImpact is limited to information disclosure of at most 12 bytes per connect() call, with no write primitive; the leak is delivered to whoever operates the SOCKS5 proxy. The mirrored pairing (IPv6 destination through an IPv4 proxy) is memory-safe but encoded the destination as SOCKS5_ATYP_IPV4 from the first four bytes of the IPv6 address, causing the proxy to connect to an unrelated host. Exploitation requires the non-default CONFIG_SOCKS option, a socket with SO_SOCKS5 configured, and both IPv4 and IPv6 support in the image.\n\nThe fix moves the encoding into a helper that selects the address type from dest->sa_family and validates dest_len against the matching struct net_sockaddr_in/struct net_sockaddr_in6 before copying, rejecting under-length or unsupported destinations with an error.\n  \nSeverity: 3.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-95822\n  \nPublished : Nov. 17, 2026, 8:17 p.m. | 24 minutes ago\n  \nDescription :The SOCKS5 client in subsys/net/lib/socks/socks.c built the CONNECT request in socks5_tcp_connect() by choosing the SOCKS5 address type from the address family of the proxy (proxy->sa_family) while reading the bytes out of the destination address supplied to connect(). A SOCKS5 request encodes the destination independently of the transport used to reach the proxy, so the two families are unrelated and nothing in the path forces them to agree: set_context_proxy() only requires the proxy family to match the socket, and zsock_connect_ctx() enters the SOCKS branch before any destination validation. With an IPv6 proxy and an AF_INET destination the code treated an 8-byte struct net_sockaddr_in as a struct net_sockaddr_in6 and copied the 16-byte sin6_addr from it, reading 12 bytes past the end of the object and transmitting them to the proxy.\n\nWith CONFIG_USERSPACE enabled, z_vrfy_zsock_connect() copies only addrlen user bytes into a stack-resident struct net_sockaddr_storage and enforces no per-family minimum length, so the oversized read stays within the storage but returns stale, uninitialised kernel-stack bytes. An unprivileged user-mode thread can therefore open an AF_INET6 stream socket, point setsockopt(SO_SOCKS5) at a proxy it controls, and call connect() with a short AF_INET destination to have the kernel send it 12 bytes of supervisor stack residue per attempt. Without CONFIG_USERSPACE the read runs past the end of the caller's own struct net_sockaddr_in, disclosing adjacent memory to the proxy; the family mismatch can arise unintentionally when a destination is obtained from DNS while an IPv6 proxy is configured.\n\nImpact is limited to information disclosure of at most 12 bytes per connect() call, with no write primitive; the leak is delivered to whoever operates the SOCKS5 proxy. The mirrored pairing (IPv6 destination through an IPv4 proxy) is memory-safe but encoded the destination as SOCKS5_ATYP_IPV4 from the first four bytes of the IPv6 address, causing the proxy to connect to an unrelated host. Exploitation requires the non-default CONFIG_SOCKS option, a socket with SO_SOCKS5 configured, and both IPv4 and IPv6 support in the image.\n\nThe fix moves the encoding into a helper that selects the address type from dest->sa_family and validates dest_len against the matching struct net_sockaddr_in/struct net_sockaddr_in6 before copying, rejecting under-length or unsupported destinations with an error.\n  \nSeverity: 3.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-95822\n2. 26.11.18 오전5:17\n3. The SOCKS5 client in subsys/net/lib/socks/socks.c ",
-      "cve_id": "CVE-2026-95822",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-95822",
-      "source": "cvefeed",
-      "published": "2026-11-18T05:17:59+09:00",
       "lang": "en"
     }
   ],
