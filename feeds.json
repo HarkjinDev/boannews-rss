@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20T20:02:48.016581+09:00",
+  "fetched_at": "2026-11-20T20:31:21.951041+09:00",
   "security_news": [
     {
       "title": "울산시, 해킹 대비 42개 정보시스템 긴급 점검",
@@ -5200,6 +5200,36 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-119088 - My Calendar <= 3.8.13 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Event Title",
+      "summary": "CVE ID :CVE-2026-119088\n  \nPublished : Nov. 20, 2026, 9:34 a.m. | 50 minutes ago\n  \nDescription :The My Calendar – Accessible Event Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'mc_template (template body); event_title (payload storage)' parameter in all versions up to, and including, 3.8.13 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires the site to have granted mc_add_events to Subscriber-level users (a configurable plugin permission), and relies on a privileged user — such as an Administrator — following the event preview link surfaced on the My Calendar Events management screen.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-119088\n  \nPublished : Nov. 20, 2026, 9:34 a.m. | 50 minutes ago\n  \nDescription :The My Calendar – Accessible Event Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'mc_template (template body); event_title (payload storage)' parameter in all versions up to, and including, 3.8.13 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires the site to have granted mc_add_events to Subscriber-level users (a configurable plugin permission), and relies on a privileged user — such as an Administrator — following the event preview link surfaced on the My Calendar Events management screen.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-119088\n2. 26.11.20 오후6:34\n3. The My Calendar – Accessible Event Manager plugin ",
+      "cve_id": "CVE-2026-119088",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-119088",
+      "source": "cvefeed",
+      "published": "2026-11-20T18:34:11+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-115409 - Unverified key-pair binding lets an unauthenticated token user substitute the public key or certificate returned for a private key",
+      "summary": "CVE ID :CVE-2026-115409\n  \nPublished : Nov. 20, 2026, 9:33 a.m. | 50 minutes ago\n  \nDescription :In `github.com/eclipse-keypont/crypto11/v2` versions `<= 2.0.0-rc8` (and the deprecated v1 module paths `github.com/eclipse-keypont/crypto11 <= 1.6.8`, `github.com/ThalesGroup/crypto11 <= 1.7.0-rc1` and `github.com/ThalesIgnite/crypto11 <= 1.2.5`), the key-pair and certificate lookup functions (`FindKeyPair`, `FindKeyPairs`, `FindKeyPairsWithAttributes`, `FindAllKeyPairs`, the `FindRSAKeyPair*` family and `FindAllPairedCertificates`) pair a private key with a public key object, or with a certificate, by `CKA_ID`/`CKA_LABEL` alone, take the first match the token returns, and never verify that it belongs to the private key. PKCS#11 permits a session that has not logged in to create public token objects, so anyone able to open a session on the token — without the PIN — can plant a public key or certificate carrying a victim key's `CKA_ID` and label, and crypto11 may return it as that key's public half. An application that publishes or trusts `Signer.Public()` (a JWKS endpoint, a key registry, `authorized_keys`, a CSR) then publishes the attacker's key, and relying parties accept anything the attacker signs as coming from the service. On the v1 line the lookup also falls back to a class-and-key-type-only search when the private key has no `CKA_ID`, pairing a label-only private key with the first public key of its type on the token.\n\n\n\nThe v1 module paths are deprecated and will not be fixed; users should migrate to github.com/eclipse-keypont/crypto11/v2 version 2.0.0-rc9 or later.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-115409\n  \nPublished : Nov. 20, 2026, 9:33 a.m. | 50 minutes ago\n  \nDescription :In `github.com/eclipse-keypont/crypto11/v2` versions `<= 2.0.0-rc8` (and the deprecated v1 module paths `github.com/eclipse-keypont/crypto11 <= 1.6.8`, `github.com/ThalesGroup/crypto11 <= 1.7.0-rc1` and `github.com/ThalesIgnite/crypto11 <= 1.2.5`), the key-pair and certificate lookup functions (`FindKeyPair`, `FindKeyPairs`, `FindKeyPairsWithAttributes`, `FindAllKeyPairs`, the `FindRSAKeyPair*` family and `FindAllPairedCertificates`) pair a private key with a public key object, or with a certificate, by `CKA_ID`/`CKA_LABEL` alone, take the first match the token returns, and never verify that it belongs to the private key. PKCS#11 permits a session that has not logged in to create public token objects, so anyone able to open a session on the token — without the PIN — can plant a public key or certificate carrying a victim key's `CKA_ID` and label, and crypto11 may return it as that key's public half. An application that publishes or trusts `Signer.Public()` (a JWKS endpoint, a key registry, `authorized_keys`, a CSR) then publishes the attacker's key, and relying parties accept anything the attacker signs as coming from the service. On the v1 line the lookup also falls back to a class-and-key-type-only search when the private key has no `CKA_ID`, pairing a label-only private key with the first public key of its type on the token.\n\n\n\nThe v1 module paths are deprecated and will not be fixed; users should migrate to github.com/eclipse-keypont/crypto11/v2 version 2.0.0-rc9 or later.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-115409\n2. 26.11.20 오후6:33\n3. In `github.com/eclipse-keypont/crypto11/v2` versio",
+      "cve_id": "CVE-2026-115409",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115409",
+      "source": "cvefeed",
+      "published": "2026-11-20T18:33:32+09:00",
+      "lang": "en"
+    },
+    {
       "title": "Chromium: CVE-2023-1531 Use after free in ANGLE",
       "summary": "Information published.",
       "description": "Information published.",
@@ -6323,21 +6353,6 @@
       "source": "cisa",
       "published": "2026-11-17T21:00:00+09:00",
       "lang": "de"
-    },
-    {
-      "title": "CVE-2026-125163 - TYPO3 CMS - Unrestricted File Upload in Form Framework",
-      "summary": "CVE ID :CVE-2026-125163\n  \nPublished : Nov. 17, 2026, 11:17 a.m. | 42 minutes ago\n  \nDescription :The FileUpload and ImageUpload elements of the Form Framework use the property allowedMimeTypes as an allow list of MIME types accepted for upload. An empty allowedMimeTypes list was treated as \"no restriction\". Forms containing upload elements without any configured MIME type, for example in manually created form definitions or when all MIME types were deselected in the form editor, accepted any file except those blocked by the file deny pattern, which only covers PHP-related file extensions. This allowed unauthenticated users to upload files with browser-executable content, such as HTML or SVG documents, to the configured upload folder, which by default is located in a public storage. If attackers know the URL of an uploaded file (see TYPO3-CORE-SA-2026-029), this could lead to Cross-Site Scripting on web servers that do not apply the Content-Security-Policy recommended by TYPO3 to the form upload target folder.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-125163\n  \nPublished : Nov. 17, 2026, 11:17 a.m. | 42 minutes ago\n  \nDescription :The FileUpload and ImageUpload elements of the Form Framework use the property allowedMimeTypes as an allow list of MIME types accepted for upload. An empty allowedMimeTypes list was treated as \"no restriction\". Forms containing upload elements without any configured MIME type, for example in manually created form definitions or when all MIME types were deselected in the form editor, accepted any file except those blocked by the file deny pattern, which only covers PHP-related file extensions. This allowed unauthenticated users to upload files with browser-executable content, such as HTML or SVG documents, to the configured upload folder, which by default is located in a public storage. If attackers know the URL of an uploaded file (see TYPO3-CORE-SA-2026-029), this could lead to Cross-Site Scripting on web servers that do not apply the Content-Security-Policy recommended by TYPO3 to the form upload target folder.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-125163\n2. 26.11.17 오후8:17\n3. The FileUpload and ImageUpload elements of the For",
-      "cve_id": "CVE-2026-125163",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-125163",
-      "source": "cvefeed",
-      "published": "2026-11-17T20:17:25+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
