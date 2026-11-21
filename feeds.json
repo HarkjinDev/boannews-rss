@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-21T22:32:41.625373+09:00",
+  "fetched_at": "2026-11-21T23:02:35.105852+09:00",
   "security_news": [
     {
       "title": "바이낸스 해킹 연계 지갑, 나흘간 이더 약 48만 개 이동…일부는 비트코...",
@@ -3663,6 +3663,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-129814 - CoE Object Name Null Terminator Off-by-One Out-of-Bounds Write",
+      "summary": "CVE ID :CVE-2026-129814\n  \nPublished : Nov. 21, 2026, 1:16 p.m. | 15 minutes ago\n  \nDescription :The SDO Information Get Object Description and Get Entry Description responses copy the object or entry name into the mailbox data area and then write a null terminator byte. The copy loops ran up to the last available byte in the buffer, leaving no room for the terminator. When an object or entry name exactly fills the available space the terminator is written one byte past the end of the mailbox data buffer.\n  \nSeverity: 3.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-129814\n  \nPublished : Nov. 21, 2026, 1:16 p.m. | 15 minutes ago\n  \nDescription :The SDO Information Get Object Description and Get Entry Description responses copy the object or entry name into the mailbox data area and then write a null terminator byte. The copy loops ran up to the last available byte in the buffer, leaving no room for the terminator. When an object or entry name exactly fills the available space the terminator is written one byte past the end of the mailbox data buffer.\n  \nSeverity: 3.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-129814\n2. 26.11.21 오후10:16\n3. The SDO Information Get Object Description and Get",
+      "cve_id": "CVE-2026-129814",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129814",
+      "source": "cvefeed",
+      "published": "2026-11-21T22:16:41+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-131971 - GetPaid 2.6.2 - 2.8.62 - Unauthenticated Invoice Disclosure via Payment Form Embed",
       "summary": "CVE ID :CVE-2026-131971\n  \nPublished : Nov. 21, 2026, 6 a.m. | 22 minutes ago\n  \nDescription :The Payment forms, Buy now buttons, and Invoicing System | GetPaid WordPress plugin before 2.8.63 does not check that the visitor is allowed to view an invoice before rendering it through its single-invoice shortcode, and its payment-form embed page lets unauthenticated users render that shortcode for any invoice ID, disclosing customers' names, billing addresses, phone numbers, line items and payment status.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
