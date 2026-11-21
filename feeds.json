@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-21T22:02:40.223060+09:00",
+  "fetched_at": "2026-11-21T22:32:41.625373+09:00",
   "security_news": [
     {
       "title": "바이낸스 해킹 연계 지갑, 나흘간 이더 약 48만 개 이동…일부는 비트코...",
@@ -4802,21 +4802,6 @@
       "source": "krcert_notice",
       "published": "2026-11-19T00:00:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "CVE-2026-110009 - Unzer Payments <= 2.2.1 - Unauthenticated Authentication Bypass to Account Takeover via 'paymentData.email' Parameter",
-      "summary": "CVE ID :CVE-2026-110009\n  \nPublished : Nov. 18, 2026, 1:32 p.m. | 27 minutes ago\n  \nDescription :The Unzer Payments plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 2.2.1. The vulnerability exists because the Google Pay Express Checkout endpoint (`/?wc-api=google_pay_express`), handled by `startCheckoutDataWithNormalizedCustomerData`, accepts an attacker-controlled `paymentData.email` value and passes it to `createOrGetGuestCustomer()`, which resolves the submitted email to any existing WordPress user via `get_user_by('email', ...)` and then calls `wp_set_current_user()` and `wp_set_auth_cookie()` for the resolved user ID without verifying ownership of the email address, a password, a nonce, an authentication token, or any proof of payment from the payment provider. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including administrators — by submitting that user's known email address, receiving valid `wordpress_logged_in_*` session cookies for the targeted account and achieving full site takeover. The endpoint is entirely unprotected with no capability check, nonce validation, or payment-provider signature verification applied, and administrator email addresses are frequently discoverable via the WordPress REST API user enumeration endpoint (`/wp-json/wp/v2/users`), author archive pages, Gravatar lookups, or site contact footers.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-110009\n  \nPublished : Nov. 18, 2026, 1:32 p.m. | 27 minutes ago\n  \nDescription :The Unzer Payments plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 2.2.1. The vulnerability exists because the Google Pay Express Checkout endpoint (`/?wc-api=google_pay_express`), handled by `startCheckoutDataWithNormalizedCustomerData`, accepts an attacker-controlled `paymentData.email` value and passes it to `createOrGetGuestCustomer()`, which resolves the submitted email to any existing WordPress user via `get_user_by('email', ...)` and then calls `wp_set_current_user()` and `wp_set_auth_cookie()` for the resolved user ID without verifying ownership of the email address, a password, a nonce, an authentication token, or any proof of payment from the payment provider. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including administrators — by submitting that user's known email address, receiving valid `wordpress_logged_in_*` session cookies for the targeted account and achieving full site takeover. The endpoint is entirely unprotected with no capability check, nonce validation, or payment-provider signature verification applied, and administrator email addresses are frequently discoverable via the WordPress REST API user enumeration endpoint (`/wp-json/wp/v2/users`), author archive pages, Gravatar lookups, or site contact footers.\n  \nSeverity: 9.8 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-110009\n2. 26.11.18 오후10:32\n3. The Unzer Payments plugin for WordPress is vulnera",
-      "cve_id": "CVE-2026-110009",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-110009",
-      "source": "cvefeed",
-      "published": "2026-11-18T22:32:27+09:00",
-      "lang": "en"
     }
   ],
   "reputation": [
