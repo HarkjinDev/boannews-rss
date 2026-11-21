@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-21T21:02:45.187670+09:00",
+  "fetched_at": "2026-11-21T21:32:27.759809+09:00",
   "security_news": [
     {
       "title": "바이낸스 해킹 연계 지갑, 나흘간 이더 약 48만 개 이동…일부는 비트코...",
@@ -3910,6 +3910,21 @@
       "lang": "en"
     },
     {
+      "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+      "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\nCVE-2025-42884 SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability\nCVE-2026-76466 Cisco Expressway Series Use of Hard-coded Credentials Vulnerability\nCVE-2026-123890 VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability\nCVE-2026-129448 Apache Roller Deserialization of Untrusted Data Vulnerability\n\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. \nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. \n\n\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria. \n\n\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "description": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n\nCVE-2025-42884 SAP NetWeaver Improper Neutralization of Special Elements in Data Query Logic Vulnerability\nCVE-2026-76466 Cisco Expressway Series Use of Hard-coded Credentials Vulnerability\nCVE-2026-123890 VMWare vCenter Authentication Bypass Using an Alternate Path or Channel Vulnerability\nCVE-2026-129448 Apache Roller Deserialization of Untrusted Data Vulnerability\n\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. \nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. \n\n\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria. \n\n\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2025-42884\n2. CISA\n3. CISA has added four new vulnerabilities to its Kno",
+      "cve_id": "CVE-2025-42884",
+      "cvss": "",
+      "severity": "",
+      "link": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+      "source": "cisa",
+      "published": "2026-11-20T21:00:00+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-131170 - Insufficient validation of payment status for Stripe",
       "summary": "CVE ID :CVE-2026-131170\n  \nPublished : Nov. 20, 2026, 11:29 a.m. | 55 minutes ago\n  \nDescription :Our payment integration with Stripe did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid tickets with only one payment. However, the attack requires knowledge of a valid charge ID from the same event which we believe is usually not exposed to users.\n\n\n\n\nTo simplify attack surface, the fix removes support for incoming webhooks regarding payments created through Stripe's old \"source\" API. pretix stopped creating payments using this API in 2024.1 for most payment methods and in 2024.9 for all payment methods.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-131170\n  \nPublished : Nov. 20, 2026, 11:29 a.m. | 55 minutes ago\n  \nDescription :Our payment integration with Stripe did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid tickets with only one payment. However, the attack requires knowledge of a valid charge ID from the same event which we believe is usually not exposed to users.\n\n\n\n\nTo simplify attack surface, the fix removes support for incoming webhooks regarding payments created through Stripe's old \"source\" API. pretix stopped creating payments using this API in 2024.1 for most payment methods and in 2024.9 for all payment methods.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -4837,21 +4852,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-110009",
       "source": "cvefeed",
       "published": "2026-11-18T22:32:27+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-132079 - Apache Iggy Go SDK: Go TCP client creates personal access tokens that outlive the requested expiry",
-      "summary": "CVE ID :CVE-2026-132079\n  \nPublished : Nov. 18, 2026, 12:17 p.m. | 21 minutes ago\n  \nDescription :Insufficient Session Expiration vulnerability in the Apache Iggy Go SDK. The TCP client method CreatePersonalAccessToken wrote the 32-bit expiry into the upper half of the 64-bit expiry field that the server reads. The server read a nonzero expiry as 2^32 times the requested value. A token created through the Go TCP client therefore stayed valid about four billion times longer than the caller asked for.\n\nThis issue affects Apache Iggy Go SDK: from 0.5.0 before 0.10.0.\n\nUsers are recommended to upgrade to version 0.10.0, which fixes the issue. Tokens that an earlier version created keep their long expiry on the server. Delete those tokens and create new ones.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-132079\n  \nPublished : Nov. 18, 2026, 12:17 p.m. | 21 minutes ago\n  \nDescription :Insufficient Session Expiration vulnerability in the Apache Iggy Go SDK. The TCP client method CreatePersonalAccessToken wrote the 32-bit expiry into the upper half of the 64-bit expiry field that the server reads. The server read a nonzero expiry as 2^32 times the requested value. A token created through the Go TCP client therefore stayed valid about four billion times longer than the caller asked for.\n\nThis issue affects Apache Iggy Go SDK: from 0.5.0 before 0.10.0.\n\nUsers are recommended to upgrade to version 0.10.0, which fixes the issue. Tokens that an earlier version created keep their long expiry on the server. Delete those tokens and create new ones.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-132079\n2. 26.11.18 오후9:17\n3. Insufficient Session Expiration vulnerability in t",
-      "cve_id": "CVE-2026-132079",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-132079",
-      "source": "cvefeed",
-      "published": "2026-11-18T21:17:22+09:00",
       "lang": "en"
     }
   ],
