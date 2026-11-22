@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-23T04:01:27.281967+09:00",
+  "fetched_at": "2026-11-23T04:31:03.464965+09:00",
   "security_news": [
     {
       "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
@@ -2940,18 +2940,6 @@
       "source": "darkreading",
       "published": "2026-11-20T04:46:44+09:00",
       "lang": "en"
-    },
-    {
-      "title": "Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT",
-      "summary": "Google says a China-linked espionage group exploited a critical VMware vCenter authentication bypass before Broadcom released a patch.\nThe post Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT appeared first on SecurityWeek.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Newly Patched VMware vCenter Flaw Exploited as Zer\n2. The post Newly Patched VMware vCenter Flaw Exploit",
-      "link": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/",
-      "source": "securityweek",
-      "published": "2026-11-20T04:21:06+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
@@ -3613,21 +3601,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-131299",
       "source": "cvefeed",
       "published": "2026-11-20T04:56:45+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-130159 - RepoManager: Authenticated Path Traversal allows arbitrary file read via service unit log viewer",
-      "summary": "CVE ID :CVE-2026-130159\n  \nPublished : Nov. 19, 2026, 7:17 p.m. | 27 minutes ago\n  \nDescription :RepoManager is a self-hosted deb/rpm package repository. Prior to 5.13.3, the authenticated get-unit-log action accepts a caller-controlled logfile value. Validate::string() escapes HTML but leaves path traversal components unchanged. The action joins the caller-controlled logfile to SERVICE_LOGS_DIR without enforcing containment, so traversal can resolve the file read outside that directory. www/controllers/ajax/status/service.php reads and returns the resolved file, and any authenticated user can invoke the action to retrieve files readable by the www-data service account, including application configuration, source code, and the GPG signing-key passphrase. Fixed in 5.13.3.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-130159\n  \nPublished : Nov. 19, 2026, 7:17 p.m. | 27 minutes ago\n  \nDescription :RepoManager is a self-hosted deb/rpm package repository. Prior to 5.13.3, the authenticated get-unit-log action accepts a caller-controlled logfile value. Validate::string() escapes HTML but leaves path traversal components unchanged. The action joins the caller-controlled logfile to SERVICE_LOGS_DIR without enforcing containment, so traversal can resolve the file read outside that directory. www/controllers/ajax/status/service.php reads and returns the resolved file, and any authenticated user can invoke the action to retrieve files readable by the www-data service account, including application configuration, source code, and the GPG signing-key passphrase. Fixed in 5.13.3.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-130159\n2. 26.11.20 오전4:17\n3. RepoManager is a self-hosted deb/rpm package repos",
-      "cve_id": "CVE-2026-130159",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-130159",
-      "source": "cvefeed",
-      "published": "2026-11-20T04:17:25+09:00",
       "lang": "en"
     }
   ],
