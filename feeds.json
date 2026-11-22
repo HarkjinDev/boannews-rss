@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-22T23:02:56.033777+09:00",
+  "fetched_at": "2026-11-22T23:33:38.315953+09:00",
   "security_news": [
     {
       "title": "신뢰 제로 사회 [김소연 칼럼]",
@@ -119,6 +119,18 @@
       "link": "http://www.kdfnews.com/news/articleView.html?idxno=191245",
       "source": "naver",
       "published": "2026-11-22T19:56:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "한전도 털렸다…주민번호 포함 152만건 유출",
+      "summary": "최근 해킹과 개인정보 유출 사고는 공공·민간을 가리지 않고 잇따르고 있다. 지난 5월 온라인동영상서비스... 한국조폐공사 건은 응용 프로그램 인터페이스(API)의 인증 취약점을 악용한 해킹이었다. 해킹 공격은 더욱...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 한국전력공사, 주민번호 포함 152만건 유출\n2. API 인증 취약점 악용, 개인정보 탈취\n3. 공공·민간 분야 정보 유출 잇따라 발생",
+      "link": "https://n.news.naver.com/mnews/article/009/0005767335?sid=105",
+      "source": "naver",
+      "published": "2026-11-22T19:44:00+09:00",
       "lang": "ko"
     },
     {
@@ -3802,36 +3814,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-99412",
       "source": "cvefeed",
       "published": "2026-11-19T23:40:08+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-129916 - Eclipse Ditto resolved policy view discloses non-readable content of imported, namespace root and referenced policy entries",
-      "summary": "CVE ID :CVE-2026-129916\n  \nPublished : Nov. 19, 2026, 2:32 p.m. | 20 minutes ago\n  \nDescription :In Eclipse Ditto versions 3.9.0 to 3.9.8, the resolved policy view (`GET /api/2/policies/{policyId}?policy-view=resolved`) does not restrict merged policy content to what the caller may read in the policy it originates from. Imported and namespace-root entries are returned in full as soon as the caller may read any part of them in the source policy, entries of transitive imports and of the imports of namespace-root policies are only checked against the intermediate policy, and content copied into an entry by `references`, also from another entry of the same policy, is not checked against the referenced entry. An authenticated caller with READ on a policy can therefore read subjects, resources and granted/revoked permissions of policy entries that are hidden from them, including by explicit revokes, when reading the originating policy directly.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-129916\n  \nPublished : Nov. 19, 2026, 2:32 p.m. | 20 minutes ago\n  \nDescription :In Eclipse Ditto versions 3.9.0 to 3.9.8, the resolved policy view (`GET /api/2/policies/{policyId}?policy-view=resolved`) does not restrict merged policy content to what the caller may read in the policy it originates from. Imported and namespace-root entries are returned in full as soon as the caller may read any part of them in the source policy, entries of transitive imports and of the imports of namespace-root policies are only checked against the intermediate policy, and content copied into an entry by `references`, also from another entry of the same policy, is not checked against the referenced entry. An authenticated caller with READ on a policy can therefore read subjects, resources and granted/revoked permissions of policy entries that are hidden from them, including by explicit revokes, when reading the originating policy directly.\n  \nSeverity: 2.3 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-129916\n2. 26.11.19 오후11:32\n3. In Eclipse Ditto versions 3.9.0 to 3.9.8, the reso",
-      "cve_id": "CVE-2026-129916",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129916",
-      "source": "cvefeed",
-      "published": "2026-11-19T23:32:38+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-133188 - MISP Protected Event Signature Bypass via Whitespace Injection in JSON Keys and Identifiers",
-      "summary": "CVE ID :CVE-2026-133188\n  \nPublished : Nov. 19, 2026, 2:32 p.m. | 20 minutes ago\n  \nDescription :MISP contains a vulnerability in the cryptographic signature verification of protected events. When a MISP instance signs a protected event for synchronization, it strips all whitespace from the JSON body before computing the PGP signature (preg_replace(\"/\\s+/\", \"\", $data)). The receiving instance performs the same whitespace-stripping before verification. Because the signature covers only the whitespace-free representation, a network relay positioned between two MISP instances can insert whitespace characters into JSON object keys (effectively renaming fields) or into identifier values such as UUIDs, timestamps, and distribution fields without invalidating the signature. The receiving instance accepts the modified event as authentic.\n\nThe vulnerability affects the protected event synchronization path: event creation (EventsController::add), event editing (EventsController::edit), event viewing (EventsController::view1), and server-to-server pull synchronization (ServerSyncTool, Server model). An attacker with a network position to intercept and modify traffic between MISP instances can alter the semantic content of protected events while the PGP signature still validates, undermining the integrity guarantees that protected events are designed to provide.\n\nThe fix introduces two complementary mechanisms. First, a post-verification scan rejects any received body that contains whitespace in JSON keys (except under Galaxy cluster 'meta' keys) or in identifier-like values (uuid, id, timestamp, distribution, date). Second, a new exact-byte signature scheme (x-pgp-signature-v2) signs the body as transmitted, without whitespace normalization. MISP 3.0 and later peers exchange this exact-byte signature; older peers retain the legacy whitespace-stripped signature. A signature_version field is embedded in protected events so that a 3.0 receiver refuses a body carrying that marker if only the legacy signature is present. Both mechanisms together close the whitespace-injection vector while preserving backward compatibility with pre-3.0 instances.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-133188\n  \nPublished : Nov. 19, 2026, 2:32 p.m. | 20 minutes ago\n  \nDescription :MISP contains a vulnerability in the cryptographic signature verification of protected events. When a MISP instance signs a protected event for synchronization, it strips all whitespace from the JSON body before computing the PGP signature (preg_replace(\"/\\s+/\", \"\", $data)). The receiving instance performs the same whitespace-stripping before verification. Because the signature covers only the whitespace-free representation, a network relay positioned between two MISP instances can insert whitespace characters into JSON object keys (effectively renaming fields) or into identifier values such as UUIDs, timestamps, and distribution fields without invalidating the signature. The receiving instance accepts the modified event as authentic.\n\nThe vulnerability affects the protected event synchronization path: event creation (EventsController::add), event editing (EventsController::edit), event viewing (EventsController::view1), and server-to-server pull synchronization (ServerSyncTool, Server model). An attacker with a network position to intercept and modify traffic between MISP instances can alter the semantic content of protected events while the PGP signature still validates, undermining the integrity guarantees that protected events are designed to provide.\n\nThe fix introduces two complementary mechanisms. First, a post-verification scan rejects any received body that contains whitespace in JSON keys (except under Galaxy cluster 'meta' keys) or in identifier-like values (uuid, id, timestamp, distribution, date). Second, a new exact-byte signature scheme (x-pgp-signature-v2) signs the body as transmitted, without whitespace normalization. MISP 3.0 and later peers exchange this exact-byte signature; older peers retain the legacy whitespace-stripped signature. A signature_version field is embedded in protected events so that a 3.0 receiver refuses a body carrying that marker if only the legacy signature is present. Both mechanisms together close the whitespace-injection vector while preserving backward compatibility with pre-3.0 instances.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-133188\n2. 26.11.19 오후11:32\n3. MISP contains a vulnerability in the cryptographic",
-      "cve_id": "CVE-2026-133188",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-133188",
-      "source": "cvefeed",
-      "published": "2026-11-19T23:32:35+09:00",
       "lang": "en"
     }
   ],
