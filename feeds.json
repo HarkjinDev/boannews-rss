@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-23T02:02:23.782478+09:00",
+  "fetched_at": "2026-11-23T02:32:11.933039+09:00",
   "security_news": [
+    {
+      "title": "이번엔 카드번호까지...한전, 또 150만 건 정보유출",
+      "summary": "한전은 지난 20일 이 같은 해킹 정황을 인지한 뒤, 외부 IP 접근을 차단하고 관련 서비스 운영도 중지했다고 밝혔습니다. 한전은 김동철 사장 명의의 대국민 사과문을 홈페이지에도 올려 정보보안체계를 근본적으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 한전, 카드번호 포함 150만 건 정보 유출\n2. 외부 IP 접근 차단 및 서비스 운영 중지\n3. 김동철 사장, 대국민 사과 및 보안 체계 강화",
+      "link": "https://n.news.naver.com/mnews/article/052/0002436533?sid=101",
+      "source": "naver",
+      "published": "2026-11-23T02:22:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[뉴스이슈&비즈] 김동철 사장 국감 사과 한 달 만에…한전 고객정보 152...",
       "summary": "당시 김 사장은 직원 정보 유출 사고와 관련해 국민에게 심려를 끼쳐 죄송하다며 정보보안 업무 전반의 근본적 혁신을 추진하겠다고 밝혔다. 한전은 이후 재직자·퇴직자·협력사 직원 3만5,528명의 개인정보 유출...",
@@ -3605,21 +3617,6 @@
       "source": "cvefeed",
       "published": "2026-11-20T03:18:57+09:00",
       "lang": "ca"
-    },
-    {
-      "title": "CVE-2026-77382 - falcon-rust: Discrete-Gaussian sampler runs at 2^-33 precision, far below Falcon's requirement (reference KAT vectors no longer pass)",
-      "summary": "CVE ID :CVE-2026-77382\n  \nPublished : Nov. 19, 2026, 5:19 p.m. | 1 hour, 6 minutes ago\n  \nDescription :falcon-rust is a Rust implementation of the Falcon post-quantum signature scheme. Prior to 0.2.0, the discrete-Gaussian sampler in src/samplerz.rs evaluates approx_exp, ber_exp, and sampler_z acceptance probabilities with FixedPoint64 values having only 32 fractional bits. The scaling in approx_exp quantizes its input and limits relative precision to about 2^-33, below Falcon's required bound, causing reference known-answer vectors to diverge and invalidating the proof assumption that secret-dependent signature and key distributions are negligibly close to the ideal discrete Gaussian. This is a cryptographic-soundness defect and no practical key-recovery attack has been demonstrated. This issue is fixed in version 0.2.0.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-77382\n  \nPublished : Nov. 19, 2026, 5:19 p.m. | 1 hour, 6 minutes ago\n  \nDescription :falcon-rust is a Rust implementation of the Falcon post-quantum signature scheme. Prior to 0.2.0, the discrete-Gaussian sampler in src/samplerz.rs evaluates approx_exp, ber_exp, and sampler_z acceptance probabilities with FixedPoint64 values having only 32 fractional bits. The scaling in approx_exp quantizes its input and limits relative precision to about 2^-33, below Falcon's required bound, causing reference known-answer vectors to diverge and invalidating the proof assumption that secret-dependent signature and key distributions are negligibly close to the ideal discrete Gaussian. This is a cryptographic-soundness defect and no practical key-recovery attack has been demonstrated. This issue is fixed in version 0.2.0.\n  \nSeverity: 5.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-77382\n2. 26.11.20 오전2:19\n3. falcon-rust is a Rust implementation of the Falcon",
-      "cve_id": "CVE-2026-77382",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-77382",
-      "source": "cvefeed",
-      "published": "2026-11-20T02:19:00+09:00",
-      "lang": "en"
     }
   ],
   "reputation": []
