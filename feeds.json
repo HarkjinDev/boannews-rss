@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-23T20:01:29.925537+09:00",
+  "fetched_at": "2026-11-23T20:31:21.326789+09:00",
   "security_news": [
+    {
+      "title": "전용태 전북도의회 교육위원장, 교육청 예산·안전관리 정조준",
+      "summary": "관리시스템 해킹에 따른 개인정보 유출 사고를 정면으로 제기했다. 교육재정 여건이 녹록지 않은... 특히 전 위원장은 최근 불거진 통학버스 관리시스템 해킹 사고와 개인정보 유출 문제에도 날을 세웠다. 그는 \"해킹...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 전북교육청, 통학버스 관리시스템 해킹\n2. 개인정보 유출 사고 발생\n3. 전용태 위원장, 안전관리 질책",
+      "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=886371",
+      "source": "naver",
+      "published": "2026-11-23T20:20:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "한전 152만 명, 삼성증권 8241명…국민 정보 또 줄줄 샜다(종합)",
       "summary": "삼성증권과 컬리에서도 개인정보 유출이 발생, 사실상 안전지대는 없어 보안에 대한 우려가 극에 달한다.... 한전은 “보안 환경이 빠르게 변화하는 상황에서 외부 공격자가 두 시스템(한전ON·SRM)에 불법 침입해 정보를...",
@@ -3940,66 +3952,6 @@
       "link": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog",
       "source": "cisa",
       "published": "2026-11-20T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-131170 - Insufficient validation of payment status for Stripe",
-      "summary": "CVE ID :CVE-2026-131170\n  \nPublished : Nov. 20, 2026, 11:29 a.m. | 55 minutes ago\n  \nDescription :Our payment integration with Stripe did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid tickets with only one payment. However, the attack requires knowledge of a valid charge ID from the same event which we believe is usually not exposed to users.\n\n\n\n\nTo simplify attack surface, the fix removes support for incoming webhooks regarding payments created through Stripe's old \"source\" API. pretix stopped creating payments using this API in 2024.1 for most payment methods and in 2024.9 for all payment methods.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-131170\n  \nPublished : Nov. 20, 2026, 11:29 a.m. | 55 minutes ago\n  \nDescription :Our payment integration with Stripe did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid tickets with only one payment. However, the attack requires knowledge of a valid charge ID from the same event which we believe is usually not exposed to users.\n\n\n\n\nTo simplify attack surface, the fix removes support for incoming webhooks regarding payments created through Stripe's old \"source\" API. pretix stopped creating payments using this API in 2024.1 for most payment methods and in 2024.9 for all payment methods.\n  \nSeverity: 6.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-131170\n2. 26.11.20 오후8:29\n3. Our payment integration with Stripe did not proper",
-      "cve_id": "CVE-2026-131170",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-131170",
-      "source": "cvefeed",
-      "published": "2026-11-20T20:29:20+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-133667 - flowintel DOM-based XSS via Timeline Autolinking, Search Highlighting, and Content-Type Confusion",
-      "summary": "CVE ID :CVE-2026-133667\n  \nPublished : Nov. 20, 2026, 11:18 a.m. | 18 minutes ago\n  \nDescription :flowintel contains multiple related flaws that allow an authenticated attacker to inject arbitrary HTML or script into pages viewed by other users.\n\n- Timeline rendering: the timeline library's autolinking feature rewrote already-sanitised case notes and imported MISP attribute values into generated HTML link elements. Crafted text containing quote characters could break out of the generated attribute context, altering the surrounding markup and enabling script execution in the victim's browser.\n\n- Search highlighting: the highlight injection logic used a regular expression to locate text between angle brackets and spliced  elements into the resulting string. Because the pattern could match inside HTML attribute values, the rewrite could corrupt or inject content into attributes of already-sanitised markup, again leading to DOM-based cross-site scripting.\n\n- Content-Type confusion: three analyser selection endpoints returned session-stored JSON strings with a text/html content type. A browser receiving such a response will parse and render the body as HTML, so any HTML or script embedded in the stored value is executed in the victim's context.\n\nPreconditions: the attacker must be an authenticated user with the ability to create or import case content (notes, MISP attributes) containing specially crafted quote or angle-bracket sequences. The victim must subsequently open the affected case timeline, run a search, or request one of the selection endpoints.\n\nImpact: successful exploitation yields DOM-based cross-site scripting in the victim's browser session, potentially allowing disclosure of case data, session manipulation, or execution of arbitrary actions under the victim's identity.\n\nAffected versions: flowintel prior to 4.1.0.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-133667\n  \nPublished : Nov. 20, 2026, 11:18 a.m. | 18 minutes ago\n  \nDescription :flowintel contains multiple related flaws that allow an authenticated attacker to inject arbitrary HTML or script into pages viewed by other users.\n\n- Timeline rendering: the timeline library's autolinking feature rewrote already-sanitised case notes and imported MISP attribute values into generated HTML link elements. Crafted text containing quote characters could break out of the generated attribute context, altering the surrounding markup and enabling script execution in the victim's browser.\n\n- Search highlighting: the highlight injection logic used a regular expression to locate text between angle brackets and spliced  elements into the resulting string. Because the pattern could match inside HTML attribute values, the rewrite could corrupt or inject content into attributes of already-sanitised markup, again leading to DOM-based cross-site scripting.\n\n- Content-Type confusion: three analyser selection endpoints returned session-stored JSON strings with a text/html content type. A browser receiving such a response will parse and render the body as HTML, so any HTML or script embedded in the stored value is executed in the victim's context.\n\nPreconditions: the attacker must be an authenticated user with the ability to create or import case content (notes, MISP attributes) containing specially crafted quote or angle-bracket sequences. The victim must subsequently open the affected case timeline, run a search, or request one of the selection endpoints.\n\nImpact: successful exploitation yields DOM-based cross-site scripting in the victim's browser session, potentially allowing disclosure of case data, session manipulation, or execution of arbitrary actions under the victim's identity.\n\nAffected versions: flowintel prior to 4.1.0.\n  \nSeverity: 4.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-133667\n2. 26.11.20 오후8:18\n3. flowintel contains multiple related flaws that all",
-      "cve_id": "CVE-2026-133667",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-133667",
-      "source": "cvefeed",
-      "published": "2026-11-20T20:18:35+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-133661 - FlowIntel: Missing Authorization and Credential Scope Enforcement in Connector and Template Features",
-      "summary": "CVE ID :CVE-2026-133661\n  \nPublished : Nov. 20, 2026, 11:18 a.m. | 18 minutes ago\n  \nDescription :FlowIntel contains multiple authorization and credential management vulnerabilities affecting connector instances, MISP helper tools, and case templates.\n\n- Connector instance metadata, connectivity checks, and case listings accepted instance IDs without verifying if the acting user had visibility or ownership rights, allowing unauthorized access to sensitive configuration and data.\n- Case template serialization and creation processes exposed connector instances attached to templates regardless of the user's permissions, potentially leaking credentials or instance details to users who should not have access.\n- Editing connector instances allowed changes to URLs or sharing scopes without requiring re-authentication of API keys, enabling the reuse of another user's credentials in a new context or the leakage of shared keys to unauthorized endpoints.\n- Outbound MISP connector keys were incorrectly accepted for authenticating incoming alerts, bypassing the intended separation between outbound integration credentials and inbound alert source authentication.\n\nThese issues allow authenticated users to access unauthorized connector data, manipulate credential scopes, and potentially exploit credential confusion between different security contexts.\n\nAffected versions: < 4.1.0\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-133661\n  \nPublished : Nov. 20, 2026, 11:18 a.m. | 18 minutes ago\n  \nDescription :FlowIntel contains multiple authorization and credential management vulnerabilities affecting connector instances, MISP helper tools, and case templates.\n\n- Connector instance metadata, connectivity checks, and case listings accepted instance IDs without verifying if the acting user had visibility or ownership rights, allowing unauthorized access to sensitive configuration and data.\n- Case template serialization and creation processes exposed connector instances attached to templates regardless of the user's permissions, potentially leaking credentials or instance details to users who should not have access.\n- Editing connector instances allowed changes to URLs or sharing scopes without requiring re-authentication of API keys, enabling the reuse of another user's credentials in a new context or the leakage of shared keys to unauthorized endpoints.\n- Outbound MISP connector keys were incorrectly accepted for authenticating incoming alerts, bypassing the intended separation between outbound integration credentials and inbound alert source authentication.\n\nThese issues allow authenticated users to access unauthorized connector data, manipulate credential scopes, and potentially exploit credential confusion between different security contexts.\n\nAffected versions: < 4.1.0\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-133661\n2. 26.11.20 오후8:18\n3. FlowIntel contains multiple authorization and cred",
-      "cve_id": "CVE-2026-133661",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-133661",
-      "source": "cvefeed",
-      "published": "2026-11-20T20:18:34+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-133652 - Flowintel Session Identifiers Not Bound to Credentials Allow Persistent Access After Password Change",
-      "summary": "CVE ID :CVE-2026-133652\n  \nPublished : Nov. 20, 2026, 11:18 a.m. | 18 minutes ago\n  \nDescription :Flowintel , contained a session management vulnerability in its browser authentication mechanism. The session identifier used a bare numeric user ID rather than a credential-bound token, resulting in several related weaknesses:\n\n- Remembered logins (remember-me cookies) remained valid after a user changed their password, allowing an attacker holding a previously issued cookie to retain access indefinitely.\n- Server-side session identifiers were not rotated upon login (local, SSO, or remembered), enabling session fixation.\n- Self-service email and password changes did not require verification of the current password, permitting an attacker with an active session to modify account credentials without knowledge of the existing password.\n- Administrator-initiated password resets did not revoke other browser sessions, invalidate remembered logins, or rotate the affected user's API key.\n\nAn attacker who obtained a valid session or remember-me cookie (e.g., through XSS, network interception, or cookie theft) could maintain unauthorized access even after the legitimate user changed their password. Additionally, an attacker with any valid session could change the account's email address or password without knowing the current credentials, effectively taking over the account.\n\nAffected versions: Flowintel prior to 4.1.0.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-133652\n  \nPublished : Nov. 20, 2026, 11:18 a.m. | 18 minutes ago\n  \nDescription :Flowintel , contained a session management vulnerability in its browser authentication mechanism. The session identifier used a bare numeric user ID rather than a credential-bound token, resulting in several related weaknesses:\n\n- Remembered logins (remember-me cookies) remained valid after a user changed their password, allowing an attacker holding a previously issued cookie to retain access indefinitely.\n- Server-side session identifiers were not rotated upon login (local, SSO, or remembered), enabling session fixation.\n- Self-service email and password changes did not require verification of the current password, permitting an attacker with an active session to modify account credentials without knowledge of the existing password.\n- Administrator-initiated password resets did not revoke other browser sessions, invalidate remembered logins, or rotate the affected user's API key.\n\nAn attacker who obtained a valid session or remember-me cookie (e.g., through XSS, network interception, or cookie theft) could maintain unauthorized access even after the legitimate user changed their password. Additionally, an attacker with any valid session could change the account's email address or password without knowing the current credentials, effectively taking over the account.\n\nAffected versions: Flowintel prior to 4.1.0.\n  \nSeverity: 7.2 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-133652\n2. 26.11.20 오후8:18\n3. Flowintel , contained a session management vulnera",
-      "cve_id": "CVE-2026-133652",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-133652",
-      "source": "cvefeed",
-      "published": "2026-11-20T20:18:33+09:00",
       "lang": "en"
     }
   ],
