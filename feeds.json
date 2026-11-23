@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-23T19:33:40.294459+09:00",
+  "fetched_at": "2026-11-23T20:01:29.925537+09:00",
   "security_news": [
     {
       "title": "한전 152만 명, 삼성증권 8241명…국민 정보 또 줄줄 샜다(종합)",
@@ -3564,33 +3564,54 @@
       "source": "naver",
       "published": "2026-11-20T21:04:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "울산시, 해킹 대비 42개 정보시스템 긴급 점검",
-      "summary": "전국 공공기관과 대학에서 해킹과 개인정보 유출 사고가 잇따르면서 울산시도 보안 점검을 강화하고... 또 산하 공공기관에도 보안 점검을 권고하고 24시간 감시체계를 운영하고 있으며 현재까지 확인된 해킹 피해는...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 울산시, 42개 정보시스템 대상 긴급 보안 점검\n2. 개인정보 유출 사고 잇따라… 24시간 감시체계 운영\n3. 산하 공공기관에도 보안 점검 권고",
-      "link": "https://n.news.naver.com/mnews/article/056/0012298312?sid=102",
-      "source": "naver",
-      "published": "2026-11-20T19:49:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE",
-      "summary": "Tracked as CVE-2026-132825, the bug is a heap-based buffer overflow that could lead to remote code execution (RCE).\nThe post Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE appeared first on SecurityWeek.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 루비(Ruby) 개발팀, RCE 유발 가능한 'Ruby2Shell' 취약점(CVE-2026\n2. 힙 기반 버퍼 오버플로우 공격 통해 원격 코드 실행(RCE) 가능.\n3. 해당 취약점 악용 시 시스템 침해 위험, 즉각적인 패치 적용 권고.",
-      "link": "https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/",
-      "source": "securityweek",
-      "published": "2026-11-20T19:34:10+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-59340 - Denial of Service via crafted PDF in PagePdfDocumentReader",
+      "summary": "CVE ID :CVE-2026-59340\n  \nPublished : Nov. 23, 2026, 10:23 a.m. | 23 minutes ago\n  \nDescription :PagePdfDocumentReader and ParagraphPdfDocumentReader are vulnerable to a denial of service when processing untrusted PDF input.\n\n\n\n The underlying text extraction logic reconstructs layout from a PDF's glyph positions and limits how much memory can be allocated for any single computed gap, but does not limit the cumulative allocation across an entire page.\n\n\n\nA specially crafted PDF can exploit this to force excessive memory allocation during processing, resulting in OutOfMemoryError.\n\n\n\nDepending on JVM configuration, this can cause request failures with degraded service under repeated exploitation, or immediate JVM termination when ExitOnOutOfMemoryError options are used.\n\n\n\nAny application that processes PDFs from untrusted sources (document upload, email attachment processing, RAG ingestion, web crawling) using either affected reader is impacted.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59340\n  \nPublished : Nov. 23, 2026, 10:23 a.m. | 23 minutes ago\n  \nDescription :PagePdfDocumentReader and ParagraphPdfDocumentReader are vulnerable to a denial of service when processing untrusted PDF input.\n\n\n\n The underlying text extraction logic reconstructs layout from a PDF's glyph positions and limits how much memory can be allocated for any single computed gap, but does not limit the cumulative allocation across an entire page.\n\n\n\nA specially crafted PDF can exploit this to force excessive memory allocation during processing, resulting in OutOfMemoryError.\n\n\n\nDepending on JVM configuration, this can cause request failures with degraded service under repeated exploitation, or immediate JVM termination when ExitOnOutOfMemoryError options are used.\n\n\n\nAny application that processes PDFs from untrusted sources (document upload, email attachment processing, RAG ingestion, web crawling) using either affected reader is impacted.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-59340\n2. 26.11.23 오후7:23\n3. PagePdfDocumentReader and ParagraphPdfDocumentRead",
+      "cve_id": "CVE-2026-59340",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59340",
+      "source": "cvefeed",
+      "published": "2026-11-23T19:23:21+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-59442 - Broken Logical Grouping Expression in TypesenseFilterExpressionConverter",
+      "summary": "CVE ID :CVE-2026-59442\n  \nPublished : Nov. 23, 2026, 10:19 a.m. | 27 minutes ago\n  \nDescription :TypesenseFilterExpressionConverter does not correctly translate grouped (parenthesized) filter expressions into the Typesense filter syntax.\n\n\n\nAs a result, the filter sent to Typesense can have a different meaning than the one the application defined, and some conditions may not be applied as intended.\n\n\n\n An application is affected if it uses the Typesense vector store with filter expressions that contain groups and relies on them to restrict results, for example to enforce tenant isolation or access control.\n\n\n\nIn that case, a remote user may be able to retrieve documents they should not have access to, and the same filter used for a delete operation may remove documents outside the intended scope.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-59442\n  \nPublished : Nov. 23, 2026, 10:19 a.m. | 27 minutes ago\n  \nDescription :TypesenseFilterExpressionConverter does not correctly translate grouped (parenthesized) filter expressions into the Typesense filter syntax.\n\n\n\nAs a result, the filter sent to Typesense can have a different meaning than the one the application defined, and some conditions may not be applied as intended.\n\n\n\n An application is affected if it uses the Typesense vector store with filter expressions that contain groups and relies on them to restrict results, for example to enforce tenant isolation or access control.\n\n\n\nIn that case, a remote user may be able to retrieve documents they should not have access to, and the same filter used for a delete operation may remove documents outside the intended scope.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-59442\n2. 26.11.23 오후7:19\n3. TypesenseFilterExpressionConverter does not correc",
+      "cve_id": "CVE-2026-59442",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59442",
+      "source": "cvefeed",
+      "published": "2026-11-23T19:19:17+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-94252 - Unauthenticated Stored Cross-Site Scripting in Frontier Smart Technologies Venice X FS2340 Embedded Web Interface",
+      "summary": "CVE ID :CVE-2026-94252\n  \nPublished : Nov. 23, 2026, 10:17 a.m. | 29 minutes ago\n  \nDescription :An unauthenticated stored and reflected cross-site scripting (XSS) vulnerability in the embedded web interface of Frontier Smart Technologies Venice X FS2340 running IR4.9 allows a network attacker with access to the interface to inject attacker-controlled JavaScript that may execute in the browser of a user accessing affected content.\n\n\n\nSuccessful exploitation may allow the attacker to access information available within the browser's security context or perform actions through the affected web interface with the privileges of the affected user.\n\n\n\nDuring authorized security testing, certain crafted JavaScript and code-injection payloads were also observed to cause the embedded web interface to crash and become temporarily unavailable on some tested software versions. This behavior represents a denial-of-service condition affecting the embedded web management interface; no device-level denial of service was established.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-94252\n  \nPublished : Nov. 23, 2026, 10:17 a.m. | 29 minutes ago\n  \nDescription :An unauthenticated stored and reflected cross-site scripting (XSS) vulnerability in the embedded web interface of Frontier Smart Technologies Venice X FS2340 running IR4.9 allows a network attacker with access to the interface to inject attacker-controlled JavaScript that may execute in the browser of a user accessing affected content.\n\n\n\nSuccessful exploitation may allow the attacker to access information available within the browser's security context or perform actions through the affected web interface with the privileges of the affected user.\n\n\n\nDuring authorized security testing, certain crafted JavaScript and code-injection payloads were also observed to cause the embedded web interface to crash and become temporarily unavailable on some tested software versions. This behavior represents a denial-of-service condition affecting the embedded web management interface; no device-level denial of service was established.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-94252\n2. 26.11.23 오후7:17\n3. An unauthenticated stored and reflected cross-site",
+      "cve_id": "CVE-2026-94252",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-94252",
+      "source": "cvefeed",
+      "published": "2026-11-23T19:17:16+09:00",
+      "lang": "en"
+    },
     {
       "title": "ISC Stormcast For Monday, November 23rd, 2026 https://isc.sans.edu/podcastdetail/10190, (Mon, Nov 23rd)",
       "summary": "",
