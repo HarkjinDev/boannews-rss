@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-23T22:04:55.176496+09:00",
+  "fetched_at": "2026-11-23T22:32:21.942020+09:00",
   "security_news": [
+    {
+      "title": "크라우드스트라이크, 지스케일러 59조원에 인수… 보안업계 사상 최대 ...",
+      "summary": "사이버보안 공룡 탄생 예고 인수는 전액 주식 교환 방식 AI 해킹 공포에 보안업계 ‘빅딜’ 잇따라 미국... 최근 미국에서는 시스템 오류로 항공기 운항과 은행 거래가 일시 중단되고, 유럽에서는 해킹 공격으로 주요...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 크라우드스트라이크, 지스케일러 59조원에 인수… 보안업계 사상 최대 ...\n2. 사이버보안 공룡 탄생 예고 인수는 전액 주식 교환 방식 AI 해킹 공포에 보안업계 ‘빅딜’\n3. 최근 미국에서는 시스템 오류로 항공기 운항과 은행 거래가 일시 중단되고, 유럽에서는 해킹 ",
+      "link": "https://n.news.naver.com/mnews/article/366/0001206786?sid=105",
+      "source": "naver",
+      "published": "2026-11-23T22:08:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
       "summary": "Threat actors are exploiting a now-patched security flaw in ConnectWise ScreenConnect to target managed service provider (MSP) servers.\n\nThe activity revolves around CVE-2026-84869 (CVSS score: 9.9), a critical ScreenConnect client flaw that allows a guest to transfer and execute a malicious payload on a connecting technician's host.\n\n\"On November 12, 2026, we observed one managed service",
@@ -3603,6 +3615,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-86312 - Apache Solr: Ping health-check endpoint could trigger unintended functionality",
+      "summary": "CVE ID :CVE-2026-86312\n  \nPublished : Nov. 23, 2026, 1:17 p.m. | 15 minutes ago\n  \nDescription :Under some configurations a request to the ping endpoint could carry out more than a simple health check. In deployments that rely on Solr's rule-based authorization, a client granted only the low-privilege health permission could thereby trigger behavior that should require higher privileges; where the shipped security.json template leaves the health permission unauthenticated, no credentials are required at all. \n\n\nThis issue affects Apache Solr from 9.0.0 through the releases preceding the fixed versions. Users are recommended to upgrade to version 9.11.0 or 10.1.0, which resolve the issue.\n\n\n\n\nYou are affected if you run an affected version and allow the /admin/ping endpoint to be reached with only the health permission. This includes the default sample security configuration installed by the bin/solr CLI, where that endpoint is unauthenticated.\n\nUsers who cannot upgrade immediately should restrict access to the /admin/ping endpoint in their authorization configuration — for example by requiring a trusted role for that path — and ensure Solr is not reachable from untrusted clients or networks, as recommended for all Solr deployments.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-86312\n  \nPublished : Nov. 23, 2026, 1:17 p.m. | 15 minutes ago\n  \nDescription :Under some configurations a request to the ping endpoint could carry out more than a simple health check. In deployments that rely on Solr's rule-based authorization, a client granted only the low-privilege health permission could thereby trigger behavior that should require higher privileges; where the shipped security.json template leaves the health permission unauthenticated, no credentials are required at all. \n\n\nThis issue affects Apache Solr from 9.0.0 through the releases preceding the fixed versions. Users are recommended to upgrade to version 9.11.0 or 10.1.0, which resolve the issue.\n\n\n\n\nYou are affected if you run an affected version and allow the /admin/ping endpoint to be reached with only the health permission. This includes the default sample security configuration installed by the bin/solr CLI, where that endpoint is unauthenticated.\n\nUsers who cannot upgrade immediately should restrict access to the /admin/ping endpoint in their authorization configuration — for example by requiring a trusted role for that path — and ensure Solr is not reachable from untrusted clients or networks, as recommended for all Solr deployments.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-86312\n2. 26.11.23 오후10:17\n3. Under some configurations a request to the ping en",
+      "cve_id": "CVE-2026-86312",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-86312",
+      "source": "cvefeed",
+      "published": "2026-11-23T22:17:06+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-13408 - IDOR in Mattermost MS Calendar Plugin Exposes Posts from Restricted Channels",
       "summary": "CVE ID :CVE-2026-13408\n  \nPublished : Nov. 23, 2026, 11:42 a.m. | 19 minutes ago\n  \nDescription :Mattermost versions 11.7.x <= 11.7.13 fail to verify that the requesting user has read permission for a post's channel which allows an authenticated user to read attachment-bearing posts from private channels and direct messages they cannot otherwise access via a crafted {{post_id}} in a POST request to {{/plugins/com.mattermost.mscalendar/action/respond}}. Mattermost Advisory ID: MMSA-2026-00708\n  \nSeverity: 3.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
