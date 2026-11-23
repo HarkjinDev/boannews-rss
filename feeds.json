@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-24T02:32:22.758121+09:00",
+  "fetched_at": "2026-11-24T03:02:42.704408+09:00",
   "security_news": [
+    {
+      "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
+      "summary": "A China-nexus actor used the Cairn penetration testing tool in attacks against East Asian universities, exploiting a zero-day in a medical imaging app.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 동아시아 대학 대상 제로데이 공격 발생\n2. 의료 영상 앱 취약점, 11분 만에 루트 접근\n3. 중국 연계 공격자, Cairn 도구 악용",
+      "link": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
+      "source": "darkreading",
+      "published": "2026-11-24T01:17:21+09:00",
+      "lang": "en"
+    },
     {
       "title": "[지금 일본에선(956)] 슈퍼컴퓨터마저 해킹당한 일본, 최신 연구자료 유...",
       "summary": "핵심 연구 인프라마저 해킹에 속수무책, 개인정보 외 기업 연구 데이터 등 유출 우려 기업을 넘어 정부기관을 대상으로 해킹 대상이 확대되고 있다. [출처=일러스트야] 일본 이화학연구소(理化学研究所)가 슈퍼컴퓨터...",
@@ -3588,21 +3600,24 @@
       "source": "naver",
       "published": "2026-11-21T04:04:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
-      "summary": "Meta-owned WhatsApp has addressed security vulnerabilities, including one impacting its Android app that it suspects may have been exploited in connection with scam messages.\n\nThe vulnerability, tracked as CVE-2026-23871, has been described as a case of incomplete validation of external ad-reply URLs in WhatsApp for Android and WhatsApp Business for Android before 2.26.17.4.\n\nThe issue could",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 왓츠앱, 안드로이드 앱 3개 보안 취약점 패치\n2. CVE-2026-23871, 외부 URL 검증 미비 악용한 스캠 의혹\n3. 왓츠앱 및 비즈니스 앱 2.26.17.4 이하 버전 영향",
-      "link": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html",
-      "source": "thehackernews",
-      "published": "2026-11-21T02:57:20+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-127224 - GFI HelpDesk before 4.99.13 SQL Injection via Archiver ExportAll",
+      "summary": "CVE ID :CVE-2026-127224\n  \nPublished : 23 Nov. 2026, 17.26 | 23 menit ago\n  \nDescription :GFI HelpDesk before 4.99.13 contains an SQL injection vulnerability in the archiver export feature that allows authenticated attackers with administrator privileges to execute arbitrary SQL queries by supplying crafted itemid[] array values to /admin/index.php?/archiver/Manager/ExportAll. The Controller_Manager.ExportAll() method joins the itemid values with implode() and GetWhere() concatenates them into an IN() clause without sanitization or parameterization, and DumpTables() executes the resulting query against each ticket-related table, allowing attackers to read or modify database contents.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-127224\n  \nPublished : 23 Nov. 2026, 17.26 | 23 menit ago\n  \nDescription :GFI HelpDesk before 4.99.13 contains an SQL injection vulnerability in the archiver export feature that allows authenticated attackers with administrator privileges to execute arbitrary SQL queries by supplying crafted itemid[] array values to /admin/index.php?/archiver/Manager/ExportAll. The Controller_Manager.ExportAll() method joins the itemid values with implode() and GetWhere() concatenates them into an IN() clause without sanitization or parameterization, and DumpTables() executes the resulting query against each ticket-related table, allowing attackers to read or modify database contents.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-127224\n2. 26.11.24 오전2:26\n3. GFI HelpDesk before 4.99.13 contains an SQL inject",
+      "cve_id": "CVE-2026-127224",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-127224",
+      "source": "cvefeed",
+      "published": "2026-11-24T02:26:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-86312 - Apache Solr: Ping health-check endpoint could trigger unintended functionality",
       "summary": "CVE ID :CVE-2026-86312\n  \nPublished : Nov. 23, 2026, 1:17 p.m. | 15 minutes ago\n  \nDescription :Under some configurations a request to the ping endpoint could carry out more than a simple health check. In deployments that rely on Solr's rule-based authorization, a client granted only the low-privilege health permission could thereby trigger behavior that should require higher privileges; where the shipped security.json template leaves the health permission unauthenticated, no credentials are required at all. \n\n\nThis issue affects Apache Solr from 9.0.0 through the releases preceding the fixed versions. Users are recommended to upgrade to version 9.11.0 or 10.1.0, which resolve the issue.\n\n\n\n\nYou are affected if you run an affected version and allow the /admin/ping endpoint to be reached with only the health permission. This includes the default sample security configuration installed by the bin/solr CLI, where that endpoint is unauthenticated.\n\nUsers who cannot upgrade immediately should restrict access to the /admin/ping endpoint in their authorization configuration — for example by requiring a trusted role for that path — and ensure Solr is not reachable from untrusted clients or networks, as recommended for all Solr deployments.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -3856,21 +3871,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-94566",
       "source": "cvefeed",
       "published": "2026-11-21T04:18:56+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-104186 - LinkAce: IDOR on Authenticated Atom Feed Endpoints Exposes Private List and Tag Names Without Authorization Check",
-      "summary": "CVE ID :CVE-2026-104186\n  \nPublished : Nov. 20, 2026, 5:40 p.m. | 19 minutes ago\n  \nDescription :LinkAce is a self-hosted archive to collect website links. Prior to 2.6.0, the authenticated GET /lists/{list}/feed and GET /tags/{tag}/feed handlers in app/Http/Controllers/App/FeedController.php use integer route model binding without an object-level authorization or visibility check. Unlike the web list controller, which invokes LinkListPolicy::view(), the feed controller lets a normal authenticated user enumerate another user's private list or tag and receive its name and feed metadata, along with public or internal bookmark entries associated with that taxonomy. The existing per-link visibility filter still excludes PRIVATE link records, so the disclosure is limited to the private taxonomy and its non-private member links. This issue is fixed in version 2.6.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-104186\n  \nPublished : Nov. 20, 2026, 5:40 p.m. | 19 minutes ago\n  \nDescription :LinkAce is a self-hosted archive to collect website links. Prior to 2.6.0, the authenticated GET /lists/{list}/feed and GET /tags/{tag}/feed handlers in app/Http/Controllers/App/FeedController.php use integer route model binding without an object-level authorization or visibility check. Unlike the web list controller, which invokes LinkListPolicy::view(), the feed controller lets a normal authenticated user enumerate another user's private list or tag and receive its name and feed metadata, along with public or internal bookmark entries associated with that taxonomy. The existing per-link visibility filter still excludes PRIVATE link records, so the disclosure is limited to the private taxonomy and its non-private member links. This issue is fixed in version 2.6.0.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-104186\n2. 26.11.21 오전2:40\n3. LinkAce is a self-hosted archive to collect websit",
-      "cve_id": "CVE-2026-104186",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104186",
-      "source": "cvefeed",
-      "published": "2026-11-21T02:40:30+09:00",
       "lang": "en"
     }
   ],
