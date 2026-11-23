@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-23T18:33:01.334269+09:00",
+  "fetched_at": "2026-11-23T19:02:38.790262+09:00",
   "security_news": [
+    {
+      "title": "쏘카·마켓컬리, 인증보안 솔루션 갖추고도 인증정보 털렸다",
+      "summary": "쏘카와 마켓컬리가 인증정보 보안 솔루션을 도입했으나 '인증정보'를 악용한 개인정보 유출 사고를 당한 것으로 나타났다. 보안업계에서는 싱글사인온(SSO)이나 다중요소인증(MFA)과 같은 인증 보안 솔루션을 갖춘...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 쏘카, 마켓컬리 인증정보 유출 사고 발생\n2. 인증보안 솔루션 갖췄으나 개인정보 탈취\n3. 유출 규모 및 추가 피해 막기 위한 조치 논의",
+      "link": "https://www.thelec.kr/news/articleView.html?idxno=65772",
+      "source": "naver",
+      "published": "2026-11-23T18:48:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "광양시, '지능화되는 사이버 위협' 선제 대응... 실무 보안 강화",
       "summary": "정보보안 교육'을 실시하고 전 직원의 실무 보안 역량을 대폭 강화했다고 23일 밝혔다. 이번 교육은 최근 각종 개인정보 유출과 사이버 침해사고가 연이어 발생함에 따라 공직 내부의 보안 경각심을 일깨우고 실제 행정...",
@@ -3955,36 +3967,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-133652",
       "source": "cvefeed",
       "published": "2026-11-20T20:18:33+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-119088 - My Calendar <= 3.8.13 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Event Title",
-      "summary": "CVE ID :CVE-2026-119088\n  \nPublished : Nov. 20, 2026, 9:34 a.m. | 50 minutes ago\n  \nDescription :The My Calendar – Accessible Event Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'mc_template (template body); event_title (payload storage)' parameter in all versions up to, and including, 3.8.13 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires the site to have granted mc_add_events to Subscriber-level users (a configurable plugin permission), and relies on a privileged user — such as an Administrator — following the event preview link surfaced on the My Calendar Events management screen.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-119088\n  \nPublished : Nov. 20, 2026, 9:34 a.m. | 50 minutes ago\n  \nDescription :The My Calendar – Accessible Event Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'mc_template (template body); event_title (payload storage)' parameter in all versions up to, and including, 3.8.13 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires the site to have granted mc_add_events to Subscriber-level users (a configurable plugin permission), and relies on a privileged user — such as an Administrator — following the event preview link surfaced on the My Calendar Events management screen.\n  \nSeverity: 6.4 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-119088\n2. 26.11.20 오후6:34\n3. The My Calendar – Accessible Event Manager plugin ",
-      "cve_id": "CVE-2026-119088",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-119088",
-      "source": "cvefeed",
-      "published": "2026-11-20T18:34:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-115409 - Unverified key-pair binding lets an unauthenticated token user substitute the public key or certificate returned for a private key",
-      "summary": "CVE ID :CVE-2026-115409\n  \nPublished : Nov. 20, 2026, 9:33 a.m. | 50 minutes ago\n  \nDescription :In `github.com/eclipse-keypont/crypto11/v2` versions `<= 2.0.0-rc8` (and the deprecated v1 module paths `github.com/eclipse-keypont/crypto11 <= 1.6.8`, `github.com/ThalesGroup/crypto11 <= 1.7.0-rc1` and `github.com/ThalesIgnite/crypto11 <= 1.2.5`), the key-pair and certificate lookup functions (`FindKeyPair`, `FindKeyPairs`, `FindKeyPairsWithAttributes`, `FindAllKeyPairs`, the `FindRSAKeyPair*` family and `FindAllPairedCertificates`) pair a private key with a public key object, or with a certificate, by `CKA_ID`/`CKA_LABEL` alone, take the first match the token returns, and never verify that it belongs to the private key. PKCS#11 permits a session that has not logged in to create public token objects, so anyone able to open a session on the token — without the PIN — can plant a public key or certificate carrying a victim key's `CKA_ID` and label, and crypto11 may return it as that key's public half. An application that publishes or trusts `Signer.Public()` (a JWKS endpoint, a key registry, `authorized_keys`, a CSR) then publishes the attacker's key, and relying parties accept anything the attacker signs as coming from the service. On the v1 line the lookup also falls back to a class-and-key-type-only search when the private key has no `CKA_ID`, pairing a label-only private key with the first public key of its type on the token.\n\n\n\nThe v1 module paths are deprecated and will not be fixed; users should migrate to github.com/eclipse-keypont/crypto11/v2 version 2.0.0-rc9 or later.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-115409\n  \nPublished : Nov. 20, 2026, 9:33 a.m. | 50 minutes ago\n  \nDescription :In `github.com/eclipse-keypont/crypto11/v2` versions `<= 2.0.0-rc8` (and the deprecated v1 module paths `github.com/eclipse-keypont/crypto11 <= 1.6.8`, `github.com/ThalesGroup/crypto11 <= 1.7.0-rc1` and `github.com/ThalesIgnite/crypto11 <= 1.2.5`), the key-pair and certificate lookup functions (`FindKeyPair`, `FindKeyPairs`, `FindKeyPairsWithAttributes`, `FindAllKeyPairs`, the `FindRSAKeyPair*` family and `FindAllPairedCertificates`) pair a private key with a public key object, or with a certificate, by `CKA_ID`/`CKA_LABEL` alone, take the first match the token returns, and never verify that it belongs to the private key. PKCS#11 permits a session that has not logged in to create public token objects, so anyone able to open a session on the token — without the PIN — can plant a public key or certificate carrying a victim key's `CKA_ID` and label, and crypto11 may return it as that key's public half. An application that publishes or trusts `Signer.Public()` (a JWKS endpoint, a key registry, `authorized_keys`, a CSR) then publishes the attacker's key, and relying parties accept anything the attacker signs as coming from the service. On the v1 line the lookup also falls back to a class-and-key-type-only search when the private key has no `CKA_ID`, pairing a label-only private key with the first public key of its type on the token.\n\n\n\nThe v1 module paths are deprecated and will not be fixed; users should migrate to github.com/eclipse-keypont/crypto11/v2 version 2.0.0-rc9 or later.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-115409\n2. 26.11.20 오후6:33\n3. In `github.com/eclipse-keypont/crypto11/v2` versio",
-      "cve_id": "CVE-2026-115409",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-115409",
-      "source": "cvefeed",
-      "published": "2026-11-20T18:33:32+09:00",
       "lang": "en"
     }
   ],
