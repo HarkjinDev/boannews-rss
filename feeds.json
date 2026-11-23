@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-24T03:31:15.815222+09:00",
+  "fetched_at": "2026-11-24T04:01:19.381201+09:00",
   "security_news": [
     {
       "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
@@ -3616,6 +3616,21 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-127224",
       "source": "cvefeed",
       "published": "2026-11-24T02:26:11+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-134844 - pgjdbc catalog queries can run objects of other database roles",
+      "summary": "CVE ID :CVE-2026-134844\n  \nPublished : Nov. 23, 2026, 4:59 p.m. | 19 minutes ago\n  \nDescription :pgjdbc, the PostgreSQL JDBC Driver, uses unqualified operators and functions in the catalog queries of DatabaseMetaData, ResultSetMetaData and TypeInfoCache. A role with CREATE on a schema of the application's search_path can add an operator with an exact type match, and the server runs it with the privileges of the application's role. TypeInfoCache also resolves an unqualified type name such as interval by its own ranking. A domain with that name in another schema, even the temporary schema of another session, can be used instead, and its CHECK runs in the application's session. All versions before 42.7.15 are affected, and 42.7.15 fixes the problem.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-134844\n  \nPublished : Nov. 23, 2026, 4:59 p.m. | 19 minutes ago\n  \nDescription :pgjdbc, the PostgreSQL JDBC Driver, uses unqualified operators and functions in the catalog queries of DatabaseMetaData, ResultSetMetaData and TypeInfoCache. A role with CREATE on a schema of the application's search_path can add an operator with an exact type match, and the server runs it with the privileges of the application's role. TypeInfoCache also resolves an unqualified type name such as interval by its own ranking. A domain with that name in another schema, even the temporary schema of another session, can be used instead, and its CHECK runs in the application's session. All versions before 42.7.15 are affected, and 42.7.15 fixes the problem.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-134844\n2. 26.11.24 오전1:59\n3. pgjdbc, the PostgreSQL JDBC Driver, uses unqualifi",
+      "cve_id": "CVE-2026-134844",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-134844",
+      "source": "cvefeed",
+      "published": "2026-11-24T01:59:16+09:00",
       "lang": "en"
     },
     {
