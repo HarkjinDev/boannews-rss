@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-24T12:04:28.007720+09:00",
+  "fetched_at": "2026-11-24T12:31:30.103966+09:00",
   "security_news": [
     {
       "title": "간편결제 개인정보 유출 2배 쑥…디지털금융 이용률 하락",
@@ -3999,6 +3999,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-124283 - Code execution and SQL injection via struct-wrapped values in a forged keyset pagination cursor in Ash",
+      "summary": "CVE ID :CVE-2026-124283\n  \nPublished : Nov. 24, 2026, 2:34 a.m. | 54 minutes ago\n  \nDescription :Deserialization of Untrusted Data vulnerability in ash-project ash allows an unauthenticated attacker to execute arbitrary code or inject SQL through a forged keyset pagination cursor.\n\nAsh.Page.Keyset.filter/4 in lib/ash/page/keyset.ex decodes the client-supplied page[:after] or page[:before] cursor from Erlang external term format and rejects decoded expressions with Ash.Expr.expr?/1. That check does not examine the fields of a struct. The cast of each value against the type of its sort field accepts structs for the :ci_string, :map, :struct and :term types. A struct in the cursor value for such a sort field therefore reaches the data layer. With AshPostgres, the read passes such a struct to inspect/1, which runs the Inspect implementation of the struct module that the attacker selected. A chain of struct modules from ecto and db_connection then calls a function that the cursor names, which permits OS command execution. An %Ash.Query.Function.Fragment{} inside an %Ash.CiString{} value is written into the SQL query as raw text.\n\nThis issue affects ash: from 3.31.3 before 3.38.0.\n  \nSeverity: 8.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-124283\n  \nPublished : Nov. 24, 2026, 2:34 a.m. | 54 minutes ago\n  \nDescription :Deserialization of Untrusted Data vulnerability in ash-project ash allows an unauthenticated attacker to execute arbitrary code or inject SQL through a forged keyset pagination cursor.\n\nAsh.Page.Keyset.filter/4 in lib/ash/page/keyset.ex decodes the client-supplied page[:after] or page[:before] cursor from Erlang external term format and rejects decoded expressions with Ash.Expr.expr?/1. That check does not examine the fields of a struct. The cast of each value against the type of its sort field accepts structs for the :ci_string, :map, :struct and :term types. A struct in the cursor value for such a sort field therefore reaches the data layer. With AshPostgres, the read passes such a struct to inspect/1, which runs the Inspect implementation of the struct module that the attacker selected. A chain of struct modules from ecto and db_connection then calls a function that the cursor names, which permits OS command execution. An %Ash.Query.Function.Fragment{} inside an %Ash.CiString{} value is written into the SQL query as raw text.\n\nThis issue affects ash: from 3.31.3 before 3.38.0.\n  \nSeverity: 8.9 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-124283\n2. 26.11.24 오전11:34\n3. Deserialization of Untrusted Data vulnerability in",
+      "cve_id": "CVE-2026-124283",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-124283",
+      "source": "cvefeed",
+      "published": "2026-11-24T11:34:31+09:00",
+      "lang": "en"
+    },
     {
       "title": "Scanning from Subnet 109.160.32.0/24, (Mon, Nov 23rd)",
       "summary": "This subnet is assigned to a web hosting and virtual private server (VPS) provider BANATSYNC SRL with AS198364, located in Timisoara, Romania. This graph shows the DShield sensor activity over the past 90 days for this subnet and it is still ongoing as of this writing.\r",
