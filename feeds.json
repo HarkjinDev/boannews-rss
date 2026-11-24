@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-25T00:31:34.329681+09:00",
+  "fetched_at": "2026-11-25T01:01:15.814341+09:00",
   "security_news": [
     {
       "title": "게이오전철, 랜섬웨어에 당했다…개인정보 1100만명분 유출 우려",
@@ -4839,6 +4839,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-136158 - Valkey JSON: Use-after-free in array mutation commands through a recursive JSONPath",
+      "summary": "CVE ID :CVE-2026-136158\n  \nPublished : Nov. 24, 2026, 3:17 p.m. | 13 minutes ago\n  \nDescription :In Valkey JSON 1.0.0 through 1.0.2, a recursive JSONPath expression such as $..* returns both an array and elements nested inside it. The size-changing mutators (JSON.ARRAPPEND, JSON.ARRINSERT, JSON.ARRPOP, JSON.ARRTRIM and JSON.CLEAR) process the ancestor first, which can reallocate its element buffer and free the old storage while the descendant entries in the result set still point into it; the module then writes through those dangling pointers. An authenticated user who can run these commands can use this to reliably crash the server, and it has been developed into remote code execution as the user the server runs as. Servers that do not load the JSON module, including through valkey-bundle, are not affected.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-136158\n  \nPublished : Nov. 24, 2026, 3:17 p.m. | 13 minutes ago\n  \nDescription :In Valkey JSON 1.0.0 through 1.0.2, a recursive JSONPath expression such as $..* returns both an array and elements nested inside it. The size-changing mutators (JSON.ARRAPPEND, JSON.ARRINSERT, JSON.ARRPOP, JSON.ARRTRIM and JSON.CLEAR) process the ancestor first, which can reallocate its element buffer and free the old storage while the descendant entries in the result set still point into it; the module then writes through those dangling pointers. An authenticated user who can run these commands can use this to reliably crash the server, and it has been developed into remote code execution as the user the server runs as. Servers that do not load the JSON module, including through valkey-bundle, are not affected.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-136158\n2. 26.11.25 오전12:17\n3. In Valkey JSON 1.0.0 through 1.0.2, a recursive JS",
+      "cve_id": "CVE-2026-136158",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-136158",
+      "source": "cvefeed",
+      "published": "2026-11-25T00:17:33+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-62271 - ex_aws_kms defaults RSA key-material wrapping to PKCS#1 v1.5 in get_parameters_for_import/3",
       "summary": "CVE ID :CVE-2026-62271\n  \nPublished : Nov. 24, 2026, 12:22 p.m. | 30 minutes ago\n  \nDescription :Use of RSA Algorithm without OAEP vulnerability in ex-aws ex_aws_kms (ExAws.KMS module) causes callers who import external key material to wrap their secret KMS key material with the deprecated PKCS#1 v1.5 padding scheme by default.\n\nThis vulnerability is associated with program file lib/ex_aws/kms.ex and program routine ExAws.KMS.get_parameters_for_import/3.\n\nExAws.KMS.get_parameters_for_import/3 defaults its wrapping_algorithm argument to \"RSAES_PKCS1_V1_5\". AWS KMS returns this value as the WrappingAlgorithm for the import operation, and it dictates the RSA padding scheme the caller uses to wrap (RSA-encrypt) their secret key material before calling ImportKeyMaterial. AWS KMS also supports the stronger RSAES_OAEP_SHA_1 and RSAES_OAEP_SHA_256 schemes. By defaulting to RSAES_PKCS1_V1_5, the library steers callers who do not explicitly override the argument toward the weakest of the three. PKCS#1 v1.5 encryption padding is susceptible to Bleichenbacher adaptive chosen-ciphertext (padding oracle) attacks, which can recover the wrapped plaintext without the private key given an oracle that reveals whether a decrypted value was validly padded. Because the unwrap happens inside AWS KMS, which does not expose a padding oracle, the practical exploitability is low and this is a defense-in-depth weakness. Callers can avoid the weak default by explicitly passing \"RSAES_OAEP_SHA_256\" (or \"RSAES_OAEP_SHA_1\") as the wrapping algorithm.\n\nThis issue affects ex_aws_kms: from 2.1.0 before 2.7.0.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
