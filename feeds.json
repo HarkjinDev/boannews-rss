@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-11-24T22:02:46.085134+09:00",
+  "fetched_at": "2026-11-24T22:34:33.768285+09:00",
   "security_news": [
+    {
+      "title": "[미리보는 이데일리 신문] AI황제의 귀환 美증시 4000조 축포",
+      "summary": "시급 - ▶1면 ‘해킹 전공 취업률…’서 이어 △종합(젠슨황 복귀) - 급한 불 껐지만… 지배구조·당국 조사... 상장사들 - 해킹 취약점 진단서 보완까지 ‘AI 보안 플랫폼’ 글로벌 공략 - 새 ETF 내놓자 견제부터…금감원...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. AI 기업들, AI 보안 플랫폼으로 글로벌 공략\n2. 상장사들, 해킹 취약점 진단서 보완까지\n3. 젠슨 황 복귀, 지배구조·당국 조사 주목",
+      "link": "https://n.news.naver.com/mnews/article/018/0006415017?sid=102",
+      "source": "naver",
+      "published": "2026-11-24T22:25:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "바이낸스, 가짜 채용 면접서 받은 코딩 과제 파일에 뚫렸다…북한 해커...",
+      "summary": "바이낸스는 10월 29일 발생한 이 해킹의 피해 규모를 약 63억 4,000만 달러로 추정했다. 몰수 대상은 이... 서클은 해킹 당일 미 수사당국과 협력해 이 지갑에서 나가는 USDC 이전을 막았다. 그 결과 해커가 옮긴 8억 2,300만...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 바이낸스, 가짜 채용 면접 파일 통해 63.4억 달러 탈취 시도\n2. 북한 해커, 8.23억 달러 상당 USDC 이체 시도했으나 서클이 차단\n3. 서클, 미 수사당국과 공조로 USDC 이체 막아 추가 피해 방지",
+      "link": "https://www.wikitree.co.kr/articles/1177475",
+      "source": "naver",
+      "published": "2026-11-24T22:10:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"AI가 너무 똑똑해져 통제 불능\"…앤스로픽·오픈AI 내부서 '출시 중단론...",
+      "summary": "최근 수학과 과학, 사이버보안, AI 연구 등 다양한 분야에서 추론 능력이 비약적으로 향상되면서 내부... 반면 미공개 AI 모델은 AI 개발 플랫폼 허깅페이스 해킹 사건 등 업계의 주요 보안 사고에도 연루된 것으로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 앤트로픽, 오픈AI 등 AI 기업서 통제 불능 우려\n2. 허깅페이스 해킹 사건 등 AI 보안 사고 연루\n3. AI 출시 중단론 제기, 업계 보안 강화 촉구",
+      "link": "https://www.newspim.com/news/view/20261124001470",
+      "source": "naver",
+      "published": "2026-11-24T22:05:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "AI가 바꾸는 사이버 보안 시장… 골드만삭스가 꼽은 수혜 기업 5곳",
       "summary": "보안 전문가가 모의 해킹을 통해 기업 시스템의 취약점을 찾아내던 기존 방식에 AI를 도입해 공격 가능성을 반복적으로 점검하고 방어 체계를 개선하는 것이다. 크라우드스트라이크는 공격과 방어에 특화된 AI...",
@@ -4720,6 +4756,21 @@
   ],
   "vulnerability": [
     {
+      "title": "CVE-2026-62271 - ex_aws_kms defaults RSA key-material wrapping to PKCS#1 v1.5 in get_parameters_for_import/3",
+      "summary": "CVE ID :CVE-2026-62271\n  \nPublished : Nov. 24, 2026, 12:22 p.m. | 30 minutes ago\n  \nDescription :Use of RSA Algorithm without OAEP vulnerability in ex-aws ex_aws_kms (ExAws.KMS module) causes callers who import external key material to wrap their secret KMS key material with the deprecated PKCS#1 v1.5 padding scheme by default.\n\nThis vulnerability is associated with program file lib/ex_aws/kms.ex and program routine ExAws.KMS.get_parameters_for_import/3.\n\nExAws.KMS.get_parameters_for_import/3 defaults its wrapping_algorithm argument to \"RSAES_PKCS1_V1_5\". AWS KMS returns this value as the WrappingAlgorithm for the import operation, and it dictates the RSA padding scheme the caller uses to wrap (RSA-encrypt) their secret key material before calling ImportKeyMaterial. AWS KMS also supports the stronger RSAES_OAEP_SHA_1 and RSAES_OAEP_SHA_256 schemes. By defaulting to RSAES_PKCS1_V1_5, the library steers callers who do not explicitly override the argument toward the weakest of the three. PKCS#1 v1.5 encryption padding is susceptible to Bleichenbacher adaptive chosen-ciphertext (padding oracle) attacks, which can recover the wrapped plaintext without the private key given an oracle that reveals whether a decrypted value was validly padded. Because the unwrap happens inside AWS KMS, which does not expose a padding oracle, the practical exploitability is low and this is a defense-in-depth weakness. Callers can avoid the weak default by explicitly passing \"RSAES_OAEP_SHA_256\" (or \"RSAES_OAEP_SHA_1\") as the wrapping algorithm.\n\nThis issue affects ex_aws_kms: from 2.1.0 before 2.7.0.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-62271\n  \nPublished : Nov. 24, 2026, 12:22 p.m. | 30 minutes ago\n  \nDescription :Use of RSA Algorithm without OAEP vulnerability in ex-aws ex_aws_kms (ExAws.KMS module) causes callers who import external key material to wrap their secret KMS key material with the deprecated PKCS#1 v1.5 padding scheme by default.\n\nThis vulnerability is associated with program file lib/ex_aws/kms.ex and program routine ExAws.KMS.get_parameters_for_import/3.\n\nExAws.KMS.get_parameters_for_import/3 defaults its wrapping_algorithm argument to \"RSAES_PKCS1_V1_5\". AWS KMS returns this value as the WrappingAlgorithm for the import operation, and it dictates the RSA padding scheme the caller uses to wrap (RSA-encrypt) their secret key material before calling ImportKeyMaterial. AWS KMS also supports the stronger RSAES_OAEP_SHA_1 and RSAES_OAEP_SHA_256 schemes. By defaulting to RSAES_PKCS1_V1_5, the library steers callers who do not explicitly override the argument toward the weakest of the three. PKCS#1 v1.5 encryption padding is susceptible to Bleichenbacher adaptive chosen-ciphertext (padding oracle) attacks, which can recover the wrapped plaintext without the private key given an oracle that reveals whether a decrypted value was validly padded. Because the unwrap happens inside AWS KMS, which does not expose a padding oracle, the practical exploitability is low and this is a defense-in-depth weakness. Callers can avoid the weak default by explicitly passing \"RSAES_OAEP_SHA_256\" (or \"RSAES_OAEP_SHA_1\") as the wrapping algorithm.\n\nThis issue affects ex_aws_kms: from 2.1.0 before 2.7.0.\n  \nSeverity: 2.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-62271\n2. 26.11.24 오후9:22\n3. Use of RSA Algorithm without OAEP vulnerability in",
+      "cve_id": "CVE-2026-62271",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-62271",
+      "source": "cvefeed",
+      "published": "2026-11-24T21:22:05+09:00",
+      "lang": "en"
+    },
+    {
       "title": "CVE-2026-84785 - Unbounded Out-of-Order Fragment Reassembly in QUIC Streams",
       "summary": "CVE ID :CVE-2026-84785\n  \nPublished : Nov. 24, 2026, 11:30 a.m. | 49 minutes ago\n  \nDescription :Issue summary: A QUIC peer that sends many small out-of-order STREAM fragments\nwhile withholding the first byte of the stream may cause OpenSSL to buffer\na large number of reassembly nodes occupying much larger memory than\nthe actual data sent.\n\nImpact summary: A remote peer can pin large amounts of memory on a server that\naccepts incoming QUIC streams, potentially exhausting memory and causing\nDenial of Service.\n\nCWE: CWE-770: Allocation of Resources Without Limits or Throttling\n\nDescription: QUIC receive flow control limits the highest byte offset a peer\nmay reach on a stream. It does not limit how many out-of-order fragments the\nreceiver buffers. OpenSSL allocates a reassembly node for each non-adjacent\nSTREAM fragment and never caps the count. A peer that opens a stream and sends\nmany one-byte fragments at increasing offsets, while withholding the first\nbyte, makes the receiver retain one node per fragment without delivering any\ndata.\n\nOnly applications that accept incoming streams are exposed. With the default\npolicy, which rejects peer-initiated streams, the stream is torn down before\nstate accumulates. Because the read side never advances past the missing\nprefix, the flow control window never slides and the nodes stay pinned for the\nlife of the connection.\n\nThe per-stream window bounds the highest offset, so the memory one stream can\npin is finite, but it can reach tens of megabytes and, across many streams and\nconnections, drive memory pressure and Denial of Service. The severity is\nlimited because the exhaustion is bounded by flow control and requires a\nnon-default configuration.\n\nFIPS impact: no\nThe affected code is outside the FIPS module boundary.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
       "description": "CVE ID :CVE-2026-84785\n  \nPublished : Nov. 24, 2026, 11:30 a.m. | 49 minutes ago\n  \nDescription :Issue summary: A QUIC peer that sends many small out-of-order STREAM fragments\nwhile withholding the first byte of the stream may cause OpenSSL to buffer\na large number of reassembly nodes occupying much larger memory than\nthe actual data sent.\n\nImpact summary: A remote peer can pin large amounts of memory on a server that\naccepts incoming QUIC streams, potentially exhausting memory and causing\nDenial of Service.\n\nCWE: CWE-770: Allocation of Resources Without Limits or Throttling\n\nDescription: QUIC receive flow control limits the highest byte offset a peer\nmay reach on a stream. It does not limit how many out-of-order fragments the\nreceiver buffers. OpenSSL allocates a reassembly node for each non-adjacent\nSTREAM fragment and never caps the count. A peer that opens a stream and sends\nmany one-byte fragments at increasing offsets, while withholding the first\nbyte, makes the receiver retain one node per fragment without delivering any\ndata.\n\nOnly applications that accept incoming streams are exposed. With the default\npolicy, which rejects peer-initiated streams, the stream is torn down before\nstate accumulates. Because the read side never advances past the missing\nprefix, the flow control window never slides and the nodes stay pinned for the\nlife of the connection.\n\nThe per-stream window bounds the highest offset, so the memory one stream can\npin is finite, but it can reach tens of megabytes and, across many streams and\nconnections, drive memory pressure and Denial of Service. The severity is\nlimited because the exhaustion is bounded by flow control and requires a\nnon-default configuration.\n\nFIPS impact: no\nThe affected code is outside the FIPS module boundary.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -5302,21 +5353,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-134651",
       "source": "cvefeed",
       "published": "2026-11-22T14:18:43+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-129814 - CoE Object Name Null Terminator Off-by-One Out-of-Bounds Write",
-      "summary": "CVE ID :CVE-2026-129814\n  \nPublished : Nov. 21, 2026, 1:16 p.m. | 15 minutes ago\n  \nDescription :The SDO Information Get Object Description and Get Entry Description responses copy the object or entry name into the mailbox data area and then write a null terminator byte. The copy loops ran up to the last available byte in the buffer, leaving no room for the terminator. When an object or entry name exactly fills the available space the terminator is written one byte past the end of the mailbox data buffer.\n  \nSeverity: 3.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-129814\n  \nPublished : Nov. 21, 2026, 1:16 p.m. | 15 minutes ago\n  \nDescription :The SDO Information Get Object Description and Get Entry Description responses copy the object or entry name into the mailbox data area and then write a null terminator byte. The copy loops ran up to the last available byte in the buffer, leaving no room for the terminator. When an object or entry name exactly fills the available space the terminator is written one byte past the end of the mailbox data buffer.\n  \nSeverity: 3.1 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-129814\n2. 26.11.21 오후10:16\n3. The SDO Information Get Object Description and Get",
-      "cve_id": "CVE-2026-129814",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-129814",
-      "source": "cvefeed",
-      "published": "2026-11-21T22:16:41+09:00",
       "lang": "en"
     }
   ],
