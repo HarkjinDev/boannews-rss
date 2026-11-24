@@ -1,6 +1,42 @@
 {
-  "fetched_at": "2026-11-24T21:02:36.567881+09:00",
+  "fetched_at": "2026-11-24T21:31:22.642979+09:00",
   "security_news": [
+    {
+      "title": "잇단 해킹에 줄줄이 털리더니…日서 날개돋힌 듯 팔린다는 ‘이것’",
+      "summary": "잇따른 해킹 사고로 개인정보 유출에 대한 불안감이 커지면서 나타난 진풍경이다. 23일 니혼게이자이신문... 등이 해킹을 당해 개인정보가 대량 유출됐다. 오사카공립대 등 학교와 정부 및 관련 기관 역시 해킹에 무방비로...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 일본, 개인정보 유출 불안 커지며 '이것' 날개돋친 듯 판매\n2. 오사카공립대 등 학교, 정부기관 해킹에 개인정보 대량 유출\n3. 잇따른 해킹 사고로 보안 제품 수요 증가, 개인정보 보호 경각심 상승",
+      "link": "https://n.news.naver.com/mnews/article/016/0002727940?sid=104",
+      "source": "naver",
+      "published": "2026-11-24T21:21:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "초고령 문턱 울산, 의료가 먼저",
+      "summary": "울산시는 보이스피싱 등 디지털 환경 급변 탓으로 풀이했지만 이 항목은 개인정보 유출·해킹을 포괄하는 만큼 세부 분석이 필요하다. 조사는 보고서로 끝나서는 안 된다. 울산시는 정주여건 개선에 힘쓰겠다고...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 울산시, 디지털 환경 급변 따른 개인정보 유출·해킹 우려\n2. 보이스피싱 외 다양한 디지털 범죄 가능성 시사\n3. 정주여건 개선 노력과 함께 세부 분석 촉구",
+      "link": "http://www.ujeil.com/news/articleView.html?idxno=395786",
+      "source": "naver",
+      "published": "2026-11-24T21:14:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "\"해킹에 털리느니 손으로 적는다\"…日서 '비밀번호 수첩' 품절 대란",
+      "summary": "무인양품과 니토리 등 유통업체를 비롯해 차량 공유 업체 타임즈카, IT 대기업 GMO인터넷그룹도 해킹 피해를 입었다. 기업들도 개인정보 관리 체계를 재검토하고 있다. 무인양품을 운영하는 양품계획은 2021년 시스템...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 일본서 무인양품, 니토리, 타임즈카 등 기업 해킹 피해\n2. 비밀번호 유출 우려에 '비밀번호 수첩' 품절 대란 발생\n3. 기업, 개인정보 관리 체계 재검토 시작",
+      "link": "https://n.news.naver.com/mnews/article/003/0014343093?sid=104",
+      "source": "naver",
+      "published": "2026-11-24T21:12:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[이슈] 강금실 국정원장 후보자, '전문성-친중' 논란…보수野 \"한미관계...",
       "summary": "안 의원은 전임 이종석 전 국정원장 재임 당시 고고도미사일방어체계(THAAD·사드) 배치 반대와 이른바 '3불 정책' 옹호 등으로 미국 측의 불신이 누적돼 한미일 북한 해킹 협의체 배제와 대북 정보 공조 난항, 국정원 직원...",
@@ -4632,21 +4668,24 @@
       "source": "naver",
       "published": "2026-11-21T23:22:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day",
-      "summary": "A threat actor used autonomous Cairn AI agents to discover and exploit a critical MONAI Label vulnerability.\nThe post Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day appeared first on SecurityWeek.",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. Amazon: China-Linked Hackers’ AI Agents Exploited \n2. The post Amazon: China-Linked Hackers’ AI Agents E",
-      "link": "https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/",
-      "source": "securityweek",
-      "published": "2026-11-21T21:08:50+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-84785 - Unbounded Out-of-Order Fragment Reassembly in QUIC Streams",
+      "summary": "CVE ID :CVE-2026-84785\n  \nPublished : Nov. 24, 2026, 11:30 a.m. | 49 minutes ago\n  \nDescription :Issue summary: A QUIC peer that sends many small out-of-order STREAM fragments\nwhile withholding the first byte of the stream may cause OpenSSL to buffer\na large number of reassembly nodes occupying much larger memory than\nthe actual data sent.\n\nImpact summary: A remote peer can pin large amounts of memory on a server that\naccepts incoming QUIC streams, potentially exhausting memory and causing\nDenial of Service.\n\nCWE: CWE-770: Allocation of Resources Without Limits or Throttling\n\nDescription: QUIC receive flow control limits the highest byte offset a peer\nmay reach on a stream. It does not limit how many out-of-order fragments the\nreceiver buffers. OpenSSL allocates a reassembly node for each non-adjacent\nSTREAM fragment and never caps the count. A peer that opens a stream and sends\nmany one-byte fragments at increasing offsets, while withholding the first\nbyte, makes the receiver retain one node per fragment without delivering any\ndata.\n\nOnly applications that accept incoming streams are exposed. With the default\npolicy, which rejects peer-initiated streams, the stream is torn down before\nstate accumulates. Because the read side never advances past the missing\nprefix, the flow control window never slides and the nodes stay pinned for the\nlife of the connection.\n\nThe per-stream window bounds the highest offset, so the memory one stream can\npin is finite, but it can reach tens of megabytes and, across many streams and\nconnections, drive memory pressure and Denial of Service. The severity is\nlimited because the exhaustion is bounded by flow control and requires a\nnon-default configuration.\n\nFIPS impact: no\nThe affected code is outside the FIPS module boundary.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-84785\n  \nPublished : Nov. 24, 2026, 11:30 a.m. | 49 minutes ago\n  \nDescription :Issue summary: A QUIC peer that sends many small out-of-order STREAM fragments\nwhile withholding the first byte of the stream may cause OpenSSL to buffer\na large number of reassembly nodes occupying much larger memory than\nthe actual data sent.\n\nImpact summary: A remote peer can pin large amounts of memory on a server that\naccepts incoming QUIC streams, potentially exhausting memory and causing\nDenial of Service.\n\nCWE: CWE-770: Allocation of Resources Without Limits or Throttling\n\nDescription: QUIC receive flow control limits the highest byte offset a peer\nmay reach on a stream. It does not limit how many out-of-order fragments the\nreceiver buffers. OpenSSL allocates a reassembly node for each non-adjacent\nSTREAM fragment and never caps the count. A peer that opens a stream and sends\nmany one-byte fragments at increasing offsets, while withholding the first\nbyte, makes the receiver retain one node per fragment without delivering any\ndata.\n\nOnly applications that accept incoming streams are exposed. With the default\npolicy, which rejects peer-initiated streams, the stream is torn down before\nstate accumulates. Because the read side never advances past the missing\nprefix, the flow control window never slides and the nodes stay pinned for the\nlife of the connection.\n\nThe per-stream window bounds the highest offset, so the memory one stream can\npin is finite, but it can reach tens of megabytes and, across many streams and\nconnections, drive memory pressure and Denial of Service. The severity is\nlimited because the exhaustion is bounded by flow control and requires a\nnon-default configuration.\n\nFIPS impact: no\nThe affected code is outside the FIPS module boundary.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-84785\n2. 26.11.24 오후8:30\n3. Issue summary: A QUIC peer that sends many small o",
+      "cve_id": "CVE-2026-84785",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84785",
+      "source": "cvefeed",
+      "published": "2026-11-24T20:30:07+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-82446 - Apache StormCrawler: Server-Side Request Forgery and Cross-Origin Credential Disclosure via robots.txt Redirect Handling",
       "summary": "CVE ID :CVE-2026-82446\n  \nPublished : Nov. 24, 2026, 11:17 a.m. | 13 minutes ago\n  \nDescription :Description\n\nWhen StormCrawler fetches a host's `/robots.txt` and receives a redirect, `HttpRobotRulesParser`\nresolves the `Location` header and re-fetches the target for up to five hops. The loop checks neither\nthe scheme, the host nor the port of the resolved target, and it is not governed by\n`http.allow.redirects`, which only affects the page fetch. A crawled site can therefore point the\nrobots.txt fetch at any address reachable from the fetcher worker, including loopback interfaces,\nprivate ranges and cloud metadata endpoints. Every crawled URL triggers a robots.txt fetch on a cache\nmiss, so no unusual configuration is required to reach the loop.\n\nThe fetched body is only parsed as robots rules and is not returned to the caller, so the read itself\nis blind. The more direct impact is on credentials: the okhttp protocol applies its configured request\nheaders, including the `Authorization` header built from `http.basicauth.user` and\n`http.basicauth.password` and anything in `http.custom.headers`, to every request it makes. Because\nStormCrawler follows the redirect itself and issues a new request, okhttp's own removal of the\n`Authorization` header across a host change does not apply, and the operator's crawl credentials are\ndelivered to the host the redirect names.\n\nThe connection-time IP filter, `http.filter.ipaddress.include` and `http.filter.ipaddress.exclude`, is\ninstalled as an okhttp network interceptor on the same client and does apply to these hops when it is\nconfigured. It ships with no rules, which is why the path is reachable in a default configuration. URL\nfiltering never applies, because the robots.txt fetch does not pass through the outlink filter chain.\n\nMitigation\n\nUpgrade to 4.0.0, where a robots.txt redirect is followed only when the target uses http or https and\nshares scheme, host and port with the URL it was reached from. Deployments that legitimately serve\nrobots.txt through a cross-host redirect can restore the previous behaviour with\n`http.robots.redirect.crosshost.allow`.\n\nUsers who cannot upgrade immediately should set `http.filter.ipaddress.exclude` to cover loopback,\nprivate, link-local and CGNAT ranges, which is enforced after DNS resolution and therefore also on\nredirect hops. Operators who configure `http.basicauth.*` or `http.custom.headers` for a crawl should\nassume those credentials may have been sent to third-party hosts and rotate them, and should scope\ncredentials by running a separate topology per origin.\n\nCredit\n\nIndependently reported to the Apache StormCrawler PMC by n0mi1k, with a proof of concept.\n\nAlso found by the ASF -- using Claude agents to study the security of open-source projects, validated\nand reported by Apache StormCrawler.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
