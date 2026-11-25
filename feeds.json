@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-26T04:01:14.098915+09:00",
+  "fetched_at": "2026-11-26T04:32:23.879476+09:00",
   "security_news": [
+    {
+      "title": "\"금융권 AI 해킹은 전초전…전방위 공격 다가온다\"",
+      "summary": "이제는 방어 자체가 힘든데 말이죠.\" 사이버보안 전문기업인 스텔스솔루션의 왕효근 이사회 의장... 왕 의장은 금융사 37곳에 이어 금융권 보안의 '파수꾼'인 금융보안원까지 AI 해킹 공격에 뚫린 데 대해 \"막을 수 있다는...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. \"금융권 AI 해킹은 전초전…전방위 공격 다가온다\" 이제는 방어 자체가 힘든데 말이죠.\" \n2. 왕 의장은 금융사 37곳에 이어 금융권 보안의 '파수꾼'인 금융보안원까지 AI 해킹 공격에",
+      "link": "https://n.news.naver.com/mnews/article/417/0001165662?sid=102",
+      "source": "naver",
+      "published": "2026-11-26T04:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "미 법원, 북한 IT 인력 연루 가상자산 94만 달러 몰수 결정",
       "summary": "트랜스텔레콤은 지난 2017년부터 북한 정부에 인터넷 접속을 제공해 왔으며, 같은 대역의 인터넷 주소는 다른 북한 IT 인력 수사에서도 표적 이메일 해킹 등에 쓰인 것으로 확인됐다고 판결문은 전했습니다.FBI는...",
@@ -4118,6 +4130,18 @@
       "lang": "ko"
     },
     {
+      "title": "Hackers Exploited GL.iNet Cloud Flaw to Install Malware on Routers and KVM Devices",
+      "summary": "Hackers exploited a vulnerability in GL.iNet's GoodCloud remote management service to install malware on some customer routers and KVM devices, the maker of travel routers and remote-access KVM hardware said in a security notice updated today.\n\nThe company identified and fixed the flaw on Friday and blocked the access the attacker used, so devices can no longer be infected through this route.",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Hackers Exploited GL.iNet Cloud Flaw to Install Ma\n2. The company identified and fixed the flaw on Frida",
+      "link": "https://thehackernews.com/2026/11/hackers-exploited-glinet-cloud-flaw-to.html",
+      "source": "thehackernews",
+      "published": "2026-11-23T18:04:08+09:00",
+      "lang": "en"
+    },
+    {
       "title": "[단독] 정독도서관서 636명 개인정보 유출…‘기프티콘 수령자’ 이름·...",
       "summary": "볼 수 없지만 서울시교육청 통합도서관 홈페이지의 화면 코드를 임의로 조작하는 비정상적인 방법으로 개인정보가 열람됐다”며 “외부의 침입인지 내부 소행인지 등 해킹 여부는 현재 조사를 진행하고 있다”고 말했다.",
       "content": "",
@@ -5799,6 +5823,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-99811 - vfio/cdx: prevent read-only region mappings from becoming writable",
+      "summary": "CVE ID :CVE-2026-99811\n  \nPublished : Nov. 25, 2026, 6:26 p.m. | 35 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvfio/cdx: prevent read-only region mappings from becoming writable\n\nvfio_cdx_mmap() rejects writable mappings of regions without the WRITE\nflag, but leaves VM_MAYWRITE set.  Userspace can map such a region\nread-only and then upgrade the mapping to writable with mprotect(),\nwriting to MMIO regions the device marks read-only.\n\nClear VM_MAYWRITE for regions without the WRITE flag, as i915 does for\nits read-only objects and as fixed in drm/vc4 (CVE-2026-68445),\ndrm/panthor (CVE-2024-53071) and commit a5edadbae57e (\"ptp: vmclock:\nprevent read-only mappings from becoming writable\").\n\nNote this is defensive hardening: no in-tree cdx device currently\npublishes a region without the WRITE flag.  The guard costs nothing and\nkeeps the mmap() interface honest if a read-only region ever appears.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-99811\n  \nPublished : Nov. 25, 2026, 6:26 p.m. | 35 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvfio/cdx: prevent read-only region mappings from becoming writable\n\nvfio_cdx_mmap() rejects writable mappings of regions without the WRITE\nflag, but leaves VM_MAYWRITE set.  Userspace can map such a region\nread-only and then upgrade the mapping to writable with mprotect(),\nwriting to MMIO regions the device marks read-only.\n\nClear VM_MAYWRITE for regions without the WRITE flag, as i915 does for\nits read-only objects and as fixed in drm/vc4 (CVE-2026-68445),\ndrm/panthor (CVE-2024-53071) and commit a5edadbae57e (\"ptp: vmclock:\nprevent read-only mappings from becoming writable\").\n\nNote this is defensive hardening: no in-tree cdx device currently\npublishes a region without the WRITE flag.  The guard costs nothing and\nkeeps the mmap() interface honest if a read-only region ever appears.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-99811\n2. 26.11.26 오전3:26\n3. In the Linux kernel, the following vulnerability h",
+      "cve_id": "CVE-2026-99811",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-99811",
+      "source": "cvefeed",
+      "published": "2026-11-26T03:26:11+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-135150 - Eclipse Ditto Authentication Bypass via Header Injection",
       "summary": "CVE ID :CVE-2026-135150\n  \nPublished : Nov. 25, 2026, 3:49 p.m. | 31 minutes ago\n  \nDescription :In Eclipse Ditto versions 1.1.0 to 3.9.9, the nginx reverse proxy configurations shipped with Ditto (Helm chart, Docker Compose, Kubernetes and OpenShift deployment files) forward a client-supplied\n\n  `x-ditto-pre-authenticated` header to the Ditto gateway on locations that do not apply nginx authentication, such as `/api/2/connections`. nginx selects the location based on the normalized request URI\n  but forwards the raw URI, while the gateway does not treat an encoded slash (`%2f`) as a path separator. A crafted request path is therefore routed by nginx through such an unauthenticated location and\n  by the gateway to the regular Things and Policies HTTP API, including routes that send live messages to devices. When pre-authentication is enabled (the default of the Helm chart and the Docker Compose\n  setup), an unauthenticated remote attacker can impersonate arbitrary policy subjects and read, modify and delete Things, read Policies, send messages to devices and create entities. Additionally, the\n  optional Ingress of the Helm chart (Ditto 3.9.0 to 3.9.9) routes requests directly to the gateway without setting or removing that header, and the WebSocket Ingress of the Helm chart of Ditto 3.3.0 to\n  3.8.15 does not set it, allowing the same impersonation without path manipulation when pre-authentication is enabled. This bypasses the fix for CVE-2026-120753.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
