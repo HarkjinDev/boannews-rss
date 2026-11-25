@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-26T01:01:28.562903+09:00",
+  "fetched_at": "2026-11-26T01:31:11.793574+09:00",
   "security_news": [
     {
       "title": "다올투자증권 주가 25.94%↑…뷰노도 22% 급등",
@@ -5820,21 +5820,24 @@
       "source": "naver",
       "published": "2026-11-23T02:22:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[뉴스이슈&비즈] 김동철 사장 국감 사과 한 달 만에…한전 고객정보 152...",
-      "summary": "당시 김 사장은 직원 정보 유출 사고와 관련해 국민에게 심려를 끼쳐 죄송하다며 정보보안 업무 전반의 근본적 혁신을 추진하겠다고 밝혔다. 한전은 이후 재직자·퇴직자·협력사 직원 3만5,528명의 개인정보 유출...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. [뉴스이슈&비즈] 김동철 사장 국감 사과 한 달 만에…한전 고객정보 152...\n2. 당시 김 사장은 직원 정보 유출 사고와 관련해 국민에게 심려를 끼쳐 죄송하다며 정보보안 업\n3. 한전은 이후 재직자·퇴직자·협력사 직원 3만5,528명의 개인정보 유출...",
-      "link": "http://www.issuenbiz.com/news/articleView.html?idxno=81864",
-      "source": "naver",
-      "published": "2026-11-23T01:30:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-135150 - Eclipse Ditto Authentication Bypass via Header Injection",
+      "summary": "CVE ID :CVE-2026-135150\n  \nPublished : Nov. 25, 2026, 3:49 p.m. | 31 minutes ago\n  \nDescription :In Eclipse Ditto versions 1.1.0 to 3.9.9, the nginx reverse proxy configurations shipped with Ditto (Helm chart, Docker Compose, Kubernetes and OpenShift deployment files) forward a client-supplied\n\n  `x-ditto-pre-authenticated` header to the Ditto gateway on locations that do not apply nginx authentication, such as `/api/2/connections`. nginx selects the location based on the normalized request URI\n  but forwards the raw URI, while the gateway does not treat an encoded slash (`%2f`) as a path separator. A crafted request path is therefore routed by nginx through such an unauthenticated location and\n  by the gateway to the regular Things and Policies HTTP API, including routes that send live messages to devices. When pre-authentication is enabled (the default of the Helm chart and the Docker Compose\n  setup), an unauthenticated remote attacker can impersonate arbitrary policy subjects and read, modify and delete Things, read Policies, send messages to devices and create entities. Additionally, the\n  optional Ingress of the Helm chart (Ditto 3.9.0 to 3.9.9) routes requests directly to the gateway without setting or removing that header, and the WebSocket Ingress of the Helm chart of Ditto 3.3.0 to\n  3.8.15 does not set it, allowing the same impersonation without path manipulation when pre-authentication is enabled. This bypasses the fix for CVE-2026-120753.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-135150\n  \nPublished : Nov. 25, 2026, 3:49 p.m. | 31 minutes ago\n  \nDescription :In Eclipse Ditto versions 1.1.0 to 3.9.9, the nginx reverse proxy configurations shipped with Ditto (Helm chart, Docker Compose, Kubernetes and OpenShift deployment files) forward a client-supplied\n\n  `x-ditto-pre-authenticated` header to the Ditto gateway on locations that do not apply nginx authentication, such as `/api/2/connections`. nginx selects the location based on the normalized request URI\n  but forwards the raw URI, while the gateway does not treat an encoded slash (`%2f`) as a path separator. A crafted request path is therefore routed by nginx through such an unauthenticated location and\n  by the gateway to the regular Things and Policies HTTP API, including routes that send live messages to devices. When pre-authentication is enabled (the default of the Helm chart and the Docker Compose\n  setup), an unauthenticated remote attacker can impersonate arbitrary policy subjects and read, modify and delete Things, read Policies, send messages to devices and create entities. Additionally, the\n  optional Ingress of the Helm chart (Ditto 3.9.0 to 3.9.9) routes requests directly to the gateway without setting or removing that header, and the WebSocket Ingress of the Helm chart of Ditto 3.3.0 to\n  3.8.15 does not set it, allowing the same impersonation without path manipulation when pre-authentication is enabled. This bypasses the fix for CVE-2026-120753.\n  \nSeverity: 9.1 | CRITICAL\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-135150\n2. 26.11.26 오전12:49\n3. In Eclipse Ditto versions 1.1.0 to 3.9.9, the ngin",
+      "cve_id": "CVE-2026-135150",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-135150",
+      "source": "cvefeed",
+      "published": "2026-11-26T00:49:31+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2024-7430 - Bypass Separation of Duties in Opentext Application Performance Management",
       "summary": "CVE ID :CVE-2024-7430\n  \nPublished : Nov. 25, 2026, 12:05 p.m. | 26 minutes ago\n  \nDescription :Application Performance Management 9.60 patch versions before IP4 are affected. This issue seems to be present throughout the application, as several endpoints or functionalities that are restricted to Admin users can be directly accessed by Regular users. The authorization method of the application can be bypassed allowing users to perform unauthorized actions to their role. The application supports different levels of access. The application performs authorization checks to keep users from accessing functionality outside of their role such as create, verify, and/or repair. \n\n\n\n\nThis authorization method can be bypassed. During VA testing, it was found that under the User Reports inside the Applications menu, it is possible to  create links and different reports. However, the creation of custom links, Excel reports, and service reports are restricted to admin users. Hence, it is possible for regular users with the least privileges to directly access these \n\npages and the application allows them to further use these restricted functionalities.\n  \nSeverity: 8.4 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
