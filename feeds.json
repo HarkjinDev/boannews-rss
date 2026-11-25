@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-11-26T05:01:17.540045+09:00",
+  "fetched_at": "2026-11-26T05:32:31.848445+09:00",
   "security_news": [
+    {
+      "title": "[노트북 너머] 해커도 은행 창구에 가야 한다면",
+      "summary": "여기에는 해킹을 100% 막을 수 없다는 판단이 깔려있다. 한국전력 152만여명, 중소기업중앙회 노란우산... 금융권 보안을 책임지는 금융보안원마저 해킹을 당했다. 개인정보 유출이 일상화된 시대에 사람들은...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. [노트북 너머] 해커도 은행 창구에 가야 한다면 여기에는 해킹을 100% 막을 수 없다는 \n2. 한국전력 152만여명, 중소기업중앙회 노란우산... 금융권 보안을 책임지는 금융보안원마저 \n3. 개인정보 유출이 일상화된 시대에 사람들은...",
+      "link": "https://www.etoday.co.kr/news/view/2652876",
+      "source": "naver",
+      "published": "2026-11-26T05:02:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "“세금 돌려막기”…공공기관 정보유출 과징금, 나랏돈으로 낸다",
+      "summary": "9일엔 금융권의 보안을 지원하는 금융보안원마저 해킹 공격을 받아 직원 정보 수백건이 유출됐다. 대부분의 공공기관은 과징금 처분을 받더라도 보장원처럼 국가 예산을 절감해서 납부할 수밖에 없는 실정이다....",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. “세금 돌려막기”…공공기관 정보유출 과징금, 나랏돈으로 낸다 9일엔 금융권의 보안을 지원하\n2. 대부분의 공공기관은 과징금 처분을 받더라도 보장원처럼 국가 예산을 절감해서 납부할 수밖에 ",
+      "link": "https://n.news.naver.com/mnews/article/025/0003568032?sid=102",
+      "source": "naver",
+      "published": "2026-11-26T05:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "\"금융권 AI 해킹은 전초전…전방위 공격 다가온다\"",
       "summary": "이제는 방어 자체가 힘든데 말이죠.\" 사이버보안 전문기업인 스텔스솔루션의 왕효근 이사회 의장... 왕 의장은 금융사 37곳에 이어 금융권 보안의 '파수꾼'인 금융보안원까지 AI 해킹 공격에 뚫린 데 대해 \"막을 수 있다는...",
@@ -5823,6 +5847,21 @@
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-134070 - Improper input validation in the AWS Systems Manager Automation runbook AWSConfigRemediation-EnableSystemsManagerSessionManagerAuditLogsToS3",
+      "summary": "CVE ID :CVE-2026-134070\n  \nPublished : Nov. 25, 2026, 7:37 p.m. | 29 minutes ago\n  \nDescription :Improper input validation in the AWS-managed AWS Systems Manager Automation runbook AWSConfigRemediation-EnableSystemsManagerSessionManagerAuditLogsToS3 might allow an authenticated remote user who is permitted to run the runbook to set unintended configuration in the account's Regional Session Manager preferences document (SSM-SessionManagerRunShell) via a crafted S3KeyPrefix parameter value. This applies only when that document does not already exist in the Region. The unintended configuration can include arbitrary commands, which then run on managed instances when other users start Session Manager sessions.\n\n\n\nBecause any user permitted to run the runbook selects which revision to run, this issue remains reachable in an affected Region until earlier revisions can no longer be run there. AWS is deprecating all revisions created before 2026-10-22 (UTC) in every Region and partition beginning January 15, 2027; until deprecation, earlier revisions remain runnable, so upgrading alone is not sufficient.\n\n\n\nTo remediate this issue:\n\n\n\n1. Run the latest revision of the runbook. The latest revision is the fixed revision in every Region where the runbook is available, and its revision number varies by Region. To find it, run aws ssm describe-document --name AWSConfigRemediation-EnableSystemsManagerSessionManagerAuditLogsToS3 --region  --query \"Document.LatestVersion\". Update any Automation executions, State Manager associations, AWS Config remediation configurations, or other automations pinned to an earlier revision to use the latest revision. 2. Until earlier revisions are removed in your Region, either keep untrusted users from running earlier revisions of the runbook, or keep a trusted Session Manager preferences document (SSM-SessionManagerRunShell) in every Region. Earlier revisions inject only when they create this document, so while a trusted one exists, this path is closed in that Region. 3. Review your Session Manager preferences document (SSM-SessionManagerRunShell) in any Region where it was first created by an earlier revision of this runbook, not by you. To check, look for any run of this runbook that failed with \"DOCUMENT CREATE OR UPDATE FAILED.\" An injected run always fails with this error. You can also compare the creation date of the document's first version with the start times of runs of this runbook in that Region. Check the document for settings you did not configure, especially shellProfile, Run As (runAsEnabled, runAsDefaultUser), maxSessionDuration, idleSessionTimeout, and the logging destination fields. The fixed runbook updates only the S3 bucket and prefix fields of an existing preferences document, so settings injected earlier remain until you remove them. If you find unexpected settings, restore your trusted preferences and review instances on which Session Manager sessions were started while those settings were active. The AWS Security Bulletin includes commands for this review.\n  \nSeverity: 8.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-134070\n  \nPublished : Nov. 25, 2026, 7:37 p.m. | 29 minutes ago\n  \nDescription :Improper input validation in the AWS-managed AWS Systems Manager Automation runbook AWSConfigRemediation-EnableSystemsManagerSessionManagerAuditLogsToS3 might allow an authenticated remote user who is permitted to run the runbook to set unintended configuration in the account's Regional Session Manager preferences document (SSM-SessionManagerRunShell) via a crafted S3KeyPrefix parameter value. This applies only when that document does not already exist in the Region. The unintended configuration can include arbitrary commands, which then run on managed instances when other users start Session Manager sessions.\n\n\n\nBecause any user permitted to run the runbook selects which revision to run, this issue remains reachable in an affected Region until earlier revisions can no longer be run there. AWS is deprecating all revisions created before 2026-10-22 (UTC) in every Region and partition beginning January 15, 2027; until deprecation, earlier revisions remain runnable, so upgrading alone is not sufficient.\n\n\n\nTo remediate this issue:\n\n\n\n1. Run the latest revision of the runbook. The latest revision is the fixed revision in every Region where the runbook is available, and its revision number varies by Region. To find it, run aws ssm describe-document --name AWSConfigRemediation-EnableSystemsManagerSessionManagerAuditLogsToS3 --region  --query \"Document.LatestVersion\". Update any Automation executions, State Manager associations, AWS Config remediation configurations, or other automations pinned to an earlier revision to use the latest revision. 2. Until earlier revisions are removed in your Region, either keep untrusted users from running earlier revisions of the runbook, or keep a trusted Session Manager preferences document (SSM-SessionManagerRunShell) in every Region. Earlier revisions inject only when they create this document, so while a trusted one exists, this path is closed in that Region. 3. Review your Session Manager preferences document (SSM-SessionManagerRunShell) in any Region where it was first created by an earlier revision of this runbook, not by you. To check, look for any run of this runbook that failed with \"DOCUMENT CREATE OR UPDATE FAILED.\" An injected run always fails with this error. You can also compare the creation date of the document's first version with the start times of runs of this runbook in that Region. Check the document for settings you did not configure, especially shellProfile, Run As (runAsEnabled, runAsDefaultUser), maxSessionDuration, idleSessionTimeout, and the logging destination fields. The fixed runbook updates only the S3 bucket and prefix fields of an existing preferences document, so settings injected earlier remain until you remove them. If you find unexpected settings, restore your trusted preferences and review instances on which Session Manager sessions were started while those settings were active. The AWS Security Bulletin includes commands for this review.\n  \nSeverity: 8.0 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-134070\n2. 26.11.26 오전4:37\n3. Improper input validation in the AWS-managed AWS S",
+      "cve_id": "CVE-2026-134070",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-134070",
+      "source": "cvefeed",
+      "published": "2026-11-26T04:37:43+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-99811 - vfio/cdx: prevent read-only region mappings from becoming writable",
       "summary": "CVE ID :CVE-2026-99811\n  \nPublished : Nov. 25, 2026, 6:26 p.m. | 35 minutes ago\n  \nDescription :In the Linux kernel, the following vulnerability has been resolved:\n\nvfio/cdx: prevent read-only region mappings from becoming writable\n\nvfio_cdx_mmap() rejects writable mappings of regions without the WRITE\nflag, but leaves VM_MAYWRITE set.  Userspace can map such a region\nread-only and then upgrade the mapping to writable with mprotect(),\nwriting to MMIO regions the device marks read-only.\n\nClear VM_MAYWRITE for regions without the WRITE flag, as i915 does for\nits read-only objects and as fixed in drm/vc4 (CVE-2026-68445),\ndrm/panthor (CVE-2024-53071) and commit a5edadbae57e (\"ptp: vmclock:\nprevent read-only mappings from becoming writable\").\n\nNote this is defensive hardening: no in-tree cdx device currently\npublishes a region without the WRITE flag.  The guard costs nothing and\nkeeps the mmap() interface honest if a read-only region ever appears.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
