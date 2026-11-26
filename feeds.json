@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-26T19:02:47.520023+09:00",
+  "fetched_at": "2026-11-26T19:31:06.020758+09:00",
   "security_news": [
     {
       "title": "정부, 개인정보 유출 위험 높은 '스크래핑' 개선 나선다…2027년부터 API...",
@@ -5544,21 +5544,39 @@
       "source": "naver",
       "published": "2026-11-23T20:20:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "한전 152만 명, 삼성증권 8241명…국민 정보 또 줄줄 샜다(종합)",
-      "summary": "삼성증권과 컬리에서도 개인정보 유출이 발생, 사실상 안전지대는 없어 보안에 대한 우려가 극에 달한다.... 한전은 “보안 환경이 빠르게 변화하는 상황에서 외부 공격자가 두 시스템(한전ON·SRM)에 불법 침입해 정보를...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한전 152만 명, 삼성증권 8241명 개인정보 유출 발생\n2. 외부 공격자의 불법 침입으로 한전ON, SRM 시스템 정보 유출\n3. 삼성증권, 컬리에서도 유출 발생…사실상 안전지대 없어",
-      "link": "https://n.news.naver.com/mnews/article/658/0000162037?sid=101",
-      "source": "naver",
-      "published": "2026-11-23T19:15:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-127041 - Using encrypted credentials in Bizum Pay for Android",
+      "summary": "CVE ID :CVE-2026-127041\n  \nPublished : Nov. 26, 2026, 10:02 a.m. | 19 minutes ago\n  \nDescription :Bizum Pay for Android incorporates static values within the APK to authenticate and sign requests to its API, including those for user registration. These values are common across different installations and can be extracted from the APK. An attacker who obtains the application could reuse them to generate requests that the server accepts as authenticated. The potential scope of these requests was limited to querying auxiliary information and certain configuration statuses. Under no circumstances could they generate unauthorised payments via Bizum Pay, nor could they carry out illegitimate activations of the app (which always require access to the customer’s banking channels, thereby protecting them from this type of potential vulnerability). Furthermore, requests are always limited to a set number of attempts and are closely monitored to prevent potential mass queries.\n\n\n\nThe correction implemented uses site-specific material and removes support for the previous format in the backend. Consequently, previous versions are no longer operational for the services affected.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-127041\n  \nPublished : Nov. 26, 2026, 10:02 a.m. | 19 minutes ago\n  \nDescription :Bizum Pay for Android incorporates static values within the APK to authenticate and sign requests to its API, including those for user registration. These values are common across different installations and can be extracted from the APK. An attacker who obtains the application could reuse them to generate requests that the server accepts as authenticated. The potential scope of these requests was limited to querying auxiliary information and certain configuration statuses. Under no circumstances could they generate unauthorised payments via Bizum Pay, nor could they carry out illegitimate activations of the app (which always require access to the customer’s banking channels, thereby protecting them from this type of potential vulnerability). Furthermore, requests are always limited to a set number of attempts and are closely monitored to prevent potential mass queries.\n\n\n\nThe correction implemented uses site-specific material and removes support for the previous format in the backend. Consequently, previous versions are no longer operational for the services affected.\n  \nSeverity: 8.8 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-127041\n2. 26.11.26 오후7:02\n3. Bizum Pay for Android incorporates static values w",
+      "cve_id": "CVE-2026-127041",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-127041",
+      "source": "cvefeed",
+      "published": "2026-11-26T19:02:35+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-131687 - ShopMagic <= 4.9.5 - Unauthenticated Improper Verification of Cryptographic Signature to Guest Impersonation and Arbitrary Guest Profile Modification via 'shopmagic_visitor_' Cookie",
+      "summary": "CVE ID :CVE-2026-131687\n  \nPublished : Nov. 26, 2026, 9:33 a.m. | 48 minutes ago\n  \nDescription :The ShopMagic – email automation for WordPress plugin for WordPress is vulnerable to Improper Verification of Cryptographic Signature in all versions up to, and including, 4.9.5 Although `CurrentCustomer::encode_tracking_data()` appends an md5 hash to the `shopmagic_visitor_` cookie to make it tamper-resistant, `CookiePersistence::get_tracking_data()` returns the raw `json_decode()`'d cookie value directly without computing or verifying that hash, leaving the cookie's `user_id`, `email`, and `meta` fields fully under attacker control. This makes it possible for unauthenticated attackers to forge the visitor cookie — which is predictable because its name is derived as `md5(siteurl)` from the public site URL — and submit it to the unprotected `wp_ajax_nopriv_capture_email_url` endpoint (which is registered without a nonce check or capability check) to impersonate any WordPress user including administrators in ShopMagic's customer-identity context, and to overwrite the stored profile metadata — including name, phone number, and billing address — of any existing guest record in `wp_shopmagic_guest` and `wp_shopmagic_guest_meta` via `GuestManager::save()`.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-131687\n  \nPublished : Nov. 26, 2026, 9:33 a.m. | 48 minutes ago\n  \nDescription :The ShopMagic – email automation for WordPress plugin for WordPress is vulnerable to Improper Verification of Cryptographic Signature in all versions up to, and including, 4.9.5 Although `CurrentCustomer::encode_tracking_data()` appends an md5 hash to the `shopmagic_visitor_` cookie to make it tamper-resistant, `CookiePersistence::get_tracking_data()` returns the raw `json_decode()`'d cookie value directly without computing or verifying that hash, leaving the cookie's `user_id`, `email`, and `meta` fields fully under attacker control. This makes it possible for unauthenticated attackers to forge the visitor cookie — which is predictable because its name is derived as `md5(siteurl)` from the public site URL — and submit it to the unprotected `wp_ajax_nopriv_capture_email_url` endpoint (which is registered without a nonce check or capability check) to impersonate any WordPress user including administrators in ShopMagic's customer-identity context, and to overwrite the stored profile metadata — including name, phone number, and billing address — of any existing guest record in `wp_shopmagic_guest` and `wp_shopmagic_guest_meta` via `GuestManager::save()`.\n  \nSeverity: 5.3 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-131687\n2. 26.11.26 오후6:33\n3. The ShopMagic – email automation for WordPress plu",
+      "cve_id": "CVE-2026-131687",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-131687",
+      "source": "cvefeed",
+      "published": "2026-11-26T18:33:24+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2017-20291 - Broadcom SiteMinder Secure Proxy Server (Access Gateway) Federation Web Services XXE Injection Vulnerability",
       "summary": "CVE ID :CVE-2017-20291\n  \nPublished : Nov. 26, 2026, 7:16 a.m. | 1 hour, 5 minutes ago\n  \nDescription :An XML External Entity (XXE) injection vulnerability in the Federation Web Services component (/affwebservices/router/session) of Broadcom SiteMinder (CA Single Sign-On) Secure Proxy Server / Access Gateway R12.52 SP1 prior to R12.52 SP1 CR6 allows a remote attacker to submit crafted SOAP requests to the exposed Apache-SOAP RPC Router servlet (org.apache.soap.server.http.RPCRouterServlet). Successful exploitation could result in unauthorized disclosure of local files or sensitive data, server-side request forgery (SSRF), or denial of service. The issue is resolved in R12.52 SP1 CR6 (and does not affect R12.8 or R12.9) by removing the router servlet mapping so requests to the endpoint return HTTP 404.\n  \nSeverity: 8.7 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
@@ -6532,51 +6550,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-13408",
       "source": "cvefeed",
       "published": "2026-11-23T20:42:46+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59340 - Denial of Service via crafted PDF in PagePdfDocumentReader",
-      "summary": "CVE ID :CVE-2026-59340\n  \nPublished : Nov. 23, 2026, 10:23 a.m. | 23 minutes ago\n  \nDescription :PagePdfDocumentReader and ParagraphPdfDocumentReader are vulnerable to a denial of service when processing untrusted PDF input.\n\n\n\n The underlying text extraction logic reconstructs layout from a PDF's glyph positions and limits how much memory can be allocated for any single computed gap, but does not limit the cumulative allocation across an entire page.\n\n\n\nA specially crafted PDF can exploit this to force excessive memory allocation during processing, resulting in OutOfMemoryError.\n\n\n\nDepending on JVM configuration, this can cause request failures with degraded service under repeated exploitation, or immediate JVM termination when ExitOnOutOfMemoryError options are used.\n\n\n\nAny application that processes PDFs from untrusted sources (document upload, email attachment processing, RAG ingestion, web crawling) using either affected reader is impacted.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59340\n  \nPublished : Nov. 23, 2026, 10:23 a.m. | 23 minutes ago\n  \nDescription :PagePdfDocumentReader and ParagraphPdfDocumentReader are vulnerable to a denial of service when processing untrusted PDF input.\n\n\n\n The underlying text extraction logic reconstructs layout from a PDF's glyph positions and limits how much memory can be allocated for any single computed gap, but does not limit the cumulative allocation across an entire page.\n\n\n\nA specially crafted PDF can exploit this to force excessive memory allocation during processing, resulting in OutOfMemoryError.\n\n\n\nDepending on JVM configuration, this can cause request failures with degraded service under repeated exploitation, or immediate JVM termination when ExitOnOutOfMemoryError options are used.\n\n\n\nAny application that processes PDFs from untrusted sources (document upload, email attachment processing, RAG ingestion, web crawling) using either affected reader is impacted.\n  \nSeverity: 6.5 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-59340\n2. 26.11.23 오후7:23\n3. PagePdfDocumentReader and ParagraphPdfDocumentRead",
-      "cve_id": "CVE-2026-59340",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59340",
-      "source": "cvefeed",
-      "published": "2026-11-23T19:23:21+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-59442 - Broken Logical Grouping Expression in TypesenseFilterExpressionConverter",
-      "summary": "CVE ID :CVE-2026-59442\n  \nPublished : Nov. 23, 2026, 10:19 a.m. | 27 minutes ago\n  \nDescription :TypesenseFilterExpressionConverter does not correctly translate grouped (parenthesized) filter expressions into the Typesense filter syntax.\n\n\n\nAs a result, the filter sent to Typesense can have a different meaning than the one the application defined, and some conditions may not be applied as intended.\n\n\n\n An application is affected if it uses the Typesense vector store with filter expressions that contain groups and relies on them to restrict results, for example to enforce tenant isolation or access control.\n\n\n\nIn that case, a remote user may be able to retrieve documents they should not have access to, and the same filter used for a delete operation may remove documents outside the intended scope.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-59442\n  \nPublished : Nov. 23, 2026, 10:19 a.m. | 27 minutes ago\n  \nDescription :TypesenseFilterExpressionConverter does not correctly translate grouped (parenthesized) filter expressions into the Typesense filter syntax.\n\n\n\nAs a result, the filter sent to Typesense can have a different meaning than the one the application defined, and some conditions may not be applied as intended.\n\n\n\n An application is affected if it uses the Typesense vector store with filter expressions that contain groups and relies on them to restrict results, for example to enforce tenant isolation or access control.\n\n\n\nIn that case, a remote user may be able to retrieve documents they should not have access to, and the same filter used for a delete operation may remove documents outside the intended scope.\n  \nSeverity: 7.5 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-59442\n2. 26.11.23 오후7:19\n3. TypesenseFilterExpressionConverter does not correc",
-      "cve_id": "CVE-2026-59442",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-59442",
-      "source": "cvefeed",
-      "published": "2026-11-23T19:19:17+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-94252 - Unauthenticated Stored Cross-Site Scripting in Frontier Smart Technologies Venice X FS2340 Embedded Web Interface",
-      "summary": "CVE ID :CVE-2026-94252\n  \nPublished : Nov. 23, 2026, 10:17 a.m. | 29 minutes ago\n  \nDescription :An unauthenticated stored and reflected cross-site scripting (XSS) vulnerability in the embedded web interface of Frontier Smart Technologies Venice X FS2340 running IR4.9 allows a network attacker with access to the interface to inject attacker-controlled JavaScript that may execute in the browser of a user accessing affected content.\n\n\n\nSuccessful exploitation may allow the attacker to access information available within the browser's security context or perform actions through the affected web interface with the privileges of the affected user.\n\n\n\nDuring authorized security testing, certain crafted JavaScript and code-injection payloads were also observed to cause the embedded web interface to crash and become temporarily unavailable on some tested software versions. This behavior represents a denial-of-service condition affecting the embedded web management interface; no device-level denial of service was established.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-94252\n  \nPublished : Nov. 23, 2026, 10:17 a.m. | 29 minutes ago\n  \nDescription :An unauthenticated stored and reflected cross-site scripting (XSS) vulnerability in the embedded web interface of Frontier Smart Technologies Venice X FS2340 running IR4.9 allows a network attacker with access to the interface to inject attacker-controlled JavaScript that may execute in the browser of a user accessing affected content.\n\n\n\nSuccessful exploitation may allow the attacker to access information available within the browser's security context or perform actions through the affected web interface with the privileges of the affected user.\n\n\n\nDuring authorized security testing, certain crafted JavaScript and code-injection payloads were also observed to cause the embedded web interface to crash and become temporarily unavailable on some tested software versions. This behavior represents a denial-of-service condition affecting the embedded web management interface; no device-level denial of service was established.\n  \nSeverity: 4.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-94252\n2. 26.11.23 오후7:17\n3. An unauthenticated stored and reflected cross-site",
-      "cve_id": "CVE-2026-94252",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-94252",
-      "source": "cvefeed",
-      "published": "2026-11-23T19:17:16+09:00",
       "lang": "en"
     }
   ],
