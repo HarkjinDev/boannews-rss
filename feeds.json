@@ -1,6 +1,30 @@
 {
-  "fetched_at": "2026-11-27T05:31:31.915018+09:00",
+  "fetched_at": "2026-11-27T06:01:35.852785+09:00",
   "security_news": [
+    {
+      "title": "[대동USA 보안 쇼크②] \"소장 근거 부족\"vs\"사생활 침해\"… 美 소송서 공...",
+      "summary": "황용식 세종대 교수는 \"해킹 사고가 발생할 경우 미국 법원은 실제적이고 구체적인 손해 여부를 중요하게 판단하기 때문에 정보 유출 사실만으로 자동적으로 손해배상을 인정하기는 어렵다\"며 \"유출 정보의 민감성과...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 대동USA, 개인정보 유출 소송 중\n2. 소장 근거 부족, 사생활 침해 여부 쟁점\n3. 미국 법원, 실제 손해 여부 중요 판단",
+      "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=731535",
+      "source": "naver",
+      "published": "2026-11-27T06:00:00+09:00",
+      "lang": "ko"
+    },
+    {
+      "title": "정보기관 수장에게 묻는 것은 상징이 아니라 전문성이다",
+      "summary": "다만 지금 국정원이 마주한 과제는 북한과 러시아의 군사 협력, 중국발 기술 유출, 사이버 공격처럼... 북·러 군사 협력이 깊어지고 기술 유출과 사이버 공격이 일상이 된 지금, 국정원장 자리를 비워 둘 여유도, 검증을...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 국정원, 북·러 군사 협력, 기술 유출, 사이버 공격 대응\n2. 중국발 기술 유출, 사이버 공격 일상이 된 상황\n3. 검증 시간 지체 없이 국정원장 임명 시급",
+      "link": "https://www.gokorea.kr/news/articleView.html?idxno=887464",
+      "source": "naver",
+      "published": "2026-11-27T06:00:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "[씨줄날줄] CIA 뚫은 해킹",
       "summary": "사적으로 해킹해 무고한 시민을 추적하는 내용이다. 2007년 개봉한 ‘다이하드 4.0’에도 전직 국방부... 핵심 정보기관에 대한 해킹 및 기밀 유출 사건은 영화적 상상력에 머물지 않고 현실이 되고 있다. 2015년에는...",
@@ -6391,21 +6415,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-133918",
       "source": "cvefeed",
       "published": "2026-11-24T06:16:58+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-135617 - Lookyloo Inconsistent Authorization Enforcement for Private Captures Allows Unauthorized Data Access",
-      "summary": "CVE ID :CVE-2026-135617\n  \nPublished : Nov. 23, 2026, 8:34 p.m. | 23 minutes ago\n  \nDescription :Lookyloo is a web-based URL capture and analysis platform. Prior to the fix, the authorization mechanism for private captures (seed-based access control) was not consistently enforced at the data access layer. The capture_cache method and numerous internal methods (get_info, get_meta, get_statistics, get_modules_responses, get_data, get_video, get_screenshot, get_har, get_cookies, get_storage_state, get_frames, get_console_messages, get_capture, get_ressource, misp_export, lacus_export, ai_export, comparator functions, and others) could be invoked with only a capture UUID without validating the required seed token. This meant that API endpoints and internal code paths that called these methods directly could return private capture data to unauthenticated users or users lacking the correct seed. The before_request hook in the web interface provided a partial check, but the underlying data layer did not enforce it, creating an inconsistent authorization boundary. An attacker who knew or guessed a private capture UUID could potentially access sensitive data including rendered screenshots, HAR files, downloaded files, cookies, storage state, console messages, and MISP exports through various REST API endpoints and web routes. The fix introduces a LookylooPrivateCapture exception raised at the cache layer when a private capture is accessed without a valid seed, refactors the API to pass CaptureCache objects (already validated) rather than raw UUIDs, and ensures all web and API endpoints propagate the session-known seed or admin status to the data access layer. Background processes use an explicit unsafe=True flag to bypass the check, as they operate server-side with full trust.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-135617\n  \nPublished : Nov. 23, 2026, 8:34 p.m. | 23 minutes ago\n  \nDescription :Lookyloo is a web-based URL capture and analysis platform. Prior to the fix, the authorization mechanism for private captures (seed-based access control) was not consistently enforced at the data access layer. The capture_cache method and numerous internal methods (get_info, get_meta, get_statistics, get_modules_responses, get_data, get_video, get_screenshot, get_har, get_cookies, get_storage_state, get_frames, get_console_messages, get_capture, get_ressource, misp_export, lacus_export, ai_export, comparator functions, and others) could be invoked with only a capture UUID without validating the required seed token. This meant that API endpoints and internal code paths that called these methods directly could return private capture data to unauthenticated users or users lacking the correct seed. The before_request hook in the web interface provided a partial check, but the underlying data layer did not enforce it, creating an inconsistent authorization boundary. An attacker who knew or guessed a private capture UUID could potentially access sensitive data including rendered screenshots, HAR files, downloaded files, cookies, storage state, console messages, and MISP exports through various REST API endpoints and web routes. The fix introduces a LookylooPrivateCapture exception raised at the cache layer when a private capture is accessed without a valid seed, refactors the API to pass CaptureCache objects (already validated) rather than raw UUIDs, and ensures all web and API endpoints propagate the session-known seed or admin status to the data access layer. Background processes use an explicit unsafe=True flag to bypass the check, as they operate server-side with full trust.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-135617\n2. 26.11.24 오전5:34\n3. Lookyloo is a web-based URL capture and analysis p",
-      "cve_id": "CVE-2026-135617",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-135617",
-      "source": "cvefeed",
-      "published": "2026-11-24T05:34:44+09:00",
       "lang": "en"
     }
   ],
