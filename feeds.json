@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-27T02:01:17.137376+09:00",
+  "fetched_at": "2026-11-27T02:31:08.606464+09:00",
   "security_news": [
     {
       "title": "Remus malware steals Gmail messages via fake Google Sheets extension",
@@ -6541,21 +6541,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-102950",
       "source": "cvefeed",
       "published": "2026-11-24T04:17:28+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-127224 - GFI HelpDesk before 4.99.13 SQL Injection via Archiver ExportAll",
-      "summary": "CVE ID :CVE-2026-127224\n  \nPublished : 23 Nov. 2026, 17.26 | 23 menit ago\n  \nDescription :GFI HelpDesk before 4.99.13 contains an SQL injection vulnerability in the archiver export feature that allows authenticated attackers with administrator privileges to execute arbitrary SQL queries by supplying crafted itemid[] array values to /admin/index.php?/archiver/Manager/ExportAll. The Controller_Manager.ExportAll() method joins the itemid values with implode() and GetWhere() concatenates them into an IN() clause without sanitization or parameterization, and DumpTables() executes the resulting query against each ticket-related table, allowing attackers to read or modify database contents.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-127224\n  \nPublished : 23 Nov. 2026, 17.26 | 23 menit ago\n  \nDescription :GFI HelpDesk before 4.99.13 contains an SQL injection vulnerability in the archiver export feature that allows authenticated attackers with administrator privileges to execute arbitrary SQL queries by supplying crafted itemid[] array values to /admin/index.php?/archiver/Manager/ExportAll. The Controller_Manager.ExportAll() method joins the itemid values with implode() and GetWhere() concatenates them into an IN() clause without sanitization or parameterization, and DumpTables() executes the resulting query against each ticket-related table, allowing attackers to read or modify database contents.\n  \nSeverity: 8.6 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-127224\n2. 26.11.24 오전2:26\n3. GFI HelpDesk before 4.99.13 contains an SQL inject",
-      "cve_id": "CVE-2026-127224",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-127224",
-      "source": "cvefeed",
-      "published": "2026-11-24T02:26:11+09:00",
       "lang": "en"
     }
   ],
