@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-28T07:32:25.581193+09:00",
+  "fetched_at": "2026-11-28T08:01:19.426661+09:00",
   "security_news": [
     {
       "title": "75만명 정보 털린 동행복권…\"막을 수 없었다\" 주장했지만",
@@ -5376,30 +5376,6 @@
       "source": "naver",
       "published": "2026-11-25T08:10:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "미 CIA·국가정보장실, 해킹당해…기밀 시스템은 유출 안 돼",
-      "summary": "미 중앙정보국(CIA)과 국가정보장실(ODNI)이 해킹당했다. 지난 24일(이하 현지시간) 미국 매체 뉴욕타임스와 CNN에 따르면 복수 소식통들은 CIA와 ODNI가 공개출처정보 분석에 쓰는 시스템이 해킹당했다고 밝혔다. 피해...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 미 CIA·국가정보장실, 해킹당해…기밀 시스템은 유출 안 돼 미 중앙정보국(CIA)과 국가\n2. 지난 24일(이하 현지시간) 미국 매체 뉴욕타임스와 CNN에 따르면 복수 소식통들은 CIA",
-      "link": "https://n.news.naver.com/mnews/article/417/0001165536?sid=104",
-      "source": "naver",
-      "published": "2026-11-25T07:54:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "영국 재무부 \"의심법인 수사 중 北 제재회피 연루 정황 포착\"",
-      "summary": "또 일부 법인은 과거 대북 제재 회피와 북한 해킹 조직 '라자루스'의 탈취 자금 세탁에 연루된 인물들과... 또 북한 연계 해킹 세력이 2024년 1월부터 2025년 9월까지 총 약 20억파운드(약 3조5천억원) 상당의 가상자산을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 영국 재무부 \"의심법인 수사 중 北 제재회피 연루 정황 포착\" 또 일부 법인은 과거 대북 \n2. 또 북한 연계 해킹 세력이 2024년 1월부터 2025년 9월까지 총 약 20억파운드(약 ",
-      "link": "https://n.news.naver.com/mnews/article/001/0016461670?sid=100",
-      "source": "naver",
-      "published": "2026-11-25T07:49:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6076,21 +6052,6 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-16669",
       "source": "cvefeed",
       "published": "2026-11-25T09:17:11+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-16668 - Unbounded CBOR recursion in MCUboot serial recovery allows pre-authentication stack exhaustion",
-      "summary": "CVE ID :CVE-2026-16668\n  \nPublished : Nov. 24, 2026, 10:39 p.m. | 41 minutes ago\n  \nDescription :The vendored zcbor decoder's zcbor_any_skip() in boot/zcbor/src/zcbor_decode.c descends one C-stack frame per level of CBOR nesting. On a list or map it copies the decoder state (memcpy(&state_copy, state, sizeof(zcbor_state_t))) and recurses once per member, with no depth cap: the skip path does not use zcbor's backup stack, and ZCBOR_MAX_ELEM_COUNT is SIZE_MAX, so nothing bounds how deep the recursion goes.\n\nThat function is reached on attacker-controlled bytes before any authentication. MCUboot's serial-recovery command parser decodes SMP/CBOR requests with zcbor_map_decode_bulk() (boot/boot_serial/src/zcbor_bulk.c), which skips any map key it does not recognise by calling zcbor_any_skip() on the encoded value; the echo handler in boot/boot_serial/src/boot_serial.c calls it directly on the same footing. Both run during image upload, long before the uploaded image's signature is checked. The default receive buffer is MCUBOOT_SERIAL_MAX_RECEIVE_SIZE = 512 bytes and each nesting level costs a single byte to encode (0x81), so roughly 500 levels of nesting fit in one request — comfortably more than a bootloader's stack can absorb, since every frame carries a full zcbor_state_t copy plus locals.\n\nThe impact is availability only: the bootloader's stack overflows and the device faults or hangs during recovery. There is no controlled out-of-bounds write that escapes the DFU buffer, no disclosure, and no authentication bypass — the recursion grows the stack with the decoder's own internal state. Whether a given board actually exhausts its stack depends on that board's bootloader stack size, which we did not measure; the fix is nevertheless unconditional, because an unauthenticated pre-authentication code path must not have its safety depend on a per-board stack margin.\n\nExposure requires MCUBOOT_SERIAL (serial/SMP recovery), which is not enabled by default, and recovery entry is normally gated on a physical pin (CONFIG_BOOT_SERIAL_ENTRANCE_GPIO / PIN_RESET), with a no-valid-image fallback path. Products that expose serial recovery over an externally reachable transport, or that fall into recovery when no valid image is present, are the ones at risk.\n\nThe fix is to bound the skip: thread a recursion-depth counter through zcbor_any_skip() (or have zcbor_map_decode_bulk() reject values nested beyond a small constant) and fail once the limit is exceeded — equivalently, take the bounded-skip implementation from upstream zcbor.\n  \nSeverity: 2.4 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-16668\n  \nPublished : Nov. 24, 2026, 10:39 p.m. | 41 minutes ago\n  \nDescription :The vendored zcbor decoder's zcbor_any_skip() in boot/zcbor/src/zcbor_decode.c descends one C-stack frame per level of CBOR nesting. On a list or map it copies the decoder state (memcpy(&state_copy, state, sizeof(zcbor_state_t))) and recurses once per member, with no depth cap: the skip path does not use zcbor's backup stack, and ZCBOR_MAX_ELEM_COUNT is SIZE_MAX, so nothing bounds how deep the recursion goes.\n\nThat function is reached on attacker-controlled bytes before any authentication. MCUboot's serial-recovery command parser decodes SMP/CBOR requests with zcbor_map_decode_bulk() (boot/boot_serial/src/zcbor_bulk.c), which skips any map key it does not recognise by calling zcbor_any_skip() on the encoded value; the echo handler in boot/boot_serial/src/boot_serial.c calls it directly on the same footing. Both run during image upload, long before the uploaded image's signature is checked. The default receive buffer is MCUBOOT_SERIAL_MAX_RECEIVE_SIZE = 512 bytes and each nesting level costs a single byte to encode (0x81), so roughly 500 levels of nesting fit in one request — comfortably more than a bootloader's stack can absorb, since every frame carries a full zcbor_state_t copy plus locals.\n\nThe impact is availability only: the bootloader's stack overflows and the device faults or hangs during recovery. There is no controlled out-of-bounds write that escapes the DFU buffer, no disclosure, and no authentication bypass — the recursion grows the stack with the decoder's own internal state. Whether a given board actually exhausts its stack depends on that board's bootloader stack size, which we did not measure; the fix is nevertheless unconditional, because an unauthenticated pre-authentication code path must not have its safety depend on a per-board stack margin.\n\nExposure requires MCUBOOT_SERIAL (serial/SMP recovery), which is not enabled by default, and recovery entry is normally gated on a physical pin (CONFIG_BOOT_SERIAL_ENTRANCE_GPIO / PIN_RESET), with a no-valid-image fallback path. Products that expose serial recovery over an externally reachable transport, or that fall into recovery when no valid image is present, are the ones at risk.\n\nThe fix is to bound the skip: thread a recursion-depth counter through zcbor_any_skip() (or have zcbor_map_decode_bulk() reject values nested beyond a small constant) and fail once the limit is exceeded — equivalently, take the bounded-skip implementation from upstream zcbor.\n  \nSeverity: 2.4 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-16668\n2. 26.11.25 오전7:39\n3. The vendored zcbor decoder's zcbor_any_skip() in b",
-      "cve_id": "CVE-2026-16668",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-16668",
-      "source": "cvefeed",
-      "published": "2026-11-25T07:39:47+09:00",
       "lang": "en"
     }
   ],
