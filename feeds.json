@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-27T22:32:27.873449+09:00",
+  "fetched_at": "2026-11-27T23:01:15.507699+09:00",
   "security_news": [
     {
       "title": "과학자 모임이 악성코드도 몰라···서버가 21만명 정보 내놓고도 코드...",
@@ -5544,45 +5544,24 @@
       "source": "naver",
       "published": "2026-11-24T23:11:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "\"가상자산 범죄수익 동결 법제화해야\"…트래블룰 내부통제 강화도",
-      "summary": "해킹 등으로 유출된 자금을 신속히 묶어둘 수 있도록 △사업자의 선제 보류 △금융정보분석원(FIU)의 지급정지 △법원의 보전 조치로 이어지는 절차도 제시했다. 김 변호사는 \"범죄수익을 동결하는 권한은 무고한 이용자의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 가상자산 범죄수익 동결 위한 법제화 논의\n2. 사업자 선제 보류, FIU 지급정지, 법원 보전 조치 절차 제시\n3. 해킹 등 유출 자금 신속 동결 위한 내부통제 강화 필요",
-      "link": "https://www.asiatime.co.kr/article/20261124500444",
-      "source": "naver",
-      "published": "2026-11-24T22:52:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "자격의 자격...AI 시대의 혼용과 활용",
-      "summary": "초광역으로 보편화된 네트워크와 신기술에 대한 거부감 없는 선호는 통신-반도체 산업의 급속 성장과 그 이익을 사회 전반에 분산하는 경과를 가져오기도 했지만, 공공과 민간을 가리지 않는 개인정보와 금융정보의 해킹...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. AI 시대, 개인·금융정보 해킹 기승\n2. 통신-반도체 산업 성장 속 정보 유출\n3. 공공·민간 가리지 않는 광범위한 위협",
-      "link": "https://www.doctorsnews.co.kr/news/articleView.html?idxno=200207",
-      "source": "naver",
-      "published": "2026-11-24T22:40:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "New Shirudo tool uses AI to shield unpatched Linux systems from exploits",
-      "summary": "OpenAI and Cisco launched an open-source Linux security tool named Shirudo that deploys temporary runtime protections to block vulnerability exploitation while administrators prepare and roll out patches, without restarting services. [...]",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. New Shirudo tool uses AI to shield unpatched Linux",
-      "link": "https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/",
-      "source": "bleepingcomputer",
-      "published": "2026-11-24T22:34:23+09:00",
-      "lang": "en"
     }
   ],
   "vulnerability": [
+    {
+      "title": "CVE-2026-137911 - FFmpeg before 9.1 Out-of-Bounds Read via XWD Encoder Scanline Padding",
+      "summary": "CVE ID :CVE-2026-137911\n  \nPublished : Nov. 27, 2026, 1:17 p.m. | 20 minutes ago\n  \nDescription :FFmpeg before 9.1 contains an out-of-bounds read vulnerability in xwd_encode_frame() in libavcodec/xwdenc.c that copies each RGB24 or BGR24 row using the padded XWD scanline size instead of the pixel row size. Attackers who control the width of video encoded to XWD by an application that supplies tightly packed frames can make the encoder read past the frame buffer, crashing the application or leaking heap contents into the output image.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-137911\n  \nPublished : Nov. 27, 2026, 1:17 p.m. | 20 minutes ago\n  \nDescription :FFmpeg before 9.1 contains an out-of-bounds read vulnerability in xwd_encode_frame() in libavcodec/xwdenc.c that copies each RGB24 or BGR24 row using the padded XWD scanline size instead of the pixel row size. Attackers who control the width of video encoded to XWD by an application that supplies tightly packed frames can make the encoder read past the frame buffer, crashing the application or leaking heap contents into the output image.\n  \nSeverity: 5.8 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-137911\n2. 26.11.27 오후10:17\n3. FFmpeg before 9.1 contains an out-of-bounds read v",
+      "cve_id": "CVE-2026-137911",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-137911",
+      "source": "cvefeed",
+      "published": "2026-11-27T22:17:26+09:00",
+      "lang": "en"
+    },
     {
       "title": "CVE-2026-137826 - Lookyloo: Unrestricted Remote Instance Pull Allows Anonymous SSRF to Internal Lookyloo Instances",
       "summary": "CVE ID :CVE-2026-137826\n  \nPublished : Nov. 27, 2026, 10:22 a.m. | 36 minutes ago\n  \nDescription :Lookyloo is a web-based malware analysis and sandboxing platform. The pull-from-remote-instance feature allows a user to request a previously captured sample from another Lookyloo instance by specifying the target instance's URL and a capture UUID. Prior to the fix, the only restriction on the target URL was a check that the hostname, if it was a literal IP address, was not in a private range. Hostnames that resolved to private or internal addresses were not blocked, and no authentication or allowlist was enforced for anonymous users. This allowed any unauthenticated user to direct the Lookyloo server to issue HTTP requests (HEAD to the root path and GET to /json//status, followed by a capture download) to arbitrary internal or external hosts, effectively enabling a Server-Side Request Forgery (SSRF) attack. An attacker could use this to probe internal network topology, access captures stored on internal Lookyloo instances, or leverage the server as a proxy to reach otherwise unreachable services. The vulnerability is in the website/web/__init__.py module, specifically the __get_remote_capture function and the associated pull endpoint. The security impact is unauthorized disclosure of capture data and internal service information from Lookyloo instances that are not intended to be publicly accessible.\n  \nSeverity: 6.9 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
