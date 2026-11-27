@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-28T01:33:27.913196+09:00",
+  "fetched_at": "2026-11-28T02:01:18.895224+09:00",
   "security_news": [
     {
       "title": "대표번호 찍힌 ‘거래소 보안점검’ 전화, 3단계로 악성앱 설치시켜 출...",
@@ -5568,18 +5568,6 @@
       "source": "naver",
       "published": "2026-11-25T02:08:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "[이슈] 한전 해킹 뒤 '취약점 방치' 제보 확인해보니…신고 건은 패치, ...",
-      "summary": "현재까지 시범사업에서 신고된 취약점이 이번 해킹 사고의 원인이 됐다는 근거는 확인되지 않았다.... 11월 사고에서 공식 확인된 한전 해킹 피해는 한전ON 고객 약 65만 명과 전자조달시스템(SRM) 이용자 약 87만 명의...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 한전 해킹, 65만 명 고객·87만 명 SRM 이용자 피해\n2. 취약점 방치로 인한 해킹 여부는 미확인, 11월 사고로 공식 확인\n3. 시범사업 신고 취약점은 패치, 이번 해킹 원인과 무관",
-      "link": "https://www.dailysecu.com/news/articleView.html?idxno=209704",
-      "source": "naver",
-      "published": "2026-11-25T01:40:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -5596,6 +5584,36 @@
       "link": "https://cvefeed.io/vuln/detail/CVE-2026-102963",
       "source": "cvefeed",
       "published": "2026-11-28T00:42:06+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-104928 - Kernel object validation bypass in k_thread_stack_space_get syscall verifier with CONFIG_NO_RUNTIME_CHECKS",
+      "summary": "CVE ID :CVE-2026-104928\n  \nPublished : Nov. 27, 2026, 3:42 p.m. | 34 minutes ago\n  \nDescription :The system call verifier z_vrfy_k_thread_stack_space_get() in kernel/thread.c checked the result of K_SYSCALL_OBJ(thread, K_OBJ_THREAD) with the CHECKIF() macro instead of K_OOPS(). CHECKIF() compiles to if (0) when CONFIG_NO_RUNTIME_CHECKS is selected, and becomes an assertion when CONFIG_ASSERT_ON_ERRORS is selected. In both cases, the kernel-object validation result for the user-supplied thread pointer is ignored, or is a no-op when assertions are disabled.\n\nOn builds with CONFIG_USERSPACE, CONFIG_INIT_STACKS and CONFIG_THREAD_STACK_INFO plus one of those check modes, a user-mode thread can call k_thread_stack_space_get() with an arbitrary pointer. That pointer can be a fake struct k_thread in its own memory, or a thread object it has no permission on. z_impl_k_thread_stack_space_get() then dereferences thread->stack_info in supervisor mode and scans memory starting at the attacker-chosen stack_info.start.\n\nThe syscall returns the number of leading 0xAA bytes at that address. This gives an unprivileged thread a limited oracle on arbitrary kernel or peripheral memory, and allows privileged reads of attacker-selected addresses, including MMIO. No write primitive results. The default CONFIG_RUNTIME_ERROR_CHECKS configuration is not affected. The fix replaces the CHECKIF() with K_OOPS() so the object check is always enforced.\n  \nSeverity: 2.8 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-104928\n  \nPublished : Nov. 27, 2026, 3:42 p.m. | 34 minutes ago\n  \nDescription :The system call verifier z_vrfy_k_thread_stack_space_get() in kernel/thread.c checked the result of K_SYSCALL_OBJ(thread, K_OBJ_THREAD) with the CHECKIF() macro instead of K_OOPS(). CHECKIF() compiles to if (0) when CONFIG_NO_RUNTIME_CHECKS is selected, and becomes an assertion when CONFIG_ASSERT_ON_ERRORS is selected. In both cases, the kernel-object validation result for the user-supplied thread pointer is ignored, or is a no-op when assertions are disabled.\n\nOn builds with CONFIG_USERSPACE, CONFIG_INIT_STACKS and CONFIG_THREAD_STACK_INFO plus one of those check modes, a user-mode thread can call k_thread_stack_space_get() with an arbitrary pointer. That pointer can be a fake struct k_thread in its own memory, or a thread object it has no permission on. z_impl_k_thread_stack_space_get() then dereferences thread->stack_info in supervisor mode and scans memory starting at the attacker-chosen stack_info.start.\n\nThe syscall returns the number of leading 0xAA bytes at that address. This gives an unprivileged thread a limited oracle on arbitrary kernel or peripheral memory, and allows privileged reads of attacker-selected addresses, including MMIO. No write primitive results. The default CONFIG_RUNTIME_ERROR_CHECKS configuration is not affected. The fix replaces the CHECKIF() with K_OOPS() so the object check is always enforced.\n  \nSeverity: 2.8 | LOW\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-104928\n2. 26.11.28 오전12:42\n3. The system call verifier z_vrfy_k_thread_stack_spa",
+      "cve_id": "CVE-2026-104928",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-104928",
+      "source": "cvefeed",
+      "published": "2026-11-28T00:42:05+09:00",
+      "lang": "en"
+    },
+    {
+      "title": "CVE-2026-102962 - MCUmgr SMP client accepts responses from any transport, allowing spoofed command results",
+      "summary": "CVE ID :CVE-2026-102962\n  \nPublished : Nov. 27, 2026, 3:42 p.m. | 34 minutes ago\n  \nDescription :The MCUmgr SMP client matched an incoming response to a pending command in smp_client_response_discover() (subsys/mgmt/mcumgr/smp_client/src/client.c) using only the 8-bit sequence number and the operation. It did not check the transport the response arrived on, or the group and command ID. smp_process_request_packet() hands every MGMT_OP_READ_RSP/MGMT_OP_WRITE_RSP packet received on any SMP transport to smp_client_single_response(), so a response from any SMP peer could complete any pending client command.\n\nOn a device that is both an SMP server (for example over Bluetooth LE or UDP) and an SMP client (CONFIG_SMP_CLIENT, for example using img_mgmt_client to update a companion MCU over UART), a peer on the server transport can send up to 256 forged response packets while a client operation is pending and have one of them accepted as the reply from the managed device. Non-matching responses are dropped silently. The response path bypasses the server command handlers, so restricting which server groups a peer may use does not prevent it.\n\nThe attacker can forge the results of client operations. For example, a forged image-upload offset makes img_mgmt_client_upload() report success after only part of the image was sent, a forged image-state response can report arbitrary versions or flags, and any pending command can be forced to fail. No memory corruption results: the response callbacks bound-check the decoded data. The target's own image validation limits the result to failed or suppressed updates and disrupted management operations. The fix restricts matching to commands sent on the same transport with the same group and command ID. Responses from a different peer on the same transport are still not distinguished.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "description": "CVE ID :CVE-2026-102962\n  \nPublished : Nov. 27, 2026, 3:42 p.m. | 34 minutes ago\n  \nDescription :The MCUmgr SMP client matched an incoming response to a pending command in smp_client_response_discover() (subsys/mgmt/mcumgr/smp_client/src/client.c) using only the 8-bit sequence number and the operation. It did not check the transport the response arrived on, or the group and command ID. smp_process_request_packet() hands every MGMT_OP_READ_RSP/MGMT_OP_WRITE_RSP packet received on any SMP transport to smp_client_single_response(), so a response from any SMP peer could complete any pending client command.\n\nOn a device that is both an SMP server (for example over Bluetooth LE or UDP) and an SMP client (CONFIG_SMP_CLIENT, for example using img_mgmt_client to update a companion MCU over UART), a peer on the server transport can send up to 256 forged response packets while a client operation is pending and have one of them accepted as the reply from the managed device. Non-matching responses are dropped silently. The response path bypasses the server command handlers, so restricting which server groups a peer may use does not prevent it.\n\nThe attacker can forge the results of client operations. For example, a forged image-upload offset makes img_mgmt_client_upload() report success after only part of the image was sent, a forged image-state response can report arbitrary versions or flags, and any pending command can be forced to fail. No memory corruption results: the response callbacks bound-check the decoded data. The target's own image validation limits the result to failed or suppressed updates and disrupted management operations. The fix restricts matching to commands sent on the same transport with the same group and command ID. Responses from a different peer on the same transport are still not distinguished.\n  \nSeverity: 4.2 | MEDIUM\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. CVE-2026-102962\n2. 26.11.28 오전12:42\n3. The MCUmgr SMP client matched an incoming response",
+      "cve_id": "CVE-2026-102962",
+      "cvss": "",
+      "severity": "",
+      "link": "https://cvefeed.io/vuln/detail/CVE-2026-102962",
+      "source": "cvefeed",
+      "published": "2026-11-28T00:42:03+09:00",
       "lang": "en"
     },
     {
