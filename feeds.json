@@ -1,6 +1,18 @@
 {
-  "fetched_at": "2026-11-27T20:01:41.865437+09:00",
+  "fetched_at": "2026-11-27T20:31:17.279123+09:00",
   "security_news": [
+    {
+      "title": "메디카 폐막... 미래 의료 혁신트렌드 제시",
+      "summary": "메인 스테이지와 디지털 헬스 허브에서는 AI와 정밀의료, 로보틱스 활용 사례가 소개됐고, 실시간 해킹 시연으로 의료 사이버보안의 중요성도 부각됐다.현장을 찾은 연세대학교 의료기기산업학과 박순만...",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. 메디카에서 AI·정밀의료·로보틱스 활용 사례 소개\n2. 실시간 해킹 시연으로 의료 사이버보안 중요성 부각\n3. 연세대 박순만 교수 등 참석, 미래 의료 혁신 논의",
+      "link": "https://weeklytrade.co.kr/news/view.html?section=1&category=8&item=&no=102466",
+      "source": "naver",
+      "published": "2026-11-27T20:16:00+09:00",
+      "lang": "ko"
+    },
     {
       "title": "In Other News: Tanker Cyberattacks, EU Quantum Act, New VirusTotal Capabilities",
       "summary": "Noteworthy stories that might have slipped under the radar: RansomwareHelp accused of profiting from ransom payments, USDA payment systems breach, cybersecurity firm Radware hacked. \nThe post In Other News: Tanker Cyberattacks, EU Quantum Act, New VirusTotal Capabilities appeared first on SecurityWeek.",
@@ -5640,18 +5652,6 @@
       "source": "naver",
       "published": "2026-11-24T20:43:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "AI 보안 연구 쏟아지는 거짓 양성…비트코인 코어 유지관리자, 수천 건...",
-      "summary": "비트코인 코어가 노드 정지 취약점 CVE-2026-117348을 고치면서 보안 결함을 알리는 방식도 달라졌다.... 비트코인 코어 개발자 그레고리 샌더스는 루페의 결과를 검증해 프로젝트 보안팀에 전달했고, 8월 4일 수정 풀...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 비트코인 코어, 노드 정지 취약점 CVE-2026-117348 수정\n2. AI 보안 연구, 수천 건의 거짓 양성 결과 보고\n3. 그레고리 샌더스, 루페 결과 검증 후 프로젝트 보안팀 전달",
-      "link": "https://www.wikitree.co.kr/articles/1177460",
-      "source": "naver",
-      "published": "2026-11-24T20:26:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -6448,36 +6448,6 @@
       "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-02",
       "source": "cisa",
       "published": "2026-11-24T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-84785 - Unbounded Out-of-Order Fragment Reassembly in QUIC Streams",
-      "summary": "CVE ID :CVE-2026-84785\n  \nPublished : Nov. 24, 2026, 11:30 a.m. | 49 minutes ago\n  \nDescription :Issue summary: A QUIC peer that sends many small out-of-order STREAM fragments\nwhile withholding the first byte of the stream may cause OpenSSL to buffer\na large number of reassembly nodes occupying much larger memory than\nthe actual data sent.\n\nImpact summary: A remote peer can pin large amounts of memory on a server that\naccepts incoming QUIC streams, potentially exhausting memory and causing\nDenial of Service.\n\nCWE: CWE-770: Allocation of Resources Without Limits or Throttling\n\nDescription: QUIC receive flow control limits the highest byte offset a peer\nmay reach on a stream. It does not limit how many out-of-order fragments the\nreceiver buffers. OpenSSL allocates a reassembly node for each non-adjacent\nSTREAM fragment and never caps the count. A peer that opens a stream and sends\nmany one-byte fragments at increasing offsets, while withholding the first\nbyte, makes the receiver retain one node per fragment without delivering any\ndata.\n\nOnly applications that accept incoming streams are exposed. With the default\npolicy, which rejects peer-initiated streams, the stream is torn down before\nstate accumulates. Because the read side never advances past the missing\nprefix, the flow control window never slides and the nodes stay pinned for the\nlife of the connection.\n\nThe per-stream window bounds the highest offset, so the memory one stream can\npin is finite, but it can reach tens of megabytes and, across many streams and\nconnections, drive memory pressure and Denial of Service. The severity is\nlimited because the exhaustion is bounded by flow control and requires a\nnon-default configuration.\n\nFIPS impact: no\nThe affected code is outside the FIPS module boundary.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-84785\n  \nPublished : Nov. 24, 2026, 11:30 a.m. | 49 minutes ago\n  \nDescription :Issue summary: A QUIC peer that sends many small out-of-order STREAM fragments\nwhile withholding the first byte of the stream may cause OpenSSL to buffer\na large number of reassembly nodes occupying much larger memory than\nthe actual data sent.\n\nImpact summary: A remote peer can pin large amounts of memory on a server that\naccepts incoming QUIC streams, potentially exhausting memory and causing\nDenial of Service.\n\nCWE: CWE-770: Allocation of Resources Without Limits or Throttling\n\nDescription: QUIC receive flow control limits the highest byte offset a peer\nmay reach on a stream. It does not limit how many out-of-order fragments the\nreceiver buffers. OpenSSL allocates a reassembly node for each non-adjacent\nSTREAM fragment and never caps the count. A peer that opens a stream and sends\nmany one-byte fragments at increasing offsets, while withholding the first\nbyte, makes the receiver retain one node per fragment without delivering any\ndata.\n\nOnly applications that accept incoming streams are exposed. With the default\npolicy, which rejects peer-initiated streams, the stream is torn down before\nstate accumulates. Because the read side never advances past the missing\nprefix, the flow control window never slides and the nodes stay pinned for the\nlife of the connection.\n\nThe per-stream window bounds the highest offset, so the memory one stream can\npin is finite, but it can reach tens of megabytes and, across many streams and\nconnections, drive memory pressure and Denial of Service. The severity is\nlimited because the exhaustion is bounded by flow control and requires a\nnon-default configuration.\n\nFIPS impact: no\nThe affected code is outside the FIPS module boundary.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-84785\n2. 26.11.24 오후8:30\n3. Issue summary: A QUIC peer that sends many small o",
-      "cve_id": "CVE-2026-84785",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-84785",
-      "source": "cvefeed",
-      "published": "2026-11-24T20:30:07+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-82446 - Apache StormCrawler: Server-Side Request Forgery and Cross-Origin Credential Disclosure via robots.txt Redirect Handling",
-      "summary": "CVE ID :CVE-2026-82446\n  \nPublished : Nov. 24, 2026, 11:17 a.m. | 13 minutes ago\n  \nDescription :Description\n\nWhen StormCrawler fetches a host's `/robots.txt` and receives a redirect, `HttpRobotRulesParser`\nresolves the `Location` header and re-fetches the target for up to five hops. The loop checks neither\nthe scheme, the host nor the port of the resolved target, and it is not governed by\n`http.allow.redirects`, which only affects the page fetch. A crawled site can therefore point the\nrobots.txt fetch at any address reachable from the fetcher worker, including loopback interfaces,\nprivate ranges and cloud metadata endpoints. Every crawled URL triggers a robots.txt fetch on a cache\nmiss, so no unusual configuration is required to reach the loop.\n\nThe fetched body is only parsed as robots rules and is not returned to the caller, so the read itself\nis blind. The more direct impact is on credentials: the okhttp protocol applies its configured request\nheaders, including the `Authorization` header built from `http.basicauth.user` and\n`http.basicauth.password` and anything in `http.custom.headers`, to every request it makes. Because\nStormCrawler follows the redirect itself and issues a new request, okhttp's own removal of the\n`Authorization` header across a host change does not apply, and the operator's crawl credentials are\ndelivered to the host the redirect names.\n\nThe connection-time IP filter, `http.filter.ipaddress.include` and `http.filter.ipaddress.exclude`, is\ninstalled as an okhttp network interceptor on the same client and does apply to these hops when it is\nconfigured. It ships with no rules, which is why the path is reachable in a default configuration. URL\nfiltering never applies, because the robots.txt fetch does not pass through the outlink filter chain.\n\nMitigation\n\nUpgrade to 4.0.0, where a robots.txt redirect is followed only when the target uses http or https and\nshares scheme, host and port with the URL it was reached from. Deployments that legitimately serve\nrobots.txt through a cross-host redirect can restore the previous behaviour with\n`http.robots.redirect.crosshost.allow`.\n\nUsers who cannot upgrade immediately should set `http.filter.ipaddress.exclude` to cover loopback,\nprivate, link-local and CGNAT ranges, which is enforced after DNS resolution and therefore also on\nredirect hops. Operators who configure `http.basicauth.*` or `http.custom.headers` for a crawl should\nassume those credentials may have been sent to third-party hosts and rotate them, and should scope\ncredentials by running a separate topology per origin.\n\nCredit\n\nIndependently reported to the Apache StormCrawler PMC by n0mi1k, with a proof of concept.\n\nAlso found by the ASF -- using Claude agents to study the security of open-source projects, validated\nand reported by Apache StormCrawler.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-82446\n  \nPublished : Nov. 24, 2026, 11:17 a.m. | 13 minutes ago\n  \nDescription :Description\n\nWhen StormCrawler fetches a host's `/robots.txt` and receives a redirect, `HttpRobotRulesParser`\nresolves the `Location` header and re-fetches the target for up to five hops. The loop checks neither\nthe scheme, the host nor the port of the resolved target, and it is not governed by\n`http.allow.redirects`, which only affects the page fetch. A crawled site can therefore point the\nrobots.txt fetch at any address reachable from the fetcher worker, including loopback interfaces,\nprivate ranges and cloud metadata endpoints. Every crawled URL triggers a robots.txt fetch on a cache\nmiss, so no unusual configuration is required to reach the loop.\n\nThe fetched body is only parsed as robots rules and is not returned to the caller, so the read itself\nis blind. The more direct impact is on credentials: the okhttp protocol applies its configured request\nheaders, including the `Authorization` header built from `http.basicauth.user` and\n`http.basicauth.password` and anything in `http.custom.headers`, to every request it makes. Because\nStormCrawler follows the redirect itself and issues a new request, okhttp's own removal of the\n`Authorization` header across a host change does not apply, and the operator's crawl credentials are\ndelivered to the host the redirect names.\n\nThe connection-time IP filter, `http.filter.ipaddress.include` and `http.filter.ipaddress.exclude`, is\ninstalled as an okhttp network interceptor on the same client and does apply to these hops when it is\nconfigured. It ships with no rules, which is why the path is reachable in a default configuration. URL\nfiltering never applies, because the robots.txt fetch does not pass through the outlink filter chain.\n\nMitigation\n\nUpgrade to 4.0.0, where a robots.txt redirect is followed only when the target uses http or https and\nshares scheme, host and port with the URL it was reached from. Deployments that legitimately serve\nrobots.txt through a cross-host redirect can restore the previous behaviour with\n`http.robots.redirect.crosshost.allow`.\n\nUsers who cannot upgrade immediately should set `http.filter.ipaddress.exclude` to cover loopback,\nprivate, link-local and CGNAT ranges, which is enforced after DNS resolution and therefore also on\nredirect hops. Operators who configure `http.basicauth.*` or `http.custom.headers` for a crawl should\nassume those credentials may have been sent to third-party hosts and rotate them, and should scope\ncredentials by running a separate topology per origin.\n\nCredit\n\nIndependently reported to the Apache StormCrawler PMC by n0mi1k, with a proof of concept.\n\nAlso found by the ASF -- using Claude agents to study the security of open-source projects, validated\nand reported by Apache StormCrawler.\n  \nSeverity: 0.0 | NA\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-82446\n2. 26.11.24 오후8:17\n3. Description When StormCrawler fetches a host's `/r",
-      "cve_id": "CVE-2026-82446",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-82446",
-      "source": "cvefeed",
-      "published": "2026-11-24T20:17:21+09:00",
       "lang": "en"
     }
   ],
