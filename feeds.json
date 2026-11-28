@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-28T19:31:13.951499+09:00",
+  "fetched_at": "2026-11-28T20:01:20.441884+09:00",
   "security_news": [
     {
       "title": "李대통령, 병원 ‘가짜 후기’ 조작에 “국민 기만 범죄 엄정 대응”",
@@ -864,6 +864,18 @@
       "source": "naver",
       "published": "2026-11-27T19:30:00+09:00",
       "lang": "ko"
+    },
+    {
+      "title": "Drupal warns of new site takeover flaw exploited in attacks",
+      "summary": "The Drupal security team says attackers are exploiting a second critical vulnerability that lets them breach and hijack unpatched websites. [...]",
+      "content": "",
+      "title_ko": null,
+      "summary_ko": null,
+      "summary_3lines": "1. Drupal, 웹사이트 탈취 가능한 2차 취약점 경고\n2. 패치되지 않은 웹사이트 대상 공격으로 사이트 장악\n3. 추가 악용 사례 발생, 즉각적인 패치 권고",
+      "link": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/",
+      "source": "bleepingcomputer",
+      "published": "2026-11-27T19:10:15+09:00",
+      "lang": "en"
     },
     {
       "title": "[코인 시황] 비트코인 ETF 역대 최대 자금 유출…장기 보유 물량 증가는...",
@@ -4536,30 +4548,6 @@
       "source": "naver",
       "published": "2026-11-25T20:09:00+09:00",
       "lang": "ko"
-    },
-    {
-      "title": "빗썸, 해킹 피해 추가 확인…보름 동안 해킹 사실 몰랐다",
-      "summary": "사고 직후에는 긴급 조치를 진행했으며, 이후에는 시스템 개발사와 함께 보안 점검과 보안 조치를 진행하고 이후에도 추가 점검을 진행하고 있다고도 안내했다. 빗썸 관계자는 \"사고 후속 점검 과정에서 유출된...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 빗썸, 보름간 해킹 사실 인지 못해 추가 피해 발생\n2. 시스템 개발사와 보안 점검 및 조치 진행 중\n3. 사고 후속 점검서 유출 추가 확인, 관련 조치 중",
-      "link": "https://n.news.naver.com/mnews/article/001/0016463744?sid=101",
-      "source": "naver",
-      "published": "2026-11-25T19:50:00+09:00",
-      "lang": "ko"
-    },
-    {
-      "title": "빗썸, 보름간 해킹 몰랐다…한 달 만에 추가 피해 확인",
-      "summary": "빗썸이 지난달 발생한 해킹 사고에 대한 후속 조사에서 개인정보 추가 유출 사실을 확인했다. 당초... 해킹·전산장애 등으로 이용자에게 손해가 발생하면 사업자의 고의·과실 여부와 관계없이 원칙적으로 배상책임을...",
-      "content": "",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. 빗썸, 보름간 해킹 몰랐다…한 달 만에 추가 피해 확인 빗썸이 지난달 발생한 해킹 사고에 \n2. 해킹·전산장애 등으로 이용자에게 손해가 발생하면 사업자의 고의·과실 여부와 관계없이 원칙적",
-      "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=508128",
-      "source": "naver",
-      "published": "2026-11-25T19:32:00+09:00",
-      "lang": "ko"
     }
   ],
   "vulnerability": [
@@ -5071,21 +5059,6 @@
       "link": "https://www.cisa.gov/news-events/alerts/2026/11/25/cisa-adds-10-known-exploited-vulnerabilities-catalog",
       "source": "cisa",
       "published": "2026-11-25T21:00:00+09:00",
-      "lang": "en"
-    },
-    {
-      "title": "CVE-2026-105609 - OAuth callback open redirect, login-CSRF, and cross-user state leak",
-      "summary": "CVE ID :CVE-2026-105609\n  \nPublished : Nov. 25, 2026, 10:56 a.m. | 31 minutes ago\n  \nDescription :In Eclipse Che versions 7.61.0 through 7.124.0 three related defects in the SCM-OAuth flow, chain into a Medium-severity finding:\n\n\n\n1. Open redirect (CWE-601) — `EmbeddedOAuthAPI.callback()` and the OAuth1 callback issue `307 Temporary Redirect` to whatever URL was carried in the `redirect_after_login` field of the OAuth `state` parameter. The value is fully attacker-controlled and never compared against an allow-list of permitted hosts.\n\n\n\n2. Missing CSRF nonce in OAuth `state` (CWE-352) — `OAuthAuthenticator.prepareState()` builds the `state` parameter solely by URL-encoding the original request's query string. No random nonce is bound to the user's session, so an attacker can pre-compute a callback URL carrying _their own_ SCM authorization `code` and have a logged-in victim open it. `callback()` then stores the attacker's SCM token under the victim's Che identity (`personalAccessTokenManager.store(...)`).\n\n\n\n3. Mutable field on a `@Singleton` (CWE-362 / CWE-488) — `EmbeddedOAuthAPI` is `@Singleton` but stores the per-request `redirect_after_login` value into the instance field `private String redirectAfterLogin`. Any user's `authenticate()` call overwrites the field for all concurrent users; the `access_denied` error-path of `callback()` then redirects to the _last writer's_ URL.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "description": "CVE ID :CVE-2026-105609\n  \nPublished : Nov. 25, 2026, 10:56 a.m. | 31 minutes ago\n  \nDescription :In Eclipse Che versions 7.61.0 through 7.124.0 three related defects in the SCM-OAuth flow, chain into a Medium-severity finding:\n\n\n\n1. Open redirect (CWE-601) — `EmbeddedOAuthAPI.callback()` and the OAuth1 callback issue `307 Temporary Redirect` to whatever URL was carried in the `redirect_after_login` field of the OAuth `state` parameter. The value is fully attacker-controlled and never compared against an allow-list of permitted hosts.\n\n\n\n2. Missing CSRF nonce in OAuth `state` (CWE-352) — `OAuthAuthenticator.prepareState()` builds the `state` parameter solely by URL-encoding the original request's query string. No random nonce is bound to the user's session, so an attacker can pre-compute a callback URL carrying _their own_ SCM authorization `code` and have a logged-in victim open it. `callback()` then stores the attacker's SCM token under the victim's Che identity (`personalAccessTokenManager.store(...)`).\n\n\n\n3. Mutable field on a `@Singleton` (CWE-362 / CWE-488) — `EmbeddedOAuthAPI` is `@Singleton` but stores the per-request `redirect_after_login` value into the instance field `private String redirectAfterLogin`. Any user's `authenticate()` call overwrites the field for all concurrent users; the `access_denied` error-path of `callback()` then redirects to the _last writer's_ URL.\n  \nSeverity: 8.3 | HIGH\n  \n  Visit the link for more details, such as CVSS details, affected products, timeline, and more...",
-      "title_ko": null,
-      "summary_ko": null,
-      "summary_3lines": "1. CVE-2026-105609\n2. 26.11.25 오후7:56\n3. In Eclipse Che versions 7.61.0 through 7.124.0 thr",
-      "cve_id": "CVE-2026-105609",
-      "cvss": "",
-      "severity": "",
-      "link": "https://cvefeed.io/vuln/detail/CVE-2026-105609",
-      "source": "cvefeed",
-      "published": "2026-11-25T19:56:54+09:00",
       "lang": "en"
     }
   ],
